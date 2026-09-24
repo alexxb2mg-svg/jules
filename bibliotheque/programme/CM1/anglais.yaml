@@ -1,0 +1,305 @@
+matiere: "Anglais (langue vivante)"
+id: anglais
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3)"
+    reference: "Arrêté du 26-2-2026, BO n° 12 du 19 mars 2026 (MENE2602911A) — NOUVEAU en CM1 à la rentrée 2026"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Ce texte (annexe 2 de l'arrêté du 26-2-2026) est commun à TOUTES les langues vivantes étrangères et
+  régionales enseignées au cours moyen (LV1 comme LV2, quelle que soit la langue) : il ne mentionne
+  jamais l'anglais ni aucune autre langue par son nom, et ne donne aucun repère linguistique
+  spécifique à une langue (pas de vocabulaire anglais, pas de grammaire anglaise). Ce fichier est
+  nommé anglais.yaml uniquement par convention de la bibliothèque (Ellie apprend l'anglais et le
+  référentiel de 3e utilise déjà ce nom de fichier), mais son contenu ne retient QUE ce que dit ce
+  texte générique ; aucun exemple propre à l'anglais n'y a été ajouté puisque le texte source n'en
+  fournit aucun. Le programme distingue explicitement, pour chacune des six activités langagières
+  (compréhension de l'oral CO, expression orale en continu EOC, expression orale en interaction EOI,
+  compréhension de l'écrit CE, expression écrite EE, médiation M), un bloc « Cours moyen première
+  année » (CM1, niveau A1 visé) et un bloc « Cours moyen deuxième année » (CM2, niveau A1 consolidé
+  voire A1+/A2 visé) : seul le bloc CM1 est retenu ici (niveau_programme "CM1"). Les objectifs
+  d'apprentissage complémentaires signalés en bleu dans le texte officiel avec la mention "(A1+)"
+  restent des objectifs internes au bloc CM1 (pour les élèves qui peuvent aller plus loin, notamment
+  en parcours EMILE/bilingue) et sont donc conservés dans les attendus de CM1, avec leur mention
+  d'origine. Sont exclus les blocs « Cours moyen deuxième année » (CM2) ainsi que les paragraphes de
+  préambule et d'approches pédagogiques générales qui ne formulent pas d'objectif d'apprentissage
+  précis ; le tableau des niveaux de maitrise visés par classe (p.2) et la liste des six activités
+  langagières travaillées sont en revanche retenus car ils s'appliquent explicitement au cours moyen
+  dans son ensemble (niveau_programme "cours moyen"). Point de vigilance (lecture à vérifier) : le
+  texte source comporte de nombreux mots sans accent circonflexe qui semblent être des pertes
+  d'extraction plutôt que la graphie voulue (« gouts » pour goûts, « maitrise »/« maitriser » pour
+  maîtrise/maîtriser, « entrainé » pour entraîné, « plait » pour plaît, « trainant »...) ; ces mots
+  sont reproduits tels quels dans les attendus ci-dessous, sans correction, faute d'indication
+  explicite que ce fichier serait, comme celui de sciences, une OCR d'image à corriger.
+themes:
+  - id: cadre-general
+    titre: "Cadre général du cours moyen (commun à toutes les activités langagières)"
+    chapitres:
+      - id: activites-langagieres-et-niveaux
+        titre: "Activités langagières travaillées et niveaux visés"
+        notions:
+          - id: cm1-six-activites-langagieres
+            titre: "Les six activités langagières travaillées en langue vivante"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Le développement de la compétence de communication des élèves requiert de travailler les activités langagières suivantes : la compréhension de l'oral (CO) ; l'expression orale en continu (EOC) et en interaction (EOI) ; la compréhension de l'écrit (CE) ; l'expression écrite (EE) ; la médiation (M)."
+              - "Chacune des activités langagières prend appui sur les niveaux de compétences du Cadre européen commun de référence pour les langues (CECRL) qui donne cohérence et visibilité à ces apprentissages."
+            mots_cles: [activité langagière, CECRL, oral, écrit, médiation]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Préambule, p.1-2"
+          - id: cm1-niveau-vise-a1
+            titre: "Niveau visé en fin de CM1 : A1 (A1+ en parcours renforcé)"
+            niveau_programme: "CM1"
+            attendus:
+              - "En fin d'année de CM1, il s'agit pour tous les élèves d'atteindre le niveau A1 du CECRL dans les situations de communication décrites par le programme."
+              - "Pour la classe de CM1, parcours de droit commun : niveau A1 pour toutes les activités langagières. Parcours renforcés / bilingues / EMILE : niveau A1+ pour les activités de compréhension et d'expression, niveau A1 pour la médiation."
+              - "Le niveau A1+ peut toutefois être atteint dans plusieurs activités langagières par un certain nombre d'élèves ; les éléments signalés (A1+) dans le programme illustrent la complexification possible pour tendre vers ce niveau."
+            mots_cles: [CECRL, A1, A1+, EMILE, parcours bilingue]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Préambule, tableau « Niveau de maitrise linguistique attendu pour les classes du cours moyen... », p.2"
+  - id: comprehension-de-loral
+    titre: "Compréhension de l'oral : écouter et comprendre (CO)"
+    chapitres:
+      - id: co-cm1
+        titre: "Écouter et comprendre — CM1"
+        notions:
+          - id: cm1-co-suivre-fil-histoire-simple
+            titre: "Suivre le fil d'une histoire simple"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut isoler des informations simples dans un message explicite (A1+) et les relier à un titre ou un thème."
+              - "Il peut repérer des indices sonores simples dans une variété de supports simples (comptines, chansons, contes, légendes, dialogues, etc.)."
+              - "Il peut associer un document oral à un visuel."
+              - "Objectifs d'apprentissage : repérer les lettres de l'alphabet et les chiffres pour réaliser une tâche ; repérer les champs lexicaux et les repères spatiotemporels simples pour parler de soi, de sa sphère immédiate, (A1+) de son environnement proche ou des thématiques culturelles et disciplinaires travaillées en classe ; identifier une question, une affirmation, une exclamation en reconnaissant des intonations de phrases propres à la langue ; reconnaitre quelques structures et formes grammaticales simples appartenant à un répertoire mémorisé ; (A1+) repérer les marques du pluriel en s'appuyant sur la phonologie."
+            mots_cles: [écoute, compréhension orale, indices sonores, alphabet, intonation]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Suivre le fil d'une histoire simple (CO-CM1) », p.4"
+          - id: cm1-co-comprendre-message-oral-court
+            titre: "Comprendre un message oral court sur un sujet familier ou d'actualité"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut comprendre l'ensemble des consignes utilisées en classe."
+              - "Il peut comprendre des mots familiers et des expressions courtes dans une conversation simple à condition que l'interlocuteur parle lentement et très distinctement."
+              - "(A1+) Il peut distinguer des blocs ou des segments et relever une tonalité pour comprendre le sens d'un message (plaisanterie, agressivité, etc.)."
+              - "Objectifs d'apprentissage : repérer quelques mots du champ lexical de la prise de contact ou des salutations ; repérer des mots simples et familiers (famille, environnement immédiat, thématiques travaillées en classe) ; reconnaitre les pronoms interrogatifs usuels ; déterminer de qui on parle en s'appuyant sur les pronoms personnels sujets, compléments et les adjectifs possessifs ; identifier les verbes et adjectifs de gout et de dégout ; identifier l'humeur des interlocuteurs (tristesse, joie, colère) en s'aidant de l'émotion portée par la voix et les gestes."
+            mots_cles: [compréhension orale, champ lexical, pronoms interrogatifs, émotions]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Comprendre un message oral court sur un sujet familier ou d'actualité (CO-CM1) », p.5"
+          - id: cm1-co-comprendre-et-agir
+            titre: "Comprendre et agir"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut associer un document oral à un visuel."
+              - "Il peut suivre des consignes familières, courtes et simples pour réaliser une tâche."
+              - "(A1+) Il peut repérer une instruction dans un message (autorisation, obligation ou interdiction) pour s'y conformer."
+              - "Objectifs d'apprentissage : reconnaitre quelques formes courantes de l'impératif à travers des consignes de classe, des instructions de jeu ou des étapes de recette de cuisine ; identifier les auxiliaires modaux pour exprimer au présent l'autorisation, la capacité ou l'incapacité ; relever quelques prépositions permettant des repérages dans l'espace et les verbes d'action associés ; reconnaitre quelques mots simples du champ lexical de l'environnement proche (famille, école, activités de loisirs, météo, etc.)."
+            mots_cles: [consigne, impératif, auxiliaires modaux, prépositions de lieu]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Comprendre et agir (CO-CM1) », p.5"
+  - id: expression-orale-en-continu
+    titre: "Expression orale en continu : parler en continu (EOC)"
+    chapitres:
+      - id: eoc-cm1
+        titre: "Parler en continu — CM1"
+        notions:
+          - id: cm1-eoc-reperes-phonologiques
+            titre: "Repères phonologiques"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut prononcer un répertoire d'expressions et de mots mémorisés, de manière compréhensible."
+              - "L'élève peut lire à haute voix et de manière expressive un texte bref (petit dialogue, poème, extrait d'album de littérature jeunesse, etc.) à condition qu'il ait été préparé auparavant."
+              - "(A1+) L'élève peut reproduire et reprendre à son compte des phrases simples avec l'aide de son interlocuteur."
+              - "Objectifs d'apprentissage : réaliser et mobiliser les spécificités phonologiques essentielles de la langue étudiée ; prononcer correctement des mots isolés et mémorisés dans des champs lexicaux connus ; (A1+) connaitre l'intonation des énoncés affirmatifs et interrogatifs."
+            mots_cles: [phonologie, prononciation, intonation, lecture expressive]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Repères phonologiques (EOC-CM1) », p.7"
+          - id: cm1-eoc-se-presenter-exprimer-gouts
+            titre: "Se présenter oralement et exprimer ses gouts, présenter les autres"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut lire et reproduire un modèle oral court (répéter, réciter, etc.)."
+              - "L'élève peut décrire brièvement des personnes, des objets ou des animaux familiers, après y avoir été entrainé (A1+) en réponse à une sollicitation."
+              - "(A1+) L'élève peut coordonner plusieurs éléments simples dans une description ou une présentation élémentaire."
+              - "Objectifs d'apprentissage : utiliser le présent d'une gamme de verbes courants à la première ou à la troisième personne du singulier pour se présenter ou présenter un camarade ; nommer les moments de la journée ; mobiliser quelques champs lexicaux en lien avec les activités quotidiennes et les habitudes."
+            mots_cles: [se présenter, gouts, présent simple, description]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Se présenter oralement et exprimer ses gouts, présenter les autres (EOC-CM1) », p.7-8"
+          - id: cm1-eoc-raconter
+            titre: "Raconter"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut raconter des faits brefs en quelques mots ou phrases simples et en s'aidant d'images."
+              - "L'élève peut raconter une histoire courte en quelques mots, en juxtaposant des phrases simples et en s'aidant d'images."
+              - "(A1+) L'élève peut parler de lui-même à l'aide de mots et d'expressions simples et juxtaposées."
+              - "Objectifs d'apprentissage : nommer, caractériser, dénombrer simplement des personnes, des objets, des lieux (champs lexicaux de l'école, la famille, le matériel scolaire, les loisirs) ; savoir employer quelques adjectifs ; compter en utilisant la suite numérique des nombres ; situer dans l'espace et dans le temps (date, repères temporels simples) ; reproduire un modèle oral court en suivant la trame d'une histoire répétitive (histoire en randonnée) en prenant appui sur un album ou un support de conte illustré type kamishibaï."
+            mots_cles: [raconter, histoire répétitive, adjectifs, nombres, repères temporels]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Raconter (EOC-CM1) », p.7-8"
+          - id: cm1-eoc-decrire-environnement-et-gouts
+            titre: "Décrire son environnement quotidien, des personnes ou des activités, et exprimer ses gouts"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut présenter et décrire son environnement proche avec des mots et des expressions simples, à condition d'avoir pu préparer son discours."
+              - "L'élève peut exprimer (A1+) ses gouts (A1) et ses activités préférées à l'aide d'expressions toutes faites et de façon simple et succincte."
+              - "Objectifs d'apprentissage : maitriser le présent simple d'une gamme de verbes courants à la première, deuxième et troisième personne du singulier pour présenter ce qui se trouve dans l'environnement proche ; utiliser des articles et des adjectifs démonstratifs ; utiliser « et » ou « ou » pour juxtaposer des énoncés simples ; exprimer ses gouts de façon simple par des verbes, des adjectifs, le degré, (A1+) des phrases exclamatives."
+            mots_cles: [environnement proche, gouts, adjectifs démonstratifs, phrase exclamative]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Décrire son environnement quotidien, des personnes ou des activités, et exprimer ses gouts (EOC-CM1) », p.8"
+  - id: expression-orale-en-interaction
+    titre: "Expression orale en interaction : réagir et dialoguer (EOI)"
+    chapitres:
+      - id: eoi-cm1
+        titre: "Réagir et dialoguer — CM1"
+        notions:
+          - id: cm1-eoi-echanger-informations
+            titre: "Échanger des informations"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut demander de ses nouvelles à quelqu'un et réagir en utilisant des formules de politesse."
+              - "L'élève peut répondre à des questions très simples et en poser de manière ritualisée sur des sujets familiers et sur les habitudes quotidiennes."
+              - "L'élève peut réagir à des affirmations très simples et en émettre, en utilisant des formules courtes ou toutes faites."
+              - "(A1+) L'élève peut interagir dans des situations familières à l'aide d'expressions toutes faites."
+              - "Objectifs d'apprentissage : poser quelques questions simples à l'aide d'une gamme réduite de pronoms interrogatifs ; donner quelques consignes ou ordres ritualisés à l'aide d'énoncés à l'impératif fréquemment utilisés ; mobiliser l'expression simple de l'autorisation et de l'interdiction sous forme lexicalisée ; utiliser les réponses courtes."
+            mots_cles: [échanger, formules de politesse, questions, réponses courtes]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Échanger des informations (EOI-CM1) », p.10"
+          - id: cm1-eoi-exprimer-emotions-souhaits
+            titre: "Exprimer ses émotions ou ses souhaits et réagir"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut exprimer simplement des sentiments et émotions, à l'aide d'expressions idiomatiques ou toutes faites pour demander ou dire comment on se porte et réagir à la réponse donnée."
+              - "L'élève peut exprimer de manière simple (y compris par onomatopées) des émotions ou réactions telles que la joie, la tristesse, la déception, la peur ou la surprise."
+              - "(A1+) L'élève peut réagir positivement ou négativement aux demandes de son interlocuteur et s'appuyer sur ses réactions pour faire part de ses propres sentiments."
+              - "Objectifs d'apprentissage : mobiliser l'expression de sentiments ou d'émotions dans le cadre de situations ritualisées ou répétées (réagir à une chanson, rituels de début d'heure, etc.) ; connaitre et mobiliser quelques onomatopées typiques."
+            mots_cles: [émotions, sentiments, onomatopées, réagir]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Exprimer ses émotions ou ses souhaits et réagir (EOI-CM1) », p.10"
+          - id: cm1-eoi-clarifier-un-point
+            titre: "Clarifier ou faire clarifier un point"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut clarifier ou faire clarifier des points très simples, notamment en situation de communication de classe, comme épeler des mots familiers, demander de répéter et répéter soi-même un mot ou une phrase très brève, demander le sens ou la traduction d'un mot ou dire qu'il ne comprend pas."
+              - "L'élève peut répéter une consigne simple et connue afin de s'assurer de sa bonne compréhension."
+              - "Objectifs d'apprentissage : maitriser la prononciation des lettres de l'alphabet ; indiquer simplement qu'il a compris ou pas ; mobiliser des formules toutes faites pour demander le sens d'un mot ; répéter ou utiliser la plupart des consignes simples ou usuelles en lien avec la communication de classe."
+            mots_cles: [clarifier, alphabet, consignes de classe, compréhension]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Clarifier ou faire clarifier un point (EOI-CM1) », p.11"
+          - id: cm1-eoi-etablir-un-contact
+            titre: "Établir un contact (saluer, se présenter, présenter quelqu'un, etc.)"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut établir un contact social en utilisant quelques formules de politesse : salutations et prises de congé, présentations et expressions du type « merci », « s'il vous plait », « pardon »."
+              - "L'élève peut réagir à des propositions dans des situations de la vie courante (remercier, féliciter, présenter des excuses, accepter, refuser)."
+              - "L'élève peut demander des informations complémentaires très simples si le fil des échanges porte sur des faits familiers et simples, avec un interlocuteur qui adopte un débit lent et accepte de répéter."
+              - "L'élève peut clore une conversation à l'aide de mots très simples comme « merci », « au revoir », « d'accord »."
+              - "Objectifs d'apprentissage : utiliser des formules d'adresse élémentaires pour ouvrir un échange et des termes élémentaires pour le clore ; utiliser quelques formules de politesse élémentaires ; relancer par des questions élémentaires en mettant le ton."
+            mots_cles: [saluer, se présenter, formules de politesse, engager une conversation]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Établir un contact (saluer, se présenter, présenter quelqu'un, etc.) (EOI-CM1) », p.11"
+  - id: comprehension-de-lecrit
+    titre: "Compréhension de l'écrit : lire et comprendre (CE)"
+    chapitres:
+      - id: ce-cm1
+        titre: "Lire et comprendre — CM1"
+        notions:
+          - id: cm1-ce-comprendre-textes-courts-simples
+            titre: "Comprendre des textes courts et simples"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut repérer des mots isolés dans un énoncé ou un texte court."
+              - "Il peut comprendre des messages ou courriels simples, des annonces ou de courts récits illustrés au sujet d'activités quotidiennes et rédigés avec des mots simples."
+              - "Il peut se faire une idée du contenu d'un texte informatif assez simple, surtout s'il est accompagné d'un document visuel l'illustrant."
+              - "Objectifs d'apprentissage : reconnaitre des informations simples et familières en s'appuyant sur les indices visuels (images, illustrations) et sur les éléments mis en exergue dans le titre ; repérer les chiffres et les nombres ; reconnaitre quelques mots des champs lexicaux de l'environnement proche et des activités quotidiennes ; identifier la nature de différents textes (bande dessinée, carte postale, publicité, poème, chanson, etc.) en prenant appui sur leur mise en forme."
+            mots_cles: [lecture, texte court, indices visuels, types de textes]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Comprendre des textes courts et simples (CE-CM1) », p.13-14"
+          - id: cm1-ce-identifier-trame-narrative
+            titre: "Identifier la trame narrative d'un récit clairement structuré"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut repérer la structure narrative de courts récits illustrés au sujet d'activités quotidiennes, et rédigés avec des mots simples, à condition que les images l'aident à deviner le contenu."
+              - "Objectifs d'apprentissage : reconnaitre quelques mots du champ lexical de la famille et des traits de caractère simples ; reconnaitre quelques verbes du champ lexical des activités quotidiennes ; repérer quelques exemples d'organisation de la phrase simple (affirmative ou négative avec la marque de la négation) ; repérer quelques connecteurs simples dans des énoncés simples."
+            mots_cles: [trame narrative, récit illustré, phrase affirmative, phrase négative, connecteurs]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Identifier la trame narrative d'un récit clairement structuré (CE-CM1) », p.14"
+          - id: cm1-ce-traiter-informations-et-agir
+            titre: "Traiter les informations et agir"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut comprendre des consignes et suivre des indications courtes, simples ou récurrentes dans un texte informatif, un mode d'emploi ou une recette de cuisine."
+              - "Objectifs d'apprentissage : comprendre le lexique simple des fournitures scolaires ou des ustensiles de cuisine ; comprendre les étapes d'une recette ou les ingrédients à sélectionner pour la réaliser en s'appuyant sur l'image ; reconnaitre l'impératif à la forme affirmative et adapter son geste."
+            mots_cles: [consignes, mode d'emploi, recette, impératif]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Traiter les informations et agir (CE-CM1) », p.14"
+  - id: expression-ecrite
+    titre: "Expression écrite : écrire et réagir à l'écrit (EE)"
+    chapitres:
+      - id: ee-cm1
+        titre: "Écrire et réagir à l'écrit — CM1"
+        notions:
+          - id: cm1-ee-epeler-copier-ecrire-sous-dictee
+            titre: "Épeler, copier ou écrire sous la dictée des éléments connus"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut épeler, copier ou écrire sous la dictée des éléments connus."
+              - "Objectifs d'apprentissage : copier dans son cahier des éléments écrits au tableau ou prélevés dans un texte court ; retranscrire quelques mots entendus."
+            mots_cles: [épeler, copier, dictée]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Épeler, copier ou écrire sous la dictée des éléments connus (EE-CM1) », p.16"
+          - id: cm1-ee-raconter
+            titre: "Raconter à l'écrit"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut raconter succinctement des expériences vécues ou imaginées en mobilisant des structures grammaticales et des expressions simples appartenant à un répertoire mémorisé."
+              - "Objectifs d'apprentissage : nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux en mobilisant quelques champs lexicaux connus (l'école, la famille, etc.) en ayant recours à quelques adjectifs et en appliquant les règles d'accord élémentaires ; situer dans le temps (exprimer la date du jour) ; se présenter brièvement à l'écrit à l'aide d'expressions lexicalisées en juxtaposant quelques phrases simples."
+            mots_cles: [raconter, écrit, adjectifs, accord, date]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Raconter (EE-CM1) », p.16"
+          - id: cm1-ee-structures-simples-trame-connue
+            titre: "Mobiliser des structures simples pour écrire des phrases en s'appuyant sur une trame connue"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut décrire des objets ou des lieux familiers."
+              - "L'élève peut produire de manière autonome quelques phrases sur lui-même, les autres, des personnages réels ou imaginaires, en s'appuyant sur des modèles connus."
+              - "L'élève peut rédiger un courrier bref et simple, en référence à des modèles (message électronique court, carte postale, lettre)."
+              - "Objectifs d'apprentissage : exprimer simplement des informations sur soi, son environnement proche, des personnes ou des activités en utilisant le présent simple des verbes les plus courants et des articles ; utiliser quelques blocs lexicaux très simples pour écrire un courrier à un proche."
+            mots_cles: [courrier, carte postale, présent simple, modèle connu]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Mobiliser des structures simples pour écrire des phrases en s'appuyant sur une trame connue (EE-CM1) », p.16"
+          - id: cm1-ee-decrire-informer-point-de-vue
+            titre: "Écrire pour décrire, informer ou exprimer un point de vue"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut écrire des mots et des expressions isolées pour évoquer ou décrire très simplement certains objets familiers."
+              - "L'élève peut compléter une fiche de renseignements très simple."
+              - "L'élève peut rédiger un courrier court et simple, écrire un message ou y répondre, y compris sur supports numériques, en s'appuyant sur un modèle et en réinvestissant les apprentissages effectués en classe."
+              - "L'élève peut réagir très simplement, positivement ou négativement, à des propos et à des commentaires, en réinvestissant des expressions apprises."
+              - "Objectifs d'apprentissage : exprimer simplement ses gouts en mobilisant quelques adjectifs qualificatifs et en exprimant le gout à l'aide des verbes les plus courants ; faire part simplement de son accord ou de son désaccord ; mobiliser quelques champs lexicaux en lien avec ses propres activités en ayant recours à quelques adverbes ou adjectifs exprimant des degrés d'intensité."
+            mots_cles: [point de vue, fiche de renseignements, gouts, accord, désaccord]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Écrire pour décrire, informer ou exprimer un point de vue (EE-CM1) », p.16"
+  - id: mediation
+    titre: "Médiation (M)"
+    chapitres:
+      - id: m-cm1
+        titre: "Médiation — CM1"
+        notions:
+          - id: cm1-m-prendre-notes-paraphraser
+            titre: "Prendre des notes, paraphraser"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut lister et transmettre, à l'écrit ou à l'oral, des informations d'un intérêt immédiat (noms, nombres, prix, détails factuels), à condition qu'elles soient prévisibles et formulées dans une langue simple."
+              - "L'élève peut passer d'une langue à l'autre pour reformuler des consignes de travail simples en vue de s'assurer de la compréhension de tous."
+              - "L'élève peut épeler, copier ou écrire sous la dictée des éléments connus."
+              - "Objectifs d'apprentissage : recopier sans erreur un court texte ou une liste de mots dans un contexte de médiation ; copier sous la dictée quelques mots très courants déjà connus dans un contexte de médiation ; avoir recours à la traduction pour aider un camarade dans la compréhension d'une consigne."
+            mots_cles: [médiation, traduction, reformuler, prendre des notes]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Prendre des notes, paraphraser (M-CM1) », p.18"
+          - id: cm1-m-identifier-reperes-culturels
+            titre: "Identifier les repères culturels"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut identifier une similitude ou une différence culturelle."
+              - "Objectifs d'apprentissage : informer ou marquer par un geste, des formules élémentaires ou toutes faites, des différences culturelles."
+            mots_cles: [repères culturels, différence culturelle, interculturalité]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Identifier les repères culturels (M-CM1) », p.18"
+          - id: cm1-m-expliciter-message-pour-autrui
+            titre: "Expliciter un message, un document pour autrui"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut indiquer avec des mots et des gestes simples les besoins élémentaires d'une tierce personne dans une situation précise."
+              - "L'élève peut attirer l'attention sur des informations simples et prévisibles d'un intérêt immédiat, données dans des supports courts et simples tels que des panneaux, des annonces, des affiches, des programmes, des dépliants, etc."
+              - "Objectifs d'apprentissage : mobiliser le champ lexical des besoins élémentaires à l'aide de mots isolés ou insérés dans des structures très simples ; utiliser quelques verbes de perception ; utiliser quelques termes permettant de situer une information ; joindre le geste à la parole pour identifier ou souligner une information."
+            mots_cles: [expliciter, besoins élémentaires, gestes, informations]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Expliciter un message, un document pour autrui (M-CM1) », p.18-19"
+          - id: cm1-m-participer-travail-collectif
+            titre: "Participer à un travail collectif, coopérer et contribuer à des échanges interculturels"
+            niveau_programme: "CM1"
+            attendus:
+              - "L'élève peut faciliter un échange interculturel en manifestant son intérêt avec des mots simples, des expressions non verbales ou des gestes."
+              - "L'élève peut demander aux participants leur avis ou des contributions à des tâches élémentaires, à l'aide d'expressions mémorisées."
+              - "L'élève peut dire très simplement qu'il a compris, qu'il est d'accord, que tout va bien (dans la tâche à accomplir ou dans la communication), et demander aux autres s'ils ont compris, s'ils sont d'accord, s'ils ont un problème."
+              - "Objectifs d'apprentissage : utiliser des formules d'adresse élémentaires ou toutes faites pour accueillir ; donner quelques consignes ou ordres simples ritualisés ; dire ou demander si on a compris."
+            mots_cles: [travail collectif, coopérer, échanges interculturels]
+            source: "Programme de langues vivantes cours moyen (BO 12 du 19-3-2026), Cours moyen première année, « Participer à un travail collectif, coopérer et contribuer à des échanges interculturels (M-CM1) », p.19"

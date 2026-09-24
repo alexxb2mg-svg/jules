@@ -1,0 +1,194 @@
+matiere: Histoire
+id: histoire
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'histoire-géographie pour le cycle 3 — partie Histoire, Cours moyen première année"
+    reference: "Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme d'histoire-géographie du cycle 3 change à la rentrée 2026 (arrêté du 22-4-2026, BO n° 22
+  du 28 mai 2026) et introduit, pour la première fois, une répartition explicite par année du cours moyen.
+  Ce fichier ne retient que la partie Histoire de la section « Cours moyen première année » (p.4-6), soit
+  les quatre thèmes prévus pour le CM1 : la vie quotidienne au Moyen Âge, la monarchie en France,
+  explorations et conquêtes par les Européens, 1789 une année révolutionnaire en France. Sont exclus les
+  six thèmes de la section « Cours moyen deuxième année » (p.6-8, de la République à l'Empire jusqu'à la
+  France depuis 1945), propres au CM2, ainsi que les quatre thèmes de la section « Sixième » (p.8-11). Les
+  « repères » indiqués dans la troisième colonne du tableau officiel (dates, lieux à mémoriser) sont repris
+  comme éléments de contexte dans les attendus, faute de champ dédié dans ce référentiel.
+themes:
+  - id: vie-quotidienne-moyen-age
+    titre: "La vie quotidienne au Moyen Âge (XIe - XIIIe siècles)"
+    chapitres:
+      - id: cadres-de-vie-seigneurie-paroisse
+        titre: "Les cadres de la vie : la seigneurie et la paroisse"
+        notions:
+          - id: cm1-seigneurie-et-paroisse
+            titre: "La seigneurie et la paroisse, cadres de la vie médiévale"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la seigneurie (la domination d'un seigneur sur un territoire et les hommes qui y vivent) et la paroisse (l'encadrement par l'Église de la vie des femmes et des hommes de leur naissance à leur mort)."
+              - "Décrire les fonctions d'un château (lieu de protection, lieu de vie du seigneur, symbole de la puissance du seigneur) ou décrire le fonctionnement d'une seigneurie."
+              - "Situer le Moyen Âge sur une frise chronologique (476-1492) et identifier la période du XIe au XIIIe siècle."
+            mots_cles: ["seigneurie", "château", "paroisse", "Moyen Âge"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 1 « La vie quotidienne au Moyen Âge », hg_c3_2026.txt p.4"
+      - id: modes-de-vie-medievaux
+        titre: "Les modes de vie des seigneurs, des paysans et des habitants des villes"
+        notions:
+          - id: cm1-modes-de-vie-seigneurs-paysans-villes
+            titre: "Les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître les modes de vie des seigneurs, des paysannes et des paysans et des habitants des villes."
+              - "Raconter la vie quotidienne des paysannes et des paysans (calendrier annuel des travaux, obligations envers le seigneur, l'Église, etc.)."
+              - "Décrire les activités des villes au Moyen Âge (marché et foire, artisanat, etc.)."
+            mots_cles: ["paysanne et paysan", "corvée", "dîme", "ville médiévale"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 1 « La vie quotidienne au Moyen Âge », hg_c3_2026.txt p.4-5"
+      - id: role-eglise-et-art-medieval
+        titre: "Le rôle de l'Église et l'art médiéval"
+        notions:
+          - id: cm1-role-social-eglise-moyen-age
+            titre: "Le rôle social de l'Église au Moyen Âge"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître le rôle de l'Église."
+              - "Décrire le rôle social de l'Église (assistance aux pauvres et malades, enseignement)."
+              - "Repère : une abbaye dans l'espace proche des élèves ou l'abbaye de Cluny ; une cathédrale dans l'espace proche des élèves ou Notre-Dame de Paris."
+            mots_cles: ["Église", "abbaye", "cathédrale", "clergé"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 1 « La vie quotidienne au Moyen Âge », hg_c3_2026.txt p.4-5"
+          - id: cm1-art-roman-art-gothique
+            titre: "L'art roman et l'art gothique"
+            niveau_programme: "CM1"
+            attendus:
+              - "Différencier l'art roman de l'art gothique."
+            mots_cles: ["art roman", "art gothique", "cathédrale"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 1 « La vie quotidienne au Moyen Âge », hg_c3_2026.txt p.5"
+  - id: monarchie-en-france-xvie-xviie
+    titre: "La monarchie en France (XVIe – XVIIe siècles)"
+    chapitres:
+      - id: rois-embleatiques-monarchie
+        titre: "Trois rois emblématiques de la monarchie française"
+        notions:
+          - id: cm1-francois-1er-mecene-renaissance
+            titre: "François Ier, roi mécène de la Renaissance"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître un roi mécène de la Renaissance, François Ier (1515-1547)."
+              - "Expliquer avec l'exemple de François Ier et de Léonard de Vinci le rôle d'un roi dans la diffusion de la Renaissance."
+              - "Repère : 1515, début du séjour de Léonard de Vinci en France jusqu'à sa mort en 1519."
+            mots_cles: ["Renaissance", "mécène", "artiste", "François Ier"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 2 « La monarchie en France », hg_c3_2026.txt p.5"
+          - id: cm1-henri-iv-pacificateur
+            titre: "Henri IV, roi pacificateur du royaume"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître un roi pacificateur du royaume, Henri IV (1589-1610)."
+              - "Expliquer comment Henri IV pacifie le royaume de France dans le contexte des guerres de religion."
+              - "Repère : 1598, édit de Nantes."
+            mots_cles: ["guerres de religion", "catholique", "protestant", "édit de Nantes"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 2 « La monarchie en France », hg_c3_2026.txt p.5"
+          - id: cm1-louis-xiv-pouvoir-absolu
+            titre: "Louis XIV et l'affirmation du pouvoir absolu"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître un roi qui affirme son pouvoir absolu, Louis XIV (1643-1715)."
+              - "Expliquer comment le château de Versailles exprime le pouvoir absolu du roi."
+              - "Décrire le rôle des femmes à la Cour de Versailles."
+              - "Situer sur une frise chronologique les règnes de François Ier, Henri IV et Louis XIV."
+              - "Repère : 1643-1715, règne de Louis XIV."
+            mots_cles: ["monarchie absolue", "Versailles", "Louis XIV"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 2 « La monarchie en France », hg_c3_2026.txt p.5"
+      - id: societe-ordres-ancien-regime
+        titre: "La société d'Ancien Régime"
+        notions:
+          - id: cm1-societe-ordres-clerge-noblesse-tiers-etat
+            titre: "Une société divisée en trois ordres"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître une société d'Ancien Régime divisée en trois ordres (clergé, noblesse, tiers état)."
+              - "Décrire l'organisation de la société d'ordres majoritairement composée de paysans."
+            mots_cles: ["société d'ordres", "noblesse", "tiers état", "Ancien Régime"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 2 « La monarchie en France », hg_c3_2026.txt p.5"
+  - id: explorations-conquetes-europeennes
+    titre: "Explorations et conquêtes par les Européens du XVe au XVIIe siècle"
+    chapitres:
+      - id: progres-techniques-explorations
+        titre: "Les progrès techniques des explorations européennes"
+        notions:
+          - id: cm1-progres-techniques-navigation
+            titre: "Les progrès techniques permettant la navigation au grand large"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître les progrès techniques qui ont permis aux Européens de s'aventurer vers de nouveaux territoires."
+              - "Mémoriser le nom de plusieurs inventions permettant la navigation au grand large."
+              - "Repère : 1492, Christophe Colomb débarque en Amérique ; 1519-1522, l'expédition de Magellan fait le tour du monde."
+            mots_cles: ["boussole", "caravelle", "carte", "exploration"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 3 « Explorations et conquêtes par les Européens », hg_c3_2026.txt p.5"
+      - id: empires-coloniaux-amerique
+        titre: "La constitution des premiers empires coloniaux en Amérique"
+        notions:
+          - id: cm1-empires-coloniaux-amerindiens
+            titre: "Les premiers empires coloniaux en Amérique et leurs conséquences sur les Amérindiens"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la constitution des premiers empires coloniaux en Amérique."
+              - "Localiser les grands empires coloniaux sur une carte."
+              - "Citer des conséquences de ces conquêtes sur les populations amérindiennes."
+            mots_cles: ["empire colonial", "colonisation", "Amérindiens"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 3 « Explorations et conquêtes par les Européens », hg_c3_2026.txt p.5"
+      - id: traite-esclavage-plantations
+        titre: "La traite des esclaves et la vie dans les plantations"
+        notions:
+          - id: cm1-traite-esclaves-plantations
+            titre: "La traite des esclaves entre l'Afrique et l'Amérique et la vie dans les plantations"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la traite des esclaves entre l'Afrique et l'Amérique et la vie des esclaves dans les plantations."
+              - "Décrire les conditions de vie des esclaves dans une plantation."
+              - "Connaître les échanges commerciaux avec les colonies."
+              - "Nommer quelques denrées issues de ces colonies (tomate, chocolat, haricot, pomme de terre, sucre de canne, etc.)."
+              - "Repère : 1685, Édit royal de Louis XIV dit le « Code noir »."
+            mots_cles: ["commerce triangulaire", "esclavage", "plantation", "traite", "Code noir"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 3 « Explorations et conquêtes par les Européens », hg_c3_2026.txt p.5"
+  - id: 1789-annee-revolutionnaire
+    titre: "1789, une année révolutionnaire en France"
+    chapitres:
+      - id: contexte-royaume-1789
+        titre: "Le contexte du royaume de France en 1789"
+        notions:
+          - id: cm1-contexte-royaume-1789
+            titre: "Le contexte social, économique et intellectuel du royaume en 1789"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître le contexte social, économique et intellectuel du royaume de France en 1789."
+              - "Décrire le contexte social, économique et intellectuel du royaume en 1789."
+              - "Citer des idées des Lumières."
+              - "Repère : un ou une philosophe des Lumières ; printemps 1789, rédaction des cahiers de doléances et réunion des États-Généraux."
+            mots_cles: ["Lumières", "l'Encyclopédie", "Ancien Régime"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 4 « 1789, une année révolutionnaire en France », hg_c3_2026.txt p.6"
+      - id: fin-monarchie-absolue-1789
+        titre: "1789, la fin de la monarchie absolue"
+        notions:
+          - id: cm1-1789-fin-monarchie-absolue
+            titre: "1789, fin de la monarchie absolue et de l'Ancien Régime"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître 1789, fin de la monarchie absolue et de l'Ancien Régime."
+              - "Compléter une frise chronologique avec les évènements marquants de l'année 1789."
+              - "Raconter la vie et l'action d'une femme ou de femmes au cours de l'année 1789."
+              - "Repère : 14 juillet, prise de la Bastille ; nuit du 4 août, abolition des privilèges ; 5-6 octobre 1789, marche des femmes à Versailles."
+            mots_cles: ["Révolution", "prise de la Bastille", "marche des femmes"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 4 « 1789, une année révolutionnaire en France », hg_c3_2026.txt p.6"
+      - id: nouveaux-principes-declaration-droits
+        titre: "Les nouveaux principes d'organisation de la société"
+        notions:
+          - id: cm1-declaration-droits-homme-citoyen
+            titre: "La Déclaration des Droits de l'Homme et du Citoyen"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître l'affirmation des nouveaux principes d'organisation de la société."
+              - "Citer les principaux droits énoncés dans la Déclaration des Droits de l'Homme et du Citoyen."
+              - "Repère : 26 août, Déclaration des Droits de l'Homme et du Citoyen."
+            mots_cles: ["droits de l'Homme", "égalité", "liberté", "souveraineté nationale", "citoyenneté", "constitution"]
+            source: "Programme d'histoire-géographie cycle 3, Histoire, Cours moyen première année, thème 4 « 1789, une année révolutionnaire en France », hg_c3_2026.txt p.6"

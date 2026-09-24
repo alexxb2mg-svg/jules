@@ -1,0 +1,155 @@
+matiere: "Éducation musicale"
+id: education-musicale
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 3 (annexe 2) — partie Éducation musicale"
+    reference: "Arrêté du 9-11-2015 modifié, version consolidée BO n° 31 du 30 juillet 2020"
+    url: "https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme du cycle 3, partie « Éducation musicale », p.47 à 50 du texte source
+  (bornes vérifiées via les marqueurs [p.N] : la rubrique commence juste après le
+  marqueur [p.47], qui suit la fin du chapitre « Arts plastiques », et s'arrête juste
+  avant le marqueur [p.51], qui ouvre le chapitre suivant « Histoire des arts »). Ce
+  programme n'est pas découpé par année scolaire : toutes les notions ont donc
+  niveau_programme "cycle 3" et s'appliquent identiquement au CM1, au CM2 et à la 6e.
+  Aucune mention de « CM1 », « CM2 » ou « sixième » n'apparaît dans cette rubrique :
+  rien n'y est explicitement réservé à une autre année, donc rien n'a été exclu. Sont
+  retenues les quatre compétences travaillées (Chanter et interpréter ; Écouter,
+  comparer et commenter ; Explorer, imaginer et créer ; Échanger, partager et
+  argumenter) détaillées dans le tableau « Connaissances et compétences associées »,
+  avec leurs exemples d'activités. Ne sont pas repris : l'introduction générale, le
+  tableau de synthèse « Compétences travaillées » (redondant avec le détail retenu) et
+  le paragraphe « Repères de progressivité » (indication quantitative transversale —
+  au moins 4 chants et 6 œuvres écoutées par année du cycle — sans notion musicale
+  propre).
+themes:
+  - id: chanter-interpreter
+    titre: "Chanter et interpréter"
+    chapitres:
+      - id: interpretation-modele-melodique
+        titre: "Interpréter un modèle mélodique et rythmique"
+        notions:
+          - id: cm1-interpretation-chant-modele
+            titre: "Interpréter un modèle mélodique et rythmique"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Reproduire et interpréter un modèle mélodique et rythmique."
+              - "Chanter une mélodie simple avec une intonation juste et une intention expressive."
+              - "Mobiliser son corps pour interpréter, le cas échéant avec des instruments."
+            mots_cles: ["chanter", "mélodie", "rythme", "intonation"]
+            source: "Programme cycle 3, Éducation musicale, « Chanter et interpréter », p.48"
+      - id: memorisation-chant-solo
+        titre: "Mémoriser et chanter par cœur"
+        notions:
+          - id: cm1-memorisation-chant-solo
+            titre: "Mémoriser et chanter par cœur"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Mémoriser et chanter par cœur un chant appris par imitation."
+              - "Soutenir un bref moment de chant en solo."
+              - "Identifier les difficultés rencontrées dans l'interprétation d'un chant."
+            mots_cles: ["chant par cœur", "mémoriser", "solo", "chanson"]
+            source: "Programme cycle 3, Éducation musicale, « Chanter et interpréter », p.48"
+      - id: polyphonie-simple
+        titre: "Polyphonie simple"
+        notions:
+          - id: cm1-polyphonie-simple
+            titre: "Tenir sa partie dans une polyphonie simple"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Tenir sa partie dans un bref moment de polyphonie."
+              - "Interpréter un chant avec expressivité en respectant plusieurs choix et contraintes précédemment indiqués."
+            mots_cles: ["polyphonie", "chant à plusieurs voix", "chorale"]
+            source: "Programme cycle 3, Éducation musicale, « Chanter et interpréter », p.48"
+      - id: vocabulaire-expression-vocale
+        titre: "Vocabulaire de l'expression vocale"
+        notions:
+          - id: cm1-vocabulaire-expression-musicale
+            titre: "Vocabulaire de l'expression vocale"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Utiliser le vocabulaire de l'expression : quelques nuances simples, tempo, caractère, etc."
+              - "Comprendre le rôle complémentaire des parties simultanées dans une polyphonie."
+              - "Comprendre et utiliser à bon escient le terme « interprétation » d'une musique, à propos d'une œuvre écoutée et d'une musique produite en classe."
+            mots_cles: ["nuances", "tempo", "vocabulaire musical", "expression"]
+            source: "Programme cycle 3, Éducation musicale, « Chanter et interpréter », connaissances associées, p.48"
+  - id: ecouter-comparer-commenter
+    titre: "Écouter, comparer et commenter"
+    chapitres:
+      - id: description-comparaison-sons
+        titre: "Décrire et comparer des éléments sonores"
+        notions:
+          - id: cm1-description-comparaison-sons
+            titre: "Décrire et comparer des éléments sonores"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Décrire et comparer des éléments sonores issus de la biodiversité, de contextes musicaux, d'aires géographiques ou culturelles différents et dans un temps historique, contemporain, proche ou lointain."
+              - "Identifier et nommer ressemblances et différences dans deux extraits musicaux."
+            mots_cles: ["écoute", "comparer", "sons", "musique du monde"]
+            source: "Programme cycle 3, Éducation musicale, « Écouter, comparer et commenter », p.48-49"
+      - id: forme-musicale-simple
+        titre: "Repérer une forme musicale simple"
+        notions:
+          - id: cm1-forme-musicale-simple
+            titre: "Repérer une forme musicale simple"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Repérer et nommer une organisation simple dans un extrait musical : répétition d'une mélodie, d'un motif rythmique, d'un thème, d'une partie caractéristique."
+              - "En déduire une forme simple (couplet/refrain, ABA par exemple)."
+            mots_cles: ["couplet", "refrain", "forme musicale", "répétition"]
+            source: "Programme cycle 3, Éducation musicale, « Écouter, comparer et commenter », p.49"
+      - id: reperes-culture-musicale
+        titre: "Repères de culture musicale"
+        notions:
+          - id: cm1-reperes-culture-musicale
+            titre: "Repères de culture musicale"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Associer la découverte d'une œuvre à des connaissances construites dans d'autres domaines enseignés."
+              - "Repérer quelques grandes œuvres du patrimoine et les principales caractéristiques de l'orchestre symphonique."
+              - "Distinguer des formes de production variées : vocales, instrumentales, solistes."
+            mots_cles: ["patrimoine musical", "orchestre symphonique", "repères", "œuvres"]
+            source: "Programme cycle 3, Éducation musicale, « Écouter, comparer et commenter », connaissances associées, p.49"
+  - id: explorer-imaginer-creer
+    titre: "Explorer, imaginer et créer"
+    chapitres:
+      - id: parametres-son-exploration
+        titre: "Exploration des paramètres du son"
+        notions:
+          - id: cm1-parametres-son-exploration
+            titre: "Exploration des paramètres du son"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Expérimenter les paramètres du son (hauteur, timbre, durée, intensité) et en imaginer des utilisations possibles."
+              - "Développer un lexique pour décrire le son instrumental, le son vocal et les objets sonores."
+            mots_cles: ["hauteur", "timbre", "durée", "intensité", "son"]
+            source: "Programme cycle 3, Éducation musicale, « Explorer, imaginer et créer », p.49"
+      - id: creation-organisation-sonore
+        titre: "Création d'une organisation sonore"
+        notions:
+          - id: cm1-creation-organisation-sonore
+            titre: "Création d'une organisation sonore"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Imaginer des représentations graphiques pour organiser une succession de sons et d'événements sonores."
+              - "Inventer une organisation simple à partir de sources sonores sélectionnées (dont la voix) et l'interpréter."
+              - "Adopter les postures de l'explorateur du son puis du compositeur : produire, écouter, trier, choisir, organiser, composer."
+            mots_cles: ["composition", "partition graphique", "créer des sons"]
+            source: "Programme cycle 3, Éducation musicale, « Explorer, imaginer et créer », p.49"
+  - id: echanger-partager-argumenter
+    titre: "Échanger, partager et argumenter"
+    chapitres:
+      - id: argumentation-jugement-musical
+        titre: "Argumenter un jugement musical"
+        notions:
+          - id: cm1-argumentation-jugement-musical
+            titre: "Argumenter un jugement musical"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Exprimer ses goûts au-delà de son ressenti immédiat."
+              - "Argumenter un jugement sur une musique tout en respectant le point de vue des autres."
+              - "Argumenter un choix dans la perspective d'une interprétation collective."
+            mots_cles: ["goût musical", "argumenter", "avis", "débat"]
+            source: "Programme cycle 3, Éducation musicale, « Échanger, partager et argumenter », p.49-50"

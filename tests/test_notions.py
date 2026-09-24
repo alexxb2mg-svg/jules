@@ -160,6 +160,10 @@ def test_niveau_filtre(mini):
     assert niveau_du_profil("3ème") == "3e"
     assert niveau_du_profil("troisième B") == "3e"
     assert niveau_du_profil("") is None
+    assert niveau_du_profil("CM1") == "CM1"
+    assert niveau_du_profil("cm1 B") == "CM1"
+    assert niveau_du_profil("Cours moyen première année") == "CM1"
+    assert niveau_du_profil("CM2") == "CM2"
 
 
 def test_candidats_par_mots_cles(mini):
@@ -313,7 +317,7 @@ def test_routes_eleve(tuteur):
         assert client.get("/api/eleve/notions/conversations/inconnue").status_code == 404
         infos = client.get("/api/infos").json()["notions"]
         assert any(b["statut"] == "experimentale" and b["avertissement"] for b in infos["bibliotheques"])
-        # profil sans classe : tout le programme est propose (5e, 4e et 3e)
+        # profil sans classe : tout le programme est propose (CM1, 5e, 4e et 3e)
         tout = charger_catalogue(BIBLIOTHEQUES, ["programme"], None)
         assert sum(len(m["notions"]) for m in infos["matieres"]) == len(tout.notions) > 252
 
@@ -372,3 +376,27 @@ def test_fiches_experimentales_francais_langue_sont_completes():
         assert fiche.get("exemple", {}).get("solution"), identifiant
         for exercice in fiche.get("exercices", []):
             assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), identifiant
+
+
+def test_referentiel_cm1():
+    """CM1 2026-2027 : 10 matieres, ids prefixes cm1-, chaque notion a attendus et source, rien de la 3e ne fuit."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], "CM1")
+    notions = list(cat.notions.values())
+    assert len(notions) == 158
+    assert {n.matiere for n in notions} == {
+        "anglais",
+        "arts-plastiques",
+        "education-musicale",
+        "emc",
+        "francais",
+        "geographie",
+        "histoire",
+        "histoire-des-arts",
+        "mathematiques",
+        "sciences-et-technologie",
+    }
+    for n in notions:
+        assert n.id.startswith("cm1-") and n.niveau == "CM1" and not n.brevet, n.id
+        assert n.attendus and n.source, n.id
+        assert n.niveau_programme in ("CM1", "cours moyen", "cycle 3"), n.id
+    assert candidats(cat, "je dois apprendre les phases de la lune")[0].id == "cm1-phases-de-la-lune"

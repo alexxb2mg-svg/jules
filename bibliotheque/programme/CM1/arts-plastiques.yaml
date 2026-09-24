@@ -1,0 +1,183 @@
+matiere: "Arts plastiques"
+id: arts-plastiques
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 3 (annexe 2) — partie Arts plastiques"
+    reference: "Arrêté du 9-11-2015 modifié, version consolidée BO n° 31 du 30 juillet 2020"
+    url: "https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme du cycle 3, partie « Arts plastiques », p.41 à 46 du texte source
+  (bornes vérifiées via les marqueurs [p.N] : la rubrique commence juste après le
+  marqueur [p.41] et s'arrête juste avant le marqueur [p.47], qui ouvre le chapitre
+  suivant « Éducation musicale »). Ce programme n'est pas découpé par année scolaire :
+  toutes les notions ont donc niveau_programme "cycle 3" et s'appliquent identiquement
+  au CM1, au CM2 et à la 6e. Aucune mention de « CM1 », « CM2 » ou « sixième » n'apparaît
+  dans cette rubrique : rien n'y est explicitement réservé à une autre année, donc rien
+  n'a été exclu. Sont retenus les 13 « questionnements » associés aux trois grandes
+  questions du programme (représentation plastique et dispositifs de présentation ;
+  fabrications et relation objet/espace ; matérialité de la production plastique), avec
+  leurs exemples de situations d'activités associés. Ne sont pas repris : l'introduction
+  générale, le tableau de synthèse « Compétences travaillées » (redondant avec les
+  questionnements détaillés) et le paragraphe final « Croisements entre enseignements »
+  (transversal, sans notion plastique propre).
+themes:
+  - id: representation-plastique-dispositifs-presentation
+    titre: "La représentation plastique et les dispositifs de présentation"
+    chapitres:
+      - id: ressemblance-ecart
+        titre: "La ressemblance et l'écart dans la représentation"
+        notions:
+          - id: cm1-ressemblance-ecart-representation
+            titre: "La ressemblance et l'écart dans la représentation"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Prendre conscience de la valeur expressive de l'écart dans la représentation par rapport au réel."
+              - "Rechercher l'imitation, l'accentuation, l'interprétation ou l'éloignement des caractéristiques du réel dans une représentation."
+            mots_cles: ["dessin", "ressemblance", "écart", "interprétation", "modèle"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La ressemblance », p.43"
+      - id: geste-graphique-pictural-sculptural
+        titre: "L'autonomie du geste graphique, pictural, sculptural"
+        notions:
+          - id: cm1-autonomie-geste-graphique
+            titre: "L'autonomie du geste graphique, pictural, sculptural"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Explorer les incidences du geste graphique, pictural ou sculptural sur la représentation et sur l'unicité de l'œuvre."
+              - "Découvrir le lien du geste aux notions d'original, de copie, de multiple et de série."
+            mots_cles: ["geste", "original", "copie", "série", "peinture"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « L'autonomie du geste graphique, pictural, sculptural », p.43"
+      - id: categories-images
+        titre: "Les catégories d'images, leurs procédés de fabrication, leurs transformations"
+        notions:
+          - id: cm1-categories-images-fabrication
+            titre: "Les catégories d'images, leurs procédés de fabrication, leurs transformations"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Distinguer les images à caractère artistique des images scientifiques ou documentaires (image dessinée, peinte, photographiée, filmée)."
+              - "Utiliser l'appareil photographique ou la caméra, notamment numériques, pour produire des images ; intervenir sur des images existantes pour en modifier le sens (collage, dessin, peinture, montage, outils numériques)."
+            mots_cles: ["photographie", "image", "collage", "montage", "numérique"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « Les différentes catégories d'images... », p.43"
+      - id: narration-visuelle
+        titre: "La narration visuelle"
+        notions:
+          - id: cm1-narration-visuelle
+            titre: "La narration visuelle"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Réaliser des compositions plastiques, en deux et en trois dimensions, à des fins de récit ou de témoignage."
+              - "Mettre en œuvre des principes d'organisation et d'agencements plastiques pour raconter ou témoigner, y compris au moyen d'images animées (ralenti, accélération, séquençage)."
+            mots_cles: ["récit", "témoignage", "image animée", "composition"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La narration visuelle », p.43"
+      - id: mise-en-regard-espace
+        titre: "La mise en regard et en espace des productions"
+        notions:
+          - id: cm1-mise-en-regard-espace
+            titre: "La mise en regard et en espace des productions"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Découvrir les modalités de présentation d'une production (présence ou absence du cadre, du socle, du piédestal, etc.)."
+              - "Explorer les contextes de présentation (espace quotidien privé ou public, écran, vitrine, musée, etc.)."
+            mots_cles: ["cadre", "socle", "exposition", "présentation", "musée"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La mise en regard et en espace », p.43-44"
+      - id: prise-en-compte-spectateur
+        titre: "La prise en compte du spectateur et de l'effet recherché"
+        notions:
+          - id: cm1-prise-en-compte-spectateur
+            titre: "La prise en compte du spectateur et de l'effet recherché"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Découvrir les modalités de présentation permettant la réception d'une œuvre (accrochage, mise en espace, mise en scène, frontalité, circulation, parcours, etc.)."
+              - "Explorer les modalités et lieux de présentation de sa production ; comprendre le rôle du rapport d'échelle."
+            mots_cles: ["accrochage", "mise en scène", "spectateur", "échelle"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La prise en compte du spectateur », p.44"
+  - id: fabrications-objet-espace
+    titre: "Les fabrications et la relation entre l'objet et l'espace"
+    chapitres:
+      - id: heterogeneite-coherence-plastiques
+        titre: "Hétérogénéité et cohérence plastiques"
+        notions:
+          - id: cm1-heterogeneite-coherence-plastiques
+            titre: "Hétérogénéité et cohérence plastiques"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Faire des choix et établir des relations formelles entre constituants plastiques divers, en pratique bidimensionnelle et en fabrication en trois dimensions."
+              - "Prendre en compte les qualités formelles de matériaux, d'objets ou d'images dans leur association (collage d'éléments hétéroclites, association d'images disparates, etc.)."
+            mots_cles: ["collage", "assemblage", "matériaux", "composition"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « L'hétérogénéité et la cohérence plastiques », p.44"
+      - id: invention-fabrication-objets
+        titre: "Invention, fabrication et détournement d'objets"
+        notions:
+          - id: cm1-invention-fabrication-detournement-objets
+            titre: "Invention, fabrication et détournement d'objets"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Créer des objets, intervenir sur des objets, les transformer ou les manipuler à des fins narratives, symboliques ou poétiques."
+              - "Prendre en compte les statuts de l'objet (artistique, symbolique, utilitaire, de communication) et la relation entre forme et fonction."
+              - "Créer, fabriquer ou transformer des objets en lien avec des situations à forte charge symbolique."
+            mots_cles: ["objet", "détournement", "transformation", "fabrication"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « L'invention, la fabrication, les détournements... », p.44"
+      - id: espace-trois-dimensions
+        titre: "L'espace en trois dimensions"
+        notions:
+          - id: cm1-espace-trois-dimensions
+            titre: "L'espace en trois dimensions"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Découvrir et expérimenter le travail en volume (modelage, assemblage, construction, installation, etc.)."
+              - "Utiliser les notions de forme fermée et forme ouverte, de vide et de plein, d'intérieur et d'extérieur, d'enveloppe et de structure."
+              - "Explorer le déploiement de volumes dans l'espace, en lien avec l'architecture (équilibre et déséquilibre)."
+            mots_cles: ["modelage", "sculpture", "assemblage", "volume", "construction"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « L'espace en trois dimensions », p.44"
+  - id: materialite-production-plastique
+    titre: "La matérialité de la production plastique et la sensibilité aux constituants de l'œuvre"
+    chapitres:
+      - id: realite-concrete-production
+        titre: "La réalité concrète d'une production ou d'une œuvre"
+        notions:
+          - id: cm1-realite-concrete-oeuvre-materialite
+            titre: "La réalité concrète d'une production ou d'une œuvre"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Faire l'expérience de la matérialité de l'œuvre, en tirer parti."
+              - "Comprendre qu'en art, un objet ou une image peut aussi devenir matériau d'une nouvelle réalisation."
+              - "Identifier, dans une réalisation, la part du hasard et celle de l'intention."
+            mots_cles: ["matière", "matériau", "œuvre", "texture"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La réalité concrète d'une production ou d'une œuvre », p.44"
+      - id: qualites-physiques-materiaux
+        titre: "Les qualités physiques des matériaux"
+        notions:
+          - id: cm1-qualites-physiques-materiaux
+            titre: "Les qualités physiques des matériaux"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Identifier des matériaux de récupération, non transformés ou issus de transformations physiques ou chimiques."
+              - "Repérer les incidences des qualités physiques des matériaux (porosité, rugosité, liquidité, malléabilité, etc.) sur la pratique plastique en deux dimensions et en volume."
+              - "Explorer les qualités physiques des matériaux, des médiums et des supports pour peindre, dessiner, sculpter ou construire."
+            mots_cles: ["matériaux", "récupération", "texture", "porosité"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « Les qualités physiques des matériaux », p.44-45"
+      - id: effets-geste-instrument
+        titre: "Les effets du geste et de l'instrument"
+        notions:
+          - id: cm1-effets-geste-instrument
+            titre: "Les effets du geste et de l'instrument"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Explorer les qualités plastiques et les effets visuels obtenus par la mise en œuvre d'outils, de médiums et de supports variés."
+              - "Découvrir les dialogues entre les instruments et la matière (touche, trace, texture, facture, griffure, traînée, découpe, coulure, etc.)."
+              - "Mettre en œuvre l'amplitude ou la retenue du geste, sa maîtrise ou son imprévisibilité."
+            mots_cles: ["pinceau", "outil", "trace", "geste", "texture"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « Les effets du geste et de l'instrument », p.45"
+      - id: materialite-qualite-couleur
+        titre: "La matérialité et la qualité de la couleur"
+        notions:
+          - id: cm1-materialite-qualite-couleur
+            titre: "La matérialité et la qualité de la couleur"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Découvrir les relations entre sensation colorée et qualités physiques de la matière colorée (pigments, substances, liants, siccatifs, etc.)."
+              - "Explorer les effets induits par les usages de la couleur (jus, glacis, empâtement, couverture, aplat, plage, giclure, etc.)."
+              - "Comprendre les interrelations entre quantité (formats, surfaces, étendue) et qualité (teintes, intensité, nuances, lumière) de la couleur."
+            mots_cles: ["couleur", "peinture", "pigment", "mélange"]
+            source: "Programme cycle 3, Arts plastiques, questionnement « La matérialité et la qualité de la couleur », p.45"

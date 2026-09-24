@@ -1,7 +1,7 @@
 # Référentiel du programme officiel — format des fichiers
 
-Un fichier YAML par classe et par matière : `bibliotheque/programme/<classe>/<matiere>.yaml` (UTF-8), avec `<classe>` parmi `5e`, `4e`, `3e`.
-Seule la classe de l'élève est chargée (champ `classe` du profil) ; sans classe, les trois sont chargées ensemble, d'où la règle d'identifiants uniques sur tous les niveaux.
+Un fichier YAML par classe et par matière : `bibliotheque/programme/<classe>/<matiere>.yaml` (UTF-8), avec `<classe>` parmi `CM1`, `5e`, `4e`, `3e` (la liste fait foi dans `niveaux` de `bibliotheque.yaml`).
+Seule la classe de l'élève est chargée (champ `classe` du profil) ; sans classe, toutes sont chargées ensemble, d'où la règle d'identifiants uniques sur tous les niveaux.
 C'est le référentiel : les fiches des autres bibliothèques s'y rattachent par l'identifiant de notion (voir `bibliotheque/README.md`).
 
 ```yaml
@@ -47,3 +47,4 @@ Règles :
 - Ids : minuscules, sans accents, tirets. Uniques sur **toute** la bibliothèque, tous niveaux confondus (en 4e et 5e, préfixés par la classe : `4e-...`, `5e-...`).
 - Programmes réécrits : quand un nouveau programme s'applique déjà à la classe l'année indiquée dans `annee_scolaire` (par exemple français et mathématiques en 5e à la rentrée 2026, arrêté du 18-2-2026), c'est lui qui est cité, pas l'ancien. Le dire dans `perimetre`.
 - En cas de doute sur l'appartenance à la classe : `niveau_programme: "cycle 4"`, pas de supposition.
+- Primaire : ids préfixés par la classe (`cm1-angles`). `niveau_programme` vaut la classe (`"CM1"`) si le texte la nomme, `"cours moyen"` si le texte vise CM1 et CM2 sans les distinguer, `"cycle 3"` si le texte n'est pas découpé par année. Pas de champ `brevet`.

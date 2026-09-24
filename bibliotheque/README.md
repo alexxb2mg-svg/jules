@@ -9,7 +9,7 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 
 | Type | Rôle | Exemple ici |
 |---|---|---|
-| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : programme officiel de 3e, 252 notions |
+| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : programme officiel de CM1 (158 notions) et de 3e (252 notions) |
 | `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
 | `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
@@ -42,7 +42,7 @@ modules:
 
 - **Priorité** : pour une même notion, si deux bibliothèques de fiches remplissent le même champ (par exemple `methode`), c'est la première de la liste qui l'emporte ; les champs manquants sont complétés par les suivantes.
 - **Directions** : elles s'additionnent (celle de la matière, puis celle de la notion). Jules les suit en priorité, sans jamais passer outre ses règles de pédagogie et de sécurité.
-- **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « 3e », « 3ème », « troisième »...).
+- **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « CM1 », « cours moyen première année », « 3e », « 3ème », « troisième »...).
 - Une bibliothèque illisible est signalée dans le journal et ignorée : Jules continue sans elle.
 
 ## Format

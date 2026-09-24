@@ -1,0 +1,210 @@
+matiere: "Sciences et technologie"
+id: sciences-et-technologie
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme de sciences et technologie du cycle 3"
+    reference: "Arrêté du 5-6-2026, BO n° 24 du 11 juin 2026 (MENE2611650A) — NOUVEAU en CM1 à la rentrée 2026"
+    url: "https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de sciences et technologie du cycle 3 (BO n° 24 du 11 juin 2026) organise chacun de
+  ses quatre domaines (« La matière, les mouvements et les signaux », « Les êtres vivants dans leur
+  environnement », « Le corps humain et la santé », « Les objets techniques au cœur de la société »)
+  en trois blocs d'« Objectifs d'apprentissage » explicitement séparés : « Cours moyen première
+  année » (CM1), « Cours moyen deuxième année » (CM2) puis « Sixième ». Seul le bloc « Cours moyen
+  première année » est retenu ici (niveau_programme "CM1"). Sont exclus : tout ce qui relève du bloc
+  CM2 ou du bloc Sixième (par exemple l'étude de l'électricité et des circuits électriques,
+  introduite seulement au bloc CM2 du domaine « Signaux » ; la reproduction des plantes à fleurs et
+  la nomenclature des organes reproducteurs, en CM2 ; l'alimentation humaine, en CM2), ainsi que les
+  paragraphes d'introduction narrative de chaque domaine et les principes généraux du programme
+  (contribution à la maitrise de la langue, à l'égalité filles-garçons, à la pensée informatique,
+  etc.), qui ne sont pas des objectifs d'apprentissage propres au CM1. Ce texte est fourni en OCR à
+  partir d'un PDF image : deux coquilles évidentes ont été corrigées dans les attendus sans changer
+  le sens (« Utiliser Un programme » → « utiliser un programme » ; « Dès le CM1; » / « au CM1; » →
+  « au CM1 »). Les pages citées renvoient aux marqueurs [p.N] de l'extraction OCR (une page
+  par page du PDF officiel), contrôlées une à une.
+themes:
+  - id: la-matiere-les-mouvements-et-les-signaux
+    titre: "La matière, les mouvements et les signaux"
+    chapitres:
+      - id: etats-et-constitution-de-la-matiere
+        titre: "États et constitution de la matière à l'échelle macroscopique"
+        notions:
+          - id: cm1-masse-et-volume
+            titre: "Comparer et mesurer une masse"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comparer les masses de différents objets à l'aide d'un dispositif simple qui peut être conçu par les élèves (poulie et cordelette, balance romaine, à fléau, à plateaux)."
+              - "Mesurer la masse d'un solide ou d'un liquide à l'aide d'une balance (balance romaine, balance à plateaux, balance électronique) en tarant la balance le cas échéant."
+            mots_cles: [masse, balance, tare, mesure]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « La matière, les mouvements et les signaux — États et constitution de la matière, Masse et volume », p.4"
+          - id: cm1-melanges-homogenes-heterogenes
+            titre: "Distinguer, séparer et faire dissoudre des mélanges"
+            niveau_programme: "CM1"
+            attendus:
+              - "Distinguer des mélanges homogènes et des mélanges hétérogènes."
+              - "Séparer les constituants d'un mélange de solides ou d'un mélange solide-liquide par tamisage, décantation, filtration."
+              - "Constater que certains solides peuvent se dissoudre dans l'eau."
+              - "Observer le phénomène de saturation lors du mélange d'un solide dans l'eau et en rendre compte quantitativement."
+            mots_cles: [mélange homogène, mélange hétérogène, tamisage, décantation, filtration, dissolution, saturation]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « La matière, les mouvements et les signaux — États et constitution de la matière, Mélanges », p.4"
+      - id: differents-types-de-mouvement
+        titre: "Différents types de mouvement"
+        notions:
+          - id: cm1-mesurer-distance-et-duree
+            titre: "Mesurer une distance et une durée lors du déplacement d'un objet"
+            niveau_programme: "CM1"
+            attendus:
+              - "Mesurer une distance lors du déplacement d'un objet."
+              - "Mesurer une durée, comme intervalle entre deux instants, lors du déplacement d'un objet."
+            mots_cles: [distance, durée, déplacement, chronomètre, instrument de mesure]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « La matière, les mouvements et les signaux — Différents types de mouvement », p.4"
+      - id: signaux
+        titre: "Signaux"
+        notions:
+          - id: cm1-ombres-et-materiaux-lumiere
+            titre: "Observer et produire des ombres ; matériaux transparents, opaques, translucides"
+            niveau_programme: "CM1"
+            attendus:
+              - "Observer et classer des matériaux selon qu'ils sont transparents, opaques ou translucides à la lumière."
+              - "Produire expérimentalement une ombre (déficit de lumière associé à une source) à l'aide d'un objet opaque et distinguer ombre propre et ombre portée (sur le sol ou sur un écran)."
+              - "Produire des ombres et associer leurs positions et leurs tailles à celles de la source lumineuse et de l'objet opaque."
+            mots_cles: [lumière, ombre propre, ombre portée, transparent, opaque, translucide]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « La matière, les mouvements et les signaux — Signaux, Lumière », p.5"
+          - id: cm1-phases-de-la-lune
+            titre: "Observer, schématiser et nommer les phases de la Lune"
+            niveau_programme: "CM1"
+            attendus:
+              - "Observer, schématiser et nommer les phases de la Lune."
+            mots_cles: [Lune, phases de la Lune, lunaison]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « La matière, les mouvements et les signaux — Signaux », p.5"
+  - id: les-etres-vivants-dans-leur-environnement
+    titre: "Les êtres vivants dans leur environnement"
+    chapitres:
+      - id: unite-et-diversite-du-vivant
+        titre: "Unité et diversité du vivant"
+        notions:
+          - id: cm1-espece-et-classification-emboitee
+            titre: "Définir une espèce et réaliser une classification en groupes emboîtés"
+            niveau_programme: "CM1"
+            attendus:
+              - "Définir une espèce comme un ensemble d'individus interféconds."
+              - "Réaliser une classification en groupes emboîtés à partir d'un petit nombre d'espèces possédant des attributs identifiés, puis en déduire les liens de parenté."
+            mots_cles: [espèce, interfécondité, classification, groupes emboîtés, parenté]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — Unité et diversité du vivant, Classification du vivant », p.10"
+          - id: cm1-identifier-especes-cle-determination
+            titre: "Identifier des espèces à l'aide d'une clé de détermination"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier des espèces en utilisant une clé de détermination."
+            mots_cles: [espèce, clé de détermination, biodiversité, environnement proche]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — Unité et diversité du vivant, Biodiversité actuelle et passée », p.10"
+      - id: reproduction-croissance-et-developpement
+        titre: "Reproduction, croissance et développement"
+        notions:
+          - id: cm1-cycle-de-vie-des-animaux
+            titre: "Décrire les étapes du développement des animaux et distinguer ovipare/vivipare"
+            niveau_programme: "CM1"
+            attendus:
+              - "Décrire les étapes du développement des animaux de la fécondation à la naissance."
+              - "Mettre en relation le type de fécondation (interne ou externe) avec le mode de reproduction ovipare et vivipare des animaux."
+            mots_cles: [fécondation, ovipare, vivipare, développement, naissance]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — Reproduction, croissance et développement, Cycle de vie », p.11"
+      - id: les-ecosystemes
+        titre: "Les écosystèmes"
+        notions:
+          - id: cm1-definir-un-ecosysteme
+            titre: "Définir un écosystème et caractériser un milieu"
+            niveau_programme: "CM1"
+            attendus:
+              - "Définir un écosystème comme un ensemble d'êtres vivants, leur milieu de vie et leurs relations."
+              - "À partir d'observations, de mesures et d'expériences dans son environnement proche, décrire les caractéristiques géographiques et physicochimiques d'un écosystème (altitude, latitude, humidité, pluviométrie, luminosité, température) et sa biodiversité, mettre en relation la présence d'êtres vivants avec les caractéristiques physiques du milieu, et caractériser des relations entre individus d'espèces distinctes (coopération et prédation)."
+            mots_cles: [écosystème, milieu de vie, biodiversité, coopération, prédation]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — Les écosystèmes, Écosystème », p.11"
+          - id: cm1-reseaux-alimentaires
+            titre: "Relier consommation de nourriture, croissance et réseaux alimentaires"
+            niveau_programme: "CM1"
+            attendus:
+              - "Relier la production de matière par les animaux à leur consommation de nourriture provenant d'autres êtres vivants."
+              - "Expérimenter pour identifier les besoins des végétaux et les relier à leur capacité à produire de la matière organique."
+              - "Représenter par un réseau les liens alimentaires entre les êtres vivants."
+              - "Envisager les conséquences d'une action humaine sur un réseau alimentaire."
+            mots_cles: [réseau alimentaire, besoins des végétaux, matière organique, chaine alimentaire]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — Les écosystèmes, Place des êtres vivants dans les réseaux alimentaires », p.11"
+      - id: la-terre-une-planete-active
+        titre: "La Terre, une planète active"
+        notions:
+          - id: cm1-mesures-meteorologiques
+            titre: "Réaliser et exploiter des mesures météorologiques"
+            niveau_programme: "CM1"
+            attendus:
+              - "Réaliser et exploiter des mesures météorologiques en utilisant des capteurs (thermomètre, pluviomètre, anémomètre)."
+              - "Caractériser à partir de données physiques les variations météorologiques de son espace de vie au cours du temps (journée, semaine, mois, saison)."
+            mots_cles: [météorologie, capteur, thermomètre, pluviomètre, anémomètre]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les êtres vivants dans leur environnement — La Terre, une planète active, La météorologie », p.11"
+  - id: le-corps-humain-et-la-sante
+    titre: "Le corps humain et la santé"
+    chapitres:
+      - id: le-cerveau
+        titre: "Le cerveau : introduction à quelques grandes fonctions"
+        notions:
+          - id: cm1-cerveau-grandes-fonctions
+            titre: "Localiser le cerveau et identifier ses grandes fonctions"
+            niveau_programme: "CM1"
+            attendus:
+              - "Localiser le cerveau et l'identifier comme un organe impliqué dans différentes fonctions : perception sensorielle, élaboration de la commande motrice, langage, apprentissage et mémorisation, élaboration des émotions, production des rêves."
+              - "Comprendre quelques mécanismes perceptifs et comment notre perception du monde peut être différente de sa réalité physique."
+              - "Déterminer des stratégies pour focaliser son attention sur une tâche identifiée et/ou mémoriser une information (mémoire à court terme et mémoire à long terme)."
+            mots_cles: [cerveau, perception, mémoire, attention, émotions]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Le corps humain et la santé — Le cerveau : introduction à quelques grandes fonctions », p.14"
+      - id: puberte-et-reproduction-humaine
+        titre: "Puberté et reproduction humaine"
+        notions:
+          - id: cm1-changements-morphologiques-puberte
+            titre: "Décrire les changements morphologiques du corps à la puberté"
+            niveau_programme: "CM1"
+            attendus:
+              - "Décrire et identifier les changements morphologiques du corps au moment de la puberté."
+              - "Comprendre que la puberté se produit à des âges différents selon les individus, qu'elle n'a pas les mêmes effets et que ces changements sont normaux."
+            mots_cles: [puberté, changements morphologiques, croissance]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Le corps humain et la santé — Puberté et reproduction humaine », p.15"
+  - id: les-objets-techniques-au-coeur-de-la-societe
+    titre: "Les objets techniques au cœur de la société"
+    chapitres:
+      - id: objets-techniques-et-besoins
+        titre: "Les objets techniques en réponse aux besoins des individus et de la société"
+        notions:
+          - id: cm1-evolutions-objets-techniques
+            titre: "Repérer les évolutions d'un objet et comparer des réponses à des besoins"
+            niveau_programme: "CM1"
+            attendus:
+              - "Repérer les évolutions d'un objet dans différents contextes (historique, géographique, économique, culturel, technologique, dans le cadre du développement durable)."
+              - "Comparer des réponses à des besoins dans différents contextes."
+            mots_cles: [besoin, objet technique, évolution, contexte, développement durable]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les objets techniques au cœur de la société — Les objets techniques en réponse aux besoins des individus et de la société », p.17"
+      - id: description-des-objets-techniques
+        titre: "Description du fonctionnement et de la constitution d'objets techniques"
+        notions:
+          - id: cm1-fonctions-et-croquis-objet-technique
+            titre: "Identifier les fonctions d'un objet technique et le décrire par un croquis"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier les fonctions assurées par les différents composants ou formes ou matériaux d'un objet technique."
+              - "Associer les solutions technologiques aux fonctions techniques."
+              - "Représenter graphiquement à l'aide de croquis à main levée les éléments d'un objet technique."
+              - "Identifier les sous-ensembles constituant un objet technique."
+              - "Décrire à l'aide d'un croquis le fonctionnement d'un objet technique."
+            mots_cles: [objet technique, fonction technique, croquis, sous-ensemble]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les objets techniques au cœur de la société — Description du fonctionnement et de la constitution d'objets techniques », p.17"
+      - id: programmation-des-objets-techniques
+        titre: "Programmation d'objets techniques"
+        notions:
+          - id: cm1-programme-simple-objet-technique
+            titre: "Traduire et utiliser un programme simple pour un objet technique"
+            niveau_programme: "CM1"
+            attendus:
+              - "Traduire un programme simple en langage naturel."
+              - "Utiliser un programme pour agir sur le comportement d'un objet technique."
+            mots_cles: [programme, algorithme, bloc, objet technique]
+            source: "Programme de sciences et technologie cycle 3 (BO 24 du 11-6-2026), Cours moyen première année, « Les objets techniques au cœur de la société — Programmation d'objets techniques, Algorithmes et programmation », p.17"

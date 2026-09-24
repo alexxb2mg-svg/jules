@@ -1,0 +1,101 @@
+matiere: Enseignement moral et civique
+id: emc
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société »"
+    reference: "Arrêté du 29-5-2024, BO n° 24 du 13 juin 2024 (NOR MENE2413934A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  L'EMC est déjà, depuis la rentrée 2024, régi par le programme publié au BO n° 24 du 13 juin 2024 (arrêté
+  du 29-5-2024) ; le CM1 fait partie des niveaux où ce programme s'applique dès sa première année de mise
+  en œuvre (rentrée 2024 : CP, CM1, 5e). Ce fichier ne retient que la séquence « CM1 : Faire société »
+  (p.11-12), structurée en trois volets : « Civisme et citoyenneté », « L'égalité dans la dignité » et
+  « Comment faire société ». Le préambule commun du programme (p.1-10 : valeurs et principes de la
+  République, place de l'EMC dans le parcours citoyen, citoyenneté républicaine, culture de la démocratie,
+  progressivité, méthodes) décrit des principes généraux transversaux à toute la scolarité et ne fournit
+  aucune notion propre au CM1 : il n'est donc pas découpé en notions, conformément à la consigne. Sont
+  exclues les séquences CP, CE1, CE2 (p.7-10) et CM2 « Vivre en République » (p.12-15).
+themes:
+  - id: cm1-faire-societe
+    titre: "CM1 : Faire société"
+    chapitres:
+      - id: civisme-et-citoyennete
+        titre: "Civisme et citoyenneté"
+        notions:
+          - id: cm1-civisme-action-bien-public
+            titre: "Le civisme, l'action au service du bien public"
+            niveau_programme: "CM1"
+            attendus:
+              - "Définir le civisme comme l'action d'un individu en fonction du bien public et dans le respect des règles."
+              - "Aborder des exemples de comportement civique dans la classe, l'école, dans la vie quotidienne, en ligne, et en faveur de l'environnement."
+            mots_cles: ["civisme", "bien public", "règles"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Civisme et citoyenneté », notion « Civisme », emc_2024.txt p.11"
+          - id: cm1-civisme-numerique
+            titre: "Le civisme numérique"
+            niveau_programme: "CM1"
+            attendus:
+              - "Aborder des exemples de comportement civique dans la classe, l'école, dans la vie quotidienne, en ligne, et en faveur de l'environnement."
+              - "Reconnaître des situations de danger, alerter et se mettre en sécurité (APS, APER)."
+            mots_cles: ["civisme numérique", "sobriété numérique", "recherche en ligne"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Civisme et citoyenneté », notion « Sobriété numérique », emc_2024.txt p.11"
+          - id: cm1-incivilites-regles-civilite
+            titre: "Les incivilités et les règles de civilité en société"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître et appliquer les règles de civilité en société."
+              - "Identifier les incivilités et comprendre pourquoi elles nuisent à la vie en commun."
+            mots_cles: ["incivilités", "civilité", "règles"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Civisme et citoyenneté », notion « Incivilités », emc_2024.txt p.11"
+          - id: cm1-democratie-suffrage-direct
+            titre: "La démocratie et le fonctionnement du suffrage direct"
+            niveau_programme: "CM1"
+            attendus:
+              - "Apprendre la signification du terme « démocratie » et le fonctionnement du suffrage direct."
+              - "Exposer les principes généraux de la démocratie en France en abordant les notions de citoyenneté, de vote et de participation aux décisions."
+              - "Articuler, à partir des articles 3, 6 et 16 de la Déclaration des droits de l'homme et du citoyen, une réflexion sur la démocratie scolaire et les notions de souveraineté populaire, de volonté générale, d'égalité devant la loi et de séparation des pouvoirs."
+            mots_cles: ["démocratie", "suffrage direct", "souveraineté populaire", "séparation des pouvoirs"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Civisme et citoyenneté », notion « Démocratie », emc_2024.txt p.11"
+      - id: egalite-dans-la-dignite
+        titre: "L'égalité dans la dignité"
+        notions:
+          - id: cm1-egalite-en-droit-dignite-personne
+            titre: "L'égalité en droit et la dignité de la personne humaine"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comprendre la notion d'égalité en droit."
+              - "Comprendre ce qu'implique le principe de dignité de la personne humaine."
+              - "Identifier, à partir de situations réelles ou fictives, des situations dans lesquelles l'égalité n'est pas respectée et des situations de discrimination ou d'atteintes à la personne d'autrui."
+              - "Développer, dans le cadre d'activités de groupe, le respect de son intégrité personnelle et de celle des autres, dans leur diversité (croyances, convictions, etc.)."
+            mots_cles: ["égalité", "dignité", "discrimination", "tolérance"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « L'égalité dans la dignité », emc_2024.txt p.11-12"
+          - id: cm1-cyberviolences-harcelement-en-ligne
+            titre: "Cyberviolences et harcèlement en ligne"
+            niveau_programme: "CM1"
+            attendus:
+              - "Aborder le phénomène des cyberviolences."
+              - "Comprendre que ces actes peuvent entraîner du harcèlement en ligne."
+              - "Connaître la règle et le droit applicables face aux cyberviolences."
+            mots_cles: ["cyberviolences", "harcèlement en ligne"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « L'égalité dans la dignité », emc_2024.txt p.12"
+      - id: comment-faire-societe
+        titre: "Comment faire société"
+        notions:
+          - id: cm1-fraternite-valeur-republique
+            titre: "La fraternité, valeur et principe de la République"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comprendre la notion de fraternité, valeur et principe de la République."
+              - "Participer à un débat réglé en exprimant ses opinions personnelles tout en tenant compte de la sensibilité des autres (nuancer son propos, modérer son attitude)."
+            mots_cles: ["fraternité", "débat réglé", "République"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Comment faire société », notion « Fraternité et empathie », emc_2024.txt p.12"
+          - id: cm1-empathie-lutte-discriminations-harcelement
+            titre: "L'empathie, moteur de la lutte contre les discriminations et le harcèlement"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comprendre ce qu'implique et permet l'empathie."
+              - "Développer l'empathie comme moteur pour lutter contre les discriminations, la violence physique ou verbale, le harcèlement, les cyberviolences."
+              - "Définir, par une discussion collective, l'égoïsme et l'altruisme."
+            mots_cles: ["empathie", "altruisme", "égoïsme", "discrimination"]
+            source: "Programme d'EMC 2024, séquence « CM1 : Faire société », volet « Comment faire société », notion « Fraternité et empathie », emc_2024.txt p.12"

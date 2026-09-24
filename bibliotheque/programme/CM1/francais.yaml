@@ -1,0 +1,399 @@
+matiere: Français
+id: francais
+niveau: CM1
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme de français pour le cycle 3"
+    reference: "Arrêté du 10-4-2025, BO n° 16 du 17 avril 2025 (MENE2504620A) — en vigueur en CM1 depuis la rentrée 2025"
+    url: "https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de français de cycle 3 (BO n° 16 du 17 avril 2025) est découpé en cinq domaines
+  (Lecture, Culture littéraire et artistique, Écriture, Oral, Vocabulaire, Grammaire et orthographe
+  grammaticale). Pour Lecture, Écriture, Oral, Vocabulaire et Grammaire, le texte détaille des
+  « objectifs d'apprentissage » séparément pour « Cours moyen première année » (CM1), « Cours moyen
+  deuxième année » (CM2) et « Sixième » : seule la section CM1 est retenue ici (niveau_programme
+  "CM1"). La Culture littéraire et artistique n'est en revanche pas déclinée par année pour le cours
+  moyen : ses six entrées littéraires sont présentées sous l'intitulé « Cours moyen première et
+  deuxième années » et donc communes CM1-CM2 (niveau_programme "cours moyen"), de même que quelques
+  repères chiffrés de lecture (« Au cours moyen, [...] au moins sept œuvres complètes par an »). Sont
+  exclus : tout ce qui relève explicitement du CM2 seul ou de la Sixième, ainsi que « Se repérer dans
+  la phrase complexe » (compétence introduite à partir du CM2 seulement d'après le sommaire, p.1) et
+  la notion de valeur des temps (introduite en Sixième, p.16).
+themes:
+  - id: lecture
+    titre: "Lecture"
+    chapitres:
+      - id: lire-avec-fluidite
+        titre: "Lire avec fluidité"
+        notions:
+          - id: cm1-fluidite-lecture
+            titre: "Lire avec fluidité (lecture silencieuse, mots fréquents, 110 mots/minute)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Lire sans effort un texte d'une page silencieusement ou à voix haute."
+              - "Lire à voix haute un texte court, après préparation, sans confondre les graphèmes, même complexes, et en tenant compte des marques de ponctuation."
+              - "Mémoriser de plus en plus de mots fréquents et irréguliers."
+              - "Lire correctement en ciblant 110 mots par minute en moyenne."
+            mots_cles: [fluidité, lecture silencieuse, mots par minute, graphèmes, ponctuation]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Cours moyen première année, « Lire avec fluidité », p.4"
+      - id: lire-a-voix-haute-avec-expressivite
+        titre: "Lire à voix haute avec expressivité"
+        notions:
+          - id: cm1-lecture-expressive
+            titre: "Lire à voix haute avec expressivité"
+            niveau_programme: "CM1"
+            attendus:
+              - "Lire à voix haute, avec aisance et expressivité, un texte court travaillé en amont."
+              - "Proposer une lecture avec un rythme fluide et régulier qui respecte la ponctuation et les groupes de sens pour faciliter la compréhension de l'auditoire."
+              - "Gérer l'intensité de sa voix (volume, débit)."
+            mots_cles: [lecture expressive, voix haute, intonation, rythme, ponctuation]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Cours moyen première année, « Lire à voix haute avec expressivité », p.4"
+      - id: lire-et-comprendre-seul
+        titre: "Lire et comprendre seul des textes, des documents et des images"
+        notions:
+          - id: cm1-comprehension-lecture-autonome
+            titre: "Développer des stratégies de compréhension en lecture autonome"
+            niveau_programme: "CM1"
+            attendus:
+              - "Développer des stratégies de compréhension."
+              - "Repérer, dans un texte, les informations explicites et pointer des informations implicites."
+              - "Distinguer, par la mise en page et les caractéristiques d'écriture spécifiques, un extrait de théâtre, un poème, un texte narratif."
+            mots_cles: [compréhension, informations explicites, informations implicites, théâtre, poème, texte narratif]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Cours moyen première année, « Lire et comprendre seul des textes, des documents et des images », p.4"
+      - id: lire-pour-apprendre-dans-toutes-les-disciplines
+        titre: "Lire et comprendre des textes, des documents et des images pour apprendre dans toutes les disciplines"
+        notions:
+          - id: cm1-lecture-documents-disciplines
+            titre: "Lire des documents pour apprendre dans toutes les disciplines"
+            niveau_programme: "CM1"
+            attendus:
+              - "Donner la nature et la source d'un document."
+              - "Identifier les différents genres représentés et repérer leurs caractéristiques majeures."
+              - "Trouver dans des documents simples les réponses à des questions."
+              - "Découvrir des documents composites et y repérer des informations grâce à un questionnement."
+            mots_cles: [document, source, genre, document composite, questionnement]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Cours moyen première année, « Lire et comprendre des textes, des documents et des images pour apprendre dans toutes les disciplines », p.4"
+      - id: lire-une-oeuvre-et-se-lapproprier
+        titre: "Lire une œuvre et se l'approprier"
+        notions:
+          - id: cm1-appropriation-oeuvre-lue
+            titre: "Lire une œuvre et se l'approprier"
+            niveau_programme: "CM1"
+            attendus:
+              - "Mettre en relation le texte lu avec une œuvre lue en classe afin de garder la mémoire des livres lus."
+              - "Créer des liens entre le texte lu et ses expériences personnelles, ses connaissances."
+              - "Varier les expériences de lecture (genres, formats, thèmes, etc.) afin de développer le plaisir de lire."
+              - "S'engager et persévérer dans sa lecture."
+            mots_cles: [appropriation, plaisir de lire, expériences de lecture, mémoire des livres lus]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Cours moyen première année, « Lire une œuvre et se l'approprier », p.4"
+          - id: cm1-volume-annuel-lectures
+            titre: "Volume annuel de lecture en CM1 (œuvres du patrimoine et littérature de jeunesse)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Au CM1, lire au moins 2 œuvres issues du patrimoine et 5 ouvrages de littérature de jeunesse dans l'année."
+              - "Garder trace de ses lectures et les partager."
+            mots_cles: [œuvres du patrimoine, littérature de jeunesse, carnet de lecture, quantité de lecture]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Lecture, tableau « Au cycle 3 », p.3-4"
+          - id: cm1-cours-moyen-sept-oeuvres
+            titre: "Lire au moins sept œuvres complètes par an au cours moyen"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Au cours moyen, faire lire au moins sept œuvres complètes par an, issues du patrimoine et de la littérature de jeunesse (contes, récits, fables, poèmes, pièces de théâtre, albums et textes documentaires)."
+            mots_cles: [sept œuvres, patrimoine, littérature de jeunesse, contes, fables, théâtre]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Lecture, Points de vigilance pour les professeurs, p.3"
+  - id: culture-litteraire-et-artistique
+    titre: "Culture littéraire et artistique"
+    chapitres:
+      - id: entrees-litteraires-cours-moyen
+        titre: "Entrées littéraires du cours moyen (CM1-CM2)"
+        notions:
+          - id: cm1-heroines-heros
+            titre: "Découvrir des héroïnes, des héros"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Réfléchir sur ce qui constitue une héroïne ou un héros à travers des œuvres de la littérature patrimoniale et de la littérature de jeunesse (épopée, roman, fable, conte, nouvelle, pièce de théâtre)."
+              - "Comprendre les motivations de ces personnages et percevoir leurs éventuelles fragilités."
+              - "S'interroger sur les valeurs morales et culturelles dont ces personnages sont porteurs."
+            mots_cles: [héros, héroïne, épopée, conte, fable, valeurs]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Découvrir des héroïnes, des héros », p.6"
+          - id: cm1-merveilleux-etrange
+            titre: "Se confronter au merveilleux, à l'étrange"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Découvrir des mondes imaginaires et éveiller la sensibilité à l'inconnu : la peur, le désir d'évasion et la curiosité pour l'inexplicable."
+              - "Allier la découverte du texte littéraire à une réflexion sur notre rapport à l'inexplicable, au rêve et à la peur."
+              - "Développer l'esprit critique et la créativité."
+            mots_cles: [merveilleux, étrange, imaginaire, peur, esprit critique]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Se confronter au merveilleux, à l'étrange », p.6"
+          - id: cm1-imaginer-vivre-autres-vies
+            titre: "Imaginer et vivre d'autres vies"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "S'engager personnellement dans la lecture d'œuvres intégrales patrimoniales ou contemporaines ou d'extraits choisis, en s'identifiant aux personnages ou en s'en démarquant."
+              - "Se projeter dans des existences nouvelles grâce aux récits de vie offerts par la littérature de jeunesse."
+              - "Développer sa sensibilité, son empathie et sa créativité, et renforcer son goût pour la lecture."
+            mots_cles: [récits de vie, empathie, identification, littérature de jeunesse]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Imaginer et vivre d'autres vies », p.7"
+          - id: cm1-comprendre-interroger-morale
+            titre: "Comprendre et interroger la morale"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "À partir d'une œuvre intégrale ou d'extraits choisis, découvrir des fondements de la vie en commun : la justice, la tolérance, la liberté, le respect des différences, la préservation de l'environnement."
+              - "Comprendre les valeurs morales portées par les personnages et s'interroger sur les conséquences de leurs actions sur le collectif."
+              - "Développer son esprit critique et sa propre sensibilité."
+            mots_cles: [morale, justice, tolérance, liberté, valeurs]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Comprendre et interroger la morale », p.7"
+          - id: cm1-poesie-gout-des-mots
+            titre: "Savourer le goût des mots, imaginer et créer en poésie"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Écouter et lire un recueil de poèmes et de textes poétiques de siècles différents."
+              - "Développer une posture subjective de lecteur fondée sur la sensibilité à la langue et l'émotion qu'elle procure."
+              - "Mesurer les écarts possibles à la norme construite en grammaire et vocabulaire, les reconnaître et être capable d'en jouer."
+            mots_cles: [poésie, recueil de poèmes, sensibilité, émotion, mots]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Savourer le goût des mots, imaginer et créer en poésie », p.7"
+          - id: cm1-se-decouvrir-saffirmer
+            titre: "Se découvrir, s'affirmer dans le rapport aux autres"
+            niveau_programme: "cours moyen"
+            attendus:
+              - "Se découvrir : une aventure à la fois intime et collective, à travers des personnages de récits, de romans, de bandes dessinées et de pièces de théâtre."
+              - "Face aux défis de l'existence, ces personnages se construisent et se redéfinissent au gré de leurs rencontres et de leur propre cheminement."
+              - "S'ouvrir à la complexité humaine et grandir grâce aux lectures, échanges et activités conduites en classe."
+            mots_cles: [se découvrir, rencontres, personnages, complexité humaine]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Culture littéraire et artistique, Cours moyen première et deuxième années, « Se découvrir, s'affirmer dans le rapport aux autres », p.7"
+  - id: ecriture
+    titre: "Écriture"
+    chapitres:
+      - id: ecrire-a-la-main-de-maniere-fluide-et-efficace
+        titre: "Écrire à la main de manière fluide et efficace"
+        notions:
+          - id: cm1-ecriture-cursive-et-copie
+            titre: "Copier et produire des textes en écriture cursive"
+            niveau_programme: "CM1"
+            attendus:
+              - "Copier et produire des textes."
+              - "Acquérir des stratégies de copie."
+            mots_cles: [écriture cursive, copie, stratégies de copie]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Écriture, Cours moyen première année, « Écrire à la main de manière fluide et efficace », p.9"
+      - id: ecrire-pour-reflechir-apprendre-et-memoriser
+        titre: "Écrire pour réfléchir, apprendre et mémoriser"
+        notions:
+          - id: cm1-ecrire-pour-reflechir
+            titre: "Écrire pour réfléchir, apprendre et mémoriser"
+            niveau_programme: "CM1"
+            attendus:
+              - "Écrire pour repérer et trier les informations pertinentes."
+              - "Produire des écrits réflexifs courts pour s'entraîner à expliquer un point de vue."
+              - "Reformuler, avec l'aide du professeur et de ses pairs, l'essentiel d'une leçon ou d'une activité pour se l'approprier."
+              - "Produire des écrits courts pour appliquer une règle de grammaire ou employer et mémoriser le lexique appris."
+            mots_cles: [écrit réflexif, reformuler, résumer une leçon, point de vue]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Écriture, Cours moyen première année, « Écrire pour réfléchir, apprendre et mémoriser », p.9"
+      - id: produire-des-ecrits-varies
+        titre: "Produire des écrits variés"
+        notions:
+          - id: cm1-produire-ecrits-varies
+            titre: "Produire des écrits variés (raconter, expliquer, textes personnels)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Découvrir et explorer des situations variées d'écriture : raconter, expliquer."
+              - "Écrire au quotidien des textes personnels (donner son avis, imaginer une suite de texte, formuler des hypothèses, etc.)."
+              - "Utiliser le brouillon pour préparer son texte."
+              - "Exercer sa vigilance quant au respect des codes de l'écrit."
+              - "Prendre conscience des composantes de la cohérence textuelle."
+              - "Améliorer tout ou partie de son texte à partir des pistes données par l'enseignant et/ou ses pairs."
+            mots_cles: [brouillon, texte personnel, cohérence textuelle, raconter, expliquer]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Écriture, Cours moyen première année, « Produire des écrits variés », p.9"
+  - id: oral
+    titre: "Oral"
+    chapitres:
+      - id: ecouter-pour-comprendre
+        titre: "Écouter pour comprendre"
+        notions:
+          - id: cm1-ecouter-pour-comprendre
+            titre: "Écouter pour comprendre"
+            niveau_programme: "CM1"
+            attendus:
+              - "Construire sa posture d'auditeur en maintenant une écoute active orientée en fonction du but."
+              - "Comprendre un message oral provenant d'un tiers ou d'un média (interview, reportage)."
+              - "Manifester sa compréhension des textes entendus."
+              - "Identifier les caractéristiques des différents genres de discours."
+              - "Manifester sa sensibilité à l'écoute d'un texte."
+            mots_cles: [écoute active, message oral, compréhension orale, genres de discours]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Oral, Cours moyen première année, « Écouter pour comprendre », p.11"
+      - id: dire-pour-etre-compris
+        titre: "Dire pour être compris dans toutes les disciplines"
+        notions:
+          - id: cm1-dire-pour-etre-compris
+            titre: "Dire pour être compris dans toutes les disciplines"
+            niveau_programme: "CM1"
+            attendus:
+              - "Réaliser une production orale, individuelle ou collective, claire et organisée pour raconter, expliquer, argumenter, justifier, partager des connaissances."
+              - "Faire vivre un texte littéraire, historique ou documentaire par une lecture expressive devant un public."
+              - "Utiliser l'oral comme outil réflexif."
+            mots_cles: [prise de parole, raconter, expliquer, lecture expressive]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Oral, Cours moyen première année, « Dire pour être compris dans toutes les disciplines », p.12"
+      - id: participer-echanges-verbaux
+        titre: "Participer à des échanges verbaux"
+        notions:
+          - id: cm1-participer-echanges-verbaux
+            titre: "Participer à des échanges verbaux"
+            niveau_programme: "CM1"
+            attendus:
+              - "Prendre la parole en respectant les codes de la communication."
+              - "Utiliser des structures de langage en fonction du but recherché."
+              - "Construire et ajuster son propos pour présenter de façon claire et ordonnée des explications, des informations, un point de vue."
+              - "Se servir du langage oral pour construire une analyse collective en interaction."
+              - "Adapter son discours en fonction de la situation de communication."
+              - "Porter un regard critique sur l'oral produit."
+            mots_cles: [échange, débat, prise de parole, regard critique]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Oral, Cours moyen première année, « Participer à des échanges verbaux », p.12"
+  - id: vocabulaire
+    titre: "Vocabulaire"
+    chapitres:
+      - id: enrichir-son-vocabulaire
+        titre: "Enrichir son vocabulaire dans toutes les disciplines"
+        notions:
+          - id: cm1-enrichir-vocabulaire
+            titre: "Enrichir son vocabulaire dans toutes les disciplines"
+            niveau_programme: "CM1"
+            attendus:
+              - "Approfondir, en contexte, le vocabulaire appris au cycle 2."
+              - "Mémoriser des mots et expressions en s'appuyant sur des corpus variés issus de toutes les disciplines."
+              - "Identifier les mots inconnus, lors de ses différentes lectures, et rechercher leur signification en s'appuyant sur la morphologie et sur le contexte."
+            mots_cles: [vocabulaire, corpus de mots, mots inconnus, morphologie, contexte]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Vocabulaire, Cours moyen première année, « Enrichir son vocabulaire dans toutes les disciplines », p.14"
+      - id: etablir-relations-entre-les-mots
+        titre: "Établir des relations entre les mots"
+        notions:
+          - id: cm1-relations-entre-mots
+            titre: "Établir des relations entre les mots (morphologie, synonymie, antonymie)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Établir des relations morphologiques et sémantiques entre les mots."
+              - "Comprendre et utiliser les notions de synonymie et antonymie."
+            mots_cles: [synonyme, antonyme, famille de mots, relations sémantiques]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Vocabulaire, Cours moyen première année, « Établir des relations entre les mots », p.14"
+      - id: reemployer-le-vocabulaire-etudie
+        titre: "Réemployer le vocabulaire étudié"
+        notions:
+          - id: cm1-reemployer-vocabulaire
+            titre: "Réemployer le vocabulaire étudié à l'oral et à l'écrit"
+            niveau_programme: "CM1"
+            attendus:
+              - "À l'oral et à l'écrit, utiliser à bon escient les mots appris et se les approprier durablement."
+              - "À l'oral et à l'écrit, utiliser à bon escient les mots polysémiques dans différents contextes disciplinaires."
+            mots_cles: [réemploi, mots polysémiques, oral, écrit]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Vocabulaire, Cours moyen première année, « Réemployer le vocabulaire étudié », p.14"
+      - id: memoriser-lorthographe-des-mots
+        titre: "Mémoriser l'orthographe des mots"
+        notions:
+          - id: cm1-memoriser-orthographe-mots
+            titre: "Mémoriser l'orthographe des mots fréquents"
+            niveau_programme: "CM1"
+            attendus:
+              - "Écrire correctement les mots les plus fréquents de la langue en s'appuyant sur les régularités et la formation."
+              - "S'appuyer sur la dimension morphologique des mots rencontrés lors de ses différentes lectures pour les orthographier."
+            mots_cles: [orthographe lexicale, mots fréquents, régularités, morphologie]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Vocabulaire, Cours moyen première année, « Mémoriser l'orthographe des mots », p.14"
+  - id: grammaire-et-orthographe-grammaticale
+    titre: "Grammaire et orthographe grammaticale"
+    chapitres:
+      - id: identifier-constituants-phrase-simple
+        titre: "Identifier les constituants d'une phrase simple"
+        notions:
+          - id: cm1-types-et-formes-de-phrases
+            titre: "Connaître les trois types de phrases et leurs formes"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier les trois types de phrases (déclaratif, interrogatif, impératif ou injonctif) et comprendre leurs effets dans un texte simple."
+              - "Identifier les principales formes de phrases (négative, exclamative) et comprendre leurs effets dans un texte simple."
+              - "Transformer à l'oral puis à l'écrit des phrases d'un type à un autre, d'une forme à une autre."
+              - "Distinguer et produire différentes réalisations du type interrogatif à l'oral comme à l'écrit (inversion du sujet, est-ce que, intonation ascendante à l'oral, etc.), en employant le point d'interrogation."
+            mots_cles: [type de phrase, forme de phrase, phrase interrogative, phrase exclamative]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Identifier les constituants d'une phrase simple, Connaître les trois types de phrases et leurs formes », p.17"
+          - id: cm1-analyser-phrase-simple
+            titre: "Analyser une phrase simple (sujet, verbe, compléments)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Consolider l'identification du verbe conjugué et l'identification du groupe sujet."
+              - "Identifier les différents types de sujets (pronoms personnels, groupes nominaux, plusieurs noms)."
+              - "Distinguer le complément d'objet du complément circonstanciel."
+              - "Après s'être assuré de la capacité à identifier le complément d'objet, différencier complément d'objet direct et complément d'objet indirect dans des phrases prototypiques sans ambigüité."
+              - "Identifier les groupes circonstanciels (sans les distinguer)."
+              - "Comprendre et utiliser les manipulations syntaxiques (déplacement, suppression, substitution, addition, encadrement) au service de la production d'écrits et de l'étude de la langue."
+            mots_cles: [sujet, verbe, complément d'objet, complément circonstanciel, manipulation syntaxique]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Analyser une phrase simple », p.17"
+          - id: cm1-nature-et-fonction
+            titre: "Distinguer les notions de nature (classe grammaticale) et de fonction"
+            niveau_programme: "CM1"
+            attendus:
+              - "Se familiariser avec les notions de nature et fonction."
+            mots_cles: [nature, classe grammaticale, fonction]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Distinguer les notions de nature ou classe grammaticale et de fonction », p.17"
+          - id: cm1-identifier-mots-selon-nature
+            titre: "Identifier les mots selon leur nature (déterminants, conjonctions, adverbes, pronoms)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier et nommer les déterminants suivants : articles définis, indéfinis, déterminants possessifs et démonstratifs."
+              - "Identifier et nommer les conjonctions de coordination."
+              - "Identifier et nommer les adverbes les plus fréquents (caractère invariable souligné)."
+              - "Distinguer les pronoms personnels sujets des pronoms personnels compléments."
+              - "Remplacer un groupe nominal sujet par un pronom personnel sujet, et un groupe nominal objet par un pronom personnel objet."
+            mots_cles: [déterminant, conjonction de coordination, adverbe, pronom personnel]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Identifier les mots, un groupe de mots selon leur nature », p.17"
+          - id: cm1-analyser-groupe-nominal
+            titre: "Analyser le groupe nominal (nom noyau, épithète)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Repérer des groupes nominaux dans une phrase simple et nommer les différents éléments qui les constituent (Dét. + Nom ; Dét. + Nom + Adj. ; Dét. + Adj. + Nom)."
+              - "Repérer et nommer le nom noyau dans le groupe nominal."
+              - "Aborder la notion d'épithète."
+            mots_cles: [groupe nominal, nom noyau, adjectif, épithète]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Analyser le groupe nominal », p.18"
+      - id: acquerir-orthographe-grammaticale
+        titre: "Acquérir l'orthographe grammaticale"
+        notions:
+          - id: cm1-classes-de-mots-variations
+            titre: "Identifier les classes de mots subissant des variations"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier, classer et repérer les critères de variations (genre, nombre, personne, temps) au sein des différentes classes grammaticales : déterminant, nom, adjectif, pronom personnel, verbe."
+              - "Retenir et restituer les variations des déterminants : articles, déterminants possessifs et démonstratifs."
+              - "Mobiliser ces connaissances dans les activités d'écriture ou d'entraînement par mémorisation ou par l'utilisation d'outils de référence."
+            mots_cles: [variation, genre, nombre, déterminant, adjectif]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Acquérir l'orthographe grammaticale, Identifier les classes de mots subissant des variations », p.18"
+          - id: cm1-chaine-accords-groupe-nominal
+            titre: "Réaliser la chaîne d'accords au sein du groupe nominal"
+            niveau_programme: "CM1"
+            attendus:
+              - "Consolider la connaissance et la maîtrise des variations les plus régulières en genre et nombre des noms, des adjectifs, des déterminants (les formes irrégulières sont introduites et stabilisées au cours du cycle)."
+              - "Repérer le donneur d'accord du groupe nominal : le nom noyau."
+              - "Transformer le genre et le nombre de groupes nominaux simples isolés puis inscrits dans des phrases simples, en effectuant toutes les variations nécessaires."
+              - "Justifier les variations morphologiques effectuées."
+              - "Systématiser la chaîne d'accords dans le groupe nominal."
+            mots_cles: [accord, groupe nominal, genre, nombre, donneur d'accord]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Réaliser la chaîne d'accords au sein du groupe nominal », p.18"
+          - id: cm1-accorder-sujet-verbe
+            titre: "Accorder le sujet et le verbe"
+            niveau_programme: "CM1"
+            attendus:
+              - "Repérer le sujet du verbe, notamment le nom noyau dans le cas d'un groupe nominal."
+              - "Accorder le participe passé avec le sujet dans le cas de l'emploi avec l'auxiliaire être."
+              - "Transformer à l'écrit et à l'oral des phrases en faisant varier le temps ou le sujet ; respecter toutes les chaînes d'accord."
+              - "Mémoriser les marques de personne des verbes les plus fréquents aux temps de conjugaison étudiés pour apprendre à accorder sujet et verbe dans tous types de productions écrites."
+              - "Distinguer les variations morphologiques du verbe de celles du nom (ex : il élève / tu élèves / elles élèvent vs une élève / des élèves)."
+            mots_cles: [accord sujet-verbe, participe passé, auxiliaire être, conjugaison]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Accorder le sujet et le verbe », p.18"
+          - id: cm1-conjugaison-cm1
+            titre: "Approfondir sa maîtrise de la conjugaison (présent, imparfait, futur, passé composé)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la composition du passé composé en deux parties (auxiliaire + participe passé) ; retrouver la forme infinitive du verbe."
+              - "Effectuer la transformation à la forme négative d'un verbe au passé composé en insérant les adverbes de négation à leur juste place."
+              - "Identifier par une première approche la composition de la terminaison des verbes conjugués : la marque de temps et la marque de personne."
+              - "Connaître les marques de personne pour le présent de l'indicatif, l'imparfait et le futur ; savoir isoler les marques de temps de l'imparfait (-ai-, -i-) et du futur (-r-)."
+              - "Mettre en évidence les variations du radical pour certains verbes du premier groupe (avant-dernière syllabe avec e muet ou é, verbes en -yer, -eler et -eter, -cer, -ger)."
+              - "Conjugaisons à mémoriser et à maîtriser : présent de l'indicatif, imparfait, futur, passé composé des verbes être et avoir, des verbes du premier et du deuxième groupe et des verbes irréguliers du troisième groupe (faire, aller, dire, venir, pouvoir, voir, vouloir, prendre)."
+            mots_cles: [conjugaison, présent, imparfait, futur, passé composé, radical]
+            source: "Programme de français cycle 3 (BO 16 du 17-4-2025), Grammaire et orthographe grammaticale, Cours moyen première année, « Approfondir sa maîtrise de la conjugaison », p.18"
