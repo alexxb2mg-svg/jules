@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: se-reperer-questions-art
+declencheurs:
+- identifier le mouvement artistique d'une oeuvre
+- situer une oeuvre dans le temps
+- reconnaitre un artiste
+- culture artistique
+- a quelle epoque appartient ce tableau
+- difference entre l'art et le reel
+- art et realite
+essentiel: 'Se repérer dans les questions de l''art, c''est reconnaître des œuvres de domaines et d''époques variés
+  (peinture, sculpture, architecture, photographie, arts numériques…) appartenant au patrimoine.
+
+  Cela suppose d''identifier des caractéristiques plastiques (couleurs, matières, composition) et culturelles qui
+  permettent de situer une œuvre dans une aire géographique et un temps historique.
+
+  C''est aussi savoir proposer une analyse et une interprétation d''une œuvre, en tenant compte à la fois du point
+  de vue de l''auteur (ce qu''il a voulu faire) et de celui du spectateur (ce qu''il en perçoit).
+
+  Cette compétence prépare directement l''histoire des arts : une œuvre se comprend mieux quand on sait d''où elle
+  vient et à quelles questions artistiques elle répond.'
+methode:
+- 'Observer d''abord les caractéristiques visibles : matériau, technique, format, couleurs.'
+- Chercher des indices de date ou de lieu (vêtements, objets, style architectural, signature).
+- Relier ces indices à un mouvement ou une période déjà rencontrés en cours.
+- Formuler une interprétation prudente, en distinguant ce qu'on observe de ce qu'on suppose.
+erreurs_frequentes:
+- Confondre le sujet représenté (ce que montre l'œuvre) et le mouvement artistique (comment elle le montre).
+- Dater une œuvre uniquement à partir de son sujet, sans regarder la technique.
+- Donner une interprétation sans l'appuyer sur un élément observable de l'œuvre.
+exemple:
+  enonce: Une peinture montre des touches de couleur juxtaposées, non mélangées, représentant un paysage en plein
+    air, avec des ombres colorées.
+  solution: Ces caractéristiques (touches visibles, peinture en extérieur, ombres colorées plutôt que grises) sont
+    typiques de l'impressionnisme, mouvement français de la deuxième moitié du XIXe siècle.
+exercices:
+- enonce: Choisis une œuvre étudiée en cours cette année. Note trois caractéristiques plastiques (sans le titre)
+    qui permettraient à un camarade de deviner à quelle période elle appartient.
+  indices:
+  - Pense à la technique, à la composition, aux couleurs.
+  solution: Réussite si un camarade peut retrouver approximativement la période à partir des trois indices donnés.
+- enonce: Devant une œuvre inconnue (livre, exposition, internet), essaie de proposer une interprétation en une
+    phrase, en citant l'élément de l'œuvre qui la justifie.
+  indices:
+  - « Je pense que… parce que je vois… » est une bonne structure.
+  solution: Réussite si l'interprétation s'appuie sur un élément visible précis, même si elle reste une hypothèse.
+sources:
+- titre: Vikidia, « Perspective »
+  url: https://fr.vikidia.org/w/index.php?title=Perspective&oldid=2335729
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Art abstrait »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_abstrait&oldid=239711738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

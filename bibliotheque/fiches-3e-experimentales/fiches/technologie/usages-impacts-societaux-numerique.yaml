@@ -1,0 +1,100 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: usages-impacts-societaux-numerique
+declencheurs:
+- cybersécurité
+- mot de passe
+- données personnelles
+- cyberharcèlement
+- piratage
+- identité numérique
+- traces internet
+- octet
+essentiel: 'Un système d''information collecte, stocke et fait circuler des données numériques. Ces données sont
+  mesurées en bits (0 ou 1, la plus petite unité) et en octets (un octet = 8 bits). Elles sont organisées en fichiers,
+  eux-mêmes rangés dans une arborescence de dossiers.
+
+
+  La cybersécurité regroupe les moyens de protéger ces données contre le piratage : mot de passe solide et jamais
+  partagé, mise à jour régulière des logiciels, vérification de l''adresse d''un site avant de s''y connecter, ne
+  jamais ouvrir un lien envoyé par un inconnu.
+
+
+  Les données personnelles sont toutes les informations qui identifient une personne (nom, adresse IP, photo, localisation).
+  Elles laissent des traces numériques, volontaires (ce que l''on publie soi-même) ou involontaires (adresse IP,
+  cookies qui enregistrent la navigation) : l''ensemble de ces traces forme l''identité numérique d''une personne.
+
+
+  La cyberviolence regroupe les comportements malveillants en ligne (insultes, harcèlement, usurpation d''identité,
+  diffusion d''images sans accord) : chacun est responsable de ce qu''il publie ou partage.'
+methode:
+- 'Pour situer une quantité de données, convertir en bits/octets : 1 octet = 8 bits, 1 kilooctet ≈ 1000 octets,
+  1 mégaoctet ≈ 1000 kilooctets.'
+- 'Pour sécuriser un compte, associer chaque risque à une règle : mot de passe deviné → mot de passe long et unique
+  ; logiciel non à jour → mise à jour régulière ; lien suspect → ne pas cliquer.'
+- Pour repérer une donnée personnelle, se demander si elle permet, seule ou combinée à d'autres, d'identifier une
+  personne précise.
+- 'Face à une cyberviolence subie ou vue, ne jamais répondre par la violence : garder une preuve (capture d''écran),
+  en parler à un adulte, signaler le contenu.'
+vocabulaire:
+- terme: bit
+  definition: plus petite unité d'information numérique, qui vaut 0 ou 1
+- terme: octet
+  definition: groupe de 8 bits, permettant de coder 256 valeurs différentes
+- terme: donnée personnelle
+  definition: information qui permet d'identifier une personne
+- terme: identité numérique
+  definition: ensemble des traces (volontaires et involontaires) qu'une personne laisse sur Internet
+erreurs_frequentes:
+- 'Croire qu''un pseudonyme protège totalement l''anonymat : l''adresse IP et les recoupements permettent souvent
+  de retrouver une personne.'
+- Utiliser le même mot de passe sur plusieurs sites.
+- Penser qu'une information supprimée disparaît réellement d'Internet (des copies peuvent subsister).
+- Confondre octet (8 bits, unité de stockage) et bit (unité élémentaire).
+- Rester silencieux face à une cyberviolence par peur ou par honte, au lieu d'en parler à un adulte.
+exemple:
+  enonce: Une élève reçoit un message d'un inconnu contenant un lien « clique ici pour gagner un cadeau ». Que doit-elle
+    faire, et pourquoi ?
+  solution: 'Elle ne doit pas cliquer sur le lien : il peut s''agir d''un lien piégé (hameçonnage) qui vole des
+    données personnelles ou installe un logiciel malveillant. Elle peut en parler à un adulte et supprimer ou signaler
+    le message.'
+exercices:
+- enonce: Un fichier pèse 4 000 octets. Combien de bits représente-t-il ?
+  indices:
+  - 1 octet = 8 bits.
+  solution: 4 000 × 8 = 32 000 bits.
+- enonce: 'Classer ces informations en « donnée personnelle » ou « pas une donnée personnelle » : le prénom d''un
+    élève, la couleur préférée d''une classe entière, une adresse IP, la météo du jour.'
+  indices:
+  - Une donnée personnelle permet d'identifier une personne précise.
+  solution: 'Donnée personnelle : prénom, adresse IP. Pas une donnée personnelle : couleur préférée de toute une
+    classe (ne cible personne en particulier), météo du jour.'
+- enonce: Proposer trois règles simples pour sécuriser un compte en ligne.
+  indices:
+  - Pense au mot de passe, aux mises à jour, aux liens inconnus.
+  solution: 'Exemples valables : choisir un mot de passe long et différent pour chaque site, ne jamais le communiquer,
+    mettre à jour régulièrement ses applications, ne pas cliquer sur un lien envoyé par un numéro ou un expéditeur
+    inconnu, se déconnecter après usage sur un ordinateur partagé.'
+sources:
+- titre: Vikidia, « Cybersécurité »
+  url: https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Identité numérique »
+  url: https://fr.vikidia.org/w/index.php?title=Identit%C3%A9_num%C3%A9rique&oldid=2492634
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Octet »
+  url: https://fr.wikipedia.org/w/index.php?title=Octet&oldid=238694572
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

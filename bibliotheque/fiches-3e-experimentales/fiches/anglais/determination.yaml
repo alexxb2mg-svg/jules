@@ -1,0 +1,91 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: determination
+declencheurs:
+- a an the
+- some any
+- much many
+- article anglais
+- quantifieur anglais
+- beaucoup de en anglais
+- déterminant anglais
+essentiel: 'En anglais, les articles indéfinis « a » et « an » signifient « un/une » et s''utilisent devant un nom
+  dénombrable au singulier : « a » devant un son consonne (a book), « an » devant un son voyelle (an apple). L''article
+  défini « the » signifie « le/la/les » et ne varie jamais.
+
+
+  Les quantifieurs « some » et « any » signifient tous les deux « du/de la/des/quelques » : « some » s''utilise
+  dans les phrases affirmatives (I have some apples) et dans les offres ou demandes polies (Would you like some
+  tea?), tandis que « any » s''utilise dans les phrases négatives (I don''t have any apples) et dans les questions
+  ordinaires (Do you have any apples?).
+
+
+  « Much » s''utilise devant un nom indénombrable (much water, much time), surtout dans les phrases négatives et
+  les questions ; « many » s''utilise devant un nom dénombrable au pluriel (many books, many friends). Dans les
+  phrases affirmatives, on préfère souvent « a lot of » à « much » et « many ».'
+methode:
+- 'Vérifier si le nom est dénombrable (countable, qui a un pluriel : book/books) ou indénombrable (uncountable,
+  sans pluriel : water, information) avant de choisir much/many.'
+- Utiliser « a » devant un son consonne et « an » devant un son voyelle, en écoutant le son du mot, pas seulement
+  sa lettre (« an hour » car « h » ne se prononce pas).
+- Choisir « some » pour l'affirmatif et les offres polies, « any » pour le négatif et les questions ordinaires.
+- Utiliser « many » avec un nom dénombrable pluriel et « much » avec un nom indénombrable.
+vocabulaire:
+- terme: nom dénombrable
+  definition: nom qui peut se compter et avoir un pluriel (a book, two books)
+- terme: nom indénombrable
+  definition: nom qui ne se compte pas et n'a pas de pluriel (water, information, advice)
+erreurs_frequentes:
+- Utiliser « many » avec un nom indénombrable (« many water » au lieu de « much water »).
+- Utiliser « a » devant un son voyelle au lieu de « an » (« a apple » au lieu de « an apple »).
+- Employer « any » dans une phrase affirmative classique au lieu de « some ».
+exemple:
+  enonce: 'Choisir entre « much » et « many » : « How ___ friends do you have? » et « How ___ time do you have?
+    »'
+  solution: « How many friends do you have? » (friends est dénombrable, pluriel) et « How much time do you have?
+    » (time est indénombrable).
+exercices:
+- enonce: 'Compléter avec « some » ou « any » : « I don''t have ___ money left. »'
+  indices:
+  - 'La phrase est négative : some ou any ?'
+  solution: '« any » : « I don''t have any money left. » (phrase négative).'
+- enonce: Choisir « a » ou « an » devant « umbrella » et « university ».
+  indices:
+  - Écoute le son au début du mot, pas seulement la lettre.
+  solution: « an umbrella » (le son « u » se prononce comme une voyelle) mais « a university » (le son au début
+    se prononce « you », comme une consonne).
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais/Articles »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Articles&oldid=563541
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wiktionnaire, « some »
+  url: https://fr.wiktionary.org/w/index.php?title=some&oldid=39764227
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wiktionnaire, « any »
+  url: https://fr.wiktionary.org/w/index.php?title=any&oldid=39423473
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wiktionnaire, « much »
+  url: https://fr.wiktionary.org/w/index.php?title=much&oldid=36091412
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wiktionnaire, « many »
+  url: https://fr.wiktionary.org/w/index.php?title=many&oldid=39766000
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

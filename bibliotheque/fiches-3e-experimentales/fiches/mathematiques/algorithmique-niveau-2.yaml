@@ -1,0 +1,65 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: algorithmique-niveau-2
+declencheurs: ["scratch", "lutin", "drapeau vert", "variable", "variables", "mettre", "ajouter", "demander", "si alors", "sinon"]
+essentiel: 'Un script démarre en réponse à un événement : « quand le drapeau vert est cliqué », « quand la touche
+  espace est pressée », « quand ce lutin est cliqué »…
+
+  Une séquence d''instructions s''exécute dans l''ordre. On peut y combiner des conditions (« si … alors … sinon
+  ») et des boucles (« répéter … fois »).
+
+  Une variable est une « boîte » qui porte un nom et contient une valeur qui peut changer pendant le programme (un
+  score, un côté, un nombre choisi). Blocs utiles : « mettre … à … », « ajouter … à … ».
+
+  Une variable permet d''écrire des programmes de calcul, ou des figures dont la taille change.'
+methode:
+- Identifier l'événement qui lance chaque script.
+- Suivre la valeur de chaque variable dans un tableau, ligne après ligne.
+- 'Pour une condition : tester si elle est vraie ou fausse avec la valeur actuelle.'
+- Initialiser les variables au début (mettre le score à 0), sinon elles gardent l'ancienne valeur.
+erreurs_frequentes:
+- Oublier d'initialiser une variable.
+- Confondre « mettre … à 10 » (remplace la valeur) et « ajouter 10 à … » (augmente la valeur).
+- 'Mal placer une condition : elle n''est testée qu''au moment où le programme l''atteint.'
+exemple:
+  enonce: 'Programme : « demander un nombre ; mettre résultat à réponse × 3 ; ajouter −4 à résultat ; si résultat
+    > 10 alors dire résultat, sinon dire résultat × 2 ». Que dit le lutin si on entre 5 ? et 4 ?'
+  solution: 'Avec 5 : 15 − 4 = 11 > 10, il dit 11. Avec 4 : 12 − 4 = 8, pas > 10, il dit 16.'
+exercices:
+- enonce: Avec le programme de l'exemple, que dit le lutin si on entre 2 ?
+  indices:
+  - Calcule 2 × 3 − 4, puis teste la condition.
+  solution: '6 − 4 = 2, pas > 10 : il dit 2 × 2 = 4.'
+- enonce: '« Quand le drapeau vert est cliqué : mettre score à 0. Quand ce lutin est cliqué : ajouter 10 à score.
+    » On clique sur le drapeau, puis 7 fois sur le lutin. Que vaut le score ?'
+  indices:
+  - Deux scripts, deux événements.
+  solution: '70.'
+- enonce: 'Qu''affiche : « mettre somme à 0 ; mettre i à 1 ; répéter 10 fois : ajouter i à somme, ajouter 1 à i
+    ; dire somme » ?'
+  indices:
+  - Suis somme et i dans un tableau.
+  solution: 1 + 2 + … + 10 = 55.
+sources:
+- titre: Vikidia, « Variable (informatique) »
+  url: https://fr.vikidia.org/w/index.php?title=Variable_%28informatique%29&oldid=2557114
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Scratch (logiciel) »
+  url: https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Programmation par blocs »
+  url: https://fr.vikidia.org/w/index.php?title=Programmation_par_blocs&oldid=2086190
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

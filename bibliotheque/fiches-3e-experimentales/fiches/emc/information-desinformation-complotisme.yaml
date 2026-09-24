@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: information-desinformation-complotisme
+declencheurs:
+- fausse information
+- fake news
+- fact-checking
+- vérifier une information
+- théorie du complot
+- manipulation de l'information loi
+- sources fiables internet
+essentiel: 'La désinformation est un ensemble de techniques de communication utilisées pour tromper ou influencer
+  volontairement l''opinion publique par un ou plusieurs médias : contrairement à une simple erreur, elle est intentionnelle.
+
+  En France, la loi du 22 décembre 2018 relative à la lutte contre la manipulation de l''information permet, en
+  particulier en période électorale, de saisir un juge pour faire cesser rapidement la diffusion de fausses informations
+  créées de manière délibérée et massive dans le but de fausser une élection.
+
+  La désinformation peut nourrir le complotisme, c''est-à-dire la croyance en des complots cachés, qui s''appuie
+  souvent sur des faits déformés ou inventés et qui peut alimenter le racisme et l''antisémitisme.
+
+  Pour s''en protéger, il est essentiel d''établir rigoureusement les faits et de distinguer trois notions différentes
+  : une croyance (non vérifiable), une opinion (un point de vue personnel) et un savoir (une connaissance vérifiée).
+  Des services de fact-checking (vérification des faits) aident à distinguer une information vraie d''une information
+  fausse.'
+methode:
+- Définir la désinformation par son caractère volontaire et intentionnel, contrairement à une simple erreur.
+- Citer la loi du 22 décembre 2018 comme réponse législative française à la désinformation électorale.
+- 'Distinguer croyance, opinion et savoir : trois façons différentes d''affirmer quelque chose.'
+- Adopter une méthode de vérification avant de partager une information (source, date, recoupement).
+vocabulaire:
+- terme: désinformation
+  definition: la diffusion volontaire et intentionnelle de fausses informations pour tromper l'opinion publique
+- terme: complotisme
+  definition: la croyance en l'existence de complots cachés, souvent fondée sur des informations déformées ou inventées
+- terme: fact-checking
+  definition: la vérification méthodique des faits avancés dans une information, pour établir s'ils sont vrais ou
+    faux
+erreurs_frequentes:
+- Confondre désinformation (volontaire) et mésinformation ou simple erreur (involontaire).
+- Croire que toute information trouvée en ligne est fiable sans vérification.
+- 'Confondre opinion (point de vue personnel) et savoir (fait vérifié) : les deux ne se valent pas de la même façon
+  dans un débat argumenté.'
+- Oublier que la désinformation peut nourrir des idées racistes ou antisémites via le complotisme.
+exemple:
+  enonce: Que permet la loi du 22 décembre 2018 relative à la lutte contre la manipulation de l'information ?
+  solution: Elle permet, notamment en période électorale, de saisir un juge en urgence pour faire cesser la diffusion
+    de fausses informations créées et diffusées de façon délibérée et massive dans le but de fausser le résultat
+    d'une élection.
+exercices:
+- enonce: Quelle est la différence entre une croyance, une opinion et un savoir ?
+  indices:
+  - Lequel des trois est vérifiable scientifiquement ou juridiquement ?
+  solution: Une croyance repose sur la foi ou l'intuition, sans preuve vérifiable ; une opinion est un point de
+    vue personnel, discutable ; un savoir est une connaissance établie et vérifiée, qui peut être démontrée.
+- enonce: 'Développement construit : explique comment la désinformation peut nourrir le complotisme.'
+  indices:
+  - Comment naît une théorie du complot ?
+  - Quel rôle jouent les réseaux sociaux ?
+  solution: Un développement réussi doit expliquer que la désinformation diffuse volontairement des informations
+    fausses ou déformées ; montrer que ces fausses informations peuvent servir de base à des théories du complot,
+    qui prétendent révéler une vérité cachée ; préciser que ce phénomène peut nourrir le racisme et l'antisémitisme
+    en désignant des boucs émissaires ; conclure sur l'importance du fact-checking et de l'esprit critique.
+- enonce: Cite deux réflexes simples pour vérifier une information avant de la partager.
+  indices:
+  - Pense à la source et à la date.
+  solution: Vérifier la source de l'information (site fiable ou non) et recouper l'information avec d'autres médias
+    sérieux ; vérifier aussi la date de publication, car une information ancienne peut être partagée hors contexte.
+sources:
+- titre: Vikidia, « Désinformation »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9sinformation&oldid=2464955
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

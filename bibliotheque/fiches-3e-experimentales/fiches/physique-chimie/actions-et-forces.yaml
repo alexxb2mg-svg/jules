@@ -1,0 +1,62 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: actions-et-forces
+declencheurs:
+- force exercée
+- action mécanique
+- pousser
+- tirer
+- flèche représentant une force
+- point d'application
+essentiel: 'Une action mécanique est ce qu''exerce un objet sur un autre (pousser, tirer, retenir…). Elle peut être
+  une action de contact (un coup de pied sur un ballon) ou une action à distance (la gravitation entre la Terre
+  et un objet, un aimant).
+
+  On modélise une action mécanique par une force, représentée par une flèche (vecteur) qui possède quatre caractéristiques
+  : un point d''application (où la force s''exerce), une direction (la droite le long de laquelle elle agit), un
+  sens (vers où) et une valeur (son intensité, en newtons, symbole N).
+
+  Deux forces de même valeur mais de sens opposés ne se compensent pas forcément : il faut aussi regarder leur direction
+  et leur point d''application.
+
+  Plus une force est intense, plus la flèche qui la représente est longue, à une échelle donnée (par exemple 1 cm
+  représente 10 N).'
+methode:
+- Identifier l'objet qui exerce l'action et l'objet qui la subit.
+- Déterminer si l'action est de contact (les objets se touchent) ou à distance (pas de contact).
+- Pour représenter une force, choisir une échelle, puis tracer une flèche avec le bon point d'application, la bonne
+  direction, le bon sens et la bonne longueur.
+- Pour lire la valeur d'une force sur un schéma, mesurer la longueur de la flèche et appliquer l'échelle donnée.
+erreurs_frequentes:
+- Oublier une des quatre caractéristiques d'une force (point d'application, direction, sens, valeur).
+- Confondre action de contact et action à distance.
+- Tracer une flèche de force sans respecter l'échelle donnée.
+- Croire que seules les actions de contact existent (la gravitation agit à distance).
+exemple:
+  enonce: Sur un schéma à l'échelle 1 cm → 10 N, une flèche de force mesure 3,5 cm. Quelle est la valeur de cette
+    force ?
+  solution: 3,5 × 10 = 35 N.
+exercices:
+- enonce: 'Un enfant pousse une brouette : est-ce une action de contact ou à distance ?'
+  indices:
+  - Y a-t-il contact physique entre l'enfant et la brouette ?
+  solution: 'C''est une action de contact : les mains de l''enfant touchent la brouette.'
+- enonce: La Lune est attirée par la Terre. Est-ce une action de contact ou à distance ?
+  indices:
+  - La Terre et la Lune se touchent-elles ?
+  solution: 'C''est une action à distance (gravitation) : il n''y a pas de contact entre les deux astres.'
+- enonce: Citer les quatre caractéristiques nécessaires pour décrire complètement une force.
+  indices:
+  - Pense à ce qu'il faut préciser pour dessiner une flèche.
+  solution: Le point d'application, la direction, le sens et la valeur (intensité, en newtons).
+sources:
+- titre: Vikidia, « Force »
+  url: https://fr.vikidia.org/w/index.php?title=Force&oldid=2553010
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

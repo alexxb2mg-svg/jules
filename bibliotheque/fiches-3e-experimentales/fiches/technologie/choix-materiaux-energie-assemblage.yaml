@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: choix-materiaux-energie-assemblage
+declencheurs:
+- choix matériau
+- assemblage
+- vis
+- colle
+- soudure
+- source d'énergie
+- batterie
+- pile
+- alimentation électrique
+essentiel: 'Concevoir un objet technique demande de choisir ensemble le matériau, la source d''énergie et le mode
+  d''assemblage, car ces trois choix s''influencent mutuellement.
+
+
+  Le choix du matériau dépend de la résistance nécessaire, de la masse souhaitée, du coût et de l''impact environnemental
+  (voir la fiche matériaux-et-procedes). Le choix de la source d''énergie (pile, batterie rechargeable, secteur,
+  panneau solaire) dépend de la puissance nécessaire, de l''autonomie voulue et de la mobilité de l''objet (un objet
+  mobile a besoin d''une source embarquée comme une pile ou une batterie).
+
+
+  Le mode d''assemblage relie les pièces entre elles : un assemblage démontable (vis, clips) permet de réparer ou
+  de changer une pièce facilement, alors qu''un assemblage indémontable (colle, soudure, rivetage) est souvent plus
+  solide ou plus étanche mais rend la réparation difficile, ce qui va à l''encontre du développement durable.'
+methode:
+- Identifier la contrainte principale de l'objet (résistance, autonomie, mobilité, réparabilité) avant de choisir
+  matériau, énergie et assemblage.
+- 'Choisir une source d''énergie adaptée à la mobilité de l''objet : embarquée (pile, batterie) pour un objet mobile,
+  filaire (secteur) pour un objet fixe.'
+- Préférer un assemblage démontable quand la réparabilité est une exigence du cahier des charges.
+- Vérifier la cohérence entre les trois choix (par exemple, un matériau lourd complique un objet mobile alimenté
+  par batterie).
+vocabulaire:
+- terme: assemblage démontable
+  definition: liaison entre pièces qui peut être défaite sans destruction (vis, clips)
+- terme: assemblage indémontable
+  definition: liaison entre pièces qui ne peut pas être défaite sans destruction (colle, soudure)
+erreurs_frequentes:
+- Choisir un assemblage collé pour un objet qui doit être réparable.
+- Choisir une pile non rechargeable pour un objet utilisé très fréquemment (coût et déchets élevés).
+- Oublier de vérifier que la source d'énergie choisie fournit assez de puissance pour l'objet.
+exemple:
+  enonce: On conçoit une lampe de poche destinée à être réparée facilement. Justifier le choix d'un assemblage par
+    vis plutôt que par colle, et d'une pile rechargeable plutôt qu'une pile jetable.
+  solution: 'Un assemblage par vis est démontable : on peut ouvrir la lampe pour changer l''ampoule ou un composant
+    défectueux, ce qui allonge sa durée de vie. Une pile rechargeable réduit les déchets et le coût sur le long
+    terme par rapport à des piles jetables, ce qui est cohérent avec une démarche de réparabilité et de développement
+    durable.'
+exercices:
+- enonce: Un objet connecté doit fonctionner en extérieur, loin de toute prise électrique, pendant plusieurs mois
+    sans intervention. Quelle source d'énergie choisir ? Justifier.
+  indices:
+  - Pense à l'autonomie nécessaire et à l'absence de prise secteur.
+  solution: 'Un panneau solaire associé à une batterie rechargeable est adapté : il permet une autonomie longue
+    sans intervention humaine et sans dépendre d''une prise électrique, contrairement à une pile jetable qui devrait
+    être changée régulièrement.'
+sources:
+- titre: Vikidia, « Matériau »
+  url: https://fr.vikidia.org/w/index.php?title=Mat%C3%A9riau&oldid=2527637
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Générateur électrique »
+  url: https://fr.wikipedia.org/w/index.php?title=G%C3%A9n%C3%A9rateur_%C3%A9lectrique&oldid=232004610
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

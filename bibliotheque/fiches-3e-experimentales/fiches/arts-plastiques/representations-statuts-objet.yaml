@@ -1,0 +1,60 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: representations-statuts-objet
+declencheurs:
+- un objet peut il devenir une oeuvre d'art
+- objet expose au musee
+- difference entre objet et oeuvre d'art
+- statut de l'objet en art
+essentiel: 'Un même objet peut avoir plusieurs statuts selon le contexte : objet non artistique dans la vie quotidienne,
+  objet matériel une fois transformé par un artiste, objet d''art une fois exposé et reconnu comme œuvre, ou encore
+  objet d''étude quand on l''analyse en classe ou en musée.
+
+  Le statut d''une œuvre ne dépend donc pas seulement de sa fabrication, mais aussi du regard porté sur elle et
+  du cadre dans lequel elle est montrée (atelier, rue, galerie, musée).
+
+  Un objet exposé dans une vitrine de musée d''histoire n''a pas le même statut qu''un objet semblable présenté
+  dans une galerie d''art contemporain, même s''il s''agit physiquement du même type d''objet.'
+methode:
+- Identifier le contexte de présentation d'un objet avant de juger son statut.
+- Se demander qui a choisi de le montrer, et pourquoi (usage, mémoire, esthétique, art).
+- Comparer le même type d'objet dans deux contextes différents (musée d'histoire / musée d'art).
+- Distinguer l'objet matériel (sa matière, sa forme) de son statut (comment il est reçu).
+erreurs_frequentes:
+- Croire que le statut d'objet d'art dépend uniquement de sa beauté.
+- Ne pas distinguer un objet exposé pour sa valeur historique et un objet exposé pour sa valeur artistique.
+- Oublier que le même objet peut changer de statut selon son lieu de présentation.
+exemple:
+  enonce: Une vieille chaise en bois est présentée dans un musée d'histoire locale, puis une chaise semblable est
+    exposée dans une galerie d'art contemporain avec un cartel signé par un artiste.
+  solution: 'Dans le musée d''histoire, la chaise a un statut d''objet d''étude ou de témoignage d''une époque.
+    Dans la galerie, la même forme d''objet, présentée par un artiste, prend un statut d''œuvre d''art : le contexte
+    change complètement sa réception.'
+exercices:
+- enonce: 'À la maison : choisis un objet et imagine trois contextes différents où il pourrait être présenté (musée
+    d''histoire, galerie d''art, vide-grenier). Décris comment son statut changerait.'
+  indices:
+  - Pense à ce que dirait l'étiquette ou le cartel dans chaque cas.
+  solution: Réussite si les trois statuts proposés sont bien différents et cohérents avec leur contexte.
+- enonce: Cherche un exemple où un objet ordinaire (boîte de conserve, panneau routier) a été utilisé par un artiste
+    connu, et explique quel nouveau statut il obtient.
+  indices:
+  - Le pop art est une bonne piste de recherche.
+  solution: Réussite si l'exemple montre bien un objet devenu œuvre par le geste de l'artiste et le lieu d'exposition.
+sources:
+- titre: Vikidia, « Ready-made »
+  url: https://fr.vikidia.org/w/index.php?title=Ready-made&oldid=2582131
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Musée »
+  url: https://fr.vikidia.org/w/index.php?title=Mus%C3%A9e&oldid=2553277
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

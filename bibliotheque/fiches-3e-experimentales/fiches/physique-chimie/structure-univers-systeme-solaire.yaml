@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: structure-univers-systeme-solaire
+declencheurs:
+- système solaire
+- planètes
+- galaxie
+- unité astronomique
+- distance dans l'espace
+- combien de planètes
+- planète tellurique
+- planète gazeuse
+- planète rocheuse
+essentiel: 'L''Univers contient des milliards de galaxies, dont la Voie lactée, qui elle-même contient des milliards
+  d''étoiles, dont le Soleil.
+
+  Le système solaire est formé du Soleil (une étoile) et de tout ce qui tourne autour de lui par gravitation : 8
+  planètes, leurs satellites naturels (comme la Lune), des astéroïdes et des comètes.
+
+  On distingue les planètes telluriques (rocheuses, proches du Soleil : Mercure, Vénus, Terre, Mars) des planètes
+  gazeuses (Jupiter, Saturne, Uranus, Neptune), plus grandes et plus éloignées.
+
+  Les distances dans l''espace sont énormes : on utilise des unités adaptées, comme l''unité astronomique (UA, distance
+  moyenne Terre-Soleil, environ 150 millions de km) ou l''année-lumière pour les distances entre étoiles.
+
+  Neptune, la planète la plus éloignée du Soleil, se trouve à environ 30 UA, soit environ 4,5 milliards de km.'
+methode:
+- 'Distinguer les échelles : planète < système solaire < galaxie < Univers.'
+- Utiliser l'unité astronomique (UA) pour les distances à l'intérieur du système solaire.
+- Pour convertir un nombre d'UA en km, multiplier par la distance Terre-Soleil (environ 150 millions de km).
+- Retenir l'ordre des planètes à partir du Soleil et la distinction telluriques/gazeuses.
+erreurs_frequentes:
+- Confondre système solaire (autour du Soleil) et galaxie (des milliards d'étoiles).
+- Croire que toutes les planètes ont une surface solide (les planètes gazeuses n'en ont pas).
+- Confondre étoile (le Soleil, qui produit sa propre lumière) et planète (qui réfléchit la lumière du Soleil).
+- Se tromper d'ordre de grandeur en convertissant des UA en kilomètres.
+exemple:
+  enonce: Neptune est à environ 30 UA du Soleil. Sachant que 1 UA vaut environ 150 millions de km, calculer cette
+    distance en km.
+  solution: 30 × 150 000 000 = 4 500 000 000 km, soit 4,5 milliards de km.
+exercices:
+- enonce: Le système solaire fait-il partie de la Voie lactée, ou l'inverse ?
+  indices:
+  - La Voie lactée est une galaxie, qui contient des milliards d'étoiles.
+  solution: Le système solaire (avec le Soleil et ses planètes) fait partie de la Voie lactée, qui est une galaxie
+    parmi des milliards d'autres.
+- enonce: Citer deux différences entre une planète tellurique et une planète gazeuse.
+  indices:
+  - Pense à la composition (roche ou gaz) et à la taille.
+  solution: Une planète tellurique est rocheuse et plutôt petite (comme la Terre) ; une planète gazeuse est composée
+    surtout de gaz et est beaucoup plus grande (comme Jupiter).
+- enonce: Mars est à environ 1,5 UA du Soleil. Calculer cette distance en km.
+  indices:
+  - 1 UA ≈ 150 millions de km.
+  solution: 1,5 × 150 000 000 = 225 000 000 km.
+sources:
+- titre: Vikidia, « Système solaire »
+  url: https://fr.vikidia.org/w/index.php?title=Syst%C3%A8me_solaire&oldid=2402266
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Étoile »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89toile&oldid=2510949
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

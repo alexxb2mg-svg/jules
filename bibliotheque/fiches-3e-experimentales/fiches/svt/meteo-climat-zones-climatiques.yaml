@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: meteo-climat-zones-climatiques
+declencheurs:
+- différence météo climat
+- il fait beau aujourd'hui
+- climat tropical
+- climat tempéré
+- zones climatiques du monde
+- courants océaniques
+- chaud à l'équateur
+- froid aux pôles
+essentiel: 'La météo décrit l''état de l''atmosphère à un endroit précis et à un instant donné (ou sur quelques
+  jours) : température, pluie, vent observés aujourd''hui ou cette semaine.
+
+  Le climat décrit les conditions atmosphériques moyennes d''une région sur une longue période (généralement calculée
+  sur plusieurs décennies) : il caractérise les tendances habituelles, pas un jour précis.
+
+  La répartition de l''énergie solaire reçue selon la latitude, ainsi que les courants océaniques et les mouvements
+  des masses d''air, expliquent l''existence de grandes zones climatiques sur Terre (climat tropical, tempéré, polaire,
+  désertique, entre autres).
+
+  Chaque zone climatique possède des conditions de température et de précipitations caractéristiques, qui déterminent
+  en grande partie la répartition des faunes et des flores adaptées à ces conditions.
+
+  Une seule journée de temps froid ne contredit pas un climat qui se réchauffe globalement : il ne faut pas confondre
+  une variation météo ponctuelle avec une tendance climatique de long terme.'
+methode:
+- 'Distinguer la durée observée : quelques jours pour la météo, plusieurs décennies pour le climat.'
+- Relier une zone climatique à sa latitude approximative et aux courants océaniques ou masses d'air qui l'influencent.
+- Associer une faune et une flore typiques à chaque grande zone climatique.
+- Ne jamais déduire une tendance climatique à partir d'une seule observation météo ponctuelle.
+erreurs_frequentes:
+- Confondre météo (un jour donné) et climat (une moyenne sur le long terme).
+- Croire qu'un hiver froid contredit le réchauffement climatique global.
+- Penser que le climat est le même partout sur Terre à une même latitude, sans tenir compte des courants océaniques
+  ou du relief.
+- Confondre climat tropical (chaud toute l'année) et climat tempéré (saisons marquées).
+exemple:
+  enonce: En quoi la phrase « il pleut aujourd'hui, donc le climat ne se réchauffe pas » est-elle incorrecte scientifiquement
+    ?
+  solution: 'Elle confond météo (l''observation d''un jour) et climat (une tendance mesurée sur plusieurs décennies)
+    : un jour de pluie ne dit rien sur l''évolution du climat à long terme.'
+exercices:
+- enonce: Donner un exemple de phrase qui parle de météo, et un exemple de phrase qui parle de climat.
+  indices:
+  - La météo concerne un instant précis, le climat une moyenne sur des années.
+  solution: 'Météo : « il fait 25 °C aujourd''hui ». Climat : « cette région a des étés chauds et des hivers doux
+    en moyenne sur les 30 dernières années ».'
+- enonce: Pourquoi trouve-t-on des zones climatiques très différentes selon la latitude sur Terre ?
+  indices:
+  - Pense à la quantité d'énergie solaire reçue selon l'endroit du globe.
+  solution: La quantité d'énergie solaire reçue varie avec la latitude (plus forte à l'équateur, plus faible aux
+    pôles), ce qui crée des zones climatiques différentes (tropicale, tempérée, polaire…).
+- enonce: Citer un facteur, autre que la latitude, qui influence le climat d'une région.
+  indices:
+  - Pense aux masses d'eau et d'air en mouvement.
+  solution: Les courants océaniques ou les masses d'air (vents dominants) ; l'altitude joue aussi un rôle.
+sources:
+- titre: Vikidia, « Climat »
+  url: https://fr.vikidia.org/w/index.php?title=Climat&oldid=2562142
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

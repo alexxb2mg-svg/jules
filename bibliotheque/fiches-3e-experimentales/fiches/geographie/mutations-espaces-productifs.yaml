@@ -1,0 +1,91 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: mutations-espaces-productifs
+declencheurs:
+- usine
+- zone industrielle
+- espace agricole
+- zone touristique
+- PAC
+- mondialisation économie
+- exploitation agricole
+- délocalisation
+essentiel: 'Un espace productif est un territoire où sont produites des richesses : biens industriels, produits
+  agricoles ou services touristiques.
+
+  L''agriculture française est la première de l''Union européenne (environ 18 % de la production agricole et agroalimentaire
+  européenne) : la France est un grand producteur de céréales, de vin, de lait. L''agriculture s''est modernisée
+  et concentrée, employant de moins en moins de personnes (environ 1,5 % de la population active), tout en restant
+  fortement soutenue par la politique agricole commune (PAC) de l''Union européenne.
+
+  L''industrie a connu de profondes mutations : mondialisation, délocalisations de certaines productions, mais aussi
+  maintien ou développement de secteurs innovants et de pôles de compétitivité.
+
+  Le tourisme est un secteur économique du secteur tertiaire, qui crée des emplois souvent saisonniers et des revenus
+  dans les territoires d''accueil (littoraux, montagnes, grandes villes). La France est le pays le plus visité au
+  monde, avec plus de 100 millions d''arrivées internationales par an.
+
+  Ces espaces productifs sont redessinés par l''urbanisation (qui les repousse parfois en périphérie) et par la
+  mondialisation des échanges.'
+methode:
+- 'Distinguer les trois types d''espaces productifs : industriels, agricoles, touristiques (ou d''affaires).'
+- Pour chaque type, retenir un ou deux chiffres ou faits précis (rang mondial ou européen, part de la population
+  active).
+- Montrer le lien entre mutations des espaces productifs, urbanisation et mondialisation.
+- 'Éviter les généralités : toujours illustrer avec un exemple français concret.'
+vocabulaire:
+- terme: espace productif
+  definition: un territoire organisé pour produire des biens ou des services (usine, exploitation agricole, zone
+    touristique...)
+- terme: PAC
+  definition: 'politique agricole commune : politique de l''Union européenne qui soutient financièrement les agriculteurs'
+- terme: délocalisation
+  definition: le transfert d'une activité de production vers un autre pays, souvent pour réduire les coûts
+erreurs_frequentes:
+- Réduire les espaces productifs à l'industrie seule, en oubliant l'agriculture et le tourisme.
+- 'Croire que l''agriculture emploie beaucoup de monde en France aujourd''hui : elle emploie une faible part de
+  la population active malgré son importance économique.'
+- Oublier le rôle de la PAC dans le soutien à l'agriculture française.
+- Négliger les effets de la mondialisation (délocalisations, concurrence internationale) sur les espaces productifs.
+exemple:
+  enonce: Pourquoi peut-on dire que l'agriculture française est un espace productif important malgré peu d'emplois
+    ?
+  solution: 'La France est le premier pays agricole de l''Union européenne, avec environ 18 % de la production agricole
+    et agroalimentaire européenne, alors que l''agriculture n''emploie qu''environ 1,5 % de la population active
+    : elle s''est modernisée et concentrée sur de grandes exploitations performantes.'
+exercices:
+- enonce: Cite les trois types d'espaces productifs étudiés en géographie de 3e.
+  indices:
+  - Un secteur primaire, un secondaire, un tertiaire.
+  solution: Les espaces à dominante industrielle, agricole et touristique (ou d'affaires).
+- enonce: 'Développement construit : montre que le tourisme est un espace productif à part entière en France.'
+  indices:
+  - Donne un chiffre sur la fréquentation touristique.
+  - Explique les emplois créés.
+  solution: Un développement réussi doit rappeler que la France est le pays le plus visité au monde (plus de 100
+    millions d'arrivées internationales par an) ; expliquer que le tourisme crée des emplois, souvent saisonniers,
+    et des revenus dans les territoires d'accueil (littoraux, montagnes, grandes villes) ; montrer que ces espaces
+    sont aménagés spécifiquement pour l'accueil des touristes.
+- enonce: Comment la mondialisation transforme-t-elle les espaces industriels français ?
+  indices:
+  - Pense aux délocalisations et à la concurrence internationale.
+  solution: La concurrence internationale pousse certaines entreprises à délocaliser une partie de leur production
+    vers des pays où les coûts sont plus bas, tandis que la France conserve ou développe des activités industrielles
+    innovantes et à forte valeur ajoutée.
+sources:
+- titre: Vikidia, « Agriculture »
+  url: https://fr.vikidia.org/w/index.php?title=Agriculture&oldid=2331506
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé (secteur primaire, agriculture française)
+- titre: Vikidia, « Tourisme »
+  url: https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

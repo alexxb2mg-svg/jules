@@ -1,0 +1,56 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ratio
+declencheurs: ["partager", "partage", "rapport", "parts"]
+essentiel: 'Partager une quantité selon le ratio a : b, c''est la couper en a + b parts égales : la première personne
+  reçoit a parts, la seconde b parts.
+
+  La première reçoit donc a/(a + b) du total et la seconde b/(a + b). Même principe avec trois nombres (a : b :
+  c, en a + b + c parts).
+
+  Un ratio se simplifie comme une fraction : 18 : 12 = 3 : 2. L''ordre des nombres compte.
+
+  Attention : le ratio 2 : 3 ne veut pas dire « 2/3 du total », mais 2/5 et 3/5.'
+methode:
+- Additionner les nombres du ratio pour obtenir le nombre total de parts.
+- 'Diviser la quantité totale par ce nombre : c''est la valeur d''une part.'
+- Multiplier la valeur d'une part par chaque nombre du ratio.
+- Vérifier que la somme des parts redonne le total.
+erreurs_frequentes:
+- Diviser le total par l'un des nombres du ratio au lieu de leur somme.
+- 'Confondre le ratio 2 : 3 avec la fraction 2/3.'
+- 'Inverser l''ordre (le ratio filles : garçons n''est pas le ratio garçons : filles).'
+exemple:
+  enonce: 'Partager 35 € entre Adam et Inès selon le ratio 3 : 4.'
+  solution: 3 + 4 = 7 parts ; une part vaut 35 ÷ 7 = 5 €. Adam reçoit 3 × 5 = 15 € et Inès 4 × 5 = 20 € (15 + 20
+    = 35).
+exercices:
+- enonce: 'Une boisson se prépare avec du sirop et de l''eau selon le ratio 1 : 6. Quelle quantité de sirop faut-il
+    pour 350 mL de boisson ?'
+  indices:
+  - Combien de parts en tout ?
+  solution: '7 parts de 50 mL : 50 mL de sirop et 300 mL d''eau.'
+- enonce: 'Partager 120 billes selon le ratio 2 : 3 : 5.'
+  indices:
+  - 2 + 3 + 5 = ?
+  solution: '10 parts de 12 billes : 24, 36 et 60 billes.'
+- enonce: 'Dans une classe, le ratio filles : garçons est 4 : 3. Il y a 12 filles. Combien y a-t-il de garçons ?
+    d''élèves ?'
+  indices:
+  - '12 filles correspondent à 4 parts : combien vaut une part ?'
+  solution: 'Une part = 3 élèves : 9 garçons, 21 élèves.'
+- enonce: 'Simplifier le ratio 18 : 12.'
+  indices:
+  - Divise les deux nombres par un diviseur commun.
+  solution: '18 : 12 = 3 : 2 (division par 6).'
+sources:
+- titre: Wikipédia, « Rapport (mathématiques) »
+  url: https://fr.wikipedia.org/w/index.php?title=Rapport_%28math%C3%A9matiques%29&oldid=223706738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: définition du rapport reprise ; méthode et exercices écrits pour Jules
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

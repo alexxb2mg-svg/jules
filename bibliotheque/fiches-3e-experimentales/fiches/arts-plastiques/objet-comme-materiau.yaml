@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: objet-comme-materiau
+declencheurs:
+- utiliser un objet du quotidien dans une oeuvre
+- detourner un objet
+- ready made c'est quoi
+- objet transforme en art
+- recontextualiser un objet
+essentiel: 'Un objet du quotidien (une chaise, une bouteille, un outil) peut devenir un matériau artistique quand
+  un artiste le détourne de sa fonction habituelle pour lui donner une intention artistique.
+
+  Le « ready-made », inventé par Marcel Duchamp au début du XXe siècle, pousse cette idée à l''extrême : un objet
+  industriel « déjà prêt » est présenté tel quel dans un contexte artistique (musée, galerie) et devient une œuvre
+  par ce simple déplacement.
+
+  Ce geste de décontextualisation (sortir l''objet de son usage normal) et de recontextualisation (le placer dans
+  un cadre artistique) change le regard du spectateur : il ne voit plus l''objet pour son usage, mais pour ce qu''il
+  évoque une fois isolé et présenté comme œuvre.'
+methode:
+- Choisir un objet et repérer sa fonction habituelle avant de le détourner.
+- Décider ce qui change quand on le sort de son contexte normal (lieu, usage, association).
+- Présenter l'objet de façon à souligner ce nouveau statut (socle, cadre, mise en lumière).
+- Vérifier que le détournement porte une intention, et pas seulement un déplacement sans idée.
+vocabulaire:
+- terme: ready-made
+  definition: objet du commerce industriel, non transformé, présenté comme une œuvre d'art dans un contexte artistique
+- terme: décontextualisation
+  definition: fait de sortir un objet de son usage ou de son lieu habituel pour changer son sens
+erreurs_frequentes:
+- Croire qu'exposer n'importe quel objet suffit à en faire une œuvre, sans intention.
+- Confondre détournement d'objet et simple réparation ou bricolage.
+- Oublier que le contexte de présentation (musée, socle) participe au sens du geste.
+exemple:
+  enonce: Marcel Duchamp présente un urinoir industriel, signé et titré « Fontaine », dans une exposition d'art
+    en 1917.
+  solution: 'L''objet n''est pas transformé matériellement : c''est son déplacement du magasin vers l''exposition,
+    et le geste de le signer et de le titrer, qui en font une œuvre d''art et interrogent la définition même de
+    l''art.'
+exercices:
+- enonce: 'À la maison : choisis un objet du quotidien et imagine (par un croquis ou une photo mise en scène) comment
+    le présenter pour qu''il soit perçu autrement que pour son usage.'
+  indices:
+  - Change le lieu, l'orientation ou l'association avec d'autres objets.
+  solution: Réussite si la présentation modifie clairement le regard porté sur l'objet, et si tu peux expliquer
+    l'intention derrière ce choix.
+- enonce: Cherche une autre œuvre (autre que la Fontaine de Duchamp) qui utilise un objet détourné, et explique
+    en une phrase ce que ce détournement apporte.
+  indices:
+  - Le pop art (Andy Warhol) utilise aussi des objets de consommation courante.
+  solution: Réussite si l'exemple identifie bien un objet non transformé et l'intention qui motive son détournement.
+sources:
+- titre: Vikidia, « Ready-made »
+  url: https://fr.vikidia.org/w/index.php?title=Ready-made&oldid=2582131
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Art conceptuel »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_conceptuel&oldid=239237289
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: experience-sensible-espace-oeuvre
+declencheurs:
+- se deplacer autour d'une sculpture
+- ressentir l'espace d'une oeuvre
+- point de vue du spectateur
+- immersion dans une oeuvre
+- espace percu et espace represente
+- marcher dans une installation
+- se sentir dans l'oeuvre
+- visiter une oeuvre au lieu de la regarder
+essentiel: 'L''espace d''une œuvre peut être perçu physiquement (l''espace réel dans lequel le spectateur se déplace
+  autour ou à l''intérieur d''une œuvre), ressenti (une impression d''oppression, d''ouverture, de calme) et représenté
+  ou construit (l''espace suggéré par une image en deux dimensions).
+
+  Certaines œuvres font de l''espace et du temps eux-mêmes des matériaux : une installation qu''on traverse, une
+  œuvre sonore qui remplit une pièce, mobilisent plusieurs sens et pas seulement la vue.
+
+  Le point de vue du spectateur (où il se place, comment il se déplace) fait autant partie de l''expérience que
+  celui de l''auteur au moment de la conception : l''œuvre se complète dans la relation entre les deux.'
+methode:
+- Distinguer l'espace réel (où l'on se trouve physiquement) de l'espace suggéré par une image.
+- Repérer si une œuvre demande un déplacement du spectateur pour être perçue entièrement.
+- Identifier les sens sollicités au-delà de la vue (toucher, ouïe) si l'œuvre le permet.
+- Comparer son propre ressenti face à une œuvre à celui d'un camarade, pour voir la part de subjectivité.
+erreurs_frequentes:
+- Juger une installation seulement à partir d'une photo, sans tenir compte du déplacement physique qu'elle demande.
+- Réduire l'expérience d'une œuvre à la seule vue, en oubliant les autres sens.
+- Croire que le ressenti face à une œuvre est fixe et identique pour tout le monde.
+exemple:
+  enonce: Une installation remplit une pièce sombre avec des jeux de lumière changeante et un fond sonore discret.
+  solution: 'Le spectateur ne perçoit pas l''œuvre d''un seul point fixe : il doit s''y déplacer, et son expérience
+    mobilise la vue et l''ouïe en même temps ; le ressenti (calme, inquiétude…) fait partie de l''œuvre autant que
+    sa description technique.'
+exercices:
+- enonce: 'À la maison : installe un petit objet (lampe, tissu, objet réfléchissant) dans une pièce et observe comment
+    ton ressenti change en te déplaçant autour de lui.'
+  indices:
+  - Change de distance et d'angle de vue plusieurs fois.
+  solution: Réussite si tu décris au moins deux ressentis différents selon ta position dans l'espace.
+- enonce: Choisis une œuvre en volume (sculpture, installation) que tu connais et explique ce que l'on percevrait
+    de plus en la voyant en vrai plutôt qu'en photo.
+  indices:
+  - Pense à la taille réelle, au tour complet possible, aux sons ou odeurs éventuels.
+  solution: Réussite si au moins un élément d'expérience réelle (échelle, déplacement, autres sens) manquant à la
+    photo est identifié.
+sources:
+- titre: Vikidia, « Installation »
+  url: https://fr.vikidia.org/w/index.php?title=Installation&oldid=2570407
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: parallelisme-triangles-pythagore
+declencheurs: ["hypoténuse", "rectangle", "angle droit", "réciproque", "alternes-internes", "correspondants", "somme des angles"]
+essentiel: 'Dans un triangle rectangle, l''hypoténuse est le côté opposé à l''angle droit : c''est le plus grand
+  côté.
+
+  Théorème de Pythagore : si ABC est rectangle en C, alors AB² = AC² + BC² (le carré de l''hypoténuse est égal à
+  la somme des carrés des deux autres côtés). Il sert à calculer une longueur quand on connaît les deux autres.
+
+  Réciproque : si, dans un triangle ABC de plus grand côté [AB], on a AB² = AC² + BC², alors le triangle est rectangle
+  en C.
+
+  Contraposée : si AB² ≠ AC² + BC² (avec [AB] le plus grand côté), le triangle n''est pas rectangle.'
+methode:
+- Repérer l'angle droit et nommer l'hypoténuse (le côté en face de l'angle droit).
+- Écrire l'égalité de Pythagore avec les lettres de la figure, hypoténuse seule d'un côté.
+- Remplacer par les longueurs connues et calculer les carrés.
+- Isoler le carré cherché (addition si on cherche l'hypoténuse, soustraction sinon).
+- Prendre la racine carrée (une longueur est positive) et arrondir si l'énoncé le demande, avec l'unité.
+- 'Pour prouver qu''un triangle est (ou n''est pas) rectangle : calculer séparément le carré du plus grand côté
+  et la somme des carrés des deux autres, puis comparer et conclure avec la réciproque ou la contraposée.'
+vocabulaire:
+- terme: hypoténuse
+  definition: côté opposé à l'angle droit, le plus long du triangle rectangle
+- terme: réciproque
+  definition: propriété qui part de l'égalité pour conclure que le triangle est rectangle
+erreurs_frequentes:
+- Mettre l'hypoténuse du mauvais côté de l'égalité (ou se tromper de côté le plus long).
+- Additionner au lieu de soustraire quand on cherche un côté de l'angle droit.
+- Oublier la racine carrée à la fin et donner le carré comme longueur.
+- 'Écrire (a + b)² = a² + b² : on calcule chaque carré séparément.'
+- Utiliser le théorème pour prouver qu'un triangle est rectangle (il faut la réciproque).
+exemple:
+  enonce: RST est rectangle en S avec RS = 5 cm et ST = 12 cm. Calculer RT.
+  solution: Le triangle est rectangle en S, donc d'après le théorème de Pythagore RT² = RS² + ST² = 25 + 144 = 169.
+    RT est positive, donc RT = √169 = 13 cm.
+exercices:
+- enonce: EFG est rectangle en F, EF = 7,5 cm et FG = 4 cm. Calculer EG.
+  indices:
+  - Quel est le côté opposé à l'angle droit ?
+  - 'EG² = EF² + FG² : combien vaut EF² ?'
+  solution: EG² = 7,5² + 4² = 56,25 + 16 = 72,25 donc EG = √72,25 = 8,5 cm.
+- enonce: KLM est rectangle en L, KM = 10 cm et KL = 6 cm. Calculer LM.
+  indices:
+  - 'L''hypoténuse est connue : faut-il additionner ou soustraire ?'
+  solution: KM² = KL² + LM² donc LM² = 100 − 36 = 64 et LM = 8 cm.
+- enonce: Un triangle a des côtés de 8 cm, 15 cm et 17 cm. Est-il rectangle ?
+  indices:
+  - Quel est le plus grand côté ?
+  - Calcule séparément 17² et 8² + 15².
+  solution: '17² = 289 et 8² + 15² = 64 + 225 = 289 : égalité, donc d''après la réciproque du théorème de Pythagore
+    le triangle est rectangle (angle droit en face du côté de 17 cm).'
+- enonce: Un triangle a des côtés de 6 cm, 7 cm et 9 cm. Est-il rectangle ?
+  indices:
+  - Compare 9² avec 6² + 7².
+  solution: 9² = 81 et 6² + 7² = 36 + 49 = 85. 81 ≠ 85, donc le triangle n'est pas rectangle (contraposée du théorème
+    de Pythagore).
+sources:
+- titre: Wikiversité, « Triangle rectangle/Théorèmes de Pythagore »
+  url: https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Th%C3%A9or%C3%A8mes_de_Pythagore&oldid=923259
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

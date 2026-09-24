@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: masse-volumique
+declencheurs:
+- rho
+- kg/m3
+- g/cm3
+- m = rho × v
+- densité
+- flotte ou coule
+essentiel: 'La masse volumique ρ (« rhô ») d''une espèce chimique est le rapport de sa masse m à son volume V :
+  ρ = m / V.
+
+  Dans le système international, elle s''exprime en kg/m³ ; en chimie et en physique de collège on utilise souvent
+  g/cm³ ou g/mL (1 g/cm³ = 1000 kg/m³).
+
+  Elle permet de retrouver une masse (m = ρ × V) ou un volume (V = m / ρ) sans peser ou mesurer directement.
+
+  Elle caractérise une espèce chimique : deux échantillons de tailles différentes de la même matière ont la même
+  masse volumique, ce qui permet de distinguer deux matériaux ou d''identifier une substance inconnue.
+
+  La masse volumique de l''eau vaut environ 1000 kg/m³ (1 g/cm³) ; elle sert souvent de référence : un matériau
+  plus dense qu''elle coule dans l''eau, un matériau moins dense flotte.'
+methode:
+- Repérer l'unité de la masse volumique donnée (kg/m³ ou g/cm³) et l'unité demandée pour la réponse.
+- Utiliser ρ = m / V pour calculer une masse volumique à partir d'une mesure de masse et de volume.
+- Utiliser m = ρ × V pour calculer une masse, en veillant à ce que le volume soit dans la même unité que celle utilisée
+  pour ρ.
+- Pour comparer avec l'eau (flotte ou coule), convertir dans la même unité (1 g/cm³ = 1000 kg/m³).
+erreurs_frequentes:
+- Mélanger g/cm³ et kg/m³ sans convertir (facteur 1000 entre les deux).
+- 'Confondre masse volumique et masse : deux objets de tailles différentes du même matériau ont la même masse volumique
+  mais pas la même masse.'
+- Diviser le volume par la masse au lieu de la masse par le volume.
+- Oublier que la masse volumique dépend un peu de la température (surtout pour les gaz).
+exemple:
+  enonce: Un cube d'aluminium a un volume de 10 cm³. La masse volumique de l'aluminium est 2,7 g/cm³. Calculer sa
+    masse.
+  solution: m = ρ × V = 2,7 × 10 = 27 g.
+exercices:
+- enonce: Un lingot d'or a un volume de 5 cm³. La masse volumique de l'or est 19,3 g/cm³. Calculer sa masse.
+  indices:
+  - m = ρ × V.
+  solution: m = 19,3 × 5 = 96,5 g.
+- enonce: Un échantillon d'huile a une masse de 780 g pour un volume de 1000 mL. Calculer sa masse volumique en
+    g/mL. L'huile flotte-t-elle sur l'eau ?
+  indices:
+  - ρ = m / V.
+  - Comparer à 1 g/mL, la masse volumique de l'eau.
+  solution: 'ρ = 780 / 1000 = 0,78 g/mL. C''est moins que l''eau (1 g/mL) : l''huile flotte.'
+- enonce: La masse volumique du fer est 7,9 g/cm³, soit 7900 kg/m³. Convertir 2,7 g/cm³ (l'aluminium) en kg/m³.
+  indices:
+  - 1 g/cm³ = 1000 kg/m³.
+  solution: 2,7 g/cm³ = 2700 kg/m³.
+sources:
+- titre: Vikidia, « Masse volumique »
+  url: https://fr.vikidia.org/w/index.php?title=Masse_volumique&oldid=2568685
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Densité »
+  url: https://fr.vikidia.org/w/index.php?title=Densit%C3%A9&oldid=2344955
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: puissance-electrique-consommation
+declencheurs:
+- P = UI
+- puissance en watts
+- consommation électrique
+- combien coûte un appareil électrique
+- kWh
+essentiel: 'La puissance électrique d''un appareil indique la rapidité avec laquelle il consomme (ou fournit) de
+  l''énergie électrique : P = U × I, avec P en watts (W), U la tension en volts (V) et I l''intensité en ampères
+  (A).
+
+  L''énergie électrique consommée pendant une durée t se calcule par E = P × t, avec E en joules si t est en secondes,
+  ou en wattheures (Wh) si t est en heures.
+
+  Pour les appareils domestiques, l''énergie se compte souvent en kilowattheures (kWh), l''unité utilisée sur les
+  factures d''électricité : 1 kWh = 1000 Wh.
+
+  Plus un appareil a une puissance élevée et plus il fonctionne longtemps, plus il consomme d''énergie électrique.
+
+  Comparer deux appareils sur leur seule puissance ne suffit pas pour comparer leur consommation : il faut aussi
+  tenir compte de leur durée d''utilisation.'
+methode:
+- Utiliser P = U × I pour calculer une puissance à partir de la tension et de l'intensité.
+- Utiliser E = P × t pour calculer une énergie, en veillant à l'unité de temps (s pour des J, h pour des Wh).
+- Convertir les Wh en kWh en divisant par 1000 si besoin pour lire une facture.
+- Pour comparer deux usages, calculer l'énergie totale consommée (puissance × durée), pas seulement la puissance.
+erreurs_frequentes:
+- Confondre puissance (W, instantanée) et énergie (Wh ou J, qui dépend de la durée).
+- Oublier de convertir des minutes en heures avant de calculer une énergie en Wh.
+- Croire qu'un appareil plus puissant consomme forcément plus d'énergie totale, sans tenir compte de sa durée d'utilisation.
+- Confondre kWh (unité d'énergie) et kW (unité de puissance).
+exemple:
+  enonce: Un radiateur électrique fonctionne sous une tension de 230 V avec une intensité de 2 A. Calculer sa puissance,
+    puis l'énergie consommée en 3 heures, en kWh.
+  solution: P = U × I = 230 × 2 = 460 W. E = P × t = 460 × 3 = 1380 Wh = 1,38 kWh.
+exercices:
+- enonce: Un four à micro-ondes de puissance 2000 W fonctionne pendant 30 minutes. Calculer l'énergie consommée,
+    en Wh.
+  indices:
+  - 30 min = 0,5 h.
+  - E = P × t avec t en heures.
+  solution: E = 2000 × 0,5 = 1000 Wh, soit 1 kWh.
+- enonce: Une lampe consomme une intensité de 0,5 A sous une tension de 230 V. Calculer sa puissance.
+  indices:
+  - P = U × I.
+  solution: P = 230 × 0,5 = 115 W.
+- enonce: Deux appareils ont la même puissance de 1000 W, mais l'un fonctionne 1 heure et l'autre 3 heures. Lequel
+    consomme le plus d'énergie, et de combien ?
+  indices:
+  - Calcule E = P × t pour chacun.
+  solution: 'Le premier consomme 1000 Wh, le second 3000 Wh : le second consomme 2000 Wh de plus.'
+sources:
+- titre: Vikidia, « Puissance (physique) »
+  url: https://fr.vikidia.org/w/index.php?title=Puissance_%28physique%29&oldid=2569834
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Intensité électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Intensit%C3%A9_%C3%A9lectrique&oldid=2204263
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: fonctions-lineaires-affines
+declencheurs: ["droite", "pente", "coefficient directeur", "ordonnée à l'origine", "affine", "linéaire"]
+essentiel: 'Une fonction affine s''écrit f(x) = ax + b : a est le coefficient directeur, b l''ordonnée à l''origine.
+
+  Si b = 0, f(x) = ax est une fonction linéaire : elle traduit une situation de proportionnalité.
+
+  Représentation graphique : une droite. Pour une fonction linéaire, la droite passe par l''origine.
+
+  b se lit là où la droite coupe l''axe des ordonnées ; a est ce qu''on ajoute à y quand x augmente de 1 (a > 0
+  : la droite monte ; a < 0 : elle descend).
+
+  Si la droite passe par deux points A(x₁ ; y₁) et B(x₂ ; y₂), alors a = (y₂ − y₁) / (x₂ − x₁).'
+methode:
+- 'Image d''un nombre : remplacer x par ce nombre dans f(x) = ax + b.'
+- 'Antécédent d''un nombre k : résoudre l''équation ax + b = k.'
+- 'Tracer : calculer deux points (par exemple x = 0 et une autre valeur), les placer, tracer la droite.'
+- 'Retrouver f depuis deux points : calculer a avec la formule, puis b en remplaçant un point dans y = ax + b.'
+- 'Reconnaître une situation : proportionnelle → linéaire ; montant fixe + part proportionnelle → affine.'
+erreurs_frequentes:
+- Confondre image (on calcule f(x)) et antécédent (on résout une équation).
+- Inverser les rôles de a et b, ou lire b sur l'axe des abscisses.
+- Calculer le coefficient directeur avec (x₂ − x₁)/(y₂ − y₁).
+- Croire que toute droite passe par l'origine.
+exemple:
+  enonce: Un cinéma propose un abonnement à 20 € par an et la séance à 5 € ; sans abonnement, la séance coûte 8
+    €. Exprimer le coût pour n séances dans chaque cas.
+  solution: 'Sans abonnement S(n) = 8n (fonction linéaire : proportionnel) ; avec abonnement A(n) = 5n + 20 (fonction
+    affine, pas proportionnelle).'
+exercices:
+- enonce: f(x) = −2x + 3. Calculer l'image de 4, puis l'antécédent de 0.
+  indices:
+  - 'Image : remplace x par 4.'
+  - 'Antécédent de 0 : résous −2x + 3 = 0.'
+  solution: f(4) = −8 + 3 = −5 ; −2x + 3 = 0 donne x = 3/2 = 1,5.
+- enonce: Une droite passe par A(1 ; 1) et B(3 ; 7). Donner la fonction affine qu'elle représente.
+  indices:
+  - a = (7 − 1)/(3 − 1)
+  - Remplace les coordonnées de A dans y = ax + b pour trouver b.
+  solution: 'a = 6/2 = 3 ; 1 = 3 × 1 + b donc b = −2 : f(x) = 3x − 2.'
+- enonce: Avec les tarifs de l'exemple du cinéma, quelle formule est la moins chère pour 7 séances ? et pour 10
+    ?
+  indices:
+  - Calcule A(7) et S(7), puis A(10) et S(10).
+  solution: '7 séances : A = 55 €, S = 56 € (abonnement). 10 séances : A = 70 €, S = 80 € (abonnement).'
+sources:
+- titre: Wikiversité, « Fonctions affines et linéaires/Fonctions linéaires »
+  url: https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_lin%C3%A9aires&oldid=968959
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Fonctions affines et linéaires/Fonctions affines »
+  url: https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_affines&oldid=985043
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

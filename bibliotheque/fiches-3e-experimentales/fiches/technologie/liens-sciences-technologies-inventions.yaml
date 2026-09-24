@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: liens-sciences-technologies-inventions
+declencheurs:
+- découverte scientifique
+- application technique
+- invention
+- innovation
+- sciences et technologie
+- cycle de vie du produit
+essentiel: 'Une découverte scientifique (comprendre un phénomène naturel) peut donner naissance, parfois des décennies
+  plus tard, à une invention technique (une solution concrète qui utilise ce phénomène). Par exemple, la découverte
+  du lien entre électricité et magnétisme par Hans Christian Ørsted en 1821 a ouvert la voie, quelques décennies
+  après, à l''invention du moteur électrique.
+
+
+  Réciproquement, une invention technique peut permettre de nouvelles découvertes scientifiques (un microscope plus
+  puissant permet de découvrir de nouveaux phénomènes). Les sciences et les techniques avancent donc souvent ensemble.
+
+
+  Étudier les liens entre sciences, technologies et inventions demande de prendre en compte les besoins qui ont
+  motivé l''invention, les usages qu''elle a permis, et son cycle de vie (comment elle a été fabriquée, utilisée,
+  puis remplacée ou recyclée).'
+methode:
+- Repérer la découverte scientifique à l'origine d'une invention (quel phénomène naturel est exploité ?).
+- Identifier le besoin auquel répond l'invention (pourquoi a-t-elle été développée ?).
+- Situer l'invention dans le temps par rapport à la découverte scientifique (immédiate ou beaucoup plus tardive).
+- 'Relier l''invention à son cycle de vie : comment est-elle fabriquée, utilisée, puis en fin de vie ?'
+vocabulaire:
+- terme: découverte scientifique
+  definition: mise en évidence d'un phénomène naturel jusque-là inconnu ou mal compris
+- terme: invention technique
+  definition: solution concrète nouvelle qui utilise un phénomène ou un principe scientifique
+erreurs_frequentes:
+- Croire qu'une invention suit toujours immédiatement la découverte scientifique correspondante.
+- Confondre découverte scientifique (comprendre un phénomène) et invention (créer une solution technique).
+- Oublier de relier l'invention à un besoin humain précis.
+exemple:
+  enonce: En 1821, Ørsted découvre que le courant électrique crée un champ magnétique. Expliquer le lien entre cette
+    découverte et l'invention du moteur électrique.
+  solution: 'Cette découverte scientifique (électromagnétisme) a montré qu''un courant électrique pouvait créer
+    une force. Des inventeurs comme Zénobe Gramme (génératrice, 1871) puis d''autres ont utilisé ce principe pour
+    construire des machines transformant l''énergie électrique en mouvement : les moteurs électriques, répondant
+    au besoin de faire tourner des mécanismes sans force humaine ni vapeur.'
+exercices:
+- enonce: Citer un exemple où une invention technique (comme un instrument d'observation) a permis une nouvelle
+    découverte scientifique.
+  indices:
+  - Pense à des instruments qui permettent de voir ce qui était invisible auparavant.
+  solution: 'Exemple possible : le microscope a permis de découvrir l''existence des cellules et des micro-organismes,
+    invisibles à l''œil nu.'
+- enonce: Le four à micro-ondes a été inventé après la découverte, par hasard, qu'un rayonnement radar faisait fondre
+    une barre chocolatée dans une poche. Quel besoin cette invention a-t-elle fini par satisfaire ?
+  indices:
+  - Pense à l'usage quotidien du four à micro-ondes.
+  solution: Le besoin de réchauffer ou cuire rapidement des aliments, sans utiliser de flamme ni de four traditionnel
+    plus lent.
+sources:
+- titre: Vikidia, « Moteur électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Invention »
+  url: https://fr.vikidia.org/w/index.php?title=Invention&oldid=2093699
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

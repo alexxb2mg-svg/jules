@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: concevoir-creer-realiser-pieces
+declencheurs:
+- composer une petite piece musicale
+- creer une bande son
+- realiser une production musicale personnelle
+- composer avec un logiciel
+- faire une creation musicale de A a Z
+essentiel: 'Concevoir une pièce musicale, c''est passer d''une intention (une ambiance recherchée, une histoire
+  à raconter en son) à une réalisation concrète, en faisant des choix successifs de sons, de rythme et de structure.
+
+  Ce travail peut mobiliser des instruments, la voix, des objets sonores ou des outils numériques (logiciels d''enregistrement
+  ou de composition), seuls ou combinés.
+
+  Une pièce se construit par essais successifs : on teste une idée, on l''écoute, on la garde ou on la modifie,
+  jusqu''à obtenir une forme qui correspond à l''intention de départ.
+
+  La réalisation finale doit être fixée d''une manière ou d''une autre (partition simple, enregistrement, fichier
+  numérique) pour pouvoir être rejouée ou partagée.'
+methode:
+- Définir d'abord une intention claire (une ambiance, une histoire, une émotion).
+- Choisir les sons ou instruments qui peuvent servir cette intention.
+- Construire la pièce par essais successifs, en réécoutant régulièrement.
+- Fixer la version finale (enregistrement, notation simple) pour pouvoir la rejouer.
+erreurs_frequentes:
+- Accumuler trop de sons différents sans intention claire, ce qui rend la pièce confuse.
+- Ne jamais réécouter son travail en cours de création.
+- Oublier de fixer ou d'enregistrer la version finale, qui se perd alors.
+exemple:
+  enonce: Créer une courte bande sonore pour illustrer l'ambiance d'une forêt la nuit.
+  solution: Choisir des sons évoquant ce thème (souffle imitant le vent, petits bruits de percussions légères pour
+    des craquements, une voix chuchotée), les organiser dans un ordre qui crée une progression (calme puis un bruit
+    soudain), puis enregistrer le résultat avec un téléphone.
+exercices:
+- enonce: 'À la maison : crée une bande-son de 30 secondes maximum pour illustrer une ambiance de ton choix (ville,
+    mer, orage), avec ta voix et des objets du quotidien.'
+  indices:
+  - Note d'abord l'intention (l'ambiance choisie) avant de chercher les sons.
+  solution: Réussite si une personne qui écoute la bande-son sans savoir le thème peut deviner approximativement
+    l'ambiance recherchée.
+- enonce: Enregistre deux versions différentes d'une même petite phrase musicale ou rythmique, en changeant un seul
+    paramètre (tempo ou instrument), et compare-les.
+  indices:
+  - Ne change qu'un seul élément entre les deux versions pour bien isoler son effet.
+  solution: Réussite si tu peux décrire précisément la différence d'effet produite par le changement de ce seul
+    paramètre.
+sources:
+- titre: Wikipédia, « Musique assistée par ordinateur »
+  url: https://fr.wikipedia.org/w/index.php?title=Musique_assist%C3%A9e_par_ordinateur&oldid=239631594
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

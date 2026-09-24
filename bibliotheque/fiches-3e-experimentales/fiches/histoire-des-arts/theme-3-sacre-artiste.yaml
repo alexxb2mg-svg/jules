@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-3-sacre-artiste
+declencheurs:
+- renaissance italienne art
+- mecenat artiste
+- gravure imprimerie renaissance
+- artiste et son mecene
+- statut de l'artiste a la renaissance
+essentiel: 'Entre le XIVe et le début du XVIIe siècle, l''artiste change de statut : il n''est plus seulement un
+  artisan anonyme mais devient reconnu individuellement pour son talent, souvent grâce au soutien de mécènes (des
+  personnes riches, comme des princes ou des familles puissantes) qui financent son travail.
+
+  Ce mouvement, appelé la Renaissance, naît dans les cités-États italiennes puis se diffuse en Europe : les échanges
+  entre les Flandres, la France et l''Italie font circuler des formes, des styles et des techniques.
+
+  La gravure et l''imprimerie, développées à cette période, permettent pour la première fois de reproduire une image
+  en plusieurs exemplaires identiques (un texte gravé sur une plaque, encré, puis pressé sur du papier), ce qui
+  change la diffusion des idées et des images.
+
+  Cette période voit aussi se développer de nouveaux liens entre poésie et musique, ainsi que les arts du spectacle
+  (théâtre religieux, comique, fêtes).'
+methode:
+- Repérer si une œuvre a été commandée par un mécène et en quoi ce soutien a influencé sa réalisation.
+- Situer géographiquement une œuvre de la Renaissance (Italie, Flandres, France) pour comprendre les circulations
+  artistiques.
+- Distinguer une œuvre unique (peinture, sculpture) d'une œuvre reproductible (gravure imprimée).
+- Relier le développement de l'imprimerie à un changement dans la diffusion des images ou des idées.
+erreurs_frequentes:
+- Croire que tous les artistes de cette période étaient déjà célèbres et indépendants.
+- Confondre gravure (matrice reproductible) et peinture (œuvre unique).
+- Limiter la Renaissance à l'Italie seule, sans voir les échanges avec les Flandres et la France.
+exemple:
+  enonce: Un riche mécène italien finance un peintre pour décorer une chapelle familiale.
+  solution: Ce soutien financier (mécénat) permet à l'artiste de réaliser une œuvre ambitieuse tout en répondant
+    aux attentes du commanditaire (sujet religieux, mise en valeur de la famille du mécène), un fonctionnement typique
+    de la Renaissance italienne.
+exercices:
+- enonce: 'À l''oral (type brevet) : explique en 2 phrases ce qu''est le mécénat et pourquoi il a joué un rôle important
+    à la Renaissance.'
+  indices:
+  - Pense à ce que le mécène apporte à l'artiste, et ce qu'il attend en retour.
+  solution: Réussite si les 2 phrases expliquent bien le principe du mécénat (financement en échange d'une œuvre)
+    et son importance pour les artistes de l'époque.
+- enonce: Explique la différence entre une œuvre gravée et une peinture, et pourquoi la gravure a changé la diffusion
+    des images.
+  indices:
+  - La gravure permet de faire plusieurs exemplaires identiques, contrairement à la peinture.
+  solution: Réussite si la différence de reproductibilité est bien expliquée et reliée à un changement de diffusion
+    (plus d'exemplaires, plus grande diffusion).
+sources:
+- titre: Vikidia, « Mécène »
+  url: https://fr.vikidia.org/w/index.php?title=M%C3%A9c%C3%A8ne&oldid=2311793
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Gravure »
+  url: https://fr.vikidia.org/w/index.php?title=Gravure&oldid=2247625
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Renaissance »
+  url: https://fr.vikidia.org/w/index.php?title=Renaissance&oldid=2447711
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

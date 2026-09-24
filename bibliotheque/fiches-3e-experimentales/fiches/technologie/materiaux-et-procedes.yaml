@@ -1,0 +1,84 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: materiaux-et-procedes
+declencheurs:
+- matériau
+- plastique
+- bois
+- métal
+- impression 3D
+- fabrication
+- procédé
+- propriété du matériau
+- résistance des matériaux
+essentiel: 'Un matériau est une matière choisie pour ses propriétés (résistance, masse, aspect, coût) afin de fabriquer
+  un objet. On distingue quatre grandes familles : les matériaux minéraux (roches, céramiques, verre), les matériaux
+  métalliques (métaux et alliages comme l''acier ou l''aluminium), les matériaux organiques (bois, plastiques, cuir,
+  à base de matière vivante ou d''hydrocarbures) et les matériaux composites (association de plusieurs familles,
+  comme le béton armé ou la fibre de carbone).
+
+
+  Le choix d''un matériau et de son procédé de mise en forme dépend des contraintes techniques (résistance nécessaire,
+  forme voulue) et environnementales (recyclabilité, énergie nécessaire à sa production). La résistance des matériaux
+  étudie comment un matériau se déforme sous une contrainte : d''abord une déformation élastique (il reprend sa
+  forme initiale si on arrête la contrainte), puis, si la contrainte est trop forte, une déformation plastique (déformation
+  qui reste) et enfin une rupture.
+
+
+  Parmi les procédés de fabrication modernes, l''impression 3D (ou fabrication additive) construit un objet couche
+  par couche à partir d''un modèle numérique, ce qui permet de réaliser des pièces sur mesure sans outillage spécifique,
+  contrairement aux procédés qui enlèvent de la matière (découpe, usinage).'
+methode:
+- Pour choisir un matériau, comparer ses propriétés (résistance, masse, coût, recyclabilité) aux contraintes du
+  cahier des charges.
+- Pour choisir un procédé de fabrication, tenir compte de la forme voulue, de la quantité de pièces à produire,
+  et du matériau choisi.
+- Pour analyser une déformation, identifier si elle est réversible (élastique) ou définitive (plastique ou rupture).
+- Pour justifier un choix, toujours relier le matériau ET le procédé aux contraintes techniques ET environnementales.
+vocabulaire:
+- terme: matériau composite
+  definition: matériau fabriqué en associant plusieurs matériaux de familles différentes
+- terme: déformation élastique
+  definition: 'déformation réversible : le matériau reprend sa forme initiale une fois la contrainte supprimée'
+- terme: fabrication additive
+  definition: procédé qui construit un objet en ajoutant de la matière couche par couche (impression 3D)
+erreurs_frequentes:
+- 'Confondre matériau (la matière : bois, acier...) et procédé (la méthode de fabrication : découpe, impression
+  3D...).'
+- Croire que tous les plastiques appartiennent à la même famille de propriétés.
+- Penser qu'une déformation élastique est toujours définitive.
+- Choisir un matériau uniquement sur son esthétique, sans tenir compte de sa résistance ou de son impact environnemental.
+exemple:
+  enonce: On veut fabriquer une pièce unique et complexe pour réparer un jouet. Pourquoi l'impression 3D est-elle
+    souvent préférée à l'usinage dans ce cas ?
+  solution: 'L''impression 3D ne nécessite pas d''outillage spécifique (moule, outil de coupe adapté) : on peut
+    fabriquer une seule pièce, même de forme complexe, directement à partir d''un modèle numérique, ce qui est plus
+    rapide et moins coûteux que l''usinage pour une pièce unique.'
+exercices:
+- enonce: 'Classer ces matériaux dans leur famille : acier, chêne, verre, béton armé.'
+  indices:
+  - 'Pense aux quatre familles : minéral, métallique, organique, composite.'
+  solution: 'Acier : métallique. Chêne : organique. Verre : minéral. Béton armé (béton + acier) : composite.'
+- enonce: Une règle en plastique que l'on plie légèrement reprend sa forme initiale ; pliée trop fort, elle casse.
+    Nommer les deux comportements observés.
+  indices:
+  - L'un est réversible, l'autre est une rupture.
+  solution: 'Pliage léger réversible : déformation élastique. Pliage trop fort : rupture (la règle casse, sans même
+    passer par une déformation plastique visible pour ce matériau cassant).'
+sources:
+- titre: Vikidia, « Matériau »
+  url: https://fr.vikidia.org/w/index.php?title=Mat%C3%A9riau&oldid=2527637
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Impression 3D »
+  url: https://fr.wikipedia.org/w/index.php?title=Impression_3D&oldid=239144470
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: qualites-physiques-materiaux
+declencheurs:
+- choisir un materiau pour mon oeuvre
+- oeuvre inachevee expres
+- qu'est ce que le fini et le non fini
+- assembler des materiaux differents
+- materiau lourd ou leger
+- difference entre les materiaux d'une sculpture
+essentiel: 'Chaque matériau a des qualités physiques propres (dur, souple, transparent, lourd, fragile…) qui portent
+  déjà un potentiel de signification avant même d''être transformé : le verre suggère la fragilité, le métal la
+  solidité ou la froideur.
+
+  On distingue le « fini », une œuvre achevée, lisse, sans trace apparente du travail, du « non fini », une œuvre
+  qui montre volontairement des traces d''inachèvement ou de fabrication, ce qui peut être une intention artistique
+  (des sculptures de Michel-Ange laissent ainsi la pierre brute visible autour de la forme sculptée).
+
+  Assembler des matériaux de caractéristiques différentes (dur/mou, brillant/mat, ancien/neuf) crée des contrastes
+  qui deviennent eux-mêmes porteurs de sens.'
+methode:
+- Choisir un matériau en pensant à ses qualités physiques, pas seulement à sa disponibilité.
+- Décider si l'œuvre doit paraître « finie » ou si le non fini sert une intention.
+- En cas d'assemblage, chercher le contraste qui donne du sens (dur/mou, neuf/usé…).
+- Vérifier que le matériau choisi résiste à la manipulation prévue pour l'œuvre.
+vocabulaire:
+- terme: fini
+  definition: état d'une œuvre achevée, sans trace apparente de fabrication
+- terme: non fini
+  definition: état d'une œuvre qui garde volontairement des traces d'inachèvement ou de fabrication
+erreurs_frequentes:
+- Croire qu'une œuvre non finie est forcément ratée.
+- Choisir un matériau sans tenir compte de ce qu'il évoque déjà (fragilité, solidité…).
+- Assembler des matériaux au hasard sans chercher de contraste porteur de sens.
+exemple:
+  enonce: Une sculpture en pierre montre un visage très détaillé émergeant d'un bloc resté brut.
+  solution: Le contraste entre la partie « finie » (le visage poli) et la partie « non finie » (la pierre brute)
+    peut suggérer une figure qui se dégage de la matière, un thème que Michel-Ange a exploré.
+exercices:
+- enonce: 'À la maison : assemble deux matériaux très différents que tu as chez toi (par exemple du papier et un
+    objet dur) et explique le contraste que ça crée.'
+  indices:
+  - Le contraste peut être de texture, de poids ou d'usage habituel.
+  solution: Réussite si le contraste choisi est décrit précisément et si tu proposes une idée de sens qu'il pourrait
+    porter.
+- enonce: Réalise un petit modelage en terre ou pâte à modeler et laisse une partie volontairement non finie (traces
+    de doigts visibles).
+  indices:
+  - Choisis à l'avance quelle partie restera « brute ».
+  solution: Réussite si le contraste fini/non fini est visible et assumé, pas accidentel.
+sources:
+- titre: Vikidia, « Sculpture »
+  url: https://fr.vikidia.org/w/index.php?title=Sculpture&oldid=2584156
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

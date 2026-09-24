@@ -1,0 +1,97 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: formes-engagement-citoyen
+declencheurs:
+- s'engager pour une cause
+- bénévolat
+- adhérer à un syndicat
+- SNU
+- délégué de classe rôle
+- manifester droit
+- engagement dans l'armée
+essentiel: 'S''engager, c''est agir volontairement pour une cause ou une collectivité. L''engagement citoyen prend
+  des formes traditionnelles variées : l''engagement politique (adhérer à un parti, exercer un mandat électif),
+  l''engagement syndical (défendre les droits des salariés au sein d''un syndicat), l''engagement associatif ou
+  humanitaire, et la démocratie scolaire (par exemple être délégué de classe, élu par ses camarades pour les représenter
+  auprès des professeurs et de l''administration).
+
+  L''engagement peut aussi prendre la forme d''un service au sein d''institutions publiques : armée, police, justice,
+  éducation.
+
+  La liberté de manifester, garantie en France au nom de la liberté d''expression, permet aux citoyens de faire
+  connaître publiquement leurs opinions et de faire pression sur les pouvoirs publics ; elle peut toutefois être
+  encadrée ou interdite par les autorités si l''ordre public est menacé.
+
+  Le service national universel (SNU), programme mis en place à partir de 2019, est un dispositif national qui vise
+  à faire découvrir aux jeunes différentes formes et différents domaines d''engagement.'
+methode:
+- 'Distinguer les grandes formes d''engagement : politique, syndical, associatif/humanitaire, scolaire, et service
+  dans une institution publique.'
+- Donner un exemple concret pour au moins deux formes d'engagement différentes.
+- Relier la liberté de manifester à la liberté d'expression, tout en signalant qu'elle peut être encadrée.
+- Connaître le SNU comme dispositif récent de découverte de l'engagement, sans le confondre avec le service militaire
+  obligatoire (supprimé en France en 1996).
+vocabulaire:
+- terme: engagement citoyen
+  definition: le fait d'agir volontairement pour une cause ou une collectivité, sous des formes variées
+- terme: démocratie scolaire
+  definition: l'organisation qui permet aux élèves d'élire des délégués pour les représenter dans leur établissement
+- terme: SNU
+  definition: 'service national universel : programme d''éducation à la citoyenneté non obligatoire mis en place
+    à partir de 2019'
+erreurs_frequentes:
+- 'Réduire l''engagement citoyen au seul vote : il existe de nombreuses autres formes d''engagement.'
+- Confondre le SNU (non obligatoire, créé en 2019) et l'ancien service militaire obligatoire, supprimé en France
+  en 1996.
+- Croire que la liberté de manifester est absolue et ne peut jamais être encadrée par les autorités.
+- Oublier que le service dans une institution publique (armée, police, justice, éducation) est aussi une forme d'engagement
+  citoyen.
+exemple:
+  enonce: Donne trois exemples différents de formes d'engagement citoyen.
+  solution: L'engagement associatif (être bénévole dans une association humanitaire), l'engagement syndical (adhérer
+    à un syndicat pour défendre les droits des salariés), et la démocratie scolaire (être élu délégué de classe
+    pour représenter ses camarades).
+exercices:
+- enonce: Qu'est-ce que le service national universel (SNU) et depuis quand existe-t-il ?
+  indices:
+  - Ce n'est pas obligatoire.
+  solution: C'est un programme d'éducation à la citoyenneté non obligatoire, mis en place à partir de 2019, qui
+    vise à faire découvrir aux jeunes différentes formes d'engagement.
+- enonce: 'Développement construit : montre que l''engagement citoyen peut prendre plusieurs formes, en t''appuyant
+    sur au moins deux exemples précis.'
+  indices:
+  - Choisis deux formes différentes (par exemple associatif et scolaire).
+  - Explique en quoi chacune constitue un engagement.
+  solution: Un développement réussi doit présenter au moins deux formes d'engagement distinctes, par exemple l'engagement
+    associatif (agir bénévolement pour une cause) et la démocratie scolaire (être délégué de classe, élu pour représenter
+    ses camarades) ; expliquer pour chacune en quoi elle constitue une participation volontaire à la vie collective
+    ; conclure en montrant la diversité des engagements possibles, y compris le service dans une institution publique.
+- enonce: Pourquoi la liberté de manifester peut-elle parfois être encadrée par les autorités ?
+  indices:
+  - Pense à l'ordre public.
+  solution: Si une manifestation risque de troubler gravement l'ordre public ou la sécurité, les autorités (préfecture
+    de police, gouvernement) peuvent l'encadrer ou l'interdire, tout en respectant le principe général de la liberté
+    d'expression.
+sources:
+- titre: Vikidia, « Délégué de classe »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9l%C3%A9gu%C3%A9_de_classe&oldid=2280639
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Syndicat »
+  url: https://fr.vikidia.org/w/index.php?title=Syndicat&oldid=2458649
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (engagement syndical)
+- titre: Wikipédia, « Service national universel »
+  url: https://fr.wikipedia.org/w/index.php?title=Service_national_universel&oldid=239118473
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

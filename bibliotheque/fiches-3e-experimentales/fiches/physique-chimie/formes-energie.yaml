@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: formes-energie
+declencheurs:
+- énergie cinétique
+- énergie potentielle
+- énergie thermique
+- énergie chimique
+- énergie lumineuse
+- formes d'énergie
+- convertir de l'énergie
+essentiel: 'L''énergie existe sous différentes formes : cinétique (liée au mouvement), potentielle (liée à la position,
+  par exemple l''altitude, ou à un état, comme un ressort comprimé), thermique (liée à l''agitation des particules,
+  ressentie comme la chaleur), électrique (liée au déplacement de charges électriques), chimique (stockée dans les
+  liaisons entre atomes, libérée par une réaction chimique), nucléaire (stockée dans le noyau des atomes) et lumineuse
+  (transportée par la lumière).
+
+  Un dispositif ne crée jamais d''énergie : il la convertit d''une forme à une autre (une pile convertit de l''énergie
+  chimique en énergie électrique, un panneau solaire convertit de l''énergie lumineuse en énergie électrique, une
+  éolienne convertit de l''énergie cinétique du vent en énergie électrique).
+
+  Certains dispositifs de conversion d''énergie (moteurs à combustion, centrales thermiques) libèrent du dioxyde
+  de carbone au cours de la conversion, ce qui a un impact sur l''effet de serre.
+
+  L''énergie se mesure en joules (J) ; pour l''énergie électrique domestique, on utilise souvent le kilowattheure
+  (kWh), avec 1 kWh = 3,6 millions de joules.'
+methode:
+- Pour analyser un dispositif, repérer la forme d'énergie en entrée et la ou les formes d'énergie en sortie.
+- Se souvenir qu'un dispositif ne fait que convertir l'énergie, jamais n'en crée ou n'en détruit.
+- Repérer si la conversion s'accompagne d'une émission de dioxyde de carbone (combustion, centrale thermique) ou
+  non (panneau solaire, éolienne).
+- Convertir entre joules et kilowattheures si besoin (1 kWh = 3 600 000 J).
+erreurs_frequentes:
+- 'Croire qu''un appareil « produit » de l''énergie à partir de rien : il la convertit toujours à partir d''une
+  source.'
+- Confondre énergie cinétique (mouvement) et énergie potentielle (position ou état).
+- Penser que toutes les conversions d'énergie émettent du CO2 (un panneau solaire n'en émet pas pendant son fonctionnement).
+- Oublier de convertir kWh en J (ou inversement) avant de comparer deux valeurs.
+exemple:
+  enonce: Une centrale thermique brûle du charbon pour produire de l'électricité. Quelles formes d'énergie sont
+    mises en jeu, et cette conversion émet-elle du CO2 ?
+  solution: Énergie chimique (du charbon) → énergie thermique (combustion) → énergie électrique. La combustion du
+    charbon (carboné) émet du dioxyde de carbone.
+exercices:
+- enonce: Une éolienne convertit quelle forme d'énergie en énergie électrique ?
+  indices:
+  - Qu'est-ce qui fait tourner les pales ?
+  solution: Elle convertit l'énergie cinétique du vent en énergie électrique.
+- enonce: Convertir 2 kWh en joules.
+  indices:
+  - 1 kWh = 3 600 000 J.
+  solution: 2 × 3 600 000 = 7 200 000 J.
+- enonce: Citer un dispositif qui convertit de l'énergie électrique en énergie lumineuse, et un autre qui fait la
+    conversion inverse.
+  indices:
+  - Pense à une ampoule, et à un panneau solaire.
+  solution: Une ampoule (électrique → lumineuse) ; un panneau photovoltaïque (lumineuse → électrique).
+sources:
+- titre: Vikidia, « Énergie cinétique »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89nergie_cin%C3%A9tique&oldid=2555116
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Énergie potentielle »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89nergie_potentielle&oldid=2516878
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

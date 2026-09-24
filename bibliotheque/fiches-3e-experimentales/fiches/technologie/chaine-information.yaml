@@ -1,0 +1,87 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: chaine-information
+declencheurs:
+- capteur
+- microcontrôleur
+- Arduino
+- IHM
+- interface
+- bouton
+- écran
+- acquérir
+- traiter
+- communiquer
+essentiel: 'La chaîne d''information d''un objet technique décrit comment l''information est traitée pour commander
+  la chaîne d''énergie. Elle comprend en général trois grandes fonctions : ACQUÉRIR (capter une information avec
+  un capteur), TRAITER (analyser cette information et décider d''une action, souvent avec un microcontrôleur) et
+  COMMUNIQUER (transmettre une information à l''utilisateur ou à un autre système, par exemple un afficheur ou une
+  connexion sans fil).
+
+
+  Un capteur est un dispositif qui transforme une grandeur physique (température, distance, luminosité, présence)
+  en un signal exploitable, le plus souvent électrique. Un microcontrôleur est un petit circuit intégré programmable
+  qui exécute un programme pour analyser les données des capteurs et commander des actionneurs (comme un moteur
+  ou une lumière). La carte Arduino est un exemple très utilisé en cours de technologie : elle associe un microcontrôleur,
+  des entrées pour les capteurs et des sorties pour les actionneurs, et se programme depuis un ordinateur.
+
+
+  Une interface homme-machine (IHM) regroupe les éléments qui permettent à un utilisateur d''interagir avec un objet
+  technique : boutons, écrans, voyants lumineux, haut-parleurs.'
+methode:
+- Pour identifier la fonction acquérir, chercher le ou les capteurs de l'objet (température, présence, distance...).
+- Pour identifier la fonction traiter, chercher le composant qui prend une décision à partir des informations reçues
+  (microcontrôleur, carte électronique).
+- Pour identifier la fonction communiquer, chercher ce qui informe l'utilisateur ou un autre système (écran, voyant,
+  message envoyé).
+- Pour construire un schéma de la chaîne d'information, placer les fonctions dans l'ordre acquérir → traiter → communiquer,
+  avec le composant réel sous chaque bloc.
+vocabulaire:
+- terme: capteur
+  definition: dispositif qui transforme une grandeur physique en un signal exploitable
+- terme: microcontrôleur
+  definition: petit circuit programmable qui traite les informations et commande des actionneurs
+- terme: IHM
+  definition: interface homme-machine, ensemble des éléments qui permettent l'interaction avec un utilisateur
+erreurs_frequentes:
+- 'Confondre un capteur (qui acquiert une information) et un actionneur (qui agit, comme un moteur : ce dernier
+  appartient à la chaîne d''énergie).'
+- Croire qu'un microcontrôleur est un ordinateur complet avec système d'exploitation.
+- Oublier la fonction communiquer, qui n'est pas toujours visible mais existe dès qu'une information sort du système.
+exemple:
+  enonce: Une veilleuse s'allume automatiquement la nuit grâce à un capteur de luminosité relié à un microcontrôleur
+    qui commande une LED. Identifier la fonction acquérir, traiter et communiquer/agir.
+  solution: 'Acquérir : le capteur de luminosité mesure la lumière ambiante. Traiter : le microcontrôleur compare
+    cette mesure à un seuil et décide d''allumer ou non. La LED qui s''allume relève de la chaîne d''énergie (elle
+    convertit l''énergie électrique en lumière), mais un voyant indiquant que le système fonctionne relèverait de
+    la fonction communiquer de la chaîne d''information.'
+exercices:
+- enonce: Citer un exemple de capteur que l'on pourrait utiliser avec une carte Arduino pour mesurer la température
+    d'une pièce.
+  indices:
+  - Pense aux capteurs cités dans le programme de technologie.
+  solution: Un capteur de température (thermistance ou capteur numérique de température) branché sur une entrée
+    de la carte Arduino.
+- enonce: Un système d'arrosage automatique mesure l'humidité du sol, décide s'il faut arroser, puis affiche « arrosage
+    en cours » sur un petit écran. Identifier les trois fonctions de la chaîne d'information dans cet exemple.
+  indices:
+  - Une mesure, une décision, un affichage.
+  solution: 'Acquérir : le capteur d''humidité du sol. Traiter : le microcontrôleur qui compare l''humidité mesurée
+    à un seuil et décide d''arroser. Communiquer : l''écran qui affiche « arrosage en cours ».'
+sources:
+- titre: Wikipédia, « Capteur »
+  url: https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Arduino »
+  url: https://fr.vikidia.org/w/index.php?title=Arduino&oldid=2554579
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

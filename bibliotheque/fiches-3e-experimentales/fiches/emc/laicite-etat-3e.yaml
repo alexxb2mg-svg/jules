@@ -1,0 +1,88 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: laicite-etat-3e
+declencheurs:
+- loi 1905
+- séparation Église État
+- neutralité religieuse
+- liberté de conscience
+- religion et politique
+- État laïque
+essentiel: 'La laïcité est le principe de séparation entre les religions et l''État. La Constitution de 1958 affirme,
+  dans son article premier, que « la France est une République indivisible, laïque, démocratique et sociale ».
+
+  Concrètement, la laïcité signifie que l''État est indépendant des autorités religieuses : il ne reconnaît, ne
+  salarie ni ne subventionne aucun culte, et ne privilégie aucune religion par rapport à une autre. En contrepartie,
+  elle garantit à chacun la liberté de conscience (croire ou ne pas croire) et la liberté de culte (pratiquer librement
+  sa religion).
+
+  Ce principe repose en France sur la loi du 9 décembre 1905 concernant la séparation des Églises et de l''État,
+  dont l''article 2 dispose que « la République ne reconnaît, ne salarie ni ne subventionne aucun culte », tout
+  en garantissant, selon l''article 1er, le libre exercice des cultes, avec les seules restrictions nécessaires
+  à l''ordre public.
+
+  La laïcité n''interdit pas aux autorités religieuses de s''exprimer sur des sujets de société : elles peuvent
+  participer au débat public, dans les limites fixées par la loi.'
+methode:
+- Définir la laïcité par la séparation des religions et de l'État, pas par l'interdiction des religions.
+- Citer la loi de 1905 comme fondement juridique de la laïcité en France.
+- 'Distinguer les deux libertés garanties : liberté de conscience et liberté de culte.'
+- Montrer que la laïcité n'exclut pas les autorités religieuses du débat public, dans certaines limites.
+vocabulaire:
+- terme: laïcité
+  definition: le principe de séparation entre les religions et l'État, qui garantit la liberté de conscience et
+    de culte
+- terme: liberté de conscience
+  definition: le droit de croire, de ne pas croire ou de changer de religion
+- terme: culte
+  definition: la pratique organisée d'une religion (cérémonies, lieux de culte)
+erreurs_frequentes:
+- 'Croire que la laïcité interdit de pratiquer une religion : elle protège au contraire la liberté de culte.'
+- Penser que la laïcité empêche toute expression des religions dans le débat public.
+- Oublier de citer la loi de 1905 comme texte fondateur.
+- Confondre laïcité (principe d'organisation de l'État) et athéisme (une croyance personnelle).
+exemple:
+  enonce: Explique en une phrase pourquoi la laïcité protège à la fois les croyants et les non-croyants.
+  solution: La laïcité garantit à chacun la liberté de croire et de pratiquer sa religion (liberté de culte), mais
+    aussi la liberté de ne pas croire, car l'État ne favorise ni n'impose aucune religion.
+exercices:
+- enonce: Que dit l'article 2 de la loi du 9 décembre 1905 sur le financement des cultes par l'État ?
+  indices:
+  - Une formule sur ce que l'État ne fait pas.
+  solution: L'article 2 dispose que la République ne reconnaît, ne salarie ni ne subventionne aucun culte.
+- enonce: 'Développement construit : explique le principe de laïcité et son fondement juridique en France.'
+  indices:
+  - Cite la loi de 1905.
+  - Distingue les deux libertés garanties.
+  solution: Un développement réussi doit définir la laïcité comme la séparation des religions et de l'État ; citer
+    la loi du 9 décembre 1905 comme son fondement juridique ; expliquer qu'elle garantit à la fois la liberté de
+    conscience et la liberté de culte, tout en assurant la neutralité religieuse de l'État ; préciser que les autorités
+    religieuses peuvent néanmoins s'exprimer dans le débat public, dans les limites fixées par la loi.
+- enonce: En quoi la laïcité est-elle liée à l'égalité entre les citoyens ?
+  indices:
+  - Pense au traitement des différentes religions par l'État.
+  solution: En ne privilégiant aucune religion, l'État traite tous les citoyens de la même manière quelle que soit
+    leur croyance ou leur absence de croyance, ce qui contribue à l'égalité devant la loi.
+sources:
+- titre: Vikidia, « Laïcité »
+  url: https://fr.vikidia.org/w/index.php?title=La%C3%AFcit%C3%A9&oldid=2344502
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Légifrance, « Article 1 - Loi du 9 décembre 1905 concernant la séparation des Eglises et de l'Etat »
+  url: https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006340313
+  auteurs: République française (Légifrance)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: citation de l'article 1 (libre exercice des cultes)
+- titre: Légifrance, « Article 2 - Loi du 9 décembre 1905 concernant la séparation des Eglises et de l'Etat »
+  url: https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000006340314
+  auteurs: République française (Légifrance)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: citation de l'article 2 (non-subventionnement des cultes)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

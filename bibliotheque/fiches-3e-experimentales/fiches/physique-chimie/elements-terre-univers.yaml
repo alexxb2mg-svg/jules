@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: elements-terre-univers
+declencheurs:
+- éléments chimiques dans les étoiles
+- d'où viennent les atomes
+- matière de l'Univers
+- ressources en éléments
+essentiel: 'La matière observable dans l''Univers, sur Terre comme dans les étoiles les plus lointaines, est constituée
+  des mêmes éléments chimiques et obéit aux mêmes lois physiques : c''est un principe fondamental de l''astrophysique.
+
+  L''hydrogène et l''hélium, formés très tôt dans l''histoire de l''Univers, en constituent l''essentiel de la matière
+  ordinaire ; les éléments plus lourds (oxygène, carbone, fer, silicium, terres rares…) sont produits par les réactions
+  nucléaires au cœur des étoiles, puis dispersés dans l''espace lors de leur explosion en fin de vie.
+
+  Sur Terre, la disponibilité des éléments est très inégale : l''hydrogène et l''hélium, abondants dans l''Univers,
+  sont rares à l''état libre sur Terre, tandis que des éléments plus lourds comme l''oxygène, le silicium ou le
+  fer sont beaucoup plus présents dans les roches terrestres.
+
+  Certaines ressources terrestres en éléments chimiques (métaux, terres rares) sont limitées, ce qui pose des questions
+  de gestion et d''exploitation raisonnée de ces ressources.'
+methode:
+- Retenir que les mêmes éléments chimiques se retrouvent partout dans l'Univers observable.
+- Distinguer les éléments légers (hydrogène, hélium), très abondants dans l'Univers, et les éléments plus lourds,
+  produits dans les étoiles.
+- 'Comparer l''abondance d''un élément dans l''Univers et sa disponibilité effective sur Terre : ce sont deux choses
+  différentes.'
+- Relier la rareté de certaines ressources terrestres (terres rares, métaux) aux enjeux de leur exploitation.
+erreurs_frequentes:
+- Croire que les éléments chimiques sont différents selon l'endroit de l'Univers où on les observe.
+- Confondre abondance dans l'Univers et abondance sur Terre (l'hydrogène est très abondant dans l'Univers mais rare
+  à l'état libre sur Terre).
+- Penser que les éléments lourds ont toujours existé depuis l'origine de l'Univers, alors qu'ils sont produits progressivement
+  dans les étoiles.
+- Ignorer que certaines ressources en éléments chimiques sont limitées sur Terre.
+exemple:
+  enonce: L'hydrogène et l'hélium représentent environ 74 % et 24 % de la matière ordinaire de l'Univers. Quel pourcentage
+    représentent tous les autres éléments réunis (oxygène, carbone, fer…) ?
+  solution: 100 − 74 − 24 = 2 % pour tous les autres éléments réunis.
+exercices:
+- enonce: Pourquoi dit-on que « nous sommes faits de poussière d'étoiles » ?
+  indices:
+  - D'où viennent les éléments plus lourds que l'hydrogène et l'hélium présents dans notre corps (carbone, oxygène…)
+    ?
+  solution: Les éléments lourds qui composent notre corps (carbone, oxygène, fer…) ont été formés au cœur d'étoiles
+    disparues, puis dispersés dans l'espace avant de participer à la formation du système solaire et de la Terre.
+- enonce: L'hydrogène est très abondant dans l'Univers. Est-il aussi très abondant à l'état libre à la surface de
+    la Terre ? Pourquoi cette différence est-elle importante à comprendre ?
+  indices:
+  - Compare abondance dans l'Univers et disponibilité sur Terre.
+  solution: 'Non, l''hydrogène est rare à l''état libre sur Terre (surtout combiné, par exemple dans l''eau) : abondance
+    dans l''Univers et disponibilité terrestre sont deux choses différentes, importantes pour comprendre les enjeux
+    de ressources.'
+- enonce: Citer un exemple d'élément chimique dont la ressource terrestre est limitée et pose des enjeux d'exploitation.
+  indices:
+  - Pense aux terres rares ou à certains métaux.
+  solution: 'Les terres rares (utilisées dans l''électronique) ou des métaux comme le cuivre : leurs réserves terrestres
+    sont limitées.'
+sources:
+- titre: Vikidia, « Élément chimique »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89l%C3%A9ment_chimique&oldid=2553298
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Étoile »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89toile&oldid=2510949
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

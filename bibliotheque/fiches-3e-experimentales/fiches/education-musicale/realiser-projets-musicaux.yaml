@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: realiser-projets-musicaux
+declencheurs:
+- projet musical de classe
+- chanter en groupe pour un concert
+- repartir les roles dans un projet musical
+- preparer une chanson pour la classe
+- chorale de la classe
+essentiel: 'Réaliser un projet musical d''interprétation ou de création suppose de tenir sa partie (voix ou instrument)
+  tout en écoutant les autres, pour former un ensemble cohérent.
+
+  Cela demande une organisation collective : répartir les voix ou les rôles, respecter un tempo commun, s''accorder
+  sur les nuances et l''expression recherchée.
+
+  Un projet se construit par étapes (apprentissage individuel, répétitions en groupe, ajustements) et aboutit à
+  une restitution devant un public, qui est un moment à part entière du projet, pas seulement son résultat.
+
+  La qualité du projet dépend autant de la justesse individuelle que de l''écoute mutuelle : chanter ou jouer juste
+  seul ne suffit pas si on ne s''accorde pas avec le groupe.'
+methode:
+- Apprendre sa partie individuellement (paroles, rythme, hauteur) avant les répétitions collectives.
+- En répétition, écouter les autres voix ou instruments autant que la sienne.
+- Repérer les passages difficiles (changement de tempo, entrée décalée) et les travailler à part.
+- S'accorder collectivement sur l'expression recherchée (nuances, caractère).
+- Préparer la restitution finale comme un moment de communication avec le public.
+erreurs_frequentes:
+- Se concentrer uniquement sur sa propre partie sans écouter le groupe.
+- Vouloir aller trop vite dans l'apprentissage collectif avant de maîtriser sa partie individuelle.
+- Négliger la préparation de la restitution (posture, entrées, silence avant de commencer).
+exemple:
+  enonce: La classe prépare un chant à deux voix pour une fête de fin d'année.
+  solution: Chaque groupe de voix apprend sa mélodie séparément, puis les deux groupes répètent ensemble en s'écoutant
+    pour que les deux parties s'accordent en hauteur et en tempo, avant une répétition générale qui simule les conditions
+    du concert.
+exercices:
+- enonce: 'À la maison : enregistre-toi en train de chanter ta partie d''un chant appris en classe, puis réécoute-toi
+    pour repérer un passage à améliorer.'
+  indices:
+  - Utilise le dictaphone de ton téléphone si tu en as un.
+  solution: Réussite si tu identifies précisément un passage (une note, un rythme) à retravailler, et si tu peux
+    dire pourquoi il pose problème.
+- enonce: Avec une ou plusieurs personnes de ta famille, essaie de chanter en canon une comptine simple que tout
+    le monde connaît.
+  indices:
+  - Un canon demande de décaler le départ d'une personne par rapport à l'autre.
+  solution: Réussite si les voix restent globalement synchronisées malgré le décalage, sans que l'une ne perde le
+    fil de l'autre.
+sources:
+- titre: Vikidia, « Voix »
+  url: https://fr.vikidia.org/w/index.php?title=Voix&oldid=2441249
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

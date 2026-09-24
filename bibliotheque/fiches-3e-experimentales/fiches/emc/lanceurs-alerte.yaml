@@ -1,0 +1,80 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: lanceurs-alerte
+declencheurs:
+- protéger un lanceur d'alerte
+- dénoncer un scandale
+- MeToo
+- révéler une affaire
+- signalement
+- affaire financière révélée
+essentiel: 'Un lanceur d''alerte est une personne qui signale, de bonne foi et sans intérêt personnel, un danger
+  ou un scandale (sanitaire, environnemental, financier...) pour protéger l''intérêt général. Il se distingue d''un
+  délateur, qui agit par intérêt personnel ou par malveillance.
+
+  Les médias sociaux sont devenus un lieu où des lanceurs d''alerte prennent des risques pour informer leurs concitoyens,
+  comme lors du mouvement #MeToo, qui a permis à de nombreuses personnes de témoigner publiquement de violences
+  sexuelles, ou lors de révélations sur des affaires financières.
+
+  En France, la loi du 21 mars 2022 vise à améliorer la protection des lanceurs d''alerte : elle protège notamment
+  leur identité, qui ne peut être divulguée qu''avec leur consentement, sauf communication à l''autorité judiciaire
+  dans certains cas prévus par la loi.
+
+  Le travail d''un lanceur d''alerte est plus facile dans une démocratie, où la liberté d''expression est garantie,
+  que dans un régime autoritaire, où il peut être réduit au silence.'
+methode:
+- Définir le lanceur d'alerte par la bonne foi et l'absence d'intérêt personnel, à l'opposer du délateur.
+- Citer la loi du 21 mars 2022 comme protection juridique du lanceur d'alerte en France.
+- Illustrer avec un exemple précis de mobilisation (#MeToo, affaire financière).
+- Relier le rôle du lanceur d'alerte à la liberté d'expression et au fonctionnement démocratique.
+vocabulaire:
+- terme: lanceur d'alerte
+  definition: une personne qui signale de bonne foi un danger ou un scandale pour protéger l'intérêt général
+- terme: délateur
+  definition: une personne qui dénonce quelqu'un par intérêt personnel ou malveillance, à la différence du lanceur
+    d'alerte
+erreurs_frequentes:
+- 'Confondre lanceur d''alerte et délateur : l''intention (intérêt général contre intérêt personnel) fait toute
+  la différence.'
+- Oublier que la loi du 21 mars 2022 protège en particulier l'identité du lanceur d'alerte.
+- 'Réduire les lanceurs d''alerte au seul mouvement #MeToo, sans connaître d''autre exemple (affaires financières,
+  sanitaires).'
+- 'Croire que le rôle du lanceur d''alerte est identique dans toutes les sociétés politiques : il est plus difficile
+  dans une dictature.'
+exemple:
+  enonce: Quelle protection la loi du 21 mars 2022 apporte-t-elle aux lanceurs d'alerte ?
+  solution: Elle protège en particulier l'identité du lanceur d'alerte, qui ne peut être divulguée qu'avec son consentement,
+    sauf communication à l'autorité judiciaire dans les cas prévus par la loi.
+exercices:
+- enonce: Quelle est la différence entre un lanceur d'alerte et un délateur ?
+  indices:
+  - Pense à l'intention de la personne qui parle.
+  solution: Le lanceur d'alerte agit de bonne foi, sans intérêt personnel, pour protéger l'intérêt général ; le
+    délateur dénonce par intérêt personnel ou malveillance.
+- enonce: 'Développement construit : présente le mouvement #MeToo comme un exemple de mobilisation portée par des
+    lanceurs d''alerte.'
+  indices:
+  - Quel type de faits est dénoncé ?
+  - Par quel moyen les témoignages circulent-ils ?
+  solution: 'Un développement réussi doit présenter #MeToo comme un mouvement où de nombreuses personnes ont témoigné
+    publiquement de violences sexuelles, notamment via les médias sociaux ; expliquer que ces témoignages relèvent
+    d''un lancement d''alerte lorsqu''ils visent à protéger d''autres personnes en dénonçant des faits graves ;
+    conclure sur l''importance d''un cadre légal protecteur, comme la loi de 2022.'
+- enonce: Pourquoi le travail d'un lanceur d'alerte est-il plus difficile dans une dictature que dans une démocratie
+    ?
+  indices:
+  - Pense à la liberté d'expression.
+  solution: Dans une démocratie, la liberté d'expression est garantie et des lois protègent le lanceur d'alerte,
+    alors que dans une dictature, la liberté d'expression est réduite et une personne qui dénonce un scandale risque
+    d'être réduite au silence ou punie.
+sources:
+- titre: Vikidia, « Lanceur d'alerte »
+  url: https://fr.vikidia.org/w/index.php?title=Lanceur_d%27alerte&oldid=2364203
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

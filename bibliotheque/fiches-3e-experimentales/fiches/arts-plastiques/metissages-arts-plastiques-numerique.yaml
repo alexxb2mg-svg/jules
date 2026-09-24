@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: metissages-arts-plastiques-numerique
+declencheurs:
+- art et intelligence artificielle
+- croisement entre arts et sciences
+- qui est l'artiste avec un logiciel
+- oeuvre collective en ligne
+- evolution du role de l'artiste
+- melanger peinture et effets numeriques
+- peinture traditionnelle avec ordinateur
+essentiel: 'Les technologies numériques bousculent la notion traditionnelle d''œuvre et d''artiste : quand un programme
+  génère une image, la question se pose de savoir qui en est réellement l''auteur (la personne qui a écrit le programme
+  ? qui a choisi le résultat ?).
+
+  Le public lui-même peut changer de rôle : d''un simple récepteur qui regarde, il peut devenir participant dans
+  des œuvres interactives ou collectives, notamment en ligne.
+
+  Ces métissages croisent aussi les arts plastiques avec les sciences et les technologies (programmation, capteurs,
+  impression 3D, intelligence artificielle), ouvrant des pratiques qui n''existaient pas avant l''ère numérique.'
+methode:
+- 'Repérer, dans une œuvre numérique, qui a fait quoi : programmation, choix esthétiques, participation du public.'
+- Distinguer une œuvre où le numérique est un outil de fabrication d'une œuvre où le public participe activement.
+- Chercher les liens entre l'œuvre et une discipline scientifique ou technique (biologie, informatique, physique).
+- Interroger la question de l'auteur quand plusieurs personnes ou un programme interviennent dans la création.
+erreurs_frequentes:
+- Croire qu'une œuvre faite avec un programme n'a pas d'auteur du tout.
+- Négliger le rôle du public dans une œuvre participative ou collective.
+- Réduire le métissage arts-sciences à la seule utilisation d'un ordinateur.
+exemple:
+  enonce: Une œuvre en ligne évolue en fonction des contributions successives de nombreux internautes anonymes,
+    sans qu'aucun d'eux ne la termine seul.
+  solution: 'L''auteur n''est plus une personne unique : c''est un processus collectif, guidé par les règles fixées
+    au départ par le créateur du dispositif, qui définit ce statut d''œuvre partagée.'
+exercices:
+- enonce: 'À la maison : imagine un petit dispositif participatif (même très simple, sur papier) où plusieurs personnes
+    de ta famille contribuent chacune un peu à une même œuvre.'
+  indices:
+  - Fixe une règle simple de départ (une couleur chacun, une forme chacun) avant de commencer.
+  solution: Réussite si le résultat final montre bien la contribution de plusieurs personnes selon une règle commune,
+    et si tu peux dire qui en est « l'auteur ».
+- enonce: Cherche un exemple d'œuvre ou de projet artistique qui utilise une science ou une technologie (biologie,
+    robotique, données) et explique ce que ce croisement apporte.
+  indices:
+  - Le land art croise déjà art et sciences de la nature ; cherche un équivalent numérique.
+  solution: Réussite si l'exemple relie clairement une pratique artistique à un domaine scientifique ou technique
+    précis.
+sources:
+- titre: Wikipédia, « Art numérique »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_num%C3%A9rique&oldid=238186012
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

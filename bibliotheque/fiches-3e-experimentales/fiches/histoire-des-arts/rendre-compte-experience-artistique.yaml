@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: rendre-compte-experience-artistique
+declencheurs:
+- parler de mon experience de spectateur
+- raconter un concert auquel j'ai assiste
+- rendre compte d'une pratique artistique personnelle
+- experience vecue en art
+essentiel: 'Rendre compte en termes personnels d''une expérience artistique, c''est décrire un moment vécu, soit
+  en tant que spectateur (concert, exposition, spectacle), soit en tant que pratiquant (théâtre, musique, arts plastiques),
+  en expliquant ce que cette expérience a apporté personnellement.
+
+  Ce compte rendu mêle des éléments factuels (quoi, où, quand) et un ressenti personnel argumenté : il ne s''agit
+  pas seulement de dire « c''était bien », mais d''expliquer précisément ce qui a produit cette impression.
+
+  Cette compétence est particulièrement mobilisée à l''oral de soutenance du brevet, où le candidat peut présenter
+  une expérience artistique personnelle vécue dans le cadre scolaire ou extrascolaire.
+
+  Une expérience artistique vécue en train de pratiquer (jouer d''un instrument, danser, peindre) donne un point
+  de vue différent de celui du simple spectateur, et les deux peuvent être valorisés.'
+methode:
+- Préciser le contexte de l'expérience (quoi, où, quand, en tant que spectateur ou pratiquant).
+- Décrire un moment précis plutôt qu'un résumé général de l'expérience.
+- Expliquer ce que cette expérience a apporté personnellement, avec un argument concret.
+- Relier si possible cette expérience à des notions vues en classe (technique, mouvement artistique…).
+erreurs_frequentes:
+- Rester trop vague sur le ressenti (« c'était cool ») sans l'expliquer.
+- Oublier de préciser le contexte de l'expérience (où, quand).
+- Ne parler que du contenu de l'œuvre vue, sans jamais dire ce que l'expérience a apporté personnellement.
+exemple:
+  enonce: Un élève a appris à jouer d'un instrument et raconte cette expérience.
+  solution: « J'ai appris la guitare pendant deux ans. Le moment où j'ai réussi à jouer un morceau entier sans erreur
+    m'a appris la patience, car j'avais dû répéter le même passage des dizaines de fois avant d'y arriver. » (contexte
+    + moment précis + apport personnel argumenté.)
+exercices:
+- enonce: 'À l''oral (type brevet) : raconte en 3 phrases une expérience artistique personnelle (spectateur ou pratiquant),
+    en expliquant ce qu''elle t''a apporté.'
+  indices:
+  - Choisis un moment précis plutôt qu'un souvenir flou de toute une période.
+  solution: Réussite si les 3 phrases couvrent bien le contexte, un moment précis, et un apport personnel argumenté
+    (pas juste un jugement de valeur).
+- enonce: Si tu as assisté à un spectacle ou une exposition, note ce qui t'a le plus marqué et pourquoi, en une
+    phrase argumentée.
+  indices:
+  - « Ce qui m'a marqué, c'est... parce que... » est une bonne structure.
+  solution: Réussite si la raison donnée est concrète et personnelle, pas une formule générale.
+sources:
+- titre: Vikidia, « Musique »
+  url: https://fr.vikidia.org/w/index.php?title=Musique&oldid=2487852
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

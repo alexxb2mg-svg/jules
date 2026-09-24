@@ -1,0 +1,87 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: evolution-especes
+declencheurs:
+- théorie de l'évolution
+- Darwin
+- sélection naturelle
+- espèces disparues
+- apparition de nouvelles espèces
+- fossiles et évolution
+essentiel: 'L''évolution biologique est l''ensemble des modifications des espèces vivantes au cours du temps, avec
+  l''apparition progressive de nouvelles espèces et la disparition d''autres ; ce processus est très lent, se manifestant
+  sur des dizaines ou des centaines de milliers d''années.
+
+  Les fossiles, restes ou traces d''organismes conservés dans les roches, apportent des preuves concrètes de l''évolution
+  : ils montrent que des espèces différentes de celles d''aujourd''hui ont existé, et permettent de retracer des
+  filiations entre espèces anciennes et actuelles.
+
+  Charles Darwin, en 1859, propose la théorie de la sélection naturelle pour expliquer les mécanismes de l''évolution
+  : au sein d''une population, les individus présentent des variations de caractères ; ceux dont les caractères
+  sont les mieux adaptés aux contraintes du milieu ont plus de chances de survivre et de se reproduire, transmettant
+  ces caractères favorables à leur descendance.
+
+  La sélection naturelle est un phénomène passif : elle ne « choisit » rien consciemment, elle résulte simplement
+  du fait que certains individus survivent et se reproduisent mieux que d''autres dans un contexte donné (une pression
+  de sélection).
+
+  Le hasard joue aussi un rôle dans l''évolution, notamment par les mutations génétiques qui créent la variation
+  de départ sur laquelle la sélection naturelle peut ensuite agir.'
+methode:
+- Utiliser les fossiles comme preuves d'espèces disparues et d'une évolution au cours du temps.
+- Repérer une variation de caractères au sein d'une population avant d'expliquer une évolution par sélection naturelle.
+- Identifier la pression de sélection (contrainte du milieu) qui avantage certains individus par rapport à d'autres.
+- Ne jamais présenter la sélection naturelle comme un choix conscient ou une volonté d'adaptation des individus.
+erreurs_frequentes:
+- Croire que les individus « choisissent » de s'adapter à leur environnement (c'est un phénomène passif, pas volontaire).
+- Penser que l'évolution vise un but ou une amélioration constante vers plus de complexité.
+- Confondre évolution d'une espèce (sur des générations) et adaptation individuelle au cours d'une vie (par exemple
+  le bronzage n'est pas transmis génétiquement).
+- Croire que l'être humain descend directement des chimpanzés actuels, plutôt que de partager avec eux un ancêtre
+  commun disparu.
+exemple:
+  enonce: Pourquoi, chez une population de papillons dont la couleur des ailes varie, la proportion de papillons
+    foncés augmente-t-elle si l'environnement s'assombrit (par exemple, la pollution des arbres) ?
+  solution: 'Les papillons foncés sont mieux camouflés dans un environnement sombre, donc moins repérés par les
+    prédateurs : ils survivent davantage et se reproduisent plus, transmettant leur couleur à leur descendance.
+    Au fil des générations, la proportion de papillons foncés augmente dans la population : c''est un exemple de
+    sélection naturelle.'
+exercices:
+- enonce: Quel scientifique a proposé la théorie de la sélection naturelle, et en quelle année ?
+  indices:
+  - Il a publié un livre intitulé L'Origine des espèces.
+  solution: Charles Darwin, en 1859.
+- enonce: Pourquoi les fossiles sont-ils des preuves importantes de l'évolution des espèces ?
+  indices:
+  - Que montrent-ils sur des espèces qui n'existent plus aujourd'hui ?
+  solution: Ils montrent l'existence d'espèces disparues, différentes des espèces actuelles, ce qui prouve que les
+    espèces vivantes ont changé au cours du temps.
+- enonce: Expliquer pourquoi on dit que la sélection naturelle est un phénomène « passif ».
+  indices:
+  - Personne ne décide consciemment qui survit.
+  solution: 'Parce qu''aucun individu ni aucune force extérieure ne choisit consciemment qui survit : ce sont simplement
+    les individus dont les caractères sont les mieux adaptés au milieu qui ont statistiquement plus de chances de
+    survivre et de se reproduire.'
+sources:
+- titre: Vikidia, « Évolution »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89volution&oldid=2563672
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Sélection naturelle »
+  url: https://fr.vikidia.org/w/index.php?title=S%C3%A9lection_naturelle&oldid=2362133
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Fossile »
+  url: https://fr.vikidia.org/w/index.php?title=Fossile&oldid=1854598
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

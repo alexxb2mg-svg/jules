@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transfert-lexique-et-genres
+declencheurs:
+- réutiliser du vocabulaire
+- enrichir mon vocabulaire
+- s'inspirer d'un texte lu
+- reprendre des tournures
+- écrire comme un auteur
+- distance critique sur mon texte
+essentiel: 'Bien écrire ne consiste pas seulement à respecter les règles de grammaire : c''est aussi savoir réutiliser,
+  dans ses propres textes, le vocabulaire et les tournures de phrases découverts en lisant. Connaître les principaux
+  genres littéraires (roman, théâtre, poésie, conte…) et leurs caractéristiques aide à choisir la forme adaptée
+  à ce qu''on veut écrire, et à imiter certains procédés propres à un genre (le dialogue au théâtre, la description
+  dans le roman, l''image en poésie).
+
+  Des outils d''analyse des textes (relever le vocabulaire, les figures de style, la construction des phrases d''un
+  auteur) permettent de repérer ce qu''on peut réutiliser, adapter dans sa propre écriture.
+
+  Enfin, adopter une distance critique sur son propre texte, c''est être capable de le relire comme s''il avait
+  été écrit par quelqu''un d''autre, pour en juger la pertinence et les effets : ce vocabulaire est-il bien choisi
+  ? cette tournure produit-elle l''effet voulu ?'
+methode:
+- En lisant, noter un mot, une expression ou une tournure de phrase qui te plaît particulièrement.
+- Repérer les caractéristiques du genre du texte lu (dialogue, description, rimes…).
+- Réutiliser dans sa propre production ce vocabulaire ou ces tournures, sans copier le texte entier.
+- Relire son propre texte avec distance, comme si on le découvrait, pour juger ses effets.
+- Se demander si le genre choisi pour son écrit correspond bien à ce qu'on veut exprimer.
+vocabulaire:
+- terme: distance critique
+  definition: capacité à relire et juger son propre texte comme s'il avait été écrit par quelqu'un d'autre
+- terme: genre littéraire
+  definition: catégorie de textes définie par sa forme ou son sujet (roman, théâtre, poésie…)
+erreurs_frequentes:
+- Copier une tournure lue sans l'adapter à son propre texte.
+- Mélanger les caractéristiques de plusieurs genres sans cohérence.
+- Ne jamais se relire avec un regard critique, comme si le texte était terminé dès le premier jet.
+- Réutiliser un vocabulaire sans être sûr d'en comprendre le sens exact.
+exemple:
+  enonce: Après avoir lu un extrait de roman où l'auteur décrit une tempête avec des comparaisons saisissantes,
+    comment réutiliser cette découverte dans sa propre rédaction ?
+  solution: 'On peut s''inspirer du procédé (utiliser une comparaison marquante pour décrire un phénomène) sans
+    reprendre les mêmes mots, en l''adaptant à sa propre scène : par exemple comparer le vent à un animal, comme
+    l''auteur avait pu le faire, mais avec ses propres images.'
+exercices:
+- enonce: Explique en une phrase ce que signifie « adopter une distance critique » sur son texte.
+  indices:
+  - Pense à relire comme un lecteur extérieur.
+  solution: C'est relire son propre texte comme si on ne l'avait pas écrit, pour juger honnêtement s'il est réussi,
+    clair, et produit l'effet voulu.
+- enonce: Relis un texte que tu as écrit récemment et note en 3-4 lignes ce que tu changerais maintenant, avec un
+    regard critique.
+  indices:
+  - Cherche un mot répété, une phrase peu claire, un passage à enrichir.
+  solution: Réussite si au moins deux améliorations précises sont proposées (vocabulaire, clarté, effet recherché).
+sources:
+- titre: Wikipédia, « Genre littéraire »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_litt%C3%A9raire&oldid=238084925
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

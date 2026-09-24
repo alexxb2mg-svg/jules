@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: monde-microbien-immunite
+declencheurs:
+- microbes dans le corps
+- bactéries utiles
+- vaccination comment ça marche
+- antibiotique résistance
+- hygiène et maladies
+essentiel: 'L''organisme humain héberge en permanence une grande diversité de micro-organismes (bactéries surtout,
+  mais aussi d''autres micro-organismes), dont beaucoup sont utiles ou inoffensifs et participent au fonctionnement
+  de l''organisme (par exemple dans la digestion).
+
+  Certains micro-organismes sont pathogènes : ils peuvent provoquer des maladies infectieuses en se multipliant
+  dans l''organisme et en perturbant son fonctionnement.
+
+  Face à ces micro-organismes pathogènes, l''organisme dispose de réactions immunitaires qui permettent de les détecter
+  et de les éliminer, pour préserver son fonctionnement.
+
+  Les mesures d''hygiène (lavage des mains, désinfection) limitent le contact avec des micro-organismes pathogènes
+  ; la vaccination prépare le système immunitaire à réagir plus vite et plus efficacement en cas d''infection réelle
+  ; les antiseptiques et les antibiotiques aident à lutter contre une infection déjà présente (les antibiotiques
+  ciblant spécifiquement les bactéries).
+
+  L''usage excessif ou inapproprié des antibiotiques favorise l''apparition de bactéries résistantes, contre lesquelles
+  ces médicaments deviennent inefficaces : c''est un enjeu majeur de santé publique actuel.'
+methode:
+- Distinguer micro-organismes utiles ou inoffensifs et micro-organismes pathogènes.
+- Relier chaque mesure de lutte (hygiène, vaccination, antiseptique, antibiotique) à son mode d'action et à son
+  moment d'utilisation (avant ou après une infection).
+- Retenir que les antibiotiques ciblent spécifiquement les bactéries, pas les virus.
+- Expliquer pourquoi un usage excessif des antibiotiques favorise l'apparition de résistances bactériennes.
+erreurs_frequentes:
+- Croire que tous les micro-organismes présents dans le corps sont dangereux.
+- Confondre vaccination (prévention, avant l'infection) et antibiotique (traitement, après l'infection).
+- Penser que les antibiotiques sont efficaces contre les virus (ils n'agissent que sur les bactéries).
+- Ignorer les conséquences d'un usage excessif des antibiotiques (résistance bactérienne).
+exemple:
+  enonce: Pourquoi un médecin ne prescrit-il pas d'antibiotique contre une simple grippe (une maladie virale) ?
+  solution: 'Les antibiotiques agissent spécifiquement contre les bactéries, pas contre les virus : ils seraient
+    inefficaces contre la grippe, qui est due à un virus, et leur usage inutile favorise en plus l''apparition de
+    bactéries résistantes.'
+exercices:
+- enonce: Quelle est la différence entre la vaccination et la prise d'un antibiotique, en termes de moment d'utilisation
+    ?
+  indices:
+  - L'une est préventive, l'autre curative.
+  solution: La vaccination prépare le système immunitaire avant une éventuelle infection (prévention) ; l'antibiotique
+    traite une infection bactérienne déjà présente (traitement curatif).
+- enonce: Pourquoi l'usage répété et inapproprié des antibiotiques pose-t-il un problème de santé publique ?
+  indices:
+  - Pense à ce qui arrive aux bactéries qui survivent à un traitement répété.
+  solution: Il favorise la sélection de bactéries résistantes aux antibiotiques, qui deviennent alors inefficaces
+    contre elles, rendant certaines infections plus difficiles à traiter.
+- enonce: Citer une mesure d'hygiène simple qui limite la transmission de micro-organismes pathogènes.
+  indices:
+  - Pense à un geste quotidien courant.
+  solution: Le lavage régulier des mains (d'autres réponses comme désinfecter une plaie sont acceptées).
+sources:
+- titre: Vikidia, « Vaccination »
+  url: https://fr.vikidia.org/w/index.php?title=Vaccination&oldid=1909390
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Antibiotique »
+  url: https://fr.vikidia.org/w/index.php?title=Antibiotique&oldid=2080959
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

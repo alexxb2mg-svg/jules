@@ -1,0 +1,76 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: geodynamique-globale
+declencheurs:
+- plaques tectoniques
+- dérive des continents
+- volcanisme
+- séismes
+- planète telluriques et gazeuses
+- pourquoi il y a des tremblements de terre
+essentiel: 'La Terre fait partie du système solaire, autour du Soleil, avec les autres planètes telluriques (rocheuses
+  : Mercure, Vénus, Terre, Mars) et les planètes gazeuses, plus grandes et plus éloignées (Jupiter, Saturne, Uranus,
+  Neptune).
+
+  La surface terrestre (la lithosphère) est fragmentée en plusieurs grandes plaques tectoniques rigides, qui se
+  déplacent lentement les unes par rapport aux autres, portées par les mouvements de matière plus profonds (l''asthénosphère).
+
+  Aux limites des plaques, ces mouvements produisent des phénomènes géologiques observables : séismes (secousses
+  dues à une rupture brutale des roches), volcanisme (remontée de magma) et formation de chaînes de montagnes (par
+  collision de plaques).
+
+  Le globe terrestre est animé d''une rotation sur lui-même (jour/nuit) et d''une dynamique interne (mouvements
+  de matière chaude à l''intérieur de la Terre) qui entraîne le déplacement des plaques.
+
+  L''histoire de la Terre se découpe en grandes ères géologiques, marquées par des événements majeurs (apparition
+  et disparition d''espèces, changements climatiques importants).'
+methode:
+- Situer la Terre dans le système solaire, parmi les planètes telluriques.
+- Repérer les limites de plaques tectoniques sur une carte pour expliquer la localisation des séismes et des volcans.
+- Relier un phénomène géologique observé (séisme, volcan, chaîne de montagnes) au mouvement des plaques qui le produit.
+- Distinguer la surface rigide (lithosphère, découpée en plaques) de la matière plus profonde et plus chaude qui
+  la porte.
+erreurs_frequentes:
+- 'Croire que les continents sont immobiles : ils se déplacent, mais très lentement (quelques centimètres par an).'
+- 'Confondre plaque tectonique et continent : une plaque peut porter un continent et une partie d''un océan.'
+- Penser que les séismes et les volcans se produisent n'importe où sur Terre, sans lien avec les limites de plaques.
+- Confondre planète tellurique (rocheuse) et planète gazeuse.
+exemple:
+  enonce: Pourquoi trouve-t-on de nombreux volcans et séismes tout autour de l'océan Pacifique (« ceinture de feu
+    ») ?
+  solution: Cette zone correspond à des limites de plaques tectoniques (par exemple la plaque Pacifique face à plusieurs
+    autres plaques) où les mouvements et les frottements entre plaques provoquent fréquemment des séismes et du
+    volcanisme.
+exercices:
+- enonce: Citer deux planètes telluriques et deux planètes gazeuses du système solaire.
+  indices:
+  - Les telluriques sont les plus proches du Soleil, les gazeuses les plus éloignées et les plus grosses.
+  solution: 'Telluriques : Mercure, Vénus, Terre, Mars (2 au choix). Gazeuses : Jupiter, Saturne, Uranus, Neptune
+    (2 au choix).'
+- enonce: Qu'appelle-t-on la lithosphère, et pourquoi la décrit-on comme fragmentée en plaques ?
+  indices:
+  - Pense à l'enveloppe rigide externe de la Terre.
+  solution: La lithosphère est l'enveloppe rigide externe de la Terre (croûte + partie supérieure du manteau) ;
+    elle est découpée en plusieurs grandes plaques tectoniques qui se déplacent les unes par rapport aux autres.
+- enonce: Expliquer en une phrase pourquoi les séismes se produisent surtout aux limites des plaques tectoniques.
+  indices:
+  - Que se passe-t-il quand deux plaques frottent ou se bloquent l'une contre l'autre ?
+  solution: Aux limites des plaques, les frottements accumulent des contraintes dans les roches ; quand elles cèdent
+    brutalement, cette libération d'énergie provoque un séisme.
+sources:
+- titre: Vikidia, « Tectonique des plaques »
+  url: https://fr.vikidia.org/w/index.php?title=Tectonique_des_plaques&oldid=2550391
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Système solaire »
+  url: https://fr.vikidia.org/w/index.php?title=Syst%C3%A8me_solaire&oldid=2402266
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

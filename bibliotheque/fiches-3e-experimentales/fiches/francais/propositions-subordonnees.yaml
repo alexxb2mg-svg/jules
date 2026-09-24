@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: propositions-subordonnees
+declencheurs:
+- proposition subordonnée
+- pronom relatif
+- qui que dont où
+- antécédent
+- analyse logique
+- subordonnée relative
+essentiel: 'Une proposition subordonnée dépend d''une proposition principale et occupe, dans la phrase complexe,
+  une fonction grammaticale par rapport à celle-ci (sujet, COD, complément circonstanciel, complément du nom...).
+
+  La subordonnée relative est introduite par un pronom relatif (qui, que, quoi, dont, où, lequel...) qui reprend
+  un nom ou un pronom appelé antécédent. Toute la subordonnée est complément de l''antécédent (elle fonctionne comme
+  une expansion du nom).
+
+  Le pronom relatif a lui-même une fonction à l''intérieur de sa propre subordonnée : sujet (qui), COD (que), complément
+  du nom (dont), complément circonstanciel de lieu ou de temps (où), complément prépositionnel (lequel, à qui...).
+
+  Pour analyser une phrase complexe : on repère d''abord la proposition principale, puis chaque subordonnée, sa
+  nature, son antécédent éventuel et sa fonction.'
+methode:
+- 'Souligner chaque verbe conjugué : autant de propositions que de verbes conjugués.'
+- Repérer le mot qui introduit chaque subordonnée (pronom relatif, conjonction, mot interrogatif).
+- 'Pour une relative : trouver l''antécédent (le nom ou pronom juste avant le pronom relatif).'
+- Donner la fonction du pronom relatif DANS sa subordonnée (remplacer mentalement par l'antécédent pour la trouver).
+- Donner la fonction de la subordonnée entière par rapport à la principale (souvent complément de l'antécédent pour
+  une relative).
+vocabulaire:
+- terme: antécédent
+  definition: nom ou pronom que reprend le pronom relatif
+- terme: proposition subordonnée relative
+  definition: subordonnée introduite par un pronom relatif, complément de son antécédent
+erreurs_frequentes:
+- Confondre la fonction du pronom relatif dans sa subordonnée avec la fonction de la subordonnée entière.
+- Oublier de chercher l'antécédent, ou le confondre avec le mot le plus proche s'il y a un complément entre les
+  deux.
+- Ne pas voir qu'une subordonnée relative peut être complément du nom, et non du verbe.
+- Confondre « que » pronom relatif (avec antécédent) et « que » conjonction de subordination (introduisant une complétive,
+  sans antécédent).
+exemple:
+  enonce: 'Analyser : « Le livre que j''ai emprunté à la bibliothèque parle d''un voyage. »'
+  solution: 'Proposition principale : « Le livre... parle d''un voyage. » Subordonnée relative : « que j''ai emprunté
+    à la bibliothèque », introduite par « que », antécédent « le livre ». Fonction de « que » dans la relative :
+    COD de « ai emprunté » (j''ai emprunté quoi ? le livre). Fonction de la relative entière : complément de l''antécédent
+    « le livre ».'
+exercices:
+- enonce: 'Analyser : « La ville où mes grands-parents sont nés a beaucoup changé. »'
+  indices:
+  - Quel est l'antécédent de « où » ?
+  - Quelle est la fonction de « où » dans la subordonnée ?
+  solution: 'Antécédent : la ville. « où » a la fonction de complément circonstanciel de lieu dans la relative («
+    sont nés » où ? dans cette ville). La relative entière est complément de l''antécédent « la ville ».'
+- enonce: 'Analyser : « Je connais bien l''auteur dont tu parles. »'
+  indices:
+  - '« dont » remplace un complément introduit par « de » : de qui parle-t-on ?'
+  solution: 'Antécédent : l''auteur. « dont » a la fonction de complément d''objet indirect de « parles » (tu parles
+    de l''auteur). La relative « dont tu parles » est complément de l''antécédent « l''auteur ».'
+- enonce: Dans « Je pense que tu as raison. », la subordonnée « que tu as raison » est-elle une relative ? Justifier.
+  indices:
+  - Y a-t-il un antécédent avant « que » ?
+  solution: 'Non, c''est une subordonnée conjonctive complétive : « que » est ici une conjonction de subordination
+    sans antécédent, et la subordonnée est COD du verbe « pense ».'
+sources:
+- titre: Wikipédia, « Proposition relative »
+  url: https://fr.wikipedia.org/w/index.php?title=Proposition_relative&oldid=233932611
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Pronom relatif en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Pronom_relatif_en_fran%C3%A7ais&oldid=218440136
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

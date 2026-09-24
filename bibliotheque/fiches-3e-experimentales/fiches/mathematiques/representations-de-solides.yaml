@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: representations-de-solides
+declencheurs: ["patron", "perspective", "cube", "pavé", "section", "coupe", "faces", "arêtes", "sommets", "solide"]
+essentiel: 'Un solide peut être représenté de plusieurs façons : en perspective cavalière, par des vues (de face,
+  de dessus, de côté), par un patron, par des sections.
+
+  Perspective cavalière : les faces avant sont dessinées en vraie grandeur ; les arêtes « fuyantes » (qui partent
+  vers l''arrière) sont parallèles entre elles et raccourcies ; les arêtes cachées sont en pointillés.
+
+  Patron : figure plane en un seul morceau qui, pliée, reconstitue le solide (la sphère n''a pas de patron). Le
+  patron d''un cylindre est formé de deux disques et d''un rectangle dont une dimension est le périmètre du disque.
+
+  Section plane : intersection d''un solide avec un plan. Pavé coupé parallèlement à une face : un rectangle ; cylindre
+  coupé parallèlement à la base : un disque de même rayon ; sphère coupée par un plan : un cercle ; pyramide ou
+  cône coupé parallèlement à la base : une réduction de la base.'
+methode:
+- Identifier le solide et compter faces, arêtes et sommets.
+- 'Perspective : dessiner d''abord la face avant en vraie grandeur, puis les fuyantes parallèles, puis la face arrière.'
+- 'Patron : vérifier que les arêtes qui se rejoignent au pliage ont la même longueur.'
+- 'Section : repérer la position du plan (parallèle à une face, à la base, à l''axe…) et en déduire la forme.'
+erreurs_frequentes:
+- Dessiner les arêtes cachées en traits pleins.
+- Croire que les longueurs fuyantes sont en vraie grandeur.
+- Proposer un patron dont deux faces se superposent au pliage.
+- Penser que la section d'un cône parallèle à la base est un triangle (c'est un disque).
+exemple:
+  enonce: Quelles sont les dimensions du rectangle dans le patron d'un cylindre de rayon 3 cm et de hauteur 5 cm
+    ?
+  solution: Une dimension est la hauteur, 5 cm ; l'autre est le périmètre du disque, 2π × 3 = 6π ≈ 18,8 cm.
+exercices:
+- enonce: Combien un cube a-t-il de faces, d'arêtes et de sommets ? Et une pyramide à base carrée ?
+  indices:
+  - Compte sur un dessin en perspective.
+  solution: 'Cube : 6 faces, 12 arêtes, 8 sommets. Pyramide à base carrée : 5 faces, 8 arêtes, 5 sommets.'
+- enonce: Quelle est la nature de la section d'un pavé droit par un plan parallèle à une face ? D'une sphère par
+    un plan ?
+  indices:
+  - Pense à couper une boîte ou une orange.
+  solution: Un rectangle (de mêmes dimensions que la face) ; un cercle (un disque si on coupe la boule).
+- enonce: Quelle est l'aire totale du patron d'un pavé de 3 cm × 2 cm × 1 cm ?
+  indices:
+  - Six faces, identiques deux à deux.
+  solution: 2 × (3 × 2 + 3 × 1 + 2 × 1) = 22 cm².
+sources:
+- titre: Wikipédia, « Perspective cavalière »
+  url: https://fr.wikipedia.org/w/index.php?title=Perspective_cavali%C3%A8re&oldid=229057623
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Patron (géométrie) »
+  url: https://fr.wikipedia.org/w/index.php?title=Patron_%28g%C3%A9om%C3%A9trie%29&oldid=236595132
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Section plane »
+  url: https://fr.wikipedia.org/w/index.php?title=Section_plane&oldid=97913717
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Polyèdre »
+  url: https://fr.vikidia.org/w/index.php?title=Poly%C3%A8dre&oldid=1536876
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

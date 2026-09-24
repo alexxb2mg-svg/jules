@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: modelisation-fabrication-objets-communicants
+declencheurs:
+- objet connecté
+- internet des objets
+- modéliser un objet communicant
+- domotique
+- capteur connecté
+- IoT
+essentiel: 'L''Internet des objets (IdO, ou IoT en anglais) désigne l''interconnexion entre Internet et des objets
+  physiques qui échangent des données. Un objet connecté combine une chaîne d''information (capteurs, microcontrôleur)
+  et une capacité de communication à distance (Wi-Fi, Bluetooth, ou d''autres technologies radio) qui lui permet
+  d''envoyer ou de recevoir des informations via un réseau, souvent vers une application sur smartphone.
+
+
+  Modéliser un objet communicant consiste à représenter son fonctionnement avant de le fabriquer : schéma des chaînes
+  d''énergie et d''information, modélisation numérique 3D de sa structure, et algorithme ou programme qui gère ses
+  échanges de données.
+
+
+  Ces objets soulèvent des enjeux de cybersécurité et de protection des données personnelles : les données collectées
+  (localisation, habitudes) doivent être protégées, et le nombre croissant d''objets connectés a aussi un impact
+  environnemental (fabrication, énergie, fin de vie).'
+methode:
+- Lister les capteurs nécessaires à l'objet communicant selon les informations qu'il doit collecter.
+- Choisir la technologie de communication (Wi-Fi, Bluetooth) selon la distance et la consommation d'énergie acceptables.
+- Modéliser numériquement la structure de l'objet et vérifier sa compatibilité avec les composants électroniques
+  choisis.
+- Prévoir la sécurisation des données échangées (mot de passe, protocole sécurisé).
+vocabulaire:
+- terme: objet connecté
+  definition: objet capable d'échanger des données avec un réseau, souvent via Internet
+- terme: Internet des objets
+  definition: ensemble des objets connectés interconnectés avec Internet et entre eux
+erreurs_frequentes:
+- Oublier de sécuriser les données échangées par un objet connecté.
+- Confondre objet connecté (qui communique avec un réseau) et objet simplement automatisé (qui fonctionne seul,
+  sans communication réseau).
+- Ne pas prendre en compte l'impact environnemental de la fabrication et de l'usage énergétique des objets connectés.
+exemple:
+  enonce: On modélise un thermomètre connecté qui envoie la température d'une pièce sur une application smartphone.
+    Décrire les principaux blocs à modéliser.
+  solution: 'Chaîne d''information : capteur de température (acquérir), microcontrôleur (traiter), module Wi-Fi
+    ou Bluetooth (communiquer vers l''application). Chaîne d''énergie : pile ou secteur (alimenter), interrupteur
+    ou gestion logicielle (distribuer). Modèle numérique 3D du boîtier protégeant l''électronique. Programme gérant
+    l''envoi périodique de la mesure et la sécurité de la connexion.'
+exercices:
+- enonce: Pourquoi un objet connecté qui transmet la localisation de son utilisateur pose-t-il un enjeu de protection
+    des données personnelles ?
+  indices:
+  - Repense à la notion de donnée personnelle.
+  solution: 'La localisation est une donnée personnelle : si elle n''est pas protégée (chiffrement, accès sécurisé),
+    elle peut être interceptée ou utilisée pour suivre les déplacements d''une personne sans son accord.'
+sources:
+- titre: Wikipédia, « Internet des objets »
+  url: https://fr.wikipedia.org/w/index.php?title=Internet_des_objets&oldid=239662782
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Cybersécurité »
+  url: https://fr.vikidia.org/w/index.php?title=Cybers%C3%A9curit%C3%A9&oldid=2332150
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ponctuation-syntaxique
+declencheurs:
+- virgule
+- point-virgule
+- deux points
+- guillemets
+- ponctuation
+- parenthèses
+- tiret
+essentiel: 'Chaque signe de ponctuation joue un rôle syntaxique, pas seulement une pause à l''oral.
+
+  La virgule sépare les éléments d''une énumération, isole une apposition ou une proposition incise, détache un
+  complément circonstanciel déplacé en tête de phrase.
+
+  Le point-virgule relie deux propositions indépendantes proches par le sens, sans les subordonner l''une à l''autre.
+
+  Les deux-points annoncent une explication, une cause, une énumération ou une parole rapportée au discours direct.
+
+  Les parenthèses et les tirets isolent une information secondaire (incise) ; les guillemets signalent une citation
+  ou un discours direct ; le point d''interrogation et le point d''exclamation marquent le type ou la forme de la
+  phrase.'
+methode:
+- 'Repérer le signe et se demander : sépare-t-il des éléments de même fonction, ou relie-t-il deux phrases ?'
+- 'Pour la virgule : vérifier énumération, apposition détachée, ou complément déplacé.'
+- 'Pour les deux-points : chercher ce qui suit (explication, énumération, citation).'
+- 'Pour le point-virgule : vérifier qu''il y a bien deux propositions autonomes de chaque côté.'
+- Ne jamais mettre une virgule entre le sujet et son verbe (sauf incise entre virgules).
+erreurs_frequentes:
+- Séparer le sujet de son verbe par une virgule sans raison.
+- Utiliser un point-virgule comme une simple virgule (il faut deux propositions complètes).
+- Oublier la virgule après un complément circonstanciel déplacé en tête de phrase.
+- Confondre les deux-points explicatifs et une simple pause.
+exemple:
+  enonce: 'Expliquer le rôle de chaque signe : « Le soir venu, il rentra chez lui : la nuit s''annonçait froide,
+    humide et silencieuse. »'
+  solution: La virgule après « venu » détache le complément circonstanciel de temps placé en tête de phrase. Les
+    deux-points annoncent l'explication de ce qui précède (pourquoi il rentre). Les virgules dans l'énumération
+    séparent les trois adjectifs « froide, humide et silencieuse ».
+exercices:
+- enonce: 'Ponctuer : « Pierre aime lire dessiner et jouer de la guitare »'
+  indices:
+  - Combien d'éléments sont énumérés ?
+  - Faut-il une virgule avant le dernier élément relié par « et » ?
+  solution: '« Pierre aime lire, dessiner et jouer de la guitare. » : virgules entre les éléments de l''énumération,
+    pas de virgule avant « et » qui relie déjà les deux derniers.'
+- enonce: 'Justifier l''emploi du point-virgule : « Le ciel s''assombrit ; l''orage n''était plus très loin. »'
+  indices:
+  - Chaque partie forme-t-elle une phrase complète à elle seule ?
+  solution: 'Les deux propositions sont grammaticalement autonomes (chacune a un sujet et un verbe) mais liées par
+    le sens (la seconde est presque une conséquence de la première) : le point-virgule marque ce lien sans les subordonner.'
+sources:
+- titre: Wikipédia, « Ponctuation »
+  url: https://fr.wikipedia.org/w/index.php?title=Ponctuation&oldid=237620250
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

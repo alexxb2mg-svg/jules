@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: lire
+declencheurs:
+- comprendre un texte en anglais
+- lecture anglais
+- compréhension écrite
+- lire un article
+- stratégie de lecture
+- texte en anglais difficile
+essentiel: 'Lire un texte en anglais, comme à l''oral, ne demande pas de comprendre chaque mot pour saisir le sens
+  général. Développer des stratégies de lecteur permet de s''approprier des documents variés (articles, dialogues,
+  extraits de site web, bandes dessinées).
+
+
+  Avant de lire en détail, repérer les indices extralinguistiques : le type de document (article, lettre, publicité),
+  sa mise en page, les images, le titre. Ils donnent déjà une idée du sujet et du genre de texte.
+
+
+  Pendant la lecture, repérer les indices linguistiques : les mots transparents (proches du français, comme « important
+  », « television »), les mots répétés (souvent des mots-clés), les mots-outils qui structurent le texte (however,
+  because, first). On peut aussi s''appuyer sur la construction des mots (préfixes, suffixes) pour deviner leur
+  sens : « unhappy » (un- = négation + happy).
+
+
+  La reconstitution du sens se fait par recoupement : combiner plusieurs indices plutôt que de chercher un seul
+  mot précis.'
+methode:
+- Observer d'abord le document dans son ensemble (titre, images, mise en page) avant de lire les phrases.
+- Repérer les mots transparents et les mots déjà connus pour construire une première idée du sens.
+- Utiliser les préfixes et suffixes connus pour deviner le sens d'un mot nouveau (un-, re-, -ful, -less).
+- Relire une deuxième fois en se concentrant sur les connecteurs logiques (but, so, because, however) qui organisent
+  les idées.
+- 'Accepter de ne pas tout comprendre : se concentrer sur ce qui répond à la question posée sur le texte.'
+vocabulaire:
+- terme: mot transparent
+  definition: mot dont la forme est proche de son équivalent en français, facilitant la compréhension
+- terme: stratégie de lecteur
+  definition: méthode active pour comprendre un texte sans tout traduire mot à mot
+erreurs_frequentes:
+- Traduire mot à mot au lieu de chercher le sens global.
+- Abandonner la lecture dès le premier mot inconnu.
+- Ne pas s'appuyer sur le titre et les images, qui donnent pourtant des indices précieux.
+- Confondre un mot transparent avec un faux-ami (par exemple « library » ne veut pas dire librairie mais bibliothèque).
+exemple:
+  enonce: Dans le texte « The unhappy dog was waiting patiently for its owner. », deviner le sens de « unhappy »
+    sans dictionnaire.
+  solution: « Happy » est un mot connu qui signifie heureux. Le préfixe « un- » indique une négation en anglais.
+    « Unhappy » signifie donc « pas heureux, triste ».
+exercices:
+- enonce: Deviner le sens de « careless » en sachant que « care » veut dire soin/attention et que le suffixe « -less
+    » signifie « sans ».
+  indices:
+  - Combine le sens de care et de -less.
+  solution: « Careless » signifie « sans soin, négligent, imprudent ».
+- enonce: Un article s'intitule « Five Tips to Protect the Ocean » avec une photo de plastique sur une plage. Sans
+    lire le texte, de quoi parle probablement l'article ?
+  indices:
+  - Utilise le titre et l'image comme indices extralinguistiques.
+  solution: L'article donne probablement des conseils (« tips ») pour protéger l'océan, certainement liés à la pollution
+    plastique, comme le suggère la photo.
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

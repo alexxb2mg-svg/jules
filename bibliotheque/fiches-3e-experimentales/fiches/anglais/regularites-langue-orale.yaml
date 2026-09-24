@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: regularites-langue-orale
+declencheurs:
+- accent tonique anglais
+- prononciation anglaise
+- rythme de l'anglais
+- liaison anglais
+- accent britannique américain
+- intonation anglais
+essentiel: 'L''anglais oral a des régularités propres, différentes du français, qu''il est utile de repérer pour
+  mieux comprendre et être compris.
+
+
+  L''accentuation tonique (stress) marque une syllabe plus forte dans chaque mot de plusieurs syllabes (par exemple
+  « PHOtograph » mais « phoTOgraphy », l''accent se déplace). Contrairement au français, où l''accent est souvent
+  régulier en fin de mot, l''accent anglais varie et change parfois le sens ou la nature grammaticale du mot («
+  PREsent », le cadeau ; « to preSENT », présenter).
+
+
+  Le rythme de l''anglais est accentuel : les mots importants (noms, verbes, adjectifs) sont prononcés avec plus
+  de force et de durée que les mots-outils (articles, prépositions), qui sont souvent prononcés rapidement et de
+  façon réduite.
+
+
+  Il existe aussi des variations phoniques selon les régions et les pays anglophones (accent britannique, américain,
+  australien...), qui prononcent certains sons différemment sans que cela change le sens des mots.'
+methode:
+- Écouter où se place l'accent tonique dans les mots nouveaux, en s'aidant d'un dictionnaire si besoin.
+- S'entraîner à accentuer les mots importants (noms, verbes) plutôt que les mots-outils, pour se rapprocher du rythme
+  naturel de l'anglais.
+- Écouter des documents variés (accents différents) pour habituer son oreille aux variations phoniques entre pays
+  anglophones.
+- 'Ne pas chercher à reproduire un seul accent « parfait » : accepter la diversité des prononciations de l''anglais
+  dans le monde.'
+vocabulaire:
+- terme: accent tonique
+  definition: syllabe prononcée avec plus de force dans un mot
+- terme: variation phonique
+  definition: différence de prononciation d'un même mot selon les régions ou les locuteurs
+erreurs_frequentes:
+- Accentuer chaque syllabe de façon égale, comme en français, au lieu de marquer une syllabe plus forte.
+- Croire qu'il n'existe qu'une seule bonne prononciation de l'anglais.
+- Ne jamais s'entraîner à l'écoute de documents authentiques, ce qui empêche de se familiariser avec le rythme réel
+  de la langue.
+exemple:
+  enonce: 'Le mot « present » change de sens selon l''accent tonique : « PREsent » (nom, le cadeau) et « preSENT
+    » (verbe, présenter). Utiliser chacun dans une phrase.'
+  solution: « I gave her a nice PREsent for her birthday. » (un cadeau) et « I will preSENT my project tomorrow.
+    » (présenter).
+exercices:
+- enonce: Pourquoi est-il faux de dire qu'il existe une seule bonne façon de prononcer l'anglais ?
+  indices:
+  - Pense aux différents pays anglophones.
+  solution: 'Parce que l''anglais est parlé dans de nombreux pays (Royaume-Uni, États-Unis, Australie, Canada...)
+    avec des accents différents, tous corrects : il n''existe pas un accent unique et supérieur aux autres.'
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

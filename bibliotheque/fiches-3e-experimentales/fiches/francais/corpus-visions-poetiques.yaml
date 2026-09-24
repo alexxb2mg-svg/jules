@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: corpus-visions-poetiques
+declencheurs:
+- recueil de poèmes
+- groupement de poèmes
+- prose poétique
+- paysage en poésie
+- anthologie
+- corpus poétique
+essentiel: 'Ce corpus regroupe des poèmes ou des textes de prose poétique, du romantisme à nos jours, pour montrer
+  la diversité des façons de voir et de dire le monde selon les poètes et les époques. On y trouve par exemple un
+  poème romantique de Victor Hugo tourné vers le souvenir et la nature, un poème de Baudelaire qui interroge la
+  place du poète dans la société (« L''Albatros »), un poème de Verlaine centré sur la musicalité et la mélancolie
+  (« Chanson d''automne »).
+
+  Un même thème, comme le paysage, peut être traité de façons très différentes selon l''esthétique de chaque poète
+  : célébration, mélancolie, inquiétude, émerveillement. Le corpus peut être complété par des exemples de paysages
+  peints, pour montrer que cette diversité de « visions du monde » existe aussi en peinture.
+
+  Comparer plusieurs poèmes sur un même thème permet de mieux percevoir ce qui appartient à chaque poète (son style
+  propre) et ce qui appartient à son époque ou à son mouvement littéraire.'
+methode:
+- 'Repérer le thème commun aux poèmes du corpus (par exemple : la nature, le temps qui passe, la solitude).'
+- Identifier, pour chaque poème, l'émotion dominante et le regard porté sur ce thème.
+- Comparer la forme des poèmes (rimes, strophes, rythme) pour voir ce qui les distingue.
+- Relever le vocabulaire et les images propres à chaque poète.
+- 'Conclure sur ce que la comparaison révèle : un même thème peut inspirer des visions très différentes.'
+erreurs_frequentes:
+- Étudier chaque poème séparément sans jamais les comparer.
+- Résumer le sujet du poème sans analyser comment il est écrit.
+- Attribuer à tous les poèmes du corpus le même sentiment, sans distinguer les nuances.
+- Oublier de situer chaque poème dans son époque.
+exemple:
+  enonce: Dans « L'Albatros » de Baudelaire, l'oiseau majestueux dans le ciel devient « gauche et veule » une fois
+    capturé sur le pont du navire, où il est moqué par les marins. Quelle vision poétique ce texte propose-t-il
+    ?
+  solution: 'Baudelaire compare le poète à l''albatros : magnifique dans son élément (l''inspiration, le ciel),
+    il devient ridicule et empêché une fois confronté au monde ordinaire, qui se moque de sa différence. C''est
+    une vision mélancolique de la place du poète dans la société.'
+exercices:
+- enonce: Donne un exemple de thème qui pourrait réunir plusieurs poèmes dans un même corpus.
+  indices:
+  - Nature, temps, solitude, amour, ville…
+  solution: 'Par exemple : le paysage, la nuit, le passage des saisons, la mer.'
+- enonce: Choisis deux poèmes que tu connais (ou deux extraits étudiés en classe) sur un thème proche et note en
+    3-4 lignes ce qui les rapproche et ce qui les distingue.
+  indices:
+  - Compare le ton (joyeux, triste…) et la forme (rimes, longueur des vers).
+  solution: Réussite si la comparaison porte à la fois sur le fond (le sentiment exprimé) et sur la forme (rythme,
+    images, longueur).
+sources:
+- titre: Wikipédia, « Poésie »
+  url: https://fr.wikipedia.org/w/index.php?title=Po%C3%A9sie&oldid=238949190
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Les Fleurs du mal (1868)/L’Albatros »
+  url: https://fr.wikisource.org/w/index.php?title=Les_Fleurs_du_mal_%281868%29/L%E2%80%99Albatros&oldid=15074528
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, poème du domaine public, exemple d'étude
+- titre: Wikisource, « Poèmes saturniens (1866)/Chanson d’automne »
+  url: https://fr.wikisource.org/w/index.php?title=Po%C3%A8mes_saturniens_%281866%29/Chanson_d%E2%80%99automne&oldid=13177234
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, poème du domaine public, exemple d'étude
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -35,6 +35,10 @@ const MS = {
     }
   },
 
+  sansAccents(texte) {
+    return String(texte).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  },
+
   echapper(texte) {
     return String(texte).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   },
