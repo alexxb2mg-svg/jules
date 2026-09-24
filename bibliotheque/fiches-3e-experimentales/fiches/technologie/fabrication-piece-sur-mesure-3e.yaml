@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: fabrication-piece-sur-mesure-3e
+declencheurs:
+- impression 3D
+- modélisation numérique
+- pièce sur mesure
+- fichier 3D
+- imprimante 3D
+- fabrication additive
+- prototype
+essentiel: 'Fabriquer une pièce sur mesure consiste à concevoir une pièce adaptée à un besoin précis (par exemple
+  remplacer une pièce cassée d''un objet), en général à partir d''une modélisation numérique en trois dimensions
+  réalisée avec un logiciel de CAO (conception assistée par ordinateur).
+
+
+  L''impression 3D (fabrication additive) permet de fabriquer cette pièce en ajoutant de la matière couche par couche
+  à partir du modèle numérique, sans outillage spécifique (contrairement à un moule ou à l''usinage). Elle est adaptée
+  à la réalisation de prototypes ou de pièces uniques, mais reste plus lente que la production en série pour de
+  grandes quantités.
+
+
+  Avant l''impression, il faut vérifier les dimensions de la pièce (souvent avec un instrument de mesure sur la
+  pièce à remplacer), choisir un matériau adapté (résistance nécessaire) et paramétrer l''imprimante (résolution,
+  remplissage).'
+methode:
+- Mesurer précisément les dimensions nécessaires de la pièce à fabriquer (avec un pied à coulisse ou une règle).
+- Modéliser la pièce en trois dimensions avec un logiciel de CAO en respectant ces dimensions.
+- Choisir un matériau d'impression adapté à l'usage (résistance à la chaleur, à la flexion...).
+- Vérifier le modèle numérique (absence de trous, épaisseur suffisante) avant de lancer l'impression.
+vocabulaire:
+- terme: CAO
+  definition: conception assistée par ordinateur, logiciel permettant de modéliser un objet en 3D
+- terme: fabrication additive
+  definition: procédé qui construit un objet en ajoutant de la matière couche par couche
+erreurs_frequentes:
+- Ne pas vérifier les dimensions réelles avant de modéliser, ce qui rend la pièce imprimée inadaptée.
+- Choisir un matériau ou une épaisseur insuffisante pour l'usage prévu de la pièce.
+- 'Croire que l''impression 3D est toujours plus rapide que d''autres procédés : elle est lente pour de grandes
+  quantités.'
+exemple:
+  enonce: Le clip de fixation d'une boîte à goûter est cassé. Décrire les grandes étapes pour le remplacer par impression
+    3D.
+  solution: Mesurer les dimensions du clip cassé (longueur, épaisseur, forme des crans). Modéliser un clip identique
+    avec un logiciel de CAO. Choisir un matériau plastique assez souple pour résister à la flexion répétée. Imprimer
+    la pièce et vérifier qu'elle s'emboîte correctement sur la boîte.
+exercices:
+- enonce: Pourquoi est-il important de mesurer précisément la pièce d'origine avant de la modéliser en 3D ?
+  indices:
+  - Pense à ce qui se passe si les dimensions sont fausses.
+  solution: Si les dimensions sont imprécises, la pièce imprimée risque de ne pas s'emboîter ou de ne pas remplir
+    sa fonction (trop grande, trop petite, mal ajustée).
+sources:
+- titre: Wikipédia, « Impression 3D »
+  url: https://fr.wikipedia.org/w/index.php?title=Impression_3D&oldid=239144470
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: narration-visuelle
+declencheurs:
+- raconter une histoire en images
+- planche de bande dessinee
+- montrer le mouvement dans un dessin
+- montage d'images
+- ellipse temporelle
+- sequence d'images
+essentiel: 'La narration visuelle raconte une histoire ou suggère un mouvement à travers une ou plusieurs images,
+  sans forcément utiliser de mots.
+
+  Un dispositif séquentiel (plusieurs images à la suite, comme dans une bande dessinée ou un photoreportage) organise
+  le temps de l''histoire : la durée, la vitesse et le rythme du récit dépendent du nombre d''images, de leur taille
+  et de leur enchaînement.
+
+  Le montage et le découpage choisissent ce qu''on montre et dans quel ordre ; l''ellipse consiste à sauter volontairement
+  un moment de l''histoire, en laissant le spectateur le reconstituer.
+
+  Une image unique peut aussi suggérer un mouvement ou une durée (un flou de vitesse, une trajectoire dessinée)
+  sans avoir besoin d''être répétée.'
+methode:
+- Décider ce que l'histoire doit montrer et ce qu'elle peut laisser deviner (ellipse).
+- 'Choisir le nombre d''images nécessaires : trop d''images ralentissent le rythme, trop peu le rendent confus.'
+- Pour une image unique, chercher un moyen plastique de suggérer le mouvement (flou, lignes de vitesse, positions
+  successives).
+- Vérifier que l'enchaînement des images reste compréhensible sans texte explicatif.
+vocabulaire:
+- terme: ellipse
+  definition: moment de l'histoire volontairement non montré, que le spectateur reconstitue lui-même
+- terme: dispositif séquentiel
+  definition: suite d'images organisées pour raconter une histoire ou un déroulement dans le temps
+erreurs_frequentes:
+- Vouloir tout montrer, ce qui alourdit le récit visuel.
+- Confondre montrer un mouvement et montrer plusieurs instants identiques.
+- Oublier que l'ordre des images change le sens de l'histoire.
+exemple:
+  enonce: Raconter en trois images seulement l'histoire « quelqu'un plante une graine, puis récolte un fruit »,
+    sans montrer la croissance.
+  solution: 'Image 1 : la main plante la graine. Image 2 (ellipse) : un arbre déjà grand. Image 3 : la récolte du
+    fruit. Le saut entre l''image 1 et l''image 2 est une ellipse : le spectateur comprend le temps écoulé sans
+    qu''on le lui montre.'
+exercices:
+- enonce: 'À la maison : dessine une petite histoire en 4 cases maximum (bonhommes bâtons acceptés), en utilisant
+    au moins une ellipse.'
+  indices:
+  - Repère le moment que tu peux sauter sans perdre le sens de l'histoire.
+  solution: Réussite si l'histoire reste compréhensible malgré le moment sauté, et si tu peux désigner clairement
+    où se trouve l'ellipse.
+- enonce: Dans une seule image (dessin ou photo), essaie de suggérer un mouvement rapide sans montrer plusieurs
+    instants.
+  indices:
+  - Pense au flou, aux lignes de vitesse, à une position du corps déséquilibrée.
+  solution: Réussite si une personne qui regarde l'image devine qu'il y a du mouvement, sans que tu aies eu besoin
+    de l'expliquer.
+sources:
+- titre: Vikidia, « Bande dessinée »
+  url: https://fr.vikidia.org/w/index.php?title=Bande_dessin%C3%A9e&oldid=2581894
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

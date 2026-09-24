@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: formes-actives-passives-impersonnelle
+declencheurs:
+- forme impersonnelle
+- il pleut il faut
+- phrase active
+- il est arrivé
+- valeur sémantique
+- sujet apparent
+essentiel: 'La forme active présente le sujet comme celui qui accomplit l''action (« Le vent a cassé la branche
+  »), en insistant sur l''agent. La forme passive inverse la perspective en mettant en avant celui qui subit l''action
+  (« La branche a été cassée par le vent »).
+
+  La forme impersonnelle utilise un sujet apparent « il », qui ne représente personne ni rien de précis, alors que
+  le sujet réel (souvent inversé) suit le verbe : « Il pleut. », « Il faut du courage. », « Il est arrivé un accident.
+  »
+
+  Sa valeur sémantique : elle sert à décrire des phénomènes météorologiques ou naturels sans agent identifiable,
+  à exprimer une nécessité générale (il faut que), ou à présenter un événement en insistant sur le fait lui-même
+  plutôt que sur celui qui le vit (« il est arrivé un accident » met l''accent sur l''événement, plus que « un accident
+  est arrivé »).'
+methode:
+- Repérer si le sujet grammatical accomplit l'action (active), la subit (passive), ou est un « il » impersonnel
+  qui ne renvoie à rien de précis (impersonnelle).
+- 'Pour l''impersonnelle : chercher le sujet réel après le verbe (souvent introduit sans déterminant défini).'
+- 'Se demander pourquoi l''auteur choisit cette forme : insister sur l''agent (active), sur ce qui est subi (passive),
+  ou sur l''événement/la nécessité (impersonnelle).'
+- Ne pas confondre un verbe essentiellement impersonnel (il pleut, il neige) avec un verbe employé de façon impersonnelle
+  (il est arrivé, il existe, il reste).
+erreurs_frequentes:
+- Chercher un sujet réel pour les verbes essentiellement impersonnels comme « pleuvoir ».
+- Confondre le « il » impersonnel avec un pronom personnel qui représente quelqu'un.
+- Ne pas voir la différence de sens entre « un accident est arrivé » (forme personnelle) et « il est arrivé un accident
+  » (forme impersonnelle, plus neutre).
+- Oublier que la forme impersonnelle a un sujet réel, souvent au singulier même si le sens est pluriel (« il manque
+  des chaises »).
+exemple:
+  enonce: 'Comparer les valeurs de sens de : « Un problème s''est posé. » et « Il s''est posé un problème. »'
+  solution: La première (forme personnelle) présente « un problème » comme sujet actif de son apparition. La seconde
+    (forme impersonnelle) insiste davantage sur le fait même qu'un problème existe, de façon plus neutre et souvent
+    plus formelle.
+exercices:
+- enonce: 'Identifier la forme (active, passive ou impersonnelle) : « Il reste deux places pour le concert. »'
+  indices:
+  - « Il » représente-t-il quelqu'un de précis ?
+  solution: 'Forme impersonnelle : « il » est un sujet apparent, le sujet réel est « deux places ».'
+- enonce: 'Réécrire à la forme personnelle : « Il est tombé de la neige toute la nuit. »'
+  indices:
+  - Quel est le sujet réel, placé après le verbe ?
+  solution: « De la neige est tombée toute la nuit. » (la forme impersonnelle initiale insistait davantage sur l'événement
+    que sur la neige elle-même).
+sources:
+- titre: Wikipédia, « Verbe impersonnel »
+  url: https://fr.wikipedia.org/w/index.php?title=Verbe_impersonnel&oldid=236015527
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Voix passive »
+  url: https://fr.wikipedia.org/w/index.php?title=Voix_passive&oldid=230156410
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

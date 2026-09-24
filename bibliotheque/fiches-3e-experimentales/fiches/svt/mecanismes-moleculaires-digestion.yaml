@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: mecanismes-moleculaires-digestion
+declencheurs:
+- enzyme digestive
+- amylase salivaire
+- comment les molécules sont découpées dans la digestion
+- grosses molécules en petites molécules
+- pain qui a un goût sucré
+essentiel: 'À l''échelle moléculaire, la digestion consiste à découper les grosses molécules complexes des aliments
+  (comme l''amidon, les protéines ou les graisses) en molécules plus simples (glucose, acides aminés, acides gras)
+  que l''organisme peut absorber et utiliser.
+
+  Ce découpage est réalisé par des enzymes digestives, des protéines spécialisées produites par différents organes
+  du tube digestif (glandes salivaires, estomac, pancréas, intestin), chacune agissant sur un type précis de molécule.
+
+  Chaque enzyme est spécifique d''une molécule ou d''un type de liaison chimique : par exemple, l''amylase (présente
+  dans la salive) découpe spécifiquement l''amidon en molécules de sucre plus petites, elle n''agit pas sur les
+  protéines.
+
+  L''action des enzymes digestives explique pourquoi la digestion transforme progressivement les aliments tout au
+  long du tube digestif, chaque étape apportant de nouvelles enzymes adaptées aux molécules restant à découper.
+
+  Sans ces enzymes, les grosses molécules des aliments resteraient trop volumineuses pour traverser la paroi intestinale
+  et ne pourraient pas être absorbées dans le sang.'
+methode:
+- Identifier le type de molécule à digérer (amidon, protéine, graisse) et l'enzyme correspondante.
+- 'Retenir qu''une enzyme est spécifique : elle n''agit que sur un type précis de molécule.'
+- Relier la localisation d'une enzyme (salive, estomac, intestin) à l'étape de digestion à laquelle elle intervient.
+- Relier le découpage moléculaire réalisé par les enzymes à la nécessité d'obtenir des molécules assez petites pour
+  être absorbées.
+erreurs_frequentes:
+- Croire qu'une seule enzyme suffit pour digérer tous les types d'aliments.
+- Penser que la digestion se fait uniquement par une action mécanique (mastication, brassage), sans intervention
+  chimique des enzymes.
+- Confondre enzyme (protéine qui accélère une transformation chimique) et nutriment (produit de cette transformation).
+- Croire que les enzymes digestives agissent au hasard sur n'importe quelle molécule rencontrée.
+exemple:
+  enonce: En mâchant longuement un morceau de pain (riche en amidon), on perçoit un goût légèrement sucré apparaître
+    en bouche. Pourquoi ?
+  solution: La salive contient une enzyme, l'amylase, qui commence à découper l'amidon du pain en molécules de sucre
+    plus petites dès la mastication, ce qui explique ce goût sucré qui apparaît progressivement.
+exercices:
+- enonce: Qu'est-ce qu'une enzyme digestive, et pourquoi dit-on qu'elle est « spécifique » ?
+  indices:
+  - Pense à ce qu'elle fait, et au fait qu'elle n'agit pas sur n'importe quelle molécule.
+  solution: Une enzyme digestive est une protéine qui accélère le découpage d'une molécule alimentaire en molécules
+    plus simples ; elle est spécifique car elle n'agit que sur un type précis de molécule (par exemple l'amylase
+    agit sur l'amidon, pas sur les protéines).
+- enonce: Pourquoi les molécules des aliments doivent-elles être découpées par les enzymes avant d'être absorbées
+    par l'intestin ?
+  indices:
+  - Pense à la taille des molécules qui peuvent traverser la paroi intestinale.
+  solution: Parce que les grosses molécules des aliments sont trop volumineuses pour traverser la paroi intestinale
+    ; seules les molécules simples issues de leur découpage par les enzymes peuvent être absorbées dans le sang.
+- enonce: Quelle enzyme, présente dans la salive, commence la digestion de l'amidon dès la bouche ?
+  indices:
+  - Elle porte un nom qui rappelle l'amidon.
+  solution: L'amylase (amylase salivaire).
+sources:
+- titre: Vikidia, « Enzyme »
+  url: https://fr.vikidia.org/w/index.php?title=Enzyme&oldid=2137834
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: role-cerveau-message-nerveux
+declencheurs:
+- rôle du cerveau
+- message nerveux
+- nerf
+- cellule nerveuse
+- comment le cerveau reçoit les informations
+essentiel: 'Le cerveau est le centre nerveux principal de l''organisme : il reçoit en permanence de nombreuses informations
+  en provenance des organes sensoriels (yeux, oreilles, peau…) et les intègre (les traite, les combine) pour produire
+  une réponse adaptée.
+
+  Ces informations circulent dans l''organisme sous forme de messages nerveux, transmis par des cellules spécialisées
+  appelées neurones (ou cellules nerveuses), organisées en réseaux et regroupées en nerfs qui relient les organes
+  au système nerveux central (cerveau et moelle épinière).
+
+  Un nerf est un ensemble de prolongements de neurones (fibres nerveuses) qui conduisent les messages nerveux, soit
+  des organes sensoriels vers le cerveau (informations sensorielles), soit du cerveau vers les muscles ou organes
+  (commande motrice).
+
+  Le cerveau intègre simultanément plusieurs informations multiples (visuelles, sonores, tactiles…) pour élaborer
+  une réponse cohérente, ce qui lui permet de coordonner des comportements complexes.
+
+  Toute atteinte du cerveau, des nerfs ou des centres nerveux peut perturber la réception, le traitement ou la transmission
+  de ces messages nerveux, avec des conséquences sur le comportement ou les fonctions du corps.'
+methode:
+- 'Repérer le trajet d''un message nerveux : organe sensoriel → nerf → cerveau (intégration) → nerf → organe effecteur
+  (muscle par exemple).'
+- Distinguer message sensoriel (vers le cerveau) et message moteur (du cerveau vers les muscles).
+- Retenir que le cerveau intègre plusieurs informations en même temps, pas une seule à la fois.
+- Relier une cellule nerveuse (neurone) à son rôle de transmission du message nerveux.
+erreurs_frequentes:
+- Croire que le cerveau reçoit une seule information à la fois, sans les combiner.
+- Confondre nerf (ensemble de fibres nerveuses) et neurone (une seule cellule nerveuse).
+- Penser que tous les messages nerveux vont dans le même sens (certains vont vers le cerveau, d'autres en partent).
+- Oublier que le cerveau fait partie d'un système plus large incluant la moelle épinière et les nerfs.
+exemple:
+  enonce: Quand on touche accidentellement une plaque chaude, la main se retire très vite. Quel est le trajet du
+    message nerveux dans cette réaction ?
+  solution: Les récepteurs sensoriels de la peau détectent la chaleur et envoient un message nerveux par un nerf
+    sensitif vers le système nerveux central ; celui-ci traite l'information et envoie en retour un message moteur
+    par un nerf vers les muscles du bras, qui se contractent pour retirer la main.
+exercices:
+- enonce: Quelle est la différence entre un neurone et un nerf ?
+  indices:
+  - L'un est une cellule unique, l'autre un ensemble de fibres.
+  solution: Un neurone est une cellule nerveuse individuelle ; un nerf est un ensemble de prolongements de plusieurs
+    neurones regroupés, qui conduisent les messages nerveux.
+- enonce: Le cerveau reçoit-il uniquement des informations, ou en envoie-t-il aussi ?
+  indices:
+  - Pense à la commande des muscles.
+  solution: 'Il fait les deux : il reçoit des informations sensorielles (par des nerfs sensitifs) et envoie des
+    commandes motrices vers les muscles (par des nerfs moteurs).'
+- enonce: Pourquoi dit-on que le cerveau « intègre » des informations multiples, plutôt qu'il les traite simplement
+    une par une ?
+  indices:
+  - Pense à toutes les informations reçues en même temps quand on marche dans la rue.
+  solution: Parce qu'il reçoit et combine simultanément plusieurs informations sensorielles (vision, audition, équilibre…)
+    pour élaborer une réponse cohérente et adaptée à la situation globale, pas seulement à un seul signal isolé.
+sources:
+- titre: Vikidia, « Synapse »
+  url: https://fr.vikidia.org/w/index.php?title=Synapse&oldid=1525703
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

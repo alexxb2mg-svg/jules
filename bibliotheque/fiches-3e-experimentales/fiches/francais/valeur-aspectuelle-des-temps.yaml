@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: valeur-aspectuelle-des-temps
+declencheurs:
+- accompli non accompli
+- premier plan arrière-plan
+- action terminée en cours
+- aspect du verbe
+- imparfait ou passé simple
+- borné non borné
+essentiel: 'L''aspect d''un temps verbal indique comment l''action se déroule dans son déroulement, indépendamment
+  de son moment dans le temps (passé, présent, futur).
+
+  Non accompli / accompli : un temps simple (présent, imparfait, futur, passé simple) présente l''action en train
+  de se dérouler ou comme un fait global ; un temps composé (passé composé, plus-que-parfait) présente l''action
+  comme terminée, son résultat étant acquis au moment de référence.
+
+  Borné / non borné : une action bornée a des limites temporelles marquées (un début et/ou une fin perçus), comme
+  le passé simple (« il sortit ») ; une action non bornée est présentée sans limites précises, comme l''imparfait
+  (« il sortait »).
+
+  Dans un récit, cette valeur explique l''emploi : le passé simple, aspect borné, met les événements au premier
+  plan (ce qui fait avancer l''histoire) ; l''imparfait, aspect non borné, sert d''arrière-plan (description, situation,
+  habitude, action qui dure).'
+methode:
+- Identifier le temps employé et se demander si l'action est présentée comme achevée (accompli) ou en cours/globale
+  (non accompli).
+- Se demander si l'action a des limites temporelles nettes (bornée) ou si elle dure sans limite précise (non bornée).
+- Dans un récit, distinguer les phrases qui font progresser l'histoire (premier plan, souvent passé simple) de celles
+  qui décrivent le décor ou la situation (arrière-plan, souvent imparfait).
+- 'Vérifier avec le sens : une action ponctuelle et datée est presque toujours au passé simple ou au passé composé
+  ; une habitude ou une description, à l''imparfait.'
+erreurs_frequentes:
+- Confondre le temps grammatical (passé, présent) avec son aspect (accompli, en cours).
+- Mettre systématiquement au passé simple des actions qui décrivent un décor (elles demandent l'imparfait, aspect
+  non borné).
+- Croire que le passé composé et le passé simple ont exactement le même emploi (le passé composé garde un lien avec
+  le présent, le passé simple coupe totalement l'action du présent).
+- Ne pas justifier le choix imparfait/passé simple par l'aspect (premier plan/arrière-plan) dans une analyse de
+  texte.
+exemple:
+  enonce: 'Justifier l''emploi des temps : « Il pleuvait depuis le matin. Soudain, la foudre tomba sur le vieux
+    chêne. »'
+  solution: '« pleuvait » (imparfait) : aspect non borné, décrit une situation qui dure en arrière-plan. « tomba
+    » (passé simple) : aspect borné, un événement ponctuel au premier plan qui fait progresser le récit.'
+exercices:
+- enonce: Dans « La maison était silencieuse quand quelqu'un frappa à la porte. », identifier le verbe d'arrière-plan
+    et celui de premier plan.
+  indices:
+  - Quel verbe décrit une situation qui dure ? Lequel marque un événement ponctuel ?
+  solution: « était » (imparfait, arrière-plan, description de la situation) ; « frappa » (passé simple, premier
+    plan, événement ponctuel qui fait avancer l'action).
+- enonce: Expliquer la différence d'aspect entre « il a fini » et « il finissait ».
+  indices:
+  - L'un des deux temps est-il simple ou composé ?
+  solution: « a fini » (passé composé, temps composé) présente l'action comme accomplie, terminée ; « finissait
+    » (imparfait, temps simple) la présente comme non accomplie, en cours ou habituelle.
+sources:
+- titre: Wikipédia, « Aspect grammatical »
+  url: https://fr.wikipedia.org/w/index.php?title=Aspect_grammatical&oldid=204682291
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

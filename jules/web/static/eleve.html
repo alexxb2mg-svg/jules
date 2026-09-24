@@ -34,6 +34,7 @@
       <div class="entete">
         <button class="menu-cote" id="menu-cote" aria-label="Menu">☰</button>
         <div class="titre" id="titre">Nouvelle discussion</div>
+        <button type="button" class="pastille-notion cache" id="pastille-notion" title="La notion travaillée">📚 Choisir une notion</button>
         <span class="pastille-mode cache" id="pastille-mode"></span>
       </div>
 
@@ -49,6 +50,19 @@
         </form>
       </div>
     </main>
+  </div>
+
+  <div id="choix-notion" class="voile cache" role="dialog" aria-modal="true" aria-labelledby="choix-titre">
+    <div class="panneau">
+      <div class="panneau-entete">
+        <strong id="choix-titre">Sur quelle notion tu travailles ?</strong>
+        <button type="button" class="fermer" id="choix-fermer" aria-label="Fermer">✕</button>
+      </div>
+      <input id="choix-recherche" type="search" placeholder="Cherche : Pythagore, fractions, guerre froide…" aria-label="Rechercher une notion">
+      <div id="choix-liste" class="choix-liste"></div>
+      <p id="choix-avertissement" class="avertissement"></p>
+      <button type="button" class="bouton secondaire" id="choix-retirer">Aucune notion précise</button>
+    </div>
   </div>
 
   <script src="/static/commun.js"></script>

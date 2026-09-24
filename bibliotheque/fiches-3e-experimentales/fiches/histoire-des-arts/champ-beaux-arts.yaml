@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: champ-beaux-arts
+declencheurs:
+- difference entre peinture sculpture et architecture
+- les beaux arts c'est quoi
+- gravure et dessin en histoire des arts
+- champ artistique classique
+essentiel: 'Le champ classique des « Beaux-Arts » regroupe l''architecture, la peinture, la sculpture, le dessin
+  et la gravure : ce sont les disciplines artistiques les plus anciennement reconnues et enseignées en Europe.
+
+  L''architecture organise l''espace construit (bâtiments, monuments) ; la peinture et le dessin représentent sur
+  une surface plane ; la sculpture donne une forme en volume, en relief ou en ronde-bosse ; la gravure permet de
+  reproduire une image en plusieurs exemplaires à partir d''une matrice gravée.
+
+  Historiquement, une académie des Beaux-Arts organisait l''enseignement et la hiérarchie de ces disciplines, avec
+  des règles précises sur les techniques et les sujets considérés comme nobles.
+
+  Aujourd''hui, ce champ reste une base essentielle pour comprendre l''histoire de l''art, même si d''autres champs
+  artistiques (photographie, arts numériques…) se sont ajoutés depuis.'
+methode:
+- Distinguer les cinq disciplines du champ des Beaux-Arts (architecture, peinture, sculpture, dessin, gravure).
+- Identifier la technique utilisée dans une œuvre pour la rattacher à la bonne discipline.
+- Repérer si une œuvre en volume est en ronde-bosse (visible de tous côtés) ou en relief (attachée à un fond).
+- Vérifier si une image existe en plusieurs exemplaires (gravure) ou en un seul exemplaire (peinture, dessin).
+erreurs_frequentes:
+- Confondre une gravure (reproductible) et un dessin (unique).
+- Ne pas distinguer bas-relief, haut-relief et ronde-bosse en sculpture.
+- Réduire les Beaux-Arts à la seule peinture, en oubliant l'architecture, la sculpture et la gravure.
+exemple:
+  enonce: Une même image existe en plusieurs exemplaires identiques, imprimés à partir d'une plaque gravée.
+  solution: Il s'agit d'une gravure, une des cinq disciplines des Beaux-Arts, qui se distingue de la peinture ou
+    du dessin par sa reproductibilité en plusieurs exemplaires à partir d'une même matrice.
+exercices:
+- enonce: 'À l''oral (type brevet) : cite les cinq disciplines du champ classique des Beaux-Arts et donne un exemple
+    d''œuvre pour l''une d''elles.'
+  indices:
+  - Architecture, peinture, sculpture, dessin, gravure.
+  solution: Réussite si les cinq disciplines sont correctement nommées et l'exemple donné correspond bien à l'une
+    d'elles.
+- enonce: Observe une sculpture (photo ou réelle) et détermine si elle est en ronde-bosse (visible de tous côtés)
+    ou en bas-relief (attachée à un fond).
+  indices:
+  - Une statue posée au milieu d'une pièce est en ronde-bosse ; une frise sculptée sur un mur est en relief.
+  solution: Réussite si la catégorie choisie correspond bien à ce qui est observé sur l'œuvre.
+sources:
+- titre: Vikidia, « Architecture »
+  url: https://fr.vikidia.org/w/index.php?title=Architecture&oldid=2441357
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Sculpture »
+  url: https://fr.vikidia.org/w/index.php?title=Sculpture&oldid=2584156
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Gravure »
+  url: https://fr.vikidia.org/w/index.php?title=Gravure&oldid=2247625
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

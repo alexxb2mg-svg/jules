@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: structuration-du-texte-argumentatif
+declencheurs:
+- paragraphe argumenté
+- convaincre à l'écrit
+- structurer mon argumentation
+- organiser mes arguments
+- texte pour défendre une idée
+- on sait que or donc
+essentiel: 'Un texte argumentatif cherche à faire partager un point de vue au lecteur. On distingue persuader (faire
+  appel aux émotions du lecteur) et convaincre (faire appel à sa raison, avec des preuves et des exemples) : un
+  même texte peut combiner les deux.
+
+  Pour étayer une argumentation, on utilise des procédés précis : une organisation claire du propos (du plus simple
+  au plus fort argument, par exemple), le choix d''exemples précis pour illustrer chaque idée, et la modalisation,
+  c''est-à-dire l''usage de mots qui montrent le degré de certitude ou l''implication de celui qui parle (« sans
+  doute », « il est certain que », « peut-être »).
+
+  Un texte argumentatif bien structuré présente clairement une thèse (l''idée défendue), des arguments (les raisons
+  qui la soutiennent) et des exemples (qui illustrent chaque argument). Les paragraphes doivent avoir une cohérence
+  interne, qu''il s''agisse d''un paragraphe d''analyse littéraire ou d''un paragraphe purement argumentatif : chaque
+  paragraphe développe une seule idée principale, appuyée par une explication et un exemple.'
+methode:
+- Formuler clairement la thèse défendue en une phrase.
+- Trouver au moins deux ou trois arguments distincts qui soutiennent cette thèse.
+- Pour chaque argument, choisir un exemple précis qui l'illustre concrètement.
+- Organiser les arguments dans un ordre logique (du plus faible au plus fort, par exemple).
+- Utiliser des connecteurs logiques (donc, cependant, par exemple) et des modalisateurs pour nuancer son propos.
+vocabulaire:
+- terme: thèse
+  definition: idée principale qu'un texte argumentatif cherche à défendre
+- terme: modalisation
+  definition: usage de mots qui expriment le degré de certitude ou d'implication de celui qui parle
+- terme: paragraphe argumenté
+  definition: paragraphe qui développe une idée, une explication et un exemple
+erreurs_frequentes:
+- Donner des arguments sans jamais les illustrer par un exemple précis.
+- Mélanger plusieurs idées dans un même paragraphe, sans cohérence.
+- Confondre persuader et convaincre.
+- Oublier les connecteurs logiques qui relient les idées entre elles.
+exemple:
+  enonce: Rédige la structure (sans le texte complet) d'un paragraphe argumenté défendant l'idée que la lecture
+    est utile pour un collégien.
+  solution: 'Idée : la lecture enrichit le vocabulaire et la culture générale. Explication : en lisant, on rencontre
+    des mots et des situations nouvelles qu''on retient. Exemple : un élève qui lit régulièrement comprend plus
+    facilement les textes proposés en classe, y compris en histoire ou en sciences.'
+exercices:
+- enonce: Donne un exemple de modalisateur qui exprime un doute plutôt qu'une certitude.
+  indices:
+  - 'Relis l''essentiel : « sans doute », « il est certain que »…'
+  solution: 'Par exemple : « peut-être », « il semble que », « sans doute », « probablement ».'
+- enonce: Rédige un paragraphe argumenté de 5-6 lignes défendant une opinion de ton choix (sur le sport, les écrans,
+    l'école…), avec une idée, une explication et un exemple précis.
+  indices:
+  - 'Structure : idée défendue, puis explication, puis exemple concret.'
+  solution: Réussite si le paragraphe présente clairement une idée, l'explique, et l'illustre par un exemple concret
+    et pertinent.
+sources:
+- titre: Wikipédia, « Argumentation »
+  url: https://fr.wikipedia.org/w/index.php?title=Argumentation&oldid=230491172
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wiktionnaire, « modalisateur »
+  url: https://fr.wiktionary.org/w/index.php?title=modalisateur&oldid=34291906
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: définition reformulée
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

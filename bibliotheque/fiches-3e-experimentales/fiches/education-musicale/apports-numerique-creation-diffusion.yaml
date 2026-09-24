@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: apports-numerique-creation-diffusion
+declencheurs:
+- logiciel pour composer de la musique
+- enregistrer sa musique sur ordinateur
+- partager sa musique en ligne
+- musique assistee par ordinateur
+- creer un son avec un ordinateur
+essentiel: 'La musique assistée par ordinateur (MAO) regroupe l''ensemble des usages de l''informatique dans la
+  chaîne de création musicale : composer, enregistrer, modifier des sons, jusqu''à la diffusion finale de l''œuvre.
+
+  Ces outils numériques permettent de créer des sons qui n''existent pas dans la nature (synthèse sonore), de superposer
+  facilement plusieurs pistes enregistrées, ou de corriger et transformer un enregistrement après coup.
+
+  Le numérique a aussi transformé la diffusion de la musique : un morceau peut être partagé instantanément en ligne,
+  ce qui change la façon dont un public le découvre, comparé à un concert ou un support physique.
+
+  Utiliser ces outils suppose de connaître quelques bases techniques (enregistrement, montage de pistes) mais aussi
+  de respecter les droits d''auteur des sons ou morceaux empruntés à d''autres.'
+methode:
+- Choisir un outil numérique adapté au projet (enregistreur simple, logiciel de composition).
+- Enregistrer ou créer les sons nécessaires, éventuellement sur plusieurs pistes séparées.
+- Réécouter et ajuster (volume, ordre, effets) avant de considérer la pièce terminée.
+- Vérifier les droits d'utilisation de tout son ou extrait emprunté avant de le partager.
+erreurs_frequentes:
+- Utiliser un effet numérique uniquement parce qu'il est disponible, sans lien avec l'intention musicale.
+- Oublier de sauvegarder son travail au fur et à mesure.
+- Partager en ligne un extrait musical emprunté sans vérifier s'il en a le droit.
+exemple:
+  enonce: Un élève enregistre sa voix sur une piste, puis ajoute une deuxième piste avec un rythme créé sur une
+    application, pour obtenir un morceau à deux éléments.
+  solution: L'enregistrement de la voix et la création du rythme peuvent être faits séparément puis superposés (plusieurs
+    pistes) grâce au logiciel, un montage impossible à réaliser aussi facilement sans outil numérique.
+exercices:
+- enonce: 'À la maison : enregistre un petit son ou une phrase chantée avec ton téléphone, puis essaie de le réécouter
+    en ajustant le volume ou en le recadrant si l''application le permet.'
+  indices:
+  - Les applications d'enregistrement basiques permettent souvent de couper le début ou la fin d'un fichier.
+  solution: Réussite si le fichier final est propre (sans blanc inutile au début/à la fin) et correspond à ce que
+    tu voulais garder.
+- enonce: Cherche ce que signifie « respecter les droits d'auteur » quand on utilise un extrait musical trouvé en
+    ligne dans une création personnelle.
+  indices:
+  - Pense à la différence entre s'inspirer d'un morceau et l'utiliser directement sans autorisation.
+  solution: Réussite si l'explication mentionne bien qu'un morceau protégé ne peut pas être réutilisé librement
+    sans autorisation ou licence adaptée.
+sources:
+- titre: Wikipédia, « Musique assistée par ordinateur »
+  url: https://fr.wikipedia.org/w/index.php?title=Musique_assist%C3%A9e_par_ordinateur&oldid=239631594
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

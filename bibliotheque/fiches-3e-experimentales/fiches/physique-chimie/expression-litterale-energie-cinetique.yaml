@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: expression-litterale-energie-cinetique
+declencheurs:
+- Ec = 1/2 m v2
+- énergie cinétique formule
+- calculer l'énergie cinétique
+- énergie d'un objet en mouvement
+- choc à grande vitesse
+- danger de la vitesse
+essentiel: 'L''énergie cinétique est l''énergie que possède un objet du fait de son mouvement ; elle dépend de sa
+  masse et de sa vitesse.
+
+  Sa formule est Ec = ½ × m × v², avec Ec en joules (J), m la masse en kilogrammes (kg) et v la vitesse en mètres
+  par seconde (m/s).
+
+  Comme la vitesse est élevée au carré, l''énergie cinétique augmente très vite avec la vitesse : doubler la vitesse
+  multiplie l''énergie cinétique par 4 (2² = 4), la tripler la multiplie par 9.
+
+  Un objet immobile (v = 0) a une énergie cinétique nulle.
+
+  Cette relation explique pourquoi les distances de freinage augmentent beaucoup plus vite que la vitesse, et pourquoi
+  un choc à grande vitesse est bien plus dangereux qu''à faible vitesse.'
+methode:
+- Vérifier que la masse est en kg et la vitesse en m/s avant de calculer (convertir si besoin).
+- Appliquer Ec = ½ × m × v², en calculant d'abord v² puis en multipliant par m et par 0,5.
+- Pour comparer deux énergies cinétiques à masse égale, comparer le carré des vitesses.
+- Retenir que multiplier la vitesse par k multiplie l'énergie cinétique par k².
+erreurs_frequentes:
+- Oublier le carré sur la vitesse (calculer ½ × m × v au lieu de ½ × m × v²).
+- Oublier le facteur ½ dans la formule.
+- Ne pas convertir une vitesse donnée en km/h en m/s avant le calcul.
+- Croire que doubler la vitesse double seulement l'énergie cinétique (elle la multiplie par 4).
+exemple:
+  enonce: Calculer l'énergie cinétique d'une voiture de masse 1000 kg roulant à 20 m/s.
+  solution: Ec = ½ × 1000 × 20² = ½ × 1000 × 400 = 200 000 J, soit 200 kJ.
+exercices:
+- enonce: Calculer l'énergie cinétique d'un cycliste (avec son vélo) de masse 70 kg roulant à 8 m/s.
+  indices:
+  - Ec = ½ × m × v².
+  solution: Ec = ½ × 70 × 8² = ½ × 70 × 64 = 2240 J.
+- enonce: Une voiture roule d'abord à 10 m/s puis à 20 m/s (masse inchangée). Par combien son énergie cinétique
+    est-elle multipliée ?
+  indices:
+  - Compare 20² et 10².
+  solution: '20² / 10² = 400 / 100 = 4 : l''énergie cinétique est multipliée par 4.'
+- enonce: Un objet de masse 2 kg a une énergie cinétique de 25 J. Quelle est sa vitesse ?
+  indices:
+  - 'Isoler v² dans la formule : v² = 2 × Ec / m.'
+  solution: v² = 2 × 25 / 2 = 25, donc v = 5 m/s.
+sources:
+- titre: Vikidia, « Énergie cinétique »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89nergie_cin%C3%A9tique&oldid=2555116
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

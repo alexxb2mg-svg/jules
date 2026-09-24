@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: nommer-oeuvres-majeures
+declencheurs:
+- retenir des oeuvres majeures
+- connaitre les grandes oeuvres de l'histoire de l'art
+- rattacher une oeuvre a une epoque
+- elements constitutifs d'une oeuvre
+essentiel: 'Se constituer une culture artistique suppose de mémoriser quelques œuvres majeures et de savoir les
+  rattacher à une époque et une aire géographique de production (par exemple la Renaissance italienne, l''impressionnisme
+  français).
+
+  Pour chaque œuvre retenue, il est utile de connaître ses éléments constitutifs essentiels : le matériau ou la
+  technique utilisée, la forme (composition, dimensions), le sens ou l''intention supposée, et la fonction pour
+  laquelle elle a été créée (religieuse, décorative, commémorative, critique…).
+
+  Cette mémorisation ne consiste pas à retenir une liste isolée de titres, mais à comprendre pourquoi chaque œuvre
+  est représentative de son époque ou de la démarche de son auteur.
+
+  Pour les œuvres encore protégées par le droit d''auteur, on peut citer leur titre et leur auteur et expliquer
+  leur démarche, sans en reproduire l''image ni la décrire au point de la remplacer.'
+methode:
+- 'Pour chaque œuvre étudiée, retenir : titre, auteur, date approximative, technique.'
+- Identifier sa fonction d'origine (religieuse, décorative, commémorative, critique…).
+- Relier l'œuvre à un mouvement ou une période déjà connus.
+- Pouvoir expliquer en une phrase pourquoi cette œuvre est représentative de son époque.
+erreurs_frequentes:
+- Mémoriser un titre sans savoir le rattacher à une époque ou un mouvement.
+- Confondre la fonction d'origine d'une œuvre (religieuse, par exemple) avec son usage actuel (exposée en musée).
+- Décrire trop précisément une œuvre protégée au point de reproduire son contenu.
+exemple:
+  enonce: Retenir une œuvre représentative de l'impressionnisme.
+  solution: 'Impression, soleil levant, de Claude Monet (1872), peinture à l''huile qui a donné son nom au mouvement
+    impressionniste : elle montre un port dans la brume avec des touches rapides et visibles, une œuvre créée pour
+    capter une impression fugitive plutôt qu''un rendu académique précis.'
+exercices:
+- enonce: 'À l''oral (type brevet) : choisis une œuvre majeure étudiée cette année et présente en 3 phrases son
+    identité, son époque et sa fonction d''origine.'
+  indices:
+  - Choisis de préférence une œuvre du domaine public pour pouvoir la décrire librement.
+  solution: Réussite si les 3 informations (identité, époque, fonction) sont exactes et bien distinctes.
+- enonce: Cite le titre et l'auteur d'une œuvre encore protégée par le droit d'auteur (XXe siècle) et explique sa
+    démarche artistique en une phrase, sans en décrire précisément l'image.
+  indices:
+  - Parle de l'intention ou du contexte de création plutôt que de ce que montre l'image en détail.
+  solution: Réussite si la démarche est expliquée sans reproduire ni décrire l'image au point de la remplacer.
+sources:
+- titre: Vikidia, « Impressionnisme »
+  url: https://fr.vikidia.org/w/index.php?title=Impressionnisme&oldid=2561020
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Art abstrait »
+  url: https://fr.vikidia.org/w/index.php?title=Art_abstrait&oldid=2261134
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: enonces-simples-et-complexes
+declencheurs:
+- who which that
+- discours indirect anglais
+- reported speech
+- subordonnée relative anglais
+- connecteurs anglais
+- interrogation indirecte
+- and but so because
+essentiel: 'Une phrase complexe en anglais peut relier deux idées par coordination (and, but, or, so) ou par subordination,
+  notamment avec une proposition relative introduite par un pronom relatif : « who » pour une personne (the man
+  who lives next door), « which » pour une chose (the book which I read), « that » pour une personne ou une chose,
+  surtout à l''oral (the car that I bought).
+
+
+  Le discours indirect (reported speech) rapporte les paroles de quelqu''un sans les citer mot à mot. Quand le verbe
+  introducteur est au passé (« He said »), les temps du discours direct reculent généralement d''un cran : le présent
+  devient le prétérit, le prétérit devient le past perfect. Exemple : « I am tired » (discours direct) devient «
+  He said he was tired » (discours indirect).
+
+
+  L''interrogation indirecte transforme une question en proposition subordonnée, sans inversion sujet-verbe et sans
+  point d''interrogation : « Where do you live? » devient « She asked me where I lived. » Les connecteurs (because,
+  so, however, although) relient logiquement les idées d''une phrase ou d''un texte.'
+methode:
+- Choisir « who » pour une personne et « which » pour une chose comme pronom relatif ; « that » peut remplacer les
+  deux, surtout à l'oral.
+- Pour passer au discours indirect avec un verbe introducteur au passé, reculer les temps d'un cran (présent → prétérit,
+  prétérit → past perfect).
+- Dans une interrogation indirecte, remettre l'ordre sujet-verbe normal (pas d'inversion) et supprimer le point
+  d'interrogation.
+- Utiliser des connecteurs logiques (because, so, although, however) pour relier des idées dans une phrase complexe.
+vocabulaire:
+- terme: pronom relatif
+  definition: mot (who, which, that) qui introduit une proposition relative et remplace un nom déjà cité
+- terme: discours indirect
+  definition: manière de rapporter les paroles de quelqu'un sans les citer mot à mot, avec souvent un changement
+    de temps
+erreurs_frequentes:
+- Utiliser « which » pour une personne au lieu de « who ».
+- Oublier de reculer les temps au discours indirect quand le verbe introducteur est au passé.
+- Garder l'inversion sujet-verbe dans une interrogation indirecte (« She asked me where did I live » au lieu de
+  « She asked me where I lived »).
+- Garder le point d'interrogation dans une interrogation indirecte.
+exemple:
+  enonce: 'Mettre au discours indirect : Tom said: « I am hungry. » (verbe introducteur au passé)'
+  solution: « Tom said he was hungry. » (le présent « am » recule au prétérit « was » car le verbe introducteur
+    « said » est au passé).
+exercices:
+- enonce: 'Compléter avec « who » ou « which » : « This is the teacher ___ helped me. » et « This is the book ___
+    I read last week. »'
+  indices:
+  - Un pronom pour une personne, l'autre pour une chose.
+  solution: « This is the teacher who helped me. » (personne) et « This is the book which I read last week. » (chose).
+- enonce: 'Transformer en interrogation indirecte : « What is your name? » → She asked me...'
+  indices:
+  - Remets l'ordre sujet-verbe normal, sans inversion.
+  solution: « She asked me what my name was. »
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais/Pronoms relatifs »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Pronoms_relatifs&oldid=259237
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikilivres, « Enseignement de l'anglais/le discours indirect »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/le_discours_indirect&oldid=670796
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

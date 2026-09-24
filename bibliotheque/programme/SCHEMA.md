@@ -1,7 +1,7 @@
 # Référentiel du programme officiel — format des fichiers
 
 Un fichier YAML par matière : `bibliotheque/programme/3e/<matiere>.yaml` (UTF-8).
-C'est le squelette de la bibliothèque : chaque notion recevra plus tard sa fiche (cours, méthode, exemples, exercices corrigés).
+C'est le référentiel : les fiches des autres bibliothèques s'y rattachent par l'identifiant de notion (voir `bibliotheque/README.md`).
 
 ```yaml
 matiere: Mathématiques            # nom affiché

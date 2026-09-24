@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: classification-periodique
+declencheurs:
+- symbole chimique
+- tableau de mendeleïev
+- formule chimique
+- CO2 veut dire quoi
+- H2O c'est quoi
+- dioxygène
+essentiel: 'Chaque élément chimique (type d''atome) est représenté par un symbole : une lettre majuscule, parfois
+  suivie d''une minuscule (H pour l''hydrogène, O pour l''oxygène, C pour le carbone, Fe pour le fer, Na pour le
+  sodium…).
+
+  Le tableau périodique (ou classification périodique, créé par Dmitri Mendeleïev au XIXe siècle) range tous les
+  éléments chimiques connus ; des éléments d''une même colonne ont des propriétés chimiques proches.
+
+  Une formule chimique indique quels atomes composent une molécule et en quelle quantité : le nombre en indice après
+  un symbole donne le nombre d''atomes de cet élément (H2O = 2 atomes H + 1 atome O).
+
+  Formules courantes à connaître : dioxygène O2, dihydrogène H2, diazote N2, eau H2O, dioxyde de carbone CO2, méthane
+  CH4, protoxyde d''azote N2O.
+
+  Un symbole chimique ne s''invente pas et ne se traduit pas : Na est le sodium (pas l''azote), le carbone est C
+  (pas Ca, qui est le calcium).'
+methode:
+- Pour lire une formule, repérer chaque symbole (majuscule, éventuellement suivie d'une minuscule) puis le nombre
+  en indice qui le suit.
+- Un symbole sans indice signifie qu'il y a un seul atome de cet élément.
+- Pour compter le nombre total d'atomes d'une molécule, additionner tous les indices.
+- Utiliser le tableau périodique pour retrouver le symbole d'un élément à partir de son nom, ou inversement.
+erreurs_frequentes:
+- Confondre le nombre d'atomes (indice après le symbole) et le nombre de molécules (coefficient devant la formule).
+- Inventer un symbole à partir du nom français au lieu de le chercher dans le tableau.
+- 'Confondre les symboles proches : N (azote) et Na (sodium), C (carbone) et Ca (calcium).'
+- Oublier qu'un symbole chimique commence toujours par une majuscule.
+exemple:
+  enonce: La formule du dioxyde de carbone est CO2. Combien d'atomes de carbone et d'oxygène contient une molécule
+    de CO2 ? Combien d'atomes au total ?
+  solution: '1 atome de carbone (C, pas d''indice) et 2 atomes d''oxygène (O2). Total : 3 atomes.'
+exercices:
+- enonce: La formule du méthane est CH4. Combien d'atomes d'hydrogène et de carbone contient une molécule de méthane
+    ?
+  indices:
+  - L'indice 4 est après H.
+  solution: 1 atome de carbone et 4 atomes d'hydrogène.
+- enonce: Le protoxyde d'azote a pour formule N2O. Quels éléments contient-il, et en quelle quantité ?
+  indices:
+  - 'Deux symboles différents dans cette formule : N et O.'
+  solution: 2 atomes d'azote (N2) et 1 atome d'oxygène (O).
+- enonce: Écrire la formule du dihydrogène et celle du diazote.
+  indices:
+  - « di » signifie deux atomes du même élément.
+  solution: 'Dihydrogène : H2. Diazote : N2.'
+sources:
+- titre: Vikidia, « Tableau périodique des éléments »
+  url: https://fr.vikidia.org/w/index.php?title=Tableau_p%C3%A9riodique_des_%C3%A9l%C3%A9ments&oldid=2307266
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Élément chimique »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89l%C3%A9ment_chimique&oldid=2553298
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

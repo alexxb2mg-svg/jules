@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ecouter-comparer-construire-culture
+declencheurs:
+- comparer deux musiques
+- reconnaitre le style d'un morceau
+- construire sa culture musicale
+- ecouter attentivement une oeuvre
+- identifier les instruments dans un morceau
+essentiel: 'Écouter une œuvre musicale de façon active, c''est repérer des éléments précis (instruments, voix, rythme,
+  structure, nuances) et pas seulement dire si on l''aime ou non.
+
+  Comparer deux musiques permet de faire émerger leurs points communs et leurs différences (même thème traité différemment,
+  même style à des époques différentes) et d''affiner son vocabulaire d''analyse.
+
+  Construire sa culture musicale, c''est élargir progressivement le champ des œuvres et des styles rencontrés, des
+  plus anciens (musique baroque) aux plus récents, dans des genres différents (musique classique, musiques actuelles,
+  musiques du monde).
+
+  Cette écoute active nourrit ensuite la pratique et la création, car elle donne des références et un vocabulaire
+  technique pour parler de sa propre production.'
+methode:
+- Écouter d'abord sans a priori, en notant ce qui attire l'attention (un instrument, un changement).
+- 'Réécouter en cherchant des éléments précis : tempo, nuances, timbre, structure.'
+- Comparer avec une autre œuvre déjà connue pour situer un style ou une époque.
+- Utiliser un vocabulaire musical précis pour décrire ce qu'on entend plutôt qu'un simple jugement.
+erreurs_frequentes:
+- Se contenter de dire « j'aime » ou « j'aime pas » sans décrire ce qu'on entend.
+- Confondre le style d'une musique avec l'émotion qu'elle procure.
+- Ne comparer que des musiques très proches d'un même genre, sans élargir son écoute.
+exemple:
+  enonce: Comparer un extrait de musique baroque joué au clavecin et un extrait de musique électronique.
+  solution: Le premier utilise un instrument acoustique ancien avec une polyphonie régulière et un tempo stable
+    ; le second utilise des sons synthétiques, souvent avec des boucles rythmiques répétées et des effets numériques.
+    Les deux peuvent partager une même pulsation régulière malgré leurs timbres très différents.
+exercices:
+- enonce: 'À la maison : écoute deux fois le même extrait musical de ton choix. La première fois sans rien noter,
+    la deuxième fois en notant trois éléments précis (instrument, tempo, nuance).'
+  indices:
+  - Choisis un morceau que tu n'as jamais vraiment écouté attentivement.
+  solution: Réussite si les trois éléments notés sont précis et vérifiables (pas juste « c'est beau »).
+- enonce: Trouve deux versions différentes d'un même morceau ou d'une même mélodie (reprise, adaptation) et note
+    deux différences entre elles.
+  indices:
+  - Une comptine reprise dans des styles différents est un bon exemple accessible.
+  solution: Réussite si les deux différences relèvent bien du langage musical (tempo, instrument, nuance, structure)
+    et non du seul ressenti.
+sources:
+- titre: Wikipédia, « Genre musical »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_musical&oldid=236954603
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

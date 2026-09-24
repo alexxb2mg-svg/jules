@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: paroles-rapportees-et-discours-indirect-libre
+declencheurs:
+- discours direct indirect
+- il dit que
+- guillemets paroles
+- discours indirect libre
+- changer les pronoms
+- rapporter une parole
+essentiel: 'Le discours direct rapporte les paroles telles qu''elles ont été dites, entre guillemets, introduites
+  par un verbe de parole et souvent deux-points ou une incise : « Je viendrai demain », dit-elle.
+
+  Le discours indirect intègre la parole dans une subordonnée, sans guillemets ni ponctuation expressive propre
+  : elle dit qu''elle viendra le lendemain. Cela entraîne des changements : pronoms (je → elle), temps (futur →
+  conditionnel ou futur dans le passé selon le contexte), repères de temps et de lieu (demain → le lendemain, ici
+  → là).
+
+  Le discours indirect libre mélange les deux : il garde certains traits du discours direct (exclamations, questions,
+  rythme de la phrase, vocabulaire du personnage) mais sans guillemets ni verbe introducteur, et applique les transformations
+  de pronoms et de temps du discours indirect. Il permet au narrateur de faire entendre la voix ou les pensées d''un
+  personnage sans rompre le récit.'
+methode:
+- Repérer les guillemets et le verbe introducteur pour identifier le discours direct.
+- 'Pour passer au discours indirect : supprimer les guillemets, ajouter une conjonction (que, si...), transformer
+  pronoms, temps et indicateurs de temps/lieu.'
+- 'Pour repérer un discours indirect libre : chercher des phrases sans guillemets ni verbe introducteur, mais avec
+  des marques de l''oral (exclamations, questions, tournures familières) insérées dans la narration.'
+- 'Se demander à qui appartient vraiment la pensée exprimée : au narrateur ou au personnage.'
+vocabulaire:
+- terme: discours indirect libre
+  definition: façon de rapporter des paroles ou pensées sans guillemets ni verbe introducteur, en gardant des traits
+    du discours direct
+erreurs_frequentes:
+- Oublier de changer les pronoms et les temps en passant du discours direct à l'indirect.
+- Garder les guillemets ou le point d'interrogation direct dans une interrogative indirecte.
+- Confondre discours indirect libre et simple discours indirect (le libre garde le ton du personnage, sans subordination).
+- Ne pas transformer les indicateurs de temps et de lieu (demain, ici, hier) au discours indirect.
+exemple:
+  enonce: 'Transformer au discours indirect : Il déclara : « Je pars demain matin. »'
+  solution: Il déclara qu'il partait le lendemain matin. (je → il ; pars, présent → partait, imparfait car la principale
+    est au passé ; demain → le lendemain).
+exercices:
+- enonce: 'Transformer au discours indirect : Elle demanda : « Où as-tu rangé mes affaires ? »'
+  indices:
+  - 'C''est une question : quel mot introducteur utiliser ?'
+  - Pas de point d'interrogation à l'indirect.
+  solution: Elle demanda où j'avais rangé ses affaires. (interrogative indirecte, sans point d'interrogation, pronoms
+    et possessifs changés).
+- enonce: 'Identifier le discours indirect libre dans : « Elle regarda la lettre. Que devait-elle faire ? Impossible
+    de répondre maintenant. » et justifier.'
+  indices:
+  - Y a-t-il des guillemets ou un verbe introducteur avant la question ?
+  solution: '« Que devait-elle faire ? Impossible de répondre maintenant. » est du discours indirect libre : ce
+    sont les pensées du personnage, sans guillemets ni verbe introducteur, mais avec les pronoms et les temps de
+    l''indirect (devait à la 3e personne).'
+sources:
+- titre: Wikipédia, « Discours indirect libre »
+  url: https://fr.wikipedia.org/w/index.php?title=Discours_indirect_libre&oldid=238392526
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Discours rapporté »
+  url: https://fr.wikipedia.org/w/index.php?title=Discours_rapport%C3%A9&oldid=235220432
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

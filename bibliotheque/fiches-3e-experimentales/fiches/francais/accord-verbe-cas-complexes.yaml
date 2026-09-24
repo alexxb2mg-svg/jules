@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: accord-verbe-cas-complexes
+declencheurs:
+- accord du verbe
+- sujet éloigné
+- beaucoup de
+- la plupart
+- chacun
+- nom collectif
+- verbe au singulier ou pluriel
+essentiel: 'En général, le verbe s''accorde en nombre avec son sujet, mais certains sujets compliquent l''accord.
+
+  Avec un sujet du type « adverbe de quantité + nom » (beaucoup de, peu de, combien de...), le verbe se met au pluriel
+  si le nom qui suit est au pluriel : « Beaucoup d''élèves ont réussi. »
+
+  Avec un nom collectif singulier suivi d''un complément au pluriel (une foule de, un groupe de...), le verbe se
+  met au singulier si l''on pense à l''ensemble comme un tout, au pluriel si l''on pense à chaque élément séparément
+  : « Une foule de spectateurs s''est levée » (un seul mouvement d''ensemble) / « Une foule de spectateurs applaudissaient
+  chacun à leur rythme ».
+
+  Avec des pronoms distributifs comme « chacun », « aucun », « personne », le verbe reste au singulier, même si
+  le sens semble collectif : « Chacun des élèves a son cahier. »'
+methode:
+- Repérer le noyau du groupe sujet, pas seulement le mot le plus proche du verbe.
+- 'Sujet éloigné du verbe (complément entre les deux) : chercher le vrai sujet en ignorant le complément intercalé.'
+- 'Nom collectif + complément pluriel : décider si on insiste sur l''ensemble (singulier) ou sur chaque élément
+  (pluriel).'
+- 'Pronoms distributifs (chacun, aucun, nul, personne) : toujours le singulier.'
+- 'Plusieurs sujets reliés par « et » : pluriel ; reliés par « ou », « ni » : le sens décide (exclusion = singulier
+  possible, addition = pluriel).'
+erreurs_frequentes:
+- Accorder avec le complément le plus proche du verbe au lieu du vrai sujet.
+- Mettre « chacun » au pluriel parce que le groupe évoqué est nombreux.
+- Oublier que « la plupart de » impose presque toujours le pluriel.
+- Ne pas justifier le choix singulier/pluriel avec un nom collectif (les deux existent selon le sens).
+exemple:
+  enonce: 'Accorder : « La liste des invités (être) déjà envoyée. »'
+  solution: 'Le sujet réel est « la liste » (singulier), « des invités » est un complément du nom intercalé. On
+    écrit : « La liste des invités est déjà envoyée. »'
+exercices:
+- enonce: 'Accorder : « Chacun des candidats (avoir) préparé son dossier. »'
+  indices:
+  - « chacun » s'accorde-t-il au singulier ou au pluriel ?
+  solution: '« Chacun des candidats a préparé son dossier. » : chacun impose toujours le singulier.'
+- enonce: 'Accorder en justifiant : « Une bande de moineaux (s''envoler) tous ensemble au même instant. »'
+  indices:
+  - L'action est-elle faite en un seul mouvement d'ensemble, ou séparément par chacun ?
+  solution: '« Une bande de moineaux s''est envolée tous ensemble au même instant. » : l''action est simultanée,
+    on insiste sur l''ensemble, donc singulier (accord possible au pluriel si l''on insistait sur chaque oiseau
+    séparément).'
+- enonce: 'Accorder : « Beaucoup de spectateurs (applaudir) à la fin du spectacle. »'
+  indices:
+  - '« beaucoup de » est un adverbe de quantité : quel accord impose-t-il en général ?'
+  solution: '« Beaucoup de spectateurs ont applaudi à la fin du spectacle. » : un adverbe de quantité suivi d''un
+    nom pluriel entraîne le pluriel.'
+sources:
+- titre: Wikipédia, « Accord du verbe avec le sujet en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Accord_du_verbe_avec_le_sujet_en_fran%C3%A7ais&oldid=201540488
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Accord (grammaire) »
+  url: https://fr.wikipedia.org/w/index.php?title=Accord_%28grammaire%29&oldid=238071441
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

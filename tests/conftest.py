@@ -18,6 +18,8 @@ from jules.moteur import Tuteur  # noqa: E402
 
 
 def regle_par_defaut(systeme: str, tours, modele: str) -> str:
+    if "UNE notion d'une liste fermée" in systeme:
+        return '{"notion": "", "confiance": "faible"}'
     if "suivi scolaire" in systeme:
         return (
             '{"matiere": "Mathématiques", "notion": "fractions : addition", "statut": "bloque", '
@@ -32,8 +34,8 @@ def regle_par_defaut(systeme: str, tours, modele: str) -> str:
 
 @pytest.fixture
 def projet(tmp_path: Path) -> Path:
-    """Copie des fichiers de contenu (persona, consignes, profils) dans un dossier jetable."""
-    for dossier in ("persona", "consignes", "profils"):
+    """Copie des fichiers de contenu (persona, consignes, profils, bibliotheques) dans un dossier jetable."""
+    for dossier in ("persona", "consignes", "profils", "bibliotheque"):
         shutil.copytree(RACINE / dossier, tmp_path / dossier)
     return tmp_path
 

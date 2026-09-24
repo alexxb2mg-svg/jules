@@ -1,0 +1,90 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: diversite-stabilite-genetique
+declencheurs:
+- ADN c'est quoi
+- mutation génétique
+- brassage génétique
+- génotype phénotype
+- pourquoi on ne se ressemble pas tous
+- méiose fécondation génétique
+- frères pas identiques génétiquement
+- risque de transmettre une maladie génétique
+- parents porteurs d'une maladie
+essentiel: 'L''ADN (acide désoxyribonucléique) est la molécule qui porte l''information génétique dans le noyau
+  de chaque cellule, organisée en gènes le long des chromosomes ; elle est transmise de génération en génération,
+  ce qui assure une certaine stabilité génétique.
+
+  Le génotype d''un individu est l''ensemble de son information génétique (ses gènes et leurs versions, appelées
+  allèles) ; le phénotype est l''ensemble des caractères observables (couleur des yeux, groupe sanguin…), déterminé
+  par le génotype et, pour certains caractères, influencé aussi par l''environnement.
+
+  Une mutation est un changement accidentel dans la séquence de l''ADN ; elle est à l''origine de nouveaux allèles
+  et donc d''une partie de la diversité génétique entre individus.
+
+  La méiose (division cellulaire qui produit les gamètes) et la fécondation (fusion des gamètes) provoquent un brassage
+  génétique : chaque gamète reçoit une combinaison différente des allèles des parents, et la fécondation combine
+  celles de deux individus différents, ce qui explique pourquoi deux enfants d''un même couple ne sont jamais génétiquement
+  identiques (sauf vrais jumeaux).
+
+  Ainsi, mutations et brassage génétique (méiose + fécondation) expliquent ensemble à la fois la diversité génétique
+  des individus (chacun est unique) et la stabilité génétique de l''espèce (les mêmes gènes se transmettent globalement
+  de génération en génération).'
+methode:
+- Distinguer génotype (l'information génétique) et phénotype (ce qui est observable).
+- Retenir que les mutations créent de nouveaux allèles, source de diversité.
+- Retenir que le brassage génétique (méiose puis fécondation) recombine les allèles existants sans en créer de nouveaux.
+- 'Pour un croisement simple, utiliser les probabilités : deux parents porteurs d''un même allèle récessif ont 1
+  chance sur 4 d''avoir un enfant portant les deux exemplaires de cet allèle.'
+erreurs_frequentes:
+- Confondre génotype et phénotype.
+- Croire qu'une mutation est toujours néfaste (elle peut être neutre, parfois même avantageuse).
+- Penser que le brassage génétique crée de nouveaux allèles (il recombine seulement les allèles déjà présents chez
+  les parents).
+- Oublier que le phénotype peut aussi être influencé par l'environnement, pas seulement par le génotype.
+exemple:
+  enonce: Deux parents sont tous les deux porteurs (hétérozygotes) d'un allèle récessif responsable d'une maladie.
+    Quelle est la probabilité que leur enfant porte deux exemplaires de cet allèle (soit atteint) ?
+  solution: Chaque parent a 1 chance sur 2 de transmettre l'allèle récessif. La probabilité que l'enfant reçoive
+    cet allèle des deux parents est 1/2 × 1/2 = 1/4, soit 25 %.
+exercices:
+- enonce: Expliquer la différence entre génotype et phénotype avec l'exemple de la couleur des yeux.
+  indices:
+  - L'un se voit, l'autre est l'information génétique sous-jacente.
+  solution: Le génotype est l'ensemble des allèles portés par l'individu pour le gène de la couleur des yeux (invisible
+    directement) ; le phénotype est la couleur des yeux réellement observée, résultat de ce génotype.
+- enonce: Pourquoi deux frères ou sœurs (hors vrais jumeaux) ne sont-ils jamais génétiquement identiques, alors
+    qu'ils ont les mêmes parents ?
+  indices:
+  - Pense au brassage génétique lors de la méiose et de la fécondation.
+  solution: 'La méiose crée des gamètes avec des combinaisons différentes d''allèles à chaque fois, et la fécondation
+    combine un gamète différent de chaque parent : chaque enfant reçoit donc une combinaison génétique unique.'
+- enonce: Une mutation apparaît dans une cellule reproductrice. Peut-elle être transmise à la descendance ? Pourquoi
+    ?
+  indices:
+  - Distingue une mutation dans une cellule reproductrice d'une mutation dans une cellule du reste du corps.
+  solution: Oui, si la mutation touche une cellule reproductrice (gamète), elle peut être transmise à la descendance,
+    car c'est cette cellule qui participe à la fécondation.
+sources:
+- titre: Vikidia, « Acide désoxyribonucléique »
+  url: https://fr.vikidia.org/w/index.php?title=Acide_d%C3%A9soxyribonucl%C3%A9ique&oldid=2265573
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Génotype »
+  url: https://fr.vikidia.org/w/index.php?title=G%C3%A9notype&oldid=2519107
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Méiose »
+  url: https://fr.vikidia.org/w/index.php?title=M%C3%A9iose&oldid=1967597
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

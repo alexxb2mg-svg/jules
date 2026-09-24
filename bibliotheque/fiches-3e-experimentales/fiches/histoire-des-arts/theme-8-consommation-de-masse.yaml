@@ -1,0 +1,65 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-8-consommation-de-masse
+declencheurs:
+- art contemporain apres 1945
+- pop art societe de consommation
+- design et nouvelles technologies
+- art et ecologie
+- mondialisation dans l'art
+- metissages artistiques
+essentiel: 'Depuis 1945, l''art contemporain oscille entre des démarches figuratives (réalismes) et abstraites face
+  à une réalité en constante évolution technologique et sociale.
+
+  Le pop art, apparu en Grande-Bretagne puis développé aux États-Unis dans les années 1950-1960, critique et magnifie
+  à la fois les objets de la société de consommation (produits de supermarché, stars médiatiques) en utilisant des
+  images de la culture de masse.
+
+  L''architecture et le design intègrent les nouvelles technologies pour répondre à de nouveaux modes de vie ; les
+  questions d''énergie, de climat et de développement durable deviennent progressivement des sujets pour les artistes,
+  en particulier dans les dernières décennies.
+
+  La globalisation favorise des métissages artistiques : les échanges entre cultures du monde entier se multiplient,
+  donnant naissance à des démarches qui croisent des traditions artistiques différentes.'
+methode:
+- Repérer si une œuvre s'inspire d'objets ou d'images de la société de consommation (indice de pop art).
+- Identifier une préoccupation environnementale ou énergétique explicite dans une œuvre contemporaine.
+- Chercher des indices de métissage entre plusieurs traditions culturelles dans une œuvre récente.
+- Distinguer une démarche figurative d'une démarche abstraite dans l'art contemporain.
+erreurs_frequentes:
+- Croire que le pop art se contente de copier des objets de consommation sans aucune intention critique.
+- Réduire l'art contemporain à un seul courant, alors qu'il est très diversifié depuis 1945.
+- Ignorer que les questions environnementales sont devenues un sujet artistique récent mais réel.
+exemple:
+  enonce: Un artiste reproduit en grand format et en couleurs vives l'emballage d'un produit de consommation courante.
+  solution: 'Cette démarche est caractéristique du pop art : elle s''approprie une image de la culture de masse
+    et de la société de consommation, en jouant sur l''ambiguïté entre critique et fascination pour ces objets du
+    quotidien.'
+exercices:
+- enonce: 'À l''oral (type brevet) : présente une œuvre contemporaine (après 1945) en expliquant en quoi elle reflète
+    une préoccupation de son époque (consommation, technologie, écologie…).'
+  indices:
+  - Choisis une œuvre dont le sujet est clairement lié à un enjeu contemporain.
+  solution: Réussite si le lien entre l'œuvre et la préoccupation de son époque est explicite et argumenté.
+- enonce: Cherche un exemple d'œuvre ou de projet artistique qui mélange des influences de plusieurs cultures du
+    monde, et explique ce métissage en une phrase.
+  indices:
+  - La musique contemporaine mélange souvent des instruments ou des styles venus de différentes régions du monde.
+  solution: Réussite si l'exemple montre clairement la rencontre d'au moins deux traditions culturelles distinctes.
+sources:
+- titre: Vikidia, « Pop art »
+  url: https://fr.vikidia.org/w/index.php?title=Pop_art&oldid=2360735
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Design »
+  url: https://fr.vikidia.org/w/index.php?title=Design&oldid=2339048
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

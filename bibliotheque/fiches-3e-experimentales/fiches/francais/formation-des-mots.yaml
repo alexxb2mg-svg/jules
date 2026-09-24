@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: formation-des-mots
+declencheurs:
+- dérivation composition
+- mot composé
+- créer un nouveau mot
+- beau beauté
+- déménager déménagement
+- changement de catégorie
+essentiel: 'Les mots nouveaux se forment surtout par dérivation (ajout d''un préfixe et/ou d''un suffixe à un radical
+  : décorer → décoration) et par composition (assemblage de deux mots ou éléments autonomes : porte-monnaie, grand-mère,
+  tire-bouchon).
+
+  L''étymologie éclaire l''origine d''un mot, souvent latine ou grecque (biologie, du grec bio- : vie, et -logie
+  : étude) ; la néologie crée des mots nouveaux pour désigner des réalités nouvelles.
+
+  La dérivation change souvent la catégorie grammaticale du mot de départ : un verbe peut devenir un nom (déménager
+  → déménagement), un adjectif peut devenir un nom (beau → beauté) ou un adverbe (lent → lentement). Ce changement
+  de catégorie a des conséquences orthographiques (le suffixe impose sa propre terminaison, parfois avec des modifications
+  du radical : beau → beauté, avec un seul t final).
+
+  Une locution est un groupe de mots figé qui fonctionne comme un seul mot de sens (« pomme de terre », « tout à
+  coup »).'
+methode:
+- Repérer le radical du mot et se demander de quel mot de base il pourrait dériver.
+- Identifier s'il s'agit d'une dérivation (préfixe/suffixe ajoutés) ou d'une composition (plusieurs mots autonomes
+  assemblés).
+- Noter le changement éventuel de catégorie grammaticale entre le mot de base et le mot dérivé.
+- Vérifier l'orthographe de la terminaison imposée par le suffixe (attention aux modifications du radical).
+- 'Pour un mot d''origine étrangère ou ancienne : chercher son étymon pour comprendre sa formation.'
+erreurs_frequentes:
+- Confondre dérivation (ajout d'affixes) et composition (assemblage de mots autonomes).
+- Oublier que la dérivation change souvent la catégorie grammaticale du mot.
+- Mal orthographier un mot dérivé en oubliant la modification du radical (beau → beauté, pas « beauté » avec deux
+  t).
+- Écrire une locution figée en la modifiant comme un groupe libre (« pomme de terre » ne se met pas au pluriel en
+  « pommes de terres »).
+exemple:
+  enonce: 'Analyser la formation de « déménagement » à partir de « déménager » : procédé et changement de catégorie.'
+  solution: '« déménagement » est formé par dérivation suffixale : on ajoute -ment au radical du verbe « déménager
+    ». Le verbe (catégorie : verbe) devient un nom (catégorie : nom), ce qui entraîne un changement d''emploi dans
+    la phrase (déménagement peut être sujet ou complément).'
+exercices:
+- enonce: Former le nom dérivé de l'adjectif « beau » et de l'adjectif « lent » son adverbe, puis préciser le changement
+    de catégorie.
+  indices:
+  - beau + suffixe -té ; lent + suffixe -ment.
+  solution: beau → beauté (adjectif → nom) ; lent → lentement (adjectif → adverbe).
+- enonce: « Porte-monnaie » et « lave-vaisselle » sont-ils formés par dérivation ou par composition ? Justifier.
+  indices:
+  - Chaque élément est-il un mot autonome qui existe seul par ailleurs ?
+  solution: 'Composition : chacun assemble deux mots autonomes existant par ailleurs (porte + monnaie ; lave + vaisselle),
+    sans ajout de préfixe ni de suffixe.'
+sources:
+- titre: Wikipédia, « Formation des mots »
+  url: https://fr.wikipedia.org/w/index.php?title=Formation_des_mots&oldid=238428798
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Dérivation lexicale »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9rivation_lexicale&oldid=229957313
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

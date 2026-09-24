@@ -1,0 +1,62 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: analyse-du-sens-des-mots
+declencheurs:
+- polysémie
+- sens propre sens figuré
+- expression figée
+- sens d'un verbe change
+- construction du verbe
+- plusieurs sens d'un mot
+essentiel: 'Un mot polysémique a plusieurs sens liés entre eux (le pied d''une personne, le pied d''une table, le
+  pied d''une montagne) : il faut le sens du contexte pour choisir la bonne interprétation.
+
+  Le sens d''un mot peut glisser progressivement (un mot qui désignait une chose finit par en désigner une autre,
+  proche ou liée) : c''est une évolution ou un glissement de sens.
+
+  Une expression figée (ou locution) a un sens global qui ne se déduit pas de l''addition des sens de chaque mot
+  : « avoir le cafard » ne parle pas d''un insecte, mais d''un état de tristesse.
+
+  La construction d''un verbe (avec ou sans complément, avec tel type de complément) peut changer son sens : « sortir
+  » seul (quitter un lieu) diffère de « sortir un livre » (le publier) ou « sortir de la maladie » (en guérir).'
+methode:
+- Repérer le contexte (mots autour) pour choisir le bon sens d'un mot polysémique.
+- Vérifier dans le dictionnaire si une expression a un sens figuré global différent du sens littéral de chaque mot.
+- Observer la construction du verbe (avec quel type de complément, ou sans complément) pour déterminer son sens
+  précis.
+- Chercher l'origine d'un mot pour comprendre comment son sens a pu évoluer avec le temps.
+erreurs_frequentes:
+- Prendre au sens propre une expression figée (« il pleut des cordes » ne parle pas de vraies cordes).
+- Ne pas remarquer qu'un mot change de sens selon sa construction grammaticale.
+- Confondre polysémie (plusieurs sens d'un même mot) et homonymie (deux mots différents qui se prononcent ou s'écrivent
+  pareil, sans lien de sens, comme « pain » et « pin »).
+- Se limiter au premier sens trouvé dans le dictionnaire sans vérifier s'il correspond au contexte.
+exemple:
+  enonce: 'Expliquer les deux sens du mot « feuille » dans : « La feuille tombe de l''arbre » et « J''écris sur
+    une feuille. »'
+  solution: Dans la première phrase, « feuille » désigne l'organe végétal ; dans la seconde, une pièce de papier.
+    C'est un même mot polysémique, les deux sens étant liés historiquement (le papier a d'abord évoqué la finesse
+    d'une feuille d'arbre).
+exercices:
+- enonce: Expliquer le sens de l'expression figée « casser les pieds à quelqu'un » sans se fier au sens littéral.
+  indices:
+  - Le sens global ne se déduit pas de « casser » + « pieds ».
+  solution: L'expression signifie « ennuyer, importuner quelqu'un » ; elle n'a aucun rapport avec de vrais pieds
+    cassés.
+- enonce: Comparer le sens de « rendre » dans « rendre un livre » et « rendre quelqu'un heureux ». Que remarque-t-on
+    sur la construction du verbe ?
+  indices:
+  - Regarder si « rendre » a un COD seul ou un COD + attribut du COD.
+  solution: « rendre un livre » (COD seul) signifie restituer ; « rendre quelqu'un heureux » (COD + attribut du
+    COD) signifie faire devenir. La construction différente change le sens du verbe.
+sources:
+- titre: Wikipédia, « Polysémie »
+  url: https://fr.wikipedia.org/w/index.php?title=Polys%C3%A9mie&oldid=236228721
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

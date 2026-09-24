@@ -216,12 +216,15 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         return [{"id": m.id, "routes": m.routes() is not None} for m in tuteur.modules]
 
     for module in tuteur.modules:
-        routeur = module.routes()
-        if routeur is None:
-            continue
-        enveloppe = APIRouter(dependencies=[parent])
-        enveloppe.include_router(routeur)
-        app.include_router(enveloppe, prefix=f"/api/modules/{module.id}")
+        for routeur, garde, prefixe in (
+            (module.routes(), parent, f"/api/modules/{module.id}"),
+            (module.routes_eleve(), eleve, f"/api/eleve/{module.id}"),
+        ):
+            if routeur is None:
+                continue
+            enveloppe = APIRouter(dependencies=[garde])
+            enveloppe.include_router(routeur)
+            app.include_router(enveloppe, prefix=prefixe)
 
     return app
 

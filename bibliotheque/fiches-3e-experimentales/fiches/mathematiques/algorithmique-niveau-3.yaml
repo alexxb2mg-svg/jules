@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: algorithmique-niveau-3
+declencheurs: ["scratch", "bloc personnalisé", "mes blocs", "répéter jusqu'à", "boucles", "aléatoire", "sous-programme"]
+essentiel: 'Pour un problème complexe, on le décompose en sous-problèmes. En Scratch, un sous-problème peut devenir
+  un « bloc personnalisé » (Mes blocs), éventuellement avec un paramètre : par exemple un bloc « carré (côté) ».
+
+  Une boucle peut en contenir une autre (boucles imbriquées) : pour reproduire un motif, on répète le bloc qui le
+  dessine en tournant ou en se déplaçant entre deux motifs.
+
+  « Répéter jusqu''à … » répète tant que la condition n''est pas vraie : on ne connaît pas le nombre de tours à
+  l''avance.
+
+  Plusieurs scripts peuvent fonctionner en même temps (en parallèle), par exemple pour un jeu : un script déplace
+  le personnage, un autre surveille les collisions.
+
+  On peut simuler une expérience aléatoire avec « nombre aléatoire entre … et … ».'
+methode:
+- Décrire le but, puis lister les sous-tâches (dessiner un motif, se déplacer, recommencer).
+- Créer un bloc personnalisé par sous-tâche, avec des paramètres si la taille varie.
+- Assembler avec des boucles ; vérifier le nombre total de répétitions (boucle externe × boucle interne).
+- Pour « répéter jusqu'à », vérifier que la condition finira par devenir vraie (sinon la boucle est infinie).
+erreurs_frequentes:
+- Écrire une boucle « répéter jusqu'à » dont la condition n'est jamais atteinte.
+- 'Oublier de tourner ou de se déplacer entre deux motifs : ils se dessinent les uns sur les autres.'
+- Confondre le nombre de tours de la boucle interne et celui de la boucle externe.
+exemple:
+  enonce: 'On définit le bloc « carré (côté) » : répéter 4 fois [avancer de côté ; tourner de 90°]. Écrire un script
+    qui dessine une rosace de 6 carrés.'
+  solution: répéter 6 fois [carré (50) ; tourner de 60°]. Les 6 carrés sont tournés de 60° les uns par rapport aux
+    autres (6 × 60° = 360°).
+exercices:
+- enonce: Dans la rosace de l'exemple, combien de fois le bloc « avancer » est-il exécuté ?
+  indices:
+  - Boucle externe × boucle interne.
+  solution: 6 × 4 = 24 fois.
+- enonce: '« mettre x à 1 ; mettre n à 0 ; répéter jusqu''à x > 1000 : mettre x à x × 2, ajouter 1 à n ». Que valent
+    x et n à la fin ?'
+  indices:
+  - 'Suis x : 1, 2, 4, 8…'
+  solution: x = 1 024 et n = 10.
+- enonce: '« mettre n à 100 ; répéter jusqu''à n < 1 : mettre n à n / 2 ». Combien de tours fait la boucle ?'
+  indices:
+  - 100, 50, 25, 12,5…
+  solution: 7 tours (n finit à 100/128 ≈ 0,78).
+sources:
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Structure de contrôle »
+  url: https://fr.wikipedia.org/w/index.php?title=Structure_de_contr%C3%B4le&oldid=231442964
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: notions de boucle et de condition, résumées
+- titre: Vikidia, « Scratch (logiciel) »
+  url: https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

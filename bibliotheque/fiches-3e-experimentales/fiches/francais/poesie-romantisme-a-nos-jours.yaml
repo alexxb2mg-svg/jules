@@ -1,0 +1,87 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: poesie-romantisme-a-nos-jours
+declencheurs:
+- poème
+- vers
+- rime
+- strophe
+- romantisme
+- poète
+- poésie lyrique
+- célébrer la nature
+- sentiment dans un texte
+essentiel: 'La poésie est un genre littéraire très ancien qui privilégie l''expressivité de la forme : le choix
+  des mots (sens et sonorités) et leur agencement (rythme, rimes, figures de style) comptent autant que ce qu''ils
+  disent. Elle peut être écrite en vers ou en prose (prose poétique).
+
+  Le romantisme est un mouvement littéraire et artistique né en Europe à la fin du XVIIIe siècle et diffusé au XIXe
+  siècle. Les poètes romantiques (Hugo, Lamartine, Musset, Vigny) placent le sentiment et l''émotion personnelle
+  au cœur de leur poésie, expriment la nostalgie, s''émerveillent ou s''inquiètent devant la nature, qu''ils voient
+  comme un reflet de leur âme.
+
+  Depuis le romantisme, la poésie n''a cessé de se renouveler (symbolisme avec Baudelaire et Verlaine, puis Rimbaud,
+  surréalisme au XXe siècle…), mais une constante demeure : la poésie cherche à faire sentir au lecteur une présence
+  intense au monde, à intensifier ce qu''on voit, ressent ou imagine, et à interroger le sens de cette présence.
+  Le rapport à la nature (paysages, saisons, éléments) y tient souvent une place centrale, comme un moyen de parler
+  de soi et du monde en même temps.'
+methode:
+- Repérer la forme du poème (vers réguliers ou libres, strophes, rimes ou non).
+- Identifier le sentiment ou l'état d'âme exprimé (tristesse, nostalgie, émerveillement).
+- Observer comment la nature ou le paysage sont utilisés pour exprimer ce sentiment.
+- Relever les images et figures de style qui rendent la langue plus expressive (comparaisons, métaphores).
+- Lire le poème à voix haute pour percevoir son rythme et sa musicalité.
+vocabulaire:
+- terme: romantisme
+  definition: mouvement du XIXe siècle qui met en avant les sentiments et l'émotion personnelle
+- terme: strophe
+  definition: groupe de vers séparé des autres par un blanc
+- terme: lyrisme
+  definition: expression poétique des sentiments personnels
+erreurs_frequentes:
+- Croire que tout poème en vers est romantique.
+- Ne parler que du sens du poème sans étudier sa forme (rythme, sonorités).
+- Confondre le narrateur/poète du texte avec l'auteur réel sans le vérifier.
+- Réciter sans comprendre le sens général du poème.
+exemple:
+  enonce: 'Dans « Demain, dès l''aube » de Victor Hugo, le poète écrit : « Je marcherai les yeux fixés sur mes pensées,
+    / Sans rien voir au dehors, sans entendre aucun bruit, / Seul, inconnu, le dos courbé, les mains croisées, /
+    Triste, et le jour pour moi sera comme la nuit. » Que traduit ce passage ?'
+  solution: 'Le rythme lent, les répétitions de « sans » et l''accumulation d''adjectifs (« Seul, inconnu… Triste
+    ») traduisent un état de tristesse profonde et d''isolement : le poète romantique exprime une douleur intime
+    à travers la marche solitaire, en accord avec le paysage traversé.'
+exercices:
+- enonce: Cite deux poètes du mouvement romantique français.
+  indices:
+  - L'essentiel en cite quatre.
+  solution: Par exemple Victor Hugo et Alphonse de Lamartine (ou Alfred de Musset, Alfred de Vigny).
+- enonce: Écris un petit poème de 4 vers (rimés ou non) sur une saison ou un moment de la journée qui exprime un
+    sentiment personnel.
+  indices:
+  - Choisis un sentiment précis avant d'écrire (joie, nostalgie, calme…).
+  - Utilise au moins une comparaison ou une image.
+  solution: Réussite si le poème exprime clairement un sentiment lié à un élément naturel, avec au moins une image
+    ou comparaison, même sans rimes parfaites.
+sources:
+- titre: Wikipédia, « Poésie »
+  url: https://fr.wikipedia.org/w/index.php?title=Po%C3%A9sie&oldid=238949190
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Romantisme »
+  url: https://fr.wikipedia.org/w/index.php?title=Romantisme&oldid=237914198
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Les Contemplations/« Demain, dès l’aube, à l’heure où blanchit la campagne » »
+  url: https://fr.wikisource.org/w/index.php?title=Les_Contemplations/%C2%AB_Demain%2C_d%C3%A8s_l%E2%80%99aube%2C_%C3%A0_l%E2%80%99heure_o%C3%B9_blanchit_la_campagne_%C2%BB&oldid=15164548
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, poème du domaine public, exemple d'étude
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -15,6 +15,14 @@ Profil de l'élève          ce que Jules charge                  ce qui l'enric
 
 Aujourd'hui Jules est un tuteur par conversation, avec une seule bibliothèque (le programme de 3e). La suite le fait évoluer sur quatre axes.
 
+## Trois règles qui tiennent sur tous les axes
+
+Ces règles viennent de l'essai dont Jules est né, [*Après la dernière main levée*](essai/). Elles servent à juger chaque proposition, y compris celles des mainteneurs.
+
+1. **L'élève essaie d'abord.** Jules n'aide qu'après une tentative, et une intervention non demandée est toujours une question, jamais une réponse ni un indice qui la contient. Un outil qui « remarque l'hésitation et la comble » fait le travail à la place de l'élève, même avec de bonnes intentions.
+2. **L'élève produit, Jules relit.** Une fiche, une carte mentale ou un quiz fabriqués par la machine ne laissent presque rien à l'élève. Jules peut proposer un modèle vide, poser des questions, corriger ; c'est l'élève qui écrit.
+3. **L'adulte d'à côté compte plus que le réglage.** Les études sur les tuteurs à l'IA montrent des progrès quand un adulte est dans la boucle, pas quand l'enfant est seul avec l'outil. Ce que Jules dit au parent est donc aussi important que ce qu'il dit à l'élève.
+
 ## 1. Des bibliothèques qui se branchent
 
 Une bibliothèque est un dossier de contenus : un programme officiel, le cours d'un enseignant, une méthode de lecture, une collection d'exercices. Chaque bibliothèque se présente dans un petit fichier qui dit à qui elle s'adresse. Jules charge celles qui correspondent au profil de l'élève et ignore les autres.
@@ -40,7 +48,7 @@ Le programme de 3e existant deviendra la première bibliothèque à ce format. L
 
 Un outil est une petite application qui s'ouvre dans la leçon : frise chronologique en histoire, calculatrice ou géométrie dynamique en maths, carte muette en géographie, conjugueur en français, tableau périodique en physique-chimie. Chaque matière peut avoir les siens, écrits par la communauté.
 
-Jules peut ouvrir un outil de lui-même au bon moment (« ouvre la frise avec ces cinq dates ») et l'outil peut dire à Jules ce que fait l'élève (« l'élève a placé Verdun avant la mobilisation »). C'est ce qui permet à Jules de réagir à une erreur sans donner la réponse.
+La leçon ou Jules peuvent ouvrir un outil (« ouvre la frise avec ces cinq dates ») et l'outil peut dire à Jules ce que fait l'élève (« l'élève a placé Verdun avant la mobilisation »). C'est ce qui permet à Jules de réagir à une erreur sans donner la réponse : il attend que l'élève ait fini sa tentative, puis il pose une question (« Qu'est-ce qui se passe d'abord, la mobilisation ou la bataille ? »).
 
 Proposition de fiche d'identité d'un outil (`outils/<id>/outil.yaml`) :
 
@@ -69,9 +77,9 @@ Une règle de fond s'applique aux outils comme au reste : **un outil ne fait pas
 L'élève ne parle plus à une fenêtre de conversation : il suit une **leçon**, faite de blocs qui s'enchaînent. Voir la [maquette](maquette-cours.png).
 
 - **Au centre, le cours** : objectifs, explication, outil, exercice, question ouverte. Une barre de progression montre où en est l'élève.
-- **À côté, Jules** : il voit ce que fait l'élève dans le cours, pose des questions, donne des indices progressifs et renvoie vers le bon endroit du cours au lieu de répondre.
-- **Le parcours** : les notions de la matière, avec leur état (comprise, en cours, à venir).
-- **Le studio** : à partir de la leçon, l'élève fabrique ses supports de révision, comme dans NotebookLM : carte mentale, fiche, quiz, cartes mémoire avec répétition espacée.
+- **À côté, Jules** : il voit ce que fait l'élève dans le cours. Il le laisse d'abord essayer, puis pose des questions, donne des indices progressifs et renvoie vers le bon endroit du cours au lieu de répondre. Il ne parle de lui-même qu'après une tentative, et seulement par une question.
+- **Le parcours** : les notions de la matière, avec leur état (comprise, en cours, à venir). Cet état est une estimation de l'IA, affichée comme telle.
+- **Le studio** : à partir de la leçon, l'élève fabrique ses supports de révision (carte mentale, fiche, quiz, cartes mémoire avec répétition espacée). À la différence de NotebookLM, Jules ne les génère pas : il propose une trame vide, pose des questions, puis relit et corrige ce que l'élève a écrit.
 
 Proposition de format d'une leçon (un fichier par leçon, écrit par un contributeur ou préparé par Jules à partir d'une notion) :
 
@@ -136,21 +144,39 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 - elle peut aussi modifier les consignes données à Jules (rythme, longueur des phrases, découpage) ;
 - les besoins sont indiqués par le parent : Jules ne pose jamais de diagnostic.
 
+## 6. Le parent, et la mesure
+
+**Le bilan qui souffle une question.** Le bilan du soir dit aujourd'hui ce qui a été travaillé et ce qui bloque. Il doit aussi proposer au parent une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice soi-même (« Explique-moi comment tu sais qu'un nombre est premier »). C'est le moyen le moins cher de remettre un adulte dans la boucle ; l'essai y consacre son chapitre VIII.
+
+**Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules proposera, quelques jours après, une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours. Ce n'est pas une étude scientifique, mais c'est le bon critère.
+
+## Ce que Jules ne fait pas encore
+
+À dire honnêtement à qui l'installe :
+
+- **Le suivi des notions est une estimation.** L'état (comprise, en cours, bloquée) est déduit par le modèle d'IA à partir des conversations. Les grands modèles sont médiocres à cet exercice ; la recherche sur le suivi des connaissances des élèves n'a pas encore de méthode fiable à proposer.
+- **Aucune mesure des progrès.** Jules n'a été essayé que dans une famille. Rien ne montre encore qu'il fait progresser un élève ; un tuteur bien réglé évite surtout que l'IA fasse perdre.
+- **Les petits modèles locaux cèdent.** Un modèle de 8 milliards de paramètres a fini par donner la réponse quand l'élève insistait. Pour l'instant, gratuit et fiable ne vont pas ensemble.
+- **Le dossier de l'élève ne s'efface pas en entier.** Il reste sur l'ordinateur de la famille, mais l'espace parent ne permet encore ni d'effacer les conversations, ni de tout effacer, ni de tout exporter.
+
 ## Feuille de route proposée
 
 | Étape | Contenu | État |
 |---|---|---|
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
+| 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | à faire |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | à faire |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
-| 4 | Studio : carte mentale, fiche, quiz, cartes mémoire avec répétition espacée | à faire |
+| 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
+| 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | à faire |
 | 5 | Catalogue communautaire de bibliothèques et d'outils | à faire |
 | à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
 
 ## Questions ouvertes
 
 - **Qui écrit les leçons ?** Des contributeurs, Jules à partir d'une notion, ou les deux (Jules propose, un humain valide) ?
+- **Quand Jules parle-t-il sans qu'on l'appelle ?** Combien de temps attendre, et que considérer comme une tentative (une réponse fausse, un silence, un effacement) ?
 - **Modèles installés sur l'ordinateur.** Les petits modèles savent mal piloter des outils. Faut-il des leçons plus guidées quand Jules tourne sans connexion ?
 - **Hébergement du catalogue** : dans ce dépôt, ou dans un dépôt séparé avec ses propres mainteneurs ?
 - **Gouvernance** : qui peut valider une bibliothèque, un outil, une adaptation ?

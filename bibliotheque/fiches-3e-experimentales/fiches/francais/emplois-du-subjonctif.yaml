@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: emplois-du-subjonctif
+declencheurs:
+- il faut que
+- je veux que
+- bien que
+- pour que
+- de crainte que
+- doute souhait
+- subjonctif après conjonction
+essentiel: 'Le subjonctif s''emploie dans une proposition subordonnée quand le fait exprimé est envisagé (souhaité,
+  redouté, ordonné, mis en doute) et non présenté comme une réalité certaine.
+
+  On le trouve après des verbes exprimant le souhait ou le désir (vouloir que, souhaiter que, aimer que), un ordre
+  (falloir que, ordonner que), un doute ou une incertitude (douter que, ne pas être sûr que), un sentiment (regretter
+  que, avoir peur que, être content que).
+
+  On le trouve aussi après certaines conjonctions de subordination : but (pour que, afin que), concession (bien
+  que, quoique), condition (à condition que, pourvu que), crainte (de crainte que, de peur que), temps (avant que,
+  jusqu''à ce que).
+
+  À l''inverse, un verbe d''opinion ou de déclaration à la forme affirmative (penser que, dire que, être sûr que)
+  est suivi de l''indicatif, car le fait est présenté comme certain.'
+methode:
+- Repérer le verbe ou la conjonction qui introduit la subordonnée.
+- Se demander si le fait est présenté comme certain (indicatif) ou seulement envisagé/souhaité/redouté (subjonctif).
+- 'Mémoriser les listes de déclencheurs du subjonctif : souhait, ordre, doute, sentiment, et les conjonctions de
+  but, concession, condition, crainte, temps antérieur.'
+- Vérifier la terminaison caractéristique du subjonctif présent (-e, -es, -e, -ions, -iez, -ent) pour distinguer
+  un subjonctif d'un indicatif de forme proche.
+erreurs_frequentes:
+- Employer l'indicatif après « bien que » ou « pour que » (le subjonctif est obligatoire).
+- Employer le subjonctif après « penser que » ou « dire que » à la forme affirmative (indicatif attendu).
+- Oublier le subjonctif après « il faut que », « avant que », « à condition que ».
+- Confondre l'indicatif après « après que » (fait réalisé, indicatif) avec le subjonctif après « avant que ».
+exemple:
+  enonce: 'Choisir le mode qui convient : « Je doute qu''il (venir) à la réunion. »'
+  solution: '« Je doute qu''il vienne à la réunion. » : douter que exprime une incertitude, donc subjonctif présent.'
+exercices:
+- enonce: 'Choisir le mode : « Bien qu''il (pleuvoir), nous sommes sortis nous promener. »'
+  indices:
+  - '« bien que » exprime la concession : quel mode impose-t-il toujours ?'
+  solution: '« Bien qu''il pleuve, nous sommes sortis nous promener. » : bien que + subjonctif présent.'
+- enonce: 'Choisir le mode : « Je pense qu''elle (avoir) raison. »'
+  indices:
+  - « penser que » à la forme affirmative présente-t-il le fait comme certain ?
+  solution: '« Je pense qu''elle a raison. » : penser que affirmatif est suivi de l''indicatif.'
+- enonce: 'Choisir le mode : « Range ta chambre avant que tes parents (rentrer). »'
+  indices:
+  - « avant que » introduit-il un fait déjà réalisé ou seulement envisagé ?
+  solution: '« Range ta chambre avant que tes parents rentrent. » : avant que + subjonctif présent (fait non encore
+    réalisé au moment de l''énoncé).'
+sources:
+- titre: Wikipédia, « Subjonctif en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Subjonctif_en_fran%C3%A7ais&oldid=237843267
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

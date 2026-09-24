@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: enrichissement-lexique-par-lecture
+declencheurs:
+- champ lexical
+- champ sémantique
+- chercher un mot dans le dictionnaire
+- enrichir son vocabulaire
+- classer des mots par intensité
+- réutiliser un mot
+essentiel: 'Le champ lexical rassemble tous les mots (noms, verbes, adjectifs) qui se rapportent à un même thème
+  (le champ lexical de la peur : trembler, frayeur, angoissant, terrifié...). Le champ sémantique, lui, regroupe
+  les différents sens d''un même mot (le mot « feuille » : partie d''une plante, morceau de papier, plaque de métal
+  fin).
+
+  Enrichir son lexique passe par la lecture régulière, l''usage du dictionnaire (sens précis, synonymes, étymologie)
+  et par la réutilisation active des mots appris à l''écrit et à l''oral.
+
+  Les mots d''un même champ lexical peuvent se classer par degré d''intensité (contrarié < fâché < furieux) ou de
+  généralité (mot générique comme « habitation » / mot spécifique comme « chalet »).'
+methode:
+- En lisant, repérer les mots inconnus et chercher leur sens exact dans un dictionnaire.
+- Relier un mot nouveau à un champ lexical connu pour mieux le mémoriser.
+- Classer une série de mots proches par intensité croissante ou par degré de généralité.
+- Réutiliser le mot appris dans une phrase personnelle, à l'écrit ou à l'oral, pour se l'approprier.
+- Comparer plusieurs sens d'un même mot (champ sémantique) pour éviter les contresens.
+erreurs_frequentes:
+- Confondre champ lexical (mots différents, même thème) et champ sémantique (même mot, sens différents).
+- Se contenter d'un synonyme approximatif sans vérifier la nuance de sens dans le dictionnaire.
+- Classer des mots d'intensité différente comme s'ils étaient équivalents (content = ravi).
+- Apprendre un mot sans jamais le réemployer, donc l'oublier rapidement.
+exemple:
+  enonce: 'Classer par intensité croissante : content, ravi, satisfait.'
+  solution: 'satisfait < content < ravi : satisfait exprime une approbation mesurée, content une joie simple, ravi
+    une joie très intense.'
+exercices:
+- enonce: Donner trois mots du champ lexical de la tristesse.
+  indices:
+  - Penser à des noms, des adjectifs et des verbes.
+  solution: 'Exemples possibles : chagrin (nom), mélancolique (adjectif), pleurer (verbe).'
+- enonce: 'Le mot « glace » a plusieurs sens : donner deux sens différents (champ sémantique) et employer chacun
+    dans une phrase.'
+  indices:
+  - Penser à la météo, au dessert, au miroir.
+  solution: 'Sens 1 (dessert) : « J''ai mangé une glace à la vanille. » Sens 2 (eau gelée) : « Le lac était couvert
+    de glace en hiver. »'
+sources:
+- titre: Wikipédia, « Champ lexical »
+  url: https://fr.wikipedia.org/w/index.php?title=Champ_lexical&oldid=230757724
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -30,9 +30,11 @@ Les tickets marqués **good first issue** sont prévus pour une première contri
 
 ### Une fiche de cours
 
-Le programme de 3e est décrit dans `bibliotheque/programme/3e/`, une matière par fichier, au format expliqué dans `bibliotheque/programme/SCHEMA.md`. Chaque notion a un identifiant et sa source officielle. Pour proposer une fiche, ouvrez un ticket « Fiche de cours » en indiquant la notion. Vous pouvez y coller votre texte directement : un mainteneur s'occupe de le mettre au bon format.
+Le programme de 3e est décrit dans `bibliotheque/programme/3e/`, une matière par fichier, au format expliqué dans `bibliotheque/programme/SCHEMA.md`. Chaque notion a un identifiant et sa source officielle. Les fiches vont dans `bibliotheque/fiches-3e-experimentales/fiches/<matiere>/<notion>.yaml`, au format décrit dans [`bibliotheque/README.md`](bibliotheque/README.md). Pour proposer une fiche sans toucher à git, ouvrez un ticket « Fiche de cours » en indiquant la notion. Vous pouvez y coller votre texte directement : un mainteneur s'occupe de le mettre au bon format.
 
-Une bonne fiche contient : l'essentiel du cours en quelques lignes, la méthode pas à pas, un exemple rédigé et deux ou trois exercices corrigés. Citez vos sources ; ne copiez pas un manuel protégé.
+Une bonne fiche contient : l'essentiel du cours en quelques lignes, la méthode pas à pas, les erreurs fréquentes, un exemple rédigé et deux ou trois exercices avec indices et solution. Citez vos sources, avec leur licence : seuls les contenus libres sont acceptés (liste des sources vérifiées dans `bibliotheque/fiches-3e-experimentales/SOURCES.md`). Ne copiez pas un manuel protégé, même gratuit.
+
+**Enseignants** : vous pouvez aussi décrire votre direction pédagogique (approche, rédaction attendue, vocabulaire, ce qu'il faut éviter), pour que Jules suive votre façon de faire avec vos élèves. Modèle : `bibliotheque/exemple-direction-enseignant/`.
 
 ### Une persona
 

@@ -1,0 +1,89 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: puissances-notation-scientifique
+declencheurs: ["puissance", "puissances", "exposant", "au carré", "au cube", "milliard", "milliards", "millions"]
+essentiel: 'Pour un nombre a et un entier n ≥ 1 : aⁿ = a × a × … × a (n facteurs). Pour a ≠ 0 : a⁰ = 1 et a⁻ⁿ =
+  1/aⁿ (l''inverse de aⁿ).
+
+  Même base : aⁿ × aᵖ = aⁿ⁺ᵖ ; aⁿ / aᵖ = aⁿ⁻ᵖ ; (aⁿ)ᵖ = aⁿˣᵖ.
+
+  Puissances de 10 : 10ⁿ s''écrit 1 suivi de n zéros ; 10⁻ⁿ = 0,0…01 avec le 1 au n-ième rang après la virgule.
+  Multiplier par 10ⁿ décale la virgule de n rangs vers la droite, par 10⁻ⁿ de n rangs vers la gauche.
+
+  Notation scientifique : a × 10ⁿ avec 1 ≤ a < 10 (un seul chiffre, non nul, avant la virgule) et n entier. Exemples
+  : 46 738 = 4,6738 × 10⁴ ; 0,0678 = 6,78 × 10⁻².
+
+  Elle sert à écrire et comparer des nombres très grands ou très petits (sciences, ordres de grandeur).'
+methode:
+- 'Notation scientifique : placer la virgule juste après le premier chiffre non nul, puis compter de combien de
+  rangs elle s''est déplacée.'
+- Si le nombre de départ est grand (≥ 10), l'exposant est positif ; s'il est plus petit que 1, l'exposant est négatif.
+- 'Produit de deux nombres en notation scientifique : multiplier les nombres décimaux entre eux et les puissances
+  de 10 entre elles (on additionne les exposants).'
+- Si le nombre décimal obtenu n'est pas entre 1 et 10, le réécrire en notation scientifique et ajuster l'exposant.
+- 'Pour comparer deux nombres en notation scientifique : comparer d''abord les exposants.'
+vocabulaire:
+- terme: exposant
+  definition: 'le petit nombre n dans aⁿ : le nombre de facteurs égaux à a'
+- terme: notation scientifique
+  definition: écriture a × 10ⁿ avec 1 ≤ a < 10 et n entier
+erreurs_frequentes:
+- Confondre 10³ (= 1 000) avec 10 × 3.
+- 'Confondre (−3)² = 9 et −3² = −9 : sans parenthèses, le carré ne porte que sur 3.'
+- 'Multiplier les exposants au lieu de les additionner : 2³ × 2⁴ = 2⁷, pas 2¹².'
+- 'Croire que 10⁻² est négatif : 10⁻² = 0,01, un nombre positif.'
+- Écrire 45 × 10³ ou 0,45 × 10⁵ en pensant que c'est une notation scientifique.
+exemple:
+  enonce: Donner la notation scientifique de 3 250 000 et de 0,000 52.
+  solution: 3 250 000 = 3,25 × 10⁶ (la virgule recule de 6 rangs) ; 0,000 52 = 5,2 × 10⁻⁴ (la virgule avance de
+    4 rangs).
+exercices:
+- enonce: Calculer 2⁵, (−3)², −3² et 5⁻¹.
+  indices:
+  - Écris chaque puissance comme un produit.
+  - 5⁻¹ est l'inverse de 5.
+  solution: 2⁵ = 32 ; (−3)² = 9 ; −3² = −9 ; 5⁻¹ = 1/5 = 0,2.
+- enonce: 'Écrire sous la forme d''une seule puissance de 10 : 10⁵ × 10⁻³, puis (10²)³.'
+  indices:
+  - 'Même base : que fait-on des exposants dans un produit ?'
+  solution: 10⁵ × 10⁻³ = 10² ; (10²)³ = 10⁶.
+- enonce: Donner la notation scientifique de A = (3 × 10⁴) × (5 × 10⁻⁷).
+  indices:
+  - Calcule 3 × 5 d'un côté, 10⁴ × 10⁻⁷ de l'autre.
+  - 15 n'est pas entre 1 et 10.
+  solution: A = 15 × 10⁻³ = 1,5 × 10¹ × 10⁻³ = 1,5 × 10⁻².
+- enonce: La Terre est à environ 150 millions de kilomètres du Soleil. Écrire cette distance en notation scientifique,
+    en km puis en m.
+  indices:
+  - 150 millions = 150 000 000.
+  - 1 km = 10³ m.
+  solution: 1,5 × 10⁸ km, soit 1,5 × 10⁸ × 10³ = 1,5 × 10¹¹ m.
+sources:
+- titre: Wikiversité, « Puissances/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=Puissances/Introduction&oldid=979075
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Puissances/Calcul avec des puissances »
+  url: https://fr.wikiversity.org/w/index.php?title=Puissances/Calcul_avec_des_puissances&oldid=885017
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Puissances/Les puissances de 10 et leur usage scientifique »
+  url: https://fr.wikiversity.org/w/index.php?title=Puissances/Les_puissances_de_10_et_leur_usage_scientifique&oldid=967503
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Notation scientifique »
+  url: https://fr.vikidia.org/w/index.php?title=Notation_scientifique&oldid=2443502
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

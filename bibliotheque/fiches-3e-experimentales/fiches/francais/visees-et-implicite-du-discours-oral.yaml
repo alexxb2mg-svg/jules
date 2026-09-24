@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: visees-et-implicite-du-discours-oral
+declencheurs:
+- comprendre ce que quelqu'un veut vraiment dire
+- sous-entendu à l'oral
+- but d'un discours
+- message caché
+- implicite d'une intervention orale
+essentiel: 'Un discours oral (exposé, intervention, débat) a toujours une visée : informer, convaincre, persuader,
+  émouvoir, divertir. Comprendre un discours, c''est d''abord identifier ce que celui qui parle cherche vraiment
+  à obtenir de son auditoire, puis hiérarchiser les informations qu''il donne (distinguer l''idée principale des
+  détails secondaires).
+
+  L''implicite d''un discours oral, c''est ce qui n''est pas dit directement mais que l''auditeur peut comprendre
+  grâce au contexte, au ton, aux gestes ou à un présupposé partagé. Le présupposé est une information tenue pour
+  acquise par celui qui parle : par exemple, dire « il a enfin arrêté de fumer » présuppose (sans le dire explicitement)
+  qu''il fumait auparavant.
+
+  Savoir expliquer l''implicite d''un discours demande d''être attentif au ton employé, aux silences, aux mots choisis
+  et au contexte de la situation, pas seulement au sens littéral des phrases.'
+methode:
+- 'Identifier la visée principale du discours : informer, convaincre, persuader, divertir.'
+- Distinguer, parmi les informations données, celle qui est essentielle des détails secondaires.
+- 'Repérer les indices de l''implicite : ton de la voix, gestes, silences, sous-entendus.'
+- Reformuler ce que le discours suggère sans le dire directement.
+- Vérifier son interprétation de l'implicite en la confrontant au contexte général de la situation.
+vocabulaire:
+- terme: implicite
+  definition: ce qui n'est pas dit directement mais peut être compris grâce au contexte
+- terme: présupposé
+  definition: information tenue pour acquise par celui qui parle, sans être énoncée explicitement
+erreurs_frequentes:
+- Ne retenir que le sens littéral d'un discours sans chercher son implicite.
+- Confondre la visée principale d'un discours avec un détail secondaire.
+- Ignorer le ton ou les gestes, qui apportent souvent une information sur l'intention réelle.
+- Sur-interpréter un implicite qui n'est pas réellement suggéré par le contexte.
+exemple:
+  enonce: 'Un camarade dit, d''un ton ironique, en regardant une salle en désordre : « Bravo, quel rangement impeccable
+    ! » Que faut-il comprendre ?'
+  solution: 'Le ton ironique inverse le sens littéral : le camarade veut en réalité dire que la salle est mal rangée.
+    L''implicite (la critique) se comprend grâce au ton, pas au sens des mots.'
+exercices:
+- enonce: Donne un exemple de phrase qui présuppose une information sans la dire explicitement.
+  indices:
+  - Pense à des mots comme « encore », « enfin », « ne… plus ».
+  solution: 'Par exemple : « Il est encore en retard » présuppose qu''il était déjà en retard auparavant.'
+- enonce: Écoute (ou imagine) une courte intervention orale d'un camarade et note en 3-4 lignes sa visée principale
+    (informer, convaincre…) et un élément implicite que tu as perçu.
+  indices:
+  - Appuie-toi sur le ton, les gestes, le contexte, pas seulement sur les mots.
+  solution: Réussite si la visée est clairement nommée et si l'élément implicite est justifié par un indice précis
+    (ton, contexte, geste).
+sources:
+- titre: Wikipédia, « Présupposition »
+  url: https://fr.wikipedia.org/w/index.php?title=Pr%C3%A9supposition&oldid=229317800
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Débat »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9bat&oldid=237090905
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-7-liberte-propagande
+declencheurs:
+- naissance de l'art abstrait
+- art et pouvoir propagande
+- femmes artistes histoire
+- abstraction geometrique
+- electricite dans les arts
+- peinture abstraite au debut du 20e siecle
+- comment est nee la peinture abstraite
+essentiel: 'Entre 1910 et 1945, certains artistes libèrent progressivement les formes et les couleurs de toute obligation
+  de représenter le réel, ce qui aboutit à la naissance de l''art abstrait, un art qui s''organise par lui-même
+  sans imiter le monde visible.
+
+  Dans le même temps, les régimes politiques de cette période utilisent parfois l''art comme outil de propagande
+  (pour glorifier un pouvoir) ou, à l''inverse, des artistes utilisent leur travail pour contester ou dénoncer ce
+  même pouvoir.
+
+  Cette période voit aussi l''émancipation progressive de femmes artistes, qui accèdent plus largement à la reconnaissance
+  dans des domaines où elles étaient auparavant marginalisées.
+
+  L''électricité, nouvelle technologie de l''époque, devient elle-même un sujet ou un moyen artistique (parfois
+  surnommée la « Fée électricité » dans les arts), symbole de modernité et de progrès.'
+methode:
+- Distinguer une œuvre figurative (qui représente encore le monde) d'une œuvre pleinement abstraite de cette période.
+- Repérer si une œuvre semble servir un pouvoir (propagande) ou le contester (art engagé, critique).
+- Chercher des exemples de femmes artistes reconnues durant cette période et leur démarche.
+- Identifier une œuvre qui prend l'électricité ou la modernité technique comme sujet ou comme moyen.
+erreurs_frequentes:
+- Croire que l'art abstrait est apparu d'un coup, sans lien avec les recherches antérieures sur la couleur et la
+  forme.
+- Confondre propagande (mise au service d'un pouvoir) et art simplement politique ou engagé.
+- Ignorer la difficulté qu'ont eue de nombreuses femmes artistes à être reconnues avant cette période.
+exemple:
+  enonce: Une composition ne montre que des formes géométriques colorées, sans aucun objet reconnaissable, réalisée
+    au début du XXe siècle.
+  solution: 'Cette œuvre illustre la naissance de l''art abstrait durant cette période : l''autonomie des formes
+    et des couleurs par rapport à toute obligation de représenter le monde visible, une démarche développée notamment
+    par des artistes comme Vassily Kandinsky.'
+exercices:
+- enonce: 'À l''oral (type brevet) : explique en 2 phrases ce qui distingue une œuvre de propagande d''une œuvre
+    simplement politique ou engagée.'
+  indices:
+  - La propagande est mise au service direct d'un pouvoir en place.
+  solution: Réussite si les 2 phrases distinguent bien service d'un pouvoir (propagande) et critique ou expression
+    libre (art engagé).
+- enonce: Cherche le nom d'une femme artiste reconnue durant cette période et présente en une phrase sa démarche
+    artistique.
+  indices:
+  - L'abstraction géométrique compte plusieurs femmes artistes pionnières.
+  solution: Réussite si l'artiste citée est bien active durant cette période et sa démarche correctement résumée.
+sources:
+- titre: Vikidia, « Art abstrait »
+  url: https://fr.vikidia.org/w/index.php?title=Art_abstrait&oldid=2261134
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Art abstrait »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_abstrait&oldid=239711738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

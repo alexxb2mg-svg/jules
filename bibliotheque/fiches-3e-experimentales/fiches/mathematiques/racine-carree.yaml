@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: racine-carree
+declencheurs: ["racine", "racines", "radical"]
+essentiel: 'Pour un nombre a positif, la racine carrée de a, notée √a, est le seul nombre positif dont le carré
+  est a. Exemple : √49 = 7 car 7² = 49 et 7 ≥ 0.
+
+  (√a)² = a pour a ≥ 0 ; √(a²) = a si a ≥ 0 (et −a si a < 0).
+
+  Pour a et b positifs : √(a × b) = √a × √b. On s''en sert pour simplifier : √28 = √(4 × 7) = 2√7.
+
+  Attention : en général √(a + b) ≠ √a + √b (√9 + √16 = 7 mais √25 = 5).
+
+  La racine carrée d''un nombre négatif n''existe pas.'
+methode:
+- 'Pour simplifier √n : chercher le plus grand carré parfait qui divise n (4, 9, 16, 25, 36...).'
+- Écrire n = carré × reste, puis √n = √carré × √reste.
+- 'Pour additionner des racines : les simplifier d''abord, puis regrouper celles qui ont le même radical (comme
+  on regroupe des x).'
+- 'Pour vérifier : élever le résultat au carré.'
+erreurs_frequentes:
+- Écrire √(a + b) = √a + √b.
+- Croire que √a est la moitié de a.
+- Donner une valeur approchée alors qu'on demande une valeur exacte.
+- Oublier que √a est toujours positif.
+exemple:
+  enonce: Simplifier √72.
+  solution: 72 = 36 × 2 donc √72 = √36 × √2 = 6√2.
+exercices:
+- enonce: Écrire √45 sous la forme a√b avec b le plus petit possible.
+  indices:
+  - Quel carré parfait divise 45 ?
+  solution: 45 = 9 × 5 donc √45 = 3√5.
+- enonce: Calculer √50 + √18.
+  indices:
+  - Simplifie chaque racine séparément.
+  - 50 = 25 × 2 et 18 = 9 × 2
+  solution: √50 = 5√2 et √18 = 3√2, donc √50 + √18 = 8√2.
+- enonce: Calculer √12 × √3.
+  indices:
+  - √a × √b = √(a × b)
+  solution: √12 × √3 = √36 = 6.
+sources:
+- titre: Wikiversité, « Racine carrée/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=Racine_carr%C3%A9e/Introduction&oldid=976914
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Racine carrée/Exercices/Calculs de base »
+  url: https://fr.wikiversity.org/w/index.php?title=Racine_carr%C3%A9e/Exercices/Calculs_de_base&oldid=781735
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: algorithme-nouvelle-fonctionnalite-3e
+declencheurs:
+- algorithme
+- organigramme
+- instruction
+- boucle
+- condition
+- structure de contrôle
+essentiel: 'Un algorithme est une suite finie et ordonnée d''instructions permettant de résoudre un problème ou
+  de réaliser une tâche. Avant de programmer une nouvelle fonctionnalité, il est utile d''écrire son algorithme
+  (en langage courant ou sous forme d''organigramme) pour vérifier que le raisonnement est correct, indépendamment
+  du langage de programmation utilisé ensuite.
+
+
+  Trois structures de contrôle permettent de construire un algorithme : la séquence (instructions exécutées les
+  unes après les autres), la condition (si... alors... sinon..., qui choisit entre plusieurs actions selon une situation)
+  et la boucle (répéter une ou plusieurs instructions, soit un nombre de fois fixé, soit jusqu''à ce qu''une condition
+  soit vraie).
+
+
+  Un algorithme doit toujours se terminer (condition d''arrêt) : une boucle sans condition d''arrêt correcte peut
+  tourner indéfiniment (boucle infinie), ce qui est une erreur fréquente.'
+methode:
+- Découper la fonctionnalité voulue en étapes précises, une action par ligne.
+- Repérer les répétitions (boucle) et les choix (condition) dans le déroulement de l'algorithme.
+- Vérifier que toute boucle a bien une condition d'arrêt qui sera atteinte.
+- Tester l'algorithme « à la main » avec un exemple simple avant de le traduire en programme.
+vocabulaire:
+- terme: boucle
+  definition: structure qui répète une ou plusieurs instructions plusieurs fois
+- terme: condition (si...alors...)
+  definition: structure qui choisit une action différente selon qu'une situation est vraie ou fausse
+- terme: boucle infinie
+  definition: erreur où une boucle ne s'arrête jamais faute de condition d'arrêt atteignable
+erreurs_frequentes:
+- Écrire une boucle sans condition d'arrêt atteignable (boucle infinie).
+- Oublier le « sinon » d'une condition alors qu'une action est nécessaire dans les deux cas.
+- Mélanger l'ordre des instructions, ce qui change le résultat de l'algorithme.
+exemple:
+  enonce: Écrire l'algorithme qui répète 5 fois « avancer de 10 pas » puis affiche « arrivé ! ».
+  solution: 'RÉPÉTER 5 FOIS : avancer de 10 pas. FIN RÉPÉTER. Afficher « arrivé ! ».'
+exercices:
+- enonce: Un algorithme doit afficher « pair » si un nombre est pair et « impair » sinon. Écrire cet algorithme
+    avec une structure si...alors...sinon.
+  indices:
+  - Un nombre est pair si le reste de sa division par 2 est 0.
+  solution: SI (nombre modulo 2 = 0) ALORS afficher « pair » SINON afficher « impair ».
+- enonce: 'Expliquer pourquoi la boucle suivante ne s''arrête jamais : « TANT QUE x > 0 FAIRE : afficher x. FIN
+    TANT QUE. » (x vaut 5 au départ et n''est jamais modifié).'
+  indices:
+  - Regarde si la valeur de x change pendant la boucle.
+  solution: 'La valeur de x reste toujours égale à 5 car elle n''est jamais modifiée dans la boucle : la condition
+    x > 0 est donc toujours vraie, la boucle ne s''arrête jamais (boucle infinie).'
+sources:
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Structure de contrôle »
+  url: https://fr.wikipedia.org/w/index.php?title=Structure_de_contr%C3%B4le&oldid=231442964
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

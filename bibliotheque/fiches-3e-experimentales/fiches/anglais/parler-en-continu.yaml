@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: parler-en-continu
+declencheurs:
+- exposé en anglais
+- présentation orale anglais
+- parler seul en anglais
+- raconter en anglais
+- décrire en anglais
+- argumenter en anglais
+- prise de parole
+essentiel: 'Parler en continu, c''est produire un discours oral sans être interrompu, par exemple pour raconter,
+  décrire, expliquer ou argumenter (un exposé, la présentation d''un projet, le résumé d''une histoire).
+
+
+  Pour réussir cet exercice, il faut mobiliser à bon escient son vocabulaire, sa grammaire et ses connaissances
+  culturelles, tout en développant des stratégies pour surmonter un manque de vocabulaire : reformuler avec des
+  mots plus simples, utiliser un synonyme, décrire l''objet ou l''idée autrement plutôt que de rester bloqué.
+
+
+  Il est aussi important de respecter un registre de langue adapté à la situation (plus formel pour un exposé devant
+  la classe, plus familier pour un dialogue entre amis), et de mettre en voix son discours par la prononciation,
+  l''intonation, et éventuellement la gestuelle, pour se faire comprendre et capter l''attention.'
+methode:
+- 'Préparer les idées principales du discours à l''avance (plan simple : introduction, deux ou trois points, conclusion),
+  sans forcément écrire toutes les phrases.'
+- Utiliser des connecteurs pour organiser le discours (first, then, after that, finally, in conclusion).
+- En cas de mot manquant, reformuler avec un synonyme ou une description plutôt que de s'arrêter (par exemple dire
+  « the thing you use to open a door » si l'on ne connaît pas « key »).
+- S'entraîner à voix haute pour travailler la prononciation et l'intonation avant la présentation finale.
+vocabulaire:
+- terme: registre de langue
+  definition: niveau de formalité utilisé selon la situation (formel, courant, familier)
+- terme: reformulation
+  definition: stratégie qui consiste à exprimer une idée autrement quand le mot exact manque
+erreurs_frequentes:
+- S'arrêter complètement de parler dès qu'un mot manque, au lieu de reformuler.
+- Lire un texte écrit mot à mot sans intonation, ce qui rend le discours difficile à suivre.
+- Utiliser un registre trop familier dans un exposé formel devant la classe.
+- Ne préparer aucune structure (introduction, milieu, conclusion), ce qui rend le propos décousu.
+exemple:
+  enonce: Un élève doit décrire sa ville pour un exposé mais ne connaît pas le mot « town hall » (mairie). Comment
+    peut-il continuer sans se bloquer ?
+  solution: 'Il peut reformuler : « There is a big building where the mayor works, in the centre of the town. »
+    Il transmet ainsi l''information essentielle sans connaître le mot exact, ce qui est une stratégie de communication
+    efficace.'
+exercices:
+- enonce: Préparer trois phrases simples en anglais pour se présenter à l'oral (nom, âge, une activité que l'on
+    aime).
+  indices:
+  - 'Utilise des structures simples : My name is..., I am... years old, I like...'
+  solution: 'Exemple de réponse possible : « My name is Léa. I am fourteen years old. I like playing basketball
+    with my friends after school. » (Toute réponse correcte grammaticalement et cohérente est acceptée.)'
+- enonce: Donner un exemple de connecteur à utiliser pour introduire la conclusion d'un exposé oral en anglais.
+  indices:
+  - Pense aux connecteurs de fin de discours.
+  solution: 'Exemples possibles : « Finally », « In conclusion », « To sum up ».'
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

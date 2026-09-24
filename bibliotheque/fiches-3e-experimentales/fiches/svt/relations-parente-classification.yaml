@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: relations-parente-classification
+declencheurs:
+- classification des espèces
+- arbre du vivant
+- parenté entre espèces
+- classification phylogénétique
+- Homo sapiens classification
+- dauphin mammifère pas poisson
+- groupe animal de l'être humain
+essentiel: 'La classification scientifique des êtres vivants regroupe les espèces selon les caractères qu''elles
+  partagent, ce qui reflète leurs relations de parenté (leur degré de proximité évolutive).
+
+  La classification classique, souvent enseignée à l''école, se fondait sur des ressemblances visibles ; la classification
+  phylogénétique moderne se fonde sur les liens de parenté réels, établis notamment grâce à la comparaison de caractères
+  anatomiques et, aujourd''hui, de l''ADN.
+
+  Deux espèces qui partagent plus de caractères communs (et un ancêtre commun plus récent) sont considérées comme
+  plus proches parentes que deux espèces qui partagent moins de caractères.
+
+  Cette classification s''applique à tous les êtres vivants : animaux, végétaux, champignons, bactéries.
+
+  L''espèce humaine, Homo sapiens, est elle aussi classée selon ces principes : elle appartient au groupe des Vertébrés,
+  puis des Mammifères, puis des Primates, ce qui reflète sa parenté avec d''autres espèces animales, notamment les
+  grands singes.'
+methode:
+- Comparer les caractères de plusieurs espèces pour établir des groupes de parenté.
+- Retenir que plus deux espèces partagent de caractères communs, plus elles sont considérées comme proches parentes.
+- Distinguer classification classique (ressemblances visibles) et classification phylogénétique (liens de parenté
+  réels).
+- Situer Homo sapiens dans la classification, en lien avec les autres Vertébrés et Primates.
+erreurs_frequentes:
+- Croire qu'une classification se fait uniquement sur l'aspect extérieur, sans tenir compte de la parenté réelle.
+- Penser que l'espèce humaine est classée à part, en dehors du règne animal.
+- Confondre ressemblance superficielle (comme entre un dauphin et un poisson) et parenté réelle (le dauphin est
+  un mammifère, plus proche parent des autres mammifères).
+- Croire que la classification scientifique est figée et ne change jamais avec les découvertes.
+exemple:
+  enonce: Le dauphin ressemble beaucoup à un poisson (forme du corps, vie aquatique), mais il est classé parmi les
+    mammifères. Pourquoi ?
+  solution: 'La classification se fonde sur les liens de parenté réels, pas seulement sur la ressemblance visible
+    : le dauphin partage avec les autres mammifères des caractères hérités d''un ancêtre commun (allaitement, respiration
+    pulmonaire, squelette de type mammifère), malgré une forme extérieure adaptée à la vie aquatique, semblable
+    à celle des poissons.'
+exercices:
+- enonce: Pourquoi dit-on que la classification phylogénétique est plus fiable que la classification classique fondée
+    sur les ressemblances visibles ?
+  indices:
+  - Pense à ce qui peut tromper une classification basée seulement sur l'apparence.
+  solution: 'Parce que deux espèces peuvent se ressembler par adaptation à un même milieu sans être proches parentes
+    (convergence évolutive) : la classification phylogénétique se fonde sur des liens de parenté réels (caractères
+    hérités, ADN), plus fiables que la seule apparence.'
+- enonce: À quel grand groupe d'êtres vivants appartient Homo sapiens, en plus des Primates ?
+  indices:
+  - Pense aux caractères partagés avec les autres animaux qui allaitent leurs petits.
+  solution: Homo sapiens appartient aux Vertébrés et aux Mammifères, en plus des Primates.
+- enonce: Deux espèces qui partagent de nombreux caractères communs sont-elles considérées comme plus ou moins proches
+    parentes que deux espèces qui en partagent peu ?
+  indices:
+  - Pense au lien entre caractères partagés et ancêtre commun récent.
+  solution: 'Elles sont considérées comme plus proches parentes : plus de caractères communs suggèrent un ancêtre
+    commun plus récent.'
+sources:
+- titre: Vikidia, « Classification scientifique des espèces »
+  url: https://fr.vikidia.org/w/index.php?title=Classification_scientifique_des_esp%C3%A8ces&oldid=2548273
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

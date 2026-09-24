@@ -1,0 +1,88 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: naissance-ve-republique
+declencheurs:
+- '1958'
+- de Gaulle président
+- nouvelle constitution
+- crise de mai 1958
+- cinquième république
+- scrutin majoritaire
+- retour de De Gaulle
+essentiel: 'En 1958, la IVe République est confrontée à une grave crise politique liée à la guerre d''Algérie. À
+  la suite d''un soulèvement à Alger en mai 1958, le général de Gaulle, retiré de la politique depuis 1946, revient
+  au pouvoir : il devient président du Conseil et obtient les pleins pouvoirs pour rédiger une nouvelle Constitution.
+
+  Cette Constitution, approuvée par référendum le 28 septembre 1958 (plus de 80 % de « oui »), fonde la Ve République,
+  en vigueur depuis le 4 octobre 1958. Elle renforce nettement le pouvoir exécutif (président de la République et
+  gouvernement) par rapport au Parlement, contrairement aux IIIe et IVe Républiques où le pouvoir législatif dominait.
+  Charles de Gaulle devient le premier président de la Ve République. Ce pouvoir présidentiel est encore renforcé
+  en 1962 par l''élection du président au suffrage universel direct.
+
+  Le scrutin majoritaire aux élections législatives favorise en général une majorité stable à l''Assemblée nationale,
+  soutien du gouvernement.'
+methode:
+- 'Retenir la date de naissance de la Ve République : la Constitution est adoptée par référendum le 28 septembre
+  1958, en vigueur depuis le 4 octobre 1958.'
+- Situer le contexte de crise (guerre d'Algérie, mai 1958) qui amène le retour de De Gaulle.
+- 'Insister sur la caractéristique principale de la Ve République : un exécutif renforcé par rapport aux républiques
+  précédentes.'
+- Ne pas confondre l'adoption de la Constitution (1958) et l'élection du président au suffrage universel direct
+  (réforme de 1962).
+vocabulaire:
+- terme: pouvoir exécutif
+  definition: 'le pouvoir qui applique les lois : le président de la République et le gouvernement'
+- terme: scrutin majoritaire
+  definition: un mode d'élection où le candidat qui obtient le plus de voix dans sa circonscription est élu
+erreurs_frequentes:
+- Confondre la date de l'adoption de la Constitution par référendum (28 septembre 1958) et son entrée en vigueur
+  (4 octobre 1958).
+- 'Croire que de Gaulle est élu président dès 1958 au suffrage universel direct : ce n''est le cas qu''à partir
+  de la réforme de 1962.'
+- Oublier le contexte de la guerre d'Algérie dans le retour au pouvoir de De Gaulle.
+- 'Penser que la Ve République affaiblit le pouvoir exécutif : c''est l''inverse, elle le renforce nettement.'
+exemple:
+  enonce: Explique en une phrase pourquoi 1958 marque une rupture dans l'histoire politique française.
+  solution: En 1958, une nouvelle Constitution, approuvée par référendum, fonde la Ve République et renforce durablement
+    le pouvoir exécutif face au Parlement, mettant fin à l'instabilité gouvernementale de la IVe République.
+exercices:
+- enonce: Donne la date d'adoption de la Constitution de 1958 et celle de son entrée en vigueur.
+  indices:
+  - Un référendum précède l'entrée en vigueur de quelques jours.
+  solution: Adoptée par référendum le 28 septembre 1958 ; en vigueur depuis le 4 octobre 1958.
+- enonce: 'Développement construit : explique le contexte du retour au pouvoir de Charles de Gaulle en 1958.'
+  indices:
+  - Quelle guerre pose problème à la IVe République ?
+  - Que se passe-t-il à Alger en mai 1958 ?
+  solution: Un développement réussi doit présenter la crise algérienne qui fragilise la IVe République en 1958 ;
+    expliquer que le soulèvement d'Alger en mai 1958 provoque le retour au pouvoir de De Gaulle, qui obtient les
+    pleins pouvoirs pour rédiger une nouvelle Constitution ; conclure sur l'adoption de cette Constitution par référendum
+    en septembre 1958, fondant la Ve République.
+- enonce: En quoi le pouvoir du président change-t-il en 1962 ?
+  indices:
+  - Comment est-il élu à partir de cette date ?
+  solution: À partir de 1962, le président de la République est élu au suffrage universel direct par l'ensemble
+    des citoyens, et non plus par un collège de grands électeurs, ce qui renforce encore sa légitimité et son pouvoir.
+sources:
+- titre: Vikidia, « Cinquième République »
+  url: https://fr.vikidia.org/w/index.php?title=Cinqui%C3%A8me_R%C3%A9publique&oldid=2454737
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Charles de Gaulle »
+  url: https://fr.vikidia.org/w/index.php?title=Charles_de_Gaulle&oldid=2568232
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Constitution française de 1958 »
+  url: https://fr.vikidia.org/w/index.php?title=Constitution_fran%C3%A7aise_de_1958&oldid=2431778
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

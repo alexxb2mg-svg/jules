@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: presenter-justifier-choix
+declencheurs:
+- expliquer mes choix musicaux
+- presenter ma creation a la classe
+- justifier un choix d'instrument
+- pourquoi j'ai choisi ce rythme
+- defendre sa composition musicale
+essentiel: 'Présenter une création musicale, c''est expliquer avec un vocabulaire précis les choix faits (instruments,
+  rythme, structure, nuances) et l''intention qui les a guidés.
+
+  Il ne suffit pas de dire ce qu''on a fait : il faut justifier pourquoi ce choix sert l''intention recherchée,
+  par exemple pourquoi un tempo lent a été choisi pour évoquer le calme.
+
+  Cette présentation orale s''appuie sur l''écoute de sa propre production (l''avoir réécoutée avant de la présenter)
+  et sur la capacité à recevoir ensuite des questions ou des remarques du public.
+
+  C''est une compétence proche de celle mobilisée en arts plastiques ou en histoire des arts : verbaliser une démarche
+  de création avec un vocabulaire adapté à la discipline.'
+methode:
+- Réécouter sa production avant de la présenter pour bien s'en souvenir.
+- 'Préparer deux ou trois phrases : ce qui a été fait, comment, et pourquoi.'
+- Utiliser un vocabulaire musical précis (tempo, nuance, timbre) plutôt qu'un vocabulaire vague.
+- Être prêt à répondre à une question sur un choix qui pourrait surprendre.
+erreurs_frequentes:
+- Décrire sa création sans jamais dire pourquoi tel choix a été fait.
+- Utiliser uniquement des mots vagues (« c'est joli », « ça sonne bien ») au lieu de termes précis.
+- Ne pas avoir réécouté sa propre production avant de la présenter.
+exemple:
+  enonce: Un élève présente une petite création avec un tempo très lent et des sons graves.
+  solution: « J'ai choisi un tempo lent et des sons graves parce que je voulais évoquer la nuit et le calme ; un
+    tempo rapide aurait donné une impression d'agitation contraire à ce que je cherchais. » (description technique
+    + intention justifiée.)
+exercices:
+- enonce: 'À la maison : choisis une création musicale que tu as faite (même ancienne) et écris trois phrases pour
+    la présenter : ce que tu as fait, comment, pourquoi.'
+  indices:
+  - Utilise au moins deux termes musicaux précis (tempo, nuance, timbre, rythme…).
+  solution: Réussite si les trois phrases répondent chacune à leur question et utilisent un vocabulaire musical
+    précis.
+- enonce: Présente ta création à quelqu'un de ta famille et note une question qu'il ou elle te pose, puis prépare
+    une réponse.
+  indices:
+  - Une bonne question porte souvent sur un choix qui n'est pas évident au premier écoute.
+  solution: Réussite si tu as une réponse argumentée à la question posée, même si ce n'est pas celle que tu avais
+    anticipée.
+sources:
+- titre: Wikipédia, « Genre musical »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_musical&oldid=236954603
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

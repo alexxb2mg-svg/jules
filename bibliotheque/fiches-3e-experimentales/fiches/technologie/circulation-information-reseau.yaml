@@ -1,0 +1,87 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: circulation-information-reseau
+declencheurs:
+- réseau informatique
+- adresse IP
+- routeur
+- internet
+- wifi
+- box internet
+- topologie
+- serveur
+essentiel: 'Un réseau informatique est un ensemble d''ordinateurs et d''appareils (appelés hôtes) reliés entre eux
+  pour échanger des données, par câble ou sans fil (Wi-Fi). Chaque appareil connecté au réseau est identifié par
+  une adresse IP, un identifiant numérique qui permet d''acheminer les informations jusqu''à lui, comme une adresse
+  postale. Une adresse IPv4 s''écrit avec quatre nombres entre 0 et 255 séparés par des points (par exemple 172.16.1.2).
+
+
+  Un routeur est l''équipement qui fait transiter les informations d''un réseau à un autre (par exemple du réseau
+  local de la maison vers Internet), en choisissant le meilleur chemin pour chaque paquet de données. La box Internet
+  contient à la fois un routeur et un point d''accès Wi-Fi.
+
+
+  Internet est un réseau mondial qui relie entre eux des millions de réseaux plus petits, en utilisant des protocoles
+  communs (des règles de communication partagées). L''organisation des connexions entre les appareils d''un réseau
+  (en étoile, en anneau, en bus...) s''appelle la topologie du réseau.'
+methode:
+- Pour identifier une adresse IP, vérifier qu'elle comporte quatre nombres entre 0 et 255 séparés par des points
+  (format IPv4).
+- Pour comprendre le rôle d'un routeur, se rappeler qu'il relie des réseaux entre eux et choisit le chemin des données.
+- Pour distinguer réseau local et Internet, se rappeler que le réseau local relie des appareils proches (une maison,
+  une salle), Internet relie des réseaux du monde entier.
+- Pour décrire une topologie, observer comment les câbles ou connexions relient les appareils entre eux (tous vers
+  un même point central = étoile).
+vocabulaire:
+- terme: adresse IP
+  definition: identifiant numérique attribué à un appareil connecté à un réseau utilisant le protocole Internet
+- terme: routeur
+  definition: équipement qui fait transiter les données entre différents réseaux en choisissant leur chemin
+- terme: topologie
+  definition: manière dont les appareils d'un réseau sont organisés et reliés entre eux
+erreurs_frequentes:
+- Confondre adresse IP (identifiant d'un appareil sur le réseau) et adresse MAC ou nom de domaine.
+- 'Croire que le Wi-Fi et Internet sont la même chose : le Wi-Fi est une technologie de connexion sans fil au réseau
+  local, qui peut ou non donner accès à Internet.'
+- 'Penser qu''un routeur et un simple câble jouent le même rôle : le routeur choisit activement le chemin des données.'
+exemple:
+  enonce: Un ordinateur a l'adresse IP 172.16.1.15. Un smartphone connecté au même Wi-Fi a l'adresse 172.16.1.22.
+    Peuvent-ils s'envoyer des données directement, sans passer par Internet ?
+  solution: 'Oui : les deux appareils partagent les trois premiers nombres (172.16.1), ce qui indique qu''ils sont
+    sur le même réseau local ; ils peuvent communiquer directement via le routeur de la box, sans avoir besoin de
+    sortir vers Internet.'
+exercices:
+- enonce: 'Parmi ces suites de chiffres, laquelle NE peut PAS être une adresse IPv4 : 172.16.0.1 ; 172.16.0.256
+    ; 172.16.5.30 ?'
+  indices:
+  - Chaque nombre d'une adresse IPv4 doit être compris entre 0 et 255.
+  solution: 172.16.0.256 n'est pas valide, car 256 dépasse la valeur maximale autorisée (255) pour chaque nombre
+    d'une adresse IPv4.
+- enonce: Expliquer en une phrase la différence entre un réseau local et Internet.
+  indices:
+  - Pense à l'échelle géographique concernée.
+  solution: Un réseau local relie un nombre limité d'appareils proches (une maison, un établissement), alors qu'Internet
+    est un réseau mondial qui interconnecte des millions de réseaux locaux entre eux.
+sources:
+- titre: Wikipédia, « Réseau informatique »
+  url: https://fr.wikipedia.org/w/index.php?title=R%C3%A9seau_informatique&oldid=238275738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Adresse IP »
+  url: https://fr.wikipedia.org/w/index.php?title=Adresse_IP&oldid=239491530
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Routeur »
+  url: https://fr.wikipedia.org/w/index.php?title=Routeur&oldid=239607839
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

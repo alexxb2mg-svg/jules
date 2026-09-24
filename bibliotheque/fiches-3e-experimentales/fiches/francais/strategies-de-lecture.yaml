@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: strategies-de-lecture
+declencheurs:
+- je ne comprends pas ce texte
+- comprendre un texte difficile
+- interprétation d'un texte
+- justifier une lecture
+- choisir un livre
+- compréhension de lecture
+essentiel: 'Comprendre un texte demande souvent des stratégies actives, pas seulement de le lire une fois : relire
+  un passage difficile, s''arrêter sur un mot inconnu pour le deviner grâce au contexte, reformuler avec ses propres
+  mots ce qu''on vient de lire, anticiper la suite à partir d''indices, ou relier ce qu''on lit à ce qu''on connaît
+  déjà.
+
+  Interpréter un texte, c''est aller au-delà du sens littéral pour comprendre ce que l''auteur suggère ou veut faire
+  ressentir. Une interprétation doit toujours être justifiée en s''appuyant sur des éléments précis du texte (une
+  phrase, un mot, une image) : on ne peut pas dire n''importe quoi, l''interprétation doit rester vérifiable dans
+  le texte.
+
+  Enfin, devenir un lecteur autonome, c''est aussi apprendre à choisir un livre adapté à son niveau de lecture,
+  à ses goûts et à ses besoins, en observant la couverture, le résumé, les premières pages, ou en demandant conseil.'
+methode:
+- 'Avant de lire : observer le titre, la couverture, le résumé pour anticiper le sujet.'
+- 'Pendant la lecture : s''arrêter sur les mots inconnus et essayer de les deviner par le contexte.'
+- Reformuler avec ses propres mots ce qu'on vient de lire, paragraphe par paragraphe si besoin.
+- Pour interpréter, toujours pouvoir montrer la phrase ou le passage précis qui justifie son idée.
+- Relire un passage difficile plusieurs fois plutôt que de continuer sans avoir compris.
+vocabulaire:
+- terme: interprétation
+  definition: sens qu'on donne à un texte, au-delà du sens littéral, justifié par le texte lui-même
+- terme: inférence
+  definition: information qu'on déduit d'un texte sans qu'elle soit dite directement
+erreurs_frequentes:
+- Donner une interprétation personnelle sans jamais citer le texte pour la justifier.
+- Abandonner la lecture dès qu'un mot est inconnu, au lieu d'essayer de le deviner.
+- Lire trop vite un passage important et rater une information clé.
+- Choisir un livre uniquement d'après sa couverture, sans lire le résumé ni les premières pages.
+exemple:
+  enonce: 'Dans un texte, on lit : « Elle referma la porte sans un bruit et retint son souffle. » Que peut-on déduire
+    de l''état d''esprit du personnage, sans que le texte le dise explicitement ?'
+  solution: 'Le silence de la porte et le souffle retenu suggèrent que le personnage a peur ou veut se cacher, sans
+    que le texte dise explicitement « elle avait peur » : c''est une inférence, une interprétation justifiée par
+    des détails précis du texte.'
+exercices:
+- enonce: Que faire quand on rencontre un mot inconnu au milieu d'un texte qu'on doit comprendre sans dictionnaire
+    ?
+  indices:
+  - Pense au contexte autour du mot.
+  solution: Continuer la lecture de la phrase et du paragraphe pour deviner le sens du mot grâce au contexte, avant
+    de chercher, si besoin, dans un dictionnaire.
+- enonce: Lis un court paragraphe d'un livre de ton choix et note une information que le texte laisse deviner sans
+    la dire explicitement (une inférence), en citant la phrase qui te permet de le deviner.
+  indices:
+  - Cherche des détails (gestes, objets, mots choisis) qui en disent plus que le texte littéral.
+  solution: Réussite si l'élève cite une phrase précise du texte et explique clairement ce qu'elle laisse deviner
+    sans être dit directement.
+sources:
+- titre: Wikipédia, « Lecture attentive »
+  url: https://fr.wikipedia.org/w/index.php?title=Lecture_attentive&oldid=234757213
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Fiche de lecture »
+  url: https://fr.wikipedia.org/w/index.php?title=Fiche_de_lecture&oldid=236874457
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

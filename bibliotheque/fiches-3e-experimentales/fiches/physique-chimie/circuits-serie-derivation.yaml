@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: circuits-serie-derivation
+couverture: Les lois d'additivité des tensions et des intensités et la loi d'Ohm sont traitées ; le montage pratique
+  d'un circuit répondant à un cahier des charges n'est pas détaillé ici.
+declencheurs:
+- circuit en série
+- circuit en dérivation
+- loi d'ohm U = RI
+- additivité des tensions
+- additivité des intensités
+- deux ampoules en série
+essentiel: 'Dans un circuit en série, les dipôles sont branchés les uns à la suite des autres sur une seule boucle
+  : l''intensité du courant électrique est la même en tout point du circuit.
+
+  Dans un circuit en série, les tensions aux bornes de chaque dipôle s''additionnent pour donner la tension totale
+  du circuit (loi d''additivité des tensions).
+
+  Dans un circuit en dérivation (parallèle), chaque branche est reliée directement aux deux mêmes points : la tension
+  est la même aux bornes de chaque branche (loi d''unicité des tensions), et l''intensité totale qui arrive du générateur
+  se répartit entre les branches, leur somme redonnant l''intensité totale (loi d''additivité des intensités).
+
+  La loi d''Ohm relie la tension U aux bornes d''un résistor (ou conducteur ohmique) et l''intensité I qui le traverse
+  : U = R × I, avec U en volts (V), I en ampères (A) et R la résistance en ohms (Ω).
+
+  Plus la résistance R est grande, plus il faut de tension pour faire passer la même intensité de courant (le conducteur
+  s''oppose davantage au passage du courant).'
+methode:
+- Identifier d'abord si le circuit est en série (une seule boucle) ou en dérivation (plusieurs branches).
+- 'En série : appliquer l''égalité des intensités partout, et l''addition des tensions.'
+- 'En dérivation : appliquer l''égalité des tensions entre les branches, et l''addition des intensités.'
+- Pour un résistor, utiliser U = R × I (ou I = U / R, ou R = U / I selon l'inconnue).
+erreurs_frequentes:
+- Additionner les intensités dans un circuit en série (elles sont égales, pas additionnées).
+- Additionner les tensions dans un circuit en dérivation (elles sont égales entre les branches).
+- Oublier de convertir les unités avant d'appliquer U = R × I (kΩ en Ω, mA en A).
+- Confondre résistance R (en ohms) et résistor (le composant physique).
+exemple:
+  enonce: Un résistor de résistance 100 Ω est traversé par un courant d'intensité 0,2 A. Calculer la tension à ses
+    bornes.
+  solution: U = R × I = 100 × 0,2 = 20 V.
+exercices:
+- enonce: Deux ampoules identiques sont branchées en série sur une pile de 6 V. La tension aux bornes de la première
+    ampoule est de 3 V. Quelle est la tension aux bornes de la seconde ?
+  indices:
+  - En série, les tensions s'additionnent pour donner la tension totale.
+  solution: 6 − 3 = 3 V (les deux ampoules identiques se partagent également la tension).
+- enonce: Dans un circuit en dérivation, deux branches sont parcourues par des intensités de 0,5 A et 0,3 A. Quelle
+    est l'intensité totale débitée par le générateur ?
+  indices:
+  - En dérivation, les intensités des branches s'additionnent.
+  solution: 0,5 + 0,3 = 0,8 A.
+- enonce: Un résistor est soumis à une tension de 12 V et sa résistance vaut 60 Ω. Calculer l'intensité qui le traverse.
+  indices:
+  - I = U / R.
+  solution: I = 12 / 60 = 0,2 A.
+sources:
+- titre: Vikidia, « Circuit électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Circuit_%C3%A9lectrique&oldid=2563960
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Loi d'Ohm »
+  url: https://fr.vikidia.org/w/index.php?title=Loi_d%27Ohm&oldid=2091347
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Tension électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Tension_%C3%A9lectrique&oldid=2457767
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
