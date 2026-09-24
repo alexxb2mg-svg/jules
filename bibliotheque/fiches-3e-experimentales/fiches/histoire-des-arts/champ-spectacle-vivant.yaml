@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: champ-spectacle-vivant
+declencheurs:
+- difference entre theatre opera et danse
+- spectacle vivant c'est quoi
+- cirque et marionnette histoire des arts
+- opera et musique classique
+essentiel: 'Le spectacle vivant regroupe des arts qui se jouent devant un public présent, en direct : la musique,
+  le théâtre, l''opéra, la danse, le cirque et la marionnette.
+
+  Le théâtre associe des comédiens et un texte (une pièce) ou parfois de l''improvisation sans texte écrit ; il
+  est né dans l''Antiquité à partir de rites religieux joués par des acteurs masqués.
+
+  L''opéra combine musique chantée, théâtre et souvent danse dans une même œuvre ; la danse peut être populaire,
+  de cour ou stylisée selon les époques et les contextes sociaux.
+
+  Le cirque, art vivant porté par une troupe (acrobates, clowns, jongleurs, numéros aériens), s''est développé comme
+  un spectacle itinérant, installé temporairement sous un chapiteau.'
+methode:
+- Identifier le type de spectacle vivant (théâtre, opéra, danse, cirque, marionnette) à partir de ses éléments distinctifs.
+- Repérer si un spectacle combine plusieurs arts (l'opéra mêle musique et théâtre par exemple).
+- Situer une pratique (danse populaire, danse de cour) dans son contexte social d'origine.
+- Distinguer un texte de théâtre écrit d'une improvisation sans texte.
+erreurs_frequentes:
+- Confondre opéra (chanté) et théâtre (parlé).
+- Croire que le théâtre nécessite toujours un texte écrit.
+- Réduire le cirque aux seuls clowns, en oubliant les numéros acrobatiques et aériens.
+exemple:
+  enonce: Un spectacle mêle des chanteurs, un orchestre et une mise en scène théâtrale sur un même sujet.
+  solution: Il s'agit d'un opéra, une forme de spectacle vivant qui combine musique chantée et théâtre, souvent
+    accompagné de danse, contrairement au théâtre parlé simple.
+exercices:
+- enonce: 'À l''oral (type brevet) : cite trois formes de spectacle vivant et explique en une phrase ce qui les
+    distingue les unes des autres.'
+  indices:
+  - Pense à la présence ou non de musique chantée, de texte parlé, de mouvement dansé.
+  solution: Réussite si les trois formes citées sont bien distinctes et correctement caractérisées.
+- enonce: Cherche l'origine historique du théâtre dans l'Antiquité et explique en une phrase son lien avec la religion
+    à cette époque.
+  indices:
+  - Le théâtre antique est né de rites religieux joués devant un public.
+  solution: Réussite si le lien entre théâtre antique et rite religieux est correctement expliqué.
+sources:
+- titre: Vikidia, « Théâtre »
+  url: https://fr.vikidia.org/w/index.php?title=Th%C3%A9%C3%A2tre&oldid=2548648
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Danse »
+  url: https://fr.vikidia.org/w/index.php?title=Danse&oldid=2563087
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Cirque »
+  url: https://fr.vikidia.org/w/index.php?title=Cirque&oldid=2302889
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

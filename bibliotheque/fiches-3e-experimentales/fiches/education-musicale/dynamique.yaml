@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: dynamique
+declencheurs:
+- nuances en musique
+- musique qui devient plus forte
+- crescendo decrescendo
+- intensite d'un son
+- piano forte en musique
+- decibel
+- mots italiens sur une partition
+- augmenter progressivement le volume
+- morceau de plus en plus fort
+essentiel: 'La dynamique musicale désigne les variations d''intensité (fort, doux) au cours d''une œuvre : elle
+  se note sur une partition par des nuances comme piano (doux), forte (fort), ou par des symboles indiquant une
+  évolution progressive (crescendo pour augmenter, decrescendo pour diminuer).
+
+  Physiquement, l''intensité d''un son se mesure en décibels : plus le nombre de décibels est élevé, plus le son
+  est perçu comme fort, mais cette échelle n''est pas linéaire (elle est logarithmique).
+
+  Les nuances participent directement à l''expression d''une œuvre : un même thème joué très doucement ou très fort
+  ne produit pas le même effet émotionnel sur l''auditeur.
+
+  Les compositeurs notent les nuances sur la partition depuis le XVIIIe siècle environ ; avant, elles étaient rarement
+  précisées et laissées à l''interprétation du musicien.'
+methode:
+- Écouter un extrait en repérant les moments où le son devient plus fort ou plus doux.
+- Distinguer un changement brusque d'intensité d'une évolution progressive (crescendo/decrescendo).
+- Relier la dynamique observée à l'effet ou à l'émotion qu'elle produit.
+- Utiliser les termes précis (piano, forte, crescendo) plutôt que « fort » et « doux » seulement.
+vocabulaire:
+- terme: crescendo
+  definition: augmentation progressive de l'intensité sonore
+- terme: decrescendo
+  definition: diminution progressive de l'intensité sonore
+erreurs_frequentes:
+- Confondre un changement de tempo (plus vite) et un changement de dynamique (plus fort).
+- Croire que le décibel mesure la hauteur d'un son plutôt que son intensité.
+- Ne pas remarquer les nuances progressives (crescendo), plus discrètes qu'un changement brutal.
+exemple:
+  enonce: Une pièce commence très doucement (piano), puis grossit progressivement jusqu'à un passage très fort (forte)
+    avant de revenir au calme.
+  solution: 'On peut décrire cette évolution ainsi : piano – crescendo – forte – decrescendo – piano. Cette dynamique
+    en arc crée un effet de tension qui monte puis retombe.'
+exercices:
+- enonce: 'À la maison : chante ou fredonne une phrase musicale trois fois, une fois doucement, une fois fort, une
+    fois avec un crescendo du début à la fin.'
+  indices:
+  - Le crescondo doit être progressif, pas un saut brutal.
+  solution: Réussite si les trois versions sont clairement différentes en intensité et si le crescendo est bien
+    progressif.
+- enonce: Écoute un morceau de ton choix et repère un moment de crescendo ou de decrescendo, en notant à quel instant
+    il se produit.
+  indices:
+  - Les musiques de film utilisent souvent des crescendos pour créer du suspense.
+  solution: Réussite si le moment identifié correspond bien à une évolution progressive de l'intensité, vérifiée
+    en réécoutant.
+sources:
+- titre: Wikipédia, « Nuance (musique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Nuance_%28musique%29&oldid=236536454
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Décibel »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9cibel&oldid=237481128
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

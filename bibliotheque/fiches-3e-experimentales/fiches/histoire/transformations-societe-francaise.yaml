@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transformations-societe-francaise
+declencheurs:
+- immigration en France
+- chômage en France
+- place des femmes dans la société
+- vieillissement de la population
+- jeunesse
+- société française après 1945
+- évolutions des mœurs
+essentiel: 'La société française connaît de profondes transformations dans la seconde moitié du XXe siècle. La place
+  des femmes évolue : au-delà du droit de vote (1944), elles accèdent davantage à l''emploi et voient leurs droits
+  progresser (contraception, avortement légalisé en 1975).
+
+  L''immigration se développe, en particulier depuis les années 1950-1960, pour répondre aux besoins de main-d''œuvre
+  de la reconstruction puis de la croissance économique, avant de devenir un enjeu de débat politique.
+
+  De nouvelles aspirations de la jeunesse apparaissent, notamment marquées par le mouvement de mai 1968. Le chômage
+  augmente fortement à partir du milieu des années 1970, avec la fin des « Trente Glorieuses » et les crises économiques.
+  La population française vieillit, avec l''allongement de l''espérance de vie.
+
+  Ces transformations s''accompagnent d''évolutions législatives (droits des femmes, droit du travail) et posent
+  de nouveaux enjeux pour l''exercice de la citoyenneté dans la démocratie française.'
+methode:
+- 'Distinguer les grandes transformations à connaître : place des femmes, immigration, jeunesse, vieillissement,
+  chômage.'
+- Pour chaque transformation, donner un repère chronologique ou un exemple concret (loi, événement).
+- Relier ces transformations à des adaptations de la loi (par exemple les droits des femmes).
+- Montrer le lien entre ces évolutions sociales et le débat politique et citoyen en France.
+vocabulaire:
+- terme: Trente Glorieuses
+  definition: période de forte croissance économique en France de 1945 à 1975 environ
+- terme: immigration
+  definition: l'installation dans un pays de personnes venues d'un autre pays pour y vivre et y travailler
+erreurs_frequentes:
+- Réduire les transformations de la société française à un seul thème (par exemple seulement l'immigration).
+- Oublier de donner un exemple précis (loi, date, événement) pour illustrer une transformation.
+- Confondre l'augmentation du chômage (à partir des années 1970) avec la période des Trente Glorieuses (croissance,
+  plein emploi).
+- Ne pas relier les transformations sociales à des évolutions législatives concrètes.
+exemple:
+  enonce: Donne un exemple d'évolution législative liée à la place des femmes dans la société française après 1945.
+  solution: La légalisation de l'interruption volontaire de grossesse (IVG) en 1975, portée par la loi Veil, illustre
+    l'évolution des droits des femmes après la Seconde Guerre mondiale.
+exercices:
+- enonce: Cite trois transformations majeures de la société française dans la seconde moitié du XXe siècle.
+  indices:
+  - Pense à la démographie, au travail et à la place des femmes.
+  solution: 'Par exemple : la progression de la place des femmes dans la société et l''emploi, le développement
+    de l''immigration liée aux besoins économiques, et la montée du chômage à partir des années 1970.'
+- enonce: 'Développement construit : montre comment la société française change entre 1945 et la fin du XXe siècle,
+    à partir de deux exemples précis.'
+  indices:
+  - Choisis deux thèmes différents (par exemple femmes et chômage).
+  - Donne une date ou une loi pour chaque exemple.
+  solution: Un développement réussi doit choisir deux transformations (par exemple la place des femmes et le chômage)
+    ; pour chacune, donner un repère précis (la loi Veil de 1975 pour les femmes, la fin des Trente Glorieuses au
+    milieu des années 1970 pour le chômage) ; conclure en montrant que ces évolutions transforment la vie quotidienne
+    et alimentent le débat citoyen.
+- enonce: Pourquoi peut-on dire que le vieillissement de la population est un enjeu pour la société française ?
+  indices:
+  - Pense aux retraites, à la santé.
+  solution: L'allongement de l'espérance de vie et la baisse de la natalité augmentent la part des personnes âgées
+    dans la population, ce qui pose des questions de financement des retraites et de prise en charge de la dépendance.
+sources:
+- titre: Vikidia, « Immigration »
+  url: https://fr.vikidia.org/w/index.php?title=Immigration&oldid=2185441
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Chômage »
+  url: https://fr.vikidia.org/w/index.php?title=Ch%C3%B4mage&oldid=2281796
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

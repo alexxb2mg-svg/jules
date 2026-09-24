@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: voix-passive-effets-de-sens
+declencheurs:
+- voix passive
+- être + participe passé
+- complément d'agent
+- transformer en passif
+- phrase active passive
+- par le vent
+- la ville a été fondée
+essentiel: 'La voix passive se construit avec l''auxiliaire être conjugué au temps de la phrase active, suivi du
+  participe passé du verbe, éventuellement accompagné d''un complément d''agent introduit par « par » (ou parfois
+  « de ») : « Le chat mange la souris » (actif) → « La souris est mangée par le chat » (passif).
+
+  Pour transformer une phrase active en passive : le COD de la phrase active devient sujet de la phrase passive
+  ; le sujet actif devient complément d''agent (ou disparaît s''il n''est pas précisé) ; seuls les verbes transitifs
+  directs (qui ont un COD) peuvent se mettre au passif.
+
+  Effets de sens de la voix passive : mettre en valeur celui qui subit l''action plutôt que celui qui l''accomplit
+  ; effacer ou rendre secondaire l''agent quand il est inconnu, évident ou sans intérêt (« la ville a été fondée
+  au Moyen Âge ») ; donner un ton plus objectif, scientifique ou administratif au texte.'
+methode:
+- 'Vérifier que le verbe actif a un COD : sans COD, pas de transformation possible.'
+- Faire du COD actif le nouveau sujet passif.
+- Conjuguer être au même temps que le verbe actif, ajouter le participe passé accordé avec le nouveau sujet.
+- Faire du sujet actif un complément d'agent introduit par « par » (le supprimer s'il est vague ou inutile).
+- 'Pour interpréter un passif : se demander pourquoi l''auteur a choisi de mettre en valeur le patient plutôt que
+  l''agent.'
+vocabulaire:
+- terme: complément d'agent
+  definition: groupe introduit par « par » (ou « de ») qui indique qui accomplit l'action dans une phrase passive
+erreurs_frequentes:
+- Essayer de mettre au passif un verbe intransitif ou transitif indirect (partir, obéir à...).
+- Oublier d'accorder le participe passé avec le nouveau sujet passif.
+- Confondre complément d'agent et complément circonstanciel de moyen.
+- 'Croire que la voix passive est toujours maladroite : elle a des effets de sens précis (objectivité, mise en valeur
+  du patient, agent inconnu).'
+exemple:
+  enonce: 'Transformer à la voix passive : « Les vagues ont détruit la digue. »'
+  solution: '« La digue a été détruite par les vagues. » : COD « la digue » devient sujet, « ont » (avoir au passé
+    composé) devient « a été » (être au passé composé), sujet « les vagues » devient complément d''agent.'
+exercices:
+- enonce: 'Transformer à la voix passive : « Le jardinier taille les rosiers chaque printemps. »'
+  indices:
+  - Quel est le COD de la phrase active ?
+  solution: « Les rosiers sont taillés par le jardinier chaque printemps. »
+- enonce: 'Expliquer l''effet de sens du passif dans : « Le tableau a été volé pendant la nuit. » (l''auteur ne
+    sait pas qui a volé le tableau)'
+  indices:
+  - Y a-t-il un complément d'agent ? Pourquoi ?
+  solution: 'L''agent est absent parce qu''il est inconnu : le passif permet de mettre en valeur le tableau (ce
+    qui a été subi) sans avoir à préciser qui a commis le vol.'
+- enonce: Pourquoi ne peut-on pas mettre au passif la phrase « Elle obéit à ses parents » ?
+  indices:
+  - Le verbe obéir a-t-il un COD ou un COI ?
+  solution: « obéir à » est transitif indirect (COI « à ses parents »), or seuls les verbes transitifs directs (avec
+    COD) peuvent se transformer au passif.
+sources:
+- titre: Wikipédia, « Voix passive »
+  url: https://fr.wikipedia.org/w/index.php?title=Voix_passive&oldid=230156410
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

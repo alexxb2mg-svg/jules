@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: constitution-atome-noyau
+declencheurs:
+- proton
+- neutron
+- électron
+- noyau de l'atome
+- charge de l'atome
+- ion positif
+- ion négatif
+- combien de protons
+essentiel: 'Un atome est constitué d''un noyau, très petit et très dense, entouré d''électrons qui se déplacent
+  autour de lui.
+
+  Le noyau est formé de nucléons : des protons (charge électrique positive) et des neutrons (aucune charge électrique,
+  neutres). Le nombre de protons définit l''élément chimique (par exemple, tout atome de 6 protons est du carbone).
+
+  Les électrons portent une charge électrique négative. Dans un atome neutre, le nombre d''électrons est égal au
+  nombre de protons, ce qui rend l''atome électriquement neutre au total.
+
+  Un ion se forme quand un atome (ou un groupe d''atomes) gagne ou perd un ou plusieurs électrons : s''il perd des
+  électrons, il devient un ion positif (cation) ; s''il en gagne, il devient un ion négatif (anion).
+
+  La charge d''un ion se calcule par la différence entre le nombre de protons (charges positives) et le nombre d''électrons
+  (charges négatives).'
+methode:
+- Repérer le nombre de protons d'un atome pour identifier l'élément chimique correspondant.
+- Pour un atome neutre, poser nombre d'électrons = nombre de protons.
+- Pour un ion, comparer le nombre de protons et le nombre d'électrons donnés pour déterminer le signe et la valeur
+  de la charge.
+- 'Distinguer clairement les trois particules : proton (+, dans le noyau), neutron (neutre, dans le noyau), électron
+  (-, autour du noyau).'
+erreurs_frequentes:
+- Croire que les neutrons portent une charge électrique.
+- Confondre nombre de protons (qui définit l'élément) et nombre de neutrons (qui peut varier, isotopes).
+- 'Se tromper de signe pour un ion : un atome qui perd des électrons devient positif, pas négatif.'
+- Oublier qu'un atome non chargé (neutre) a autant d'électrons que de protons.
+exemple:
+  enonce: Un atome de carbone a 6 protons et 6 neutrons dans son noyau. Combien a-t-il d'électrons, sachant qu'il
+    est neutre ? Quel est son nombre de masse (nombre de nucléons) ?
+  solution: 'Atome neutre : 6 électrons (autant que de protons). Nombre de masse = 6 protons + 6 neutrons = 12.'
+exercices:
+- enonce: L'ion sodium Na+ possède 11 protons et 10 électrons. Vérifier que sa charge est bien +1.
+  indices:
+  - Charge = nombre de protons − nombre d'électrons.
+  solution: '11 − 10 = 1 : la charge est bien +1 (un excès d''une charge positive).'
+- enonce: L'ion chlorure Cl- possède 17 protons. Combien a-t-il d'électrons pour porter une charge −1 ?
+  indices:
+  - Charge = protons − électrons ; ici la charge vaut −1.
+  solution: '17 − électrons = −1, donc électrons = 18 : l''ion chlorure a 18 électrons.'
+- enonce: Un atome a 8 protons, 8 neutrons et 8 électrons. Est-il neutre ou chargé ? Quel est son nombre de masse
+    ?
+  indices:
+  - Compare le nombre de protons et d'électrons.
+  solution: '8 protons = 8 électrons : l''atome est neutre. Nombre de masse = 8 + 8 = 16 (c''est un atome d''oxygène).'
+sources:
+- titre: Vikidia, « Atome »
+  url: https://fr.vikidia.org/w/index.php?title=Atome&oldid=2554609
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Proton »
+  url: https://fr.vikidia.org/w/index.php?title=Proton&oldid=2307261
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ecouter-et-comprendre
+declencheurs:
+- comprendre l'oral
+- écoute
+- audio en anglais
+- compréhension orale
+- écouter un document
+- comprendre ce qu'on entend
+- vidéo en anglais
+essentiel: 'Comprendre un document sonore ou vidéo en anglais ne demande pas de saisir chaque mot : il s''agit surtout
+  de repérer des indices qui permettent de reconstituer le sens global, puis d''affiner.
+
+
+  Avant même les mots, des indices extralinguistiques aident à comprendre la situation : le ton de voix (colère,
+  joie, surprise), les bruits de fond (musique, circulation, cour de récréation), les images dans une vidéo. Ils
+  permettent de deviner où se passe la scène et qui parle.
+
+
+  Ensuite, des indices linguistiques affinent la compréhension : les mots que l''on reconnaît (même isolés), les
+  mots-outils qui structurent le discours (first, then, but, because), les répétitions, l''intonation qui monte
+  pour une question. Il n''est pas grave de ne pas comprendre un mot : on peut déduire son sens du contexte, ou
+  l''ignorer s''il n''est pas essentiel au sens global.
+
+
+  S''entraîner régulièrement à écouter des documents variés (dialogues, chansons, journaux, podcasts) habitue l''oreille
+  aux réalités sonores de l''anglais (accentuation, rythme, liaisons) et améliore la mémorisation.'
+methode:
+- Avant l'écoute, observer le titre, l'image ou le contexte donné pour anticiper le sujet probable.
+- 'Lors d''une première écoute, repérer la situation générale : qui parle, où, de quoi (sans chercher à tout comprendre).'
+- Lors d'une deuxième écoute, se concentrer sur les mots-clés et les connecteurs (first, next, but, because) qui
+  structurent le sens.
+- 'Ne pas se bloquer sur un mot inconnu : continuer à écouter et déduire son sens du contexte si possible.'
+- Repérer l'intonation (une phrase qui monte est souvent une question) et le ton de voix (indice sur l'émotion du
+  locuteur).
+vocabulaire:
+- terme: indice extralinguistique
+  definition: élément qui aide à comprendre sans passer par les mots (bruit, ton de voix, image)
+- terme: indice linguistique
+  definition: élément du message lui-même qui aide à comprendre (mot reconnu, connecteur, intonation)
+erreurs_frequentes:
+- Vouloir comprendre chaque mot au lieu de se concentrer sur le sens global.
+- Se bloquer sur un mot inconnu et perdre le fil de la suite du document.
+- Ignorer les indices non verbaux (bruits, images, ton) qui donnent pourtant beaucoup d'informations.
+- Ne pas s'entraîner à l'écoute régulièrement, ce qui empêche l'oreille de se familiariser avec le rythme de l'anglais.
+exemple:
+  enonce: 'On entend : « Excuse me, where is the train station? It''s over there, next to the bank. » Sans connaître
+    tous les mots, comment deviner de quoi parlent les deux personnes ?'
+  solution: Le mot « train station » et « where is » (reconnaissable même isolé) indiquent une demande d'itinéraire.
+    Le ton poli (« Excuse me ») et la réponse avec une indication de lieu (« over there », « next to ») confirment
+    qu'il s'agit de demander et donner son chemin.
+exercices:
+- enonce: En écoutant un dialogue, on entend beaucoup de bruit de couverts et des voix qui parlent de « the menu
+    » et « can I order ». Où se passe probablement la scène ?
+  indices:
+  - Pense aux indices extralinguistiques (bruits) et linguistiques (mots entendus).
+  solution: 'La scène se passe probablement dans un restaurant : les bruits de couverts (indice extralinguistique)
+    et les mots « menu », « order » (indices linguistiques) le suggèrent fortement.'
+- enonce: Proposer deux stratégies à utiliser quand on entend un mot inconnu pendant une écoute.
+  indices:
+  - Repense à la méthode de la fiche.
+  solution: Continuer à écouter sans se bloquer, et essayer de déduire le sens du mot grâce au contexte (les mots
+    autour, la situation) plutôt que de chercher à le traduire immédiatement.
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

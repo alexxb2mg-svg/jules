@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: geographie-aires-urbaines
+declencheurs:
+- ville centre
+- banlieue
+- périurbain
+- migrations pendulaires
+- étalement urbain
+- 85% des Français en ville
+- aire d'influence d'une ville
+- habiter loin de son travail
+- s'installer loin de la ville
+essentiel: 'Une aire urbaine est un ensemble formé d''une ville-centre, de ses banlieues (qui forment ensemble une
+  agglomération) et d''une couronne périurbaine, où plus de 40 % des habitants actifs travaillent dans la ville-centre.
+
+  En France, environ 85 % de la population vit dans une aire urbaine, ce qui montre l''ampleur de l''urbanisation
+  depuis 50 ans. Les plus grandes aires urbaines françaises sont celles de Paris, Lyon, Marseille, Toulouse, Lille,
+  Bordeaux, Nice, Nantes, Rennes et Strasbourg.
+
+  L''urbanisation transforme les espaces : les logements de la ville-centre étant chers, de nombreux habitants s''installent
+  en banlieue, ou de plus en plus loin dans la couronne périurbaine, tout en conservant leur emploi en ville. On
+  parle d''étalement urbain (ou périurbanisation). Cela entraîne des migrations pendulaires quotidiennes (domicile-travail),
+  qui provoquent des problèmes de circulation et de pollution.'
+methode:
+- 'Distinguer les trois composantes d''une aire urbaine : ville-centre, banlieue, couronne périurbaine.'
+- 'Retenir le critère qui définit la couronne périurbaine : plus de 40 % des actifs travaillent dans la ville-centre.'
+- 'Relier étalement urbain et migrations pendulaires : plus la ville s''étend, plus les trajets domicile-travail
+  sont longs.'
+- 'Utiliser un vocabulaire précis dans un croquis ou une analyse de document : agglomération, périurbanisation,
+  aire d''influence.'
+vocabulaire:
+- terme: aire urbaine
+  definition: ville-centre + banlieue + couronne périurbaine
+- terme: migration pendulaire
+  definition: déplacement quotidien entre le domicile et le lieu de travail ou d'études
+- terme: périurbanisation
+  definition: l'extension de l'espace urbain sur les espaces ruraux environnants
+erreurs_frequentes:
+- Confondre agglomération (ville-centre + banlieue) et aire urbaine (agglomération + couronne périurbaine, plus
+  vaste).
+- 'Croire que la couronne périurbaine est un espace rural comme les autres : ses habitants sont majoritairement
+  liés à la ville par le travail.'
+- Oublier de citer un ordre de grandeur (85 % de la population française vit en aire urbaine).
+- Négliger les conséquences négatives de l'étalement urbain (pollution, embouteillages).
+exemple:
+  enonce: Explique en une phrase pourquoi une commune peut appartenir à une aire urbaine sans être elle-même une
+    ville.
+  solution: Une commune de la couronne périurbaine appartient à l'aire urbaine dès lors que plus de 40 % de ses
+    actifs vont travailler dans la ville-centre, même si elle a l'aspect d'un village ou d'une petite commune rurale.
+exercices:
+- enonce: Quelle est la principale aire urbaine française et quel ordre de grandeur de population représente-t-elle
+    ?
+  indices:
+  - C'est la capitale.
+  solution: L'aire urbaine de Paris est la plus peuplée de France, avec environ 15 millions d'habitants.
+- enonce: 'Développement construit : explique comment l''urbanisation a transformé les espaces français depuis 50
+    ans.'
+  indices:
+  - Parle de l'étalement urbain et des migrations pendulaires.
+  - Donne un ordre de grandeur (85 %).
+  solution: Un développement réussi doit rappeler qu'environ 85 % des Français vivent aujourd'hui dans une aire
+    urbaine ; expliquer que la hausse du prix des logements en ville pousse les habitants vers la périphérie, provoquant
+    un étalement urbain (périurbanisation) ; montrer que cela entraîne des migrations pendulaires croissantes et
+    des problèmes de transport et de pollution.
+- enonce: Pourquoi les migrations pendulaires posent-elles des problèmes environnementaux ?
+  indices:
+  - Pense aux transports utilisés chaque jour.
+  solution: De nombreux habitants de la couronne périurbaine utilisent leur voiture pour se rendre chaque jour en
+    ville, ce qui provoque des embouteillages et augmente la pollution de l'air, en particulier quand les transports
+    en commun sont peu développés loin du centre.
+sources:
+- titre: Vikidia, « Aire urbaine »
+  url: https://fr.vikidia.org/w/index.php?title=Aire_urbaine&oldid=2384584
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

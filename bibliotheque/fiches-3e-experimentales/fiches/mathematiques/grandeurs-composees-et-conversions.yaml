@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: grandeurs-composees-et-conversions
+declencheurs: ["vitesse", "convertir", "conversion", "débit", "litres par minute", "masse volumique", "kwh", "moyenne en km"]
+essentiel: 'Une grandeur composée est obtenue en combinant deux grandeurs.
+
+  Grandeurs quotients : vitesse v = d/t (km/h, m/s) ; débit = volume / durée (L/min, m³/h) ; masse volumique ρ =
+  m/V (g/cm³, kg/m³) ; prix au kilo (€/kg).
+
+  Grandeurs produits : énergie = puissance × durée (kWh) ; « passagers × km »…
+
+  Pour convertir, on convertit chaque unité séparément : 1 m/s = 3 600 m/h = 3,6 km/h (donc km/h → m/s : diviser
+  par 3,6 ; m/s → km/h : multiplier par 3,6).
+
+  Les durées ne sont pas décimales : 2 h 15 min = 2,25 h ; 45 min = 0,75 h.
+
+  On vérifie la cohérence d''un résultat par ses unités (des km divisés par des h donnent des km/h).'
+methode:
+- Écrire la formule avec les unités (v = d/t, débit = V/t…).
+- Convertir les données dans des unités compatibles avant de calculer (durées en heures décimales ou en minutes).
+- Calculer, puis vérifier que l'unité du résultat est cohérente.
+- 'Pour convertir une grandeur composée : convertir le numérateur et le dénominateur séparément, puis diviser.'
+- Contrôler la vraisemblance (un piéton ne marche pas à 50 km/h).
+erreurs_frequentes:
+- Écrire 2 h 15 min = 2,15 h (c'est 2,25 h).
+- Multiplier par 3,6 au lieu de diviser (ou l'inverse).
+- Diviser des km par des minutes et annoncer des km/h.
+- Oublier que 1 L = 1 dm³ et que 1 m³ = 1 000 L.
+exemple:
+  enonce: Un cycliste roule à 15 m/s. Quelle est sa vitesse en km/h ?
+  solution: 15 m/s = 15 × 3 600 m/h = 54 000 m/h = 54 km/h (soit 15 × 3,6).
+exercices:
+- enonce: Une voiture parcourt 180 km en 2 h 15 min. Calculer sa vitesse moyenne.
+  indices:
+  - 2 h 15 min = 2 h + 15/60 h.
+  solution: 2 h 15 min = 2,25 h ; v = 180 ÷ 2,25 = 80 km/h.
+- enonce: Un train roule à 72 km/h pendant 2 h 30 min, puis à 80 km/h pendant 45 min. Distance totale ?
+  indices:
+  - d = v × t, avec t en heures.
+  - 45 min = 0,75 h.
+  solution: 72 × 2,5 + 80 × 0,75 = 180 + 60 = 240 km.
+- enonce: Un robinet a un débit de 12 L/min. Combien de temps pour remplir une cuve de 300 L ? Exprimer ce débit
+    en m³/h.
+  indices:
+  - temps = volume ÷ débit.
+  - 1 m³ = 1 000 L et 1 h = 60 min.
+  solution: 300 ÷ 12 = 25 min. 12 L/min = 720 L/h = 0,72 m³/h.
+- enonce: L'acier a une masse volumique de 7,8 g/cm³. Quelle est la masse d'une pièce de 50 cm³ ?
+  indices:
+  - m = ρ × V
+  solution: 7,8 × 50 = 390 g.
+- enonce: Un radiateur de 2 000 W fonctionne 1 h 30. Quelle énergie consomme-t-il ? Combien cela coûte-t-il à 0,20
+    € le kWh ?
+  indices:
+  - 2 000 W = 2 kW ; E = P × t.
+  solution: 2 × 1,5 = 3 kWh ; coût 3 × 0,20 = 0,60 €.
+sources:
+- titre: Vikidia, « Vitesse »
+  url: https://fr.vikidia.org/w/index.php?title=Vitesse&oldid=2384746
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Masse volumique »
+  url: https://fr.wikipedia.org/w/index.php?title=Masse_volumique&oldid=236465032
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: définition reprise
+- titre: Wikipédia, « Débit »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9bit&oldid=163872422
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

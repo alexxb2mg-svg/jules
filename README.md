@@ -38,7 +38,8 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 - **Cinq modes** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent, avec une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice (« Explique-moi comment tu sais qu'un nombre est premier »). Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
-- **Une première bibliothèque** : le programme officiel de 3e découpé en notions, avec la source officielle de chacune (`bibliotheque/`). Les autres niveaux, du primaire au lycée, sont à construire.
+- **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
+- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune) et une fiche de repères pour chacune de ces notions, dans les 12 matières, écrite à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux, du primaire au lycée, sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on peut télécharger tout le dossier de l'élève (.zip), effacer une conversation, ou tout effacer d'un coup.
 
 ## Ce que Jules ne sait pas encore
@@ -130,7 +131,7 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir... | en place |
 | Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
-| Bibliothèques | `bibliotheque/` | Contenus par niveau, âge et matière, chargés selon l'élève | une première (3e), format à généraliser |
+| Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (3e) |
 | Outils | à définir | Frise, calculatrice, carte... ouverts par Jules pendant une leçon | à concevoir |
 | Adaptations | `adaptations/` | Besoins particuliers (troubles dys, attention...) : affichage et consignes adaptés | emplacement réservé |
 

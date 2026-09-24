@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: orthographe-affixes-et-etymons
+declencheurs:
+- préfixe suffixe orthographe
+- étymon latin grec
+- orthographier un mot dérivé
+- in- im- ir-
+- effet du préfixe sur le sens
+- irrégulier deux r
+essentiel: 'Un préfixe se place avant le radical d''un mot et change souvent son sens sans changer sa catégorie
+  grammaticale : dé- (contraire : défaire), in-/im-/ir-/il- (négation, forme adaptée au son qui suit : illisible,
+  impossible, irrégulier), re-/ré- (répétition : refaire), extra-, hypo-, hyper-...
+
+  Un suffixe se place après le radical et peut changer la catégorie grammaticale du mot : -tion, -ment, -eur/-euse,
+  -able/-ible, -isme forment souvent des noms, adjectifs ou adverbes à partir d''un verbe ou d''un adjectif (décorer
+  → décoration ; utile → utilement).
+
+  Un étymon est le mot ou l''élément d''origine (souvent latin ou grec) à partir duquel un mot français s''est formé
+  : « chrono- » (temps), « -logie » (étude), « aqua- » (eau), « photo- » (lumière). Connaître le sens d''un étymon
+  aide à deviner le sens et l''orthographe d''un mot inconnu.
+
+  L''orthographe des préfixes suit des règles précises (double consonne fréquente : il-/im-/ir- s''adaptent à la
+  première lettre du radical) qu''il faut mémoriser plutôt que deviner.'
+methode:
+- Repérer le radical du mot (partie qui porte le sens de base).
+- Identifier le préfixe éventuel et son sens (négation, répétition, direction...).
+- Identifier le suffixe éventuel et la catégorie grammaticale qu'il crée (nom, adjectif, verbe, adverbe).
+- Chercher l'étymon (souvent latin ou grec) pour confirmer le sens et l'orthographe.
+- Vérifier l'orthographe des préfixes qui s'assimilent à la consonne suivante (in- devient il-/im-/ir- selon le
+  radical).
+vocabulaire:
+- terme: étymon
+  definition: mot ou élément d'une langue ancienne (souvent latin ou grec) à l'origine d'un mot français
+- terme: affixe
+  definition: terme général pour préfixe ou suffixe, ajouté à un radical
+erreurs_frequentes:
+- Écrire « inrégulier » au lieu de « irrégulier » (le préfixe in- s'assimile devant r).
+- Confondre préfixe et suffixe.
+- Ignorer le sens d'un étymon connu et se tromper sur le sens général du mot.
+- Oublier qu'un suffixe peut changer la catégorie grammaticale du mot (l'adjectif devient un nom, etc.).
+exemple:
+  enonce: Analyser la formation du mot « irréversible » et expliquer son orthographe.
+  solution: 'Préfixe in- (négation) devant un radical commençant par r : il s''assimile en ir-, d''où irréversible.
+    Radical « révers- » (du latin revertere, revenir en arrière). Suffixe -ible (qui peut être) : irréversible =
+    qui ne peut pas revenir en arrière.'
+exercices:
+- enonce: Former l'adjectif négatif de « légal », « lisible » et « mobile » avec le bon préfixe.
+  indices:
+  - Le préfixe in- s'adapte à la consonne qui suit.
+  solution: illégal (devant l), illisible (devant l), immobile (devant m).
+- enonce: Le mot « photographie » contient les étymons grecs « photo- » et « -graphie ». Donner leur sens et en
+    déduire le sens global du mot.
+  indices:
+  - photo- = lumière ; -graphie = écriture, action d'écrire/dessiner.
+  solution: 'photo- (lumière) + -graphie (action d''écrire, de fixer) : la photographie est littéralement une «
+    écriture par la lumière ».'
+sources:
+- titre: Wikipédia, « Préfixe (linguistique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Pr%C3%A9fixe_%28linguistique%29&oldid=220194495
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Suffixe (linguistique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Suffixe_%28linguistique%29&oldid=216037099
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

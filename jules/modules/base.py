@@ -1,10 +1,12 @@
 """Contrat commun des modules.
 
 Un module = jules/modules/<id>.py avec une classe `Brique(Module)`. Il peut :
+  - agir avant la reponse (bloquant, court) -> avant_echange(conv, eleve)
   - contribuer au prompt systeme           -> contribution(conv)
   - agir apres chaque echange (en tache de fond) -> apres_echange(conv, eleve, bot)
   - declarer des taches planifiees          -> taches()
-  - exposer des routes HTTP                 -> routes()  (montees sous /api/modules/<id>)
+  - exposer des routes HTTP parent         -> routes()  (montees sous /api/modules/<id>)
+  - exposer des routes HTTP eleve          -> routes_eleve()  (montees sous /api/eleve/<id>)
   - donner des infos a l'interface          -> infos_interface()
 Tout est optionnel : un module n'implemente que ce dont il a besoin.
 """
@@ -39,6 +41,9 @@ class Module:
         self.tuteur = tuteur
         self.reglages = reglages
 
+    def avant_echange(self, conv: Conversation, eleve: Message) -> None:
+        return None
+
     def contribution(self, conv: Conversation) -> str | None:
         return None
 
@@ -49,6 +54,9 @@ class Module:
         return []
 
     def routes(self) -> APIRouter | None:
+        return None
+
+    def routes_eleve(self) -> APIRouter | None:
         return None
 
     def infos_interface(self) -> dict[str, Any]:

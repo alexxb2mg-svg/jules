@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: analyse-critique-interpretation
+declencheurs:
+- interpreter une oeuvre d'art
+- que veut dire cette peinture
+- analyse critique d'un tableau
+- sens d'une oeuvre
+- message de l'artiste
+essentiel: 'Analyser une œuvre, c''est aller au-delà de la simple description pour expliquer comment elle fonctionne
+  : pourquoi telle couleur, telle composition, tel choix technique produisent tel effet.
+
+  Interpréter, c''est proposer un sens possible à l''œuvre (ce qu''elle raconte, ce qu''elle critique, ce qu''elle
+  célèbre), en s''appuyant sur des éléments observés et sur le contexte de sa création (époque, commande, intentions
+  connues de l''artiste).
+
+  Une bonne interprétation reste prudente : elle utilise des formules comme « on peut penser que » plutôt que des
+  affirmations catégoriques, car plusieurs interprétations peuvent coexister pour une même œuvre.
+
+  L''analyse critique peut aussi questionner la réception de l''œuvre : comment elle a été perçue à son époque (scandale,
+  succès) et comment elle est perçue aujourd''hui.'
+methode:
+- Partir d'une description précise avant de chercher un sens.
+- Relier les choix plastiques ou musicaux observés (couleur, composition, technique) à un effet ressenti.
+- Utiliser le contexte historique connu (époque, commande, événement) pour éclairer une interprétation.
+- Formuler l'interprétation avec prudence (« on peut penser que », « cela pourrait évoquer »).
+erreurs_frequentes:
+- Affirmer une interprétation comme une vérité unique et certaine.
+- Interpréter sans s'appuyer sur un élément concret observé dans l'œuvre.
+- Ignorer le contexte historique de création, qui éclaire souvent le sens d'une œuvre.
+exemple:
+  enonce: Une peinture représentant une scène de bataille utilise des couleurs sombres et des corps désarticulés
+    au sol.
+  solution: On peut interpréter ces choix (couleurs sombres, corps désarticulés) comme une volonté de montrer l'horreur
+    de la guerre plutôt que de la glorifier, contrairement à d'autres peintures historiques plus héroïques de la
+    même époque.
+exercices:
+- enonce: 'À l''oral (type brevet) : pour une œuvre déjà décrite, propose une interprétation en une ou deux phrases,
+    en citant l''élément précis de l''œuvre qui la justifie.'
+  indices:
+  - Utilise la formule « on peut penser que… parce que… ».
+  solution: Réussite si l'interprétation reste prudente et s'appuie explicitement sur un élément observable de l'œuvre.
+- enonce: Cherche comment une œuvre étudiée en classe a été reçue à sa création (scandale, succès, indifférence)
+    et compare avec sa réception aujourd'hui.
+  indices:
+  - Certaines œuvres impressionnistes ont d'abord été moquées avant d'être célébrées.
+  solution: Réussite si la comparaison identifie un changement ou une continuité réel dans la réception de l'œuvre,
+    appuyé sur une recherche.
+sources:
+- titre: Wikipédia, « Art abstrait »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_abstrait&oldid=239711738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

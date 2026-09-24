@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transformation-chimique-molecules-atomes-ions
+couverture: Notion de transformation chimique, molécules, atomes, ions et conservation de la masse ; l'écriture
+  d'équations de réaction équilibrées est traitée avec des exemples fournis.
+declencheurs:
+- réaction chimique
+- avant/après une réaction
+- atomes se réarrangent
+- conservation de la masse
+- équation de réaction
+- réactifs et produits
+essentiel: 'Une transformation chimique change la nature des espèces chimiques présentes : des réactifs disparaissent
+  et de nouveaux produits apparaissent (contrairement à un simple mélange ou à un changement d''état, qui ne créent
+  pas de nouvelle substance).
+
+  La matière est faite de molécules (groupes d''atomes liés, comme H2O) et d''atomes isolés ou combinés. Un ion
+  est un atome (ou un groupe d''atomes) qui a perdu ou gagné des électrons et porte donc une charge électrique.
+
+  Lors d''une transformation chimique, les atomes présents dans les réactifs ne disparaissent pas : ils se réorganisent
+  pour former les produits. C''est pourquoi la masse totale est conservée entre avant et après la réaction.
+
+  Une équation de réaction traduit cette transformation avec des formules chimiques : réactifs → produits, avec
+  des nombres (coefficients) qui assurent qu''il y a le même nombre de chaque type d''atome de part et d''autre.
+
+  Exemple : la combustion du carbone s''écrit C + O2 → CO2 (un atome de carbone et deux atomes d''oxygène de chaque
+  côté).'
+methode:
+- Repérer les réactifs (avant la flèche) et les produits (après la flèche) d'une équation.
+- 'Pour vérifier qu''une équation est correcte, compter le nombre d''atomes de chaque élément de chaque côté de
+  la flèche : ils doivent être égaux (conservation des atomes, donc de la masse).'
+- Si les nombres ne correspondent pas, ajuster les coefficients devant les formules (jamais les indices à l'intérieur
+  d'une formule, qui changeraient l'espèce chimique).
+- Utiliser la conservation de la masse pour retrouver la masse d'un réactif ou d'un produit manquant dans une expérience.
+erreurs_frequentes:
+- Changer les indices d'une formule (CO2 en CO3) pour équilibrer, ce qui change l'espèce chimique.
+- Croire que la masse totale change pendant une réaction chimique (elle est conservée).
+- Confondre transformation chimique et changement d'état ou simple mélange.
+- Oublier de multiplier tous les atomes d'une formule par son coefficient lors du comptage.
+exemple:
+  enonce: Vérifier que l'équation de la combustion du méthane CH4 + 2 O2 → CO2 + 2 H2O est équilibrée.
+  solution: 'À gauche : 1 C, 4 H, 4 O (2 × O2). À droite : 1 C (CO2), 4 H (2 × H2O), 2 + 2 = 4 O (CO2 apporte 2
+    O, 2 H2O apporte 2 O). Les nombres d''atomes correspondent : l''équation est équilibrée.'
+exercices:
+- enonce: L'équation 2 H2 + O2 → 2 H2O décrit la synthèse de l'eau. Compter les atomes d'hydrogène et d'oxygène
+    de chaque côté pour vérifier qu'elle est équilibrée.
+  indices:
+  - 2 H2 contient combien d'atomes H au total ?
+  solution: 'À gauche : 4 H (2 × H2) et 2 O. À droite : 4 H et 2 O (2 × H2O). C''est équilibré.'
+- enonce: Du fer (Fe) réagit avec du soufre (S) pour former du sulfure de fer (FeS). Écrire l'équation de cette
+    réaction et vérifier qu'elle est équilibrée.
+  indices:
+  - Un atome de fer et un atome de soufre donnent une unité de FeS.
+  solution: 'Fe + S → FeS. 1 Fe et 1 S de chaque côté : équilibrée.'
+- enonce: 5,6 g de fer réagissent entièrement avec 3,2 g de soufre. Quelle est la masse de sulfure de fer obtenue,
+    d'après la conservation de la masse ?
+  indices:
+  - La masse totale ne change pas pendant une transformation chimique.
+  solution: 5,6 + 3,2 = 8,8 g de sulfure de fer.
+sources:
+- titre: Vikidia, « Réaction chimique »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9action_chimique&oldid=2572456
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Atome »
+  url: https://fr.vikidia.org/w/index.php?title=Atome&oldid=2554609
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Molécule »
+  url: https://fr.vikidia.org/w/index.php?title=Mol%C3%A9cule&oldid=2334767
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

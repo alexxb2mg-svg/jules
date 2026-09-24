@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: variation-de-la-langue
+declencheurs:
+- mots nouveaux
+- emprunt à une langue
+- régionalisme
+- évolution du sens des mots
+- registre de langue
+- mot inventé
+- chocolatine
+essentiel: 'La langue française varie selon l''époque, le lieu et le contexte de communication.
+
+  Dans le temps, le sens des mots évolue (« gentil » signifiait autrefois « noble », il désigne aujourd''hui la
+  bienveillance), et de nouveaux mots apparaissent : c''est la néologie, qui crée des mots nouveaux (« covoiturage
+  », « selfie ») par dérivation, composition, ou en empruntant à d''autres langues (« email » de l''anglais, « pizza
+  » de l''italien).
+
+  Dans l''espace, on observe des régionalismes (mots employés dans une région : « chocolatine » pour pain au chocolat
+  dans le Sud-Ouest).
+
+  Selon le contexte et le moyen de communication, on choisit un registre différent : familier à l''oral entre amis,
+  soutenu à l''écrit formel, et des abréviations propres aux messages instantanés (« mdr », « stp »).'
+methode:
+- Identifier si la variation observée est due à l'époque, au lieu ou au contexte de communication.
+- 'Pour un mot nouveau : chercher s''il vient d''une dérivation, d''une composition ou d''un emprunt à une langue
+  étrangère.'
+- 'Pour un mot ancien : comparer son sens d''origine et son sens actuel.'
+- Adapter son propre registre de langue à la situation de communication (destinataire, écrit/oral).
+erreurs_frequentes:
+- Employer un registre familier dans un écrit formel (lettre, rédaction scolaire).
+- Croire qu'un mot a toujours eu le même sens qu'aujourd'hui.
+- Confondre emprunt (mot pris à une autre langue) et néologisme formé en français.
+- Ne pas reconnaître un régionalisme et le croire incorrect alors qu'il est simplement local.
+exemple:
+  enonce: Le mot « ordinateur » a été créé en 1955 pour traduire l'anglais « computer ». De quel type de variation
+    s'agit-il ?
+  solution: 'C''est un néologisme (mot nouveau), formé en français à partir du verbe latin « ordinare » plutôt qu''en
+    empruntant directement le mot anglais : une création lexicale liée à l''apparition d''une technologie nouvelle.'
+exercices:
+- enonce: Le mot « week-end » est-il un emprunt ou une dérivation française ? Justifier.
+  indices:
+  - De quelle langue ce mot vient-il ?
+  solution: C'est un emprunt à l'anglais (week-end), entré tel quel dans le vocabulaire français courant.
+- enonce: 'Réécrire dans un registre soutenu : « T''inquiète, ça va être trop bien ! »'
+  indices:
+  - Éviter les abréviations et le vocabulaire familier.
+  solution: 'Exemple de réponse : « Ne t''inquiète pas, cela se passera très bien. »'
+sources:
+- titre: Wikipédia, « Variation linguistique »
+  url: https://fr.wikipedia.org/w/index.php?title=Variation_linguistique&oldid=229651894
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

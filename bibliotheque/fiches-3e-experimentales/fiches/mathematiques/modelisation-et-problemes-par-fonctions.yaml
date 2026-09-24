@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: modelisation-et-problemes-par-fonctions
+declencheurs: ["tarif", "tarifs", "formule", "offre", "offres", "abonnement", "plus avantageux", "moins cher"]
+essentiel: 'Modéliser, c''est choisir une fonction qui décrit comment une grandeur dépend d''une autre (un prix
+  selon le nombre de séances, une distance selon le temps…).
+
+  Au collège : fonction linéaire (proportionnalité), fonction affine (partie fixe + partie proportionnelle), ou
+  fonction donnée par une formule (aire, chute d''un objet…).
+
+  Pour résoudre le problème, on peut calculer (expression, équation), lire un tableau ou lire un graphique. Comparer
+  deux offres revient souvent à chercher où leurs courbes se croisent.
+
+  Un modèle a ses limites : il ne vaut que pour certaines valeurs (un temps positif, un nombre entier de séances…).'
+methode:
+- Nommer la variable (x = …, avec l'unité) et exprimer la grandeur cherchée en fonction de x.
+- Reconnaître le type de fonction (linéaire, affine, autre).
+- 'Choisir l''outil : calcul d''image, équation pour un antécédent, graphique pour comparer.'
+- 'Pour comparer deux offres : résoudre f(x) = g(x), puis tester une valeur de chaque côté.'
+- Répondre dans le contexte, avec l'unité, et vérifier la vraisemblance.
+erreurs_frequentes:
+- Oublier la partie fixe d'un tarif.
+- Donner le point d'intersection sans dire quelle offre est la moins chère de chaque côté.
+- Appliquer le modèle en dehors de son domaine (un temps négatif, 2,7 séances…).
+exemple:
+  enonce: 'Location de vélo : tarif A, 10 € d''adhésion puis 2 € par heure ; tarif B, 4 € par heure. À partir de
+    combien d''heures le tarif A est-il plus avantageux ?'
+  solution: 'A(x) = 2x + 10 et B(x) = 4x (x en heures). 2x + 10 = 4x donne x = 5 (20 € dans les deux cas). Pour
+    8 h : A = 26 € et B = 32 €. Le tarif A est plus avantageux au-delà de 5 heures.'
+exercices:
+- enonce: 'On lâche une bille : la distance parcourue (en m) après t secondes est d(t) = 4,9t². Quelle distance
+    après 2 s ?'
+  indices:
+  - Remplace t par 2 ; le carré d'abord.
+  solution: d(2) = 4,9 × 4 = 19,6 m.
+- enonce: Un réservoir contient 60 L et se vide de 4 L par minute. Exprimer le volume V(t) après t minutes. Combien
+    reste-t-il après 6 min ? Quand reste-t-il 20 L ?
+  indices:
+  - On part de 60 et on enlève 4 par minute.
+  - Résous 60 − 4t = 20.
+  solution: V(t) = 60 − 4t ; V(6) = 36 L ; 60 − 4t = 20 donne t = 10 min.
+sources:
+- titre: Wikiversité, « Généralités sur les fonctions/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Fonction affine »
+  url: https://fr.vikidia.org/w/index.php?title=Fonction_affine&oldid=2434748
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,96 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: vichy-collaboration-resistance
+declencheurs:
+- Pétain
+- maréchal Pétain
+- zone libre
+- zone occupée
+- STO
+- Jean Moulin
+- appel du 18 juin
+- collaboration d'État
+- France libre
+essentiel: 'Après la défaite de juin 1940 face à l''Allemagne nazie, le maréchal Pétain signe l''armistice le 22
+  juin 1940. La France est coupée en deux : zone occupée au nord, « zone libre » au sud. Le gouvernement s''installe
+  à Vichy ; Pétain, devenu « chef de l''État français », met en place un régime autoritaire (régime de Vichy, 10
+  juillet 1940 - 20 août 1944) qui rejette les valeurs républicaines : plus d''élections, devise « Travail, Famille,
+  Patrie », exclusion des Juifs de la fonction publique dès 1940. Pierre Laval pousse à une collaboration d''État
+  avec l''Allemagne nazie.
+
+  Dès le 18 juin 1940, le général de Gaulle lance depuis Londres un appel à continuer le combat : il fonde la France
+  libre. En France occupée, une résistance intérieure se développe, d''abord dispersée. En 1943, Jean Moulin réunit
+  les principaux mouvements de résistance au sein du Conseil national de la Résistance (CNR), qui reconnaît de Gaulle
+  comme le chef de la Résistance.'
+methode:
+- 'Distinguer trois réalités françaises entre 1940 et 1944 : le régime de Vichy (collaboration), la Résistance intérieure
+  et la France libre de De Gaulle (depuis Londres).'
+- 'Retenir les dates clés : armistice du 22 juin 1940, appel du 18 juin 1940, régime de Vichy jusqu''en août 1944.'
+- Montrer que la Résistance agit à la fois contre l'occupant nazi et contre le régime de Vichy, jugé contraire aux
+  valeurs républicaines.
+- Ne pas confondre « collaboration » (choix politique de Vichy) et simple « occupation » (fait militaire subi).
+vocabulaire:
+- terme: collaboration
+  definition: la politique du régime de Vichy qui choisit de coopérer avec l'Allemagne nazie occupante
+- terme: Résistance
+  definition: l'ensemble des Français qui refusent l'occupation allemande et le régime de Vichy et luttent pour
+    libérer la France
+- terme: France libre
+  definition: le mouvement fondé par le général de Gaulle depuis Londres à partir du 18 juin 1940 pour continuer
+    le combat
+erreurs_frequentes:
+- 'Confondre zone occupée et zone libre : la « zone libre » reste sous l''autorité de Vichy, pas sous occupation
+  directe allemande (jusqu''en novembre 1942).'
+- 'Croire que tous les Français résistent ou collaborent : la majorité s''accommode ou attend.'
+- Oublier que le régime de Vichy prend des mesures antisémites dès 1940, avant la Shoah.
+- 'Situer l''appel du 18 juin après l''armistice : il est lancé la veille de sa signature, en réaction au discours
+  de Pétain annonçant l''arrêt des combats.'
+exemple:
+  enonce: Explique pourquoi la Résistance combat à la fois l'occupant allemand et le régime de Vichy.
+  solution: La Résistance refuse l'occupation du territoire par l'Allemagne nazie, mais aussi la soumission du régime
+    de Vichy, qui collabore avec l'occupant et rejette les valeurs républicaines (suppression des élections, exclusion
+    des Juifs). Résister, c'est donc lutter sur ces deux fronts à la fois.
+exercices:
+- enonce: Donne les dates de l'armistice, de l'appel du 18 juin et de la fin du régime de Vichy.
+  indices:
+  - L'appel précède de peu l'armistice.
+  solution: Appel du 18 juin 1940 ; armistice signé le 22 juin 1940 ; régime de Vichy du 10 juillet 1940 au 20 août
+    1944.
+- enonce: 'Développement construit : présente le rôle de Jean Moulin dans l''organisation de la Résistance.'
+  indices:
+  - Que crée-t-il en 1943 ?
+  - Quel chef reconnaît-il ?
+  solution: Un développement réussi doit situer Jean Moulin comme un résistant envoyé par de Gaulle pour unifier
+    les mouvements de résistance intérieure ; expliquer qu'il fonde en 1943 le Conseil national de la Résistance
+    (CNR), qui regroupe résistants, partis politiques et syndicats ; préciser que le CNR reconnaît de Gaulle comme
+    chef de la Résistance, renforçant sa légitimité face aux Alliés.
+- enonce: Quelle est la différence entre le régime de Vichy et la France libre ?
+  indices:
+  - Où sont-ils installés ?
+  - Quelle est leur position face à l'Allemagne nazie ?
+  solution: Le régime de Vichy, dirigé par Pétain, gouverne une partie de la France depuis Vichy et choisit la collaboration
+    avec l'Allemagne nazie. La France libre, fondée par de Gaulle à Londres, refuse la défaite et continue le combat
+    aux côtés des Alliés.
+sources:
+- titre: Vikidia, « Régime de Vichy »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9gime_de_Vichy&oldid=2154610
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Résistance française »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9sistance_fran%C3%A7aise&oldid=2464574
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Conseil national de la Résistance »
+  url: https://fr.vikidia.org/w/index.php?title=Conseil_national_de_la_R%C3%A9sistance&oldid=2179810
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

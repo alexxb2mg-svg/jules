@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: prototypage-solutions
+declencheurs:
+- prototype
+- maquette
+- test de solution
+- modèle numérique
+- essai
+- valider une idée
+essentiel: 'Un prototype est un modèle original qui possède les principales qualités techniques et caractéristiques
+  de fonctionnement d''un futur produit, mais qui n''est pas encore le produit final. Il sert à tester et valider
+  (ou invalider) une solution technique avant sa production en plus grand nombre.
+
+
+  Le prototypage peut être numérique (modèle 3D simulé sur ordinateur, sans matière) ou physique (maquette réelle,
+  fabriquée en un seul ou quelques exemplaires, par exemple par impression 3D). Un prototype physique permet de
+  tester des aspects qu''une simulation ne peut pas toujours vérifier (ergonomie réelle, résistance mécanique réelle,
+  assemblage).
+
+
+  Prototyper une solution suit une démarche : réaliser le prototype à partir de la conception, le tester dans des
+  conditions représentatives de l''usage réel, comparer les résultats aux exigences du cahier des charges, puis
+  modifier la conception si nécessaire (le prototypage est souvent itératif).'
+methode:
+- Réaliser le prototype à partir du modèle numérique ou du plan de conception.
+- Définir les tests à réaliser en lien avec les exigences du cahier des charges.
+- Tester le prototype dans des conditions proches de l'usage réel.
+- Comparer les résultats aux exigences attendues et modifier la conception si un écart est constaté.
+vocabulaire:
+- terme: prototype
+  definition: modèle original qui possède les qualités techniques d'un futur produit, destiné à être testé
+- terme: itératif
+  definition: qui se répète par étapes successives, chacune s'appuyant sur les résultats de la précédente
+erreurs_frequentes:
+- 'Croire qu''un prototype doit être parfait dès le premier essai : il est normal de le modifier après les tests.'
+- Tester un prototype dans des conditions trop différentes de l'usage réel, ce qui fausse les résultats.
+- Ne pas comparer les résultats du test aux exigences précises du cahier des charges.
+exemple:
+  enonce: Un groupe fabrique un prototype de support de smartphone en impression 3D. Le cahier des charges exige
+    qu'il supporte un téléphone de 200 g sans se casser. Décrire un test possible.
+  solution: Poser sur le prototype un poids de 200 g (ou un téléphone de cette masse) pendant plusieurs minutes
+    et observer s'il se déforme ou casse. Si le prototype casse ou se déforme trop, il faut revoir l'épaisseur ou
+    le matériau avant de fabriquer une nouvelle version.
+exercices:
+- enonce: Expliquer la différence entre un prototype numérique et un prototype physique.
+  indices:
+  - L'un existe seulement sur ordinateur, l'autre est un objet réel.
+  solution: Un prototype numérique est un modèle simulé sur ordinateur (sans matière réelle), utile pour vérifier
+    des dimensions ou un assemblage virtuel. Un prototype physique est un objet réel fabriqué en un ou quelques
+    exemplaires, qui permet de tester des propriétés réelles (résistance, ergonomie) qu'une simulation ne capture
+    pas toujours parfaitement.
+sources:
+- titre: Wikipédia, « Prototype »
+  url: https://fr.wikipedia.org/w/index.php?title=Prototype&oldid=233294886
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: identifier-decrire-organisation-musicale
+declencheurs:
+- comprendre la structure d'une chanson
+- reperer le refrain et les couplets
+- organisation d'un morceau de musique
+- structure musicale
+- plan d'une oeuvre musicale
+essentiel: 'Une œuvre musicale a une organisation dans le temps : elle s''appuie sur des éléments qui se répètent
+  (un refrain, un motif) et d''autres qui varient ou contrastent (un couplet différent, un changement de tonalité).
+
+  Identifier cette organisation, c''est repérer les moments où la musique revient à l''identique, où elle change
+  légèrement, ou où elle introduit quelque chose de nouveau.
+
+  Cette organisation s''appuie sur des paramètres du son (hauteur, durée, timbre, intensité) qui changent ensemble
+  ou séparément pour créer une structure repérable, même dans une musique qu''on découvre pour la première fois.
+
+  Décrire cette organisation demande d''utiliser un vocabulaire précis (introduction, couplet, refrain, pont, coda)
+  qui aide à comparer différentes œuvres entre elles.'
+methode:
+- Écouter l'œuvre en entier une première fois sans rien noter.
+- Réécouter en repérant les moments qui se répètent à l'identique.
+- Repérer ensuite les moments qui changent ou contrastent avec ce qui précède.
+- Nommer les grandes parties repérées avec un vocabulaire adapté (introduction, couplet, refrain…).
+erreurs_frequentes:
+- Confondre une simple répétition de mélodie et un vrai contraste structurel.
+- Décrire l'organisation d'un morceau uniquement à partir des paroles, sans écouter la musique.
+- Utiliser des termes de structure sans être sûr de ce qu'ils désignent précisément.
+exemple:
+  enonce: Une chanson commence par une courte introduction instrumentale, suivie d'un couplet, d'un refrain qui
+    revient identique deux fois, puis d'un second couplet différent, et se termine par le refrain répété.
+  solution: 'On peut décrire l''organisation ainsi : introduction – couplet 1 – refrain – couplet 2 – refrain (répété).
+    Le refrain identique aux deux passages est l''élément stable, les couplets apportent la variation.'
+exercices:
+- enonce: 'À la maison : écoute une chanson que tu connais bien et note, avec des lettres (A pour refrain, B pour
+    couplet…), l''ordre des grandes parties que tu identifies.'
+  indices:
+  - 'Repère d''abord le refrain : c''est souvent la partie la plus répétée et la plus mémorisable.'
+  solution: Réussite si le schéma de lettres correspond bien à l'ordre réel des parties du morceau, vérifié en réécoutant.
+- enonce: Compare la structure de deux chansons différentes et note si elles suivent le même schéma (couplet-refrain)
+    ou un schéma différent.
+  indices:
+  - Certaines musiques n'ont pas de refrain du tout, notamment en musique classique.
+  solution: Réussite si la comparaison identifie clairement une ressemblance ou une différence de structure entre
+    les deux morceaux.
+sources:
+- titre: Wikipédia, « Forme musicale »
+  url: https://fr.wikipedia.org/w/index.php?title=Forme_musicale&oldid=238830203
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

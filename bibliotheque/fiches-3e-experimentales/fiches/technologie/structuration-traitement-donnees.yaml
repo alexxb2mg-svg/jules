@@ -1,0 +1,76 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: structuration-traitement-donnees
+declencheurs:
+- tableur
+- base de données
+- tableau
+- formule
+- tri de données
+- graphique
+- colonne
+- ligne
+- cellule
+essentiel: 'Un tableur est un logiciel (comme Excel, Google Sheets ou LibreOffice Calc) qui organise des données
+  dans un tableau composé de lignes et de colonnes ; chaque case s''appelle une cellule, repérée par une lettre
+  (colonne) et un nombre (ligne), par exemple B3. Un tableur permet de saisir des données, de les trier, de les
+  filtrer, de réaliser des calculs automatiques avec des formules (par exemple une somme ou une moyenne) et de créer
+  des graphiques pour les visualiser.
+
+
+  Une donnée numérique (un nombre) est traitée différemment d''une donnée textuelle : un tableur peut faire des
+  calculs sur une colonne de nombres, mais pas sur du texte. Structurer des données, c''est les organiser de façon
+  cohérente (une ligne = une observation, une colonne = une caractéristique) pour pouvoir les traiter automatiquement.
+
+
+  Une base de données est un ensemble plus large et structuré de données, organisées en tables, que plusieurs programmes
+  ou utilisateurs peuvent consulter et modifier (par exemple la base des élèves d''un établissement).'
+methode:
+- Pour organiser des données dans un tableur, mettre un intitulé clair en première ligne de chaque colonne, et une
+  seule information par cellule.
+- Pour calculer automatiquement, utiliser une formule (par exemple =SOMME(B2:B10) pour additionner une plage de
+  cellules).
+- Pour visualiser des données, choisir un type de graphique adapté (histogramme pour comparer des quantités, courbe
+  pour une évolution dans le temps).
+- Pour trier ou filtrer, s'assurer que chaque colonne contient bien le même type de donnée du début à la fin.
+vocabulaire:
+- terme: cellule
+  definition: case d'un tableur repérée par une lettre de colonne et un numéro de ligne
+- terme: formule
+  definition: instruction de calcul automatique dans un tableur (commence souvent par le signe =)
+- terme: base de données
+  definition: ensemble structuré de données organisées en tables, consultable par plusieurs utilisateurs ou programmes
+erreurs_frequentes:
+- Mélanger du texte et des nombres dans une même colonne, ce qui empêche les calculs automatiques.
+- Oublier le signe = au début d'une formule dans un tableur.
+- Confondre tableur (logiciel de calcul en tableau) et base de données (structure de données plus large, souvent
+  partagée).
+- Choisir un graphique mal adapté aux données (par exemple un histogramme pour une évolution dans le temps, où une
+  courbe serait plus lisible).
+exemple:
+  enonce: Un tableur contient les notes de dix élèves en colonne B (de B2 à B11). Écrire la formule permettant de
+    calculer la moyenne de la classe.
+  solution: =MOYENNE(B2:B11)
+exercices:
+- enonce: Dans un tableur, la cellule A1 contient « Distance (km) » et les cellules A2 à A6 contiennent des distances.
+    Écrire la formule pour additionner ces distances dans la cellule A8.
+  indices:
+  - Utilise la fonction SOMME.
+  solution: =SOMME(A2:A6)
+- enonce: Pourquoi ne peut-on pas calculer la somme d'une colonne qui contient à la fois des nombres et du texte
+    comme « en cours » ?
+  indices:
+  - Pense à ce qu'un tableur peut ou ne peut pas additionner.
+  solution: 'Un tableur ne peut additionner que des valeurs numériques : une cellule contenant du texte est ignorée
+    ou provoque une erreur dans le calcul, la colonne doit donc contenir un seul type de donnée.'
+sources:
+- titre: Vikidia, « Tableur »
+  url: https://fr.vikidia.org/w/index.php?title=Tableur&oldid=2342127
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

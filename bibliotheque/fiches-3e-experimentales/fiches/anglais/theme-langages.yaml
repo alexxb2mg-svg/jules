@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-langages
+declencheurs:
+- médias en anglais
+- réseaux sociaux en anglais
+- chanson en anglais
+- film en anglais
+- art et langage
+- codes culturels anglais
+- BD en anglais
+essentiel: 'Le thème « Langages » regroupe les façons dont les sociétés anglophones communiquent et s''expriment,
+  à travers différents supports.
+
+
+  Les codes socio-culturels désignent les usages propres à une culture (comment on salue quelqu''un, comment on
+  écrit une lettre formelle, les symboles utilisés dans les graphiques, tableaux ou cartes d''un pays anglophone),
+  qui aident à interpréter correctement un document.
+
+
+  Les médias regroupent la presse, la télévision, les réseaux sociaux et la publicité des pays anglophones, qui
+  permettent de découvrir la société contemporaine à travers ses propres modes de communication.
+
+
+  Les langages artistiques (peinture, musique, poésie, cinéma, théâtre, littérature, bande dessinée, science-fiction)
+  sont une autre façon d''aborder la langue et la culture, à travers des œuvres qui peuvent être citées et présentées
+  sans être reproduites intégralement.'
+methode:
+- Identifier le type de support étudié (média, œuvre artistique, document graphique) avant d'en analyser le contenu.
+- Repérer les codes socio-culturels spécifiques au support (par exemple, la structure d'un tweet, d'une publicité,
+  ou d'une légende de tableau).
+- Relier le document étudié à la culture du pays anglophone concerné.
+vocabulaire:
+- terme: code socio-culturel
+  definition: usage propre à une culture qui aide à interpréter un document (formule de politesse, symbole, mise
+    en page)
+erreurs_frequentes:
+- Analyser un document anglophone avec les seuls codes français, sans tenir compte des usages propres au pays concerné.
+- Confondre un langage artistique (peinture, musique) avec un média d'information (presse, télévision).
+- Citer ou reproduire intégralement une œuvre protégée au lieu de la présenter et d'en parler.
+exemple:
+  enonce: On étudie une publicité britannique pour une boisson. Quels éléments peut-on analyser sans reproduire
+    l'œuvre elle-même ?
+  solution: On peut décrire ce que l'on voit (couleurs, slogan, personnages représentés), analyser le message qu'elle
+    cherche à transmettre, et le comparer à des publicités françaises pour en dégager les codes propres à la culture
+    britannique, sans recopier ni décrire l'image au point de la remplacer.
+exercices:
+- enonce: Citer trois types de « langages artistiques » que l'on peut étudier en cours d'anglais.
+  indices:
+  - Pense à la musique, aux images, aux textes.
+  solution: 'Exemples possibles : la musique et les chansons, la peinture, le cinéma, la littérature, la bande dessinée,
+    le théâtre.'
+sources:
+- titre: Simple English Wikipedia, « United Kingdom »
+  url: https://simple.wikipedia.org/w/index.php?title=United_Kingdom&oldid=11001367
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

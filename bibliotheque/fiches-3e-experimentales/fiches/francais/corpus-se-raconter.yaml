@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: corpus-se-raconter
+declencheurs:
+- groupement de textes
+- lecture intégrale
+- autobiographie à lire
+- extraits sur l'enfance
+- livre sur sa propre vie
+- roman autobiographique
+- recueil de lettres
+essentiel: 'Ce corpus rassemble des œuvres et extraits qui relèvent du récit de soi et de l''autoportrait, d''époques
+  et de genres variés : essai, mémoires, autobiographie, roman autobiographique, journal et correspondance intimes.
+  On peut lire une œuvre entière (lecture intégrale) — par exemple les Confessions de Rousseau, une autobiographie
+  de Simone Veil, un roman autobiographique — ou un ensemble de courts extraits choisis sur un même thème (groupement
+  de textes).
+
+  Le corpus peut aussi croiser la littérature avec d''autres arts : autoportraits peints (Dürer, Rembrandt, Van
+  Gogh), photographies, films autobiographiques. Lire plusieurs textes sur un même sujet permet de comparer les
+  façons de se raconter selon l''époque, le genre et la personnalité de chaque auteur.
+
+  Ce travail développe la capacité à situer une œuvre dans son contexte (quand a-t-elle été écrite, dans quelles
+  circonstances) et à mettre en relation plusieurs textes autour d''une même question.'
+methode:
+- 'Pour une lecture intégrale : noter le titre, l''auteur, l''époque et le sujet principal de l''œuvre avant de
+  commencer.'
+- 'Pour un groupement : repérer le point commun entre les textes (le thème qui les réunit).'
+- Identifier, pour chaque extrait, la forme précise (lettre, page de journal, chapitre de mémoires…).
+- 'Comparer les textes entre eux : que racontent-ils de façon différente sur le fait de se raconter ?'
+- Relier, si le corpus le permet, un texte à une œuvre picturale sur le même principe (l'autoportrait).
+erreurs_frequentes:
+- Résumer un extrait sans dire à quel genre il appartient (lettre ? journal ? mémoires ?).
+- Étudier chaque texte du groupement isolément, sans jamais les comparer entre eux.
+- Oublier de situer l'œuvre dans son époque avant de l'analyser.
+- Confondre une lecture cursive (à faire seul, en autonomie) et une lecture intégrale étudiée en classe.
+exemple:
+  enonce: Un groupement de textes réunit un extrait des Confessions de Rousseau, une page de journal intime imaginaire
+    et un autoportrait peint de Van Gogh. Que peut-on en dire malgré la diversité des formes ?
+  solution: 'Les trois documents partagent le même geste : une personne cherche à se représenter elle-même, par
+    l''écrit (récit, journal) ou par l''image (peinture). Comparer les formes permet de voir que « se raconter »
+    n''est pas réservé au texte.'
+exercices:
+- enonce: Cite trois formes différentes que peut prendre un texte de ce corpus.
+  indices:
+  - 'Relis l''essentiel : essai, mémoires, autobiographie…'
+  solution: 'Par exemple : autobiographie, journal intime, correspondance (ou mémoires, roman autobiographique,
+    essai).'
+- enonce: 'Pour une œuvre autobiographique que tu as lue ou que tu choisis (même en résumé), rédige une fiche de
+    5 lignes : titre, auteur, époque, sujet principal, un passage marquant.'
+  indices:
+  - 'Une fiche de lecture répond à : qui écrit, quand, sur quoi, avec quel effet.'
+  solution: Réussite si les cinq informations demandées figurent clairement et si le passage choisi est justifié
+    en une phrase.
+sources:
+- titre: Wikipédia, « Autobiographie »
+  url: https://fr.wikipedia.org/w/index.php?title=Autobiographie&oldid=236979671
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Les Confessions (Rousseau)/Préface »
+  url: https://fr.wikisource.org/w/index.php?title=Les_Confessions_%28Rousseau%29/Pr%C3%A9face&oldid=12247741
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé (présentation de l'édition)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

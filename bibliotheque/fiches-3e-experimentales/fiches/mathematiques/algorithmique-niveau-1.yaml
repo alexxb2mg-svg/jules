@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: algorithmique-niveau-1
+declencheurs: ["scratch", "lutin", "avancer", "tourner", "répéter", "script", "stylo", "programme"]
+essentiel: 'Un algorithme est une suite d''instructions, dans un ordre précis, qui permet de résoudre un problème.
+  On peut en exécuter « à la main », sans ordinateur (algorithmique débranchée).
+
+  En programmation par blocs (Scratch), on assemble des blocs : « avancer de … pas », « tourner de … degrés », «
+  stylo en position d''écriture »…
+
+  La boucle « répéter n fois » exécute les blocs qu''elle contient n fois : elle évite de recopier des instructions.
+
+  L''instruction conditionnelle « si … alors » n''exécute des blocs que si une condition est vraie.
+
+  Pour tracer un polygone régulier à n côtés : répéter n fois (avancer de la longueur du côté ; tourner de 360°
+  ÷ n).'
+methode:
+- Lire le programme instruction par instruction, en suivant l'ordre.
+- Faire un petit dessin ou un tableau pour suivre la position et l'orientation du lutin.
+- Repérer ce qui se répète pour l'écrire avec une boucle.
+- Tester le programme et corriger (déboguer) si le résultat n'est pas celui attendu.
+erreurs_frequentes:
+- 'Tourner de l''angle intérieur du polygone (90° marche pour le carré, mais pas 60° pour le triangle équilatéral
+  : il faut 120°).'
+- Placer un bloc à l'extérieur de la boucle au lieu de l'intérieur (ou l'inverse).
+- Oublier de mettre le stylo en position d'écriture.
+exemple:
+  enonce: Écrire un script qui trace un carré de côté 50 pas.
+  solution: 'stylo en position d''écriture ; répéter 4 fois : avancer de 50 pas, tourner de 90 degrés. Le lutin
+    revient à son point de départ.'
+exercices:
+- enonce: De quel angle faut-il tourner pour tracer un triangle équilatéral ? un pentagone régulier ? un hexagone
+    régulier ?
+  indices:
+  - Le lutin fait un tour complet (360°) en tout.
+  solution: 360 ÷ 3 = 120° ; 360 ÷ 5 = 72° ; 360 ÷ 6 = 60°.
+- enonce: 'Un script contient « répéter 6 fois : avancer de 30 ; tourner de 60° ». Quelle figure trace-t-il ?'
+  indices:
+  - 6 côtés égaux, 6 × 60° = 360°.
+  solution: Un hexagone régulier de côté 30 pas.
+- enonce: 'Remettre dans l''ordre pour tracer un carré : « tourner de 90° », « stylo en position d''écriture »,
+    « répéter 4 fois », « avancer de 50 ».'
+  indices:
+  - Le stylo se pose avant de tracer.
+  solution: stylo en position d'écriture ; répéter 4 fois [avancer de 50 ; tourner de 90°].
+sources:
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Programmation par blocs »
+  url: https://fr.vikidia.org/w/index.php?title=Programmation_par_blocs&oldid=2086190
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Scratch (logiciel) »
+  url: https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: forme
+declencheurs:
+- forme musicale c'est quoi
+- structure couplet refrain
+- sonate ou symphonie
+- difference entre genre et forme musicale
+- plan d'une oeuvre classique
+essentiel: 'La forme musicale est la structure générale d''une œuvre : elle peut être très simple (une forme strophique
+  où le même motif se répète pour chaque couplet, une forme couplet-refrain) ou plus complexe (plusieurs mouvements
+  distincts, comme dans une symphonie).
+
+  Il ne faut pas confondre la forme et le genre musical : le genre catégorise un type de musique (la sonate, le
+  blues, la chanson) alors que la forme désigne l''organisation interne d''une pièce, même si certains genres imposent
+  souvent une forme particulière.
+
+  Une forme peut s''analyser à plusieurs niveaux : l''organisation générale de l''œuvre (en un ou plusieurs mouvements),
+  puis à l''intérieur de chaque mouvement, l''organisation en sections, puis en phrases plus courtes.
+
+  Reconnaître une forme aide à mieux suivre une œuvre à l''écoute, en anticipant le retour d''un thème déjà entendu
+  ou l''arrivée d''une partie nouvelle.'
+methode:
+- Écouter l'œuvre en repérant les grandes sections (changements de thème, de tempo, d'instrumentation).
+- Vérifier si un même motif ou thème revient à l'identique (forme strophique ou couplet-refrain).
+- Distinguer la forme (structure) du genre (catégorie), qui sont deux informations différentes.
+- Nommer la forme repérée avec le vocabulaire adapté si elle correspond à une forme connue.
+erreurs_frequentes:
+- Confondre le genre musical (par exemple « une sonate ») et la forme (l'organisation interne de la pièce).
+- Ne pas repérer qu'un motif entendu au début revient plus tard, identique ou légèrement modifié.
+- Croire que toutes les musiques suivent un schéma couplet-refrain.
+exemple:
+  enonce: Une chanson répète exactement la même mélodie pour chaque nouveau couplet, seules les paroles changent.
+  solution: 'Il s''agit d''une forme strophique : la structure musicale reste identique d''un couplet à l''autre,
+    seul le texte varie, contrairement à une forme couplet-refrain où une partie contrastante (le refrain) revient
+    entre les couplets.'
+exercices:
+- enonce: 'À la maison : écoute une chanson connue et détermine si sa forme est strophique (même musique à chaque
+    couplet) ou couplet-refrain (une partie contrastante qui revient).'
+  indices:
+  - Compare la musique du premier couplet à celle du deuxième couplet.
+  solution: Réussite si la forme identifiée correspond bien à ce qui est réellement entendu, vérifié en réécoutant
+    les deux couplets.
+- enonce: Cherche la différence entre le mot « genre musical » et le mot « forme musicale » et donne un exemple
+    de chacun.
+  indices:
+  - Le rap est un genre ; le couplet-refrain est une forme.
+  solution: Réussite si les deux exemples donnés correspondent bien aux bonnes catégories (genre / forme).
+sources:
+- titre: Wikipédia, « Forme musicale »
+  url: https://fr.wikipedia.org/w/index.php?title=Forme_musicale&oldid=238830203
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

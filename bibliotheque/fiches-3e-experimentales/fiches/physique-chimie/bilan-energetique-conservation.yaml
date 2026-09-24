@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: bilan-energetique-conservation
+declencheurs:
+- énergie perdue
+- rendement
+- P = E / t
+- conservation de l'énergie
+- énergie utile
+- puissance en watt
+essentiel: 'L''énergie totale d''un système isolé se conserve toujours : elle ne disparaît jamais, elle se transforme
+  ou se transfère d''un objet à un autre.
+
+  Dans un dispositif réel, l''énergie reçue en entrée se retrouve en sortie sous plusieurs formes : une partie utile
+  (ce pour quoi le dispositif est fait) et une partie perdue, le plus souvent sous forme de chaleur due aux frottements
+  ou à la résistance électrique.
+
+  Un bilan énergétique additionne toutes les énergies (ou puissances) en sortie : elles doivent toujours redonner
+  l''énergie (ou la puissance) totale entrante.
+
+  La puissance P est l''énergie E transférée ou consommée par unité de temps t : P = E / t (P en watts W, E en joules
+  J, t en secondes s) ; on en déduit E = P × t.
+
+  Un appareil « économe en énergie » n''est pas celui qui consomme le plus d''énergie utile, mais celui qui limite
+  le plus les pertes (souvent sous forme de chaleur).'
+methode:
+- Repérer l'énergie ou la puissance totale entrant dans le système.
+- Identifier la part utile et la part perdue (souvent de la chaleur) en sortie.
+- Vérifier que la somme des parts en sortie égale bien le total entrant (conservation de l'énergie).
+- Utiliser P = E / t pour passer d'une puissance à une énergie (ou inversement), en respectant les unités (W, J,
+  s).
+erreurs_frequentes:
+- Croire qu'un dispositif peut produire plus d'énergie en sortie qu'il n'en reçoit en entrée.
+- Oublier de compter les pertes (souvent de la chaleur) dans un bilan énergétique.
+- Confondre puissance (en watts, par seconde) et énergie (en joules, la quantité totale).
+- Mélanger les unités de temps (secondes, heures) sans convertir avant de calculer P = E / t.
+exemple:
+  enonce: Une ampoule incandescente consomme une puissance électrique de 60 W, dont seulement 12 W sont convertis
+    en lumière utile. Quelle puissance est perdue, et sous quelle forme principalement ?
+  solution: 60 − 12 = 48 W sont perdus, principalement sous forme de chaleur.
+exercices:
+- enonce: Un appareil reçoit une énergie de 3600 J en 60 secondes. Calculer sa puissance.
+  indices:
+  - P = E / t.
+  solution: P = 3600 / 60 = 60 W.
+- enonce: Un radiateur de puissance 1000 W fonctionne pendant 2 heures. Calculer l'énergie consommée, en Wh.
+  indices:
+  - E = P × t, avec t en heures pour obtenir des Wh.
+  solution: E = 1000 × 2 = 2000 Wh.
+- enonce: Un moteur reçoit 500 W d'énergie électrique et fournit 350 W d'énergie mécanique utile. Que devient le
+    reste de la puissance ?
+  indices:
+  - La conservation de l'énergie impose que rien ne disparaisse.
+  solution: 500 − 350 = 150 W sont perdus, en général sous forme de chaleur due aux frottements.
+sources:
+- titre: Vikidia, « Puissance (physique) »
+  url: https://fr.vikidia.org/w/index.php?title=Puissance_%28physique%29&oldid=2569834
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Énergie cinétique »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89nergie_cin%C3%A9tique&oldid=2555116
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

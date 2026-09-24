@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: chaines-daccord
+declencheurs:
+- chaîne d'accord
+- accord dans le groupe nominal
+- plusieurs adjectifs
+- tout chaque leur
+- apposition
+- groupe nominal complexe
+essentiel: 'Dans un groupe nominal, tous les mots qui se rapportent au nom (déterminants, adjectifs, participes
+  passés employés comme adjectifs) doivent s''accorder avec lui en genre et en nombre : c''est une chaîne d''accord.
+
+  Avec plusieurs noms coordonnés, l''adjectif qui les qualifie tous se met au pluriel, et au masculin s''il y a
+  au moins un nom masculin dans le groupe : « une chemise et un pantalon neufs ».
+
+  Avec plusieurs adjectifs pour un seul nom, chacun s''accorde séparément avec ce nom.
+
+  Certains déterminants ont un comportement particulier : « chaque » et « tout » (adjectif) restent singuliers devant
+  un nom singulier ; « leur » s''accorde en nombre selon qu''il y a un ou plusieurs objets possédés.
+
+  Le participe passé employé comme adjectif (épithète ou apposé) suit la même règle que l''adjectif : il s''accorde
+  avec le nom auquel il se rapporte, quel que soit l''auxiliaire du verbe dont il est issu.'
+methode:
+- Repérer le noyau du groupe nominal (le nom principal) et son genre, son nombre.
+- Vérifier chaque déterminant, adjectif ou participe qui s'y rattache.
+- 'Avec plusieurs noms coordonnés : accorder au pluriel, au masculin si un nom est masculin.'
+- 'Avec « chaque », « tout » déterminant : garder le singulier.'
+- 'Pour un participe passé en apposition ou épithète : l''accorder comme un adjectif ordinaire, avec le nom qu''il
+  qualifie.'
+vocabulaire:
+- terme: chaîne d'accord
+  definition: ensemble des mots qui s'accordent entre eux autour d'un même nom
+- terme: apposition
+  definition: mot ou groupe qui se rapporte à un nom sans mot de liaison, détaché par une virgule
+erreurs_frequentes:
+- Accorder l'adjectif seulement avec le nom le plus proche au lieu de l'ensemble des noms coordonnés.
+- Mettre « chaque » ou « tout » déterminant au pluriel devant un nom singulier.
+- Oublier d'accorder un participe passé employé comme épithète ou en apposition.
+- Confondre l'accord du groupe nominal avec l'accord du verbe (ce sont deux chaînes différentes).
+exemple:
+  enonce: 'Accorder : « Une veste et un manteau (neuf) l''attendaient dans le magasin. »'
+  solution: '« Une veste et un manteau neufs l''attendaient dans le magasin. » : deux noms coordonnés, l''un féminin
+    et l''autre masculin, l''adjectif se met au masculin pluriel.'
+exercices:
+- enonce: 'Accorder : « (Fatigué) par la longue marche, les randonneurs s''arrêtèrent. »'
+  indices:
+  - 'Ce participe passé est en apposition : à quel nom se rapporte-t-il ?'
+  solution: '« Fatigués par la longue marche, les randonneurs s''arrêtèrent. » : le participe en apposition s''accorde
+    avec « les randonneurs » (masculin pluriel).'
+- enonce: 'Accorder : « (Chaque) élève doit apporter (son/ses) cahier. »'
+  indices:
+  - « chaque » est-il compatible avec un nom pluriel ?
+  solution: '« Chaque élève doit apporter son cahier. » : chaque reste singulier, donc « son cahier » au singulier
+    (chaque élève a un seul cahier ici).'
+- enonce: 'Accorder : « Un pantalon et une veste (assorti) complétaient sa tenue. »'
+  indices:
+  - Combien de noms l'adjectif qualifie-t-il, et de quel genre sont-ils ?
+  solution: '« Un pantalon et une veste assortis complétaient sa tenue. » : accord au pluriel, masculin car un des
+    deux noms coordonnés est masculin.'
+sources:
+- titre: Wikipédia, « Accord (grammaire) »
+  url: https://fr.wikipedia.org/w/index.php?title=Accord_%28grammaire%29&oldid=238071441
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Accord du participe passé en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais&oldid=239496579
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

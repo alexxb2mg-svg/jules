@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: multiples-diviseurs-division-euclidienne
+declencheurs: ["divisible", "divisibles", "divisé", "reste", "quotient", "diviseurs", "multiples"]
+essentiel: 'a est un multiple de b (et b un diviseur de a) s''il existe un entier k tel que a = b × k. On dit aussi
+  que a est divisible par b.
+
+  Division euclidienne de a par b (b ≠ 0) : on trouve deux entiers, le quotient q et le reste r, tels que a = b
+  × q + r avec 0 ≤ r < b. a est divisible par b exactement quand le reste est 0.
+
+  Critères de divisibilité : par 2 si le nombre se termine par 0, 2, 4, 6 ou 8 ; par 5 s''il se termine par 0 ou
+  5 ; par 10 s''il se termine par 0 ; par 3 (ou par 9) si la somme de ses chiffres est divisible par 3 (ou par 9).'
+methode:
+- 'Pour savoir si b divise a : appliquer un critère, ou poser la division euclidienne et regarder le reste.'
+- 'Pour écrire une division euclidienne : trouver le plus grand multiple de b inférieur ou égal à a, puis le reste.'
+- 'Vérifier : b × q + r doit redonner a, avec r < b.'
+- 'Pour lister les diviseurs de n : tester 1, 2, 3… et les ranger par paires (1 et n, 2 et n/2…), jusqu''à ce que
+  les paires se croisent.'
+vocabulaire:
+- terme: dividende, diviseur
+  definition: dans a = b × q + r, a est le dividende et b le diviseur
+erreurs_frequentes:
+- Écrire un reste plus grand que le diviseur (158 = 12 × 12 + 14 est faux comme division euclidienne).
+- Confondre multiple et diviseur.
+- Appliquer le critère de 3 ou de 9 au dernier chiffre au lieu de la somme des chiffres.
+- Oublier 1 et le nombre lui-même dans la liste des diviseurs.
+exemple:
+  enonce: Effectuer la division euclidienne de 158 par 12.
+  solution: '12 × 13 = 156 ≤ 158 < 12 × 14 = 168, donc 158 = 12 × 13 + 2 : quotient 13, reste 2 (et 2 < 12).'
+exercices:
+- enonce: Donner tous les diviseurs de 36.
+  indices:
+  - 'Cherche les paires : 1 × 36, 2 × 18…'
+  solution: 1, 2, 3, 4, 6, 9, 12, 18, 36.
+- enonce: Le nombre 2 718 est-il divisible par 2 ? par 3 ? par 5 ? par 9 ?
+  indices:
+  - 'Somme des chiffres : 2 + 7 + 1 + 8.'
+  solution: Pair donc divisible par 2 ; somme 18, divisible par 3 et par 9 ; ne se termine pas par 0 ou 5, donc
+    pas par 5. (2 718 = 9 × 302.)
+- enonce: On range 250 œufs dans des boîtes de 12. Combien de boîtes pleines ? Combien d'œufs restent ?
+  indices:
+  - Division euclidienne de 250 par 12.
+  solution: '250 = 12 × 20 + 10 : 20 boîtes pleines et 10 œufs restants.'
+sources:
+- titre: Wikiversité, « Initiation à l'arithmétique/Divisibilité »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Divisibilit%C3%A9&oldid=885515
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Initiation à l'arithmétique/Division euclidienne »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Division_euclidienne&oldid=971525
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Critère de divisibilité »
+  url: https://fr.vikidia.org/w/index.php?title=Crit%C3%A8re_de_divisibilit%C3%A9&oldid=2331781
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

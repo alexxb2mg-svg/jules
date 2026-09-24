@@ -67,10 +67,16 @@ def test_prompt_complet_sans_balise_restante(tuteur, genre):
         assert "une collégienne" in systeme
 
 
-@pytest.mark.parametrize(("genre", "attendu"), [("fille", "une collégienne"), ("garcon", "un collégien")])
+@pytest.mark.parametrize(
+    ("genre", "attendu"),
+    [("fille", "une collégienne"), ("garcon", "un collégien"), ("neutre", "un ou une élève de collège")],
+)
 def test_consigne_du_rapport_accordee(genre, attendu):
     from jules.modules.rapport import CONSIGNE_SYNTHESE
 
     texte = remplir(CONSIGNE_SYNTHESE, {"prenom": "Sam"}, genre)
     assert attendu in texte
     assert "{{" not in texte and "{prenom}" not in texte
+    # la consigne demande au modele les questions a souffler au parent, au format JSON
+    assert '{"resume": "...", "questions": ["...", "..."]}' in texte
+    assert "sans savoir faire l'exercice" in texte and "que l'adulte pose à Sam" in texte

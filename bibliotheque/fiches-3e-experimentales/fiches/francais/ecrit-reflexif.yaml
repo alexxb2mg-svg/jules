@@ -1,0 +1,65 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ecrit-reflexif
+declencheurs:
+- écrire pour comprendre
+- justifier ma réponse
+- expliquer ma démarche
+- prendre des notes
+- écrit sur ce que j'apprends
+- 2000 signes
+essentiel: 'L''écrit réflexif est un écrit qui sert à penser et à apprendre, pas seulement à restituer une réponse
+  : on l''utilise pour expliquer sa démarche, justifier une réponse, argumenter un propos. Écrire ce qu''on pense
+  oblige à organiser ses idées, et aide souvent à mieux comprendre ce qu''on étudie.
+
+  La prise de notes est une technique utile pour cet écrit réflexif : elle consiste à transcrire de façon résumée
+  ce qu''on écoute ou lit, en notant les idées principales plutôt que tout mot à mot. On utilise des phrases courtes,
+  des abréviations, des symboles, pour aller plus vite tout en gardant une trace utile pour soi-même.
+
+  En 3e, on s''entraîne à rédiger des textes réflexifs de 2 000 à 3 000 signes (environ une demi-page à une page),
+  selon le type d''écrit demandé (explication, justification, argumentation).'
+methode:
+- 'Avant d''écrire : lister au brouillon les idées principales qu''on veut expliquer ou justifier.'
+- 'Pour la prise de notes : ne pas écrire de phrases complètes, utiliser des abréviations et symboles personnels.'
+- Dans un écrit réflexif, expliquer pourquoi on pense ce qu'on écrit, pas seulement ce qu'on pense.
+- Relire pour vérifier que chaque idée est justifiée par une explication ou un exemple.
+- Vérifier la longueur demandée (2 000 à 3 000 signes) sans se contenter d'une réponse trop courte.
+vocabulaire:
+- terme: écrit réflexif
+  definition: écrit qui sert à expliquer une démarche ou justifier une réponse, pas seulement à donner un résultat
+- terme: prise de notes
+  definition: transcription résumée et personnelle de ce qu'on écoute ou lit
+erreurs_frequentes:
+- Donner une réponse sans expliquer le raisonnement qui y mène.
+- Prendre des notes en essayant de tout écrire mot à mot, au lieu de résumer l'essentiel.
+- Confondre écrit réflexif (qui explique une pensée) et simple résumé de cours.
+- Ne pas relire son texte pour vérifier qu'il est compréhensible par quelqu'un d'autre.
+exemple:
+  enonce: Après avoir résolu un problème de mathématiques, on te demande d'expliquer ta démarche. Que doit contenir
+    cet écrit réflexif ?
+  solution: 'Il doit expliquer les étapes du raisonnement (ce qu''on a cherché, pourquoi on a choisi telle méthode,
+    ce qui a posé difficulté), pas seulement donner le résultat final : c''est la pensée elle-même qui est mise
+    en mots.'
+exercices:
+- enonce: Donne deux techniques utilisées en prise de notes pour aller plus vite qu'à l'oral.
+  indices:
+  - 'Relis l''essentiel : abréviations, symboles…'
+  solution: Utiliser des abréviations (par exemple « bcp » pour beaucoup), des symboles (flèches, signe +), et des
+    phrases courtes sans mots inutiles.
+- enonce: Rédige un texte réflexif de 5-6 lignes qui explique pourquoi tu as choisi une méthode précise pour résoudre
+    un exercice récent (n'importe quelle matière), en justifiant chaque étape.
+  indices:
+  - 'N''écris pas seulement le résultat : explique le pourquoi de chaque choix.'
+  solution: Réussite si le texte explique un raisonnement étape par étape, avec au moins une justification claire
+    (« j'ai choisi cette méthode parce que… »).
+sources:
+- titre: Wikipédia, « Prise de notes »
+  url: https://fr.wikipedia.org/w/index.php?title=Prise_de_notes&oldid=239721500
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

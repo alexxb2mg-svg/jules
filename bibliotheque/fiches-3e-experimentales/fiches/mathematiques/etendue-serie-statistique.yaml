@@ -1,0 +1,35 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: etendue-serie-statistique
+declencheurs: ["écart", "plus grande et la plus petite", "série", "notes", "dispersion"]
+essentiel: 'L''étendue d''une série statistique est l''écart entre sa plus grande et sa plus petite valeur : étendue
+  = valeur maximale − valeur minimale.
+
+  Elle mesure la dispersion : plus elle est grande, plus les valeurs sont éparpillées. Elle ne dit rien sur le centre
+  de la série (c''est le rôle de la moyenne et de la médiane).'
+methode:
+- Repérer la plus grande et la plus petite valeur (ranger la série aide).
+- 'Soustraire : maximum − minimum, avec l''unité.'
+- 'Comparer deux séries : même moyenne mais étendues différentes = régularité différente.'
+erreurs_frequentes:
+- Donner l'intervalle « de 5 à 16 » au lieu de la différence 11.
+- Confondre étendue et effectif total.
+exemple:
+  enonce: 'Notes : de 5 (la plus basse) à 16 (la plus haute). Quelle est l''étendue ?'
+  solution: 16 − 5 = 11 points.
+exercices:
+- enonce: 'Série : 12, 7, 15, 9, 11, 8, 14. Calculer l''étendue.'
+  indices:
+  - Maximum − minimum.
+  solution: 15 − 7 = 8.
+sources:
+- titre: Wikiversité, « Initiation à la statistique/Médiane »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/M%C3%A9diane&oldid=984608
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

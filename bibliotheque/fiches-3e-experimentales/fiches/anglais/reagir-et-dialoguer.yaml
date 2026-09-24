@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: reagir-et-dialoguer
+declencheurs:
+- dialogue en anglais
+- jeu de rôle anglais
+- répondre spontanément en anglais
+- petite conversation anglais
+- improviser en anglais
+- échange oral
+essentiel: 'Réagir et dialoguer, c''est participer à un échange oral spontané en anglais : répondre à une question,
+  réagir à ce que dit l''interlocuteur, poser une question à son tour, dans un jeu de rôle ou une conversation improvisée.
+
+
+  Cette activité demande de comprendre rapidement ce que dit l''autre (repérer les indices comme dans l''écoute)
+  et de réagir avec des énoncés adaptés au contexte, sans avoir le temps de tout préparer à l''avance, contrairement
+  à l''écrit.
+
+
+  Des expressions toutes faites aident à garder le fil du dialogue même en cas d''hésitation : demander de répéter
+  (« Sorry, can you repeat, please? »), demander de préciser (« What do you mean? »), donner son avis (« I think
+  that... », « In my opinion... »), marquer son accord ou désaccord (« I agree » / « I don''t think so »). Il est
+  normal d''hésiter ou de se reprendre : l''important est de maintenir l''échange.'
+methode:
+- Écouter attentivement la question ou la remarque de l'interlocuteur avant de répondre.
+- Utiliser des expressions toutes faites pour gagner du temps ou clarifier (Sorry, can you repeat? / What do you
+  mean?).
+- 'Répondre même de façon imparfaite plutôt que de rester silencieux : la spontanéité prime sur la perfection grammaticale.'
+- Relancer le dialogue en posant une question à son tour, pour montrer que l'on participe activement à l'échange.
+vocabulaire:
+- terme: spontanéité
+  definition: capacité à réagir rapidement dans un échange oral, sans préparation complète à l'avance
+erreurs_frequentes:
+- Rester silencieux par peur de se tromper au lieu de répondre, même imparfaitement.
+- Ne pas écouter réellement l'interlocuteur et répondre à côté de la question.
+- Ne jamais relancer la conversation par une question, ce qui coupe l'échange.
+- Chercher à traduire mot à mot une phrase française complexe au lieu d'utiliser des structures anglaises simples
+  et connues.
+exemple:
+  enonce: 'Dans un dialogue, un camarade demande : « What did you do last weekend? » L''élève ne se souvient plus
+    du mot « cinema ». Que peut-il faire ?'
+  solution: 'Il peut reformuler ou décrire : « I watched a film with my family. » ou demander de l''aide : « How
+    do you say ''cinéma'' in English? » L''important est de continuer l''échange sans se bloquer sur le mot manquant.'
+exercices:
+- enonce: Proposer une réponse orale possible à la question « Do you like pizza? » qui inclut un avis et une raison.
+  indices:
+  - Utilise « I think » ou « I like/don't like... because... ».
+  solution: 'Exemple de réponse possible : « Yes, I love pizza because it''s delicious and easy to share with friends.
+    » (Toute réponse cohérente et correcte est acceptée.)'
+- enonce: Donner une expression utile en anglais pour demander à quelqu'un de répéter ce qu'il vient de dire.
+  indices:
+  - Pense à une formule polie de demande de répétition.
+  solution: « Sorry, can you repeat, please? » ou « Could you say that again? »
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: niveau-lv2-a2
+declencheurs:
+- niveau LV2
+- deuxième langue vivante
+- niveau A2 LV2
+- espagnol ou allemand LV2
+- niveau attendu en LV2
+essentiel: 'Pour la langue vivante 2 (LV2, la deuxième langue étrangère étudiée, commencée plus tard que la LV1),
+  l''objectif de fin de cycle 4 (donc de fin de 3e) est plus modeste que pour la LV1 : atteindre le niveau A2 du
+  CECRL dans au moins deux des cinq activités langagières.
+
+
+  Cette différence s''explique par le temps d''apprentissage plus court : la LV2 est généralement commencée en classe
+  de 5e, alors que la LV1 est étudiée depuis l''école primaire. Les exigences sont donc adaptées à ce temps d''exposition
+  à la langue.
+
+
+  Comme pour la LV1, il est normal que le niveau varie selon les activités langagières : un élève peut par exemple
+  avoir atteint A2 en lecture et en écoute, mais pas encore en expression orale continue, ce qui suffit à répondre
+  à l''objectif du programme.'
+methode:
+- 'Ne pas comparer directement son niveau en LV2 à celui en LV1 : les objectifs et le temps d''apprentissage sont
+  différents.'
+- Se concentrer sur la progression dans les activités langagières les plus travaillées en classe.
+- Réutiliser les stratégies apprises en LV1 (repérage d'indices, reformulation) pour la LV2, car elles s'appliquent
+  à toutes les langues.
+vocabulaire:
+- terme: LV2
+  definition: langue vivante 2, deuxième langue étrangère étudiée, généralement commencée en classe de 5e
+erreurs_frequentes:
+- Croire que le niveau attendu en LV2 est le même qu'en LV1 en fin de 3e.
+- Se décourager en comparant son niveau en LV2 (langue étudiée depuis moins longtemps) à celui en LV1.
+- Négliger la LV2 en pensant que son niveau visé, plus modeste, compte moins.
+exemple:
+  enonce: Un élève étudie l'anglais en LV1 depuis le CP et l'espagnol en LV2 depuis la 5e. Pourquoi est-il normal
+    qu'il soit plus à l'aise en anglais ?
+  solution: Il a été exposé à l'anglais beaucoup plus longtemps (depuis l'école primaire) qu'à l'espagnol (depuis
+    seulement la classe de 5e), ce qui explique un niveau généralement plus élevé en LV1 ; c'est pourquoi les objectifs
+    de fin de 3e sont différents pour les deux langues (A2 minimum dans les cinq activités en LV1, A2 dans deux
+    activités seulement en LV2).
+exercices:
+- enonce: Combien d'activités langagières doivent atteindre le niveau A2 en fin de 3e pour la LV2 ?
+  indices:
+  - C'est moins que pour la LV1.
+  solution: Au moins deux activités langagières, contre les cinq activités visées au niveau A2 minimum en LV1.
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (contexte général de l'apprentissage des langues par niveaux)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,92 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ecriture-de-soi-autoportrait
+declencheurs:
+- souvenir
+- raconter ma vie
+- journal intime
+- mémoires
+- correspondance
+- lettres
+- se raconter
+- récit de vie
+- portrait de moi
+essentiel: 'L''écriture de soi désigne les textes où un auteur parle de sa propre vie : autobiographie (récit rétrospectif
+  en prose, où l''auteur, le narrateur et le personnage principal sont la même personne), journal intime (écriture
+  datée, au jour le jour, sans recul), mémoires (l''auteur raconte surtout les évènements publics auxquels il a
+  été mêlé) et correspondance (lettres). L''autoportrait est l''équivalent en peinture, dessin, sculpture ou photographie
+  : l''artiste se représente lui-même.
+
+  Écrire sur soi, c''est chercher à se connaître et à se faire connaître : on choisit ce qu''on raconte, dans quel
+  ordre, avec quels mots, ce qui construit une image de soi — jamais un simple miroir neutre. Le pacte autobiographique
+  (l''auteur promet au lecteur de dire la vérité) est un engagement, pas une garantie parfaite : la mémoire déforme,
+  et l''écriture met en forme.
+
+  Ces textes s''interrogent souvent sur les raisons d''écrire sur soi (se justifier, comprendre son passé, laisser
+  une trace, se raconter pour mieux se comprendre) et sur les effets de cette mise en récit (est-ce un portrait
+  fidèle ou une reconstruction ?).'
+methode:
+- 'Repérer qui parle : l''auteur, le narrateur et le personnage sont-ils la même personne (autobiographie) ?'
+- 'Identifier le genre précis (journal intime : dates et présent ; mémoires : évènements publics ; lettre : un destinataire
+  nommé).'
+- Chercher les marques de la première personne et les commentaires du narrateur sur son propre passé (« je ne savais
+  pas encore que… »).
+- Se demander pourquoi l'auteur écrit sur lui-même à ce moment précis de sa vie.
+- Comparer ce que le texte montre et ce qu'il choisit de taire ou d'atténuer.
+vocabulaire:
+- terme: autobiographie
+  definition: récit en prose qu'une personne réelle fait de sa propre vie
+- terme: pacte autobiographique
+  definition: engagement implicite de l'auteur à dire la vérité sur lui-même
+- terme: mémoires
+  definition: récit centré sur les évènements publics vécus ou observés par l'auteur
+erreurs_frequentes:
+- Confondre autobiographie (l'auteur = narrateur = personnage) et roman autobiographique (inspiré de la vie de l'auteur,
+  mais fictif).
+- Croire qu'un texte autobiographique est forcément entièrement exact.
+- Confondre journal intime (écrit au jour le jour, sans savoir la suite) et mémoires (écrits après coup, avec du
+  recul).
+- Oublier qu'un autoportrait pictural est aussi une construction, pas un simple reflet.
+exemple:
+  enonce: 'Dans Les Confessions, Jean-Jacques Rousseau écrit : « Je forme une entreprise qui n''eut jamais d''exemple
+    […] Je veux montrer à mes semblables un homme dans toute la vérité de la nature, et cet homme, ce sera moi.
+    » Que nous apprend cette phrase sur le projet de l''auteur ?'
+  solution: 'Rousseau annonce un projet inédit : se montrer tel qu''il est réellement, sans se flatter ni se noircir.
+    Le mot « entreprise » souligne l''ambition du geste, et « ce sera moi » établit le pacte autobiographique :
+    auteur, narrateur et personnage ne font qu''un.'
+exercices:
+- enonce: Explique en deux phrases la différence entre un journal intime et des mémoires.
+  indices:
+  - 'Pense au moment où le texte est écrit : pendant les évènements, ou longtemps après ?'
+  solution: Le journal intime est écrit jour après jour, sans savoir ce qui va suivre. Les mémoires sont écrits
+    après coup, avec du recul, et racontent surtout des évènements publics ou marquants.
+- enonce: Écris 5 à 8 lignes où tu racontes un souvenir précis de ton enfance, à la première personne, en essayant
+    de retrouver tes sensations et pensées de l'époque.
+  indices:
+  - Choisis un souvenir précis (un lieu, un jour), pas une généralité.
+  - Utilise le passé et, si tu veux, une remarque avec le recul d'aujourd'hui.
+  solution: 'Réussite si : premier personne, souvenir daté et concret, un ou deux détails sensoriels (ce qu''on
+    voyait, entendait), une phrase qui montre le recul de l''auteur sur cet évènement.'
+sources:
+- titre: Wikipédia, « Autobiographie »
+  url: https://fr.wikipedia.org/w/index.php?title=Autobiographie&oldid=236979671
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Autoportrait »
+  url: https://fr.wikipedia.org/w/index.php?title=Autoportrait&oldid=238503251
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Les Confessions (Rousseau)/Livre I »
+  url: https://fr.wikisource.org/w/index.php?title=Les_Confessions_%28Rousseau%29/Livre_I&oldid=12221798
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation d'ouverture, domaine public, pour l'exemple d'étude
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: amenagement-du-territoire
+declencheurs:
+- inégalités entre régions
+- réduire les inégalités territoriales
+- TGV
+- collectivités territoriales
+- politique régionale UE
+- acteurs publics territoire
+- croquis territoire national
+- ligne à grande vitesse
+- région isolée
+essentiel: 'L''aménagement du territoire consiste en des actions menées par les pouvoirs publics pour compenser
+  les inégalités économiques, sociales et d''accès aux équipements entre les territoires français.
+
+  Le mot apparaît en France en 1943 et se développe surtout à partir de 1950, dans un contexte où l''État cherche
+  à mieux répartir les populations, les activités et les équipements sur le territoire, plutôt que de les laisser
+  se concentrer uniquement autour de Paris.
+
+  Plusieurs niveaux d''acteurs interviennent : l''État (lois, budget national), les collectivités territoriales
+  (régions, départements, communes, qui ont gagné en autonomie avec la décentralisation), et l''Union européenne,
+  qui finance des projets grâce à sa politique régionale, en particulier dans les territoires les moins développés.
+
+  Les outils de l''aménagement sont variés : construction d''infrastructures de transport (comme les lignes à grande
+  vitesse), soutien à l''implantation d''entreprises, aide au maintien de services publics dans les zones rurales.'
+methode:
+- 'Définir l''aménagement du territoire par son objectif : réduire les inégalités entre territoires.'
+- 'Citer les trois niveaux d''acteurs : l''État, les collectivités territoriales, l''Union européenne.'
+- Donner un exemple concret d'outil d'aménagement (infrastructure de transport, aide financière européenne).
+- Pour un croquis, hiérarchiser le territoire (métropoles, aires urbaines, espaces ruraux, littoraux) et utiliser
+  une légende organisée.
+vocabulaire:
+- terme: aménagement du territoire
+  definition: l'ensemble des actions publiques qui organisent et corrigent les inégalités entre les territoires
+    d'un pays
+- terme: décentralisation
+  definition: le transfert de compétences et de pouvoirs de l'État vers les collectivités territoriales (régions,
+    départements, communes)
+- terme: politique régionale (UE)
+  definition: les fonds européens qui financent des projets de développement dans les régions moins développées
+erreurs_frequentes:
+- 'Croire que l''aménagement du territoire est réalisé uniquement par l''État : les collectivités territoriales
+  et l''UE y participent aussi.'
+- Oublier de citer un exemple concret d'outil d'aménagement.
+- Confondre aménagement du territoire (politique publique) et simple développement économique spontané.
+- Négliger l'échelle européenne dans un développement ou un croquis.
+exemple:
+  enonce: Cite les trois niveaux d'acteurs qui interviennent dans l'aménagement du territoire français.
+  solution: L'État (lois et budget national), les collectivités territoriales (régions, départements, communes,
+    via la décentralisation) et l'Union européenne (politique régionale).
+exercices:
+- enonce: Pourquoi l'aménagement du territoire est-il nécessaire en France ?
+  indices:
+  - Pense aux différences entre grandes métropoles et espaces ruraux isolés.
+  solution: 'Parce que les territoires français ne sont pas égaux face à l''emploi, aux équipements ou aux transports
+    : l''aménagement du territoire vise à réduire ces inégalités entre régions dynamiques et régions moins favorisées.'
+- enonce: 'Développement construit : explique, à partir d''un exemple, comment un outil d''aménagement du territoire
+    peut réduire les inégalités entre régions.'
+  indices:
+  - Choisis un outil précis (infrastructure de transport, aide financière).
+  - Explique quel effet il a sur un territoire donné.
+  solution: Un développement réussi doit choisir un outil précis, par exemple une ligne à grande vitesse (TGV) qui
+    relie une région isolée aux grandes métropoles ; expliquer comment cela améliore l'accès à l'emploi et attire
+    des entreprises ; conclure sur le rôle des différents acteurs (collectivités locales, État, parfois fonds européens)
+    qui financent ensemble ce type de projet.
+- enonce: Quel est le rôle de l'Union européenne dans l'aménagement du territoire français ?
+  indices:
+  - Pense au financement de projets régionaux.
+  solution: L'Union européenne finance, via sa politique régionale, des projets de développement dans les régions
+    les moins développées de ses États membres, y compris en France.
+sources:
+- titre: Wikipédia, « Aménagement du territoire en France »
+  url: https://fr.wikipedia.org/w/index.php?title=Am%C3%A9nagement_du_territoire_en_France&oldid=233193019
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: attribut-du-cod
+declencheurs:
+- attribut du cod
+- attribut du complément
+- on l'a élu
+- on l'a élue déléguée
+- je le trouve
+- on l'appelle
+- verbe de jugement
+- considérer comme
+essentiel: 'L''attribut du complément d''objet direct (COD) est un mot ou un groupe qui apporte une information
+  sur le COD, par l''intermédiaire du verbe, sans préposition (ou avec « de », « pour », « comme »).
+
+  Il apparaît après des verbes de jugement, d''appréciation, de choix ou des verbes qui donnent un titre : nommer,
+  élire, choisir, déclarer, rendre, trouver, juger, considérer, appeler, croire...
+
+  Exemple : « On a élu Julie déléguée. » — COD : Julie ; attribut du COD : déléguée (Julie EST déléguée, grâce à
+  l''élection).
+
+  Il ne faut pas le confondre avec un second COD (« Il donne un livre à Léa » : deux compléments distincts, pas
+  d''attribution) ni avec une épithète du COD (« Il achète une voiture rouge » : rouge qualifie voiture directement,
+  sans passer par un verbe de jugement).'
+methode:
+- Repérer le verbe et son COD (qui/qu'est-ce que + verbe ?).
+- Chercher un second élément qui donne une qualité, un nom ou un rôle à ce COD.
+- 'Vérifier qu''on peut intercaler « être » entre le COD et cet élément (Julie est déléguée) : si oui, c''est un
+  attribut du COD.'
+- Vérifier que le verbe appartient bien à la liste (jugement, élection, dénomination...).
+- 'Distinguer d''un second COD : deux compléments d''objet ne peuvent pas se remplacer par « être ».'
+vocabulaire:
+- terme: attribut
+  definition: mot qui exprime une qualité ou un état attribué au sujet ou au COD
+- terme: verbe attributif
+  definition: verbe qui introduit un attribut (être, sembler pour le sujet ; nommer, trouver pour le COD)
+erreurs_frequentes:
+- Confondre l'attribut du COD avec une épithète du COD (pas de verbe de jugement entre les deux).
+- Confondre avec un second complément d'objet indirect (« Il parle de son voyage à ses amis »).
+- 'Oublier l''accord de l''attribut du COD avec le COD quand c''est un adjectif (« Je la crois capable » : capable
+  s''accorde avec la, féminin).'
+- Chercher un attribut du COD après un verbe qui n'en admet pas (courir, dormir...).
+exemple:
+  enonce: Dans la phrase « Les élèves jugent ce contrôle difficile. », identifier le COD et son attribut.
+  solution: 'COD : ce contrôle (les élèves jugent quoi ? ce contrôle). Attribut du COD : difficile, car « ce contrôle
+    est difficile » selon leur jugement ; difficile s''accorde avec contrôle (masculin singulier).'
+exercices:
+- enonce: « On nomme Sarah capitaine de l'équipe. » Identifier le COD et son attribut.
+  indices:
+  - Qui nomme-t-on ?
+  - Peut-on dire « Sarah est capitaine » ?
+  solution: 'COD : Sarah ; attribut du COD : capitaine (Sarah est capitaine grâce à la nomination).'
+- enonce: « Le jury trouve cette réponse excellente. » Identifier le COD et son attribut, et justifier l'accord
+    d'« excellente ».
+  indices:
+  - Le jury trouve quoi ?
+  - De quel genre et de quel nombre est « cette réponse » ?
+  solution: 'COD : cette réponse (féminin singulier) ; attribut du COD : excellente, accordée au féminin singulier
+    avec réponse.'
+- enonce: Dans « Il offre un cadeau à sa sœur pour son anniversaire. », y a-t-il un attribut du COD ? Justifier.
+  indices:
+  - Le verbe offrir est-il un verbe de jugement, d'élection ou de dénomination ?
+  solution: 'Non : « à sa sœur » est un COI et « pour son anniversaire » un complément circonstanciel ; offrir n''introduit
+    pas d''attribut du COD, il n''y a pas de relation d''identité entre le cadeau et un autre terme.'
+sources:
+- titre: Wikipédia, « Attribut (grammaire) »
+  url: https://fr.wikipedia.org/w/index.php?title=Attribut_%28grammaire%29&oldid=234393499
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

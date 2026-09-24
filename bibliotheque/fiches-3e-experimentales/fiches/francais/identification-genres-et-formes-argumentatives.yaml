@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: identification-genres-et-formes-argumentatives
+declencheurs:
+- genre du texte
+- type d'argumentation
+- contexte historique du texte
+- effet du texte
+- jugement sur une œuvre
+- reconnaître le genre littéraire
+- toucher mes émotions
+- convaincre avec des preuves
+- persuader ou convaincre
+essentiel: 'Un genre littéraire est une catégorie qui classe les productions littéraires selon leur forme (poème,
+  pièce de théâtre, roman, essai…) ou leur sujet et leur registre (comique, tragique, didactique). Cette classification
+  n''est pas figée : elle évolue selon les époques et un même texte peut mélanger plusieurs genres.
+
+  Identifier les formes argumentatives d''un texte, c''est reconnaître comment l''auteur cherche à faire partager
+  son point de vue : par la démonstration (des preuves, des faits), par la persuasion (jouer sur les émotions) ou
+  par la conviction (s''adresser à la raison du lecteur).
+
+  Contextualiser une œuvre, c''est la relier à ses connaissances historiques et culturelles : à quelle époque a-t-elle
+  été écrite, quels évènements ou débats de société éclaire-t-elle ? Cela aide à comprendre pourquoi l''auteur a
+  choisi tel genre et telle forme.
+
+  Enfin, percevoir les effets esthétiques de la langue littéraire (le choix des mots, le rythme des phrases, les
+  images) permet d''interpréter le texte au-delà de son simple sens littéral, et de formuler un jugement personnel
+  argumenté sur l''œuvre.'
+methode:
+- Identifier le genre du texte (poème, extrait de roman, scène de théâtre, article…).
+- Repérer si l'auteur cherche à démontrer, persuader ou convaincre.
+- Situer le texte dans son contexte historique (siècle, évènements liés).
+- Relever des exemples précis de choix de langue (mots, images, rythme) qui produisent un effet particulier.
+- Formuler un avis personnel sur l'œuvre, appuyé sur des éléments précis du texte.
+vocabulaire:
+- terme: persuader
+  definition: chercher à convaincre en s'adressant aux émotions du lecteur
+- terme: convaincre
+  definition: chercher à faire adhérer par des arguments rationnels
+- terme: contextualiser
+  definition: relier une œuvre à son époque et à son contexte historique et culturel
+erreurs_frequentes:
+- Confondre persuader (émotions) et convaincre (raison).
+- Analyser un texte sans jamais le relier à son contexte historique.
+- Donner un jugement sur une œuvre sans l'appuyer sur des éléments précis du texte.
+- Croire qu'un genre littéraire est une case unique et figée.
+exemple:
+  enonce: Un auteur du XVIIIe siècle écrit un conte plein d'aventures pour dénoncer, en réalité, l'intolérance religieuse
+    de son époque. Cherche-t-il plutôt à persuader ou à convaincre ?
+  solution: 'Il mêle les deux : les péripéties et le comique cherchent à toucher et à divertir (persuader), tandis
+    que la satire des institutions repose sur une critique construite, presque argumentée (convaincre). C''est le
+    principe du conte philosophique.'
+exercices:
+- enonce: Donne un exemple de moyen utilisé pour persuader plutôt que pour convaincre.
+  indices:
+  - Pense à ce qui touche les émotions plutôt que la raison.
+  solution: 'Par exemple : une image émouvante, un ton pathétique, une exclamation, un exemple poignant qui joue
+    sur la pitié ou l''indignation.'
+- enonce: Choisis un court texte (article, extrait de roman) et indique en 3-4 lignes son genre, son époque probable,
+    et s'il cherche plutôt à démontrer, persuader ou convaincre.
+  indices:
+  - Appuie-toi sur des indices précis du texte (vocabulaire, ton, construction).
+  solution: Réussite si les trois éléments (genre, contexte, visée argumentative) sont identifiés et justifiés par
+    au moins un exemple tiré du texte.
+sources:
+- titre: Wikipédia, « Genre littéraire »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_litt%C3%A9raire&oldid=238084925
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Argumentation »
+  url: https://fr.wikipedia.org/w/index.php?title=Argumentation&oldid=230491172
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

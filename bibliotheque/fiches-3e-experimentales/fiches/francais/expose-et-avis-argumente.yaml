@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: expose-et-avis-argumente
+declencheurs:
+- faire un exposé
+- présenter un travail à l'oral
+- compte rendu de lecture
+- donner mon avis à l'oral
+- oral du brevet
+- présentation devant la classe
+essentiel: 'Un compte rendu est un rapport, oral ou écrit, qui résume et présente certains faits ou une lecture
+  (par exemple le compte rendu d''une lecture, d''une sortie, d''une expérience). Un exposé est une présentation
+  orale d''un travail devant un public : il s''appuie souvent sur des documents supports (diaporama, affiche, notes)
+  qu''il faut savoir utiliser efficacement, sans se contenter de les lire.
+
+  Exprimer un avis personnel argumenté sur une œuvre ou une situation demande d''utiliser un vocabulaire précis
+  et étendu (éviter les mots trop vagues comme « bien » ou « nul »), et de chercher à faire partager son point de
+  vue en l''appuyant sur des exemples concrets, pas seulement sur une impression.
+
+  Cette compétence est particulièrement mobilisée pour l''oral du brevet, où l''élève présente un travail réalisé
+  pendant l''année et doit ensuite répondre à des questions en donnant son avis de façon claire et argumentée.'
+methode:
+- 'Préparer un plan clair pour son exposé : introduction, développement en parties, conclusion.'
+- Utiliser les documents supports (diaporama, fiches) comme aide-mémoire, sans les lire mot à mot.
+- Regarder son public, parler assez fort et pas trop vite.
+- Pour donner un avis, toujours l'appuyer sur un exemple ou une raison précise, pas seulement une impression.
+- S'entraîner à répondre aux questions du public de façon posée et argumentée.
+vocabulaire:
+- terme: compte rendu
+  definition: rapport qui résume et présente des faits ou une lecture
+- terme: exposé
+  definition: présentation orale d'un travail devant un public
+erreurs_frequentes:
+- Lire un texte préparé d'un bout à l'autre sans regarder le public.
+- Donner un avis vague (« c'était bien ») sans le justifier par des exemples précis.
+- Surcharger les documents supports de texte au lieu de s'appuyer dessus comme aide-mémoire.
+- Ne pas préparer de réponses possibles aux questions attendues.
+exemple:
+  enonce: Pendant un exposé sur un livre lu, comment exprimer un avis personnel argumenté plutôt qu'une simple opinion
+    ?
+  solution: 'Plutôt que de dire « j''ai bien aimé ce livre », il faut préciser pourquoi, avec un exemple précis
+    : « j''ai apprécié ce livre parce que le personnage principal évolue de façon convaincante, notamment au moment
+    où il décide de… ».'
+exercices:
+- enonce: Donne un exemple de vocabulaire précis qu'on peut utiliser à la place de « c'était bien » pour parler
+    d'un livre.
+  indices:
+  - 'Pense à des adjectifs plus précis : captivant, émouvant, surprenant…'
+  solution: 'Par exemple : « captivant », « émouvant », « surprenant », « bien construit », « touchant ».'
+- enonce: Prépare en 4-5 lignes le plan d'un exposé de deux minutes sur un sujet de ton choix (un livre, un fait
+    d'actualité, une passion), avec une introduction, deux idées principales et une conclusion.
+  indices:
+  - Un plan d'exposé doit être clair même sans le développer entièrement.
+  solution: Réussite si les quatre parties du plan (introduction, deux idées, conclusion) sont présentes et clairement
+    distinguées.
+sources:
+- titre: Wiktionnaire, « compte rendu »
+  url: https://fr.wiktionary.org/w/index.php?title=compte_rendu&oldid=39309710
+  auteurs: Contributeurs du Wiktionnaire (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: définition reformulée
+- titre: Wikipédia, « Fiche de lecture »
+  url: https://fr.wikipedia.org/w/index.php?title=Fiche_de_lecture&oldid=236874457
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

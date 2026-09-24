@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: probabilites-experiences-simples
+declencheurs: ["chance", "chances", "hasard", "lancer", "lance", "tire", "tirage", "boules", "sac", "urne", "pile", "face", "roue", "cartes", "proba", "probas"]
+essentiel: 'Une expérience est aléatoire quand on connaît les résultats possibles (les issues) sans pouvoir prévoir
+  lequel se produira. Un événement est un ensemble d''issues.
+
+  La probabilité d''un événement est un nombre entre 0 et 1 : 0 pour un événement impossible, 1 pour un événement
+  certain. La somme des probabilités de toutes les issues vaut 1.
+
+  Quand toutes les issues ont la même chance (équiprobabilité : dé équilibré, pièce bien équilibrée, tirage au hasard)
+  : P(A) = nombre d''issues favorables / nombre total d''issues.
+
+  Événement contraire : P(non A) = 1 − P(A).
+
+  Si l''on répète l''expérience un grand nombre de fois, la fréquence observée d''un événement se stabilise autour
+  de sa probabilité (mais ne lui est pas forcément égale).'
+methode:
+- Lister ou compter toutes les issues possibles et vérifier qu'elles sont équiprobables.
+- Compter les issues qui réalisent l'événement.
+- Écrire la probabilité sous forme de fraction (puis décimale ou pourcentage si demandé), simplifiée.
+- Pour « ne pas … » ou « au moins … », penser à l'événement contraire.
+- Vérifier que le résultat est entre 0 et 1.
+erreurs_frequentes:
+- Obtenir une probabilité supérieure à 1 ou négative sans s'en rendre compte.
+- Appliquer « favorables / total » alors que les issues n'ont pas la même chance (dé truqué, secteurs de tailles
+  différentes).
+- 'Croire qu''après cinq « pile », « face » devient plus probable : la pièce n''a pas de mémoire.'
+- Confondre la fréquence observée et la probabilité.
+exemple:
+  enonce: On lance un dé équilibré à six faces. Quelle est la probabilité d'obtenir un nombre pair ? un multiple
+    de 3 ?
+  solution: '6 issues équiprobables. Pair : 2, 4, 6, donc P = 3/6 = 1/2. Multiple de 3 : 3 et 6, donc P = 2/6 =
+    1/3.'
+exercices:
+- enonce: Un sac contient 5 boules rouges, 3 vertes et 2 bleues, indiscernables au toucher. On tire une boule au
+    hasard. Quelle est la probabilité qu'elle soit verte ? qu'elle ne soit pas rouge ?
+  indices:
+  - Combien de boules en tout ?
+  - « Pas rouge » est le contraire de « rouge ».
+  solution: P(verte) = 3/10. P(pas rouge) = 1 − 5/10 = 5/10 = 1/2.
+- enonce: Une roue est partagée en 8 secteurs égaux numérotés de 1 à 8. Quelle est la probabilité d'obtenir un nombre
+    premier ?
+  indices:
+  - Quels nombres de 1 à 8 sont premiers ? (1 ne l'est pas.)
+  solution: '2, 3, 5 et 7 : P = 4/8 = 1/2.'
+- enonce: On tire une carte au hasard dans un jeu de 32 cartes. Probabilité de tirer un roi ? un cœur ?
+  indices:
+  - Il y a 4 rois et 4 couleurs de 8 cartes.
+  solution: P(roi) = 4/32 = 1/8 ; P(cœur) = 8/32 = 1/4.
+- enonce: Une pièce lancée 1 000 fois est tombée 512 fois sur « pile ». Cela prouve-t-il qu'elle est truquée ?
+  indices:
+  - Calcule la fréquence de « pile » et compare-la à 1/2.
+  solution: 'Fréquence 512/1000 = 0,512, proche de 0,5 : on ne peut pas conclure qu''elle est truquée ; un petit
+    écart est normal.'
+sources:
+- titre: Wikiversité, « Probabilités (mathématiques)/Déterminer la probabilité d'un événement »
+  url: https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/D%C3%A9terminer_la_probabilit%C3%A9_d%27un_%C3%A9v%C3%A9nement&oldid=985513
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Probabilités (mathématiques)/Notion d'expérience aléatoire et vocabulaire des probabilités
+    »
+  url: https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/Notion_d%27exp%C3%A9rience_al%C3%A9atoire_et_vocabulaire_des_probabilit%C3%A9s&oldid=921349
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Probabilité »
+  url: https://fr.vikidia.org/w/index.php?title=Probabilit%C3%A9&oldid=2559961
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
