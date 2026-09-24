@@ -17,7 +17,7 @@ journal = logging.getLogger("jules.suivi")
 
 STATUTS = ("compris", "en_cours", "bloque", "hors_scolaire")
 # "acquis" n'est jamais donne par l'analyse : seul le module epreuve l'ecrit, apres une epreuve sans aide.
-MODES_IGNORES = ("epreuve",)
+MODES_IGNORES = ("epreuve", "exercice")
 
 CONSIGNE = """Tu analyses un échange entre un élève de collège et son tuteur IA, pour le suivi scolaire.
 Réponds UNIQUEMENT par un objet JSON, sans texte autour :

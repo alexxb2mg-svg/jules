@@ -48,7 +48,7 @@
   function afficherNotion(notion) {
     etat.notion = notion;
     const b = $("pastille-notion");
-    if (!catalogueNotions() || !etat.conv || etat.conv.mode === "epreuve") { b.classList.add("cache"); return; }
+    if (!catalogueNotions() || !etat.conv || etat.conv.mode === "epreuve" || etat.conv.mode === "exercice") { b.classList.add("cache"); return; }
     b.classList.remove("cache");
     b.classList.toggle("choisie", Boolean(notion));
     b.textContent = notion ? `📚 ${notion.titre}` : "📚 Choisir une notion";
@@ -150,6 +150,7 @@
       fil.appendChild(lienStudio);
     }
     proposerEpreuve(fil);
+    proposerExercices(fil);
     marquerActif(null);
   }
 
@@ -188,6 +189,28 @@
   const epreuveFinie = (texte) => /preuve terminée/i.test(texte || "");
   function fermerSiEpreuveFinie(texte) {
     if (etat.conv && etat.conv.mode === "epreuve" && epreuveFinie(texte)) $("saisie").classList.add("cache");
+  }
+
+  // --- exercices sans IA (module "exercices", facultatif) --------------------
+  function proposerExercices(fil) {
+    const notions = (etat.infos.exercices || []);
+    if (!notions.length || etat.conv) return;
+    const encart = document.createElement("div");
+    encart.className = "encart-epreuve";
+    encart.innerHTML = `<p><strong>📝 S'entraîner sans IA</strong> : des exercices corrigés directement par le code, sans aide du modèle.</p>`;
+    for (const n of notions) {
+      const b = document.createElement("button");
+      b.className = "bouton secondaire";
+      b.textContent = `${n.titre} (${n.nb})`;
+      b.addEventListener("click", () => commencerExercice(n.id));
+      encart.appendChild(b);
+    }
+    fil.appendChild(encart);
+  }
+
+  async function commencerExercice(notionId) {
+    const r = await MS.api(`/api/eleve/exercices/${encodeURIComponent(notionId)}/commencer`, { method: "POST" });
+    await ouvrir(r.conversation);
   }
 
   function nomMode(id) {

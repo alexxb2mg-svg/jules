@@ -100,12 +100,22 @@ class Tuteur:
                 module.avant_echange(conv, eleve)
             except Exception:
                 journal.exception("Module %s : avant_echange en echec", module.id)
-        try:
-            reponse = self.llm.repondre(self.systeme(conv), self.tours(conv), "principal")
-        except Exception as err:
-            journal.exception("Echec du moteur d'IA")
-            self.stockage.ajouter_evenement("erreur", {"message": str(err)[:500]}, conv_id)
-            return Message(role="bot", texte=MESSAGE_PANNE)
+        reponse: str | None = None
+        for module in self.modules:
+            try:
+                reponse = module.repondre_a_la_place(conv, eleve)
+            except Exception:
+                journal.exception("Module %s : repondre_a_la_place en echec", module.id)
+                continue
+            if reponse is not None:
+                break
+        if reponse is None:
+            try:
+                reponse = self.llm.repondre(self.systeme(conv), self.tours(conv), "principal")
+            except Exception as err:
+                journal.exception("Echec du moteur d'IA")
+                self.stockage.ajouter_evenement("erreur", {"message": str(err)[:500]}, conv_id)
+                return Message(role="bot", texte=MESSAGE_PANNE)
         bot = self.stockage.ajouter_message(conv_id, Message(role="bot", texte=reponse or "…"))
         conv.messages.append(bot)
         self._lancer_apres_echange(conv, eleve, bot)

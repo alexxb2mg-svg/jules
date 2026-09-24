@@ -2,6 +2,7 @@
 
 Un module = jules/modules/<id>.py avec une classe `Brique(Module)`. Il peut :
   - agir avant la reponse (bloquant, court) -> avant_echange(conv, eleve)
+  - decider seul de la reponse, sans IA     -> repondre_a_la_place(conv, eleve)
   - contribuer au prompt systeme           -> contribution(conv)
   - agir apres chaque echange (en tache de fond) -> apres_echange(conv, eleve, bot)
   - declarer des taches planifiees          -> taches()
@@ -45,6 +46,10 @@ class Module:
         self.reglages = reglages
 
     def avant_echange(self, conv: Conversation, eleve: Message) -> None:
+        return None
+
+    def repondre_a_la_place(self, conv: Conversation, eleve: Message) -> str | None:
+        """Un module peut decider seul de la reponse (aucun appel au modele). None : ce n'est pas son tour."""
         return None
 
     def contribution(self, conv: Conversation) -> str | None:

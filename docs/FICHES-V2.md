@@ -117,6 +117,14 @@ refuse tout ce qui n'est pas nombre, variable, `+ − × ÷` ou puissance entiè
 C'est le niveau 0 de Jules. Aux niveaux supérieurs, le parcours ne change pas : un modèle reformule les
 messages, relit les exercices `ouverte` avec leurs critères, et converse librement autour.
 
+Le module `jules/modules/exercices.py` branche ce parcours sur la conversation : il ouvre une conversation
+en mode caché `exercice` (comme `epreuve`), et répond lui-même à chaque message tant que ce mode est actif
+(`Module.repondre_a_la_place`, `jules/moteur.py`) — aucun appel au modèle de langage n'a lieu pendant cette
+conversation. Réglage (`config.yaml`) : `bibliotheques`, la liste des dossiers de `bibliotheque/` à
+parcourir pour trouver des fiches v2 servables sans IA, par ordre de priorité. À la fin de la série, un
+événement `suivi` est écrit (même forme que le module `cours`) : l'épreuve sans aide et le bilan du soir
+voient la notion travaillée comme n'importe quelle autre.
+
 ## Le vérificateur
 
 ```
@@ -163,7 +171,8 @@ les repères (dates, acteurs, camps, chronologie, vocabulaire), le développemen
 
 ## Ce qui reste à faire
 
-- Brancher le parcours sur la conversation (un mode « exercice » servi sans IA quand la fiche est `verifiee`).
+- ~~Brancher le parcours sur la conversation (un mode « exercice » servi sans IA quand la fiche est
+  `verifiee`)~~ : fait, module `exercices` (voir « Le parcours sans IA » ci-dessus).
 - Aux niveaux avec IA, ne plus mettre les solutions dans le prompt quand le code corrige : le modèle n'a
   pas besoin de connaître une réponse qu'il ne doit jamais donner.
 - Convertir les 252 fiches v1, matière par matière, avec la filière ci-dessus.
