@@ -107,6 +107,13 @@ Une fiche dont la `notion` n'existe pas dans le référentiel est ignorée (et s
 
 `declencheurs` ne va pas dans le prompt : il aide seulement la détection automatique à retrouver la notion quand l'élève ne la nomme pas (« un pull à −30 % », « le lutin avance de 50 pas »). Comme pour les `mots_cles` du référentiel, un déclencheur trouvé en entier compte plus qu'un déclencheur trouvé en partie ; les mots de moins de trois lettres et les mots vides sont ignorés, et « % » ou « √ » tapés par l'élève valent « pourcent » et « racine ».
 
+### Fiches v2 (corrigées sans IA)
+
+Une fiche qui commence par `format: 2` suit un contrat plus strict, fait pour que Jules la serve sans IA :
+exercices typés et corrigés par le code, échelle de trois indices, pièges, prérequis, empreinte de
+vérification. Le contrat est dans [docs/FICHES-V2.md](../docs/FICHES-V2.md) ; `jules fiches verifier` le
+contrôle. Deux fiches de démonstration : `fiches-v2-demonstration/`.
+
 ### Direction d'un enseignant
 
 - `matieres/<id-de-matiere>.yaml` : ce qui vaut pour toute la matière ;

@@ -5,6 +5,7 @@
   jules verifier             charge toutes les briques et affiche le prompt assemble
   jules code eleve           definit le code d'acces eleve (idem : parent)
   jules rapport [JOUR]       affiche le rapport d'un jour (AAAA-MM-JJ), sans l'envoyer
+  jules fiches verifier      controle les fiches v2 (contrat, index) ; `jules fiches signer DOSSIER` les scelle
 
 Sans installation : `python lancer.py <commande>` depuis le dossier du projet.
 """
@@ -133,6 +134,10 @@ def main(args: list[str] | None = None) -> None:
         definir_code(args[1])
     elif args[0] == "rapport":
         rapport(args[1] if len(args) > 1 else None)
+    elif args[0] == "fiches":
+        from jules.fiches.commande import main as fiches
+
+        fiches(args[1:], RACINE / "bibliotheque")
     else:
         print(__doc__)
 
