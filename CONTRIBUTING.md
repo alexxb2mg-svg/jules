@@ -36,6 +36,16 @@ Une bonne fiche contient : l'essentiel du cours en quelques lignes, la méthode 
 
 **Enseignants** : vous pouvez aussi décrire votre direction pédagogique (approche, rédaction attendue, vocabulaire, ce qu'il faut éviter), pour que Jules suive votre façon de faire avec vos élèves. Modèle : `bibliotheque/exemple-direction-enseignant/`.
 
+### Une leçon (interface de cours)
+
+Une leçon fait suivre à l'élève un parcours guidé sur **une seule notion** du référentiel : objectifs, un ou deux blocs de texte, un exemple résolu, plusieurs exercices (nombre, réponse courte ou QCM), une question ouverte, et une synthèse écrite par l'élève. C'est un format plus construit qu'une fiche, pensé pour être suivi bloc par bloc dans la page `/cours` plutôt que résumé dans un prompt.
+
+1. Choisissez une notion sans leçon (`bibliotheque/lecons-3e-experimentales/lecons/<matiere>/` : si le fichier `<notion>.yaml` n'existe pas, la leçon reste à écrire).
+2. Suivez le format et les règles de validation de `docs/COURS-CONTRAT.md` (section 1) : 3 à 20 blocs, `sources` obligatoires avec leur licence, `indices` qui ne contiennent jamais la réponse, `relecture: {statut: a_relire}` tant qu'aucun enseignant n'a validé le contenu.
+3. Vérifiez vos calculs et vos exercices vous-même avant de proposer la leçon : un contributeur qui écrit une leçon de mathématiques doit refaire les calculs, pas seulement les recopier d'une source.
+4. Citez vos sources (mêmes règles que pour une fiche : contenu libre uniquement, licence indiquée). Pour proposer une leçon sans toucher à git, ouvrez un ticket « Leçon » avec votre texte : un mainteneur la met au format YAML.
+5. `jules verifier` charge et valide les leçons de la bibliothèque configurée ; il signale le motif de chaque leçon écartée.
+
 ### Une persona
 
 Copiez `persona/jules/` vers `persona/<nouvel-id>/`, puis adaptez `persona.yaml` (nom, message d'accueil, couleurs), les fichiers `.md` (identité, ton, petites manies) et l'avatar (`avatar.png`, carré, fond transparent ; un `.svg` marche aussi). Les règles de pédagogie et de sécurité ne sont pas dans la persona : elles restent les mêmes pour toutes. Pour essayer : `persona: <nouvel-id>` dans `config.local.yaml`, puis `jules verifier`.

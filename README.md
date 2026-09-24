@@ -14,7 +14,7 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 
 > **Pourquoi Jules.** Jules est né d'un essai, [*Après la dernière main levée*](docs/essai/), qui se demande ce que l'intelligence artificielle fait à l'apprentissage des enfants et à quelles conditions elle peut aider au lieu de faire à leur place. Sa lecture n'est pas nécessaire pour utiliser Jules. Elle montre d'où part le projet, les études sur lesquelles il s'appuie, et une postface dit ce que Jules en a repris, ce qu'il a corrigé et ce qui lui manque encore.
 
-> **Où en est le projet.** Jules fonctionne aujourd'hui comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'interface de cours interactif et les outils par matière sont en cours de conception ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; trois leçons expérimentales (mathématiques, français, histoire) servent de premier contenu, à relire par un enseignant. Les outils par matière (étape 3) restent à concevoir ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
 ## Où va Jules
 
@@ -34,13 +34,14 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 
 ## Ce que fait Jules aujourd'hui
 
+- **Interface de cours** : l'élève suit une leçon en blocs (objectifs, texte, exemple, exercice, question ouverte, synthèse) avec, à côté, Jules qui laisse essayer avant d'aider et ne donne jamais la réponse ; à gauche, le parcours des notions de la matière avec leur état estimé. La fin d'une leçon alimente le suivi et l'épreuve sans aide, comme un échange en conversation.
 - **Aide aux devoirs** avec la photo de l'exercice, sans jamais donner la réponse, même si l'enfant insiste.
-- **Cinq modes** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
+- **Cinq modes de conversation** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
 - **Épreuve sans aide** : quelques jours après, Jules propose de reprendre sans aide les notions marquées comprises. Ce qui a tenu devient « acquis », ce qui n'a pas tenu repasse « en cours », et le bilan du soir le dit au parent.
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent, avec une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice (« Explique-moi comment tu sais qu'un nombre est premier »). Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
 - **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
-- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune) et une fiche de repères pour chacune de ces notions, dans les 12 matières, écrite à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux, du primaire au lycée, sont à construire.
+- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune), une fiche de repères pour chacune de ces notions dans les 12 matières, et trois premières leçons en blocs (théorème de Pythagore, accord du participe passé avec avoir, la guerre totale 1914-1918), écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux, du primaire au lycée, sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on peut télécharger tout le dossier de l'élève (.zip), effacer une conversation, ou tout effacer d'un coup.
 
 ## Ce que Jules ne sait pas encore
@@ -129,10 +130,10 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié | en place |
 | Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas | en place |
 | Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève | en place |
-| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir... | en place |
+| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir, module `cours` (interface de leçon) | en place |
 | Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
-| Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (3e) |
+| Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (3e) |
 | Outils | à définir | Frise, calculatrice, carte... ouverts par Jules pendant une leçon | à concevoir |
 | Adaptations | `adaptations/` | Besoins particuliers (troubles dys, attention...) : affichage et consignes adaptés | emplacement réservé |
 
