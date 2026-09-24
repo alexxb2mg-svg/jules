@@ -1,0 +1,114 @@
+matiere: Physique-Chimie
+id: physique-chimie
+niveau: 5e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de physique-chimie du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été
+  réécrit pour 2026-2027 : il reste en vigueur tel quel en 5e. Il est structuré par cycle
+  de 3 ans (5e-4e-3e), avec quatre thèmes travaillés chaque année avec une complexité
+  croissante, sans découpage annuel officiel. Seuls les paragraphes « Repères de
+  progressivité » de chaque thème précisent explicitement ce qui peut être abordé dès la
+  classe de 5e (formulations « dès la classe de 5e », « la classe de 5e est l'occasion
+  de... ») : ce sont ces notions, et elles seules, qui sont retenues ici avec
+  niveau_programme "5e" ; le reste du programme (non attribué explicitement à une année)
+  n'est pas repris dans ce fichier annuel.
+brevet:
+  evalue: false
+themes:
+  - id: organisation-et-transformations-de-la-matiere
+    titre: "Organisation et transformations de la matière"
+    chapitres:
+      - id: constitution-et-etats-de-la-matiere-5e
+        titre: "Décrire la constitution et les états de la matière"
+        notions:
+          - id: 5e-etats-changements-etat-matiere
+            titre: "États de la matière, changements d'état, conservation de la masse"
+            niveau_programme: "5e"
+            attendus:
+              - "Caractériser les différents états de la matière (solide, liquide, gaz) et leurs changements d'état par des études quantitatives."
+              - "Mettre en œuvre des expériences sur la conservation de la masse (et la non-conservation du volume) lors d'un changement d'état."
+              - "Étudier la proportionnalité entre masse et volume pour une substance donnée."
+            mots_cles: [états de la matière, changement d'état, conservation de la masse, proportionnalité masse-volume]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Organisation et transformations de la matière », Repères de progressivité : « Dès la classe de 5e, les activités proposées permettent de consolider les notions d'espèce chimique, de mélange et de corps pur, d'état physique et de changement d'état, par des études quantitatives »"
+          - id: 5e-modele-particulaire-transformations-chimiques
+            titre: "Premières transformations chimiques et modèle particulaire"
+            niveau_programme: "5e"
+            attendus:
+              - "Utiliser un modèle particulaire pour décrire les états de la matière et les transformations physiques et chimiques."
+              - "Introduire expérimentalement des exemples de transformations chimiques (combustions, réactions acide-base, réactions acides-métaux)."
+            mots_cles: [modèle particulaire, transformation chimique, transformation physique]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Organisation et transformations de la matière », Repères de progressivité : « peut être développée à partir de la classe de 5e » et « permettent d'introduire expérimentalement des exemples de transformations chimiques dès la classe de 5e »"
+      - id: organisation-matiere-univers-5e
+        titre: "Décrire l'organisation de la matière dans l'Univers"
+        notions:
+          - id: 5e-organisation-matiere-univers
+            titre: "Structure de l'Univers et du système solaire (abordable dès le début du cycle)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Décrire la structure de l'Univers et du système solaire ; aborder les différentes unités de distance (du kilomètre à l'année-lumière)."
+              - "Connaître et comprendre l'origine de la matière ; comparer les ressources terrestres de certains éléments."
+            mots_cles: [Univers, système solaire, unités de distance, origine de la matière]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Organisation et transformations de la matière », rubrique « Décrire l'organisation de la matière dans l'Univers », précisée « peut être abordée tout au long du cycle » — non attribuée spécifiquement à la 5e par les repères de progressivité, marquée niveau_programme cycle 4 par prudence."
+  - id: mouvement-et-interactions
+    titre: "Mouvement et interactions"
+    chapitres:
+      - id: caracteriser-mouvement-5e
+        titre: "Caractériser un mouvement"
+        notions:
+          - id: 5e-vitesse-mouvement
+            titre: "Vitesse : direction, sens, valeur ; mouvements rectilignes et circulaires"
+            niveau_programme: "5e"
+            attendus:
+              - "Caractériser le mouvement d'un objet (vitesse : direction, sens, valeur)."
+              - "Utiliser la relation liant vitesse, distance et durée dans le cas d'un mouvement uniforme."
+              - "Distinguer mouvements rectilignes et circulaires, mouvements uniformes et mouvements dont la vitesse varie."
+            mots_cles: [vitesse, mouvement rectiligne, mouvement circulaire, mouvement uniforme]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Mouvement et interactions », Repères de progressivité : « Le concept de vitesse est réinvesti et approfondi dès le début du cycle 4 en introduisant les caractéristiques direction et sens »"
+          - id: 5e-interactions-descriptives
+            titre: "Notion d'interaction de contact ou à distance (approche descriptive)"
+            niveau_programme: "5e"
+            attendus:
+              - "Identifier les actions mises en jeu (de contact ou à distance), de manière descriptive."
+            mots_cles: [interaction, action de contact, action à distance]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Mouvement et interactions », Repères de progressivité : « la notion d'interaction de contact ou à distance peut être abordée de manière descriptive dès le début du cycle 4 »"
+  - id: energie-transferts-conversions
+    titre: "L'énergie, ses transferts et ses conversions"
+    chapitres:
+      - id: sources-formes-energie-5e
+        titre: "Identifier les sources, transferts et conversions de l'énergie"
+        notions:
+          - id: 5e-sources-conversions-energie
+            titre: "Sources et conversions de l'énergie (reprise et approfondissement du cycle 3)"
+            niveau_programme: "5e"
+            attendus:
+              - "Revenir sur les attendus du cycle 3 concernant les sources et les conversions de l'énergie."
+              - "Comparer des ordres de grandeur d'énergies ou de puissances produites ou consommées par des dispositifs."
+            mots_cles: [source d'énergie, conversion d'énergie, ordre de grandeur, puissance]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « L'énergie, ses transferts et ses conversions », Repères de progressivité : « La classe de 5e est l'occasion de revenir sur les attendus du cycle 3... La comparaison d'ordres de grandeur... peut être introduite dès la classe de 5e »"
+      - id: circuits-electriques-5e
+        titre: "Circuits électriques simples"
+        notions:
+          - id: 5e-circuits-electriques-simples
+            titre: "Mise en œuvre de circuits électriques simples ; propriétés du courant et de la tension"
+            niveau_programme: "5e"
+            attendus:
+              - "Mettre en œuvre des circuits électriques simples visant à réaliser des fonctions précises."
+              - "Aborder les propriétés du courant électrique et de la tension (approche qualitative, à reprendre avec le formalisme requis en 4e et 3e)."
+            mots_cles: [circuit électrique, courant électrique, tension]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « L'énergie, ses transferts et ses conversions », Repères de progressivité : « Dès la classe de 5e, la mise en œuvre de circuits simples... est recommandée. L'étude des propriétés du courant électrique et de la tension peut être abordée dès la classe de 5e »"

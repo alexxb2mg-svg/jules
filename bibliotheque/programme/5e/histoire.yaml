@@ -1,0 +1,129 @@
+matiere: Histoire
+id: histoire
+niveau: 5e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 5e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme d'histoire de la classe de 5e, première année du cycle 4. Le BO n° 31 du 30 juillet
+  2020 rattache explicitement trois thèmes à la « Classe de 5e » au titre des « Repères annuels
+  de programmation » : Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact ; Société,
+  Église et pouvoir politique dans l'Occident féodal (XIe-XVe siècles) ; Transformations de
+  l'Europe et ouverture sur le monde aux XVIe et XVIIe siècles. Le programme fait suite à la 6e
+  (préhistoire à l'Antiquité) et couvre le Moyen Âge jusqu'à la Renaissance et au début de l'âge
+  moderne. Comme pour la 3e, le texte ne fournit pas de liste de repères chronologiques et
+  spatiaux distincte : ils sont donc ceux mentionnés explicitement dans les « démarches et
+  contenus d'enseignement » de chaque sous-thème, repris ci-dessous en attendus.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 5e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 5e-chretientes-et-islam
+    titre: "Chrétientés et islam (VIe-XIIIe siècles), des mondes en contact"
+    chapitres:
+      - id: 5e-byzance-et-leurope-carolingienne
+        titre: "Byzance et l'Europe carolingienne"
+        notions:
+          - id: 5e-empire-byzantin-et-empire-carolingien
+            titre: "Byzance et l'Europe carolingienne : empires, pouvoirs et religion"
+            niveau_programme: "5e"
+            attendus:
+              - "Montrer comment naissent et évoluent des empires (byzantin, carolingien), en soulignant leurs facteurs d'unité ou de morcellement, la religion étant un facteur explicatif important."
+              - "Comprendre les relations entre pouvoirs politiques, militaires et religieux, qui permettent de définir les fonctions de basileus et d'empereur."
+            mots_cles: [Byzance, Empire carolingien, basileus, empereur]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 1 « Chrétientés et islam », « Byzance et l'Europe carolingienne »"
+      - id: 5e-naissance-de-lislam-a-bagdad
+        titre: "De la naissance de l'islam à la prise de Bagdad par les Mongols : pouvoirs, sociétés, cultures"
+        notions:
+          - id: 5e-islam-califat-et-contacts-mediterraneens
+            titre: "Naissance de l'islam, califat et contacts en Méditerranée (VIIe-XIIIe siècle)"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier la naissance de l'islam et l'évolution du monde musulman jusqu'à la prise de Bagdad par les Mongols (1258) ; définir la fonction de calife."
+              - "Étudier les contacts entre les puissances (byzantine, musulmane, occidentale) au sein de l'espace méditerranéen, illustrant les modalités de leur ouverture sur l'extérieur."
+              - "Comprendre que la Méditerranée, sillonnée par des marins, des guerriers et des marchands, est aussi un lieu d'échanges scientifiques, culturels et artistiques."
+            mots_cles: [islam, califat, Bagdad, Méditerranée, échanges culturels]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 1 « Chrétientés et islam », « De la naissance de l'islam à la prise de Bagdad par les Mongols »"
+  - id: 5e-societe-eglise-et-pouvoir-feodal
+    titre: "Société, Église et pouvoir politique dans l'Occident féodal (XIe-XVe siècles)"
+    chapitres:
+      - id: 5e-ordre-seigneurial
+        titre: "L'ordre seigneurial : la formation et la domination des campagnes"
+        notions:
+          - id: 5e-societe-feodale-et-campagnes
+            titre: "La société féodale : pouvoirs seigneuriaux, laïques et ecclésiastiques"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre que la société féodale, empreinte des valeurs religieuses du christianisme, se construit sous la domination conjointe des pouvoirs seigneuriaux, laïques et ecclésiastiques."
+              - "Étudier la conquête des terres et le lien entre êtres humains et environnement dans l'exploitation des campagnes, principales ressources de ces pouvoirs."
+            mots_cles: [féodalité, seigneurie, campagnes, christianisme]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 2 « Société, Église et pouvoir politique dans l'Occident féodal », « L'ordre seigneurial »"
+      - id: 5e-nouvelle-societe-urbaine
+        titre: "L'émergence d'une nouvelle société urbaine"
+        notions:
+          - id: 5e-essor-urbain-xiie-siecle
+            titre: "Essor urbain et économie marchande au XIIe siècle"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier le mouvement urbain qui s'amorce principalement au XIIe siècle et fait apparaître de nouveaux modes de vie."
+              - "Comprendre comment ce mouvement stimule l'économie marchande."
+            mots_cles: [ville médiévale, économie marchande, XIIe siècle]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 2 « Société, Église et pouvoir politique dans l'Occident féodal », « L'émergence d'une nouvelle société urbaine »"
+      - id: 5e-affirmation-etat-monarchique
+        titre: "L'affirmation de l'État monarchique dans le royaume des Capétiens et des Valois"
+        notions:
+          - id: 5e-etat-royal-capetiens-valois
+            titre: "Le gouvernement royal capétien et valois : bases d'un État moderne"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre comment le gouvernement royal pose les bases d'un État moderne, en s'imposant progressivement face aux pouvoirs féodaux."
+              - "Étudier l'extension du domaine royal et le développement d'un appareil administratif plus efficace pour le contrôler."
+            mots_cles: [Capétiens, Valois, État royal, administration]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 2 « Société, Église et pouvoir politique dans l'Occident féodal », « L'affirmation de l'État monarchique »"
+  - id: 5e-transformations-europe-xvi-xvii
+    titre: "Transformations de l'Europe et ouverture sur le monde aux XVIe et XVIIe siècles"
+    chapitres:
+      - id: 5e-monde-charles-quint-soliman
+        titre: "Le monde au temps de Charles Quint et Soliman le Magnifique"
+        notions:
+          - id: 5e-premiere-mondialisation-xve-xvie
+            titre: "Grandes découvertes et première mondialisation (XVe-XVIe siècle)"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier l'expansion européenne dans le cadre des grandes découvertes, accomplissant une première mondialisation aux XVe et XVIe siècles."
+              - "Comprendre les recompositions de l'espace méditerranéen, en tenant compte du rôle des Ottomans et des Ibériques dans ces processus."
+            mots_cles: [grandes découvertes, Charles Quint, Soliman le Magnifique, première mondialisation]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 3 « Transformations de l'Europe et ouverture sur le monde », « Le monde au temps de Charles Quint et Soliman le Magnifique »"
+      - id: 5e-humanisme-reformes-conflits-religieux
+        titre: "Humanisme, réformes et conflits religieux"
+        notions:
+          - id: 5e-renaissance-reformes-et-conflits
+            titre: "Bouleversements scientifiques, culturels et religieux de la Renaissance"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier les bouleversements scientifiques, techniques, culturels et religieux que connaît l'Europe de la Renaissance."
+              - "Réinterroger les relations entre pouvoirs politiques et religion à la lumière de l'humanisme et des réformes."
+            mots_cles: [humanisme, Renaissance, réforme protestante, conflits religieux]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 3 « Transformations de l'Europe et ouverture sur le monde », « Humanisme, réformes et conflits religieux »"
+      - id: 5e-du-prince-de-la-renaissance-au-roi-absolu
+        titre: "Du Prince de la Renaissance au roi absolu (François Ier, Henri IV, Louis XIV)"
+        notions:
+          - id: 5e-affirmation-figure-royale
+            titre: "Évolution de la figure royale du XVIe au XVIIe siècle en France"
+            niveau_programme: "5e"
+            attendus:
+              - "Approfondir, à travers l'exemple français, l'étude de l'évolution de la figure royale du XVIe au XVIIe siècle (François Ier, Henri IV, Louis XIV), déjà abordée au cycle 3."
+            mots_cles: [François Ier, Henri IV, Louis XIV, absolutisme]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 5e, Thème 3 « Transformations de l'Europe et ouverture sur le monde », « Du Prince de la Renaissance au roi absolu »"

@@ -1,0 +1,101 @@
+matiere: Technologie
+id: technologie
+niveau: 5e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Annexe — Programme de technologie du cycle 4"
+    reference: "BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Ressources d'accompagnement du programme de technologie au cycle 4 — calendrier d'application (5e 2024-2025, 4e 2025-2026, 3e 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le nouveau programme de technologie de cycle 4 (BO n° 9 du 29 février 2024) est entré
+  en application en 5e dès la rentrée 2024-2025 : il est donc pleinement en vigueur en
+  5e en 2026-2027 (troisième année d'application pour ce niveau). Le texte est structuré
+  en trois thèmes, chacun décliné en compétences de fin de cycle assorties d'un paragraphe
+  « Progressivité pour atteindre ces compétences en fin de cycle » qui détaille
+  explicitement ce qui est attendu « en classe de 5e », puis en 4e, puis en 3e, ainsi que
+  de tableaux « Repères de progressivité 5e 4e 3e » par compétence. Les notions ci-dessous
+  reprennent les éléments explicitement attribués à la classe de 5e par ces paragraphes.
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: usages-et-interactions-des-ost-5e
+    titre: "Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser"
+    chapitres:
+      - id: usages-culture-technologique-5e
+        titre: "Décrire les liens entre usages et évolutions technologiques"
+        notions:
+          - id: 5e-usages-objets-quotidien
+            titre: "Usages d'objets et de systèmes techniques du quotidien : mise en service, manipulation, paramétrage"
+            niveau_programme: "5e"
+            attendus:
+              - "Mieux appréhender les usages d'objets et de systèmes techniques de leur quotidien, par la mise en service, la manipulation, le recours à des expériences d'utilisateurs, des activités de paramétrage, de configuration et de tests."
+              - "Commencer à construire et à conceptualiser les premiers éléments d'une culture des solutions technologiques."
+            mots_cles: [objet technique, système technique, usage, paramétrage]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 1, compétence « Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques », Progressivité : « En classe de 5e, il s'agit d'amener les élèves à mieux appréhender les usages d'objets et de systèmes techniques de leur quotidien... »"
+      - id: environnement-numerique-donnees-5e
+        titre: "Usages et impacts sociétaux du numérique"
+        notions:
+          - id: 5e-donnees-fichiers-arborescence
+            titre: "Fichiers, dossiers et arborescence numérique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Décrire le rôle des systèmes d'information dans le partage d'information."
+              - "Recenser des données, les identifier, les classer, les représenter, les stocker dans des fichiers, les retrouver dans une arborescence."
+            mots_cles: [système d'information, fichier, arborescence, stockage de données]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 1, compétence « Décrire les liens entre usages et évolutions technologiques », rubrique « Usages et impacts sociétaux du numérique », tableau Repères de progressivité 5e 4e 3e (attribution précise à la 5e non détaillée cellule par cellule dans l'extraction du texte — notion marquée cycle 4 par prudence)"
+  - id: structure-fonctionnement-comportement-5e
+    titre: "Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre"
+    chapitres:
+      - id: entrees-sorties-reparation-5e
+        titre: "Entrées, sorties et réparation d'un objet technique"
+        notions:
+          - id: 5e-entrees-sorties-objet-technique
+            titre: "Identifier les entrées et sorties d'un objet ou système technique"
+            niveau_programme: "5e"
+            attendus:
+              - "À partir d'observations, de manipulations, de réparations, aborder les objets et les systèmes techniques et identifier leurs entrées et leurs sorties (mouvements, informations)."
+              - "Être en mesure de modifier les paramètres d'entrée d'un programme pour en identifier les conséquences sur les fonctionnalités d'un objet ou d'un système technique."
+            mots_cles: [entrée, sortie, objet technique, programme, paramètre]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 2, compétence « Décrire et caractériser l'organisation interne d'un objet ou d'un système technique », Progressivité : « En classe de 5e, à partir d'observations, de manipulations, de réparations, les élèves abordent les objets et les systèmes techniques et identifient leurs entrées et leurs sorties »"
+          - id: 5e-reparation-visuelle
+            titre: "Réparer une pièce après un dysfonctionnement repéré visuellement"
+            niveau_programme: "5e"
+            attendus:
+              - "Être en mesure d'effectuer une réparation d'une pièce d'un objet ou d'un système technique après avoir repéré visuellement un dysfonctionnement."
+            mots_cles: [dysfonctionnement, réparation, diagnostic visuel]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 2, compétence « Identifier un dysfonctionnement d'un objet technique et y remédier », Progressivité : « Ils doivent également être en mesure d'effectuer une réparation d'une pièce... après avoir repéré visuellement un dysfonctionnement »"
+  - id: creation-conception-realisation-5e
+    titre: "Création, conception, réalisation, innovations : des objets à concevoir et à réaliser"
+    chapitres:
+      - id: mini-projets-5e
+        titre: "Gestion de projet technique : mini-projets"
+        notions:
+          - id: 5e-mini-projets-prototype
+            titre: "Mini-projets : de la problématique au prototype"
+            niveau_programme: "5e"
+            attendus:
+              - "Dans le cadre de mini-projets, identifier des problématiques afin de répondre à des besoins en lien avec des enjeux."
+              - "Choisir ou proposer des solutions à partir d'éléments donnés en suivant une planification établie et arrêtée."
+              - "Aboutir, après conception et réalisation d'un ou plusieurs éléments répondant à une fonction technique précise, à l'élaboration d'un prototype (constituants, assemblage, programme)."
+            mots_cles: [projet technique, prototype, planification, conception]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 3, compétence « Imaginer, concevoir et réaliser une ou des solutions », Progressivité : « En classe de 5e, dans le cadre de mini-projets, les élèves identifient des problématiques afin de répondre à des besoins en lien avec des enjeux... »"
+          - id: 5e-suivre-processus-conception
+            titre: "Suivre un processus de conception et de réalisation avec des tâches identifiées"
+            niveau_programme: "5e"
+            attendus:
+              - "Suivre un processus de conception et de réalisation dans une durée, avec des tâches identifiées."
+            mots_cles: [gestion de projet, tâches, diagramme de planification]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 3, rubrique « La gestion de projet technique », tableau Repères de progressivité 5e 4e 3e : ligne 5e « Suivre un processus de conception et de réalisation dans une durée, avec des tâches identifiées »"
