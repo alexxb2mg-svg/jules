@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: proportionnalite-en-geometrie
+declencheurs: ["échelle", "plan", "maquette", "agrandir", "agrandit", "réduire la figure", "longueur réelle"]
 essentiel: 'Agrandir ou réduire une figure de rapport k, c''est multiplier toutes ses longueurs par k (k > 1 : agrandissement
   ; 0 < k < 1 : réduction). Les angles ne changent pas.
 

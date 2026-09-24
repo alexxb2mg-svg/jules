@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: problemes-mise-en-equation
+declencheurs: ["mettre en équation", "âge", "ans", "nombre de départ", "consécutifs", "trouver le nombre"]
 essentiel: 'Un problème se présente rarement sous forme d''équation : il faut traduire l''énoncé en langage mathématique.
 
   Quatre étapes : 1) choisir l''inconnue et dire ce qu''elle représente (souvent ce que demande la question) ; 2)

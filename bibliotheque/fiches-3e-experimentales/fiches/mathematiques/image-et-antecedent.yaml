@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: image-et-antecedent
+declencheurs: ["image", "images", "antécédents", "lecture graphique", "lire sur la courbe"]
 essentiel: 'Image de a par f : f(a). On la trouve en calculant avec l''expression, en lisant le tableau (ligne du
   dessous) ou le graphique (on part de a sur l''axe des abscisses, on monte jusqu''à la courbe, on lit l''ordonnée).
 

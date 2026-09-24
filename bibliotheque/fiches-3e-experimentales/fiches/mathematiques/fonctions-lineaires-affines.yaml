@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: fonctions-lineaires-affines
+declencheurs: ["droite", "pente", "coefficient directeur", "ordonnée à l'origine", "affine", "linéaire"]
 essentiel: 'Une fonction affine s''écrit f(x) = ax + b : a est le coefficient directeur, b l''ordonnée à l''origine.
 
   Si b = 0, f(x) = ax est une fonction linéaire : elle traduit une situation de proportionnalité.

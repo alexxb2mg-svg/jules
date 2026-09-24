@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: histogrammes
+declencheurs: ["classes", "rectangles", "graphique", "barres", "intervalles"]
 essentiel: 'Quand les valeurs sont nombreuses et continues (tailles, durées), on les regroupe en classes, par exemple
   [160 ; 170[ : de 160 inclus à 170 exclu. L''amplitude d''une classe est la différence entre ses bornes (ici 10).
 

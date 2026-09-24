@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: calcul-nombres-rationnels
+declencheurs: ["fraction", "fractions", "dénominateur", "numérateur", "inverse", "priorité", "priorités", "relatif", "relatifs", "négatif", "négatifs"]
 essentiel: 'Additionner ou soustraire des fractions : les mettre au même dénominateur, puis additionner (ou soustraire)
   les numérateurs : a/c + b/c = (a + b)/c.
 

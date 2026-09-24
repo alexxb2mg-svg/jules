@@ -14,10 +14,11 @@ from jules.bibliotheques import (
     candidats,
     charger_catalogue,
     lire_identite,
+    mots,
     texte_direction,
     texte_fiche,
 )
-from jules.modules.notions import niveau_du_profil
+from jules.modules.notions import niveau_du_profil, ressemble_a_un_calcul
 from jules.stockage import Message
 from jules.web.app import creer_app
 
@@ -86,6 +87,7 @@ def mini(tmp_path: Path) -> Path:
         tmp_path / "fiches" / "fiches" / "maths" / "pythagore.yaml",
         {
             "notion": "pythagore",
+            "declencheurs": ["angle droit", "équerre"],
             "essentiel": "Dans un triangle rectangle, BC² = AB² + AC².",
             "methode": ["Repérer l'angle droit", "Écrire l'égalité"],
             "erreurs_frequentes": ["Oublier la racine carrée"],
@@ -123,6 +125,22 @@ def test_catalogue_priorite_et_directions(mini):
     assert [b.id for b, _ in directions] == ["prof", "prof"]
     assert not cat.a_une_fiche("thales")
     assert all("nexistepas" not in b.fiches for b in cat.contenus)  # fiche sur notion inconnue ignoree
+
+
+def test_declencheurs_preselectionnent_sans_aller_dans_le_prompt(mini):
+    cat = charger_catalogue(mini, ["ref", "fiches"], "3e")
+    assert [n.id for n in candidats(cat, "Mon triangle a un angle droit")] == ["pythagore"]
+    assert candidats(cat, "Un triangle quelconque") == []
+    assert [n.id for n in candidats(cat, "j'ai pris l'équerre")] == ["pythagore"]
+    fiche, _ = cat.fiche("pythagore")
+    assert "declencheurs" not in fiche and "équerre" not in texte_fiche(fiche)
+
+
+def test_symboles_et_calculs_sans_mot():
+    assert mots("moins 30 %") == {"moins", "pourcent"} and "racine" in mots("√72")
+    assert ressemble_a_un_calcul("(2x-6)(x+5) = 0") and ressemble_a_un_calcul("2/3 + 5/6")
+    assert not ressemble_a_un_calcul("j'ai une rédaction à faire") and not ressemble_a_un_calcul("")
+    assert not ressemble_a_un_calcul("peut-être, quand se retrouvent-ils ? en km/h")
 
 
 def test_bibliotheque_invalide_ecartee_sans_bloquer(mini):
@@ -220,6 +238,27 @@ def test_detection_sur_photo_seule(tuteur):
     tuteur.echanger(conv.id, "", [nom])
     assert vus["images"] == 1
     assert tuteur.module("notions").notion_de(conv.id)["id"] == "fonctions-lineaires-affines"
+
+
+def test_detection_sur_un_calcul_sans_mot(tuteur):
+    vus = {}
+
+    def regle(systeme, tours, modele):
+        if "UNE notion d'une liste fermée" in systeme:
+            vus["liste_complete"] = "racine-carree" in systeme and "ratio" in systeme
+            return '{"notion": "equations-premier-degre-et-produits", "confiance": "haute"}'
+        return "ok"
+
+    tuteur.llm.regle = regle
+    module = tuteur.module("notions")
+    trouvee = module.detecter(Message(role="eleve", texte="(2x-6)(x+5) = 0"))
+    assert trouvee == ("equations-premier-degre-et-produits", "haute")
+    assert vus["liste_complete"]  # un calcul : toute la liste, comme pour une photo
+    vus.clear()
+    module.detecter(Message(role="eleve", texte="Pythagore : 3² + 4² = ?"))
+    assert vus["liste_complete"]  # meme avec un mot reconnu
+    vus.clear()
+    assert module.detecter(Message(role="eleve", texte="bonjour")) is None and not vus  # ni mot ni calcul : pas d'appel
 
 
 def test_detection_rejette_une_notion_inventee(tuteur):

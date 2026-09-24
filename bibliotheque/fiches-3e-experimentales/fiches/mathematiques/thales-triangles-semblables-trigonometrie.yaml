@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: thales-triangles-semblables-trigonometrie
+declencheurs: ["parallèles", "papillon", "cos", "sin", "tan", "sohcahtoa", "adjacent", "opposé", "angle"]
 essentiel: 'Théorème de Thalès. Deux droites (d) et (d'') sont sécantes en A ; B et M sont sur (d), C et N sur (d'').
   Si (MN) et (BC) sont parallèles, alors AM/AB = AN/AC = MN/BC. Cela vaut dans la configuration « triangle » (M
   sur [AB], N sur [AC]) comme dans la configuration « papillon » (A entre M et B, et entre N et C). Il sert à calculer

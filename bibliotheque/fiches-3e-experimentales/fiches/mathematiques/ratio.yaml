@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: ratio
+declencheurs: ["partager", "partage", "rapport", "parts"]
 essentiel: 'Partager une quantité selon le ratio a : b, c''est la couper en a + b parts égales : la première personne
   reçoit a parts, la seconde b parts.
 

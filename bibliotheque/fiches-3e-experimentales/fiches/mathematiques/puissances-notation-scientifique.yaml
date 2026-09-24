@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: puissances-notation-scientifique
+declencheurs: ["puissance", "puissances", "exposant", "au carré", "au cube", "milliard", "milliards", "millions"]
 essentiel: 'Pour un nombre a et un entier n ≥ 1 : aⁿ = a × a × … × a (n facteurs). Pour a ≠ 0 : a⁰ = 1 et a⁻ⁿ =
   1/aⁿ (l''inverse de aⁿ).
 

@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: problemes-divisibilite
+declencheurs: ["ensemble", "retrouver", "retrouvent", "sachets", "paquets", "lots", "identiques", "roues dentées", "dents", "même temps", "plus petit multiple", "plus grand diviseur"]
 essentiel: 'Beaucoup de problèmes se ramènent à des multiples ou des diviseurs communs.
 
   Phénomènes qui se répètent (bus, feux, engrenages, planètes) : ils se retrouvent ensemble au bout d''un temps

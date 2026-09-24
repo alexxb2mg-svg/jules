@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: equations-premier-degre-et-produits
+declencheurs: ["résoudre", "résous", "inconnue", "solution", "solutions", "équations"]
 essentiel: 'Résoudre une équation d''inconnue x, c''est trouver toutes les valeurs de x qui rendent l''égalité vraie
   (les solutions).
 

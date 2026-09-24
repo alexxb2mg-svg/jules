@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: modelisation-et-problemes-par-fonctions
+declencheurs: ["tarif", "tarifs", "formule", "offre", "offres", "abonnement", "plus avantageux", "moins cher"]
 essentiel: 'Modéliser, c''est choisir une fonction qui décrit comment une grandeur dépend d''une autre (un prix
   selon le nombre de séances, une distance selon le temps…).
 

@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: fractions-irreductibles
+declencheurs: ["irréductible", "simplifier", "simplifie"]
 essentiel: 'Une fraction est irréductible quand son numérateur et son dénominateur n''ont pas d''autre diviseur
   commun que 1.
 

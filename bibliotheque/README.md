@@ -72,6 +72,7 @@ Tous les champs de contenu sont facultatifs ; `notion`, `sources` et `relecture`
 
 ```yaml
 notion: racine-carree            # identifiant exact du référentiel
+declencheurs: [racine, radical]  # facultatif : mots d'élève qui signalent la notion sans la nommer
 couverture: "..."                # si la fiche ne couvre qu'une partie de la notion
 essentiel: |                     # le cours en quelques lignes
   ...
@@ -103,6 +104,8 @@ relecture:
 ```
 
 Une fiche dont la `notion` n'existe pas dans le référentiel est ignorée (et signalée).
+
+`declencheurs` ne va pas dans le prompt : il aide seulement la détection automatique à retrouver la notion quand l'élève ne la nomme pas (« un pull à −30 % », « le lutin avance de 50 pas »). Comme pour les `mots_cles` du référentiel, un déclencheur trouvé en entier compte plus qu'un déclencheur trouvé en partie ; les mots de moins de trois lettres et les mots vides sont ignorés, et « % » ou « √ » tapés par l'élève valent « pourcent » et « racine ».
 
 ### Direction d'un enseignant
 

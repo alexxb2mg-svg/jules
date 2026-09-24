@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: pourcentages-coefficient-multiplicateur
+declencheurs: ["pourcent", "soldes", "solde", "soldé", "remise", "réduction", "promo", "augmente", "augmentation", "baisse", "hausse", "diminue", "diminution", "taux"]
 essentiel: 'Prendre t % d''une quantité a : a × t/100.
 
   Augmenter de t %, c''est multiplier par 1 + t/100 ; diminuer de t %, c''est multiplier par 1 − t/100. Ce nombre

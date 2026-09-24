@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: vocabulaire-notations-fonctions
+declencheurs: ["fonction", "fonctions", "associe", "machine"]
 essentiel: 'Une fonction f est un procédé qui, à un nombre x (la variable), associe un seul nombre, noté f(x) (lire
   « f de x »).
 

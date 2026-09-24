@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: grandeurs-et-transformations
+declencheurs: ["aire multipliée", "volume multiplié", "agrandissement", "réduction", "rapport k"]
 essentiel: 'Les symétries, les translations et les rotations conservent les longueurs, les angles, les aires et
   les volumes : la figure image est superposable à la figure de départ.
 

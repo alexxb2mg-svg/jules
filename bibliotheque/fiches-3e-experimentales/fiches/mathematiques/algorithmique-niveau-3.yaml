@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: algorithmique-niveau-3
+declencheurs: ["scratch", "bloc personnalisé", "mes blocs", "répéter jusqu'à", "boucles", "aléatoire", "sous-programme"]
 essentiel: 'Pour un problème complexe, on le décompose en sous-problèmes. En Scratch, un sous-problème peut devenir
   un « bloc personnalisé » (Mes blocs), éventuellement avec un paramètre : par exemple un bloc « carré (côté) ».
 

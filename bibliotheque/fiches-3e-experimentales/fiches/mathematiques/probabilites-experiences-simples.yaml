@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: probabilites-experiences-simples
+declencheurs: ["chance", "chances", "hasard", "lancer", "lance", "tire", "tirage", "boules", "sac", "urne", "pile", "face", "roue", "cartes", "proba", "probas"]
 essentiel: 'Une expérience est aléatoire quand on connaît les résultats possibles (les issues) sans pouvoir prévoir
   lequel se produira. Un événement est un ensemble d''issues.
 

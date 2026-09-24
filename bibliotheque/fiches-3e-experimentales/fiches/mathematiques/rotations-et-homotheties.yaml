@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: rotations-et-homotheties
+declencheurs: ["tourner", "tourne", "rotation", "centre", "image de la figure", "frise", "pavage", "rosace", "homothétie"]
 essentiel: 'Rotation de centre O et d''angle α (dans un sens donné) : l''image d''un point M est le point M'' tel
   que OM'' = OM et l''angle MOM'' = α. O est sa propre image.
 

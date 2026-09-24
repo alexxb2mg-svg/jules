@@ -35,6 +35,14 @@ journal = logging.getLogger("jules.notions")
 
 ESPACE = "notions"
 ORIGINES = ("eleve", "auto")
+# Un calcul tape par l'eleve (« (2x-6)(x+5) = 0 », « 2/3 + 5/6 ») : un operateur colle a un nombre ou a une
+# parenthese. « peut-être » ou « m/s » n'en sont pas.
+_CALCUL = re.compile(r"[0-9)²³]\s*[-+*/×÷=^]|[-+*/×÷=^]\s*[0-9(√]")
+
+
+def ressemble_a_un_calcul(texte: str) -> bool:
+    return bool(_CALCUL.search(texte or ""))
+
 
 CONSIGNE_DETECTION = """Tu rattaches le travail d'un élève à UNE notion d'une liste fermée.
 Lis son message (et la photo de son exercice s'il y en a une), puis réponds UNIQUEMENT par un objet JSON :
@@ -146,10 +154,12 @@ class Brique(Module):
     def detecter(self, eleve: Message) -> tuple[str, str] | None:
         """Propose (id de notion, confiance) pour un message de l'eleve, ou None."""
         liste = candidats(self.catalogue, eleve.texte) if eleve.texte else []
-        if not liste and not eleve.images:
-            return None  # ni mot reconnu ni photo : rien a rattacher
-        if not liste:
-            liste = list(self.catalogue.notions.values())  # photo seule : toute la liste
+        calcul = ressemble_a_un_calcul(eleve.texte)
+        if not liste and not eleve.images and not calcul:
+            return None  # ni mot reconnu, ni photo, ni calcul : rien a rattacher
+        if not liste or calcul:
+            # photo ou calcul : les mots du message ne suffisent pas a choisir, le modele voit toute la liste
+            liste = list(self.catalogue.notions.values())
         catalogue = "\n".join(f"{n.id} | {n.nom_matiere} | {n.titre}" for n in liste)
         images = [p for nom in eleve.images if (p := self.tuteur.stockage.chemin_image(nom))]
         tour = Tour(role="user", texte=eleve.texte or TEXTE_PHOTO_SEULE, images=images)

@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: effectifs-et-frequences
+declencheurs: ["effectifs", "fréquences", "combien de fois", "proportion", "élèves sur", "pourcent"]
 essentiel: 'L''effectif d''une valeur est le nombre de fois où elle apparaît ; l''effectif total est le nombre de
   données.
 

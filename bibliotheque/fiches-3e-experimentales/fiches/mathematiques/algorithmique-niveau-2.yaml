@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: algorithmique-niveau-2
+declencheurs: ["scratch", "lutin", "drapeau vert", "variable", "variables", "mettre", "ajouter", "demander", "si alors", "sinon"]
 essentiel: 'Un script démarre en réponse à un événement : « quand le drapeau vert est cliqué », « quand la touche
   espace est pressée », « quand ce lutin est cliqué »…
 

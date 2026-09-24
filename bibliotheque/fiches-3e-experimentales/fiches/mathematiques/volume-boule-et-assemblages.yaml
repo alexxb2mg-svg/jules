@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: volume-boule-et-assemblages
+declencheurs: ["volume", "sphère", "ballon", "boule", "cylindre", "cône", "pyramide", "silo", "demi-sphère", "litres", "contenance"]
 essentiel: 'Une sphère de centre O et de rayon r est formée des points situés à la distance r de O ; la boule est
   la sphère « pleine » (tous les points à une distance inférieure ou égale à r).
 

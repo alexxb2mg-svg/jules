@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: ecritures-et-comparaison-nombres
+declencheurs: ["ordre croissant", "ordre décroissant", "ranger", "plus grand", "plus petit", "comparer", "encadrer", "encadrement", "droite graduée", "virgule"]
 essentiel: 'Un même nombre rationnel a plusieurs écritures : fractionnaire (3/4), décimale (0,75), en pourcentage
   (75 %), scientifique (7,5 × 10⁻¹), ou un point sur une droite graduée.
 

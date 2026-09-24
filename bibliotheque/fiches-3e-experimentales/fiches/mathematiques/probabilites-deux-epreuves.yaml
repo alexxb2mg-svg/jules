@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: probabilites-deux-epreuves
+declencheurs: ["deux dés", "deux fois", "somme des", "arbre", "sans remise", "avec remise", "remet", "proba", "probas"]
 essentiel: 'Une expérience à deux épreuves enchaîne deux expériences aléatoires (lancer deux dés, tirer deux boules
   l''une après l''autre…). Une issue est alors un couple, par exemple (2 ; 5).
 

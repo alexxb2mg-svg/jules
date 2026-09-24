@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: developper-factoriser-reduire
+declencheurs: ["développer", "développe", "factoriser", "factorise", "réduire", "réduis", "identités remarquables", "distributivité", "expression littérale"]
 couverture: Surtout les identités remarquables ; la double distributivité est rappelée brièvement.
 essentiel: 'Développer, c''est transformer un produit en somme ; factoriser, c''est l''inverse (somme → produit).
 

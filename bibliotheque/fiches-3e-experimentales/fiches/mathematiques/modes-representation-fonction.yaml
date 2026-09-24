@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: modes-representation-fonction
+declencheurs: ["courbe", "tracer", "repère", "tableau de valeurs", "programme de calcul"]
 essentiel: 'Une même fonction peut être donnée de quatre façons : un programme de calcul (en phrases), une expression
   (f(x) = 2x + 3), un tableau de valeurs, une représentation graphique.
 
