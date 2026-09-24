@@ -1,0 +1,53 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: effectifs-et-frequences
+essentiel: 'L''effectif d''une valeur est le nombre de fois où elle apparaît ; l''effectif total est le nombre de
+  données.
+
+  La fréquence d''une valeur est effectif de la valeur / effectif total. C''est un nombre entre 0 et 1, qu''on écrit
+  souvent en pourcentage (× 100).
+
+  La somme des fréquences de toutes les valeurs vaut 1 (100 %).
+
+  Les fréquences permettent de comparer des groupes d''effectifs différents (une classe de 20 et une de 30 élèves).'
+methode:
+- Trier ou compter les données dans un tableau (valeur, effectif).
+- Calculer l'effectif total et le vérifier.
+- 'Pour chaque valeur : fréquence = effectif / effectif total, puis en % si demandé.'
+- 'Contrôler : la somme des fréquences doit faire 1 (aux arrondis près).'
+erreurs_frequentes:
+- Diviser par le mauvais total.
+- Comparer des effectifs quand les groupes n'ont pas la même taille (il faut comparer des fréquences).
+- Oublier de multiplier par 100 pour passer en pourcentage.
+exemple:
+  enonce: 'Notes d''une classe : 10, 9, 12, 11, 10, 8, 14, 11, 9, 16, 5, 12, 10, 11, 10, 13. Quelle est la fréquence
+    de la note 10 ?'
+  solution: 'Effectif total : 16 notes. La note 10 apparaît 4 fois. Fréquence : 4/16 = 0,25, soit 25 %.'
+exercices:
+- enonce: Dans une classe de 25 élèves, 8 viennent à pied, 5 à vélo, 10 en bus et 2 en voiture. Calculer la fréquence
+    de chaque mode de transport en %.
+  indices:
+  - Divise chaque effectif par 25.
+  solution: À pied 32 %, vélo 20 %, bus 40 %, voiture 8 % (total 100 %).
+- enonce: En 3e A, 12 élèves sur 30 font du sport en club ; en 3e B, 10 sur 20. Quelle classe en a la plus grande
+    proportion ?
+  indices:
+  - Compare des fréquences, pas des effectifs.
+  solution: '3e A : 12/30 = 40 % ; 3e B : 10/20 = 50 %. La 3e B, même si elle compte moins de sportifs.'
+sources:
+- titre: Wikipédia, « Fréquence (statistiques) »
+  url: https://fr.wikipedia.org/w/index.php?title=Fr%C3%A9quence_%28statistiques%29&oldid=213044233
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Initiation à la statistique/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_la_statistique/Introduction&oldid=986124
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

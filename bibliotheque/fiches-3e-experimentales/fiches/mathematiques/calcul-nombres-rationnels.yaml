@@ -1,0 +1,84 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: calcul-nombres-rationnels
+essentiel: 'Additionner ou soustraire des fractions : les mettre au même dénominateur, puis additionner (ou soustraire)
+  les numérateurs : a/c + b/c = (a + b)/c.
+
+  Multiplier : numérateurs entre eux, dénominateurs entre eux : a/b × c/d = (a × c)/(b × d). Simplifier avant de
+  multiplier facilite le calcul.
+
+  Diviser par un nombre non nul, c''est multiplier par son inverse : l''inverse de c/d est d/c, donc a/b ÷ c/d =
+  a/b × d/c.
+
+  Priorités : d''abord les parenthèses, puis les multiplications et divisions, enfin les additions et soustractions
+  (de gauche à droite).
+
+  Nombres relatifs : le produit ou le quotient de deux nombres de même signe est positif, de signes contraires négatif.
+
+  Un ordre de grandeur (en arrondissant les nombres) permet de vérifier qu''un résultat est vraisemblable.'
+methode:
+- Repérer l'opération prioritaire avant de calculer.
+- 'Pour une somme de fractions : chercher un dénominateur commun (un multiple commun des dénominateurs), transformer
+  chaque fraction, puis additionner les numérateurs.'
+- 'Pour un quotient de fractions : remplacer « ÷ c/d » par « × d/c ».'
+- Simplifier le résultat jusqu'à obtenir une fraction irréductible.
+- Contrôler avec un ordre de grandeur ou la calculatrice.
+erreurs_frequentes:
+- 'Additionner les numérateurs et les dénominateurs : 1/2 + 1/3 ≠ 2/5.'
+- Mettre au même dénominateur pour une multiplication (inutile).
+- Inverser la mauvaise fraction dans une division.
+- 'Oublier les priorités : dans 2/3 + 5/6 × 4/5, la multiplication se fait en premier.'
+- Se tromper de signe dans un produit de nombres relatifs.
+exemple:
+  enonce: Calculer A = 2/3 + 5/6 × 4/5 et donner le résultat sous forme irréductible.
+  solution: 'La multiplication est prioritaire : 5/6 × 4/5 = 20/30 = 2/3. Donc A = 2/3 + 2/3 = 4/3.'
+exercices:
+- enonce: Calculer 3/4 − 5/6.
+  indices:
+  - 12 est un multiple commun de 4 et de 6.
+  solution: 3/4 − 5/6 = 9/12 − 10/12 = −1/12.
+- enonce: Calculer (4/5) ÷ (7/8).
+  indices:
+  - Diviser par 7/8, c'est multiplier par 8/7.
+  solution: 4/5 × 8/7 = 32/35.
+- enonce: Calculer B = (1 − 1/4) × 8/9.
+  indices:
+  - 'Commence par la parenthèse : 1 = 4/4.'
+  solution: B = 3/4 × 8/9 = 24/36 = 2/3.
+- enonce: Sans calculatrice, donner un ordre de grandeur de 49,8 × 0,21, puis vérifier.
+  indices:
+  - Arrondis 49,8 à 50 et 0,21 à 0,2.
+  solution: '50 × 0,2 = 10 ; le calcul exact donne 10,458 : le résultat est vraisemblable.'
+- enonce: Calculer (−3) × (−4) − 2 × (−5).
+  indices:
+  - Les deux produits d'abord, avec la règle des signes.
+  solution: 12 − (−10) = 12 + 10 = 22.
+sources:
+- titre: Wikiversité, « Fraction/Addition »
+  url: https://fr.wikiversity.org/w/index.php?title=Fraction/Addition&oldid=885201
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Fraction/Multiplication »
+  url: https://fr.wikiversity.org/w/index.php?title=Fraction/Multiplication&oldid=984610
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Fraction/Division »
+  url: https://fr.wikiversity.org/w/index.php?title=Fraction/Division&oldid=985014
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Opérations sur les nombres relatifs »
+  url: https://fr.wikiversity.org/w/index.php?title=Op%C3%A9rations_sur_les_nombres_relatifs&oldid=903936
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

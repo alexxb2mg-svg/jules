@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: modelisation-fonction-lineaire
+essentiel: 'Une situation de proportionnalité entre deux grandeurs se modélise par une fonction linéaire f(x) =
+  ax : a est le coefficient de proportionnalité.
+
+  Sa représentation graphique est une droite qui passe par l''origine du repère.
+
+  Réciproquement, si un graphique est une droite passant par l''origine, les grandeurs sont proportionnelles.
+
+  Les pourcentages sont des fonctions linéaires : une remise de 20 % correspond à x ↦ 0,8x, une hausse de 5 % à
+  x ↦ 1,05x.
+
+  Pour trouver a, on divise une image par son nombre de départ : a = f(x)/x (x ≠ 0).'
+methode:
+- Vérifier que la situation est proportionnelle (un tableau de proportionnalité, ou « 0 donne 0 » et « double donne
+  double »).
+- Calculer le coefficient a = y/x à partir d'un couple de valeurs connues.
+- Écrire f(x) = ax en précisant ce que représentent x et f(x), avec les unités.
+- Utiliser f pour calculer une image (multiplier par a) ou un antécédent (diviser par a).
+erreurs_frequentes:
+- 'Modéliser par une fonction linéaire une situation avec une partie fixe (un abonnement) : c''est affine, pas linéaire.'
+- Calculer a à l'envers (x/y au lieu de y/x).
+- Tracer une droite qui ne passe pas par l'origine pour une fonction linéaire.
+exemple:
+  enonce: Des pommes coûtent 2,40 € le kilogramme. Modéliser le prix par une fonction, puis calculer le prix de
+    3,5 kg et la masse achetée pour 6 €.
+  solution: 'p(x) = 2,4x (x en kg, p(x) en €). p(3,5) = 8,40 €. Pour 6 € : 2,4x = 6, x = 2,5 kg.'
+exercices:
+- enonce: 2 L de peinture coûtent 3 € et 5 L coûtent 7,50 €. Le prix est-il proportionnel au volume ? Si oui, donner
+    la fonction.
+  indices:
+  - Calcule le prix d'un litre dans les deux cas.
+  solution: '3/2 = 1,5 et 7,5/5 = 1,5 : oui, f(x) = 1,5x (x en L, f(x) en €).'
+- enonce: Un magasin fait −20 % sur tout. Écrire la fonction qui donne le prix soldé, puis le prix soldé d'un article
+    à 45 €.
+  indices:
+  - Baisser de 20 %, c'est multiplier par… ?
+  solution: f(x) = 0,8x ; f(45) = 36 €.
+- enonce: Un taxi facture 4 € de prise en charge plus 1,50 € par km. Le prix est-il proportionnel à la distance
+    ?
+  indices:
+  - Combien coûte une course de 0 km ?
+  solution: 'Non : pour 0 km, on paie déjà 4 €. Le prix se modélise par une fonction affine, x ↦ 1,5x + 4.'
+sources:
+- titre: Wikiversité, « Proportionnalité/Fonctions linéaires »
+  url: https://fr.wikiversity.org/w/index.php?title=Proportionnalit%C3%A9/Fonctions_lin%C3%A9aires&oldid=913565
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Fonction linéaire »
+  url: https://fr.vikidia.org/w/index.php?title=Fonction_lin%C3%A9aire&oldid=2114819
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

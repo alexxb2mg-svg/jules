@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: proportionnalite-en-geometrie
+essentiel: 'Agrandir ou réduire une figure de rapport k, c''est multiplier toutes ses longueurs par k (k > 1 : agrandissement
+  ; 0 < k < 1 : réduction). Les angles ne changent pas.
+
+  Les longueurs de la figure d''arrivée sont donc proportionnelles à celles de la figure de départ ; k est le coefficient
+  de proportionnalité.
+
+  Une échelle est un rapport de réduction : sur un plan au 1/200, 1 cm représente 200 cm en réalité.
+
+  Cette proportionnalité apparaît dans les configurations de Thalès, les triangles semblables et les homothéties
+  : on calcule une longueur manquante avec un tableau de proportionnalité (produit en croix).
+
+  Pour les aires, le coefficient est k² ; pour les volumes, k³.'
+methode:
+- Repérer les longueurs qui se correspondent (côtés homologues).
+- 'Calculer le rapport k à partir d''un couple de longueurs connues : k = longueur d''arrivée / longueur de départ.'
+- Multiplier (ou diviser) les autres longueurs par k, ou compléter un tableau de proportionnalité.
+- Pour une échelle, convertir dans la même unité avant de comparer.
+erreurs_frequentes:
+- Ajouter une même longueur à chaque côté au lieu de multiplier.
+- Associer des côtés qui ne se correspondent pas.
+- Multiplier une aire par k au lieu de k².
+- Oublier de convertir les unités (cm sur le plan, m en réalité).
+exemple:
+  enonce: Sur un plan à l'échelle 1/200, une pièce mesure 4,5 cm de long. Quelle est sa longueur réelle ?
+  solution: 4,5 × 200 = 900 cm, soit 9 m.
+exercices:
+- enonce: Un triangle a des côtés de 4 cm, 5 cm et 6 cm. On l'agrandit de rapport 1,5. Longueurs des côtés ?
+  indices:
+  - Multiplie chaque longueur par 1,5.
+  solution: 6 cm, 7,5 cm et 9 cm.
+- enonce: Une voiture de 4,2 m de long est reproduite en maquette au 1/50. Longueur de la maquette ?
+  indices:
+  - Convertis 4,2 m en cm.
+  solution: 420 ÷ 50 = 8,4 cm.
+- enonce: Le triangle DEF est un agrandissement du triangle ABC ; DE = 6 cm correspond à AB = 4 cm et BC = 5 cm.
+    Calculer EF.
+  indices:
+  - Calcule d'abord le rapport k = DE/AB.
+  solution: k = 6/4 = 1,5, donc EF = 5 × 1,5 = 7,5 cm.
+- enonce: On agrandit un carré de rapport 3. Par combien son aire est-elle multipliée ?
+  indices:
+  - Prends un carré de côté 1 et calcule les deux aires.
+  solution: Par 3² = 9.
+sources:
+- titre: Vikidia, « Réduction »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9duction&oldid=568131
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Homothétie »
+  url: https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Triangles semblables »
+  url: https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: rotations-et-homotheties
+essentiel: 'Rotation de centre O et d''angle α (dans un sens donné) : l''image d''un point M est le point M'' tel
+  que OM'' = OM et l''angle MOM'' = α. O est sa propre image.
+
+  Une rotation conserve les longueurs, les angles, l''alignement et les aires (comme les symétries et les translations).
+
+  Homothétie de centre O et de rapport k (k ≠ 0) : M'' est sur la droite (OM), avec OM'' = |k| × OM ; du même côté
+  que M si k > 0, de l''autre côté si k < 0. Elle agrandit (|k| > 1) ou réduit (|k| < 1) la figure, conserve les
+  angles et l''alignement, et transforme une droite en une droite parallèle.
+
+  Les rosaces se construisent par rotations successives autour d''un centre (angle = 360° ÷ nombre de motifs) ;
+  les frises et pavages utilisent translations, symétries et rotations.'
+methode:
+- 'Rotation : tracer [OM], reporter l''angle au rapporteur dans le bon sens, reporter la longueur OM au compas.'
+- 'Homothétie : tracer la droite (OM), mesurer OM, placer M'' à |k| × OM, du bon côté de O.'
+- 'Pour une figure : transformer les sommets, puis les relier.'
+- 'Pour reconnaître une transformation dans une rosace ou un pavage : chercher le centre, l''angle (rotation) ou
+  le rapport (homothétie).'
+erreurs_frequentes:
+- Tourner dans le mauvais sens.
+- Mesurer l'angle à partir d'un autre point que le centre.
+- Placer l'image d'une homothétie de rapport négatif du même côté que le point de départ.
+- Croire qu'une homothétie conserve les longueurs.
+exemple:
+  enonce: Une rosace est formée de 6 motifs identiques, obtenus par rotations autour de son centre. Quel est l'angle
+    de la plus petite rotation qui laisse la rosace inchangée ?
+  solution: 360° ÷ 6 = 60°.
+exercices:
+- enonce: Un segment [AB] de 5 cm subit une homothétie de rapport 3, puis un autre de 8 cm une homothétie de rapport
+    1/2. Longueurs des images ?
+  indices:
+  - Longueur × |k|.
+  solution: 15 cm et 4 cm.
+- enonce: Un triangle d'aire 7 cm² subit une homothétie de rapport −2. Quelle est l'aire de l'image ?
+  indices:
+  - Aire × k², et k² est positif.
+  solution: 7 × 4 = 28 cm².
+- enonce: Une rosace à 8 pétales est obtenue par rotation d'un pétale. Quel angle utiliser ?
+  indices:
+  - Un tour complet fait 360°.
+  solution: 360° ÷ 8 = 45°.
+sources:
+- titre: Wikiversité, « Rotation »
+  url: https://fr.wikiversity.org/w/index.php?title=Rotation&oldid=943811
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Rotation plane »
+  url: https://fr.wikipedia.org/w/index.php?title=Rotation_plane&oldid=236556709
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Homothétie »
+  url: https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Rosace »
+  url: https://fr.vikidia.org/w/index.php?title=Rosace&oldid=1272445
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: illustration
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

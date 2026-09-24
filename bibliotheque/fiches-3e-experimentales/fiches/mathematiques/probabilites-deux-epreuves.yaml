@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: probabilites-deux-epreuves
+essentiel: 'Une expérience à deux épreuves enchaîne deux expériences aléatoires (lancer deux dés, tirer deux boules
+  l''une après l''autre…). Une issue est alors un couple, par exemple (2 ; 5).
+
+  Pour dénombrer les issues, on utilise un tableau à double entrée (la première épreuve en ligne, la seconde en
+  colonne) ou un arbre. Nombre total d''issues = (issues de la 1re épreuve) × (issues de la 2e).
+
+  Si chaque épreuve est équiprobable, les couples le sont aussi et P(A) = cases favorables / nombre de cases.
+
+  Tirage avec remise : la deuxième épreuve a les mêmes issues que la première. Sans remise : l''objet tiré n''est
+  plus disponible, il y a moins d''issues à la deuxième épreuve.'
+methode:
+- Construire le tableau (ou l'arbre) de toutes les issues, dans l'ordre des épreuves.
+- Colorier ou compter les cases qui réalisent l'événement.
+- Diviser par le nombre total de cases, puis simplifier.
+- 'Sans remise : barrer les cases impossibles (tirer deux fois le même objet).'
+erreurs_frequentes:
+- Croire que toutes les sommes de deux dés sont aussi probables (7 sort 6 fois plus souvent que 2).
+- Compter (1 ; 2) et (2 ; 1) comme une seule issue.
+- Confondre tirage avec remise et sans remise.
+exemple:
+  enonce: On lance deux dés équilibrés et on additionne les résultats. Quelle est la probabilité d'obtenir 7 ?
+  solution: 'Le tableau 6 × 6 compte 36 cases équiprobables. Somme 7 : (1;6), (2;5), (3;4), (4;3), (5;2), (6;1),
+    soit 6 cases. P = 6/36 = 1/6.'
+exercices:
+- enonce: Avec deux dés, quelle est la probabilité que la somme fasse 10 ?
+  indices:
+  - Cherche les couples dont la somme vaut 10 dans le tableau.
+  solution: '(4;6), (5;5), (6;4) : P = 3/36 = 1/12.'
+- enonce: Avec deux dés, quelle est la probabilité d'obtenir un double ?
+  indices:
+  - Où sont les doubles dans le tableau ?
+  solution: '6 doubles sur 36 cases : P = 1/6.'
+- enonce: On lance deux fois une pièce équilibrée. Probabilité d'obtenir au moins un « pile » ?
+  indices:
+  - Liste les 4 issues.
+  - 'Ou bien : quel est l''événement contraire ?'
+  solution: 'Issues PP, PF, FP, FF ; seule FF n''a pas de pile : P = 3/4 (ou 1 − 1/4).'
+- enonce: Un sac contient 2 boules rouges et 1 verte. On tire une boule, on la remet, puis on en tire une seconde.
+    Probabilité d'avoir deux rouges ? Et si on ne remet pas la première boule ?
+  indices:
+  - Numérote les boules R1, R2, V pour faire le tableau.
+  - Sans remise, les cases (R1;R1)... sont impossibles.
+  solution: 'Avec remise : 9 cases, 4 avec deux rouges, P = 4/9. Sans remise : 6 cases possibles, 2 avec deux rouges
+    (R1;R2) et (R2;R1), P = 2/6 = 1/3.'
+sources:
+- titre: Wikiversité, « Probabilités (mathématiques)/Déterminer la probabilité d'un événement »
+  url: https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/D%C3%A9terminer_la_probabilit%C3%A9_d%27un_%C3%A9v%C3%A9nement&oldid=985513
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Probabilité »
+  url: https://fr.vikidia.org/w/index.php?title=Probabilit%C3%A9&oldid=2559961
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

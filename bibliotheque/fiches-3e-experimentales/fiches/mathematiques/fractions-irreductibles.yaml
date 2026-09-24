@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: fractions-irreductibles
+essentiel: 'Une fraction est irréductible quand son numérateur et son dénominateur n''ont pas d''autre diviseur
+  commun que 1.
+
+  On ne change pas une fraction en divisant son numérateur et son dénominateur par un même nombre non nul : a/b
+  = (a ÷ k)/(b ÷ k).
+
+  Trois façons de simplifier : diviser plusieurs fois par des diviseurs communs (critères de divisibilité par 2,
+  3, 5, 9, 10) ; diviser en une fois par le plus grand diviseur commun ; ou décomposer numérateur et dénominateur
+  en produits de facteurs premiers et supprimer les facteurs communs.'
+methode:
+- Chercher un diviseur commun évident (les deux nombres sont pairs ? finissent par 0 ou 5 ? la somme des chiffres
+  est divisible par 3 ?).
+- Diviser le numérateur et le dénominateur par ce diviseur ; recommencer tant que c'est possible.
+- 'Ou bien : décomposer les deux nombres en facteurs premiers et barrer les facteurs communs.'
+- Conclure seulement quand il n'y a plus de diviseur commun autre que 1.
+erreurs_frequentes:
+- Diviser seulement le numérateur (ou seulement le dénominateur).
+- '« Simplifier » en barrant des chiffres identiques : dans 12/24, barrer les 2 donne 1/4 alors que 12/24 = 1/2.'
+- 'Soustraire un même nombre en haut et en bas : (12 − 2)/(24 − 2) ≠ 12/24.'
+- 'S''arrêter trop tôt : 45/60 = 9/12 n''est pas irréductible.'
+exemple:
+  enonce: Rendre irréductible la fraction 84/126.
+  solution: '84 = 2² × 3 × 7 et 126 = 2 × 3² × 7 : les facteurs communs sont 2, 3 et 7 (produit 42). 84/126 = (42
+    × 2)/(42 × 3) = 2/3.'
+exercices:
+- enonce: Simplifier 14/18.
+  indices:
+  - 14 et 18 sont pairs.
+  solution: 14/18 = 7/9.
+- enonce: Rendre irréductible 45/60.
+  indices:
+  - 45 et 60 sont divisibles par 5, et par 3.
+  solution: '45/60 = 9/12 = 3/4 (en une fois : diviser par 15).'
+- enonce: Rendre irréductible 105/165.
+  indices:
+  - Les deux se terminent par 5.
+  - 'Somme des chiffres : 1 + 0 + 5 et 1 + 6 + 5.'
+  solution: 'Divisibles par 5 et par 3, donc par 15 : 105/165 = 7/11.'
+- enonce: La fraction 35/48 est-elle irréductible ?
+  indices:
+  - Décompose 35 et 48.
+  solution: '35 = 5 × 7 et 48 = 2⁴ × 3 : aucun facteur commun, donc 35/48 est irréductible.'
+sources:
+- titre: Wikiversité, « Fraction/Simplification »
+  url: https://fr.wikiversity.org/w/index.php?title=Fraction/Simplification&oldid=912281
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Initiation à l'arithmétique/PGCD »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/PGCD&oldid=966772
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Critère de divisibilité »
+  url: https://fr.vikidia.org/w/index.php?title=Crit%C3%A8re_de_divisibilit%C3%A9&oldid=2331781
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: pourcentages-coefficient-multiplicateur
+essentiel: 'Prendre t % d''une quantité a : a × t/100.
+
+  Augmenter de t %, c''est multiplier par 1 + t/100 ; diminuer de t %, c''est multiplier par 1 − t/100. Ce nombre
+  est le coefficient multiplicateur (CM) : +12 % → × 1,12 ; −30 % → × 0,7.
+
+  Un CM supérieur à 1 traduit une hausse, un CM entre 0 et 1 une baisse.
+
+  Évolutions successives : on multiplie les coefficients (on n''additionne pas les pourcentages).
+
+  Retrouver la valeur de départ : diviser la valeur d''arrivée par le CM.
+
+  Taux d''évolution entre une valeur de départ VD et une valeur d''arrivée VA : (VA − VD)/VD, exprimé en %.'
+methode:
+- Traduire l'évolution en coefficient multiplicateur (1 + t/100 ou 1 − t/100).
+- Valeur d'arrivée = valeur de départ × CM.
+- 'Plusieurs évolutions : multiplier les CM, puis traduire le CM global en pourcentage.'
+- Valeur de départ = valeur d'arrivée ÷ CM.
+- 'Contrôler le sens : une hausse doit donner un résultat plus grand.'
+erreurs_frequentes:
+- Croire qu'une hausse de 20 % suivie d'une baisse de 20 % ramène au prix de départ.
+- Retrouver un prix avant remise en ajoutant le pourcentage au prix remisé.
+- Confondre 1,5 (hausse de 50 %) et 1,05 (hausse de 5 %).
+- Calculer un taux d'évolution en divisant par la valeur d'arrivée.
+exemple:
+  enonce: Un pull à 40 € est soldé à −30 %. Quel est son nouveau prix ?
+  solution: 'Baisse de 30 % : CM = 1 − 0,30 = 0,7. Nouveau prix : 40 × 0,7 = 28 €.'
+exercices:
+- enonce: Un vélo coûte 250 €. Son prix augmente de 12 %. Quel est son nouveau prix ?
+  indices:
+  - Quel coefficient correspond à +12 % ?
+  solution: 250 × 1,12 = 280 €.
+- enonce: Quelle évolution correspond à un coefficient multiplicateur de 0,85 ? de 1,04 ?
+  indices:
+  - Compare chaque coefficient à 1.
+  solution: '0,85 = 1 − 0,15 : baisse de 15 %. 1,04 = 1 + 0,04 : hausse de 4 %.'
+- enonce: Un prix augmente de 20 %, puis baisse de 20 %. Revient-il à sa valeur de départ ?
+  indices:
+  - Multiplie les deux coefficients.
+  solution: '1,2 × 0,8 = 0,96 : le prix final correspond à une baisse de 4 % ; il ne revient pas à sa valeur de
+    départ.'
+- enonce: Après une remise de 25 %, un article coûte 60 €. Quel était son prix avant la remise ?
+  indices:
+  - Prix avant × 0,75 = 60.
+  solution: 60 ÷ 0,75 = 80 € (et non 60 + 25 % de 60 = 75 €).
+- enonce: La population d'un village passe de 1 200 à 1 350 habitants. Calculer le taux d'évolution.
+  indices:
+  - (arrivée − départ) / départ
+  solution: '(1 350 − 1 200)/1 200 = 150/1 200 = 0,125 : hausse de 12,5 %.'
+sources:
+- titre: Wikiversité, « Pourcentage/Calculer un pourcentage d'un nombre »
+  url: https://fr.wikiversity.org/w/index.php?title=Pourcentage/Calculer_un_pourcentage_d%27un_nombre&oldid=969029
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Pourcentage/Pourcentage d'évolution »
+  url: https://fr.wikiversity.org/w/index.php?title=Pourcentage/Pourcentage_d%27%C3%A9volution&oldid=969030
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Taux d'évolution »
+  url: https://fr.wikipedia.org/w/index.php?title=Taux_d%27%C3%A9volution&oldid=239424958
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

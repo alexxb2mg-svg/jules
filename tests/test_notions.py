@@ -283,3 +283,16 @@ def test_bibliotheque_publiee_valide(dossier):
             assert source.get("licence") in LICENCES_LIBRES, f"{fichier.name} : licence de source non libre"
             assert source.get("url", "").startswith("https://"), f"{fichier.name} : lien de source manquant"
         assert fiche.get("relecture", {}).get("statut") in ("a_relire", "relue"), f"{fichier.name} : relecture"
+
+
+def test_fiches_experimentales_couvrent_les_maths_de_3e():
+    """Chaque notion de maths du referentiel 3e a sa fiche, et chaque fiche a exemple et exercices complets."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
+    maths = [n.id for n in cat.notions.values() if n.matiere == "mathematiques"]
+    fiches = cat.contenus[0].fiches
+    assert len(maths) == 38 and sorted(maths) == sorted(fiches)
+    for identifiant, fiche in fiches.items():
+        assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), identifiant
+        assert fiche.get("exemple", {}).get("solution"), identifiant
+        for exercice in fiche.get("exercices", []):
+            assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), identifiant

@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: proportionnalite-configurations-geometriques
+essentiel: 'Dans plusieurs configurations, des longueurs sont proportionnelles et on les calcule avec un rapport
+  k :
+
+  - agrandissement ou réduction : toutes les longueurs sont multipliées par k ;
+
+  - triangles semblables : les côtés homologues sont proportionnels ;
+
+  - configuration de Thalès (droites parallèles) : AM/AB = AN/AC = MN/BC ;
+
+  - homothétie de centre O et de rapport k : OM'' = |k| × OM et M''N'' = |k| × MN (k > 0 : même côté de O ; k <
+  0 : de l''autre côté).
+
+  Les angles sont conservés ; les aires sont multipliées par k² et les volumes par |k|³.'
+methode:
+- Repérer la configuration et justifier la proportionnalité (parallèles, angles égaux, homothétie donnée…).
+- Associer les longueurs qui se correspondent (dresser un tableau à deux lignes aide).
+- Calculer le rapport avec un couple complet, puis les longueurs manquantes (produit en croix).
+- Conclure avec l'unité.
+erreurs_frequentes:
+- Associer des côtés qui ne se correspondent pas.
+- Utiliser la proportionnalité sans l'avoir justifiée.
+- Oublier le signe du rapport d'homothétie pour placer le point image.
+exemple:
+  enonce: À la même heure, un bâton vertical de 2 m a une ombre de 1,6 m, et l'ombre d'un arbre mesure 9,6 m. Quelle
+    est la hauteur de l'arbre ?
+  solution: 'Les rayons du soleil sont parallèles : les triangles bâton-ombre et arbre-ombre sont semblables. Rapport
+    9,6 / 1,6 = 6, donc l''arbre mesure 2 × 6 = 12 m.'
+exercices:
+- enonce: Les triangles ABC et DEF sont semblables avec AB = 4 cm ↔ DE = 6 cm et BC = 5 cm ↔ EF. Calculer EF.
+  indices:
+  - Rapport k = DE / AB.
+  solution: k = 1,5 donc EF = 7,5 cm.
+- enonce: Une homothétie de centre O a pour rapport −2. OA = 3 cm. Où est A' et combien mesure OA' ?
+  indices:
+  - 'Rapport négatif : de l''autre côté de O.'
+  solution: A' est sur la droite (OA), de l'autre côté de O, avec OA' = 2 × 3 = 6 cm.
+- enonce: Une photo de 9 cm × 6 cm est réduite pour que la largeur de 6 cm devienne 4 cm. Quelle est la nouvelle
+    longueur ?
+  indices:
+  - Rapport = 4/6.
+  solution: k = 2/3 donc 9 × 2/3 = 6 cm.
+sources:
+- titre: Wikiversité, « Triangles et parallèles/Théorème de Thalès »
+  url: https://fr.wikiversity.org/w/index.php?title=Triangles_et_parall%C3%A8les/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s&oldid=983153
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Triangles semblables »
+  url: https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Homothétie »
+  url: https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

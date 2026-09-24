@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: grandeurs-et-transformations
+essentiel: 'Les symétries, les translations et les rotations conservent les longueurs, les angles, les aires et
+  les volumes : la figure image est superposable à la figure de départ.
+
+  Une homothétie de rapport k (ou un agrandissement/réduction de rapport k > 0) multiplie les longueurs par |k|,
+  les aires par k² et les volumes par |k|³ ; elle conserve les angles.
+
+  On s''en sert pour calculer une grandeur sans tout recalculer : si on connaît l''aire de la figure de départ et
+  le rapport, on obtient directement l''aire de l''image.'
+methode:
+- Identifier la transformation et, pour une homothétie, son rapport k.
+- 'Isométrie (symétrie, translation, rotation) : reporter les mêmes mesures.'
+- 'Homothétie : longueurs × |k|, aires × k², volumes × |k|³.'
+- Vérifier les unités (cm, cm², cm³).
+erreurs_frequentes:
+- Multiplier une aire par k au lieu de k².
+- Croire qu'une rotation change les longueurs.
+- 'Oublier qu''un rapport négatif donne des longueurs multipliées par sa valeur positive (k = −2 : longueurs × 2).'
+exemple:
+  enonce: Un triangle a un côté de 3 cm et une aire de 12 cm². On lui applique une homothétie de rapport 2. Longueur
+    du côté image ? Aire de l'image ?
+  solution: 'Côté : 3 × 2 = 6 cm. Aire : 12 × 2² = 48 cm².'
+exercices:
+- enonce: Une réduction de rapport 0,5 est appliquée à une figure d'aire 24 cm², puis à un solide de volume 300
+    cm³. Aire et volume obtenus ?
+  indices:
+  - Aire × k², volume × k³.
+  solution: 'Aire : 24 × 0,25 = 6 cm². Volume : 300 × 0,125 = 37,5 cm³.'
+- enonce: Sur un plan au 1/50, une pièce a une aire de 400 cm². Quelle est son aire réelle en m² ?
+  indices:
+  - Aire réelle = aire sur le plan × 50².
+  solution: 400 × 2 500 = 1 000 000 cm² = 100 m².
+- enonce: Un carré de 5 cm de côté subit une rotation de 90°. Quelle est l'aire de l'image ?
+  indices:
+  - Une rotation conserve les longueurs.
+  solution: 'La même : 25 cm².'
+sources:
+- titre: Vikidia, « Transformation (géométrie) »
+  url: https://fr.vikidia.org/w/index.php?title=Transformation_%28g%C3%A9om%C3%A9trie%29&oldid=1063345
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Homothétie »
+  url: https://fr.vikidia.org/w/index.php?title=Homoth%C3%A9tie&oldid=2339862
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Homothétie »
+  url: https://fr.wikipedia.org/w/index.php?title=Homoth%C3%A9tie&oldid=222741314
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

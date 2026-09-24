@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: equations-premier-degre-et-produits
+essentiel: 'Résoudre une équation d''inconnue x, c''est trouver toutes les valeurs de x qui rendent l''égalité vraie
+  (les solutions).
+
+  On obtient une équation qui a les mêmes solutions en ajoutant (ou soustrayant) un même nombre aux deux membres,
+  ou en les multipliant (ou divisant) par un même nombre non nul.
+
+  Une équation du premier degré se ramène à ax = b avec a ≠ 0 : sa solution unique est x = b/a.
+
+  Équation produit : un produit est nul si et seulement si l''un au moins de ses facteurs est nul. Donc A × B =
+  0 équivaut à A = 0 ou B = 0.
+
+  Équation x² = a : si a > 0, deux solutions √a et −√a ; si a = 0, une solution 0 ; si a < 0, aucune solution (un
+  carré est toujours positif ou nul).'
+methode:
+- 'Premier degré : développer si besoin, regrouper les termes en x dans un membre et les nombres dans l''autre,
+  puis diviser par le coefficient de x.'
+- 'Équation produit : vérifier qu''un membre est 0 et l''autre un produit ; sinon tout passer d''un côté et factoriser.'
+- Écrire « A = 0 ou B = 0 », puis résoudre chaque petite équation.
+- Vérifier chaque solution en la remplaçant dans l'équation de départ.
+- 'Conclure par une phrase : « l''équation a pour solution(s) … ».'
+erreurs_frequentes:
+- Faire passer un terme de l'autre côté sans changer son signe.
+- Diviser par le coefficient de x en oubliant son signe (−5x = 15 donne x = −3).
+- 'Oublier la solution négative : x² = 49 a deux solutions, 7 et −7.'
+- Développer une équation produit au lieu d'utiliser la règle du produit nul.
+- Dans x + 5 = 0, répondre x = 5.
+exemple:
+  enonce: Résoudre 5x − 3 = 2x + 9.
+  solution: '5x − 2x = 9 + 3, donc 3x = 12 et x = 4. Vérification : 5 × 4 − 3 = 17 et 2 × 4 + 9 = 17.'
+exercices:
+- enonce: Résoudre 7 − 2x = 3x + 22.
+  indices:
+  - Regroupe les x à droite ou à gauche, au choix.
+  solution: '−2x − 3x = 22 − 7, donc −5x = 15 et x = −3 (vérification : 13 = 13).'
+- enonce: Résoudre 3(x − 2) = 5x + 4.
+  indices:
+  - Développe d'abord le membre de gauche.
+  solution: '3x − 6 = 5x + 4, donc −2x = 10 et x = −5 (vérification : −21 = −21).'
+- enonce: Résoudre (2x − 6)(x + 5) = 0.
+  indices:
+  - Un produit est nul si l'un de ses facteurs est nul.
+  solution: 2x − 6 = 0 ou x + 5 = 0, donc x = 3 ou x = −5.
+- enonce: Résoudre x² = 49, puis x² = −4.
+  indices:
+  - Quels nombres ont 49 pour carré ?
+  - Un carré peut-il être négatif ?
+  solution: 'x² = 49 : x = 7 ou x = −7. x² = −4 : aucune solution.'
+- enonce: Résoudre x² − 16 = 0 en factorisant.
+  indices:
+  - 'x² − 16 = x² − 4² : quelle identité ?'
+  solution: (x − 4)(x + 4) = 0, donc x = 4 ou x = −4.
+sources:
+- titre: Wikiversité, « Équation et inéquation/Définitions »
+  url: https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/D%C3%A9finitions&oldid=886171
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Équation et inéquation/Équation produit et équation quotient »
+  url: https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/%C3%89quation_produit_et_%C3%A9quation_quotient&oldid=977736
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Équation »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89quation&oldid=2498913
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

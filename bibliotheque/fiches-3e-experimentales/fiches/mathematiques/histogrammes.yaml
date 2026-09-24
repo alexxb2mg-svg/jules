@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: histogrammes
+essentiel: 'Quand les valeurs sont nombreuses et continues (tailles, durées), on les regroupe en classes, par exemple
+  [160 ; 170[ : de 160 inclus à 170 exclu. L''amplitude d''une classe est la différence entre ses bornes (ici 10).
+
+  Un histogramme représente ces classes par des rectangles accolés. En 3e, toutes les classes ont la même amplitude
+  : les rectangles ont la même largeur et leur hauteur est proportionnelle à l''effectif (ou à la fréquence).
+
+  Différence avec un diagramme en barres : les barres d''un diagramme en barres sont séparées et correspondent à
+  des valeurs isolées ou à des catégories ; les rectangles d''un histogramme se touchent, car les classes se suivent.'
+methode:
+- 'Lire : repérer la classe sur l''axe horizontal, puis la hauteur du rectangle (effectif) sur l''axe vertical.'
+- 'Construire : graduer l''axe horizontal avec les bornes des classes, dessiner des rectangles accolés de même largeur,
+  de hauteur égale à l''effectif.'
+- 'Interpréter : additionner les effectifs de plusieurs classes, calculer des fréquences, repérer la classe la plus
+  fréquente.'
+- Titrer le graphique et nommer les axes avec les unités.
+erreurs_frequentes:
+- Laisser des espaces entre les rectangles.
+- 'Mal interpréter les crochets : 170 appartient à [170 ; 180[, pas à [160 ; 170[.'
+- 'Lire une valeur précise dans une classe : on sait seulement qu''elle est dans l''intervalle.'
+exemple:
+  enonce: 'Tailles (cm) de 20 élèves : [150 ; 160[ : 4 ; [160 ; 170[ : 9 ; [170 ; 180[ : 6 ; [180 ; 190[ : 1. Quelle
+    part des élèves mesure au moins 170 cm ?'
+  solution: 6 + 1 = 7 élèves sur 20, soit 7/20 = 35 %.
+exercices:
+- enonce: Avec les mêmes données, quelle est la fréquence de la classe [160 ; 170[ ? Quelle part mesure moins de
+    170 cm ?
+  indices:
+  - Divise par l'effectif total, 20.
+  solution: '9/20 = 45 %. Moins de 170 cm : (4 + 9)/20 = 13/20 = 65 %.'
+- enonce: 'Temps de trajet (min) de 30 élèves : [0 ; 10[ : 3 ; [10 ; 20[ : 8 ; [20 ; 30[ : 12 ; [30 ; 40[ : 7. Décrire
+    l''histogramme à tracer et donner la classe la plus fréquente avec sa fréquence.'
+  indices:
+  - Quatre rectangles accolés, de largeur 10 min.
+  - Quelle classe a le plus grand effectif ?
+  solution: 'Quatre rectangles accolés de même largeur, de hauteurs 3, 8, 12 et 7. La classe [20 ; 30[ est la plus
+    fréquente : 12/30 = 40 %.'
+sources:
+- titre: Wikipédia, « Histogramme »
+  url: https://fr.wikipedia.org/w/index.php?title=Histogramme&oldid=239324267
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Statistiques (représentation et traitement des données)/Représentations graphiques d'une
+    série statistique »
+  url: https://fr.wikiversity.org/w/index.php?title=Statistiques_%28repr%C3%A9sentation_et_traitement_des_donn%C3%A9es%29/Repr%C3%A9sentations_graphiques_d%27une_s%C3%A9rie_statistique&oldid=921351
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

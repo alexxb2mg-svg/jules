@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: problemes-divisibilite
+essentiel: 'Beaucoup de problèmes se ramènent à des multiples ou des diviseurs communs.
+
+  Phénomènes qui se répètent (bus, feux, engrenages, planètes) : ils se retrouvent ensemble au bout d''un temps
+  qui est un multiple commun des deux périodes ; la première fois, c''est le plus petit multiple commun.
+
+  Engrenages : deux roues dentées reviennent en même temps à leur position de départ quand le nombre de dents passées
+  est un multiple commun des deux nombres de dents.
+
+  Partages en lots identiques, sans reste : le nombre de lots doit diviser chaque quantité ; le plus grand nombre
+  de lots possible est le plus grand diviseur commun.
+
+  Pour les trouver : lister les multiples (ou les diviseurs) de chaque nombre, ou utiliser les décompositions en
+  facteurs premiers.'
+methode:
+- 'Reconnaître le type : « se retrouver ensemble, en même temps » → multiples communs ; « partager, le plus grand
+  nombre de lots » → diviseurs communs.'
+- Lister les multiples (ou les diviseurs) de chaque nombre et repérer le premier commun (ou le plus grand commun).
+- Traduire le nombre trouvé dans le contexte (heure, nombre de tours, contenu de chaque lot).
+- Vérifier avec les données de l'énoncé.
+erreurs_frequentes:
+- Multiplier les deux nombres au lieu de chercher le plus petit multiple commun (12 × 18 = 216 au lieu de 36).
+- Confondre les problèmes de multiples communs et de diviseurs communs.
+- Oublier de répondre à la question posée (l'heure, le nombre de tours de chaque roue…).
+exemple:
+  enonce: 'Deux roues dentées s''engrènent : la roue A a 12 dents, la roue B en a 18. Au bout de combien de tours
+    reviennent-elles ensemble à leur position de départ ?'
+  solution: 'Multiples de 12 : 12, 24, 36… ; multiples de 18 : 18, 36… Le premier commun est 36 dents : la roue
+    A fait 36 ÷ 12 = 3 tours et la roue B 36 ÷ 18 = 2 tours.'
+exercices:
+- enonce: Un bus de la ligne 1 part toutes les 12 minutes, un bus de la ligne 2 toutes les 20 minutes. Ils partent
+    ensemble à 7 h. À quelle heure repartiront-ils ensemble pour la première fois ?
+  indices:
+  - Liste les multiples de 12 et de 20.
+  solution: Au bout de 60 minutes, donc à 8 h.
+- enonce: Un pâtissier a 60 croissants et 84 pains au chocolat. Il veut faire le plus grand nombre de sachets identiques,
+    en utilisant tout. Combien de sachets, et que contient chacun ?
+  indices:
+  - Le nombre de sachets doit diviser 60 et 84.
+  - Cherche le plus grand diviseur commun.
+  solution: 'Le plus grand diviseur commun de 60 et 84 est 12 : 12 sachets de 5 croissants et 7 pains au chocolat.'
+- enonce: Un phare s'allume toutes les 15 s et un autre toutes les 25 s. Ils s'allument ensemble à l'instant 0.
+    Quand s'allumeront-ils de nouveau ensemble ?
+  indices:
+  - Plus petit multiple commun de 15 et 25.
+  solution: Au bout de 75 s.
+sources:
+- titre: Wikiversité, « Initiation à l'arithmétique/PGCD »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/PGCD&oldid=966772
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Engrenage »
+  url: https://fr.vikidia.org/w/index.php?title=Engrenage&oldid=2102245
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: exemple de l'algorithme d'Euclide, résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

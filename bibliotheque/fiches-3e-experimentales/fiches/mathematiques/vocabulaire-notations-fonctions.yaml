@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: vocabulaire-notations-fonctions
+essentiel: 'Une fonction f est un procédé qui, à un nombre x (la variable), associe un seul nombre, noté f(x) (lire
+  « f de x »).
+
+  On écrit f : x ↦ f(x) (« la fonction f qui à x associe f(x) ») ou f(x) = … avec une expression.
+
+  f(x) est l''image de x par f. Si f(a) = b, on dit que b est l''image de a et que a est un antécédent de b.
+
+  Un nombre a une seule image, mais il peut avoir zéro, un ou plusieurs antécédents.
+
+  On peut voir une fonction comme une machine : on entre x, il sort f(x).'
+methode:
+- 'Pour une image : remplacer x par le nombre dans l''expression (avec des parenthèses si le nombre est négatif),
+  puis calculer.'
+- 'Pour un antécédent : chercher le ou les x tels que f(x) = le nombre donné (équation, tableau ou graphique).'
+- 'Traduire les phrases : « l''image de 2 est 1 » s''écrit f(2) = 1 ; « 4 est un antécédent de 7 » s''écrit f(4)
+  = 7.'
+vocabulaire:
+- terme: image
+  definition: le nombre f(x) qui sort de la fonction quand on entre x (il est unique)
+- terme: antécédent
+  definition: un nombre qui, entré dans la fonction, donne le nombre considéré
+- terme: variable
+  definition: la lettre (souvent x) qui représente le nombre de départ
+erreurs_frequentes:
+- 'Confondre image et antécédent (f(2) = 1 : 1 est l''image de 2, 2 est un antécédent de 1).'
+- Lire f(x) comme « f fois x ».
+- 'Oublier les parenthèses en remplaçant x par un nombre négatif : si f(x) = x², f(−3) = (−3)² = 9.'
+- Dire « l'antécédent » alors qu'il peut y en avoir plusieurs.
+exemple:
+  enonce: f est la fonction x ↦ 3x − 5. Calculer l'image de 2 et f(−1).
+  solution: 'f(2) = 3 × 2 − 5 = 1 : l''image de 2 est 1. f(−1) = 3 × (−1) − 5 = −8.'
+exercices:
+- enonce: Avec f(x) = 3x − 5, trouver l'antécédent de 7.
+  indices:
+  - Résous 3x − 5 = 7.
+  solution: '3x = 12 donc x = 4 : l''antécédent de 7 est 4 (vérification : f(4) = 7).'
+- enonce: 'Traduire par une égalité : « l''image de −2 par g est 5 », puis « 3 est un antécédent de 0 par h ».'
+  indices:
+  - L'image est ce qui sort, l'antécédent ce qui entre.
+  solution: g(−2) = 5 et h(3) = 0.
+- enonce: La fonction carré associe à x le nombre x². Combien le nombre 9 a-t-il d'antécédents ? Et le nombre −4
+    ?
+  indices:
+  - Quels nombres ont 9 pour carré ?
+  - Un carré peut-il être négatif ?
+  solution: 9 a deux antécédents, 3 et −3. −4 n'en a aucun.
+sources:
+- titre: Wikiversité, « Généralités sur les fonctions/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Fonction mathématique »
+  url: https://fr.vikidia.org/w/index.php?title=Fonction_math%C3%A9matique&oldid=2494404
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

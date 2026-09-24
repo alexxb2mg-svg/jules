@@ -1,31 +1,75 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: thales-triangles-semblables-trigonometrie
-couverture: 'Partie trigonométrie seulement : Thalès et triangles semblables restent à écrire.'
-essentiel: 'Dans un triangle rectangle, pour un angle aigu Â :
+essentiel: 'Théorème de Thalès. Deux droites (d) et (d'') sont sécantes en A ; B et M sont sur (d), C et N sur (d'').
+  Si (MN) et (BC) sont parallèles, alors AM/AB = AN/AC = MN/BC. Cela vaut dans la configuration « triangle » (M
+  sur [AB], N sur [AC]) comme dans la configuration « papillon » (A entre M et B, et entre N et C). Il sert à calculer
+  des longueurs.
 
-  cos Â = côté adjacent / hypoténuse ; sin Â = côté opposé / hypoténuse ; tan Â = côté opposé / côté adjacent.
+  Réciproque : si AM/AB = AN/AC et si les points A, M, B et A, N, C sont alignés dans le même ordre, alors (MN)
+  et (BC) sont parallèles. Si AM/AB ≠ AN/AC, les droites ne sont pas parallèles.
 
-  Ces formules servent à calculer une longueur (si on connaît un angle et une longueur) ou un angle (si on connaît
-  deux longueurs, avec les touches cos⁻¹, sin⁻¹ ou tan⁻¹ de la calculatrice).
+  Triangles semblables : deux triangles sont semblables quand leurs angles sont deux à deux de même mesure ; c''est
+  équivalent à : leurs côtés sont proportionnels. Le coefficient est le rapport d''agrandissement ou de réduction.
+  Dans une configuration de Thalès, les triangles AMN et ABC sont semblables.
 
-  La calculatrice doit être en mode degrés (« D » ou « Deg » à l''écran).'
+  Trigonométrie. Dans un triangle rectangle, pour un angle aigu Â : cos Â = côté adjacent / hypoténuse ; sin Â =
+  côté opposé / hypoténuse ; tan Â = côté opposé / côté adjacent. Ces formules servent à calculer une longueur (si
+  on connaît un angle et une longueur) ou un angle (si on connaît deux longueurs, avec les touches cos⁻¹, sin⁻¹
+  ou tan⁻¹ de la calculatrice, en mode degrés).'
 methode:
-- Vérifier que le triangle est rectangle et repérer l'angle utilisé.
-- Nommer, par rapport à cet angle, l'hypoténuse, le côté adjacent et le côté opposé.
-- 'Choisir la formule qui relie ce qu''on connaît et ce qu''on cherche (moyen mnémotechnique : SOH-CAH-TOA).'
-- Écrire l'égalité avec les lettres de la figure, puis remplacer par les valeurs.
-- 'Pour une longueur : produit en croix. Pour un angle : touche cos⁻¹, sin⁻¹ ou tan⁻¹.'
-- Arrondir comme demandé et donner l'unité (cm, °).
+- 'Thalès : citer les droites sécantes, les points alignés et les droites parallèles (les hypothèses).'
+- 'Écrire l''égalité des trois rapports avec les lettres de la figure, le petit triangle en haut : AM/AB = AN/AC
+  = MN/BC.'
+- Remplacer par les longueurs connues, garder les deux rapports utiles et calculer par produit en croix.
+- 'Réciproque : calculer séparément les deux rapports (AM/AB et AN/AC), les comparer, vérifier l''ordre des points,
+  puis conclure.'
+- 'Triangles semblables : montrer que deux paires d''angles sont égales (la troisième suit, car la somme vaut 180°)
+  ou que les rapports des côtés homologues sont tous égaux.'
+- 'Trigonométrie : repérer l''angle, nommer hypoténuse, côté adjacent et côté opposé, choisir la formule (SOH-CAH-TOA),
+  puis calculer (produit en croix ou touche cos⁻¹, sin⁻¹, tan⁻¹).'
+- Donner l'unité et arrondir seulement à la fin.
+vocabulaire:
+- terme: côtés homologues
+  definition: côtés qui se correspondent dans deux triangles semblables
+- terme: réciproque
+  definition: énoncé qui part de la conclusion d'un théorème pour retrouver son hypothèse
 erreurs_frequentes:
-- Calculatrice en radians ou en grades au lieu des degrés.
-- Confondre côté adjacent et côté opposé (ils dépendent de l'angle choisi).
-- Utiliser le cosinus dans un triangle qui n'est pas rectangle.
-- Arrondir trop tôt dans un calcul en plusieurs étapes.
+- Utiliser Thalès sans avoir justifié que les droites sont parallèles.
+- 'Mélanger les rapports : chaque rapport doit comparer deux longueurs d''un même côté (AM/AB, pas AM/AN).'
+- Utiliser BM au lieu de AB (la longueur doit partir du point A).
+- Dans la réciproque, oublier de vérifier que les points sont dans le même ordre.
+- Croire que deux triangles sont semblables parce qu'ils « se ressemblent » sur le dessin.
+- 'Trigonométrie : calculatrice en radians ; confondre côté adjacent et côté opposé ; utiliser cos dans un triangle
+  non rectangle.'
 exemple:
-  enonce: ABC est rectangle en B, AB = 5 cm et AC = 7 cm. Calculer l'angle Â arrondi au degré.
-  solution: cos Â = AB / AC = 5/7, donc Â = cos⁻¹(5/7) ≈ 44°.
+  enonce: M est sur [AB] et N sur [AC], avec (MN) // (BC). AM = 4 cm, AB = 10 cm, AN = 3 cm et BC = 7,5 cm. Calculer
+    AC et MN.
+  solution: Les droites (MB) et (NC) sont sécantes en A et (MN) // (BC), donc d'après le théorème de Thalès AM/AB
+    = AN/AC = MN/BC, soit 4/10 = 3/AC = MN/7,5. AC = 3 × 10 / 4 = 7,5 cm et MN = 7,5 × 4 / 10 = 3 cm.
 exercices:
+- enonce: Les droites (BE) et (CD) se coupent en A ; A est entre B et E, et entre C et D ; (BC) // (DE). AB = 4
+    cm, AE = 6 cm, AC = 5 cm et BC = 3,5 cm. Calculer AD et DE.
+  indices:
+  - C'est une configuration « papillon ».
+  - AB/AE = AC/AD = BC/DE
+  solution: 4/6 = 5/AD = 3,5/DE, donc AD = 5 × 6 / 4 = 7,5 cm et DE = 3,5 × 6 / 4 = 5,25 cm.
+- enonce: A, D, B sont alignés dans cet ordre, ainsi que A, E, C. AD = 3 cm, AB = 7,5 cm, AE = 4 cm, AC = 10 cm.
+    Les droites (DE) et (BC) sont-elles parallèles ? Et si AB valait 8 cm ?
+  indices:
+  - Calcule AD/AB et AE/AC séparément.
+  solution: 'AD/AB = 3/7,5 = 0,4 et AE/AC = 4/10 = 0,4 : égaux, points dans le même ordre, donc (DE) // (BC) (réciproque
+    de Thalès). Avec AB = 8 : 3/8 = 0,375 ≠ 0,4, donc les droites ne sont pas parallèles.'
+- enonce: Le triangle ABC a pour côtés AB = 4 cm, BC = 5 cm, AC = 6 cm ; le triangle DEF a pour côtés DE = 6 cm,
+    EF = 7,5 cm, DF = 9 cm. Sont-ils semblables ?
+  indices:
+  - Range les côtés dans l'ordre et calcule les rapports.
+  solution: '6/4 = 7,5/5 = 9/6 = 1,5 : les côtés sont proportionnels, les triangles sont semblables (DEF est un
+    agrandissement de ABC de rapport 1,5).'
+- enonce: Un triangle a deux angles de 50° et 70° ; un autre a deux angles de 70° et 60°. Sont-ils semblables ?
+  indices:
+  - Calcule le troisième angle de chaque triangle.
+  solution: 'Troisièmes angles : 60° et 50°. Les deux triangles ont les angles 50°, 60°, 70° : ils sont semblables.'
 - enonce: DEF est rectangle en E, DF = 10 cm et l'angle D̂ mesure 35°. Calculer DE au dixième.
   indices:
   - Par rapport à D̂, DE est-il le côté adjacent ou opposé ?
@@ -42,6 +86,18 @@ exercices:
   - tan 40° = 6 / x
   solution: tan 40° = 6 / x donc x = 6 / tan 40° ≈ 7,2 m.
 sources:
+- titre: Wikiversité, « Triangles et parallèles/Théorème de Thalès »
+  url: https://fr.wikiversity.org/w/index.php?title=Triangles_et_parall%C3%A8les/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s&oldid=983153
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Triangles semblables »
+  url: https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
 - titre: Wikiversité, « Trigonométrie/Cosinus dans un triangle rectangle »
   url: https://fr.wikiversity.org/w/index.php?title=Trigonom%C3%A9trie/Cosinus_dans_un_triangle_rectangle&oldid=985005
   auteurs: Contributeurs de Wikiversité (historique de la page)
