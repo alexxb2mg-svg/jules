@@ -8,6 +8,7 @@
 #   jules/modules/<id>.py       -> fonctions (memoire, suivi, rapport...)
 #   jules/notifieurs/<id>.py    -> canaux vers le parent
 #   jules/llm/<id>.py           -> moteur d'IA
+#   bibliotheque/<id>/          -> notions du programme et contenus par notion (voir bibliotheque/README.md)
 
 serveur:
   hote: 127.0.0.1          # seulement cet ordinateur. Tablette sur le wifi : voir config.local.exemple.yaml
@@ -29,6 +30,12 @@ acces:
 
 modules:
   - id: modes          # modes de travail = fichiers consignes/modes/*.md
+  - id: notions        # rattache la conversation a une notion du programme et nourrit Jules avec
+    reglages:
+      bibliotheques:   # ordre = priorite (la premiere qui renseigne un point l'emporte)
+        - programme                    # referentiel : les notions du programme officiel
+        - fiches-3e-experimentales     # fiches de test, contenus libres, NON certifiees
+      detection: true  # reconnait la notion dans le texte ou la photo de l'exercice
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent

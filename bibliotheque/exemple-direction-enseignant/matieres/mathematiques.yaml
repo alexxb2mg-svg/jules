@@ -1,0 +1,9 @@
+# Direction qui vaut pour toutes les notions de la matiere (le nom du fichier = id de la matiere)
+matiere: mathematiques
+direction:
+  approche: "Faire d'abord une figure à main levée codée, avant tout calcul."
+  redaction_attendue: "Rédaction en trois temps : « On sait que… », « Or… », « Donc… »."
+  a_privilegier:
+    - "Les valeurs exactes tant que l'énoncé ne demande pas d'arrondi."
+  a_eviter:
+    - "La calculatrice pour les calculs mentaux simples (carrés jusqu'à 15²)."

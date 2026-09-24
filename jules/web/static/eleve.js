@@ -3,7 +3,7 @@
 
 (() => {
   const $ = (id) => document.getElementById(id);
-  const etat = { infos: null, conv: null, photos: [], occupe: false };
+  const etat = { infos: null, conv: null, photos: [], occupe: false, notion: null };
 
   // Reduit une photo de telephone (souvent 4000 px) a 1600 px max en JPEG : envoi plus rapide.
   function reduire(fichier) {
@@ -42,11 +42,84 @@
     return ligne;
   }
 
+  // --- notion travaillee (module "notions", facultatif) ---------------------
+  const catalogueNotions = () => (etat.infos && etat.infos.notions) || null;
+
+  function afficherNotion(notion) {
+    etat.notion = notion;
+    const b = $("pastille-notion");
+    if (!catalogueNotions() || !etat.conv) { b.classList.add("cache"); return; }
+    b.classList.remove("cache");
+    b.classList.toggle("choisie", Boolean(notion));
+    b.textContent = notion ? `📚 ${notion.titre}` : "📚 Choisir une notion";
+    b.title = notion
+      ? `${notion.matiere} : ${notion.titre}${notion.origine === "auto" ? " (reconnue par Jules, touche pour changer)" : ""}`
+      : "Choisir la notion travaillée";
+  }
+
+  async function chargerNotion() {
+    if (!catalogueNotions() || !etat.conv) { afficherNotion(null); return; }
+    try {
+      const r = await MS.api(`/api/eleve/notions/conversations/${encodeURIComponent(etat.conv.id)}`);
+      afficherNotion(r.notion);
+    } catch (_) { afficherNotion(null); }
+  }
+
+  function remplirChoix(filtre = "") {
+    const cat = catalogueNotions();
+    const zone = $("choix-liste");
+    zone.innerHTML = "";
+    const cherche = MS.sansAccents(filtre.trim());
+    for (const matiere of cat.matieres) {
+      const notions = matiere.notions.filter((n) => !cherche || MS.sansAccents(`${n.titre} ${n.chapitre} ${matiere.nom}`).includes(cherche));
+      if (!notions.length) continue;
+      const bloc = document.createElement("details");
+      bloc.open = Boolean(cherche);
+      bloc.innerHTML = `<summary>${MS.echapper(matiere.nom)}</summary>`;
+      for (const n of notions) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.innerHTML = `${MS.echapper(n.titre)}${n.fiche ? '<span class="marque-fiche">fiche</span>' : ""}<small>${MS.echapper(n.chapitre)}</small>`;
+        b.addEventListener("click", () => choisirNotion(n.id));
+        bloc.appendChild(b);
+      }
+      zone.appendChild(bloc);
+    }
+    if (!zone.children.length) zone.innerHTML = '<p class="avertissement">Aucune notion trouvée.</p>';
+  }
+
+  function ouvrirChoix() {
+    const cat = catalogueNotions();
+    if (!cat || !etat.conv) return;
+    const avertissements = cat.bibliotheques.filter((b) => b.avertissement).map((b) => `${b.titre} : ${b.avertissement}`);
+    $("choix-avertissement").textContent = avertissements.join(" ");
+    $("choix-recherche").value = "";
+    remplirChoix();
+    $("choix-retirer").classList.toggle("cache", !etat.notion);
+    $("choix-notion").classList.remove("cache");
+    $("choix-recherche").focus();
+  }
+
+  const fermerChoix = () => $("choix-notion").classList.add("cache");
+
+  async function choisirNotion(id) {
+    const r = await MS.api(`/api/eleve/notions/conversations/${encodeURIComponent(etat.conv.id)}`, MS.json({ notion: id }, "PUT"));
+    afficherNotion(r.notion);
+    fermerChoix();
+  }
+
+  async function retirerNotion() {
+    await MS.api(`/api/eleve/notions/conversations/${encodeURIComponent(etat.conv.id)}`, { method: "DELETE" });
+    afficherNotion(null);
+    fermerChoix();
+  }
+
   function ecranAccueil() {
     etat.conv = null;
     $("titre").textContent = "Nouvelle discussion";
     $("pastille-mode").classList.add("cache");
     $("saisie").classList.add("cache");
+    afficherNotion(null);
     const fil = $("fil");
     fil.innerHTML = "";
     const accueil = document.createElement("div");
@@ -78,6 +151,7 @@
     $("pastille-mode").textContent = nomMode(conv.mode);
     $("pastille-mode").classList.remove("cache");
     $("saisie").classList.remove("cache");
+    afficherNotion(null);
     ajouterBulle("bot", `C'est parti, ${etat.infos.prenom} ! Envoie-moi ton message ou une photo de ton exercice.`);
     $("texte").focus();
     fermerCote();
@@ -95,6 +169,7 @@
       ajouterBulle(m.role, m.texte, m.images.map((n) => `/api/images/${encodeURIComponent(n)}`));
     }
     marquerActif(id);
+    chargerNotion();
     fermerCote();
   }
 
@@ -146,6 +221,7 @@
       attente.remove();
       ajouterBulle("bot", r.reponse);
       chargerHistorique();
+      if (!etat.notion) chargerNotion();
     } catch (err) {
       attente.remove();
       if (err.code === 401) { location.reload(); return; }
@@ -186,6 +262,12 @@
       $("fichier").value = "";
       afficherApercus();
     });
+    $("pastille-notion").addEventListener("click", ouvrirChoix);
+    $("choix-fermer").addEventListener("click", fermerChoix);
+    $("choix-retirer").addEventListener("click", retirerNotion);
+    $("choix-recherche").addEventListener("input", (ev) => remplirChoix(ev.target.value));
+    $("choix-notion").addEventListener("click", (ev) => { if (ev.target === $("choix-notion")) fermerChoix(); });
+    document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") fermerChoix(); });
     ecranAccueil();
     chargerHistorique();
   }

@@ -1,0 +1,48 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: nombres-premiers-decomposition
+essentiel: 'b est un diviseur de a (a est un multiple de b) s''il existe un entier q tel que a = b × q.
+
+  Un nombre premier a exactement deux diviseurs : 1 et lui-même (2, 3, 5, 7, 11, 13...). 1 n''est pas premier.
+
+  Tout entier supérieur ou égal à 2 est premier ou se décompose de façon unique en produit de facteurs premiers
+  : 1 848 = 2³ × 3 × 7 × 11.
+
+  La décomposition sert à simplifier une fraction jusqu''à la rendre irréductible.'
+methode:
+- Diviser le nombre par le plus petit nombre premier possible (2, puis 3, 5, 7...).
+- Recommencer avec le quotient, jusqu'à obtenir 1.
+- Écrire le produit de tous les diviseurs utilisés, avec des puissances.
+- 'Pour savoir si n est premier : tester les nombres premiers dont le carré ne dépasse pas n.'
+- 'Pour simplifier une fraction : décomposer numérateur et dénominateur, puis barrer les facteurs communs.'
+erreurs_frequentes:
+- Croire que 1 est premier, ou que tous les nombres impairs le sont (9, 15, 21, 91 ne le sont pas).
+- Laisser un facteur non premier dans la décomposition (ex. 4 ou 6).
+- Arrêter la décomposition avant d'arriver à 1.
+exemple:
+  enonce: Décomposer 1 250 en produit de facteurs premiers.
+  solution: 1 250 = 2 × 625 = 2 × 5 × 5 × 5 × 5 = 2 × 5⁴.
+exercices:
+- enonce: Décomposer 360 en produit de facteurs premiers.
+  indices:
+  - Commence par diviser par 2.
+  solution: 360 = 2³ × 3² × 5.
+- enonce: Rendre irréductible la fraction 252/360.
+  indices:
+  - Décompose 252 comme tu as décomposé 360.
+  solution: 252 = 2² × 3² × 7 et 360 = 2³ × 3² × 5, donc 252/360 = 7/(2 × 5) = 7/10.
+- enonce: 91 et 97 sont-ils premiers ?
+  indices:
+  - Teste 2, 3, 5 et 7 (7² = 49, 11² = 121).
+  solution: '91 = 7 × 13 n''est pas premier ; 97 n''est divisible ni par 2, 3, 5 ni 7, et 11² > 97 : 97 est premier.'
+sources:
+- titre: Wikiversité, « Initiation à l'arithmétique/Nombres premiers »
+  url: https://fr.wikiversity.org/w/index.php?title=Initiation_%C3%A0_l%27arithm%C3%A9tique/Nombres_premiers&oldid=912716
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

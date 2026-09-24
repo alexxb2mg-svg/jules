@@ -1,0 +1,7 @@
+# Direction propre a une notion : elle s'ajoute a celle de la matiere
+notion: parallelisme-triangles-pythagore
+direction:
+  vocabulaire:
+    - "égalité de Pythagore"
+    - "réciproque du théorème de Pythagore"
+  remarques: "En classe, la contraposée n'a pas encore été vue : conclure « n'est pas rectangle » en citant le théorème."
