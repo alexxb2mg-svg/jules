@@ -164,7 +164,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 |---|---|---|
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
-| 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | à faire |
+| 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, programme et fiches de 3e ; reste le chargement selon l'âge |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
