@@ -111,6 +111,28 @@ button { font: inherit; cursor: pointer; }
   .entete .menu-cote { display: block; }
 }
 
+/* --- notion travaillee --- */
+.pastille-notion {
+  background: #FFFFFF; color: var(--p-principale); border: 2px solid var(--p-bulle-bot); border-radius: 999px;
+  padding: 3px 12px; font-size: 14px; max-width: 45%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.pastille-notion.choisie { background: var(--p-bulle-bot); border-color: var(--p-principale); }
+.voile { position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 20; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.voile.cache { display: none; }
+.panneau { background: #FFFFFF; border-radius: 18px; width: 100%; max-width: 620px; max-height: 88vh; display: flex; flex-direction: column; gap: 10px; padding: 16px; }
+.panneau-entete { display: flex; align-items: center; gap: 8px; }
+.panneau-entete strong { flex: 1; font-size: 18px; }
+.panneau .fermer { background: none; border: none; font-size: 20px; }
+.panneau input[type=search] { font: inherit; padding: 10px 12px; border: 2px solid var(--bord); border-radius: 12px; }
+.choix-liste { overflow-y: auto; flex: 1; }
+.choix-liste details { border-bottom: 1px solid var(--bord); }
+.choix-liste summary { padding: 10px 4px; font-weight: 600; cursor: pointer; }
+.choix-liste button { display: block; width: 100%; text-align: left; background: none; border: none; padding: 8px 10px; border-radius: 10px; color: var(--texte); font: inherit; }
+.choix-liste button:hover, .choix-liste button:focus { background: var(--p-bulle-bot); }
+.choix-liste small { color: var(--gris); display: block; }
+.choix-liste .marque-fiche { color: var(--p-principale); font-size: 12px; margin-left: 6px; }
+.avertissement { color: var(--gris); font-size: 13px; margin: 0; }
+
 /* --- page parent --- */
 .parent { max-width: 960px; margin: 0 auto; padding: 20px; }
 .parent header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }

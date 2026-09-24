@@ -15,7 +15,7 @@ from jules.planificateur import Planificateur
 
 
 def test_briques_chargees_depuis_la_config(tuteur):
-    assert [m.id for m in tuteur.modules] == ["modes", "memoire", "suivi", "vigilance", "rapport"]
+    assert [m.id for m in tuteur.modules] == ["modes", "notions", "memoire", "suivi", "vigilance", "rapport"]
     assert [type(n).__module__ for n in tuteur.notifieurs] == ["jules.notifieurs.fichier"]
 
 
@@ -67,9 +67,9 @@ def test_echange_complet_et_modules_de_fond(tuteur):
     suivis = tuteur.stockage.evenements("suivi")
     assert suivis[0]["donnees"]["statut"] == "bloque"
     assert tuteur.stockage.evenements("vigilance") == []
-    # le modele principal sert a l'eleve, le rapide aux analyses
+    # le modele principal sert a l'eleve (une fois), le rapide aux analyses (notion, suivi, vigilance)
     modeles = [a["modele"] for a in tuteur.llm.appels]
-    assert modeles[0] == "principal" and set(modeles[1:]) == {"rapide"}
+    assert modeles.count("principal") == 1 and set(modeles) == {"principal", "rapide"}
 
 
 def test_memoire_reinjectee_au_tour_suivant(tuteur):

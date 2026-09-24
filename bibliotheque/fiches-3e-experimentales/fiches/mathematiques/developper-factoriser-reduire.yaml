@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: developper-factoriser-reduire
+couverture: Surtout les identités remarquables ; la double distributivité est rappelée brièvement.
+essentiel: 'Développer, c''est transformer un produit en somme ; factoriser, c''est l''inverse (somme → produit).
+
+  Double distributivité : (a + b)(c + d) = ac + ad + bc + bd.
+
+  Identités remarquables, pour tous nombres a et b :
+
+  (a + b)² = a² + 2ab + b²
+
+  (a − b)² = a² − 2ab + b²
+
+  (a − b)(a + b) = a² − b²
+
+  Pour factoriser, on cherche un facteur commun, ou on reconnaît une identité remarquable.'
+methode:
+- 'Développer : distribuer chaque terme, puis réduire (regrouper les x², les x, les nombres).'
+- 'Factoriser avec un facteur commun : le repérer dans chaque terme, l''écrire devant, mettre le reste entre crochets,
+  puis réduire le crochet.'
+- 'Factoriser avec une identité : compter les termes. Trois termes → (a + b)² ou (a − b)² ; deux carrés séparés
+  par un moins → (a − b)(a + b).'
+- Vérifier en redéveloppant le résultat.
+erreurs_frequentes:
+- Écrire (a + b)² = a² + b² en oubliant le double produit 2ab.
+- Mal gérer le signe moins devant une parenthèse lors de la réduction.
+- 'Oublier de mettre au carré le coefficient : (3x)² = 9x², pas 3x².'
+- S'arrêter avant d'avoir réduit l'expression.
+exemple:
+  enonce: Factoriser x² − 49.
+  solution: x² − 49 = x² − 7², de la forme a² − b² avec a = x et b = 7, donc x² − 49 = (x − 7)(x + 7).
+exercices:
+- enonce: Développer et réduire (2x − 5)².
+  indices:
+  - C'est (a − b)² avec a = 2x et b = 5.
+  solution: (2x − 5)² = 4x² − 20x + 25.
+- enonce: Développer et réduire (3x + 1)(x − 2).
+  indices:
+  - 'Double distributivité : 4 produits.'
+  solution: 3x² − 6x + x − 2 = 3x² − 5x − 2.
+- enonce: Factoriser 9x² − 4.
+  indices:
+  - 9x² = (3x)² et 4 = 2²
+  solution: 9x² − 4 = (3x − 2)(3x + 2).
+- enonce: Factoriser (x + 2)(3x − 1) − (x + 2)(x + 4).
+  indices:
+  - Quel facteur apparaît dans les deux termes ?
+  - Attention au signe moins devant (x + 4).
+  solution: (x + 2)[(3x − 1) − (x + 4)] = (x + 2)(2x − 5).
+- enonce: Factoriser 25x² + 10x + 1.
+  indices:
+  - 'Trois termes, que des plus : a² + 2ab + b² ?'
+  solution: 25x² + 10x + 1 = (5x + 1)².
+sources:
+- titre: Wikiversité, « Identités remarquables/Définition »
+  url: https://fr.wikiversity.org/w/index.php?title=Identit%C3%A9s_remarquables/D%C3%A9finition&oldid=943595
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Identités remarquables/Factorisation »
+  url: https://fr.wikiversity.org/w/index.php?title=Identit%C3%A9s_remarquables/Factorisation&oldid=913087
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

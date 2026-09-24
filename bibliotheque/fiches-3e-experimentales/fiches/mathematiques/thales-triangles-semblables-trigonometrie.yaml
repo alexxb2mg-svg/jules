@@ -1,0 +1,60 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: thales-triangles-semblables-trigonometrie
+couverture: 'Partie trigonométrie seulement : Thalès et triangles semblables restent à écrire.'
+essentiel: 'Dans un triangle rectangle, pour un angle aigu Â :
+
+  cos Â = côté adjacent / hypoténuse ; sin Â = côté opposé / hypoténuse ; tan Â = côté opposé / côté adjacent.
+
+  Ces formules servent à calculer une longueur (si on connaît un angle et une longueur) ou un angle (si on connaît
+  deux longueurs, avec les touches cos⁻¹, sin⁻¹ ou tan⁻¹ de la calculatrice).
+
+  La calculatrice doit être en mode degrés (« D » ou « Deg » à l''écran).'
+methode:
+- Vérifier que le triangle est rectangle et repérer l'angle utilisé.
+- Nommer, par rapport à cet angle, l'hypoténuse, le côté adjacent et le côté opposé.
+- 'Choisir la formule qui relie ce qu''on connaît et ce qu''on cherche (moyen mnémotechnique : SOH-CAH-TOA).'
+- Écrire l'égalité avec les lettres de la figure, puis remplacer par les valeurs.
+- 'Pour une longueur : produit en croix. Pour un angle : touche cos⁻¹, sin⁻¹ ou tan⁻¹.'
+- Arrondir comme demandé et donner l'unité (cm, °).
+erreurs_frequentes:
+- Calculatrice en radians ou en grades au lieu des degrés.
+- Confondre côté adjacent et côté opposé (ils dépendent de l'angle choisi).
+- Utiliser le cosinus dans un triangle qui n'est pas rectangle.
+- Arrondir trop tôt dans un calcul en plusieurs étapes.
+exemple:
+  enonce: ABC est rectangle en B, AB = 5 cm et AC = 7 cm. Calculer l'angle Â arrondi au degré.
+  solution: cos Â = AB / AC = 5/7, donc Â = cos⁻¹(5/7) ≈ 44°.
+exercices:
+- enonce: DEF est rectangle en E, DF = 10 cm et l'angle D̂ mesure 35°. Calculer DE au dixième.
+  indices:
+  - Par rapport à D̂, DE est-il le côté adjacent ou opposé ?
+  - cos D̂ = DE / DF
+  solution: cos 35° = DE / 10 donc DE = 10 × cos 35° ≈ 8,2 cm.
+- enonce: GHI est rectangle en H, GH = 4 cm et HI = 3 cm. Calculer l'angle Ĝ au dixième de degré.
+  indices:
+  - 'Tu connais le côté opposé et le côté adjacent à Ĝ : quelle formule les relie ?'
+  solution: tan Ĝ = HI / GH = 3/4, donc Ĝ = tan⁻¹(0,75) ≈ 36,9°.
+- enonce: Une échelle posée contre un mur forme un angle de 40° avec le sol ; son pied est à une distance x du mur
+    et elle touche le mur à 6 m de haut. Calculer x au dixième.
+  indices:
+  - 'Dessine le triangle rectangle : où est l''angle droit ?'
+  - tan 40° = 6 / x
+  solution: tan 40° = 6 / x donc x = 6 / tan 40° ≈ 7,2 m.
+sources:
+- titre: Wikiversité, « Trigonométrie/Cosinus dans un triangle rectangle »
+  url: https://fr.wikiversity.org/w/index.php?title=Trigonom%C3%A9trie/Cosinus_dans_un_triangle_rectangle&oldid=985005
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Triangle rectangle/Trigonométrie »
+  url: https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Trigonom%C3%A9trie&oldid=726623
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
