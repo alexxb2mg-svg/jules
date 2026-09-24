@@ -66,6 +66,7 @@ Sans installation par pip, `python lancer.py <commande>` fait la même chose que
 | **Mistral AI** | payant à l'usage | Mistral (France) | une clé sur [console.mistral.ai](https://console.mistral.ai) |
 | **Anthropic (Claude)** | payant à l'usage | Anthropic | une clé sur [console.anthropic.com](https://console.anthropic.com) |
 | **OpenAI** | payant à l'usage | OpenAI | une clé sur [platform.openai.com](https://platform.openai.com) |
+| **Albert** (IA publique de l'État) | gratuit pour les agents publics | serveurs de l'État, en France | réservé aux enseignants et établissements : voir plus bas |
 
 Tout service compatible avec le format OpenAI (LM Studio, vLLM, OpenRouter...) fonctionne aussi : voir `config.local.exemple.yaml`.
 
@@ -82,6 +83,20 @@ La clé API se colle dans le fichier `.env`, créé par l'assistant. Elle n'est 
 3. Sur la tablette, reliée au même wifi, ouvrir `http://<adresse-de-l-ordinateur>:8795/`.
 
 Jules refuse de démarrer sur le réseau tant que les deux codes ne sont pas définis. Ne l'exposez jamais sur Internet.
+
+### Vous êtes enseignant ? Jules fonctionne avec Albert
+
+[Albert](https://albert.sites.beta.gouv.fr/) est l'IA publique de l'État, opérée par la DINUM. Les modèles sont libres (Mistral…), hébergés en France avec la qualification SecNumCloud, et aucune conversation n'est conservée. L'accès est **gratuit pour les agents de la fonction publique d'État**, enseignants compris.
+
+1. Demander un accès : [albert.sites.beta.gouv.fr/access](https://albert.sites.beta.gouv.fr/access/). La réponse arrive en général sous 24 heures.
+2. Créer une clé dans le [Playground Albert](https://albert.playground.etalab.gouv.fr/keys).
+3. Lancer `jules installer` et choisir **Albert**, puis coller la clé dans le fichier `.env` (`ALBERT_API_KEY=...`).
+
+Jules utilise alors `openweight-medium` (Mistral Small, qui lit aussi les photos d'exercices) pour parler avec l'élève, et `openweight-small` pour les tâches de fond (suivi, bilan du soir).
+
+Albert est réservé aux usages professionnels des agents publics : il convient à un projet de classe ou d'établissement, pas à un usage familial privé. Respectez les règles de votre académie et du [cadre d'usage de l'IA en éducation](https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647).
+
+**Nous cherchons des enseignants** pour essayer Jules avec Albert, relire les fiches du programme et nous aider à le proposer sur la [Forge des communs numériques éducatifs](https://forge.apps.education.fr). Ouvrez un ticket [« Retour d'usage »](https://github.com/alexxb2mg-svg/jules/issues/new/choose) ou écrivez dans les [Discussions](https://github.com/alexxb2mg-svg/jules/discussions).
 
 ## Commandes
 
