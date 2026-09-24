@@ -99,7 +99,9 @@ TYPES_SUPPORT = ("carte_mentale", "fiche", "quiz", "cartes_memoire")
 STATUTS_SUPPORT = ("brouillon", "relu", "valide")
 TAILLE_CHAMP_MAX = 200
 
+
 class ErreurStudio(ValueError): ...
+
 
 @dataclass
 class Support:
@@ -107,24 +109,34 @@ class Support:
     notion: str
     type: str
     titre: str
-    contenu: dict[str, Any]   # forme selon `type`, voir §1
-    statut: str               # STATUTS_SUPPORT
+    contenu: dict[str, Any]  # forme selon `type`, voir §1
+    statut: str  # STATUTS_SUPPORT
     cree_le: str
     modifie_le: str
-    def public(self) -> dict[str, Any]: ...  # tel quel : rien de "serveur seulement" ici,
-                                              # contrairement aux leçons, tout appartient à l'élève
 
-def trame_vide(type_support: str, notion: str, titre: str) -> dict[str, Any]: ...
+    def public(self) -> dict[str, Any]:
+        ...  # tel quel : rien de "serveur seulement" ici,
+        # contrairement aux leçons, tout appartient à l'élève
+
+
+def trame_vide(type_support: str, notion: str, titre: str) -> dict[str, Any]:
+    ...
     # gabarit vide du type demandé (voir §1) ; lève ErreurStudio si type_support inconnu
 
-def valider_champ(type_support: str, chemin: list[str | int], valeur: str) -> None: ...
+
+def valider_champ(type_support: str, chemin: list[str | int], valeur: str) -> None:
+    ...
     # lève ErreurStudio : longueur, chemin inexistant dans le gabarit du type
 
-def pret_a_valider(support: Support, lecon_textes: list[str], messages_jules: list[str]) -> None: ...
+
+def pret_a_valider(support: Support, lecon_textes: list[str], messages_jules: list[str]) -> None:
+    ...
     # lève ErreurStudio si : nombre d'éléments insuffisant (voir §1), ou contenu recopié
     # (comparaison normalisée avec `lecon_textes` et `messages_jules`)
 
-def ressemble_a_un_support_redige(texte_jules: str) -> bool: ...
+
+def ressemble_a_un_support_redige(texte_jules: str) -> bool:
+    ...
     # heuristique (même esprit que jules.lecons.contient_la_reponse) : vrai si le message de
     # Jules ressemble à un contenu prêt à copier pour l'élève (voir §5) plutôt qu'à une question
     # ou une remarque courte. Réutilisée par le harnais d'évaluation ET par le module serveur
@@ -183,8 +195,9 @@ Module séparé `jules/revisions.py` (fonctions pures, sans stockage), pour qu'u
 sans toucher `jules/studio.py`.
 
 ```python
-PALIERS_JOURS = (1, 3, 7, 15, 30, 60)   # index = palier de la carte
+PALIERS_JOURS = (1, 3, 7, 15, 30, 60)  # index = palier de la carte
 ETATS_CARTE = ("nouvelle", "apprentissage", "acquise")
+
 
 def prochaine_revision(carte: dict[str, Any], reponse: str, aujourdhui: date) -> dict[str, Any]:
     ...
@@ -194,7 +207,9 @@ def prochaine_revision(carte: dict[str, Any], reponse: str, aujourdhui: date) ->
     #                          etat = "acquise" si palier == dernier palier, sinon "apprentissage",
     #                          prochaine_revision = aujourd'hui + PALIERS_JOURS[palier] jours
 
-def cartes_dues(cartes: list[dict[str, Any]], aujourdhui: date) -> list[dict[str, Any]]: ...
+
+def cartes_dues(cartes: list[dict[str, Any]], aujourdhui: date) -> list[dict[str, Any]]:
+    ...
     # cartes dont prochaine_revision <= aujourd'hui, "nouvelle" et jamais révisées en premier
 ```
 
