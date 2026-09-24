@@ -1,4 +1,4 @@
-// Page parent : rapport, signaux, notes, lecture des conversations.
+// Page parent : rapport, signaux, notes, lecture des conversations, export et effacement du dossier.
 "use strict";
 
 (() => {
@@ -69,9 +69,45 @@
           div.innerHTML = `<b>${qui}${photos} :</b> ${MS.echapper(m.texte).replace(/\n/g, "<br>")}`;
           bloc.appendChild(div);
         }
+        const effacer = document.createElement("button");
+        effacer.className = "effacer-conv";
+        effacer.textContent = "Effacer cette conversation";
+        effacer.addEventListener("click", async () => {
+          const titre = c.titre || c.mode;
+          if (!window.confirm(`Effacer définitivement « ${titre} » (messages, photos et analyses) ? Impossible de revenir en arrière.`)) return;
+          try {
+            await MS.api(`/api/parent/conversations/${c.id}`, { method: "DELETE" });
+            chargerConversations(); chargerRapport();
+          } catch (err) { window.alert(`Erreur : ${err.message}`); }
+        });
+        bloc.appendChild(effacer);
       });
       zone.appendChild(bloc);
     }
+  }
+
+  function preparerEffacement() {
+    const mot = $("effacer-mot");
+    const bouton = $("effacer-tout");
+    mot.addEventListener("input", () => { bouton.disabled = mot.value.trim().toUpperCase() !== "EFFACER"; });
+    $("form-effacer").addEventListener("submit", async (ev) => {
+      ev.preventDefault();
+      if (bouton.disabled) return;
+      if (!window.confirm("Dernière vérification : tout le dossier de l'élève va être effacé, sans retour possible. Continuer ?")) return;
+      bouton.disabled = true;
+      $("etat-effacement").textContent = "Effacement…";
+      try {
+        const r = await MS.api("/api/parent/dossier/effacer", MS.json({ confirmation: mot.value }));
+        const e = r.efface;
+        $("etat-effacement").textContent = `Dossier effacé : ${e.conversations} conversation(s), ${e.evenements} analyse(s), ${e.bilans} fichier(s) de bilans.`;
+        mot.value = "";
+        await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations()]);
+        chargerRapport();
+      } catch (err) {
+        $("etat-effacement").textContent = `Erreur : ${err.message}`;
+        bouton.disabled = false;
+      }
+    });
   }
 
   async function demarrage() {
@@ -96,6 +132,7 @@
         $("etat-envoi").textContent = r.envoye ? "Envoyé." : (r.erreurs && r.erreurs.length ? `Échec : ${r.erreurs.join(" ; ")}` : "Rien à envoyer ce jour-là.");
       } catch (err) { $("etat-envoi").textContent = `Erreur : ${err.message}`; }
     });
+    preparerEffacement();
     await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations()]);
     chargerRapport();
   }

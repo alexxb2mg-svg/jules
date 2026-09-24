@@ -134,6 +134,14 @@ button { font: inherit; cursor: pointer; }
 .conv-parent .msg b { color: var(--p-principale); }
 .alerte { background: #FFF3E0; border-left: 4px solid #EF6C00; padding: 8px 12px; border-radius: 8px; margin: 6px 0; }
 .muet { color: var(--gris); }
+.bouton.danger { background: #C62828; }
+.bouton:disabled { opacity: 0.45; cursor: not-allowed; }
+a.bouton { display: inline-block; text-decoration: none; }
+.zone-danger { border: 2px solid #F3C4C4; border-radius: 12px; padding: 12px 14px; }
+.zone-danger h3 { margin: 0 0 8px; font-size: 16px; color: #C62828; }
+.zone-danger p { margin: 0 0 8px; }
+.rangee input#effacer-mot { font: inherit; padding: 8px 10px; border: 1px solid var(--bord); border-radius: 10px; width: 140px; }
+.conv-parent .effacer-conv { background: none; border: none; color: #C62828; padding: 4px 0; margin-left: 12px; }
 
 .rangee.colonne { flex-direction: column; }
 .espace-haut { margin-top: 12px; }

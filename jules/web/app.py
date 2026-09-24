@@ -16,6 +16,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from starlette.concurrency import run_in_threadpool
 
+from jules import dossier
 from jules.acces import COOKIE, DUREE_S, Acces
 from jules.moteur import Tuteur
 
@@ -208,6 +209,8 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     def evenements(type_: str, jour: str | None = None, _: str = parent) -> list[dict[str, Any]]:
         return tuteur.stockage.evenements(type_, jour=jour, limite=200)
 
+    app.include_router(routes_dossier(tuteur), prefix="/api/parent", dependencies=[parent])
+
     @app.get("/api/parent/modules")
     def modules(_: str = parent) -> list[dict[str, Any]]:
         return [{"id": m.id, "routes": m.routes() is not None} for m in tuteur.modules]
@@ -221,6 +224,32 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         app.include_router(enveloppe, prefix=f"/api/modules/{module.id}")
 
     return app
+
+
+def routes_dossier(tuteur: Tuteur) -> APIRouter:
+    """Le dossier de l'eleve entre les mains du parent : effacer une conversation, tout exporter, tout effacer."""
+    routeur = APIRouter()
+
+    @routeur.delete("/conversations/{conv_id}")
+    def effacer_conversation(conv_id: str) -> dict[str, bool]:
+        tuteur.attendre_fond()  # l'analyse de fond du dernier echange ne doit pas revenir apres
+        if not tuteur.stockage.effacer_conversation(conv_id):
+            raise HTTPException(404, "Conversation introuvable")
+        return {"ok": True}
+
+    @routeur.get("/dossier/export")
+    def exporter_dossier() -> Response:
+        contenu = dossier.exporter(tuteur)
+        entetes = {"Content-Disposition": f'attachment; filename="{dossier.nom_archive()}"'}
+        return Response(contenu, media_type="application/zip", headers=entetes)
+
+    @routeur.post("/dossier/effacer")
+    def effacer_dossier(entree: dossier.Confirmation) -> dict[str, Any]:
+        if entree.confirmation.strip().upper() != dossier.MOT_DE_CONFIRMATION:
+            raise HTTPException(400, f"Tape {dossier.MOT_DE_CONFIRMATION} pour confirmer")
+        return {"ok": True, "efface": dossier.effacer_tout(tuteur)}
+
+    return routeur
 
 
 async def _en_fil(fonction, *args):
