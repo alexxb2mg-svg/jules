@@ -9,6 +9,13 @@ Références : `docs/VISION.md` (section 3 « Une interface de cours, pas de cha
 « Le studio », et les « Trois règles »), `docs/COURS-CONTRAT.md` (format des leçons et des
 notions, dont le studio dépend).
 
+## Décisions d'Alex (25/09)
+
+1. Garde-fou anti-copie : validé. `pret_a_valider` refuse un support qui recopie la leçon ou un message de Jules.
+2. Statuts `brouillon`, `relu`, `valide`, avec **dévalidation possible** : un support validé repasse en `brouillon` et redevient modifiable (route `devalider`, §3).
+3. Révisions à paliers fixes (1, 3, 7, 15, 30, 60 jours) : validé.
+4. Quiz écrit par l'élève, sans correction automatique : validé.
+
 ## La règle de fond
 
 **L'élève produit, Jules relit.** À la différence d'un résumé généré par une IA (type
@@ -144,6 +151,7 @@ l'intégration seulement** (voir §6 : ce lot ne touche pas `config.yaml`), apr�
 | `POST /api/eleve/studio/supports/<id>/ecrire` | `{chemin, valeur}` | `{support: Support.public()}` — refuse (409) si `statut == "valide"` (un support validé est verrouillé, pour la répétition espacée) ; sinon `statut` repasse à `brouillon` si l'élève modifie après une relecture |
 | `POST /api/eleve/studio/supports/<id>/relire` | | `{retours: [{chemin, message}], support: Support.public()}` — Jules relit *l'existant*, ne réécrit rien ; `statut -> "relu"` |
 | `POST /api/eleve/studio/supports/<id>/valider` | | `{support: Support.public()}` ou 422 si `pret_a_valider` refuse ; `statut -> "valide"`, événement `suivi` (notion, `support_cree`) ; pour `cartes_memoire`, initialise `prochaine_revision` de chaque carte à aujourd'hui |
+| `POST /api/eleve/studio/supports/<id>/devalider` | | `{support: Support.public()}` — `valide -> brouillon`, le support redevient modifiable ; pour `cartes_memoire`, la programmation des révisions est effacée (`prochaine_revision: null`, `palier: 0`, `etat: nouvelle`) ; 409 si le support n'est pas validé ; événement `suivi` (notion, `support_devalide`) |
 | `DELETE /api/eleve/studio/supports/<id>` | | 204 ; refuse (409) si `statut == "valide"` (on ne supprime pas un travail terminé, seulement un brouillon) |
 | `GET /api/eleve/studio/revisions` | | `{cartes: [{support, carte_id, recto, notion}], nombre_du_jour}` — cartes dont `prochaine_revision <= aujourd'hui`, tous supports `cartes_memoire` validés, toutes matières |
 | `POST /api/eleve/studio/revisions/<support>/<carte_id>/reponse` | `{reponse}` | `{carte: {...}, restantes}` — `reponse` ∈ `facile, difficile, rate` (voir §4) ; le `verso` n'est renvoyé qu'à `GET supports/<id>` (le client l'a déjà affiché quand l'élève a "retourné" la carte, avant de répondre) |
@@ -170,6 +178,9 @@ Comportement de la relecture (`relire`) :
 Algorithme volontairement simple (le projet évite la complexité inutile — voir `docs/VISION.md`,
 « Ce que Jules ne fait pas encore ») : des paliers fixes, pas de facteur de difficulté ajusté
 carte par carte comme SM-2.
+
+Module séparé `jules/revisions.py` (fonctions pures, sans stockage), pour qu'un lot puisse l'écrire
+sans toucher `jules/studio.py`.
 
 ```python
 PALIERS_JOURS = (1, 3, 7, 15, 30, 60)   # index = palier de la carte
@@ -228,8 +239,8 @@ venant du serveur passe par `MS.echapper` ou `MS.markdown`.
   mémoire, avec bouton « retourner »). Boutons « Relire » et « Valider » (grisé tant que
   `pret_a_valider` échouerait côté serveur — message d'aide affiché, jamais bloquant en silence).
   Un support `valide` s'affiche en lecture seule avec un bouton « dévalider » qui repasse en
-  `brouillon` (перед perte de la programmation de révision pour les cartes : avertissement
-  explicite avant confirmation).
+  `brouillon` (route `devalider`). Pour les cartes mémoire, un avertissement explicite demande
+  confirmation avant, car la programmation des révisions est perdue.
 - **Droite, les retours de Jules** : une bulle par section relue (pas un fil de conversation
   libre comme dans `/cours` — la relecture porte sur le support, pas une discussion ouverte ;
   l'élève peut demander « relire encore » après avoir modifié).
@@ -244,7 +255,8 @@ venant du serveur passe par `MS.echapper` ou `MS.markdown`.
 
 | Lot | Fichiers (et seulement eux) |
 |---|---|
-| A. Formats et garde-fous | `jules/studio.py`, `docs/STUDIO-CONTRAT.md`, `tests/test_studio.py` |
+| A. Formats et garde-fous | `jules/studio.py`, `tests/test_studio.py` |
+| R. Répétition espacée | `jules/revisions.py`, `tests/test_revisions.py` |
 | B. Module de studio et API | `jules/modules/studio.py`, `tests/test_module_studio.py`, `tests/conftest.py` (ajout seulement, si besoin d'un fixture) |
 | C. Interface élève | `jules/web/static/studio.html`, `studio.js`, `studio.css`, `eleve.js` (bouton d'entrée seulement), `tests/test_web.py` (ajouts seulement) |
 | D. Consigne de Jules et évaluation réelle | `consignes/modes/studio.md`, `evaluation/studio/**` |
@@ -253,6 +265,8 @@ venant du serveur passe par `MS.echapper` ou `MS.markdown`.
 Chaque lot A à D décrit dans sa PR ce qu'il faudrait ajouter aux fichiers du lot E : le studio ne
 touche ni `README.md`, ni `docs/VISION.md`, ni `config.yaml`, ni `jules/web/app.py` avant
 l'intégration (S7 dans `Projets/jules_plan_sessions.md`).
+
+Le contrat (`docs/STUDIO-CONTRAT.md`) n'est modifié que par l'intégrateur ; un lot qui le trouve faux le dit dans son rapport.
 
 Dépendance : le lot A doit être stable avant que B ne commence à écrire des tests dessus (mêmes
 signatures figées ci-dessus) ; B et C peuvent avancer en parallèle une fois le format de l'API
