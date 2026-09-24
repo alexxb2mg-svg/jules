@@ -205,7 +205,7 @@
     switch (bloc.type) {
       case "objectifs": {
         const liste = creer("ul");
-        for (const it of bloc.donnees.items || []) liste.appendChild(creer("li", "", MS.echapper(it)));
+        for (const it of bloc.items || []) liste.appendChild(creer("li", "", MS.echapper(it)));
         corps.appendChild(liste);
         const actions = creer("div", "bloc-actions");
         const boutonLu = creer("button", "bouton secondaire", "J'ai lu");
@@ -217,7 +217,7 @@
         break;
       }
       case "texte": {
-        corps.appendChild(creer("div", "bloc-markdown", MS.markdown(bloc.donnees.contenu || "")));
+        corps.appendChild(creer("div", "bloc-markdown", MS.markdown(bloc.contenu || "")));
         const actions = creer("div", "bloc-actions");
         const boutonLu = creer("button", "bouton secondaire", "J'ai lu");
         boutonLu.type = "button";
@@ -228,9 +228,9 @@
         break;
       }
       case "exemple": {
-        corps.appendChild(creer("p", "bloc-enonce", MS.markdown(bloc.donnees.enonce || "")));
+        corps.appendChild(creer("p", "bloc-enonce", MS.markdown(bloc.enonce || "")));
         const ol = creer("ol", "etapes");
-        for (const e of bloc.donnees.etapes || []) ol.appendChild(creer("li", "", MS.markdown(e)));
+        for (const e of bloc.etapes || []) ol.appendChild(creer("li", "", MS.markdown(e)));
         corps.appendChild(ol);
         const actions = creer("div", "bloc-actions");
         const boutonLu = creer("button", "bouton secondaire", "J'ai lu");
@@ -283,7 +283,7 @@
   function titreBloc(bloc) {
     return {
       objectifs: "🎯 Ce que tu vas savoir faire",
-      texte: bloc.donnees.titre || "📖 Le cours",
+      texte: bloc.titre || "📖 Le cours",
       exemple: "💡 Un exemple",
       exercice: "✏️ À toi de jouer",
       question_ouverte: "🤔 À toi de réfléchir",
@@ -295,15 +295,15 @@
   // --- bloc exercice --------------------------------------------------------
   function construireExercice(bloc) {
     const dom = creer("div");
-    dom.appendChild(creer("p", "bloc-enonce", MS.echapper(bloc.donnees.enonce || "")));
+    dom.appendChild(creer("p", "bloc-enonce", MS.echapper(bloc.enonce || "")));
 
     const champZone = creer("div", "reponse-champ");
     let lireReponse = () => "";
     let champPrincipal = null;
-    const forme = bloc.donnees.forme;
+    const forme = bloc.forme;
     if (forme === "qcm") {
       const liste = creer("div", "qcm-liste");
-      (bloc.donnees.choix || []).forEach((choix, i) => {
+      (bloc.choix || []).forEach((choix, i) => {
         const label = creer("label", "qcm-option");
         const input = document.createElement("input");
         input.type = "radio"; input.name = `qcm-${bloc.index}`; input.value = String(i);
@@ -322,11 +322,11 @@
       input.type = "text";
       input.inputMode = forme === "nombre" ? "decimal" : "text";
       input.id = `reponse-${bloc.index}`;
-      const label = creer("label", "cache-visuel", MS.echapper(bloc.donnees.enonce || "Ta réponse"));
+      const label = creer("label", "cache-visuel", MS.echapper(bloc.enonce || "Ta réponse"));
       label.htmlFor = input.id;
       champZone.appendChild(label);
       champZone.appendChild(input);
-      if (forme === "nombre" && bloc.donnees.unite) champZone.appendChild(creer("span", "reponse-unite", MS.echapper(bloc.donnees.unite)));
+      if (forme === "nombre" && bloc.unite) champZone.appendChild(creer("span", "reponse-unite", MS.echapper(bloc.unite)));
       lireReponse = () => input.value.trim();
       champPrincipal = input;
       input.addEventListener("keydown", (ev) => { if (ev.key === "Enter") { ev.preventDefault(); valider(); } });
@@ -335,7 +335,7 @@
 
     const indicesVusZone = creer("ul", "indices-vus");
     dom.appendChild(indicesVusZone);
-    const totalIndices = (bloc.donnees.indices || []).length;
+    const totalIndices = (bloc.indices || []).length;
 
     const actions = creer("div", "bloc-actions");
     const boutonValider = creer("button", "bouton", "Valider");
@@ -354,7 +354,7 @@
 
     let indicesAffiches = 0;
     function afficherIndicesJusqua(n) {
-      const liste = bloc.donnees.indices || [];
+      const liste = bloc.indices || [];
       while (indicesAffiches < n && indicesAffiches < liste.length) {
         indicesVusZone.appendChild(creer("li", "", MS.echapper(liste[indicesAffiches])));
         indicesAffiches += 1;
@@ -420,7 +420,7 @@
   // --- bloc question_ouverte / synthese --------------------------------------
   function construireLibre(bloc) {
     const dom = creer("div");
-    const consigne = bloc.type === "synthese" ? bloc.donnees.consigne : bloc.donnees.question;
+    const consigne = bloc.type === "synthese" ? bloc.consigne : bloc.question;
     dom.appendChild(creer("p", "bloc-enonce", MS.echapper(consigne || "")));
 
     const labelId = `libre-${bloc.index}`;
@@ -435,7 +435,7 @@
 
     const indicesVusZone = creer("ul", "indices-vus");
     dom.appendChild(indicesVusZone);
-    const totalIndices = (bloc.donnees.indices || []).length;
+    const totalIndices = (bloc.indices || []).length;
 
     const actions = creer("div", "bloc-actions");
     const boutonEnvoyer = creer("button", "bouton", "Envoyer à Jules");
@@ -452,7 +452,7 @@
 
     let indicesAffiches = 0;
     function afficherIndicesJusqua(n) {
-      const liste = bloc.donnees.indices || [];
+      const liste = bloc.indices || [];
       while (indicesAffiches < n && indicesAffiches < liste.length) {
         indicesVusZone.appendChild(creer("li", "", MS.echapper(liste[indicesAffiches])));
         indicesAffiches += 1;
