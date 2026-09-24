@@ -48,7 +48,7 @@
   function afficherNotion(notion) {
     etat.notion = notion;
     const b = $("pastille-notion");
-    if (!catalogueNotions() || !etat.conv) { b.classList.add("cache"); return; }
+    if (!catalogueNotions() || !etat.conv || etat.conv.mode === "epreuve") { b.classList.add("cache"); return; }
     b.classList.remove("cache");
     b.classList.toggle("choisie", Boolean(notion));
     b.textContent = notion ? `📚 ${notion.titre}` : "📚 Choisir une notion";
@@ -128,14 +128,47 @@
     fil.appendChild(accueil);
     const grille = document.createElement("div");
     grille.className = "modes";
-    for (const mode of etat.infos.modes || []) {
+    for (const mode of (etat.infos.modes || []).filter((m) => !m.cache)) {
       const b = document.createElement("button");
       b.innerHTML = `<span class="icone">${MS.echapper(mode.icone)}</span><strong>${MS.echapper(mode.nom)}</strong><small>${MS.echapper(mode.description)}</small>`;
       b.addEventListener("click", () => demarrer(mode.id));
       grille.appendChild(b);
     }
     fil.appendChild(grille);
+    proposerEpreuve(fil);
     marquerActif(null);
+  }
+
+  // --- epreuve sans aide (module "epreuve", facultatif) ---------------------
+  async function proposerEpreuve(fil) {
+    if (!etat.infos.epreuve) return;
+    let notions = [];
+    try { notions = (await MS.api("/api/eleve/epreuve/proposition")).notions; } catch (_) { return; }
+    if (!notions.length || etat.conv) return;
+    const encart = document.createElement("div");
+    encart.className = "encart-epreuve";
+    const liste = notions.map((n) => MS.echapper(n.notion)).join(", ");
+    encart.innerHTML = `<p><strong>🧭 Épreuve sans aide</strong> : tu avais compris ${liste} il y a quelques jours. Est-ce que ça a tenu ?</p>`;
+    const b = document.createElement("button");
+    b.className = "bouton";
+    b.textContent = "Faire l'épreuve";
+    b.addEventListener("click", commencerEpreuve);
+    encart.appendChild(b);
+    fil.appendChild(encart);
+  }
+
+  async function commencerEpreuve() {
+    const conv = await MS.api("/api/eleve/epreuve/commencer", { method: "POST" });
+    etat.conv = { id: conv.id, mode: conv.mode, titre: conv.titre };
+    $("fil").innerHTML = "";
+    $("titre").textContent = conv.titre;
+    $("pastille-mode").textContent = nomMode(conv.mode);
+    $("pastille-mode").classList.remove("cache");
+    $("saisie").classList.remove("cache");
+    afficherNotion(null);
+    ajouterBulle("bot", conv.presentation);
+    $("texte").focus();
+    fermerCote();
   }
 
   function nomMode(id) {

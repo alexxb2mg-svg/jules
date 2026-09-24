@@ -39,6 +39,11 @@ modules:
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent
+  - id: epreuve        # quelques jours apres, reprend sans aide les notions marquees comprises
+    reglages:
+      delai_jours: 3   # age minimum d'une notion comprise pour etre reprise
+      fenetre_jours: 30
+      notions_max: 3
   - id: rapport        # resume quotidien pour le parent
     reglages:
       heure: "20:00"

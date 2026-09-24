@@ -15,7 +15,7 @@ from jules.planificateur import Planificateur
 
 
 def test_briques_chargees_depuis_la_config(tuteur):
-    assert [m.id for m in tuteur.modules] == ["modes", "notions", "memoire", "suivi", "vigilance", "rapport"]
+    assert [m.id for m in tuteur.modules] == ["modes", "notions", "memoire", "suivi", "vigilance", "epreuve", "rapport"]
     assert [type(n).__module__ for n in tuteur.notifieurs] == ["jules.notifieurs.fichier"]
 
 
@@ -212,7 +212,7 @@ def test_bilan_notions_fenetre():
         {"horodatage": "2026-08-01T10:00:00", "donnees": {"matiere": "SVT", "notion": "vieux", "statut": "bloque"}},
     ]
     bilan = bilan_notions(evs, 21, date(2026, 9, 23))
-    assert bilan == {"bloque": [], "compris": ["SVT : cellule"]}
+    assert bilan == {"bloque": [], "compris": ["SVT : cellule"], "acquis": []}
 
 
 def test_planificateur_une_fois_par_jour(tuteur):

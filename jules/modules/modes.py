@@ -33,6 +33,7 @@ class Mode:
     description: str
     ordre: int
     consignes: str
+    cache: bool = False  # lance par un autre module (ex. epreuve), absent de la grille
 
 
 def lire_mode(chemin: Path) -> Mode:
@@ -48,6 +49,7 @@ def lire_mode(chemin: Path) -> Mode:
         description=str(entete.get("description") or ""),
         ordre=int(entete.get("ordre") or 99),
         consignes=texte.strip(),
+        cache=bool(entete.get("cache")),
     )
 
 
@@ -68,7 +70,9 @@ class Brique(Module):
         return lire_mode(chemin) if chemin.is_file() else None
 
     def valider(self, identifiant: str | None) -> str:
-        return identifiant if identifiant and self.mode(identifiant) else MODE_DEFAUT
+        """Mode demande par l'eleve ; un mode cache ne s'ouvre pas depuis la grille."""
+        mode = self.mode(identifiant) if identifiant else None
+        return mode.id if mode and not mode.cache else MODE_DEFAUT
 
     def contribution(self, conv: Conversation) -> str | None:
         mode = self.mode(conv.mode) or self.mode(MODE_DEFAUT)
@@ -79,7 +83,7 @@ class Brique(Module):
     def infos_interface(self) -> dict[str, Any]:
         return {
             "modes": [
-                {"id": m.id, "nom": m.nom, "icone": m.icone, "description": m.description}
+                {"id": m.id, "nom": m.nom, "icone": m.icone, "description": m.description, "cache": m.cache}
                 for m in lister_modes(self.dossier)
             ]
         }

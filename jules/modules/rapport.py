@@ -68,7 +68,10 @@ def minutes_travail(messages: list[dict[str, Any]]) -> int:
 
 
 def donnees_du_jour(
-    messages: list[dict[str, Any]], suivis: list[dict[str, Any]], alertes: list[dict[str, Any]]
+    messages: list[dict[str, Any]],
+    suivis: list[dict[str, Any]],
+    alertes: list[dict[str, Any]],
+    epreuves: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     notions: dict[str, dict[str, str]] = {}
     for ev in reversed(suivis):  # du plus ancien au plus recent : le dernier statut gagne
@@ -85,6 +88,7 @@ def donnees_du_jour(
         "notions": notions,
         "hors_scolaire": sum(1 for ev in suivis if ev["donnees"].get("statut") == "hors_scolaire"),
         "alertes": [ev["donnees"] for ev in alertes],
+        "epreuves": [ev["donnees"] for ev in reversed(epreuves or [])],
     }
 
 
@@ -122,11 +126,17 @@ def texte_rapport(
     ]
     if d["matieres"]:
         lignes.append("Matières : " + ", ".join(d["matieres"]))
-    marques = {"compris": "[OK]", "bloque": "[BLOQUE]", "en_cours": "[EN COURS]"}
+    marques = {"compris": "[OK]", "acquis": "[ACQUIS]", "bloque": "[BLOQUE]", "en_cours": "[EN COURS]"}
     for notion, info in d["notions"].items():
         lignes.append(f"  {marques.get(info['statut'], '')} {notion}")
     if d["hors_scolaire"]:
         lignes.append(f"Échanges hors scolaire : {d['hors_scolaire']}")
+    for ep in d.get("epreuves", []):
+        tenues, pas_tenues = ep.get("tenues") or [], ep.get("pas_tenues") or []
+        ligne = f"Épreuve sans aide : {len(tenues)} notion(s) sur {len(tenues) + len(pas_tenues)} ont tenu"
+        if pas_tenues:
+            ligne += " ; à retravailler : " + ", ".join(pas_tenues)
+        lignes.append(ligne + ".")
     for alerte in d["alertes"]:
         lignes.append(f"Signal ({alerte['niveau']}) : {alerte['motif']}")
     if synthese:
@@ -166,6 +176,7 @@ class Brique(Module):
             stockage.messages_du_jour(jour),
             stockage.evenements("suivi", jour=jour),
             stockage.evenements("vigilance", jour=jour),
+            stockage.evenements("epreuve", jour=jour),
         )
         synthese = ""
         questions: list[str] = []
