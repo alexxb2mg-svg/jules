@@ -19,7 +19,7 @@ from typing import Any
 
 import yaml
 
-from jules.acces import LONGUEUR_MIN, ROLES, empreinte, verifier_exposition
+from jules.acces import LONGUEUR_MIN, ROLES, code_evident, empreinte, verifier_exposition
 from jules.config import RACINE, charger_config
 from jules.moteur import Tuteur
 from jules.stockage import Conversation
@@ -143,8 +143,11 @@ def definir_code(role: str) -> None:
         sys.exit(f"Role inconnu : {role} (attendu : {', '.join(ROLES)})")
     minimum = LONGUEUR_MIN[role]
     code = getpass.getpass(f"Nouveau code {role} ({minimum} caracteres minimum, rien ne s'affiche) : ")
-    if len(code.strip()) < minimum:
-        sys.exit("Code trop court.")
+    nettoye = code.strip()
+    if len(nettoye) < minimum:
+        sys.exit(f"Code trop court ({minimum} caracteres minimum).")
+    if code_evident(nettoye):
+        sys.exit("Code trop evident (suite, caractere repete ou mot de passe courant) : choisis-en un autre.")
     if getpass.getpass("Confirme : ") != code:
         sys.exit("Les deux saisies different.")
     enregistrer_code(FICHIER_LOCAL, role, code)
