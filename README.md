@@ -2,13 +2,17 @@
 
 # Jules
 
-**Un tuteur libre et gratuit qui s'adapte à chaque élève. Il guide pas à pas et ne donne jamais la réponse.**
+**Un tuteur libre qui s'adapte à chaque élève. Il guide pas à pas et ne donne jamais la réponse.**
 
-Jules aide un enfant à apprendre comme le ferait un bon répétiteur : il demande ce qui a déjà été essayé, découpe le problème en petites marches et laisse l'élève trouver. Il retient ce qui bloque et envoie chaque soir un court bilan au parent. Si l'enfant parle de harcèlement ou de mal-être, le parent est prévenu tout de suite.
+*Libre : chacun peut le lire, l'installer et le modifier. Gratuit avec un modèle installé sur l'ordinateur ; payant à l'usage avec un moteur en ligne, plus fiable aujourd'hui (voir [Choisir l'intelligence artificielle](#choisir-lintelligence-artificielle)).*
 
-Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : au départ il est vide, puis il charge ce dont l'élève a besoin (le programme de sa classe, les outils de ses matières, les adaptations qui l'aident à lire ou à se concentrer) et s'enrichit ensuite de ses cours, de ses devoirs et de ses progrès. Le même Jules peut accompagner un élève de CM1 en conjugaison et un lycéen en physique.
+Jules aide un enfant à apprendre comme le ferait un bon répétiteur : il demande ce qui a déjà été essayé, découpe le problème en petites marches et laisse l'élève trouver. Il note ce qui semble bloquer et envoie chaque soir un court bilan au parent. Si l'enfant parle de harcèlement ou de mal-être, le parent est prévenu tout de suite.
+
+Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : au départ il est vide, puis il charge ce dont l'élève a besoin (le programme de sa classe, les outils de ses matières, les adaptations qui l'aident à lire ou à se concentrer) et s'enrichit ensuite de ses cours et de ses devoirs. Le même Jules peut accompagner un élève de CM1 en conjugaison et un lycéen en physique.
 
 Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants, développeurs. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
+
+> **Pourquoi Jules.** Jules est né d'un essai, [*Après la dernière main levée*](docs/essai/), qui se demande ce que l'intelligence artificielle fait à l'apprentissage des enfants et à quelles conditions elle peut aider au lieu de faire à leur place. Sa lecture n'est pas nécessaire pour utiliser Jules. Elle montre d'où part le projet, les études sur lesquelles il s'appuie, et une postface dit ce que Jules en a repris, ce qu'il a corrigé et ce qui lui manque encore.
 
 > **Où en est le projet.** Jules fonctionne aujourd'hui comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'interface de cours interactif et les outils par matière sont en cours de conception ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
@@ -21,7 +25,7 @@ Quatre idées guident la suite :
 
 | Idée | Ce que ça veut dire |
 |---|---|
-| **Un cours, pas un chat** | L'élève suit une leçon faite de blocs : explication, frise, carte, exercice, question ouverte. Jules est à côté, il voit ce que fait l'élève et intervient au bon moment. |
+| **Un cours, pas un chat** | L'élève suit une leçon faite de blocs : explication, frise, carte, exercice, question ouverte. Jules est à côté et voit ce que fait l'élève. Il le laisse d'abord essayer ; quand il intervient, c'est par une question, jamais par la réponse. |
 | **Des bibliothèques qui se branchent** | Chaque bibliothèque (un programme officiel, un cours d'enseignant, une méthode de lecture) dit à quels niveaux et à quels âges elle s'adresse. Jules charge celles qui correspondent à l'élève. |
 | **Des outils par matière** | Frise chronologique, calculatrice, géométrie, conjugueur, carte muette... Chaque outil est une petite brique écrite par la communauté, que Jules peut ouvrir au milieu d'une leçon. |
 | **Une interface qui s'adapte à l'élève** | Les besoins particuliers de l'élève (troubles dys, attention, vue...) changeront l'affichage et la façon dont Jules s'exprime. Chaque trouble a ses particularités : c'est un chantier à part entière, qui sera construit plus tard avec des professionnels. Sa place est déjà réservée. |
@@ -32,11 +36,17 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 
 - **Aide aux devoirs** avec la photo de l'exercice, sans jamais donner la réponse, même si l'enfant insiste.
 - **Cinq modes** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
-- **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent.
+- **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent. Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
 - **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
-- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune) et quelques fiches de maths écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit.
-- **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité.
+- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune) et une fiche de repères pour chacune de ces notions, dans les 12 matières, écrite à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux, du primaire au lycée, sont à construire.
+- **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on ne peut encore supprimer que les notes laissées par le parent ; effacer les conversations, tout effacer d'un coup ou tout exporter reste à faire (voir [les limites](docs/VISION.md#ce-que-jules-ne-fait-pas-encore)).
+
+## Ce que Jules ne sait pas encore
+
+- **S'il fait progresser.** Jules n'a été essayé que dans une famille, sans mesure. Un tuteur bien réglé évite surtout que l'IA fasse le travail à la place de l'enfant ; les progrès mesurés dans les études viennent quand un adulte s'en mêle. Une épreuve sans aide, quelques jours après, est prévue pour vérifier ce qui reste.
+- **Aider vraiment l'adulte.** Le bilan du soir informe le parent ; il devrait aussi lui souffler une ou deux questions à poser à l'enfant. C'est la prochaine étape (voir [la feuille de route](docs/VISION.md#feuille-de-route-proposée)).
+- **Tenir la règle avec un petit modèle installé sur l'ordinateur** (voir plus bas).
 
 ## Installation
 
@@ -158,4 +168,4 @@ Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cou
 
 ## Licence
 
-[MIT](LICENSE). Le nom rend hommage à Jules Ferry et à l'école gratuite pour tous.
+Code : [MIT](LICENSE). Essai : [CC BY-NC-ND 4.0](docs/essai/LICENCE.md). Le nom rend hommage à Jules Ferry et à l'école gratuite pour tous.
