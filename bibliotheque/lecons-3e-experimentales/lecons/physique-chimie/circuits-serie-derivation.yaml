@@ -1,0 +1,142 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: circuits-serie-derivation
+titre: "Dipôles en série et en dérivation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Circuit électrique »"
+    url: "https://fr.vikidia.org/wiki/Circuit_%C3%A9lectrique"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Loi d'Ohm »"
+    url: "https://fr.wikipedia.org/wiki/Loi_d%27Ohm"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un montage en série d'un montage en dérivation."
+      - "Utiliser la loi d'unicité et la loi d'additivité des tensions et des intensités."
+      - "Utiliser la loi d'Ohm pour calculer une tension, une intensité ou une résistance."
+
+  - type: texte
+    titre: "Deux montages possibles"
+    contenu: >-
+      Un circuit électrique est fait de dipôles reliés entre eux. Un **nœud** est un point où au
+      moins trois fils se rejoignent ; une **maille** est un trajet fermé que l'on peut suivre dans
+      le circuit. Quand un circuit ne comporte **aucun nœud**, tous les dipôles sont parcourus l'un
+      après l'autre par le même courant : c'est un montage **en série**. Quand le circuit comporte
+      **au moins un nœud** où le courant se sépare en plusieurs chemins qui se rejoignent ensuite,
+      c'est un montage **en dérivation** (ou en parallèle).
+
+  - type: texte
+    titre: "Dans un circuit en série : unicité de l'intensité, additivité des tensions"
+    contenu: >-
+      Dans un circuit en série (une seule maille, sans nœud), **l'intensité du courant est la même
+      en tout point** : c'est la **loi d'unicité de l'intensité**. En revanche, les tensions aux
+      bornes de chaque dipôle **s'additionnent** pour donner la tension totale du générateur :
+      c'est la **loi d'additivité des tensions**.
+
+  - type: texte
+    titre: "Dans un circuit en dérivation : unicité de la tension, additivité des intensités"
+    contenu: >-
+      Dans un circuit en dérivation (plusieurs mailles, avec au moins un nœud), tous les dipôles
+      placés entre les deux mêmes nœuds ont **la même tension** à leurs bornes : c'est la **loi
+      d'unicité des tensions**. En revanche, l'intensité qui arrive à un nœud se répartit entre les
+      branches : l'intensité dans la branche principale est égale à la **somme des intensités**
+      des branches dérivées, c'est la **loi d'additivité des intensités**.
+
+  - type: texte
+    titre: "La loi d'Ohm"
+    contenu: >-
+      Pour un conducteur ohmique, la tension U à ses bornes est proportionnelle à l'intensité I qui
+      le traverse : **U = R × I**, où R est la résistance du conducteur (en ohms, Ω), U la tension
+      (en volts, V) et I l'intensité (en ampères, A). Cette loi permet de calculer l'une des trois
+      grandeurs quand les deux autres sont connues.
+
+  - type: exemple
+    enonce: >-
+      Dans un circuit en série, une pile de 9 V alimente une lampe et un moteur. La tension aux
+      bornes de la lampe vaut 3,5 V. Quelle est la tension aux bornes du moteur ?
+    etapes:
+      - "Le circuit ne comporte qu'une seule maille, avec la pile, la lampe et le moteur en série."
+      - "La loi d'additivité des tensions donne : U_pile = U_lampe + U_moteur."
+      - "9 = 3,5 + U_moteur, donc U_moteur = 9 − 3,5 = 5,5 V."
+
+  - type: exercice
+    enonce: >-
+      Un circuit en série comporte une lampe (tension à ses bornes U1 = 3 V) et un moteur (tension
+      à ses bornes U2 = 4,5 V), alimentés par un générateur. Calcule la tension U aux bornes du
+      générateur.
+    forme: nombre
+    reponse: 7.5
+    tolerance: 0.05
+    unite: V
+    indices:
+      - "Dans un circuit en série, comment s'additionnent les tensions de chaque dipôle pour donner la tension du générateur ?"
+      - "Additionne U1 et U2."
+    explication: "D'après la loi d'additivité des tensions, U = U1 + U2 = 3 + 4,5 = 7,5 V."
+
+  - type: exercice
+    enonce: >-
+      Dans un circuit à deux mailles, deux lampes sont branchées en dérivation aux bornes d'un
+      générateur. L'intensité dans la première branche est I1 = 0,2 A et dans la deuxième
+      I2 = 0,15 A. Calcule l'intensité I dans la branche principale, au niveau du générateur.
+    forme: nombre
+    reponse: 0.35
+    tolerance: 0.01
+    unite: A
+    indices:
+      - "Dans un circuit en dérivation, la loi d'additivité des intensités relie l'intensité de la branche principale aux intensités des branches dérivées."
+      - "Additionne I1 et I2."
+    explication: "D'après la loi d'additivité des intensités, I = I1 + I2 = 0,2 + 0,15 = 0,35 A."
+
+  - type: exercice
+    enonce: >-
+      Un conducteur ohmique de résistance R = 100 Ω est traversé par un courant d'intensité
+      I = 0,06 A. Calcule la tension U à ses bornes.
+    forme: nombre
+    reponse: 6
+    tolerance: 0.1
+    unite: V
+    indices:
+      - "La loi d'Ohm relie la tension, la résistance et l'intensité : U = R × I."
+      - "Multiplie R par I."
+    explication: "D'après la loi d'Ohm, U = R × I = 100 × 0,06 = 6 V."
+
+  - type: exercice
+    enonce: >-
+      Deux lampes sont reliées de telle façon qu'il existe un nœud où le courant électrique se
+      sépare pour emprunter deux chemins différents, qui se rejoignent ensuite. Comment qualifie-t-on
+      ce montage ?
+    forme: qcm
+    choix:
+      - "Un montage en série"
+      - "Un montage en dérivation (en parallèle)"
+      - "Ce n'est pas un circuit fermé"
+    reponse: 1
+    indices:
+      - "Repère s'il existe un nœud où le courant se divise en plusieurs branches, ou si les dipôles se suivent sans embranchement."
+    explication: >-
+      Un nœud où le courant se sépare en plusieurs branches caractérise un montage en dérivation
+      (ou en parallèle), par opposition au montage en série où tous les dipôles sont parcourus par
+      le même courant, sans embranchement.
+
+  - type: question_ouverte
+    question: >-
+      Explique avec tes mots pourquoi, dans un circuit en dérivation, deux lampes identiques
+      branchées entre les deux mêmes nœuds brillent avec la même intensité lumineuse, alors que
+      dans un circuit en série, ajouter une deuxième lampe rend chaque lampe moins brillante.
+    indices:
+      - "Repense à la loi d'unicité des tensions en dérivation : que reçoit chaque lampe ?"
+      - "Repense à la loi d'additivité des tensions en série : la tension du générateur doit se répartir entre les lampes."
+    criteres:
+      - "L'élève relie le fonctionnement identique des lampes en dérivation à la loi d'unicité des tensions (même tension à leurs bornes)."
+      - "L'élève relie la baisse de luminosité en série au partage de la tension totale entre les dipôles (loi d'additivité des tensions)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce qui distingue un montage en
+      série d'un montage en dérivation, en citant les lois d'unicité et d'additivité qui
+      s'appliquent à chacun.

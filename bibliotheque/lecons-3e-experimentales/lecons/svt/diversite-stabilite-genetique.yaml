@@ -1,0 +1,135 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: diversite-stabilite-genetique
+titre: "Diversité et stabilité génétique : ADN, méiose, fécondation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Méiose »"
+    url: "https://fr.wikipedia.org/wiki/M%C3%A9iose"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Mutation génétique »"
+    url: "https://fr.wikipedia.org/wiki/Mutation_g%C3%A9n%C3%A9tique"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer le rôle de la méiose et de la fécondation dans la diversité génétique des individus."
+      - "Expliquer pourquoi chaque gamète produit par la méiose est différent des autres."
+      - "Relier mutation, allèle, génotype et phénotype."
+
+  - type: texte
+    titre: "L'ADN, les gènes et le patrimoine génétique"
+    contenu: >-
+      Le noyau de chaque cellule contient de l'**ADN**, une molécule qui porte l'information
+      génétique, organisée en chromosomes. Un **gène** est une portion d'ADN qui code une
+      information (par exemple la couleur des yeux). Un même gène peut exister sous plusieurs
+      versions, plus ou moins différentes, appelées **allèles**. L'ensemble des allèles portés par
+      un individu forme son **génotype** ; les caractères que l'on peut observer chez cet individu
+      (couleur des yeux, groupe sanguin...) forment son **phénotype**, qui dépend à la fois du
+      génotype et de l'action de l'environnement.
+
+  - type: texte
+    titre: "La méiose : diviser par deux la quantité de chromosomes"
+    contenu: >-
+      Les cellules reproductrices (les **gamètes** : spermatozoïdes et ovules) sont produites par
+      une division cellulaire particulière, la **méiose**. Une cellule initiale, dite **diploïde**
+      (elle possède les chromosomes par paires, notées 2n), subit deux divisions successives et
+      donne quatre cellules filles **haploïdes** (n chromosomes, soit la moitié). La méiose permet
+      ainsi que la fécondation, en réunissant deux gamètes, restaure le nombre de chromosomes
+      propre à l'espèce.
+
+  - type: texte
+    titre: "Le brassage génétique pendant la méiose"
+    contenu: >-
+      La méiose ne se contente pas de diviser par deux la quantité de chromosomes : elle mélange
+      aussi l'information génétique, ce qui rend chaque gamète unique. Deux mécanismes y
+      contribuent. D'abord, dans chaque paire, le chromosome venu du père et celui venu de la mère
+      sont répartis **au hasard** entre les cellules filles : chez l'être humain, avec 23 paires,
+      cela fait déjà plus de 8 millions de combinaisons possibles (2 multiplié 23 fois par
+      lui-même). Ensuite, les deux chromosomes d'une même paire peuvent **échanger des morceaux**,
+      ce qui mélange encore les allèles. C'est ce qu'on appelle le **brassage génétique**.
+
+  - type: texte
+    titre: "La fécondation et les mutations"
+    contenu: >-
+      La **fécondation**, qui réunit un gamète mâle et un gamète femelle choisis au hasard parmi
+      des millions, restaure le nombre de chromosomes propre à l'espèce (n + n = 2n) et ajoute un
+      brassage supplémentaire : c'est pourquoi deux frères et sœurs, hors vrais jumeaux, ne sont
+      jamais génétiquement identiques. Une autre source de diversité est la **mutation** : une
+      modification accidentelle de la séquence de l'ADN, qui peut créer un nouvel allèle d'un gène.
+      Si elle survient dans une cellule reproductrice, une mutation peut être transmise à la
+      descendance. À côté de cette diversité, une **stabilité** existe aussi : la réplication de
+      l'ADN avant chaque division est en général fidèle, ce qui explique que les caractères d'une
+      espèce se transmettent globalement sans changement d'une génération à l'autre.
+
+  - type: exemple
+    enonce: >-
+      Chez l'espèce humaine, une cellule ordinaire (diploïde) possède 2n = 46 chromosomes. Combien
+      de chromosomes contient un gamète humain, et combien de chromosomes possédera la cellule-œuf
+      obtenue après la fécondation ?
+    etapes:
+      - "La méiose divise par deux le nombre de chromosomes : un gamète humain est haploïde, il possède donc n = 46 / 2 = 23 chromosomes."
+      - "La fécondation réunit un gamète mâle (n = 23) et un gamète femelle (n = 23) : la cellule-œuf obtenue possède 23 + 23 = 46 chromosomes, soit à nouveau 2n."
+      - "Le nombre de chromosomes propre à l'espèce humaine (46) est ainsi restauré à chaque génération."
+
+  - type: exercice
+    enonce: >-
+      Chez une espèce de mouche, une cellule diploïde possède 2n = 8 chromosomes. Combien de
+      chromosomes contient un gamète (n) de cette espèce après la méiose ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.1
+    unite: chromosomes
+    indices:
+      - "La méiose divise par deux le nombre de chromosomes d'une cellule diploïde pour former des cellules haploïdes."
+      - "Divise 8 par 2."
+    explication: "n = 2n / 2 = 8 / 2 = 4 chromosomes."
+
+  - type: exercice
+    enonce: >-
+      Pourquoi deux gamètes fabriqués par la même personne ne portent-ils presque jamais les
+      mêmes allèles ?
+    forme: qcm
+    choix:
+      - "Parce que la méiose répartit au hasard les chromosomes de chaque paire et mélange des morceaux de chromosomes"
+      - "Parce que chaque gamète reçoit tous les chromosomes de la cellule de départ"
+      - "Parce que l'ADN change complètement à chaque division"
+    reponse: 0
+    indices:
+      - "Relis le paragraphe sur le brassage génétique : que se passe-t-il pour chaque paire de chromosomes ?"
+    explication: >-
+      Pendant la méiose, les chromosomes de chaque paire sont répartis au hasard et peuvent
+      échanger des morceaux : c'est le brassage génétique. Chaque gamète ne reçoit que la moitié
+      des chromosomes, et l'ADN est en général recopié fidèlement : les deux autres réponses sont
+      fausses.
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la molécule, présente dans le noyau des cellules, qui porte l'information génétique ?"
+    forme: reponse_courte
+    reponse: "ADN"
+    reponses_acceptees: ["l'ADN", "acide désoxyribonucléique"]
+    indices:
+      - "C'est un sigle de trois lettres."
+      - "Son nom complet contient le mot « acide »."
+    explication: "Cette molécule s'appelle l'ADN (acide désoxyribonucléique)."
+
+  - type: question_ouverte
+    question: >-
+      Deux vrais jumeaux (issus de la division d'un seul œuf fécondé) sont génétiquement
+      identiques, mais deux frères et sœurs ordinaires ne le sont jamais. Explique pourquoi, en
+      utilisant les mots « méiose », « brassage » et « fécondation ».
+    indices:
+      - "Repense à l'origine des gamètes de chaque frère ou sœur : sont-ils fabriqués avec le même brassage ?"
+      - "Repense aussi au hasard de la rencontre des gamètes lors de la fécondation."
+    criteres:
+      - "L'élève explique que chaque gamète produit par méiose est différent à cause du brassage génétique."
+      - "L'élève relie la diversité entre frères et sœurs au hasard de la fécondation, qui associe des gamètes différents à chaque fois, contrairement aux vrais jumeaux issus d'un seul œuf fécondé."
+
+  - type: synthese
+    consigne: >-
+      Écris, en trois ou quatre phrases, ce qui distingue diversité génétique et stabilité
+      génétique, en citant au moins deux mécanismes qui interviennent (méiose, brassage,
+      fécondation, mutation).
