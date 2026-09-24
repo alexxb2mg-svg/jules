@@ -50,18 +50,17 @@ def _media_type(chemin: Path) -> str:
 
 
 def _chemin_sur(dossier: Path, sous_chemin: str) -> Path | None:
-    """Chemin résolu dans `dossier`, ou None s'il en sort ou a une extension non autorisée."""
-    relatif = Path(sous_chemin)
-    if relatif.is_absolute() or ".." in relatif.parts:
+    """Chemin résolu dans `dossier` (un seul niveau, comme jules/persona.py `_dans`), ou None
+    s'il en sort, contient un séparateur (donc une sous-arborescence) ou a une extension non
+    autorisée."""
+    if "/" in sous_chemin or "\\" in sous_chemin:
         return None
-    if relatif.suffix.lower() not in EXTENSIONS_SERVIES:
+    if Path(sous_chemin).suffix.lower() not in EXTENSIONS_SERVIES:
         return None
-    cible = (dossier / relatif).resolve()
-    try:
-        cible.relative_to(dossier.resolve())
-    except ValueError:
+    cible = (dossier / sous_chemin).resolve()
+    if cible.parent != dossier.resolve() or not cible.is_file():
         return None
-    return cible if cible.is_file() else None
+    return cible
 
 
 class Brique(Module):
