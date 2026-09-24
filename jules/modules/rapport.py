@@ -167,7 +167,8 @@ class Brique(Module):
             stockage.evenements("suivi", jour=jour),
             stockage.evenements("vigilance", jour=jour),
         )
-        synthese, questions = "", []
+        synthese = ""
+        questions: list[str] = []
         if d["messages_eleve"] and avec_synthese and self.reglages.get("synthese", True):
             synthese, questions = self.synthese(jour, d)
         if d["messages_eleve"] and self.reglages.get("questions", True):
