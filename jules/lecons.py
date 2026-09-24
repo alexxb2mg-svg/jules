@@ -216,6 +216,15 @@ def _texte(valeur: object) -> str:
     return re.sub(r"\s+", " ", normaliser(str(valeur or ""))).strip().rstrip(".!?;: ").strip()
 
 
+def _sans_ponctuation(valeur: object) -> str:
+    """Comme `_texte`, mais la ponctuation collee a un mot (virgule, apostrophe...) devient un espace.
+
+    Sert a chercher un mot en milieu de phrase ('C'est l'hypotenuse, ...') sans le rater a cause
+    d'un caractere colle.
+    """
+    return re.sub(r"[^a-z0-9]+", " ", normaliser(str(valeur or ""))).strip()
+
+
 def _index_qcm(donnees: dict[str, Any]) -> int | None:
     choix = [str(c) for c in donnees.get("choix") or []]
     reponse = donnees.get("reponse")
@@ -250,6 +259,22 @@ def verifier_reponse(bloc: Bloc, reponse: object) -> bool | None:
     return None
 
 
+_MOTS_AVANT_NOMBRE_IGNORES = frozenset({"question", "exercice", "partie", "etape", "bloc"})
+
+
+def _ignorer_occurrence_nombre(texte: str, debut: int, fin: int) -> bool:
+    """Faux positifs frequents pour un petit nombre isole : une fraction ('1/2') ou un numero
+    ('question 1', 'exercice 2') ne sont pas la reponse donnee a l'exercice.
+    """
+    if texte[fin : fin + 1] == "/":
+        return True
+    avant = texte[:debut].rstrip()
+    if avant.endswith("/"):
+        return True
+    mot = re.search(r"([a-zA-ZÀ-ÿ]+)\s*$", avant)
+    return bool(mot and normaliser(mot.group(1)) in _MOTS_AVANT_NOMBRE_IGNORES)
+
+
 def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
     """Vrai si `texte` donne la reponse attendue d'un exercice (garde-fou avant d'afficher Jules)."""
     if bloc.type != "exercice":
@@ -261,10 +286,18 @@ def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
         if attendu is None:
             return False
         tolerance = float(d.get("tolerance") or TOLERANCE_DEFAUT)
-        return any(abs(float(n.replace(",", ".")) - attendu) <= tolerance for n in _NOMBRE.findall(texte))
+        for trouve in _NOMBRE.finditer(texte):
+            if _ignorer_occurrence_nombre(texte, trouve.start(), trouve.end()):
+                continue
+            if abs(float(trouve.group(0).replace(",", ".")) - attendu) <= tolerance:
+                return True
+        return False
     if forme == "reponse_courte":
-        propre = f" {_texte(texte)} "
-        admises = [_texte(d.get("reponse"))] + [_texte(v) for v in d.get("reponses_acceptees") or []]
+        # ponctuation collee au mot ("l'HYPOTENUSE,") : on la remplace par des espaces avant de chercher,
+        # sinon une reponse en milieu de phrase avec une virgule ou une apostrophe passerait inapercue.
+        propre = f" {_sans_ponctuation(texte)} "
+        admises = [_sans_ponctuation(d.get("reponse"))]
+        admises += [_sans_ponctuation(v) for v in d.get("reponses_acceptees") or []]
         return any(a and f" {a} " in propre for a in admises)
     if forme == "qcm":
         index = _index_qcm(d)
