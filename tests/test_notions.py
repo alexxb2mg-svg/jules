@@ -400,3 +400,24 @@ def test_referentiel_cm1():
         assert n.attendus and n.source, n.id
         assert n.niveau_programme in ("CM1", "cours moyen", "cycle 3"), n.id
     assert candidats(cat, "je dois apprendre les phases de la lune")[0].id == "cm1-phases-de-la-lune"
+
+
+def test_referentiel_marque_donnees_d_experimentation():
+    """Tant qu'aucun enseignant n'a relu, chaque fichier du referentiel se declare donnee d'experimentation."""
+    biblio = lire_identite(BIBLIOTHEQUES / "programme")
+    assert biblio.statut == "experimentale" and "EXPÉRIMENTAL" in biblio.avertissement
+    assert "expérimental" in biblio.titre.lower()
+    fichiers = [
+        f
+        for niveau in biblio.niveaux
+        for f in (BIBLIOTHEQUES / "programme" / niveau).glob("*.yaml")
+        if not f.name.startswith("_")
+    ]
+    assert fichiers
+    for fichier in fichiers:
+        texte = fichier.read_text(encoding="utf-8")
+        assert texte.startswith("# DONNÉES D'EXPÉRIMENTATION"), fichier
+        brut = yaml.safe_load(texte)
+        assert brut.get("statut") == "experimentale", fichier
+        assert brut.get("relecture") in ("a_relire", "relue"), fichier
+        assert "expérimentation" in str(brut.get("avertissement", "")), fichier

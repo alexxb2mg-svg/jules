@@ -1,7 +1,15 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 matiere: Français
 id: francais
 niveau: 4e
 annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:
   - intitule: "Programme du cycle 4 (annexe 3), enseignement du français"
     reference: "BO n° 31 du 30 juillet 2020"

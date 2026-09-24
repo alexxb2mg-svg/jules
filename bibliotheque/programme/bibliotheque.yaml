@@ -1,16 +1,19 @@
 # Fiche d'identite de la bibliotheque (format : bibliotheque/README.md)
 id: programme
-titre: "Programme officiel (école et collège)"
+titre: "Référentiel expérimental du programme officiel (CM1, 5e, 4e, 3e)"
 type: referentiel          # la liste des notions ; les autres bibliotheques s'y rattachent
 statut: experimentale
 licence: etalab-2.0        # textes officiels résumés ; le résumé est publié sous la licence du dépôt (MIT)
 pays: FR
 niveaux: [CM1, 5e, 4e, 3e]
 avertissement: >-
-  Découpage du programme en notions fait par les contributeurs de Jules à partir des textes
-  officiels (sources citées notion par notion). Ce n'est pas une publication du ministère.
+  Référentiel EXPÉRIMENTAL, pour tester Jules. Découpage du programme en notions fait par les
+  contributeurs de Jules à partir des textes officiels (sources citées notion par notion), sans
+  validation par un enseignant ni par l'Éducation nationale. Ce n'est pas une publication du
+  ministère et il peut contenir des erreurs. Le cours de l'élève et la parole de son professeur
+  font toujours foi.
 description: >-
-  Programme officiel découpé en notions, une liste par classe : CM1 (année 2026-2027, cycle 3) et
-  5e, 4e, 3e (cycle 4), avec les attendus officiels et la source de chacune. Seul le niveau de
-  l'élève est chargé (classe du profil).
-  Format des fichiers : SCHEMA.md.
+  Données d'expérimentation. Programme officiel découpé en notions, une liste par classe : CM1
+  (année 2026-2027, cycle 3) et 5e, 4e, 3e (cycle 4), avec les attendus officiels et la source de
+  chacune. Seul le niveau de l'élève est chargé (classe du profil). Aucun fichier n'est encore relu
+  par un enseignant. Format des fichiers : SCHEMA.md.

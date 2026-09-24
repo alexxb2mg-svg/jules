@@ -9,6 +9,11 @@ matiere: Mathématiques            # nom affiché
 id: mathematiques                 # = nom du fichier, minuscules, tirets
 niveau: 3e
 annee_scolaire: "2026-2027"
+statut: experimentale             # obligatoire : experimentale tant qu'un enseignant n'a pas relu
+relecture: a_relire               # a_relire | relue
+avertissement: >-                 # obligatoire, dit que ce sont des données d'expérimentation
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:                 # TOUS les textes utilisés, avec lien direct
   - intitule: "Programme du cycle 4 (annexe 3)"
     reference: "BO n° 31 du 30 juillet 2020"
@@ -42,6 +47,7 @@ themes:
 ```
 
 Règles :
+- Données d'expérimentation : chaque fichier commence par le commentaire « # DONNÉES D'EXPÉRIMENTATION » et porte `statut: experimentale` et `avertissement`. On ne passe à `relue` qu'après relecture par un enseignant.
 - Aucune notion inventée : chaque notion vient d'un texte officiel cité dans `textes_officiels`.
 - `attendus` : fidèle au texte (citation ou résumé serré), jamais d'ajout personnel.
 - Ids : minuscules, sans accents, tirets. Uniques sur **toute** la bibliothèque, tous niveaux confondus (en 4e et 5e, préfixés par la classe : `4e-...`, `5e-...`).

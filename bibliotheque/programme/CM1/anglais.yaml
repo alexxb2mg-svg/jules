@@ -1,7 +1,15 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 matiere: "Anglais (langue vivante)"
 id: anglais
 niveau: CM1
 annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:
   - intitule: "Programme de langues vivantes étrangères et régionales pour les classes de cours moyen (cycle 3)"
     reference: "Arrêté du 26-2-2026, BO n° 12 du 19 mars 2026 (MENE2602911A) — NOUVEAU en CM1 à la rentrée 2026"

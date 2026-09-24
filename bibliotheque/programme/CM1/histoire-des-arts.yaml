@@ -1,7 +1,15 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 matiere: "Histoire des arts"
 id: histoire-des-arts
 niveau: CM1
 annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:
   - intitule: "Programme du cycle 3 (annexe 2) — partie Histoire des arts"
     reference: "Arrêté du 9-11-2015 modifié, version consolidée BO n° 31 du 30 juillet 2020"

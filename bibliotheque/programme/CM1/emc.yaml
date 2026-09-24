@@ -1,7 +1,15 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 matiere: Enseignement moral et civique
 id: emc
 niveau: CM1
 annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:
   - intitule: "Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP — séquence « CM1 : Faire société »"
     reference: "Arrêté du 29-5-2024, BO n° 24 du 13 juin 2024 (NOR MENE2413934A)"

@@ -210,7 +210,9 @@ class Brique(Module):
             )
         if notion.attendus:
             referentiel = self.catalogue.referentiel
-            nom_ref = f" (bibliothèque « {referentiel.titre} »)" if referentiel else ""
+            nom_ref = (
+                f" (bibliothèque « {referentiel.titre} »{self._mention(referentiel.statut)})" if referentiel else ""
+            )
             parties.append(f"Ce que le programme attend{nom_ref} :\n" + "\n".join(f"- {a}" for a in notion.attendus))
         directions = self.catalogue.directions(notion)
         if directions:
