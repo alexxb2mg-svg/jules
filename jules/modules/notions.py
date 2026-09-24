@@ -214,6 +214,11 @@ class Brique(Module):
                 f" (bibliothèque « {referentiel.titre} »{self._mention(referentiel.statut)})" if referentiel else ""
             )
             parties.append(f"Ce que le programme attend{nom_ref} :\n" + "\n".join(f"- {a}" for a in notion.attendus))
+        if notion.limites:
+            parties.append(
+                "Limites fixées par le programme à ce niveau (ne pas aller au-delà, ne pas imposer d'autre méthode) :\n"
+                + "\n".join(f"- {li}" for li in notion.limites)
+            )
         directions = self.catalogue.directions(notion)
         if directions:
             lignes = [

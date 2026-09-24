@@ -44,6 +44,8 @@ themes:
             mots_cles: [premier, diviseur, décomposition]
             brevet: true                # notion susceptible de tomber au DNB
             source: "Attendus 3e, p. 4" # où c'est dans le texte officiel (page ou section)
+            limites:                    # facultatif : bornes posées par le texte à ce niveau, citées mot pour mot
+              - "Seuls les critères de divisibilité par 2, par 5 et par 10 figurent au programme. (p.5)"
 ```
 
 Règles :
@@ -54,3 +56,4 @@ Règles :
 - Programmes réécrits : quand un nouveau programme s'applique déjà à la classe l'année indiquée dans `annee_scolaire` (par exemple français et mathématiques en 5e à la rentrée 2026, arrêté du 18-2-2026), c'est lui qui est cité, pas l'ancien. Le dire dans `perimetre`.
 - En cas de doute sur l'appartenance à la classe : `niveau_programme: "cycle 4"`, pas de supposition.
 - Primaire : ids préfixés par la classe (`cm1-angles`). `niveau_programme` vaut la classe (`"CM1"`) si le texte la nomme, `"cours moyen"` si le texte vise CM1 et CM2 sans les distinguer, `"cycle 3"` si le texte n'est pas découpé par année. Pas de champ `brevet`.
+- `limites` : seulement ce que le texte officiel interdit ou borne explicitement pour ce niveau (champ numérique, méthode exclue, outil non utilisé), citation exacte + page. Jules les transmet au moteur pour qu'il n'aille pas au-delà.

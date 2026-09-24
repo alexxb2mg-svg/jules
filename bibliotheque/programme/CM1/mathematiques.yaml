@@ -46,6 +46,9 @@ themes:
               - "Ordonner des nombres dans l'ordre croissant ou décroissant."
               - "Savoir placer des nombres et repérer des points sur une demi-droite graduée."
             mots_cles: [nombres entiers, dizaines de milliers, centaines de milliers, comparer des nombres, demi-droite graduée]
+            limites:                   # citations du texte officiel
+              - "Les connaissances et les savoir-faire attendus en fin de CM1 concernent les nombres s'écrivant avec au plus six chiffres. (p.5)"
+              - "On se limite, pendant les deux premières périodes de l'année, aux nombres entiers s'écrivant avec au plus quatre chiffres. (p.5)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres entiers », p.5"
           - id: cm1-multiples-et-diviseurs
             titre: "Multiples et diviseurs (critères de divisibilité par 2, 5 et 10)"
@@ -55,6 +58,8 @@ themes:
               - "Savoir déterminer si un nombre entier donné est un multiple d'un nombre entier inférieur ou égal à 10."
               - "Savoir déterminer si un nombre entier inférieur ou égal à 10 est un diviseur d'un nombre entier donné."
             mots_cles: [multiple, diviseur, table de multiplication, divisible par 2, divisible par 5, divisible par 10]
+            limites:                   # citations du texte officiel
+              - "Seuls les critères de divisibilité par 2, par 5 et par 10 figurent au programme. (p.5)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres entiers », p.5"
       - id: fractions
         titre: "Les fractions"
@@ -101,6 +106,8 @@ themes:
               - "Savoir donner la partie entière et l'arrondi à l'entier d'un nombre décimal."
               - "Comparer, encadrer, intercaler, ordonner par ordre croissant ou décroissant des nombres décimaux donnés par leur écriture à virgule en utilisant les symboles =, < et >."
             mots_cles: [nombre décimal, virgule, partie entière, arrondi, comparer des décimaux]
+            limites:                   # citations du texte officiel
+              - "Au CM1, les nombres décimaux rencontrés ne vont pas au-delà des centièmes et s'écrivent donc avec au plus deux chiffres après la virgule. (p.6)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres décimaux », p.6"
       - id: calcul-mental
         titre: "Le calcul mental"
@@ -146,6 +153,8 @@ themes:
               - "Poser et effectuer des multiplications de deux nombres entiers, et d'un nombre décimal par un nombre entier inférieur à 10."
               - "Poser et effectuer des divisions euclidiennes avec un diviseur à un chiffre."
             mots_cles: [addition posée, soustraction posée, multiplication posée, division euclidienne, ordre de grandeur]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves ne disposent pas de calculatrice personnelle. (p.7)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les quatre opérations », p.7"
       - id: resolution-de-problemes
         titre: "La résolution de problèmes"
@@ -171,6 +180,8 @@ themes:
               - "Résoudre des problèmes de dénombrement."
               - "Résoudre des problèmes d'optimisation."
             mots_cles: [problème additif, problème multiplicatif, comparaison, dénombrement, optimisation]
+            limites:                   # citations du texte officiel
+              - "Les données des problèmes proposés aux élèves sont dans le champ numérique maîtrisé au CM1, à savoir les nombres entiers jusqu'à 999 999, les nombres décimaux et les fractions. (p.8)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La résolution de problèmes », p.8"
       - id: algebre
         titre: "Algèbre"
@@ -208,6 +219,8 @@ themes:
               - "Savoir ce qu'est le périmètre d'une figure plane ; déterminer le périmètre d'un polygone en utilisant une règle graduée."
               - "Résoudre des problèmes mettant en jeu les longueurs des côtés d'un polygone et son périmètre."
             mots_cles: [longueur, mètre, périmètre, unités de longueur]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les longueurs », p.17"
       - id: masses
         titre: "Les masses"
@@ -219,6 +232,8 @@ themes:
               - "Connaître et utiliser les unités de masse du milligramme au kilogramme et la tonne, et les symboles associés ; connaître les relations entre les unités de masse."
               - "Choisir une unité adaptée pour exprimer une masse ; comparer des masses ; disposer de quelques masses de référence ; estimer la masse d'un objet."
             mots_cles: [masse, gramme, kilogramme, tonne, peser]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les masses », p.17"
       - id: contenances
         titre: "Les contenances"
@@ -230,6 +245,8 @@ themes:
               - "Connaître et utiliser les unités de contenance du millilitre à l'hectolitre et les symboles associés ; connaître les relations entre les unités de contenance."
               - "Choisir une unité adaptée pour exprimer une contenance ; comparer des contenances."
             mots_cles: [contenance, litre, millilitre, hectolitre]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les contenances », p.17"
       - id: aires
         titre: "Les aires"
@@ -241,6 +258,8 @@ themes:
               - "Comparer les aires de différentes figures planes."
               - "Déterminer des aires ; connaître et utiliser les centimètres carrés pour exprimer des aires (aucune formule de périmètre ou d'aire n'est exigée par cœur au CM1)."
             mots_cles: [aire, surface, centimètre carré]
+            limites:                   # citations du texte officiel
+              - "Il n'est pas attendu de mémorisation de formules de périmètres ou d'aires de figures planes au CM1, l'enseignement privilégiant l'acquisition de leur sens et la détermination de mesures s'appuyant sur des pavages. (p.17)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les aires », p.17"
       - id: angles
         titre: "Les angles"
@@ -368,6 +387,9 @@ themes:
               - "Identifier une situation de proportionnalité, dans le cadre des grandeurs."
               - "Savoir résoudre un problème de proportionnalité en s'appuyant sur un raisonnement de linéarité pour la multiplication, formulé en langage naturel (au CM1, sans tableau de proportionnalité)."
             mots_cles: [proportionnalité, fois plus, fois moins, raisonnement]
+            limites:                   # citations du texte officiel
+              - "Les élèves n'utilisent pas de tableaux de proportionnalité au cours moyen. (p.26)"
+              - "Au cours moyen, les problèmes posés le sont tous dans le cadre des grandeurs et ne portent pas sur des suites de nombres hors contexte. (p.26)"
             source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La proportionnalité », p.26"
   - id: initiation-a-la-pensee-informatique
     titre: "Initiation à la pensée informatique"

@@ -18,7 +18,7 @@ from jules.bibliotheques import (
     texte_direction,
     texte_fiche,
 )
-from jules.modules.notions import niveau_du_profil, ressemble_a_un_calcul
+from jules.modules.notions import Brique, niveau_du_profil, ressemble_a_un_calcul
 from jules.stockage import Message
 from jules.web.app import creer_app
 
@@ -421,3 +421,14 @@ def test_referentiel_marque_donnees_d_experimentation():
         assert brut.get("statut") == "experimentale", fichier
         assert brut.get("relecture") in ("a_relire", "relue"), fichier
         assert "expérimentation" in str(brut.get("avertissement", "")), fichier
+
+
+def test_limites_du_programme_transmises_au_moteur():
+    """Les bornes du texte officiel (ex. pas de tableau de proportionnalité au CM1) arrivent dans la consigne."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme"], "CM1")
+    notion = cat.notions["cm1-identifier-et-resoudre-un-probleme-de-proportionnalite"]
+    assert any("tableaux de proportionnalité" in li for li in notion.limites)
+    brique = Brique.__new__(Brique)
+    brique._catalogue = cat
+    texte = brique.texte_notion(notion, "eleve")
+    assert "Limites fixées par le programme" in texte and "tableaux de proportionnalité" in texte

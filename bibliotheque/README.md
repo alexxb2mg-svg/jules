@@ -9,7 +9,7 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 
 | Type | Rôle | Exemple ici |
 |---|---|---|
-| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : référentiel **expérimental** du programme officiel, CM1 (158 notions) et 3e (252 notions), non relu |
+| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : référentiel **expérimental** du programme officiel, CM1 (158 notions), 5e, 4e et 3e, non relu |
 | `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
 | `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
