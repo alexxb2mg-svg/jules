@@ -1,0 +1,147 @@
+notion: guerre-totale-1914-1918
+titre: "La Première Guerre mondiale, une guerre totale"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Première Guerre mondiale »"
+    url: "https://fr.vikidia.org/wiki/Premi%C3%A8re_Guerre_mondiale"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Bataille de Verdun »"
+    url: "https://fr.vikidia.org/wiki/Bataille_de_Verdun"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Génocide arménien »"
+    url: "https://fr.vikidia.org/wiki/G%C3%A9nocide_arm%C3%A9nien"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Révolution russe »"
+    url: "https://fr.vikidia.org/wiki/R%C3%A9volution_russe"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer pourquoi la Première Guerre mondiale est appelée une « guerre totale »."
+      - "Donner un exemple de mobilisation des civils et un exemple de violence de masse pendant la guerre."
+      - "Situer dans le temps la bataille de Verdun et le génocide des Arméniens, et relier la guerre à la révolution russe de 1917."
+
+  - type: texte
+    titre: "Une guerre mondiale, une guerre totale"
+    contenu: >-
+      La Première Guerre mondiale dure du 28 juillet 1914 au 11 novembre 1918. Elle oppose la
+      Triple-Entente (France, Royaume-Uni, Russie, rejointes plus tard par l'Italie et les
+      États-Unis) à la Triple-Alliance, aussi appelée puissances centrales (Empire allemand,
+      Autriche-Hongrie, Empire ottoman, Bulgarie).
+
+      C'est une **guerre totale** : elle ne mobilise pas seulement les soldats au front (les
+      « poilus » côté français, dans la guerre des tranchées), mais toute la société. Les civils
+      travaillent dans les usines d'armement, subissent les pénuries et la propagande des États, et
+      sont parfois eux-mêmes visés par des violences de guerre.
+
+  - type: texte
+    titre: "Verdun, une bataille emblématique"
+    contenu: >-
+      La bataille de Verdun (février-décembre 1916) est l'une des plus meurtrières de la guerre :
+      elle oppose les armées françaises et allemandes autour de la ville de Verdun, dans l'est de
+      la France, et fait de l'ordre de 700 000 morts et blessés au total, des deux côtés. Elle
+      montre à elle seule l'ampleur des pertes humaines d'une guerre de position, où les deux
+      camps s'affrontent longuement pour un territoire limité.
+
+  - type: texte
+    titre: "Des violences de masse contre les civils"
+    contenu: >-
+      La guerre totale s'accompagne de violences extrêmes qui dépassent les champs de bataille.
+      Entre 1915 et 1916, le gouvernement ottoman des Jeunes-Turcs organise le **génocide des
+      Arméniens** : les Arméniens de l'Empire ottoman sont massacrés, déportés vers le désert
+      syrien et victimes de la famine, ce qui fait de l'ordre de 800 000 à 1,2 million de morts.
+      C'est un génocide, c'est-à-dire la destruction volontaire et organisée d'un groupe humain en
+      tant que tel — un mot plus précis que « massacre ».
+
+  - type: texte
+    titre: "Une guerre qui bouleverse la Russie"
+    contenu: >-
+      En Russie, l'épuisement provoqué par la guerre totale débouche en 1917 sur la révolution
+      russe, en deux temps : en février, des manifestations et des grèves renversent le tsar
+      Nicolas II ; en octobre, le parti bolchevique, dirigé par Lénine, prend le pouvoir par un
+      coup d'État contre le gouvernement provisoire. Ce basculement politique va durablement
+      fragiliser plusieurs régimes en Europe, bien après la fin de la guerre en 1918.
+
+  - type: exemple
+    enonce: >-
+      Expliquer en deux ou trois phrases comment la propagande a participé à l'effort de guerre
+      pendant la Première Guerre mondiale.
+    etapes:
+      - "Les États en guerre veulent maintenir le moral des civils et des soldats malgré la durée du conflit et les pertes."
+      - "Ils contrôlent la presse et diffusent des affiches, des journaux et des discours qui présentent la guerre de façon favorable et diabolisent l'ennemi : c'est la propagande."
+      - "La propagande montre que la guerre totale mobilise aussi les esprits, pas seulement les armées et les usines : c'est une autre facette de la mobilisation de toute la société."
+
+  - type: exercice
+    enonce: "Combien d'années a duré la Première Guerre mondiale, entre son début en 1914 et l'armistice en 1918 ?"
+    forme: nombre
+    reponse: 4
+    tolerance: 0
+    unite: ans
+    indices:
+      - "L'armistice est signé le 11 novembre 1918. À quelle année commence la guerre ?"
+      - "Compte le nombre d'années pleines entre 1914 et 1918."
+    explication: "La guerre commence en juillet 1914 et se termine par l'armistice du 11 novembre 1918 : elle dure 4 ans."
+
+  - type: exercice
+    enonce: "Cite les deux camps qui s'affrontent pendant la Première Guerre mondiale."
+    forme: reponse_courte
+    reponse: "Triple-Entente et Triple-Alliance"
+    reponses_acceptees:
+      - "la Triple-Entente et la Triple-Alliance"
+      - "Triple Entente et Triple Alliance"
+      - "Entente et puissances centrales"
+      - "Triple-Entente et puissances centrales"
+    indices:
+      - "Un des deux camps regroupe la France, le Royaume-Uni et la Russie."
+      - "L'autre camp est parfois appelé « puissances centrales »."
+    explication: "La Triple-Entente (France, Royaume-Uni, Russie, rejointes ensuite par l'Italie et les États-Unis) affronte la Triple-Alliance, aussi appelée puissances centrales (Empire allemand, Autriche-Hongrie, Empire ottoman, Bulgarie)."
+
+  - type: exercice
+    enonce: "Quel événement de violence de masse contre une population civile est organisé par le gouvernement ottoman entre 1915 et 1916 ?"
+    forme: qcm
+    choix:
+      - "Le génocide des Arméniens"
+      - "La bataille de Verdun"
+      - "La révolution bolchevique"
+    reponse: 0
+    indices:
+      - "Cet événement vise un peuple précis de l'Empire ottoman, pas une armée."
+      - "Le mot juste pour cet événement n'est pas « massacre » mais un terme plus précis, qui désigne la destruction organisée d'un groupe humain."
+    explication: "Entre 1915 et 1916, le gouvernement ottoman des Jeunes-Turcs organise le génocide des Arméniens : massacres, déportations vers le désert syrien et famine font de l'ordre de 800 000 à 1,2 million de morts."
+
+  - type: exercice
+    enonce: >-
+      Pourquoi peut-on dire que les conséquences de la Première Guerre mondiale en Russie vont
+      au-delà de la fin de la guerre en 1918 ?
+    forme: qcm
+    choix:
+      - "Parce que la révolution bolchevique de 1917 installe un pouvoir communiste qui dure bien après 1918."
+      - "Parce que la Russie change de capitale en 1918."
+      - "Parce que la Russie ne participe pas à la guerre après 1918."
+    reponse: 0
+    indices:
+      - "Que se passe-t-il en Russie en 1917, pendant la guerre ?"
+      - "Le régime politique qui prend le pouvoir en 1917 disparaît-il à la fin de la guerre en 1918 ?"
+    explication: "La guerre épuise la Russie et provoque en 1917 la révolution bolchevique, menée par Lénine, qui renverse le tsar. Le pouvoir communiste qui s'installe alors dure bien au-delà de la fin de la guerre en 1918."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre, en t'appuyant sur deux exemples précis pris dans cette
+      leçon, que la Première Guerre mondiale est une « guerre totale ». Rédige une phrase
+      d'introduction, tes deux exemples, et une phrase de conclusion.
+    indices:
+      - "Choisis un exemple du côté des combattants ou des violences de masse, et un exemple du côté de la société à l'arrière (économie, propagande)."
+      - "N'oublie pas de dire à quelle date se situe chacun de tes deux exemples."
+    criteres:
+      - "Le développement contient une phrase d'introduction qui situe la guerre (1914-1918) et une phrase de conclusion sur ses conséquences."
+      - "L'élève donne deux exemples précis et distincts, avec au moins une date, tirés de la leçon (par exemple violence de masse comme le génocide des Arméniens, et mobilisation de l'arrière comme la propagande ou l'économie de guerre)."
+      - "L'élève relie explicitement ses exemples à l'idée que civils et militaires sont mobilisés ensemble, pas seulement les armées."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens de cette leçon :
+      pourquoi on parle de « guerre totale », un exemple de violence de masse que tu as appris, et un
+      lien entre cette guerre et un événement politique qui a suivi.
