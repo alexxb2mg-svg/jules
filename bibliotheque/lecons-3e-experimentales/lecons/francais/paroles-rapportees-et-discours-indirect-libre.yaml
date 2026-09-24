@@ -1,0 +1,108 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: paroles-rapportees-et-discours-indirect-libre
+titre: "Discours direct, discours indirect et discours indirect libre"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Discours indirect libre »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Discours_indirect_libre&oldid=238392526"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Discours rapporté »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Discours_rapport%C3%A9&oldid=235220432"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître et utiliser le discours direct et le discours indirect."
+      - "Transformer une phrase du discours direct au discours indirect (pronoms, temps, indicateurs de temps et de lieu)."
+      - "Reconnaître le discours indirect libre dans un texte narratif."
+
+  - type: texte
+    titre: "Le discours direct"
+    contenu: >-
+      Le **discours direct** rapporte les paroles telles qu'elles ont été dites, entre guillemets,
+      introduites par un verbe de parole et souvent deux-points ou une incise : « Je viendrai
+      demain », dit-elle.
+
+  - type: texte
+    titre: "Le discours indirect"
+    contenu: >-
+      Le **discours indirect** intègre la parole dans une subordonnée, sans guillemets ni
+      ponctuation expressive propre : elle dit qu'elle viendra le lendemain. Ce passage entraîne
+      des changements : les **pronoms** (je → elle), les **temps** (futur → conditionnel ou futur
+      dans le passé selon le contexte), et les **repères de temps et de lieu** (demain → le
+      lendemain, ici → là).
+
+  - type: texte
+    titre: "Le discours indirect libre"
+    contenu: >-
+      Le **discours indirect libre** mélange les deux : il garde certains traits du discours direct
+      (exclamations, questions, rythme de la phrase, vocabulaire du personnage) mais **sans
+      guillemets ni verbe introducteur**, et applique les transformations de pronoms et de temps du
+      discours indirect. Il permet au narrateur de faire entendre la voix ou les pensées d'un
+      personnage sans rompre le récit.
+
+  - type: exemple
+    enonce: "Transformer au discours indirect : Il déclara : « Je pars demain matin. »"
+    etapes:
+      - "Le pronom « je » devient « il » (celui qui parle est repris par le narrateur)."
+      - "Le présent « pars » devient l'imparfait « partait », car la principale est au passé (« il déclara »)."
+      - "L'indicateur de temps « demain » devient « le lendemain »."
+      - "Les guillemets et le deux-points disparaissent, remplacés par la conjonction « que »."
+      - "Phrase correcte : « Il déclara qu'il partait le lendemain matin. »"
+
+  - type: exercice
+    enonce: "Transformer au discours indirect : Elle demanda : « Où as-tu rangé mes affaires ? » Écris la subordonnée interrogative indirecte complète (sans le verbe introducteur « elle demanda »)."
+    forme: reponse_courte
+    reponse: "où j'avais rangé ses affaires"
+    reponses_acceptees: ["ou j'avais range ses affaires", "où il avait rangé ses affaires", "ou il avait range ses affaires"]
+    indices:
+      - "C'est une question : le mot interrogatif « où » reste-t-il tel quel à l'indirect ?"
+      - "Il n'y a pas de point d'interrogation dans une interrogative indirecte."
+      - "Pense à changer le temps (présent → plus-que-parfait, car l'action de ranger est antérieure) et les possessifs."
+    explication: "Elle demanda où j'avais rangé ses affaires. L'interrogative indirecte garde « où », perd le point d'interrogation, et change les pronoms/possessifs et le temps."
+
+  - type: exercice
+    enonce: "Dans « Elle regarda la lettre. Que devait-elle faire ? Impossible de répondre maintenant. », les deux dernières phrases sont-elles du discours indirect libre ?"
+    forme: qcm
+    choix:
+      - "Non, ce sont les pensées du narrateur, exprimées normalement."
+      - "Oui : ce sont les pensées du personnage, sans guillemets ni verbe introducteur, mais avec les pronoms et les temps de l'indirect."
+      - "Non, c'est du discours direct car il y a un point d'interrogation."
+    reponse: 1
+    indices:
+      - "Y a-t-il des guillemets ou un verbe introducteur (« elle pensa que ») avant la question ?"
+      - "À qui appartient vraiment cette question : au narrateur, ou au personnage qui regarde la lettre ?"
+    explication: "Ce sont les pensées du personnage (« Que devait-elle faire ? »), sans guillemets ni verbe introducteur, mais avec les pronoms et les temps de l'indirect (« devait » à la 3e personne) : c'est du discours indirect libre."
+
+  - type: exercice
+    enonce: "Parmi ces trois transformations, laquelle respecte correctement le passage du discours direct au discours indirect pour la phrase « Il annonça : “Je reviendrai ici demain.” » ?"
+    forme: qcm
+    choix:
+      - "Il annonça qu'il reviendrait là le lendemain."
+      - "Il annonça : je reviendrai ici demain."
+      - "Il annonça qu'il reviendra ici demain."
+    reponse: 0
+    indices:
+      - "Le futur simple d'une phrase introduite par un verbe au passé devient quel temps à l'indirect ?"
+      - "Les indicateurs de lieu et de temps « ici » et « demain » doivent aussi changer."
+    explication: "« reviendrai » (futur) devient « reviendrait » (conditionnel, valeur de futur dans le passé), « ici » devient « là » et « demain » devient « le lendemain »."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots pourquoi le discours indirect libre est utile pour un romancier : que permet-il de faire que ne permettent pas le discours direct ou le discours indirect classique ?"
+    indices:
+      - "Pense à la fluidité du récit : que se passe-t-il si on ajoute des guillemets et un verbe introducteur à chaque pensée d'un personnage ?"
+      - "Pense à ce qui reste du « ton » du personnage dans le discours indirect libre, contrairement au discours indirect classique."
+    criteres:
+      - "L'élève explique que le discours indirect libre évite la lourdeur des guillemets et des verbes introducteurs répétés."
+      - "L'élève relie ce procédé au fait qu'il garde le ton, le vocabulaire ou le rythme du personnage tout en restant dans la narration."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qui change (pronoms, temps,
+      indicateurs) quand on passe du discours direct au discours indirect, puis donne toi-même un
+      exemple de phrase (différent de ceux de cette leçon) au discours direct et sa transformation
+      au discours indirect.
