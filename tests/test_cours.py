@@ -37,6 +37,9 @@ B_OBJECTIFS, B_TEXTE, B_EXERCICE_NOMBRE, B_EXERCICE_QCM, B_QUESTION_OUVERTE, B_S
 
 def _ecrire_bibliotheque_lecons(racine_bibliotheque: Path) -> None:
     dossier = racine_bibliotheque / "lecons-3e-experimentales"
+    # Le dossier peut deja exister (bibliotheque reelle du lot B, copiee par la fixture `projet`) :
+    # on la remplace par une bibliotheque de test avec une seule lecon predictible, isolee du contenu reel.
+    shutil.rmtree(dossier, ignore_errors=True)
     (dossier / "lecons" / "mathematiques").mkdir(parents=True)
     identite = {
         "id": "lecons-3e-experimentales",
