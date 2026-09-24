@@ -146,7 +146,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 
 ## 6. Le parent, et la mesure
 
-**Le bilan qui souffle une question.** Le bilan du soir dit aujourd'hui ce qui a été travaillé et ce qui bloque. Il doit aussi proposer au parent une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice soi-même (« Explique-moi comment tu sais qu'un nombre est premier »). C'est le moyen le moins cher de remettre un adulte dans la boucle ; l'essai y consacre son chapitre VIII.
+**Le bilan qui souffle une question.** Le bilan du soir dit ce qui a été travaillé et ce qui bloque. Il propose aussi au parent une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice soi-même (« Explique-moi comment tu sais qu'un nombre est premier »). C'est le moyen le moins cher de remettre un adulte dans la boucle ; l'essai y consacre son chapitre VIII.
 
 **Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules proposera, quelques jours après, une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours. Ce n'est pas une étude scientifique, mais c'est le bon critère.
 
@@ -157,14 +157,13 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 - **Le suivi des notions est une estimation.** L'état (comprise, en cours, bloquée) est déduit par le modèle d'IA à partir des conversations. Les grands modèles sont médiocres à cet exercice ; la recherche sur le suivi des connaissances des élèves n'a pas encore de méthode fiable à proposer.
 - **Aucune mesure des progrès.** Jules n'a été essayé que dans une famille. Rien ne montre encore qu'il fait progresser un élève ; un tuteur bien réglé évite surtout que l'IA fasse perdre.
 - **Les petits modèles locaux cèdent.** Un modèle de 8 milliards de paramètres a fini par donner la réponse quand l'élève insistait. Pour l'instant, gratuit et fiable ne vont pas ensemble.
-- **Le dossier de l'élève ne s'efface pas en entier.** Il reste sur l'ordinateur de la famille, mais l'espace parent ne permet encore ni d'effacer les conversations, ni de tout effacer, ni de tout exporter.
 
 ## Feuille de route proposée
 
 | Étape | Contenu | État |
 |---|---|---|
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
-| 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | à faire |
+| 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | à faire |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
