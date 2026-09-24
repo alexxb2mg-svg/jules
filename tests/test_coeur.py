@@ -15,7 +15,16 @@ from jules.planificateur import Planificateur
 
 
 def test_briques_chargees_depuis_la_config(tuteur):
-    assert [m.id for m in tuteur.modules] == ["modes", "notions", "memoire", "suivi", "vigilance", "epreuve", "rapport"]
+    assert [m.id for m in tuteur.modules] == [
+        "modes",
+        "notions",
+        "cours",
+        "memoire",
+        "suivi",
+        "vigilance",
+        "epreuve",
+        "rapport",
+    ]
     assert [type(n).__module__ for n in tuteur.notifieurs] == ["jules.notifieurs.fichier"]
 
 

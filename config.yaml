@@ -36,6 +36,10 @@ modules:
         - programme                    # referentiel : les notions du programme officiel
         - fiches-3e-experimentales     # fiches de test, contenus libres, NON certifiees
       detection: true  # reconnait la notion dans le texte ou la photo de l'exercice
+  - id: cours          # interface de lecon guidee, notion par notion (etape 2)
+    reglages:
+      bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
+        - lecons-3e-experimentales     # ecrite par le lot B ; absente = module actif sans lecon
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent
