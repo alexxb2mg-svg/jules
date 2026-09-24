@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-fractions-decimales-et-ecriture-a-virgule
+declencheurs:
+- dixième
+- centième
+- fraction décimale
+- virgule
+- passer en virgule
+- 417 sur 100
+essentiel: 'Une fraction décimale est une fraction dont le dénominateur est 10, 100 ou 1 000. Un dixième s''écrit
+  1/10, un centième s''écrit 1/100, et 1 = 10/10 = 100/100.
+
+  Une fraction décimale supérieure à 1 peut s''écrire comme la somme d''un nombre entier et d''une fraction décimale
+  plus petite que 1 : par exemple 417/100 = 4 + 17/100, et on peut aussi la séparer encore plus : 4 + 1/10 + 7/100.
+
+  On peut placer une fraction décimale sur une demi-droite graduée, comme n''importe quelle fraction.
+
+  Pour comparer, encadrer ou ranger des fractions décimales, on peut les transformer pour avoir le même dénominateur,
+  comme pour toutes les fractions : par exemple 14/10 et 120/100 se comparent en écrivant 14/10 = 140/100.'
+methode:
+- 'Repérer le dénominateur (10, 100 ou 1 000) : il dit si ce sont des dixièmes, des centièmes ou des millièmes.'
+- 'Pour séparer la partie entière : chercher combien de fois le dénominateur entre entièrement dans le numérateur.'
+- Écrire le reste comme une fraction décimale plus petite que 1.
+- Pour comparer deux fractions décimales de dénominateurs différents, les transformer pour avoir le même dénominateur.
+- Vérifier sur une demi-droite graduée si besoin.
+erreurs_frequentes:
+- Croire que 14/10 est plus petit que 9/10 parce que 14 semble être « après la virgule ».
+- Oublier qu'un dixième vaut dix centièmes (1/10 = 10/100) quand on compare.
+- Se tromper en séparant la partie entière d'une fraction décimale supérieure à 1.
+exemple:
+  enonce: 'Range dans l''ordre croissant : 2 ; 14/10 ; 120/100 ; 9/10.'
+  solution: 'On met tout en centièmes : 2 = 200/100 ; 14/10 = 140/100 ; 120/100 reste 120/100 ; 9/10 = 90/100. Ordre
+    croissant : 9/10 < 120/100 < 14/10 < 2.'
+exercices:
+- enonce: Écris 417/100 comme la somme d'un nombre entier et d'une fraction décimale plus petite que 1.
+  indices:
+  - '100/100 = 1 : combien de fois 100 entre-t-il dans 417 ?'
+  solution: 417/100 = 4 + 17/100, car 4 × 100 = 400 et il reste 17.
+- enonce: 'Complète : 14/10 < … < 15/10, avec une fraction décimale qui convient.'
+  indices:
+  - Cherche une fraction en centièmes entre 140/100 et 150/100.
+  solution: Par exemple 145/100 convient, car 140/100 < 145/100 < 150/100.
+- enonce: Encadre la fraction décimale 67/10 par deux nombres entiers consécutifs.
+  indices:
+  - '10/10 = 1 : combien de fois 10 entre-t-il dans 67 ?'
+  solution: 60/10 = 6 et 70/10 = 7, donc 6 < 67/10 < 7.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.6-7
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

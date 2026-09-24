@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-imaginer-vivre-autres-vies
+declencheurs:
+- se mettre à la place d'un personnage
+- imaginer une autre vie
+- s'identifier à un personnage
+- vivre une aventure à travers un livre
+essentiel: 'Lire une œuvre, c''est parfois s''identifier à un personnage, ou au contraire s''en démarquer, en s''immergeant
+  dans un univers étranger ou insolite.
+
+  Cela permet de s''engager personnellement dans la lecture d''œuvres du patrimoine ou contemporaines.
+
+  Les récits de vie offerts par la littérature de jeunesse aident à se projeter dans des existences nouvelles, différentes
+  de la sienne.
+
+  Cela développe la sensibilité, l''empathie et la créativité du lecteur, et renforce son goût pour la lecture.'
+methode:
+- Repérer qui est le personnage principal et dans quel univers il vit.
+- Se demander en quoi cette vie ressemble ou diffère de la sienne.
+- Imaginer ce que l'on ressentirait à la place du personnage.
+- Expliquer si l'on s'identifie au personnage ou si, au contraire, on s'en démarque, et pourquoi.
+erreurs_frequentes:
+- Résumer seulement l'histoire sans se demander ce que l'on ressentirait à la place du personnage.
+- Croire qu'on doit forcément ressembler au personnage pour apprécier l'histoire.
+exemple:
+  enonce: Dans un roman, un enfant vit seul sur une île après un naufrage. Comment un lecteur peut-il « vivre une
+    autre vie » en lisant ce livre ?
+  solution: 'Le lecteur peut s''imaginer à la place de l''enfant, ressentir sa solitude ou son ingéniosité pour
+    survivre, même s''il n''a jamais vécu cette situation lui-même : c''est se projeter dans une existence nouvelle.'
+exercices:
+- enonce: Choisis un personnage d'un livre que tu as lu, dont la vie est très différente de la tienne. En quoi est-elle
+    différente ?
+  indices:
+  - Pense au lieu où vit le personnage, à son époque, à sa famille...
+  solution: La réponse doit citer au moins deux différences précises entre la vie du personnage et celle du lecteur.
+- enonce: Imagine que tu es ce personnage pendant une journée. Écris trois phrases pour raconter ce que tu ferais
+    et ressentirais.
+  indices:
+  - Utilise « je » comme si tu étais le personnage.
+  solution: 'Critère de réussite : le texte est écrit à la première personne et montre ce que ressentirait le personnage,
+    pas seulement ce qu''il fait.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

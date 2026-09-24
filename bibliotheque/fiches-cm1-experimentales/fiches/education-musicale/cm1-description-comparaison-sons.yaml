@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-description-comparaison-sons
+declencheurs:
+- comparer deux musiques
+- décrire un son
+- ressemblances entre deux musiques
+- différences entre deux extraits
+- à quoi ça ressemble cette musique
+- décrire ce que j'entends
+essentiel: 'Décrire un son ou une musique, c''est dire avec des mots ce qu''on entend : le timbre, le rythme, l''ambiance...
+
+  Comparer deux musiques, c''est chercher ce qu''elles ont en commun et ce qui les différencie.
+
+  On peut comparer des musiques venues d''endroits différents (aires géographiques ou culturelles) ou d''époques
+  différentes : anciennes, contemporaines, proches ou lointaines dans le temps.
+
+  Les sons ne viennent pas que des instruments : les sons de la biodiversité (nature, animaux) peuvent aussi être
+  décrits et comparés à des musiques.
+
+  Identifier des ressemblances et des différences t''aide à mieux comprendre ce qui rend chaque musique particulière.'
+methode:
+- Écoute l'extrait en entier, une première fois, sans rien dire.
+- Réécoute-le en cherchant des mots pour le décrire (instruments, voix, rythme, ambiance).
+- Écoute un deuxième extrait de la même façon.
+- Cherche un point commun entre les deux extraits (même instrument, même rythme...).
+- Cherche une différence claire entre les deux extraits.
+- Formule tes ressemblances et différences avec des phrases complètes.
+erreurs_frequentes:
+- Dire seulement « j'aime » ou « j'aime pas » au lieu de décrire ce qu'on entend.
+- Comparer sans avoir bien réécouté les deux extraits.
+- Confondre une ressemblance (ce qui est pareil) et une différence (ce qui change).
+exemple:
+  enonce: Tu écoutes un chant d'oiseau enregistré dans la nature, puis un extrait où un instrument imite le chant
+    d'un oiseau. Compare les deux.
+  solution: 'Ressemblance : les deux sons sont aigus et légers, avec des motifs qui se répètent. Différence : le
+    premier est un son naturel (biodiversité), le second est produit par un instrument joué par un musicien.'
+exercices:
+- enonce: Écoute deux musiques très différentes (par exemple une musique calme et une musique rythmée) et note au
+    moins une ressemblance et une différence entre elles.
+  indices:
+  - Pense au tempo, au timbre des instruments ou des voix, à l'ambiance générale.
+  - Écris tes remarques avec des phrases complètes.
+  solution: 'Critères de réussite : tu donnes au moins une ressemblance et une différence précises, en utilisant
+    du vocabulaire musical (tempo, timbre, ambiance).'
+- enonce: Écoute un son de la nature (pluie, vent, oiseau) et une musique jouée par un instrument. Décris ce qui
+    les rapproche ou les éloigne.
+  indices:
+  - Un son de la nature peut être régulier ou irrégulier, comme une musique.
+  solution: 'Critères de réussite : tu compares les deux sons sur au moins un aspect précis (durée, hauteur, régularité).'
+- enonce: Demande à un adulte de te faire écouter une musique d'un pays ou d'une époque différente de celle que
+    tu écoutes d'habitude, puis compare-la à une chanson que tu connais bien.
+  indices:
+  - Cherche si les instruments ou les voix te semblent proches ou très différents de ceux que tu connais.
+  solution: 'Critères de réussite : tu identifies et nommes au moins une ressemblance et une différence entre les
+    deux musiques.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

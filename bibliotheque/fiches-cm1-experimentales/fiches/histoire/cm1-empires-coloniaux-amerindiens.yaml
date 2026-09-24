@@ -1,0 +1,51 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-empires-coloniaux-amerindiens
+declencheurs:
+- colonies en amérique
+- empires coloniaux
+- amérindiens
+- territoires conquis
+- conséquences pour les populations d'amérique
+couverture: 'Ne couvre que ce que dit le programme, de façon très générale : la constitution des premiers empires
+  coloniaux en Amérique et l''existence de conséquences sur les populations amérindiennes, sans détail précis fourni
+  par le texte officiel.'
+essentiel: 'À partir des explorations européennes, des empires coloniaux se constituent en Amérique.
+
+  Ces empires coloniaux peuvent être localisés sur une carte.
+
+  Cette conquête a des conséquences sur les populations amérindiennes, qui vivaient déjà sur ces territoires.'
+methode:
+- Se rappeler que ce sont des Européens qui constituent des empires coloniaux en Amérique.
+- Savoir localiser un empire colonial sur une carte.
+- Se souvenir que la conquête a des conséquences pour les populations amérindiennes déjà présentes.
+vocabulaire:
+- terme: empire colonial
+  definition: ensemble de territoires conquis et dominés par un pays européen, ici en Amérique
+erreurs_frequentes:
+- Oublier que les populations amérindiennes vivaient sur ces territoires avant la constitution des empires coloniaux.
+- Ne pas savoir localiser un empire colonial sur une carte.
+exemple:
+  enonce: Que se passe-t-il pour les populations amérindiennes quand des empires coloniaux se constituent en Amérique
+    ?
+  solution: Cette conquête a des conséquences pour elles, car ces territoires étaient les leurs.
+exercices:
+- enonce: Sur la carte de l'Amérique de ton cahier, colorie ou entoure les grands empires coloniaux.
+  indices:
+  - Aide-toi de la légende de la carte de ton cours.
+  solution: Les grands empires coloniaux sont localisés sur la carte (vérifie avec la carte de ton cours).
+- enonce: Cite qui vivait en Amérique avant la constitution des empires coloniaux européens.
+  indices:
+  - Le mot est dans le titre de cette fiche.
+  solution: Les populations amérindiennes.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

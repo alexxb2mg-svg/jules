@@ -1,0 +1,50 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-societe-ordres-clerge-noblesse-tiers-etat
+declencheurs:
+- les trois groupes de la société
+- clergé
+- noblesse
+- tiers état
+- ancien régime
+- qui paie les impôts avant 1789
+couverture: 'Ne couvre que ce que dit le programme : la société d''Ancien Régime divisée en trois ordres (clergé,
+  noblesse, tiers état), majoritairement composée de paysans.'
+essentiel: 'Sous l''Ancien Régime (avant 1789), la société française est divisée en trois ordres.
+
+  Ces trois ordres sont le clergé, la noblesse, et le tiers état.
+
+  Cette société d''ordres est majoritairement composée de paysans, qui font partie du tiers état.'
+methode:
+- 'Retenir les trois ordres, dans l''ordre du programme : clergé, noblesse, tiers état.'
+- Se rappeler que la majorité des gens sont des paysans, dans le tiers état.
+- Vérifier qu'aucun des trois ordres n'est oublié quand on décrit la société d'Ancien Régime.
+vocabulaire:
+- terme: société d'ordres
+  definition: 'une société divisée en trois groupes : clergé, noblesse, tiers état'
+erreurs_frequentes:
+- Oublier un des trois ordres (clergé, noblesse, tiers état).
+- Croire que les paysans sont peu nombreux, alors que la société d'ordres en est majoritairement composée.
+exemple:
+  enonce: Nomme les trois ordres de la société d'Ancien Régime.
+  solution: Le clergé, la noblesse, et le tiers état.
+exercices:
+- enonce: 'Une paysanne du royaume de France en 1750 : à quel ordre appartient-elle ?'
+  indices:
+  - La société d'ordres est majoritairement composée de paysans.
+  solution: Elle appartient au tiers état, qui est majoritairement composé de paysans.
+- enonce: 'Range ces mots dans l''ordre où le programme les cite : « tiers état », « clergé », « noblesse ».'
+  indices:
+  - Le programme les cite dans un ordre précis.
+  solution: Clergé, noblesse, tiers état.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

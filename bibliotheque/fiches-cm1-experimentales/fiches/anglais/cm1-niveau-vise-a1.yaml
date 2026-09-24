@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-niveau-vise-a1
+declencheurs:
+- niveau A1 en anglais
+- niveau CECRL anglais
+- anglais niveau débutant
+- le niveau attendu en anglais CM1
+- A1 A1+
+- évaluation du niveau anglais
+essentiel: 'Pour savoir ce qu''un élève sait faire dans une langue, il existe une échelle commune à toutes les langues
+  : le CECRL. Le premier niveau s''appelle A1.
+
+  En CM1, l''objectif pour tous les élèves est d''atteindre le niveau A1 dans toutes les activités : écouter, parler
+  seul, dialoguer, lire, écrire, aider à comprendre.
+
+  Certains élèves, par exemple dans une classe qui fait beaucoup d''anglais (parcours renforcé, bilingue ou EMILE),
+  peuvent viser un niveau un peu plus haut, noté A1+, pour comprendre et s''exprimer.
+
+  Le niveau A1, c''est comprendre et utiliser des mots et des phrases très simples sur des sujets familiers (soi-même,
+  sa famille, son école).'
+methode:
+- Repérer si la tâche demande de comprendre, de parler, de lire, d'écrire ou d'aider quelqu'un.
+- 'Se rappeler qu''au niveau A1, les phrases sont courtes et simples : pas besoin de tout dire parfaitement.'
+- Utiliser en priorité les mots et les phrases déjà appris en classe, plutôt que d'en inventer de nouveaux.
+- 'Ne pas se décourager si on ne comprend pas tout : au niveau A1, comprendre l''essentiel suffit.'
+vocabulaire:
+- terme: CECRL
+  definition: 'Cadre européen commun de référence pour les langues : l''échelle commune à toutes les langues'
+- terme: A1
+  definition: 'le premier niveau de l''échelle : comprendre et dire des phrases très simples sur des sujets familiers'
+- terme: A1+
+  definition: un niveau un peu plus avancé que A1, visé par certains élèves
+erreurs_frequentes:
+- 'Croire qu''il faut parler anglais sans aucune erreur dès le CM1 : au niveau A1, l''essentiel est de se faire
+  comprendre.'
+- Confondre le niveau visé en médiation (A1) et celui visé en compréhension ou en expression (A1 ou A1+ selon le
+  parcours).
+exemple:
+  enonce: Un élève de CM1 sait dire « My name is Lea. I am 9 years old. » Est-ce que cela correspond au niveau attendu
+    ?
+  solution: 'Oui : ce sont des phrases très simples sur un sujet familier (se présenter), c''est exactement ce que
+    demande le niveau A1 visé en fin de CM1.'
+exercices:
+- enonce: 'Vrai ou faux : en CM1, l''objectif est d''atteindre au moins le niveau A1 dans toutes les activités langagières.'
+  indices:
+  - Relis ce que dit le programme sur le niveau visé pour tous les élèves de CM1.
+  solution: 'Vrai : en parcours de droit commun, le niveau A1 est visé pour toutes les activités langagières en
+    CM1.'
+- enonce: Dans un parcours renforcé ou bilingue, quel niveau est visé pour comprendre et s'exprimer, et quel niveau
+    pour la médiation ?
+  indices:
+  - 'Il y a deux niveaux différents dans le tableau : un pour comprendre/s''exprimer, un pour la médiation.'
+  solution: A1+ pour les activités de compréhension et d'expression, et A1 pour la médiation.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 2
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,72 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-figures-planes-usuelles
+declencheurs:
+- triangle
+- carré
+- rectangle
+- losange
+- quadrilatère
+- construire une figure
+- reconnaître une figure
+essentiel: 'On reconnaît et on nomme les figures planes usuelles en utilisant leur définition : triangle, triangle
+  rectangle, triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle, losange.
+
+  Chaque figure a des propriétés : côtés parallèles, côtés de même longueur, angles égaux. Par exemple, un rectangle
+  est un quadrilatère qui a quatre angles droits.
+
+  Pour justifier qu''une figure est (ou n''est pas) d''une certaine nature, on s''appuie sur ses propriétés, vérifiées
+  avec l''équerre, le compas ou la règle graduée, ou sur son codage.
+
+  On sait reproduire ou construire ces figures sur papier quadrillé, pointé ou uni, avec la règle, l''équerre ou
+  le compas.'
+methode:
+- 'Observer la figure : combien de côtés, quelle forme ?'
+- 'Vérifier les propriétés utiles : angles droits (équerre), longueurs égales (règle graduée ou compas), parallélisme.'
+- Comparer ces propriétés à la définition de chaque figure usuelle pour la nommer.
+- Pour construire, tracer d'abord les longueurs données, puis les angles droits avec l'équerre.
+vocabulaire:
+- terme: quadrilatère
+  definition: polygone à quatre côtés
+- terme: losange
+  definition: quadrilatère dont les quatre côtés ont la même longueur
+- terme: triangle isocèle
+  definition: triangle qui a deux côtés de même longueur
+- terme: triangle équilatéral
+  definition: triangle qui a ses trois côtés de même longueur
+erreurs_frequentes:
+- Nommer une figure seulement d'après son allure sans vérifier les propriétés.
+- Confondre carré et losange (le carré est un losange avec des angles droits en plus).
+- Oublier de vérifier tous les côtés avant de dire qu'une figure est régulière.
+exemple:
+  enonce: Une figure a quatre côtés, ses côtés opposés sont parallèles et elle a quatre angles droits mais pas tous
+    les côtés égaux. Quelle figure est-ce ?
+  solution: 'C''est un rectangle : quadrilatère avec quatre angles droits, mais les côtés ne sont pas tous égaux
+    (sinon ce serait un carré).'
+exercices:
+- enonce: Une figure a quatre côtés égaux mais aucun angle droit. Est-ce un carré ?
+  indices:
+  - Un carré a aussi quatre angles droits.
+  solution: Non, ce n'est pas un carré, car un carré a quatre angles droits ; c'est un losange.
+- enonce: Construis sur papier uni un rectangle ABCD tel que AB = 7 cm et BC = 3 cm.
+  indices:
+  - Trace d'abord le côté AB avec la règle graduée.
+  - Utilise l'équerre pour les quatre angles droits.
+  solution: 'On trace AB = 7 cm, puis en A et B des perpendiculaires de 3 cm, et on relie les extrémités : ABCD
+    est le rectangle.'
+- enonce: Un triangle a un angle droit. Comment s'appelle-t-il ?
+  indices:
+  - Le nom dépend de la présence d'un angle droit.
+  solution: C'est un triangle rectangle.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 20
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

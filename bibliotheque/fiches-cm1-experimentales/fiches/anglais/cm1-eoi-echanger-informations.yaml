@@ -1,0 +1,52 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoi-echanger-informations
+declencheurs:
+- poser des questions en anglais
+- répondre à des questions en anglais
+- demander des nouvelles en anglais
+- how are you en anglais
+essentiel: 'Pour échanger des informations, on pose des questions simples avec Who?, What?, Where?, When?
+
+  On peut demander des nouvelles de quelqu''un et réagir avec des formules de politesse.
+
+  On répond avec des réponses courtes, par exemple I do ou I haven''t.
+
+  On donne aussi des consignes simples à l''impératif, comme Give me a pen ou Repeat please.
+
+  On utilise can pour demander une autorisation : Can you...?'
+methode:
+- Choisir le bon mot interrogatif selon ce qu'on veut savoir (qui, quoi, où, quand).
+- Poser la question à voix haute, en respectant l'intonation.
+- Répondre par une réponse courte plutôt qu'une phrase complète compliquée.
+- Utiliser des formules de politesse pour engager ou continuer l'échange.
+vocabulaire:
+- terme: réponse courte
+  definition: une réponse brève à une question, comme I do ou I haven't, sans refaire toute la phrase
+erreurs_frequentes:
+- Répondre par une phrase trop longue au lieu d'une réponse courte.
+- Confondre Who (qui) et What (quoi).
+- Oublier please dans une consigne, ce qui la rend moins polie.
+exemple:
+  enonce: Tu veux savoir qui est sur la photo. Quelle question poses-tu ?
+  solution: Who is in the picture?
+exercices:
+- enonce: On te demande « Can you play again? » et tu as le droit. Donne une réponse courte.
+  indices:
+  - Une réponse courte commence souvent par Yes ou No, suivi du mot clé.
+  solution: Yes, I can.
+- enonce: Demande à un camarade où est passée sa gomme (« Where »).
+  indices:
+  - Where sert à demander un lieu.
+  solution: Where is your rubber?
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 16-17
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,61 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-programme-simple-objet-technique
+declencheurs:
+- programmer un robot
+- bloc de programmation
+- faire avancer un robot
+- algorithme simple
+- programme en langage naturel
+essentiel: 'On peut traduire un programme simple en langage naturel : décrire avec des mots ce que fait chaque bloc
+  ou instruction sur le comportement d''un objet technique.
+
+  On associe chaque bloc ou instruction à son effet observable sur le comportement de l''objet technique (par exemple
+  des blocs qui font se déplacer un robot ou évoluer un personnage virtuel).
+
+  On utilise un programme pour agir sur le comportement d''un objet technique, par exemple pour faire fonctionner
+  un robot ou obtenir un comportement attendu (le déplacement d''un robot ou d''un personnage virtuel). On peut
+  aussi comparer différents programmes qui font parcourir un trajet à un robot et identifier le programme le plus
+  efficace.'
+methode:
+- Observer chaque bloc ou instruction du programme.
+- Associer chaque bloc à son effet observable sur le comportement de l'objet technique.
+- Traduire le programme en langage naturel, avec des phrases simples.
+- Utiliser le programme pour faire fonctionner l'objet technique et vérifier qu'il obtient le comportement attendu.
+erreurs_frequentes:
+- Décrire un programme sans relier chaque bloc à son effet observable sur l'objet.
+- Utiliser un programme sans vérifier s'il produit bien le comportement attendu.
+- Comparer des programmes sans identifier lequel est le plus efficace pour la tâche demandée.
+exemple:
+  enonce: Un programme fait avancer un robot puis tourner à droite. Comment traduire ce programme en langage naturel
+    ?
+  solution: 'On décrit avec des mots l''effet de chaque bloc : « le robot avance tout droit, puis il tourne à droite
+    » ; chaque bloc du programme est ainsi associé à son effet observable.'
+exercices:
+- enonce: Deux programmes différents font parcourir le même trajet à un robot avec des obstacles. Comment savoir
+    lequel est le plus efficace ?
+  indices:
+  - Que compare-t-on entre les deux programmes ?
+  solution: On compare les deux programmes, par exemple le temps mis par le robot pour parcourir le trajet en évitant
+    les obstacles, et on identifie le programme le plus efficace.
+- enonce: À quoi sert d'associer chaque bloc d'un programme à son effet observable sur l'objet technique ?
+  indices:
+  - Que permet de comprendre cette association ?
+  solution: Cela permet de comprendre ce que fait chaque instruction du programme et de traduire le programme en
+    langage naturel.
+- enonce: Pourquoi écrit-on un programme pour un robot ou un objet technique ?
+  indices:
+  - Que veut-on obtenir de l'objet technique ?
+  solution: Pour agir sur le comportement de l'objet technique et obtenir un comportement attendu, comme le déplacement
+    d'un robot ou d'un personnage virtuel.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

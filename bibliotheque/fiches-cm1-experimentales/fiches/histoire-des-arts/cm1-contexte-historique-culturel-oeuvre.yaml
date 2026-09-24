@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-contexte-historique-culturel-oeuvre
+declencheurs:
+- à quelle époque ce tableau
+- contexte historique d'une œuvre
+- musée imaginaire
+- relier une œuvre à l'histoire
+- illustration d'un texte
+- objet ancien à quoi il servait
+essentiel: 'Relier une œuvre d''art à son contexte, c''est la mettre en relation avec l''époque, le lieu et les
+  événements où elle a été créée.
+
+  On peut mettre en relation une ou plusieurs œuvres avec un fait historique, une époque, une aire géographique
+  ou un texte étudiés en histoire, en géographie ou en français.
+
+  On peut aussi mettre en relation un texte connu (récit, fable, poésie, texte religieux ou mythologique) avec plusieurs
+  de ses illustrations ou transpositions visuelles, musicales, scéniques, chorégraphiques ou filmiques.
+
+  Enfin, on peut mettre en relation des œuvres et des objets mobiliers avec des usages et des modes de vie de leur
+  époque : à quoi servait cet objet, comment vivait-on alors ?'
+methode:
+- Repérer, si elle est connue, la date ou l'époque de création de l'œuvre.
+- Chercher un lien entre l'œuvre et un fait, un texte ou un mode de vie déjà étudié en classe.
+- Comparer, si possible, plusieurs œuvres ou illustrations d'un même texte ou d'une même époque.
+- Expliquer en une phrase ce que ce contexte apporte à la compréhension de l'œuvre.
+vocabulaire:
+- terme: contexte historique et culturel
+  definition: l'époque, le lieu et les événements liés à la création d'une œuvre
+- terme: usage
+  definition: la façon dont un objet ou une œuvre était utilisé à son époque
+erreurs_frequentes:
+- Décrire une œuvre sans jamais se demander à quelle époque ou dans quel lieu elle a été créée.
+- Confondre l'époque de l'histoire racontée par l'œuvre et l'époque où l'œuvre a été fabriquée.
+- Ne pas relier un objet mobilier ancien à l'usage qu'on en faisait réellement.
+exemple:
+  enonce: Tu observes plusieurs illustrations différentes du conte du Petit Chaperon rouge, réalisées à des époques
+    différentes. Que peux-tu en faire ?
+  solution: Tu peux mettre en relation ces illustrations avec le texte connu qu'elles transposent, et remarquer
+    comment chaque époque a représenté différemment le loup, la forêt ou les vêtements, ce qui montre l'évolution
+    du regard porté sur cette histoire selon le contexte de création.
+exercices:
+- enonce: Choisis un objet ancien que tu as étudié en histoire (une armure, un objet de l'époque de Louis XIV) et
+    explique en deux phrases à quel usage et à quel mode de vie il correspondait.
+  indices:
+  - Pense à qui utilisait cet objet et pourquoi.
+  - Relie l'objet à ce que tu sais déjà de cette époque en histoire.
+  solution: 'Réussite si : l''élève relie correctement l''objet choisi à son usage réel et à l''époque ou au mode
+    de vie étudiés en classe.'
+- enonce: 'Trouve deux illustrations différentes d''un même conte ou récit que tu connais, et compare-les à l''oral
+    : que montre chaque illustration de différent ?'
+  indices:
+  - Regarde les vêtements, les décors, les couleurs de chaque illustration.
+  - Demande-toi si l'une paraît plus ancienne ou plus récente que l'autre.
+  solution: 'Réussite si : l''élève identifie au moins une différence entre les deux illustrations du même texte
+    et propose une explication liée au contexte.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 53-54
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

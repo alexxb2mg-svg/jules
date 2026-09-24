@@ -1,0 +1,56 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-declaration-droits-homme-citoyen
+declencheurs:
+- déclaration des droits de l'homme
+- 26 août 1789
+- liberté égalité
+- droits du citoyen
+- nouveaux principes de la société
+couverture: 'Ne couvre que ce que dit le programme : la Déclaration des Droits de l''Homme et du Citoyen, datée
+  du 26 août 1789, affirme de nouveaux principes d''organisation de la société. Le programme ne détaille pas les
+  articles précis : les mots-clés associés sont liberté, égalité, droits de l''Homme, citoyenneté, constitution,
+  souveraineté nationale.'
+essentiel: 'Le 26 août 1789, la Déclaration des Droits de l''Homme et du Citoyen est adoptée.
+
+  Elle affirme de nouveaux principes d''organisation de la société.
+
+  Des mots sont associés à ce texte : liberté, égalité, droits de l''Homme, citoyenneté, constitution, souveraineté
+  nationale.'
+methode:
+- Retenir la date du 26 août 1789 pour la Déclaration des Droits de l'Homme et du Citoyen.
+- Citer au moins un principe qu'elle affirme (par exemple la liberté ou l'égalité).
+- Relier ce texte à l'idée de nouveaux principes d'organisation de la société.
+vocabulaire:
+- terme: droits de l'Homme
+  definition: principes affirmés par la Déclaration du 26 août 1789
+- terme: citoyenneté
+  definition: mot-clé associé à la Déclaration des Droits de l'Homme et du Citoyen
+erreurs_frequentes:
+- Confondre la date de la Déclaration des Droits de l'Homme et du Citoyen (26 août) avec celle de l'abolition des
+  privilèges (nuit du 4 août).
+- Ne citer aucun principe affirmé par la Déclaration (liberté, égalité...).
+exemple:
+  enonce: À quelle date la Déclaration des Droits de l'Homme et du Citoyen est-elle adoptée ?
+  solution: Le 26 août 1789.
+exercices:
+- enonce: Cite deux mots-clés associés à la Déclaration des Droits de l'Homme et du Citoyen.
+  indices:
+  - Le titre de la Déclaration en contient déjà un.
+  solution: Par exemple liberté et égalité (ou droits de l'Homme, citoyenneté, constitution, souveraineté nationale).
+- enonce: La Déclaration des Droits de l'Homme et du Citoyen affirme-t-elle les anciens principes de l'Ancien Régime
+    ou de nouveaux principes ?
+  indices:
+  - 'Relis le titre du thème 4 : « 1789, une année révolutionnaire ».'
+  solution: Elle affirme de nouveaux principes d'organisation de la société.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.6
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

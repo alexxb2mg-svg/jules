@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ce-comprendre-textes-courts-simples
+declencheurs:
+- lire un texte court en anglais
+- comprendre une carte postale en anglais
+- lire une bande dessinée en anglais
+- comprendre un message écrit en anglais
+essentiel: 'Pour comprendre un texte court en anglais, on s''appuie sur les images et sur le titre.
+
+  On repère les mots transparents, qui ressemblent au français : music, family, tomato.
+
+  On repère les chiffres et les nombres écrits : five, fifteen, fifty.
+
+  On reconnaît le type de texte grâce à sa mise en forme : une bande dessinée, une carte postale, une publicité
+  n''ont pas la même forme.'
+methode:
+- Regarder d'abord les images et le titre pour deviner le sujet.
+- Repérer les mots transparents, qu'on comprend sans traduire.
+- Repérer les chiffres et les nombres écrits en lettres.
+- Identifier le type de texte grâce à sa forme (carte postale, bande dessinée...).
+vocabulaire:
+- terme: mot transparent
+  definition: un mot anglais qui ressemble beaucoup à un mot français, comme music ou tomato
+erreurs_frequentes:
+- Vouloir traduire tous les mots inconnus au lieu de s'appuyer sur les images.
+- Ne pas remarquer les mots transparents qui ressemblent au français.
+- Ignorer la mise en forme qui donne des indices sur le type de texte.
+exemple:
+  enonce: 'Tu lis : « Today, it''s windy in Chicago. ». Quels indices t''aident à comprendre, même si tu ne connais
+    pas windy ?'
+  solution: 'Today (aujourd''hui) et le nom d''une ville te donnent le sujet : une phrase sur la météo dans une
+    ville.'
+exercices:
+- enonce: Dans le texte « I like swimming and reading. I am wearing black trousers. », quels mots transparents reconnais-tu
+    ?
+  indices:
+  - Cherche des mots qui ressemblent à des mots français.
+  solution: Aucun mot n'est directement transparent ici, mais swimming et reading ressemblent à des activités qu'on
+    peut deviner grâce au contexte et aux images.
+- enonce: Tu vois un texte avec un timbre, une adresse et « Dear parents, ». Quel type de texte est-ce ?
+  indices:
+  - 'Pense à la mise en forme : timbre, adresse, formule d''appel.'
+  solution: C'est une carte postale.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 6-7
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-empathie-lutte-discriminations-harcelement
+declencheurs:
+- se mettre à la place de l'autre
+- empathie
+- comprendre ce que ressent l'autre
+- égoïsme
+- altruisme
+essentiel: 'L''empathie, c''est le fait de comprendre ce que ressent une autre personne, et de s''en soucier.
+
+  L''altruisme est le contraire de l''égoïsme : c''est penser aux autres et à leur bien-être, pas seulement à soi.
+
+  L''empathie aide à lutter contre les discriminations, la violence physique ou verbale, le harcèlement et les cyberviolences,
+  car elle pousse à ne pas faire du mal à quelqu''un dont on comprend la souffrance.'
+methode:
+- Demande-toi ce que ressent la personne concernée par la situation.
+- Distingue une attitude égoïste (penser seulement à soi) d'une attitude altruiste (penser aux autres).
+- Relie l'empathie à la lutte contre les discriminations et le harcèlement.
+vocabulaire:
+- terme: égoïsme
+  definition: le fait de penser seulement à soi-même
+- terme: altruisme
+  definition: le fait de penser aux autres et à leur bien-être
+erreurs_frequentes:
+- Confondre empathie et simple gentillesse.
+- Croire que l'empathie signifie être d'accord avec tout ce que ressent l'autre.
+exemple:
+  enonce: Un élève voit qu'un camarade est triste parce qu'il est mis à l'écart par le groupe. Il va lui parler
+    et l'invite à jouer avec lui. Quelle attitude illustre-t-il ?
+  solution: 'Il illustre l''empathie et l''altruisme : il comprend ce que ressent son camarade et agit pour l''aider,
+    plutôt que de penser seulement à lui-même.'
+exercices:
+- enonce: Explique avec tes mots la différence entre égoïsme et altruisme.
+  indices:
+  - Un des deux mots veut dire « penser seulement à soi ».
+  solution: L'égoïsme, c'est penser seulement à soi. L'altruisme, c'est penser aussi aux autres et à leur bien-être.
+- enonce: Explique comment l'empathie peut aider à lutter contre le harcèlement.
+  indices:
+  - Pense à ce que ressent une personne harcelée.
+  solution: En comprenant ce que ressent une personne harcelée, on est moins tenté de lui faire du mal, et plus
+    tenté de l'aider ou de la défendre.
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

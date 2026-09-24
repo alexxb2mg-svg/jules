@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-memoriser-des-faits-numeriques
+declencheurs:
+- par cœur
+- tables
+- double de
+- moitié de
+- vite en tête
+- sans compter sur les doigts
+essentiel: 'Au CM1, on connaît par cœur les tables d''addition et de multiplication, pour les restituer très vite.
+
+  On connaît aussi par cœur les doubles des nombres de 1 à 20, et les moitiés des nombres pairs de 2 à 40, sans
+  avoir besoin de les recalculer.
+
+  On connaît les multiples de 25 jusqu''à 100 (25, 50, 75, 100) et des façons de décomposer 60 en produit de deux
+  nombres (par exemple 6 × 10, 5 × 12, 4 × 15).
+
+  On connaît par cœur des relations entre fractions usuelles : 1/2 + 1/2 = 1, 1/4 + 1/4 = 1/2, 1 - 1/2 = 1/2, ainsi
+  que 1/10 = 10/100 et 1 = 100/100.
+
+  On connaît aussi l''écriture décimale de deux fractions usuelles : 1/10 = 0,1 et 1/100 = 0,01.'
+methode:
+- S'entraîner à répondre aux tables d'addition et de multiplication de plus en plus vite, sans les recompter.
+- Réciter ou écrire les doubles et les moitiés régulièrement pour les fixer en mémoire.
+- Relier les nouveaux faits (multiples de 25, décompositions de 60) à des faits déjà connus.
+- Utiliser les relations entre fractions usuelles pour compléter une égalité sans calculer.
+erreurs_frequentes:
+- Recalculer une table connue au lieu de la restituer directement.
+- Confondre le double et la moitié d'un nombre.
+- Oublier qu'un dixième vaut dix centièmes.
+exemple:
+  enonce: 'Complète sans calculer : 1/4 + 1/4 = … ; 1/2 - 1/4 = ….'
+  solution: 1/4 + 1/4 = 1/2 (deux quarts font une moitié). 1/2 - 1/4 = 1/4 (il reste un quart quand on retire un
+    quart d'une moitié).
+exercices:
+- enonce: Donne rapidement le double de 16 et la moitié de 30.
+  indices:
+  - Le double de 16, c'est 16 + 16.
+  solution: Le double de 16 est 32. La moitié de 30 est 15.
+- enonce: 'Complète : 3 × 25 = … ; 60 = 4 × ….'
+  indices:
+  - Pense aux multiples de 25.
+  - Pense aux décompositions de 60.
+  solution: 3 × 25 = 75. 60 = 4 × 15.
+- enonce: Écris 1/100 avec une virgule.
+  indices:
+  - Un centième s'écrit avec deux chiffres après la virgule.
+  solution: 1/100 = 0,01.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

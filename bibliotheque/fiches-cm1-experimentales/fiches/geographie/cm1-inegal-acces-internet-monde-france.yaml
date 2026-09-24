@@ -1,0 +1,51 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-inegal-acces-internet-monde-france
+declencheurs:
+- pas de wifi
+- pas de réseau
+- 5G
+- connexion internet
+- inégalité numérique
+- internet partout
+essentiel: 'L''accès à internet n''est pas le même partout dans le monde, ni partout en France.
+
+  À l''échelle mondiale, certaines aires régionales sont très bien reliées à internet, alors que d''autres le sont
+  faiblement.
+
+  À l''échelle de la France, l''accès à internet peut aussi varier selon les endroits, par exemple selon le déploiement
+  de la 5G.
+
+  Ces différences d''accès s''appellent des inégalités d''accès à internet.'
+methode:
+- Précise si tu parles de l'échelle mondiale ou de l'échelle de la France.
+- À l'échelle mondiale, compare une aire régionale très bien reliée et une aire régionale faiblement reliée.
+- À l'échelle de la France, pense au déploiement de la 5G comme exemple.
+erreurs_frequentes:
+- Croire que l'inégal accès à internet ne concerne que d'autres pays, jamais la France.
+- Confondre l'échelle mondiale et l'échelle de la France dans une réponse.
+exemple:
+  enonce: Sur une carte du monde, une aire régionale apparaît en vert foncé (très bien reliée à internet) et une
+    autre en rouge (faiblement reliée). Que montre cette carte ?
+  solution: 'Cette carte montre l''inégal accès à internet à l''échelle mondiale : certaines aires régionales sont
+    très bien reliées, d''autres le sont faiblement.'
+exercices:
+- enonce: Donne un exemple utilisé par le programme pour décrire l'inégal accès à internet en France.
+  indices:
+  - C'est une technologie de connexion mobile récente.
+  solution: Le déploiement de la 5G en France, qui n'est pas le même partout sur le territoire.
+- enonce: À quelles deux échelles peut-on décrire les inégalités d'accès à internet ?
+  indices:
+  - L'une concerne le monde entier, l'autre un seul pays.
+  solution: À l'échelle mondiale et à l'échelle de la France.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

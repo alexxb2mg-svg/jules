@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-mise-en-regard-espace
+declencheurs:
+- accrocher un dessin
+- exposer mon dessin
+- cadre
+- socle
+- mettre sur un mur
+- présenter mon dessin
+- accrochage
+essentiel: 'Une œuvre ou une production plastique ne se montre pas toujours de la même façon : c''est ce qu''on
+  appelle sa mise en regard et en espace.
+
+  Il existe différentes modalités de présentation : avec ou sans cadre, avec ou sans socle (pour poser une sculpture),
+  avec ou sans piédestal.
+
+  Le lieu où l''on présente une œuvre change aussi la façon dont on la reçoit : un espace privé (chez soi), un espace
+  public, un écran, une vitrine, un musée.
+
+  Regarder comment des œuvres sont présentées (dans une salle d''exposition, in situ c''est-à-dire directement dans
+  un lieu existant) aide à comprendre pourquoi ce choix de présentation compte.'
+methode:
+- Choisir la production plastique qu'on veut montrer.
+- 'Se demander où on va la présenter : sur un mur, sur une table, dans une vitrine.'
+- Décider si elle a besoin d'un cadre, d'un socle, ou de rien du tout.
+- Observer comment ce choix de présentation change ce qu'on remarque en premier.
+vocabulaire:
+- terme: socle
+  definition: support sur lequel on pose une sculpture ou un objet pour le présenter
+- terme: cadre
+  definition: bordure qui entoure une image pour la présenter et la délimiter
+erreurs_frequentes:
+- Penser qu'une œuvre se présente toujours de la même façon, quel que soit le lieu.
+- Oublier que le choix du lieu (mur, table, vitrine) change ce que le spectateur remarque.
+- Croire qu'un cadre ou un socle est obligatoire pour toute œuvre.
+exemple:
+  enonce: Tu as fait un dessin. Tu peux le coller dans ton cahier, l'accrocher au mur avec un cadre, ou le poser
+    sur une étagère debout contre un livre. Ces trois choix changent-ils quelque chose ?
+  solution: 'Oui : dans le cahier, le dessin reste privé et petit ; encadré au mur, il devient visible de loin comme
+    une vraie œuvre exposée ; posé sur une étagère, il se mêle à d''autres objets du quotidien. Le lieu et le dispositif
+    de présentation changent la façon dont on regarde le même dessin.'
+exercices:
+- enonce: Présente un même dessin de deux façons différentes dans ta chambre (par exemple posé sur une table, puis
+    accroché au mur) et observe ce qui change.
+  indices:
+  - Prends une photo de chaque présentation pour comparer.
+  - Remarque si ton regard va plus vite vers le dessin dans un cas que dans l'autre.
+  solution: 'Réussite si : l''élève décrit au moins une différence entre les deux présentations (par exemple : accroché
+    au mur, on le voit de loin ; sur la table, il faut s''approcher).'
+- enonce: Fabrique un petit cadre en papier ou carton pour un de tes dessins, puis compare son effet avec le même
+    dessin sans cadre.
+  indices:
+  - 'Le cadre peut être simple : quatre bandes de papier collées autour.'
+  - Regarde si le cadre attire davantage l'attention sur le dessin.
+  solution: 'Réussite si : le dessin encadré et le dessin non encadré sont comparés, et l''élève explique en une
+    phrase l''effet du cadre.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43-44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

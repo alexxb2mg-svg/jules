@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-melanges-homogenes-heterogenes
+declencheurs:
+- mélange
+- tamis
+- filtrer
+- eau trouble
+- sel qui fond
+- dissoudre
+- décanter
+- séparer
+- saturation
+essentiel: 'Un mélange peut être homogène (on ne distingue plus les éléments, comme l''eau salée) ou hétérogène
+  (on voit encore les éléments, comme l''eau et le sable).
+
+  On sépare les constituants d''un mélange de solides ou d''un mélange solide-liquide par tamisage (avec des tamis,
+  du plus large au plus petit), par décantation (laisser les solides se déposer au fond) ou par filtration (avec
+  un filtre à café, un tissu, du papier absorbant).
+
+  Certains solides se dissolvent dans l''eau (le sel, le sucre), d''autres non (le sable). Un solide dissous ne
+  peut plus être récupéré avec un filtre.
+
+  En ajoutant de plus en plus de solide dans l''eau, on atteint un moment où il ne se dissout plus : c''est la saturation.'
+methode:
+- 'Observer le mélange : voit-on encore les éléments (hétérogène) ou non (homogène) ?'
+- 'Pour séparer des solides de tailles différentes : tamiser en commençant par le tamis aux mailles les plus larges,
+  puis les plus petites.'
+- 'Pour clarifier un mélange eau-terre : attendre que les solides se déposent au fond (décantation), puis récupérer
+  l''eau claire.'
+- 'Pour séparer un liquide et un solide non dissous : filtrer avec un filtre à café, un tissu ou du papier absorbant.'
+- 'Pour tester la dissolution : ajouter le solide petit à petit dans l''eau et observer jusqu''à la saturation.'
+erreurs_frequentes:
+- Tamiser en commençant par les mailles les plus petites au lieu des plus larges.
+- Croire qu'un solide dissous a disparu, alors qu'il est toujours présent mais invisible.
+- 'Essayer de récupérer un solide dissous avec un filtre (impossible : c''est justement le signe qu''il est dissous).'
+- Ne pas contrôler précisément les quantités (cuillère rase, volume mesuré) et obtenir des résultats différents
+  à chaque essai.
+exemple:
+  enonce: On mélange des cailloux, du gravier et du sable dans un seau. Comment les séparer ?
+  solution: 'On utilise des tamis dans le bon ordre : d''abord le tamis aux mailles les plus larges (il garde les
+    cailloux), puis un tamis aux mailles plus petites (il garde le gravier), le sable passe à travers tous les tamis.'
+exercices:
+- enonce: 'De l''eau et de l''huile dans un verre : est-ce un mélange homogène ou hétérogène ? Pourquoi ?'
+  indices:
+  - Peut-on distinguer les deux liquides à l'œil ?
+  solution: 'C''est un mélange hétérogène : on voit deux liquides séparés, l''huile flotte sur l''eau.'
+- enonce: Comment récupérer de l'eau claire à partir d'un mélange d'eau et de terre dans une bouteille ?
+  indices:
+  - Il faut attendre avant d'agir.
+  - Où se trouve la terre après un moment sans bouger la bouteille ?
+  solution: On attend que la terre se dépose au fond (décantation), puis on perce un trou au bon endroit, au-dessus
+    du dépôt, pour récupérer l'eau claire.
+- enonce: Tu ajoutes du sucre dans un verre d'eau, cuillère par cuillère, et à un moment il reste au fond sans plus
+    se dissoudre. Comment appelle-t-on ce phénomène ?
+  indices:
+  - C'est un mot du texte officiel avec les lettres s-a-t-u-r...
+  solution: 'C''est le phénomène de saturation : l''eau ne peut plus dissoudre de sucre supplémentaire.'
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,75 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-methode-de-resolution-de-problemes
+declencheurs:
+- problème
+- comprendre l'énoncé
+- quelle opération faire
+- est-ce que c'est logique
+- vérifier la réponse
+essentiel: 'Pour résoudre un problème, on suit quatre étapes : comprendre, modéliser, calculer, répondre.
+
+  Comprendre : on doit saisir le sens de l''énoncé et de la question posée, par exemple en racontant « l''histoire
+  » du problème avec ses propres mots. Attention : certains problèmes contiennent le mot « plus » alors que l''opération
+  à faire est une soustraction.
+
+  Modéliser : on identifie l''opération ou les opérations à effectuer, en s''aidant si besoin d''un schéma ou d''un
+  dessin.
+
+  Calculer : au CM1, on utilise surtout le calcul mental et le calcul posé.
+
+  Répondre : on écrit une phrase-réponse, puis on vérifie que le résultat est plausible, par exemple en se demandant
+  « 4,5 m pour la longueur d''une voiture, est-ce que cela semble possible ? ».'
+methode:
+- Lire l'énoncé et le reformuler avec ses propres mots pour vérifier qu'on l'a compris.
+- 'Repérer la question posée : que doit-on trouver exactement ?'
+- Choisir l'opération ou les opérations à effectuer, en s'aidant d'un schéma si besoin.
+- Effectuer le ou les calculs, mentalement ou en les posant.
+- Écrire la réponse en phrase, puis vérifier si le résultat trouvé est plausible.
+erreurs_frequentes:
+- Choisir l'opération seulement à partir d'un mot de l'énoncé (« plus » = addition) sans réfléchir au sens.
+- Se lancer dans le calcul sans avoir compris ce que demande la question.
+- Oublier d'écrire une phrase-réponse.
+- Ne pas vérifier si le résultat trouvé est raisonnable.
+exemple:
+  enonce: 'Léa avait 43 cerises. Elle en a mangé 18. Le mot « avait » et le mot « mangé » : quelle opération faut-il
+    faire pour trouver combien il en reste ?'
+  solution: 'On comprend l''histoire : Léa avait des cerises, elle en a mangé, il en reste moins. On modélise par
+    une soustraction : 43 - 18. On calcule : 43 - 18 = 25. On répond : il reste 25 cerises à Léa. Vérification :
+    25 est plus petit que 43, c''est cohérent.'
+exercices:
+- enonce: Un train part à 7 h 43 et met 1 h 34 min pour arriver à une gare. Reformule cette histoire avec tes propres
+    mots, puis dis quelle opération permettrait de trouver l'heure d'arrivée.
+  indices:
+  - 'On connaît l''heure de départ et une durée : que cherche-t-on ?'
+  solution: 'On cherche l''heure d''arrivée : il faut ajouter la durée du trajet à l''heure de départ (une addition
+    de durées).'
+- enonce: 'Un élève trouve comme réponse à un problème : « il reste -3 billes ». Que peut-on dire de ce résultat
+    ?'
+  indices:
+  - Peut-on avoir un nombre négatif de billes ?
+  solution: 'Ce résultat n''est pas plausible : on ne peut pas avoir un nombre négatif de billes, il faut revérifier
+    le calcul ou la modélisation.'
+- enonce: 'Un énoncé dit : « Pierre a 5 billes. Il a 3 billes de moins que Julie. Combien Julie a-t-elle de billes
+    ? ». Le mot « moins » veut-il dire qu''il faut soustraire ?'
+  indices:
+  - Réfléchis à qui a le plus de billes dans l'histoire.
+  solution: 'Non : Julie a plus de billes que Pierre (puisque Pierre en a moins que Julie), donc il faut additionner
+    : 5 + 3 = 8 billes.'
+sources:
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Exemples de mise en œuvre pour l'enseignement de la résolution de problèmes », p.16
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/la-resolution-de-problemesv2pdf-111837.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

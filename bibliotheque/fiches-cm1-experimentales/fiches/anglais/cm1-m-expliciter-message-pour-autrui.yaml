@@ -1,0 +1,45 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-m-expliciter-message-pour-autrui
+declencheurs:
+- expliquer une affiche en anglais à quelqu'un
+- dire ce qu'il faut faire à un copain en anglais
+- expliquer un panneau en anglais
+essentiel: 'Expliciter un message pour autrui, c''est indiquer avec des mots et des gestes simples les besoins d''une
+  autre personne : hungry, thirsty, cold, hot, scared.
+
+  On peut attirer l''attention sur une information importante donnée dans une affiche, un panneau, un programme.
+
+  On utilise des verbes comme look, listen et des mots pour situer : here, there.'
+methode:
+- Repérer le besoin ou l'information à transmettre.
+- Choisir un mot simple (hungry, thirsty, cold, hot) ou un geste pour l'exprimer.
+- Utiliser here ou there pour montrer où se trouve l'information.
+- Vérifier que la personne aidée a bien compris.
+vocabulaire: []
+erreurs_frequentes:
+- Confondre hungry (avoir faim) et thirsty (avoir soif).
+- Ne pas montrer avec le geste l'information qu'on transmet.
+exemple:
+  enonce: Un camarade a faim et tu dois transmettre son besoin au serveur d'un jeu de rôle. Que dis-tu ?
+  solution: He is hungry. Can I have a sandwich, please?
+exercices:
+- enonce: Une camarade a soif. Transmets son besoin.
+  indices:
+  - Utilise thirsty.
+  solution: She is thirsty.
+- enonce: Une invitation dit que la fête est le 16 juillet à 14h. Transmets ces informations en anglais.
+  indices:
+  - Utilise on + date, at + heure.
+  solution: The party is on Saturday 16th July at 2:00 pm.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 29
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

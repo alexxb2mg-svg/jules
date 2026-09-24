@@ -1,0 +1,46 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-m-participer-travail-collectif
+declencheurs:
+- travailler en groupe en anglais
+- coopérer avec des correspondants anglais
+- travail de groupe en anglais
+essentiel: 'Participer à un travail collectif, c''est faciliter un échange en se montrant accueillant, avec des
+  mots simples ou des gestes : Hello, welcome.
+
+  On donne des consignes ou des ordres simples et ritualisés : Your turn, Let''s play, Time''s up.
+
+  On demande ou on dit si on a compris : Do you understand?'
+methode:
+- Accueillir les autres avec un mot simple (Hello, welcome).
+- Donner un tour de parole ou une consigne simple pendant le travail de groupe.
+- Demander régulièrement si tout le monde a compris.
+- Répondre si on a compris ou pas, pour que le groupe avance ensemble.
+vocabulaire: []
+erreurs_frequentes:
+- Ne jamais vérifier si les autres ont compris pendant un travail de groupe.
+- Oublier d'accueillir poliment un nouveau camarade ou un correspondant.
+exemple:
+  enonce: 'Tu expliques à un camarade comment plier un papier : « Take a square piece of paper. ». Comment vérifies-tu
+    qu''il a compris ?'
+  solution: Do you understand? (Est-ce que tu as compris ?)
+exercices:
+- enonce: C'est le tour de ton camarade de jouer. Dis-le-lui simplement.
+  indices:
+  - Utilise une expression courte et ritualisée.
+  solution: Your turn!
+- enonce: Le temps est écoulé pendant un jeu de groupe. Que dis-tu ?
+  indices:
+  - Utilise une expression toute faite pour signaler la fin du temps.
+  solution: Time's up!
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 30-31
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

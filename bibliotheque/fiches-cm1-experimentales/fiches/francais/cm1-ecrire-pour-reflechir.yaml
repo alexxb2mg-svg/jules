@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ecrire-pour-reflechir
+declencheurs:
+- résumer une leçon
+- noter les idées importantes
+- surligner les infos importantes
+- donner son avis par écrit
+- écrire pour comprendre
+essentiel: 'Écrire ne sert pas seulement à raconter : cela aide aussi à réfléchir, apprendre et mémoriser.
+
+  On peut écrire pour repérer et trier les informations importantes d''un texte, par exemple en surlignant ou en
+  soulignant le personnage principal, le titre ou des informations importantes.
+
+  On peut produire des écrits réflexifs courts pour s''entraîner à expliquer un point de vue (« Je pense que...
+  », « J''ai aimé... parce que... »).
+
+  Reformuler l''essentiel d''une leçon avec ses propres mots, avec l''aide du professeur et de ses pairs, aide à
+  se l''approprier.'
+methode:
+- Lire le texte ou la leçon en entier une première fois.
+- Surligner ou souligner les informations les plus importantes.
+- Classer ces informations sous forme de liste ou de phrases courtes.
+- Reformuler l'essentiel avec ses propres mots, sans recopier le texte entier.
+- Comparer sa reformulation avec celle d'un camarade ou du professeur.
+erreurs_frequentes:
+- Recopier tout le texte au lieu de n'en garder que l'essentiel.
+- Donner un avis sans jamais l'expliquer (« j'ai aimé » sans dire pourquoi).
+exemple:
+  enonce: Après une leçon sur le cycle de l'eau, résume-la en une phrase avec tes propres mots.
+  solution: 'Par exemple : « L''eau s''évapore, forme des nuages, retombe en pluie, puis rejoint les rivières »
+    : une phrase courte qui reprend l''essentiel sans recopier la leçon entière.'
+exercices:
+- enonce: Lis un court texte documentaire sur un animal. Souligne le nom de l'animal et deux informations importantes
+    à son sujet.
+  indices:
+  - 'Ne souligne pas plus de trois éléments : choisis les plus importants.'
+  solution: 'Critère de réussite : les éléments soulignés sont vraiment les informations essentielles, pas des détails
+    secondaires.'
+- enonce: 'Écris deux phrases pour répondre à la question : « Qu''as-tu aimé ou pas aimé dans ta dernière lecture
+    ? Pourquoi ? »'
+  indices:
+  - Commence par « J'ai aimé... » ou « Je n'ai pas aimé... » puis explique pourquoi.
+  solution: 'Critère de réussite : l''avis donné est justifié par une raison précise, pas seulement affirmé.'
+- enonce: Résume en une phrase l'essentiel d'une leçon de grammaire récente, avec tes propres mots.
+  indices:
+  - 'N''utilise pas les mots exacts de la leçon : reformule.'
+  solution: 'Critère de réussite : la phrase reprend l''idée essentielle de la leçon sans être une copie du texte
+    du professeur.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

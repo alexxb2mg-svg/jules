@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-programmes-de-calcul-et-suites
+declencheurs:
+- programme de calcul
+- suite de nombres
+- quel est le nombre suivant
+- régularité
+- continuer la suite
+- suite de motifs
+essentiel: 'Un programme de calcul est une suite d''instructions à suivre dans l''ordre pour transformer un nombre
+  de départ, comme : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire le nombre obtenu.
+
+  Une suite de nombres est une liste de nombres construite avec une règle. Pour continuer une suite, il faut d''abord
+  découvrir la règle en observant comment on passe d''un nombre au suivant.
+
+  Certaines suites suivent une règle simple (ajouter toujours le même nombre), d''autres suivent une règle qui alterne
+  entre deux opérations, ou qui change selon la position du terme dans la suite.
+
+  Une suite de motifs évolutive est une suite de dessins dont le nombre d''éléments change selon une règle, par
+  exemple « à chaque étape, on ajoute le numéro de l''étape ».'
+methode:
+- Pour un programme de calcul, appliquer chaque instruction une par une, dans l'ordre donné.
+- Pour une suite de nombres, calculer la différence ou le rapport entre plusieurs termes successifs.
+- Formuler la règle trouvée par une phrase claire, avant de l'appliquer pour continuer la suite.
+- Pour une suite de motifs, compter les éléments de chaque étape et chercher comment ce nombre évolue d'une étape
+  à l'autre.
+erreurs_frequentes:
+- Sauter une instruction ou changer l'ordre des instructions d'un programme de calcul.
+- Chercher une règle qui n'ajoute ou ne multiplie pas toujours de la même façon sans vérifier sur plusieurs termes.
+- Continuer une suite de motifs en ajoutant toujours le même nombre alors que la règle change.
+exemple:
+  enonce: 'Applique ce programme de calcul à 5 : choisir un nombre, ajouter 2, multiplier le résultat par 4, écrire
+    le nombre obtenu.'
+  solution: 5 + 2 = 7, puis 7 × 4 = 28. Le nombre obtenu est 28.
+exercices:
+- enonce: 'Donne les trois nombres suivants de la suite : 3 ; 7 ; 11 ; 15…'
+  indices:
+  - Calcule la différence entre deux termes qui se suivent.
+  solution: 'On ajoute toujours 4 : 15 + 4 = 19, 19 + 4 = 23, 23 + 4 = 27. La suite continue par 19, 23, 27.'
+- enonce: 'Donne les trois nombres suivants de la suite : 4 ; 12 ; 36 ; 108…'
+  indices:
+  - Calcule le rapport entre deux termes qui se suivent (par combien on multiplie).
+  solution: 'On multiplie toujours par 3 : 108 × 3 = 324, 324 × 3 = 972, 972 × 3 = 2 916. La suite continue par
+    324, 972, 2 916.'
+- enonce: Une suite de motifs commence avec 2 ronds à l'étape 1, 4 ronds à l'étape 2, 7 ronds à l'étape 3. Si la
+    règle est « on ajoute le numéro de l'étape suivante », combien de ronds y aura-t-il à l'étape 4 ?
+  indices:
+  - De l'étape 1 à l'étape 2, on a ajouté 2. De l'étape 2 à l'étape 3, on a ajouté 3.
+  solution: 'De l''étape 3 à l''étape 4, on ajoute 4 : 7 + 4 = 11 ronds à l''étape 4.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.14
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

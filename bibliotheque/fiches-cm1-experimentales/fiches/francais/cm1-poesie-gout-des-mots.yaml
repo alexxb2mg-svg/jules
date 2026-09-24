@@ -1,0 +1,56 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-poesie-gout-des-mots
+declencheurs:
+- poème
+- les mots qui sonnent bien
+- recueil de poésie
+- jeux de mots
+- rimes
+- poète
+- vers qui riment
+- image poétique
+essentiel: 'Écouter et lire un recueil de poèmes et de textes poétiques de siècles différents permet de savourer
+  le goût des mots.
+
+  La poésie développe une façon personnelle de lire, fondée sur la sensibilité à la langue et sur l''émotion qu''elle
+  procure.
+
+  En poésie, un mot peut créer un lien entre les mots, le monde et soi-même, au-delà de son sens habituel.
+
+  La poésie s''écarte parfois de la norme habituelle de la grammaire et du vocabulaire : le poète peut jouer avec
+  les mots, les sons et les images.'
+methode:
+- Lire ou écouter le poème une première fois pour ressentir son ambiance générale.
+- Repérer les mots ou les sons qui reviennent, les rimes, les images créées par les mots.
+- Chercher les mots ou les tournures qui s'écartent de la façon habituelle de parler ou d'écrire.
+- Exprimer ce que le poème fait ressentir, sans chercher forcément à tout expliquer.
+erreurs_frequentes:
+- Vouloir absolument comprendre chaque mot d'un poème comme dans un texte explicatif.
+- Ne pas remarquer les sonorités (rimes, répétitions) qui font aussi le sens d'un poème.
+exemple:
+  enonce: 'Dans un poème, on lit : « La lune se penche à la fenêtre du ciel. » Pourquoi cette phrase n''est-elle
+    pas « normale » et qu''apporte-t-elle ?'
+  solution: 'La lune ne peut pas vraiment « se pencher » : c''est une image poétique qui s''écarte du sens habituel
+    des mots, et qui crée une émotion en donnant à la lune un geste humain.'
+exercices:
+- enonce: Choisis un poème que tu aimes. Relève un mot ou une image qui t'a marqué et explique pourquoi.
+  indices:
+  - Une image poétique associe deux choses qui ne vont pas ensemble d'habitude.
+  solution: La réponse doit citer un mot ou une image précise du poème et expliquer l'émotion ou l'effet qu'elle
+    produit.
+- enonce: Invente une courte phrase poétique de deux vers qui riment, sur le thème de la pluie.
+  indices:
+  - Cherche deux mots qui se terminent par le même son.
+  solution: 'Critère de réussite : les deux vers riment et évoquent la pluie par une image, même simple.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

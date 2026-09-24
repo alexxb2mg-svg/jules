@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-narration-visuelle
+declencheurs:
+- raconter avec des dessins
+- bande dessinée
+- histoire en images
+- plusieurs images à la suite
+- raconter sans écrire
+- montrer une histoire
+essentiel: 'La narration visuelle, c''est raconter une histoire ou témoigner de quelque chose avec des images, sans
+  forcément écrire de texte.
+
+  On peut réaliser des compositions plastiques en deux dimensions (dessin, peinture) ou en trois dimensions (objets,
+  petites scènes) qui racontent ou témoignent d''un événement.
+
+  Pour raconter avec des images, il faut organiser les images fixes ou animées dans un certain ordre, avec une logique
+  (ce qui se passe avant, pendant, après).
+
+  Avec des images animées, on peut aussi jouer sur le rythme du récit : ralentir, accélérer, découper l''histoire
+  en plusieurs moments (séquençage).'
+methode:
+- Choisir l'histoire ou le témoignage qu'on veut raconter en images.
+- Découper cette histoire en plusieurs moments clés (début, milieu, fin).
+- Représenter chaque moment par une image ou un élément plastique différent.
+- Organiser les images dans l'ordre pour que l'histoire se comprenne en les regardant.
+vocabulaire:
+- terme: narration visuelle
+  definition: raconter une histoire ou un témoignage avec des images
+- terme: séquençage
+  definition: découper un récit en plusieurs moments, en images animées
+erreurs_frequentes:
+- Faire une seule image et penser qu'elle suffit à raconter toute une histoire complexe.
+- Mettre les images dans le désordre, ce qui empêche de comprendre l'histoire.
+- Oublier de montrer clairement un début et une fin.
+exemple:
+  enonce: Tu veux raconter en images le trajet de ta maison jusqu'à l'école. Comment faire ?
+  solution: Tu dessines plusieurs images qui montrent les étapes importantes du trajet (sortir de chez toi, traverser
+    une rue, arriver devant l'école) et tu les places dans l'ordre où elles se passent, pour que quelqu'un comprenne
+    l'histoire du trajet en les regardant les unes après les autres.
+exercices:
+- enonce: Raconte en 3 dessins seulement une petite histoire de ta journée (par exemple ton réveil, ton repas, ton
+    coucher), un dessin par moment.
+  indices:
+  - Choisis bien les 3 moments les plus importants à montrer.
+  - Numérote tes dessins pour montrer l'ordre.
+  solution: 'Réussite si : les 3 dessins, mis dans l''ordre, permettent à quelqu''un d''autre de comprendre le déroulement
+    de l''histoire sans explication écrite.'
+- enonce: Avec de petits objets ou jouets, installe une courte scène qui raconte un témoignage (par exemple « ce
+    que j'ai vu au parc »), puis prends-en une photo.
+  indices:
+  - Place les objets pour montrer une action, pas juste pour les ranger.
+  - Pense à ce que la photo doit faire comprendre à quelqu'un qui ne l'a pas vécu.
+  solution: 'Réussite si : la disposition des objets raconte clairement une action ou un témoignage, identifiable
+    par une autre personne regardant la photo.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,74 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-conjugaison-cm1
+declencheurs:
+- conjuguer un verbe
+- passé composé
+- imparfait
+- futur
+- présent de l'indicatif
+- radical du verbe
+- terminaison du verbe
+- premier groupe
+- deuxième groupe
+essentiel: 'Un verbe conjugué se compose d''un radical et d''une terminaison, qui porte une marque de temps et une
+  marque de personne.
+
+  Le passé composé se forme en deux parties : l''auxiliaire (être ou avoir) conjugué au présent, suivi du participe
+  passé du verbe.
+
+  Pour mettre un verbe au passé composé à la forme négative, on place les adverbes de négation autour de l''auxiliaire
+  : elle n''a pas mangé.
+
+  Tu dois connaître les marques de personne du présent, de l''imparfait et du futur, et savoir isoler les marques
+  de temps de l''imparfait (-ai-, -i-) et du futur (-r-).
+
+  Tu dois mémoriser la conjugaison des verbes être et avoir, des verbes du 1er et du 2e groupe, et de verbes irréguliers
+  du 3e groupe comme faire, aller, dire, venir, pouvoir, voir, vouloir, prendre.'
+methode:
+- Trouver l'infinitif du verbe pour identifier son groupe.
+- Repérer le radical (partie qui ne change presque pas) et la terminaison (qui varie).
+- Pour le passé composé, choisir le bon auxiliaire (être ou avoir) puis former le participe passé.
+- Identifier la marque de temps (-ai-, -i- pour l'imparfait ; -r- pour le futur) et la marque de personne.
+- Pour la forme négative au passé composé, encadrer l'auxiliaire par les adverbes de négation.
+vocabulaire:
+- terme: radical
+  definition: la partie du verbe qui reste stable ou varie peu selon la conjugaison
+- terme: terminaison
+  definition: la fin du verbe conjugué, qui porte la marque de temps et de personne
+- terme: auxiliaire
+  definition: être ou avoir, utilisé avec le participe passé pour former le passé composé
+erreurs_frequentes:
+- Oublier une des deux parties du passé composé (auxiliaire ou participe passé).
+- Mal placer les adverbes de négation autour de l'auxiliaire au passé composé.
+- Confondre les marques de temps de l'imparfait et du futur.
+exemple:
+  enonce: 'Mets le verbe « manger » au passé composé, 3e personne du singulier, à la forme négative (sujet : elle).'
+  solution: 'Elle n''a pas mangé : auxiliaire avoir (a) encadré par ne...pas, suivi du participe passé mangé.'
+exercices:
+- enonce: Conjugue le verbe « finir » à l'imparfait, 1re personne du singulier (je).
+  indices:
+  - La marque de l'imparfait est -ai- ou -i- selon la personne.
+  solution: je finissais.
+- enonce: Conjugue le verbe « aller » au futur, 3e personne du pluriel (ils).
+  indices:
+  - La marque du futur est -r-.
+  - Le verbe aller est irrégulier au futur.
+  solution: ils iront.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Approfondir sa maîtrise de la conjugaison » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 149
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: composition du passé composé et accord du participe passé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

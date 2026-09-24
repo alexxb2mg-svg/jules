@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-caracteristiques-techniques-formelles-oeuvre
+declencheurs:
+- comment c'est fait ce tableau
+- les matériaux de la sculpture
+- les formes d'un tableau
+- façade avec des formes
+- décrire une œuvre
+- observer un tableau
+essentiel: 'Dégager les caractéristiques techniques et formelles d''une œuvre, c''est observer comment elle est
+  faite (technique) et comment elle est organisée visuellement (formelle).
+
+  On identifie d''abord les matériaux utilisés, y compris sonores pour la musique, et on observe la manière dont
+  l''artiste leur a donné forme.
+
+  On peut aussi retrouver des formes géométriques et comprendre comment elles sont agencées dans une façade, un
+  tableau, un pavement, un tapis.
+
+  À partir de ces observations concrètes, on dégage d''une œuvre des éléments de sens : ce que cette organisation
+  formelle permet de comprendre ou de ressentir.'
+methode:
+- Identifier de quoi l'œuvre est matériellement faite (peinture, pierre, bois, sons).
+- 'Repérer les formes visibles : lignes, formes géométriques, leur agencement.'
+- Décrire cette organisation avec un vocabulaire simple et précis.
+- Relier cette observation à un sens ou une intention possible de l'artiste.
+vocabulaire:
+- terme: caractéristique technique
+  definition: ce qui concerne la matière et la façon dont l'œuvre a été fabriquée
+- terme: caractéristique formelle
+  definition: 'ce qui concerne l''organisation visuelle : formes, lignes, agencement'
+erreurs_frequentes:
+- Décrire seulement le sujet de l'œuvre (« c'est un chat ») sans observer sa fabrication.
+- Ne pas remarquer les formes géométriques qui organisent une façade ou un tapis.
+- Confondre le matériau (la matière utilisée) avec le sujet représenté.
+exemple:
+  enonce: Tu observes un tapis avec des motifs répétés en carrés et en triangles de couleurs différentes. Que peux-tu
+    dire de ses caractéristiques formelles ?
+  solution: Tu peux dire que le tapis est organisé à partir de formes géométriques simples (carrés, triangles) qui
+    se répètent selon un agencement régulier, et que le choix des couleurs souligne cette organisation, créant un
+    rythme visuel.
+exercices:
+- enonce: Observe un objet ou une image (un tissu, une façade de maison, un tableau) et note trois formes géométriques
+    que tu y retrouves, en expliquant comment elles sont agencées entre elles.
+  indices:
+  - Cherche des lignes droites, des cercles, des triangles, des carrés.
+  - Regarde si les formes se répètent ou s'organisent en motif.
+  solution: 'Réussite si : trois formes géométriques différentes sont identifiées et leur agencement (répétition,
+    alignement, symétrie) est décrit.'
+- enonce: 'Écoute un court extrait musical et essaie de dire de quoi il semble « fait » : instruments, voix, sons
+    naturels, et si le son est doux, fort, régulier ou changeant.'
+  indices:
+  - Ferme les yeux pour mieux te concentrer sur ce que tu entends.
+  - Note au moins deux caractéristiques sonores différentes.
+  solution: 'Réussite si : l''élève identifie au moins un élément « matériel » du son (instrument, voix) et une
+    caractéristique de son organisation (doux/fort, régulier/changeant).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 53
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

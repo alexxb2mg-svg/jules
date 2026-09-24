@@ -1,0 +1,46 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ee-raconter
+declencheurs:
+- écrire une histoire en anglais
+- raconter par écrit en anglais
+- écrire ce que j'ai fait en anglais
+essentiel: 'Pour raconter à l''écrit, on utilise des structures grammaticales et des expressions simples déjà apprises.
+
+  On exprime l''appartenance et l''origine : I am from..., She comes from..., He lives in...
+
+  On utilise le présent simple de verbes usuels au singulier : I like, He lives, You sleep.
+
+  On situe dans le temps (today, yesterday, tomorrow) et dans l''espace (He lives near the school).'
+methode:
+- Choisir ce qu'on veut raconter (un fait vécu ou imaginé).
+- Faire une phrase avec un verbe au présent simple.
+- Ajouter un repère de temps ou de lieu si besoin.
+- Relire sa phrase pour vérifier l'accord du verbe (le s à la troisième personne).
+vocabulaire: []
+erreurs_frequentes:
+- Oublier le s à la troisième personne du présent simple (he like au lieu de he likes).
+- Ne pas préciser d'où vient ou où habite la personne dont on parle.
+exemple:
+  enonce: Écris une phrase simple pour dire que Sam sait skier mais ne sait pas monter à cheval.
+  solution: Sam can ski. He can't ride a horse.
+exercices:
+- enonce: Écris une phrase pour dire que tu habites en France et que tu viens de Nantes.
+  indices:
+  - Utilise I live in... et I come from...
+  solution: I live in France, I come from Nantes.
+- enonce: Écris que Sarah aime le football, en anglais, à la troisième personne.
+  indices:
+  - N'oublie pas le s à la troisième personne.
+  solution: Sarah likes football.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

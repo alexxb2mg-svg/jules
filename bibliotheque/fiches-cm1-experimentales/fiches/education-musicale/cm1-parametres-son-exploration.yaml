@@ -1,0 +1,79 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-parametres-son-exploration
+declencheurs:
+- hauteur d'un son
+- timbre d'un instrument
+- son grave ou aigu
+- durée d'un son
+- intensité d'un son
+- paramètres du son
+- expérimenter des sons
+essentiel: 'Les paramètres du son sont les éléments qu''on peut changer pour transformer un son : la hauteur, le
+  timbre, la durée, l''intensité.
+
+  La hauteur, c''est si un son est grave ou aigu.
+
+  Le timbre, c''est la couleur du son : ce qui permet de reconnaître un instrument ou une voix.
+
+  La durée, c''est le temps pendant lequel un son dure : court ou long.
+
+  L''intensité, c''est la force du son : fort ou doux.
+
+  Expérimenter ces paramètres permet d''imaginer de nouvelles utilisations pour créer des sons ou des musiques.'
+methode:
+- Choisis un objet ou un instrument qui produit un son.
+- Essaie de changer sa hauteur (plus grave, plus aigu).
+- Essaie de changer son timbre (frotter, taper, souffler différemment).
+- Essaie de changer sa durée (son court, son qui dure longtemps).
+- Essaie de changer son intensité (jouer fort, jouer doucement).
+- Note ce que tu as découvert avec un mot de vocabulaire pour chaque paramètre.
+vocabulaire:
+- terme: hauteur
+  definition: le fait qu'un son soit grave ou aigu
+- terme: timbre
+  definition: la couleur d'un son, ce qui permet de reconnaître qui ou quoi le produit
+- terme: intensité
+  definition: la force d'un son, fort ou doux
+erreurs_frequentes:
+- Confondre hauteur (grave/aigu) et intensité (fort/doux).
+- Croire que le timbre, c'est la même chose que la hauteur.
+- Ne changer qu'un seul paramètre à la fois sans essayer d'en combiner plusieurs.
+exemple:
+  enonce: Tu frappes une même casserole avec une cuillère en bois, puis avec une cuillère en métal. Quel paramètre
+    du son changes-tu surtout ?
+  solution: 'Tu changes surtout le timbre : la matière de la cuillère change la couleur du son, même si la casserole
+    reste la même.'
+exercices:
+- enonce: Trouve trois objets à la maison qui produisent un son différent (par exemple un verre, une casserole,
+    une boîte en carton). Compare leur timbre.
+  indices:
+  - Frappe-les de la même façon pour comparer seulement le timbre, pas l'intensité.
+  - 'Décris chaque son avec un mot : métallique, sourd, claquant...'
+  solution: 'Critères de réussite : tu décris le timbre des trois objets avec un mot différent pour chacun.'
+- enonce: Avec ta voix ou un objet sonore, fais un son très court, puis un son qui dure le plus longtemps possible.
+  indices:
+  - Pense à une note tenue comme une sirène pour le son long.
+  solution: 'Critères de réussite : la différence de durée entre les deux sons est nette et volontaire.'
+- enonce: 'Chante ou joue la même petite phrase musicale trois fois : une fois grave, une fois aiguë, une fois normale.'
+  indices:
+  - La hauteur d'une voix peut changer en chantant plus haut ou plus bas.
+  solution: 'Critères de réussite : les trois hauteurs sont clairement différentes, tout en gardant la même phrase
+    musicale.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Éducation musicale — Repères pour l'écoute » (cycles 2, 3, 4), p. 2
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c2c3emusecouterepere-ecoute837653pdf-74949.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: détail du paramètre timbre et espace sonore pour l'écoute
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

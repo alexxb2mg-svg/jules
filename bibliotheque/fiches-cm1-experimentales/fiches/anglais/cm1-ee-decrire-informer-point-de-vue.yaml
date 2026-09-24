@@ -1,0 +1,48 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ee-decrire-informer-point-de-vue
+declencheurs:
+- donner mon avis en anglais à l'écrit
+- avis en anglais
+- compléter une fiche en anglais
+- écrire ce que j'aime en anglais
+essentiel: 'Pour écrire et donner son avis, on écrit des mots ou des expressions isolées pour décrire très simplement
+  des objets familiers.
+
+  On peut compléter une fiche de renseignements très simple, ou rédiger un court message.
+
+  On exprime ses goûts avec des adjectifs (nice, good, funny) et des verbes (like, enjoy).
+
+  On peut dire si on est d''accord ou pas d''accord : I agree, I disagree.'
+methode:
+- Choisir l'information ou l'objet dont on veut parler.
+- Utiliser un adjectif simple pour donner son avis (nice, good, funny).
+- Ajouter I agree ou I disagree si on réagit à quelque chose.
+- Relire pour vérifier que la phrase est simple et compréhensible.
+vocabulaire: []
+erreurs_frequentes:
+- Écrire une phrase trop compliquée au lieu d'une expression simple.
+- Oublier de dire pourquoi on aime ou pas (ajouter un adjectif).
+exemple:
+  enonce: Tu regardes une œuvre d'art de Keith Haring et tu la trouves drôle et colorée. Écris ton avis en anglais.
+  solution: I like it. It's funny. I love the colours.
+exercices:
+- enonce: 'Complète une fiche de renseignements très simple : dis ton prénom et que tu es bon en mathématiques.'
+  indices:
+  - Utilise My name is... et I'm very good at...
+  solution: My name is Martin. I am 9. I'm very good at maths.
+- enonce: Un camarade dit qu'il n'aime pas les épinards, et toi non plus. Dis que tu es d'accord.
+  indices:
+  - Utilise I agree.
+  solution: I agree.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 25-26
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

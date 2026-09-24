@@ -1,0 +1,63 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-reseaux-alimentaires
+declencheurs:
+- chaîne alimentaire
+- réseau alimentaire
+- qui mange qui
+- besoins des plantes
+- matière organique
+- conséquences sur l'environnement animaux
+essentiel: 'Les animaux produisent de la matière en consommant de la nourriture provenant d''autres êtres vivants
+  : la production de matière par un animal est reliée à sa consommation de nourriture.
+
+  Les végétaux ont des besoins particuliers (eau, lumière...) qu''on peut identifier par l''expérimentation, et
+  ces besoins sont reliés à leur capacité à produire de la matière organique.
+
+  On représente par un réseau les liens alimentaires entre les êtres vivants, et on peut envisager les conséquences
+  d''une action humaine sur ce réseau alimentaire.'
+methode:
+- Relier la nourriture consommée par un animal à sa production de matière (croissance).
+- Expérimenter pour identifier les besoins des végétaux (formuler une hypothèse, réaliser l'expérience, exploiter
+  les résultats).
+- Représenter par un réseau (avec des flèches) qui mange qui parmi les êtres vivants étudiés.
+- Envisager ce qui se passerait sur ce réseau si une action humaine changeait le nombre d'individus d'une espèce.
+erreurs_frequentes:
+- Dessiner les flèches du réseau alimentaire dans le mauvais sens (elles vont du mangé vers le mangeur).
+- Oublier que les végétaux ont eux aussi des besoins qu'on peut tester expérimentalement.
+- Ne pas relier variation du nombre d'individus d'une espèce et conséquences sur tout le réseau.
+exemple:
+  enonce: Une chenille mange des feuilles, un oiseau mange la chenille. Comment représenter ce réseau alimentaire
+    ?
+  solution: 'On dessine une flèche de la feuille vers la chenille (la feuille est mangée par la chenille), puis
+    une flèche de la chenille vers l''oiseau (la chenille est mangée par l''oiseau) : les flèches vont du mangé
+    vers le mangeur.'
+exercices:
+- enonce: Un élève met en place une expérience pour savoir si les plantes ont besoin de lumière pour bien pousser.
+    Quelles sont les grandes étapes de sa démarche ?
+  indices:
+  - Pense à ce qu'il faut faire avant, pendant et après l'expérience.
+  solution: Il formule une hypothèse et ses conséquences vérifiables, conçoit et réalise l'expérience, puis exploite
+    les résultats pour valider ou non son hypothèse.
+- enonce: Dans un réseau alimentaire, la surpêche fait disparaître beaucoup de poissons d'une espèce. Que peut-on
+    envisager comme conséquence ?
+  indices:
+  - Que mangeaient les animaux qui se nourrissaient de ces poissons ?
+  solution: Les espèces qui se nourrissaient de ces poissons risquent de manquer de nourriture, ce qui peut perturber
+    tout le réseau alimentaire.
+- enonce: Pourquoi dit-on que la production de matière d'un animal est reliée à sa consommation de nourriture ?
+  indices:
+  - D'où vient la matière avec laquelle un animal grandit ?
+  solution: Un animal grandit (produit de la matière) en consommant de la nourriture qui provient d'autres êtres
+    vivants ; sans nourriture, il ne peut pas produire cette matière.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

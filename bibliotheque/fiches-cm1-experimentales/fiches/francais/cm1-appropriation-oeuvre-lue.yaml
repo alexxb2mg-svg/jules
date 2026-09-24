@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-appropriation-oeuvre-lue
+declencheurs:
+- carnet de lecture
+- ça me fait penser à un livre que j'ai lu
+- je n'ai pas envie de continuer ce livre
+- relier deux histoires
+- parler d'un livre qu'on a aimé
+essentiel: 'Lire une œuvre et se l''approprier, c''est en garder la mémoire, pas seulement la lire une fois.
+
+  On peut tenir un carnet de lecture pour se souvenir des livres lus et pouvoir les réutiliser plus tard (par exemple
+  pour les comparer à un nouveau livre).
+
+  On crée des liens entre ce qu''on lit et sa propre vie, ses propres expériences ou ses connaissances.
+
+  Varier les lectures (genres, thèmes, formats différents) aide à développer le plaisir de lire, et il est important
+  de s''engager et de persévérer même quand un livre est difficile à finir.'
+methode:
+- Noter dans un carnet de lecture le titre, l'auteur et un résumé rapide du livre lu.
+- Écrire ce qu'on a ressenti ou pensé en lisant.
+- Chercher des liens entre le livre et ses propres expériences ou d'autres histoires connues.
+- Comparer plusieurs lectures entre elles.
+- Partager sa lecture avec d'autres (présentation, échange).
+erreurs_frequentes:
+- Refermer un livre sans en garder aucune trace ni aucun souvenir.
+- Ne lire toujours qu'un seul genre ou un seul type de livre.
+- Abandonner un livre à la première difficulté sans essayer de persévérer.
+exemple:
+  enonce: Tu viens de finir un roman sur un enfant qui déménage. Comment peux-tu te l'approprier ?
+  solution: On peut noter dans son carnet de lecture le titre et ce qu'on a ressenti, puis faire un lien avec sa
+    propre vie (« moi aussi j'ai changé d'école ») ou avec un autre livre déjà lu sur un thème proche.
+exercices:
+- enonce: 'Choisis un livre que tu as lu récemment. Écris trois phrases pour ton carnet de lecture : le titre, ce
+    que tu as aimé ou pas, et un lien avec ta propre vie.'
+  indices:
+  - Pense à un moment du livre qui t'a marqué.
+  - Le lien avec ta vie peut être une expérience proche ou très différente.
+  solution: 'Critères de réussite : le titre est noté, l''avis est justifié, et un vrai lien personnel est proposé
+    (pas juste « c''était bien »).'
+- enonce: 'Compare deux livres que tu as lus cette année : en quoi se ressemblent-ils ou diffèrent-ils (personnages,
+    thème, fin) ?'
+  indices:
+  - Reprends ton carnet de lecture si tu en as un.
+  - Compare au moins deux éléments précis (par exemple le personnage principal et la fin).
+  solution: 'Critère de réussite : la comparaison porte sur des éléments précis des deux livres, pas seulement «
+    j''ai préféré celui-ci ».'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 4
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoc-decrire-environnement-et-gouts
+declencheurs:
+- décrire ma chambre en anglais
+- décrire l'école en anglais
+- dire ce que j'aime faire en anglais
+- parler de mes activités préférées en anglais
+essentiel: 'Pour décrire son environnement proche, on utilise there is (il y a, au singulier) et there are (il y
+  a, au pluriel) : There is a basketball pitch. There are 4 benches.
+
+  On utilise des articles (a, the) et des mots comme this, that pour montrer un objet.
+
+  Pour exprimer ses goûts, on utilise des verbes comme like, love, hate, et des adjectifs comme Great!
+
+  On peut relier deux phrases simples avec and ou or.
+
+  Pour dire à quel point on aime, on ajoute very, so, too : I like it very much.'
+methode:
+- Observer ce qu'on veut décrire (une pièce, une cour, une ville).
+- Faire une phrase avec There is (un seul élément) ou There are (plusieurs éléments).
+- Ajouter une phrase sur ses goûts avec like, love ou hate.
+- Relier deux idées avec and ou or si besoin.
+vocabulaire:
+- terme: there is / there are
+  definition: 'structure pour dire qu''il y a quelque chose : there is pour un seul élément, there are pour plusieurs'
+erreurs_frequentes:
+- Utiliser there is avec plusieurs éléments au lieu de there are.
+- Oublier l'article a ou the devant un nom.
+- Ne dire que like sans jamais varier avec love, hate ou dislike.
+exemple:
+  enonce: 'Décris ta cour d''école : il y a un terrain de basket et deux bancs.'
+  solution: There is a basketball pitch. There are two benches.
+exercices:
+- enonce: Dis que tu aimes beaucoup les chats, en utilisant very much.
+  indices:
+  - Utilise I like it very much, adapté aux chats.
+  solution: I like cats very much.
+- enonce: 'Décris ta ville : il y a une piscine et deux parcs. Relie les deux informations avec and.'
+  indices:
+  - There is pour un seul élément, there are pour plusieurs.
+  solution: In our town, there is a swimming pool and there are two parks.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 15-16
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

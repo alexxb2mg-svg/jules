@@ -1,0 +1,76 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-vocabulaire-et-outils-geometriques
+declencheurs:
+- règle
+- équerre
+- compas
+- cercle
+- disque
+- perpendiculaire
+- parallèle
+- droite
+- droites
+- sécantes
+essentiel: 'En géométrie, on utilise un vocabulaire précis : point, droite, segment, demi-droite, milieu d''un segment,
+  droites sécantes.
+
+  Les outils : la règle (pour tracer des droites), la règle graduée (pour mesurer des longueurs), l''équerre (pour
+  les angles droits) et le compas (pour les cercles).
+
+  Un cercle de centre A passant par B, c''est l''ensemble des points situés à la même distance de A que B. Le disque
+  de centre A et de rayon 4 cm, c''est l''ensemble des points situés à 4 cm au plus de A.
+
+  Deux droites perpendiculaires se coupent en formant un angle droit (donc quatre angles droits en tout).
+
+  Deux droites parallèles ne se coupent jamais ; sinon elles sont sécantes.
+
+  Si deux droites sont perpendiculaires à une même troisième droite, alors elles sont parallèles entre elles.'
+methode:
+- Nommer précisément les objets (point, droite, segment...) avec le vocabulaire officiel.
+- 'Choisir le bon outil : règle pour tracer, règle graduée pour mesurer, équerre pour les angles droits, compas
+  pour les cercles.'
+- Pour vérifier une perpendicularité ou une longueur égale, utiliser l'équerre ou le compas plutôt que l'œil.
+- Repérer les codages sur une figure (petit carré = angle droit, traits = longueurs égales).
+vocabulaire:
+- terme: droites sécantes
+  definition: deux droites qui se coupent en un point
+- terme: droites perpendiculaires
+  definition: deux droites qui se coupent en formant un angle droit
+- terme: droites parallèles
+  definition: deux droites qui ne se coupent jamais
+- terme: rayon
+  definition: distance entre le centre d'un cercle et un point du cercle
+erreurs_frequentes:
+- Dire que deux droites sont parallèles seulement parce qu'elles ne se coupent pas sur la feuille (il faut être
+  sûr qu'elles ne se couperaient jamais).
+- Confondre cercle (le contour) et disque (la surface).
+- Ne pas vérifier une perpendicularité à l'équerre alors que ce n'est pas évident.
+exemple:
+  enonce: Deux droites sont toutes les deux perpendiculaires à une même droite d. Que peut-on dire d'elles ?
+  solution: Elles sont parallèles entre elles, car deux droites perpendiculaires à une même droite sont parallèles.
+exercices:
+- enonce: Trace un cercle de centre A et de rayon 3 cm. Quel outil utilises-tu ?
+  indices:
+  - Le compas sert à tracer les cercles.
+  solution: On utilise le compas, en l'ouvrant sur 3 cm entre la pointe et la mine, centré en A.
+- enonce: Comment vérifier si deux droites sont perpendiculaires quand ce n'est pas évident ?
+  indices:
+  - Un outil sert à vérifier les angles droits.
+  solution: On utilise l'équerre pour vérifier qu'elles se coupent en formant un angle droit.
+- enonce: Le disque de centre O a un rayon de 5 cm. Un point est à 6 cm de O. Est-il dans le disque ?
+  indices:
+  - Le disque contient les points situés à 5 cm au plus de O.
+  solution: Non, il n'est pas dans le disque, car 6 cm est plus grand que le rayon 5 cm.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 19-20
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

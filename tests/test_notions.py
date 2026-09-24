@@ -177,6 +177,7 @@ def test_fiches_experimentales_dans_le_prompt_mais_pas_la_direction_exemple():
     config = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))
     reglages = next(m for m in config["modules"] if m["id"] == "notions")["reglages"]
     assert "fiches-3e-experimentales" in reglages["bibliotheques"]
+    assert "fiches-cm1-experimentales" in reglages["bibliotheques"]
     assert "exemple-direction-enseignant" not in reglages["bibliotheques"]
 
 
@@ -432,3 +433,40 @@ def test_limites_du_programme_transmises_au_moteur():
     brique._catalogue = cat
     texte = brique.texte_notion(notion, "eleve")
     assert "Limites fixées par le programme" in texte and "tableaux de proportionnalité" in texte
+
+
+def test_fiches_cm1_experimentales():
+    """Une fiche par notion CM1, complete, marquee experimentale, sourcee uniquement par le ministere."""
+    biblio = lire_identite(BIBLIOTHEQUES / "fiches-cm1-experimentales")
+    assert biblio.statut == "experimentale" and biblio.niveaux == ["CM1"]
+    assert "EXPÉRIMENTALE" in biblio.avertissement
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-cm1-experimentales"], "CM1")
+    fiches = cat.contenus[0].fiches
+    assert sorted(fiches) == sorted(cat.notions), "une fiche par notion CM1, ni plus ni moins"
+    officiels = (
+        "https://eduscol.education.gouv.fr/",
+        "https://www.education.gouv.fr/",
+        "https://cache.media.education.gouv.fr/",
+    )
+    for fichier in (BIBLIOTHEQUES / "fiches-cm1-experimentales" / "fiches").glob("*/*.yaml"):
+        texte = fichier.read_text(encoding="utf-8")
+        assert texte.startswith("# DONNÉES D'EXPÉRIMENTATION"), fichier.name
+        fiche = yaml.safe_load(texte)
+        assert fiche["relecture"]["statut"] == "a_relire", fichier.name
+        assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), fichier.name
+        assert fiche.get("exemple", {}).get("solution"), fichier.name
+        assert len(fiche.get("exercices", [])) >= 2, fichier.name
+        for exercice in fiche["exercices"]:
+            assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), fichier.name
+        for source in fiche["sources"]:
+            assert source["licence"] == "etalab-2.0" and source["url"].startswith(officiels), fichier.name
+        assert fichier.parent.name == cat.notions[fiche["notion"]].matiere, fichier.name
+
+
+def test_fiches_cm1_et_3e_ne_se_melangent_pas():
+    """Un eleve de 3e ne recoit jamais une fiche CM1, et inversement."""
+    ids = ["programme", "fiches-3e-experimentales", "fiches-cm1-experimentales"]
+    cm1 = charger_catalogue(BIBLIOTHEQUES, ids, "CM1")
+    troisieme = charger_catalogue(BIBLIOTHEQUES, ids, "3e")
+    assert [b.id for b in cm1.contenus] == ["fiches-cm1-experimentales"]
+    assert [b.id for b in troisieme.contenus] == ["fiches-3e-experimentales"]

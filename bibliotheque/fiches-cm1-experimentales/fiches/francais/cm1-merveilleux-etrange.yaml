@@ -1,0 +1,56 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-merveilleux-etrange
+declencheurs:
+- histoire qui fait peur
+- monde imaginaire
+- un événement inexplicable
+- conte fantastique
+- j'ai eu peur en lisant
+- personne ne peut l'expliquer
+- objet magique qui parle
+- phénomène étrange
+essentiel: 'Se confronter au merveilleux et à l''étrange, c''est découvrir des mondes imaginaires et éveiller sa
+  sensibilité à l''inconnu.
+
+  Cela permet d''explorer des sentiments universels : la peur, le désir d''évasion et la curiosité pour l''inexplicable.
+
+  Lire ce type de textes permet d''allier la découverte du texte littéraire à une réflexion sur notre rapport à
+  l''inexplicable, au rêve et à la peur.
+
+  Cela aide aussi à développer l''esprit critique et la créativité.'
+methode:
+- Repérer ce qui, dans l'histoire, n'existe pas dans la réalité (un événement magique, une créature étrange...).
+- Identifier les sentiments que l'histoire fait naître (peur, curiosité, envie de s'évader).
+- Réfléchir à pourquoi ce phénomène étrange ou merveilleux paraît inexplicable.
+- Imaginer ou inventer, à son tour, un petit élément merveilleux ou étrange.
+erreurs_frequentes:
+- Confondre le merveilleux (magie, contes) avec un simple récit réaliste.
+- Ne pas chercher à comprendre ce que l'histoire fait ressentir (peur, évasion, curiosité).
+exemple:
+  enonce: Dans un conte, une horloge se met à parler à minuit et personne ne peut expliquer pourquoi. Qu'est-ce
+    qui relève du merveilleux ou de l'étrange dans cet extrait ?
+  solution: Une horloge qui parle est un événement impossible dans la réalité (merveilleux) et le fait que personne
+    ne puisse l'expliquer crée un sentiment d'étrangeté et de curiosité.
+exercices:
+- enonce: Choisis un conte que tu connais avec un élément magique ou étrange. Décris cet élément en une phrase.
+  indices:
+  - Un élément magique peut être un objet, un personnage ou un événement impossible.
+  solution: La phrase doit décrire précisément un élément impossible dans la réalité (objet magique, transformation,
+    créature imaginaire...).
+- enonce: 'Quel sentiment ce conte te fait-il ressentir : la peur, la curiosité, l''envie d''évasion ? Explique
+    pourquoi.'
+  indices:
+  - Pense au moment précis du conte qui te fait ressentir cela.
+  solution: La réponse doit relier le sentiment ressenti à un passage précis du conte.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

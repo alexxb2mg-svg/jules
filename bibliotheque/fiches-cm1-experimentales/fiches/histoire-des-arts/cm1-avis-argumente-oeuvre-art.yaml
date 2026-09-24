@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-avis-argumente-oeuvre-art
+declencheurs:
+- j'aime pas ce tableau
+- pourquoi ce tableau
+- donner mon avis sur une œuvre
+- expliquer un tableau
+- que représente ce tableau
+- personnage mythologique
+essentiel: 'Devant une œuvre d''art (un tableau, une sculpture, un film, un morceau de musique), on peut donner
+  un avis argumenté : dire ce qu''on pense ou ressent, mais en expliquant pourquoi grâce à ce qu''on observe dans
+  l''œuvre.
+
+  Pour cela, on commence par observer et identifier ce qui est représenté : des personnages (parfois mythologiques
+  ou religieux), des objets, des types d''espaces, des éclairages.
+
+  On peut ensuite résumer une action représentée en image, sur scène ou sur un écran, et caractériser les personnages,
+  ou caractériser un morceau de musique en termes simples.
+
+  Un avis argumenté n''est donc pas « j''aime » ou « j''aime pas » tout seul : c''est un avis appuyé sur ce qu''on
+  a vraiment observé ou entendu dans l''œuvre.'
+methode:
+- 'Observer attentivement l''œuvre : qui ou quoi est représenté, quel espace, quel éclairage.'
+- Résumer en une ou deux phrases ce qui se passe ou ce qui est montré.
+- Choisir un mot ou une phrase qui exprime ce qu'on ressent devant l'œuvre.
+- Relier cet avis à un détail précis observé (une couleur, un geste, un son) pour l'argumenter.
+vocabulaire:
+- terme: avis argumenté
+  definition: un avis personnel expliqué et appuyé sur des observations précises
+- terme: personnage mythologique
+  definition: personnage issu d'un mythe ou d'un récit fondateur ancien
+erreurs_frequentes:
+- Donner un avis (« j'aime » ou « je n'aime pas ») sans dire pourquoi.
+- Décrire l'œuvre sans jamais exprimer d'avis ni de ressenti personnel.
+- Inventer une histoire sans lien avec ce qui est réellement représenté dans l'œuvre.
+exemple:
+  enonce: Devant un tableau qui représente une tempête en mer avec un bateau, comment donner un avis argumenté plutôt
+    que dire juste « c'est beau » ?
+  solution: 'On peut dire : « Je trouve ce tableau impressionnant parce que les vagues sont peintes avec des couleurs
+    sombres et le bateau paraît minuscule à côté d''elles, ce qui montre le danger de la tempête. » L''avis (« impressionnant
+    ») est appuyé sur des observations précises (les couleurs sombres, la taille du bateau).'
+exercices:
+- enonce: 'Choisis un tableau, une photo ou une sculpture que tu aimes bien (dans un livre, chez toi ou vu à l''école)
+    et écris deux phrases : une qui décrit ce que tu observes, une qui donne ton avis en expliquant pourquoi.'
+  indices:
+  - Commence par « J'observe... » puis « Je pense/je ressens... parce que... ».
+  - 'Appuie-toi sur un détail précis : une couleur, une forme, un personnage.'
+  solution: 'Réussite si : la phrase d''observation décrit un élément réel de l''œuvre, et la phrase d''avis relie
+    clairement le ressenti à ce détail observé.'
+- enonce: Regarde une image représentant une scène avec plusieurs personnages et résume l'action en une phrase,
+    puis caractérise un des personnages en un mot.
+  indices:
+  - 'Demande-toi : que sont-ils en train de faire ?'
+  - Pour caractériser un personnage, pense à son attitude, son expression.
+  solution: 'Réussite si : la phrase résume correctement l''action visible sur l''image, et le mot choisi pour le
+    personnage correspond à ce qui est observable.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 52-53
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

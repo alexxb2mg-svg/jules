@@ -1,0 +1,84 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-six-activites-langagieres
+declencheurs:
+- en anglais on fait quoi
+- écouter parler lire écrire anglais
+- les activités en anglais
+- CO EOC EOI CE EE
+- à quoi ça sert d'apprendre l'anglais
+- les compétences en anglais
+essentiel: 'En anglais, on ne fait pas qu''apprendre des mots : on s''entraîne dans plusieurs activités différentes.
+
+  Écouter et comprendre (CO) : on écoute une histoire, une consigne, une chanson en anglais.
+
+  Parler seul (EOC, « expression orale en continu ») : on se présente, on raconte, on décrit, sans que quelqu''un
+  réponde tout de suite.
+
+  Parler avec quelqu''un (EOI, « expression orale en interaction ») : on pose des questions, on répond, on discute.
+
+  Lire (CE) : on lit un texte court, une carte postale, une bande dessinée en anglais.
+
+  Écrire (EE) : on copie, on écrit des phrases simples.
+
+  La médiation (M) : on aide quelqu''un à comprendre, par exemple en traduisant un mot ou une consigne.
+
+  Toutes ces activités s''appuient sur les niveaux du CECRL, une échelle commune à toutes les langues qui dit ce
+  qu''on sait faire.'
+methode:
+- 'Se demander : est-ce que j''écoute (CO) ou est-ce que je lis (CE) ?'
+- 'Se demander : est-ce que je parle tout seul (EOC) ou est-ce que je discute avec quelqu''un (EOI) ?'
+- 'Se demander : est-ce que j''écris (EE) ?'
+- 'Se demander : est-ce que j''aide quelqu''un à comprendre, par exemple en traduisant (M) ?'
+- Utiliser cette activité pour choisir la bonne stratégie (écouter attentivement, relire, s'aider d'images...).
+vocabulaire:
+- terme: CO
+  definition: 'compréhension de l''oral : écouter et comprendre'
+- terme: EOC
+  definition: 'expression orale en continu : parler seul, sans dialogue'
+- terme: EOI
+  definition: 'expression orale en interaction : parler en dialoguant avec quelqu''un'
+- terme: CE
+  definition: 'compréhension de l''écrit : lire et comprendre'
+- terme: EE
+  definition: 'expression écrite : écrire'
+- terme: M
+  definition: 'médiation : aider une autre personne à comprendre (par exemple traduire)'
+- terme: CECRL
+  definition: l'échelle commune à toutes les langues qui dit ce qu'un élève sait faire
+erreurs_frequentes:
+- Confondre parler seul (EOC, par exemple se présenter) et dialoguer (EOI, par exemple répondre à une question).
+- 'Croire que la médiation, c''est traduire mot à mot : c''est surtout aider quelqu''un à comprendre le sens.'
+- Oublier que comprendre à l'oral (CO) et comprendre à l'écrit (CE) demandent des stratégies différentes.
+exemple:
+  enonce: La maîtresse raconte une histoire en anglais et la classe l'écoute sans parler. Quelle activité langagière
+    est travaillée ?
+  solution: 'C''est la compréhension de l''oral (CO) : les élèves écoutent et comprennent, ils ne parlent pas et
+    n''écrivent pas.'
+exercices:
+- enonce: Tu lis une carte postale écrite en anglais par un correspondant. Quelle activité langagière travailles-tu
+    ?
+  indices:
+  - Est-ce que tu écoutes, ou est-ce que tu regardes des mots écrits ?
+  solution: 'La compréhension de l''écrit (CE) : tu lis et tu comprends un texte.'
+- enonce: Tu expliques à un camarade, en français, ce que veut dire une consigne anglaise qu'il n'a pas comprise.
+    Quelle activité fais-tu ?
+  indices:
+  - 'Tu n''écoutes pas et tu n''écris pas : tu aides quelqu''un d''autre à comprendre.'
+  solution: 'La médiation (M) : tu passes d''une langue à l''autre pour aider un camarade.'
+- enonce: Tu réponds à la question « What's your name? » posée par ton voisin. Quelle activité travailles-tu ?
+  indices:
+  - Est-ce que tu parles tout seul, ou est-ce que tu dialogues avec quelqu'un ?
+  solution: 'L''expression orale en interaction (EOI) : tu réponds à quelqu''un qui te parle.'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 1
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

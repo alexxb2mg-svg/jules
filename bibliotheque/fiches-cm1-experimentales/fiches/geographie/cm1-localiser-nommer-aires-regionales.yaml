@@ -1,0 +1,70 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-localiser-nommer-aires-regionales
+declencheurs:
+- planisphère
+- carte du monde
+- continent
+- Maghreb
+- Asie
+- Amérique
+- Afrique
+- Océanie
+essentiel: 'Sur un planisphère, le monde est découpé en grandes aires régionales, plus précises que les continents.
+
+  Le programme de CM1 demande de localiser et de nommer huit aires régionales : l''Afrique subsaharienne, le Maghreb,
+  l''Amérique du Nord, l''Amérique du Sud, l''Asie du Sud-Est, l''Asie de l''Est, l''Europe et l''Océanie.
+
+  Localiser, c''est savoir placer une aire régionale au bon endroit sur le planisphère. Nommer, c''est savoir écrire
+  ou dire correctement son nom.'
+methode:
+- Repère d'abord le continent, puis la partie plus précise de ce continent.
+- 'Mémorise les huit aires régionales dans l''ordre des continents : Afrique, Amérique, Asie, Europe, Océanie.'
+- Entraîne-toi à les placer sur un planisphère vierge.
+- Vérifie que tu sais aussi bien les localiser que les nommer à l'écrit.
+vocabulaire:
+- terme: aire régionale
+  definition: une grande partie d'un continent, plus précise que le continent entier
+- terme: planisphère
+  definition: une carte qui représente le monde entier
+erreurs_frequentes:
+- Confondre continent et aire régionale (par exemple confondre « Afrique » et « Maghreb »).
+- Oublier qu'un même continent peut contenir plusieurs aires régionales (l'Afrique subsaharienne et le Maghreb en
+  Afrique).
+- Se tromper entre l'Asie du Sud-Est et l'Asie de l'Est.
+exemple:
+  enonce: Sur un planisphère, on montre une zone au nord du continent africain, qui borde la mer Méditerranée. Quelle
+    aire régionale est-ce ?
+  solution: 'C''est le Maghreb : c''est l''aire régionale située au nord du continent africain.'
+exercices:
+- enonce: Cite les deux aires régionales du continent américain vues en CM1.
+  indices:
+  - Une se trouve au nord, l'autre au sud.
+  solution: L'Amérique du Nord et l'Amérique du Sud.
+- enonce: Cite les deux aires régionales du continent asiatique vues en CM1.
+  indices:
+  - Une se trouve à l'est, l'autre au sud-est.
+  solution: L'Asie du Sud-Est et l'Asie de l'Est.
+- enonce: Liste les huit aires régionales que l'on apprend à situer sur le planisphère en CM1.
+  indices:
+  - Il y en a deux en Afrique, deux en Amérique, deux en Asie, et une pour l'Europe et une pour l'Océanie.
+  solution: Afrique subsaharienne, Maghreb, Amérique du Nord, Amérique du Sud, Asie du Sud-Est, Asie de l'Est, Europe,
+    Océanie.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Supports cartographiques pour la mise en œuvre du programme d'histoire-géographie, premier degré,
+    cycles 2-3 » (2026), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/fichehgcartoc2c32026-127502.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'ressource d''accompagnement : fond de carte planisphère avec pays pour le CM1'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

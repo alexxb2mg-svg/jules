@@ -1,0 +1,78 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-aires
+declencheurs:
+- aire
+- surface
+- carreaux
+- centimètre carré
+- plus grand que
+- pavage
+- recouvrir
+essentiel: 'L''aire, c''est la mesure d''une surface : la place qu''elle occupe à plat.
+
+  On peut comparer deux aires sans les mesurer : en les superposant, ou en découpant et recollant les morceaux.
+
+  Pour déterminer une aire, on compte le nombre de carreaux (une unité) qui recouvrent la surface, avec parfois
+  des demi-carreaux.
+
+  Le centimètre carré (cm²) est l''unité : c''est l''aire d''un carré de 1 cm de côté.
+
+  Au CM1, on ne retient pas de formule pour calculer l''aire : on s''appuie sur un quadrillage.
+
+  Attention : l''aire et le périmètre sont deux choses différentes, deux figures peuvent avoir la même aire mais
+  un périmètre différent.'
+methode:
+- Poser la figure sur un quadrillage (ou l'imaginer quadrillée).
+- Compter les carreaux entiers à l'intérieur de la figure.
+- Ajouter les demi-carreaux (deux demi-carreaux font un carreau entier).
+- Si la figure est irrégulière, encadrer l'aire entre deux nombres de carreaux (carreaux complets à l'intérieur,
+  et carreaux complets qui recouvrent toute la figure).
+- Exprimer le résultat en cm² si chaque carreau vaut 1 cm².
+vocabulaire:
+- terme: aire
+  definition: mesure de la surface occupée par une figure
+- terme: centimètre carré (cm²)
+  definition: aire d'un carré de 1 cm de côté
+erreurs_frequentes:
+- Confondre aire et périmètre.
+- 'Vouloir appliquer une formule apprise par cœur : au CM1 on compte les carreaux.'
+- Oublier les demi-carreaux quand la figure ne suit pas exactement le quadrillage.
+exemple:
+  enonce: Une figure recouvre 18 carreaux complets et il reste des morceaux qui pourraient recouvrir jusqu'à 36
+    carreaux en tout. Que peut-on dire de son aire ?
+  solution: 'Son aire est comprise entre 18 carreaux et 36 carreaux : on l''encadre car on ne peut pas la compter
+    exactement.'
+exercices:
+- enonce: Une figure est composée de 7 carreaux entiers et de 4 demi-carreaux. Quelle est son aire en carreaux ?
+  indices:
+  - Deux demi-carreaux font un carreau entier.
+  solution: 4 demi-carreaux = 2 carreaux entiers. 7 + 2 = 9 carreaux.
+- enonce: Un carré de 1 cm de côté est posé sur une figure 12 fois exactement, sans trou ni recouvrement. Quelle
+    est l'aire de la figure ?
+  indices:
+  - Le carré de 1 cm de côté mesure 1 cm².
+  solution: L'aire de la figure est 12 cm², car elle est recouverte par 12 carrés de 1 cm².
+- enonce: Deux figures A et B ont la même aire mais pas la même forme. Peut-on dire qu'elles ont le même périmètre
+    ?
+  indices:
+  - Aire et périmètre ne mesurent pas la même chose.
+  solution: 'Non : deux figures peuvent avoir la même aire mais des périmètres différents.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 17
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : pas de formule à mémoriser au CM1'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

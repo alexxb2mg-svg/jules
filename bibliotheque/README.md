@@ -10,7 +10,7 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 | Type | Rôle | Exemple ici |
 |---|---|---|
 | `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : référentiel **expérimental** du programme officiel, CM1 (158 notions), 5e, 4e et 3e, non relu |
-| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
+| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) ; `fiches-cm1-experimentales/` : les 158 notions de CM1, 10 matières, ressources officielles éduscol uniquement (données d'expérimentation, à relire) |
 | `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
 
@@ -139,7 +139,7 @@ Les clés ci-dessus ont un libellé prévu ; toute autre clé est transmise tell
 
 ## Règles pour publier une bibliothèque ici
 
-1. **Contenu libre uniquement.** Licences acceptées : domaine public, CC0, CC BY, CC BY-SA, Licence Ouverte (etalab-2.0), GFDL, MIT. Refusées : NC (pas d'usage commercial), ND (pas de modification), « droits réservés », « usage en classe seulement », licence non indiquée. La liste des sources vérifiées est dans [`fiches-3e-experimentales/SOURCES.md`](fiches-3e-experimentales/SOURCES.md).
+1. **Contenu libre uniquement.** Licences acceptées : domaine public, CC0, CC BY, CC BY-SA, Licence Ouverte (etalab-2.0), GFDL, MIT. Refusées : NC (pas d'usage commercial), ND (pas de modification), « droits réservés », « usage en classe seulement », licence non indiquée. La liste des sources vérifiées est dans [`fiches-3e-experimentales/SOURCES.md`](fiches-3e-experimentales/SOURCES.md) et, pour le CM1 (sources officielles uniquement), dans [`fiches-cm1-experimentales/SOURCES.md`](fiches-cm1-experimentales/SOURCES.md).
 2. **Chaque fiche cite ses sources**, avec leur licence et le lien vers la version consultée. Un contenu adapté d'une source CC BY-SA reste en CC BY-SA.
 3. **Rien de copié tel quel depuis un manuel ou un site non libre**, même « gratuit ».
 4. **Les calculs des exercices sont vérifiés** avant publication.
