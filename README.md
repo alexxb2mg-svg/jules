@@ -10,7 +10,7 @@ Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : a
 
 Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants, développeurs. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
-> **Où en est le projet.** Jules fonctionne aujourd'hui comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'interface de cours interactif, les outils par matière et les adaptations (troubles dys, etc.) sont en cours de conception : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+> **Où en est le projet.** Jules fonctionne aujourd'hui comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'interface de cours interactif et les outils par matière sont en cours de conception ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
 ## Où va Jules
 
@@ -24,7 +24,7 @@ Quatre idées guident la suite :
 | **Un cours, pas un chat** | L'élève suit une leçon faite de blocs : explication, frise, carte, exercice, question ouverte. Jules est à côté, il voit ce que fait l'élève et intervient au bon moment. |
 | **Des bibliothèques qui se branchent** | Chaque bibliothèque (un programme officiel, un cours d'enseignant, une méthode de lecture) dit à quels niveaux et à quels âges elle s'adresse. Jules charge celles qui correspondent à l'élève. |
 | **Des outils par matière** | Frise chronologique, calculatrice, géométrie, conjugueur, carte muette... Chaque outil est une petite brique écrite par la communauté, que Jules peut ouvrir au milieu d'une leçon. |
-| **Une interface qui s'adapte à l'élève** | Mode dys (police, espacements, lecture à voix haute, consignes découpées), mode attention, gros caractères : le profil de l'élève change l'affichage et la façon dont Jules s'exprime. |
+| **Une interface qui s'adapte à l'élève** | Les besoins particuliers de l'élève (troubles dys, attention, vue...) changeront l'affichage et la façon dont Jules s'exprime. Chaque trouble a ses particularités : c'est un chantier à part entière, qui sera construit plus tard avec des professionnels. Sa place est déjà réservée. |
 
 Le détail, les étapes et les règles de sécurité des outils sont dans [docs/VISION.md](docs/VISION.md).
 
@@ -123,7 +123,7 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
 | Bibliothèques | `bibliotheque/` | Contenus par niveau, âge et matière, chargés selon l'élève | une première (3e), format à généraliser |
 | Outils | à définir | Frise, calculatrice, carte... ouverts par Jules pendant une leçon | à concevoir |
-| Adaptations | à définir | Mode dys, attention, gros caractères : affichage et consignes adaptés | à concevoir |
+| Adaptations | `adaptations/` | Besoins particuliers (troubles dys, attention...) : affichage et consignes adaptés | emplacement réservé |
 
 Les textes s'accordent selon le genre indiqué dans le profil (fille, garçon ou neutre) : `{{elle|il|iel}}` dans un fichier de consignes donne la bonne forme. Les variables `{prenom}`, `{classe}` et `{parent}` viennent aussi du profil.
 
@@ -153,7 +153,7 @@ Signaler une faille : voir [SECURITY.md](SECURITY.md).
 
 ## Contribuer
 
-Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cours, outils pour une matière, adaptations pour les élèves dys, nouvelles personas, relecture pédagogique, tests avec de vrais élèves : toutes les aides comptent. Pas besoin de savoir coder pour écrire une fiche ou décrire un outil. Le guide est dans [CONTRIBUTING.md](CONTRIBUTING.md), le code de conduite dans [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cours, outils pour une matière, réflexion sur les adaptations aux troubles dys, nouvelles personas, relecture pédagogique, tests avec de vrais élèves : toutes les aides comptent. Pas besoin de savoir coder pour écrire une fiche ou décrire un outil. Le guide est dans [CONTRIBUTING.md](CONTRIBUTING.md), le code de conduite dans [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## Licence
 
