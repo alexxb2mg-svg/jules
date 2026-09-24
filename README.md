@@ -2,19 +2,39 @@
 
 # Jules
 
-**Un tuteur de devoirs libre et gratuit pour les collégiens. Il guide pas à pas et ne donne jamais la réponse.**
+**Un tuteur libre et gratuit qui s'adapte à chaque élève. Il guide pas à pas et ne donne jamais la réponse.**
 
-Jules aide un enfant à faire ses devoirs comme le ferait un bon répétiteur : il demande ce qui a déjà été essayé, découpe le problème en petites marches et laisse l'enfant trouver. Il retient ce qui bloque et envoie chaque soir un court bilan au parent. Si l'enfant parle de harcèlement ou de mal-être, le parent est prévenu tout de suite.
+Jules aide un enfant à apprendre comme le ferait un bon répétiteur : il demande ce qui a déjà été essayé, découpe le problème en petites marches et laisse l'élève trouver. Il retient ce qui bloque et envoie chaque soir un court bilan au parent. Si l'enfant parle de harcèlement ou de mal-être, le parent est prévenu tout de suite.
 
-Le projet est ouvert à tous : parents, enseignants, étudiants, développeurs. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
+Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : au départ il est vide, puis il charge ce dont l'élève a besoin (le programme de sa classe, les outils de ses matières, les adaptations qui l'aident à lire ou à se concentrer) et s'enrichit ensuite de ses cours, de ses devoirs et de ses progrès. Le même Jules peut accompagner un élève de CM1 en conjugaison et un lycéen en physique.
 
-## Ce que fait Jules
+Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants, développeurs. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
+
+> **Où en est le projet.** Jules fonctionne aujourd'hui comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'interface de cours interactif, les outils par matière et les adaptations (troubles dys, etc.) sont en cours de conception : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+
+## Où va Jules
+
+<p align="center"><img src="docs/maquette-cours.png" alt="Maquette : une leçon d'histoire avec une frise chronologique interactive au centre, le parcours de l'élève et les outils de la matière à gauche, Jules et le studio de révision à droite" width="820"></p>
+<p align="center"><em>Maquette de principe, rien n'est encore branché. Au centre le cours, à gauche le parcours et les outils de la matière, à droite Jules qui accompagne.</em></p>
+
+Quatre idées guident la suite :
+
+| Idée | Ce que ça veut dire |
+|---|---|
+| **Un cours, pas un chat** | L'élève suit une leçon faite de blocs : explication, frise, carte, exercice, question ouverte. Jules est à côté, il voit ce que fait l'élève et intervient au bon moment. |
+| **Des bibliothèques qui se branchent** | Chaque bibliothèque (un programme officiel, un cours d'enseignant, une méthode de lecture) dit à quels niveaux et à quels âges elle s'adresse. Jules charge celles qui correspondent à l'élève. |
+| **Des outils par matière** | Frise chronologique, calculatrice, géométrie, conjugueur, carte muette... Chaque outil est une petite brique écrite par la communauté, que Jules peut ouvrir au milieu d'une leçon. |
+| **Une interface qui s'adapte à l'élève** | Mode dys (police, espacements, lecture à voix haute, consignes découpées), mode attention, gros caractères : le profil de l'élève change l'affichage et la façon dont Jules s'exprime. |
+
+Le détail, les étapes et les règles de sécurité des outils sont dans [docs/VISION.md](docs/VISION.md).
+
+## Ce que fait Jules aujourd'hui
 
 - **Aide aux devoirs** avec la photo de l'exercice, sans jamais donner la réponse, même si l'enfant insiste.
 - **Cinq modes** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
-- **Programme officiel de 3e** découpé en notions, avec la source officielle de chacune (`bibliotheque/`).
+- **Une première bibliothèque** : le programme officiel de 3e découpé en notions, avec la source officielle de chacune (`bibliotheque/`). Les autres niveaux, du primaire au lycée, sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité.
 
 ## Installation
@@ -77,15 +97,18 @@ jules rapport [AAAA-MM-JJ] affiche le bilan d'un jour, sans l'envoyer
 
 Tout se branche par la configuration, sans toucher au cœur :
 
-| Brique | Où | Rôle |
-|---|---|---|
-| Persona | `persona/<id>/` | La personnalité : nom, ton, couleurs, avatar, en fichiers texte |
-| Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié |
-| Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas |
-| Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève |
-| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir... |
-| Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram |
-| Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic |
+| Brique | Où | Rôle | État |
+|---|---|---|---|
+| Persona | `persona/<id>/` | La personnalité : nom, ton, couleurs, avatar, en fichiers texte | en place |
+| Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié | en place |
+| Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas | en place |
+| Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève | en place |
+| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir... | en place |
+| Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
+| Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
+| Bibliothèques | `bibliotheque/` | Contenus par niveau, âge et matière, chargés selon l'élève | une première (3e), format à généraliser |
+| Outils | à définir | Frise, calculatrice, carte... ouverts par Jules pendant une leçon | à concevoir |
+| Adaptations | à définir | Mode dys, attention, gros caractères : affichage et consignes adaptés | à concevoir |
 
 Les textes s'accordent selon le genre indiqué dans le profil (fille, garçon ou neutre) : `{{elle|il|iel}}` dans un fichier de consignes donne la bonne forme. Les variables `{prenom}`, `{classe}` et `{parent}` viennent aussi du profil.
 
@@ -109,12 +132,13 @@ Des tests et un contrôle au moment du commit empêchent ces fichiers privés d'
 - Les codes d'accès sont stockés sous forme d'empreinte salée (scrypt), jamais en clair.
 - Les pages web refusent tout script ou style venu d'ailleurs (Content-Security-Policy).
 - Les photos sont vérifiées (vraie image, 8 Mo au plus) avant d'être enregistrées.
+- Les futurs outils de la communauté tourneront dans un espace isolé, sans accès au réseau ni aux données de l'élève, et passeront une validation encadrée avant d'être proposés : voir [docs/VISION.md](docs/VISION.md#4-la-sécurité-des-outils).
 
 Signaler une faille : voir [SECURITY.md](SECURITY.md).
 
 ## Contribuer
 
-Fiches de cours, nouvelles personas, modes, modules, relecture pédagogique, tests avec de vrais élèves, accessibilité : toutes les aides comptent. Pas besoin de savoir coder pour écrire une fiche. Le guide est dans [CONTRIBUTING.md](CONTRIBUTING.md), le code de conduite dans [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cours, outils pour une matière, adaptations pour les élèves dys, nouvelles personas, relecture pédagogique, tests avec de vrais élèves : toutes les aides comptent. Pas besoin de savoir coder pour écrire une fiche ou décrire un outil. Le guide est dans [CONTRIBUTING.md](CONTRIBUTING.md), le code de conduite dans [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
 ## Licence
 
