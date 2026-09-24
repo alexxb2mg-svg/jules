@@ -53,7 +53,7 @@ class Politique:
     """Seuils du §6.2 (entree / sortie, pour l'hysteresis)."""
 
     gamma_reussite: float = 0.4
-    gamma_frustration: float = 0.5
+    gamma_frustration: float = 0.6  # un seul « j'en ai marre » suffit a entrer en frustration (0,6 >= 0,6)
     erreurs_consecutives: int = 3
     frustration_entree: float = 0.60
     frustration_sortie: float = 0.45
@@ -72,6 +72,8 @@ class Politique:
 @dataclass(frozen=True)
 class Parametres:
     capteurs: dict[str, Capteur] = field(default_factory=lambda: dict(CAPTEURS_DEFAUT))
+    # capteurs recales par matiere (§7.2, second niveau) ; vide tant que la calibration n'a pas tourne
+    capteurs_matiere: dict[str, dict[str, Capteur]] = field(default_factory=dict)
     apprentissage: dict[int, float] = field(default_factory=lambda: dict(APPRENTISSAGE_DEFAUT))
     poids_certitude: dict[str, float] = field(default_factory=lambda: {"haute": 1.0, "moyenne": 0.7, "basse": 0.4})
     poids_partiel: float = 0.5
@@ -86,7 +88,7 @@ class Parametres:
     politique: Politique = field(default_factory=Politique)
     calibration_active: bool = True
     epreuves_min: int = 8
-    force_a_priori: float = 5.0
+    force_a_priori: float = 3.0  # mesure au simulateur, voir §9 (A4) : 5 recale trop lentement, 1 trop bruite
     fenetre_mesure: int = 60
     carnet_actif: bool = True
     seuil_surprise: float = 1.386  # ln 4 arrondi : Jules donnait 25 % ou moins a ce qui s'est passe (§8.1)
@@ -94,9 +96,17 @@ class Parametres:
     expiration_jours: int = 45
     lecons_prompt: int = 5
 
-    def avec_capteurs(self, capteurs: dict[str, Capteur]) -> Parametres:
+    def avec_capteurs(
+        self, capteurs: dict[str, Capteur], par_matiere: dict[str, dict[str, Capteur]] | None = None
+    ) -> Parametres:
         """Copie avec des capteurs recales (la calibration ne modifie jamais les parametres en place)."""
-        return replace(self, capteurs={**self.capteurs, **capteurs})
+        return replace(self, capteurs={**self.capteurs, **capteurs}, capteurs_matiere=dict(par_matiere or {}))
+
+    def capteur(self, nom: str, matiere: str | None = None) -> Capteur:
+        """Le capteur a utiliser : celui de la matiere s'il a ete recale, sinon celui de l'eleve."""
+        if matiere is not None and nom in self.capteurs_matiere.get(matiere, {}):
+            return self.capteurs_matiere[matiere][nom]
+        return self.capteurs[nom]
 
 
 def _proba(nom: str, valeur: Any, ouvert: bool = True) -> float:

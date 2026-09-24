@@ -3,8 +3,8 @@
 Deux familles :
   - ce qui est ecrit dans le squelette (primitives, oubli FSRS, parametres, extraction, filtre du
     carnet, mesures) : teste tout de suite, valeurs de reference calculees a la main ;
-  - les criteres d'acceptation A1 a A8 (§9) : marques `lot N`, a activer par le lot qui les rend
-    possibles. Un lot n'est pas fini tant que ses tests ne passent pas sans marque.
+  - les lots 2 a 7 (estimateur, simulateur, calibration, politique, carnet, brique) : tests unitaires
+    ici, criteres d'acceptation A1 a A8 du §9 dans tests/test_modele_eleve_acceptation.py.
 """
 
 from __future__ import annotations
@@ -21,10 +21,6 @@ from jules.apprentissage.parametres import FSRS45_DEFAUT, Capteur, ErreurParamet
 
 DONNEES = Path(__file__).parent / "cas" / "modele_eleve"
 W = FSRS45_DEFAUT
-
-
-def lot(n: int) -> pytest.MarkDecorator:
-    return pytest.mark.skip(reason=f"lot {n} : docs/MODELE-ELEVE.md §12")
 
 
 # --- primitives bayesiennes (§4) ---------------------------------------------
@@ -336,33 +332,3 @@ def test_mesures_refusent_les_entrees_invalides() -> None:
         mesures.brier([0.5], [2])
     with pytest.raises(ValueError):
         mesures.brier([1.5], [1])
-
-
-# --- criteres d'acceptation (§9), a activer par les lots -----------------------------
-@lot(2)
-def test_estimateur_bkt_ordre_des_operations() -> None:
-    """Un cas deroule a la main : prior, trois tentatives, plafond, transition."""
-    e = estimateurs.creer("bkt", Parametres())
-    obs = Observation("Maths : x", "tentative_aide0", 1, 1.0, "s1", "2026-09-24T10:00:00+02:00")
-    etat = e.observer(None, obs, {})
-    assert etat.n_eff == pytest.approx(1.0)
-
-
-@lot(3)
-def test_a1_a2_a3_le_modele_predit_mieux_que_l_ancienne_regle() -> None: ...
-
-
-@lot(4)
-def test_a4_la_calibration_corrige_un_juge_biaise() -> None: ...
-
-
-@lot(4)
-def test_a5_la_calibration_ne_degrade_pas_un_juge_honnete() -> None: ...
-
-
-@lot(5)
-def test_a6_la_politique_n_oscille_pas() -> None: ...
-
-
-@lot(7)
-def test_a8_mise_a_jour_en_moins_de_5_ms() -> None: ...

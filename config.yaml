@@ -66,7 +66,7 @@ modules:
       prior: {global: 0.30, force: 5}                                        # §4.5
       repetition: {decroissance: 0.5, plafond_seance: 2.0}                   # §4.3
       oubli: {retention_cible: 0.85, glissement_epreuve: 0.05, chance_epreuve: 0.10}  # §5
-      calibration: {actif: true, epreuves_min: 8, force_a_priori: 5, fenetre_mesure: 60}  # §7
+      calibration: {actif: true, epreuves_min: 8, force_a_priori: 3, fenetre_mesure: 60}  # §7
       carnet: {actif: true, seuil_surprise: 1.386, max_lecons: 12, expiration_jours: 45}  # §8
 
 notifieurs:

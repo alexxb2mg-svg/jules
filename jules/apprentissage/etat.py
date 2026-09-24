@@ -78,6 +78,8 @@ class EtatNotion:
     rangs_seance: dict[str, int] = field(default_factory=dict)  # capteur -> nombre d'observations (§4.3)
     reussite_sans_aide_seance: bool = False  # pour la note FSRS de premiere seance (§5.1)
     reussite_avec_aide_seance: bool = False
+    seance_close: bool = False  # la seance courante a deja ete notee pour FSRS (clore_seance idempotent)
+    retention_seance: float | None = None  # R au debut de la seance courante (revision FSRS, §5.2)
 
     def vers_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -125,6 +127,23 @@ class Reglage:
 
 
 @dataclass(frozen=True)
+class ResultatEpreuve:
+    """Le resultat d'une notion a une epreuve sans aide : la verite terrain du modele (§5.3, §7)."""
+
+    notion: str
+    horodatage: str
+    tenu: bool
+    epreuve: str  # id de la conversation d'epreuve
+
+    def vers_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+    @classmethod
+    def depuis_dict(cls, donnees: dict[str, Any]) -> ResultatEpreuve:
+        return _depuis(cls, donnees)
+
+
+@dataclass(frozen=True)
 class Prediction:
     """Prediction figee au lancement d'une epreuve (§5.3, §7.4)."""
 
@@ -156,6 +175,7 @@ class Lecon:
     statut: Literal["active", "confirmee", "retiree"] = "active"
     pertes_avant: list[float] = field(default_factory=list)  # perte log. des epreuves de la portee, avant
     pertes_apres: list[float] = field(default_factory=list)
+    derniere_epreuve: str = ""  # ISO : derniere epreuve dans la portee (expiration, §8.3)
     motif_retrait: str = ""
 
     def vers_dict(self) -> dict[str, Any]:

@@ -9,11 +9,18 @@ from __future__ import annotations
 
 import math
 from collections.abc import Sequence
+from datetime import datetime
 
 DECAY = -0.5
 FACTOR = 19 / 81  # R(S, S) = 0,9
 D_MIN, D_MAX = 1.0, 10.0
 S_MIN = 0.01  # jours : evite les divisions par zero sur une stabilite degeneree
+
+
+def jours_entre(debut: str, fin: str) -> float:
+    """Ecart en jours (fractionnaires) entre deux horodatages ISO 8601 ; jamais negatif."""
+    ecart = datetime.fromisoformat(fin) - datetime.fromisoformat(debut)
+    return max(0.0, ecart.total_seconds() / 86400)
 
 
 def _bornee(d: float) -> float:
