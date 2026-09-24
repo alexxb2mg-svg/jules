@@ -148,7 +148,7 @@
     const encart = document.createElement("div");
     encart.className = "encart-epreuve";
     const liste = notions.map((n) => MS.echapper(n.notion)).join(", ");
-    encart.innerHTML = `<p><strong>🧭 Épreuve sans aide</strong> : tu avais compris ${liste} il y a quelques jours. Est-ce que ça a tenu ?</p>`;
+    encart.innerHTML = `<p><strong>🧭 Épreuve sans aide</strong> : il y a quelques jours, tu avais compris ${liste}. Est-ce que ça a tenu ?</p>`;
     const b = document.createElement("button");
     b.className = "bouton";
     b.textContent = "Faire l'épreuve";
@@ -169,6 +169,11 @@
     ajouterBulle("bot", conv.presentation);
     $("texte").focus();
     fermerCote();
+  }
+
+  const epreuveFinie = (texte) => /preuve terminée/i.test(texte || "");
+  function fermerSiEpreuveFinie(texte) {
+    if (etat.conv && etat.conv.mode === "epreuve" && epreuveFinie(texte)) $("saisie").classList.add("cache");
   }
 
   function nomMode(id) {
@@ -201,6 +206,8 @@
     for (const m of conv.messages) {
       ajouterBulle(m.role, m.texte, m.images.map((n) => `/api/images/${encodeURIComponent(n)}`));
     }
+    const dernier = conv.messages[conv.messages.length - 1];
+    if (dernier && dernier.role !== "eleve") fermerSiEpreuveFinie(dernier.texte);
     marquerActif(id);
     chargerNotion();
     fermerCote();
@@ -253,6 +260,7 @@
       const r = await MS.api(`/api/conversations/${encodeURIComponent(etat.conv.id)}/messages`, { method: "POST", body: donnees });
       attente.remove();
       ajouterBulle("bot", r.reponse);
+      fermerSiEpreuveFinie(r.reponse);
       chargerHistorique();
       if (!etat.notion) chargerNotion();
     } catch (err) {

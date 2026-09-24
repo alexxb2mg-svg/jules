@@ -101,7 +101,7 @@ def test_epreuve_de_bout_en_bout(tuteur):
     assert resultat["pas_tenues"] == ["Mathématiques : racine carrée"]
     statuts = {e["donnees"]["notion"]: e["donnees"]["statut"] for e in tuteur.stockage.evenements("suivi")[:2]}
     assert statuts == {"Thalès": "acquis", "racine carrée": "en_cours"}
-    assert module.candidates() == []  # plus rien a reprendre
+    assert module.candidates() == []  # plus rien a reprendre (et une epreuve par jour au plus)
 
     # un nouveau message apres la fin ne recompte rien
     tuteur.echanger(lancee["id"], "merci")
@@ -147,3 +147,11 @@ def test_message_de_fin_sans_epreuve_enregistree_ignore(tuteur):
     conv = tuteur.stockage.creer_conversation("epreuve")  # etat absent : rien a enregistrer
     tuteur.module("epreuve").apres_echange(conv, Message("eleve", "x"), Message("bot", "Épreuve terminée."))
     assert tuteur.stockage.evenements("epreuve") == []
+
+
+def test_une_epreuve_par_jour_au_plus(tuteur):
+    """L'invitation disparait des le lancement : pas de deuxieme epreuve le meme jour, meme inachevee."""
+    preparer_notions_comprises(tuteur)
+    module = tuteur.module("epreuve")
+    module.commencer()
+    assert module.candidates() == []

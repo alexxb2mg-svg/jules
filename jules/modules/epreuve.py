@@ -9,6 +9,7 @@ a tenu :
 Deroulement :
   1. candidates() choisit les notions dont le dernier etat connu est "compris", vieux d'au moins
      `delai_jours` et d'au plus `fenetre_jours` (les plus anciennes d'abord, `notions_max` au plus).
+     Une epreuve par jour au plus : l'invitation disparait des le lancement.
   2. L'eleve voit la proposition sur l'ecran d'accueil et la lance (POST /api/eleve/epreuve/commencer).
      La conversation est en mode "epreuve" (consignes/modes/epreuve.md, mode cache de la grille).
   3. Quand Jules ecrit « Épreuve terminée. », le modele rapide lit le bilan et renvoie, notion par
@@ -108,6 +109,9 @@ class Brique(Module):
         return datetime.now().astimezone().date()
 
     def candidates(self) -> list[dict[str, str]]:
+        derniere = self.tuteur.stockage.lire_etat(ESPACE, "derniere") or {}
+        if derniere.get("jour") == self.aujourdhui().isoformat():
+            return []  # une epreuve par jour au plus
         return candidates(
             self.tuteur.stockage.evenements("suivi", limite=2000),
             self.aujourdhui(),
@@ -127,6 +131,7 @@ class Brique(Module):
         conv = stockage.creer_conversation(MODE)
         stockage.renommer(conv.id, TITRE)
         stockage.ecrire_etat(ESPACE, conv.id, {"notions": notions, "terminee": False})
+        stockage.ecrire_etat(ESPACE, "derniere", {"jour": self.aujourdhui().isoformat(), "conversation": conv.id})
         profil = self.tuteur.profil()
         presentation = remplir(
             PRESENTATION,
