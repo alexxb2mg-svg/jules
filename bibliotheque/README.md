@@ -5,12 +5,13 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 
 > **État actuel : expérimental.** Les bibliothèques publiées ici servent à tester le mécanisme. Aucune n'est validée par l'Éducation nationale ni par un enseignant. Le jour où des bibliothèques certifiées, ou les contenus d'un enseignant, seront disponibles, elles se brancheront au même endroit, sans toucher au code.
 
-## Les trois types
+## Les quatre types
 
 | Type | Rôle | Exemple ici |
 |---|---|---|
 | `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : programme officiel de 3e, 252 notions |
 | `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
+| `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
 
 Chaque bibliothèque déclare aussi un **statut**, que Jules transmet au modèle et que l'élève voit dans le sélecteur :
@@ -65,6 +66,10 @@ description: >-
 ### Référentiel
 
 `<niveau>/<matiere>.yaml`, format décrit dans [`programme/SCHEMA.md`](programme/SCHEMA.md). Les fichiers qui commencent par `_` sont des annexes (ex. `_brevet.yaml`) et ne contiennent pas de notions.
+
+### Leçons : `lecons/<matiere>/<notion>.yaml`
+
+Format complet (les sept types de blocs, ce qui fait refuser une leçon, la règle « la réponse ne quitte jamais le serveur ») dans [`SCHEMA-LECON.md`](SCHEMA-LECON.md), écrit pour un contributeur non développeur ; contrat technique complet dans `docs/COURS-CONTRAT.md`. Une leçon porte sur une seule notion du référentiel, fait 3 à 20 blocs et sert l'interface de cours (`/cours`), à la différence d'une fiche qui alimente l'aide aux devoirs en conversation.
 
 ### Fiches : `fiches/<matiere>/<id-de-notion>.yaml`
 
