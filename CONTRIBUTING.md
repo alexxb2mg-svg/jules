@@ -9,8 +9,8 @@ Merci de votre intérêt. Jules est un projet de parents, d'enseignants et de b�
 | Enseignant, étudiant | écrire ou relire une fiche de cours, relire les consignes pédagogiques | non |
 | Parent | tester Jules avec votre enfant et raconter ce qui coince (issue « Retour d'usage ») | non |
 | Enseignant du primaire, du collège ou du lycée | décrire le programme d'un autre niveau, en suivant le format de `bibliotheque/programme/SCHEMA.md` | non |
-| Orthophoniste, ergothérapeute, famille concernée | aider à concevoir les adaptations (mode dys, attention) : voir [docs/VISION.md](docs/VISION.md) | non |
-| Spécialiste de l'accessibilité | proposer des améliorations (dyslexie, lecture à voix haute, contrastes) | pas forcément |
+| Orthophoniste, ergothérapeute, enseignant spécialisé, famille concernée | préparer le futur chantier des adaptations aux troubles dys et apparentés : voir [adaptations/](adaptations/README.md) | non |
+| Spécialiste de l'accessibilité | proposer des améliorations (lecture à voix haute, contrastes, navigation au clavier) | pas forcément |
 | Enseignant ou développeur | imaginer un outil pour une matière (frise, géométrie, conjugueur...) : décrivez-le dans un ticket « Idée » | pas pour le décrire |
 | Créatif | créer une nouvelle persona (personnalité, avatar, couleurs) | non |
 | Développeur Python | modules, moteurs d'IA, notifieurs, tests | oui |

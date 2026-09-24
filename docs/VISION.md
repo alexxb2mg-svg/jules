@@ -10,7 +10,7 @@ Jules est un **harnais** qui s'adapte à l'élève : au départ il ne sait rien 
 Profil de l'élève          ce que Jules charge                  ce qui l'enrichit ensuite
 (âge, classe,        --->  bibliothèques de son niveau   --->   cours photographiés, devoirs,
  matières, besoins)        outils de ses matières               notions comprises ou bloquées,
-                           adaptations (dys, attention...)      remarques du parent
+                           adaptations (troubles dys...)        remarques du parent
 ```
 
 Aujourd'hui Jules est un tuteur par conversation, avec une seule bibliothèque (le programme de 3e). La suite le fait évoluer sur quatre axes.
@@ -123,32 +123,18 @@ Par défaut, Jules n'installe que des outils du catalogue validé. Installer un 
 
 ## 5. Une interface qui s'adapte à l'élève
 
-Le profil de l'élève peut indiquer des besoins particuliers. Ils changent à la fois **l'affichage** et **la façon dont Jules s'exprime**. Ces besoins sont indiqués par le parent : Jules ne pose jamais de diagnostic.
+**Emplacement réservé : ce pan du projet sera conçu plus tard.**
 
-Pistes pour un **mode dys** (à construire avec des orthophonistes, des ergothérapeutes et des familles concernées) :
+Le profil de l'élève pourra indiquer des besoins particuliers. Ils changeront à la fois **l'affichage** et **la façon dont Jules s'exprime**. Chaque besoin sera une brique à part, une **adaptation**, rangée dans le dossier [`adaptations/`](../adaptations/).
 
-- police, taille, espacement des lettres et des lignes réglables ; l'effet d'une police varie d'un enfant à l'autre, le choix doit donc rester libre ;
-- lecture à voix haute des consignes et des réponses de Jules, faite sur l'appareil ;
-- coloration des syllabes ou alternance de couleurs par ligne, au choix ;
-- consignes découpées : une seule étape affichée à la fois ;
-- phrases plus courtes et vocabulaire expliqué dans les réponses de Jules ;
-- pas de minuterie, pas de pénalité pour la lenteur ;
-- en maths, calculatrice toujours disponible si le plan d'accompagnement de l'élève le prévoit.
+Les troubles dys en sont le cœur : dyslexie, dysorthographie, dyscalculie, dyspraxie, dysgraphie, dysphasie... Chacun a ses particularités et ses besoins, parfois opposés d'un trouble à l'autre, et un même élève peut en cumuler plusieurs. Le champ s'étend aussi aux troubles de l'attention, à la déficience visuelle ou auditive, etc. C'est un chantier à part entière, qui se construira avec des orthophonistes, des ergothérapeutes, des enseignants spécialisés et des familles concernées.
 
-D'autres adaptations pourront suivre sur le même modèle : attention (séances courtes, pauses proposées, moins d'éléments à l'écran), vue (gros caractères, fort contraste), etc.
+Ce qui est déjà posé, pour que l'architecture laisse la place :
 
-Proposition de fiche d'identité d'une adaptation (`adaptations/<id>/adaptation.yaml`) :
-
-```yaml
-id: dys-lecture
-titre: "Aide à la lecture (dyslexie)"
-interface:            # réglages d'affichage appliqués à toute l'interface et aux outils
-  espacement_lettres: 0.12em
-  interligne: 1.8
-  lecture_voix_haute: true
-  une_etape_a_la_fois: true
-consignes: consignes.md   # ce qui change dans la façon dont Jules s'exprime
-```
+- une adaptation par besoin, et plusieurs adaptations peuvent se combiner chez un même élève ;
+- une adaptation agit sur toute l'interface, y compris sur les outils des matières : c'est une condition pour qu'un outil soit validé (section 4) ;
+- elle peut aussi modifier les consignes données à Jules (rythme, longueur des phrases, découpage) ;
+- les besoins sont indiqués par le parent : Jules ne pose jamais de diagnostic.
 
 ## Feuille de route proposée
 
@@ -156,11 +142,11 @@ consignes: consignes.md   # ce qui change dans la façon dont Jules s'exprime
 |---|---|---|
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | à faire |
-| 2 | Adaptations : besoins dans le profil, premier mode dys sur l'interface actuelle | à faire |
-| 3 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
-| 4 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
-| 5 | Studio : carte mentale, fiche, quiz, cartes mémoire avec répétition espacée | à faire |
-| 6 | Catalogue communautaire de bibliothèques et d'outils | à faire |
+| 2 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
+| 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
+| 4 | Studio : carte mentale, fiche, quiz, cartes mémoire avec répétition espacée | à faire |
+| 5 | Catalogue communautaire de bibliothèques et d'outils | à faire |
+| à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
 
 ## Questions ouvertes
 
