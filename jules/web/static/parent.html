@@ -59,6 +59,25 @@
       <h2>Conversations du jour</h2>
       <div id="conversations" class="muet">Chargement…</div>
     </section>
+
+    <section class="carte" id="carte-dossier">
+      <h2>Le dossier de l'élève</h2>
+      <p class="muet">Tout ce que Jules garde reste sur cet ordinateur : conversations, photos, notions travaillées, signaux, bilans envoyés et vos notes. Vous pouvez le récupérer ou l'effacer quand vous voulez.</p>
+      <div class="rangee">
+        <a class="bouton secondaire" id="exporter" href="/api/parent/dossier/export" download>Télécharger tout le dossier (.zip)</a>
+      </div>
+      <div class="zone-danger espace-haut">
+        <h3>Tout effacer</h3>
+        <p>Efface définitivement les conversations, les photos, les notions suivies, les signaux, les bilans et vos notes. <b>Impossible de revenir en arrière</b> : téléchargez d'abord le dossier si vous voulez le garder.</p>
+        <p class="muet">Restent en place : le profil de l'élève, les réglages et les codes d'accès. Ce qui a déjà été envoyé ailleurs (Telegram…) ne peut pas être effacé d'ici.</p>
+        <form id="form-effacer" class="rangee">
+          <label for="effacer-mot">Pour confirmer, tapez <b>EFFACER</b> :</label>
+          <input type="text" id="effacer-mot" autocomplete="off" spellcheck="false">
+          <button class="bouton danger" type="submit" id="effacer-tout" disabled>Tout effacer</button>
+        </form>
+        <div id="etat-effacement" class="muet"></div>
+      </div>
+    </section>
   </div>
 
   <script src="/static/commun.js"></script>
