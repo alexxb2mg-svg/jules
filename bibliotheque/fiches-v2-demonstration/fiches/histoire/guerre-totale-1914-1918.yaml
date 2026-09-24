@@ -1,0 +1,303 @@
+# Fiche v2 (format : docs/FICHES-V2.md). EXPÉRIMENTALE tant que `relecture.statut` n'est pas `relue`.
+# Licence : voir `sources` et le bibliotheque.yaml du dossier. Relecture bienvenue.
+format: 2
+notion: guerre-totale-1914-1918
+version: 1
+etat: verifiee
+declencheurs:
+- tranchées
+- poilus
+- guerre des tranchées
+- génocide arménien
+- révolution bolchevique
+- Verdun
+- armistice de 1918
+- munitionnettes
+prerequis: []
+couverture: 'Couvre la guerre totale, les deux camps, le génocide des Arméniens et la révolution bolchevique de 1917. L''installation
+  du communisme stalinien dans les années 1920, citée par le programme, n''est pas encore traitée : les sources de cette fiche
+  s''arrêtent à 1922 (naissance de l''URSS).'
+essentiel: 'La Première Guerre mondiale dure du 28 juillet 1914 au 11 novembre 1918, date de l''armistice signé à Rethondes.
+
+
+  Deux camps s''affrontent. D''un côté la Triple-Entente (France, Royaume-Uni, Empire russe), rejointe notamment par
+
+  l''Italie en 1915 et les États-Unis. De l''autre, les Empires centraux (Empire allemand, Autriche-Hongrie), soutenus
+
+  par l''Empire ottoman à partir d''octobre 1914 et par la Bulgarie à partir d''octobre 1915.
+
+
+  À partir de 1915, le front se stabilise : c''est la guerre des tranchées. Les soldats français, les « poilus »,
+
+  y vivent dans des conditions extrêmes. Les grandes batailles (Verdun et la Somme en 1916, le Chemin des Dames
+
+  en 1917) font d''immenses pertes.
+
+
+  C''est une guerre totale : tous les moyens des pays sont mis au service de la guerre. Les femmes remplacent les
+
+  hommes mobilisés, par exemple dans les usines d''armement (les « munitionnettes »). L''État contrôle les journaux
+
+  et les lettres, et les habitants prêtent leurs économies à l''État pour financer la guerre.
+
+
+  D''avril 1915 à juillet 1916, le gouvernement ottoman, dirigé par les Jeunes-Turcs, organise le génocide des
+
+  Arméniens : massacres, déportations vers le désert syrien et famine font entre 800 000 et 1,2 million de victimes.
+
+
+  En Russie, la guerre épuise le pays. En 1917, une première révolution renverse le tsar Nicolas II, puis en
+
+  octobre les bolcheviks de Lénine prennent le pouvoir. Ils signent un armistice avec l''Allemagne à Brest-Litovsk
+
+  en décembre 1917. De cette révolution naît l''URSS en 1922.'
+methode:
+- 'Situer la guerre dans le temps : 1914-1918, avec une guerre de mouvement au début puis une guerre de position dans les
+  tranchées à partir de 1915.'
+- 'Distinguer les deux camps : la Triple-Entente et ses alliés contre les Empires centraux et leurs alliés.'
+- 'Pour expliquer « guerre totale », montrer que les civils sont mobilisés autant que les soldats : usines, contrôle de l''information,
+  financement.'
+- 'Pour le génocide des Arméniens, donner la date (1915-1916), l''auteur (le gouvernement ottoman) et le mot juste : génocide,
+  pas seulement massacre.'
+- Relier la sortie de guerre de la Russie à la révolution bolchevique de 1917.
+vocabulaire:
+- terme: guerre totale
+  definition: 'un conflit où tous les moyens d''un pays sont engagés : armée, mais aussi économie, population civile et information'
+- terme: génocide
+  definition: la destruction volontaire et organisée d'un groupe humain en tant que tel
+- terme: bolchevik
+  definition: membre du parti révolutionnaire russe dirigé par Lénine, qui prend le pouvoir en Russie en octobre 1917
+erreurs_frequentes:
+- 'Confondre les dates : la guerre commence en 1914 ; 1918 est l''année de l''armistice.'
+- Oublier que la guerre totale mobilise aussi les civils, pas seulement les soldats.
+- Dire « massacre » quand il faut dire « génocide » pour les Arméniens (destruction organisée d'un peuple).
+- Confondre la Première Guerre mondiale (1914-1918) et la Seconde (1939-1945).
+exemple:
+  enonce: Explique en trois phrases pourquoi la Première Guerre mondiale est qualifiée de « guerre totale ».
+  solution: 'Elle mobilise les soldats sur le front, comme les poilus dans les tranchées, mais aussi les civils à l''arrière
+    : les femmes travaillent dans les usines d''armement. L''État contrôle les journaux et les lettres, et les habitants lui
+    prêtent leurs économies pour financer la guerre. La violence touche aussi les civils, comme le montre le génocide des
+    Arméniens en 1915-1916.'
+exercices:
+- id: annee-debut
+  type: nombre
+  difficulte: 1
+  enonce: En quelle année commence la Première Guerre mondiale ?
+  reponse:
+    valeur: 1914
+    forme: entier
+  indices:
+    relance: Pense aux monuments aux morts de ta commune. Quelles dates y sont gravées pour cette guerre ?
+    methode: Pars de la fin, l'armistice du 11 novembre 1918, et souviens-toi que la guerre a duré un peu plus de quatre ans.
+    etape: On l'appelle souvent « la guerre de 14-18 ». Écris l'année complète du début.
+  pieges:
+  - si:
+      valeur: 1918
+    relance: 1918, c'est l'année de l'armistice, qui met fin aux combats. La guerre a-t-elle commencé la même année ?
+  - si:
+      valeur: 1939
+    relance: Tu penses à la Seconde Guerre mondiale. La Première a lieu une vingtaine d'années plus tôt.
+  solution: La guerre commence en 1914 (le 28 juillet) et se termine par l'armistice du 11 novembre 1918.
+- id: auteur-genocide
+  type: choix
+  difficulte: 1
+  enonce: Qui organise le génocide des Arméniens en 1915-1916 ?
+  reponse:
+    options:
+    - id: a
+      texte: Le gouvernement ottoman des Jeunes-Turcs
+    - id: b
+      texte: L'Empire allemand
+    - id: c
+      texte: Les bolcheviks russes
+    - id: d
+      texte: Le Royaume-Uni
+    bonnes:
+    - a
+  indices:
+    relance: Dans quel empire vivaient les Arméniens au début du XXe siècle ?
+    methode: Cherche qui gouverne cet empire pendant la guerre. C'est ce gouvernement qui donne les ordres de déportation.
+    etape: Les Arméniens vivaient dans l'Empire ottoman. Quelle réponse désigne ceux qui le gouvernent ?
+  pieges:
+  - si:
+      contient:
+      - b
+    relance: Des militaires allemands présents sur place ont laissé faire. Mais qui a donné les ordres, et dans quel empire
+      vivaient les Arméniens ?
+  - si:
+      contient:
+      - c
+    relance: Les bolcheviks prennent le pouvoir en Russie à la fin de 1917. Où vivaient les Arméniens massacrés en 1915 ?
+  - si:
+      contient:
+      - d
+    relance: Le Royaume-Uni est dans le camp opposé à l'Empire ottoman. Dans quel empire vivaient les Arméniens ?
+  solution: Le génocide est organisé par le gouvernement de l'Empire ottoman, dirigé par les Jeunes-Turcs, d'avril 1915 à
+    juillet 1916.
+- id: camps
+  type: association
+  difficulte: 2
+  enonce: Relie chaque pays au camp dans lequel il combat.
+  reponse:
+    gauche:
+    - id: a
+      texte: France
+    - id: b
+      texte: Empire allemand
+    - id: c
+      texte: Royaume-Uni
+    - id: d
+      texte: Autriche-Hongrie
+    - id: e
+      texte: Empire ottoman
+    droite:
+    - id: x
+      texte: La Triple-Entente et ses alliés
+    - id: y
+      texte: Les Empires centraux et leurs alliés
+    paires:
+      a: x
+      b: y
+      c: x
+      d: y
+      e: y
+  indices:
+    relance: La France et l'Allemagne sont ennemies. Place ces deux pays d'abord.
+    methode: 'Pour chaque autre pays, demande-toi : combat-il aux côtés de la France, ou aux côtés de l''Allemagne ?'
+    etape: L'Autriche-Hongrie est l'alliée de l'Allemagne depuis avant la guerre. Et l'Empire ottoman, qui entre en guerre
+      en octobre 1914 ?
+  pieges:
+  - si:
+      diagnostic: une_erreur
+    relance: Une seule association est fausse. Reprends les pays un par un en te demandant de quel côté est leur allié principal.
+  - si:
+      diagnostic: associations_fausses
+    relance: Pars d'un repère sûr, la France et l'Allemagne sont ennemies, et place les autres pays par rapport à elles.
+  solution: 'Triple-Entente et alliés : France, Royaume-Uni. Empires centraux et alliés : Empire allemand, Autriche-Hongrie,
+    Empire ottoman (entré en guerre à leurs côtés en octobre 1914).'
+- id: chronologie
+  type: ordre
+  difficulte: 2
+  enonce: Range ces événements du plus ancien au plus récent.
+  reponse:
+    elements:
+    - id: entree
+      texte: Les pays européens entrent en guerre
+    - id: genocide
+      texte: Le génocide des Arméniens commence dans l'Empire ottoman
+    - id: bolcheviks
+      texte: Les bolcheviks prennent le pouvoir en Russie
+    - id: armistice
+      texte: L'armistice est signé à Rethondes
+  indices:
+    relance: Lequel de ces événements met fin à la guerre ? Et lequel la commence ?
+    methode: Place d'abord le début et la fin de la guerre, puis range les deux autres entre eux.
+    etape: Le génocide des Arméniens commence en avril 1915. Où se place la révolution russe, qui a lieu pendant l'année 1917
+      ?
+  pieges:
+  - si:
+      diagnostic: inversion_voisine
+    relance: Presque. Deux événements voisins sont inversés. Lequel des deux a eu lieu en premier ?
+  - si:
+      diagnostic: ordre_faux
+    relance: Repère d'abord l'événement qui ouvre la guerre et celui qui la ferme, puis range les deux autres entre eux.
+  solution: Entrée en guerre (été 1914), début du génocide des Arméniens (avril 1915), prise du pouvoir par les bolcheviks
+    (octobre 1917), armistice (11 novembre 1918).
+- id: mot-genocide
+  type: texte_court
+  difficulte: 2
+  enonce: Quel mot désigne la destruction volontaire et organisée d'un groupe humain, comme celle des Arméniens en 1915-1916
+    ?
+  reponse:
+    acceptees:
+    - génocide
+    fautes_tolerees: 1
+  indices:
+    relance: 'C''est un mot plus fort que « massacre » : il dit que tout un peuple était visé, volontairement.'
+    methode: Relis le vocabulaire de ta leçon. Un mot désigne la destruction organisée d'un groupe humain en tant que tel.
+    etape: Le mot commence par « géno- » et se termine par « -cide ».
+  pieges:
+  - si:
+      valeur: massacre
+    relance: Un massacre peut être ponctuel. Quel mot désigne la volonté organisée de détruire tout un peuple ?
+  - si:
+      valeur: extermination
+    relance: C'est bien l'idée. Quel mot précis l'historien emploie-t-il pour ce crime contre un peuple ?
+  solution: 'Un génocide : la destruction volontaire et organisée d''un groupe humain en tant que tel. C''est le mot juste
+    pour les Arméniens en 1915-1916.'
+- id: consequence-russie
+  type: choix
+  difficulte: 2
+  enonce: Quelle conséquence la guerre a-t-elle en Russie en 1917 ?
+  reponse:
+    options:
+    - id: a
+      texte: Une révolution porte les bolcheviks au pouvoir
+    - id: b
+      texte: La Russie rejoint les Empires centraux
+    - id: c
+      texte: La Russie remporte la victoire sur l'Allemagne
+    bonnes:
+    - a
+  indices:
+    relance: Dans quel état est la Russie en 1917, après trois ans de guerre ?
+    methode: Pense au tsar Nicolas II et à ce qui lui arrive en 1917. Qui prend ensuite le pouvoir ?
+    etape: En 1917, le tsar est renversé. En octobre, un parti mené par Lénine s'empare du pouvoir. Lequel ?
+  pieges:
+  - si:
+      contient:
+      - c
+    relance: En décembre 1917, la Russie signe un armistice avec l'Allemagne à Brest-Litovsk. Est-ce la victoire ?
+  - si:
+      contient:
+      - b
+    relance: La Russie arrête de combattre en 1917, mais change-t-elle de camp ? Que se passe-t-il à l'intérieur du pays ?
+  solution: La guerre épuise la Russie. En 1917, le tsar Nicolas II est renversé, puis les bolcheviks de Lénine prennent le
+    pouvoir en octobre. Ils signent un armistice avec l'Allemagne à Brest-Litovsk en décembre 1917.
+- id: developpement-guerre-totale
+  type: ouverte
+  difficulte: 3
+  enonce: 'Développement construit : montre, avec deux exemples précis, que la Première Guerre mondiale est une guerre totale.'
+  criteres:
+  - L'élève situe la guerre dans le temps (1914-1918).
+  - L'élève donne un exemple de mobilisation des civils (usines, munitionnettes, contrôle des journaux, prêts à l'État).
+  - L'élève donne un exemple de violence de masse, y compris contre des civils (génocide des Arméniens, 1915-1916).
+  - L'élève a une phrase d'introduction et une phrase de conclusion.
+  indices:
+    relance: Qui participe à la guerre, en dehors des soldats ?
+    methode: Choisis un exemple à l'arrière (économie, information) et un exemple de violence, puis relie-les à l'idée de
+      guerre totale.
+    etape: Tu peux commencer ainsi « De 1914 à 1918, la guerre ne mobilise pas seulement les soldats... », puis continuer
+      avec ton premier exemple.
+  solution: 'De 1914 à 1918, la Première Guerre mondiale ne mobilise pas seulement les soldats. À l''arrière, les femmes remplacent
+    les hommes dans les usines d''armement et l''État contrôle les journaux et les lettres. La violence touche aussi les civils
+    : de 1915 à 1916, le gouvernement ottoman organise le génocide des Arméniens. Toute la société est engagée dans le conflit
+    : c''est une guerre totale.'
+sources:
+- titre: Vikidia, « Première Guerre mondiale »
+  url: https://fr.vikidia.org/w/index.php?title=Premi%C3%A8re_Guerre_mondiale&oldid=2569759
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Génocide arménien »
+  url: https://fr.vikidia.org/w/index.php?title=G%C3%A9nocide_arm%C3%A9nien&oldid=2569180
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Révolution russe »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9volution_russe&oldid=2396185
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
+generation:
+  par: Claude (Anthropic), en session de travail sur le projet
+  le: '2026-09-24'
+  a_partir_de: fiche expérimentale v1 de la notion, relue contre les révisions Vikidia citées
+empreinte: sha256:d730cdd8160d628f35f29bf425972f79cc27b1be90571da91f58f1e994b8e3ed
