@@ -41,6 +41,7 @@ def bilan_notions(evenements: list[dict[str, Any]], jours: int, aujourdhui: date
     return {
         "bloque": [n for n, s in vus.items() if s == "bloque"],
         "compris": [n for n, s in vus.items() if s == "compris"],
+        "acquis": [n for n, s in vus.items() if s == "acquis"],
     }
 
 
@@ -67,6 +68,8 @@ class Brique(Module):
             lignes.append("- Notions qui lui ont posé problème récemment : " + " ; ".join(bilan["bloque"][:8]))
         if bilan["compris"]:
             lignes.append("- Notions réussies récemment : " + " ; ".join(bilan["compris"][:8]))
+        if bilan["acquis"]:
+            lignes.append("- Notions qui ont tenu à une épreuve sans aide : " + " ; ".join(bilan["acquis"][:8]))
         if not lignes:
             return None
         lignes.append(

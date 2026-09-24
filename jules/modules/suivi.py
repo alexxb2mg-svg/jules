@@ -16,6 +16,8 @@ from jules.stockage import Conversation, Message
 journal = logging.getLogger("jules.suivi")
 
 STATUTS = ("compris", "en_cours", "bloque", "hors_scolaire")
+# "acquis" n'est jamais donne par l'analyse : seul le module epreuve l'ecrit, apres une epreuve sans aide.
+MODES_IGNORES = ("epreuve",)
 
 CONSIGNE = """Tu analyses un échange entre un élève de collège et son tuteur IA, pour le suivi scolaire.
 Réponds UNIQUEMENT par un objet JSON, sans texte autour :
@@ -66,6 +68,8 @@ class Brique(Module):
         return vues
 
     def apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> None:
+        if conv.mode in self.reglages.get("modes_ignores", MODES_IGNORES):
+            return  # l'epreuve sans aide tient son propre suivi : pas d'analyse pendant qu'elle se deroule
         connues = self.notions_connues()
         consigne = CONSIGNE
         if connues:

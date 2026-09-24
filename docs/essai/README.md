@@ -16,7 +16,7 @@ Il n'est pas nécessaire de le lire pour utiliser Jules ou y contribuer. Il int�
 | IV. La fenêtre du détour | Étudier une solution n'est pas recevoir la sienne | Jules peut montrer un exemple résolu sur un autre exercice, jamais résoudre celui de l'élève (`consignes/pedagogie.md`) |
 | V. Produire n'est pas apprendre | Ce que la machine produit ne s'apprend pas | Dans le studio, l'élève écrit ses fiches ; Jules relit (`docs/VISION.md`) |
 | VI. L'habitude de chercher | La tentative avant l'aide | Première question de Jules : « Qu'est-ce que tu as déjà essayé ? » |
-| VII. Trois lignes de consigne | Le réglage est un plancher, pas un moteur | Jules ne promet pas de faire progresser ; une épreuve sans aide est prévue |
+| VII. Trois lignes de consigne | Le réglage est un plancher, pas un moteur | Jules ne promet pas de faire progresser ; une épreuve sans aide, quelques jours après, regarde ce qui a tenu (`jules/modules/epreuve.py`) |
 | VIII. L'adulte d'en face | La machine peut aider l'adulte à rouvrir l'intervalle | Bilan du soir au parent, avec une ou deux questions à poser à l'enfant sans savoir faire l'exercice (`jules/modules/rapport.py`) |
 | X. Attends, ou devance | Le harnais, ses consignes lisibles, le dossier de l'élève | Consignes publiques (`jules verifier`), données à la maison, que le parent peut exporter ou effacer |
 | XI. Où passe la fracture | Gratuit dégradé, abonnement capable, souverain en poids ouverts | Le choix du moteur à l'installation : Ollama, services payants, Albert |
