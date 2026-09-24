@@ -109,6 +109,15 @@ class Brique(Module):
     def recharger(self) -> None:
         self._lecons = None
 
+    # --- interface -----------------------------------------------------------
+    def infos_interface(self) -> dict[str, Any]:
+        """Signale a la page eleve qu'un lien vers /cours doit s'afficher (voir eleve.js).
+
+        `bool(self.lecons)` : au moins une lecon chargee et valide, sinon le module est actif
+        mais n'a rien a proposer (bibliotheque absente ou toutes les lecons ecartees).
+        """
+        return {"cours": bool(self.lecons)}
+
     # --- cles de stockage ----------------------------------------------------
     @staticmethod
     def _cle_notion(notion_id: str) -> str:

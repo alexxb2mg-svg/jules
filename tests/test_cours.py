@@ -165,6 +165,14 @@ def test_ouvrir_notion_sans_lecon_refuse(tuteur):
         tuteur.module("cours").ouvrir(NOTION_SANS_LECON)
 
 
+def test_infos_interface_signale_cours_si_au_moins_une_lecon(tuteur):
+    """Le bouton « Suivre un cours » de la page eleve (eleve.js) depend de infos.cours : verifie
+    que le module l'expose bien via Tuteur.infos_interface() (integration S1 : signale par un
+    manque avant intervention, la fixture `tuteur` charge une bibliotheque avec une lecon)."""
+    infos = tuteur.infos_interface()
+    assert infos["cours"] is True
+
+
 def test_ouverture_ne_jamais_exposer_les_champs_serveur(tuteur):
     module = tuteur.module("cours")
     ouverture = module.ouvrir(NOTION)
