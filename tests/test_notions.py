@@ -313,7 +313,9 @@ def test_routes_eleve(tuteur):
         assert client.get("/api/eleve/notions/conversations/inconnue").status_code == 404
         infos = client.get("/api/infos").json()["notions"]
         assert any(b["statut"] == "experimentale" and b["avertissement"] for b in infos["bibliotheques"])
-        assert sum(len(m["notions"]) for m in infos["matieres"]) == 252
+        # profil sans classe : tout le programme est propose (5e, 4e et 3e)
+        tout = charger_catalogue(BIBLIOTHEQUES, ["programme"], None)
+        assert sum(len(m["notions"]) for m in infos["matieres"]) == len(tout.notions) > 252
 
 
 # --- les bibliotheques publiees ---------------------------------------------------
@@ -348,7 +350,7 @@ def test_bibliotheque_publiee_valide(dossier):
 def test_fiches_experimentales_couvrent_les_maths_de_3e():
     """Chaque notion de maths du referentiel 3e a sa fiche, et chaque fiche a exemple et exercices complets."""
     cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
-    maths = [n.id for n in cat.notions.values() if n.matiere == "mathematiques"]
+    maths = [n.id for n in cat.notions.values() if n.matiere == "mathematiques" and n.niveau == "3e"]
     fiches_maths = {i: f for i, f in cat.contenus[0].fiches.items() if i in maths}
     assert len(maths) == 38 and sorted(maths) == sorted(fiches_maths)
     for identifiant, fiche in fiches_maths.items():

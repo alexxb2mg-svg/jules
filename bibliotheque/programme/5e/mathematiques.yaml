@@ -1,0 +1,202 @@
+matiere: Mathématiques
+id: mathematiques
+niveau: 5e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programmes d'enseignement de français et de mathématiques du cycle des approfondissements (cycle 4) — nouveau programme de mathématiques, annexe 2"
+    reference: "Arrêté du 18 février 2026, BO n° 10 du 5 mars 2026, NOR MENE2602912A"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20math%C3%A9matiques%20pour%20le%20cycle%204-480716.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de mathématiques de cycle 4 a été réécrit par l'arrêté du 18 février 2026
+  (BO n° 10 du 5 mars 2026) et entre en application à la rentrée 2026-2027 en classe de
+  5e (et en CM2, cycle 3) ; il n'est donc pas encore en vigueur en 4e ni en 3e cette
+  année-là (déploiement progressif). Contrairement aux autres matières scientifiques du
+  cycle 4, ce texte est rédigé explicitement par année (Cinquième / Quatrième / Troisième)
+  et non par cycle : les notions ci-dessous reprennent directement les sous-sections
+  « Cinquième » de chaque thème, sans inférence de répartition.
+brevet:
+  evalue: false
+themes:
+  - id: nombres-et-calculs
+    titre: "Nombres et calculs"
+    chapitres:
+      - id: operations-automatismes
+        titre: "Opérations : automatismes et résolution de problèmes"
+        notions:
+          - id: 5e-operations-decimaux
+            titre: "Addition, soustraction, multiplication, division de nombres décimaux"
+            niveau_programme: "5e"
+            attendus:
+              - "Additionner, soustraire, multiplier et diviser pour résoudre des problèmes et contrôler la vraisemblance de son résultat."
+              - "Diviser par un nombre décimal. Enchaîner des opérations en faisant appel ou non à des parenthèses."
+              - "Connaître et utiliser les priorités opératoires et la distributivité simple sur des exemples numériques."
+              - "Utiliser les notions de multiples et diviseurs, connaître les critères de divisibilité par 3 et par 9."
+            mots_cles: [nombres décimaux, opérations, priorités opératoires, distributivité, multiples, diviseurs]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Nombres et calculs », sous-section « Cinquième », rubrique « Opérations »"
+          - id: 5e-nombres-relatifs
+            titre: "Nombres relatifs : définition, comparaison, addition, soustraction"
+            niveau_programme: "5e"
+            attendus:
+              - "Définir les nombres relatifs, l'opposé et la valeur absolue d'un nombre ; définir positif, strictement positif, négatif, strictement négatif."
+              - "Utiliser les nombres relatifs pour représenter des grandeurs observables pouvant prendre des valeurs inférieures à zéro (température, temps, altitude)."
+              - "Lire l'abscisse d'un nombre relatif sur une droite graduée et placer un nombre relatif d'abscisse donnée."
+              - "Comparer et ranger des nombres décimaux relatifs ; additionner et soustraire des nombres décimaux relatifs, y compris en enchaînant plusieurs opérations."
+            mots_cles: [nombres relatifs, opposé, valeur absolue, droite graduée, addition, soustraction]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Nombres et calculs », sous-section « Cinquième », rubrique « Nombres relatifs »"
+          - id: 5e-nombres-rationnels-fractions
+            titre: "Nombres rationnels : comparaison, addition et soustraction de fractions"
+            niveau_programme: "5e"
+            attendus:
+              - "Comparer des fractions de dénominateurs quelconques."
+              - "Additionner et soustraire des fractions de dénominateurs quelconques."
+              - "Résoudre des problèmes avec des additions et soustractions de fractions."
+            mots_cles: [nombres rationnels, fractions, comparaison, addition de fractions]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Nombres et calculs », sous-section « Cinquième », rubrique « Nombres rationnels »"
+          - id: 5e-puissances-introduction
+            titre: "Puissances : carré et cube d'un nombre"
+            niveau_programme: "5e"
+            attendus:
+              - "Découvrir la notion de puissance d'un nombre et sa notation dans le cas du carré et du cube."
+              - "Connaître les carrés des entiers de 0 à 12 et le cube de 10."
+              - "Calculer la valeur numérique d'expressions contenant des puissances simples, additions, soustractions et produits."
+            mots_cles: [puissances, carré, cube, calcul numérique]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Nombres et calculs », sous-section « Cinquième », rubrique « Puissances »"
+      - id: calcul-litteral-introduction
+        titre: "Introduction au calcul littéral et algébrique"
+        notions:
+          - id: 5e-calcul-litteral-formules
+            titre: "Produire des formules à partir de suites de motifs évolutives"
+            niveau_programme: "5e"
+            attendus:
+              - "Identifier une régularité, poursuivre et décrire une suite de motifs évolutive."
+              - "Produire des formules (double, triple, carré, successeur, prédécesseur...) à partir de suites de motifs évolutives."
+            mots_cles: [calcul littéral, suite de motifs, formule]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Nombres et calculs », sous-section « Cinquième », rubrique « Calcul littéral et algébrique »"
+  - id: espace-et-geometrie
+    titre: "Espace et géométrie"
+    chapitres:
+      - id: reperage-representation-espace
+        titre: "Repérage et représentation de l'espace"
+        notions:
+          - id: 5e-reperage-plan
+            titre: "Repérage sur une droite et dans le plan"
+            niveau_programme: "5e"
+            attendus:
+              - "Sur une droite graduée : lire l'abscisse d'un point donné, placer un point d'abscisse donnée."
+              - "Dans le plan muni d'un repère orthogonal : lire les coordonnées d'un point donné, placer un point de coordonnées données."
+            mots_cles: [repérage, droite graduée, coordonnées, repère orthogonal]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Repérage sur une droite et dans le plan »"
+          - id: 5e-representation-espace-solides
+            titre: "Représentation de l'espace : solides usuels"
+            niveau_programme: "5e"
+            attendus:
+              - "Construire et mettre en relation différentes représentations en perspective cavalière des solides suivants : pavé droit, cube, cylindre de révolution, prisme droit."
+              - "Mettre en relation une représentation en perspective cavalière et un patron d'un pavé, d'un prisme droit ou d'un cylindre de révolution."
+              - "Calculer le volume du cube, du pavé droit, du prisme droit ; calculer l'aire du disque, le volume du cylindre de révolution."
+              - "Connaître et convertir des unités usuelles (volume et capacité)."
+            mots_cles: [solides, perspective cavalière, patron, volume, aire du disque]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Représentation de l'espace »"
+      - id: transformations-angles-triangles
+        titre: "Transformations, angles, triangles et parallélogrammes"
+        notions:
+          - id: 5e-symetrie-demi-tour
+            titre: "Symétrie axiale et demi-tour (symétrie centrale)"
+            niveau_programme: "5e"
+            attendus:
+              - "Définir le demi-tour, ou symétrie centrale, et connaître ses propriétés."
+              - "Reconnaître et construire le symétrique d'une figure par symétrie axiale."
+            mots_cles: [symétrie axiale, symétrie centrale, demi-tour]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Transformations »"
+          - id: 5e-angles-parallelisme
+            titre: "Angles et caractérisation du parallélisme"
+            niveau_programme: "5e"
+            attendus:
+              - "Reconnaître et citer sur une configuration géométrique des angles : plein, plat, nul, droit, opposés par le sommet, adjacents, supplémentaires, aigus, obtus."
+              - "Caractériser le parallélisme par les angles : angles alternes internes, angles correspondants."
+            mots_cles: [angles, parallélisme, angles alternes internes, angles correspondants]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Angles »"
+          - id: 5e-triangles-proprietes
+            titre: "Triangles : somme des angles, médiatrices, hauteurs, médianes"
+            niveau_programme: "5e"
+            attendus:
+              - "Connaître la somme des angles d'un triangle et savoir la démontrer ; construire des triangles à partir de données partielles."
+              - "Connaître les propriétés des médiatrices et du cercle circonscrit dans le cas de triangles particuliers ; calculer l'aire d'un triangle."
+              - "Définir et tracer les hauteurs et les médianes dans un triangle ; savoir que les hauteurs d'un triangle sont concourantes ; démontrer qu'une médiane partage un triangle en deux triangles d'aires égales."
+            mots_cles: [triangles, médiatrice, cercle circonscrit, hauteur, médiane, aire]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Triangles »"
+          - id: 5e-parallelogrammes
+            titre: "Parallélogrammes et parallélogrammes particuliers"
+            niveau_programme: "5e"
+            attendus:
+              - "Définir le parallélogramme, le construire, connaître les propriétés caractéristiques des côtés opposés et des diagonales."
+              - "Définir les parallélogrammes particuliers (rectangle, losange, carré) et leurs propriétés caractéristiques."
+              - "Savoir calculer l'aire d'un parallélogramme et de figures complexes ; résoudre des problèmes de conversion d'unités de longueur et d'aires."
+            mots_cles: [parallélogramme, rectangle, losange, carré, aire]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Espace et géométrie », sous-section « Cinquième », rubrique « Parallélogrammes »"
+  - id: grandeurs-et-donnees
+    titre: "Grandeurs et données"
+    chapitres:
+      - id: statistiques-probabilites-introduction
+        titre: "Statistiques et probabilités"
+        notions:
+          - id: 5e-statistiques-introduction
+            titre: "Recueillir, organiser et représenter des données statistiques"
+            niveau_programme: "5e"
+            attendus:
+              - "Recueillir et organiser des données ; calculer des effectifs et des fréquences (décimale, fractionnaire, pourcentage)."
+              - "Lire et interpréter des informations sous forme de tableaux, diagrammes et graphiques ; représenter des données sous forme de tableau, diagramme en barres, diagramme circulaire ou graphique cartésien."
+              - "Calculer et interpréter la moyenne simple d'une série de données."
+            mots_cles: [statistiques, effectifs, fréquences, moyenne, diagrammes]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Grandeurs et données », sous-section « Cinquième », rubrique « Statistiques »"
+          - id: 5e-probabilites-introduction
+            titre: "Premières notions de probabilités"
+            niveau_programme: "5e"
+            attendus:
+              - "Aborder les questions relatives au hasard à partir de problèmes simples ; utiliser le vocabulaire des probabilités (expérience aléatoire, issue, évènement)."
+              - "Attribuer des probabilités dans des cas simples (équiprobabilité) et les exprimer sous diverses formes (fraction, décimale, pourcentage)."
+              - "Répéter matériellement une expérience aléatoire simple et enregistrer les résultats dans un tableau d'effectifs et de fréquences."
+            mots_cles: [probabilités, expérience aléatoire, équiprobabilité, hasard]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Grandeurs et données », sous-section « Cinquième », rubrique « Probabilités »"
+      - id: proportionnalite-fonctions-introduction
+        titre: "Proportionnalité et premières notions de fonction"
+        notions:
+          - id: 5e-proportionnalite
+            titre: "Reconnaître et traiter une situation de proportionnalité"
+            niveau_programme: "5e"
+            attendus:
+              - "Reconnaître si une situation donnée entre dans le cadre de la proportionnalité ou non ; mobiliser une procédure adaptée (propriété de linéarité, retour à l'unité)."
+              - "Utiliser des proportions, des pourcentages ; identifier des situations de proportionnalité dans des contextes concrets (prix, recettes, distances, échelles)."
+              - "Utiliser un coefficient de proportionnalité dans des contextes concrets ; représenter une situation de proportionnalité par un tableau ou un graphique."
+              - "Reconnaître graphiquement qu'un nuage de points est ou n'est pas associé à une situation de proportionnalité entre données discrètes."
+            mots_cles: [proportionnalité, pourcentages, coefficient de proportionnalité, linéarité]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Grandeurs et données », sous-section « Cinquième », rubrique « Proportionnalité »"
+          - id: 5e-fonctions-introduction
+            titre: "Introduire l'expression « en fonction de »"
+            niveau_programme: "5e"
+            attendus:
+              - "Introduire l'expression « en fonction de » dans des contextes concrets ou mathématiques."
+              - "Produire, lire et interpréter un tableau de valeurs ; placer dans un repère orthogonal des points correspondant à un tableau de valeurs."
+              - "Traduire la relation de dépendance entre deux grandeurs par un tableau de valeurs à partir d'une formule ; produire une formule simple représentant la dépendance de deux grandeurs."
+              - "Caractériser graphiquement la proportionnalité."
+            mots_cles: [fonction, tableau de valeurs, graphique cartésien, dépendance de grandeurs]
+            brevet: false
+            source: "Programme de mathématiques cycle 4 (BO n°10 du 05/03/2026), thème « Grandeurs et données », sous-section « Cinquième », rubrique « Fonctions » — « Dès la cinquième, on emploie l'expression « en fonction de » »"

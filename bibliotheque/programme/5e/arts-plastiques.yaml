@@ -1,0 +1,331 @@
+matiere: Arts plastiques
+id: arts-plastiques
+niveau: 5e
+annee_scolaire: 2026-2027
+textes_officiels:
+- intitule: Programme du cycle 4 (annexe 3) — partie « Arts plastiques »
+  reference: BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  consulte_le: '2026-09-24'
+- intitule: Enseigner au cycle 4 — confirme que le programme d'arts plastiques 2020 est inchangé pour
+    la rentrée 2026-2027
+  reference: éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  consulte_le: '2026-09-24'
+perimetre: |
+  Le programme d'arts plastiques du cycle 4 (BO n° 31 du 30 juillet 2020) est un programme de cycle, non décliné par année (5e/4e/3e) : les trois questionnements sont "travaillés tous les ans dans une logique d'approfondissement" sur l'ensemble du cycle. Aucune notion n'est donc réservée à la 3e seule ; toutes portent la mention "cycle 4". Ce programme est inchangé pour l'année 2026-2027.
+
+  Ce fichier 5e reprend donc le même choix que le référentiel de 3e : les notions du programme de cycle 4 ne sont pas réparties par année car le texte officiel ne le fait pas lui-même (aucun repère annuel de progression n'est publié pour les arts plastiques, contrairement aux langues vivantes, au français, aux mathématiques et à l'EMC) ; les mêmes notions, structurées en trois questionnements travaillés « tous les ans dans une logique d'approfondissement », s'appliquent identiquement en 5e, en 4e et en 3e.
+brevet:
+  evalue: false
+  epreuve: |
+    Pas d'épreuve écrite spécifique d'arts plastiques au DNB. Depuis la session 2026, le contrôle continu se fonde uniquement sur les moyennes annuelles des enseignements obligatoires suivis en classe de 3e (note de service du 2 septembre 2025, BO du 4 septembre 2025) : les notes d'arts plastiques obtenues en classe de 5e n'entrent donc plus dans le calcul du contrôle continu du DNB. Les notions de classe de 5e peuvent en revanche nourrir un objet d'étude présenté à l'épreuve orale de soutenance en 3e (histoire des arts, EPI, parcours d'éducation artistique et culturelle construits sur plusieurs années).
+  source: https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N ; https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+    ; note de service du 2 septembre 2025 (BO du 4 septembre 2025) sur le contrôle continu
+themes:
+- id: competences-travaillees
+  titre: Compétences travaillées
+  chapitres:
+  - id: quatre-competences
+    titre: Les quatre compétences travaillées
+    notions:
+    - id: 5e-experimenter-produire-creer
+      titre: Expérimenter, produire, créer
+      niveau_programme: cycle 4
+      attendus:
+      - Choisir, mobiliser et adapter des langages et des moyens plastiques variés en fonction de leurs
+        effets dans une intention artistique en restant attentif à l'inattendu.
+      - S'approprier des questions artistiques en prenant appui sur une pratique artistique et réflexive.
+      - Recourir à des outils numériques de captation et de réalisation à des fins de création artistique.
+      - Explorer l'ensemble des champs de la pratique plastique et leurs hybridations, notamment avec
+        les pratiques numériques.
+      - Prendre en compte les conditions de la réception de sa production dès la démarche de création,
+        en prêtant attention aux modalités de sa présentation, y compris numérique.
+      - Exploiter des informations et de la documentation, notamment iconique, pour servir un projet de
+        création.
+      mots_cles:
+      - expérimentation
+      - production
+      - création
+      - numérique
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 5e-mettre-en-oeuvre-projet
+      titre: Mettre en œuvre un projet
+      niveau_programme: cycle 4
+      attendus:
+      - Concevoir, réaliser, donner à voir des projets artistiques, individuels ou collectifs.
+      - Mener à terme une production individuelle dans le cadre d'un projet accompagné par le professeur.
+      - Se repérer dans les étapes de la réalisation d'une production plastique et en anticiper les difficultés
+        éventuelles.
+      - Faire preuve d'autonomie, d'initiative, de responsabilité, d'engagement et d'esprit critique dans
+        la conduite d'un projet artistique.
+      - Confronter intention et réalisation dans la conduite d'un projet pour l'adapter et le réorienter,
+        s'assurer de la dimension artistique de celui-ci.
+      mots_cles:
+      - projet
+      - autonomie
+      - réalisation
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 5e-sexprimer-analyser-sa-pratique
+      titre: S'exprimer, analyser sa pratique, celle de ses pairs ; établir une relation avec celle des
+        artistes, s'ouvrir à l'altérité
+      niveau_programme: cycle 4
+      attendus:
+      - Dire avec un vocabulaire approprié ce que l'on fait, ressent, imagine, observe, analyse ; s'exprimer
+        pour soutenir des intentions artistiques ou une interprétation d'œuvre.
+      - Établir des liens entre son propre travail, les œuvres rencontrées ou les démarches observées.
+      - Expliciter la pratique individuelle ou collective, écouter et accepter les avis divers et contradictoires.
+      - Porter un regard curieux et avisé sur son environnement artistique et culturel, proche et lointain,
+        notamment sur la diversité des images fixes et animées, analogiques et numériques.
+      mots_cles:
+      - expression
+      - analyse
+      - vocabulaire
+      - altérité
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 5e-se-reperer-questions-art
+      titre: Se repérer dans les domaines liés aux arts plastiques, être sensible aux questions de l'art
+      niveau_programme: cycle 4
+      attendus:
+      - Reconnaître et connaître des œuvres de domaines et d'époques variés appartenant au patrimoine
+        national et mondial, en saisir le sens et l'intérêt.
+      - Identifier des caractéristiques (plastiques, culturelles, sémantiques, symboliques) inscrivant
+        une œuvre dans une aire géographique ou culturelle et dans un temps historique.
+      - Proposer et soutenir l'analyse et l'interprétation d'une œuvre.
+      - Interroger et situer œuvres et démarches artistiques du point de vue de l'auteur et de celui du
+        spectateur.
+      - Prendre part au débat suscité par le fait artistique.
+      mots_cles:
+      - culture artistique
+      - patrimoine
+      - analyse d'œuvre
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+- id: questionnements
+  titre: Les trois questionnements du cycle 4
+  chapitres:
+  - id: la-representation
+    titre: La représentation ; images, réalité et fiction
+    notions:
+    - id: 5e-la-ressemblance
+      titre: La ressemblance
+      niveau_programme: cycle 4
+      attendus:
+      - Le rapport au réel et la valeur expressive de l'écart en art ; les images artistiques et leur
+        rapport à la fiction, notamment la différence entre ressemblance et vraisemblance.
+      mots_cles:
+      - ressemblance
+      - réel
+      - fiction
+      - vraisemblance
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+    - id: 5e-dispositif-de-representation
+      titre: Le dispositif de représentation
+      niveau_programme: cycle 4
+      attendus:
+      - L'espace en deux dimensions (littéral et suggéré), la différence entre organisation et composition.
+      - L'espace en trois dimensions (différence entre structure, construction et installation), l'intervention
+        sur le lieu, l'installation.
+      mots_cles:
+      - espace
+      - composition
+      - installation
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+    - id: 5e-narration-visuelle
+      titre: La narration visuelle
+      niveau_programme: cycle 4
+      attendus:
+      - Mouvement et temporalité suggérés ou réels, dispositif séquentiel et dimension temporelle, durée,
+        vitesse, rythme, montage, découpage, ellipse.
+      mots_cles:
+      - narration
+      - séquence
+      - montage
+      - temporalité
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+    - id: 5e-autonomie-de-loeuvre
+      titre: L'autonomie de l'œuvre d'art, les modalités de son autoréférenciation
+      niveau_programme: cycle 4
+      attendus:
+      - L'autonomie de l'œuvre vis-à-vis du monde visible ; inclusion ou mise en abyme de ses propres
+        constituants ; art abstrait, informel, concret, etc.
+      mots_cles:
+      - autonomie
+      - abstraction
+      - mise en abyme
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+    - id: 5e-creation-materialite-signification-images
+      titre: La création, la matérialité, le statut, la signification des images
+      niveau_programme: cycle 4
+      attendus:
+      - L'appréhension et la compréhension de la diversité des images ; leurs propriétés plastiques, iconiques,
+        sémantiques, symboliques.
+      - Les différences d'intention entre expression artistique et communication visuelle, entre œuvre
+        et image d'œuvre.
+      mots_cles:
+      - images
+      - statut
+      - communication visuelle
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+    - id: 5e-conception-production-diffusion-numerique
+      titre: La conception, la production et la diffusion de l'œuvre plastique à l'ère du numérique
+      niveau_programme: cycle 4
+      attendus:
+      - Les incidences du numérique sur la création des images fixes et animées, sur les pratiques plastiques
+        en deux et en trois dimensions.
+      - Les relations entre intentions artistiques, médiums de la pratique plastique, codes et outils
+        numériques.
+      mots_cles:
+      - numérique
+      - diffusion
+      - images fixes et animées
+      brevet: false
+      source: Programme cycle 4, questionnement « La représentation ; images, réalité et fiction »
+  - id: materialite-de-loeuvre
+    titre: La matérialité de l'œuvre ; l'objet et l'œuvre
+    notions:
+    - id: 5e-transformation-de-la-matiere
+      titre: La transformation de la matière
+      niveau_programme: cycle 4
+      attendus:
+      - Les relations entre matières, outils, gestes ; la réalité concrète d'une œuvre ou d'une production
+        plastique ; le pouvoir de représentation ou de signification de la réalité physique globale de
+        l'œuvre.
+      mots_cles:
+      - matière
+      - outils
+      - geste
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+    - id: 5e-qualites-physiques-materiaux
+      titre: Les qualités physiques des matériaux
+      niveau_programme: cycle 4
+      attendus:
+      - Les matériaux et leur potentiel de signification dans une intention artistique, leur nature et
+        leurs caractéristiques, les notions de fini et non fini.
+      - L'agencement de matériaux et de matières de caractéristiques diverses (plastiques, techniques,
+        sémantiques, symboliques).
+      mots_cles:
+      - matériaux
+      - fini
+      - non fini
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+    - id: 5e-materialite-qualite-couleur
+      titre: La matérialité et la qualité de la couleur
+      niveau_programme: cycle 4
+      attendus:
+      - Les relations entre sensation colorée et qualités physiques de la matière colorée ; les relations
+        entre quantité et qualité de la couleur.
+      mots_cles:
+      - couleur
+      - matière colorée
+      - sensation
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+    - id: 5e-objet-comme-materiau
+      titre: L'objet comme matériau en art
+      niveau_programme: cycle 4
+      attendus:
+      - La transformation, les détournements des objets dans une intention artistique ; la sublimation,
+        la citation, les effets de décontextualisation et de recontextualisation des objets dans une démarche
+        artistique.
+      mots_cles:
+      - objet
+      - détournement
+      - décontextualisation
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+    - id: 5e-representations-statuts-objet
+      titre: Les représentations et statuts de l'objet en art
+      niveau_programme: cycle 4
+      attendus:
+      - La place de l'objet non artistique dans l'art ; l'œuvre comme objet matériel, objet d'art, objet
+        d'étude.
+      mots_cles:
+      - objet
+      - statut
+      - œuvre
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+    - id: 5e-numerique-processus-materiau
+      titre: Le numérique en tant que processus et matériau artistiques
+      niveau_programme: cycle 4
+      attendus:
+      - L'appropriation des outils et des langages numériques destinés à la pratique plastique ; les dialogues
+        entre pratiques traditionnelles et numériques.
+      - L'interrogation et la manipulation du numérique par et dans la pratique plastique ; le regard
+        critique porté sur le coût énergétique des usages du numérique.
+      mots_cles:
+      - numérique
+      - langages
+      - matériau artistique
+      brevet: false
+      source: Programme cycle 4, questionnement « La matérialité de l'œuvre ; l'objet et l'œuvre »
+  - id: loeuvre-lespace-lauteur-le-spectateur
+    titre: L'œuvre, l'espace, l'auteur, le spectateur
+    notions:
+    - id: 5e-relation-corps-production-artistique
+      titre: La relation du corps à la production artistique
+      niveau_programme: cycle 4
+      attendus:
+      - L'implication du corps de l'auteur ; les effets du geste et de l'instrument, les qualités plastiques
+        et les effets visuels obtenus.
+      - 'La lisibilité du processus de production et de son déploiement dans le temps et dans l''espace
+        : traces, performance, théâtralisation, événements, œuvres éphémères, captations, etc.'
+      mots_cles:
+      - corps
+      - geste
+      - performance
+      brevet: false
+      source: Programme cycle 4, questionnement « L'œuvre, l'espace, l'auteur, le spectateur »
+    - id: 5e-presence-materielle-oeuvre-espace
+      titre: La présence matérielle de l'œuvre dans l'espace, la présentation de l'œuvre
+      niveau_programme: cycle 4
+      attendus:
+      - Le rapport d'échelle, l'in situ, les dispositifs de présentation, la dimension éphémère, l'espace
+        public.
+      - L'exploration des présentations des productions plastiques et des œuvres ; l'architecture.
+      mots_cles:
+      - espace
+      - présentation
+      - in situ
+      - architecture
+      brevet: false
+      source: Programme cycle 4, questionnement « L'œuvre, l'espace, l'auteur, le spectateur »
+    - id: 5e-experience-sensible-espace-oeuvre
+      titre: L'expérience sensible de l'espace de l'œuvre
+      niveau_programme: cycle 4
+      attendus:
+      - Les rapports entre l'espace perçu, ressenti et l'espace représenté ou construit ; l'espace et
+        le temps comme matériaux de l'œuvre, la mobilisation des sens.
+      - Le point de vue de l'auteur et du spectateur dans ses relations à l'espace, au temps de l'œuvre,
+        à l'inscription de son corps dans la relation à l'œuvre ou dans l'œuvre achevée.
+      mots_cles:
+      - espace perçu
+      - sens
+      - point de vue
+      brevet: false
+      source: Programme cycle 4, questionnement « L'œuvre, l'espace, l'auteur, le spectateur »
+    - id: 5e-metissages-arts-plastiques-numerique
+      titre: Les métissages entre arts plastiques et technologies numériques
+      niveau_programme: cycle 4
+      attendus:
+      - Les évolutions repérables sur la notion d'œuvre et d'artiste, de créateur, de récepteurs ou de
+        public.
+      - Les croisements entre arts plastiques et les sciences, les technologies, les environnements numériques.
+      mots_cles:
+      - métissage
+      - numérique
+      - œuvre
+      - artiste
+      brevet: false
+      source: Programme cycle 4, questionnement « L'œuvre, l'espace, l'auteur, le spectateur »

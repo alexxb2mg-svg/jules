@@ -1,0 +1,200 @@
+matiere: Français
+id: francais
+niveau: 5e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programmes d'enseignement de français et de mathématiques du cycle des approfondissements (cycle 4) — Annexe 1, Programme de français pour le cycle 4"
+    reference: "Arrêté du 18 février 2026, BO n° 10 du 5 mars 2026 (MENE2602912A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%201%20%E2%80%93%20Programme%20de%20fran%C3%A7ais%20pour%20le%20cycle%204-480713.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Programmes d'enseignement de français et de mathématiques du cycle des approfondissements (cycle 4) — texte de l'arrêté (calendrier d'application)"
+    reference: "BO n° 10 du 5 mars 2026 (MENE2602912A)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo10/MENE2602912A"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de français applicable en 5e à la rentrée 2026-2027 est le NOUVEAU programme de
+  cycle 4 (arrêté du 18 février 2026, BO n° 10 du 5 mars 2026), qui remplace celui de 2020 — mais
+  seulement en 5e cette année-là (il ne s'appliquera en 4e qu'à la rentrée 2027, et en 3e qu'à la
+  rentrée 2028 : cf. article 3 de l'arrêté). Ce nouveau texte structure chaque année du cycle
+  autour d'une « perspective annuelle » : en 5e, « Éprouver, expérimenter : la découverte de soi,
+  d'autrui et du monde ». La culture littéraire et artistique s'y décline en quatre entrées
+  obligatoires (récit/fiction, poésie, théâtre, récit/fiction), chacune assortie d'un « objectif
+  d'apprentissage » propre à la 5e pour l'écriture, l'oral, le vocabulaire et la grammaire (le
+  texte donne des objectifs différenciés « Cinquième / Quatrième / Troisième » pour ces quatre
+  domaines). niveau_programme est donc "5e" pour toutes les notions de ce fichier, sauf
+  indication contraire explicite du texte.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 5e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: culture-litteraire-et-artistique
+    titre: "Culture littéraire et artistique"
+    chapitres:
+      - id: 5e-devenir-heroine-heros
+        titre: "Devenir héroïne/héros : destins romanesques (entrée obligatoire de 5e)"
+        notions:
+          - id: 5e-devenir-heroine-heros-destins-romanesques
+            titre: "Figures héroïques : destins romanesques, de l'épopée au roman moderne"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier et s'approprier une œuvre intégrale ou un groupement de textes, ainsi que des lectures cursives, sur les figures héroïques, de l'Antiquité à nos jours."
+              - "S'interroger sur ces personnages hors normes, mesurer la diversité de leurs représentations et appréhender les stéréotypes à l'œuvre dans les textes ou leurs figurations canoniques."
+              - "Saisir les transformations en jeu de l'épopée au roman moderne, où le héros perd en superbe et gagne en banalité ; s'interroger sur la transmission des valeurs héroïques aujourd'hui."
+            mots_cles: [héros, héroïne, épopée, roman, stéréotype]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Culture littéraire et artistique, Cinquième, « Devenir héroïne/héros : destins romanesques »"
+      - id: 5e-voyager-en-poesie
+        titre: "Voyager en poésie : « Du monde entier au cœur du monde » (entrée obligatoire de 5e)"
+        notions:
+          - id: 5e-voyager-en-poesie-monde
+            titre: "Voyage réel ou imaginaire et exploration des continents intérieurs en poésie"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier et s'approprier de larges extraits d'œuvres intégrales ou un groupement de textes poétiques, ainsi que des lectures cursives, autour du thème du voyage."
+              - "Découvrir que la force des mots, des sonorités, des rythmes et des images projette le voyage bien au-delà du pittoresque, en empruntant à différentes traditions et cultures poétiques, y compris francophones, patrimoniales ou contemporaines."
+              - "Faire jouer la langue et les contraintes formelles pour en éprouver la richesse, notamment par des activités d'écriture créative et de lecture expressive."
+            mots_cles: [poésie, voyage, sonorités, écriture créative]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Culture littéraire et artistique, Cinquième, « Voyager en poésie »"
+      - id: 5e-experimenter-jouer-au-theatre
+        titre: "Expérimenter et jouer au théâtre : la société sens dessus dessous (entrée obligatoire de 5e)"
+        notions:
+          - id: 5e-theatre-societe-sens-dessus-dessous
+            titre: "Le théâtre comique : renversement de l'ordre établi et rapports dominants/dominés"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier et s'approprier une œuvre théâtrale intégrale ou un groupement de textes, ainsi que des lectures cursives."
+              - "Mesurer la portée des relations entre dominants et dominés lorsqu'elles sont incarnées sur scène — et renversées."
+              - "Approfondir la connaissance des spécificités de l'écriture et de la représentation théâtrales et de la dynamique du comique, en s'exerçant à des pratiques théâtrales variées (mise en voix, écriture, mise en scène)."
+            mots_cles: [théâtre, comique, mise en scène, dominants/dominés]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Culture littéraire et artistique, Cinquième, « Expérimenter et jouer au théâtre »"
+      - id: 5e-imaginer-sentir-raisonner
+        titre: "Imaginer, sentir, raisonner : des histoires pour plaire et instruire (entrée obligatoire de 5e)"
+        notions:
+          - id: 5e-conte-fable-plaire-et-instruire
+            titre: "Conte et fable : narration et réflexion morale"
+            niveau_programme: "5e"
+            attendus:
+              - "Étudier et s'approprier de larges extraits d'œuvres intégrales ou un groupement de textes, ainsi que des lectures cursives, dans l'univers du conte ou de la fable."
+              - "Comprendre que les personnages incarnent différentes facettes de l'être humain, interroger leur conduite et le fonctionnement social qu'ils dévoilent."
+              - "Découvrir des œuvres narratives de traditions et cultures diverses, y compris francophones ; développer, par des débats, des écritures ou réécritures d'apologues, un regard réflexif sur sa réception des récits et morales."
+            mots_cles: [conte, fable, apologue, morale]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Culture littéraire et artistique, Cinquième, « Imaginer, sentir, raisonner »"
+  - id: ecriture
+    titre: "Écriture"
+    chapitres:
+      - id: 5e-ecrire-pour-reflechir
+        titre: "Écrire pour réfléchir, apprendre et mémoriser"
+        notions:
+          - id: 5e-ecrits-de-travail
+            titre: "Écrits de travail : listes, synthèses, brouillons d'oral"
+            niveau_programme: "5e"
+            attendus:
+              - "Utiliser différents supports pour écrire, apprendre et mémoriser."
+              - "Repérer l'idée principale d'un message écrit ou oral."
+              - "Produire des écrits de travail : listes, synthèses, brouillons d'oral, etc."
+            mots_cles: [écrit de travail, synthèse, prise de notes]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Écriture, Cinquième, « Écrire pour réfléchir, apprendre et mémoriser »"
+      - id: 5e-ecrire-textes-invention-reflexion
+        titre: "Écrire des textes d'invention et de réflexion pour soi et pour autrui"
+        notions:
+          - id: 5e-textes-narratifs-descriptifs-argumentatifs
+            titre: "Textes narratifs, descriptifs et premiers textes argumentatifs"
+            niveau_programme: "5e"
+            attendus:
+              - "Planifier un écrit en étant accompagné dans sa démarche."
+              - "S'initier à une pratique artistique et créative de l'écriture, seul ou avec ses pairs."
+              - "Écrire des textes narratifs et descriptifs ; écrire un texte à visée argumentative à partir de consignes simples et explicitées."
+            mots_cles: [planification, texte narratif, texte descriptif, argumentation]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Écriture, Cinquième, « Écrire des textes d'invention et de réflexion pour soi et pour autrui »"
+      - id: 5e-evaluer-son-ecrit
+        titre: "Évaluer son écrit et savoir le faire évoluer"
+        notions:
+          - id: 5e-brouillon-et-revision
+            titre: "Le brouillon comme outil de révision de l'écrit"
+            niveau_programme: "5e"
+            attendus:
+              - "Savoir utiliser le brouillon comme un écrit pour retravailler son texte."
+              - "Réviser un écrit en suivant les consignes des professeurs."
+              - "Faire évoluer un écrit en fonction de nouvelles consignes."
+            mots_cles: [brouillon, révision, réécriture]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Écriture, Cinquième, « Évaluer son écrit et savoir le faire évoluer »"
+  - id: oral
+    titre: "Oral"
+    chapitres:
+      - id: 5e-prendre-la-parole
+        titre: "Prendre la parole, communiquer et interagir"
+        notions:
+          - id: 5e-oral-adapte-et-debat
+            titre: "Oral adapté à la situation, prise de parole fluide, entrée dans le débat"
+            niveau_programme: "5e"
+            attendus:
+              - "Pratiquer un oral adapté à la situation de communication."
+              - "Prendre la parole seul et s'exprimer de façon fluide ; entrer dans un dialogue."
+              - "Intervenir dans un débat en respectant les règles d'un échange argumentatif."
+            mots_cles: [oral, dialogue, débat, fluidité]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Oral, Cinquième, « Prendre la parole, communiquer et interagir »"
+      - id: 5e-ecouter-comprendre-interpreter
+        titre: "Écouter, comprendre et interpréter"
+        notions:
+          - id: 5e-ecoute-memorisation-visees
+            titre: "Écoute active, mémorisation des éléments et compréhension des visées"
+            niveau_programme: "5e"
+            attendus:
+              - "Écouter une production orale et en mémoriser les principaux éléments."
+              - "Comprendre les visées d'une production orale spécifique."
+            mots_cles: [écoute active, visée d'un discours, mémorisation]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Oral, Cinquième, « Écouter, comprendre et interpréter »"
+      - id: 5e-dire-lire-jouer-un-texte
+        titre: "Dire, lire, jouer un texte"
+        notions:
+          - id: 5e-lecture-a-voix-haute-et-theatre
+            titre: "Lecture à voix haute, récitation et pratique théâtrale"
+            niveau_programme: "5e"
+            attendus:
+              - "Lire et réciter avec fluidité."
+              - "Utiliser les ressources de la voix et du corps pour faire vivre un texte."
+              - "S'exercer à la pratique théâtrale."
+            mots_cles: [lecture à voix haute, récitation, théâtre, voix]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Oral, Cinquième, « Dire, lire, jouer un texte »"
+  - id: vocabulaire-et-orthographe-lexicale
+    titre: "Vocabulaire et orthographe lexicale"
+    chapitres:
+      - id: 5e-enrichir-son-vocabulaire
+        titre: "Enrichir son vocabulaire"
+        notions:
+          - id: 5e-lexique-en-contexte
+            titre: "Enrichissement du lexique par la lecture, réemploi en contexte"
+            niveau_programme: "5e"
+            attendus:
+              - "Enrichir son lexique par l'usage du dictionnaire ou d'autres outils, en version papier ou numérique."
+              - "Réutiliser à bon escient, à l'écrit et à l'oral, le lexique appris."
+              - "Observer la formation des mots : dérivation et composition, étymologie et néologie."
+            mots_cles: [lexique, dictionnaire, dérivation, étymologie]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Vocabulaire et orthographe lexicale, Cinquième"
+  - id: grammaire-et-orthographe-grammaticale
+    titre: "Grammaire et orthographe grammaticale"
+    chapitres:
+      - id: 5e-comprendre-le-fonctionnement-de-la-phrase
+        titre: "Comprendre et expliquer le fonctionnement d'une phrase"
+        notions:
+          - id: 5e-situation-denonciation-et-paroles-rapportees
+            titre: "Situation d'énonciation et paroles rapportées : premières bases"
+            niveau_programme: "5e"
+            attendus:
+              - "Identifier et interpréter les éléments de la situation d'énonciation : qui parle à qui ? où ? quand ?"
+              - "Observer, reconnaître et utiliser des paroles rapportées, directement ou indirectement."
+              - "Identifier et utiliser les éléments linguistiques de cohésion textuelle (substituts, indicateurs de temps et de lieu)."
+            mots_cles: [énonciation, paroles rapportées, cohésion textuelle]
+            brevet: false
+            source: "Programme de français pour le cycle 4 (BO n° 10 du 5 mars 2026), Grammaire et orthographe grammaticale, Cinquième"

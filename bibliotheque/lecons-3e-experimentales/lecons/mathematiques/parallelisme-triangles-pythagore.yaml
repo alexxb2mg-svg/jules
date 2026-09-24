@@ -1,0 +1,125 @@
+notion: parallelisme-triangles-pythagore
+titre: "Le théorème de Pythagore"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Triangle rectangle/Théorèmes de Pythagore »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Th%C3%A9or%C3%A8mes_de_Pythagore&oldid=923259"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Théorème de Pythagore » (sections Théorème, Réciproque, Nature d'un triangle)"
+    url: "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Pythagore"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer la longueur de l'hypoténuse d'un triangle rectangle."
+      - "Calculer la longueur d'un côté de l'angle droit d'un triangle rectangle."
+      - "Utiliser la réciproque du théorème de Pythagore pour prouver qu'un triangle est rectangle (ou ne l'est pas)."
+
+  - type: texte
+    titre: "L'hypoténuse"
+    contenu: >-
+      Dans un triangle rectangle, l'**hypoténuse** est le côté opposé à l'angle droit. C'est
+      toujours le plus long côté du triangle. Les deux autres côtés sont appelés les côtés de
+      l'angle droit.
+
+  - type: texte
+    titre: "Le théorème"
+    contenu: >-
+      Si un triangle **ABC** est rectangle en **C**, alors : **AB² = AC² + BC²** (le carré de
+      l'hypoténuse est égal à la somme des carrés des deux autres côtés). Cette égalité sert à
+      calculer une longueur quand on connaît les deux autres : addition si on cherche
+      l'hypoténuse, soustraction si on cherche un côté de l'angle droit — puis on prend la racine
+      carrée, car une longueur est toujours positive.
+
+  - type: texte
+    titre: "La réciproque"
+    contenu: >-
+      Pour **prouver** qu'un triangle est rectangle, il faut sa **réciproque** : si, dans un
+      triangle ABC de plus grand côté [AB], on a AB² = AC² + BC², alors le triangle est rectangle
+      en C. Si l'égalité n'est **pas** vérifiée, le triangle n'est pas rectangle (on parle alors de
+      contraposée). Le théorème seul ne prouve jamais qu'un triangle est rectangle : il faut
+      partir d'un triangle déjà connu comme rectangle pour l'utiliser.
+
+  - type: exemple
+    enonce: "DEF est rectangle en E, avec DE = 9 cm et EF = 12 cm. Calculer DF."
+    etapes:
+      - "Le triangle est rectangle en E, donc l'hypoténuse est [DF] (le côté opposé à l'angle droit en E)."
+      - "D'après le théorème de Pythagore : DF² = DE² + EF²."
+      - "DF² = 9² + 12² = 81 + 144 = 225."
+      - "DF est une longueur positive, donc DF = √225 = 15 cm."
+
+  - type: exercice
+    enonce: "EFG est rectangle en F, avec EF = 6 cm et FG = 8 cm. Calcule EG."
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Quel est le côté opposé à l'angle droit en F ?"
+      - "Écris l'égalité de Pythagore avec les lettres E, F, G."
+    explication: "EG² = EF² + FG² = 6² + 8² = 36 + 64 = 100, donc EG = √100 = 10 cm."
+
+  - type: exercice
+    enonce: "ABC est rectangle en B, avec AC = 13 cm (l'hypoténuse) et AB = 5 cm. Calcule BC."
+    forme: nombre
+    reponse: 12
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Laquelle des trois longueurs est déjà l'hypoténuse ?"
+      - "Ici, faut-il additionner ou soustraire les carrés pour trouver BC² ?"
+      - "AC² = AB² + BC², donc BC² = AC² − AB²."
+    explication: "BC² = AC² − AB² = 13² − 5² = 169 − 25 = 144, donc BC = √144 = 12 cm."
+
+  - type: exercice
+    enonce: "MNP est rectangle en N, avec MP = 3,5 cm (l'hypoténuse) et MN = 2,1 cm. Calcule NP (arrondis si besoin au dixième)."
+    forme: nombre
+    reponse: 2.8
+    tolerance: 0.05
+    unite: cm
+    indices:
+      - "C'est le même type de calcul que pour trouver un côté de l'angle droit, mais avec des nombres décimaux : n'oublie pas les virgules dans les carrés."
+      - "MP² = MN² + NP², donc NP² = MP² − MN²."
+      - "Calcule d'abord MP² et MN² séparément, puis soustrais."
+    explication: "NP² = MP² − MN² = 3,5² − 2,1² = 12,25 − 4,41 = 7,84, donc NP = √7,84 = 2,8 cm."
+
+  - type: exercice
+    enonce: "Un triangle IJK a des côtés IJ = 8 cm, JK = 15 cm et IK = 17 cm. Ce triangle est-il rectangle ?"
+    forme: qcm
+    choix:
+      - "Oui, il est rectangle (l'angle droit est en face du côté de 17 cm)."
+      - "Non, il n'est pas rectangle."
+      - "On ne peut pas savoir sans le dessiner."
+    reponse: 0
+    indices:
+      - "Repère d'abord le plus grand côté : c'est lui qui serait l'hypoténuse si le triangle est rectangle."
+      - "Calcule séparément le carré du plus grand côté, puis la somme des carrés des deux autres, et compare les deux résultats."
+    explication: "17² = 289 et 8² + 15² = 64 + 225 = 289 : les deux résultats sont égaux, donc d'après la réciproque du théorème de Pythagore, le triangle est rectangle (angle droit en face du côté de 17 cm)."
+
+  - type: exercice
+    enonce: "Un triangle a des côtés de 6 cm, 7 cm et 9 cm. Ce triangle est-il rectangle ? Réponds par 'oui' ou 'non'."
+    forme: reponse_courte
+    reponse: "non"
+    reponses_acceptees: ["Non", "pas rectangle"]
+    indices:
+      - "Repère le plus grand des trois côtés : c'est lui qui devrait être l'hypoténuse si le triangle est rectangle."
+      - "Calcule séparément le carré du plus grand côté (9²) et la somme des carrés des deux autres (6² + 7²), puis compare."
+    explication: "9² = 81 et 6² + 7² = 36 + 49 = 85. Comme 81 est différent de 85, l'égalité n'est pas vérifiée : le triangle n'est pas rectangle."
+
+  - type: question_ouverte
+    question: "Pourquoi l'hypoténuse est-elle toujours le plus grand côté d'un triangle rectangle ? Explique avec tes mots, sans juste recopier la définition."
+    indices:
+      - "Pense à l'angle droit : c'est le plus grand des trois angles du triangle."
+      - "Dans un triangle, à quel type d'angle correspond toujours le côté le plus long ?"
+    criteres:
+      - "L'élève relie la longueur d'un côté à la taille de l'angle qui lui fait face."
+      - "L'élève mentionne que l'angle droit est le plus grand angle du triangle rectangle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu choisis entre additionner
+      et soustraire quand tu utilises le théorème de Pythagore, et pourquoi il faut la réciproque
+      (et pas juste le théorème) pour prouver qu'un triangle est rectangle.

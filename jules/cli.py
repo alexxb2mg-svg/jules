@@ -72,7 +72,60 @@ def verifier() -> None:
     print("Taches : " + ", ".join(f"{t.nom} @ {t.heure}" for t in tuteur.taches()))
     print("\n----- PROMPT SYSTEME ASSEMBLE -----\n")
     print(tuteur.systeme(conv))
+    verifier_lecons(config)
     tuteur.fermer()
+
+
+def verifier_lecons(config: Any) -> None:
+    """Si le module `cours` est configure (reglage `bibliotheques`), charge ses lecons et rapporte
+
+    le nombre charge et, pour chaque lecon ecartee, son motif. Sans module `cours` dans la config,
+    ne fait rien (comportement d'avant l'etape 2 inchange).
+    """
+    module_cours = next((m for m in config.modules if m.id == "cours" and m.actif), None)
+    if module_cours is None:
+        return
+
+    from jules.bibliotheques import charger_catalogue
+    from jules.lecons import charger_lecons
+
+    ids_lecons = [str(i) for i in module_cours.reglages.get("bibliotheques") or []]
+    print("\n----- LECONS (module 'cours') -----\n")
+    if not ids_lecons:
+        print("Module 'cours' configure sans 'bibliotheques' : rien a charger.")
+        return
+
+    module_notions = next((m for m in config.modules if m.id == "notions"), None)
+    ids_referentiel = [
+        str(i) for i in (module_notions.reglages.get("bibliotheques") if module_notions else None) or ["programme"]
+    ]
+    catalogue = charger_catalogue(config.dossier_bibliotheques, ids_referentiel, None)
+
+    ecartees: list[str] = []
+
+    class _CaptureEcarts(logging.Handler):
+        def emit(self, record: logging.LogRecord) -> None:
+            ecartees.append(record.getMessage())
+
+    logger_lecons = logging.getLogger("jules.lecons")
+    capture = _CaptureEcarts()
+    propage_avant = logger_lecons.propagate
+    logger_lecons.propagate = False
+    logger_lecons.addHandler(capture)
+    try:
+        lecons = charger_lecons(config.dossier_bibliotheques, ids_lecons, catalogue.notions)
+    finally:
+        logger_lecons.removeHandler(capture)
+        logger_lecons.propagate = propage_avant
+
+    if lecons:
+        print(f"{len(lecons)} lecon(s) chargee(s) : " + ", ".join(sorted(lecons)))
+    else:
+        print("0 lecon chargee")
+    if ecartees:
+        print(f"{len(ecartees)} lecon(s) ecartee(s) :")
+        for motif in ecartees:
+            print(f"  - {motif}")
 
 
 def enregistrer_code(fichier: Path, role: str, code: str) -> None:
