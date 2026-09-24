@@ -1,0 +1,9 @@
+body { font: 16px/1.4 system-ui, sans-serif; margin: 1rem; color: #1a1a1a; background: #fff; }
+h1 { font-size: 1.1rem; }
+#recherche { font: inherit; width: 100%; box-sizing: border-box; padding: 0.4rem 0.6rem;
+  border: 1px solid #999; border-radius: 4px; margin-bottom: 0.6rem; }
+#app dt { font-weight: 600; margin-top: 0.6rem; }
+#app dt button { font: inherit; font-weight: 600; background: none; border: none; padding: 0;
+  cursor: pointer; color: #2b6cb0; text-decoration: underline; }
+#app dd { margin: 0.1rem 0 0; }
+#etat { color: #333; font-style: italic; }
