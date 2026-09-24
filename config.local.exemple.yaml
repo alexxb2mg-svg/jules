@@ -34,6 +34,19 @@ profil: exemple
 #     principal: mistral-medium-latest
 #     rapide: mistral-small-latest
 
+# --- Albert : IA publique de l'Etat (DINUM), pour les enseignants et etablissements ---
+# Reserve aux agents de la fonction publique d'Etat. Acces gratuit sur demande :
+# https://albert.sites.beta.gouv.fr/access/ (cle creee ensuite dans le Playground Albert).
+# Heberge en France (SecNumCloud), aucune conversation conservee.
+# openweight-medium = Mistral Small 3.2 (lit aussi les photos) ; openweight-small = Ministral 3 8B.
+# llm:
+#   backend: openai_compatible
+#   url: https://albert.api.etalab.gouv.fr/v1
+#   cle_env: ALBERT_API_KEY
+#   modeles:
+#     principal: openweight-medium
+#     rapide: openweight-small
+
 # --- Ollama : modele local, gratuit, rien ne sort de la maison ----------------
 # Installer Ollama (https://ollama.com), puis : ollama pull qwen3-vl:8b (lit aussi les photos).
 # Sans carte graphique, une reponse peut prendre plus d'une minute : augmenter delai_s.
