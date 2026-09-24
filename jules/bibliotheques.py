@@ -421,8 +421,21 @@ def texte_fiche(fiche: dict[str, Any], limite: int = 7000) -> str:
         lignes = ["Exercices d'entraînement (solutions réservées à toi : jamais avant que l'élève ait cherché) :"]
         for i, ex in enumerate(exercices, 1):
             lignes.append(f"{i}) {str(ex['enonce']).strip()}")
-            for j, indice in enumerate(_liste(ex.get("indices")), 1):
-                lignes.append(f"   Indice {j} : {indice}")
+            indices = ex.get("indices")
+            if isinstance(indices, dict):  # fiche v2 : echelle nommee, servie dans l'ordre relance, methode, etape
+                paliers = [indices[p] for p in ("relance", "methode", "etape") if indices.get(p)]
+                for j, indice in enumerate(paliers, 1):
+                    lignes.append(f"   Indice {j} : {str(indice).strip()}")
+            else:
+                for j, indice in enumerate(_liste(indices), 1):
+                    lignes.append(f"   Indice {j} : {indice}")
+            for critere in _liste(ex.get("criteres")):
+                lignes.append(f"   Critère de réussite : {critere}")
+            for piege in ex.get("pieges") or []:
+                if isinstance(piege, dict) and piege.get("relance"):
+                    lignes.append(
+                        f"   Si l'élève tombe dans un piège fréquent, relance : {str(piege['relance']).strip()}"
+                    )
             if ex.get("solution"):
                 lignes.append(f"   Solution : {str(ex['solution']).strip()}")
         blocs.append("\n".join(lignes))
