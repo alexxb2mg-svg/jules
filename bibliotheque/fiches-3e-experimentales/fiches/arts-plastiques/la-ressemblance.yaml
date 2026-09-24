@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: la-ressemblance
+declencheurs:
+- est ce que le dessin doit ressembler a la realite
+- portrait ressemblant
+- pourquoi le tableau n'est pas realiste
+- vraisemblance en art
+- ecart avec le reel
+- difference entre ressemblance et vraisemblance
+essentiel: 'En art, la ressemblance désigne le fait qu''une image reproduit fidèlement l''apparence d''un modèle
+  (un visage, un objet, un paysage).
+
+  La vraisemblance est différente : une image peut sembler crédible, cohérente, « pouvoir exister », sans pour autant
+  ressembler exactement à quelque chose de réel (une scène imaginaire bien construite peut être vraisemblable sans
+  être ressemblante).
+
+  L''écart entre l''œuvre et le réel n''est pas un défaut : c''est souvent ce choix d''écart (déformation, simplification,
+  exagération) qui porte le sens ou l''expressivité d''une œuvre.
+
+  Le trompe-l''œil pousse au contraire la ressemblance jusqu''à créer un doute chez le spectateur : il utilise la
+  perspective et les jeux d''ombre pour faire croire qu''une surface plane est réelle.'
+methode:
+- Se demander d'abord si l'image cherche à copier fidèlement un modèle (ressemblance).
+- Chercher ensuite si elle reste crédible même sans copier exactement (vraisemblance).
+- Identifier ce que l'écart au réel (déformation, couleur irréelle, proportions changées) apporte au sens.
+- 'Ne pas juger une œuvre « ratée » parce qu''elle ne ressemble pas : se demander ce qu''elle cherche à faire.'
+vocabulaire:
+- terme: trompe-l'œil
+  definition: technique qui pousse la ressemblance jusqu'à faire croire qu'une image plane est un objet réel en
+    volume
+- terme: vraisemblance
+  definition: qualité d'une image cohérente et crédible, même si elle ne reproduit pas exactement un modèle réel
+erreurs_frequentes:
+- Croire qu'une bonne œuvre doit toujours ressembler au réel.
+- Confondre absence de ressemblance et absence de sens.
+- Penser que le trompe-l'œil est de la « triche » plutôt qu'une technique exigeante.
+exemple:
+  enonce: Un peintre représente un visage avec des couleurs vives non naturelles (un front bleu, une joue orange)
+    tout en gardant les proportions justes du visage.
+  solution: 'Le portrait n''est pas ressemblant dans ses couleurs, mais il reste vraisemblable comme visage (proportions,
+    expression) : l''écart de couleur sert probablement à exprimer une émotion plutôt qu''à copier la réalité.'
+exercices:
+- enonce: 'À la maison : dessine un objet de ta chambre deux fois — une fois en cherchant la ressemblance la plus
+    fidèle possible, une fois en gardant sa reconnaissabilité mais en changeant volontairement une caractéristique
+    (couleur, taille, matière).'
+  indices:
+  - 'Le deuxième dessin doit rester reconnaissable : c''est ça, la vraisemblance.'
+  solution: Réussite si l'objet reste identifiable dans les deux dessins et si tu peux expliquer ce que le deuxième
+    écart apporte (humour, étrangeté, expressivité…).
+- enonce: Cherche une reproduction d'un trompe-l'œil (mur peint, plafond peint) et note deux procédés techniques
+    qui créent l'illusion.
+  indices:
+  - Pense à la perspective et aux ombres portées.
+  solution: Réussite si les deux procédés cités sont bien des techniques visuelles (perspective, ombre, continuité
+    du décor réel) et pas seulement « c'est bien fait ».
+sources:
+- titre: Vikidia, « Trompe-l'œil »
+  url: https://fr.vikidia.org/w/index.php?title=Trompe-l%27%C5%93il&oldid=1977820
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Portrait »
+  url: https://fr.vikidia.org/w/index.php?title=Portrait&oldid=2588251
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

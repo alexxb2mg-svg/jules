@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: conflits-monde-contemporain
+declencheurs:
+- conflits actuels
+- guerre en Ukraine
+- COP21
+- sommet pour le climat
+- coopération internationale
+- conférence mondiale
+- accord de Paris climat
+- ONU aujourd'hui
+essentiel: 'Depuis la fin de la guerre froide (1989-1991), le monde n''est plus organisé autour de deux blocs rivaux,
+  mais reste marqué par des rivalités et des conflits, avec des enjeux locaux (territoriaux, religieux, ethniques)
+  qui peuvent avoir des répercussions internationales.
+
+  Un exemple contemporain est la guerre russo-ukrainienne : la Russie envahit l''Ukraine en février 2022, provoquant
+  un conflit qui mobilise une aide internationale à l''Ukraine et de lourdes sanctions économiques contre la Russie.
+
+  Face à des défis mondiaux comme le changement climatique, des acteurs très divers (États, organisations internationales,
+  ONG, entreprises) coopèrent lors de grandes conférences. L''accord de Paris sur le climat, négocié lors de la
+  COP21 et adopté le 12 décembre 2015, engage les pays signataires à limiter le réchauffement climatique bien en
+  dessous de 2°C par rapport à l''époque préindustrielle.'
+methode:
+- Choisir un exemple précis de conflit contemporain (par exemple la guerre en Ukraine depuis 2022) et connaître
+  ses grandes dates.
+- Distinguer les enjeux locaux d'un conflit (territoire, population) de ses répercussions internationales (sanctions,
+  alliances).
+- Pour la coopération internationale, choisir un exemple précis (l'accord de Paris de 2015) et connaître son objectif
+  chiffré.
+- 'Identifier les différents types d''acteurs de la coopération internationale : États, ONU, ONG.'
+vocabulaire:
+- terme: COP
+  definition: 'Conférence des parties : réunion internationale annuelle sur le climat organisée par l''ONU'
+- terme: sanctions économiques
+  definition: des mesures prises par des États pour pénaliser économiquement un autre État, sans recourir à la guerre
+erreurs_frequentes:
+- Croire que la fin de la guerre froide a mis fin à tous les conflits dans le monde.
+- Confondre l'accord de Paris sur le climat (2015) avec un simple sommet sans engagement chiffré.
+- Oublier de dater précisément l'exemple de conflit choisi.
+- Réduire la coopération internationale aux seuls États, en oubliant les ONG et organisations comme l'ONU.
+exemple:
+  enonce: Donne la date et l'objectif principal de l'accord de Paris sur le climat.
+  solution: Adopté le 12 décembre 2015 lors de la COP21, il vise à limiter la hausse de la température moyenne mondiale
+    bien en dessous de 2°C par rapport aux niveaux préindustriels, si possible à 1,5°C.
+exercices:
+- enonce: Cite un exemple de conflit contemporain et sa date de déclenchement.
+  indices:
+  - Un exemple récent en Europe de l'Est.
+  solution: La guerre russo-ukrainienne, déclenchée par l'invasion de l'Ukraine par la Russie en février 2022.
+- enonce: 'Développement construit : montre comment la coopération internationale tente de répondre au défi du changement
+    climatique.'
+  indices:
+  - Cite l'accord de Paris et son année.
+  - Quels types d'acteurs participent ?
+  solution: Un développement réussi doit présenter l'accord de Paris sur le climat, adopté en 2015 lors de la COP21
+    ; préciser son objectif (limiter le réchauffement bien en dessous de 2°C) ; montrer que différents acteurs (États,
+    ONU, ONG) coopèrent au niveau mondial pour tenter de le mettre en œuvre.
+- enonce: Pourquoi un conflit local peut-il avoir des conséquences mondiales ?
+  indices:
+  - Pense aux sanctions économiques ou aux alliances internationales.
+  solution: Un conflit local peut entraîner des sanctions économiques internationales, des alliances diplomatiques
+    ou militaires, et perturber des échanges commerciaux mondiaux, ce qui étend ses effets bien au-delà du territoire
+    concerné.
+sources:
+- titre: Vikidia, « Guerre froide »
+  url: https://fr.vikidia.org/w/index.php?title=Guerre_froide&oldid=2570032
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (fin de la guerre froide, contexte)
+- titre: Vikidia, « Accord de Paris sur le climat »
+  url: https://fr.vikidia.org/w/index.php?title=Accord_de_Paris_sur_le_climat&oldid=2410603
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

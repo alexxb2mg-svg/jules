@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: dispositif-de-representation
+declencheurs:
+- organiser les elements dans mon dessin
+- composition d'une image
+- occuper l'espace de la feuille
+- installation en volume
+- espace en trois dimensions
+- difference entre organisation et composition
+essentiel: 'Dans une image en deux dimensions, l''espace « littéral » est la surface réelle du support (le format
+  de la feuille), et l''espace « suggéré » est la profondeur qu''une image peut donner l''illusion de contenir (grâce
+  à la perspective, à la taille des éléments, aux superpositions).
+
+  La composition organise les formes à l''intérieur des limites de l''image selon une intention (équilibre, déséquilibre,
+  ligne de force), alors que l''« organisation » peut désigner un agencement plus neutre, sans recherche esthétique
+  particulière.
+
+  En volume (trois dimensions), on distingue une structure (l''armature, le squelette d''une forme), une construction
+  (l''assemblage de plusieurs éléments) et une installation (une œuvre pensée pour un espace donné, qui inclut souvent
+  le déplacement du spectateur autour d''elle).'
+methode:
+- 'Repérer d''abord les limites du support : format, orientation, taille.'
+- Placer les éléments principaux en pensant à l'équilibre ou au déséquilibre recherché.
+- 'Pour un volume : décider s''il s''agit d''une structure, d''une construction ou d''une installation liée à un
+  lieu.'
+- Vérifier que la composition sert bien l'intention (calme, tension, mouvement…).
+vocabulaire:
+- terme: composition picturale
+  definition: organisation réfléchie des formes à l'intérieur des limites d'une image, en vue d'un effet
+- terme: installation
+  definition: œuvre en volume conçue pour un lieu précis, qui modifie la perception de cet espace
+erreurs_frequentes:
+- Placer les éléments au hasard sans penser à l'équilibre général.
+- Confondre une simple construction en volume et une véritable installation pensée pour un lieu.
+- Oublier que les bords de la feuille ou du support font partie de la composition.
+exemple:
+  enonce: Décrire la composition d'une photo qui place un personnage tout en haut à gauche d'un grand ciel vide.
+  solution: 'Le vide occupe la majorité du cadre : cette composition déséquilibrée donne une impression de petitesse
+    ou de solitude du personnage, un effet que ne donnerait pas un cadrage centré.'
+exercices:
+- enonce: 'À la maison : réalise deux petites compositions avec les mêmes trois formes découpées dans du papier
+    — une équilibrée (formes réparties), une déséquilibrée (formes regroupées dans un coin).'
+  indices:
+  - Prends une photo des deux versions avant de les coller si tu veux comparer.
+  solution: Réussite si les deux compositions utilisent bien les mêmes formes et si tu peux décrire en une phrase
+    l'effet différent que chacune produit.
+- enonce: Observe un objet en volume chez toi (une chaise, une lampe) et détermine s'il s'agit plutôt d'une structure
+    ou d'une construction, en justifiant.
+  indices:
+  - Une structure met en avant son armature ; une construction assemble des éléments visibles.
+  solution: Réussite si le choix est justifié par une observation concrète de l'objet (pieds visibles, assemblage
+    de pièces…).
+sources:
+- titre: Wikipédia, « Composition picturale »
+  url: https://fr.wikipedia.org/w/index.php?title=Composition_picturale&oldid=237458929
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Installation (art) »
+  url: https://fr.wikipedia.org/w/index.php?title=Installation_%28art%29&oldid=238029954
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

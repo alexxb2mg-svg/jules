@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: constituants-phrase-simple
+declencheurs:
+- sujet cod coi
+- compléments circonstanciels
+- épithète complément du nom
+- classes de mots
+- types de phrase
+- phrase déclarative interrogative
+essentiel: 'Une phrase simple contient un seul verbe conjugué. Ses constituants principaux sont le sujet (qui fait
+  l''action ou dont on parle), le prédicat (ce qu''on en dit, souvent le verbe et ses compléments) et, éventuellement,
+  un ou plusieurs compléments circonstanciels, mobiles et supprimables.
+
+  Le complément d''objet direct (COD) et le complément d''objet indirect (COI) complètent le verbe et ne peuvent
+  en général ni être supprimés ni être déplacés. Le sujet peut être éloigné du verbe par une inversion ou un complément
+  intercalé, mais il commande toujours l''accord.
+
+  Le nom peut être enrichi par des expansions : l''épithète (adjectif directement accolé), le complément du nom
+  (introduit par une préposition), l''apposition (détachée par une virgule).
+
+  On distingue les classes de mots (nom, verbe, adjectif, déterminant, pronom, adverbe, préposition, conjonction),
+  les types de phrase (déclaratif, interrogatif, impératif, exclamatif) et les formes de phrase (négative, passive,
+  emphatique, impersonnelle), qui peuvent se combiner.'
+methode:
+- Trouver le verbe conjugué, puis poser « qui est-ce qui / qu'est-ce qui + verbe ? » pour le sujet.
+- Repérer COD et COI par les questions qui/quoi (sans préposition) et à qui/à quoi (avec préposition).
+- 'Identifier les compléments circonstanciels : supprimables et déplaçables, ils répondent à où, quand, comment,
+  pourquoi.'
+- 'Analyser les expansions du nom : épithète collée au nom, complément du nom avec préposition, apposition détachée
+  par une virgule.'
+- 'Croiser type de phrase (sens de l''énoncé) et forme de phrase (négative, passive, impersonnelle) : une même phrase
+  peut être déclarative ET négative, par exemple.'
+erreurs_frequentes:
+- 'Confondre COD et attribut du sujet (attribut : après un verbe d''état comme être, sembler).'
+- Croire qu'un complément circonstanciel ne peut être qu'en fin de phrase.
+- Confondre type de phrase (déclaratif, interrogatif...) et forme de phrase (négative, passive...).
+- Oublier que le sujet peut être séparé du verbe par un ou plusieurs mots, sans changer l'accord.
+exemple:
+  enonce: 'Analyser : « Dans le jardin, mon voisin, un homme très patient, cultive de belles roses rouges chaque
+    été. »'
+  solution: 'Sujet : mon voisin. Apposition : un homme très patient. Verbe : cultive. COD : de belles roses rouges
+    (avec épithètes « belles » et « rouges »). Compléments circonstanciels : dans le jardin (lieu), chaque été (temps).'
+exercices:
+- enonce: Dans « Le professeur, fatigué par la journée, corrigea rapidement les copies dans la salle des professeurs.
+    », identifier sujet, apposition, verbe, COD et compléments circonstanciels.
+  indices:
+  - Qui est fatigué ?
+  - Que corrige-t-on ? Où ? Comment ?
+  solution: 'Sujet : le professeur. Apposition : fatigué par la journée. Verbe : corrigea. COD : les copies. Compléments
+    circonstanciels : rapidement (manière), dans la salle des professeurs (lieu).'
+- enonce: 'Donner le type et la forme de la phrase : « Ne partez pas sans moi ! »'
+  indices:
+  - Quel est le sens général (ordre) ?
+  - Y a-t-il une négation ?
+  solution: Type impératif (donne un ordre), forme négative (« ne... pas »).
+sources:
+- titre: Wikipédia, « Fonction syntaxique »
+  url: https://fr.wikipedia.org/w/index.php?title=Fonction_syntaxique&oldid=239405021
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

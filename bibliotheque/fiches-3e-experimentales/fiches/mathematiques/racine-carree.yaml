@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: racine-carree
+declencheurs: ["racine", "racines", "radical"]
 essentiel: 'Pour un nombre a positif, la racine carrée de a, notée √a, est le seul nombre positif dont le carré
   est a. Exemple : √49 = 7 car 7² = 49 et 7 ≥ 0.
 

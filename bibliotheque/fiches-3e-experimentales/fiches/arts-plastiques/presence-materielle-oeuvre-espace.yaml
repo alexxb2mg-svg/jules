@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: presence-materielle-oeuvre-espace
+declencheurs:
+- oeuvre installee dans la rue
+- oeuvre monumentale
+- art in situ
+- presenter une oeuvre dans un lieu precis
+- echelle d'une sculpture
+- oeuvre dans l'espace public
+essentiel: 'La présentation d''une œuvre (son échelle, son lieu, son socle ou son absence de socle) fait partie
+  de l''œuvre elle-même : une même sculpture ne produit pas le même effet posée sur un socle dans un musée ou installée
+  au sol dans une rue.
+
+  Le rapport d''échelle entre l''œuvre et le spectateur (une œuvre minuscule qu''on doit s''approcher pour voir,
+  une œuvre monumentale qui domine) modifie profondément l''expérience.
+
+  L''in situ désigne une œuvre pensée spécifiquement pour un lieu donné, qu''elle ne pourrait pas garder en étant
+  déplacée ailleurs ; l''espace public pose des questions particulières d''accès, de durée (dimension parfois éphémère)
+  et de dialogue avec l''architecture environnante.'
+methode:
+- Déterminer l'échelle de l'œuvre par rapport au corps du spectateur, et l'effet recherché.
+- Choisir le lieu de présentation en fonction de ce qu'il apporte à l'œuvre (musée, rue, nature).
+- Pour une œuvre in situ, vérifier qu'elle dialogue vraiment avec les caractéristiques du lieu (taille, matière,
+  lumière).
+- Anticiper la durée de vie de l'œuvre si elle est installée en extérieur ou dans l'espace public.
+vocabulaire:
+- terme: in situ
+  definition: œuvre conçue spécifiquement pour un lieu précis, indissociable de celui-ci
+erreurs_frequentes:
+- Penser que le lieu d'exposition n'a pas d'importance pour la perception de l'œuvre.
+- Confondre une œuvre simplement installée dehors et une véritable œuvre in situ pensée pour ce lieu.
+- Ignorer les contraintes d'une œuvre en extérieur (météo, accès du public, durée).
+exemple:
+  enonce: Un artiste enveloppe un pont existant avec un tissu, pour une durée limitée.
+  solution: 'L''œuvre est pensée pour ce pont précis (in situ) : son échelle monumentale et son caractère éphémère
+    (elle sera démontée) font partie intégrante du projet, qui ne pourrait pas être reproduit à l''identique ailleurs.'
+exercices:
+- enonce: 'À la maison : choisis un lieu de ta maison ou de ton quartier et imagine une petite œuvre pensée spécifiquement
+    pour ce lieu (qui ne fonctionnerait pas ailleurs). Décris-la.'
+  indices:
+  - 'Pense à une caractéristique unique du lieu : une fenêtre, un mur, un escalier.'
+  solution: Réussite si l'œuvre imaginée utilise vraiment une particularité du lieu choisi et ne pourrait pas être
+    simplement déplacée.
+- enonce: Compare, par la pensée ou avec des images trouvées, l'effet d'une même sculpture posée sur un socle dans
+    un musée et posée directement au sol dans un jardin.
+  indices:
+  - Pense à la distance que le spectateur doit garder dans chaque cas.
+  solution: Réussite si tu identifies au moins une différence d'expérience liée à la présentation (distance, rapport
+    au corps, contexte).
+sources:
+- titre: Vikidia, « Land art »
+  url: https://fr.vikidia.org/w/index.php?title=Land_art&oldid=2273383
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Installation »
+  url: https://fr.vikidia.org/w/index.php?title=Installation&oldid=2570407
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

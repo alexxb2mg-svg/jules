@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-rencontres-autres-cultures
+declencheurs:
+- patrimoine anglophone
+- biodiversité anglais
+- parc national anglais
+- climat pays anglophone
+- rencontre interculturelle
+- énergies renouvelables pays anglophones
+essentiel: 'Le thème « Rencontres avec d''autres cultures » s''appuie sur des repères historiques et géographiques
+  pour découvrir la diversité des pays anglophones : leur patrimoine historique, naturel et architectural, mais
+  aussi des notions d''inclusion et d''exclusion sociale.
+
+
+  Les parcs nationaux (national parks) et les réserves de biosphère sont des exemples concrets pour aborder ce thème
+  : ce sont des espaces protégés qui montrent comment un pays valorise et préserve son patrimoine naturel. Le premier
+  parc national du monde a été créé aux États-Unis (Yellowstone).
+
+
+  Les spécificités climatiques et la biodiversité des pays anglophones (très variées, du climat tropical de certaines
+  îles au climat polaire du nord du Canada) permettent de comparer les paysages et les enjeux environnementaux.
+  Le thème aborde aussi les énergies renouvelables développées dans ces pays, en lien avec la transition énergétique.'
+methode:
+- Relier chaque exemple de patrimoine ou de parc national à un pays précis, sans généraliser à tous les pays anglophones.
+- Utiliser du vocabulaire spécifique (biodiversity, national park, renewable energy) pour décrire les enjeux environnementaux
+  d'un pays.
+- S'appuyer sur des faits vérifiés (dates, lieux) pour parler du patrimoine et de l'histoire d'un pays anglophone.
+vocabulaire:
+- terme: national park
+  definition: parc national, zone protégée par un gouvernement pour préserver sa nature ou son patrimoine
+- terme: biodiversity
+  definition: la biodiversité, la diversité des espèces vivantes dans un milieu donné
+erreurs_frequentes:
+- Penser que tous les pays anglophones ont le même climat ou la même biodiversité.
+- Confondre un parc national (espace protégé, souvent naturel) avec un parc urbain classique.
+- Généraliser une observation sur un pays à l'ensemble du monde anglophone.
+exemple:
+  enonce: Le premier parc national du monde a été créé en 1872 aux États-Unis. Le nommer et expliquer en une phrase
+    en anglais pourquoi de tels espaces sont créés.
+  solution: 'Il s''agit de Yellowstone National Park. Exemple de phrase en anglais : « National parks are created
+    to protect nature and wildlife from human development. »'
+exercices:
+- enonce: Pourquoi la biodiversité et le climat peuvent-ils être très différents entre deux pays anglophones, par
+    exemple l'Australie et le Canada ?
+  indices:
+  - Pense à leur position géographique différente.
+  solution: Leur position géographique très différente (l'Australie majoritairement en zone tropicale et désertique,
+    le Canada en zone tempérée et polaire) entraîne des climats et des écosystèmes très différents, donc une biodiversité
+    propre à chaque pays.
+sources:
+- titre: Simple English Wikipedia, « National park »
+  url: https://simple.wikipedia.org/w/index.php?title=National_park&oldid=10940652
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Simple English Wikipedia, « Renewable energy »
+  url: https://simple.wikipedia.org/w/index.php?title=Renewable_energy&oldid=10962168
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

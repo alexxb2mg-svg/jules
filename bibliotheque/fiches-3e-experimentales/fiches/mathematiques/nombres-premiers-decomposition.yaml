@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: nombres-premiers-decomposition
+declencheurs: ["premier", "premiers", "facteurs premiers", "décomposer"]
 essentiel: 'b est un diviseur de a (a est un multiple de b) s''il existe un entier q tel que a = b × q.
 
   Un nombre premier a exactement deux diviseurs : 1 et lui-même (2, 3, 5, 7, 11, 13...). 1 n''est pas premier.

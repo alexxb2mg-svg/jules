@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: mecanismes-nerveux-cellulaire
+declencheurs:
+- synapse
+- neurotransmetteur
+- influx nerveux
+- dopage et cerveau
+- hygiène de vie et cerveau
+essentiel: 'À l''échelle cellulaire, un message nerveux se transmet le long d''un neurone sous forme d''un signal
+  électrique appelé influx nerveux (ou potentiel d''action), qui se propage rapidement le long de la cellule nerveuse.
+
+  Entre deux neurones, il existe un espace appelé synapse, qui sépare la cellule qui transmet l''information (présynaptique)
+  de celle qui la reçoit (postsynaptique) : l''influx nerveux ne peut pas franchir directement cet espace.
+
+  Au niveau de la synapse, la transmission se fait grâce à des molécules chimiques appelées neurotransmetteurs,
+  libérées par le neurone présynaptique dans l''espace synaptique, qui viennent se fixer sur des récepteurs du neurone
+  suivant pour transmettre le message.
+
+  Ce mode de transmission, à sens unique (toujours de la cellule présynaptique vers la cellule postsynaptique),
+  explique le fonctionnement en réseau du système nerveux, qui permet d''intégrer et de coordonner de nombreuses
+  informations.
+
+  Certains comportements (consommation de drogues, dopage, manque de sommeil) peuvent perturber le fonctionnement
+  des synapses et des neurotransmetteurs, avec des conséquences sur le fonctionnement cérébral ; une bonne hygiène
+  de vie (sommeil, alimentation équilibrée, activité physique) favorise, à l''inverse, un fonctionnement nerveux
+  optimal.'
+methode:
+- Distinguer le transport de l'information à l'intérieur d'un neurone (influx nerveux, électrique) et entre deux
+  neurones (synapse, chimique).
+- 'Retenir le sens de circulation de l''information à une synapse : toujours du neurone présynaptique vers le neurone
+  postsynaptique.'
+- Relier la libération de neurotransmetteurs à la transmission effective du message à travers la synapse.
+- Relier un comportement (dopage, hygiène de vie) à son effet possible sur le fonctionnement nerveux et cérébral.
+erreurs_frequentes:
+- Croire que l'influx nerveux traverse directement la synapse sans intermédiaire chimique.
+- Confondre neurotransmetteur (molécule chimique) et influx nerveux (signal électrique).
+- Penser que l'information peut circuler dans les deux sens à travers une même synapse.
+- Ignorer que des substances comme les drogues peuvent agir directement au niveau des synapses cérébrales.
+exemple:
+  enonce: Pourquoi dit-on que la transmission d'un message nerveux à une synapse est « chimique », alors qu'à l'intérieur
+    d'un neurone elle est « électrique » ?
+  solution: 'À l''intérieur d''un neurone, le message se propage sous forme d''un signal électrique (l''influx nerveux)
+    ; mais entre deux neurones, l''espace synaptique ne permet pas à ce signal électrique de passer directement
+    : la transmission se fait alors grâce à des molécules chimiques, les neurotransmetteurs, libérées puis captées
+    par le neurone suivant.'
+exercices:
+- enonce: Que libère le neurone présynaptique dans la fente synaptique pour transmettre un message au neurone suivant
+    ?
+  indices:
+  - Ce sont des molécules chimiques.
+  solution: Des neurotransmetteurs.
+- enonce: Dans quel sens circule l'information au niveau d'une synapse ?
+  indices:
+  - Toujours dans le même sens, entre deux types de cellules nommées d'après leur position.
+  solution: Toujours de la cellule présynaptique vers la cellule postsynaptique (jamais l'inverse).
+- enonce: Pourquoi une bonne hygiène de vie (sommeil suffisant, alimentation équilibrée) est-elle recommandée pour
+    le bon fonctionnement du cerveau ?
+  indices:
+  - Pense à ce dont les neurones et les synapses ont besoin pour bien fonctionner.
+  solution: Elle favorise un fonctionnement optimal des neurones et des synapses (récupération, apport en nutriments
+    nécessaires), tandis qu'un manque de sommeil ou une alimentation déséquilibrée peut perturber la transmission
+    des messages nerveux et le fonctionnement cérébral.
+sources:
+- titre: Vikidia, « Synapse »
+  url: https://fr.vikidia.org/w/index.php?title=Synapse&oldid=1525703
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

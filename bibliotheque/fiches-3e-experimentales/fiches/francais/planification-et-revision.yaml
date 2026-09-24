@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: planification-et-revision
+declencheurs:
+- organiser ma rédaction
+- trouver des idées pour écrire
+- brouillon
+- réécrire mon texte
+- améliorer ma rédaction
+- plan de rédaction
+- je ne sais pas quoi écrire
+essentiel: 'Écrire un texte demande d''abord de le planifier : chercher des idées (par une liste, un schéma, un
+  brainstorming), les organiser dans un ordre logique, et préparer un plan avant de rédiger le texte complet. Le
+  plan est la structure du texte : il montre comment les idées s''articulent entre elles pour construire une argumentation
+  ou un récit cohérent.
+
+  Le brouillon est la première version, l''ébauche d''un texte, destinée à être corrigée : ratures, ajouts en marge,
+  réorganisations. C''est une étape normale et utile de l''écriture, pas un texte raté.
+
+  Réviser un texte, c''est le relire pour l''améliorer : vérifier que les idées sont claires et bien reliées entre
+  elles (grâce à des connecteurs logiques), corriger les fautes de langue, enrichir le vocabulaire, supprimer les
+  répétitions. On peut utiliser différents outils pour réviser : relecture à voix haute, dictionnaire, grammaire,
+  avis d''un camarade, correcteur informatique.'
+methode:
+- Chercher des idées avant d'écrire (liste au brouillon, carte mentale).
+- Organiser ces idées dans un ordre logique pour construire un plan.
+- Rédiger un brouillon sans chercher la perfection dès la première version.
+- 'Relire le texte pour vérifier sa cohérence : les idées s''enchaînent-elles clairement ?'
+- Réviser la langue (orthographe, grammaire, vocabulaire) dans un second temps, séparément du fond.
+vocabulaire:
+- terme: brouillon
+  definition: première version d'un texte, destinée à être corrigée et améliorée
+- terme: plan
+  definition: organisation logique des idées d'un texte avant sa rédaction complète
+- terme: révision
+  definition: relecture d'un texte pour l'améliorer, sur le fond et sur la forme
+erreurs_frequentes:
+- Commencer à rédiger directement sans avoir cherché ni organisé ses idées.
+- Ne réviser que l'orthographe, sans vérifier la cohérence générale du texte.
+- Considérer le brouillon comme une perte de temps plutôt qu'une étape utile.
+- Réviser un texte tout de suite après l'avoir écrit, sans prendre de recul.
+exemple:
+  enonce: Avant d'écrire une rédaction sur un souvenir marquant, que faire en premier ?
+  solution: Chercher au brouillon plusieurs souvenirs possibles, en choisir un, noter les moments clés à raconter
+    dans l'ordre, puis construire un plan (début, évènement central, fin) avant de rédiger le texte complet.
+exercices:
+- enonce: Cite deux outils qu'on peut utiliser pour réviser un texte.
+  indices:
+  - 'Relis l''essentiel : dictionnaire, camarade…'
+  solution: 'Par exemple : la relecture à voix haute, un dictionnaire, une grammaire, l''avis d''un camarade, un
+    correcteur orthographique.'
+- enonce: Pour un sujet de rédaction de ton choix, note en 4-5 lignes un plan en trois parties (idées principales
+    à développer) avant même de rédiger le texte complet.
+  indices:
+  - Un plan liste les idées dans l'ordre où elles apparaîtront, sans détailler les phrases.
+  solution: Réussite si les trois parties du plan sont clairement distinctes et suivent un ordre logique (par exemple
+    chronologique ou du plus simple au plus complexe).
+sources:
+- titre: Wikipédia, « Plan (rédaction) »
+  url: https://fr.wikipedia.org/w/index.php?title=Plan_%28r%C3%A9daction%29&oldid=237794096
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Brouillon »
+  url: https://fr.wikipedia.org/w/index.php?title=Brouillon&oldid=239168784
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

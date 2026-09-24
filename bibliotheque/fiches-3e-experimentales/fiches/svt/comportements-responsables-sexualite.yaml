@@ -1,0 +1,80 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: comportements-responsables-sexualite
+declencheurs:
+- contraception
+- pilule contraceptive
+- préservatif
+- infection sexuellement transmissible
+- choix d'avoir un enfant
+- prévention IST
+essentiel: 'Un comportement responsable en matière de sexualité tient compte de plusieurs éléments : la fertilité
+  (la capacité à procréer), le respect de l''autre et de son consentement, le choix raisonné de la procréation (avoir
+  ou non un enfant, à quel moment), et la prévention des infections sexuellement transmissibles (IST).
+
+  La contraception regroupe les méthodes qui permettent d''éviter une grossesse non désirée tout en ayant des rapports
+  sexuels : elle peut agir en empêchant la libération ou la rencontre des gamètes (par exemple, la pilule contraceptive
+  empêche l''ovulation).
+
+  Le préservatif (masculin ou féminin) est la seule méthode de contraception qui protège aussi contre la transmission
+  des infections sexuellement transmissibles, en empêchant tout contact direct entre muqueuses et fluides.
+
+  Une infection sexuellement transmissible (IST) se transmet lors de rapports sexuels non protégés ; certaines IST
+  peuvent avoir des conséquences graves si elles ne sont pas dépistées et traitées à temps, d''où l''importance
+  de la prévention et du dépistage régulier.
+
+  La grossesse résulte de la fécondation d''un ovule par un spermatozoïde ; le choix raisonné de la procréation
+  implique d''anticiper ce risque lors de rapports sexuels non protégés si une grossesse n''est pas souhaitée.'
+methode:
+- Distinguer les méthodes de contraception qui évitent une grossesse de celles qui protègent en plus des IST (préservatif).
+- Relier le mode d'action d'une méthode contraceptive à l'étape de la reproduction qu'elle bloque (ovulation, rencontre
+  des gamètes…).
+- Retenir que seul le préservatif protège à la fois de la grossesse non désirée et des IST.
+- Relier prévention (préservatif, dépistage) et conséquences possibles d'une IST non traitée.
+erreurs_frequentes:
+- Croire que toutes les méthodes de contraception protègent aussi contre les IST (seul le préservatif le fait).
+- Penser qu'une IST ne peut pas être transmise sans symptômes visibles.
+- 'Confondre contraception (éviter une grossesse) et prévention des IST (éviter une infection) : ce sont deux enjeux
+  différents, parfois liés à la même méthode (préservatif).'
+- Croire que la responsabilité en matière de sexualité ne concerne que la contraception, en oubliant le respect
+  du consentement de l'autre.
+exemple:
+  enonce: Pourquoi recommande-t-on souvent d'associer la pilule contraceptive et le préservatif chez un couple qui
+    n'est pas mutuellement fidèle depuis longtemps ?
+  solution: La pilule contraceptive évite une grossesse non désirée en empêchant l'ovulation, mais ne protège pas
+    contre les infections sexuellement transmissibles ; seul le préservatif protège contre les IST. Associer les
+    deux méthodes permet de se prémunir à la fois contre une grossesse non désirée et contre les IST.
+exercices:
+- enonce: Quelle est la seule méthode contraceptive qui protège aussi contre les infections sexuellement transmissibles
+    ?
+  indices:
+  - Pense à une barrière physique empêchant tout contact direct.
+  solution: Le préservatif (masculin ou féminin).
+- enonce: Comment agit la pilule contraceptive pour éviter une grossesse ?
+  indices:
+  - Pense à l'une des étapes nécessaires à la fécondation.
+  solution: Elle empêche l'ovulation (la libération d'un ovule par l'ovaire), ce qui empêche la fécondation.
+- enonce: Pourquoi le dépistage régulier des infections sexuellement transmissibles est-il important, même en l'absence
+    de symptômes ?
+  indices:
+  - Pense au fait qu'une IST peut être présente sans se manifester clairement.
+  solution: Parce qu'une IST peut être transmise et évoluer sans provoquer de symptômes visibles ; un dépistage
+    régulier permet de la détecter et de la traiter à temps, avant qu'elle n'entraîne des complications ou ne soit
+    transmise à d'autres personnes.
+sources:
+- titre: Vikidia, « Contraception »
+  url: https://fr.vikidia.org/w/index.php?title=Contraception&oldid=2562259
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Infection sexuellement transmissible »
+  url: https://fr.vikidia.org/w/index.php?title=Infection_sexuellement_transmissible&oldid=2588644
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

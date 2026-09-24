@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: problemes-mise-en-equation
+declencheurs: ["mettre en équation", "âge", "ans", "nombre de départ", "consécutifs", "trouver le nombre"]
+essentiel: 'Un problème se présente rarement sous forme d''équation : il faut traduire l''énoncé en langage mathématique.
+
+  Quatre étapes : 1) choisir l''inconnue et dire ce qu''elle représente (souvent ce que demande la question) ; 2)
+  écrire une égalité entre deux expressions qui contiennent l''inconnue, à partir des informations de l''énoncé
+  ; 3) résoudre l''équation ; 4) vérifier que la solution convient (et qu''elle est vraisemblable), puis répondre
+  à la question par une phrase.'
+methode:
+- Écrire « Soit x … » en précisant l'unité (x le nombre de séances, x la largeur en cm…).
+- Exprimer les autres quantités en fonction de x (« le triple » → 3x, « 5 de plus » → x + 5).
+- Repérer ce qui est égal dans l'énoncé et écrire l'équation.
+- Résoudre, puis vérifier avec les nombres de l'énoncé.
+- Répondre à la question posée, qui n'est pas forcément x (l'âge de l'autre personne, la longueur…).
+erreurs_frequentes:
+- Ne pas dire ce que représente x.
+- Traduire « le double de x augmenté de 5 » par 2(x + 5) au lieu de 2x + 5.
+- Donner la valeur de x sans répondre à la question.
+- Ne pas contrôler la vraisemblance (un âge négatif, une longueur de 300 m pour une table…).
+exemple:
+  enonce: Léa a trois fois l'âge de son frère. À eux deux, ils ont 24 ans. Quel âge a Léa ?
+  solution: 'Soit x l''âge du frère ; Léa a 3x ans. x + 3x = 24, donc 4x = 24 et x = 6. Léa a 3 × 6 = 18 ans (vérification
+    : 6 + 18 = 24).'
+exercices:
+- enonce: 'Programme de calcul : choisir un nombre, lui ajouter 4, puis multiplier le résultat par 3. Quel nombre
+    faut-il choisir pour obtenir 27 ?'
+  indices:
+  - Appelle x le nombre choisi et écris le programme avec x.
+  - Attention aux parenthèses.
+  solution: 3(x + 4) = 27, donc x + 4 = 9 et x = 5.
+- enonce: Un rectangle a une longueur qui dépasse sa largeur de 5 cm et un périmètre de 38 cm. Calculer ses dimensions.
+  indices:
+  - Si la largeur vaut x, combien vaut la longueur ?
+  - Périmètre = 2 × (longueur + largeur).
+  solution: '2(x + x + 5) = 38, donc 4x + 10 = 38 et x = 7 : largeur 7 cm, longueur 12 cm.'
+- enonce: 'Club A : 15 € d''inscription puis 2 € la séance. Club B : 5 € la séance. Pour combien de séances les
+    deux clubs coûtent-ils le même prix ?'
+  indices:
+  - Exprime le prix de chaque club pour n séances.
+  solution: '15 + 2n = 5n, donc 3n = 15 et n = 5 : 25 € dans les deux clubs.'
+- enonce: La somme de trois nombres entiers consécutifs est 96. Quels sont ces nombres ?
+  indices:
+  - Si le premier est n, comment écrire les deux suivants ?
+  solution: 'n + (n + 1) + (n + 2) = 96, donc 3n + 3 = 96 et n = 31 : 31, 32 et 33.'
+sources:
+- titre: Wikiversité, « Équations/Résoudre un problème »
+  url: https://fr.wikiversity.org/w/index.php?title=%C3%89quations/R%C3%A9soudre_un_probl%C3%A8me&oldid=922233
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

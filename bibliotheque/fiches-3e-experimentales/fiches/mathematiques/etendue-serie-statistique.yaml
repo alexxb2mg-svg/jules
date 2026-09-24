@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: etendue-serie-statistique
+declencheurs: ["écart", "plus grande et la plus petite", "série", "notes", "dispersion"]
 essentiel: 'L''étendue d''une série statistique est l''écart entre sa plus grande et sa plus petite valeur : étendue
   = valeur maximale − valeur minimale.
 

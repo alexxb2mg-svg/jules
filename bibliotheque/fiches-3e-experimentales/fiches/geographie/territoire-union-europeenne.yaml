@@ -1,0 +1,83 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: territoire-union-europeenne
+declencheurs:
+- 27 pays de l'UE
+- carte de l'Union européenne
+- espace Schengen
+- région frontalière
+- position de la France en Europe
+- zone euro carte
+essentiel: 'Depuis le Brexit (sortie du Royaume-Uni en 2020), l''Union européenne compte 27 États membres, avec
+  des tailles et des poids économiques très différents. Elle couvre une superficie totale d''environ 4,2 millions
+  de km² pour plus de 443 millions d''habitants.
+
+  La France occupe une position centrale dans cette géographie européenne : elle est un grand pays par sa superficie
+  et sa population, elle partage des frontières terrestres avec plusieurs autres États membres, et certains de ses
+  territoires ultramarins (les régions ultrapériphériques) font aussi partie intégrante de l''Union européenne,
+  malgré leur éloignement.
+
+  L''Union européenne représente un potentiel important pour la France : marché commun sans droits de douane, libre
+  circulation des personnes (espace Schengen pour la plupart des membres), coopérations régionales transfrontalières
+  (par exemple entre la France, l''Allemagne et la Suisse dans le Rhin supérieur), et financements européens pour
+  l''aménagement du territoire.'
+methode:
+- Retenir le nombre d'États membres de l'UE (27) et un ordre de grandeur de sa population (plus de 440 millions).
+- 'Situer la France dans l''espace européen : ses voisins terrestres, sa position centrale.'
+- Donner un exemple précis de région transfrontalière (Rhin supérieur, Lille et la Belgique...).
+- 'Distinguer Union européenne, espace Schengen et zone euro : trois ensembles qui ne regroupent pas exactement
+  les mêmes pays.'
+vocabulaire:
+- terme: région transfrontalière
+  definition: un espace situé de part et d'autre d'une frontière, où les échanges quotidiens entre pays sont nombreux
+- terme: région ultrapériphérique
+  definition: un territoire ultramarin d'un État membre qui fait partie intégrante de l'Union européenne malgré
+    son éloignement (par exemple La Réunion)
+erreurs_frequentes:
+- 'Confondre Union européenne (27 membres), espace Schengen et zone euro : ces trois ensembles ne réunissent pas
+  les mêmes pays.'
+- Oublier que certains territoires ultramarins français font partie de l'UE (régions ultrapériphériques).
+- Ne pas savoir situer la France par rapport à ses voisins européens sur une carte.
+- Croire que le Royaume-Uni fait toujours partie de l'UE depuis le Brexit (2020).
+exemple:
+  enonce: Donne le nombre d'États membres de l'Union européenne depuis 2020 et explique pourquoi ce nombre a changé.
+  solution: L'Union européenne compte 27 États membres depuis 2020, après le départ du Royaume-Uni (le Brexit),
+    qui était membre depuis 1973.
+exercices:
+- enonce: Cite trois pays qui partagent une frontière terrestre avec la France.
+  indices:
+  - Pense aux pays voisins à l'est et au sud.
+  solution: 'Par exemple : la Belgique, l''Allemagne et l''Espagne (on peut aussi citer l''Italie, la Suisse ou
+    le Luxembourg).'
+- enonce: 'Développement construit : montre l''intérêt d''une région transfrontalière pour la France, à partir d''un
+    exemple.'
+  indices:
+  - Choisis une frontière précise (Rhin supérieur, Nord avec la Belgique...).
+  - Explique un avantage concret (emploi, transports).
+  solution: Un développement réussi doit choisir un exemple précis, par exemple la région du Rhin supérieur entre
+    la France, l'Allemagne et la Suisse ; expliquer que la libre circulation permise par l'espace Schengen facilite
+    les déplacements de travailleurs transfrontaliers ; montrer que cette coopération dynamise l'économie régionale
+    de part et d'autre de la frontière.
+- enonce: Quelle est la différence entre l'Union européenne et l'espace Schengen ?
+  indices:
+  - Tous les membres de l'UE ne sont pas forcément dans l'espace Schengen.
+  solution: L'Union européenne est une union politique et économique de 27 États ; l'espace Schengen est un espace
+    de libre circulation des personnes sans contrôle aux frontières intérieures, qui n'inclut pas exactement les
+    mêmes pays (certains pays hors UE en font partie, certains pays de l'UE n'en font pas partie).
+sources:
+- titre: Vikidia, « Union européenne »
+  url: https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « États membres de l'Union européenne »
+  url: https://fr.wikipedia.org/w/index.php?title=%C3%89tats_membres_de_l%27Union_europ%C3%A9enne&oldid=239310027
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

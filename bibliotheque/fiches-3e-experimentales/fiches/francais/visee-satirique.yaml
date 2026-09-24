@@ -1,0 +1,88 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: visee-satirique
+declencheurs:
+- se moquer
+- moquerie
+- ironie
+- caricature
+- tourner en ridicule
+- critiquer avec humour
+- exagération comique
+- dessin de presse
+essentiel: 'La satire est une œuvre (texte, dessin, spectacle) qui utilise la moquerie, l''ironie ou la caricature
+  pour critiquer une personne, une institution ou un comportement de la société. Son but n''est pas seulement de
+  faire rire : elle vise à dénoncer, à corriger par le ridicule.
+
+  Plusieurs procédés créent l''effet satirique : l''exagération (grossir un trait jusqu''au ridicule, comme dans
+  la caricature) ; la diminution (rapetisser quelque chose pour le rendre dérisoire) ; la parodie (imiter le style
+  de quelqu''un pour le tourner en ridicule) ; l''ironie (dire le contraire de ce qu''on pense, pour faire comprendre
+  une critique).
+
+  La caricature, en particulier, amplifie certains traits physiques ou moraux d''une personne pour faire passer
+  une idée en un coup d''œil : elle joue sur des codes partagés avec le public.
+
+  La satire a une dimension morale et sociale : elle s''attaque à des défauts (l''hypocrisie, la vanité, l''injustice)
+  plus qu''à des individus pris isolément, même si elle vise parfois des personnes précises (souverains, politiques).
+  Elle a des limites : elle peut heurter, être censurée, ou être injuste envers sa cible.'
+methode:
+- Identifier la cible réelle du texte ou de l'image (une personne, un groupe, une institution, un comportement).
+- 'Repérer les procédés utilisés : exagération, diminution, parodie, ironie.'
+- Distinguer ce qui est dit littéralement de ce que l'auteur veut vraiment faire comprendre (l'ironie dit souvent
+  le contraire).
+- Comprendre le message critique caché derrière le rire.
+- 'S''interroger sur les limites : la satire est-elle juste, excessive, dangereuse pour quelqu''un ?'
+vocabulaire:
+- terme: ironie
+  definition: dire une chose en laissant comprendre le contraire, pour critiquer
+- terme: caricature
+  definition: portrait qui exagère certains traits pour les rendre ridicules
+- terme: satire
+  definition: œuvre qui critique par la moquerie
+erreurs_frequentes:
+- Prendre au premier degré une phrase ironique.
+- Confondre satire (critique par le rire, avec une visée morale) et simple blague sans but critique.
+- Ne pas identifier la vraie cible derrière un nom ou un animal (chez La Fontaine, le lion cache souvent un roi).
+- 'Croire que la satire est toujours méchante : elle peut aussi être bienveillante et corrective.'
+exemple:
+  enonce: Dans « Le Loup et l'Agneau » de La Fontaine, le loup accuse l'agneau de salir son eau alors que l'agneau
+    boit en aval, plus bas que lui. En quoi ce récit est-il satirique ?
+  solution: 'La Fontaine exagère l''absurdité des accusations du loup pour dénoncer, sous couvert d''animaux, l''injustice
+    des puissants envers les faibles : « La raison du plus fort est toujours la meilleure » est une morale ironique
+    qui critique un abus de pouvoir réel dans la société.'
+exercices:
+- enonce: Explique la différence entre exagération et diminution comme procédés satiriques.
+  indices:
+  - L'un grossit, l'autre rapetisse.
+  solution: L'exagération grossit un trait jusqu'à le rendre ridicule (un nez énorme sur une caricature) ; la diminution
+    réduit l'importance de quelque chose pour le rabaisser (parler d'un grand discours comme d'un « petit bavardage
+    »).
+- enonce: Écris deux phrases ironiques sur un sujet du quotidien (par exemple, un jour de pluie pendant les vacances),
+    où tu dis le contraire de ce que tu penses vraiment.
+  indices:
+  - L'ironie fonctionne si le lecteur comprend, grâce au contexte, que tu ne penses pas vraiment ce que tu écris.
+  solution: Réussite si les deux phrases disent littéralement le contraire de l'opinion réelle, et si le contexte
+    (ou un mot) permet de comprendre qu'il s'agit d'ironie.
+sources:
+- titre: Wikipédia, « Satire »
+  url: https://fr.wikipedia.org/w/index.php?title=Satire&oldid=238020050
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Caricature »
+  url: https://fr.wikipedia.org/w/index.php?title=Caricature&oldid=239186401
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Fables de La Fontaine (éd. 1874)/Le Loup et l’Agneau »
+  url: https://fr.wikisource.org/w/index.php?title=Fables_de_La_Fontaine_%28%C3%A9d._1874%29/Le_Loup_et_l%E2%80%99Agneau&oldid=13176461
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, fable du domaine public, exemple d'étude
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

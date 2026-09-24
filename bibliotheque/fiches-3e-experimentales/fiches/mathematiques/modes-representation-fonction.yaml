@@ -1,0 +1,60 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: modes-representation-fonction
+declencheurs: ["courbe", "tracer", "repère", "tableau de valeurs", "programme de calcul"]
+essentiel: 'Une même fonction peut être donnée de quatre façons : un programme de calcul (en phrases), une expression
+  (f(x) = 2x + 3), un tableau de valeurs, une représentation graphique.
+
+  La représentation graphique (ou courbe) de f est l''ensemble des points M(x ; f(x)) : l''abscisse est le nombre
+  de départ, l''ordonnée son image.
+
+  Un point A(a ; b) est sur la courbe de f exactement quand f(a) = b.
+
+  Pour tracer une courbe : faire un tableau de valeurs, placer les points dans un repère, puis les relier (une droite
+  si f est affine, une courbe « régulière » sinon).'
+methode:
+- 'Programme de calcul → expression : appliquer le programme à x, étape par étape, avec des parenthèses si besoin.'
+- 'Expression → tableau : calculer f(x) pour plusieurs valeurs de x.'
+- 'Tableau → graphique : placer les points (x ; f(x)) et les relier.'
+- 'Graphique → valeurs : lire l''image sur l''axe vertical, en partant de x sur l''axe horizontal.'
+- 'Pour savoir si un point est sur la courbe : calculer f(abscisse) et comparer à l''ordonnée.'
+erreurs_frequentes:
+- Inverser abscisse et ordonnée en plaçant un point.
+- Relier les points par des segments « cassés » alors que la courbe est arrondie.
+- 'Oublier les parenthèses en traduisant un programme : « ajouter 3 puis multiplier par 2 » donne 2(x + 3).'
+- Mal lire la graduation des axes.
+exemple:
+  enonce: 'Programme : choisir un nombre, le multiplier par 2, ajouter 3. Écrire la fonction associée et son tableau
+    pour x = −1 ; 0 ; 1 ; 2.'
+  solution: 'f(x) = 2x + 3. Tableau : f(−1) = 1 ; f(0) = 3 ; f(1) = 5 ; f(2) = 7. Les points sont alignés : la courbe
+    est une droite.'
+exercices:
+- enonce: Compléter le tableau de g(x) = x² − 1 pour x = −2, −1, 0, 1, 2.
+  indices:
+  - 'Attention : (−2)² = 4.'
+  solution: g(−2) = 3 ; g(−1) = 0 ; g(0) = −1 ; g(1) = 0 ; g(2) = 3.
+- enonce: Le point A(2 ; 7) est-il sur la courbe de f(x) = 2x + 3 ? Et B(−1 ; 2) ?
+  indices:
+  - Calcule f(2) puis f(−1).
+  solution: 'f(2) = 7 : A est sur la courbe. f(−1) = 1 ≠ 2 : B n''y est pas.'
+- enonce: 'Programme : choisir un nombre, ajouter 3, multiplier le résultat par 2. Écrire l''expression h(x).'
+  indices:
+  - 'L''addition se fait en premier : pense aux parenthèses.'
+  solution: h(x) = 2(x + 3) = 2x + 6.
+sources:
+- titre: Wikiversité, « Généralités sur les fonctions/Représentation graphique »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Repr%C3%A9sentation_graphique&oldid=968762
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Généralités sur les fonctions/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

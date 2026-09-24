@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: successif-et-simultane
+declencheurs:
+- plusieurs voix en meme temps en musique
+- chanter a plusieurs voix
+- melodie et accompagnement
+- polyphonie c'est quoi
+- chanter en canon
+essentiel: 'En musique, le successif désigne des sons qui se suivent dans le temps, l''un après l''autre (comme
+  une mélodie jouée seule), tandis que le simultané désigne plusieurs sons entendus en même temps (plusieurs voix
+  ou instruments superposés).
+
+  La polyphonie est la combinaison de plusieurs mélodies ou parties musicales, chantées ou jouées simultanément
+  : elle s''est développée en Europe à partir du haut Moyen Âge et a connu son plein essor jusqu''à la fin de la
+  Renaissance.
+
+  Un cas particulier de polyphonie est le canon, où la même mélodie est chantée par plusieurs voix qui démarrent
+  l''une après l''autre, en décalé : ce qui était successif (la même mélodie) devient simultané dès que plusieurs
+  voix la chantent en même temps à des moments différents.
+
+  À l''inverse, une mélodie accompagnée par de simples accords reste souvent plus « verticale » (harmonique) que
+  polyphonique, si les voix secondaires n''ont pas leur propre mélodie indépendante.'
+methode:
+- Écouter d'abord si un seul son ou plusieurs sons sont entendus en même temps.
+- Si plusieurs sons sont simultanés, vérifier s'il s'agit de plusieurs mélodies indépendantes (polyphonie) ou d'un
+  simple accompagnement.
+- Repérer un canon en identifiant si la même mélodie est chantée en décalé par plusieurs voix.
+- Comparer une écoute successive (une voix seule) et simultanée (plusieurs voix) du même thème.
+vocabulaire:
+- terme: polyphonie
+  definition: combinaison de plusieurs mélodies ou parties musicales jouées ou chantées en même temps
+erreurs_frequentes:
+- Croire que toute musique avec plusieurs instruments est automatiquement polyphonique.
+- Confondre un simple accompagnement d'accords et une vraie polyphonie à plusieurs mélodies indépendantes.
+- Ne pas repérer le principe de décalage qui définit un canon.
+exemple:
+  enonce: Trois groupes chantent la même comptine, mais chaque groupe démarre deux mesures après le précédent.
+  solution: 'C''est un canon : la mélodie, initialement successive (une seule ligne), devient simultanée dès que
+    les trois groupes la chantent ensemble en décalé, créant une polyphonie à partir d''une seule mélodie.'
+exercices:
+- enonce: 'À la maison : essaie de chanter en canon une comptine simple avec au moins une autre personne (l''un
+    commence, l''autre démarre deux mesures plus tard).'
+  indices:
+  - Choisis une comptine très connue de vous deux pour faciliter le décalage.
+  solution: Réussite si les deux voix restent globalement synchronisées dans leur décalage, sans que l'une ne perde
+    le fil de l'autre.
+- enonce: Écoute un extrait musical et détermine s'il te semble successif (une seule ligne mélodique) ou simultané
+    (plusieurs sons superposés en même temps).
+  indices:
+  - Une musique pour piano seul jouant une mélodie simple est plutôt successive.
+  solution: Réussite si l'observation correspond bien à ce qui est réellement entendu (une ou plusieurs lignes sonores
+    en même temps).
+sources:
+- titre: Wikipédia, « Polyphonie »
+  url: https://fr.wikipedia.org/w/index.php?title=Polyphonie&oldid=236946485
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

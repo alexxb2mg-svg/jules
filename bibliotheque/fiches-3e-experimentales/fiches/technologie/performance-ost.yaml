@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: performance-ost
+declencheurs:
+- mesure
+- protocole
+- performance
+- chronomètre
+- vitesse
+- autonomie
+- grandeur physique
+essentiel: 'Mesurer, c''est associer un nombre à une grandeur physique (longueur, masse, vitesse, autonomie, température...)
+  à l''aide d''un instrument de mesure et d''une unité (mètre, kilogramme, kilomètre par heure...), afin de pouvoir
+  comparer des objets entre eux. Pour évaluer la performance d''un objet ou système technique (OST), il faut d''abord
+  choisir la ou les grandeurs mesurables pertinentes (par exemple la vitesse maximale et l''autonomie pour un vélo
+  électrique), puis définir un protocole de mesure : les conditions dans lesquelles la mesure est faite doivent
+  être précisées et répétables, sinon la comparaison entre deux objets n''a pas de sens.
+
+
+  Un protocole de mesure comprend en général : le matériel utilisé (instrument, sa précision), les conditions (température,
+  charge, terrain...), la procédure étape par étape, et le nombre de mesures effectuées (répéter une mesure permet
+  de repérer une erreur et de calculer une valeur moyenne plus fiable).'
+methode:
+- Identifier la grandeur à mesurer et choisir une unité adaptée (par exemple des mètres par seconde ou des kilomètres
+  par heure pour une vitesse).
+- Choisir un instrument de mesure adapté à la précision recherchée (chronomètre, multimètre, dynamomètre...).
+- Fixer des conditions identiques pour toutes les mesures comparées (même parcours, même charge, même température)
+  afin que la comparaison soit valable.
+- Répéter la mesure plusieurs fois et calculer une moyenne pour limiter l'effet des erreurs de mesure.
+vocabulaire:
+- terme: protocole de mesure
+  definition: ensemble des conditions et des étapes précises à suivre pour réaliser une mesure comparable
+- terme: grandeur mesurable
+  definition: caractéristique physique d'un objet qui peut être quantifiée (vitesse, masse, durée...)
+erreurs_frequentes:
+- Comparer deux mesures obtenues dans des conditions différentes (parcours, charge...).
+- Ne faire qu'une seule mesure alors qu'il faut en répéter plusieurs pour limiter l'erreur.
+- Choisir un instrument trop peu précis pour la grandeur étudiée.
+- Oublier de préciser l'unité du résultat.
+exemple:
+  enonce: On veut comparer l'autonomie de deux trottinettes électriques. Proposer un protocole simple.
+  solution: Charger complètement les deux batteries. Faire rouler chaque trottinette sur le même parcours plat,
+    à la même vitesse, avec un utilisateur de même masse, jusqu'à l'arrêt complet de la batterie. Mesurer la distance
+    parcourue (en km) avec le compteur intégré ou un GPS. Répéter le test une seconde fois pour vérifier la cohérence
+    du résultat.
+exercices:
+- enonce: 'Un protocole de mesure de la vitesse maximale d''une voiture téléguidée donne, sur trois essais sur le
+    même parcours : 3,2 m/s ; 3,4 m/s ; 3,3 m/s. Calculer la vitesse moyenne.'
+  indices:
+  - Additionne les trois valeurs puis divise par 3.
+  solution: (3,2 + 3,4 + 3,3) / 3 = 9,9 / 3 = 3,3 m/s.
+- enonce: Pourquoi faut-il tester deux ventilateurs à la même tension électrique pour comparer leur débit d'air
+    ?
+  indices:
+  - Pense à ce qui doit rester identique pour que la comparaison soit valable.
+  solution: 'Si la tension diffère, le débit d''air dépendra aussi de la tension et non plus seulement du ventilateur
+    : la comparaison ne serait plus juste. Il faut fixer toutes les conditions sauf l''objet testé.'
+sources:
+- titre: Vikidia, « Mesure »
+  url: https://fr.vikidia.org/w/index.php?title=Mesure&oldid=1988496
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

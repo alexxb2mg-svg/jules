@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: depannage-reparation
+declencheurs:
+- panne
+- réparer
+- dysfonctionnement
+- diagnostic
+- SAV
+- démonter
+- pièce détachée
+essentiel: 'Dépanner un objet technique consiste à identifier la cause d''un dysfonctionnement (panne) puis à la
+  corriger. La démarche de diagnostic suit en général plusieurs étapes : constater le symptôme (ce qui ne fonctionne
+  pas), formuler des hypothèses sur la cause possible, tester chaque hypothèse en commençant par la plus simple
+  ou la plus probable, puis confirmer la cause avant de réparer.
+
+
+  La réparation peut nécessiter une pièce détachée (une pièce de remplacement identique ou compatible). L''indice
+  de réparabilité, obligatoire en France depuis 2021 pour certains produits, aide à savoir si un objet est facile
+  à réparer (accès aux pièces, disponibilité, documentation technique).
+
+
+  Réparer plutôt que jeter s''inscrit dans une démarche de développement durable : cela allonge la durée de vie
+  d''un objet, limite les déchets et la consommation de nouvelles matières premières.'
+methode:
+- Décrire précisément le symptôme observé (l'objet ne s'allume pas, fait un bruit anormal, etc.).
+- Formuler une ou plusieurs hypothèses de cause possible, de la plus simple (pile déchargée, câble débranché) à
+  la plus complexe.
+- Tester chaque hypothèse dans l'ordre, en commençant par la plus simple à vérifier.
+- Une fois la cause confirmée, choisir la solution de réparation (remplacement d'une pièce, nettoyage, resserrage)
+  et vérifier que l'objet fonctionne de nouveau.
+vocabulaire:
+- terme: diagnostic
+  definition: démarche qui consiste à identifier la cause d'une panne avant de la réparer
+- terme: pièce détachée
+  definition: pièce de remplacement destinée à réparer un objet
+erreurs_frequentes:
+- Remplacer une pièce au hasard sans avoir confirmé le diagnostic.
+- Négliger les causes les plus simples (câble débranché, pile déchargée) avant de chercher des causes complexes.
+- Démonter un objet sans avoir identifié comment le remonter correctement.
+exemple:
+  enonce: Une lampe de bureau ne s'allume plus. Proposer une démarche de diagnostic, de l'hypothèse la plus simple
+    à la plus complexe.
+  solution: 1) Vérifier que la lampe est bien branchée et que la prise fonctionne (tester avec un autre appareil).
+    2) Vérifier l'ampoule (la remplacer par une ampoule que l'on sait fonctionnelle). 3) Vérifier l'interrupteur
+    (défectueux ?). 4) Si rien ne fonctionne, suspecter un défaut du câble ou du culot, qui nécessite une réparation
+    plus poussée.
+exercices:
+- enonce: Un ventilateur électrique ne tourne plus. Citer deux hypothèses simples à vérifier avant de le démonter.
+  indices:
+  - Pense à l'alimentation électrique et aux commandes visibles.
+  solution: Vérifier que la prise électrique fonctionne (tester avec un autre appareil) et que l'interrupteur ou
+    le réglage de vitesse n'est pas sur « arrêt ».
+sources:
+- titre: Wikipédia, « Indice de réparabilité »
+  url: https://fr.wikipedia.org/w/index.php?title=Indice_de_r%C3%A9parabilit%C3%A9&oldid=235153255
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

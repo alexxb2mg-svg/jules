@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: comparer-oeuvres-filiations
+declencheurs:
+- comparer deux oeuvres d'epoques differentes
+- filiation entre deux oeuvres
+- parente entre deux oeuvres
+- influence d'un artiste sur un autre
+- point commun entre deux tableaux
+essentiel: 'Comparer deux œuvres, c''est chercher méthodiquement leurs points communs et leurs différences, sur
+  des critères précis (sujet, technique, composition, fonction), plutôt que de juger laquelle est « meilleure ».
+
+  Une filiation relie deux œuvres d''époques différentes : l''une reprend, transforme ou s''inspire explicitement
+  d''une œuvre antérieure (une citation, un hommage, une influence visible).
+
+  Une parenté relie deux œuvres contemporaines l''une de l''autre mais de nature différente (par exemple une peinture
+  et une pièce musicale de la même période) qui partagent des préoccupations ou un esprit commun, sans lien direct
+  d''influence.
+
+  Ce raisonnement doit être fondé sur des éléments concrets (une composition similaire, un même thème traité différemment)
+  et non sur une simple impression de ressemblance.'
+methode:
+- Choisir des critères de comparaison précis (sujet, technique, composition, fonction).
+- Chercher si une œuvre plus récente reprend ou s'inspire visiblement d'une œuvre plus ancienne (filiation).
+- Pour deux œuvres contemporaines l'une de l'autre, chercher un esprit ou une préoccupation commune (parenté).
+- Justifier la comparaison par un élément concret, pas une impression générale.
+erreurs_frequentes:
+- Confondre filiation (influence entre époques différentes) et parenté (lien entre œuvres contemporaines).
+- Comparer deux œuvres sans préciser sur quel critère porte la comparaison.
+- Affirmer une influence sans élément concret qui la justifie.
+exemple:
+  enonce: Comparer une nature morte du XVIIe siècle et une nature morte du début du XXe siècle.
+  solution: 'Les deux œuvres partagent un même sujet (des objets disposés sur une table) : c''est une parenté de
+    thème. Si la seconde reprend précisément une composition ou des objets d''une œuvre ancienne connue, on peut
+    alors parler de filiation directe.'
+exercices:
+- enonce: 'À l''oral (type brevet) : choisis deux œuvres étudiées en classe et compare-les sur un seul critère (par
+    exemple la composition), en une ou deux phrases.'
+  indices:
+  - Ne mélange pas plusieurs critères dans la même comparaison.
+  solution: Réussite si la comparaison reste centrée sur le critère choisi et s'appuie sur des éléments concrets
+    des deux œuvres.
+- enonce: Cherche un exemple d'œuvre plus récente qui rend hommage ou s'inspire clairement d'une œuvre plus ancienne,
+    et explique le lien de filiation en une phrase.
+  indices:
+  - Beaucoup d'artistes du XXe siècle citent des œuvres de la Renaissance.
+  solution: Réussite si le lien de filiation est appuyé sur un élément concret (motif repris, composition similaire)
+    et non une simple ressemblance vague.
+sources:
+- titre: Vikidia, « Nature morte »
+  url: https://fr.vikidia.org/w/index.php?title=Nature_morte&oldid=2096553
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

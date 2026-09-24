@@ -14,10 +14,11 @@ from jules.bibliotheques import (
     candidats,
     charger_catalogue,
     lire_identite,
+    mots,
     texte_direction,
     texte_fiche,
 )
-from jules.modules.notions import niveau_du_profil
+from jules.modules.notions import niveau_du_profil, ressemble_a_un_calcul
 from jules.stockage import Message
 from jules.web.app import creer_app
 
@@ -86,6 +87,7 @@ def mini(tmp_path: Path) -> Path:
         tmp_path / "fiches" / "fiches" / "maths" / "pythagore.yaml",
         {
             "notion": "pythagore",
+            "declencheurs": ["angle droit", "équerre"],
             "essentiel": "Dans un triangle rectangle, BC² = AB² + AC².",
             "methode": ["Repérer l'angle droit", "Écrire l'égalité"],
             "erreurs_frequentes": ["Oublier la racine carrée"],
@@ -123,6 +125,22 @@ def test_catalogue_priorite_et_directions(mini):
     assert [b.id for b, _ in directions] == ["prof", "prof"]
     assert not cat.a_une_fiche("thales")
     assert all("nexistepas" not in b.fiches for b in cat.contenus)  # fiche sur notion inconnue ignoree
+
+
+def test_declencheurs_preselectionnent_sans_aller_dans_le_prompt(mini):
+    cat = charger_catalogue(mini, ["ref", "fiches"], "3e")
+    assert [n.id for n in candidats(cat, "Mon triangle a un angle droit")] == ["pythagore"]
+    assert candidats(cat, "Un triangle quelconque") == []
+    assert [n.id for n in candidats(cat, "j'ai pris l'équerre")] == ["pythagore"]
+    fiche, _ = cat.fiche("pythagore")
+    assert "declencheurs" not in fiche and "équerre" not in texte_fiche(fiche)
+
+
+def test_symboles_et_calculs_sans_mot():
+    assert mots("moins 30 %") == {"moins", "pourcent"} and "racine" in mots("√72")
+    assert ressemble_a_un_calcul("(2x-6)(x+5) = 0") and ressemble_a_un_calcul("2/3 + 5/6")
+    assert not ressemble_a_un_calcul("j'ai une rédaction à faire") and not ressemble_a_un_calcul("")
+    assert not ressemble_a_un_calcul("peut-être, quand se retrouvent-ils ? en km/h")
 
 
 def test_bibliotheque_invalide_ecartee_sans_bloquer(mini):
@@ -222,6 +240,48 @@ def test_detection_sur_photo_seule(tuteur):
     assert tuteur.module("notions").notion_de(conv.id)["id"] == "fonctions-lineaires-affines"
 
 
+def test_detection_sur_un_calcul_sans_mot(tuteur):
+    vus = {}
+
+    def regle(systeme, tours, modele):
+        if "UNE notion d'une liste fermée" in systeme:
+            vus["liste_complete"] = "racine-carree" in systeme and "ratio" in systeme
+            return '{"notion": "equations-premier-degre-et-produits", "confiance": "haute"}'
+        return "ok"
+
+    tuteur.llm.regle = regle
+    module = tuteur.module("notions")
+    trouvee = module.detecter(Message(role="eleve", texte="(2x-6)(x+5) = 0"))
+    assert trouvee == ("equations-premier-degre-et-produits", "haute")
+    assert vus["liste_complete"]  # un calcul : toute la liste, comme pour une photo
+    vus.clear()
+    module.detecter(Message(role="eleve", texte="Pythagore : 3² + 4² = ?"))
+    assert vus["liste_complete"]  # meme avec un mot reconnu
+    vus.clear()
+    assert module.detecter(Message(role="eleve", texte="bonjour")) is None and not vus  # ni mot ni calcul : pas d'appel
+
+
+def test_detection_liste_complete_mots_reconnus_en_tete(tuteur):
+    """Le modele voit toujours toutes les notions ; celles dont un mot-cle est reconnu passent en tete."""
+    vus = []
+
+    def regle(systeme, tours, modele):
+        if "UNE notion d'une liste fermée" in systeme:
+            vus.append(systeme.split("Liste (identifiant | matière | notion) :", 1)[1].strip().splitlines())
+            return '{"notion": "", "confiance": "faible"}'
+        return "ok"
+
+    tuteur.llm.regle = regle
+    module = tuteur.module("notions")
+    total = len(module.catalogue.notions)
+    module.detecter(Message(role="eleve", texte="Je dois calculer l'hypoténuse avec Pythagore"))
+    module.detecter(Message(role="eleve", texte="on étudie la périurbanisation autour de Lyon"))
+    assert len(vus[0]) == total and vus[0][0].startswith("parallelisme-triangles-pythagore |")
+    assert len(vus[1]) == total  # aucun mot-cle reconnu en entier : le modele juge sur le sens
+    assert module.detecter(Message(role="eleve", texte="ok")) is None  # rien a rattacher : pas d'appel
+    assert len(vus) == 2
+
+
 def test_detection_rejette_une_notion_inventee(tuteur):
     tuteur.llm.regle = lambda s, t, m: '{"notion": "inventee", "confiance": "haute"}' if "liste fermée" in s else "ok"
     module = tuteur.module("notions")
@@ -283,3 +343,30 @@ def test_bibliotheque_publiee_valide(dossier):
             assert source.get("licence") in LICENCES_LIBRES, f"{fichier.name} : licence de source non libre"
             assert source.get("url", "").startswith("https://"), f"{fichier.name} : lien de source manquant"
         assert fiche.get("relecture", {}).get("statut") in ("a_relire", "relue"), f"{fichier.name} : relecture"
+
+
+def test_fiches_experimentales_couvrent_les_maths_de_3e():
+    """Chaque notion de maths du referentiel 3e a sa fiche, et chaque fiche a exemple et exercices complets."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
+    maths = [n.id for n in cat.notions.values() if n.matiere == "mathematiques"]
+    fiches_maths = {i: f for i, f in cat.contenus[0].fiches.items() if i in maths}
+    assert len(maths) == 38 and sorted(maths) == sorted(fiches_maths)
+    for identifiant, fiche in fiches_maths.items():
+        assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), identifiant
+        assert fiche.get("exemple", {}).get("solution"), identifiant
+        for exercice in fiche.get("exercices", []):
+            assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), identifiant
+
+
+def test_fiches_experimentales_francais_langue_sont_completes():
+    """Les fiches de francais deja publiees (etude de la langue) ont exemple et exercices complets."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
+    francais = {n.id for n in cat.notions.values() if n.matiere == "francais"}
+    fiches_francais = {i: f for i, f in cat.contenus[0].fiches.items() if i in francais}
+    assert fiches_francais, "aucune fiche de francais trouvee"
+    assert set(fiches_francais).issubset(francais)
+    for identifiant, fiche in fiches_francais.items():
+        assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), identifiant
+        assert fiche.get("exemple", {}).get("solution"), identifiant
+        for exercice in fiche.get("exercices", []):
+            assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), identifiant

@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: physiologie-audition
+declencheurs:
+- comment fonctionne l'oreille
+- risque des ecouteurs trop forts
+- protection auditive
+- surdite
+- comment on entend les sons
+- volume trop fort abime les oreilles
+- decibels
+- a partir de quel niveau le son est dangereux
+essentiel: 'L''audition humaine est la capacité à entendre et interpréter les sons, grâce à l''oreille externe,
+  moyenne et interne, qui transmettent puis transforment les vibrations sonores en signaux nerveux interprétés par
+  le cerveau.
+
+  L''intensité d''un son se mesure en décibels ; une exposition prolongée ou répétée à des sons très intenses (concerts,
+  écouteurs à fort volume) peut endommager l''oreille interne de façon parfois irréversible, provoquant une baisse
+  d''audition ou des acouphènes (sifflements permanents).
+
+  La psychoacoustique étudie comment le cerveau perçoit et interprète les sons, ce qui explique pourquoi deux personnes
+  peuvent percevoir différemment un même son selon leur audition, leur âge ou leur habitude d''écoute.
+
+  Protéger son audition (baisser le volume des écouteurs, faire des pauses, utiliser des protections auditives en
+  concert) est essentiel car les cellules sensorielles de l''oreille interne ne se régénèrent pas.'
+methode:
+- 'Repérer les situations à risque pour l''audition : écouteurs à fort volume, concerts, outils bruyants.'
+- Comparer les niveaux sonores en décibels de différentes situations pour évaluer leur danger.
+- Adopter des règles simples de protection (baisser le volume, limiter la durée d'écoute, faire des pauses).
+- Distinguer une gêne passagère (oreilles qui sifflent après un concert) d'un dommage potentiellement durable.
+erreurs_frequentes:
+- Croire qu'une gêne auditive après une écoute forte disparaît toujours sans conséquence.
+- Penser que seuls les concerts très bruyants sont dangereux, en oubliant l'usage prolongé des écouteurs.
+- Ignorer que les cellules de l'oreille interne endommagées ne se réparent pas.
+exemple:
+  enonce: Un élève écoute de la musique avec des écouteurs au volume maximum pendant plusieurs heures par jour.
+  solution: Ce comportement expose l'oreille interne à un niveau sonore élevé de façon prolongée, ce qui augmente
+    le risque de perte auditive ou d'acouphènes ; il est conseillé de baisser le volume et de faire des pauses régulières.
+exercices:
+- enonce: 'À la maison : observe le volume auquel tu écoutes habituellement de la musique avec des écouteurs, et
+    essaie de le réduire d''un quart pendant une journée.'
+  indices:
+  - Beaucoup de téléphones affichent un avertissement quand le volume est trop élevé trop longtemps.
+  solution: Réussite si tu identifies ton volume habituel et si tu constates que la musique reste audible et agréable
+    à volume réduit.
+- enonce: Cherche à quel niveau de décibels environ se situe une conversation normale, un concert, et une rue bruyante,
+    et classe-les du plus calme au plus fort.
+  indices:
+  - Une conversation normale se situe autour de 60 dB.
+  solution: Réussite si le classement du plus calme au plus fort est correct (conversation < rue bruyante < concert).
+sources:
+- titre: Wikipédia, « Audition humaine »
+  url: https://fr.wikipedia.org/w/index.php?title=Audition_humaine&oldid=231234448
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Décibel »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9cibel&oldid=237481128
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

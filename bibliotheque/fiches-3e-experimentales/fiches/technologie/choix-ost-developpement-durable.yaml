@@ -1,0 +1,97 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: choix-ost-developpement-durable
+declencheurs:
+- développement durable
+- cycle de vie
+- indice de réparabilité
+- bilan carbone
+- recyclage
+- trois piliers
+- empreinte écologique
+- matériau écologique
+- objet réparable
+- note sur 10
+- écoresponsable
+essentiel: 'Le développement durable vise à répondre aux besoins du présent sans compromettre la capacité des générations
+  futures à répondre aux leurs (définition de 1987). Il repose sur trois piliers reliés entre eux : le pilier économique
+  (ne pas ralentir le développement), le pilier social (rendre le développement accessible à tous) et le pilier
+  environnemental (préserver les ressources naturelles).
+
+
+  Le cycle de vie d''un objet ou système technique (OST) comprend plusieurs étapes : extraction des matières premières,
+  fabrication, transport, utilisation, puis fin de vie (réparation, recyclage ou déchet). Chaque étape a un impact
+  environnemental (consommation d''énergie, émissions de gaz à effet de serre, déchets) qui peut être estimé par
+  un bilan carbone.
+
+
+  En France, l''indice de réparabilité est une note sur 10 obligatoire depuis 2021 pour certains produits (smartphones,
+  ordinateurs portables, lave-linge, téléviseurs, tondeuses électriques). Il est calculé par le fabricant à partir
+  de cinq critères ayant chacun le même poids (2 points chacun) : la documentation technique, la facilité de démontage,
+  la disponibilité des pièces détachées, le prix des pièces détachées, et un critère spécifique à la catégorie de
+  produit.'
+methode:
+- Pour comparer deux OST selon le développement durable, examiner chaque étape de leur cycle de vie (matériaux,
+  énergie utilisée, durée de vie, fin de vie).
+- 'Pour argumenter un choix, relier chaque critère à un des trois piliers (économique, social, environnemental)
+  : un choix idéal équilibre les trois.'
+- Pour interpréter un indice de réparabilité, se rappeler qu'il est calculé par le fabricant lui-même et ne remplace
+  pas un test indépendant.
+- 'Pour estimer l''impact environnemental, penser à toutes les étapes (pas seulement la fabrication ou l''utilisation)
+  : le transport et la fin de vie comptent aussi.'
+vocabulaire:
+- terme: cycle de vie
+  definition: ensemble des étapes de la vie d'un produit, de l'extraction des matières premières à sa fin de vie
+- terme: bilan carbone
+  definition: estimation de la quantité de gaz à effet de serre émise par une activité ou un produit
+- terme: indice de réparabilité
+  definition: note sur 10 indiquant la facilité de réparation d'un produit, affichée en France depuis 2021
+erreurs_frequentes:
+- Ne considérer que l'étape de fabrication en oubliant le transport et la fin de vie.
+- 'Croire que « durable » signifie seulement « écologique » : le pilier social et le pilier économique comptent
+  aussi.'
+- 'Penser que l''indice de réparabilité est vérifié par un organisme indépendant : il est en fait déclaré par le
+  fabricant.'
+- Confondre recyclage (transformer un déchet en nouvelle matière) et réparation (remettre en état un objet existant).
+exemple:
+  enonce: Deux smartphones ont les mêmes fonctions. Le premier a un indice de réparabilité de 8/10 et une batterie
+    amovible ; le second a un indice de 3/10 et une batterie collée. Lequel choisir dans une logique de développement
+    durable, et pourquoi ?
+  solution: 'Le premier smartphone (indice 8/10, batterie amovible) est préférable : il pourra être réparé plus
+    facilement et plus longtemps utilisé, ce qui réduit les déchets et la consommation de nouvelles matières premières
+    (pilier environnemental), tout en limitant le coût de remplacement pour l''utilisateur (pilier économique).'
+exercices:
+- enonce: Citer les trois piliers du développement durable et donner un exemple de critère pour chacun.
+  indices:
+  - Économique, social, environnemental.
+  solution: 'Économique : coût de fabrication raisonnable. Social : accessibilité du produit au plus grand nombre.
+    Environnemental : faible consommation d''énergie ou de matières non renouvelables.'
+- enonce: Lister dans l'ordre les grandes étapes du cycle de vie d'une paire de baskets.
+  indices:
+  - Pense à d'où viennent les matériaux, comment elles sont fabriquées, transportées, utilisées, puis jetées ou
+    recyclées.
+  solution: Extraction des matières premières (coton, caoutchouc, plastique) → fabrication → transport vers le magasin
+    → utilisation par le client → fin de vie (réparation, recyclage ou déchet).
+- enonce: L'indice de réparabilité d'un lave-linge est calculé sur 5 critères de 2 points chacun. S'il obtient 2
+    points en documentation technique, 1,5 en démontage, 2 en disponibilité des pièces, 1 en prix des pièces et
+    0,5 sur le critère spécifique, quelle est sa note totale ?
+  indices:
+  - Additionne les cinq critères.
+  solution: 2 + 1,5 + 2 + 1 + 0,5 = 7 sur 10.
+sources:
+- titre: Vikidia, « Développement durable »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9veloppement_durable&oldid=2556115
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Indice de réparabilité »
+  url: https://fr.wikipedia.org/w/index.php?title=Indice_de_r%C3%A9parabilit%C3%A9&oldid=235153255
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

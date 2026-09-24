@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: creation-materialite-signification-images
+declencheurs:
+- difference entre une pub et une oeuvre d'art
+- image publicitaire ou artistique
+- photo d'une oeuvre n'est pas l'oeuvre
+- signification d'une image
+- statut d'une image
+essentiel: 'Toutes les images ne se valent pas de la même façon : une image a des propriétés plastiques (comment
+  elle est faite), iconiques (ce qu''elle montre) et symboliques (ce qu''elle évoque au-delà de ce qu''elle montre).
+
+  L''intention derrière une image change son statut : une image de communication visuelle (publicité, signalétique)
+  cherche à faire passer un message clair et efficace, alors qu''une œuvre artistique peut questionner, troubler
+  ou ouvrir plusieurs interprétations.
+
+  Il faut aussi distinguer l''œuvre elle-même (le tableau original, la sculpture réelle) et l''image de l''œuvre
+  (sa photo dans un livre ou sur un écran) : cette dernière ne montre ni la taille réelle, ni la matière, ni parfois
+  les vraies couleurs.'
+methode:
+- 'Se demander quelle intention semble guider l''image : informer, vendre, questionner, émouvoir ?'
+- Repérer les propriétés plastiques (couleurs, cadrage, composition) qui servent cette intention.
+- 'Se méfier d''une image de l''œuvre vue en reproduction : chercher ses dimensions et sa matière réelles.'
+- Comparer une image artistique et une image de communication sur un même thème pour voir la différence d'intention.
+erreurs_frequentes:
+- Juger la taille ou les couleurs d'une œuvre uniquement à partir d'une photo dans un livre.
+- Croire qu'une image publicitaire est automatiquement une œuvre d'art parce qu'elle est bien faite.
+- Ne voir dans une image que son sujet, sans regarder son intention.
+exemple:
+  enonce: Comparer une affiche publicitaire pour une boisson et un tableau qui représente aussi une table avec des
+    bouteilles (nature morte).
+  solution: 'L''affiche a une intention de communication visuelle : vendre, avec un message clair. La nature morte
+    a une intention artistique : interroger la lumière, la matière, la composition, sans message à vendre. Le même
+    sujet (des bouteilles) sert deux intentions très différentes.'
+exercices:
+- enonce: 'À la maison : trouve une publicité et une œuvre d''art qui montrent un sujet proche (un fruit, un visage,
+    un paysage) et note deux différences dans leur intention.'
+  indices:
+  - Regarde si l'image cherche à convaincre ou à faire réfléchir.
+  solution: Réussite si les deux différences relèvent bien de l'intention (vendre / questionner) et pas seulement
+    du style.
+- enonce: Cherche les dimensions réelles d'une œuvre célèbre que tu ne connais qu'en photo, et compare-les à ce
+    que tu imaginais.
+  indices:
+  - Les dimensions sont souvent indiquées sous la reproduction, dans un livre ou un musée en ligne.
+  solution: Réussite si tu identifies un écart entre l'image que tu avais en tête et la taille réelle de l'œuvre.
+sources:
+- titre: Wikipédia, « Composition picturale »
+  url: https://fr.wikipedia.org/w/index.php?title=Composition_picturale&oldid=237458929
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

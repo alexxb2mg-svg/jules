@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: explication-globale-immunite
+declencheurs:
+- système immunitaire comment ça marche
+- anticorps
+- globules blancs
+- réaction immunitaire
+- défenses de l'organisme
+- corps se défend contre un microbe
+- vaccinée réagit plus vite
+essentiel: 'Le système immunitaire est l''ensemble des moyens de défense de l''organisme, qui lui permettent de
+  distinguer ce qui lui appartient (le soi) de ce qui lui est étranger (microbes, corps étrangers) et d''éliminer
+  les éléments étrangers dangereux.
+
+  Une première ligne de défense est constituée de barrières physiques (comme la peau, le plus grand organe du corps)
+  qui empêchent la plupart des micro-organismes de pénétrer dans l''organisme.
+
+  Si un agent pathogène franchit ces barrières, l''organisme met en place une réaction immunitaire : des cellules
+  spécialisées, les globules blancs (leucocytes), circulant dans le sang, reconnaissent et combattent l''agent pathogène.
+
+  Certains globules blancs produisent des anticorps, des protéines spécifiques (immunoglobulines) qui se fixent
+  précisément sur l''agent pathogène pour le marquer, facilitant sa destruction par d''autres cellules immunitaires.
+
+  La vaccination exploite ce mécanisme : elle expose l''organisme, sans danger, à des éléments d''un agent pathogène
+  (ou à une version atténuée), ce qui permet au système immunitaire de préparer à l''avance des défenses (anticorps,
+  cellules spécifiques) et de réagir beaucoup plus vite et efficacement en cas d''infection réelle par la suite.'
+methode:
+- 'Repérer les différentes lignes de défense : barrières physiques (peau) puis réaction immunitaire interne (globules
+  blancs, anticorps).'
+- Retenir que les anticorps sont spécifiques d'un agent pathogène précis, comme une clé adaptée à une serrure.
+- Expliquer le principe de la vaccination comme une préparation anticipée du système immunitaire.
+- Relier une réaction immunitaire observée (fièvre, inflammation) à la lutte de l'organisme contre un agent pathogène.
+erreurs_frequentes:
+- Croire que le système immunitaire n'intervient qu'après la pénétration d'un microbe, en oubliant le rôle des barrières
+  physiques comme la peau.
+- Penser qu'un anticorps peut se fixer sur n'importe quel agent pathogène, sans spécificité.
+- Confondre vaccination (prépare le système immunitaire avant l'infection) et traitement par anticorps déjà tout
+  faits.
+- Croire que la vaccination transmet directement la maladie à l'organisme.
+exemple:
+  enonce: Pourquoi une personne vaccinée contre une maladie réagit-elle beaucoup plus vite en cas d'exposition réelle
+    à l'agent pathogène, comparée à une personne non vaccinée ?
+  solution: La vaccination a permis au système immunitaire de « s'entraîner » à l'avance en produisant des anticorps
+    spécifiques et en gardant en mémoire l'agent pathogène ; en cas d'exposition réelle, la réaction immunitaire
+    est donc beaucoup plus rapide et efficace que si l'organisme découvrait l'agent pathogène pour la première fois.
+exercices:
+- enonce: Quel est le rôle de la peau dans le système immunitaire ?
+  indices:
+  - Pense à la première barrière rencontrée par un microbe.
+  solution: Elle constitue une barrière physique qui empêche la plupart des micro-organismes de pénétrer dans l'organisme
+    ; c'est une première ligne de défense.
+- enonce: Que sont les anticorps, et quelle est leur particularité par rapport à un agent pathogène ?
+  indices:
+  - Pense à la comparaison avec une clé et une serrure.
+  solution: Ce sont des protéines produites par certains globules blancs, qui se fixent de façon spécifique sur
+    un agent pathogène précis pour le marquer et faciliter sa destruction.
+- enonce: Expliquer le principe de la vaccination en une ou deux phrases.
+  indices:
+  - Pense à ce que reçoit l'organisme et à ce que cela permet de préparer.
+  solution: La vaccination expose l'organisme, sans danger, à des éléments d'un agent pathogène (ou une version
+    atténuée), ce qui permet au système immunitaire de préparer à l'avance des défenses (anticorps) et de réagir
+    bien plus vite en cas d'infection réelle.
+sources:
+- titre: Vikidia, « Système immunitaire »
+  url: https://fr.vikidia.org/w/index.php?title=Syst%C3%A8me_immunitaire&oldid=2428655
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

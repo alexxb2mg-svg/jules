@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: construire-expose
+declencheurs:
+- preparer un expose d'histoire des arts
+- plan pour presenter des oeuvres
+- problematique artistique
+- exposer sur un ensemble d'oeuvres
+- structurer une presentation orale sur l'art
+essentiel: 'Construire un exposé sur un ensemble d''œuvres suppose de choisir d''abord une problématique claire
+  : une question précise à laquelle l''exposé va répondre, plutôt qu''une simple accumulation d''informations sur
+  chaque œuvre séparément.
+
+  Le plan doit organiser les œuvres en fonction de cette problématique (par exemple par ordre chronologique, par
+  comparaison de deux démarches, par évolution d''une technique), pas seulement les présenter les unes après les
+  autres sans lien.
+
+  Un exposé de quelques minutes doit rester concis : mieux vaut bien développer deux ou trois œuvres en lien avec
+  la problématique que survoler dix œuvres sans les relier entre elles.
+
+  La conclusion doit répondre explicitement à la problématique posée au début, en s''appuyant sur ce qui a été montré
+  dans le développement.'
+methode:
+- Formuler une question précise (problématique) que l'exposé va traiter.
+- Choisir deux ou trois œuvres directement utiles pour répondre à cette question.
+- Organiser le développement en parties qui font avancer la réponse à la problématique.
+- Conclure en répondant explicitement à la question posée en introduction.
+erreurs_frequentes:
+- Présenter plusieurs œuvres sans problématique commune qui les relie.
+- Vouloir parler de trop d'œuvres et rester superficiel sur chacune.
+- Oublier de répondre à la problématique dans la conclusion.
+exemple:
+  enonce: 'Problématique : « Comment les peintres impressionnistes ont-ils changé la façon de représenter la lumière
+    ? »'
+  solution: 'Un plan possible : 1) la peinture académique et sa représentation traditionnelle de la lumière (avant),
+    2) les innovations techniques d''un peintre impressionniste (touches visibles, peinture en extérieur), 3) l''effet
+    obtenu sur la perception de la lumière. La conclusion répond directement à la question posée.'
+exercices:
+- enonce: 'À l''oral (type brevet) : choisis deux œuvres étudiées en classe et formule une problématique qui permettrait
+    de les comparer utilement.'
+  indices:
+  - Une bonne problématique commence souvent par « Comment » ou « En quoi ».
+  solution: Réussite si la problématique proposée permet vraiment de comparer les deux œuvres (pas une question
+    trop vague ou sans lien avec elles).
+- enonce: Prépare un plan en 3 parties pour un exposé de 3 minutes sur une problématique de ton choix, liée à une
+    thématique vue en histoire des arts.
+  indices:
+  - Chaque partie doit apporter un élément de réponse différent à la problématique.
+  solution: Réussite si les 3 parties progressent logiquement vers une réponse complète à la problématique, sans
+    répétition inutile.
+sources:
+- titre: Vikidia, « Impressionnisme »
+  url: https://fr.vikidia.org/w/index.php?title=Impressionnisme&oldid=2561020
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

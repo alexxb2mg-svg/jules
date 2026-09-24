@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: conception-production-diffusion-numerique
+declencheurs:
+- faire un dessin sur tablette
+- logiciel de dessin numerique
+- partager mon oeuvre sur internet
+- photo retouchee avec un logiciel
+- creation numerique
+- publier une oeuvre en ligne
+essentiel: 'Le numérique intervient à toutes les étapes d''une pratique plastique : pour créer (dessin sur tablette,
+  retouche photo, montage vidéo), mais aussi pour montrer et partager une œuvre (réseaux, site, exposition en ligne).
+
+  Un même projet peut mêler des outils traditionnels (peinture, dessin) et des outils numériques (scanner, logiciel,
+  impression) : les relations entre intention artistique, médium et outil numérique doivent rester cohérentes.
+
+  La diffusion numérique change la façon dont une œuvre est reçue : elle peut être vue par beaucoup de monde, mais
+  souvent à travers un petit écran, en basse qualité, ce qui modifie la perception de ses couleurs, de sa taille
+  ou de sa matière.'
+methode:
+- Choisir l'outil numérique en fonction de l'effet recherché, pas seulement par facilité.
+- Si l'œuvre mélange traditionnel et numérique, vérifier que le passage entre les deux (scan, photo) ne dénature
+  pas l'intention.
+- Avant de diffuser une œuvre en ligne, vérifier qu'elle reste lisible en petit format et sur écran.
+- Respecter les droits d'auteur des images ou sons utilisés dans une création numérique.
+erreurs_frequentes:
+- Utiliser un filtre ou un effet numérique sans lien avec l'intention artistique.
+- Croire qu'une œuvre numérique demande moins de réflexion qu'une œuvre traditionnelle.
+- Diffuser une image sans vérifier qu'elle est bien lisible une fois réduite.
+exemple:
+  enonce: Un élève dessine sur papier, puis scanne son dessin pour ajouter des couleurs numériques avant de le publier
+    sur le site de la classe.
+  solution: Le passage du papier au numérique (scan) doit conserver la qualité du trait ; l'ajout de couleur numérique
+    doit servir l'intention de départ ; avant publication, vérifier que l'image reste claire une fois réduite pour
+    le site.
+exercices:
+- enonce: 'À la maison : prends en photo une de tes productions et modifie une seule caractéristique avec une application
+    simple (contraste, couleur, recadrage). Compare l''avant/après.'
+  indices:
+  - Ne change qu'un seul réglage à la fois pour bien voir son effet.
+  solution: Réussite si tu peux décrire précisément l'effet du réglage choisi sur la perception de l'œuvre (plus
+    sombre, plus contrastée, recentrée…).
+- enonce: Vérifie si une image que tu voudrais partager reste lisible une fois réduite à la taille d'une vignette
+    (comme sur un réseau social).
+  indices:
+  - Réduis l'image sur ton écran ou éloigne-toi pour tester.
+  solution: Réussite si tu identifies ce qui devient illisible en petit format et proposes un ajustement (cadrage
+    plus serré, contraste augmenté).
+sources:
+- titre: Wikipédia, « Art numérique »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_num%C3%A9rique&oldid=238186012
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

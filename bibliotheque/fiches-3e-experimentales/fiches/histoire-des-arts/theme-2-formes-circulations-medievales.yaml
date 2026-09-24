@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-2-formes-circulations-medievales
+declencheurs:
+- art du moyen age
+- enluminure medievale
+- manuscrit medieval
+- architecture medievale
+- circulation artistique mediterranee moyen age
+- musique au moyen age
+- difference architecture romane et gothique
+- eglises gothiques et romanes
+essentiel: 'Au Moyen Âge (IXe-XVe siècle), la question de l''image pose débat entre certaines traditions qui acceptent
+  les représentations figurées et d''autres qui les refusent (l''iconoclasme), notamment autour de la Méditerranée
+  où se côtoient les mondes chrétien, byzantin et musulman.
+
+  L''architecture médiévale se développe autour de bâtiments civils, urbains, militaires (châteaux forts) et religieux
+  (églises, cathédrales) : l''architecture gothique, apparue au XIIe siècle, utilise des arcs brisés et des arcs-boutants
+  qui permettent de construire des édifices plus hauts et plus lumineux que le style roman qui la précède.
+
+  Les échanges autour de la Méditerranée favorisent des circulations de formes artistiques entre différentes régions
+  et cultures durant cette période.
+
+  Le manuscrit médiéval associe un texte copié à la main (souvent par des moines copistes) et une enluminure, une
+  illustration peinte qui décore le texte, réalisée sur parchemin ; la musique de cette période développe aussi
+  le début de l''écriture musicale (notation des sons sur une portée).'
+methode:
+- Distinguer le style roman (arcs en plein cintre, bâtiments plus massifs) du style gothique (arcs brisés, arcs-boutants,
+  plus de hauteur et de lumière).
+- Repérer, dans un manuscrit, la répartition entre texte copié et enluminure peinte.
+- Identifier la fonction d'un bâtiment médiéval (religieuse, militaire, civile) à partir de ses formes.
+- Relier une œuvre médiévale à un contexte de circulation ou d'échange culturel si des indices l'indiquent.
+erreurs_frequentes:
+- Confondre le style roman et le style gothique.
+- Croire que le manuscrit médiéval était imprimé plutôt que copié et peint à la main.
+- Réduire le Moyen Âge à une période uniforme, sans distinguer ses évolutions sur plusieurs siècles.
+exemple:
+  enonce: Une cathédrale montre de grandes fenêtres, des arcs pointus et des contreforts extérieurs qui soutiennent
+    les murs.
+  solution: Ces éléments (arcs brisés, arcs-boutants, grandes ouvertures) sont caractéristiques du style gothique,
+    qui s'est développé en France à partir du XIIe siècle et a permis de construire des édifices religieux plus
+    hauts et mieux éclairés que le style roman antérieur.
+exercices:
+- enonce: 'À l''oral (type brevet) : présente une enluminure ou un manuscrit médiéval en expliquant qui le réalisait
+    et pourquoi.'
+  indices:
+  - Le copiste écrit le texte, l'enlumineur peint les illustrations.
+  solution: Réussite si le rôle du copiste et de l'enlumineur est bien distingué et si la fonction du manuscrit
+    (religieuse le plus souvent) est expliquée.
+- enonce: Compare une façade d'église romane et une façade d'église gothique (recherche d'images libres) et note
+    deux différences visibles.
+  indices:
+  - Regarde la forme des arcs (arrondis ou pointus) et la taille des fenêtres.
+  solution: Réussite si les deux différences citées relèvent bien des caractéristiques stylistiques (forme des arcs,
+    taille des ouvertures) et non d'un simple jugement esthétique.
+sources:
+- titre: Vikidia, « Enluminure »
+  url: https://fr.vikidia.org/w/index.php?title=Enluminure&oldid=2354505
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Architecture gothique »
+  url: https://fr.vikidia.org/w/index.php?title=Architecture_gothique&oldid=2335918
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

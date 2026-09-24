@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: echanger-partager-argumenter-debattre
+declencheurs:
+- donner son avis sur une musique
+- debattre sur un style musical
+- argumenter un choix musical
+- presenter une oeuvre a la classe en musique
+- defendre son gout musical
+essentiel: 'Échanger sur une musique, c''est exprimer un avis en l''appuyant sur des éléments précis du langage
+  musical (tempo, instruments, structure, paroles) et non sur un simple goût personnel non justifié.
+
+  Argumenter suppose d''écouter d''abord l''avis des autres, de le reformuler pour vérifier qu''on l''a compris,
+  puis d''apporter un argument différent ou complémentaire, sans couper la parole.
+
+  Un débat musical accepte que plusieurs interprétations ou goûts coexistent : le but n''est pas toujours de convaincre,
+  mais de mieux comprendre pourquoi une musique plaît ou non, et ce qu''elle cherche à faire.
+
+  Cette compétence prépare aussi à présenter et justifier ses propres choix, par exemple pour expliquer pourquoi
+  on a choisi tel instrument ou tel style dans une création personnelle.'
+methode:
+- Écouter l'avis de l'autre en entier avant de répondre.
+- Reformuler cet avis avec ses propres mots pour vérifier qu'on l'a compris.
+- Appuyer son propre avis sur un élément précis du morceau (pas seulement « j'aime »).
+- Accepter qu'un avis différent du sien puisse être aussi valable.
+erreurs_frequentes:
+- Couper la parole pour donner son avis avant d'avoir écouté celui de l'autre.
+- Justifier un avis uniquement par « c'est nul » ou « c'est trop bien », sans élément précis.
+- Confondre un débat musical avec une compétition à gagner absolument.
+exemple:
+  enonce: 'Deux élèves ne sont pas d''accord sur un morceau : l''un le trouve « ennuyeux », l''autre « apaisant
+    ».'
+  solution: 'Un bon échange demande à chacun de préciser ce qui produit ce ressenti (un tempo très lent, peu de
+    variations de nuances) : les deux avis peuvent finalement s''appuyer sur les mêmes observations musicales, tout
+    en aboutissant à des ressentis différents.'
+exercices:
+- enonce: 'À la maison : demande à quelqu''un de ta famille son avis sur un morceau que tu aimes, puis reformule
+    son avis avant de donner le tien avec un argument précis.'
+  indices:
+  - Ne dis pas ton avis avant d'avoir reformulé celui de l'autre personne.
+  solution: Réussite si la reformulation est validée par la personne, et si ton propre avis s'appuie sur un élément
+    musical précis (rythme, instrument, paroles…).
+- enonce: Prépare deux arguments différents (un technique, un personnel) pour défendre le choix d'un morceau que
+    tu proposerais pour une fête de classe.
+  indices:
+  - Un argument technique porte sur la musique elle-même, un argument personnel sur ce qu'elle représente pour toi
+    ou pour le groupe.
+  solution: Réussite si les deux arguments sont bien de nature différente et clairement formulés.
+sources:
+- titre: Wikipédia, « Genre musical »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_musical&oldid=236954603
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

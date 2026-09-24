@@ -1,6 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
 notion: parallelisme-triangles-pythagore
+declencheurs: ["hypoténuse", "rectangle", "angle droit", "réciproque", "alternes-internes", "correspondants", "somme des angles"]
 essentiel: 'Dans un triangle rectangle, l''hypoténuse est le côté opposé à l''angle droit : c''est le plus grand
   côté.
 

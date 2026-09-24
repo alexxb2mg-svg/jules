@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-6-belle-epoque-annees-folles
+declencheurs:
+- impressionnisme naissance photographie
+- cinema debut histoire
+- jazz cirque music hall
+- avant garde 1900
+- peinture et photographie
+- invention de la photo change la peinture
+- peindre chez les impressionnistes
+essentiel: 'Entre 1870 et 1930, l''invention de la photographie et du cinéma crée un nouveau rapport au réel : pour
+  la première fois, une machine peut fixer une image ou un mouvement avec une fidélité que la peinture ne cherchait
+  plus forcément à atteindre, ce qui pousse certains peintres, comme les impressionnistes, vers d''autres recherches
+  (la lumière, l''impression fugitive plutôt que l''exactitude).
+
+  Cette période s''ouvre aussi à des influences venues d''autres cultures (primitivismes) et voit se développer
+  des écoles nationales et des courants régionaux qui cherchent leurs propres racines artistiques.
+
+  Les grandes villes (métropoles) développent de nouveaux spectacles populaires : le jazz (musique née aux États-Unis),
+  le cirque moderne et le music-hall attirent un large public dans des lieux nouveaux.
+
+  C''est une période d''avant-gardes : plusieurs mouvements artistiques cherchent à rompre avec les traditions académiques,
+  dans la peinture comme dans la musique ou le spectacle.'
+methode:
+- Relier l'apparition de la photographie ou du cinéma à un changement dans la peinture de la même période.
+- Repérer des influences venues d'autres cultures dans une œuvre (primitivisme).
+- Distinguer un spectacle populaire nouveau de cette période (jazz, cirque, music-hall) d'une forme plus ancienne.
+- Identifier ce qui, dans une œuvre, rompt avec les traditions académiques antérieures (avant-garde).
+erreurs_frequentes:
+- Croire que la photographie a immédiatement remplacé la peinture, alors qu'elle a plutôt fait évoluer ses recherches.
+- Confondre Belle Époque et années folles, qui correspondent à des ambiances différentes dans la même période large.
+- Réduire cette période aux seuls impressionnistes, sans voir la diversité des avant-gardes.
+exemple:
+  enonce: Un peintre de cette période s'inspire de masques ou de sculptures venues d'autres continents pour simplifier
+    les formes de ses figures.
+  solution: 'Cette démarche relève du primitivisme : la recherche de racines artistiques nouvelles en dehors de
+    la tradition académique occidentale, une des tendances des avant-gardes de cette période.'
+exercices:
+- enonce: 'À l''oral (type brevet) : explique comment l''invention de la photographie a pu influencer un mouvement
+    pictural de cette période.'
+  indices:
+  - Pense à ce que la photographie fait mieux que la peinture (fixer une image exacte) et ce que la peinture peut
+    alors chercher d'autre.
+  solution: Réussite si le lien entre l'invention technique et l'évolution artistique est clairement expliqué.
+- enonce: Cherche un exemple de spectacle populaire (jazz, cirque, music-hall) de cette période et explique en une
+    phrase ce qui le rendait nouveau.
+  indices:
+  - Le jazz est né d'un mélange de traditions musicales aux États-Unis.
+  solution: Réussite si l'exemple choisi est bien situé dans cette période et sa nouveauté correctement expliquée.
+sources:
+- titre: Vikidia, « Impressionnisme »
+  url: https://fr.vikidia.org/w/index.php?title=Impressionnisme&oldid=2561020
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Cinéma »
+  url: https://fr.vikidia.org/w/index.php?title=Cin%C3%A9ma&oldid=2554372
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

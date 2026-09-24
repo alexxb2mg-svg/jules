@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: lecture-a-voix-haute-et-recitation
+declencheurs:
+- réciter un poème
+- lire à voix haute
+- apprendre un texte par cœur
+- diction
+- enregistrer ma voix
+- mise en voix d'un texte
+essentiel: 'Lire un texte à voix haute, c''est l''oraliser pour un auditoire, ce qui est différent de la lecture
+  silencieuse : cela demande d''abord de bien comprendre le texte, puis de le dire de façon à en faire percevoir
+  le sens et les émotions à ceux qui écoutent.
+
+  Réciter un texte mémorisé va plus loin : il faut l''avoir appris par cœur, puis utiliser les ressources de la
+  voix (volume, débit, intonation), de la respiration (pauses, souffle), du regard (vers le public, pas seulement
+  vers le sol) et de la gestuelle pour rendre la récitation vivante, sans réciter de façon mécanique.
+
+  Les outils numériques peuvent aider à travailler cette compétence : enregistrer sa propre voix permet de s''écouter
+  et de se corriger ; on peut aussi associer sons, textes et images pour créer une mise en voix originale d''un
+  texte.'
+methode:
+- Comprendre le texte en profondeur avant de le lire ou de le réciter (sens, ponctuation, rythme).
+- S'entraîner à voix haute plusieurs fois avant la présentation finale.
+- Marquer les pauses aux ponctuations pour respirer et laisser le sens s'installer.
+- Varier le volume et l'intonation selon le sens et les émotions du texte.
+- Regarder le public régulièrement plutôt que de fixer ses notes ou le sol.
+vocabulaire:
+- terme: diction
+  definition: manière de prononcer et d'articuler un texte à voix haute
+- terme: intonation
+  definition: variation de la hauteur et du ton de la voix pendant la lecture ou la récitation
+erreurs_frequentes:
+- Lire ou réciter trop vite, sans respecter les pauses de ponctuation.
+- Garder un ton monotone du début à la fin, sans variation d'intonation.
+- Fixer ses notes ou le sol sans jamais regarder le public.
+- Réciter mécaniquement un texte appris par cœur sans en avoir compris le sens.
+exemple:
+  enonce: Pour réciter « Chanson d'automne » de Verlaine, un poème mélancolique et musical, quelles ressources de
+    la voix utiliser en priorité ?
+  solution: Un débit assez lent, une voix posée, des pauses marquées à la fin de chaque vers court pour respecter
+    le rythme saccadé du poème, et une intonation légèrement descendante qui restitue la mélancolie du texte.
+exercices:
+- enonce: Cite deux ressources de la voix ou du corps utilisées pour rendre une récitation vivante.
+  indices:
+  - 'Relis l''essentiel : volume, débit, regard, gestuelle…'
+  solution: 'Par exemple : le volume de la voix, le débit (vitesse), les pauses de respiration, le regard vers le
+    public, la gestuelle.'
+- enonce: 'Choisis un court texte ou poème (4 à 8 vers) et prépare-en une lecture à voix haute : note en 3-4 lignes
+    où tu placeras des pauses et où tu changeras de ton, puis entraîne-toi à le dire.'
+  indices:
+  - Les pauses se placent naturellement aux virgules, points, fins de vers.
+  solution: Réussite si les pauses et changements de ton notés correspondent à la ponctuation et au sens du texte,
+    et si la lecture entraînée respecte ces choix.
+sources:
+- titre: Wikipédia, « Lecture à voix haute »
+  url: https://fr.wikipedia.org/w/index.php?title=Lecture_%C3%A0_voix_haute&oldid=239332925
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « Poèmes saturniens (1866)/Chanson d’automne »
+  url: https://fr.wikisource.org/w/index.php?title=Po%C3%A8mes_saturniens_%281866%29/Chanson_d%E2%80%99automne&oldid=13177234
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, poème du domaine public, support de récitation
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

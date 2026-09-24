@@ -1,0 +1,86 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: elections-referendum
+declencheurs:
+- voter en France
+- élections présidentielles
+- élections législatives
+- campagne électorale
+- vote pas obligatoire
+- référendum en France
+essentiel: 'Les élections et les référendums sont des moments décisifs de la vie démocratique en France. Une campagne
+  électorale ou référendaire est une période de débat pendant laquelle les candidats ou les partisans de chaque
+  camp présentent leurs arguments aux électeurs.
+
+  En France, le vote n''est pas obligatoire, mais il constitue un engagement civique important : voter, c''est participer
+  à la vie de la cité et choisir ses représentants ou se prononcer directement sur une question.
+
+  Il existe plusieurs types d''élections, avec des temporalités différentes : l''élection présidentielle (tous les
+  cinq ans depuis le passage au quinquennat en 2000), les élections législatives (députés), sénatoriales (sénateurs,
+  au suffrage indirect), régionales, départementales, municipales et européennes.
+
+  Le référendum, lui, permet aux citoyens de répondre directement par « oui » ou « non » à une question posée par
+  les pouvoirs publics, comme lors de l''adoption de la Constitution de 1958, approuvée par référendum le 28 septembre
+  1958.'
+methode:
+- Distinguer élection (choisir des représentants) et référendum (répondre directement à une question).
+- Connaître au moins quatre types d'élections françaises et leur objet (présidentielle, législatives, municipales,
+  européennes...).
+- Retenir que le vote n'est pas obligatoire en France, contrairement à d'autres pays.
+- Relier la campagne électorale à l'idée de débat démocratique nécessaire avant un vote.
+vocabulaire:
+- terme: référendum
+  definition: un vote par lequel les citoyens répondent directement par oui ou non à une question posée par les
+    pouvoirs publics
+- terme: suffrage universel direct
+  definition: un mode d'élection où tous les citoyens majeurs votent directement pour désigner un représentant
+- terme: campagne électorale
+  definition: la période qui précède un vote, pendant laquelle candidats et partisans présentent leurs arguments
+erreurs_frequentes:
+- 'Croire que le vote est obligatoire en France : il ne l''est pas, contrairement à certains autres pays.'
+- Confondre élection (choix de représentants) et référendum (réponse directe à une question).
+- Oublier qu'il existe plusieurs échelles d'élections (locale, nationale, européenne), pas seulement la présidentielle.
+- 'Penser que ne pas voter est sans conséquence pour la vie démocratique : l''abstention influe sur la représentativité
+  des résultats.'
+exemple:
+  enonce: Donne un exemple de référendum en France et explique ce qui le distingue d'une élection.
+  solution: 'Le référendum du 28 septembre 1958, qui a permis d''adopter la Constitution de la Ve République : contrairement
+    à une élection, les citoyens ne choisissent pas un représentant mais répondent directement par oui ou non à
+    une question précise.'
+exercices:
+- enonce: Cite quatre types d'élections qui existent en France.
+  indices:
+  - 'Pense aux différentes échelles : nationale, locale, européenne.'
+  solution: 'Par exemple : les élections présidentielle, législatives, municipales et européennes (on peut aussi
+    citer les élections sénatoriales, régionales ou départementales).'
+- enonce: 'Développement construit : explique pourquoi voter, bien que non obligatoire en France, constitue un engagement
+    civique important.'
+  indices:
+  - Pense au rôle du vote dans le choix des représentants.
+  - Pense aux conséquences d'une forte abstention.
+  solution: Un développement réussi doit rappeler que le vote n'est pas une obligation légale en France ; expliquer
+    que voter permet néanmoins de choisir ses représentants ou de se prononcer sur une question, ce qui est une
+    forme concrète de participation à la vie démocratique ; montrer qu'une forte abstention peut fragiliser la légitimité
+    des élus ou du résultat d'un référendum.
+- enonce: Quelle est la différence entre une élection législative et une élection sénatoriale ?
+  indices:
+  - Qui vote directement, qui vote indirectement ?
+  solution: Les élections législatives (députés) se font au suffrage universel direct, par tous les électeurs ;
+    les élections sénatoriales se font au suffrage indirect, par des grands électeurs (élus locaux notamment).
+sources:
+- titre: Vikidia, « Élection »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89lection&oldid=2558947
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Référendum »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9f%C3%A9rendum&oldid=2435864
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

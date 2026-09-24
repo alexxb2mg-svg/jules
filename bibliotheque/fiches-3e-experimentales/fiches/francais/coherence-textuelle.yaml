@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: coherence-textuelle
+declencheurs:
+- reprise nominale pronominale
+- connecteurs logiques
+- texte cohérent
+- système des temps
+- organisation du texte
+- mise en page paragraphe
+essentiel: 'La cohérence textuelle repose sur des procédés qui relient les phrases d''un texte entre elles pour
+  qu''il forme un ensemble compréhensible.
+
+  Les reprises évitent de répéter le même mot : reprise nominale (un synonyme, un terme générique), reprise pronominale
+  (il, elle, celui-ci, le sien...), reprise par un déterminant démonstratif ou possessif.
+
+  Les connecteurs (mots ou expressions de liaison) organisent les relations entre les idées : temporels (d''abord,
+  ensuite, enfin), logiques (donc, cependant, en effet, par conséquent), spatiaux (à côté, plus loin).
+
+  Le système des temps doit rester cohérent tout au long d''un texte, surtout dans les énoncés longs : par exemple,
+  un récit au passé garde le passé simple/imparfait comme temps de base, avec le plus-que-parfait pour l''antériorité.
+
+  D''autres marques d''organisation aident le lecteur : la mise en page (paragraphes), la typographie (titres, italique),
+  la ponctuation.'
+methode:
+- Repérer les reprises d'un même personnage ou d'une même idée d'une phrase à l'autre.
+- Souligner les connecteurs et préciser leur valeur (temps, cause, conséquence, opposition...).
+- Vérifier que le système des temps reste cohérent (pas de saut injustifié de temps).
+- Observer l'organisation visuelle du texte (paragraphes, titres) pour en dégager le plan.
+- 'Pour écrire un texte cohérent : varier les reprises, choisir des connecteurs précis, garder un système de temps
+  stable.'
+vocabulaire:
+- terme: connecteur
+  definition: mot ou expression qui relie logiquement deux phrases ou deux parties d'un texte
+- terme: reprise
+  definition: procédé qui renvoie à un élément déjà mentionné sans le répéter à l'identique
+erreurs_frequentes:
+- Répéter le même nom sans varier les reprises, ce qui alourdit le texte.
+- Employer un connecteur logique inadapté (donc pour une opposition, par exemple).
+- Changer de temps verbal sans justification dans un récit.
+- Utiliser un pronom de reprise ambigu, qui peut renvoyer à plusieurs éléments du texte.
+exemple:
+  enonce: 'Identifier les procédés de cohérence : « Léa adorait la mer. Cependant, cette élève n''avait jamais appris
+    à nager. Elle décida donc de prendre des cours. »'
+  solution: 'Reprises : « cette élève » (reprise nominale de Léa), « Elle » (reprise pronominale). Connecteurs :
+    « Cependant » (opposition), « donc » (conséquence). Système des temps cohérent à l''imparfait/passé simple.'
+exercices:
+- enonce: 'Relier ces deux phrases avec un connecteur logique adapté : « Il n''avait pas révisé. ___ il a réussi
+    son contrôle. »'
+  indices:
+  - Le second fait contredit-il ce qu'on attendrait du premier ?
+  solution: '« Pourtant, il a réussi son contrôle. » (ou « Cependant » / « Néanmoins ») : connecteur d''opposition,
+    car le résultat est inattendu.'
+- enonce: 'Réécrire en évitant la répétition : « Le chat regardait l''oiseau. Le chat s''approcha doucement de l''oiseau.
+    »'
+  indices:
+  - Remplacer la seconde occurrence de « le chat » et de « l'oiseau » par des reprises.
+  solution: '« Le chat regardait l''oiseau. Il s''en approcha doucement. » : reprise pronominale « il » et « s''en
+    » évitent les répétitions.'
+sources:
+- titre: Wikipédia, « Cohérence (linguistique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Coh%C3%A9rence_%28linguistique%29&oldid=236673647
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

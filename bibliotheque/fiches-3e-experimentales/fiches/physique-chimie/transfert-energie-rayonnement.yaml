@@ -1,0 +1,83 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transfert-energie-rayonnement
+declencheurs:
+- effet de serre
+- rayonnement infrarouge
+- réchauffement atmosphère
+- gaz à effet de serre absorbent
+- chaleur du soleil
+- chauffage à distance
+- rayonnement thermique
+essentiel: 'Un rayonnement (lumière, infrarouge…) transporte de l''énergie : quand un objet absorbe un rayonnement,
+  il reçoit de l''énergie (souvent convertie en chaleur) ; quand il en émet un, il perd de l''énergie.
+
+  Le Soleil émet un rayonnement qui traverse l''atmosphère et réchauffe la surface de la Terre ; en retour, la Terre
+  réchauffée émet elle-même un rayonnement, principalement infrarouge (invisible, de grande longueur d''onde).
+
+  Les gaz à effet de serre présents dans l''atmosphère (dioxyde de carbone, méthane, vapeur d''eau…) absorbent une
+  partie de ce rayonnement infrarouge émis par la Terre, au lieu de le laisser repartir vers l''espace, et en réémettent
+  une partie vers le sol : c''est l''effet de serre, qui réchauffe l''atmosphère.
+
+  L''effet de serre naturel est indispensable à la vie sur Terre (sans lui, la température moyenne serait bien plus
+  basse) ; le problème actuel vient de son renforcement par les activités humaines, qui augmentent la concentration
+  de gaz à effet de serre.
+
+  Chaque type de rayonnement est caractérisé par une longueur d''onde (ou une fréquence) : plus la longueur d''onde
+  est grande, plus la fréquence est faible, et inversement.'
+methode:
+- Distinguer le rayonnement reçu du Soleil (plutôt visible) et le rayonnement réémis par la Terre (infrarouge).
+- Retenir que les gaz à effet de serre absorbent le rayonnement infrarouge terrestre plutôt que de le laisser s'échapper
+  vers l'espace.
+- Ne pas confondre effet de serre naturel (indispensable) et son renforcement par les activités humaines (problème
+  actuel).
+- 'Relier fréquence et longueur d''onde : elles varient en sens inverse l''une de l''autre.'
+erreurs_frequentes:
+- Croire que l'effet de serre est en lui-même un phénomène nouveau ou anormal (c'est son renforcement récent qui
+  pose problème).
+- Penser que les gaz à effet de serre bloquent la lumière du Soleil (ils absorbent surtout le rayonnement infrarouge
+  réémis par la Terre).
+- Confondre effet de serre et trou dans la couche d'ozone (deux phénomènes différents).
+- Croire qu'un objet chaud n'émet un rayonnement que s'il est incandescent (tout corps chaud émet un rayonnement
+  infrarouge, même invisible).
+exemple:
+  enonce: Pourquoi la nuit, sans nuages, la température baisse-t-elle davantage que sous un ciel nuageux ?
+  solution: Le sol réchauffé pendant la journée réémet un rayonnement infrarouge la nuit. Sans nuages (ni gaz à
+    effet de serre en quantité suffisante pour le retenir), ce rayonnement s'échappe plus facilement vers l'espace,
+    ce qui refroidit davantage la surface.
+exercices:
+- enonce: Le rayonnement émis par la Terre vers l'espace est-il surtout de la lumière visible ou du rayonnement
+    infrarouge ?
+  indices:
+  - La Terre est beaucoup plus froide que le Soleil.
+  solution: C'est surtout du rayonnement infrarouge (la Terre n'est pas assez chaude pour émettre beaucoup de lumière
+    visible).
+- enonce: Expliquer en une phrase pourquoi une augmentation de la concentration en CO2 dans l'atmosphère renforce
+    le réchauffement climatique.
+  indices:
+  - Plus de CO2, c'est plus de rayonnement infrarouge absorbé au lieu de partir vers l'espace.
+  solution: Plus il y a de CO2 (gaz à effet de serre) dans l'atmosphère, plus il absorbe et réémet vers le sol le
+    rayonnement infrarouge terrestre, ce qui renforce le réchauffement de l'atmosphère.
+- enonce: Un rayonnement de longueur d'onde 10 micromètres (infrarouge) a-t-il une fréquence plus grande ou plus
+    petite qu'un rayonnement de longueur d'onde 500 nanomètres (lumière visible) ?
+  indices:
+  - Fréquence et longueur d'onde varient en sens inverse.
+  solution: 'Sa fréquence est plus petite : plus la longueur d''onde est grande, plus la fréquence est faible (l''infrarouge
+    a une fréquence plus faible que la lumière visible).'
+sources:
+- titre: Vikidia, « Effet de serre »
+  url: https://fr.vikidia.org/w/index.php?title=Effet_de_serre&oldid=2564644
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Rayonnement »
+  url: https://fr.vikidia.org/w/index.php?title=Rayonnement&oldid=1402772
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

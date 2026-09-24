@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: explorer-imaginer-creer-produire
+declencheurs:
+- inventer une petite musique
+- creer un rythme avec des objets
+- composer une melodie simple
+- imaginer un accompagnement
+- improviser en musique
+essentiel: 'Créer en musique, c''est explorer des sons (voix, instruments, objets du quotidien, sons numériques)
+  pour inventer une organisation sonore nouvelle, même très courte.
+
+  L''improvisation est une création spontanée, dans l''instant, à partir de règles simples fixées à l''avance (une
+  gamme, un rythme, un nombre de mesures) : elle n''est pas totalement libre, mais elle n''est pas non plus figée
+  à l''avance.
+
+  Une petite pièce musicale peut se concevoir par étapes : choisir des sons, les organiser dans le temps, décider
+  d''une forme (avec un début, un développement, une fin), puis la jouer ou l''enregistrer.
+
+  Le geste de création s''appuie souvent sur l''écoute d''œuvres existantes, qui donnent des idées de structure
+  ou de timbre à réinvestir.'
+methode:
+- Choisir un petit nombre de sons ou d'instruments avant de commencer à composer.
+- Fixer une règle simple pour l'improvisation (une note de départ, un nombre de temps).
+- Organiser les sons choisis dans un ordre qui a un début, un milieu et une fin.
+- Rejouer et ajuster la pièce plusieurs fois avant de la considérer terminée.
+erreurs_frequentes:
+- Vouloir utiliser trop de sons différents dès le départ, ce qui rend la pièce confuse.
+- Improviser sans aucune règle, ce qui rend le résultat difficile à structurer.
+- Ne jamais réécouter sa propre création pour l'ajuster.
+exemple:
+  enonce: Créer un rythme court avec trois objets sonores du quotidien (une boîte, un stylo qui tape, des mains).
+  solution: 'Choisir un ordre fixe pour les trois sons (boîte, stylo, mains), le répéter deux fois à l''identique,
+    puis varier la troisième fois : cela donne déjà une petite forme avec répétition et variation, deux principes
+    utilisés en composition.'
+exercices:
+- enonce: 'À la maison : avec deux ou trois objets du quotidien qui font du bruit, invente un petit motif rythmique
+    de 4 temps et répète-le trois fois d''affilée sans erreur.'
+  indices:
+  - Compte à voix haute pour garder un tempo régulier.
+  solution: Réussite si le motif reste identique et régulier sur les trois répétitions.
+- enonce: Improvise 15 secondes de chant ou de fredonnement en utilisant seulement 3 notes différentes (par exemple
+    do-ré-mi ou trois sons que tu choisis).
+  indices:
+  - Reste sur les mêmes 3 sons du début à la fin pour garder une cohérence.
+  solution: Réussite si l'improvisation dure bien environ 15 secondes et n'utilise que les 3 sons choisis au départ.
+sources:
+- titre: Wikipédia, « Improvisation musicale »
+  url: https://fr.wikipedia.org/w/index.php?title=Improvisation_musicale&oldid=235150649
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

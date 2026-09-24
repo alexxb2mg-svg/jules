@@ -1,0 +1,98 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ost-dans-son-environnement
+declencheurs:
+- ergonomie
+- expérience utilisateur
+- cahier des charges
+- utilisateur
+- confort
+- contraintes du projet
+- norme
+- conditions d'usage
+- utilise cet objet
+- milieu d'utilisation
+essentiel: 'Un objet ou système technique (OST) n''existe jamais seul : il interagit avec des interacteurs extérieurs,
+  c''est-à-dire tout ce qui l''entoure et influence sa conception : les utilisateurs, les données échangées, d''autres
+  objets techniques, et le milieu (chaleur, humidité, poussière...).
+
+
+  L''ergonomie étudie la relation entre l''humain et les objets qu''il utilise, pour que ceux-ci soient conçus avec
+  le maximum de confort, de sécurité et d''efficacité. L''expérience utilisateur (UX, de l''anglais user experience)
+  est plus large : c''est tout ce que ressent une personne en utilisant un produit ou un service (plaisir, frustration,
+  facilité de prise en main), pas seulement le confort physique.
+
+
+  Le cahier des charges est un document qui décrit, avant la conception, les objectifs à atteindre, les contraintes
+  à respecter (sécurité, coût, normes, délais) et les résultats attendus (livrables). Il sert de référence partagée
+  entre le client et les concepteurs tout au long du projet.'
+methode:
+- 'Pour lister les interacteurs d''un OST, se poser la question : qui l''utilise ? avec quels autres objets communique-t-il
+  ? dans quel environnement fonctionne-t-il (chaud, humide, mobile...) ?'
+- Pour analyser l'ergonomie d'un objet, observer sa prise en main, la lisibilité de ses commandes, l'effort ou la
+  posture qu'il impose à l'utilisateur.
+- 'Pour lire un cahier des charges, distinguer les fonctions attendues (ce que l''objet doit faire) des contraintes
+  (limites à respecter : budget, poids, normes de sécurité).'
+- Pour représenter l'expérience utilisateur, on peut employer un croquis, un schéma des étapes d'utilisation, ou
+  un algorithme des actions possibles.
+vocabulaire:
+- terme: interacteur
+  definition: élément extérieur (utilisateur, donnée, autre objet, milieu) qui influence la conception ou le fonctionnement
+    d'un OST
+- terme: ergonomie
+  definition: étude de l'adaptation d'un objet à l'humain, pour un usage confortable, sûr et efficace
+- terme: cahier des charges
+  definition: document qui fixe les objectifs et les contraintes d'un projet avant sa réalisation
+erreurs_frequentes:
+- Confondre ergonomie (confort physique d'utilisation) et expérience utilisateur (ressenti global, plus large).
+- Oublier que le milieu (température, humidité, vibrations) fait partie des interacteurs à prendre en compte.
+- Croire que le cahier des charges décrit déjà la solution technique alors qu'il décrit le besoin et les contraintes.
+- Ne citer qu'un seul type d'interacteur (par exemple l'utilisateur) en oubliant les autres objets ou le milieu.
+exemple:
+  enonce: Une manette de jeu vidéo est conçue pour des mains d'adultes et d'enfants. Citer deux interacteurs extérieurs
+    de cette manette et une contrainte d'ergonomie qu'elle doit respecter.
+  solution: 'Interacteurs : l''utilisateur (adulte ou enfant, main plus ou moins grande) et la console de jeu (avec
+    laquelle elle communique par Bluetooth ou par fil). Contrainte d''ergonomie : les boutons doivent être atteignables
+    sans effort excessif et la manette ne doit pas être trop lourde pour une utilisation prolongée.'
+exercices:
+- enonce: Pour un vélo à assistance électrique destiné à un usage urbain, lister trois interacteurs extérieurs.
+  indices:
+  - Pense à l'utilisateur, à la route, à d'autres objets connectés.
+  solution: 'Exemples : le cycliste (taille, force), la chaussée (pavés, pluie), une application smartphone qui
+    affiche l''autonomie de la batterie.'
+- enonce: 'Dans un cahier des charges, laquelle de ces phrases est une contrainte et laquelle est un objectif fonctionnel
+    : « l''objet doit permettre d''éclairer une pièce » ; « le coût de fabrication ne doit pas dépasser 15 euros
+    ».'
+  indices:
+  - Un objectif décrit ce que l'objet doit faire ; une contrainte est une limite à respecter.
+  solution: « Permettre d'éclairer une pièce » est un objectif fonctionnel (la fonction d'usage). « Coût de fabrication
+    ≤ 15 euros » est une contrainte (une limite économique).
+- enonce: Expliquer en une phrase la différence entre ergonomie et expérience utilisateur.
+  indices:
+  - L'une porte sur le confort physique, l'autre sur le ressenti global.
+  solution: L'ergonomie concerne surtout le confort, la sécurité et l'efficacité physique de l'usage ; l'expérience
+    utilisateur couvre plus largement le ressenti de la personne (plaisir, facilité, émotion) pendant toute son
+    interaction avec l'objet.
+sources:
+- titre: Wikipédia, « Ergonomie »
+  url: https://fr.wikipedia.org/w/index.php?title=Ergonomie&oldid=237901445
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Expérience utilisateur »
+  url: https://fr.wikipedia.org/w/index.php?title=Exp%C3%A9rience_utilisateur&oldid=235635735
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Cahier des charges »
+  url: https://fr.wikipedia.org/w/index.php?title=Cahier_des_charges&oldid=235303424
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

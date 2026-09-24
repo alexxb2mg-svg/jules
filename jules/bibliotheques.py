@@ -46,7 +46,10 @@ LICENCES_LIBRES = (
     "MIT",
 )
 # Champs d'une fiche qui ne sont pas des reperes de cours (metadonnees ou direction de l'enseignant).
-CHAMPS_HORS_CONTENU = frozenset({"notion", "direction", "sources", "relecture"})
+# Champs d'une fiche qui ne sont pas du contenu de cours (non injectes dans le prompt comme tels).
+# `declencheurs` : mots qu'un eleve emploie sans nommer la notion (« soldes », « lutin », « méridien »),
+# utilises seulement pour preselectionner les notions candidates a la detection.
+CHAMPS_HORS_CONTENU = frozenset({"notion", "direction", "sources", "relecture", "declencheurs"})
 _ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 TAILLE_MAX_FICHIER = 200_000  # octets : une fiche est un texte court, pas un manuel
 
@@ -140,6 +143,15 @@ class Catalogue:
             if apport:
                 origines.append(biblio)
         return fusion, origines
+
+    def declencheurs(self, identifiant: str) -> list[str]:
+        """Mots declencheurs apportes par les fiches (toutes bibliotheques confondues)."""
+        vus: list[str] = []
+        for biblio in self.contenus:
+            for mot in (biblio.fiches.get(identifiant) or {}).get("declencheurs") or []:
+                if str(mot) not in vus:
+                    vus.append(str(mot))
+        return vus
 
     def directions(self, notion: Notion) -> list[tuple[Bibliotheque, dict[str, Any]]]:
         """Directions pedagogiques qui s'appliquent : celle de la matiere puis celle de la notion."""
@@ -309,19 +321,32 @@ _MOTS_VIDES = (
 _VIDES = frozenset(_MOTS_VIDES.split())
 
 
+_SYMBOLES = {"%": " pourcent ", "√": " racine "}  # symboles qu'un eleve tape a la place du mot
+
+
 def mots(texte: str) -> set[str]:
+    for symbole, mot in _SYMBOLES.items():
+        texte = texte.replace(symbole, mot)
     return {m for m in _MOT.findall(normaliser(texte)) if len(m) > 2 and m not in _VIDES}
 
 
+SCORE_FORT = 3.0  # un mot-cle ou un declencheur present en entier dans le message
+
+
 def candidats(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[Notion]:
-    """Notions dont le titre ou les mots-cles recoupent le texte, les plus proches d'abord."""
+    """Notions dont le titre, les mots-cles ou les declencheurs recoupent le texte, les plus proches d'abord."""
+    return [n for _, n in candidats_notes(catalogue, texte, maximum)]
+
+
+def candidats_notes(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[tuple[float, Notion]]:
+    """Comme candidats(), avec le score : SCORE_FORT ou plus = un mot-cle reconnu en entier."""
     cherches = mots(texte)
     if not cherches:
         return []
     scores: list[tuple[float, Notion]] = []
     for n in catalogue.notions.values():
         score = 0.0
-        for cle in n.mots_cles:
+        for cle in [*n.mots_cles, *catalogue.declencheurs(n.id)]:
             mc = mots(cle)
             if mc and mc <= cherches:
                 score += 3
@@ -332,7 +357,7 @@ def candidats(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[Notio
         if score > 0:
             scores.append((score, n))
     scores.sort(key=lambda s: -s[0])
-    return [n for _, n in scores[:maximum]]
+    return scores[:maximum]
 
 
 # --- rendu pour le prompt -----------------------------------------------------

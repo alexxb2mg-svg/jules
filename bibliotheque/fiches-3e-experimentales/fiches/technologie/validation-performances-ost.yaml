@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: validation-performances-ost
+declencheurs:
+- valider les performances
+- cahier des charges respecté
+- test final
+- comparer aux exigences
+- résultat attendu
+couverture: Cette fiche s'appuie sur performance-ost (mesure et protocole) pour la validation finale d'un objet
+  ou système technique par rapport à son cahier des charges.
+essentiel: 'Valider les performances d''un objet ou système technique (OST), c''est comparer les résultats de mesures
+  réelles (voir la fiche performance-ost) aux exigences fixées dans le cahier des charges, pour déterminer si l''objet
+  répond bien au besoin initial.
+
+
+  Une exigence du cahier des charges est en général exprimée avec une valeur cible et parfois une marge acceptable
+  (par exemple « autonomie supérieure à 20 km » ou « masse comprise entre 2 et 2,5 kg »). La validation consiste
+  à mesurer la grandeur réelle et à vérifier qu''elle respecte cette exigence.
+
+
+  Si une performance mesurée ne respecte pas l''exigence, il faut identifier la cause de l''écart (matériau, conception,
+  réglage) et proposer une amélioration, avant de retester : la validation des performances est souvent une étape
+  itérative, en lien avec le prototypage.'
+methode:
+- Relever dans le cahier des charges les exigences chiffrées à valider.
+- Mesurer la performance réelle de l'objet selon un protocole précis (voir performance-ost).
+- 'Comparer chaque mesure à l''exigence correspondante : respectée ou non respectée.'
+- Si une exigence n'est pas respectée, analyser la cause probable de l'écart avant de proposer une amélioration.
+vocabulaire:
+- terme: exigence
+  definition: critère chiffré ou précis que l'objet technique doit respecter, fixé dans le cahier des charges
+- terme: écart
+  definition: différence entre la performance mesurée et l'exigence attendue
+erreurs_frequentes:
+- Valider un objet sans avoir réellement mesuré sa performance (se fier à une estimation).
+- Oublier la marge acceptable d'une exigence et exiger une valeur exacte impossible à atteindre.
+- Ne pas chercher la cause d'un écart avant de modifier la conception au hasard.
+exemple:
+  enonce: Le cahier des charges d'un robot suiveur de ligne exige une vitesse maximale d'au moins 0,3 m/s. Le test
+    donne une vitesse mesurée de 0,25 m/s. L'exigence est-elle respectée ? Que faire ?
+  solution: L'exigence n'est pas respectée (0,25 m/s < 0,3 m/s attendu). Il faut chercher la cause possible (moteur
+    trop faible, frottements excessifs, batterie pas assez chargée), proposer une amélioration (changer de moteur,
+    réduire les frottements), puis retester.
+exercices:
+- enonce: Le cahier des charges d'une lampe solaire exige qu'elle reste allumée au moins 6 heures après une charge
+    complète. Le test donne 5h30. L'exigence est-elle respectée ?
+  indices:
+  - Compare 5h30 à l'exigence de 6 heures.
+  solution: 'Non, l''exigence n''est pas respectée : 5h30 (5,5 heures) est inférieur aux 6 heures minimales exigées.
+    Il faut analyser la cause (capacité de la batterie, consommation de la LED) avant de proposer une amélioration.'
+sources:
+- titre: Vikidia, « Mesure »
+  url: https://fr.vikidia.org/w/index.php?title=Mesure&oldid=1988496
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Cahier des charges »
+  url: https://fr.wikipedia.org/w/index.php?title=Cahier_des_charges&oldid=235303424
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

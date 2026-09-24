@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: dynamiques-espaces-faible-densite
+declencheurs:
+- campagne
+- zone rurale
+- montagne station de ski
+- diagonale du vide
+- peu d'habitants
+- faible densité de population
+- ruralité
+essentiel: 'Les espaces de faible densité (espaces ruraux, montagnes, certains secteurs touristiques peu urbanisés)
+  ont longtemps été présentés comme des « marges » délaissées par le développement. En réalité, ils présentent une
+  grande diversité de dynamiques et d''atouts.
+
+  Certains espaces ruraux se dépeuplent, en particulier dans la « diagonale du vide » qui traverse la France du
+  Nord-Est au Sud-Ouest. D''autres, à proximité des aires urbaines, connaissent au contraire une croissance grâce
+  à l''installation de nouveaux habitants venus des villes (néoruraux) ou de résidences secondaires.
+
+  Les espaces de montagne combinent souvent plusieurs ressources productives : l''agriculture (élevage), le tourisme
+  (stations de ski l''hiver, randonnée l''été) et parfois la production d''électricité grâce aux torrents et rivières.
+
+  Ces espaces ne sont donc pas uniformément en déclin : ils ont des atouts productifs, notamment agricoles et touristiques,
+  et peuvent attirer de nouveaux types d''habitants en quête d''un cadre de vie différent.'
+methode:
+- 'Éviter l''idée reçue que les espaces de faible densité sont tous « à l''abandon » : chercher des exemples de
+  dynamisme.'
+- Distinguer espace rural (agriculture) et espace de montagne (agriculture + tourisme), tout en notant leurs points
+  communs (faible densité).
+- Citer un exemple précis de ressource ou d'atout (agritourisme, station de ski, énergie hydroélectrique).
+- Relier ces dynamiques à la proximité ou à l'éloignement des grandes aires urbaines.
+vocabulaire:
+- terme: espace de faible densité
+  definition: un territoire où le nombre d'habitants au km² est peu élevé (campagnes, montagnes)
+- terme: diagonale du vide
+  definition: une bande de territoire français, du Nord-Est au Sud-Ouest, marquée par une faible densité de population
+- terme: néorural
+  definition: une personne venue de la ville qui s'installe à la campagne
+erreurs_frequentes:
+- Croire que tous les espaces ruraux se ressemblent et déclinent de la même façon.
+- Oublier les atouts touristiques et énergétiques des espaces de montagne.
+- Confondre espace rural éloigné des villes (souvent en déprise) et espace rural périurbain (souvent en croissance).
+- Réduire les espaces de faible densité à l'agriculture seule.
+exemple:
+  enonce: Donne un exemple montrant qu'un espace de montagne peut avoir plusieurs activités productives à la fois.
+  solution: Une vallée alpine peut combiner l'élevage en été sur les alpages, le tourisme d'hiver grâce aux stations
+    de ski, le tourisme d'été (randonnée) et la production d'électricité grâce à l'énergie des torrents.
+exercices:
+- enonce: Qu'est-ce que la « diagonale du vide » ?
+  indices:
+  - C'est une bande de territoire, pas un seul point.
+  solution: Une bande de territoire français, du Nord-Est au Sud-Ouest, marquée par une faible densité de population.
+- enonce: 'Développement construit : montre que les espaces de faible densité ne sont pas seulement des marges délaissées.'
+  indices:
+  - Cite un exemple de dynamisme (néoruraux, tourisme).
+  - Nuance avec un exemple de déprise.
+  solution: 'Un développement réussi doit rappeler l''image traditionnelle de marges délaissées, puis la nuancer
+    : certains espaces ruraux proches des villes attirent des néoruraux et connaissent une croissance ; les espaces
+    de montagne combinent agriculture et tourisme ; d''autres espaces plus isolés, notamment dans la diagonale du
+    vide, restent en revanche marqués par le dépeuplement.'
+- enonce: Pourquoi certains habitants des villes choisissent-ils de s'installer à la campagne ?
+  indices:
+  - Pense au cadre de vie et au prix des logements.
+  solution: Ils recherchent un cadre de vie différent (calme, nature) et des logements souvent moins chers qu'en
+    ville, tout en pouvant parfois continuer à travailler à distance ou dans une ville proche.
+sources:
+- titre: Vikidia, « Montagne »
+  url: https://fr.vikidia.org/w/index.php?title=Montagne&oldid=2563354
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Tourisme »
+  url: https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (tourisme en espace de faible densité)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

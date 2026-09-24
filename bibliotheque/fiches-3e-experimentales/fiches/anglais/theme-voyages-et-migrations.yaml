@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-voyages-et-migrations
+declencheurs:
+- voyage scolaire anglais
+- tourisme responsable anglais
+- migration en anglais
+- exil vocabulaire anglais
+- empreinte carbone voyage
+- émigration
+essentiel: 'Le thème « Voyages et migrations » aborde d''abord les voyages scolaires et touristiques, avec une attention
+  particulière au tourisme écoresponsable et à la notion d''empreinte carbone (carbon footprint), c''est-à-dire
+  l''impact d''un déplacement sur l''environnement.
+
+
+  Il aborde ensuite des sujets plus profonds : l''exil, la migration et l''émigration, c''est-à-dire les situations
+  où des personnes quittent leur pays, volontairement ou non, pour s''installer ailleurs. Ce thème peut aussi s''ouvrir
+  vers l''imaginaire, le rêve, le fantastique, quand le voyage devient un prétexte pour raconter une histoire inventée.
+
+
+  En anglais, il est important de distinguer les mots liés à ce thème : « migration » est le déplacement de population
+  en général, « emigration » désigne le départ d''un pays (du point de vue de celui qui part), et « immigration
+  » désigne l''arrivée dans un pays (du point de vue du pays d''accueil).'
+methode:
+- Distinguer emigration (départ) et immigration (arrivée), qui décrivent le même déplacement sous deux points de
+  vue différents.
+- Utiliser le vocabulaire du voyage (a journey, a trip, to travel) et de l'écoresponsabilité (carbon footprint,
+  sustainable tourism) selon le sujet abordé.
+- Relier les migrations à des exemples réels et vérifiés, sans généraliser à partir d'une seule histoire.
+vocabulaire:
+- terme: carbon footprint
+  definition: l'empreinte carbone, la quantité de gaz à effet de serre produite par une activité, comme un voyage
+- terme: migration
+  definition: déplacement d'un groupe de personnes d'un lieu vers un autre, souvent pour s'y installer
+erreurs_frequentes:
+- Confondre emigration (partir de son pays) et immigration (arriver dans un nouveau pays).
+- Utiliser « voyage » comme un simple mot anglais alors qu'il s'écrit « journey » ou « trip » (« voyage » n'existe
+  pas sous cette forme en anglais courant).
+- Réduire les migrations à un seul stéréotype sans tenir compte de la diversité des situations (études, travail,
+  exil, tourisme prolongé).
+exemple:
+  enonce: Une personne quitte la France pour aller vivre au Canada. Comment appelle-t-on cette personne du point
+    de vue français, et du point de vue canadien ?
+  solution: 'Du point de vue français, c''est une émigration : la personne « emigrates from France ». Du point de
+    vue canadien, c''est une immigration : la personne « immigrates to Canada ». C''est le même déplacement vu sous
+    deux angles différents.'
+exercices:
+- enonce: Écrire une phrase en anglais expliquant ce qu'est l'empreinte carbone d'un voyage.
+  indices:
+  - Utilise « carbon footprint » et un exemple de transport.
+  solution: 'Exemple de réponse possible : « Taking the plane increases your carbon footprint more than taking the
+    train. » (Toute phrase correcte et cohérente est acceptée.)'
+sources:
+- titre: Simple English Wikipedia, « Multiculturalism »
+  url: https://simple.wikipedia.org/w/index.php?title=Multiculturalism&oldid=10547171
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

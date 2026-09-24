@@ -1,0 +1,102 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: constitution-ve-republique
+declencheurs:
+- article 1 de la Constitution
+- hiérarchie des normes
+- QPC
+- Conseil constitutionnel rôle
+- texte fondamental
+- 1958 constitution
+- révisions de la Constitution
+essentiel: 'La Constitution est le texte juridique le plus important d''un pays : c''est la « loi des lois », que
+  toutes les autres lois doivent respecter. En France, la Constitution de la Ve République a été adoptée par référendum
+  le 28 septembre 1958. Son article premier dispose : « La France est une République indivisible, laïque, démocratique
+  et sociale. »
+
+  Elle garantit les droits et libertés, organise la séparation des pouvoirs (exécutif, législatif, judiciaire) et
+  permet au Parlement de contrôler l''action du gouvernement. Elle fait aussi référence à d''autres textes à valeur
+  constitutionnelle : la Déclaration des droits de l''homme et du citoyen de 1789, le préambule de la Constitution
+  de 1946, et la Charte de l''environnement (2004).
+
+  Depuis 2010, la question prioritaire de constitutionnalité (QPC) permet à toute personne partie à un procès de
+  contester une loi déjà en vigueur qui porterait atteinte aux droits et libertés garantis par la Constitution.
+  Le juge transmet la question (via la Cour de cassation ou le Conseil d''État), puis le Conseil constitutionnel
+  tranche et peut abroger la loi. Les juges, indépendants du pouvoir politique, participent ainsi à la garantie
+  des droits et libertés.
+
+  La Constitution a évolué à plusieurs reprises depuis 1958 : élection du président au suffrage universel direct
+  (1962), parité femmes-hommes en politique (1999), quinquennat présidentiel (2000), décentralisation (2003), réforme
+  de 2008 (dont la création de la QPC).'
+methode:
+- Retenir la date d'adoption de la Constitution (28 septembre 1958) et le principe de « loi des lois ».
+- Citer les trois textes à valeur constitutionnelle liés à la Constitution de 1958 (DDHC 1789, préambule de 1946,
+  Charte de l'environnement 2004).
+- 'Expliquer le fonctionnement et l''intérêt de la QPC : contrôler une loi déjà en vigueur.'
+- Situer une ou deux révisions constitutionnelles importantes (1962, 2008) avec leur apport.
+vocabulaire:
+- terme: Constitution
+  definition: le texte fondamental qui organise les pouvoirs d'un État et garantit les droits et libertés des citoyens
+- terme: séparation des pouvoirs
+  definition: le principe selon lequel les pouvoirs exécutif, législatif et judiciaire sont exercés par des organes
+    différents et se contrôlent mutuellement
+- terme: QPC
+  definition: 'question prioritaire de constitutionnalité : procédure qui permet de vérifier qu''une loi déjà appliquée
+    respecte la Constitution'
+erreurs_frequentes:
+- 'Croire que la Constitution ne contient que le texte de 1958 : elle inclut aussi la DDHC de 1789 et le préambule
+  de 1946.'
+- Confondre QPC (contrôle a posteriori, sur une loi déjà en vigueur) et le contrôle a priori d'une loi avant sa
+  promulgation.
+- 'Oublier que la Constitution peut être révisée : elle a changé plusieurs fois depuis 1958.'
+- Mélanger les dates des différentes révisions (1962, 1999, 2000, 2003, 2008).
+exemple:
+  enonce: Explique ce qu'est une question prioritaire de constitutionnalité (QPC) et à quoi elle sert.
+  solution: La QPC, créée par la révision constitutionnelle de 2008, permet à un citoyen, au cours d'un procès,
+    de demander au Conseil constitutionnel de vérifier qu'une loi déjà appliquée ne porte pas atteinte aux droits
+    et libertés garantis par la Constitution. Elle garantit ainsi le respect de la Constitution et l'indépendance
+    de la justice.
+exercices:
+- enonce: Cite deux textes, autres que la Constitution de 1958 elle-même, qui ont une valeur constitutionnelle en
+    France.
+  indices:
+  - Un texte de 1789, un texte de 2004.
+  solution: La Déclaration des droits de l'homme et du citoyen de 1789 et la Charte de l'environnement de 2004 (on
+    peut aussi citer le préambule de la Constitution de 1946).
+- enonce: 'Développement construit : explique en quoi la Constitution garantit la séparation des pouvoirs et le
+    contrôle du gouvernement.'
+  indices:
+  - Cite les trois pouvoirs.
+  - Explique le rôle du Parlement face au gouvernement.
+  solution: Un développement réussi doit présenter les trois pouvoirs (exécutif, législatif, judiciaire) et expliquer
+    qu'ils sont séparés pour éviter qu'un seul organe ne concentre tous les pouvoirs ; montrer que le Parlement
+    (Assemblée nationale et Sénat) contrôle l'action du gouvernement, par exemple en votant les lois et le budget
+    ou en interrogeant les ministres ; conclure que ce contrôle protège les citoyens contre les abus de pouvoir.
+- enonce: Donne un exemple d'évolution de la Constitution depuis 1958 et explique ce qu'elle a changé.
+  indices:
+  - Choisis parmi 1962, 1999, 2000, 2003, 2008.
+  solution: Par exemple, la révision de 1962 a instauré l'élection du président de la République au suffrage universel
+    direct, ce qui a renforcé sa légitimité démocratique par rapport à une élection indirecte.
+sources:
+- titre: Vikidia, « Constitution française de 1958 »
+  url: https://fr.vikidia.org/w/index.php?title=Constitution_fran%C3%A7aise_de_1958&oldid=2431778
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Question prioritaire de constitutionnalité »
+  url: https://fr.wikipedia.org/w/index.php?title=Question_prioritaire_de_constitutionnalit%C3%A9&oldid=231451312
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Conseil constitutionnel (France) »
+  url: https://fr.wikipedia.org/w/index.php?title=Conseil_constitutionnel_%28France%29&oldid=239301277
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (rôle et création du Conseil constitutionnel)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

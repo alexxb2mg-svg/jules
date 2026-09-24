@@ -1,0 +1,80 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: propagation-son-frequence
+declencheurs:
+- vitesse du son
+- orage éclair tonnerre
+- fréquence du son
+- infrasons
+- ultrasons
+- propagation du son
+- son grave aigu
+- son ne se propage pas dans le vide
+essentiel: 'Le son est une vibration qui se propage de proche en proche dans un milieu matériel (air, eau, solide)
+  : contrairement à la lumière, il ne peut pas se propager dans le vide.
+
+  Le son se propage beaucoup moins vite que la lumière : environ 340 m/s dans l''air (à 20 °C), contre 300 000 km/s
+  pour la lumière. C''est pourquoi on voit un éclair avant d''entendre le tonnerre.
+
+  La distance parcourue par le son se calcule par d = v × t, avec v ≈ 340 m/s dans l''air.
+
+  La fréquence d''un son (en hertz, Hz) correspond au nombre de vibrations par seconde ; elle détermine la hauteur
+  du son perçu (aigu ou grave).
+
+  L''oreille humaine perçoit les sons de fréquence comprise entre environ 20 Hz et 20 000 Hz ; en dessous, ce sont
+  des infrasons, au-dessus, des ultrasons, tous deux inaudibles par l''être humain mais perçus ou utilisés par certains
+  animaux (chauves-souris, dauphins) ou en médecine (échographie).'
+methode:
+- Retenir que le son a besoin d'un milieu matériel pour se propager (pas de son dans le vide).
+- Utiliser d = v × t avec v ≈ 340 m/s dans l'air pour calculer une distance ou une durée de propagation.
+- Situer une fréquence de son par rapport aux limites de l'audition humaine (20 Hz à 20 000 Hz).
+- Distinguer infrasons (fréquence trop basse) et ultrasons (fréquence trop haute) pour l'oreille humaine.
+erreurs_frequentes:
+- Croire que le son se propage à la même vitesse que la lumière.
+- Penser que le son peut se propager dans le vide, comme la lumière.
+- Confondre fréquence (nombre de vibrations par seconde) et vitesse de propagation du son.
+- Croire que les ultrasons sont plus « forts » que les sons audibles, alors qu'ils sont simplement d'une fréquence
+  trop élevée pour être entendus par l'oreille humaine.
+exemple:
+  enonce: Un enfant voit un éclair, puis entend le tonnerre 6 secondes plus tard. Estimer la distance de l'orage
+    (vitesse du son dans l'air ≈ 340 m/s).
+  solution: d = v × t = 340 × 6 = 2040 m, soit environ 2 km.
+exercices:
+- enonce: Le son parcourt 1700 m dans l'air. Combien de temps a-t-il mis (v ≈ 340 m/s) ?
+  indices:
+  - t = d / v.
+  solution: t = 1700 / 340 = 5 s.
+- enonce: Une chauve-souris émet des sons de fréquence 50 000 Hz pour se repérer. L'être humain peut-il les entendre
+    ? Comment appelle-t-on ce type de son ?
+  indices:
+  - Compare 50 000 Hz à la limite supérieure de l'audition humaine (20 000 Hz).
+  solution: 'Non, 50 000 Hz dépasse 20 000 Hz : l''être humain ne peut pas l''entendre. Ce sont des ultrasons.'
+- enonce: Pourquoi voit-on l'éclair d'un orage avant d'en entendre le tonnerre, alors que les deux sont produits
+    au même instant ?
+  indices:
+  - Compare les vitesses de la lumière et du son.
+  solution: 'La lumière se propage beaucoup plus vite (300 000 km/s) que le son (340 m/s) : l''éclair nous parvient
+    quasiment instantanément, le tonnerre met plusieurs secondes.'
+sources:
+- titre: Vikidia, « Son »
+  url: https://fr.vikidia.org/w/index.php?title=Son&oldid=2441333
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Fréquence »
+  url: https://fr.vikidia.org/w/index.php?title=Fr%C3%A9quence&oldid=2026060
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Ultrason »
+  url: https://fr.vikidia.org/w/index.php?title=Ultrason&oldid=2346263
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

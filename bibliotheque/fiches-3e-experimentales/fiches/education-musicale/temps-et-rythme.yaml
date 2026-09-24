@@ -1,0 +1,64 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: temps-et-rythme
+declencheurs:
+- comprendre le rythme d'une musique
+- battre la pulsation
+- tempo d'un morceau
+- difference entre rythme et tempo
+- compter les temps en musique
+essentiel: 'Le rythme est l''organisation dans le temps des sons et des silences : il détermine la durée de chaque
+  note et le moment où elle doit être jouée ou chantée.
+
+  La pulsation est le battement régulier et sous-jacent qu''on peut ressentir dans presque toute musique (celui
+  qu''on tape naturellement du pied), tandis que le tempo est la vitesse de cette pulsation, mesurée par exemple
+  en battements par minute.
+
+  Le rythme, la mélodie, le tempo et les nuances sont les principaux éléments qui composent une musique écrite ;
+  percevoir un rythme suppose de repérer une forme de répétition dans la structure temporelle des sons.
+
+  Toutes les musiques du monde n''organisent pas le temps de la même façon : la musique occidentale classique s''appuie
+  souvent sur une pulsation régulière, alors que d''autres traditions musicales peuvent utiliser des rythmes plus
+  libres.'
+methode:
+- Chercher d'abord la pulsation régulière en tapant du pied ou en comptant.
+- 'Repérer ensuite le tempo : cette pulsation est-elle rapide ou lente ?'
+- Observer comment les notes et les silences s'organisent par rapport à cette pulsation (rythme).
+- Comparer deux morceaux au tempo différent pour bien ressentir la distinction avec le rythme.
+vocabulaire:
+- terme: pulsation
+  definition: battement régulier et sous-jacent que l'on peut ressentir dans une musique
+- terme: tempo
+  definition: vitesse à laquelle se succèdent les pulsations d'une musique
+erreurs_frequentes:
+- Confondre le tempo (la vitesse) et le rythme (l'organisation des durées).
+- Ne pas réussir à trouver la pulsation dans une musique au rythme complexe.
+- Croire que toute musique a nécessairement une pulsation parfaitement régulière.
+exemple:
+  enonce: Deux versions d'une même chanson sont jouées, l'une lentement, l'autre très rapidement, mais avec exactement
+    le même enchaînement de notes longues et courtes.
+  solution: Le rythme (l'organisation des durées les unes par rapport aux autres) est identique dans les deux versions
+    ; seul le tempo (la vitesse globale) change.
+exercices:
+- enonce: 'À la maison : écoute un morceau et tape la pulsation régulière du pied ou de la main pendant 30 secondes,
+    en essayant de ne pas décrocher.'
+  indices:
+  - Choisis d'abord un morceau au rythme simple et marqué (pop, variété).
+  solution: Réussite si tu réussis à garder une pulsation régulière et alignée avec la musique pendant la durée
+    demandée.
+- enonce: 'Frappe dans tes mains un petit motif rythmique de ton invention (par exemple : long, court, court, long)
+    et répète-le trois fois à un tempo stable.'
+  indices:
+  - Compte mentalement une pulsation régulière pour ne pas accélérer ou ralentir.
+  solution: Réussite si le motif rythmique reste identique et le tempo stable sur les trois répétitions.
+sources:
+- titre: Wikipédia, « Rythme (musique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Rythme_%28musique%29&oldid=228746244
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
