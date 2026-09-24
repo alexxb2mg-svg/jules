@@ -53,3 +53,21 @@ def test_code_enregistre_en_empreinte_seulement(tmp_path):
     donnees = yaml.safe_load(texte)
     assert donnees["profil"] == "sam"
     assert code_correct("secret-parent", donnees["acces"]["code_parent"])
+
+
+def test_verifier_ne_plante_pas_sur_une_console_cp1252():
+    """Regression : sur Windows, la console en cp1252 ne sait pas afficher certains symboles du prompt."""
+    import os
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    env = {**os.environ, "PYTHONIOENCODING": "cp1252", "PYTHONUTF8": "0"}
+    resultat = subprocess.run(
+        [sys.executable, "-m", "jules", "verifier"],
+        cwd=Path(__file__).resolve().parents[1],
+        capture_output=True,
+        env=env,
+        check=False,
+    )
+    assert resultat.returncode == 0, resultat.stderr.decode("utf-8", "replace")[-800:]

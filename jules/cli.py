@@ -110,7 +110,16 @@ def rapport(jour: str | None) -> None:
     tuteur.fermer()
 
 
+def console_utf8() -> None:
+    """Les consoles Windows sont souvent en cp1252 : sans cela, un caractere comme « √ » fait planter."""
+    for flux in (sys.stdout, sys.stderr):
+        reconfigurer = getattr(flux, "reconfigure", None)
+        if reconfigurer is not None:
+            reconfigurer(encoding="utf-8", errors="replace")
+
+
 def main(args: list[str] | None = None) -> None:
+    console_utf8()
     args = sys.argv[1:] if args is None else args
     if not args or args[0] == "serveur":
         servir()
