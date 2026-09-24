@@ -67,6 +67,18 @@ MOTEURS = (
         aide="Clé sur https://console.mistral.ai",
     ),
     Moteur(
+        "albert",
+        "Albert (IA publique de l'État), réservé aux agents publics : enseignants, établissements",
+        {
+            "backend": "openai_compatible",
+            "url": "https://albert.api.etalab.gouv.fr/v1",
+            "cle_env": "ALBERT_API_KEY",
+            "modeles": {"principal": "openweight-medium", "rapide": "openweight-small"},
+        },
+        cle_env="ALBERT_API_KEY",
+        aide="Accès gratuit pour les agents de l'État : https://albert.sites.beta.gouv.fr/access/",
+    ),
+    Moteur(
         "openai",
         "OpenAI, clé API payante",
         {

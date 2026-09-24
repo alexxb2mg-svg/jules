@@ -44,6 +44,18 @@ def test_assistant_complet(tmp_path):
     assert (tmp_path / ".env").read_text(encoding="utf-8") == "ANTHROPIC_API_KEY=\n"
 
 
+def test_assistant_albert_pour_enseignants(tmp_path):
+    (tmp_path / "profils").mkdir()
+    numero = str([m.id for m in MOTEURS].index("albert") + 1)
+    reponses = iter(["Noé", "garcon", "4e", "son professeur", numero])
+    lancer(tmp_path, demander=lambda _q: next(reponses), afficher=lambda _t: None)
+    local = yaml.safe_load((tmp_path / "config.local.yaml").read_text(encoding="utf-8"))
+    assert local["llm"]["url"] == "https://albert.api.etalab.gouv.fr/v1"
+    assert local["llm"]["cle_env"] == "ALBERT_API_KEY"
+    assert local["llm"]["modeles"] == {"principal": "openweight-medium", "rapide": "openweight-small"}
+    assert (tmp_path / ".env").read_text(encoding="utf-8") == "ALBERT_API_KEY=\n"
+
+
 def test_code_enregistre_en_empreinte_seulement(tmp_path):
     fichier = tmp_path / "config.local.yaml"
     fichier.write_text("profil: sam\n", encoding="utf-8")
