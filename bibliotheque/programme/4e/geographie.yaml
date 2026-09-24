@@ -1,0 +1,116 @@
+matiere: Géographie
+id: geographie
+niveau: 4e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 4e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme de géographie de la classe de 4e, deuxième année du cycle 4. Le BO n° 31 du 30
+  juillet 2020 rattache explicitement trois thèmes à la « Classe de 4e » au titre des « Repères
+  annuels de programmation » : L'urbanisation du monde ; Les mobilités humaines transnationales ;
+  Des espaces transformés par la mondialisation. À partir des acquis de la 5e, la 4e approfondit
+  quelques caractéristiques géographiques majeures du processus de mondialisation contemporaine.
+  Comme pour l'histoire, le texte ne fournit pas de liste de repères spatiaux distincte : les
+  repères attendus sont ceux mentionnés dans les « démarches et contenus d'enseignement » de
+  chaque sous-thème.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 4e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 4e-urbanisation-du-monde
+    titre: "L'urbanisation du monde"
+    chapitres:
+      - id: 4e-espaces-et-paysages-urbanisation
+        titre: "Espaces et paysages de l'urbanisation : géographie des centres et des périphéries"
+        notions:
+          - id: 4e-types-espaces-et-paysages-urbains
+            titre: "Types d'espaces et de paysages de l'urbanisation mondiale"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que le monde s'urbanise à grande vitesse depuis 1945 : plus de la moitié de l'humanité habite les villes depuis 2007, probablement les deux tiers à l'horizon 2050."
+              - "Faire prendre conscience des principaux types d'espaces et de paysages que l'urbanisation met en place, avec le vocabulaire de base de la géographie urbaine."
+              - "Étudier deux cas de grandes villes, au choix du professeur, pour aborder concrètement ces aspects."
+            mots_cles: [urbanisation, géographie urbaine, centres, périphéries]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 1 « L'urbanisation du monde », « Espaces et paysages de l'urbanisation »"
+      - id: 4e-villes-connectees-mondialisation
+        titre: "Des villes inégalement connectées aux réseaux de la mondialisation"
+        notions:
+          - id: 4e-connexion-villes-reseaux-mondiaux
+            titre: "Connexion des villes aux réseaux de la mondialisation et villes en déclin"
+            niveau_programme: "4e"
+            attendus:
+              - "Insister sur la connexion des villes aux grands réseaux de la mondialisation."
+              - "Comprendre les différences entre villes connectées et bien intégrées à la mondialisation et villes plus à l'écart, voire en phénomène de « rétrécissement » (Shrinking Cities, comme Detroit)."
+              - "Sensibiliser les élèves aux différences entre la mondialisation contemporaine et la « première mondialisation » (XVe-XVIe siècles) étudiée en histoire."
+            mots_cles: [réseaux mondiaux, ville connectée, shrinking city, première mondialisation]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 1 « L'urbanisation du monde », « Des villes inégalement connectées aux réseaux de la mondialisation »"
+  - id: 4e-mobilites-humaines-transnationales
+    titre: "Les mobilités humaines transnationales"
+    chapitres:
+      - id: 4e-un-monde-de-migrants
+        titre: "Un monde de migrants"
+        notions:
+          - id: 4e-migrations-transnationales
+            titre: "Diversité des migrations transnationales dans le monde"
+            niveau_programme: "4e"
+            attendus:
+              - "Montrer l'importance des grands mouvements transnationaux de population, dont les motivations sont extrêmement variées (Erasmus, conflits, crise climatique, raisons économiques)."
+              - "Comprendre que la géographie des migrations n'est pas centrée sur la seule Europe, ni marquée par les seuls mouvements des « Suds » vers les « Nords », mais comporte aussi des foyers de migrations intracontinentales sud-sud."
+              - "Étudier ce sous-thème à partir d'une étude de cas locale ou régionale, mise en perspective à l'échelle mondiale."
+            mots_cles: [migrations transnationales, migrations sud-sud, étude de cas]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 2 « Les mobilités humaines transnationales », « Un monde de migrants »"
+      - id: 4e-tourisme-et-ses-espaces
+        titre: "Le tourisme et ses espaces"
+        notions:
+          - id: 4e-tourisme-mouvement-mondial
+            titre: "Le tourisme international, effets économiques, sociaux et territoriaux"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que le tourisme international constitue le mouvement de population le plus massif que le monde ait jamais connu."
+              - "Étudier les effets économiques, sociaux et territoriaux du tourisme, en lien avec le programme d'histoire de 4e."
+            mots_cles: [tourisme international, espaces touristiques, effets territoriaux]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 2 « Les mobilités humaines transnationales », « Le tourisme et ses espaces »"
+  - id: 4e-espaces-transformes-par-la-mondialisation
+    titre: "Des espaces transformés par la mondialisation"
+    chapitres:
+      - id: 4e-mers-oceans-monde-maritimise
+        titre: "Mers et Océans : un monde maritimisé"
+        notions:
+          - id: 4e-mers-oceans-enjeux-mondiaux
+            titre: "Mers et océans : transport maritime, littoraux et régulation climatique"
+            niveau_programme: "4e"
+            attendus:
+              - "Mettre en évidence les enjeux spatiaux liés à la mondialisation à travers les mers et les océans, intensément parcourus par les lignes de transport maritime."
+              - "Comprendre que les littoraux concentrent les populations et les activités, et que les mers et océans sont des régulateurs climatiques et des zones exploitées, au centre de conflits d'intérêts."
+              - "Comprendre que ce sont des milieux fragiles dont la conservation est un problème majeur pour les sociétés."
+            mots_cles: [mers, océans, transport maritime, littoralisation]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 3 « Des espaces transformés par la mondialisation », « Mers et Océans : un monde maritimisé »"
+      - id: 4e-etats-unis-adaptation-mondialisation
+        titre: "L'adaptation du territoire des États-Unis aux nouvelles conditions de la mondialisation"
+        notions:
+          - id: 4e-territoire-etats-unis-mondialisation
+            titre: "Le territoire des États-Unis face aux flux migratoires et à la mondialisation"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier le territoire des États-Unis comme exemple d'adaptation d'une grande puissance attractive (accueillant des flux migratoires importants) aux nouvelles conditions économiques et sociales de la mondialisation."
+            mots_cles: [États-Unis, flux migratoires, puissance mondiale]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 3 « Des espaces transformés par la mondialisation », « L'adaptation du territoire des États-Unis »"
+          - id: 4e-dynamiques-ensemble-geographique-africain
+            titre: "Dynamiques d'un grand ensemble géographique africain (Afrique de l'Ouest, orientale ou australe)"
+            niveau_programme: "4e"
+            attendus:
+              - "Présenter à grands traits les dynamiques spatiales que la mondialisation impulse dans un grand ensemble géographique africain, au choix (Afrique de l'Ouest, Afrique orientale, Afrique australe)."
+              - "Comprendre que le continent africain est celui où la mondialisation produit les effets les plus importants et où les potentiels de développement, mais aussi les fragilités, sont manifestes."
+            mots_cles: [Afrique, dynamiques régionales, potentiels de développement]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 4e, Thème 3 « Des espaces transformés par la mondialisation », « Les dynamiques d'un grand ensemble géographique africain »"
