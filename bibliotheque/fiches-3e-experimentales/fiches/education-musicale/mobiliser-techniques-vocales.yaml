@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: mobiliser-techniques-vocales
+declencheurs:
+- poser sa voix pour chanter
+- respiration pour chanter
+- chanter juste sans crier
+- technique vocale
+- echauffement vocal avant de chanter
+- tenir une note longtemps en chantant
+- souffle pour chanter
+essentiel: 'Bien utiliser sa voix pour chanter demande une respiration contrôlée (inspirer profondément, gérer l''air
+  pendant la phrase chantée) plutôt que de forcer avec la gorge.
+
+  La justesse (chanter la bonne hauteur de note) s''améliore en écoutant attentivement un repère sonore (un instrument,
+  une autre voix) avant et pendant qu''on chante.
+
+  La diction (articuler clairement les paroles) et la projection de la voix (la faire porter sans crier) sont des
+  techniques qui se travaillent, en particulier lors d''un échauffement avant de chanter.
+
+  Chaque voix a des limites naturelles (une tessiture, c''est-à-dire l''étendue des notes qu''elle peut atteindre
+  confortablement) qu''il faut respecter pour ne pas se faire mal en chantant trop aigu ou trop grave.'
+methode:
+- S'échauffer la voix quelques minutes avant de chanter (sons tenus, petits exercices).
+- 'Contrôler sa respiration : inspirer par le ventre, ne pas bloquer l''air dans la gorge.'
+- Écouter un repère sonore avant de chanter une note pour viser la bonne hauteur.
+- Articuler clairement les paroles sans crier, en laissant la voix se projeter naturellement.
+vocabulaire:
+- terme: tessiture
+  definition: étendue des notes qu'une voix peut chanter confortablement, du plus grave au plus aigu
+erreurs_frequentes:
+- Forcer avec la gorge pour chanter fort au lieu de bien respirer.
+- Chanter sans s'échauffer la voix, ce qui fatigue les cordes vocales.
+- Vouloir chanter des notes hors de sa tessiture confortable en forçant.
+exemple:
+  enonce: Un élève chante trop fort et sa voix devient rauque après quelques minutes.
+  solution: 'Le problème vient probablement d''un forçage de la gorge plutôt que d''un bon soutien par la respiration
+    : mieux vaut chanter avec une respiration ample par le ventre, et laisser la voix se projeter sans la pousser
+    artificiellement.'
+exercices:
+- enonce: 'À la maison : avant de chanter une chanson, fais 1 minute d''échauffement vocal (sons tenus « aaaa »
+    ou « mmmm » sur différentes hauteurs) en contrôlant ta respiration.'
+  indices:
+  - Pose une main sur ton ventre pour sentir s'il se gonfle bien en inspirant.
+  solution: Réussite si tu sens ta respiration plus contrôlée après l'échauffement, avec moins d'essoufflement en
+    chantant.
+- enonce: Chante une phrase courte d'une chanson connue en articulant exagérément chaque syllabe, sans augmenter
+    le volume.
+  indices:
+  - Ralentis le tempo si nécessaire pour bien articuler.
+  solution: Réussite si les paroles restent compréhensibles même chantées doucement, grâce à l'articulation.
+sources:
+- titre: Vikidia, « Voix »
+  url: https://fr.vikidia.org/w/index.php?title=Voix&oldid=2441249
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Timbre (musique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Timbre_%28musique%29&oldid=230099700
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

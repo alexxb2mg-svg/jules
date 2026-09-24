@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: refondation-republicaine-liberation
+declencheurs:
+- '1944'
+- '1945'
+- libération de la France
+- vote des femmes en France
+- sécurité sociale
+- nationalisations
+- programme du CNR
+- IVe République
+essentiel: 'La Libération de la France (1944) permet de restaurer la légalité républicaine après le régime de Vichy,
+  dans une dynamique de « refondation » : il s''agit de reconstruire un État démocratique et de réparer les injustices
+  de l''Occupation.
+
+  La République intègre alors politiquement les femmes : l''ordonnance du 21 avril 1944 leur accorde le droit de
+  vote et d''éligibilité, obtenu après des décennies de mobilisation, notamment de féministes comme Louise Weiss.
+  Les femmes votent pour la première fois en France en 1945.
+
+  Le gouvernement met en œuvre le programme de réformes préparé en 1943 par le Conseil national de la Résistance
+  (CNR), qui prolonge et complète celui du Front populaire de 1936 : il élargit la démocratie dans un sens social,
+  avec par exemple la création de la Sécurité sociale et des nationalisations d''entreprises.'
+methode:
+- Situer la Libération en 1944 et la retenir comme un moment de restauration de la démocratie après Vichy.
+- 'Donner la date précise du droit de vote des femmes en France : 21 avril 1944 (premier vote en 1945).'
+- 'Relier le programme du CNR au Front populaire : une continuité dans l''élargissement social de la démocratie.'
+- Citer au moins une réforme concrète héritée du programme du CNR (Sécurité sociale, nationalisations).
+vocabulaire:
+- terme: refondation républicaine
+  definition: la reconstruction des institutions et des valeurs démocratiques après la période de Vichy
+- terme: Sécurité sociale
+  definition: système de protection sociale créé en 1945-1946, issu du programme du CNR
+erreurs_frequentes:
+- Confondre 1944 (droit de vote accordé) et 1945 (premières élections où les femmes votent réellement).
+- 'Croire que le droit de vote des femmes est immédiat après la Révolution française : il faut attendre 1944, près
+  d''un siècle après le suffrage universel masculin (1848/1851).'
+- Oublier le lien entre le programme du CNR et celui du Front populaire de 1936.
+- Réduire la refondation républicaine au seul droit de vote des femmes, en oubliant les réformes sociales.
+exemple:
+  enonce: En quelle année les femmes obtiennent-elles le droit de vote en France, et quand votent-elles pour la
+    première fois ?
+  solution: Le droit de vote leur est accordé par une ordonnance du 21 avril 1944 ; elles votent pour la première
+    fois en France en 1945.
+exercices:
+- enonce: Qui prépare, dès 1943, le programme de réformes appliqué à la Libération ?
+  indices:
+  - Un organisme qui unit résistants, partis et syndicats.
+  solution: Le Conseil national de la Résistance (CNR), présidé notamment par Jean Moulin.
+- enonce: 'Développement construit : montre que la Libération est un moment de refondation démocratique et sociale
+    de la République.'
+  indices:
+  - Cite le droit de vote des femmes.
+  - Cite une réforme sociale du programme du CNR.
+  solution: Un développement réussi doit présenter le retour de la légalité républicaine après Vichy en 1944 ; citer
+    l'intégration politique des femmes (droit de vote en 1944, premier vote en 1945) ; présenter le programme du
+    CNR comme un approfondissement social de la démocratie, avec par exemple la création de la Sécurité sociale,
+    en continuité avec les acquis du Front populaire de 1936.
+- enonce: En quoi le programme du CNR prolonge-t-il celui du Front populaire ?
+  indices:
+  - Les deux visent un but social.
+  solution: 'Les deux programmes cherchent à élargir la démocratie dans un sens social, en faveur des travailleurs
+    : le Front populaire avait apporté les congés payés en 1936, le programme du CNR va plus loin avec des réformes
+    durables comme la Sécurité sociale.'
+sources:
+- titre: Vikidia, « Droit de vote des femmes »
+  url: https://fr.vikidia.org/w/index.php?title=Droit_de_vote_des_femmes&oldid=2397958
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Conseil national de la Résistance »
+  url: https://fr.vikidia.org/w/index.php?title=Conseil_national_de_la_R%C3%A9sistance&oldid=2179810
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

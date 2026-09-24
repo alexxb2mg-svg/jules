@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: applications-biotechnologiques
+declencheurs:
+- OGM
+- organisme génétiquement modifié
+- clonage
+- culture de cellules
+- sélection génétique par l'être humain
+- cloner un animal en laboratoire
+essentiel: 'Un organisme génétiquement modifié (OGM) est un être vivant dont le patrimoine génétique a été modifié
+  par l''être humain, en laboratoire, pour lui conférer une caractéristique particulière (par exemple, une résistance
+  à un insecte pour une plante cultivée).
+
+  Le clonage consiste à obtenir un individu génétiquement identique à un individu d''origine, sans passer par la
+  reproduction sexuée ; il peut se faire naturellement (bouturage) ou de façon provoquée en laboratoire (clonage
+  animal ou végétal).
+
+  La culture de cellules permet de faire se multiplier des cellules isolées en laboratoire, en dehors d''un organisme
+  entier, ce qui sert à la recherche scientifique ou à des applications médicales.
+
+  Ces techniques biotechnologiques prolongent, en les accélérant et en les rendant plus précises, des pratiques
+  de sélection génétique que l''être humain pratique depuis longtemps par l''élevage et l''agriculture (choix des
+  individus reproducteurs aux caractéristiques souhaitées).
+
+  L''utilisation des OGM et du clonage soulève des questions scientifiques, éthiques et environnementales, débattues
+  dans la société (risques, bénéfices, réglementation).'
+methode:
+- Distinguer un OGM (modification directe du patrimoine génétique en laboratoire) d'une sélection traditionnelle
+  par élevage ou culture.
+- Repérer si un individu obtenu est génétiquement identique à un autre (clonage) ou porteur d'une modification génétique
+  ciblée (OGM).
+- Relier la culture de cellules à ses usages (recherche, médecine).
+- Identifier les enjeux (bénéfices attendus, risques ou débats) associés à une application biotechnologique donnée.
+erreurs_frequentes:
+- Confondre OGM (modification génétique ciblée en laboratoire) et sélection traditionnelle par croisement.
+- Croire qu'un clone est un individu identique en tout point à l'original (il partage le même patrimoine génétique,
+  mais peut différer par l'environnement ou l'expérience vécue).
+- Penser que toutes les biotechnologies concernent uniquement les plantes ou uniquement les animaux.
+- Ignorer que ces techniques prolongent des pratiques anciennes de sélection par l'être humain.
+exemple:
+  enonce: Une variété de maïs a été modifiée en laboratoire pour résister à un insecte ravageur. Comment appelle-t-on
+    ce type d'organisme ?
+  solution: 'C''est un organisme génétiquement modifié (OGM) : son patrimoine génétique a été modifié directement
+    en laboratoire pour lui donner cette résistance.'
+exercices:
+- enonce: Quelle différence y a-t-il entre un clonage et une reproduction sexuée classique, du point de vue génétique
+    du descendant obtenu ?
+  indices:
+  - Pense au nombre de parents impliqués et à l'identité génétique du descendant.
+  solution: Le clonage produit un descendant génétiquement identique à un seul individu d'origine, tandis que la
+    reproduction sexuée combine le patrimoine génétique de deux parents pour produire un descendant différent des
+    deux.
+- enonce: En quoi les OGM prolongent-ils une pratique déjà ancienne de l'agriculture ?
+  indices:
+  - Pense à ce que font les agriculteurs et éleveurs depuis longtemps en choisissant leurs reproducteurs.
+  solution: Les agriculteurs et éleveurs sélectionnent depuis longtemps les individus aux caractéristiques souhaitées
+    pour les faire se reproduire ; les OGM permettent d'obtenir une modification génétique ciblée plus rapidement
+    et plus précisément, en laboratoire.
+- enonce: Citer un usage possible de la culture de cellules en laboratoire.
+  indices:
+  - Pense à la recherche médicale.
+  solution: Étudier le fonctionnement de cellules pour la recherche scientifique, tester des médicaments, ou produire
+    certaines substances utiles en médecine.
+sources:
+- titre: Vikidia, « Organisme génétiquement modifié »
+  url: https://fr.vikidia.org/w/index.php?title=Organisme_g%C3%A9n%C3%A9tiquement_modifi%C3%A9&oldid=2344144
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Clonage »
+  url: https://fr.vikidia.org/w/index.php?title=Clonage&oldid=1562771
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,106 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: guerre-totale-1914-1918
+declencheurs:
+- '1914'
+- '1918'
+- tranchées
+- poilus
+- guerre des tranchées
+- génocide arménien
+- révolution bolchevique
+- Verdun
+- mobilisation générale
+essentiel: 'La Première Guerre mondiale dure du 28 juillet 1914 au 11 novembre 1918. Elle oppose la Triple-Entente
+  (France, Royaume-Uni, Russie puis Italie et États-Unis) à la Triple-Alliance (Empire allemand, Autriche-Hongrie,
+  Empire ottoman, Bulgarie).
+
+  C''est une guerre totale : elle mobilise non seulement les soldats (les « poilus » côté français) mais toute la
+  société. Les civils travaillent dans les usines d''armement, subissent les pénuries, la propagande et parfois
+  l''occupation ou les violences de guerre.
+
+  Entre avril 1915 et juillet 1916, le gouvernement ottoman des Jeunes-Turcs organise le génocide des Arméniens
+  : massacres, déportations vers le désert syrien et famine font entre 800 000 et 1,2 million de morts.
+
+  En Russie, la guerre totale épuise le pays et provoque en 1917 la révolution bolchevique, menée par Lénine : le
+  tsar Nicolas II est renversé puis le pouvoir passe aux bolcheviks, qui établissent ensuite un régime communiste
+  renforcé par Staline dans les années 1920.
+
+  La guerre se termine par la victoire de la Triple-Entente et fragilise durablement plusieurs régimes politiques
+  en Europe.'
+methode:
+- 'Situer la guerre dans le temps : 1914-1918, et repérer ses grandes phases (guerre de mouvement puis guerre de
+  position dans les tranchées).'
+- 'Distinguer les deux camps : Triple-Entente contre Triple-Alliance (Empires centraux).'
+- Pour expliquer « guerre totale », montrer que civils ET militaires sont mobilisés (économie de guerre, propagande,
+  violences contre les populations).
+- 'Pour le génocide des Arméniens, donner la date (1915-1916), l''auteur (le gouvernement ottoman) et le mot juste
+  : génocide, pas seulement « massacre ».'
+- Relier la sortie de guerre de la Russie à la révolution bolchevique de 1917.
+vocabulaire:
+- terme: guerre totale
+  definition: 'un conflit qui mobilise toutes les ressources d''un pays : armées mais aussi économie, population
+    civile et opinion'
+- terme: génocide
+  definition: la destruction volontaire et organisée d'un groupe humain en tant que tel
+- terme: bolchevik
+  definition: membre du parti révolutionnaire russe dirigé par Lénine, qui prend le pouvoir en Russie en octobre
+    1917
+erreurs_frequentes:
+- 'Confondre les dates : la guerre commence en 1914, pas en 1918 (armistice).'
+- Oublier que la guerre totale mobilise aussi les civils, pas seulement les soldats.
+- Dire « massacre » quand il faut dire « génocide » pour les Arméniens (extermination organisée d'un peuple).
+- Confondre révolution bolchevique (1917) et arrivée de Staline au pouvoir (années 1920, après la mort de Lénine
+  en 1924).
+exemple:
+  enonce: Expliquer en trois phrases pourquoi la Première Guerre mondiale est qualifiée de « guerre totale ».
+  solution: Elle mobilise les combattants sur le front (les poilus dans les tranchées) mais aussi les civils à l'arrière,
+    dans les usines d'armement et l'agriculture. Les États contrôlent l'économie et la presse par la propagande.
+    La violence touche aussi les populations civiles, comme le montre le génocide des Arméniens en 1915-1916.
+exercices:
+- enonce: Cite les deux camps qui s'affrontent pendant la Première Guerre mondiale et deux pays de chaque camp.
+  indices:
+  - Triple-Entente d'un côté, Triple-Alliance de l'autre.
+  solution: 'Triple-Entente : France, Royaume-Uni (avec la Russie, puis l''Italie et les États-Unis). Triple-Alliance
+    : Empire allemand, Autriche-Hongrie (avec l''Empire ottoman et la Bulgarie).'
+- enonce: 'Développement construit : montre, en t''appuyant sur deux exemples précis, que la Première Guerre mondiale
+    est une guerre totale.'
+  indices:
+  - Un exemple côté militaire (violences de masse), un exemple côté société civile (économie, propagande).
+  - N'oublie pas une phrase d'intro et une de conclusion.
+  solution: 'Un développement réussi doit : situer la guerre (1914-1918) ; donner un exemple de violence de masse
+    touchant des civils (le génocide des Arméniens, 1915-1916, organisé par le gouvernement ottoman) ; donner un
+    exemple de mobilisation de l''arrière (les usines produisent des armes, l''État contrôle la presse) ; conclure
+    sur les conséquences (des sociétés bouleversées, des régimes fragilisés, dont la chute du tsarisme russe en
+    1917).'
+- enonce: Pourquoi peut-on dire que la Première Guerre mondiale a des conséquences en Russie qui vont au-delà de
+    1918 ?
+  indices:
+  - Que se passe-t-il en Russie en 1917 ?
+  - Qui dirige l'URSS dans les années 1920 ?
+  solution: 'La guerre épuise la Russie et provoque en 1917 la révolution bolchevique menée par Lénine, qui renverse
+    le tsar. Le communisme s''installe ensuite durablement, renforcé par Staline dans les années 1920 : ses effets
+    dépassent donc la fin de la guerre en 1918.'
+sources:
+- titre: Vikidia, « Première Guerre mondiale »
+  url: https://fr.vikidia.org/w/index.php?title=Premi%C3%A8re_Guerre_mondiale&oldid=2569759
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Génocide arménien »
+  url: https://fr.vikidia.org/w/index.php?title=G%C3%A9nocide_arm%C3%A9nien&oldid=2569180
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Révolution russe »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9volution_russe&oldid=2396185
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé (révolution bolchevique)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

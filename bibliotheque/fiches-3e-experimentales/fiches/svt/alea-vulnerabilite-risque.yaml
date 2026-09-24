@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: alea-vulnerabilite-risque
+declencheurs:
+- risque naturel
+- prévention des risques
+- aléa
+- vulnérabilité
+- zone à risque
+- catastrophe naturelle
+- dégâts d'un séisme en ville
+- danger naturel
+essentiel: 'Un aléa est un phénomène naturel (séisme, cyclone, inondation, éruption volcanique…) susceptible de
+  se produire dans une région, avec une intensité et une probabilité que l''on peut parfois estimer.
+
+  La vulnérabilité désigne la sensibilité d''une population ou d''un territoire face à cet aléa : elle dépend par
+  exemple de la densité de population, de la qualité des constructions ou des moyens d''alerte disponibles.
+
+  Le risque résulte de la combinaison de l''aléa et de la vulnérabilité : un aléa fort sur une zone inhabitée présente
+  un risque faible, alors qu''un aléa modéré sur une zone très peuplée et mal préparée présente un risque élevé.
+
+  Face aux risques (naturels ou liés aux activités humaines, comme la pollution ou le réchauffement climatique),
+  plusieurs types de réponses existent : la prévention (limiter l''exposition avant que l''événement se produise),
+  la protection (construire des digues, des normes antisismiques), l''adaptation et l''atténuation (réduire les
+  causes du phénomène, notamment pour le climat).
+
+  La prévision, quand elle est possible (alertes cycloniques, surveillance volcanique), permet d''anticiper certains
+  aléas et de réduire les conséquences sur les populations.'
+methode:
+- Distinguer l'aléa (le phénomène naturel lui-même) de la vulnérabilité (l'exposition et la fragilité des populations).
+- Retenir que le risque = combinaison de l'aléa et de la vulnérabilité, pas l'aléa seul.
+- Associer chaque réponse (prévention, protection, adaptation, atténuation) à une situation concrète.
+- Repérer si un aléa est prévisible (cyclone) ou non (séisme, largement imprévisible à ce jour).
+erreurs_frequentes:
+- 'Confondre aléa et risque : un aléa fort sans population exposée n''engendre pas de risque important.'
+- Croire que tous les aléas naturels sont aujourd'hui prévisibles avec précision (les séismes ne le sont pas).
+- Penser que la prévention supprime totalement le risque, alors qu'elle le réduit seulement.
+- Confondre protection (mesures concrètes, comme des digues) et prévention (limiter l'exposition en amont).
+exemple:
+  enonce: Un séisme de même intensité se produit dans un désert inhabité, puis dans une grande ville mal préparée.
+    Le risque est-il le même dans les deux cas ?
+  solution: 'Non : l''aléa (l''intensité du séisme) est identique, mais la vulnérabilité diffère fortement (personne
+    exposé dans le désert, forte population et bâtiments non adaptés en ville). Le risque est donc beaucoup plus
+    élevé en ville.'
+exercices:
+- enonce: Donner un exemple de mesure de prévention et un exemple de mesure de protection face au risque d'inondation.
+  indices:
+  - Prévention = limiter l'exposition en amont ; protection = ouvrage concret.
+  solution: 'Prévention : interdire de construire en zone inondable. Protection : construire des digues ou des bassins
+    de rétention.'
+- enonce: Pourquoi peut-on dire qu'un cyclone est un aléa mieux prévisible qu'un séisme ?
+  indices:
+  - Pense aux outils de suivi météorologique par satellite.
+  solution: Les cyclones sont suivis par satellite plusieurs jours à l'avance, ce qui permet des alertes ; les séismes,
+    eux, se déclenchent brutalement sans signe annonciateur fiable détecté à ce jour.
+- enonce: Expliquer avec tes mots pourquoi le risque n'est pas seulement une question d'aléa naturel.
+  indices:
+  - Pense à la définition du risque comme combinaison de deux facteurs.
+  solution: 'Le risque dépend aussi de la vulnérabilité des populations et des territoires exposés : un même aléa
+    peut avoir des conséquences très différentes selon la préparation et l''exposition des populations.'
+sources:
+- titre: Vikidia, « Risque volcanique »
+  url: https://fr.vikidia.org/w/index.php?title=Risque_volcanique&oldid=2256206
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Séisme »
+  url: https://fr.vikidia.org/w/index.php?title=S%C3%A9isme&oldid=2554345
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

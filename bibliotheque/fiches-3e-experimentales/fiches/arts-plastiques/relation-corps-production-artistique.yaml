@@ -1,0 +1,56 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: relation-corps-production-artistique
+declencheurs:
+- performance artistique avec le corps
+- trace du geste de l'artiste
+- peindre avec tout le corps
+- art ephemere filme
+- l'artiste utilise son corps
+essentiel: 'Le corps de l''artiste peut être directement impliqué dans la production d''une œuvre : les effets du
+  geste (large, rapide, appuyé) et de l''instrument utilisé se lisent dans les qualités plastiques et les effets
+  visuels obtenus.
+
+  Dans la performance, l''œuvre est l''action elle-même, accomplie devant un public ou capturée : le corps de l''artiste
+  devient à la fois l''outil et le sujet de l''œuvre.
+
+  Ce processus de production peut être rendu lisible dans le temps et dans l''espace par des traces (peinture projetée,
+  empreintes), une théâtralisation, ou des captations (photo, vidéo) qui conservent une œuvre par nature éphémère.'
+methode:
+- Décider si le corps intervient seulement dans le geste (peindre) ou devient lui-même le sujet de l'œuvre (performance).
+- Choisir une captation (photo, vidéo) si l'œuvre est éphémère et doit être conservée.
+- Observer les traces laissées par le geste comme des éléments à part entière de l'œuvre.
+- Vérifier que l'implication du corps sert une intention, pas seulement l'effet spectaculaire.
+erreurs_frequentes:
+- Confondre performance artistique et simple mise en scène sans intention.
+- Négliger de capter une œuvre éphémère, qui disparaît alors sans laisser de trace.
+- Croire que seule la performance implique le corps, en oubliant le geste du peintre ou du sculpteur.
+exemple:
+  enonce: Un artiste marche pieds nus dans de la peinture puis sur une grande toile posée au sol, laissant des empreintes
+    de pas.
+  solution: Le corps entier (et pas seulement la main) devient l'instrument de production ; les traces de pas rendent
+    visible le déplacement du corps dans le temps et l'espace de la toile.
+exercices:
+- enonce: 'À la maison : réalise une petite trace avec une partie du corps autre que la main (pied, coude, dos)
+    trempée dans une peinture lavable ou de l''eau colorée sur un grand papier.'
+  indices:
+  - Choisis un geste (frotter, tamponner, glisser) avant de commencer.
+  solution: Réussite si la trace obtenue montre clairement le mouvement du corps utilisé, et si tu peux décrire
+    le geste qui l'a produite.
+- enonce: Imagine une courte performance (30 secondes) réalisable chez toi et note comment tu la capterais (photo,
+    vidéo) pour qu'elle survive après coup.
+  indices:
+  - Pense à l'angle de vue qui montrerait le mieux le geste.
+  solution: Réussite si la proposition de captation permettrait réellement de comprendre l'action après qu'elle
+    a eu lieu.
+sources:
+- titre: Vikidia, « Performance (art) »
+  url: https://fr.vikidia.org/w/index.php?title=Performance_%28art%29&oldid=2334895
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

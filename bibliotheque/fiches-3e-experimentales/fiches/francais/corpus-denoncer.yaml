@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: corpus-denoncer
+declencheurs:
+- fable à lire
+- pamphlet
+- conte philosophique
+- dessin de presse
+- bande dessinée satirique
+- affiche satirique
+- corpus sur la satire
+- zola
+- j'accuse
+- accuse
+essentiel: 'Ce corpus regroupe des œuvres et textes, de l''Antiquité à nos jours, qui dénoncent des travers de la
+  société par la satire : poésie satirique, roman, fable, conte philosophique ou drolatique (Voltaire), pamphlet
+  (texte court et violent contre quelqu''un ou quelque chose). Il peut aussi inclure des images : dessins de presse,
+  affiches, caricatures, albums de bande dessinée, voire des extraits de spectacles ou d''émissions à caractère
+  satirique.
+
+  Étudier ce corpus permet de voir comment la satire s''adapte aux formes et aux supports (texte littéraire, image
+  de presse, scène de théâtre) tout en gardant le même objectif : faire réfléchir en faisant rire ou sourire, dénoncer
+  une injustice, un abus de pouvoir, un défaut humain.
+
+  Le conte philosophique, comme Candide de Voltaire, utilise un récit inventé, souvent avec des voyages et des rencontres,
+  pour critiquer des idées ou des institutions de son époque, sous une apparence légère.'
+methode:
+- Repérer, pour chaque document, la forme précise (fable, pamphlet, dessin de presse, extrait de conte…).
+- Identifier ce qui est dénoncé (l'injustice, la guerre, la vanité, un abus de pouvoir).
+- Comparer les procédés utilisés selon le support (les mots dans un texte, le trait et la légende dans un dessin).
+- Relier chaque document à son contexte historique si possible (une caricature du XIXe siècle vise-t-elle un évènement
+  précis ?).
+- Formuler en une phrase le message que l'auteur veut faire passer derrière la moquerie.
+erreurs_frequentes:
+- Décrire un dessin de presse sans expliquer ce qu'il dénonce réellement.
+- Oublier que le conte philosophique mélange fiction (aventures inventées) et critique sérieuse.
+- Confondre pamphlet (texte court et violent) et simple article critique.
+- Analyser une image satirique comme une image neutre, sans chercher son message.
+exemple:
+  enonce: 'Dans « J''accuse…! », publié par Émile Zola dans L''Aurore en 1898, Zola écrit : « J''accuse les bureaux
+    de la guerre d''avoir mené dans la presse […] une campagne abominable, pour égarer l''opinion et couvrir leur
+    faute. » S''agit-il d''un texte satirique ?'
+  solution: 'Ce texte n''est pas une satire à proprement parler (il ne fait pas rire), mais il appartient à la même
+    famille de textes qui dénoncent une injustice : c''est un pamphlet direct et solennel, sans détour comique,
+    contre l''injustice faite à Alfred Dreyfus.'
+exercices:
+- enonce: Donne un exemple de support autre que le texte écrit qui peut porter une intention satirique.
+  indices:
+  - Pense à la presse, à l'image.
+  solution: Un dessin de presse, une caricature, une affiche, une bande dessinée, un sketch.
+- enonce: Choisis un petit défaut du quotidien scolaire (bavardage, retards…) et invente en 4-5 lignes une courte
+    fable ou un court dialogue qui le dénonce avec humour, sans viser une personne réelle.
+  indices:
+  - 'Utilise l''exagération : rends le défaut absurde pour le faire ressortir.'
+  solution: Réussite si le texte dénonce clairement un défaut par l'exagération ou l'ironie, sans attaquer une personne
+    nommément identifiable.
+sources:
+- titre: Wikipédia, « Satire »
+  url: https://fr.wikipedia.org/w/index.php?title=Satire&oldid=238020050
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikisource, « J’accuse…! »
+  url: https://fr.wikisource.org/w/index.php?title=J%E2%80%99accuse%E2%80%A6%21&oldid=13208359
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: courte citation, texte du domaine public, exemple d'étude
+- titre: Wikisource, « Fables de La Fontaine (éd. 1874)/Le Loup et l’Agneau »
+  url: https://fr.wikisource.org/w/index.php?title=Fables_de_La_Fontaine_%28%C3%A9d._1874%29/Le_Loup_et_l%E2%80%99Agneau&oldid=13176461
+  auteurs: Contributeurs de Wikisource (historique de la page)
+  licence: domaine-public
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

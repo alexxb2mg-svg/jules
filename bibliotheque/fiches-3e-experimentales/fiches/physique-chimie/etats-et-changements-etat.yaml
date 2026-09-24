@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: etats-et-changements-etat
+declencheurs:
+- fusion
+- solidification
+- vaporisation
+- évaporation
+- condensation
+- sublimation
+- état solide
+- état liquide
+- état gazeux
+- changement d'état
+- glace qui fond
+- eau qui gèle
+- congélateur
+essentiel: 'La matière existe sous trois états principaux : solide (forme et volume propres), liquide (volume propre,
+  prend la forme du récipient) et gazeux (occupe tout l''espace disponible).
+
+  Un corps pur passe d''un état à l''autre à une température fixe (par exemple l''eau pure fond à 0 °C et bout à
+  100 °C sous pression atmosphérique normale) : c''est un changement d''état.
+
+  Noms des changements : fusion (solide → liquide), solidification (liquide → solide), vaporisation ou évaporation
+  (liquide → gaz), liquéfaction ou condensation (gaz → liquide), sublimation (solide → gaz direct).
+
+  Lors d''un changement d''état, la masse de matière est conservée, mais le volume change fortement : un gaz occupe
+  un volume beaucoup plus grand que le même corps à l''état liquide ou solide.
+
+  À l''échelle microscopique, les molécules restent les mêmes : seul leur arrangement et leur agitation changent
+  (serrées et ordonnées dans un solide, mobiles mais proches dans un liquide, très dispersées et agitées dans un
+  gaz).'
+methode:
+- Repérer l'état de départ et l'état d'arrivée pour nommer le changement d'état.
+- Vérifier qu'il s'agit d'un corps pur (une seule espèce chimique) pour parler de température fixe de changement
+  d'état ; un mélange change d'état sur une plage de températures.
+- Retenir que la masse totale ne change jamais lors d'un changement d'état, seul le volume varie.
+- Distinguer changement d'état (transformation physique, réversible, pas de nouvelle substance) et transformation
+  chimique (nouvelle substance formée).
+erreurs_frequentes:
+- Confondre évaporation et ébullition (l'évaporation se produit à toute température, en surface).
+- Croire que la masse change quand la glace fond ou que l'eau s'évapore.
+- 'Confondre sublimation et évaporation : la sublimation part directement du solide, sans passer par le liquide.'
+- Penser que la vapeur d'eau est visible (le nuage blanc au-dessus d'une casserole est en fait de fines gouttelettes
+  liquides, pas du gaz).
+exemple:
+  enonce: 50 g de glace fondent entièrement dans un verre. Quelle est la masse d'eau liquide obtenue ? Comment se
+    nomme ce changement d'état ?
+  solution: 'C''est une fusion (solide → liquide). La masse est conservée : on obtient 50 g d''eau liquide.'
+exercices:
+- enonce: Nommer le changement d'état quand de la buée (gouttelettes) apparaît sur une vitre froide.
+  indices:
+  - La vapeur d'eau de l'air, un gaz, devient liquide au contact du froid.
+  solution: 'C''est une liquéfaction (ou condensation) : gaz → liquide.'
+- enonce: 200 mL d'eau liquide (masse volumique 1 g/mL) sont entièrement vaporisés. Quelle est la masse de vapeur
+    obtenue ?
+  indices:
+  - m = ρ × V avec ρ = 1 g/mL.
+  - La masse ne change pas lors d'un changement d'état.
+  solution: m = 1 × 200 = 200 g d'eau liquide, donc 200 g de vapeur d'eau (même masse).
+- enonce: De la neige carbonique (CO2 solide) disparaît directement en gaz à l'air libre, sans flaque de liquide.
+    Comment se nomme ce changement d'état ?
+  indices:
+  - Solide directement en gaz, sans étape liquide.
+  solution: Une sublimation.
+sources:
+- titre: Vikidia, « État de la matière »
+  url: https://fr.vikidia.org/w/index.php?title=%C3%89tat_de_la_mati%C3%A8re&oldid=2077996
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Condensation »
+  url: https://fr.vikidia.org/w/index.php?title=Condensation&oldid=2560048
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

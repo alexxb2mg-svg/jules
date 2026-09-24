@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: programmation-ost
+declencheurs:
+- programmer un objet technique
+- code embarqué
+- microcontrôleur programmé
+- programme Arduino
+- commander un actionneur
+couverture: Cette fiche prolonge programmation-nouvelle-fonctionnalite pour la programmation complète d'un objet
+  ou système technique (capteurs et actionneurs) en classe de 3e.
+essentiel: 'Programmer un objet ou système technique (OST), c''est écrire le programme qui relie sa chaîne d''information
+  à sa chaîne d''énergie : le programme lit les données des capteurs (fonction acquérir), les traite selon une logique
+  définie (fonction traiter, avec des conditions et parfois des boucles), puis commande les actionneurs (moteurs,
+  LED, haut-parleurs) en conséquence.
+
+
+  Un microcontrôleur, comme celui d''une carte Arduino, exécute ce programme en continu : il répète indéfiniment
+  un cycle « lire les capteurs → décider → agir sur les actionneurs », ce qui permet à l''objet de réagir en temps
+  réel à son environnement.
+
+
+  Programmer un OST demande de connaître les entrées (capteurs branchés) et les sorties (actionneurs branchés) de
+  la carte, et d''utiliser un langage adapté (souvent proche du C pour Arduino, ou un langage par blocs pour des
+  cartes plus simples).'
+methode:
+- Lister les capteurs (entrées) et les actionneurs (sorties) branchés sur la carte électronique.
+- 'Écrire l''algorithme du programme avant de le coder : quelles conditions déclenchent quelles actions ?'
+- Traduire l'algorithme en instructions dans le langage de la carte utilisée.
+- Tester le programme sur l'objet réel et ajuster les seuils ou les conditions si le comportement observé ne correspond
+  pas à celui attendu.
+vocabulaire:
+- terme: entrée (programmation d'un OST)
+  definition: information lue par le programme, provenant d'un capteur
+- terme: sortie (programmation d'un OST)
+  definition: commande envoyée par le programme à un actionneur
+erreurs_frequentes:
+- Oublier de tester le programme sur l'objet réel, en se contentant d'une simulation.
+- Choisir un seuil de déclenchement (par exemple de luminosité) sans le tester dans les conditions réelles d'usage.
+- Confondre capteur (entrée, lu par le programme) et actionneur (sortie, commandé par le programme).
+exemple:
+  enonce: Écrire, en langage courant, l'algorithme d'un programme qui allume une LED quand un bouton est appuyé,
+    et l'éteint sinon.
+  solution: 'RÉPÉTER INDÉFINIMENT : SI le bouton est appuyé ALORS allumer la LED SINON éteindre la LED. FIN RÉPÉTER.'
+exercices:
+- enonce: Un programme doit faire tourner un ventilateur seulement quand la température mesurée dépasse 25 degrés.
+    Écrire l'algorithme correspondant.
+  indices:
+  - Utilise une structure si...alors...sinon dans une boucle répétée.
+  solution: 'RÉPÉTER INDÉFINIMENT : lire la température. SI température > 25 ALORS allumer le ventilateur SINON
+    éteindre le ventilateur. FIN RÉPÉTER.'
+sources:
+- titre: Vikidia, « Arduino »
+  url: https://fr.vikidia.org/w/index.php?title=Arduino&oldid=2554579
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Capteur »
+  url: https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

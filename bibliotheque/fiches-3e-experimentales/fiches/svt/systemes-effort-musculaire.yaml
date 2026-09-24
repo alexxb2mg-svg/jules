@@ -1,0 +1,71 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: systemes-effort-musculaire
+declencheurs:
+- essoufflement à l'effort
+- fréquence cardiaque augmente
+- pourquoi on respire plus vite quand on court
+- muscle qui se contracte
+essentiel: 'Lors d''un effort musculaire, les muscles sollicités se contractent davantage et consomment plus de
+  nutriments et de dioxygène pour produire l''énergie nécessaire à leur activité.
+
+  Pour répondre à cette demande accrue, le système cardiovasculaire réagit : le cœur bat plus vite (la fréquence
+  cardiaque augmente) pour faire circuler davantage de sang, chargé de nutriments et de dioxygène, vers les muscles
+  actifs.
+
+  Le système respiratoire réagit également : la fréquence et l''amplitude respiratoires augmentent pour capter plus
+  de dioxygène dans l''air et évacuer plus de dioxyde de carbone produit par les muscles.
+
+  Le système nerveux commande et coordonne ces ajustements automatiques (augmentation du rythme cardiaque et respiratoire)
+  en fonction de l''intensité de l''effort demandé.
+
+  Ces adaptations ont des limites : au-delà d''une certaine intensité ou durée d''effort, l''organisme ne peut plus
+  fournir suffisamment de dioxygène aux muscles, ce qui provoque fatigue, essoufflement, ou diminution de la performance.'
+methode:
+- 'Repérer les trois systèmes impliqués lors d''un effort musculaire : nerveux, respiratoire, cardiovasculaire.'
+- Relier l'augmentation de l'intensité de l'effort à l'augmentation de la fréquence cardiaque et respiratoire.
+- Calculer une variation de fréquence cardiaque (en valeur ou en pourcentage) entre le repos et l'effort.
+- Identifier les limites de l'organisme face à un effort trop intense ou trop long.
+erreurs_frequentes:
+- Croire que seul le cœur s'adapte à l'effort, en oubliant le système respiratoire et le système nerveux qui coordonne
+  le tout.
+- Penser que la fréquence cardiaque et respiratoire augmentent au hasard, sans lien avec les besoins des muscles.
+- Confondre fréquence cardiaque (nombre de battements par minute) et pression artérielle.
+- Croire que l'organisme peut s'adapter indéfiniment à n'importe quelle intensité d'effort, sans limite.
+exemple:
+  enonce: La fréquence cardiaque d'un élève au repos est de 70 battements par minute ; pendant un effort intense,
+    elle atteint 150 battements par minute. Calculer l'augmentation en pourcentage.
+  solution: '(150 − 70) / 70 × 100 ≈ 114,3 % : la fréquence cardiaque augmente d''environ 114 % pendant l''effort.'
+exercices:
+- enonce: Pourquoi respire-t-on plus vite pendant un effort physique ?
+  indices:
+  - Pense aux besoins accrus des muscles en dioxygène.
+  solution: 'Parce que les muscles sollicités consomment davantage de dioxygène pour produire de l''énergie : le
+    système respiratoire augmente sa fréquence pour capter plus de dioxygène et évacuer plus de dioxyde de carbone.'
+- enonce: Quel système coordonne l'augmentation de la fréquence cardiaque et respiratoire pendant l'effort ?
+  indices:
+  - Pense au système qui commande les réactions automatiques du corps.
+  solution: Le système nerveux, qui commande ces ajustements automatiques en fonction de l'intensité de l'effort.
+- enonce: Que se passe-t-il pour l'organisme si l'effort demandé dépasse ses capacités d'adaptation cardiovasculaire
+    et respiratoire ?
+  indices:
+  - Pense à ce que ressent un sportif à bout de souffle.
+  solution: L'apport en dioxygène aux muscles devient insuffisant, ce qui entraîne fatigue musculaire, essoufflement,
+    et une baisse de la performance, voire l'arrêt de l'effort.
+sources:
+- titre: Vikidia, « Fonctionnement du cœur »
+  url: https://fr.vikidia.org/w/index.php?title=Fonctionnement_du_c%C5%93ur&oldid=2428694
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Muscle »
+  url: https://fr.vikidia.org/w/index.php?title=Muscle&oldid=2456654
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

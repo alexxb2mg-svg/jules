@@ -1,0 +1,111 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: evolution-des-ost
+declencheurs:
+- intelligence artificielle
+- IA
+- invention
+- innovation
+- chatbot
+- robot
+- besoin
+- évolution technique
+- biais
+- vieux téléphone
+- écran tactile
+- objets ont évolué
+essentiel: 'Un objet ou système technique (OST) évolue pour répondre à un besoin nouveau ou mieux satisfaire un
+  besoin déjà connu. Une invention est la première réalisation d''une solution technique nouvelle ; une innovation
+  est la mise sur le marché, à grande échelle, d''un produit qui améliore une solution existante (elle peut être
+  d''usage, si elle change la façon d''utiliser l''objet, ou de rupture, si elle change radicalement le principe
+  technique employé). Des objets répondant à un même besoin forment une lignée (par exemple l''histoire du téléphone)
+  : chaque génération conserve certaines fonctions et en ajoute ou en modifie d''autres.
+
+
+  L''intelligence artificielle (IA) est la capacité d''un programme à réaliser des tâches qui semblaient réservées
+  à l''humain (reconnaître une image, tenir une conversation comme un agent conversationnel ou « chatbot », conduire
+  un véhicule). Une IA apprend en général à partir d''une grande quantité de données : si ces données sont mal choisies
+  ou non représentatives, l''IA peut reproduire des erreurs ou des inégalités qui y étaient déjà présentes : c''est
+  un biais. Une IA n''a pas de conscience et peut se tromper (elle peut « halluciner », c''est-à-dire inventer une
+  réponse fausse avec assurance) : il faut vérifier ses réponses avec d''autres sources.
+
+
+  Les évolutions techniques ont aussi des contraintes sociétales : coût acceptable, impact sur l''environnement,
+  acceptabilité par les utilisateurs, respect de la réglementation.'
+methode:
+- 'Pour situer un OST dans une lignée, chercher ses ancêtres directs et ce que chaque nouvelle génération a changé
+  : quel besoin en plus est satisfait, quelle contrainte est mieux gérée.'
+- 'Distinguer invention (première solution technique) et innovation (diffusion réussie de cette solution ou de son
+  amélioration) : toute invention ne devient pas une innovation.'
+- Pour une IA, identifier la tâche réalisée, le type de données utilisées pour l'entraîner, et un avantage et un
+  risque (biais, erreur, dépendance) de son usage.
+- Relier chaque évolution à un besoin (fonction d'usage) ou à une contrainte (sociétale, économique, environnementale)
+  plutôt qu'à la technique pour la technique.
+vocabulaire:
+- terme: invention
+  definition: première réalisation concrète d'une solution technique nouvelle
+- terme: innovation
+  definition: amélioration d'un produit ou d'un usage, diffusée à grande échelle
+- terme: innovation de rupture
+  definition: innovation qui change radicalement le principe technique utilisé
+- terme: biais (d'une IA)
+  definition: erreur systématique d'une intelligence artificielle due à des données d'entraînement mal choisies
+erreurs_frequentes:
+- Confondre invention (l'idée technique) et innovation (sa réussite commerciale et sa diffusion).
+- Croire qu'une intelligence artificielle « comprend » ou « pense » comme un humain.
+- Oublier de relier une évolution technique à un besoin ou une contrainte précise.
+- Penser qu'une innovation est toujours une rupture technique alors qu'elle peut n'être qu'un usage nouveau d'une
+  technique déjà connue.
+exemple:
+  enonce: Le smartphone intègre un assistant vocal utilisant l'intelligence artificielle pour comprendre des phrases
+    prononcées. Expliquer en quoi il s'agit d'une innovation, puis citer un avantage et un risque de cet usage de
+    l'IA.
+  solution: 'C''est une innovation (pas une invention isolée) car elle combine des techniques déjà connues (microphone,
+    traitement du son, réseau de neurones) pour offrir un nouvel usage diffusé à grande échelle. Avantage : accès
+    mains libres à des services (recherche, itinéraire). Risque : l''assistant peut mal comprendre un accent ou
+    une langue peu représentés dans ses données d''entraînement (biais), ou donner une réponse fausse avec assurance.'
+exercices:
+- enonce: Le vélo est passé du grand-bi (une immense roue avant) au vélo à pédalier et chaîne, puis au vélo à assistance
+    électrique. Pour chaque étape, donner un besoin ou une contrainte mieux satisfaite.
+  indices:
+  - Pense à la sécurité, au confort, à l'effort physique demandé.
+  solution: 'Pédalier et chaîne : plus sûr (roues de taille raisonnable) et plus efficace (le rapport de la chaîne
+    multiplie la vitesse pour un même effort de pédalage). Assistance électrique : réduit l''effort demandé, permet
+    de parcourir de plus longues distances ou des côtes, répond à un besoin de mobilité douce sans trop fatiguer
+    l''utilisateur.'
+- enonce: Un chatbot d'aide aux devoirs a été entraîné surtout avec des manuels de mathématiques et très peu de
+    manuels d'histoire-géographie. Que risque-t-il de se passer si un élève lui pose une question d'histoire ?
+  indices:
+  - Repense à ce qu'est un biais lié aux données d'entraînement.
+  solution: 'Le chatbot risque de répondre moins bien, voire de se tromper (donner des dates ou des faits inexacts)
+    en histoire, car ses données d''entraînement le rendent plus fiable en mathématiques : c''est un biais dû à
+    un déséquilibre des données.'
+- enonce: Expliquer pourquoi toutes les inventions ne deviennent pas des innovations.
+  indices:
+  - Pense au coût, à l'acceptation par les utilisateurs, à la réglementation.
+  solution: Une invention peut rester une simple idée ou un prototype si elle coûte trop cher à produire, si les
+    utilisateurs ne l'adoptent pas, si elle est interdite par la réglementation, ou si une autre solution technique
+    la remplace avant sa diffusion.
+sources:
+- titre: Vikidia, « Intelligence artificielle »
+  url: https://fr.vikidia.org/w/index.php?title=Intelligence_artificielle&oldid=2589298
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Chatbot »
+  url: https://fr.vikidia.org/w/index.php?title=Chatbot&oldid=2464184
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Cahier des charges »
+  url: https://fr.wikipedia.org/w/index.php?title=Cahier_des_charges&oldid=235303424
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (notion d'évolution/contrainte, non reprise ici)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: champ-genres-hybrides
+declencheurs:
+- bande dessinee neuvieme art
+- performance video art contemporain
+- installation artistique histoire des arts
+- art de la rue
+- genres artistiques du 20e siecle
+essentiel: 'Les XXe et XXIe siècles voient naître des genres artistiques hybrides ou éphémères qui ne rentrent pas
+  dans les catégories plus anciennes : la bande dessinée (parfois appelée le « neuvième art », après le cinéma et
+  la télévision), la performance, la vidéo, l''installation, les arts de la rue.
+
+  Ces formes mêlent souvent plusieurs disciplines à la fois (image et texte pour la bande dessinée, corps et durée
+  pour la performance, espace et volume pour l''installation) et remettent en question les frontières traditionnelles
+  entre les arts.
+
+  Beaucoup de ces genres sont éphémères par nature (une performance ne dure qu''un temps, un art de rue peut être
+  effacé) ou nécessitent une captation (photo, vidéo) pour être conservés.
+
+  La poésie, l''éloquence et la littérature sont aussi considérées comme des champs artistiques associés à l''histoire
+  des arts, notamment quand elles dialoguent avec d''autres formes artistiques.'
+methode:
+- Identifier le ou les médiums combinés dans une œuvre hybride (image+texte, corps+durée, espace+volume).
+- Repérer si une œuvre est éphémère et comment elle a été conservée ou documentée (photo, vidéo).
+- Distinguer un genre hybride récent d'une discipline plus ancienne des Beaux-Arts.
+- Relier une œuvre de bande dessinée, de performance ou d'installation à une intention artistique précise.
+erreurs_frequentes:
+- Croire que la bande dessinée n'est qu'un divertissement sans valeur artistique.
+- Confondre une simple captation vidéo et une véritable œuvre vidéo pensée comme telle.
+- Ignorer le caractère éphémère de certaines œuvres (performance, art de rue).
+exemple:
+  enonce: Une histoire est racontée par une succession de dessins dans des cases, avec des bulles de dialogue.
+  solution: Il s'agit d'une bande dessinée, un genre hybride qui associe image et texte, souvent appelé le « neuvième
+    art », comparé au cinéma (septième art) et à la télévision (huitième art).
+exercices:
+- enonce: 'À l''oral (type brevet) : choisis un genre hybride (bande dessinée, performance, installation, art de
+    rue) et explique quelles disciplines il combine.'
+  indices:
+  - La bande dessinée combine dessin et texte narratif ; la performance combine corps et durée.
+  solution: Réussite si les disciplines combinées sont clairement identifiées et correspondent bien au genre choisi.
+- enonce: Explique pourquoi une performance artistique doit souvent être filmée ou photographiée pour être conservée
+    dans le temps.
+  indices:
+  - Pense à ce qui se passe à une performance une fois qu'elle est terminée.
+  solution: Réussite si le caractère éphémère de la performance et le rôle de la captation sont bien expliqués.
+sources:
+- titre: Vikidia, « Bande dessinée »
+  url: https://fr.vikidia.org/w/index.php?title=Bande_dessin%C3%A9e&oldid=2581894
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Performance (art) »
+  url: https://fr.vikidia.org/w/index.php?title=Performance_%28art%29&oldid=2334895
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

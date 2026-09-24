@@ -1,0 +1,59 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: champ-arts-decoratifs
+declencheurs:
+- arts decoratifs et design
+- affiche publicitaire histoire de l'art
+- metiers d'art
+- caricature dans l'art
+- design d'objet
+essentiel: 'Le champ des arts décoratifs et appliqués regroupe les créations qui allient esthétique et fonction
+  utilitaire : le vêtement, le mobilier, les objets du quotidien, réalisés par des métiers d''art (ébénisterie,
+  céramique, orfèvrerie…).
+
+  Le design est un terme plus récent qui désigne une activité créatrice complémentaire des arts décoratifs, appliquée
+  notamment aux objets industriels : il vise à concilier économie, ergonomie, esthétique et éthique dans la conception
+  d''un objet.
+
+  L''affiche et la publicité utilisent des moyens visuels pour informer ou convaincre un large public, souvent avec
+  une intention commerciale, tandis que la caricature déforme volontairement un sujet (souvent une personne publique)
+  à des fins satiriques ou critiques.
+
+  Ces créations, bien que souvent fonctionnelles ou commerciales, peuvent avoir une réelle valeur artistique et
+  être étudiées comme telles.'
+methode:
+- Distinguer un objet des arts décoratifs (mobilier, vêtement) d'une œuvre des Beaux-Arts (peinture, sculpture).
+- Repérer l'intention d'une affiche ou d'une publicité (informer, vendre, convaincre).
+- Identifier les déformations volontaires et le message critique d'une caricature.
+- Chercher les critères qui font qu'un objet industriel relève du design (fonction, esthétique, ergonomie).
+erreurs_frequentes:
+- Croire que les arts décoratifs n'ont pas de valeur artistique parce qu'ils sont fonctionnels.
+- Confondre affiche publicitaire et œuvre d'art pure, sans distinguer leurs intentions différentes.
+- Ne pas repérer le message critique caché derrière une caricature.
+exemple:
+  enonce: Un fauteuil industriel des années 1950 associe une forme épurée, des matériaux nouveaux (aluminium, fibre
+    de verre) et une fonction confortable.
+  solution: 'Cet objet relève du design : il concilie esthétique, fonction et matériaux nouveaux, une démarche différente
+    de l''artisanat traditionnel des arts décoratifs plus anciens.'
+exercices:
+- enonce: 'À l''oral (type brevet) : présente un objet de design ou des arts décoratifs et explique en quoi il associe
+    esthétique et fonction.'
+  indices:
+  - Choisis un objet du quotidien dont la forme te semble particulièrement pensée.
+  solution: Réussite si l'objet choisi est bien décrit à la fois dans sa fonction et son esthétique.
+- enonce: Trouve une caricature (dessin de presse) et explique en une phrase le message critique qu'elle porte,
+    sans reproduire une caricature protégée par le droit d'auteur.
+  indices:
+  - Cherche une caricature ancienne, du domaine public, ou décris seulement son intention sans détailler l'image.
+  solution: Réussite si le message critique est correctement identifié et expliqué.
+sources:
+- titre: Vikidia, « Design »
+  url: https://fr.vikidia.org/w/index.php?title=Design&oldid=2339048
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

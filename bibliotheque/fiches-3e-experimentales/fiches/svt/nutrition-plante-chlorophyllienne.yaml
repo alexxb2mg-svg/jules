@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: nutrition-plante-chlorophyllienne
+declencheurs:
+- photosynthèse
+- sève brute sève élaborée
+- comment se nourrit une plante
+- pourquoi les plantes ont besoin de lumière
+essentiel: 'Une plante chlorophyllienne (verte) fabrique sa propre matière organique grâce à la photosynthèse :
+  elle utilise le dioxyde de carbone (prélevé dans l''air par les feuilles), l''eau et les sels minéraux (prélevés
+  dans le sol par les racines) et l''énergie lumineuse (captée par la chlorophylle) pour produire des matières organiques
+  (comme les sucres) et rejeter du dioxygène.
+
+  Ce processus a lieu principalement dans les feuilles, riches en chlorophylle, qui captent la lumière ; il ne se
+  produit qu''en présence de lumière (le jour, ou sous éclairage artificiel).
+
+  La sève brute (eau et sels minéraux) circule des racines vers les feuilles ; la sève élaborée (riche en sucres
+  produits par la photosynthèse) circule des feuilles vers le reste de la plante, y compris les organes de stockage
+  (racines, tubercules, fruits).
+
+  Ce transport se fait grâce à des systèmes de circulation spécialisés dans la tige : des vaisseaux distincts pour
+  la sève brute et pour la sève élaborée.
+
+  Contrairement aux animaux, les plantes chlorophylliennes n''ont pas besoin de se nourrir d''autres êtres vivants
+  pour obtenir leur matière organique : elles la fabriquent elles-mêmes, on dit qu''elles sont autotrophes.'
+methode:
+- Identifier les éléments prélevés par la plante (CO2, eau, sels minéraux) et leur lieu de prélèvement (feuilles,
+  racines).
+- Retenir que l'énergie lumineuse est indispensable à la photosynthèse.
+- Distinguer sève brute (racines → feuilles, eau + sels minéraux) et sève élaborée (feuilles → reste de la plante,
+  sucres).
+- Relier le lieu de production (feuilles) au lieu de stockage (racines, fruits, tiges) via le système de transport.
+erreurs_frequentes:
+- Croire que les racines produisent la matière organique de la plante (c'est le rôle des feuilles grâce à la lumière).
+- Confondre sève brute et sève élaborée, ou leur sens de circulation.
+- Penser que la photosynthèse a lieu la nuit, alors qu'elle nécessite de la lumière.
+- Oublier que les plantes chlorophylliennes prélèvent aussi du CO2 dans l'air, pas seulement de l'eau dans le sol.
+exemple:
+  enonce: Pourquoi une plante placée dans un placard fermé (sans lumière) finit-elle par dépérir, même si elle est
+    arrosée régulièrement ?
+  solution: 'Sans lumière, la photosynthèse ne peut pas avoir lieu : la plante ne peut plus produire la matière
+    organique dont elle a besoin pour vivre, même si elle reçoit de l''eau.'
+exercices:
+- enonce: Citer les trois éléments prélevés par une plante chlorophyllienne pour réaliser la photosynthèse, et préciser
+    où chacun est prélevé.
+  indices:
+  - Deux viennent du sol, un vient de l'air.
+  solution: Eau et sels minéraux (prélevés dans le sol par les racines), dioxyde de carbone (prélevé dans l'air
+    par les feuilles).
+- enonce: Quelle sève transporte les sucres produits par la photosynthèse, et dans quel sens circule-t-elle ?
+  indices:
+  - Les sucres sont produits dans les feuilles.
+  solution: La sève élaborée, qui circule des feuilles vers le reste de la plante (tiges, racines, fruits).
+- enonce: Pourquoi dit-on qu'une plante chlorophyllienne est autotrophe ?
+  indices:
+  - Compare avec la nutrition d'un animal, qui doit manger d'autres êtres vivants.
+  solution: Parce qu'elle fabrique elle-même sa matière organique à partir d'éléments minéraux (CO2, eau, sels minéraux)
+    et de lumière, sans avoir besoin de se nourrir d'autres êtres vivants.
+sources:
+- titre: Vikidia, « Photosynthèse »
+  url: https://fr.vikidia.org/w/index.php?title=Photosynth%C3%A8se&oldid=2564398
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Sève »
+  url: https://fr.vikidia.org/w/index.php?title=S%C3%A8ve&oldid=2052430
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

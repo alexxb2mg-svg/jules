@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: melanges-solubilite
+declencheurs:
+- dissoudre
+- sel dans l'eau
+- sucre dans l'eau
+- solution saturée
+- miscible
+- l'air est un mélange
+- se mélange pas
+essentiel: 'Un mélange associe plusieurs espèces chimiques sans réaction chimique entre elles : mélange homogène
+  (une seule phase visible, comme l''eau salée) ou hétérogène (plusieurs phases visibles, comme l''eau et l''huile).
+
+  La solubilité d''une espèce dans un solvant (souvent l''eau) est la masse maximale que l''on peut y dissoudre
+  pour un volume donné de solvant, à une température donnée ; au-delà, la solution est saturée et le solide en excès
+  ne se dissout plus.
+
+  Deux liquides qui forment un mélange homogène sont miscibles (eau et alcool) ; sinon ils sont non miscibles (eau
+  et huile) et se séparent en deux couches.
+
+  La solubilité étant proportionnelle au volume de solvant, on peut calculer la masse maximale dissoute dans un
+  volume donné à partir d''une solubilité connue (en g/L par exemple).
+
+  L''air est un mélange homogène de gaz : environ 78 % de diazote et 21 % de dioxygène, avec d''autres gaz en faible
+  quantité (dont le dioxyde de carbone).'
+methode:
+- Identifier si le mélange étudié est homogène (aspect uniforme) ou hétérogène (on distingue plusieurs constituants).
+- Pour un calcul de solubilité, repérer l'unité (g/L, g/100 mL...) et le volume de solvant utilisé.
+- 'Utiliser la proportionnalité : masse dissoute = solubilité × (volume utilisé / volume de référence).'
+- Vérifier que la masse à dissoudre ne dépasse pas la masse maximale (sinon la solution est saturée, il reste un
+  dépôt).
+erreurs_frequentes:
+- Croire qu'un mélange homogène ne contient qu'une seule espèce chimique.
+- Confondre miscible (deux liquides qui se mélangent) et soluble (un solide qui se dissout dans un liquide).
+- Oublier de convertir le volume avant d'appliquer une solubilité donnée en g/L.
+- Penser que l'on peut dissoudre une quantité infinie de soluté dans un volume donné de solvant.
+exemple:
+  enonce: La solubilité du sel dans l'eau est d'environ 360 g par litre à température ambiante. Quelle masse maximale
+    de sel peut-on dissoudre dans 250 mL d'eau ?
+  solution: 250 mL = 0,25 L. Masse maximale = 360 × 0,25 = 90 g.
+exercices:
+- enonce: Le sucre a une solubilité d'environ 2000 g/L dans l'eau. Quelle masse maximale de sucre peut-on dissoudre
+    dans 150 mL d'eau ?
+  indices:
+  - 150 mL = 0,15 L.
+  solution: 2000 × 0,15 = 300 g.
+- enonce: On verse de l'huile dans un verre d'eau et on agite. Que se passe-t-il après quelques instants ? Ce mélange
+    est-il homogène ?
+  indices:
+  - L'huile et l'eau ne sont pas miscibles.
+  solution: 'L''huile remonte à la surface, on voit deux couches distinctes : c''est un mélange hétérogène.'
+- enonce: Sur les 78 % de diazote et 21 % de dioxygène de l'air, combien de pourcents restent pour les autres gaz
+    (dont le CO2) ?
+  indices:
+  - Le total des pourcentages d'un mélange fait 100 %.
+  solution: 100 − 78 − 21 = 1 % pour les autres gaz (argon, dioxyde de carbone…).
+sources:
+- titre: Vikidia, « Solubilité »
+  url: https://fr.vikidia.org/w/index.php?title=Solubilit%C3%A9&oldid=2356817
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Mélange »
+  url: https://fr.vikidia.org/w/index.php?title=M%C3%A9lange&oldid=1958755
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

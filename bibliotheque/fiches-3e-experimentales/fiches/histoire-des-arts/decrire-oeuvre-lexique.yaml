@@ -1,0 +1,65 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: decrire-oeuvre-lexique
+declencheurs:
+- comment decrire un tableau
+- vocabulaire pour parler d'une oeuvre d'art
+- presenter une oeuvre a l'oral du brevet
+- decrire une sculpture
+- lexique histoire des arts
+essentiel: 'Décrire une œuvre d''art, c''est en donner une identité précise (titre, auteur si connu, date, matériau,
+  dimensions, lieu de conservation) puis observer ce qui est visible : le sujet représenté, la composition, les
+  couleurs ou les matériaux utilisés.
+
+  Un lexique simple mais précis distingue par exemple une peinture d''une sculpture, un portrait d''un paysage,
+  une façade d''un plan, une mélodie d''un rythme : utiliser le bon terme évite les confusions.
+
+  Décrire ne veut pas dire interpréter : on commence par ce qu''on voit ou entend objectivement, avant de proposer
+  un sens ou une intention (qui relève de l''analyse et de l''interprétation).
+
+  À partir des éléments observés (technique, style, sujet), on peut associer une œuvre à une époque et une civilisation,
+  même sans connaître son titre exact.'
+methode:
+- 'Identifier l''œuvre : titre, auteur, date, technique/matériau si l''information est disponible.'
+- 'Décrire ce qui est objectivement visible ou audible : sujet, composition, couleurs, matières, sons.'
+- Utiliser un vocabulaire précis adapté au domaine artistique (peinture, sculpture, architecture, musique).
+- Chercher des indices (style, technique, objets représentés) pour situer l'œuvre dans une époque.
+erreurs_frequentes:
+- Mélanger description et interprétation dès la première phrase.
+- Utiliser un terme vague (« un truc », « une forme ») au lieu du mot précis du domaine artistique.
+- Oublier de préciser la technique ou le matériau, pourtant essentiel pour situer une œuvre.
+exemple:
+  enonce: Décrire en une phrase une œuvre montrant un champ de fleurs jaunes peint avec des touches de couleur épaisses
+    et visibles.
+  solution: Il s'agit d'une peinture à l'huile représentant un paysage de champ, avec une technique d'empâtement
+    (peinture épaisse en relief) et des couleurs vives juxtaposées, sans mélange complet sur la toile.
+exercices:
+- enonce: 'À l''oral (entraînement type brevet) : choisis une œuvre étudiée cette année et décris-la en 3 phrases
+    maximum, sans donner ton avis ni ton interprétation.'
+  indices:
+  - Commence par identifier l'œuvre (titre, auteur, date) avant de décrire ce que tu vois.
+  solution: Réussite si les 3 phrases restent factuelles (identification + description objective) sans aucun jugement
+    de valeur ni interprétation du sens.
+- enonce: Observe une œuvre inconnue (livre, exposition, musée en ligne) et propose une hypothèse d'époque à partir
+    de deux indices visibles (technique, sujet, matériau).
+  indices:
+  - Une architecture avec des arcs brisés évoque le style gothique.
+  solution: Réussite si les deux indices cités sont bien observables sur l'œuvre et cohérents avec l'hypothèse d'époque
+    proposée.
+sources:
+- titre: Vikidia, « Sculpture »
+  url: https://fr.vikidia.org/w/index.php?title=Sculpture&oldid=2584156
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Composition picturale »
+  url: https://fr.wikipedia.org/w/index.php?title=Composition_picturale&oldid=237458929
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

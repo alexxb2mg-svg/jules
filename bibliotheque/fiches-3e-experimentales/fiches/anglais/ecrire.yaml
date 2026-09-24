@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: ecrire
+declencheurs:
+- rédaction en anglais
+- écrire un texte en anglais
+- expression écrite anglais
+- essay anglais
+- corriger son texte anglais
+- écrire une lettre en anglais
+essentiel: 'Écrire en anglais s''appuie sur les mêmes stratégies que l''oral (structurer un raconter, décrire, expliquer,
+  argumenter), mais avec la possibilité de relire et corriger son texte avant de le rendre, ce qui laisse plus de
+  temps pour choisir le vocabulaire et vérifier la grammaire.
+
+
+  Structurer un écrit demande d''organiser les idées avec des paragraphes et des connecteurs logiques (first, moreover,
+  however, in conclusion), et de respecter les codes du type de texte demandé (une lettre commence par « Dear...
+  » et se termine par une formule de politesse ; un e-mail est souvent plus court).
+
+
+  Réécrire son texte, c''est le relire pour vérifier l''orthographe, la conjugaison, l''accord sujet-verbe, et enrichir
+  le vocabulaire si des mots se répètent trop. Mobiliser des outils (brouillon, dictionnaire, tableau de conjugaison)
+  aide à corriger et améliorer son écrit avant de le finaliser.'
+methode:
+- Faire un brouillon rapide des idées avant de rédiger les phrases complètes.
+- Organiser le texte en paragraphes liés par des connecteurs logiques.
+- Respecter la forme attendue (lettre, e-mail, article) et ses formules types.
+- Relire le texte au moins une fois pour vérifier l'orthographe et les accords (sujet-verbe, pluriels), en particulier
+  les terminaisons des verbes au présent (-s à la 3e personne du singulier).
+- Varier le vocabulaire pour éviter de répéter le même mot plusieurs fois dans un court texte.
+vocabulaire:
+- terme: connecteur logique
+  definition: mot ou expression qui relie les idées d'un texte (first, however, in conclusion)
+- terme: brouillon
+  definition: premier jet d'un texte, destiné à être relu et amélioré
+erreurs_frequentes:
+- Oublier le -s de la 3e personne du singulier au présent simple (« she like » au lieu de « she likes »).
+- Ne pas relire son texte avant de le rendre.
+- Écrire un texte sans paragraphes ni connecteurs, ce qui le rend difficile à suivre.
+- Utiliser un registre ou une forme inadaptée (par exemple un ton trop familier dans une lettre formelle).
+exemple:
+  enonce: 'Corriger la phrase suivante : « My sister like animals and she have two cats. »'
+  solution: « My sister likes animals and she has two cats. » (accord de la 3e personne du singulier au présent
+    simple pour « like » → « likes » et « have » → « has »).
+exercices:
+- enonce: Écrire trois phrases en anglais pour décrire un ami imaginaire (nom, apparence, une qualité), en veillant
+    à l'accord au présent simple.
+  indices:
+  - N'oublie pas le -s à la 3e personne du singulier.
+  solution: 'Exemple de réponse possible : « His name is Tom. He has brown hair and blue eyes. He is very kind and
+    he always helps his friends. » (Réponse acceptée si la grammaire est correcte et cohérente.)'
+- enonce: Quel connecteur utiliser pour introduire une idée qui s'oppose à la précédente dans un texte argumentatif
+    ?
+  indices:
+  - Pense à un mot signifiant « cependant » en anglais.
+  solution: « However » (ou « but », plus familier) permet d'introduire une opposition.
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (démarche générale d'apprentissage de l'anglais)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

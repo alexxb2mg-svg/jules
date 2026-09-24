@@ -26,8 +26,18 @@ Licences refusées : NC (pas d'usage commercial), ND (pas de modification), « d
 | Commission européenne (pages européennes génériques) | EMC, géographie | CC BY 4.0 | [Avis juridique](https://commission.europa.eu/legal-notice_en) | R |
 | Tatoeba (phrases) | Anglais | CC BY 2.0 FR (le son : variable) | [Conditions Tatoeba](https://tatoeba.org/en/terms_of_use) | R |
 | Lingua Libre (prononciation) | Anglais | CC BY-SA 4.0 | fichiers sur Wikimedia Commons | R |
-| Simple English Wikipedia | Anglais | CC BY-SA 4.0 | [Wikipedia:Copyrights](https://en.wikipedia.org/wiki/Wikipedia:Copyrights) | R |
+| Simple English Wikipedia | Anglais | CC BY-SA 4.0 | [Wikipedia:Copyrights](https://en.wikipedia.org/wiki/Wikipedia:Copyrights) | D |
 | Paris Musées, Met, Rijksmuseum (œuvres du domaine public) | Arts, histoire des arts | CC0 | pages « Open Content » de chaque musée | R |
+
+### Emprunts effectifs (252 fiches, septembre 2026)
+
+Liens cités dans les fiches, par site : Vikidia 237, Wikipédia 145, Wikiversité 46, Wikilivres 17, Wikisource 9,
+Simple English Wikipedia 8, Wiktionnaire 6, Légifrance 2 (articles 1 et 2 de la loi de 1905).
+Chaque lien Wikimedia ou Vikidia pointe vers une révision précise (`oldid`), dont l'existence et le titre ont été
+contrôlés par l'API des sites au moment de l'écriture. Les textes d'exercices et les copies d'élèves fictives
+sont écrits par les contributeurs ; les seuls extraits d'œuvres cités sont dans le domaine public
+(Montaigne, Rousseau, Hugo…). Les œuvres récentes (Picasso, Primo Levi, Éluard, Aragon, Warhol) sont seulement
+nommées, jamais reproduites.
 
 ## À vérifier au cas par cas
 

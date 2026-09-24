@@ -1,0 +1,80 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transposition-oral-ecrit
+declencheurs:
+- transformer une phrase à l'écrit
+- discours indirect
+- discours direct
+- paroles rapportées
+- rapporter ce que quelqu'un a dit
+- discours indirect libre
+- insérer un dialogue dans un récit
+essentiel: 'Transposer un énoncé oral à l''écrit (ou inversement), c''est adapter une parole dite à l''écrit, ou
+  l''inverse, en respectant les règles propres à chaque forme (par exemple, à l''écrit, marquer clairement les paroles
+  rapportées par des guillemets et un verbe introducteur).
+
+  Le discours direct rapporte les paroles telles qu''elles ont été dites, entre guillemets, avec un verbe introducteur
+  (« il a dit : ‟…” »). Le discours indirect transforme ces paroles pour les intégrer dans une phrase du narrateur,
+  sans guillemets, avec des changements de temps et de personnes (« il a dit qu''il viendrait »).
+
+  Le discours indirect libre est une forme particulière : il rapporte les pensées ou paroles d''un personnage sans
+  verbe introducteur ni guillemets, en gardant certaines marques de la parole du personnage (mais avec les temps
+  du récit) — le texte glisse alors du narrateur vers le point de vue du personnage sans le signaler explicitement.
+
+  Dans le cadre de l''oral scolaire (exposé, débat), on peut aussi être amené à utiliser un niveau de langue soutenu,
+  plus formel que la conversation courante.'
+methode:
+- Identifier si les paroles à rapporter doivent rester au discours direct (guillemets, verbe introducteur) ou passer
+  au discours indirect.
+- Pour le discours indirect, adapter les temps verbaux, les pronoms et les indicateurs de temps et de lieu.
+- Pour reconnaître un discours indirect libre, repérer l'absence de verbe introducteur et de guillemets malgré la
+  présence de paroles ou pensées d'un personnage.
+- Dans un oral scolaire, éviter les tournures trop familières et préférer un niveau de langue soutenu.
+- Vérifier la cohérence des temps et des personnes après une transposition.
+vocabulaire:
+- terme: discours direct
+  definition: paroles rapportées telles quelles, entre guillemets, avec un verbe introducteur
+- terme: discours indirect
+  definition: paroles rapportées intégrées dans une phrase du narrateur, sans guillemets
+- terme: discours indirect libre
+  definition: paroles ou pensées d'un personnage rapportées sans verbe introducteur ni guillemets
+erreurs_frequentes:
+- Oublier de changer les temps verbaux en passant du discours direct au discours indirect.
+- Garder les guillemets dans un discours indirect.
+- Confondre discours indirect (avec verbe introducteur) et discours indirect libre (sans verbe introducteur).
+- Utiliser un niveau de langue trop familier dans un oral scolaire formel.
+exemple:
+  enonce: 'Transpose au discours indirect cette phrase au discours direct : Marie a dit : « Je viendrai demain avec
+    mon frère. »'
+  solution: Marie a dit qu'elle viendrait le lendemain avec son frère. (Le verbe passe du futur au conditionnel
+    présent par concordance des temps, « je » devient « elle », « demain » devient « le lendemain », et les guillemets
+    disparaissent.)
+exercices:
+- enonce: 'Transpose au discours direct : Il a expliqué qu''il avait oublié son cahier la veille.'
+  indices:
+  - Il faut retrouver les paroles exactes, avec un verbe introducteur et des guillemets.
+  solution: 'Il a expliqué : « J''ai oublié mon cahier hier. » (retour au passé composé et à la première personne,
+    avec guillemets).'
+- enonce: 'Écris deux phrases : une au discours direct rapportant une parole imaginaire d''un camarade, puis la
+    même transposée au discours indirect.'
+  indices:
+  - Pense aux changements de temps, de personne et d'indicateurs de temps/lieu.
+  solution: Réussite si la deuxième phrase respecte les règles de transposition (pas de guillemets, temps et pronoms
+    adaptés, éventuellement changement des indicateurs de temps).
+sources:
+- titre: Wikipédia, « Discours indirect »
+  url: https://fr.wikipedia.org/w/index.php?title=Discours_indirect&oldid=223364273
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Discours indirect libre »
+  url: https://fr.wikipedia.org/w/index.php?title=Discours_indirect_libre&oldid=238392526
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

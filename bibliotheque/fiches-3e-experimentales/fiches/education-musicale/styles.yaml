@@ -1,0 +1,57 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: styles
+declencheurs:
+- reconnaitre un style musical
+- epoque d'un morceau de musique
+- musique baroque classique romantique
+- difference entre style et genre musical
+- caracteristiques d'un courant musical
+essentiel: 'Un style musical regroupe des œuvres partageant des caractéristiques communes (instrumentation, structure,
+  harmonie) souvent liées à une époque ou à une aire culturelle : musique baroque, classique, romantique, puis les
+  styles plus récents (jazz, rock, musiques électroniques…).
+
+  Reconnaître un style suppose de repérer des indices précis : les instruments utilisés, la complexité de l''écriture,
+  le type de rythme, la présence ou non de nuances marquées, l''utilisation ou non de sons numériques.
+
+  Un même style peut traverser plusieurs genres (la musique baroque comprend à la fois des sonates, des opéras,
+  des messes) : le style renseigne plutôt sur une manière commune d''écrire la musique à une période donnée.
+
+  La notion de genre musical est proche mais différente : elle catégorise plutôt une tradition ou un ensemble de
+  conventions (le blues, le rap), sans être forcément liée à une seule époque précise.'
+methode:
+- Repérer les instruments utilisés (acoustiques anciens, orchestre, voix, sons électroniques).
+- Observer la complexité de l'écriture (une seule mélodie, plusieurs voix superposées, accompagnement riche).
+- Chercher des indices de régularité ou d'irrégularité du rythme et du tempo.
+- Relier ces observations à un style déjà rencontré en cours pour proposer une hypothèse.
+erreurs_frequentes:
+- Dater un morceau uniquement d'après son ambiance générale, sans observer les instruments utilisés.
+- Confondre le style (période d'écriture) et le genre (catégorie de musique).
+- Généraliser un style à partir d'un seul exemple entendu, sans vérifier d'autres œuvres.
+exemple:
+  enonce: Un extrait utilise un clavecin, une écriture régulière et plusieurs voix mélodiques entrelacées.
+  solution: Ces caractéristiques (instrument ancien, polyphonie régulière) évoquent le style baroque (fin du XVIe
+    au milieu du XVIIIe siècle environ), période où le clavecin était très utilisé et où la polyphonie était fréquente.
+exercices:
+- enonce: 'À la maison : écoute un extrait de musique baroque et un extrait de musique romantique (recherche libre)
+    et note deux différences d''instrumentation ou d''ambiance.'
+  indices:
+  - La musique romantique utilise souvent un orchestre plus grand et des nuances plus marquées que la musique baroque.
+  solution: Réussite si les deux différences notées reposent bien sur des éléments observables (instruments, nuances,
+    structure) et non sur un simple ressenti.
+- enonce: Choisis un morceau que tu écoutes souvent et essaie de le situer dans un style ou un courant musical,
+    en citant deux caractéristiques qui justifient ton choix.
+  indices:
+  - Pense aux instruments utilisés et à la présence ou non de sons électroniques.
+  solution: Réussite si le style proposé est cohérent avec les deux caractéristiques citées.
+sources:
+- titre: Wikipédia, « Genre musical »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_musical&oldid=236954603
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

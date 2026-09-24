@@ -1,0 +1,62 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-5-lumieres-revolutions
+declencheurs:
+- art et lumieres revolution
+- naissance de la critique d'art
+- art politique 1789
+- romantisme et revolution
+- art engage lumieres
+- mouvement romantique peinture
+- peinture au 19e siecle
+essentiel: 'Entre 1750 et 1850, l''époque des Lumières puis des révolutions voit naître de nouveaux publics pour
+  l''art (expositions ouvertes, salons) et une critique d''art qui commente et juge publiquement les œuvres, alors
+  que ce jugement était auparavant réservé aux commanditaires.
+
+  L''art devient aussi un moyen d''expression de la pensée politique : des œuvres peuvent soutenir ou critiquer
+  un régime, célébrer une révolution ou dénoncer une injustice.
+
+  Cette période développe une attention nouvelle à la sensation et à la sensibilité individuelle : le romantisme,
+  mouvement qui naît en Allemagne et en Angleterre à la fin du XVIIIe siècle, exprime des émotions fortes, parfois
+  sombres ou graves, plutôt que la raison ou l''équilibre classique.
+
+  On observe enfin une double tendance : une foi dans le progrès (scientifique, industriel, social) et en même temps
+  un recours au passé (retour à l''Antiquité ou au Moyen Âge comme sources d''inspiration).'
+methode:
+- Repérer si une œuvre exprime une émotion forte et personnelle (indice de romantisme) ou une pensée politique explicite.
+- Distinguer une critique du pouvoir en place d'une célébration de ce pouvoir dans une œuvre.
+- Chercher des indices de retour au passé (style antique ou médiéval) dans une œuvre de cette période.
+- Relier une œuvre à l'émergence d'un public plus large pour l'art (expositions, salons).
+erreurs_frequentes:
+- Confondre le romantisme (mouvement artistique) avec le sens courant du mot « romantique » (amoureux).
+- Croire que toutes les œuvres de cette période sont politiquement engagées.
+- Ignorer la double tendance progrès/retour au passé propre à cette période.
+exemple:
+  enonce: Une peinture représente une figure allégorique menant un groupe de personnes lors d'un soulèvement populaire,
+    avec des couleurs contrastées et un mouvement dramatique.
+  solution: Cette œuvre illustre l'art comme expression de la pensée politique, caractéristique de cette période
+    marquée par les révolutions ; le traitement dramatique et émotionnel de la scène est aussi typique du romantisme.
+exercices:
+- enonce: 'À l''oral (type brevet) : présente une œuvre de cette période en expliquant si elle soutient, critique
+    ou reste neutre face au pouvoir de son époque.'
+  indices:
+  - Cherche des symboles ou des figures qui pourraient représenter une cause politique.
+  solution: Réussite si la position de l'œuvre (soutien, critique, neutralité) est justifiée par un élément concret
+    observé.
+- enonce: Cherche une œuvre romantique (peinture ou musique) et explique en une phrase l'émotion qu'elle semble
+    vouloir transmettre.
+  indices:
+  - Le romantisme aime les scènes de nature dramatique ou les sentiments intenses.
+  solution: Réussite si l'émotion identifiée est cohérente avec les caractéristiques du romantisme (intensité, sensibilité,
+    parfois mélancolie).
+sources:
+- titre: Vikidia, « Romantisme »
+  url: https://fr.vikidia.org/w/index.php?title=Romantisme&oldid=2558563
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

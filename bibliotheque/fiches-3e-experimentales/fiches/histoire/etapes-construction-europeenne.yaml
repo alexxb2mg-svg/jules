@@ -1,0 +1,78 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: etapes-construction-europeenne
+declencheurs:
+- CEE
+- traité de Rome
+- traité de Maastricht
+- création de l'Europe
+- monnaie unique
+- histoire de l'Union européenne
+- élargissements de l'UE
+essentiel: 'La construction européenne vise, après la Seconde Guerre mondiale, à assurer la paix et la prospérité
+  en Europe par la coopération économique et politique.
+
+  Elle commence en 1951 avec la Communauté européenne du charbon et de l''acier (CECA), qui associe six pays (dont
+  la France et l''Allemagne) pour mettre en commun ces ressources stratégiques. En 1957, les traités de Rome créent
+  la Communauté économique européenne (CEE), fondée sur un marché commun.
+
+  En 1992, le traité de Maastricht crée l''Union européenne (UE), qui prend la suite de la CEE et élargit la coopération
+  à de nouveaux domaines (politique, monnaie). Depuis 2002, une monnaie unique, l''euro, circule dans une partie
+  des États membres.
+
+  L''Union s''est élargie progressivement, passant de 6 à 27 États membres (après le retrait du Royaume-Uni en 2020,
+  le Brexit). Elle a reçu le prix Nobel de la paix en 2012 pour ses soixante années de contribution à la paix et
+  à la démocratie en Europe.'
+methode:
+- 'Retenir trois dates-étapes : 1951 (CECA), 1957 (traités de Rome, CEE), 1992 (traité de Maastricht, UE).'
+- Montrer que la construction européenne part d'une coopération économique (charbon, acier, marché commun) avant
+  de s'élargir à d'autres domaines.
+- Relier la création de l'Europe à l'objectif de paix après la Seconde Guerre mondiale.
+- Ne pas confondre CEE (1957) et Union européenne (1992), qui sont deux étapes successives, pas la même chose.
+vocabulaire:
+- terme: CECA
+  definition: Communauté européenne du charbon et de l'acier, créée en 1951, première étape de la construction européenne
+- terme: traité de Maastricht
+  definition: traité signé en 1992 qui crée l'Union européenne
+- terme: euro
+  definition: monnaie unique utilisée depuis 2002 par une partie des États membres de l'Union européenne
+erreurs_frequentes:
+- 'Confondre CEE et UE : la CEE (1957) devient l''UE seulement en 1992, avec le traité de Maastricht.'
+- 'Croire que tous les pays de l''UE utilisent l''euro : seule une partie des membres l''a adopté.'
+- Oublier que la construction européenne commence par une coopération économique concrète (charbon et acier), pas
+  par un projet politique global.
+- 'Se tromper sur le sens du Brexit : c''est une sortie de l''UE (Royaume-Uni, 2020), pas une adhésion.'
+exemple:
+  enonce: Cite les trois grandes étapes de la construction européenne avec leurs dates.
+  solution: '1951 : création de la CECA (charbon et acier, six pays fondateurs). 1957 : traités de Rome, création
+    de la CEE (marché commun). 1992 : traité de Maastricht, création de l''Union européenne.'
+exercices:
+- enonce: Pourquoi la construction européenne commence-t-elle par le charbon et l'acier ?
+  indices:
+  - Ce sont des ressources utilisées pour fabriquer des armes.
+  solution: Mettre en commun ces ressources stratégiques, notamment entre la France et l'Allemagne, permet de rendre
+    une nouvelle guerre entre ces pays plus difficile et de construire la confiance, dans un objectif de paix après
+    la Seconde Guerre mondiale.
+- enonce: 'Développement construit : montre comment l''Union européenne s''est construite par étapes depuis 1951.'
+  indices:
+  - Utilise les trois dates-clés.
+  - N'oublie pas l'élargissement du nombre de membres.
+  solution: Un développement réussi doit présenter la CECA (1951, coopération économique limitée), la CEE (1957,
+    marché commun), puis l'UE (1992, traité de Maastricht, coopération élargie et monnaie unique à partir de 2002)
+    ; il doit aussi mentionner l'élargissement progressif de 6 à 27 États membres.
+- enonce: Qu'est-ce que le Brexit et en quelle année a-t-il eu lieu ?
+  indices:
+  - C'est un pays qui quitte l'UE.
+  solution: Le Brexit est la sortie du Royaume-Uni de l'Union européenne, effective en 2020, après un référendum
+    organisé en 2016.
+sources:
+- titre: Vikidia, « Union européenne »
+  url: https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

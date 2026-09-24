@@ -1,0 +1,67 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: experimenter-produire-creer
+declencheurs:
+- comment commencer mon dessin
+- je sais pas quoi faire pour le projet
+- trouver des idees pour une oeuvre
+- experimenter des materiaux
+- demarche de creation
+- plusieurs pistes
+- brouillon artistique
+essentiel: 'En arts plastiques, on ne cherche pas « la » bonne réponse mais on explore plusieurs pistes à partir
+  d''une consigne (l''incitation).
+
+  Expérimenter, c''est essayer des langages et des moyens plastiques variés (dessin, peinture, collage, volume,
+  photographie, numérique…) pour voir leurs effets, sans savoir à l''avance ce que ça va donner.
+
+  Un accident, un raté ou l''inattendu ne sont pas des échecs : ils peuvent devenir une piste plus intéressante
+  que l''idée de départ, à condition de rester attentif à ce qui se passe.
+
+  On documente sa recherche (croquis, photos d''essais, notes) pour garder trace des pistes explorées et choisir
+  ensuite celle qui sert le mieux l''intention artistique.'
+methode:
+- Lire la consigne et repérer ce qu'elle impose vraiment (et ce qu'elle laisse libre).
+- Faire plusieurs essais rapides (petit format, matériaux simples) avant de se lancer dans la version finale.
+- Noter ou garder ce qui surprend, même si ce n'était pas prévu.
+- Comparer ses essais à des œuvres d'artistes qui posent une question proche.
+- Choisir la piste qui répond le mieux à l'intention, et l'assumer.
+erreurs_frequentes:
+- Vouloir réussir du premier coup et jeter les essais « ratés » sans les regarder.
+- Illustrer littéralement la consigne au lieu d'en garder une intention.
+- Se limiter à un seul matériau connu par peur d'essayer autre chose.
+exemple:
+  enonce: 'Consigne : « Représenter la vitesse sans dessiner de véhicule. »'
+  solution: 'Des pistes possibles : des lignes floues et étirées au fusain frotté, un papier déchiré en diagonale,
+    une photo bougée volontairement, des mots découpés collés en oblique. Aucune n''est fausse : chacune traduit
+    la vitesse par un moyen plastique différent, sans montrer d''objet qui va vite.'
+exercices:
+- enonce: 'À la maison : à partir du mot « fragile », fais 3 petits essais très rapides (5 minutes chacun) avec
+    des moyens différents (crayon, papier déchiré, objets trouvés). Ne cherche pas à faire beau, cherche à essayer.'
+  indices:
+  - Change de matériau à chaque essai.
+  - Un essai raté qui te surprend vaut la peine d'être gardé.
+  solution: Réussite si tu as bien 3 essais avec des moyens différents et si tu peux dire, pour chacun, ce qu'il
+    traduit du mot « fragile » (une forme qui se déchire, un trait qui tremble…).
+- enonce: Choisis une de tes productions récentes et note trois choses que tu n'avais pas prévues en la faisant.
+  indices:
+  - Une tache, une couleur qui a débordé, une forme apparue par hasard comptent.
+  solution: Réussite si les trois éléments notés sont bien des surprises et si tu expliques, pour au moins un, s'il
+    a amélioré ou non ta production.
+sources:
+- titre: Wikipédia, « Composition picturale »
+  url: https://fr.wikipedia.org/w/index.php?title=Composition_picturale&oldid=237458929
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Arts plastiques »
+  url: https://fr.vikidia.org/w/index.php?title=Arts_plastiques&oldid=2072075
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

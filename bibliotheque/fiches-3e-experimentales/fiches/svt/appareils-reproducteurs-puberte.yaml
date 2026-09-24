@@ -1,0 +1,78 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: appareils-reproducteurs-puberte
+declencheurs:
+- puberté
+- appareil reproducteur masculin
+- appareil reproducteur féminin
+- hormones sexuelles
+- cycle menstruel
+- production de spermatozoïdes
+- ovaire libère un ovule chaque mois
+essentiel: 'La puberté est la période de transformations physiques et physiologiques au cours de laquelle les appareils
+  reproducteurs deviennent fonctionnels, permettant la production de cellules reproductrices (gamètes).
+
+  Chez l''homme, l''appareil reproducteur (testicules, voies génitales) produit en continu des spermatozoïdes à
+  partir de la puberté ; chez la femme, l''appareil reproducteur (ovaires, trompes, utérus) libère de façon cyclique
+  (environ chaque mois) un ovule, dans le cadre du cycle menstruel.
+
+  Ces fonctions reproductrices sont sous le contrôle d''hormones sexuelles (comme la testostérone chez l''homme,
+  les œstrogènes et la progestérone chez la femme), produites en particulier par les organes reproducteurs, qui
+  déclenchent aussi les transformations physiques de la puberté (pilosité, développement de la poitrine, mue de
+  la voix…).
+
+  Ces hormones agissent comme des messagers chimiques transportés par le sang, qui coordonnent le fonctionnement
+  des différents organes impliqués dans la reproduction.
+
+  Comprendre le fonctionnement de ces appareils reproducteurs et de leurs contrôles hormonaux est la base nécessaire
+  pour comprendre ensuite les principes de la maîtrise de la reproduction (contraception, procréation).'
+methode:
+- Distinguer l'appareil reproducteur masculin (production continue de spermatozoïdes) et féminin (production cyclique
+  d'ovules).
+- Relier une hormone sexuelle à son organe de production et à ses effets sur l'organisme.
+- Retenir que la puberté marque le début du fonctionnement des appareils reproducteurs, sous contrôle hormonal.
+- Relier le fonctionnement hormonal de la reproduction aux bases nécessaires pour comprendre la contraception.
+erreurs_frequentes:
+- Croire que la production de spermatozoïdes est cyclique comme celle des ovules (elle est continue).
+- Confondre les hormones sexuelles (testostérone, œstrogènes) et les organes qui les produisent.
+- Penser que la puberté est purement un phénomène physique, sans contrôle hormonal sous-jacent.
+- Croire que le cycle menstruel n'a aucun rapport avec la libération d'un ovule par les ovaires.
+exemple:
+  enonce: Pourquoi dit-on que la production de cellules reproductrices n'est pas organisée de la même façon chez
+    l'homme et chez la femme ?
+  solution: 'Chez l''homme, les testicules produisent des spermatozoïdes en continu à partir de la puberté ; chez
+    la femme, les ovaires libèrent un ovule de façon cyclique, environ une fois par mois, dans le cadre du cycle
+    menstruel : la production n''est donc pas organisée de la même manière dans le temps.'
+exercices:
+- enonce: Citer une hormone sexuelle féminine et une hormone sexuelle masculine.
+  indices:
+  - L'une est produite par les ovaires, l'autre par les testicules.
+  solution: 'Chez la femme : œstrogènes (ou progestérone). Chez l''homme : testostérone.'
+- enonce: Quel organe féminin libère un ovule environ une fois par mois ?
+  indices:
+  - C'est aussi l'organe qui produit les hormones sexuelles féminines.
+  solution: L'ovaire.
+- enonce: Pourquoi la puberté s'accompagne-t-elle de transformations physiques visibles (pilosité, voix, développement
+    de la poitrine) ?
+  indices:
+  - Pense au rôle des hormones sexuelles au-delà de la seule reproduction.
+  solution: Parce que les hormones sexuelles libérées à la puberté n'agissent pas uniquement sur les organes reproducteurs,
+    mais aussi sur d'autres parties du corps (pilosité, cordes vocales, glandes mammaires), provoquant ces transformations
+    physiques visibles.
+sources:
+- titre: Vikidia, « Puberté »
+  url: https://fr.vikidia.org/w/index.php?title=Pubert%C3%A9&oldid=2390179
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Hormone »
+  url: https://fr.vikidia.org/w/index.php?title=Hormone&oldid=1415663
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

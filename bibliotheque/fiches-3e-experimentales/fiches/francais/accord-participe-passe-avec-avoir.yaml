@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: accord-participe-passe-avec-avoir
+declencheurs:
+- participe passé avec avoir
+- accord du participe
+- que j'ai mangé
+- cod avant le verbe
+- les pommes que j'ai
+- invariable ou accordé
+- la lettre qu'il a écrite
+essentiel: 'Avec l''auxiliaire avoir, le participe passé s''accorde en genre et en nombre avec le COD seulement
+  si ce COD est placé AVANT le verbe. S''il n''y a pas de COD, ou si le COD est placé après le verbe, le participe
+  passé reste invariable.
+
+  Cas fréquent : le COD est le pronom relatif « que », dont l''antécédent donne le genre et le nombre de l''accord.
+  Exemple : « les pommes que j''ai mangées » — que reprend « les pommes » (féminin pluriel), et « que », COD placé
+  avant « ai mangé », impose l''accord : mangées.
+
+  Comparer : « J''ai mangé des pommes » (COD « des pommes » après le verbe : pas d''accord, mangé reste invariable).'
+methode:
+- Repérer l'auxiliaire avoir et le participe passé qui le suit.
+- 'Chercher le COD du verbe : qui/quoi + verbe ?'
+- 'Si le COD n''existe pas ou est placé après le participe : il reste invariable.'
+- 'Si le COD est placé avant (pronom personnel le/la/les, pronom relatif que, ou GN antéposé) : accorder le participe
+  en genre et en nombre avec ce COD.'
+- 'Cas du pronom relatif « que » : remonter à son antécédent pour connaître le genre et le nombre.'
+vocabulaire:
+- terme: COD antéposé
+  definition: complément d'objet direct placé avant le verbe qu'il complète
+erreurs_frequentes:
+- Accorder le participe passé avec le sujet au lieu du COD (avec avoir, ce n'est jamais le sujet qui commande l'accord).
+- Oublier l'accord quand le COD est le pronom relatif « que ».
+- Accorder alors que le COD est placé après le verbe (« j'ai acheté des fleurs », pas de fleurs accordées).
+- Confondre le COD avec un COI, qui n'entraîne jamais l'accord (« les amis à qui j'ai écrit »).
+exemple:
+  enonce: Faut-il accorder « mangé » dans « les pommes que j'ai mangé » ?
+  solution: 'Oui : « que » est COD de « ai mangé » et reprend « les pommes » (féminin pluriel), COD placé avant
+    le verbe. On écrit donc : « les pommes que j''ai mangées ».'
+exercices:
+- enonce: 'Accorder si besoin : « La lettre qu''il a (écrit) est arrivée hier. »'
+  indices:
+  - Quel est l'antécédent de « qu' » ?
+  - Le COD est-il placé avant ou après « a écrit » ?
+  solution: '« La lettre qu''il a écrite est arrivée hier. » : « qu'' » (= la lettre, féminin singulier) est COD
+    placé avant, donc accord : écrite.'
+- enonce: 'Accorder si besoin : « Il a (corrigé) les erreurs de son exercice. »'
+  indices:
+  - Où se trouve le COD « les erreurs » par rapport au verbe ?
+  solution: '« Il a corrigé les erreurs de son exercice. » : le COD « les erreurs » est placé après le verbe, donc
+    pas d''accord : corrigé reste invariable.'
+- enonce: 'Accorder si besoin : « Voici les photos que nous avons (pris) pendant les vacances. »'
+  indices:
+  - Retrouver l'antécédent de « que ».
+  - Genre et nombre de « les photos » ?
+  solution: '« Voici les photos que nous avons prises pendant les vacances. » : « que » (= les photos, féminin pluriel)
+    est COD antéposé, donc accord : prises.'
+sources:
+- titre: Wikipédia, « Accord du participe passé en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais&oldid=239496579
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

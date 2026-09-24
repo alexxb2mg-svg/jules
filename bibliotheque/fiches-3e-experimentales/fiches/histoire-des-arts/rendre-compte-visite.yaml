@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: rendre-compte-visite
+declencheurs:
+- compte rendu de visite au musee
+- rencontre avec un metier du patrimoine
+- raconter une sortie scolaire artistique
+- visite d'une exposition
+- rapport de visite culturelle
+essentiel: 'Rendre compte d''une visite d''un lieu de conservation ou de diffusion artistique (musée, galerie, monument,
+  salle de spectacle) suppose de préciser le contexte : le lieu, la date, ce qui y était présenté ou qui y a été
+  rencontré.
+
+  Un bon compte rendu ne se limite pas à un résumé chronologique de la visite : il sélectionne un ou deux moments
+  marquants (une œuvre, une explication d''un professionnel) et les développe avec précision.
+
+  Rencontrer un métier du patrimoine (restaurateur, conservateur, médiateur) est l''occasion de comprendre comment
+  une œuvre est conservée, étudiée ou transmise au public, des aspects qu''on ne perçoit pas seulement en regardant
+  l''œuvre.
+
+  Le compte rendu peut mêler des observations factuelles (ce qui a été vu ou dit) et un ressenti personnel, à condition
+  de bien distinguer les deux.'
+methode:
+- Noter le contexte de la visite (lieu, date, sujet) dès que possible après ou pendant la sortie.
+- Choisir un ou deux moments marquants à développer plutôt que tout raconter en détail.
+- Distinguer clairement les faits observés du ressenti personnel.
+- Si un professionnel a été rencontré, retenir ce que son métier apporte à la conservation ou à la diffusion de
+  l'art.
+erreurs_frequentes:
+- Faire un résumé chronologique complet sans rien approfondir.
+- Ne mentionner que son ressenti personnel sans aucune information factuelle sur la visite.
+- Oublier de préciser le contexte (lieu, date) qui permet de situer la visite.
+exemple:
+  enonce: Une classe visite un musée et rencontre une restauratrice qui explique comment elle nettoie une peinture
+    ancienne sans l'abîmer.
+  solution: 'Le compte rendu peut développer ce moment précis : la technique de nettoyage évoquée, les précautions
+    prises, et ce que cette rencontre a appris sur les métiers cachés derrière la conservation d''une œuvre, plutôt
+    que de lister toutes les salles visitées.'
+exercices:
+- enonce: 'À l''oral (type brevet) : si tu as visité un lieu culturel récemment (musée, exposition, monument, concert),
+    présente-le en 3 phrases : contexte, un moment marquant, ce que tu en retiens.'
+  indices:
+  - Si tu n'as pas de visite récente, choisis une visite scolaire déjà faite dans ta scolarité.
+  solution: Réussite si les 3 phrases correspondent bien aux 3 rôles demandés (contexte / moment marquant / ce qu'on
+    en retient).
+- enonce: Renseigne-toi sur un métier du patrimoine (conservateur, restaurateur, médiateur culturel) et note en
+    2 phrases ce qu'il fait concrètement.
+  indices:
+  - Le site d'un musée présente parfois ses différents métiers.
+  solution: Réussite si les 2 phrases décrivent des tâches concrètes du métier choisi, pas seulement son nom.
+sources:
+- titre: Vikidia, « Musée »
+  url: https://fr.vikidia.org/w/index.php?title=Mus%C3%A9e&oldid=2553277
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

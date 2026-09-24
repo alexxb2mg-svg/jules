@@ -1,0 +1,83 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: democratie-deliberative-opinion-publique
+declencheurs:
+- sondages fiables
+- esprit critique médias
+- débat public
+- réseaux sociaux opinion
+- opinion majoritaire
+- influence des médias sur les citoyens
+essentiel: 'L''opinion publique est l''opinion majoritaire dans une population donnée à un moment donné. Dans une
+  démocratie, elle joue un rôle capital : les responsables politiques en tiennent compte, les médias en parlent,
+  et les citoyens s''expriment par le vote mais aussi entre les élections.
+
+  L''opinion publique s''exprime par l''intermédiaire des médias, y compris les médias sociaux, qui amplifient et
+  accélèrent la circulation des idées. Elle est mesurée par des sondages, réalisés selon des méthodes diverses (interrogation
+  d''un échantillon représentatif de la population).
+
+  Développer l''esprit critique face à l''opinion publique et aux sondages est essentiel : un sondage peut dépendre
+  de la façon dont la question est posée, de la taille et de la représentativité de l''échantillon interrogé, ou
+  du moment où il est réalisé. La démocratie délibérative suppose un débat argumenté entre citoyens, et pas seulement
+  l''addition d''opinions individuelles non discutées.'
+methode:
+- Définir l'opinion publique comme l'opinion majoritaire d'une population à un instant donné, non figée.
+- Expliquer le rôle des médias, dont les médias sociaux, dans la formation de l'opinion publique.
+- 'Garder un regard critique sur un sondage : qui l''a commandé, comment la question est posée, quel est l''échantillon
+  interrogé.'
+- Distinguer démocratie délibérative (débat argumenté) et simple addition de sondages d'opinion.
+vocabulaire:
+- terme: opinion publique
+  definition: l'opinion majoritaire d'une population donnée à un moment donné
+- terme: sondage
+  definition: une enquête réalisée auprès d'un échantillon de personnes pour estimer l'opinion d'une population
+    plus large
+- terme: démocratie délibérative
+  definition: une conception de la démocratie qui met l'accent sur le débat argumenté entre citoyens
+erreurs_frequentes:
+- Croire qu'un sondage reflète toujours exactement l'opinion de toute la population.
+- Oublier de questionner la méthode d'un sondage (échantillon, formulation des questions).
+- Confondre opinion publique (qui évolue) et vérité scientifique ou juridique (qui ne dépend pas d'un vote).
+- Négliger le rôle amplificateur des réseaux sociaux dans la formation rapide de l'opinion.
+exemple:
+  enonce: Pourquoi faut-il garder un regard critique face à un sondage d'opinion publié dans les médias ?
+  solution: 'Parce qu''un sondage dépend de la taille et de la représentativité de l''échantillon interrogé, de
+    la façon dont les questions sont formulées, et du moment où il est réalisé : deux sondages sur le même sujet
+    peuvent donner des résultats différents selon leur méthode.'
+exercices:
+- enonce: Donne une définition simple de l'opinion publique.
+  indices:
+  - Pense à une majorité, à un moment donné.
+  solution: 'L''opinion publique est l''opinion majoritaire d''une population donnée, à un moment donné : elle peut
+    évoluer dans le temps.'
+- enonce: 'Développement construit : explique le rôle des médias sociaux dans la formation de l''opinion publique
+    aujourd''hui.'
+  indices:
+  - Pense à la rapidité de circulation de l'information.
+  - Nuance avec un risque possible.
+  solution: Un développement réussi doit expliquer que les médias sociaux permettent une circulation très rapide
+    des idées et donnent à chacun la possibilité de s'exprimer publiquement ; il doit aussi nuancer en montrant
+    que cette rapidité peut favoriser la diffusion d'informations non vérifiées et renforcer des opinions déjà formées
+    plutôt que le débat argumenté.
+- enonce: Quelles questions se poser avant de faire confiance à un sondage ?
+  indices:
+  - Qui l'a commandé ? Comment les questions sont-elles posées ?
+  solution: Il faut se demander qui a commandé et financé le sondage, quel est l'échantillon interrogé (nombre de
+    personnes, représentativité), comment les questions sont formulées, et à quelle date il a été réalisé.
+sources:
+- titre: Vikidia, « Opinion publique »
+  url: https://fr.vikidia.org/w/index.php?title=Opinion_publique&oldid=2464964
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Désinformation »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9sinformation&oldid=2464955
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (rôle des médias et esprit critique)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

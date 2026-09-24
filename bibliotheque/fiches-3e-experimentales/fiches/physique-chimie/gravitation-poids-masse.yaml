@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: gravitation-poids-masse
+declencheurs:
+- poids en newton
+- P = mg
+- différence poids masse
+- pesanteur
+- peser moins sur la Lune
+- g = 9,8
+essentiel: 'La gravitation est l''interaction attractive qui existe entre deux objets du seul fait de leur matière
+  ; elle s''exerce à distance, sans contact.
+
+  À la surface d''un astre (Terre, Lune…), la gravitation se manifeste par le poids : la force d''attraction qui
+  attire tout objet vers le centre de l''astre. Elle se calcule par P = m × g, avec P le poids en newtons (N), m
+  la masse en kilogrammes (kg) et g l''intensité de la pesanteur, en N/kg.
+
+  Sur Terre, g vaut environ 9,8 N/kg ; il est différent sur d''autres astres (environ 1,6 N/kg sur la Lune, six
+  fois plus faible que sur Terre).
+
+  La masse d''un objet est une propriété de la matière qu''il contient : elle ne change pas selon l''endroit où
+  l''on se trouve (mesurée en kg avec une balance).
+
+  Le poids, en revanche, dépend du lieu (de la valeur de g) : un même objet pèse moins sur la Lune que sur la Terre,
+  bien que sa masse reste identique (mesuré en N avec un dynamomètre).'
+methode:
+- Bien distinguer masse (kg, propriété de l'objet, invariable) et poids (N, force qui dépend du lieu).
+- Utiliser P = m × g pour calculer un poids à partir d'une masse et de la valeur de g du lieu.
+- 'Pour retrouver la masse à partir du poids, diviser par g : m = P / g.'
+- 'Retenir l''ordre de grandeur : g ≈ 9,8 N/kg sur Terre, environ 6 fois moins sur la Lune.'
+erreurs_frequentes:
+- Confondre masse et poids, et leurs unités (kg pour la masse, N pour le poids).
+- Croire que la masse d'un objet change selon l'endroit où il se trouve.
+- Oublier de convertir si la masse est donnée en grammes (il faut des kg dans P = m × g).
+- Utiliser la valeur de g de la Terre pour calculer un poids sur la Lune.
+exemple:
+  enonce: Calculer le poids sur Terre d'une personne de masse 70 kg (g = 9,8 N/kg).
+  solution: P = m × g = 70 × 9,8 = 686 N.
+exercices:
+- enonce: Cette même personne de 70 kg se rend sur la Lune (g = 1,6 N/kg). Calculer son poids sur la Lune. Sa masse
+    a-t-elle changé ?
+  indices:
+  - P = m × g avec le g de la Lune.
+  - La masse ne dépend pas du lieu.
+  solution: P = 70 × 1,6 = 112 N. Sa masse reste 70 kg (inchangée), seul son poids diminue.
+- enonce: Un objet a un poids de 49 N sur Terre. Calculer sa masse (g = 9,8 N/kg).
+  indices:
+  - m = P / g.
+  solution: m = 49 / 9,8 = 5 kg.
+- enonce: Pourquoi un astronaute flotte-t-il en apesanteur dans une station spatiale, alors que la gravitation terrestre
+    y existe encore ?
+  indices:
+  - L'apesanteur est un état de chute libre continue, pas une absence de gravitation.
+  solution: 'La station et l''astronaute sont en état de chute libre autour de la Terre : ils « tombent » ensemble
+    en permanence, ce qui donne une impesanteur apparente, bien que la gravitation terrestre agisse toujours sur
+    eux.'
+sources:
+- titre: Vikidia, « Gravitation »
+  url: https://fr.vikidia.org/w/index.php?title=Gravitation&oldid=2567038
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Poids »
+  url: https://fr.vikidia.org/w/index.php?title=Poids&oldid=2151809
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

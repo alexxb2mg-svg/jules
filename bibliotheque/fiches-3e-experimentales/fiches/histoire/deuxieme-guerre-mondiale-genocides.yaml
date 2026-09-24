@@ -1,0 +1,97 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: deuxieme-guerre-mondiale-genocides
+declencheurs:
+- '1939'
+- '1945'
+- Shoah
+- camps de concentration
+- chambres à gaz
+- génocide des Tziganes
+- extermination
+- occupation nazie
+- Auschwitz
+essentiel: 'La Seconde Guerre mondiale se déroule du 1er septembre 1939 (invasion de la Pologne par l''Allemagne)
+  au 2 septembre 1945. Elle oppose les Alliés (Royaume-Uni, URSS à partir de 1941, États-Unis à partir de décembre
+  1941, France) à l''Axe (Allemagne nazie, Italie, Japon).
+
+  C''est un conflit planétaire marqué par une violence de masse et une volonté d''anéantissement des populations
+  civiles, bien au-delà des combats militaires.
+
+  La Shoah est le génocide des Juifs commis par les nazis : environ six millions de Juifs d''Europe sont exterminés
+  par la faim, les fusillades de masse ou les chambres à gaz des camps d''extermination. Les Tziganes (Roms) sont
+  eux aussi visés par un génocide, le Samudaripen. D''autres groupes sont persécutés et assassinés : opposants politiques,
+  personnes handicapées, homosexuels.
+
+  Ce projet d''extermination repose sur l''idéologie raciste et antisémite du nazisme, mise en œuvre par Hitler
+  et des dirigeants comme Heinrich Himmler.'
+methode:
+- 'Situer précisément les dates : 1er septembre 1939 (début) au 2 septembre 1945 (capitulation du Japon).'
+- 'Distinguer les deux génocides du programme : celui des Juifs (la Shoah) et celui des Tziganes.'
+- 'Employer le mot « génocide » à bon escient : une extermination organisée et systématique d''un groupe en tant
+  que tel, différente d''un massacre isolé.'
+- Relier ce génocide à l'idéologie raciste du nazisme étudiée dans la notion précédente.
+vocabulaire:
+- terme: Shoah
+  definition: 'mot hébreu signifiant « catastrophe » : le génocide des Juifs d''Europe par les nazis pendant la
+    Seconde Guerre mondiale'
+- terme: anéantissement
+  definition: la destruction totale et volontaire d'un groupe de personnes, au-delà des combats militaires
+- terme: camp d'extermination
+  definition: un camp construit par les nazis dans le but spécifique de tuer massivement des déportés
+erreurs_frequentes:
+- 'Employer « Shoah » et « génocide des Tziganes » comme synonymes : ce sont deux génocides distincts, visant des
+  groupes différents.'
+- Confondre camp de concentration (travail forcé, conditions meurtrières) et camp d'extermination (mis en place
+  pour tuer).
+- Réduire la Seconde Guerre mondiale à des combats entre armées, en oubliant la violence contre les civils.
+- Se tromper sur les dates de début et de fin du conflit.
+exemple:
+  enonce: Explique en quoi la Seconde Guerre mondiale est un conflit d'anéantissement.
+  solution: 'Au-delà des batailles entre armées, les nazis mettent en œuvre une extermination planifiée de populations
+    civiles considérées comme inférieures selon leur idéologie raciste : les Juifs (Shoah) et les Tziganes sont
+    visés par des génocides, avec des camps construits pour tuer en masse.'
+exercices:
+- enonce: Cite les dates de début et de fin de la Seconde Guerre mondiale et l'événement qui la déclenche.
+  indices:
+  - Quel pays est envahi en septembre 1939 ?
+  solution: Du 1er septembre 1939 (invasion de la Pologne par l'Allemagne nazie) au 2 septembre 1945 (capitulation
+    du Japon).
+- enonce: 'Développement construit : présente la Shoah en expliquant qui en sont les victimes, qui l''organise,
+    et par quels moyens.'
+  indices:
+  - Qui décide ?
+  - Quels sont les moyens utilisés (privation, fusillades, chambres à gaz) ?
+  solution: Un développement réussi doit préciser que la Shoah est le génocide des Juifs d'Europe, organisé par
+    le régime nazi dirigé par Hitler et exécuté par des responsables comme Himmler ; il doit citer les moyens (privation
+    de nourriture, travail forcé, fusillades de masse, chambres à gaz dans les camps d'extermination) et rappeler
+    que d'autres groupes sont visés, notamment les Tziganes.
+- enonce: Pourquoi le terme de « génocide » est-il différent de celui de « massacre » ?
+  indices:
+  - 'Pense à l''intention : viser un groupe entier, en tant que tel.'
+  solution: Un génocide est la destruction volontaire, organisée et systématique d'un groupe humain en tant que
+    tel (par exemple les Juifs ou les Tziganes), alors qu'un massacre peut être un épisode de violence isolé, sans
+    ce projet d'extermination totale.
+sources:
+- titre: Vikidia, « Seconde Guerre mondiale »
+  url: https://fr.vikidia.org/w/index.php?title=Seconde_Guerre_mondiale&oldid=2564386
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Shoah »
+  url: https://fr.vikidia.org/w/index.php?title=Shoah&oldid=2561077
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Nazisme »
+  url: https://fr.vikidia.org/w/index.php?title=Nazisme&oldid=2575168
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (idéologie raciste et génocide des Tziganes)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

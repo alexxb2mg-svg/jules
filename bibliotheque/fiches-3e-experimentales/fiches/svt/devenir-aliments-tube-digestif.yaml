@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: devenir-aliments-tube-digestif
+declencheurs:
+- digestion des aliments
+- absorption intestinale
+- nutriments dans le sang
+- tube digestif
+- que deviennent les aliments qu'on mange
+essentiel: 'Le tube digestif (bouche, œsophage, estomac, intestin grêle, gros intestin) transforme progressivement
+  les aliments ingérés en nutriments, des molécules simples que l''organisme peut utiliser.
+
+  La digestion est cette transformation des grosses molécules apportées par l''alimentation (comme l''amidon ou
+  les protéines) en molécules plus simples (comme le glucose ou les acides aminés), grâce à des actions mécaniques
+  (mastication, brassage) et chimiques (enzymes digestives).
+
+  Une fois digérés, les nutriments traversent la paroi de l''intestin grêle pour passer dans le sang : c''est l''absorption
+  intestinale, rendue efficace par une très grande surface d''échange (la paroi intestinale est fortement plissée
+  et couverte de villosités).
+
+  Les nutriments absorbés sont ensuite distribués par le sang à toutes les cellules de l''organisme, qui les utilisent
+  pour produire de l''énergie ou fabriquer leurs propres constituants.
+
+  Les résidus non digérés ou non absorbés poursuivent leur trajet dans le gros intestin avant d''être évacués :
+  ils ne sont pas des nutriments et ne passent pas dans le sang.'
+methode:
+- Suivre le trajet des aliments dans le tube digestif, organe par organe.
+- Distinguer digestion (transformation des aliments en nutriments) et absorption (passage des nutriments dans le
+  sang).
+- Retenir que l'absorption se fait principalement au niveau de l'intestin grêle, grâce à sa grande surface d'échange.
+- Ne pas confondre nutriments (absorbés, utiles) et résidus non digérés (évacués, sans passer dans le sang).
+erreurs_frequentes:
+- Croire que tous les aliments avalés finissent par passer dans le sang (seuls les nutriments absorbés le font).
+- Confondre digestion (transformation chimique et mécanique) et absorption (passage dans le sang).
+- Penser que l'absorption se fait principalement dans l'estomac plutôt que dans l'intestin grêle.
+- Oublier le rôle des résidus non digérés, évacués par le gros intestin.
+exemple:
+  enonce: Pourquoi l'intestin grêle, et non l'estomac, est-il le principal lieu d'absorption des nutriments dans
+    le sang ?
+  solution: L'intestin grêle possède une paroi très plissée, couverte de villosités, ce qui lui donne une immense
+    surface d'échange (plusieurs dizaines de mètres carrés) permettant un passage efficace des nutriments vers le
+    sang ; l'estomac, lui, sert surtout au début de la digestion chimique, pas à l'absorption.
+exercices:
+- enonce: Quelle est la différence entre digestion et absorption ?
+  indices:
+  - L'une transforme, l'autre fait passer dans le sang.
+  solution: La digestion transforme les aliments en nutriments (molécules simples) ; l'absorption fait passer ces
+    nutriments à travers la paroi intestinale jusque dans le sang.
+- enonce: Que deviennent les résidus des aliments qui n'ont pas pu être digérés ni absorbés ?
+  indices:
+  - Ils poursuivent leur trajet dans le tube digestif.
+  solution: Ils passent dans le gros intestin, puis sont évacués de l'organisme sous forme de matières fécales,
+    sans être passés dans le sang.
+- enonce: Citer un organe du tube digestif et préciser son rôle principal dans la digestion.
+  indices:
+  - Bouche, estomac, intestin grêle sont des exemples possibles.
+  solution: Par exemple, l'estomac brasse les aliments et commence leur digestion chimique grâce à des sucs digestifs
+    acides.
+sources:
+- titre: Vikidia, « Appareil digestif »
+  url: https://fr.vikidia.org/w/index.php?title=Appareil_digestif&oldid=2575741
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

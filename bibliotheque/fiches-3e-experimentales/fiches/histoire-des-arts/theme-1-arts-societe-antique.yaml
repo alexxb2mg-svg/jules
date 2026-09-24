@@ -1,0 +1,70 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-1-arts-societe-antique
+declencheurs:
+- art de l'antiquite
+- architecture grecque et romaine
+- ville antique
+- mythes dans l'art antique
+- representation du corps dans l'antiquite
+- art egyptien
+- pharaons dessines plus grands
+- fresques egyptiennes
+essentiel: 'Dans l''Antiquité, l''art est fortement lié à la société : les temples, les théâtres et les monuments
+  publics organisent la ville autour de bâtiments religieux et civiques, une organisation qui influencera ensuite
+  la ville médiévale.
+
+  L''architecture antique développe un vocabulaire de formes et de décors (colonnes, frontons, sculptures) qui deviendra
+  une référence pour de nombreux styles ultérieurs, jusqu''à l''époque contemporaine.
+
+  Les mythes fondateurs (récits sur l''origine du monde ou des peuples) sont une source d''inspiration majeure :
+  ils sont illustrés en peinture, en sculpture et en littérature, souvent pour transmettre des valeurs ou légitimer
+  un pouvoir.
+
+  La représentation de la personne humaine évolue : dans l''art égyptien par exemple, les figures suivent des conventions
+  strictes (taille selon l''importance sociale, pas de perspective), différentes des recherches de réalisme qui
+  se développeront plus tard.'
+methode:
+- Repérer si une œuvre antique suit des conventions de représentation (taille selon l'importance, absence de perspective).
+- Identifier la fonction du bâtiment ou de l'œuvre dans la société antique (religieuse, civique, funéraire).
+- Relier un mythe illustré à ses valeurs ou son message pour la société qui l'a produit.
+- Comparer un élément architectural antique (colonne, arc) à sa réutilisation dans un style plus récent.
+erreurs_frequentes:
+- Croire que l'art égyptien ou grec cherchait le même réalisme que l'art plus tardif.
+- Confondre l'architecture grecque et l'architecture romaine, qui ont des caractéristiques différentes.
+- Réduire les mythes antiques à de simples histoires, sans voir leur rôle social ou politique.
+exemple:
+  enonce: Une fresque d'un tombeau égyptien représente un pharaon bien plus grand que les autres personnages autour
+    de lui.
+  solution: 'Cette différence de taille n''est pas une erreur de proportion : c''est une convention de l''art égyptien
+    qui indique l''importance sociale du personnage (le pharaon), pas sa distance réelle dans l''espace comme le
+    ferait une perspective.'
+exercices:
+- enonce: 'À l''oral (type brevet) : présente une œuvre antique (architecture, sculpture ou peinture) en expliquant
+    sa fonction dans la société de l''époque.'
+  indices:
+  - Un temple grec, une pyramide égyptienne ou un amphithéâtre romain sont de bons exemples.
+  solution: Réussite si la fonction sociale ou religieuse de l'œuvre est clairement expliquée et correspond bien
+    à ce qu'on sait de la civilisation concernée.
+- enonce: Cherche un élément architectural antique (colonne, arc, fronton) encore utilisé dans un bâtiment plus
+    récent (XIXe ou XXe siècle) et explique cette reprise.
+  indices:
+  - Beaucoup de bâtiments publics du XIXe siècle imitent le style antique (colonnes, fronton).
+  solution: Réussite si l'élément architectural identifié est bien d'origine antique et sa reprise clairement expliquée.
+sources:
+- titre: Vikidia, « Art égyptien »
+  url: https://fr.vikidia.org/w/index.php?title=Art_%C3%A9gyptien&oldid=2092027
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Architecture »
+  url: https://fr.vikidia.org/w/index.php?title=Architecture&oldid=2441357
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

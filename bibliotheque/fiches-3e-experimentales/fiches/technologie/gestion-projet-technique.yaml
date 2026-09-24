@@ -1,0 +1,60 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: gestion-projet-technique
+declencheurs:
+- gestion de projet
+- planning
+- étapes du projet
+- répartition des tâches
+- délai
+- jalon
+- équipe projet
+essentiel: 'La gestion de projet est l''ensemble des activités qui organisent le déroulement d''un projet pour atteindre
+  ses objectifs dans les délais et avec les moyens prévus. Un projet a un début et une fin définis, et vise un résultat
+  unique (un objet, un prototype, un document).
+
+
+  Gérer un projet technique en groupe demande de définir les tâches à réaliser, de les répartir entre les membres
+  de l''équipe selon leurs compétences ou leur temps disponible, de fixer des jalons (étapes intermédiaires avec
+  une date), et de suivre l''avancement pour ajuster si nécessaire.
+
+
+  Un planning (souvent représenté par un diagramme) permet de visualiser les tâches, leur durée et leur ordre. Certaines
+  tâches doivent être terminées avant que d''autres ne commencent (dépendances).'
+methode:
+- Lister toutes les tâches nécessaires pour réaliser le projet.
+- Identifier les dépendances entre tâches (quelle tâche doit être finie avant qu'une autre commence).
+- Répartir les tâches entre les membres du groupe selon leurs compétences et le temps disponible.
+- Fixer des jalons (dates intermédiaires) pour vérifier régulièrement l'avancement du projet.
+vocabulaire:
+- terme: jalon
+  definition: étape intermédiaire d'un projet, associée à une date, qui permet de vérifier l'avancement
+- terme: planning
+  definition: représentation dans le temps des tâches d'un projet, avec leur durée et leur ordre
+erreurs_frequentes:
+- Ne pas identifier les dépendances entre tâches, ce qui bloque le déroulement du projet.
+- Répartir les tâches sans tenir compte des compétences ou du temps disponible de chacun.
+- Ne fixer aucun jalon intermédiaire, ce qui empêche de repérer un retard avant la fin du projet.
+exemple:
+  enonce: Un groupe doit fabriquer une maquette de maison connectée en 4 séances. Proposer une répartition simple
+    des grandes tâches sur ces séances.
+  solution: 'Séance 1 : cahier des charges et répartition des rôles (jalon 1). Séance 2 : conception numérique de
+    la maquette. Séance 3 : fabrication et câblage des capteurs/actionneurs (jalon 2). Séance 4 : programmation,
+    tests et présentation finale (jalon 3).'
+exercices:
+- enonce: Dans un projet, la tâche « peindre la pièce » ne peut commencer qu'après la tâche « assembler la pièce
+    ». Comment appelle-t-on ce lien entre les deux tâches ?
+  indices:
+  - Pense au mot utilisé dans la fiche pour ce type de lien.
+  solution: 'C''est une dépendance : la tâche « peindre » dépend de la fin de la tâche « assembler ».'
+sources:
+- titre: Wikipédia, « Gestion de projet »
+  url: https://fr.wikipedia.org/w/index.php?title=Gestion_de_projet&oldid=238705832
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

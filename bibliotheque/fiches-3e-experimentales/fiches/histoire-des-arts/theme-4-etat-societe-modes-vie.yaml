@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-4-etat-societe-modes-vie
+declencheurs:
+- hierarchie des genres artistiques
+- art et mode de vie ancien regime
+- danse de cour
+- peinture de paysage histoire
+- genres artistiques classes
+essentiel: 'Entre le XIIIe et le XVIIIe siècle, les genres artistiques (peinture d''histoire, portrait, paysage,
+  nature morte…) sont classés selon une hiérarchie officielle : la peinture d''histoire (scènes religieuses, mythologiques
+  ou historiques) est considérée comme le genre « noble », au-dessus du portrait, puis du paysage et de la nature
+  morte.
+
+  Cette période voit aussi évoluer l''habitat, le décor et le mobilier des intérieurs, reflétant les changements
+  des modes de vie selon les milieux sociaux.
+
+  Le rapport à la nature se transforme également : le paysage devient un genre pictural à part entière, et l''on
+  classe et représente les animaux dans des bestiaires (ouvrages illustrés) ou des œuvres scientifiques.
+
+  La danse évolue de pratiques populaires spontanées vers des danses de cour codifiées, puis stylisées, reflétant
+  les usages sociaux des différentes classes de la société.'
+methode:
+- Identifier le genre pictural d'une œuvre (histoire, portrait, paysage, nature morte) et sa place dans la hiérarchie
+  ancienne.
+- Observer les objets ou le décor représentés pour situer un mode de vie social.
+- Distinguer une danse populaire d'une danse de cour à partir de son contexte ou de sa représentation.
+- Relier une évolution scientifique ou technique (nouvelles connaissances sur la nature) à son influence sur l'art.
+erreurs_frequentes:
+- Croire que tous les genres picturaux avaient le même prestige à cette époque.
+- Confondre une scène de genre (vie quotidienne) et une peinture d'histoire (sujet noble).
+- Ignorer que la hiérarchie des genres n'existe plus de la même façon aujourd'hui.
+exemple:
+  enonce: Une grande peinture représente un épisode mythologique avec de nombreux personnages en mouvement, exposée
+    dans un salon officiel.
+  solution: Il s'agit d'une peinture d'histoire, considérée à cette époque comme le genre le plus noble, réservé
+    aux plus grands formats et aux sujets religieux, mythologiques ou historiques, au sommet de la hiérarchie officielle
+    des genres.
+exercices:
+- enonce: 'À l''oral (type brevet) : explique la hiérarchie des genres artistiques de cette période en citant au
+    moins deux genres et leur rang.'
+  indices:
+  - La peinture d'histoire est en haut, la nature morte est plutôt en bas.
+  solution: Réussite si au moins deux genres sont cités avec leur rang relatif correctement situé.
+- enonce: Cherche un exemple de mobilier ou de décor d'intérieur de cette période et explique ce qu'il révèle du
+    mode de vie de ses propriétaires.
+  indices:
+  - Le confort, la richesse des matériaux ou la taille des pièces donnent des indices sociaux.
+  solution: Réussite si le lien entre l'objet observé et un aspect du mode de vie social est clairement établi.
+sources:
+- titre: Vikidia, « Nature morte »
+  url: https://fr.vikidia.org/w/index.php?title=Nature_morte&oldid=2096553
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Danse »
+  url: https://fr.vikidia.org/w/index.php?title=Danse&oldid=2563087
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

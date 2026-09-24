@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: reproduction-sexuee-asexuee
+declencheurs:
+- reproduction sexuée
+- reproduction asexuée
+- bouturage
+- gamètes
+- dissémination des graines
+- clone naturel
+- bouture de plante identique
+- clone et enfant différent
+essentiel: 'La reproduction sexuée nécessite la rencontre de deux cellules reproductrices (gamètes), l''une mâle
+  et l''une femelle, dont la fusion (fécondation) donne naissance à un nouvel individu génétiquement différent de
+  ses deux parents.
+
+  La reproduction asexuée ne nécessite qu''un seul individu, sans fusion de gamètes : le nouvel individu est génétiquement
+  identique au parent (un clone). Elle se rencontre chez certains végétaux (bouturage, marcottage) et certains animaux
+  simples.
+
+  Chez les Vertébrés et les plantes à fleurs, la reproduction sexuée est le mode principal : les gamètes portent
+  le patrimoine génétique de chaque parent, et leur fusion crée une combinaison nouvelle chez le descendant.
+
+  Le milieu de vie influence fortement les modes de reproduction et de dissémination (par exemple, les plantes à
+  fleurs disséminent leurs graines par le vent, l''eau ou les animaux).
+
+  Ces différents modes de reproduction et l''influence du milieu sur la survie des jeunes individus jouent un rôle
+  important dans la dynamique des populations d''une espèce.'
+methode:
+- Vérifier s'il y a fusion de deux gamètes (reproduction sexuée) ou non (reproduction asexuée).
+- Repérer si le descendant obtenu est génétiquement identique au parent (asexuée) ou différent des deux parents
+  (sexuée).
+- Identifier le mode de dissémination des graines ou des jeunes (vent, eau, animaux) selon le milieu.
+- Relier le mode de reproduction observé à son intérêt pour la survie de l'espèce dans son milieu.
+erreurs_frequentes:
+- Croire que la reproduction asexuée produit un individu différent génétiquement du parent (elle produit un clone).
+- Penser que seuls les animaux se reproduisent de façon sexuée (les plantes à fleurs aussi, via le pollen et les
+  ovules).
+- Confondre gamète (cellule reproductrice) et graine ou œuf (résultat de la fécondation).
+- Oublier que la reproduction asexuée existe aussi chez certains végétaux couramment observés (bouturage).
+exemple:
+  enonce: Une bouture de géranium replantée donne une nouvelle plante identique génétiquement au plant d'origine.
+    Est-ce de la reproduction sexuée ou asexuée ?
+  solution: 'C''est de la reproduction asexuée : un seul individu (la plante mère) donne naissance à un descendant
+    sans fusion de gamètes, génétiquement identique à elle.'
+exercices:
+- enonce: Pourquoi les descendants issus d'une reproduction sexuée ne sont-ils jamais identiques à leurs parents
+    ?
+  indices:
+  - Pense à ce qui se passe lors de la fusion des deux gamètes.
+  solution: Parce que le descendant reçoit une combinaison nouvelle du patrimoine génétique de ses deux parents
+    lors de la fécondation, différente de chacun d'eux pris séparément.
+- enonce: Citer un exemple de mode de dissémination des graines chez une plante à fleurs.
+  indices:
+  - Pense au vent, à l'eau, ou au transport par les animaux.
+  solution: Le vent (graines légères munies d'ailes ou de poils), l'eau (graines flottantes), ou le transport par
+    les animaux (graines accrochées au pelage ou consommées puis rejetées).
+- enonce: Chez les Vertébrés, quel est le nom des deux types de gamètes qui fusionnent lors de la reproduction sexuée
+    ?
+  indices:
+  - Un gamète mâle et un gamète femelle.
+  solution: Le spermatozoïde (gamète mâle) et l'ovule (gamète femelle).
+sources:
+- titre: Vikidia, « Reproduction sexuée »
+  url: https://fr.vikidia.org/w/index.php?title=Reproduction_sexu%C3%A9e&oldid=2554003
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Gamète »
+  url: https://fr.vikidia.org/w/index.php?title=Gam%C3%A8te&oldid=1785200
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: numerique-processus-materiau
+declencheurs:
+- dessiner avec un logiciel
+- art generatif
+- impression 3d en arts plastiques
+- impact ecologique du numerique en art
+- algorithme et art
+essentiel: 'Le numérique peut être utilisé comme un simple outil (dessiner sur tablette) mais aussi comme un véritable
+  matériau artistique : un algorithme, un programme ou un capteur peuvent générer ou transformer une image, un son
+  ou une forme d''une façon qu''un geste manuel ne permettrait pas.
+
+  Cette appropriation des langages numériques crée un dialogue entre pratiques traditionnelles (dessin, peinture,
+  sculpture) et pratiques numériques (image générée, impression 3D, capteurs interactifs).
+
+  Utiliser le numérique en art suppose aussi un regard critique sur son coût énergétique : la création et le stockage
+  d''images numériques, l''impression 3D ou le calcul consomment de l''énergie, ce qui fait partie des questions
+  posées par cette pratique.'
+methode:
+- Distinguer un usage du numérique comme simple outil (remplacer un pinceau) d'un usage comme véritable matériau
+  (générer une forme imprévisible).
+- Choisir un procédé numérique (algorithme, capteur, logiciel) en fonction de ce qu'il permet de faire que la main
+  seule ne permet pas.
+- Interroger le coût énergétique du procédé choisi si le projet le mobilise fortement.
+- Mettre en dialogue le résultat numérique avec une pratique traditionnelle si le projet le permet.
+erreurs_frequentes:
+- Utiliser un logiciel uniquement pour aller plus vite, sans explorer ce qu'il permet de plus.
+- Croire que le numérique est un matériau « sans coût », sans impact énergétique.
+- Opposer systématiquement pratiques traditionnelles et pratiques numériques au lieu de les croiser.
+exemple:
+  enonce: Un artiste programme un petit algorithme qui dessine des motifs différents à chaque exécution, à partir
+    de règles simples qu'il a fixées.
+  solution: 'Le numérique n''est pas ici un simple outil de dessin : c''est le processus (l''algorithme) qui devient
+    le matériau de l''œuvre, produisant des résultats que l''artiste n''a pas dessinés lui-même trait par trait.'
+exercices:
+- enonce: 'À la maison : sur une application de dessin simple, essaie un outil que tu n''utilises jamais (symétrie
+    automatique, génération de motifs, filtre) et observe ce qu''il produit que ta main seule ne ferait pas.'
+  indices:
+  - Cherche un outil qui transforme ou génère, pas seulement qui colorie.
+  solution: Réussite si tu identifies clairement ce que l'outil numérique apporte de différent par rapport à un
+    dessin entièrement manuel.
+- enonce: Réfléchis à un projet numérique que tu pourrais réaliser (photo, montage, dessin sur tablette) et note
+    une façon d'en limiter le coût énergétique (moins de rendus, moins d'impressions).
+  indices:
+  - Pense au nombre de fois où tu enregistres, imprimes ou recalcules un fichier.
+  solution: Réussite si la solution proposée réduit concrètement l'usage d'énergie sans empêcher le projet.
+sources:
+- titre: Wikipédia, « Art numérique »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_num%C3%A9rique&oldid=238186012
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

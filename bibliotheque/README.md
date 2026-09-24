@@ -10,7 +10,7 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 | Type | Rôle | Exemple ici |
 |---|---|---|
 | `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : programme officiel de 3e, 252 notions |
-| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 38 notions de maths de 3e |
+| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
 
 Chaque bibliothèque déclare aussi un **statut**, que Jules transmet au modèle et que l'élève voit dans le sélecteur :

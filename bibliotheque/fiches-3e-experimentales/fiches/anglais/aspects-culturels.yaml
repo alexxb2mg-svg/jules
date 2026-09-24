@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: aspects-culturels
+declencheurs:
+- culture anglophone
+- civilisation anglaise
+- clichés sur les Anglais
+- pays anglophones
+- Royaume-Uni culture
+- stéréotypes culturels
+essentiel: 'Découvrir les aspects culturels d''une langue, c''est apprendre à percevoir les spécificités réelles
+  des pays et régions où elle est parlée, en dépassant les clichés (par exemple : « tous les Anglais boivent du
+  thé à 17h » ou « tous les Américains mangent des hamburgers tous les jours »). Ces images figées ne rendent pas
+  compte de la diversité réelle des sociétés.
+
+
+  L''anglais est parlé comme langue officielle ou courante dans de nombreux pays très différents entre eux : le
+  Royaume-Uni, les États-Unis, l''Irlande, l''Australie, le Canada, l''Afrique du Sud, l''Inde, et beaucoup d''autres.
+  Chacun a son histoire, sa culture, ses accents, ses usages propres.
+
+
+  Connaître des références culturelles (institutions, fêtes, façons de vivre) aide à mieux comprendre un texte ou
+  un document authentique, et à interpréter correctement le sens d''un message qui suppose des connaissances communes
+  (par exemple comprendre pourquoi Halloween est important dans certains pays anglophones, ou ce qu''est le Parlement
+  britannique).'
+methode:
+- Se demander, face à une affirmation sur un pays anglophone, si elle décrit vraiment toute la population ou seulement
+  une image simplifiée (un stéréotype).
+- Chercher des informations vérifiées sur un pays anglophone (institutions, géographie, société) plutôt que de se
+  fier à des clichés entendus.
+- Comparer les usages du pays étudié avec ceux de la France, pour mieux comprendre les ressemblances et les différences.
+- Mobiliser ces connaissances culturelles pour mieux comprendre le contexte d'un texte ou d'un document authentique.
+vocabulaire:
+- terme: stéréotype
+  definition: image simplifiée et généralisée d'un groupe de personnes, souvent fausse ou incomplète
+- terme: pays anglophone
+  definition: pays où l'anglais est une langue officielle ou couramment parlée
+erreurs_frequentes:
+- Croire qu'un stéréotype décrit toute la population d'un pays.
+- Confondre le Royaume-Uni (un État) et l'Angleterre (une de ses quatre nations, avec l'Écosse, le Pays de Galles
+  et l'Irlande du Nord).
+- Penser que tous les pays anglophones partagent exactement la même culture.
+exemple:
+  enonce: Expliquer pourquoi dire « the English » pour parler de tous les habitants du Royaume-Uni est une erreur.
+  solution: 'Le Royaume-Uni (United Kingdom) est composé de quatre nations : l''Angleterre (England), l''Écosse
+    (Scotland), le Pays de Galles (Wales) et l''Irlande du Nord (Northern Ireland). « The English » désigne seulement
+    les habitants d''Angleterre, pas tous les habitants du Royaume-Uni.'
+exercices:
+- enonce: Citer deux pays, autres que le Royaume-Uni et les États-Unis, où l'anglais est une langue officielle ou
+    très largement parlée.
+  indices:
+  - Pense à des pays du Commonwealth ou d'autres continents.
+  solution: 'Exemples possibles : le Canada, l''Australie, l''Irlande, l''Afrique du Sud, l''Inde, la Nouvelle-Zélande.'
+- enonce: Pourquoi est-il utile de connaître des références culturelles d'un pays pour comprendre un texte écrit
+    dans sa langue ?
+  indices:
+  - Pense à un texte qui parle d'une fête ou d'une institution sans l'expliquer.
+  solution: 'Un texte suppose souvent des connaissances communes avec ses lecteurs habituels : sans connaître le
+    contexte culturel (une fête, une institution, une habitude), certaines phrases ou sous-entendus peuvent être
+    mal compris ou paraître incohérents.'
+sources:
+- titre: Simple English Wikipedia, « United Kingdom »
+  url: https://simple.wikipedia.org/w/index.php?title=United_Kingdom&oldid=11001367
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Simple English Wikipedia, « Multiculturalism »
+  url: https://simple.wikipedia.org/w/index.php?title=Multiculturalism&oldid=10547171
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

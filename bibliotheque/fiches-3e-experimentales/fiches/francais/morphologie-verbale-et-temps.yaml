@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: morphologie-verbale-et-temps
+declencheurs:
+- radical et terminaison
+- temps et modes
+- conjuguer un verbe
+- indicatif conditionnel impératif
+- temps simples et composés
+- marque de personne
+essentiel: 'Une forme verbale se décompose en un radical (partie qui porte le sens, souvent stable) et une terminaison
+  (qui marque le temps et la personne) : dans « nous chant-ions », « chant- » est le radical, « -ions » marque l''imparfait
+  et la 1ʳᵉ personne du pluriel.
+
+  Les modes personnels du français sont l''indicatif, le conditionnel, l''impératif et le subjonctif. L''indicatif
+  a des temps simples (présent, imparfait, passé simple, futur simple) et des temps composés formés avec un auxiliaire
+  (être ou avoir) au temps simple correspondant + le participe passé (passé composé, plus-que-parfait, futur antérieur).
+
+  Pour former un temps composé : conjuguer l''auxiliaire au temps simple qui donne son nom au temps composé, puis
+  ajouter le participe passé du verbe (« il avait fini » : avoir à l''imparfait + participe passé = plus-que-parfait).
+
+  Le subjonctif présent et l''impératif présent se forment le plus souvent à partir du radical du présent de l''indicatif,
+  avec des terminaisons propres à chaque mode.'
+methode:
+- Séparer le radical (souvent identique à l'infinitif sans -er/-ir/-re) de la terminaison.
+- 'Identifier le mode d''après la terminaison et le contexte (fait certain : indicatif ; hypothèse, politesse :
+  conditionnel ; ordre : impératif ; souhait, doute : subjonctif).'
+- 'Pour un temps composé : trouver l''auxiliaire (être ou avoir), le conjuguer au temps simple requis, ajouter le
+  participe passé.'
+- 'Pour le subjonctif présent : partir du radical de la 3e personne du pluriel au présent de l''indicatif la plupart
+  du temps (ils finiss-ent → que je finiss-e).'
+- 'Vérifier les terminaisons de personne : -s/-s/-t (ou rien)/-ons/-ez/-ent à l''indicatif présent pour la plupart
+  des verbes.'
+vocabulaire:
+- terme: radical
+  definition: partie du verbe qui porte le sens et reste en général stable
+- terme: temps composé
+  definition: temps formé avec un auxiliaire conjugué + le participe passé
+erreurs_frequentes:
+- 'Confondre le radical d''un verbe irrégulier avec celui de l''infinitif (aller : radical « v- » au présent, «
+  all- » à l''imparfait).'
+- Se tromper d'auxiliaire pour un temps composé (la plupart des verbes utilisent avoir ; être pour les verbes pronominaux
+  et certains verbes de mouvement/état).
+- Oublier la terminaison de personne et laisser l'infinitif.
+- 'Confondre futur simple et conditionnel présent (même radical, terminaisons différentes : -ai/-as/-a... contre
+  -ais/-ais/-ait...).'
+exemple:
+  enonce: Décomposer « vous auriez fini » et donner son temps et son mode.
+  solution: '« auriez » = avoir au conditionnel présent (radical « aur- » + terminaison « -iez ») + participe passé
+    « fini » : c''est le conditionnel passé du verbe finir.'
+exercices:
+- enonce: 'Décomposer « ils auraient chanté » : radical, terminaison de l''auxiliaire, temps et mode.'
+  indices:
+  - Quel est l'infinitif de l'auxiliaire ?
+  - -aient est la terminaison de quel temps ?
+  solution: 'auraient = avoir (radical aur-) + terminaison -aient (conditionnel présent, 3e personne du pluriel)
+    + chanté (participe passé) : conditionnel passé de chanter.'
+- enonce: 'Mettre au subjonctif présent, 3e personne du singulier : finir, prendre.'
+  indices:
+  - Partir du radical de « ils finissent », « ils prennent ».
+  solution: qu'il finisse ; qu'il prenne.
+- enonce: Donner le temps et le mode de « eût été » et dire comment il se forme.
+  indices:
+  - « eût » est quel temps de l'auxiliaire avoir ?
+  solution: '« eût été » est le subjonctif plus-que-parfait du verbe être : avoir au subjonctif imparfait (eût)
+    + participe passé (été).'
+sources:
+- titre: Wikipédia, « Morphologie du verbe en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Morphologie_du_verbe_en_fran%C3%A7ais&oldid=237323537
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

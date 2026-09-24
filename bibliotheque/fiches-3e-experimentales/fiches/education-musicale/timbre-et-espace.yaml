@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: timbre-et-espace
+declencheurs:
+- difference entre deux instruments qui jouent la meme note
+- timbre d'un instrument
+- reconnaitre un instrument a l'oreille
+- son qui vient de loin ou de pres
+- espace sonore
+essentiel: 'Le timbre est ce qui permet de reconnaître un instrument ou une voix, même quand deux sources jouent
+  exactement la même note : un piano et une flûte jouant le même do ne sonnent pas pareil, à cause de leur timbre
+  différent.
+
+  Le timbre dépend de la façon dont le son est produit (une corde frottée, pincée, un souffle dans un tuyau, des
+  cordes vocales) et des harmoniques qui accompagnent la note principale.
+
+  L''espace sonore désigne la façon dont les sons sont perçus dans l''espace : un son peut sembler venir de près
+  ou de loin, de la gauche ou de la droite, être sec (dans une petite pièce) ou résonner longtemps (dans une grande
+  salle ou une église).
+
+  En composition ou en écoute, jouer sur le choix des timbres et sur la disposition des sons dans l''espace permet
+  de créer des ambiances très différentes.'
+methode:
+- Écouter une note jouée par deux instruments différents pour repérer ce qui change (le timbre) et ce qui reste
+  identique (la hauteur).
+- Repérer si un son semble proche ou lointain, à gauche ou à droite dans un enregistrement.
+- Associer un timbre à sa source de production (corde frottée, soufflée, voix…).
+- Décrire un timbre avec des mots précis (chaud, métallique, doux, rugueux) plutôt que vagues.
+vocabulaire:
+- terme: timbre
+  definition: ensemble des caractéristiques d'un son qui permettent de reconnaître l'instrument ou la voix qui le
+    produit, indépendamment de la hauteur
+erreurs_frequentes:
+- Confondre le timbre et la hauteur d'un son (« il chante plus aigu » n'est pas une question de timbre).
+- Ne pas savoir associer un timbre entendu à son mode de production.
+- Ignorer que l'espace (proximité, résonance) modifie la perception d'un même timbre.
+exemple:
+  enonce: Un violon et une guitare jouent tous les deux la même note.
+  solution: 'La hauteur perçue est identique, mais le timbre diffère car le violon est frotté avec un archet (son
+    continu, riche en harmoniques) alors que la guitare est pincée (son qui s''éteint progressivement) : deux modes
+    de production différents donnent deux timbres différents.'
+exercices:
+- enonce: 'À la maison : enregistre le même petit son (par exemple frapper un verre) produit avec deux objets différents
+    et compare les deux timbres obtenus avec des mots précis.'
+  indices:
+  - Utilise des adjectifs comme « clair », « sourd », « métallique », « sec ».
+  solution: Réussite si au moins deux adjectifs précis et différents décrivent bien la différence de timbre entendue.
+- enonce: 'Ferme les yeux et fais-toi déplacer une source sonore (téléphone qui joue un son) autour de toi par quelqu''un
+    : essaie de dire d''où vient le son à chaque fois.'
+  indices:
+  - Concentre-toi sur la différence entre les deux oreilles.
+  solution: Réussite si tu retrouves correctement la direction du son dans la majorité des essais.
+sources:
+- titre: Wikipédia, « Timbre (musique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Timbre_%28musique%29&oldid=230099700
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Instrument de musique »
+  url: https://fr.vikidia.org/w/index.php?title=Instrument_de_musique&oldid=2445551
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
