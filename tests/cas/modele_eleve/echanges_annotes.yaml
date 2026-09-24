@@ -1,0 +1,118 @@
+# Banc d'essai de l'extracteur (docs/MODELE-ELEVE.md, §2). Echanges annotes a la main.
+# En CI : forme du JSON avec le moteur factice. Hors CI (lot 1) : accord d'un vrai modele avec
+# l'annotation, champ par champ ; objectif >= 90 % sur resultat et aide, >= 80 % sur affect.
+# Les cas sont choisis la ou un extracteur se trompe. A enrichir : visee 60 echanges, toutes matieres.
+echanges:
+  - id: aide-2-dans-le-message-precedent
+    messages:
+      - {role: eleve, texte: "je dois calculer 1/2 + 1/3 mais je sais pas"}
+      - {role: bot, texte: "Pour additionner deux fractions, il faut qu'elles aient le même dénominateur. Lequel pourrais-tu choisir ?"}
+      - {role: eleve, texte: "6 ? donc 3/6 + 2/6 = 5/6"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: juste, aide: 2, auto_correction: false, declare_compris: false, affect: hesitant}
+
+  - id: relance-ouverte-puis-faux
+    messages:
+      - {role: eleve, texte: "1/2 + 1/3 ça fait combien"}
+      - {role: bot, texte: "Qu'est-ce que tu as déjà essayé ?"}
+      - {role: eleve, texte: "2/5"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: faux, aide: 1, auto_correction: false, declare_compris: false, affect: neutre}
+
+  - id: declaration-sans-preuve
+    messages:
+      - {role: bot, texte: "Donc pour le passé composé avec être, le participe s'accorde avec le sujet. Tu veux essayer une phrase ?"}
+      - {role: eleve, texte: "ok j'ai compris merci"}
+    attendu:
+      - {matiere: Français, tentative: false, resultat: sans_objet, declare_compris: true, affect: neutre}
+
+  - id: auto-correction-spontanee
+    messages:
+      - {role: bot, texte: "À toi : résous 3x = 12."}
+      - {role: eleve, texte: "x = 36... non attends c'est une division, x = 4"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: juste, aide: 0, auto_correction: true, affect: neutre}
+
+  - id: correction-apres-remarque-nest-pas-auto
+    messages:
+      - {role: eleve, texte: "x = 36"}
+      - {role: bot, texte: "Regarde bien : 3 fois 36, ça fait 12 ?"}
+      - {role: eleve, texte: "ah non, x = 4"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: juste, aide: 2, auto_correction: false, affect: neutre}
+
+  - id: partiel-etourderie
+    messages:
+      - {role: bot, texte: "Calcule l'aire d'un rectangle de 7 cm sur 8 cm."}
+      - {role: eleve, texte: "longueur fois largeur donc 7 x 8 = 54 cm²"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: partiel, aide: 0, explique_methode: true, affect: neutre}
+
+  - id: frustration-explicite
+    messages:
+      - {role: bot, texte: "Presque ! Regarde le dénominateur."}
+      - {role: eleve, texte: "j'en ai marre je comprends rien à ces fractions"}
+    attendu:
+      - {matiere: Mathématiques, tentative: false, resultat: sans_objet, affect: frustre}
+
+  - id: decouragement
+    messages:
+      - {role: eleve, texte: "je suis trop nulle j'y arriverai jamais en anglais"}
+    attendu:
+      - {matiere: Anglais, tentative: false, resultat: sans_objet, affect: decourage}
+
+  - id: explique-methode-en-langue
+    messages:
+      - {role: bot, texte: "Pourquoi as-tu mis « went » et pas « goed » ?"}
+      - {role: eleve, texte: "parce que go est irrégulier, au prétérit ça fait went"}
+    attendu:
+      - {matiere: Anglais, tentative: true, resultat: juste, aide: 1, explique_methode: true, affect: neutre}
+
+  - id: photo-illisible
+    messages:
+      - {role: eleve, texte: "[+ photo] j'ai trouvé 12,5 cm pour la longueur AB"}
+    attendu:
+      - {matiere: Mathématiques, resultat: sans_objet, certitude: basse}
+
+  - id: deux-tentatives-un-message
+    messages:
+      - {role: bot, texte: "Conjugue « finir » et « prendre » au passé composé, 1re personne du singulier."}
+      - {role: eleve, texte: "j'ai fini et j'ai prendu"}
+    attendu:
+      - {matiere: Français, tentative: true, resultat: juste, aide: 0}
+      - {matiere: Français, tentative: true, resultat: faux, aide: 0}
+
+  - id: indice-fort-exemple-voisin
+    messages:
+      - {role: eleve, texte: "comment on développe 3(x + 2)"}
+      - {role: bot, texte: "Regarde cet exemple : 4(x + 5) = 4x + 20. On multiplie chaque terme par 4. À toi."}
+      - {role: eleve, texte: "3x + 6"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: juste, aide: 3, affect: neutre}
+
+  - id: question-pas-tentative
+    messages:
+      - {role: eleve, texte: "c'est quoi déjà un COD ?"}
+    attendu:
+      - {matiere: Français, tentative: false, resultat: sans_objet, declare_compris: false, affect: neutre}
+
+  - id: hesitation-mais-juste-sans-aide
+    messages:
+      - {role: bot, texte: "Quelle est la capitale de l'Australie ?"}
+      - {role: eleve, texte: "euh je crois que c'est Canberra ?"}
+    attendu:
+      - {matiere: Histoire-Géographie, tentative: true, resultat: juste, aide: 0, affect: hesitant}
+
+  - id: histoire-date-fausse
+    messages:
+      - {role: bot, texte: "En quelle année a commencé la Première Guerre mondiale ?"}
+      - {role: eleve, texte: "1918"}
+    attendu:
+      - {matiere: Histoire-Géographie, tentative: true, resultat: faux, aide: 0, affect: neutre}
+
+  - id: enthousiasme-apres-reussite
+    messages:
+      - {role: bot, texte: "Et donc x vaut ?"}
+      - {role: eleve, texte: "x = 5 !! trop bien j'ai compris"}
+    attendu:
+      - {matiere: Mathématiques, tentative: true, resultat: juste, aide: 1, declare_compris: true, affect: enthousiaste}

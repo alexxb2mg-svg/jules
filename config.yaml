@@ -48,6 +48,26 @@ modules:
     reglages:
       heure: "20:00"
       questions: true  # une ou deux questions a poser a l'eleve, sans savoir faire l'exercice
+  - id: modele_eleve   # croyance chiffree par notion, oubli, calibration par l'epreuve (docs/MODELE-ELEVE.md)
+    actif: false       # squelette : ne pas activer avant les lots 1 a 4 et leurs criteres d'acceptation
+    reglages:
+      modele_analyse: principal     # extraction des faits : jamais 'rapide' sans le banc d'essai (§2)
+      estimateur: bkt               # bkt | dernier_statut (ancienne regle, pour comparer)
+      capteurs:                     # sensibilite / specificite de depart, recalees par la calibration (§4.1)
+        tentative_aide0: {se: 0.85, sp: 0.80}
+        tentative_aide1: {se: 0.85, sp: 0.65}
+        tentative_aide2: {se: 0.85, sp: 0.50}
+        tentative_aide3: {se: 0.90, sp: 0.35}
+        auto_correction: {se: 0.45, sp: 0.92}
+        explication: {se: 0.55, sp: 0.90}
+        declaration: {se: 0.90, sp: 0.25}
+        jugement_ia: {se: 0.85, sp: 0.60}
+      apprentissage: {aide0: 0.10, aide1: 0.12, aide2: 0.15, aide3: 0.15}   # §4.4
+      prior: {global: 0.30, force: 5}                                        # §4.5
+      repetition: {decroissance: 0.5, plafond_seance: 2.0}                   # §4.3
+      oubli: {retention_cible: 0.85, glissement_epreuve: 0.05, chance_epreuve: 0.10}  # §5
+      calibration: {actif: true, epreuves_min: 8, force_a_priori: 5, fenetre_mesure: 60}  # §7
+      carnet: {actif: true, seuil_surprise: 1.386, max_lecons: 12, expiration_jours: 45}  # §8
 
 notifieurs:
   - id: fichier        # donnees/notifications/AAAA-MM-JJ.log

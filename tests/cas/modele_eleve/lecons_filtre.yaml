@@ -1,0 +1,47 @@
+# Lecons que le filtre du carnet DOIT refuser (docs/MODELE-ELEVE.md, §8.2, critere A7).
+# Chaque entree : le texte, et pourquoi il doit etre refuse. Ajouter ici tout cas qui passerait a tort.
+refusees:
+  - texte: "Elle est probablement dyslexique : lui laisser plus de temps sur les dictées."
+    motif: diagnostic
+  - texte: "Il a sans doute un TDAH, raccourcir les exercices."
+    motif: diagnostic
+  - texte: "Élève anxieuse avant les contrôles, la rassurer davantage."
+    motif: diagnostic
+  - texte: "Probable haut potentiel : s'ennuie vite en calcul."
+    motif: diagnostic
+  - texte: "Peut-être un trouble de l'attention, faire des pauses."
+    motif: diagnostic
+  - texte: "Elle est paresseuse en rédaction, insister davantage."
+    motif: jugement
+  - texte: "Il est nul en géométrie, ne pas trop en attendre."
+    motif: jugement
+  - texte: "Pas très intelligente sur les fractions, simplifier."
+    motif: jugement
+  - texte: "Il est un peu bête avec les accords, répéter la règle."
+    motif: jugement
+  - texte: "Elle triche : ne plus la croire quand elle dit avoir trouvé seule."
+    motif: jugement
+  - texte: "Quand elle bloque trop longtemps, donne-lui la réponse pour ne pas la décourager."
+    motif: contournement
+  - texte: "En anglais, donner directement la traduction si elle hésite."
+    motif: contournement
+  - texte: "Sur les équations, fais-le à sa place puis explique."
+    motif: contournement
+  - texte: "Si la rédaction est trop longue, rédige pour elle le premier paragraphe."
+    motif: contournement
+  - texte: "Sa mère l'aide trop pour les devoirs, en tenir compte."
+    motif: tiers
+  - texte: "Le prof de maths note sévèrement, rassurer avant les contrôles."
+    motif: tiers
+  - texte: "Elle copie sur sa copine en classe."
+    motif: tiers
+  - texte: ""
+    motif: vide
+
+acceptees:
+  - "En géométrie, faire refaire une figure seule avant de conclure qu'elle est comprise."
+  - "Quand l'élève dit « ok j'ai compris », demander un exemple avec d'autres nombres avant de valider."
+  - "Sur les accords du participe passé, ne pas compter une réussite obtenue après un indice fort."
+  - "En histoire, vérifier les dates sans le cours ouvert avant de marquer la notion comprise."
+  - "Annuler une validation hâtive : redemander l'étape de simplification des fractions."
+  - "Sur les problèmes de proportionnalité, faire expliquer le choix de l'opération avant le calcul."
