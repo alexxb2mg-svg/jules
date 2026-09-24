@@ -26,7 +26,15 @@ from typing import Any
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from jules.bibliotheques import Catalogue, Notion, candidats, charger_catalogue, texte_direction, texte_fiche
+from jules.bibliotheques import (
+    SCORE_FORT,
+    Catalogue,
+    Notion,
+    candidats_notes,
+    charger_catalogue,
+    texte_direction,
+    texte_fiche,
+)
 from jules.llm.base import TEXTE_PHOTO_SEULE, Tour
 from jules.modules.base import Module, extraire_json
 from jules.stockage import Conversation, Message
@@ -48,7 +56,9 @@ CONSIGNE_DETECTION = """Tu rattaches le travail d'un élève à UNE notion d'une
 Lis son message (et la photo de son exercice s'il y en a une), puis réponds UNIQUEMENT par un objet JSON :
 {"notion": "<identifiant de la liste, ou vide>", "confiance": "haute|moyenne|faible"}
 - Choisis l'identifiant tel quel dans la liste, sans l'inventer ni le modifier.
-- Si rien ne correspond clairement, ou si ce n'est pas du travail scolaire : "notion": "".
+- Une question de cours ou de curiosité sur un sujet du programme compte comme du travail scolaire
+  (« c'est quoi le mur de Berlin » -> la notion d'histoire qui en parle) : choisis la notion la plus proche.
+- "notion": "" seulement si le message n'a aucun lien avec le programme (vie personnelle, bavardage).
 Liste (identifiant | matière | notion) :
 """
 
@@ -153,13 +163,16 @@ class Brique(Module):
 
     def detecter(self, eleve: Message) -> tuple[str, str] | None:
         """Propose (id de notion, confiance) pour un message de l'eleve, ou None."""
-        liste = candidats(self.catalogue, eleve.texte) if eleve.texte else []
+        notes = candidats_notes(self.catalogue, eleve.texte) if eleve.texte else []
         calcul = ressemble_a_un_calcul(eleve.texte)
-        if not liste and not eleve.images and not calcul:
+        if not notes and not eleve.images and not calcul:
             return None  # ni mot reconnu, ni photo, ni calcul : rien a rattacher
-        if not liste or calcul:
-            # photo ou calcul : les mots du message ne suffisent pas a choisir, le modele voit toute la liste
-            liste = list(self.catalogue.notions.values())
+        # Le modele voit toujours toute la liste (le vocabulaire des eleves deborde toujours des mots-cles :
+        # « periurbanisation », « il faut mettre un e et un s ? ») ; les notions dont un mot-cle est reconnu
+        # en entier passent en tete. Le prefiltre ne sert plus qu'a decider s'il faut appeler le modele.
+        fortes = [n for score, n in notes if score >= SCORE_FORT and not calcul]
+        vues = {n.id for n in fortes}
+        liste = fortes + [n for n in self.catalogue.notions.values() if n.id not in vues]
         catalogue = "\n".join(f"{n.id} | {n.nom_matiere} | {n.titre}" for n in liste)
         images = [p for nom in eleve.images if (p := self.tuteur.stockage.chemin_image(nom))]
         tour = Tour(role="user", texte=eleve.texte or TEXTE_PHOTO_SEULE, images=images)

@@ -261,6 +261,27 @@ def test_detection_sur_un_calcul_sans_mot(tuteur):
     assert module.detecter(Message(role="eleve", texte="bonjour")) is None and not vus  # ni mot ni calcul : pas d'appel
 
 
+def test_detection_liste_complete_mots_reconnus_en_tete(tuteur):
+    """Le modele voit toujours toutes les notions ; celles dont un mot-cle est reconnu passent en tete."""
+    vus = []
+
+    def regle(systeme, tours, modele):
+        if "UNE notion d'une liste fermée" in systeme:
+            vus.append(systeme.split("Liste (identifiant | matière | notion) :", 1)[1].strip().splitlines())
+            return '{"notion": "", "confiance": "faible"}'
+        return "ok"
+
+    tuteur.llm.regle = regle
+    module = tuteur.module("notions")
+    total = len(module.catalogue.notions)
+    module.detecter(Message(role="eleve", texte="Je dois calculer l'hypoténuse avec Pythagore"))
+    module.detecter(Message(role="eleve", texte="on étudie la périurbanisation autour de Lyon"))
+    assert len(vus[0]) == total and vus[0][0].startswith("parallelisme-triangles-pythagore |")
+    assert len(vus[1]) == total  # aucun mot-cle reconnu en entier : le modele juge sur le sens
+    assert module.detecter(Message(role="eleve", texte="ok")) is None  # rien a rattacher : pas d'appel
+    assert len(vus) == 2
+
+
 def test_detection_rejette_une_notion_inventee(tuteur):
     tuteur.llm.regle = lambda s, t, m: '{"notion": "inventee", "confiance": "haute"}' if "liste fermée" in s else "ok"
     module = tuteur.module("notions")
@@ -328,9 +349,23 @@ def test_fiches_experimentales_couvrent_les_maths_de_3e():
     """Chaque notion de maths du referentiel 3e a sa fiche, et chaque fiche a exemple et exercices complets."""
     cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
     maths = [n.id for n in cat.notions.values() if n.matiere == "mathematiques"]
-    fiches = cat.contenus[0].fiches
-    assert len(maths) == 38 and sorted(maths) == sorted(fiches)
-    for identifiant, fiche in fiches.items():
+    fiches_maths = {i: f for i, f in cat.contenus[0].fiches.items() if i in maths}
+    assert len(maths) == 38 and sorted(maths) == sorted(fiches_maths)
+    for identifiant, fiche in fiches_maths.items():
+        assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), identifiant
+        assert fiche.get("exemple", {}).get("solution"), identifiant
+        for exercice in fiche.get("exercices", []):
+            assert exercice.get("enonce") and exercice.get("indices") and exercice.get("solution"), identifiant
+
+
+def test_fiches_experimentales_francais_langue_sont_completes():
+    """Les fiches de francais deja publiees (etude de la langue) ont exemple et exercices complets."""
+    cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], None)
+    francais = {n.id for n in cat.notions.values() if n.matiere == "francais"}
+    fiches_francais = {i: f for i, f in cat.contenus[0].fiches.items() if i in francais}
+    assert fiches_francais, "aucune fiche de francais trouvee"
+    assert set(fiches_francais).issubset(francais)
+    for identifiant, fiche in fiches_francais.items():
         assert fiche.get("essentiel") and fiche.get("methode") and fiche.get("erreurs_frequentes"), identifiant
         assert fiche.get("exemple", {}).get("solution"), identifiant
         for exercice in fiche.get("exercices", []):

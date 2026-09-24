@@ -330,8 +330,16 @@ def mots(texte: str) -> set[str]:
     return {m for m in _MOT.findall(normaliser(texte)) if len(m) > 2 and m not in _VIDES}
 
 
+SCORE_FORT = 3.0  # un mot-cle ou un declencheur present en entier dans le message
+
+
 def candidats(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[Notion]:
     """Notions dont le titre, les mots-cles ou les declencheurs recoupent le texte, les plus proches d'abord."""
+    return [n for _, n in candidats_notes(catalogue, texte, maximum)]
+
+
+def candidats_notes(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[tuple[float, Notion]]:
+    """Comme candidats(), avec le score : SCORE_FORT ou plus = un mot-cle reconnu en entier."""
     cherches = mots(texte)
     if not cherches:
         return []
@@ -349,7 +357,7 @@ def candidats(catalogue: Catalogue, texte: str, maximum: int = 25) -> list[Notio
         if score > 0:
             scores.append((score, n))
     scores.sort(key=lambda s: -s[0])
-    return [n for _, n in scores[:maximum]]
+    return scores[:maximum]
 
 
 # --- rendu pour le prompt -----------------------------------------------------
