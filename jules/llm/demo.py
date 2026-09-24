@@ -26,6 +26,8 @@ class Brique:
     def repondre(self, systeme: str, tours: list[Tour], modele: str = "principal") -> str:
         if modele == "principal":
             return MESSAGE
+        if '"questions"' in systeme:  # bilan du soir : pas de question inventee en mode demo
+            return '{"resume": "Mode démo : aucune synthèse.", "questions": []}'
         if "JSON" in systeme:
             return '{"niveau": "aucun", "motif": "", "statut": "hors_scolaire", "notion": "", "titre": "Démo"}'
         return "Mode démo : aucune synthèse."
