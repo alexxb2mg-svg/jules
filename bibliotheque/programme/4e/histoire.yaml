@@ -1,0 +1,137 @@
+matiere: Histoire
+id: histoire
+niveau: 4e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 4e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme d'histoire de la classe de 4e, deuxième année du cycle 4. Le BO n° 31 du 30 juillet
+  2020 rattache explicitement trois thèmes à la « Classe de 4e » au titre des « Repères annuels
+  de programmation » : Le XVIIIe siècle, expansions, Lumières et révolutions ; L'Europe et le
+  monde au XIXe siècle ; Société, culture et politique dans la France du XIXe siècle. La classe
+  de 4e permet de présenter les bases de connaissances nécessaires à la compréhension des
+  changements politiques, sociaux, économiques et culturels majeurs qu'ont connus l'Europe et la
+  France, de la mort de Louis XIV à l'installation de la Troisième République. Comme pour la 3e
+  et la 5e, le texte ne fournit pas de liste de repères distincte : les repères chronologiques et
+  spatiaux attendus sont ceux mentionnés explicitement dans les « démarches et contenus
+  d'enseignement » de chaque sous-thème, repris ci-dessous en attendus. Le nouveau programme
+  d'EMC (BO n° 24 du 13 juin 2024) entre en application en 4e à la rentrée 2025-2026 — donc déjà
+  en vigueur en 2026-2027, cf. le fichier emc.yaml de ce niveau — mais l'histoire-géographie de 4e
+  reste régie par le texte de 2020, aucune réforme n'ayant été publiée pour cette discipline à
+  cette date.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 4e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 4e-le-xviiie-siecle-expansions-lumieres-revolutions
+    titre: "Le XVIIIe siècle. Expansions, Lumières et révolutions"
+    chapitres:
+      - id: 4e-bourgeoisies-marchandes-et-traites-negrieres
+        titre: "Bourgeoisies marchandes, négoces internationaux, traites négrières et esclavage au XVIIIe siècle"
+        notions:
+          - id: 4e-economie-de-plantation-et-traite-atlantique
+            titre: "Économie de plantation, traite atlantique et essor de l'esclavage colonial"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier les échanges liés au développement de l'économie de plantation dans les colonies, l'enrichissement de la façade atlantique."
+              - "Comprendre le développement de la traite atlantique en lien avec les traites négrières en Afrique et l'essor de l'esclavage dans les colonies."
+            mots_cles: [traite négrière, esclavage, économie de plantation, façade atlantique]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 1 « Le XVIIIe siècle, expansions, Lumières et révolutions », « Bourgeoisies marchandes, négoces internationaux, traites négrières et esclavage »"
+      - id: 4e-europe-des-lumieres
+        titre: "L'Europe des Lumières : circulation des idées, despotisme éclairé et contestation de l'absolutisme"
+        notions:
+          - id: 4e-diffusion-des-idees-des-lumieres
+            titre: "Diffusion des idées des Lumières et essor de l'opinion publique"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier les modes de diffusion des nouvelles idées liées au développement de l'esprit scientifique et à l'ouverture vers des horizons plus lointains."
+              - "Comprendre comment différents groupes sociaux s'emparent de ces idées et la nouvelle place accordée à l'opinion publique dans un espace politique renouvelé."
+            mots_cles: [Lumières, opinion publique, despotisme éclairé, esprit scientifique]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 1 « Le XVIIIe siècle, expansions, Lumières et révolutions », « L'Europe des Lumières »"
+      - id: 4e-revolution-francaise-et-empire
+        titre: "La Révolution française et l'Empire : nouvel ordre politique et société révolutionnée en France et en Europe"
+        notions:
+          - id: 4e-apports-revolution-et-empire
+            titre: "Apports politiques, économiques et sociaux de la Révolution française et de l'Empire"
+            niveau_programme: "4e"
+            attendus:
+              - "Caractériser les apports de la Révolution française dans l'ordre politique, économique et social, non seulement en France mais en Europe, dans le contexte des guerres républicaines et impériales."
+              - "Replacer les singularités de la Révolution française dans le cadre des révolutions atlantiques."
+              - "Rappeler l'importance des grandes réformes administratives et sociales introduites par la Révolution puis par l'Empire."
+            mots_cles: [Révolution française, Empire, révolutions atlantiques, réformes administratives]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 1 « Le XVIIIe siècle, expansions, Lumières et révolutions », « La Révolution française et l'Empire »"
+  - id: 4e-leurope-et-le-monde-au-xixe-siecle
+    titre: "L'Europe et le monde au XIXe siècle"
+    chapitres:
+      - id: 4e-europe-de-la-revolution-industrielle
+        titre: "L'Europe de la « révolution industrielle »"
+        notions:
+          - id: 4e-industrialisation-et-bouleversements-sociaux
+            titre: "Industrialisation, transformation des paysages et naissance de la question sociale"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier le processus d'industrialisation qui transforme les paysages, les villes et les campagnes, bouleverse la société et les cultures et donne naissance à des idéologies politiques inédites."
+              - "Présenter à grands traits l'essor du salariat, la condition ouvrière et les crises périodiques suscitant une « question sociale » et des formes nouvelles de contestation politique."
+              - "Étudier un exemple de l'émigration européenne (émigration irlandaise, italienne...) liée à la croissance démographique."
+              - "Comprendre comment la révolution de 1848, qui traverse l'Europe, fait évoluer l'idée de nationalité et celle du droit au travail."
+            mots_cles: [révolution industrielle, condition ouvrière, question sociale, révolutions de 1848]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 2 « L'Europe et le monde au XIXe siècle », « L'Europe de la révolution industrielle »"
+      - id: 4e-conquetes-et-societes-coloniales
+        titre: "Conquêtes et sociétés coloniales"
+        notions:
+          - id: 4e-colonisation-et-abolition-esclavage
+            titre: "Nouvelles conquêtes coloniales, société coloniale et abolition de l'esclavage"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier les logiques de la colonisation à partir de l'exemple de l'empire colonial français ; comprendre comment de nouvelles conquêtes coloniales renforcent la domination européenne sur le monde."
+              - "Découvrir le fonctionnement d'une société coloniale."
+              - "Présenter l'aboutissement du long processus d'abolition de l'esclavage."
+              - "Évoquer comment évolue la connaissance du monde et comment la pensée scientifique continue à se dégager d'une vision religieuse du monde."
+            mots_cles: [colonisation, empire colonial français, société coloniale, abolition de l'esclavage]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 2 « L'Europe et le monde au XIXe siècle », « Conquêtes et sociétés coloniales »"
+  - id: 4e-societe-culture-et-politique-france-xixe
+    titre: "Société, culture et politique dans la France du XIXe siècle"
+    chapitres:
+      - id: 4e-difficile-conquete-voter-1815-1870
+        titre: "Une difficile conquête : voter de 1815 à 1870"
+        notions:
+          - id: 4e-suffrage-de-1815-a-1848
+            titre: "Qui vote, comment et pour quoi de 1815 à 1870 : vers le suffrage universel"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier qui vote, pour élire qui et comment on vote de 1815 à 1870, la question du vote étant objet de débats politiques."
+              - "Rendre compte des bouleversements politiques du siècle et voir comment les Français font l'apprentissage d'un « suffrage universel » à partir de 1848."
+            mots_cles: [suffrage universel, 1848, débat politique, vote]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 3 « Société, culture et politique dans la France du XIXe siècle », « Une difficile conquête : voter de 1815 à 1870 »"
+      - id: 4e-la-troisieme-republique
+        titre: "La Troisième République"
+        notions:
+          - id: 4e-construction-culture-republicaine
+            titre: "Construction de la culture républicaine après 1870-1871"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre qu'après les événements de 1870 et 1871, l'enjeu est de réaliser l'unité nationale autour de la République."
+              - "Étudier comment l'école, la municipalité, la caserne deviennent des lieux où se construit une culture républicaine progressiste et laïque, jusqu'à la loi de séparation des Églises et de l'État."
+              - "Comprendre que la République est encore discutée et contestée pendant cette période d'installation."
+            mots_cles: [Troisième République, culture républicaine, laïcité, séparation des Églises et de l'État]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 3 « Société, culture et politique dans la France du XIXe siècle », « La Troisième République »"
+          - id: 4e-conditions-feminines-societe-en-mutation
+            titre: "Conditions féminines dans une société en mutation au XIXe siècle"
+            niveau_programme: "4e"
+            attendus:
+              - "S'interroger sur le statut, la place et le rôle des femmes dans une société marquée par leur exclusion politique."
+              - "Étudier les conditions de vie et les revendications des femmes actives et ménagères, bourgeoises, paysannes ou ouvrières."
+            mots_cles: [condition féminine, exclusion politique, revendications]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Histoire — Classe de 4e, Thème 3 « Société, culture et politique dans la France du XIXe siècle », « Conditions féminines dans une société en mutation »"

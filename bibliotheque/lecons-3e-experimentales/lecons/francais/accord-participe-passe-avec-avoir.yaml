@@ -1,0 +1,124 @@
+notion: accord-participe-passe-avec-avoir
+titre: "L'accord du participe passé avec avoir"
+duree_minutes: 20
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Accord du participe passé en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Accord_du_participe_pass%C3%A9_en_fran%C3%A7ais&oldid=239496579"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître un participe passé employé avec l'auxiliaire avoir."
+      - "Trouver le COD d'un verbe conjugué avec avoir et repérer s'il est placé avant ou après le verbe."
+      - "Accorder correctement le participe passé, y compris quand le COD est le pronom relatif « que »."
+
+  - type: texte
+    titre: "Le principe"
+    contenu: >-
+      Avec l'auxiliaire **avoir**, le participe passé ne s'accorde jamais avec le sujet. Il
+      s'accorde en genre et en nombre avec le **COD** (complément d'objet direct), mais seulement
+      si ce COD est placé **avant** le verbe. S'il n'y a pas de COD, ou si le COD est placé après
+      le verbe, le participe passé reste **invariable**.
+
+  - type: texte
+    titre: "Comparer les deux cas"
+    contenu: >-
+      « J'ai mangé des pommes. » : le COD « des pommes » est placé **après** le verbe « ai mangé » :
+      pas d'accord, « mangé » reste invariable.
+
+      « Les pommes que j'ai mangées. » : le COD est le pronom relatif **« que »**, qui reprend
+      « les pommes » (féminin pluriel), et il est placé **avant** le verbe « ai mangé » : on
+      accorde, « mangées ».
+
+  - type: texte
+    titre: "Le cas du pronom relatif « que »"
+    contenu: >-
+      Quand le COD est le pronom relatif « que », il faut remonter à son **antécédent** (le mot ou
+      groupe de mots qu'il remplace) pour connaître le genre et le nombre de l'accord. Méthode :
+      repérer le verbe conjugué avec avoir → chercher son COD (qui ? quoi ?) → si le COD est
+      « que », retrouver l'antécédent juste avant → accorder le participe passé avec cet
+      antécédent.
+
+  - type: exemple
+    enonce: "Faut-il accorder « offert » dans la phrase : « Voici les fleurs que je t'ai (offert). » ?"
+    etapes:
+      - "Le participe passé est « offert », employé avec l'auxiliaire avoir."
+      - "On cherche son COD : que t'ai-je offert ? → « que », qui reprend « les fleurs »."
+      - "« que » (COD) est placé avant le verbe « ai offert » : il faut donc accorder."
+      - "« les fleurs » est féminin pluriel, donc le participe passé s'accorde : « offertes »."
+      - "Phrase correcte : « Voici les fleurs que je t'ai offertes. »"
+
+  - type: exercice
+    enonce: "Faut-il accorder « écrit » dans « La lettre qu'il a (écrit) est arrivée hier. » ? Réponds par le participe passé correctement orthographié (un seul mot)."
+    forme: reponse_courte
+    reponse: "écrite"
+    reponses_acceptees: ["ecrite"]
+    indices:
+      - "Quel est l'antécédent de « qu' » dans cette phrase ?"
+      - "Ce COD est-il placé avant ou après « a écrit » ?"
+    explication: "« qu' » (= la lettre, féminin singulier) est COD de « a écrit » et il est placé avant le verbe : il faut accorder. On écrit donc « écrite »."
+
+  - type: exercice
+    enonce: "Faut-il accorder « corrigé » dans « Il a (corrigé) les erreurs de son exercice. » ? Réponds par le participe passé correctement orthographié (un seul mot)."
+    forme: reponse_courte
+    reponse: "corrigé"
+    reponses_acceptees: ["corrige"]
+    indices:
+      - "Trouve d'abord le COD du verbe conjugué avec avoir : de quoi parle-t-on juste après ?"
+      - "Ce COD est-il placé avant ou après le verbe ?"
+    explication: "Le COD « les erreurs » est placé après le verbe « a corrigé » : pas d'accord, le participe passé reste invariable, « corrigé »."
+
+  - type: exercice
+    enonce: "Faut-il accorder « pris » dans « Voici les photos que nous avons (pris) pendant les vacances. » ? Réponds par le participe passé correctement orthographié (un seul mot)."
+    forme: reponse_courte
+    reponse: "prises"
+    reponses_acceptees: []
+    indices:
+      - "Quel est l'antécédent du pronom relatif « que » ici ?"
+      - "Ce COD est-il placé avant ou après « avons pris » ?"
+      - "« les photos » est de quel genre et de quel nombre ?"
+    explication: "« que » (= les photos, féminin pluriel) est COD placé avant le verbe : il faut accorder. On écrit donc « prises »."
+
+  - type: exercice
+    enonce: "Dans la phrase « Les amis à qui j'ai écrit n'ont pas répondu. », faut-il accorder le participe passé « écrit » avec « les amis » ?"
+    forme: qcm
+    choix:
+      - "Oui, car « les amis » est un COD placé avant le verbe."
+      - "Non, car « à qui » est un complément d'objet indirect (COI), qui n'entraîne jamais l'accord du participe passé avec avoir."
+      - "Oui, car le participe passé s'accorde toujours avec le sujet quand il est employé avec avoir."
+    reponse: 1
+    indices:
+      - "Pose-toi la question : « écrire à quelqu'un » se construit-il avec une préposition ?"
+      - "Un complément introduit par « à » (« à qui ») est-il un COD ou un autre type de complément ?"
+    explication: "« à qui » est un complément d'objet indirect (on écrit *à* quelqu'un), pas un COD : il n'entraîne jamais l'accord du participe passé avec avoir. « écrit » reste donc invariable."
+
+  - type: exercice
+    enonce: "Dans « Les cadeaux que j'ai achetés hier sont dans le placard. », lequel de ces mots est le COD antéposé qui commande l'accord de « achetés » ?"
+    forme: qcm
+    choix:
+      - "hier"
+      - "que"
+      - "le placard"
+    reponse: 1
+    indices:
+      - "Cherche le pronom relatif de la phrase : quel mot reprend « les cadeaux » ?"
+      - "Ce mot est-il placé avant ou après le verbe « ai acheté » ?"
+    explication: "« que » reprend « les cadeaux » (masculin pluriel) et il est placé avant le verbe « ai acheté » : c'est lui, le COD antéposé, qui impose l'accord « achetés »."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots pourquoi, dans « J'ai vu Camille » et « Camille que j'ai vue », le participe passé « vu » ne s'écrit pas pareil, alors que c'est la même personne qui est vue."
+    indices:
+      - "Regarde où se trouve le COD dans chacune des deux phrases : avant ou après le verbe ?"
+      - "Le mot « Camille » a-t-il changé de fonction entre les deux phrases ?"
+    criteres:
+      - "L'élève identifie que le COD est placé après le verbe dans la première phrase et avant dans la seconde."
+      - "L'élève relie explicitement la position du COD à la présence ou l'absence d'accord, sans se contenter de répéter la règle sans l'appliquer à l'exemple."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la méthode que tu utilises pour
+      savoir si un participe passé employé avec avoir doit s'accorder, et donne toi-même un exemple
+      de phrase (différent de ceux de cette leçon) où le COD est placé avant le verbe.

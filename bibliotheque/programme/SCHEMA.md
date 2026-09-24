@@ -1,6 +1,7 @@
 # Référentiel du programme officiel — format des fichiers
 
-Un fichier YAML par matière : `bibliotheque/programme/3e/<matiere>.yaml` (UTF-8).
+Un fichier YAML par classe et par matière : `bibliotheque/programme/<classe>/<matiere>.yaml` (UTF-8), avec `<classe>` parmi `5e`, `4e`, `3e`.
+Seule la classe de l'élève est chargée (champ `classe` du profil) ; sans classe, les trois sont chargées ensemble, d'où la règle d'identifiants uniques sur tous les niveaux.
 C'est le référentiel : les fiches des autres bibliothèques s'y rattachent par l'identifiant de notion (voir `bibliotheque/README.md`).
 
 ```yaml
@@ -43,5 +44,6 @@ themes:
 Règles :
 - Aucune notion inventée : chaque notion vient d'un texte officiel cité dans `textes_officiels`.
 - `attendus` : fidèle au texte (citation ou résumé serré), jamais d'ajout personnel.
-- Ids : minuscules, sans accents, tirets. Uniques dans le fichier.
-- En cas de doute sur l'appartenance à la 3e : `niveau_programme: "cycle 4"`, pas de supposition.
+- Ids : minuscules, sans accents, tirets. Uniques sur **toute** la bibliothèque, tous niveaux confondus (en 4e et 5e, préfixés par la classe : `4e-...`, `5e-...`).
+- Programmes réécrits : quand un nouveau programme s'applique déjà à la classe l'année indiquée dans `annee_scolaire` (par exemple français et mathématiques en 5e à la rentrée 2026, arrêté du 18-2-2026), c'est lui qui est cité, pas l'ancien. Le dire dans `perimetre`.
+- En cas de doute sur l'appartenance à la classe : `niveau_programme: "cycle 4"`, pas de supposition.

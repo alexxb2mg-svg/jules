@@ -1,0 +1,13 @@
+body { font: 16px/1.4 system-ui, sans-serif; margin: 1rem; color: #1a1a1a; background: #fff; }
+h1 { font-size: 1.1rem; }
+.avertissement { color: #555; font-style: italic; margin-top: 0; }
+#ecran { font-size: 1.6rem; text-align: right; padding: 0.5rem; border: 1px solid #999;
+  border-radius: 4px; margin-bottom: 0.5rem; background: #f7f7f7; min-height: 2.2rem;
+  word-break: break-all; }
+#pave { display: grid; grid-template-columns: repeat(4, 3rem); gap: 0.4rem; }
+#pave button { font: inherit; font-size: 1.1rem; padding: 0.5rem 0; border: 1px solid #999;
+  border-radius: 4px; background: #fff; cursor: pointer; }
+#pave button:hover, #pave button:focus-visible { background: #eef; }
+#pave button.operateur { background: #2b6cb0; color: #fff; border-color: #2b6cb0; }
+#pave button.egal { background: #2f855a; color: #fff; border-color: #2f855a; }
+#pave button.efface { background: #c53030; color: #fff; border-color: #c53030; }

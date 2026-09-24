@@ -135,6 +135,13 @@
       grille.appendChild(b);
     }
     fil.appendChild(grille);
+    if (etat.infos.cours) {
+      const lienCours = document.createElement("a");
+      lienCours.className = "bouton secondaire espace-haut";
+      lienCours.href = "/cours";
+      lienCours.textContent = "📘 Suivre un cours";
+      fil.appendChild(lienCours);
+    }
     proposerEpreuve(fil);
     marquerActif(null);
   }

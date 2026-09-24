@@ -11,13 +11,41 @@ import hashlib
 import hmac
 import secrets
 import time
+from itertools import pairwise
 from pathlib import Path
 
 DUREE_S = 30 * 24 * 3600
 COOKIE = "jules_session"
 ROLES = ("eleve", "parent")
-LONGUEUR_MIN = {"eleve": 4, "parent": 6}
+LONGUEUR_MIN = {"eleve": 6, "parent": 8}
 HOTES_LOCAUX = {"127.0.0.1", "localhost", "::1"}
+
+# Codes trop devines : mots de passe courants et claviers (les suites comme "123456" ou "abcdef"
+# sont detectees a part par `_suite_triviale`, pas besoin de toutes les lister ici).
+CODES_EVIDENTS = {
+    "azerty",
+    "azertyui",
+    "azertyuiop",
+    "qwerty",
+    "qwertyui",
+    "qwertyuiop",
+    "password",
+    "passw0rd",
+    "letmein",
+    "motdepasse",
+    "monmotdepasse",
+    "changeme",
+    "soleil",
+    "bonjour",
+    "bonjour1",
+    "football",
+    "marseille",
+    "11111111",
+    "00000000",
+    "121212",
+    "123123",
+    "12341234",
+}
 
 # scrypt (bibliotheque standard) : lent a calculer, donc une empreinte volee ne se casse pas en
 # essayant tous les codes. Parametres recommandes par la documentation Python / RFC 7914.
@@ -43,6 +71,29 @@ def code_correct(code: str, attendu: str) -> bool:
     if methode != "scrypt" or not derive_hex:
         return False
     return hmac.compare_digest(empreinte(code, sel), attendu)
+
+
+def _suite_triviale(code: str) -> bool:
+    """Detecte une suite de caracteres consecutifs, croissante ou decroissante (123456, fedcba...)."""
+    if len(code) < 3:
+        return False
+    ecarts = {ord(suivant) - ord(precedent) for precedent, suivant in pairwise(code)}
+    return ecarts in ({1}, {-1})
+
+
+def code_evident(code: str) -> bool:
+    """Repere un code trop facile a deviner : un seul caractere repete, une suite, ou un mot de passe courant.
+
+    Ne remplace pas la longueur minimale (`LONGUEUR_MIN`) : les deux controles sont complementaires.
+    """
+    nettoye = code.strip().lower()
+    if not nettoye:
+        return False
+    if len(set(nettoye)) == 1:
+        return True
+    if _suite_triviale(nettoye):
+        return True
+    return nettoye in CODES_EVIDENTS
 
 
 def verifier_exposition(hote: str, empreintes: dict[str, str]) -> None:
