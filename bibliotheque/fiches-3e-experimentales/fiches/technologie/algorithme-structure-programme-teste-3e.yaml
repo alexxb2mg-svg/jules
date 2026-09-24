@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: algorithme-structure-programme-teste-3e
+declencheurs:
+- tester un programme
+- déboguer
+- erreur de programme
+- structure d'un programme
+- vérifier un algorithme
+- bug
+couverture: Cette fiche prolonge algorithme-nouvelle-fonctionnalite-3e pour la structuration et le test complet
+  d'un programme en classe de 3e.
+essentiel: 'Un programme bien structuré s''organise souvent en sous-programmes (ou fonctions) : des blocs d''instructions
+  regroupés sous un nom, que l''on peut appeler plusieurs fois sans réécrire le code à chaque fois. Cela rend le
+  programme plus lisible et plus facile à corriger.
+
+
+  Tester un programme consiste à l''exécuter avec plusieurs jeux de données différents, y compris des cas limites
+  (valeur nulle, valeur maximale, valeur négative si elle est possible), pour vérifier qu''il produit toujours le
+  résultat attendu. Quand un programme ne fonctionne pas comme prévu, on parle de bug (erreur) ; le corriger s''appelle
+  déboguer.
+
+
+  Pour déboguer efficacement, on peut afficher la valeur des variables à différentes étapes du programme, ou exécuter
+  le programme instruction par instruction pour repérer où le résultat diverge de ce qui était attendu.'
+methode:
+- Découper un programme complexe en sous-programmes, chacun ayant un rôle précis et un nom clair.
+- Tester chaque sous-programme séparément avant de tester le programme complet.
+- Choisir plusieurs jeux de données de test, y compris des cas limites.
+- En cas de bug, afficher les valeurs intermédiaires des variables pour localiser où le programme diverge du résultat
+  attendu.
+vocabulaire:
+- terme: sous-programme
+  definition: bloc d'instructions regroupées sous un nom, que l'on peut appeler plusieurs fois dans un programme
+- terme: bug
+  definition: erreur dans un programme qui produit un résultat différent de celui attendu
+- terme: déboguer
+  definition: corriger les erreurs (bugs) d'un programme
+erreurs_frequentes:
+- Ne tester un programme qu'avec un seul jeu de données, en oubliant les cas limites.
+- Réécrire plusieurs fois le même bloc d'instructions au lieu d'utiliser un sous-programme.
+- Chercher à corriger un bug au hasard sans avoir localisé précisément où le programme diverge.
+exemple:
+  enonce: Un programme calcule la moyenne de trois notes mais renvoie toujours 0. Le sous-programme « calculer_moyenne
+    » additionne les notes puis divise par 3. Proposer une méthode pour trouver le bug.
+  solution: 'Afficher la valeur de la somme des trois notes juste avant la division : si elle affiche 0, le problème
+    vient de l''addition (les notes ne sont peut-être pas correctement lues ou initialisées) ; si la somme est correcte
+    mais le résultat final est 0, le problème vient de la division (mauvaise variable utilisée, par exemple).'
+exercices:
+- enonce: Pourquoi faut-il tester un programme de calcul de moyenne avec la note 0 et avec la note maximale, pas
+    seulement avec des notes « normales » ?
+  indices:
+  - Pense aux cas limites.
+  solution: 'Parce qu''un bug peut n''apparaître que dans des cas extrêmes (valeur nulle ou maximale) alors que
+    le programme fonctionne correctement avec des valeurs intermédiaires : tester les cas limites permet de détecter
+    des erreurs qui resteraient sinon invisibles.'
+sources:
+- titre: Wikipédia, « Sous-programme »
+  url: https://fr.wikipedia.org/w/index.php?title=Sous-programme&oldid=225990513
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Algorithme »
+  url: https://fr.vikidia.org/w/index.php?title=Algorithme&oldid=2331665
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

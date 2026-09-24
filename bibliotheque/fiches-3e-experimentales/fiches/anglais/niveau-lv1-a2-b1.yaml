@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: niveau-lv1-a2-b1
+declencheurs:
+- niveau A2 B1
+- CECRL
+- niveau d'anglais 3e
+- cadre européen des langues
+- évaluer mon niveau d'anglais
+- LV1
+essentiel: 'Le CECRL (Cadre européen commun de référence pour les langues) définit des niveaux communs pour évaluer
+  la maîtrise d''une langue étrangère, de A1 (débutant) à C2 (maîtrise proche d''un locuteur natif). En anglais
+  LV1 (la langue vivante étudiée en premier, souvent l''anglais en France), l''objectif en fin de 3e est d''avoir
+  atteint au moins le niveau A2 dans les cinq activités langagières (écouter, lire, parler en continu, écrire, réagir
+  et dialoguer), et si possible le niveau B1 dans plusieurs d''entre elles.
+
+
+  Le niveau A2 correspond à un utilisateur élémentaire capable de communiquer sur des sujets familiers et courants
+  (se présenter, parler de son quotidien, comprendre des annonces simples). Le niveau B1 correspond à un utilisateur
+  indépendant capable de se débrouiller dans la plupart des situations rencontrées en voyage, de raconter un événement,
+  de donner brièvement son avis.
+
+
+  Il est normal qu''un même élève ait un niveau différent selon les activités langagières : on peut être B1 en lecture
+  (parce qu''on a le temps de relire) et A2 à l''oral spontané (parce que réagir vite est plus difficile). Ce profil
+  individualisé est plus réaliste qu''un niveau unique.'
+methode:
+- Identifier son niveau approximatif dans chaque activité langagière séparément, plutôt que de chercher un seul
+  niveau global.
+- Comparer ses productions aux descripteurs du CECRL (ce qu'un élève A2 ou B1 sait faire) pour s'auto-évaluer.
+- Travailler en priorité les activités langagières où le niveau est le plus faible, sans négliger les autres.
+vocabulaire:
+- terme: CECRL
+  definition: Cadre européen commun de référence pour les langues, qui définit des niveaux communs de A1 à C2
+- terme: activité langagière
+  definition: 'une des cinq compétences travaillées en langue : écouter, lire, parler en continu, écrire, réagir
+    et dialoguer'
+erreurs_frequentes:
+- Croire qu'on a un seul niveau global identique dans toutes les activités langagières.
+- Confondre le niveau visé en LV1 (A2 minimum, souvent B1) avec celui visé en LV2 (A2 dans deux activités seulement).
+- 'Penser que le niveau A2 signifie « ne rien savoir » : c''est déjà un niveau de communication réelle sur des sujets
+  familiers.'
+exemple:
+  enonce: Un élève comprend bien des articles simples en anglais (lecture) mais a du mal à répondre spontanément
+    à une question orale imprévue. Que peut-on en déduire sur son profil ?
+  solution: 'Il a probablement un niveau plus élevé en lecture (peut-être B1) qu''en interaction orale spontanée
+    (peut-être A2), ce qui est un profil tout à fait normal et attendu par le CECRL : les niveaux peuvent varier
+    selon les activités langagières.'
+exercices:
+- enonce: Citer les cinq activités langagières évaluées en anglais.
+  indices:
+  - Deux sont à l'oral en réception/production, une combine les deux.
+  solution: Écouter (comprendre l'oral), lire (comprendre l'écrit), parler en continu, écrire, réagir et dialoguer
+    (interaction orale).
+- enonce: Quel est le niveau minimum visé en fin de 3e pour la LV1, dans les cinq activités langagières ?
+  indices:
+  - C'est le niveau juste après le niveau débutant A1.
+  solution: Le niveau A2, avec l'objectif d'atteindre B1 dans plusieurs activités langagières.
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais&oldid=769608
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (contexte général de l'apprentissage des langues par niveaux)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

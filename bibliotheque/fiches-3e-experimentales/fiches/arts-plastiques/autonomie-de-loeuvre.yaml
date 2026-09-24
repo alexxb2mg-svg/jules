@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: autonomie-de-loeuvre
+declencheurs:
+- pourquoi ce tableau ne represente rien
+- art abstrait c'est quoi
+- oeuvre qui parle d'elle meme
+- tableau dans le tableau
+- peinture non figurative
+- mise en abyme
+- spectateur comprend autre chose que l'artiste
+essentiel: 'L''art abstrait ne cherche pas à représenter le monde visible (personnes, objets, paysages) : il s''appuie
+  sur des formes, des couleurs et une composition qui existent pour elles-mêmes, sans imiter un modèle.
+
+  On dit que l''œuvre devient « autonome » vis-à-vis du monde visible : elle ne renvoie plus à autre chose qu''elle-même,
+  elle est sa propre référence.
+
+  La mise en abyme est un procédé où une œuvre inclut ses propres constituants ou se représente elle-même (un tableau
+  dans le tableau, un livre qui parle d''un livre).
+
+  L''art abstrait est apparu au XXe siècle ; des artistes comme Vassily Kandinsky ou Piet Mondrian ont développé
+  ce langage à partir de couleurs, de lignes et de formes géométriques.'
+methode:
+- Vérifier d'abord si l'œuvre montre quelque chose de reconnaissable (figuratif) ou non (abstrait).
+- 'Chercher ce qui organise l''œuvre à la place d''un sujet : couleurs, lignes, rythme, matière.'
+- Pour une mise en abyme, repérer l'élément qui renvoie à l'œuvre elle-même.
+- 'Éviter de chercher « ce que ça représente » dans une œuvre abstraite : chercher plutôt ce qu''elle fait ressentir.'
+vocabulaire:
+- terme: figuratif
+  definition: qui représente des formes reconnaissables du monde réel
+- terme: abstrait
+  definition: qui ne représente pas le monde visible, organisé par les formes et les couleurs elles-mêmes
+erreurs_frequentes:
+- Croire qu'une œuvre abstraite est « n'importe quoi » ou faite au hasard.
+- Chercher absolument un sujet caché dans une composition abstraite.
+- Confondre abstraction et simplification d'une forme reconnaissable.
+exemple:
+  enonce: Une toile ne montre que des rectangles de couleurs primaires séparés par des lignes noires épaisses.
+  solution: 'Aucun objet n''est reconnaissable : l''œuvre est abstraite. Elle organise le regard par l''équilibre
+    des couleurs et des lignes, dans la lignée du travail de Piet Mondrian sur la composition géométrique.'
+exercices:
+- enonce: 'À la maison : réalise une composition abstraite avec seulement des formes géométriques et trois couleurs,
+    sans chercher à représenter quoi que ce soit.'
+  indices:
+  - Si un objet devient reconnaissable, simplifie-le encore jusqu'à ce qu'il ne le soit plus.
+  solution: Réussite si personne ne peut dire « ça représente… » en regardant ta composition, et si tu peux expliquer
+    ton choix de couleurs et de formes.
+- enonce: Cherche un exemple de mise en abyme (un livre, un film, une pub) et décris en une phrase comment l'œuvre
+    se représente elle-même.
+  indices:
+  - Une photo qui montre l'appareil photo qui la prend est un bon exemple simple.
+  solution: Réussite si l'exemple contient bien un élément qui renvoie à l'œuvre elle-même, pas seulement une répétition.
+sources:
+- titre: Vikidia, « Art abstrait »
+  url: https://fr.vikidia.org/w/index.php?title=Art_abstrait&oldid=2261134
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Art abstrait »
+  url: https://fr.wikipedia.org/w/index.php?title=Art_abstrait&oldid=239711738
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

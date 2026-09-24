@@ -1,0 +1,65 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: champ-photo-cinema
+declencheurs:
+- histoire de la photographie
+- invention du cinema
+- septieme art
+- difference entre photo argentique et numerique
+- premiers films de l'histoire
+essentiel: 'La photographie, mise au point au début du XIXe siècle, permet d''obtenir une image fidèle de la réalité
+  (un objet, un paysage, une personne) grâce à un procédé technique captant la lumière ; la première photographie
+  connue date de 1827, réalisée par le Français Nicéphore Niépce.
+
+  Le cinéma, souvent appelé le « septième art », est l''art de produire, écrire, réaliser et interpréter des films
+  ; ses débuts techniques (le « pré-cinéma ») remontent aux années 1820, bien avant l''invention du cinématographe
+  des frères Lumière en 1895.
+
+  Ces deux arts partagent une technique commune de captation de la lumière, mais le cinéma y ajoute le mouvement
+  et souvent le son, ce qui a créé un nouveau rapport au réel par rapport à la peinture.
+
+  Une photographie ou un film peuvent être considérés comme de véritables œuvres d''art, avec leurs propres choix
+  de cadrage, de composition et de lumière, au même titre qu''une peinture ou une sculpture.'
+methode:
+- Distinguer la photographie (image fixe) du cinéma (images en mouvement, souvent avec du son).
+- Repérer les choix de cadrage, de lumière ou de composition qui font d'une photo ou d'un film une œuvre artistique.
+- Situer une œuvre photographique ou cinématographique dans son contexte technique et historique.
+- Chercher le lien entre l'invention de ces techniques et leur influence sur d'autres arts (peinture, spectacle).
+erreurs_frequentes:
+- Croire que le cinéma a été inventé d'un coup en 1895, sans étapes techniques antérieures.
+- Penser qu'une photographie ou un film ne peuvent pas être de véritables œuvres d'art.
+- Confondre la date d'invention de la photographie et celle du cinéma.
+exemple:
+  enonce: Une photographie montre un paysage avec un cadrage précis, des ombres marquées et une composition équilibrée
+    entre le ciel et la terre.
+  solution: Ces choix (cadrage, gestion de la lumière, composition) montrent que le photographe a fait des choix
+    artistiques comparables à ceux d'un peintre, ce qui permet de considérer cette photo comme une œuvre d'art à
+    part entière.
+exercices:
+- enonce: 'À l''oral (type brevet) : explique en 2 phrases pourquoi la photographie a changé la façon dont certains
+    peintres représentaient le réel.'
+  indices:
+  - Une machine peut désormais fixer une image fidèle, ce qui pousse la peinture vers d'autres recherches.
+  solution: Réussite si le lien entre l'invention de la photographie et l'évolution de la peinture est clairement
+    expliqué.
+- enonce: Cherche la date et le nom de l'inventeur de la première photographie connue.
+  indices:
+  - C'est un Français, au début du XIXe siècle.
+  solution: Réussite si la réponse correspond à Nicéphore Niépce, 1827.
+sources:
+- titre: Vikidia, « Photographie »
+  url: https://fr.vikidia.org/w/index.php?title=Photographie&oldid=2200020
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Cinéma »
+  url: https://fr.vikidia.org/w/index.php?title=Cin%C3%A9ma&oldid=2554372
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

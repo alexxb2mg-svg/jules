@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: image-et-antecedent
+declencheurs: ["image", "images", "antécédents", "lecture graphique", "lire sur la courbe"]
+essentiel: 'Image de a par f : f(a). On la trouve en calculant avec l''expression, en lisant le tableau (ligne du
+  dessous) ou le graphique (on part de a sur l''axe des abscisses, on monte jusqu''à la courbe, on lit l''ordonnée).
+
+  Antécédent(s) de b : les nombres x tels que f(x) = b. Graphiquement, on part de b sur l''axe des ordonnées, on
+  trace l''horizontale, et on lit les abscisses des points d''intersection avec la courbe. Dans un tableau, on cherche
+  b sur la ligne du dessous.
+
+  Par le calcul, chercher un antécédent revient à résoudre l''équation f(x) = b (au collège, souvent du premier
+  degré).'
+methode:
+- 'Repérer ce qui est demandé : une image (on connaît x) ou un antécédent (on connaît f(x)).'
+- 'Image : remplacer x par la valeur et calculer.'
+- 'Antécédent par le calcul : écrire f(x) = b et résoudre l''équation.'
+- 'Antécédent par le graphique : lire toutes les intersections (il peut y en avoir plusieurs, ou aucune).'
+- 'Rédiger : « l''image de … est … » ou « les antécédents de … sont … ».'
+erreurs_frequentes:
+- Lire le graphique à l'envers (partir de l'axe des ordonnées pour une image).
+- Ne donner qu'un antécédent alors qu'il y en a deux.
+- 'Donner une valeur lue sur le graphique comme exacte : c''est une valeur approchée.'
+exemple:
+  enonce: f(x) = x² − 4. Calculer l'image de −3, puis trouver les antécédents de 0.
+  solution: 'f(−3) = (−3)² − 4 = 5. Antécédents de 0 : x² − 4 = 0, soit x² = 4, donc x = 2 ou x = −2.'
+exercices:
+- enonce: g(x) = 5x + 2. Calculer l'antécédent de 17.
+  indices:
+  - Résous 5x + 2 = 17.
+  solution: 5x = 15, x = 3.
+- enonce: 'Tableau de h : pour x = −2, −1, 0, 1, 2, 3, on a h(x) = 7, 4, 3, 4, 7, 12. Quelle est l''image de 3 ?
+    Quels sont les antécédents de 7 lus dans le tableau ?'
+  indices:
+  - L'image se lit sous x, l'antécédent au-dessus de h(x).
+  solution: h(3) = 12. Les antécédents de 7 dans le tableau sont −2 et 2.
+- enonce: Sur un graphique, la courbe de f coupe la droite horizontale d'ordonnée 1 en deux points d'abscisses environ
+    −0,5 et 2,5. Que peut-on dire ?
+  indices:
+  - 'Horizontale d''ordonnée 1 : on cherche des antécédents.'
+  solution: Le nombre 1 a deux antécédents par f, environ −0,5 et 2,5 (valeurs lues, donc approchées).
+sources:
+- titre: Wikiversité, « Généralités sur les fonctions/Introduction »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Introduction&oldid=968390
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikiversité, « Généralités sur les fonctions/Représentation graphique »
+  url: https://fr.wikiversity.org/w/index.php?title=G%C3%A9n%C3%A9ralit%C3%A9s_sur_les_fonctions/Repr%C3%A9sentation_graphique&oldid=968762
+  auteurs: Contributeurs de Wikiversité (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

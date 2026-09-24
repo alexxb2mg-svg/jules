@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: constituants-phrase-complexe
+declencheurs:
+- phrase simple ou complexe
+- juxtaposition coordination subordination
+- plusieurs verbes conjugués
+- conjonction de coordination
+- subordonnée conjonctive
+- relier deux phrases
+- sans mot de liaison
+essentiel: 'Une phrase complexe contient plusieurs verbes conjugués, donc plusieurs propositions. On les relie de
+  trois manières : la juxtaposition (une virgule ou un point-virgule, sans mot de liaison), la coordination (une
+  conjonction de coordination : mais, ou, et, donc, or, ni, car), la subordination (une proposition dépend grammaticalement
+  d''une autre, dite principale).
+
+  Dans la coordination et la juxtaposition, les propositions restent indépendantes : chacune garde son sens complet
+  sans l''autre. Dans la subordination, la subordonnée ne peut pas exister seule et occupe une fonction dans la
+  principale.
+
+  Types de subordonnées : conjonctive (introduite par « que » ou une autre conjonction, souvent COD ou complément
+  circonstanciel), interrogative indirecte (introduite par si, quand, où, pourquoi... après un verbe comme demander),
+  relative (introduite par un pronom relatif, complément d''un antécédent), infinitive (verbe à l''infinitif, sujet
+  propre), participiale (verbe au participe, sujet propre, détachée de la principale).'
+methode:
+- 'Compter les verbes conjugués : un seul = phrase simple ; plusieurs = phrase complexe.'
+- 'Repérer entre chaque proposition : ponctuation seule (juxtaposition), conjonction de coordination, ou mot subordonnant.'
+- 'Pour une subordination : identifier la principale (qui reste si on enlève la subordonnée) et la subordonnée (qui
+  ne peut pas être seule).'
+- Nommer le type de subordonnée d'après le mot qui l'introduit (que → conjonctive ; pronom relatif → relative ;
+  si/quand/où après un verbe de question → interrogative indirecte).
+- Donner la fonction de la subordonnée dans la principale (sujet, COD, complément circonstanciel...).
+vocabulaire:
+- terme: juxtaposition
+  definition: liaison de deux propositions par la seule ponctuation, sans mot de liaison
+- terme: interrogative indirecte
+  definition: subordonnée qui rapporte une question, sans point d'interrogation ni inversion
+erreurs_frequentes:
+- Compter les infinitifs ou les participes comme des verbes conjugués.
+- Confondre juxtaposition et coordination (l'une n'a pas de mot de liaison, l'autre en a un).
+- Mettre un point d'interrogation à une interrogative indirecte (« Il demande si tu viens. » sans point d'interrogation).
+- Ne pas reconnaître une subordonnée relative sans antécédent explicite dans la phrase.
+exemple:
+  enonce: 'Analyser les liens entre propositions : « Il pleuvait, le match fut annulé car le terrain était impraticable.
+    »'
+  solution: '« Il pleuvait » et « le match fut annulé » sont juxtaposées (virgule seule). « le match fut annulé
+    » et « le terrain était impraticable » sont coordonnées par « car ». La phrase est complexe : trois verbes conjugués
+    (pleuvait, fut annulé, était).'
+exercices:
+- enonce: 'Identifier le type de lien entre les deux propositions : « Je me demande si tu as compris la leçon. »'
+  indices:
+  - Y a-t-il une question directe (avec point d'interrogation) ou une question rapportée ?
+  solution: 'Subordination : « si tu as compris la leçon » est une subordonnée interrogative indirecte, COD du verbe
+    « me demande ».'
+- enonce: 'Donner le type de chaque subordonnée dans : « Le film qu''on a vu hier, dont tout le monde parle, m''a
+    beaucoup plu. »'
+  indices:
+  - Repérer les deux pronoms relatifs et leur antécédent commun.
+  solution: 'Deux subordonnées relatives, toutes deux compléments de l''antécédent « le film » : « qu''on a vu hier
+    » et « dont tout le monde parle ».'
+sources:
+- titre: Wikipédia, « Subordination (grammaire) »
+  url: https://fr.wikipedia.org/w/index.php?title=Subordination_%28grammaire%29&oldid=229840636
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Fonction syntaxique »
+  url: https://fr.wikipedia.org/w/index.php?title=Fonction_syntaxique&oldid=239405021
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

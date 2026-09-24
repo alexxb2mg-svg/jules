@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: son-lumiere-information
+declencheurs:
+- signal sonore
+- signal lumineux
+- transporter une information
+- communiquer avec des ondes
+- fibre optique
+- voir l'éclair avant le tonnerre
+essentiel: 'Un signal est une variation (de son, de lumière, de courant électrique…) utilisée pour transporter une
+  information d''un émetteur vers un récepteur.
+
+  Le son et la lumière peuvent tous deux servir de support à un signal : la voix (son) transporte un message dans
+  une conversation, un flash lumineux peut coder un message (code Morse, fibre optique).
+
+  Un signal peut être analogique (il varie de façon continue, comme le son d''une voix) ou numérique (codé sous
+  forme de nombres, de 0 et de 1, comme dans les communications informatiques modernes).
+
+  La lumière (utilisée en fibre optique) permet de transporter énormément d''informations sur de longues distances
+  à très grande vitesse, car elle se propage beaucoup plus vite que le son et subit moins de perturbations sur de
+  longs trajets.
+
+  Choisir le son ou la lumière comme support dépend du besoin : le son se propage dans l''air sur de courtes distances
+  (voix, alarme sonore), la lumière permet des communications rapides sur de longues distances (téléphone, internet).'
+methode:
+- Identifier l'émetteur, le signal utilisé (son ou lumière) et le récepteur dans une situation de communication.
+- Distinguer signal analogique (variation continue) et signal numérique (codé en 0 et 1).
+- Comparer les vitesses de propagation du son et de la lumière pour comprendre pourquoi la lumière est privilégiée
+  pour les communications longue distance.
+- Relier un exemple concret (téléphone, alarme, fibre optique) au type de signal utilisé.
+erreurs_frequentes:
+- Croire qu'un signal transporte de la matière plutôt que de l'information.
+- Confondre signal analogique et signal numérique.
+- Penser que le son est aussi efficace que la lumière pour communiquer sur de longues distances.
+- Oublier que le son a besoin d'un milieu matériel, contrairement à la lumière qui traverse aussi le vide.
+exemple:
+  enonce: Pourquoi les communications à très longue distance (internet international) utilisent-elles des câbles
+    à fibre optique (lumière) plutôt que des signaux sonores ?
+  solution: La lumière se propage beaucoup plus vite que le son et peut parcourir de très longues distances (même
+    sous l'océan) sans avoir besoin d'un support matériel qui l'atténuerait comme le ferait l'air pour le son ;
+    elle permet de transporter énormément d'informations rapidement.
+exercices:
+- enonce: Une sirène d'alarme utilise-t-elle un signal sonore ou lumineux ? Pourquoi ce choix pour une alarme ?
+  indices:
+  - Pense à ce qui alerte même si on ne regarde pas dans la bonne direction.
+  solution: 'Un signal sonore : il se propage dans toutes les directions et peut être perçu même sans regarder la
+    source, ce qui est utile pour alerter rapidement.'
+- enonce: Le vitesse de la lumière est environ 300 000 000 m/s, celle du son environ 340 m/s. Environ combien de
+    fois la lumière va-t-elle plus vite que le son ?
+  indices:
+  - Diviser la vitesse de la lumière par celle du son.
+  solution: 300 000 000 / 340 ≈ 880 000 fois plus vite.
+- enonce: Un signal numérique code une information en 0 et en 1. Donner un exemple d'appareil utilisant ce type
+    de signal.
+  indices:
+  - Pense à des appareils informatiques ou de communication modernes.
+  solution: Un ordinateur, un smartphone, une connexion internet utilisent des signaux numériques.
+sources:
+- titre: Vikidia, « Son »
+  url: https://fr.vikidia.org/w/index.php?title=Son&oldid=2441333
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Lumière »
+  url: https://fr.vikidia.org/w/index.php?title=Lumi%C3%A8re&oldid=2561494
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

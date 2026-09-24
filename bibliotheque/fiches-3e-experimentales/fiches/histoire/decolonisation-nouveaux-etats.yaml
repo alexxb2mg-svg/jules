@@ -1,0 +1,79 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: decolonisation-nouveaux-etats
+declencheurs:
+- colonies françaises
+- indépendance des colonies
+- guerre d'Algérie
+- guerre d'Indochine
+- FLN
+- empire colonial
+- anciennes colonies
+essentiel: 'La décolonisation est le processus par lequel les territoires colonisés par des puissances européennes
+  accèdent à l''indépendance. Elle s''effondre rapidement après la Seconde Guerre mondiale : les pays d''Asie sont
+  décolonisés entre 1945 et 1955, puis les pays d''Afrique entre 1955 et 1975.
+
+  Plusieurs facteurs l''expliquent : la défaite rapide des puissances coloniales européennes en 1940 a brisé le
+  mythe de leur invincibilité ; les Alliés ont promis, dans la Charte de l''Atlantique (1941), le droit des peuples
+  à choisir leur gouvernement ; les mouvements nationalistes se renforcent dans les colonies.
+
+  La décolonisation prend des formes différentes selon les cas. Elle est parfois négociée et pacifique (indépendance
+  de l''Inde et du Pakistan en 1947, indépendances des colonies françaises d''Afrique subsaharienne en 1960). Elle
+  est parfois violente : la guerre d''Indochine (1946-1954) et la guerre d''Algérie (1954-1962) opposent la France
+  à des mouvements indépendantistes, comme le FLN en Algérie.'
+methode:
+- 'Situer la décolonisation dans le temps : surtout entre 1945 et 1975, en distinguant l''Asie (plus précoce) de
+  l''Afrique.'
+- Choisir UN exemple précis à étudier en détail (l'Algérie ou l'Inde, par exemple) et savoir en donner les dates
+  et les acteurs.
+- Distinguer décolonisation négociée (accord entre colonisateur et colonisés) et décolonisation violente (guerre).
+- 'Relier la décolonisation au contexte de l''après-guerre : affaiblissement des puissances coloniales, montée des
+  nationalismes.'
+vocabulaire:
+- terme: décolonisation
+  definition: le processus par lequel un territoire colonisé devient un État indépendant
+- terme: FLN
+  definition: Front de libération nationale, mouvement indépendantiste algérien qui mène la guerre contre la France
+    de 1954 à 1962
+- terme: empire colonial
+  definition: l'ensemble des territoires colonisés et administrés par une puissance européenne
+erreurs_frequentes:
+- 'Croire que toutes les indépendances se font par la guerre : beaucoup sont négociées.'
+- 'Confondre la guerre d''Indochine (1946-1954) et la guerre d''Algérie (1954-1962) : deux conflits distincts, à
+  des dates différentes.'
+- Oublier de dater précisément l'exemple choisi.
+- 'Réduire la décolonisation à un seul continent : elle touche l''Asie puis l''Afrique.'
+exemple:
+  enonce: Donne un exemple de décolonisation négociée et un exemple de décolonisation violente.
+  solution: 'Négociée : l''indépendance de l''Inde et du Pakistan en 1947, obtenue par la négociation avec le Royaume-Uni.
+    Violente : la guerre d''Algérie (1954-1962), qui oppose la France au FLN indépendantiste avant l''indépendance
+    de l''Algérie.'
+exercices:
+- enonce: Situe dans le temps la décolonisation de l'Asie, puis celle de l'Afrique.
+  indices:
+  - Laquelle des deux vagues est la plus précoce ?
+  solution: L'Asie est décolonisée en premier, entre 1945 et 1955 ; l'Afrique l'est ensuite, entre 1955 et 1975.
+- enonce: 'Développement construit : étudie les modalités d''accès à l''indépendance de l''Algérie.'
+  indices:
+  - Dates de la guerre ?
+  - Qui sont les deux camps ?
+  solution: Un développement réussi doit situer la guerre d'Algérie de 1954 à 1962, qui oppose l'armée française
+    aux indépendantistes du FLN ; rappeler que ce conflit est violent, marqué par des attentats et une répression
+    dure ; conclure sur l'indépendance obtenue en 1962, après les accords d'Évian.
+- enonce: Explique pourquoi la Seconde Guerre mondiale favorise la décolonisation.
+  indices:
+  - Que révèle la défaite rapide de la France ou des Pays-Bas en 1940 face au Japon en Asie ?
+  solution: La défaite rapide des puissances coloniales européennes en 1940, puis l'avancée japonaise en Asie, montrent
+    que ces puissances ne sont pas invincibles. Les Alliés promettent aussi aux peuples le droit de choisir leur
+    gouvernement, ce qui encourage les mouvements nationalistes des colonies.
+sources:
+- titre: Vikidia, « Décolonisation »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9colonisation&oldid=1258479
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

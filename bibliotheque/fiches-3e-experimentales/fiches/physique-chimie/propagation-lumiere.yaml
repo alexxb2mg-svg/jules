@@ -1,0 +1,75 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: propagation-lumiere
+declencheurs:
+- vitesse de la lumière
+- année-lumière
+- rayon lumineux
+- source de lumière
+- objet diffusant
+- temps mis par la lumière
+essentiel: 'Une source primaire de lumière produit elle-même de la lumière (le Soleil, une ampoule allumée) ; un
+  objet diffusant ne produit pas de lumière, il renvoie dans toutes les directions la lumière qu''il reçoit (la
+  Lune, une page de livre, la plupart des objets qui nous entourent).
+
+  Dans le vide (et approximativement dans l''air), la lumière se propage en ligne droite : on modélise sa trajectoire
+  par un rayon lumineux, une flèche représentant le trajet de la lumière.
+
+  La lumière se propage extrêmement vite : environ 300 000 km par seconde dans le vide, une vitesse bien supérieure
+  à toutes les vitesses courantes.
+
+  L''année-lumière (a.l.) est la distance parcourue par la lumière en une année ; elle sert d''unité pour exprimer
+  les très grandes distances entre étoiles (environ 9 460 milliards de km, soit 9,46 × 10¹² km).
+
+  Comme la lumière met du temps à voyager, observer un objet très lointain (une étoile) revient à le voir tel qu''il
+  était dans le passé, au moment où la lumière a quitté sa surface.'
+methode:
+- Distinguer source primaire (produit sa propre lumière) et objet diffusant (renvoie la lumière reçue).
+- Utiliser le modèle du rayon lumineux (trajet rectiligne) pour représenter la propagation de la lumière.
+- Pour calculer un temps de propagation, utiliser t = d / c, avec c ≈ 300 000 km/s.
+- Pour convertir une distance en années-lumière en kilomètres, multiplier par la distance parcourue en un an (≈
+  9,46 × 10¹² km).
+erreurs_frequentes:
+- Croire que la Lune ou les planètes produisent leur propre lumière (elles diffusent celle du Soleil).
+- Confondre année-lumière (une distance) avec une durée.
+- Oublier que la lumière met du temps à parcourir de grandes distances, même si ce temps semble négligeable à l'échelle
+  de la Terre.
+- Se tromper d'ordre de grandeur pour la vitesse de la lumière (elle n'est pas infinie, mais très grande).
+exemple:
+  enonce: Le Soleil est à environ 150 millions de km de la Terre. Combien de temps met sa lumière pour nous parvenir
+    (c ≈ 300 000 km/s) ?
+  solution: t = d / c = 150 000 000 / 300 000 = 500 s, soit 8 min 20 s.
+exercices:
+- enonce: L'étoile la plus proche du Soleil, Proxima du Centaure, est à environ 4,2 années-lumière. Convertir cette
+    distance en km (1 a.l. ≈ 9,46 × 10¹² km).
+  indices:
+  - Multiplier 4,2 par 9,46 × 10¹².
+  solution: 4,2 × 9,46 × 10¹² ≈ 3,97 × 10¹³ km, soit environ 39 700 milliards de km.
+- enonce: Une page de livre éclairée par une lampe est-elle une source primaire de lumière ou un objet diffusant
+    ?
+  indices:
+  - La page produit-elle sa propre lumière ?
+  solution: 'C''est un objet diffusant : elle renvoie la lumière de la lampe, elle n''en produit pas.'
+- enonce: Pourquoi dit-on qu'en observant une étoile très lointaine, on la voit « telle qu'elle était dans le passé
+    » ?
+  indices:
+  - La lumière met du temps à parcourir la distance jusqu'à nous.
+  solution: 'La lumière que l''on reçoit a mis parfois des milliers d''années à nous parvenir : elle montre donc
+    l''état de l''étoile au moment où elle a été émise, pas son état actuel.'
+sources:
+- titre: Vikidia, « Lumière »
+  url: https://fr.vikidia.org/w/index.php?title=Lumi%C3%A8re&oldid=2561494
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Année-lumière »
+  url: https://fr.vikidia.org/w/index.php?title=Ann%C3%A9e-lumi%C3%A8re&oldid=2410558
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

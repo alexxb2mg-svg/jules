@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: subjonctif-imparfait-plus-que-parfait
+declencheurs:
+- subjonctif imparfait
+- subjonctif plus-que-parfait
+- qu'il fût
+- qu'il eût
+- temps littéraire
+- accent circonflexe verbe
+- concordance des temps
+essentiel: 'Le subjonctif imparfait se forme sur le radical de la 2ᵉ personne du singulier du passé simple (sans
+  le -s final), avec les terminaisons -asse/-asses/-ât/-assions/-assiez/-assent (verbes en -ai au passé simple)
+  ou -isse.../-ît... (passé simple en -is) ou -usse.../-ût... (passé simple en -us). À la 3ᵉ personne du singulier,
+  un accent circonflexe apparaît toujours : qu''il aimât, qu''il finît, qu''il eût, qu''il fût.
+
+  Le subjonctif plus-que-parfait est un temps composé : auxiliaire être ou avoir au subjonctif imparfait + participe
+  passé du verbe (qu''il eût fini, qu''elle fût partie).
+
+  Ces deux temps, très employés en ancien et classique français, sont aujourd''hui réservés à la langue littéraire
+  ou soutenue ; à l''oral et dans l''usage courant, on les remplace par le subjonctif présent ou le subjonctif passé.
+
+  Verbes irréguliers du 3ᵉ groupe à connaître (3ᵉ personne du singulier) : qu''il fît (faire), qu''il allât (aller),
+  qu''il dît (dire), qu''il vînt (venir), qu''il pût (pouvoir), qu''il vît (voir), qu''il voulût (vouloir), qu''il
+  prît (prendre), qu''il sût (savoir), qu''il fallût (falloir), qu''il valût (valoir).'
+methode:
+- Trouver la 2ᵉ personne du singulier du passé simple du verbe (tu aimas, tu finis, tu eus, tu vins).
+- 'Retirer le -s final : c''est le radical du subjonctif imparfait.'
+- Ajouter la terminaison de la personne demandée ; pour la 3ᵉ personne du singulier, ajouter l'accent circonflexe
+  sur la voyelle finale.
+- 'Pour le plus-que-parfait : conjuguer être ou avoir au subjonctif imparfait, puis ajouter le participe passé du
+  verbe.'
+- Repérer ces temps dans un texte littéraire ancien ou soutenu ; les remplacer mentalement par le subjonctif présent/passé
+  pour vérifier le sens.
+vocabulaire:
+- terme: subjonctif imparfait
+  definition: temps simple du subjonctif exprimant, dans un système au passé, une action simultanée ou postérieure
+- terme: concordance des temps
+  definition: accord entre le temps de la principale et celui de la subordonnée au subjonctif
+erreurs_frequentes:
+- Oublier l'accent circonflexe à la 3ᵉ personne du singulier (qu'il aima au lieu de qu'il aimât).
+- Confondre subjonctif imparfait et passé simple de l'indicatif (qu'il chantât / il chanta).
+- Se tromper de radical pour les verbes irréguliers (qu'il venât au lieu de qu'il vînt).
+- Employer le subjonctif imparfait à l'oral courant, alors qu'il est réservé à l'écrit soutenu.
+exemple:
+  enonce: 'Mettre au subjonctif imparfait, 3ᵉ personne du singulier : « Il fallait qu''il (finir) son travail avant
+    la nuit. »'
+  solution: '« Il fallait qu''il finît son travail avant la nuit. » : radical de « tu finis » (passé simple) sans
+    le -s, + accent circonflexe : finît.'
+exercices:
+- enonce: 'Mettre au subjonctif imparfait, 3ᵉ personne du singulier : venir, avoir.'
+  indices:
+  - 'Passé simple : tu vins, tu eus.'
+  solution: qu'il vînt ; qu'il eût.
+- enonce: 'Réécrire au subjonctif plus-que-parfait : « Bien qu''il ait terminé son repas, il resta à table. » (à
+    mettre dans un système au passé)'
+  indices:
+  - Le subjonctif passé « ait terminé » devient, au passé, un temps composé du subjonctif imparfait.
+  solution: '« Bien qu''il eût terminé son repas, il resta à table. » : avoir au subjonctif imparfait (eût) + participe
+    passé (terminé).'
+- enonce: 'Corriger l''erreur : « Il aurait fallu qu''elle parla plus fort. »'
+  indices:
+  - Quelle est la 3ᵉ personne du singulier du subjonctif imparfait de parler ?
+  solution: '« Il aurait fallu qu''elle parlât plus fort. » : accent circonflexe obligatoire à la 3ᵉ personne du
+    singulier.'
+sources:
+- titre: Wikipédia, « Subjonctif imparfait en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Subjonctif_imparfait_en_fran%C3%A7ais&oldid=237100884
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Subjonctif plus-que-parfait en français »
+  url: https://fr.wikipedia.org/w/index.php?title=Subjonctif_plus-que-parfait_en_fran%C3%A7ais&oldid=216162730
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

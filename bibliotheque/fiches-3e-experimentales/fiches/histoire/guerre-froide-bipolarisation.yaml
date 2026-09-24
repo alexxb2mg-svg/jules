@@ -1,0 +1,86 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: guerre-froide-bipolarisation
+declencheurs:
+- URSS
+- États-Unis contre URSS
+- mur de Berlin
+- bloc de l'Est
+- bloc de l'Ouest
+- rideau de fer
+- capitalisme contre communisme
+- tiers monde
+essentiel: 'La guerre froide (1947-1991) est une période de tensions et de rivalité entre les deux « superpuissances
+  » issues de la Seconde Guerre mondiale : les États-Unis, attachés au capitalisme et à la démocratie libérale,
+  et l''URSS, attachée au communisme. Le monde est coupé en deux blocs par un « rideau de fer » (1946), symbolisé
+  par le mur de Berlin construit en 1961.
+
+  C''est une confrontation surtout idéologique, culturelle et d''opinion : chaque camp cherche à montrer la supériorité
+  de son modèle, sans affrontement militaire direct entre les deux superpuissances (d''où le mot « froide »), mais
+  avec des crises et des conflits locaux où elles s''opposent indirectement.
+
+  Le bloc communiste est organisé autour de l''URSS (pacte de Varsovie), le bloc occidental autour des États-Unis
+  (OTAN). Une partie des pays du tiers monde refuse de choisir un camp et forme le mouvement des non-alignés (conférence
+  de Bandung, 1955). Les décolonisations remettent en cause la logique bipolaire du monde en faisant émerger de
+  nouveaux États qui ne s''alignent pas automatiquement sur un bloc.'
+methode:
+- 'Retenir les deux dates encadrant la guerre froide : 1947 (début) et 1989-1991 (fin, chute du bloc soviétique).'
+- 'Nommer les deux camps et leurs modèles opposés : capitalisme/démocratie (États-Unis) contre communisme (URSS).'
+- Comprendre que la guerre froide est surtout une guerre d'opinion et d'idéologie, pas un affrontement militaire
+  direct entre les deux grands.
+- 'Relier la guerre froide aux indépendances : le tiers monde et les non-alignés viennent contester la logique des
+  deux blocs.'
+vocabulaire:
+- terme: bipolarisation
+  definition: l'organisation du monde autour de deux pôles de puissance rivaux (ici les États-Unis et l'URSS)
+- terme: rideau de fer
+  definition: la frontière qui sépare l'Europe entre bloc occidental et bloc communiste pendant la guerre froide
+- terme: non-alignés
+  definition: les pays qui refusent de choisir entre les deux blocs pendant la guerre froide
+erreurs_frequentes:
+- 'Croire que la guerre froide est une guerre avec des combats directs entre États-Unis et URSS : c''est une guerre
+  sans affrontement militaire direct entre les deux superpuissances.'
+- Confondre l'OTAN (bloc occidental) et le pacte de Varsovie (bloc communiste).
+- Oublier le rôle du tiers monde et des non-alignés dans la remise en cause de la logique bipolaire.
+- Situer la fin de la guerre froide en 1945 au lieu de 1989-1991.
+exemple:
+  enonce: Pourquoi dit-on que la guerre froide est une guerre « idéologique » ?
+  solution: Parce que l'affrontement entre les deux blocs se joue surtout par les idées, la propagande, la culture
+    et l'opinion publique, chaque camp cherchant à montrer la supériorité de son modèle économique et politique,
+    sans combat armé direct entre les deux superpuissances.
+exercices:
+- enonce: Cite les dates de début et de fin de la guerre froide, ainsi que les deux blocs en présence.
+  indices:
+  - 1947 marque le début officiel.
+  solution: De 1947 à 1989-1991 ; bloc occidental (États-Unis, capitalisme) contre bloc communiste (URSS, communisme).
+- enonce: 'Développement construit : explique comment les indépendances des colonies remettent en cause la logique
+    bipolaire du monde.'
+  indices:
+  - Que veulent les non-alignés ?
+  - Cite la conférence de Bandung.
+  solution: Un développement réussi doit rappeler la logique bipolaire (deux blocs rivaux) ; expliquer que de nombreux
+    nouveaux États indépendants, notamment réunis lors de la conférence de Bandung en 1955, refusent de s'aligner
+    sur un des deux blocs et forment le mouvement des non-alignés ; montrer que cela complique la vision d'un monde
+    coupé seulement en deux.
+- enonce: Quelle image symbolise le mieux la coupure de l'Europe pendant la guerre froide ?
+  indices:
+  - Un mur construit en 1961 à Berlin.
+  solution: Le mur de Berlin, construit en 1961, symbolise la coupure entre le bloc occidental et le bloc communiste,
+    matérialisant le « rideau de fer » qui traverse l'Europe.
+sources:
+- titre: Vikidia, « Guerre froide »
+  url: https://fr.vikidia.org/w/index.php?title=Guerre_froide&oldid=2570032
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Décolonisation »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9colonisation&oldid=1258479
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé (tiers monde et non-alignés)
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

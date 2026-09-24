@@ -1,0 +1,82 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: acide-base-combustion-corrosion
+declencheurs:
+- pH
+- solution acide
+- solution basique
+- combustion
+- brûler
+- rouille
+- corrosion
+- gaz à effet de serre produit par une réaction
+essentiel: 'Le pH mesure le caractère acide ou basique d''une solution aqueuse, sur une échelle qui va généralement
+  de 0 à 14 : pH < 7 signale une solution acide, pH = 7 une solution neutre (comme l''eau pure), pH > 7 une solution
+  basique.
+
+  Le caractère acide est lié à la présence d''ions H+ (plus il y en a, plus le pH est bas) ; le caractère basique
+  est lié à la présence d''ions OH- (plus il y en a, plus le pH est élevé).
+
+  Une combustion est une transformation chimique entre un combustible et un comburant (souvent le dioxygène de l''air)
+  qui produit de l''énergie (chaleur, lumière) ; une combustion complète d''un combustible contenant du carbone
+  produit du dioxyde de carbone et souvent de l''eau.
+
+  La corrosion est une réaction chimique lente entre un métal et son environnement (dioxygène, eau, parfois solutions
+  acides) qui l''abîme progressivement, comme la rouille du fer.
+
+  Certaines transformations chimiques (combustions notamment) produisent des gaz à effet de serre, en particulier
+  le dioxyde de carbone, qui participent au réchauffement climatique.'
+methode:
+- Pour caractériser une solution, mesurer son pH (papier pH ou pH-mètre) et le comparer à 7.
+- Relier un pH bas à une présence importante d'ions H+, un pH élevé à une présence importante d'ions OH-.
+- Pour une combustion, identifier le combustible et le comburant, et repérer les produits formés (souvent CO2 et
+  H2O).
+- Pour la corrosion, identifier le métal et les substances de l'environnement responsables (dioxygène, eau, humidité).
+erreurs_frequentes:
+- Croire qu'un pH négatif ou supérieur à 14 est impossible dans l'absolu (l'échelle usuelle va de 0 à 14, mais ce
+  n'est qu'une convention pratique).
+- 'Confondre acide et basique : un produit « qui pique » n''est pas forcément acide.'
+- Oublier qu'une combustion a besoin d'un comburant (souvent le dioxygène) pour se produire.
+- Confondre corrosion (réaction chimique lente) et usure mécanique (frottement, sans réaction chimique).
+exemple:
+  enonce: Une solution a un pH de 3. Est-elle acide, neutre ou basique ? Quels ions y sont en excès ?
+  solution: 'pH = 3 < 7 : la solution est acide. Elle contient un excès d''ions H+.'
+exercices:
+- enonce: Le pH de l'eau de Javel est d'environ 12. Est-elle acide ou basique ?
+  indices:
+  - Comparer 12 à 7.
+  solution: '12 > 7 : l''eau de Javel est basique.'
+- enonce: Un morceau de fer laissé dehors se recouvre d'une couche orangée après plusieurs semaines. Comment se
+    nomme ce phénomène, et quels sont les deux éléments de l'environnement responsables ?
+  indices:
+  - C'est une réaction chimique lente entre le métal et son environnement.
+  solution: C'est de la corrosion (rouille), due au dioxygène de l'air et à l'humidité (eau).
+- enonce: La combustion complète du gaz naturel (contenant du carbone) produit deux types de substances. Lesquelles,
+    et pourquoi cela concerne-t-il le climat ?
+  indices:
+  - Une combustion complète d'un combustible carboné produit du CO2 et de l'eau.
+  solution: Elle produit du dioxyde de carbone et de l'eau ; le CO2 est un gaz à effet de serre qui contribue au
+    réchauffement climatique.
+sources:
+- titre: Vikidia, « PH »
+  url: https://fr.vikidia.org/w/index.php?title=PH&oldid=2553775
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Combustion »
+  url: https://fr.vikidia.org/w/index.php?title=Combustion&oldid=1734731
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Corrosion »
+  url: https://fr.vikidia.org/w/index.php?title=Corrosion&oldid=2309950
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

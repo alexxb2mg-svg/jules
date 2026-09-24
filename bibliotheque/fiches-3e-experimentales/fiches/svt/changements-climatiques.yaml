@@ -1,0 +1,73 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: changements-climatiques
+declencheurs:
+- réchauffement climatique
+- gaz à effet de serre et climat
+- climat il y a des millions d'années
+- conséquences du changement climatique sur les espèces
+- brûler du pétrole
+- combustion des énergies fossiles
+essentiel: 'Le climat de la Terre a beaucoup varié au cours des temps géologiques (des millions d''années), avec
+  des périodes glaciaires et des périodes plus chaudes, pour des causes naturelles (variations de l''orbite terrestre,
+  activité volcanique, entre autres).
+
+  Depuis le début de l''ère industrielle, les activités humaines (combustion d''énergies fossiles comme le charbon
+  ou le pétrole, déforestation) émettent en grande quantité des gaz à effet de serre, notamment du dioxyde de carbone,
+  qui renforcent l''effet de serre naturel de l''atmosphère.
+
+  Ce renforcement de l''effet de serre entraîne un réchauffement climatique global, plus rapide que les variations
+  naturelles observées dans le passé.
+
+  Ce réchauffement a des conséquences sur la répartition des êtres vivants : certaines espèces déplacent leur aire
+  de répartition (vers des latitudes ou des altitudes plus fraîches), d''autres peinent à s''adapter assez vite
+  et voient leur population diminuer.
+
+  Distinguer les changements climatiques passés (naturels, très lents à l''échelle géologique) du changement climatique
+  actuel (accéléré par les activités humaines) est essentiel pour comprendre l''enjeu.'
+methode:
+- Distinguer les causes naturelles des changements climatiques passés et les causes humaines du changement climatique
+  actuel.
+- Relier l'augmentation des gaz à effet de serre d'origine humaine au réchauffement climatique actuel.
+- Chercher des exemples de conséquences sur la répartition des espèces (migration, disparition locale).
+- Comparer la vitesse du changement climatique actuel à celle des changements passés (naturels, beaucoup plus lents).
+erreurs_frequentes:
+- Croire que le climat n'a jamais changé avant l'ère industrielle.
+- Penser que le changement climatique actuel a uniquement des causes naturelles, comme dans le passé.
+- Confondre effet de serre (phénomène naturel indispensable à la vie) et son renforcement actuel (problème lié aux
+  activités humaines).
+- Croire que toutes les espèces peuvent s'adapter aussi vite que le climat actuel change.
+exemple:
+  enonce: En quoi le changement climatique actuel diffère-t-il des changements climatiques passés observés dans
+    l'histoire de la Terre ?
+  solution: Les changements passés avaient des causes naturelles (variations de l'orbite terrestre, volcanisme…)
+    et se sont produits très lentement, à l'échelle de milliers ou de millions d'années. Le changement actuel, lui,
+    est très rapide et lié aux émissions de gaz à effet de serre par les activités humaines depuis l'ère industrielle.
+exercices:
+- enonce: Citer deux causes des changements climatiques passés (naturels), avant l'ère industrielle.
+  indices:
+  - Pense à des phénomènes astronomiques et géologiques, pas humains.
+  solution: Les variations de l'orbite terrestre autour du Soleil et l'activité volcanique intense sont deux causes
+    naturelles possibles (d'autres réponses géologiques sont acceptées).
+- enonce: Pourquoi la combustion des énergies fossiles (charbon, pétrole, gaz) contribue-t-elle au réchauffement
+    climatique ?
+  indices:
+  - Que produit une combustion contenant du carbone ?
+  solution: Elle libère du dioxyde de carbone, un gaz à effet de serre, qui renforce l'effet de serre naturel de
+    l'atmosphère et augmente la température moyenne de la Terre.
+- enonce: Donner un exemple de conséquence du réchauffement climatique sur la répartition des êtres vivants.
+  indices:
+  - Pense à des espèces qui se déplacent vers des zones plus fraîches.
+  solution: Certaines espèces animales ou végétales déplacent leur aire de répartition vers des latitudes plus élevées
+    ou des altitudes plus fraîches pour retrouver des conditions climatiques adaptées.
+sources:
+- titre: Vikidia, « Réchauffement climatique »
+  url: https://fr.vikidia.org/w/index.php?title=R%C3%A9chauffement_climatique&oldid=2564497
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

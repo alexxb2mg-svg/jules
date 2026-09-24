@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: caracterisation-chaines-fonctions-3e
+declencheurs:
+- chaîne d'énergie
+- chaîne d'information
+- fonction technique
+- schéma fonctionnel
+- caractériser
+- objet réel
+couverture: 'Cette fiche complète les notions chaine-energie et chaine-information : elle porte sur l''analyse conjointe
+  des deux chaînes d''un objet technique réel en classe de 3e.'
+essentiel: 'Caractériser les chaînes d''énergie et d''information d''un objet réel, c''est identifier, pour chaque
+  fonction (alimenter, distribuer, convertir, transmettre pour l''énergie ; acquérir, traiter, communiquer pour
+  l''information), le ou les composants réels qui la réalisent, en observant l''objet ou sa documentation technique.
+
+
+  Les deux chaînes fonctionnent ensemble : la chaîne d''information analyse une situation et commande la chaîne
+  d''énergie pour produire une action. Par exemple, un détecteur de mouvement (chaîne d''information : acquérir
+  la présence, traiter, communiquer l''ordre) commande l''allumage d''une lampe (chaîne d''énergie : alimenter,
+  distribuer, convertir en lumière).'
+methode:
+- Observer ou démonter (virtuellement ou réellement) l'objet technique pour repérer chaque composant.
+- 'Classer chaque composant dans la chaîne d''énergie ou la chaîne d''information selon son rôle : transporte-t-il
+  de la puissance (énergie) ou une information ?'
+- Vérifier que l'ordre des fonctions est respecté dans chaque chaîne (alimenter avant distribuer avant convertir
+  avant transmettre ; acquérir avant traiter avant communiquer).
+- 'Relier les deux chaînes : la chaîne d''information commande généralement la fonction distribuer de la chaîne
+  d''énergie.'
+vocabulaire:
+- terme: schéma fonctionnel
+  definition: représentation en blocs des fonctions d'un objet technique, reliées entre elles par des flèches
+erreurs_frequentes:
+- Classer un composant dans la mauvaise chaîne (par exemple un capteur, qui appartient à la chaîne d'information,
+  pas à la chaîne d'énergie).
+- 'Oublier le lien entre les deux chaînes : la chaîne d''information commande la chaîne d''énergie.'
+- Confondre l'ordre des fonctions dans chaque chaîne.
+exemple:
+  enonce: Un portail automatique s'ouvre quand une télécommande envoie un signal. Décrire brièvement les deux chaînes
+    en jeu.
+  solution: 'Chaîne d''information : acquérir (récepteur qui capte le signal de la télécommande), traiter (carte
+    électronique qui vérifie le code et décide d''ouvrir), communiquer (envoi de l''ordre au moteur). Chaîne d''énergie
+    : alimenter (bloc secteur ou batterie), distribuer (relais commandé par la carte électronique), convertir (moteur
+    électrique qui tourne), transmettre (système de crémaillère ou de bras qui ouvre le portail).'
+exercices:
+- enonce: Un store électrique se referme automatiquement quand un capteur de vent détecte une rafale trop forte.
+    Identifier la fonction acquérir et la fonction convertir de cet objet.
+  indices:
+  - Le capteur acquiert ; le moteur convertit.
+  solution: 'Acquérir : le capteur de vent qui mesure la force du vent. Convertir : le moteur électrique qui transforme
+    l''énergie électrique en mouvement pour enrouler le store.'
+sources:
+- titre: Wikipédia, « Capteur »
+  url: https://fr.wikipedia.org/w/index.php?title=Capteur&oldid=236847533
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Moteur électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

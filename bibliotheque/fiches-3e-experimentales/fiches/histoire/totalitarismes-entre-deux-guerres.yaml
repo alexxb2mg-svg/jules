@@ -1,0 +1,97 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: totalitarismes-entre-deux-guerres
+declencheurs:
+- Hitler
+- nazis
+- '1929'
+- crise économique
+- chômage entre les deux guerres
+- Léon Blum
+- congés payés
+- montée du fascisme
+- krach de Wall Street
+essentiel: 'Le 24 octobre 1929, le krach boursier de Wall Street déclenche la Grande Dépression, une crise économique
+  mondiale marquée par des faillites bancaires, des fermetures d''usines et un chômage massif.
+
+  En Allemagne, la crise aggrave les difficultés héritées de la défaite de 1918 et du traité de Versailles. En janvier
+  1933, Adolf Hitler devient chancelier ; il installe rapidement un régime totalitaire, le nazisme : opposition
+  interdite, propagande, contrôle total de la société, idéologie raciste et antisémite qui vise en particulier les
+  Juifs. L''Allemagne nazie noue ensuite des alliances avec l''Italie fasciste de Mussolini et le Japon.
+
+  En France, la crise et la montée des ligues d''extrême droite (émeutes du 6 février 1934) inquiètent la gauche,
+  qui s''unit dans le Front populaire (Parti radical, SFIO, Parti communiste). Il remporte les élections de mai
+  1936 ; le gouvernement de Léon Blum (SFIO) fait voter d''importantes réformes sociales (congés payés, semaine
+  de 40 heures), dans un contexte européen de « montée des périls ».'
+methode:
+- Distinguer la cause économique (krach de 1929, Grande Dépression) de sa conséquence politique en Allemagne (arrivée
+  d'Hitler au pouvoir en 1933).
+- 'Retenir un mot juste pour qualifier le régime nazi : totalitaire (contrôle total de la société, parti unique,
+  propagande, répression).'
+- Situer le Front populaire dans le temps (1936) et le relier au contexte de crise et de « montée des périls » en
+  Europe.
+- 'Ne pas confondre nazisme (Allemagne, Hitler) et fascisme (Italie, Mussolini) : deux régimes proches mais distincts,
+  alliés dans les années 1930.'
+vocabulaire:
+- terme: totalitarisme
+  definition: 'un régime politique qui contrôle entièrement la société : parti unique, propagande, absence de libertés,
+    répression'
+- terme: Grande Dépression
+  definition: la crise économique mondiale qui suit le krach de Wall Street de 1929
+- terme: Front populaire
+  definition: l'alliance des partis de gauche en France (1934), au pouvoir de 1936 à 1938
+erreurs_frequentes:
+- 'Croire qu''Hitler est élu président : il est nommé chancelier en janvier 1933, puis concentre les pouvoirs.'
+- Confondre le krach de 1929 (un événement boursier) et la Grande Dépression (la crise économique qui en découle,
+  plus longue).
+- Oublier que le Front populaire est une coalition de plusieurs partis, pas un seul parti.
+- 'Mélanger nazisme et fascisme italien : des points communs (totalitarisme) mais des mouvements distincts.'
+exemple:
+  enonce: Explique le lien entre la crise de 1929 et l'arrivée d'Hitler au pouvoir en Allemagne.
+  solution: Le krach de 1929 provoque une crise économique mondiale (chômage, faillites). En Allemagne, cette crise
+    s'ajoute aux difficultés de l'après-guerre et rend le pays instable. Adolf Hitler et le parti nazi profitent
+    de ce contexte pour gagner des soutiens et arrivent au pouvoir en janvier 1933.
+exercices:
+- enonce: Donne deux caractéristiques d'un régime totalitaire, à partir de l'exemple du nazisme.
+  indices:
+  - Pense à la liberté d'expression et à l'opposition politique.
+  solution: Un parti unique au pouvoir (le NSDAP) et l'interdiction de toute opposition politique ; une propagande
+    d'État omniprésente et une idéologie raciste imposée à toute la société.
+- enonce: 'Développement construit : présente les réformes du Front populaire et le contexte dans lequel elles sont
+    votées.'
+  indices:
+  - Situe d'abord le contexte (crise, élections de 1936).
+  - Cite au moins une mesure sociale précise.
+  solution: Un développement réussi situe la victoire électorale du Front populaire en mai 1936, dans un contexte
+    de crise économique et de tensions politiques (émeutes de 1934) ; présente le gouvernement de Léon Blum et au
+    moins une réforme sociale (congés payés, réduction du temps de travail) ; relie cette expérience française à
+    la « montée des périls » en Europe (régimes totalitaires voisins).
+- enonce: Pourquoi peut-on dire que la crise de 1929 a des conséquences politiques, pas seulement économiques ?
+  indices:
+  - Regarde ce qui se passe en Allemagne à partir de 1933.
+  solution: 'La crise fragilise les gouvernements démocratiques et favorise la montée de partis extrémistes qui
+    promettent des solutions radicales : en Allemagne, elle facilite l''arrivée au pouvoir d''Hitler et du régime
+    nazi en 1933.'
+sources:
+- titre: Vikidia, « Krach de 1929 »
+  url: https://fr.vikidia.org/w/index.php?title=Krach_de_1929&oldid=2351031
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé (krach de 1929)
+- titre: Vikidia, « Nazisme »
+  url: https://fr.vikidia.org/w/index.php?title=Nazisme&oldid=2575168
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Front populaire »
+  url: https://fr.vikidia.org/w/index.php?title=Front_populaire&oldid=2337126
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

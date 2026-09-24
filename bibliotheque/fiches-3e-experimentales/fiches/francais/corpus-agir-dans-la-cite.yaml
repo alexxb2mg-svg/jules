@@ -1,0 +1,58 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: corpus-agir-dans-la-cite
+declencheurs:
+- lecture intégrale guerre
+- œuvre sur la Seconde Guerre mondiale
+- totalitarisme
+- croisement histoire français
+- extrait sur les guerres mondiales
+essentiel: 'Ce corpus s''appuie sur le programme d''histoire de 3e (l''Europe, un théâtre majeur des guerres totales)
+  pour étudier une œuvre entière, ou une partie significative d''une œuvre, qui porte un regard sur l''histoire
+  du XXe siècle : les guerres mondiales, la société de l''entre-deux-guerres, les régimes fascistes et totalitaires.
+  La lecture peut être complétée par des extraits d''autres œuvres littéraires, des œuvres picturales ou des extraits
+  d''œuvres cinématographiques sur le même sujet.
+
+  L''objectif est de croiser deux regards sur les mêmes évènements : celui de l''historien, qui établit des faits,
+  et celui de l''écrivain ou de l''artiste, qui donne à ressentir une expérience humaine à travers un récit, une
+  image ou une œuvre. Ce croisement aide à comprendre comment la littérature peut « agir dans la cité », c''est-à-dire
+  jouer un rôle dans la société en faisant réfléchir à des questions collectives (la guerre, la liberté, la responsabilité).'
+methode:
+- Relier la période historique étudiée en histoire (guerres mondiales, totalitarismes) à l'œuvre lue en français.
+- Repérer dans le texte les éléments qui renvoient à des faits historiques précis.
+- Distinguer le point de vue du narrateur ou des personnages de celui, plus général, de l'historien.
+- Analyser comment une image (peinture, photographie, extrait de film) complète la lecture du texte.
+- Formuler ce que l'œuvre apporte de plus qu'un simple exposé historique.
+erreurs_frequentes:
+- Étudier l'œuvre littéraire sans mobiliser ses connaissances d'histoire sur la période.
+- Réduire une œuvre entière à un seul évènement historique ponctuel.
+- Confondre le regard subjectif d'un personnage et la vérité historique établie.
+- Ne pas relier le texte étudié à l'image ou au film qui l'accompagne dans le corpus.
+exemple:
+  enonce: Pourquoi étudier une œuvre littéraire sur la Seconde Guerre mondiale en parallèle du cours d'histoire
+    sur le même sujet ?
+  solution: Le cours d'histoire donne les faits, les dates et les causes ; la littérature permet de ressentir, à
+    travers un ou plusieurs personnages, ce que ces évènements ont pu signifier concrètement pour des individus,
+    ce qui enrichit et complète la compréhension historique.
+exercices:
+- enonce: Cite un thème du programme d'histoire de 3e que l'on peut relier à ce corpus.
+  indices:
+  - Guerres mondiales, société de l'entre-deux-guerres, régimes totalitaires.
+  solution: 'Par exemple : les guerres mondiales, l''Occupation, les régimes totalitaires en Europe.'
+- enonce: En t'appuyant sur une œuvre lue en classe ou choisie par toi (même en résumé), explique en 4-5 lignes
+    en quoi son sujet est lié à un évènement historique du XXe siècle.
+  indices:
+  - Nomme l'œuvre, l'évènement historique concerné, et le lien entre les deux.
+  solution: Réussite si l'élève nomme une œuvre précise, l'évènement historique évoqué, et explique le lien entre
+    fiction et histoire réelle.
+sources:
+- titre: Wikipédia, « Littérature engagée »
+  url: https://fr.wikipedia.org/w/index.php?title=Litt%C3%A9rature_engag%C3%A9e&oldid=239676414
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

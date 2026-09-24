@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: programmation-nouvelle-fonctionnalite
+declencheurs:
+- Scratch
+- programmer
+- bloc de code
+- script
+- algorithme
+- langage de programmation
+- ajouter une fonctionnalité
+essentiel: 'Programmer une nouvelle fonctionnalité consiste à écrire les instructions qui permettent à un objet
+  technique ou un programme de réaliser une action supplémentaire. En 3e, cela se fait souvent avec Scratch (langage
+  de programmation graphique par blocs) ou un langage textuel simple, éventuellement relié à une carte comme Arduino.
+
+
+  Un langage de programmation est un ensemble de règles (syntaxe, vocabulaire) qui permet d''écrire des instructions
+  compréhensibles par une machine. Scratch simplifie cette écriture en assemblant des blocs visuels (comme des pièces
+  de puzzle) représentant chacun une instruction (bouger, répéter, attendre, si... alors...).
+
+
+  Pour ajouter une fonctionnalité, il faut décomposer l''action voulue en instructions simples et ordonnées, utiliser
+  des variables si une valeur doit être mémorisée, et tester le programme pour vérifier qu''il fait bien ce qui
+  est attendu.'
+methode:
+- Décrire précisément la nouvelle fonctionnalité voulue avant de programmer (que doit-il se passer, et dans quel
+  ordre ?).
+- Décomposer cette fonctionnalité en instructions simples et ordonnées (algorithme).
+- Traduire chaque instruction en bloc (Scratch) ou en ligne de code, en utilisant les structures adaptées (répétition,
+  condition si...alors, variable).
+- Tester le programme avec plusieurs cas, y compris des cas limites, pour vérifier qu'il fonctionne correctement.
+vocabulaire:
+- terme: variable
+  definition: espace mémoire nommé qui stocke une valeur pouvant changer pendant l'exécution d'un programme
+- terme: bloc (Scratch)
+  definition: élément visuel représentant une instruction, que l'on assemble à d'autres pour former un script
+erreurs_frequentes:
+- Vouloir écrire directement le programme complet sans avoir décomposé l'action en étapes simples.
+- Oublier de tester le programme avec des cas particuliers (valeur nulle, très grande, négative).
+- Utiliser toujours la même variable pour deux informations différentes, ce qui provoque des erreurs.
+exemple:
+  enonce: 'On veut ajouter à un jeu Scratch une fonctionnalité : quand le score dépasse 10, afficher « Bravo ! ».
+    Décrire les blocs nécessaires.'
+  solution: Une variable « score » qui augmente au fil du jeu ; un bloc « si score > 10 alors » ; à l'intérieur,
+    un bloc « dire Bravo ! » ; l'ensemble est vérifié en boucle (par exemple dans une boucle « répéter indéfiniment
+    ») pour détecter le moment où la condition devient vraie.
+exercices:
+- enonce: Décomposer en instructions simples et ordonnées l'algorithme d'un feu piéton qui passe du rouge au vert
+    après 10 secondes.
+  indices:
+  - Pense à l'état initial, à l'attente, puis au changement d'état.
+  solution: 1) Allumer le feu rouge. 2) Attendre 10 secondes. 3) Éteindre le rouge et allumer le vert.
+sources:
+- titre: Vikidia, « Scratch (logiciel) »
+  url: https://fr.vikidia.org/w/index.php?title=Scratch_%28logiciel%29&oldid=2559997
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Langage de programmation »
+  url: https://fr.wikipedia.org/w/index.php?title=Langage_de_programmation&oldid=235190901
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

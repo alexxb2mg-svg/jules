@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: vitesse-mouvement
+declencheurs:
+- km/h
+- m/s
+- distance parcourue
+- trajet en voiture
+- référentiel
+- se déplace par rapport à
+essentiel: 'Un objet est en mouvement si sa position change au cours du temps par rapport à un référentiel (un objet
+  ou un point choisi comme fixe) ; le mouvement est donc relatif : un passager assis dans un train est immobile
+  par rapport au train, mais en mouvement par rapport au sol.
+
+  La vitesse caractérise la rapidité du mouvement : v = d / t, avec d la distance parcourue et t la durée du parcours.
+  Elle s''exprime en m/s (unité internationale) ou en km/h (usage courant).
+
+  Un mouvement est uniforme si la vitesse reste constante au cours du temps ; sinon la vitesse varie (le mouvement
+  accélère ou ralentit).
+
+  La trajectoire (le chemin suivi) peut être rectiligne (une droite) ou circulaire (un cercle) ; elle dépend elle
+  aussi du référentiel choisi.
+
+  Pour convertir une vitesse de km/h en m/s, on multiplie par 1000 (m dans un km) et on divise par 3600 (s dans
+  une heure).'
+methode:
+- Toujours préciser le référentiel par rapport auquel on décrit un mouvement.
+- Utiliser v = d / t pour calculer une vitesse, en veillant à l'unité de d et de t.
+- Pour convertir km/h en m/s, multiplier par 1000 et diviser par 3600 (ou diviser par 3,6).
+- Repérer si le mouvement est uniforme (vitesse constante) en comparant les distances parcourues sur des durées
+  égales.
+erreurs_frequentes:
+- Oublier de préciser le référentiel, alors que le mouvement en dépend totalement.
+- Confondre distance parcourue et déplacement (distance entre point de départ et d'arrivée).
+- Se tromper dans la conversion km/h ↔ m/s (facteur 3,6, pas 3 ou 10).
+- Croire qu'un objet est forcément immobile s'il ne bouge pas par rapport à soi.
+exemple:
+  enonce: Une voiture parcourt 120 km en 1 h 30 min. Calculer sa vitesse moyenne en km/h.
+  solution: 1 h 30 min = 1,5 h. v = d / t = 120 / 1,5 = 80 km/h.
+exercices:
+- enonce: Convertir 80 km/h en m/s.
+  indices:
+  - Multiplier par 1000, diviser par 3600 (ou diviser directement par 3,6).
+  solution: 80 km/h = 80 000 / 3600 ≈ 22,2 m/s.
+- enonce: Un cycliste roule à vitesse constante de 18 km/h pendant 20 min. Quelle distance parcourt-il ?
+  indices:
+  - 20 min = 1/3 h.
+  - d = v × t.
+  solution: 20 min = 1/3 h. d = 18 × 1/3 = 6 km.
+- enonce: Un passager assis dans un train qui roule est-il en mouvement par rapport au sol ? Par rapport à son siège
+    ?
+  indices:
+  - Pense au référentiel choisi dans chaque cas.
+  solution: 'Il est en mouvement par rapport au sol (le train avance), mais immobile par rapport à son siège (il
+    ne bouge pas dans le train) : le mouvement dépend du référentiel.'
+sources:
+- titre: Vikidia, « Vitesse »
+  url: https://fr.vikidia.org/w/index.php?title=Vitesse&oldid=2384746
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

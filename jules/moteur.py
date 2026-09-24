@@ -84,6 +84,11 @@ class Tuteur:
             raise KeyError(conv_id)
         eleve = self.stockage.ajouter_message(conv_id, Message(role="eleve", texte=texte, images=images or []))
         conv.messages.append(eleve)
+        for module in self.modules:
+            try:
+                module.avant_echange(conv, eleve)
+            except Exception:
+                journal.exception("Module %s : avant_echange en echec", module.id)
         try:
             reponse = self.llm.repondre(self.systeme(conv), self.tours(conv), "principal")
         except Exception as err:

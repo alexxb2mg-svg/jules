@@ -1,0 +1,60 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: sexprimer-analyser-sa-pratique
+declencheurs:
+- presenter mon travail a la classe
+- expliquer ma demarche
+- critique de mon dessin
+- vocabulaire pour parler d'une oeuvre
+- verbaliser sa production
+- recevoir un avis sur mon travail
+essentiel: 'Parler de sa pratique, c''est dire avec des mots précis ce qu''on a fait, ressenti, voulu obtenir :
+  pas seulement « j''aime » ou « c''est nul », mais des observations sur la couleur, la matière, la composition,
+  l''effet recherché.
+
+  Cette parole sert à soutenir une intention artistique : expliquer pourquoi on a fait tel choix, même s''il surprend,
+  plutôt que de le justifier après coup par le hasard.
+
+  Elle sert aussi à établir des liens entre son propre travail et des œuvres ou démarches d''artistes rencontrées
+  en classe.
+
+  Enfin, elle s''exerce dans l''écoute : accepter un avis différent du sien, sans le prendre pour une attaque personnelle,
+  et pouvoir y répondre par un argument.'
+methode:
+- Décrire d'abord ce qui est visible (matériaux, couleurs, formes, taille) avant de donner un avis.
+- Relier cette description à une intention (« j'ai choisi… parce que… »).
+- Citer, si possible, une œuvre ou un artiste qui a un lien avec ce choix.
+- Écouter une remarque jusqu'au bout avant d'y répondre.
+- Distinguer une critique du travail d'une critique de la personne.
+erreurs_frequentes:
+- Répondre par « c'est comme ça » sans justifier un choix plastique.
+- Décrire une émotion vague (« c'est joli ») sans dire ce qui la produit dans l'image.
+- Prendre une critique du travail comme une attaque personnelle.
+exemple:
+  enonce: Présenter en une phrase une production faite en noir et blanc avec du fusain très appuyé.
+  solution: « J'ai utilisé seulement du fusain, appuyé fort pour obtenir des noirs profonds, parce que je voulais
+    que le contraste soit violent, comme dans certaines gravures anciennes. » (description du moyen, intention,
+    lien avec une référence.)
+exercices:
+- enonce: 'À la maison : choisis une de tes productions et écris trois phrases : une qui décrit (matériau, couleur,
+    forme), une qui explique une intention, une qui la relie à une œuvre vue en cours.'
+  indices:
+  - La phrase de description ne doit contenir aucun jugement (pas de « joli »).
+  solution: Réussite si les trois phrases répondent chacune à leur rôle (décrire / justifier / relier) sans les
+    mélanger.
+- enonce: Demande à quelqu'un de ta famille un avis sur une de tes productions, puis reformule cet avis avec tes
+    propres mots pour vérifier que tu l'as bien compris.
+  indices:
+  - Reformuler ne veut pas dire être d'accord.
+  solution: Réussite si la reformulation correspond à ce que la personne voulait dire, validée par elle.
+sources:
+- titre: Vikidia, « Arts plastiques »
+  url: https://fr.vikidia.org/w/index.php?title=Arts_plastiques&oldid=2072075
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

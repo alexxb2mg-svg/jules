@@ -1,0 +1,78 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: territoires-ultramarins-francais
+declencheurs:
+- DOM-TOM
+- DROM-COM
+- Guadeloupe
+- Martinique
+- Réunion
+- Guyane
+- Mayotte
+- Nouvelle-Calédonie
+- outre-mer français
+essentiel: 'Les territoires ultramarins français (« France d''outre-mer ») sont les treize territoires de la République
+  française situés en dehors de la France métropolitaine : en Amérique, en Océanie, dans l''océan Indien et en Antarctique.
+  On distingue les DROM (départements et régions d''outre-mer, comme la Guadeloupe, la Martinique, la Guyane, La
+  Réunion et Mayotte, régis par l''article 73 de la Constitution) et les collectivités d''outre-mer, aux statuts
+  très variés (Polynésie française, Nouvelle-Calédonie...).
+
+  L''outre-mer représente environ 17,9 % du territoire terrestre français mais seulement environ 4,1 % de sa population.
+
+  L''aménagement de ces territoires pose des problématiques spécifiques : éloignement de la France métropolitaine,
+  insularité pour la plupart d''entre eux, risques naturels (cyclones, volcans, séismes), coûts de transport élevés,
+  mais aussi des atouts (vastes zones maritimes économiques, biodiversité, position stratégique dans plusieurs océans).
+  Chaque territoire ultramarin nécessite donc des politiques d''aménagement adaptées à sa situation propre.'
+methode:
+- Nommer plusieurs territoires ultramarins précis (au moins deux DROM et une collectivité d'outre-mer).
+- Distinguer DROM (départements et régions d'outre-mer) et collectivités d'outre-mer, aux statuts différents.
+- 'Utiliser les deux chiffres clés : environ 18 % du territoire, environ 4 % de la population.'
+- Pour étudier un territoire précis, croiser des cartes à différentes échelles (mondiale, régionale, locale).
+vocabulaire:
+- terme: DROM
+  definition: département et région d'outre-mer, comme la Guadeloupe, la Martinique, la Guyane, La Réunion ou Mayotte
+- terme: collectivité d'outre-mer
+  definition: un territoire ultramarin français au statut particulier, différent de celui d'un DROM (par exemple
+    la Polynésie française)
+- terme: insularité
+  definition: le fait d'être une île, ce qui isole un territoire et augmente le coût des échanges
+erreurs_frequentes:
+- 'Confondre DROM et collectivité d''outre-mer : ce ne sont pas les mêmes statuts juridiques.'
+- 'Croire que tous les territoires ultramarins sont des îles : la Guyane est un territoire continental en Amérique
+  du Sud.'
+- Utiliser l'ancien sigle DOM-TOM sans savoir qu'il a été remplacé par DROM-COM dans les textes officiels.
+- Oublier de préciser un ordre de grandeur (superficie ou population) dans une réponse.
+exemple:
+  enonce: Cite deux territoires ultramarins français en donnant leur statut.
+  solution: La Martinique est un département et région d'outre-mer (DROM) situé dans les Antilles ; la Polynésie
+    française est une collectivité d'outre-mer, avec un statut d'autonomie plus large, située en Océanie.
+exercices:
+- enonce: Quelle part de la population française vit dans les territoires d'outre-mer ?
+  indices:
+  - Un chiffre inférieur à 5 %.
+  solution: Environ 4,1 % de la population française vit dans les territoires ultramarins.
+- enonce: 'Développement construit : présente deux difficultés spécifiques de l''aménagement d''un territoire ultramarin
+    de ton choix.'
+  indices:
+  - Pense à l'éloignement et aux risques naturels.
+  - Choisis un territoire précis (par exemple La Réunion ou la Guadeloupe).
+  solution: Un développement réussi doit choisir un territoire précis ; présenter une première difficulté (l'éloignement
+    de la métropole, qui augmente le coût des transports et des importations) ; présenter une seconde difficulté
+    (l'exposition aux risques naturels, comme les cyclones dans les Antilles ou l'activité volcanique à La Réunion)
+    ; conclure sur la nécessité de politiques d'aménagement adaptées.
+- enonce: Pourquoi la Guyane est-elle un cas particulier parmi les territoires ultramarins français ?
+  indices:
+  - Est-ce une île ?
+  solution: La Guyane n'est pas une île mais un territoire continental, situé en Amérique du Sud et couvert en grande
+    partie par la forêt amazonienne, ce qui la distingue des autres DROM insulaires.
+sources:
+- titre: Wikipédia, « France d'outre-mer »
+  url: https://fr.wikipedia.org/w/index.php?title=France_d%27outre-mer&oldid=237706622
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

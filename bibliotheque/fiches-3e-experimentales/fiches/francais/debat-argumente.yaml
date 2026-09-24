@@ -1,0 +1,63 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: debat-argumente
+declencheurs:
+- participer à un débat
+- réagir à une opinion
+- animer un débat
+- argumenter à l'oral
+- défendre mon point de vue à l'oral
+- discussion argumentée en classe
+essentiel: 'Un débat est une discussion sur un sujet entre des personnes qui ont des avis, parfois divergents. Participer
+  à un débat, c''est savoir exprimer une opinion personnelle argumentée (pas seulement une affirmation) et savoir
+  réagir à une opinion différente sans agressivité, en reprenant les arguments de l''autre pour les discuter.
+
+  Animer un débat, c''est distribuer la parole équitablement, relancer la discussion par des questions, reformuler
+  les positions exprimées pour clarifier les échanges. Arbitrer un débat, c''est veiller au respect des règles (temps
+  de parole, respect mutuel) sans prendre parti soi-même.
+
+  Un bon débat argumenté repose sur l''écoute (comprendre vraiment l''argument de l''autre avant d''y répondre)
+  et sur des arguments construits, pas sur des attaques personnelles ou des affirmations répétées sans preuve.'
+methode:
+- Avant le débat, préparer au moins deux arguments solides pour défendre sa position.
+- Écouter attentivement les arguments des autres avant de répondre.
+- Reprendre précisément l'argument de l'autre avant de le discuter (« tu dis que… mais… »).
+- Utiliser des modalisateurs pour nuancer son propos plutôt que d'affirmer de façon trop catégorique.
+- 'Si on anime : distribuer la parole, reformuler, relancer sans imposer son propre avis.'
+vocabulaire:
+- terme: débat
+  definition: discussion argumentée entre plusieurs personnes ayant des avis différents
+- terme: arbitrer
+  definition: veiller au respect des règles d'un débat sans prendre parti
+erreurs_frequentes:
+- Répéter son opinion sans jamais répondre aux arguments des autres.
+- Couper la parole ou ne pas écouter l'argument adverse.
+- 'Confondre débattre et se disputer : le débat repose sur des arguments, pas sur des attaques personnelles.'
+- 'Pour celui qui anime : prendre parti au lieu de rester neutre.'
+exemple:
+  enonce: 'Dans un débat sur les écrans au collège, un élève dit : « les écrans sont mauvais pour la concentration
+    ». Comment réagir avec un avis différent, de façon argumentée ?'
+  solution: 'Par exemple : « Je comprends ton argument sur la concentration, mais je pense que les écrans peuvent
+    aussi être utiles, par exemple pour chercher des informations rapidement pendant un exposé : tout dépend de
+    l''usage qu''on en fait. » On reprend l''argument avant de le nuancer.'
+exercices:
+- enonce: Donne un exemple d'expression utile pour réagir poliment à un avis différent du tien pendant un débat.
+  indices:
+  - Pense à des formules qui reconnaissent l'argument avant de le discuter.
+  solution: 'Par exemple : « Je comprends ton point de vue, mais… », « C''est vrai que…, cependant… ».'
+- enonce: Choisis un sujet de débat simple (le règlement de la cantine, les devoirs à la maison…) et rédige en 4-5
+    lignes deux arguments opposés que deux élèves pourraient défendre.
+  indices:
+  - Chaque argument doit être formulé de façon claire et justifiée, pas juste une opinion brute.
+  solution: Réussite si les deux arguments opposés sont bien formulés, chacun justifié par au moins une raison précise.
+sources:
+- titre: Wikipédia, « Débat »
+  url: https://fr.wikipedia.org/w/index.php?title=D%C3%A9bat&oldid=237090905
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,77 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: analyse-image-et-documents-composites
+declencheurs:
+- décrire une image
+- analyser une photo
+- cadrage
+- plan cinéma
+- gros plan
+- document avec texte et image
+- affiche
+- point de vue de la caméra
+essentiel: 'Un document composite mélange plusieurs types d''éléments (texte, image, tableau, schéma) sur un même
+  support, papier ou numérique (une affiche, une page de manuel, une une de journal). Le comprendre demande de lire
+  chaque élément mais aussi la façon dont ils sont organisés ensemble.
+
+  Pour décrire une image fixe (photographie, dessin) ou mobile (extrait de film), on utilise un vocabulaire précis.
+  Le cadrage désigne ce qui est choisi pour entrer dans les limites de l''image : il détermine ce qu''on voit et
+  ce qu''on ne voit pas (le hors-champ). Le plan désigne l''échelle de prise de vue : un gros plan montre un détail
+  de très près (un visage), un plan large montre un décor entier. Le point de vue indique depuis quel endroit et
+  parfois depuis le regard de quel personnage l''image est construite.
+
+  Une image ne dit jamais tout explicitement : elle comporte souvent un implicite (ce qui est suggéré, pas montré)
+  que le hors-champ, la lumière, les couleurs ou les contrastes peuvent laisser deviner.'
+methode:
+- 'Identifier d''abord ce que montre l''image : personnages, décor, action.'
+- 'Analyser le cadrage : que voit-on dans les limites de l''image, que devine-t-on hors champ ?'
+- Préciser l'échelle du plan (gros plan, plan large…) et son effet sur ce qu'on ressent.
+- Repérer le point de vue adopté (qui regarde, d'où).
+- 'Relier le texte et l''image dans un document composite : se complètent-ils, se contredisent-ils ?'
+vocabulaire:
+- terme: cadrage
+  definition: choix de ce qui entre dans les limites de l'image
+- terme: plan
+  definition: échelle de prise de vue, du gros plan (détail) au plan large (ensemble)
+- terme: hors-champ
+  definition: ce qui n'est pas montré dans l'image mais qu'on peut deviner
+erreurs_frequentes:
+- Décrire uniquement ce qu'on voit sans analyser le cadrage ou le point de vue.
+- Confondre plan (échelle) et cadrage (limites de l'image).
+- Ignorer le texte qui accompagne une image dans un document composite.
+- Ne pas chercher ce que le hors-champ ou l'implicite d'une image peuvent suggérer.
+exemple:
+  enonce: Une affiche montre en gros plan le visage inquiet d'un enfant, sans montrer ce qu'il regarde. Quel est
+    l'effet de ce choix de cadrage ?
+  solution: Le gros plan concentre l'attention sur l'émotion du visage, et le hors-champ (ce qui effraie l'enfant,
+    non montré) crée du suspense et laisse le spectateur imaginer la menace, souvent plus efficace qu'une image
+    qui montrerait tout.
+exercices:
+- enonce: Donne la différence entre un gros plan et un plan large.
+  indices:
+  - Pense à la distance et à ce qui est montré.
+  solution: Le gros plan montre un détail de très près (souvent un visage), le plan large montre un décor ou une
+    scène entière, avec plus de distance.
+- enonce: Choisis une image (publicité, affiche, photo) et décris en 4-5 lignes son cadrage, son plan, et ce qu'elle
+    laisse deviner sans le montrer (l'implicite ou le hors-champ).
+  indices:
+  - 'Utilise le vocabulaire précis : cadrage, plan, hors-champ.'
+  solution: Réussite si les trois éléments (cadrage, plan, implicite) sont identifiés avec le vocabulaire adapté
+    et justifiés par des détails précis de l'image.
+sources:
+- titre: Wikipédia, « Plan (cinéma) »
+  url: https://fr.wikipedia.org/w/index.php?title=Plan_%28cin%C3%A9ma%29&oldid=232168441
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Cadrage (photographie) »
+  url: https://fr.wikipedia.org/w/index.php?title=Cadrage_%28photographie%29&oldid=238508538
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

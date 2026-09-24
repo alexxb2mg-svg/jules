@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: nutrition-cellules-animales
+declencheurs:
+- besoin des cellules en oxygène
+- nutriments et cellules
+- système de transport dans le corps
+- pourquoi on respire et on mange
+essentiel: 'Toutes les cellules de l''organisme ont besoin en permanence de nutriments (issus de la digestion des
+  aliments) et de dioxygène (issu de la respiration) pour fonctionner et produire l''énergie nécessaire à leur activité.
+
+  Ces besoins sont satisfaits grâce à des systèmes de transport : le système digestif prélève les nutriments dans
+  les aliments, le système respiratoire capte le dioxygène de l''air, et le système cardiovasculaire (le sang, propulsé
+  par le cœur) achemine ces éléments jusqu''à chaque cellule de l''organisme.
+
+  Le sang, en circulant dans les vaisseaux sanguins, distribue nutriments et dioxygène à tous les organes et tissus,
+  et récupère en retour les déchets produits par les cellules (comme le dioxyde de carbone) pour les évacuer.
+
+  Cette organisation fonctionnelle se retrouve à toutes les échelles : de l''organisme entier, aux organes, aux
+  tissus, jusqu''à la cellule individuelle qui a besoin de ces apports pour vivre.
+
+  L''organisme entretient aussi des interactions avec des micro-organismes (notamment dans le système digestif),
+  qui participent à certaines étapes de la nutrition.'
+methode:
+- 'Identifier les deux besoins fondamentaux d''une cellule animale : nutriments et dioxygène.'
+- 'Repérer le système responsable de chaque étape : digestif (nutriments), respiratoire (dioxygène), cardiovasculaire
+  (transport vers les cellules).'
+- Retenir que le sang assure à la fois l'apport (nutriments, dioxygène) et l'évacuation des déchets (dioxyde de
+  carbone).
+- 'Relier les échelles d''organisation : organisme, organes, tissus, cellules.'
+erreurs_frequentes:
+- Croire que seuls certains organes (comme le cœur ou les poumons) ont besoin de nutriments et de dioxygène, alors
+  que toutes les cellules en ont besoin.
+- Confondre système digestif (apport des nutriments) et système respiratoire (apport du dioxygène).
+- Oublier le rôle du sang comme intermédiaire de transport entre les organes prélevant les ressources et les cellules
+  qui les utilisent.
+- Penser que le sang ne transporte que le dioxygène, en oubliant les nutriments et les déchets.
+exemple:
+  enonce: Pourquoi un muscle qui travaille intensément a-t-il besoin d'une plus grande quantité de sang que lorsqu'il
+    est au repos ?
+  solution: Un muscle en activité consomme davantage de nutriments et de dioxygène pour produire l'énergie nécessaire
+    à sa contraction ; le sang, qui transporte ces éléments, doit donc y circuler en plus grande quantité pour répondre
+    à ce besoin accru.
+exercices:
+- enonce: Quels sont les deux besoins fondamentaux de toute cellule animale pour fonctionner ?
+  indices:
+  - Un vient de la digestion, l'autre de la respiration.
+  solution: Des nutriments (issus des aliments digérés) et du dioxygène (issu de l'air respiré).
+- enonce: Quel système transporte les nutriments et le dioxygène jusqu'à chaque cellule du corps ?
+  indices:
+  - Pense au rôle du cœur et des vaisseaux sanguins.
+  solution: Le système cardiovasculaire (le sang, propulsé par le cœur dans les vaisseaux sanguins).
+- enonce: 'Le sang ne fait pas qu''apporter des éléments aux cellules : que récupère-t-il également ?'
+  indices:
+  - Pense à ce que produisent les cellules en fonctionnant.
+  solution: Il récupère les déchets produits par les cellules, notamment le dioxyde de carbone, pour les évacuer
+    vers les poumons.
+sources:
+- titre: Vikidia, « Circulation sanguine »
+  url: https://fr.vikidia.org/w/index.php?title=Circulation_sanguine&oldid=2428565
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Respiration »
+  url: https://fr.vikidia.org/w/index.php?title=Respiration&oldid=2560540
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

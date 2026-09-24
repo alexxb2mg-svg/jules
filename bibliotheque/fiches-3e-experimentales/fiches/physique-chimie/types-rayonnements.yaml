@@ -1,0 +1,72 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: types-rayonnements
+declencheurs:
+- ondes radio
+- rayons X
+- infrarouge visible ultraviolet
+- spectre électromagnétique
+- types de rayonnements
+- rayons UV
+- coup de soleil sur la peau
+essentiel: 'Il existe différents types de rayonnements, qui se distinguent par leur longueur d''onde (ou leur fréquence)
+  : ondes radio, infrarouge, lumière visible, ultraviolet, rayons X, entre autres.
+
+  Ils se propagent tous à la même vitesse dans le vide (la vitesse de la lumière, c ≈ 300 000 km/s), mais leur longueur
+  d''onde λ et leur fréquence f sont liées par la relation c = λ × f.
+
+  Seule une petite partie de ces rayonnements est visible par l''œil humain : la lumière visible, comprise entre
+  l''ultraviolet et l''infrarouge.
+
+  Ces rayonnements ont des usages différents selon leurs propriétés : les ondes radio pour les télécommunications,
+  l''infrarouge pour certaines télécommandes ou l''imagerie thermique, les rayons X pour l''imagerie médicale.
+
+  Certains rayonnements (ultraviolets, rayons X) transportent plus d''énergie et peuvent être dangereux pour les
+  organismes vivants à forte dose, ce qui impose des précautions (crème solaire, protections en radiologie).'
+methode:
+- Situer un rayonnement par sa longueur d'onde ou sa fréquence, par rapport à la lumière visible.
+- Retenir que tous ces rayonnements se propagent à la même vitesse dans le vide.
+- Utiliser c = λ × f pour calculer une fréquence à partir d'une longueur d'onde, ou inversement.
+- Associer chaque type de rayonnement à un usage courant ou à une précaution nécessaire.
+erreurs_frequentes:
+- Croire que tous les rayonnements sont visibles par l'œil (seule une petite partie l'est).
+- Confondre longueur d'onde et fréquence, qui varient en sens inverse.
+- 'Penser que les rayonnements les plus dangereux sont ceux de plus grande longueur d''onde (c''est l''inverse :
+  plus la fréquence est grande, plus l''énergie transportée est importante).'
+- Croire que ces rayonnements se propagent à des vitesses différentes dans le vide.
+exemple:
+  enonce: Calculer la fréquence d'une lumière visible de longueur d'onde 500 nm (c ≈ 3 × 10⁸ m/s).
+  solution: f = c / λ = 3 × 10⁸ / (500 × 10⁻⁹) = 6 × 10¹⁴ Hz.
+exercices:
+- enonce: Un rayonnement infrarouge a une longueur d'onde plus grande que la lumière visible. Sa fréquence est-elle
+    plus grande ou plus petite que celle de la lumière visible ?
+  indices:
+  - 'c = λ × f : si λ augmente et c est constant, que devient f ?'
+  solution: Sa fréquence est plus petite (longueur d'onde et fréquence varient en sens inverse).
+- enonce: Citer un exemple d'utilisation des ondes radio et un exemple d'utilisation des rayons X.
+  indices:
+  - Pense aux télécommunications et à la médecine.
+  solution: 'Ondes radio : radio, télévision, Wi-Fi. Rayons X : radiographies médicales.'
+- enonce: Pourquoi conseille-t-on de se protéger des ultraviolets (crème solaire, lunettes) plutôt que des ondes
+    radio ?
+  indices:
+  - Compare l'énergie transportée par ces deux types de rayonnement.
+  solution: Les ultraviolets ont une fréquence plus élevée que les ondes radio et transportent donc plus d'énergie,
+    ce qui peut abîmer la peau et les yeux à forte dose.
+sources:
+- titre: Vikidia, « Lumière »
+  url: https://fr.vikidia.org/w/index.php?title=Lumi%C3%A8re&oldid=2561494
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Rayonnement »
+  url: https://fr.vikidia.org/w/index.php?title=Rayonnement&oldid=1402772
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

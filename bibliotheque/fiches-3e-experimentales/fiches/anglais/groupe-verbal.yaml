@@ -1,0 +1,92 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: groupe-verbal
+declencheurs:
+- present perfect
+- prétérit
+- will going to
+- be going to
+- voix passive anglais
+- must have to
+- can could
+- modaux anglais
+- conjuguer un verbe anglais
+essentiel: 'Le présent simple exprime des faits habituels ou réguliers (« She plays tennis every Sunday »), avec
+  un -s à la 3e personne du singulier. Le prétérit simple exprime une action terminée à un moment précis du passé
+  (« He watched a film yesterday »), formé avec -ed pour les verbes réguliers.
+
+
+  Le present perfect (have/has + participe passé) relie le passé au présent : il exprime un bilan, une action passée
+  dont les conséquences continuent (« I have lost my keys », mes clés sont toujours perdues maintenant), contrairement
+  au prétérit qui situe l''action dans le passé sans lien explicite avec le présent.
+
+
+  Le futur s''exprime avec « will » (prédiction, décision spontanée : « It will rain tomorrow ») ou « be going to
+  » (intention déjà prévue, prédiction basée sur des indices présents : « She is going to have a baby »).
+
+
+  Les modaux (can, could, must, may, might, should) expriment une capacité, une permission, une obligation ou un
+  conseil, et sont toujours suivis d''un verbe à l''infinitif sans « to » (« You must wear a helmet »). La voix
+  passive (be + participe passé) met en avant l''objet de l''action plutôt que son auteur : « The window was broken
+  » (la fenêtre a été cassée).'
+methode:
+- Se demander si l'action est habituelle (présent simple), terminée dans le passé sans lien avec le présent (prétérit),
+  ou si elle a un lien avec maintenant (present perfect).
+- Utiliser « will » pour une décision prise au moment de parler, « be going to » pour une intention déjà prévue.
+- Après un modal (can, must, should...), utiliser toujours le verbe à l'infinitif sans « to ».
+- Pour la voix passive, utiliser be (conjugué au bon temps) + participe passé, et ajouter « by » seulement si l'auteur
+  de l'action est important à préciser.
+vocabulaire:
+- terme: modal
+  definition: verbe auxiliaire (can, must, should...) qui exprime capacité, permission, obligation ou conseil, suivi
+    d'un infinitif sans to
+- terme: voix passive
+  definition: construction (be + participe passé) qui met en avant l'objet de l'action plutôt que son auteur
+erreurs_frequentes:
+- Utiliser le prétérit à la place du present perfect quand l'action a un lien direct avec le présent.
+- Mettre « to » après un modal (« must to go » au lieu de « must go »).
+- Oublier le -s à la 3e personne du singulier au présent simple.
+- Confondre will (décision spontanée) et be going to (intention déjà prévue).
+exemple:
+  enonce: 'Choisir entre le prétérit et le present perfect : « I ___ (visit) London in 2019. » et « I ___ (never/visit)
+    Japan. »'
+  solution: « I visited London in 2019 » (prétérit, date précise dans le passé) ; « I have never visited Japan »
+    (present perfect, bilan sans date précise, valable jusqu'à maintenant).
+exercices:
+- enonce: 'Mettre à la voix passive : « Someone stole my bike. » (quelqu''un a volé mon vélo)'
+  indices:
+  - L'objet « my bike » devient le sujet de la phrase passive.
+  solution: « My bike was stolen. » (on peut omettre « by someone » car l'auteur n'est pas identifié précisément).
+- enonce: 'Compléter avec « will » ou « be going to » : « Look at those clouds! It ___ rain. »'
+  indices:
+  - Il y a un indice visible (les nuages) qui permet de prédire la suite.
+  solution: « It is going to rain. » (prédiction basée sur un indice présent, les nuages).
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais/Present perfect »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Present_perfect&oldid=463844
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikilivres, « Enseignement de l'anglais/Prétérit »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Pr%C3%A9t%C3%A9rit&oldid=686637
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikilivres, « Enseignement de l'anglais/Futur »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Futur&oldid=526601
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikilivres, « Enseignement de l'anglais/Passif »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Passif&oldid=563547
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,61 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: mettre-en-oeuvre-projet
+declencheurs:
+- organiser mon projet d'arts plastiques
+- planifier les etapes
+- je n'arrive pas a finir ma production
+- gerer mon temps pour le projet
+- mener a terme un projet artistique
+essentiel: 'Un projet artistique se conçoit, se réalise puis se donne à voir : il a un début, des étapes et une
+  fin, même quand il laisse une grande part à l''improvisation.
+
+  Mener un projet à terme suppose d''anticiper les difficultés (matériel, temps, technique) avant qu''elles ne bloquent
+  tout, et de garder des traces intermédiaires (photos, notes) au cas où il faudrait revenir en arrière.
+
+  Il faut aussi confronter en cours de route l''intention de départ à ce qui se réalise réellement : un projet vivant
+  s''adapte et se réoriente sans perdre sa dimension artistique.
+
+  L''autonomie ne veut pas dire l''isolement : demander un avis, écouter une remarque, ajuster son calendrier fait
+  partie de la conduite de projet.'
+methode:
+- Découper le projet en étapes datées (recherche, essais, réalisation, finitions).
+- Lister le matériel et le temps nécessaires à chaque étape avant de commencer.
+- Vérifier régulièrement où on en est par rapport au calendrier prévu.
+- 'En cas de blocage, revenir à l''intention de départ : faut-il l''adapter ou changer de moyen technique ?'
+- Prévoir un temps de finition et de présentation, pas seulement de fabrication.
+erreurs_frequentes:
+- Se lancer directement dans la réalisation finale sans étape d'essai.
+- Sous-estimer le temps de séchage, de collage ou d'assemblage.
+- Abandonner un projet au premier problème technique au lieu de l'adapter.
+exemple:
+  enonce: 'Projet : réaliser une petite installation en volume à partir d''objets récupérés, à présenter dans deux
+    semaines.'
+  solution: 'Étape 1 (jours 1-3) : collecter des objets et faire des essais d''assemblage. Étape 2 (jours 4-8) :
+    choisir l''assemblage final et le fixer solidement. Étape 3 (jours 9-11) : ajuster la présentation (support,
+    éclairage). Étape 4 (jours 12-14) : préparer ce qu''on va dire pour présenter la démarche.'
+exercices:
+- enonce: 'À la maison : pour ton prochain devoir d''arts plastiques, écris un petit calendrier en 3 ou 4 étapes
+    datées avant de commencer à fabriquer quoi que ce soit.'
+  indices:
+  - Compte le nombre de jours dont tu disposes et répartis-les.
+  - Prévois une étape de finition.
+  solution: Réussite si le calendrier a bien des dates, si chaque étape a un objectif clair et si tu l'as suivi
+    (ou expliqué pourquoi tu l'as changé) à la fin du projet.
+- enonce: Repère, dans un projet en cours, la difficulté qui pourrait te bloquer (matériau manquant, technique jamais
+    essayée…) et note une solution de repli.
+  indices:
+  - Une solution de repli peut être un matériau de substitution.
+  solution: Réussite si la difficulté anticipée est réaliste et si la solution de repli est concrète (pas juste
+    « je verrai »).
+sources:
+- titre: Vikidia, « Arts plastiques »
+  url: https://fr.vikidia.org/w/index.php?title=Arts_plastiques&oldid=2072075
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

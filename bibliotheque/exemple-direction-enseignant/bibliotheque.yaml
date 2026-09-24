@@ -1,0 +1,14 @@
+# Fiche d'identite de la bibliotheque (format : bibliotheque/README.md)
+id: exemple-direction-enseignant
+titre: "Exemple : direction pédagogique d'un enseignant"
+type: direction
+statut: exemple
+licence: MIT
+pays: FR
+niveaux: [3e]
+avertissement: >-
+  Enseignant FICTIF : cette bibliothèque montre le format d'une direction pédagogique. Ne pas
+  l'activer pour un vrai élève.
+description: >-
+  Modèle à copier par un enseignant (ou par une famille, avec les consignes du professeur) pour
+  que Jules suive sa façon de faire : approche, rédaction attendue, vocabulaire, points à éviter.

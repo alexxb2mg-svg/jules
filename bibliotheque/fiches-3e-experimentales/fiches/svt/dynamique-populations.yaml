@@ -1,0 +1,66 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: dynamique-populations
+declencheurs:
+- évolution d'une population dans le temps
+- taille d'une population
+- réchauffement et reproduction des animaux
+- facteurs qui font varier une population
+essentiel: 'La taille d''une population (le nombre d''individus d''une même espèce dans un milieu donné) varie dans
+  le temps sous l''effet de plusieurs paramètres : les naissances, les décès, mais aussi les migrations d''individus
+  qui entrent ou quittent le milieu.
+
+  Une population augmente quand les naissances (et les arrivées) dépassent les décès (et les départs) ; elle diminue
+  dans le cas contraire.
+
+  Le milieu de vie influence fortement la dynamique d''une population : disponibilité de nourriture, prédateurs,
+  maladies, température ou compétition avec d''autres espèces sont autant de facteurs qui peuvent limiter ou favoriser
+  sa croissance.
+
+  L''augmentation de la température globale de la Terre (réchauffement climatique) peut avoir des conséquences directes
+  sur la reproduction de certains organismes vivants : par exemple, une modification des périodes de reproduction
+  ou des taux de survie des jeunes.
+
+  Étudier la dynamique d''une population permet d''anticiper des risques (extinction locale d''une espèce menacée,
+  prolifération d''une espèce nuisible) et d''orienter des mesures de gestion.'
+methode:
+- Repérer les facteurs qui augmentent une population (naissances, arrivées) et ceux qui la diminuent (décès, départs).
+- Calculer une variation en pourcentage pour comparer deux effectifs de population à des dates différentes.
+- Identifier les facteurs du milieu qui peuvent expliquer une variation observée (nourriture, prédateurs, température,
+  maladies).
+- Relier une variation climatique (réchauffement) à ses effets possibles sur la reproduction d'une espèce donnée.
+erreurs_frequentes:
+- Croire qu'une population n'est influencée que par les naissances et les décès, en oubliant les migrations.
+- Penser qu'une population augmente toujours indéfiniment sans limite du milieu.
+- Confondre variation en valeur absolue (nombre d'individus) et variation en pourcentage.
+- Croire que le réchauffement climatique affecte toutes les espèces de la même façon.
+exemple:
+  enonce: Une population de renards passe de 100 à 120 individus en un an. Calculer la variation en pourcentage.
+  solution: '(120 − 100) / 100 × 100 = 20 % : la population a augmenté de 20 % en un an.'
+exercices:
+- enonce: Une population de grenouilles passe de 100 à 80 individus en un an, à cause d'une sécheresse. Calculer
+    la variation en pourcentage.
+  indices:
+  - Variation (%) = (arrivée − départ) / départ × 100.
+  solution: '(80 − 100) / 100 × 100 = −20 % : la population a diminué de 20 %.'
+- enonce: Citer trois facteurs du milieu qui peuvent limiter la croissance d'une population animale.
+  indices:
+  - Pense à la nourriture, aux prédateurs, aux maladies.
+  solution: Le manque de nourriture, la présence de prédateurs, les maladies (d'autres réponses comme la compétition
+    ou le manque d'espace sont acceptées).
+- enonce: Comment le réchauffement climatique peut-il modifier la reproduction d'une espèce animale ?
+  indices:
+  - Pense au décalage des saisons et à la synchronisation avec la nourriture disponible.
+  solution: Il peut décaler les périodes de reproduction (par exemple une ponte plus précoce) ou désynchroniser
+    la naissance des jeunes avec la disponibilité de leur nourriture habituelle, ce qui réduit leur taux de survie.
+sources:
+- titre: Vikidia, « Population »
+  url: https://fr.vikidia.org/w/index.php?title=Population&oldid=2569057
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

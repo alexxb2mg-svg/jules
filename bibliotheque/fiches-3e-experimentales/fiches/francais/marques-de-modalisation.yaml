@@ -1,0 +1,62 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: marques-de-modalisation
+declencheurs:
+- marques de modalisation
+- peut-être certainement
+- avis de l'auteur
+- adverbe de certitude
+- verbe devoir sembler
+- point de vue engagé
+- conditionnel information non confirmée
+essentiel: 'La modalisation regroupe les procédés par lesquels un locuteur montre son attitude envers ce qu''il
+  dit : degré de certitude, jugement, sentiment.
+
+  Elle se manifeste par des adverbes (peut-être, certainement, probablement, hélas), des verbes modaux ou d''opinion
+  (devoir, pouvoir, sembler, croire, penser), le conditionnel pour marquer une information non confirmée, des guillemets
+  pour prendre de la distance avec un mot, ou un vocabulaire évaluatif (adjectifs mélioratifs comme « magnifique
+  » ou péjoratifs comme « médiocre »).
+
+  Un texte non modalisé (informations données comme des faits certains, sans marque de doute ni de jugement) donne
+  une impression d''objectivité ; un texte fortement modalisé révèle le point de vue de son auteur.'
+methode:
+- Repérer les adverbes et expressions qui indiquent un degré de certitude ou d'incertitude.
+- Chercher les verbes modaux (devoir, pouvoir, sembler) et les verbes d'opinion.
+- Observer si le conditionnel exprime une information non vérifiée.
+- Relever le vocabulaire évaluatif (adjectifs et noms à connotation positive ou négative).
+- 'Conclure sur l''engagement de l''énonciateur : texte plutôt objectif ou plutôt marqué par son point de vue.'
+erreurs_frequentes:
+- Confondre modalisation et simple description factuelle.
+- Ne pas repérer le conditionnel de l'information non confirmée dans un article de presse.
+- Oublier que la ponctuation expressive (points d'exclamation, guillemets) peut aussi moduler le propos.
+- Croire qu'un texte sans adverbe de jugement est forcément neutre (le vocabulaire seul peut modaliser).
+exemple:
+  enonce: 'Relever les marques de modalisation : « Ce film est, sans doute, le meilleur de l''année ; il semble
+    avoir bouleversé tous les critiques. »'
+  solution: '« sans doute » (adverbe de forte probabilité), « le meilleur » (superlatif mélioratif), « semble »
+    (verbe modal marquant une impression, pas une certitude absolue) : le locuteur exprime un jugement engagé, pas
+    un simple constat.'
+exercices:
+- enonce: 'Relever les marques de modalisation : « Le suspect aurait quitté la ville la nuit dernière, selon des
+    témoins. »'
+  indices:
+  - Quel temps indique que l'information n'est pas confirmée ?
+  solution: Le conditionnel « aurait quitté » marque une information non confirmée, rapportée par des témoins et
+    non vérifiée par le locuteur.
+- enonce: 'Réécrire cette phrase pour qu''elle paraisse plus objective : « Ce livre est franchement ennuyeux et
+    mal écrit. »'
+  indices:
+  - Supprimer le vocabulaire évaluatif et les adverbes d'intensité.
+  solution: 'Exemple de réponse : « Ce livre compte deux cents pages et a été publié l''an dernier. » (on supprime
+    tout jugement de valeur pour ne garder que des faits).'
+sources:
+- titre: Wikipédia, « Modalité (linguistique et logique) »
+  url: https://fr.wikipedia.org/w/index.php?title=Modalit%C3%A9_%28linguistique_et_logique%29&oldid=220886822
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

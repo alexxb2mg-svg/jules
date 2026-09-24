@@ -1,0 +1,68 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: projet-groupe-developpement-durable-3e
+declencheurs:
+- projet écoresponsable
+- travail de groupe développement durable
+- projet technologie 3e
+- objectifs de développement durable
+- éco-conception en groupe
+couverture: Cette fiche combine gestion-projet-technique et choix-ost-developpement-durable pour un projet de groupe
+  en classe de 3e visant un objectif de développement durable.
+essentiel: 'Un projet de groupe intégrant le développement durable combine une démarche de gestion de projet (répartition
+  des tâches, planning, jalons) et des choix techniques justifiés selon les trois piliers du développement durable
+  (économique, social, environnemental).
+
+
+  Dès la définition du cahier des charges, le groupe doit intégrer des critères de développement durable parmi les
+  contraintes (matériaux recyclés ou recyclables, faible consommation d''énergie, réparabilité), en plus des critères
+  fonctionnels habituels.
+
+
+  Tout au long du projet, chaque choix technique (matériau, source d''énergie, assemblage, procédé de fabrication)
+  doit être justifié en le reliant à un ou plusieurs piliers du développement durable, et le résultat final doit
+  être évalué par rapport à ces critères, pas seulement par rapport aux fonctions attendues.'
+methode:
+- Intégrer des critères de développement durable dans le cahier des charges dès le début du projet.
+- Répartir les tâches du groupe en tenant compte des compétences de chacun (gestion de projet).
+- Justifier chaque choix technique par un ou plusieurs piliers du développement durable.
+- Évaluer le résultat final à la fois sur les fonctions attendues et sur les critères de développement durable fixés
+  au départ.
+vocabulaire: []
+erreurs_frequentes:
+- Ajouter le développement durable seulement à la fin du projet, sans l'avoir intégré au cahier des charges dès
+  le départ.
+- Justifier un choix technique sans le relier explicitement à un pilier du développement durable.
+- Négliger la répartition des tâches, ce qui ralentit le projet en groupe.
+exemple:
+  enonce: Un groupe conçoit un porte-stylos en matériaux recyclés pour la classe. Donner un exemple de critère de
+    développement durable à inscrire dans le cahier des charges, et un exemple de répartition des tâches.
+  solution: 'Critère de développement durable : « le porte-stylos doit être fabriqué à partir de matériaux recyclés
+    ou de chutes de matériaux déjà présentes dans l''atelier » (pilier environnemental). Répartition des tâches
+    : un élève cherche les matériaux disponibles, un autre modélise numériquement l''objet, un troisième s''occupe
+    du montage et un quatrième prépare la présentation du projet.'
+exercices:
+- enonce: Pour un projet de nichoir à oiseaux en bois, proposer un critère du cahier des charges pour chacun des
+    trois piliers du développement durable.
+  indices:
+  - Un critère économique, un social, un environnemental.
+  solution: 'Économique : le coût des matériaux ne doit pas dépasser un budget fixé. Social : le nichoir doit être
+    facile à installer par n''importe quel adulte, sans outil spécialisé. Environnemental : utiliser du bois non
+    traité chimiquement, sans danger pour les oiseaux ni pour l''environnement.'
+sources:
+- titre: Vikidia, « Développement durable »
+  url: https://fr.vikidia.org/w/index.php?title=D%C3%A9veloppement_durable&oldid=2556115
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Gestion de projet »
+  url: https://fr.wikipedia.org/w/index.php?title=Gestion_de_projet&oldid=238705832
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

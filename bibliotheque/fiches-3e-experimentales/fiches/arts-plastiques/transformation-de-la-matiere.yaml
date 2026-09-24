@@ -1,0 +1,54 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transformation-de-la-matiere
+declencheurs:
+- comment transformer un materiau
+- trace du geste dans la peinture
+- effet de la peinture epaisse
+- outil qui laisse une trace
+- relation entre matiere et outil
+essentiel: 'En arts plastiques, la matière (peinture, terre, papier, bois…), l''outil (pinceau, doigt, couteau,
+  spatule) et le geste (rapide, lent, appuyé) sont liés : changer l''un modifie forcément le résultat obtenu avec
+  les deux autres.
+
+  Une œuvre n''existe pas seulement pour ce qu''elle représente : sa réalité concrète (l''épaisseur de la peinture,
+  la texture de la terre, les traces d''outil visibles) porte elle-même du sens ou de l''expressivité.
+
+  Un même sujet peint avec un pinceau fin et des gestes précis, ou avec les doigts et des gestes larges, ne raconte
+  pas la même chose, même si la forme représentée est identique.'
+methode:
+- Choisir l'outil et le geste en fonction de l'effet recherché (précision, énergie, douceur…).
+- 'Observer les traces laissées par un outil avant de continuer : elles peuvent orienter la suite du travail.'
+- Comparer plusieurs essais avec des outils différents sur le même sujet.
+- Décrire ensuite ce que la matière elle-même (et pas seulement le sujet) apporte à l'œuvre.
+erreurs_frequentes:
+- Vouloir cacher toutes les traces de l'outil ou du geste, en pensant que c'est plus « propre ».
+- Changer d'outil sans observer l'effet obtenu.
+- Ne décrire une production que par son sujet, sans parler de sa matière.
+exemple:
+  enonce: Peindre un même visage une fois au pinceau fin, une fois au couteau à peindre.
+  solution: Le pinceau fin donne des détails précis et une surface lisse ; le couteau laisse des empâtements en
+    relief, une matière plus rugueuse et un rendu plus expressif, même si le visage représenté est le même.
+exercices:
+- enonce: 'À la maison : peins ou dessine trois fois la même petite forme, avec trois outils différents (pinceau,
+    doigt, objet improvisé comme une fourchette ou un bouchon).'
+  indices:
+  - Utilise la même couleur pour bien comparer l'effet de l'outil, pas de la couleur.
+  solution: Réussite si les trois résultats sont visiblement différents et si tu peux décrire l'effet propre à chaque
+    outil (texture, précision, épaisseur).
+- enonce: Observe une œuvre (reproduction ou réelle) et cherche à deviner, à la texture visible, quel outil ou geste
+    a été utilisé.
+  indices:
+  - Cherche les zones où la matière est en relief ou au contraire très lisse.
+  solution: Réussite si l'hypothèse sur l'outil est cohérente avec la texture observée, même si elle n'est pas certaine.
+sources:
+- titre: Vikidia, « Sculpture »
+  url: https://fr.vikidia.org/w/index.php?title=Sculpture&oldid=2584156
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

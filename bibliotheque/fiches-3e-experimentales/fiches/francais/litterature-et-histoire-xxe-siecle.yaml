@@ -1,0 +1,81 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: litterature-et-histoire-xxe-siecle
+declencheurs:
+- littérature sur la guerre
+- engagement de l'écrivain
+- résistance
+- témoignage littéraire
+- roman sur la guerre
+- récit historique en littérature
+essentiel: 'Au XXe siècle, de nombreux écrivains ont écrit des textes liés à des bouleversements historiques majeurs
+  : les deux guerres mondiales, l''entre-deux-guerres, les régimes totalitaires. Ces textes appartiennent à des
+  genres variés : roman, poésie, théâtre, récit de témoignage.
+
+  Un texte littéraire sur l''histoire va au-delà d''un simple document historique ou d''un témoignage brut : par
+  le travail sur la langue, la construction du récit, les images, l''auteur cherche à toucher, à faire comprendre
+  et à faire réfléchir, pas seulement à informer.
+
+  La littérature engagée désigne la démarche d''un auteur qui défend une cause (éthique, politique, sociale) par
+  ses œuvres ou par son intervention publique en tant qu''intellectuel. Au XXe siècle, la notion d''engagement se
+  développe fortement : l''écrivain se sent responsable de son époque. La notion de résistance renvoie, en littérature
+  comme dans l''histoire, à l''idée de s''opposer par l''écrit à une oppression ou une injustice, parfois au péril
+  de sa vie.
+
+  Des auteurs comme Primo Levi (survivant de la déportation) ou Paul Éluard et Louis Aragon (engagés dans la Résistance)
+  ont marqué ce lien entre littérature et histoire, sans que leurs œuvres protégées par le droit d''auteur ne puissent
+  être citées ici : on peut les nommer et les présenter, sans reproduire leurs textes.'
+methode:
+- Situer le texte dans son contexte historique précis (quelle période, quel évènement).
+- Distinguer ce qui relève du témoignage (les faits vécus) et ce qui relève du travail littéraire (la mise en forme).
+- Repérer les marques de l'engagement de l'auteur (jugement, émotion, choix des mots).
+- 'S''interroger sur ce que le texte cherche à provoquer chez le lecteur : comprendre, s''indigner, ne pas oublier.'
+- 'Ne jamais confondre un récit à la première personne et une preuve historique absolue : la littérature interprète
+  aussi.'
+vocabulaire:
+- terme: littérature engagée
+  definition: œuvres où l'auteur défend une cause par ses écrits ou son action publique
+- terme: témoignage
+  definition: récit d'une personne qui rapporte ce qu'elle a vécu ou observé
+- terme: résistance
+  definition: opposition, par l'action ou par l'écrit, à une oppression ou une occupation
+erreurs_frequentes:
+- Traiter un texte littéraire sur la guerre comme un simple document d'histoire, sans étudier son écriture.
+- Oublier de citer précisément le contexte historique évoqué.
+- Confondre l'auteur et le narrateur, même dans un récit très autobiographique.
+- 'Citer un extrait d''une œuvre protégée du XXe siècle : on peut nommer l''auteur et l''œuvre, jamais recopier
+  le texte.'
+exemple:
+  enonce: Pourquoi peut-on dire qu'un roman sur la Seconde Guerre mondiale n'est pas qu'un simple compte rendu des
+    faits ?
+  solution: Le roman choisit un point de vue, construit des personnages, travaille le rythme du récit et le style
+    pour faire ressentir au lecteur une expérience, alors qu'un document historique vise d'abord à établir des faits
+    datés et vérifiés.
+exercices:
+- enonce: Cite un évènement historique du XXe siècle que la littérature a souvent évoqué.
+  indices:
+  - Guerres mondiales, régimes totalitaires…
+  solution: Par exemple la Première Guerre mondiale, la Seconde Guerre mondiale, la déportation, l'Occupation.
+- enonce: En 4-5 lignes, explique pourquoi un écrivain peut choisir d'écrire un roman plutôt qu'un témoignage direct
+    pour parler d'un évènement historique qu'il a vécu.
+  indices:
+  - Pense à la distance, à ce que la fiction permet de faire ressentir.
+  solution: Réussite si la réponse évoque la possibilité, par la fiction, de construire une expérience de lecture
+    (émotion, réflexion) plutôt que de simplement rapporter des faits.
+sources:
+- titre: Wikipédia, « Littérature engagée »
+  url: https://fr.wikipedia.org/w/index.php?title=Litt%C3%A9rature_engag%C3%A9e&oldid=239676414
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Genre littéraire »
+  url: https://fr.wikipedia.org/w/index.php?title=Genre_litt%C3%A9raire&oldid=238084925
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

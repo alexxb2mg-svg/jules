@@ -1,0 +1,69 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: nom-et-groupe-nominal
+declencheurs:
+- him her his
+- pronoms anglais
+- he she it
+- pronom complément anglais
+- genre en anglais
+- myself yourself
+- pronoms réfléchis anglais
+essentiel: 'En anglais, le genre (masculin/féminin/neutre) ne concerne pratiquement que les pronoms représentant
+  des personnes ou des choses, pas les noms communs eux-mêmes (contrairement au français où « une table » est féminin)
+  : « the table » n''a pas de genre grammatical.
+
+
+  Les pronoms personnels sujets sont I, you, he, she, it, we, you, they. « He » remplace une personne ou un animal
+  masculin, « she » une personne ou un animal féminin, « it » une chose, un animal dont on ne précise pas le sexe,
+  ou un concept.
+
+
+  Les pronoms compléments (me, you, him, her, it, us, you, them) se placent toujours après le verbe en anglais,
+  contrairement au français où ils se placent souvent avant : « I like him » (je l''aime), pas « I him like ».
+
+
+  Les pronoms réfléchis (myself, yourself, himself, herself, itself, ourselves, yourselves, themselves) s''utilisent
+  quand le complément désigne la même personne que le sujet : « She looks at herself in the mirror » (elle se regarde
+  dans le miroir).'
+methode:
+- Identifier si le pronom remplace une personne (he/she) ou une chose (it) pour choisir le bon pronom.
+- Placer le pronom complément après le verbe, jamais avant comme en français.
+- Utiliser un pronom réfléchi (-self/-selves) seulement quand le sujet et le complément désignent la même personne.
+- 'Ne pas ajouter de genre grammatical aux objets ou noms communs en anglais : ils sont tous neutres (« it »), sauf
+  les personnes et parfois les animaux.'
+vocabulaire:
+- terme: pronom personnel sujet
+  definition: pronom qui remplace le sujet du verbe (I, you, he, she, it, we, they)
+- terme: pronom réfléchi
+  definition: pronom en -self/-selves utilisé quand le complément désigne la même personne que le sujet
+erreurs_frequentes:
+- Placer le pronom complément avant le verbe comme en français (« I him like » au lieu de « I like him »).
+- Utiliser « he » ou « she » pour un objet au lieu de « it ».
+- Oublier le pronom réfléchi quand le sujet et le complément sont la même personne (« She looks at her » au lieu
+  de « She looks at herself » pour dire qu'elle se regarde elle-même).
+exemple:
+  enonce: Traduire « Il lave sa voiture lui-même. »
+  solution: « He washes his car himself. » (« he » pronom sujet, « himself » pronom réfléchi car c'est bien lui
+    qui fait l'action pour lui-même).
+exercices:
+- enonce: 'Compléter : « My sister loves her dog. She plays with ___ every day. » (elle joue avec lui, le chien)'
+  indices:
+  - 'Le chien est un animal, pas une personne : quel pronom neutre utiliser ?'
+  solution: '« it » : « She plays with it every day. » (on peut aussi utiliser « him » si le sexe du chien est connu
+    et précisé, mais « it » est correct par défaut).'
+- enonce: 'Traduire : « Nous nous regardons dans le miroir. » (nous-mêmes)'
+  indices:
+  - Utilise le pronom réfléchi de la 1re personne du pluriel.
+  solution: « We look at ourselves in the mirror. »
+sources:
+- titre: Wikilivres, « Enseignement de l'anglais/Pronoms »
+  url: https://fr.wikibooks.org/w/index.php?title=Enseignement_de_l%27anglais/Pronoms&oldid=756787
+  auteurs: Contributeurs de Wikilivres (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,99 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: chaine-energie
+declencheurs:
+- chaîne d'énergie
+- moteur
+- génératrice
+- engrenage
+- alimenter
+- convertir
+- distribuer
+- transmettre
+- schéma bloc énergie
+essentiel: 'La chaîne d''énergie d''un objet technique décrit comment l''énergie est traitée pour produire un mouvement
+  ou un effet (lumière, chaleur, son). Elle comprend en général quatre fonctions, dans l''ordre : ALIMENTER (fournir
+  l''énergie, par exemple une pile ou le secteur), DISTRIBUER (autoriser ou couper le passage de l''énergie, par
+  exemple un interrupteur ou un relais), CONVERTIR (transformer l''énergie d''une forme à une autre, par exemple
+  un moteur électrique qui transforme l''énergie électrique en énergie mécanique, ou une génératrice qui fait l''inverse),
+  et TRANSMETTRE (adapter le mouvement, par exemple un engrenage qui change la vitesse ou le sens de rotation).
+
+
+  Un engrenage est un ensemble d''au moins deux roues dentées qui s''engrènent : quand la roue menante est petite
+  et la roue menée grande, la vitesse diminue (mais la force augmente) ; quand la roue menante est grande et la
+  roue menée petite, la vitesse augmente. Avec deux roues, le sens de rotation s''inverse.
+
+
+  Les moteurs électriques sont réversibles : ils transforment l''énergie électrique en énergie mécanique, mais actionnés
+  mécaniquement (par exemple en tournant leur axe), ils peuvent produire du courant électrique et fonctionner comme
+  une génératrice (ou dynamo).'
+methode:
+- Pour construire un schéma bloc d'une chaîne d'énergie, placer dans l'ordre les fonctions ALIMENTER → DISTRIBUER
+  → CONVERTIR → TRANSMETTRE, et écrire sous chaque bloc le composant réel qui la réalise.
+- Pour identifier la fonction convertir, chercher le composant qui change la forme d'énergie (moteur, lampe, résistance
+  chauffante).
+- Pour un engrenage, comparer le nombre de dents des deux roues pour savoir si la vitesse augmente ou diminue, et
+  compter les roues pour connaître le sens de rotation final.
+- Pour repérer la fonction distribuer, chercher le composant qui autorise ou interrompt le passage de l'énergie
+  (interrupteur, relais, contacteur).
+vocabulaire:
+- terme: convertir
+  definition: 'fonction qui transforme l''énergie d''une forme à une autre (exemple : électrique → mécanique)'
+- terme: transmettre
+  definition: fonction qui adapte un mouvement (vitesse, sens, trajectoire) sans changer la forme d'énergie
+- terme: engrenage
+  definition: mécanisme d'au moins deux roues dentées qui s'entraînent l'une l'autre
+erreurs_frequentes:
+- Confondre convertir (changer la forme d'énergie) et transmettre (adapter un mouvement).
+- Oublier que deux roues dentées en prise tournent en sens inverse.
+- Croire qu'un moteur électrique ne peut que consommer de l'énergie électrique, alors qu'il peut aussi en produire
+  s'il est entraîné mécaniquement (fonctionnement en génératrice).
+- Placer les fonctions de la chaîne d'énergie dans le désordre sur un schéma bloc.
+exemple:
+  enonce: 'Une perceuse à batterie fonctionne ainsi : la batterie alimente le circuit, l''utilisateur appuie sur
+    la gâchette qui agit comme interrupteur, un moteur électrique fait tourner un axe, et un système d''engrenages
+    adapte la vitesse avant le mandrin. Identifier la fonction réalisée par chaque élément.'
+  solution: 'Batterie : ALIMENTER. Gâchette (interrupteur) : DISTRIBUER. Moteur électrique : CONVERTIR (énergie
+    électrique → énergie mécanique). Engrenages : TRANSMETTRE (adaptation de la vitesse de rotation avant le mandrin).'
+exercices:
+- enonce: Un engrenage a une roue menante de 40 dents et une roue menée de 20 dents. La roue menée tourne-t-elle
+    plus vite ou moins vite que la roue menante ?
+  indices:
+  - La roue menée est plus petite que la roue menante.
+  solution: 'La roue menée (20 dents, plus petite) tourne plus vite que la roue menante (40 dents) : le rapport
+    de vitesse est de 40/20 = 2, donc la roue menée tourne 2 fois plus vite.'
+- enonce: 'Un vélo électrique possède : une batterie, un bouton marche/arrêt, un moteur électrique dans la roue,
+    et une chaîne qui relie aussi le pédalier à la roue. Associer chaque élément à une fonction de la chaîne d''énergie
+    (alimenter, distribuer, convertir, transmettre).'
+  indices:
+  - Le moteur change la forme d'énergie ; la chaîne adapte un mouvement.
+  solution: 'Batterie : alimenter. Bouton marche/arrêt : distribuer. Moteur électrique : convertir. Chaîne : transmettre.'
+- enonce: 'Un moteur électrique fait tourner une roue dentée de 15 dents, qui entraîne une seconde roue dentée de
+    45 dents. Si la première roue tourne à 300 tours par minute, calculer la vitesse de la seconde roue (indication
+    : vitesse menée = vitesse menante × dents menante / dents menée).'
+  indices:
+  - Applique la formule donnée avec 300, 15 et 45.
+  solution: 300 × 15 / 45 = 4500 / 45 = 100 tours par minute.
+sources:
+- titre: Vikidia, « Engrenage »
+  url: https://fr.vikidia.org/w/index.php?title=Engrenage&oldid=2102245
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Vikidia, « Moteur électrique »
+  url: https://fr.vikidia.org/w/index.php?title=Moteur_%C3%A9lectrique&oldid=2338927
+  auteurs: Contributeurs de Vikidia (historique de la page)
+  licence: CC-BY-SA-3.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Wikipédia, « Chaîne énergétique »
+  url: https://fr.wikipedia.org/w/index.php?title=Cha%C3%AEne_%C3%A9nerg%C3%A9tique&oldid=233093357
+  auteurs: Contributeurs de Wikipédia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

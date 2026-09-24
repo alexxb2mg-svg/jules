@@ -1,0 +1,74 @@
+# Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: theme-ecole-et-societe
+declencheurs:
+- système scolaire anglais
+- école au Royaume-Uni
+- environnement et société
+- métiers en anglais
+- recyclage en anglais
+- consommation responsable anglais
+- loisirs écoresponsables
+essentiel: 'Le thème « École et société » invite à comparer le système scolaire français avec ceux des pays anglophones
+  (organisation des journées, matières, uniforme scolaire souvent porté au Royaume-Uni), et à aborder des questions
+  de société à travers le vocabulaire anglais.
+
+
+  L''environnement occupe une place importante dans ce thème : l''eau, les espaces verts, l''urbanisme, les déchets
+  et le recyclage (recycling), les économies d''énergie, la pollution, la consommation responsable. Ces sujets permettent
+  de parler du quotidien des élèves dans les pays anglophones tout en enrichissant le vocabulaire lié à l''écologie.
+
+
+  Le thème couvre aussi les activités scolaires et extrascolaires (loisirs écoresponsables, clubs, sport) et la
+  découverte du monde du travail, en particulier des métiers liés à l''environnement (transition énergétique, recyclage,
+  traitement de l''eau) et au numérique.'
+methode:
+- Utiliser du vocabulaire précis pour parler de l'environnement (recycling, pollution, renewable energy) plutôt
+  que des mots trop généraux.
+- Comparer un usage scolaire ou social français avec son équivalent dans un pays anglophone pour identifier ressemblances
+  et différences.
+- Relier les sujets de société étudiés à des exemples concrets tirés de documents authentiques (site d'une école,
+  article sur le recyclage).
+vocabulaire:
+- terme: recycling
+  definition: le recyclage, la transformation de déchets en nouvelles ressources
+- terme: renewable energy
+  definition: l'énergie renouvelable, produite à partir de sources qui se renouvellent naturellement (soleil, vent,
+    eau)
+erreurs_frequentes:
+- Décrire le système scolaire d'un pays anglophone comme identique au système français.
+- Confondre « school » (l'école en général) avec un niveau précis (primary school, secondary school).
+- Utiliser un vocabulaire trop vague pour parler d'environnement au lieu de mots précis (pollution, recycling, waste).
+exemple:
+  enonce: Écrire une phrase en anglais expliquant une action écoresponsable que l'on peut faire à l'école.
+  solution: 'Exemple de réponse possible : « At school, we recycle paper and plastic bottles to reduce waste. »
+    (Toute phrase correcte et cohérente est acceptée.)'
+exercices:
+- enonce: Citer trois mots anglais liés à l'environnement pouvant être utilisés dans ce thème.
+  indices:
+  - Pense au recyclage, à la pollution, à l'énergie.
+  solution: 'Exemples possibles : recycling (recyclage), pollution (pollution), renewable energy (énergie renouvelable),
+    waste (déchets).'
+- enonce: Donner un exemple de métier lié à l'environnement que l'on pourrait présenter en anglais dans le cadre
+    de ce thème.
+  indices:
+  - Pense à la transition énergétique ou au recyclage.
+  solution: 'Exemples possibles : « a renewable energy engineer » (ingénieur en énergies renouvelables), « a recycling
+    worker » (employé du recyclage), « a water treatment technician » (technicien du traitement de l''eau).'
+sources:
+- titre: Simple English Wikipedia, « Renewable energy »
+  url: https://simple.wikipedia.org/w/index.php?title=Renewable_energy&oldid=10962168
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Simple English Wikipedia, « United Kingdom »
+  url: https://simple.wikipedia.org/w/index.php?title=United_Kingdom&oldid=11001367
+  auteurs: Contributeurs de Simple English Wikipedia (historique de la page)
+  licence: CC-BY-SA-4.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
