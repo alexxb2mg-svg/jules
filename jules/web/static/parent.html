@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jules - espace parent</title>
+  <link rel="icon" href="/api/persona/avatar">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="porte" class="porte cache">
+    <img src="/api/persona/avatar" alt="">
+    <h1>Espace parent</h1>
+    <form id="porte-form" class="rangee colonne">
+      <input id="porte-code" type="password" autocomplete="current-password" aria-label="Code parent">
+      <button class="bouton" type="submit">Entrer</button>
+    </form>
+    <div id="porte-erreur" class="erreur"></div>
+  </div>
+
+  <div id="contenu" class="parent">
+    <header>
+      <img src="/api/persona/avatar" alt="">
+      <h1>Espace parent</h1>
+      <input type="date" id="jour">
+      <a class="bouton secondaire" href="/">Page élève</a>
+    </header>
+
+    <section class="carte" id="carte-alertes">
+      <h2>Signaux de vigilance (30 derniers)</h2>
+      <div id="alertes" class="muet">Chargement…</div>
+    </section>
+
+    <section class="carte" id="carte-rapport">
+      <h2>Rapport du jour</h2>
+      <pre id="rapport" class="muet">Chargement…</pre>
+      <div class="rangee espace-haut">
+        <button class="bouton secondaire" id="envoyer-rapport">Envoyer ce rapport maintenant</button>
+        <span id="etat-envoi" class="muet"></span>
+      </div>
+    </section>
+
+    <section class="carte" id="carte-notes">
+      <h2>Infos pour Jules</h2>
+      <p class="muet">Ce que le bot doit savoir (contrôle à venir, chapitre en cours…). Il s'en sert avec tact.</p>
+      <form id="form-note" class="rangee">
+        <input type="text" id="note-texte" placeholder="Ex. contrôle de maths vendredi sur les fractions" maxlength="500">
+        <label class="muet">jusqu'au <input type="date" id="note-fin"></label>
+        <button class="bouton" type="submit">Ajouter</button>
+      </form>
+      <ul class="liste" id="notes"></ul>
+    </section>
+
+    <section class="carte">
+      <h2>Conversations du jour</h2>
+      <div id="conversations" class="muet">Chargement…</div>
+    </section>
+  </div>
+
+  <script src="/static/commun.js"></script>
+  <script src="/static/parent.js"></script>
+</body>
+</html>

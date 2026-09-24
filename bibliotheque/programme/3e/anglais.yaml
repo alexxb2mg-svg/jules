@@ -1,0 +1,231 @@
+matiere: Anglais (langue vivante)
+id: anglais
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) »"
+    reference: "BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (confirme le maintien du programme 2020 pour la 4e et la 3e en 2026-2027 ; les nouveaux programmes LV n'entrent en 3e qu'en 2028)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Pour l'année scolaire 2026-2027, la classe de 3e reste régie par le programme de langues vivantes
+  du cycle 4 (BO n° 31 du 30 juillet 2020), qui ne distingue pas les notions par année (5e/4e/3e) mais
+  fixe des objectifs de fin de cycle (niveau CECRL, thèmes culturels, repères linguistiques communs aux
+  trois années). Les nouveaux programmes de langues vivantes par année (arrêté du 5 mai 2025, BO n° 22
+  du 29 mai 2025) entrent en application en 5e à la rentrée 2026 et n'atteignent la 3e qu'à la rentrée
+  2028 : ils ne s'appliquent pas à l'année visée ici et ne sont pas utilisés dans ce fichier. Toutes les
+  notions portent donc la mention "cycle 4", à l'exception des objectifs de niveau CECRL qui sont
+  explicitement fixés "en fin de cycle 4".
+brevet:
+  evalue: true
+  epreuve: >
+    Pas d'épreuve écrite d'anglais pour les candidats scolaires au DNB série générale : l'épreuve de
+    langue vivante étrangère écrite (coefficient 2) ne concerne que les candidats "individuels"
+    (art. 4 de l'arrêté du 31 décembre 2015 modifié). Pour un candidat scolaire, l'anglais LV1 est
+    évalué uniquement via le contrôle continu (moyenne annuelle de 3e, 40 % de la note finale du DNB)
+    et peut être mobilisé lors de l'épreuve orale de soutenance (jusqu'à 5 minutes de la prestation
+    peuvent être faites en langue vivante étrangère, valorisées par le jury).
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N (parties II et III)"
+themes:
+  - id: competences-travaillees
+    titre: "Compétences travaillées (5 activités langagières + culture)"
+    chapitres:
+      - id: activites-langagieres
+        titre: "Les cinq activités langagières"
+        notions:
+          - id: ecouter-et-comprendre
+            titre: "Écouter et comprendre"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comprendre des messages oraux et des documents sonores de nature et de complexité variables."
+              - "Se familiariser aux réalités sonores de la langue, et s'entraîner à la mémorisation."
+              - "Repérer des indices pertinents, extralinguistiques ou linguistiques, pour identifier la situation d'énonciation et déduire le sens d'un message."
+              - "Savoir lire des documents vidéo et savoir mettre en relation images et documents sonores."
+            mots_cles: [écoute, compréhension orale, indices, énonciation]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: lire
+            titre: "Lire"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comprendre des documents écrits de nature et de difficultés variées issus de sources diverses."
+              - "Développer des stratégies de lecteur par le biais de lectures régulières."
+              - "S'approprier le document en utilisant des repérages de nature différente : indices extralinguistiques, linguistiques, reconstitution du sens, mise en relation d'éléments significatifs."
+            mots_cles: [lecture, compréhension écrite, stratégies de lecteur]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: parler-en-continu
+            titre: "Parler en continu"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mobiliser à bon escient ses connaissances lexicales, culturelles, grammaticales pour produire un texte oral sur des sujets variés."
+              - "Développer des stratégies pour surmonter un manque lexical lors d'une prise de parole, s'autocorriger et reformuler pour se faire comprendre."
+              - "Respecter un registre et un niveau de langue."
+              - "Mettre en voix son discours par la prononciation, l'intonation et la gestuelle adéquates."
+              - "Prendre la parole pour raconter, décrire, expliquer, argumenter."
+            mots_cles: [expression orale, prononciation, intonation, argumentation]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: ecrire
+            titre: "Écrire"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "S'appuyer sur les stratégies développées à l'oral pour apprendre à structurer son écrit."
+              - "Mobiliser les outils pour écrire, corriger, modifier son écrit."
+              - "Reformuler un message, rendre compte, raconter, décrire, expliquer, argumenter."
+            mots_cles: [expression écrite, structuration, réécriture]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: reagir-et-dialoguer
+            titre: "Réagir et dialoguer"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Développer des stratégies de compréhension orale en repérant des indices extralinguistiques ou linguistiques et en élaborant un discours commun."
+              - "Réagir spontanément à des sollicitations verbales, en mobilisant des énoncés adéquats au contexte, dans une succession d'échanges qui alimentent le message ou le contredisent."
+            mots_cles: [interaction orale, dialogue, spontanéité]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: aspects-culturels
+            titre: "Découvrir les aspects culturels d'une langue vivante étrangère et régionale"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Percevoir les spécificités culturelles des pays et des régions de la langue étudiée en dépassant la vision figée et schématique des stéréotypes et des clichés."
+              - "Mobiliser des références culturelles pour interpréter les éléments d'un message, d'un texte, d'un document sonore."
+              - "Mobiliser ses connaissances culturelles pour décrire des personnages réels ou imaginaires, raconter."
+            mots_cles: [culture, interculturalité, stéréotypes]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+      - id: niveaux-cecrl
+        titre: "Niveaux visés (CECRL)"
+        notions:
+          - id: niveau-lv1-a2-b1
+            titre: "Niveau visé en LV1 (anglais généralement LV1) : A2 puis B1"
+            niveau_programme: "3e"
+            attendus:
+              - "Pour la LV1, en fin de cycle 4, tous les élèves doivent avoir au moins atteint le niveau A2 dans les cinq activités langagières."
+              - "Les activités proposées permettent aux élèves d'atteindre le niveau B1 dans plusieurs activités langagières."
+              - "Un même élève peut atteindre B1 pour certaines activités langagières (ex. « lire », « réagir et dialoguer ») et A2 pour d'autres, selon un profil individualisé plutôt qu'un niveau transversal uniformisé (variables : correction linguistique, adéquation sociolinguistique, aisance à l'oral, étendue du vocabulaire à l'écrit)."
+            mots_cles: [CECRL, A2, B1, LV1, fin de cycle]
+            brevet: false
+            source: "Programme cycle 4, section « Activités langagières »"
+          - id: niveau-lv2-a2
+            titre: "Niveau visé en LV2 : A2 dans au moins deux activités langagières"
+            niveau_programme: "3e"
+            attendus:
+              - "Pour la LV2, le niveau A2 du CECRL dans au moins deux activités langagières."
+            mots_cles: [CECRL, A2, LV2]
+            brevet: false
+            source: "Programme cycle 4, section « Activités langagières »"
+  - id: themes-culturels
+    titre: "Thèmes culturels du cycle 4 (communs à la LV1 et à la LV2)"
+    chapitres:
+      - id: quatre-thematiques
+        titre: "Les quatre thèmes culturels"
+        notions:
+          - id: theme-langages
+            titre: "Langages"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Codes socio-culturels et dimensions géographiques et historiques ; graphiques, schémas, cartes, logos, tableaux."
+              - "Media, modes de communication, réseaux sociaux, publicité ; extraits de manuels scolaires de pays ou de la région de la langue cible."
+              - "Langages artistiques : peinture, musique et chansons, poésie, cinéma et théâtre, littérature, BD, science-fiction ; représentations de sculptures, tableaux, œuvres architecturales, monuments."
+            mots_cles: [langages, médias, arts, codes socio-culturels]
+            brevet: false
+            source: "Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »"
+          - id: theme-ecole-et-societe
+            titre: "École et société"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comparaison des systèmes scolaires."
+              - "Place de la question de l'environnement dans le quotidien des élèves des pays concernés (eau, espaces verts, urbanisme, déchets et recyclage, économies d'énergie, pollution, consommation responsable)."
+              - "Activités scolaires et extrascolaires : loisirs écoresponsables, consommation écoresponsable, parcs urbains et nationaux."
+              - "Découverte du monde du travail : fiches métier, notamment métiers liés à l'environnement (transition énergétique, recyclage, traitement de l'eau…) ; numérique et environnement."
+            mots_cles: ["école", société, environnement, monde du travail]
+            brevet: false
+            source: "Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »"
+          - id: theme-voyages-et-migrations
+            titre: "Voyages et migrations"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Voyages scolaires, touristiques ; tourisme écoresponsable, empreinte carbone."
+              - "Exil, migration et émigration ; l'imaginaire, le rêve, le fantastique."
+            mots_cles: [voyages, migrations, exil, tourisme]
+            brevet: false
+            source: "Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »"
+          - id: theme-rencontres-autres-cultures
+            titre: "Rencontres avec d'autres cultures"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Repères historiques et géographiques : patrimoine historique, naturel et architectural ; inclusion et exclusion ; parcs nationaux ; réserves de biosphères."
+              - "Spécificités climatiques des pays concernés, leur biodiversité."
+              - "Énergies renouvelables développées dans les pays concernés."
+            mots_cles: [interculturalité, patrimoine, biodiversité, rencontres]
+            brevet: false
+            source: "Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »"
+  - id: reperes-linguistiques
+    titre: "Repères linguistiques (grammaire, phonologie)"
+    chapitres:
+      - id: grammaire
+        titre: "Grammaire"
+        notions:
+          - id: nom-et-groupe-nominal
+            titre: "Nom et groupe nominal"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Genre, pronoms personnels compléments et réfléchis."
+            mots_cles: [nom, groupe nominal, pronoms, genre]
+            brevet: false
+            source: "Programme cycle 4, section « Grammaire »"
+          - id: determination
+            titre: "Détermination"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Articles, quantifieurs."
+            mots_cles: [articles, quantifieurs, détermination]
+            brevet: false
+            source: "Programme cycle 4, section « Grammaire »"
+          - id: groupe-verbal
+            titre: "Groupe verbal"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expression du présent, du passé, de l'avenir."
+              - "Modaux."
+              - "Passif."
+              - "Construction des verbes."
+            mots_cles: [groupe verbal, temps, modaux, passif]
+            brevet: false
+            source: "Programme cycle 4, section « Grammaire »"
+          - id: enonces-simples-et-complexes
+            titre: "Énoncés simples et complexes"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Coordination. Subordination. Relatifs."
+              - "Discours indirect. Interrogation indirecte."
+              - "Connecteurs."
+            mots_cles: [coordination, subordination, relatifs, discours indirect, connecteurs]
+            brevet: false
+            source: "Programme cycle 4, section « Grammaire »"
+      - id: phonologie
+        titre: "Phonologie"
+        notions:
+          - id: regularites-langue-orale
+            titre: "Régularités de la langue orale"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Prendre conscience des régularités de la langue orale."
+              - "Prendre conscience des variations phoniques et phonologiques dans les usages d'une même langue."
+            mots_cles: [phonologie, prononciation, variations]
+            brevet: false
+            source: "Programme cycle 4, section « Phonologie »"
+          - id: fluidite-et-securite-linguistique
+            titre: "Fluidité, intelligibilité, sécurité linguistique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Viser la fluidité, l'intelligibilité, la sécurité linguistique personnelle dans la production orale : ne pas viser « l'accent natif »."
+            mots_cles: [fluidité, intelligibilité, accent]
+            brevet: false
+            source: "Programme cycle 4, section « Phonologie »"

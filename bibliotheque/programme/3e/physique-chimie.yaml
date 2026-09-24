@@ -1,0 +1,288 @@
+matiere: Physique-Chimie
+id: physique-chimie
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences"
+    reference: "Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Le programme de physique-chimie du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été
+  réécrit pour 2026-2027 : il reste en vigueur tel quel en 3e. Il est structuré par cycle
+  de 3 ans (5e-4e-3e), pas par année, et les mêmes quatre thèmes sont travaillés chaque
+  année avec une complexité croissante. Seuls les « repères de progressivité » du texte
+  précisent explicitement ce qui est réservé à la classe de 3e (ex. constitution de l'atome,
+  expression littérale de l'énergie cinétique, aspects énergétiques de l'électricité) : ces
+  notions sont marquées niveau_programme "3e", le reste "cycle 4".
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: organisation-et-transformations-de-la-matiere
+    titre: "Organisation et transformations de la matière"
+    chapitres:
+      - id: constitution-et-etats-de-la-matiere
+        titre: "Décrire la constitution et les états de la matière"
+        notions:
+          - id: etats-et-changements-etat
+            titre: "États de la matière (solide, liquide, gaz) et changements d'état d'un corps pur"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Caractériser les différents états de la matière."
+              - "Proposer et mettre en œuvre un protocole expérimental pour étudier les propriétés des changements d'état."
+              - "Caractériser les différents changements d'état d'un corps pur."
+              - "Interpréter les changements d'état au niveau microscopique."
+              - "Conservation de la masse, variation du volume, température de changement d'état."
+            mots_cles: [état, solide, liquide, gaz, changement d'état, corps pur, mélange]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière », attendus de fin de cycle"
+          - id: masse-volumique
+            titre: "Masse volumique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Proposer et mettre en œuvre un protocole expérimental pour déterminer une masse volumique d'un liquide ou d'un solide."
+              - "Exploiter des mesures de masse volumique pour différencier des espèces chimiques."
+              - "Relation m = ρ.V, influence de la température."
+            mots_cles: [masse volumique, densité, proportionnalité]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+          - id: melanges-solubilite
+            titre: "Mélanges, solubilité, miscibilité, composition de l'air"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Concevoir et réaliser des expériences pour caractériser des mélanges."
+              - "Estimer expérimentalement une valeur de solubilité dans l'eau."
+            mots_cles: [solubilité, miscibilité, mélange, composition de l'air]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+      - id: transformations-chimiques
+        titre: "Décrire et expliquer des transformations chimiques"
+        notions:
+          - id: transformation-chimique-molecules-atomes-ions
+            titre: "Transformation chimique, molécules, atomes, ions, conservation de la masse"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier expérimentalement une transformation chimique."
+              - "Distinguer transformation chimique et mélange, transformation chimique et transformation physique."
+              - "Interpréter une transformation chimique comme une redistribution des atomes."
+              - "Utiliser une équation de réaction chimique fournie pour décrire une transformation chimique observée."
+              - "Conservation de la masse lors d'une transformation chimique."
+            mots_cles: [transformation chimique, molécule, atome, ion, équation de réaction]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+          - id: classification-periodique
+            titre: "Symboles des éléments et classification périodique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Associer leurs symboles aux éléments à l'aide de la classification périodique."
+              - "Interpréter une formule chimique en termes atomiques (dioxygène, dihydrogène, diazote, eau, dioxyde de carbone, méthane, protoxyde d'azote)."
+            mots_cles: [classification périodique, symbole chimique, formule chimique]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+          - id: acide-base-combustion-corrosion
+            titre: "pH, réactions acide-base, combustions, corrosion, gaz à effet de serre"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier le caractère acide ou basique d'une solution par mesure de pH."
+              - "Associer le caractère acide ou basique à la présence d'ions H+ et OH-."
+              - "Identifier les gaz à effet de serre produits lors de transformations chimiques."
+            mots_cles: [pH, acide, base, combustion, corrosion, gaz à effet de serre]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+      - id: matiere-dans-univers
+        titre: "Décrire l'organisation de la matière dans l'Univers"
+        notions:
+          - id: structure-univers-systeme-solaire
+            titre: "Structure de l'Univers et du système solaire, unités de distance"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Décrire la structure de l'Univers et du système solaire."
+              - "Aborder les différentes unités de distance et savoir les convertir : du kilomètre à l'année-lumière."
+            mots_cles: [Univers, système solaire, galaxie, année-lumière]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière »"
+          - id: elements-terre-univers
+            titre: "Ressources terrestres en éléments chimiques"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Connaitre et comprendre l'origine de la matière."
+              - "Comprendre que la matière observable est partout de même nature et obéit aux mêmes lois."
+              - "Comparer les ressources terrestres de certains éléments (hydrogène, hélium, éléments lourds : oxygène, carbone, fer, silicium, terres rares…)."
+              - "La matière constituant la Terre et les étoiles."
+            mots_cles: [élément chimique, ressources, Terre, Univers, origine de la matière]
+            brevet: true
+            source: "Physique-Chimie, thème « Organisation et transformations de la matière », connaissances et compétences associées (BOEN n° 31 du 30/07/2020, p. 100)"
+          - id: constitution-atome-noyau
+            titre: "Constitution de l'atome et structure interne du noyau atomique"
+            niveau_programme: "3e"
+            attendus:
+              - "Constituants de l'atome, structure interne d'un noyau atomique (nucléons : protons, neutrons), électrons."
+            mots_cles: [atome, noyau, proton, neutron, électron]
+            brevet: true
+            source: "Physique-Chimie, repères de progressivité : « La description de la constitution de l'atome et de la structure interne du noyau peut être réservée à la classe de 3e »"
+  - id: mouvement-et-interactions
+    titre: "Mouvement et interactions"
+    chapitres:
+      - id: caracteriser-un-mouvement
+        titre: "Caractériser un mouvement"
+        notions:
+          - id: vitesse-mouvement
+            titre: "Vitesse, mouvements rectilignes et circulaires, relativité du mouvement"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Caractériser le mouvement d'un objet."
+              - "Utiliser la relation liant vitesse, distance et durée dans le cas d'un mouvement uniforme."
+              - "Vitesse : direction, sens et valeur ; mouvements uniformes et mouvements dont la vitesse varie."
+              - "Relativité du mouvement dans des cas simples."
+            mots_cles: [vitesse, mouvement, trajectoire, relativité du mouvement]
+            brevet: true
+            source: "Physique-Chimie, thème « Mouvement et interactions », attendus de fin de cycle"
+      - id: modeliser-une-action-par-une-force
+        titre: "Modéliser une action par une force"
+        notions:
+          - id: actions-et-forces
+            titre: "Actions de contact et à distance, force (point d'application, direction, sens, valeur)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les actions mises en jeu (de contact ou à distance) et les modéliser par des forces."
+              - "Associer la notion d'interaction à la notion de force."
+              - "Force : point d'application, direction, sens et valeur."
+            mots_cles: [force, action mécanique, interaction, point d'application]
+            brevet: true
+            source: "Physique-Chimie, thème « Mouvement et interactions », attendus de fin de cycle et connaissances associées (BOEN n° 31 du 30/07/2020, p. 101)"
+          - id: gravitation-poids-masse
+            titre: "Loi de gravitation universelle, poids et masse"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Exploiter l'expression littérale scalaire de la loi de gravitation universelle, la loi étant fournie."
+              - "Force de pesanteur et son expression P = mg."
+              - "Pesanteur sur Terre et sur la Lune, différence entre poids et masse (unités)."
+            mots_cles: [gravitation, poids, masse, pesanteur]
+            brevet: true
+            source: "Physique-Chimie, thème « Mouvement et interactions »"
+  - id: energie-transferts-conversions
+    titre: "L'énergie, ses transferts et ses conversions"
+    chapitres:
+      - id: sources-transferts-conversions-energie
+        titre: "Identifier les sources, transferts, conversions et formes d'énergie ; conservation de l'énergie"
+        notions:
+          - id: formes-energie
+            titre: "Formes d'énergie (cinétique, potentielle, thermique, électrique, chimique, nucléaire, lumineuse)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les différentes formes d'énergie."
+              - "Identifier un dispositif de conversion d'énergie dont le fonctionnement s'accompagne d'une émission de dioxyde de carbone."
+              - "Énergie cinétique (relation Ec = ½ mv²), énergie potentielle (dépendant de la position)."
+            mots_cles: [énergie cinétique, énergie potentielle, formes d'énergie]
+            brevet: true
+            source: "Physique-Chimie, thème « L'énergie, ses transferts et ses conversions »"
+          - id: expression-litterale-energie-cinetique
+            titre: "Expression littérale de l'énergie cinétique"
+            niveau_programme: "3e"
+            attendus:
+              - "Énergie cinétique (relation Ec = ½ mv²)."
+            mots_cles: [énergie cinétique, formule]
+            brevet: true
+            source: "Physique-Chimie, repères de progressivité : « L'expression littérale de l'énergie cinétique peut être réservée à la classe de 3e »"
+          - id: bilan-energetique-conservation
+            titre: "Bilan énergétique, conservation de l'énergie, puissance"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Établir un bilan énergétique pour un système simple."
+              - "Analyser une situation où, pour un système donné, les valeurs des transferts d'énergie entrant et sortant sont différentes."
+              - "Utiliser la relation liant puissance, énergie et durée."
+            mots_cles: [conservation de l'énergie, transfert, conversion, puissance]
+            brevet: true
+            source: "Physique-Chimie, thème « L'énergie, ses transferts et ses conversions »"
+          - id: transfert-energie-rayonnement
+            titre: "Transfert d'énergie par rayonnement, effet de serre"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Associer l'émission et l'absorption d'un rayonnement à un transfert d'énergie."
+              - "Absorption du rayonnement terrestre par les gaz à effet de serre."
+            mots_cles: [rayonnement, effet de serre, transfert d'énergie]
+            brevet: true
+            source: "Physique-Chimie, thème « L'énergie, ses transferts et ses conversions »"
+      - id: circuits-electriques-lois-electricite
+        titre: "Réaliser des circuits électriques simples et exploiter les lois de l'électricité"
+        notions:
+          - id: circuits-serie-derivation
+            titre: "Dipôles en série et en dérivation, lois d'additivité et d'unicité"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Élaborer et mettre en œuvre un protocole expérimental simple visant à réaliser un circuit électrique répondant à un cahier des charges simple ou à vérifier une loi de l'électricité."
+              - "L'intensité du courant électrique est la même en tout point d'un circuit qui ne compte que des dipôles en série."
+              - "Loi d'additivité des tensions (circuit à une seule maille)."
+              - "Loi d'additivité des intensités (circuit à deux mailles)."
+              - "Loi d'unicité des tensions."
+              - "Relation tension-courant : loi d'Ohm."
+            mots_cles: [circuit électrique, tension, intensité, loi d'Ohm, unicité des tensions]
+            brevet: true
+            source: "Physique-Chimie, thème « L'énergie, ses transferts et ses conversions », connaissances et compétences associées (BOEN n° 31 du 30/07/2020, p. 103)"
+          - id: puissance-electrique-consommation
+            titre: "Puissance électrique et consommation d'énergie électrique"
+            niveau_programme: "3e"
+            attendus:
+              - "Conduire un calcul de consommation d'énergie électrique relatif à une situation de la vie courante."
+              - "Puissance électrique P = U.I ; relation liant l'énergie, la puissance électrique et la durée."
+            mots_cles: [puissance électrique, consommation, énergie électrique]
+            brevet: true
+            source: "Physique-Chimie, repères de progressivité : « Les aspects énergétiques peuvent être réservés à la classe de 3e »"
+  - id: signaux-observer-communiquer
+    titre: "Des signaux pour observer et communiquer"
+    chapitres:
+      - id: signaux-lumineux
+        titre: "Signaux lumineux"
+        notions:
+          - id: propagation-lumiere
+            titre: "Sources et propagation de la lumière, modèle du rayon lumineux"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Distinguer une source primaire (objet lumineux) d'un objet diffusant."
+              - "Exploiter expérimentalement la propagation rectiligne de la lumière dans le vide et le modèle du rayon lumineux."
+              - "Utiliser l'unité « année-lumière » comme unité de distance."
+            mots_cles: [lumière, propagation rectiligne, rayon lumineux, année-lumière]
+            brevet: true
+            source: "Physique-Chimie, thème « Des signaux pour observer et communiquer », partie « Signaux lumineux » (BOEN n° 31 du 30/07/2020, p. 104)"
+          - id: types-rayonnements
+            titre: "Différents types de rayonnements"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Les élèves découvrent différents types de rayonnements (lumière visible, ondes radio, rayons X…)."
+            mots_cles: [rayonnement, lumière visible, onde radio, rayons X]
+            brevet: false
+            source: "Physique-Chimie, thème « Des signaux pour observer et communiquer », partie « Signaux lumineux » (BOEN n° 31 du 30/07/2020, p. 104)"
+      - id: signaux-sonores
+        titre: "Signaux sonores"
+        notions:
+          - id: propagation-son-frequence
+            titre: "Propagation du son, vitesse de propagation, fréquence"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Décrire les conditions de propagation d'un son."
+              - "Relier la distance parcourue par un son à la durée de propagation."
+              - "Notion de fréquence : sons audibles, infrasons et ultrasons."
+            mots_cles: [son, propagation, fréquence, ultrasons, infrasons]
+            brevet: true
+            source: "Physique-Chimie, thème « Des signaux pour observer et communiquer », partie « Signaux sonores » (BOEN n° 31 du 30/07/2020, p. 104)"
+      - id: signal-information
+        titre: "Signal et information"
+        notions:
+          - id: son-lumiere-information
+            titre: "Le son et la lumière comme supports d'un signal transportant une information"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comprendre que l'utilisation du son et de la lumière permet d'émettre, de transporter un signal donc une information."
+            mots_cles: [signal, information, son, lumière]
+            brevet: false
+            source: "Physique-Chimie, thème « Des signaux pour observer et communiquer », partie « Signal et information » (BOEN n° 31 du 30/07/2020, p. 104-105)"

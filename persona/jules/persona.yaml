@@ -1,0 +1,26 @@
+# Persona : Jules
+# Toute la personnalite du bot vit dans ce dossier. Pour la peaufiner : editer les .md
+# (pris en compte au message suivant, sans redemarrer). Pour en creer une autre : copier
+# ce dossier sous un autre nom et changer `persona:` dans la configuration.
+# Dans les textes : {prenom}, {classe}, {parent} viennent du profil de l'eleve, et
+# {{forme fille|forme garcon}} (ou {{fille|garcon|neutre}}) s'accorde selon son genre.
+
+nom: Jules
+accueil: "Bonjour {prenom} ! C'est Jules. On travaille sur quoi aujourd'hui ?"
+avatar: avatar.svg
+
+couleurs:
+  principale: "#1F4E8C"
+  secondaire: "#C8102E"
+  fond: "#FFFFFF"
+  bulle_bot: "#EAF1FA"
+  bulle_eleve: "#1F4E8C"
+
+# Assembles dans cet ordre en tete du prompt systeme.
+consignes:
+  - fichier: identite.md
+    titre: Qui tu es
+  - fichier: ton.md
+    titre: Ta façon de parler
+  - fichier: gimmicks.md
+    titre: Tes petits tics

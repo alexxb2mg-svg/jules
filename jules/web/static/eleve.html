@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jules</title>
+  <link rel="icon" href="/api/persona/avatar">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="porte" class="porte cache">
+    <img src="/api/persona/avatar" alt="">
+    <h1>Jules</h1>
+    <p>Tape ton code secret pour commencer</p>
+    <form id="porte-form" class="rangee colonne">
+      <input id="porte-code" type="password" autocomplete="current-password" inputmode="text" aria-label="Code">
+      <button class="bouton" type="submit">Entrer</button>
+    </form>
+    <div id="porte-erreur" class="erreur"></div>
+  </div>
+
+  <div id="contenu" class="appli">
+    <aside id="cote" class="cote">
+      <div class="marque"><img id="av-marque" src="/api/persona/avatar" alt=""><span id="nom-persona">Jules</span></div>
+      <button id="nouvelle" class="bouton">+ Nouvelle discussion</button>
+      <div id="historique" class="historique"></div>
+    </aside>
+
+    <main class="centre">
+      <div class="entete">
+        <button class="menu-cote" id="menu-cote" aria-label="Menu">☰</button>
+        <div class="titre" id="titre">Nouvelle discussion</div>
+        <span class="pastille-mode cache" id="pastille-mode"></span>
+      </div>
+
+      <div id="fil" class="fil"></div>
+
+      <div class="saisie cache" id="saisie">
+        <div class="apercus" id="apercus"></div>
+        <form id="formulaire">
+          <input type="file" id="fichier" accept="image/*" capture="environment" multiple hidden>
+          <button type="button" class="rond photo" id="bouton-photo" title="Prendre en photo">📷</button>
+          <textarea id="texte" rows="1" placeholder="Écris ton message…"></textarea>
+          <button type="submit" class="rond envoyer" id="bouton-envoyer" title="Envoyer">➤</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="/static/commun.js"></script>
+  <script src="/static/eleve.js"></script>
+</body>
+</html>

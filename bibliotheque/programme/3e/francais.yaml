@@ -1,0 +1,543 @@
+matiere: Français
+id: francais
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3), enseignement du français"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Attendus de fin d'année de 3e — Français"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Repères annuels de progression pour le cycle 4 — Français"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    reference: "Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Pour l'année 2026-2027, la classe de 3e reste sur le programme de français du cycle 4 publié
+  au BO n° 31 du 30 juillet 2020 (le nouveau programme de cycle 4 du BO n° 10 du 5 mars 2026 ne
+  s'applique en 3e qu'à la rentrée 2028). Ce fichier reprend les compétences et connaissances du
+  programme cycle 4, en distinguant quand le texte les situe explicitement en fin de 3e (via les
+  "Attendus de fin d'année de 3e" et les "Repères annuels de progression") de ce qui reste
+  formulé au niveau du cycle 4 entier. La culture littéraire et artistique de 3e correspond à
+  l'entrée annuelle « Se chercher, se construire », déclinée en 3e sous la perspective
+  « S'affirmer, s'émanciper : l'engagement humaniste », avec ses 5 questionnements propres à la 3e.
+brevet:
+  evalue: true
+  epreuve: >
+    Épreuve écrite de français du DNB (coefficient 2), durée 3 heures, notée sur 100 points
+    ramenés sur 20. Elle prend appui sur un corpus composé d'un texte littéraire et
+    éventuellement d'une image en rapport avec le texte. Trois parties : 1) Travail sur le texte
+    littéraire et, éventuellement, sur une image (50 points, 1h10) comprenant grammaire et
+    compétences linguistiques (dont un exercice de réécriture) et compréhension/interprétation ;
+    2) Dictée (10 points, 20 minutes, texte d'environ 600 signes en lien avec l'œuvre) ;
+    3) Rédaction (40 points, 1h30), au choix entre un sujet de réflexion et un sujet
+    d'imagination. La maîtrise de la langue (orthographe, syntaxe, lexique, organisation du
+    propos) est évaluée dans tous les exercices. À partir de la session 2027, les sujets portent
+    sur le programme de la classe de 3e s'il est en vigueur, ou à défaut sur le programme du
+    cycle 4.
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: culture-litteraire-et-artistique
+    titre: "Culture littéraire et artistique"
+    chapitres:
+      - id: se-raconter-se-representer
+        titre: "Se raconter, se représenter (questionnement obligatoire de 3e)"
+        notions:
+          - id: ecriture-de-soi-autoportrait
+            titre: "Formes de l'écriture de soi et de l'autoportrait"
+            niveau_programme: "3e"
+            attendus:
+              - "Découvrir différentes formes de l'écriture de soi et de l'autoportrait."
+              - "Comprendre les raisons et le sens de l'entreprise qui consiste à se raconter ou à se représenter."
+              - "Percevoir l'effort de saisie de soi et de recherche de la vérité."
+              - "S'interroger sur les raisons et les effets de la composition du récit ou du portrait de soi."
+            mots_cles: [autobiographie, autoportrait, mémoires, journal intime, correspondance]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Se raconter, se représenter »"
+          - id: corpus-se-raconter
+            titre: "Corpus de référence : récit de soi et autoportrait"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier un livre relevant de l'autobiographie ou du roman autobiographique (lecture intégrale) ou des extraits d'œuvres de différents siècles et genres relevant de diverses formes du récit de soi et de l'autoportrait (essai, mémoires, autobiographie, roman autobiographique, journaux et correspondances intimes)."
+              - "Le groupement peut intégrer des exemples majeurs de l'autoportrait ou de l'autobiographie dans d'autres arts (peinture, photographie, images animées)."
+            mots_cles: [lecture intégrale, groupement de textes, autoportrait pictural]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Se raconter, se représenter »"
+      - id: denoncer-les-travers-de-la-societe
+        titre: "Dénoncer les travers de la société (questionnement obligatoire de 3e)"
+        notions:
+          - id: visee-satirique
+            titre: "Visées et modalités de la satire"
+            niveau_programme: "3e"
+            attendus:
+              - "Découvrir des œuvres, des textes et des images à visée satirique, relevant de différents arts, genres et formes."
+              - "Comprendre les raisons, les visées et les modalités de la satire, les effets d'ironie, de grossissement, de rabaissement ou de déplacement dont elle joue ; savoir en apprécier le sel et en saisir la portée et les limites."
+              - "S'interroger sur la dimension morale et sociale du comique satirique."
+            mots_cles: [satire, ironie, comique, caricature]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Dénoncer les travers de la société »"
+          - id: corpus-denoncer
+            titre: "Corpus de référence : satire et dénonciation sociale"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier des œuvres ou textes de l'Antiquité à nos jours, relevant de différents genres ou formes littéraires (poésie satirique, roman, fable, conte philosophique ou drolatique, pamphlet)."
+              - "Étudier des dessins de presse, affiches, caricatures, albums de bande dessinée ; on peut aussi exploiter des extraits de spectacles, d'émissions radiophoniques ou télévisées, ou de créations numériques à caractère satirique."
+            mots_cles: [fable, pamphlet, conte philosophique, dessin de presse]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Dénoncer les travers de la société »"
+      - id: visions-poetiques-du-monde
+        titre: "Visions poétiques du monde (questionnement obligatoire de 3e)"
+        notions:
+          - id: poesie-romantisme-a-nos-jours
+            titre: "La poésie du romantisme à nos jours et les visions du monde"
+            niveau_programme: "3e"
+            attendus:
+              - "Découvrir des œuvres et des textes relevant principalement de la poésie, du romantisme à nos jours."
+              - "Comprendre que la poésie joue de toutes les ressources de la langue pour célébrer et intensifier notre présence au monde, et pour en interroger le sens."
+              - "Percevoir le rôle central du rapport à la nature dans cette célébration du « chant du monde »."
+              - "Cultiver la sensibilité à la beauté des textes poétiques et s'interroger sur le rapport au monde qu'ils invitent le lecteur à éprouver par l'expérience de leur lecture."
+            mots_cles: [poésie, romantisme, prose poétique, chant du monde]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Visions poétiques du monde »"
+          - id: corpus-visions-poetiques
+            titre: "Corpus de référence : poèmes et prose poétique"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier des poèmes ou des textes de prose poétique, du romantisme à nos jours, pour faire comprendre la diversité des visions du monde et leur inscription dans des esthétiques différentes ; le groupement peut intégrer des exemples majeurs de paysages en peinture."
+            mots_cles: [groupement de poèmes, prose poétique, paysage en peinture]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Visions poétiques du monde »"
+      - id: agir-dans-la-cite-individu-et-pouvoir
+        titre: "Agir dans la cité : individu et pouvoir (questionnement obligatoire de 3e)"
+        notions:
+          - id: litterature-et-histoire-xxe-siecle
+            titre: "Littérature du XXe siècle, engagement et rapport à l'histoire"
+            niveau_programme: "3e"
+            attendus:
+              - "Découvrir des œuvres et textes du XXe siècle appartenant à des genres divers liés à des bouleversements historiques majeurs."
+              - "Comprendre en quoi les textes littéraires dépassent le statut de document historique et visent au-delà du témoignage et de la simple efficacité rhétorique."
+              - "S'interroger sur les notions d'engagement et de résistance, et sur le rapport à l'histoire qui caractérise les œuvres et textes étudiés."
+            mots_cles: [engagement, résistance, XXe siècle, témoignage]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Agir dans la cité : individu et pouvoir »"
+          - id: corpus-agir-dans-la-cite
+            titre: "Corpus de référence : regards littéraires sur le XXe siècle"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier, en lien avec la programmation annuelle en histoire (étude du XXe siècle, thème « L'Europe, un théâtre majeur des guerres totales »), une œuvre ou la partie significative d'une œuvre portant un regard sur l'histoire du siècle — guerres mondiales, société de l'entre-deux-guerres, régimes fascistes et totalitaires (lecture intégrale)."
+              - "On peut aussi étudier des extraits d'autres œuvres appartenant à divers genres littéraires, ainsi que des œuvres picturales ou des extraits d'œuvres cinématographiques."
+            mots_cles: [lecture intégrale, guerres mondiales, totalitarisme, croisement histoire]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, « Agir dans la cité : individu et pouvoir »"
+      - id: progres-et-reves-scientifiques
+        titre: "Progrès et rêves scientifiques (questionnement complémentaire de 3e, au choix)"
+        notions:
+          - id: progres-scientifique-et-litterature
+            titre: "Progrès scientifique, figure du savant et anticipation"
+            niveau_programme: "3e"
+            attendus:
+              - "S'interroger sur l'idée du progrès scientifique notamment au XIXe siècle, tantôt exalté et mythifié, tantôt objet de répulsion ou de désillusion."
+              - "Poser la question des rapports entre les sciences et la littérature, notamment à travers des œuvres mettant en scène la figure du savant, créateur génial et bienfaiteur, ou figure malfaisante et diabolique."
+              - "Interroger l'ambition de l'art à penser, imaginer voire anticiper le progrès scientifique et technologique."
+              - "Étudier les récits d'anticipation, utopies ou dystopies, comme expression des interrogations, des angoisses et des espoirs de l'humanité, y compris en matière d'environnement."
+            mots_cles: [science-fiction, utopie, dystopie, figure du savant]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Troisième, questionnement complémentaire « Progrès et rêves scientifiques »"
+      - id: elaboration-interpretation-litteraire
+        titre: "Élaborer une interprétation de textes littéraires"
+        notions:
+          - id: identification-genres-et-formes-argumentatives
+            titre: "Genres littéraires et formes argumentatives"
+            niveau_programme: "3e"
+            attendus:
+              - "Identifier différentes formes argumentatives."
+              - "Contextualiser une œuvre littéraire à partir de ses connaissances historiques et culturelles."
+              - "Percevoir les effets esthétiques et significatifs de la langue littéraire et les interpréter pour formuler un jugement."
+            mots_cles: [argumentation, contextualisation, effets esthétiques, jugement]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Élaborer une interprétation de textes littéraires »"
+          - id: lecture-oeuvres-et-frequentation-arts
+            titre: "Lire des œuvres littéraires et fréquenter des œuvres d'art"
+            niveau_programme: "3e"
+            attendus:
+              - "Lire au moins trois œuvres complètes du patrimoine en lecture intégrale étudiées en classe, au moins trois œuvres complètes en lecture cursive (littérature jeunesse notamment) et au moins trois groupements de textes."
+              - "Lire des textes appartenant à différentes époques, en lien avec le programme d'histoire."
+              - "Relier production littéraire et production artistique."
+            mots_cles: [lecture intégrale, lecture cursive, groupement de textes, patrimoine]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Lire des œuvres littéraires et fréquenter des œuvres d'art »"
+  - id: lecture-et-comprehension
+    titre: "Lecture et compréhension de l'écrit et de l'image"
+    chapitres:
+      - id: comprehension-autonome
+        titre: "Contrôler sa compréhension, devenir un lecteur autonome"
+        notions:
+          - id: strategies-de-lecture
+            titre: "Stratégies de lecture et justification de l'interprétation"
+            niveau_programme: "3e"
+            attendus:
+              - "Recourir à des stratégies de lecture pour comprendre un texte."
+              - "Justifier une interprétation en s'appuyant sur le texte."
+              - "Choisir un livre adapté à son niveau de lecture, à ses goûts et à ses besoins."
+            mots_cles: [stratégies de lecture, interprétation, autonomie de lecture]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Contrôler sa compréhension, devenir un lecteur autonome »"
+      - id: lecture-textes-non-litteraires-et-images
+        titre: "Lire des textes non littéraires, des images et des documents composites"
+        notions:
+          - id: analyse-image-et-documents-composites
+            titre: "Lecture et analyse de l'image fixe ou mobile et des documents composites"
+            niveau_programme: "3e"
+            attendus:
+              - "Lire et comprendre en autonomie des textes variés, des images et des documents composites sur différents supports (papier, numérique)."
+              - "Décrire une image fixe ou mobile en utilisant un vocabulaire adapté (formes, couleurs, contrastes, plans, cadrage et point de vue) ; comprendre le hors champ et l'implicite."
+            mots_cles: [image fixe, image mobile, document composite, cadrage, plan]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Lire des textes non littéraires, des images et des documents composites »"
+  - id: ecriture
+    titre: "Écriture"
+    chapitres:
+      - id: fonctions-de-lecrit
+        titre: "Exploiter les principales fonctions de l'écrit"
+        notions:
+          - id: ecrit-reflexif
+            titre: "Écrit pour penser, apprendre et prise de notes"
+            niveau_programme: "3e"
+            attendus:
+              - "Utiliser l'écrit pour penser et pour apprendre."
+              - "Recourir régulièrement aux écrits réflexifs pour expliquer une démarche, justifier une réponse, argumenter un propos."
+              - "Connaître les techniques et usages de la prise de notes."
+              - "Rédiger un texte de 2 000 à 3 000 signes selon les types d'écrits demandés."
+            mots_cles: [écrit réflexif, prise de notes, brouillon]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Exploiter les principales fonctions de l'écrit »"
+      - id: strategies-decriture
+        titre: "Adopter des stratégies et des procédures d'écriture efficaces"
+        notions:
+          - id: planification-et-revision
+            titre: "Planification, révision et amélioration de l'écrit"
+            niveau_programme: "3e"
+            attendus:
+              - "Planifier la production de son écrit et mettre en œuvre des stratégies pour trouver des idées ou des éléments du texte à rédiger."
+              - "Réviser ses écrits en utilisant différents outils."
+            mots_cles: [planification, brouillon, révision, réécriture]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Adopter des stratégies et des procédures d'écriture efficaces »"
+      - id: exploitation-des-lectures
+        titre: "Exploiter des lectures pour enrichir son écrit"
+        notions:
+          - id: transfert-lexique-et-genres
+            titre: "Transfert du lexique, des tournures et des genres littéraires dans l'écriture"
+            niveau_programme: "3e"
+            attendus:
+              - "Connaître les principaux genres littéraires et leurs caractéristiques."
+              - "Transférer dans ses propres écrits le lexique, les tournures syntaxiques, découverts lors de lectures."
+              - "Utiliser des outils d'analyse des textes."
+              - "Être capable d'adopter une distance critique sur son texte pour en apprécier la pertinence et les effets."
+            mots_cles: [genre littéraire, réécriture, distance critique]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Exploiter des lectures pour enrichir son écrit »"
+      - id: argumentation-a-lecrit
+        titre: "Passer du recours intuitif à l'argumentation à un usage plus maîtrisé"
+        notions:
+          - id: structuration-du-texte-argumentatif
+            titre: "Fonctions de l'argumentation, structuration du texte argumentatif"
+            niveau_programme: "3e"
+            attendus:
+              - "Connaître les principales fonctions et caractéristiques des discours argumentatifs et distinguer dans l'argumentation le fait de persuader ou de convaincre."
+              - "Repérer et identifier des procédés destinés à étayer une argumentation (organisation du propos, choix des exemples, modalisation)."
+              - "Structurer clairement un texte argumentatif et l'illustrer d'exemples précis."
+              - "Donner une cohérence aux paragraphes rédigés, qu'ils soient d'analyse littéraire ou argumentatifs."
+            mots_cles: [argumentation, persuader, convaincre, modalisation, paragraphe argumenté]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Passer du recours intuitif à l'argumentation à un usage plus maîtrisé »"
+  - id: oral
+    titre: "Oral"
+    chapitres:
+      - id: comprehension-et-interpretation-oral
+        titre: "Comprendre et interpréter des messages et des discours oraux complexes"
+        notions:
+          - id: visees-et-implicite-du-discours-oral
+            titre: "Visées du discours oral et implicite"
+            niveau_programme: "3e"
+            attendus:
+              - "Identifier les visées d'un discours oral, hiérarchiser les informations qu'il contient."
+              - "Comprendre et être capable d'expliquer l'implicite d'un discours oral."
+            mots_cles: [discours oral, implicite, visée argumentative]
+            brevet: false
+            source: "Attendus de fin d'année de 3e — Français, « Comprendre et interpréter des messages et des discours oraux complexes »"
+      - id: expression-maitrisee-devant-un-auditoire
+        titre: "S'exprimer de façon maîtrisée en s'adressant à un auditoire"
+        notions:
+          - id: expose-et-avis-argumente
+            titre: "Compte rendu, exposé et expression d'un avis personnel argumenté"
+            niveau_programme: "3e"
+            attendus:
+              - "Maîtriser les fonctions et les formes du compte rendu, et utiliser efficacement des documents supports à l'exposé."
+              - "Exprimer un avis personnel à propos d'une œuvre ou d'une situation en utilisant un vocabulaire précis et étendu et en visant à faire partager son point de vue."
+            mots_cles: [compte rendu, exposé, oral du brevet, avis argumenté]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « S'exprimer de façon maîtrisée en s'adressant à un auditoire »"
+      - id: echanges-oraux-constructifs
+        titre: "Participer de façon constructive à des échanges oraux"
+        notions:
+          - id: debat-argumente
+            titre: "Débat argumenté, animation et arbitrage"
+            niveau_programme: "3e"
+            attendus:
+              - "Participer à un débat, exprimer une opinion argumentée et réagir à une opinion différente."
+              - "Animer ou arbitrer un débat au sein de la classe."
+            mots_cles: [débat, opinion argumentée, modalisateur]
+            brevet: false
+            source: "Attendus de fin d'année de 3e — Français, « Participer de façon constructive à des échanges oraux »"
+      - id: ressources-expressives-de-la-parole
+        titre: "Exploiter les ressources expressives et créatives de la parole"
+        notions:
+          - id: lecture-a-voix-haute-et-recitation
+            titre: "Lecture à voix haute, récitation, mise en voix"
+            niveau_programme: "3e"
+            attendus:
+              - "Lire un texte à voix haute."
+              - "Réciter un texte mémorisé en utilisant les ressources de la voix, de la respiration, du regard et de la gestuelle."
+              - "Recourir à des technologies numériques pour enregistrer la voix, associer des sons, des textes et des images."
+            mots_cles: [lecture à voix haute, récitation, mise en voix, gestuelle]
+            brevet: false
+            source: "Attendus de fin d'année de 3e — Français, « Exploiter les ressources expressives et créatives de la parole »"
+  - id: etude-de-la-langue
+    titre: "Étude de la langue (grammaire, orthographe, lexique, conjugaison)"
+    chapitres:
+      - id: oral-et-ecrit
+        titre: "Connaître les différences entre l'oral et l'écrit"
+        notions:
+          - id: transposition-oral-ecrit
+            titre: "Transposition oral/écrit et paroles rapportées"
+            niveau_programme: "3e"
+            attendus:
+              - "Transposer des énoncés oraux à l'écrit et inversement."
+              - "Insérer dans un texte des paroles rapportées, y compris en utilisant éventuellement le discours indirect libre."
+              - "Recourir, dans le cadre de l'oral scolaire, à des éléments lexicaux de niveau soutenu."
+            mots_cles: [discours direct, discours indirect, discours indirect libre, niveau de langue]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Connaître les différences entre l'oral et l'écrit »"
+      - id: phrase-simple-et-complexe
+        titre: "Analyser le fonctionnement de la phrase simple et de la phrase complexe"
+        notions:
+          - id: attribut-du-cod
+            titre: "Attribut du COD"
+            niveau_programme: "3e"
+            attendus:
+              - "Élargir ses connaissances des fonctions grammaticales et identifier l'attribut du COD dans une phrase."
+              - "Connaître les différents verbes introduisant un attribut du COD : verbe de jugement, d'appréciation, de choix, verbes donnant un titre."
+            mots_cles: [attribut du COD, fonction grammaticale]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Analyser le fonctionnement de la phrase simple et de la phrase complexe »"
+          - id: propositions-subordonnees
+            titre: "Fonction des propositions subordonnées et pronom relatif"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre la fonction grammaticale des propositions subordonnées dans la phrase."
+              - "Comprendre le fonctionnement du pronom relatif dans la phrase et sa fonction dans la proposition subordonnée."
+              - "Faire l'analyse logique de la phrase complexe comportant plusieurs propositions subordonnées, dont la subordonnée relative (identifier l'antécédent et la fonction du pronom relatif)."
+            mots_cles: [proposition subordonnée relative, pronom relatif, analyse logique]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Analyser le fonctionnement de la phrase simple et de la phrase complexe »"
+          - id: ponctuation-syntaxique
+            titre: "Rôle syntaxique de la ponctuation"
+            niveau_programme: "3e"
+            attendus:
+              - "Analyser le rôle syntaxique de tous les signes de ponctuation et utiliser ces signes à bon escient."
+            mots_cles: [ponctuation, syntaxe]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Analyser le fonctionnement de la phrase simple et de la phrase complexe »"
+      - id: orthographe-lexicale-et-grammaticale
+        titre: "Consolider l'orthographe lexicale et grammaticale"
+        notions:
+          - id: accord-participe-passe-avec-avoir
+            titre: "Accord du participe passé avec avoir, cas du COD pronom relatif"
+            niveau_programme: "3e"
+            attendus:
+              - "Consolider sa maîtrise de l'accord du participe passé employé avec l'auxiliaire avoir, et l'orthographier correctement quand le COD est un pronom relatif."
+            mots_cles: [participe passé, accord, COD, pronom relatif]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: accord-verbe-cas-complexes
+            titre: "Accord du verbe dans les cas complexes"
+            niveau_programme: "3e"
+            attendus:
+              - "Maîtriser l'accord du verbe dans les cas complexes (pronom collectif ou distributif)."
+            mots_cles: [accord du verbe, pronom collectif, pronom distributif]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: morphologie-verbale-et-temps
+            titre: "Morphologie verbale, temps et modes"
+            niveau_programme: "3e"
+            attendus:
+              - "Maîtriser la morphologie verbale écrite : connaître les régularités et décomposer un verbe (radical et terminaison, marque de temps et marque de personne)."
+              - "Identifier les principaux temps (présent, futur simple, imparfait, passé simple, passé composé, plus-que-parfait, futur antérieur) et modes (indicatif, conditionnel, impératif, subjonctif)."
+              - "Former les temps simples et composés de l'indicatif, le présent et le passé du subjonctif, l'impératif présent à partir de la connaissance des bases verbales."
+            mots_cles: [conjugaison, temps, mode, radical, terminaison]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: voix-passive-effets-de-sens
+            titre: "Construction du passif et effets de sens"
+            niveau_programme: "3e"
+            attendus:
+              - "Construire le passif et analyser ses effets de sens."
+            mots_cles: [voix passive, transformation active/passive]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: subjonctif-imparfait-plus-que-parfait
+            titre: "Imparfait et plus-que-parfait du subjonctif (verbes du programme)"
+            niveau_programme: "3e"
+            attendus:
+              - "Accroître sa connaissance des conjugaisons en mémorisant l'imparfait et le plus-que-parfait du subjonctif à toutes les personnes pour : être et avoir ; les verbes des trois groupes ; les verbes irréguliers du 3e groupe (faire, aller, dire, venir, pouvoir, voir, vouloir, prendre, savoir, falloir, valoir)."
+            mots_cles: [subjonctif imparfait, subjonctif plus-que-parfait, verbes irréguliers]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: valeur-aspectuelle-des-temps
+            titre: "Valeur aspectuelle des temps (accompli/non accompli, borné/non borné)"
+            niveau_programme: "3e"
+            attendus:
+              - "À partir d'observations et de comparaisons, approfondir sa connaissance de la valeur aspectuelle des temps : non accompli/accompli ; borné/non borné."
+              - "Observer l'incidence de la valeur aspectuelle des temps sur leurs emplois (premier plan/arrière-plan)."
+            mots_cles: [aspect verbal, valeur des temps, premier plan, arrière-plan]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: emplois-du-subjonctif
+            titre: "Principaux emplois du mode subjonctif"
+            niveau_programme: "3e"
+            attendus:
+              - "Élargir sa connaissance des principaux emplois du mode subjonctif pour exprimer un souhait, un désir, un commandement, un doute et après certaines conjonctions (à condition que, bien que, pour que, de crainte que…)."
+            mots_cles: [subjonctif, conjonctions, souhait, doute]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: orthographe-affixes-et-etymons
+            titre: "Orthographe des préfixes, suffixes et étymons moins fréquents"
+            niveau_programme: "3e"
+            attendus:
+              - "Mémoriser l'orthographe de préfixes et de suffixes moins fréquents et mémoriser leur effet éventuel sur le sens du radical."
+              - "Mémoriser l'orthographe des étymons les plus productifs."
+              - "Mémoriser l'orthographe du lexique appris."
+            mots_cles: [préfixe, suffixe, étymon, radical]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Consolider l'orthographe lexicale et grammaticale »"
+      - id: lexique-3e
+        titre: "Enrichir et structurer le lexique"
+        notions:
+          - id: enrichissement-lexique-par-lecture
+            titre: "Enrichissement du lexique par les lectures et les outils"
+            niveau_programme: "3e"
+            attendus:
+              - "Enrichir son lexique par les lectures, en lien avec les entrées du programme de culture littéraire et artistique de troisième, par l'écriture et les diverses activités conduites dans toutes les disciplines."
+              - "Enrichir son lexique par l'usage du dictionnaire ou autres outils en version papier ou numérique."
+              - "Réutiliser à bon escient, à l'écrit et à l'oral, le lexique appris."
+              - "Connaître le sens des affixes les plus fréquents et de certains étymons latins et grecs."
+              - "Mettre en réseau des mots (groupements par champ lexical et par champ sémantique) et maîtriser leur classement par degré d'intensité et de généralité."
+            mots_cles: [champ lexical, champ sémantique, affixe, étymon]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Enrichir et structurer le lexique »"
+          - id: analyse-du-sens-des-mots
+            titre: "Analyse du sens des mots : nuances, glissements, expressions figées"
+            niveau_programme: "3e"
+            attendus:
+              - "Analyser le sens des mots : nuances et glissements de sens, expressions figées, construction des verbes et variations de sens."
+            mots_cles: [polysémie, nuance de sens, expression figée, construction verbale]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Enrichir et structurer le lexique »"
+      - id: notions-danalyse-des-textes-et-discours
+        titre: "Construire les notions permettant l'analyse et l'élaboration des textes et des discours"
+        notions:
+          - id: variation-de-la-langue
+            titre: "Variation de la langue (époque, néologie, emprunts, lieu, contexte)"
+            niveau_programme: "3e"
+            attendus:
+              - "Observer la variation à travers le repérage de différentes manières d'exprimer une même idée ou une idée nouvelle : évolution du sens des mots selon les époques, néologie, emprunts ; variation en fonction du lieu, du contexte, du moyen de communication."
+            mots_cles: [variation linguistique, néologie, emprunt]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Construire les notions permettant l'analyse et l'élaboration des textes et des discours »"
+          - id: paroles-rapportees-et-discours-indirect-libre
+            titre: "Paroles rapportées directement, indirectement, discours indirect libre"
+            niveau_programme: "3e"
+            attendus:
+              - "Reconnaître et utiliser les paroles rapportées directement, indirectement."
+              - "Reconnaître le discours indirect libre."
+            mots_cles: [discours direct, discours indirect, discours indirect libre]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Construire les notions permettant l'analyse et l'élaboration des textes et des discours »"
+          - id: marques-de-modalisation
+            titre: "Marques de modalisation"
+            niveau_programme: "3e"
+            attendus:
+              - "Repérer et interpréter des marques de modalisation et les réinvestir dans des situations d'écriture ou d'oral."
+            mots_cles: [modalisation, doute, certitude]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Construire les notions permettant l'analyse et l'élaboration des textes et des discours »"
+          - id: coherence-textuelle
+            titre: "Éléments linguistiques de cohérence textuelle"
+            niveau_programme: "3e"
+            attendus:
+              - "Identifier et utiliser des éléments linguistiques de cohérence textuelle : repérer des éléments de reprise dans un texte, les indicateurs de temps et de lieu, de relation logique."
+              - "Identifier le système des temps (énoncés longs)."
+              - "Utiliser des marques d'organisation du texte (mise en page, typographie, ponctuation, connecteurs)."
+            mots_cles: [cohérence textuelle, reprise, connecteur, système des temps]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Construire les notions permettant l'analyse et l'élaboration des textes et des discours »"
+          - id: formes-actives-passives-impersonnelle
+            titre: "Formes actives/passives et valeur de la phrase impersonnelle"
+            niveau_programme: "3e"
+            attendus:
+              - "Reconnaître des formes actives/passives et leurs valeurs sémantiques ; la valeur sémantique de la phrase impersonnelle."
+            mots_cles: [voix active, voix passive, phrase impersonnelle]
+            brevet: true
+            source: "Attendus de fin d'année de 3e — Français, « Construire les notions permettant l'analyse et l'élaboration des textes et des discours »"
+      - id: notions-cycle4-non-datees-3e
+        titre: "Notions de cycle 4 non spécifiquement datées en 3e (grammaire générale de la phrase)"
+        notions:
+          - id: constituants-phrase-simple
+            titre: "Constituants et fonctions de la phrase simple"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Distinguer les principaux constituants de la phrase et les hiérarchiser."
+              - "Reconnaître le sujet même dans les cas complexes (sujet éloigné) ; approfondir la connaissance du COD et du COI ; identifier les compléments circonstanciels."
+              - "Analyser la phrase à la forme impersonnelle."
+              - "Identifier les expansions du nom (épithète, complément du nom) et l'apposition."
+              - "Identifier les classes de mots (nom, verbe, adjectif et ses degrés, déterminants, pronoms, adverbe, préposition, conjonctions, groupe nominal)."
+              - "Identifier les types (déclaratif, interrogatif, impératif) et les formes (négative, passive, exclamative, impersonnelle) de phrase."
+            mots_cles: [constituants de la phrase, classes de mots, types de phrase, formes de phrase]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Étude de la langue, « Analyser le fonctionnement de la phrase simple et de la phrase complexe »"
+          - id: constituants-phrase-complexe
+            titre: "Constituants et relations de la phrase complexe"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Distinguer phrase simple / complexe."
+              - "Connaître les notions de juxtaposition, coordination, subordination."
+              - "Analyser les positions des propositions subordonnées (conjonctive, interrogative indirecte, relative, infinitive, participiale) et leurs relations avec les autres constituants de la phrase."
+            mots_cles: [juxtaposition, coordination, subordination, proposition subordonnée]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Étude de la langue, « Analyser le fonctionnement de la phrase simple et de la phrase complexe »"
+          - id: chaines-daccord
+            titre: "Chaînes d'accord dans le groupe nominal"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Connaître le fonctionnement des chaînes d'accord ; maîtriser l'accord dans le groupe nominal complexe (avec plusieurs noms, plusieurs adjectifs, une relative, des déterminants comme tout, chaque, leur, etc.)."
+              - "Maîtriser l'accord du participe passé avec être et avec avoir (cas simples) ; maîtriser l'accord de l'adjectif et du participe passé mis en apposition."
+            mots_cles: [chaîne d'accord, groupe nominal, participe passé]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Étude de la langue, « Consolider l'orthographe lexicale et grammaticale »"
+          - id: formation-des-mots
+            titre: "Formation des mots : dérivation, composition, étymologie, néologie"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Observer la formation des mots : dérivation et composition, étymologie et néologie, locutions, graphie des mots, notamment à partir d'éléments latins et grecs ou empruntés aux langues étrangères."
+              - "Mettre en évidence les changements de catégorie syntaxique induits par la dérivation (déménager/déménagement ; beau/beauté) et leurs incidences orthographiques."
+            mots_cles: [dérivation, composition, néologie, catégorie syntaxique]
+            brevet: true
+            source: "Programme cycle 4, annexe 3, Français — Étude de la langue, « Enrichir et structurer le lexique »"

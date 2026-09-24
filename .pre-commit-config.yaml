@@ -1,0 +1,40 @@
+# Controles lances a chaque commit, sur la machine du contributeur.
+# Mise en route (une fois) : voir CONTRIBUTING.md, section « Préparer son poste ».
+# Lancer a la main sur tout le depot : pre-commit run --all-files
+# Versions epinglees par empreinte de commit (une etiquette peut etre deplacee, une empreinte non).
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # v6.0.0
+    hooks:
+      - id: check-yaml
+      - id: check-toml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+        args: [--markdown-linebreak-ext=md]
+      - id: mixed-line-ending
+        args: [--fix=lf]
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: [--maxkb=500]
+      - id: detect-private-key
+      - id: check-case-conflict
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: 321478e58f4938179c6b86e4ddfa923d1547a49b  # v0.16.6
+    hooks:
+      - id: ruff-check
+        args: [--fix]
+      - id: ruff-format
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: 83d9cd684c87d95d656c1458ef04895a7f1cbd8e  # v8.30.1
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: fichiers-prives
+        name: aucun fichier prive (profil reel, config locale, .env, donnees)
+        language: fail
+        entry: "Fichier prive : il ne doit jamais etre publie. Retire-le avec git rm --cached."
+        files: '^(config\.local\.yaml|\.env|donnees/.*|profils/(?!exemple\.yaml$).*)$'

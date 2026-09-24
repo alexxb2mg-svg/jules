@@ -1,0 +1,15 @@
+# Profil de l'eleve : ce que le bot sait de l'enfant. Tout champ ajoute ici lui est transmis.
+# Mode d'emploi : copier ce fichier (ex. profils/prenom.yaml), le remplir, puis indiquer
+# `profil: prenom` dans config.local.yaml. Les vrais profils ne sont jamais publies (.gitignore).
+# Les champs vides sont ignores.
+prenom: Camille
+genre: neutre             # fille | garcon | neutre : accorde les textes du bot (elle / il / forme neutre)
+parent: ses parents       # comment le bot designe l'adulte a prevenir (ex. "sa maman", "son oncle")
+classe: ""                # ex. "5e" - si vide, le bot le demande au debut
+college: ""
+langues_vivantes: []      # ex. [Anglais, Espagnol]
+options: []               # ex. [Latin]
+points_forts: []
+points_a_travailler: []
+centres_interet: []       # le bot s'en sert pour ses exemples (ex. [chevaux, dessin, Minecraft])
+remarques: ""             # ex. "a besoin d'etre rassure(e) avant les controles"

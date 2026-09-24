@@ -1,0 +1,40 @@
+name: Bug
+description: Quelque chose ne marche pas comme prévu
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler un problème.
+        **N'incluez aucune donnée réelle d'enfant** (prénom, conversation, photo). Pour une faille de sécurité, utilisez plutôt l'onglet Security.
+  - type: textarea
+    id: probleme
+    attributes:
+      label: Ce qui se passe
+      description: Ce que vous avez fait, ce que vous attendiez, ce qui s'est passé.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduire
+    attributes:
+      label: Pour reproduire
+      placeholder: |
+        1. Lancer `jules`
+        2. Choisir le mode Quiz
+        3. ...
+  - type: dropdown
+    id: moteur
+    attributes:
+      label: Moteur d'IA
+      options: [Démo, Ollama, Mistral, Anthropic, OpenAI, Autre]
+  - type: input
+    id: systeme
+    attributes:
+      label: Système et version de Python
+      placeholder: Windows 11, Python 3.12
+  - type: textarea
+    id: journal
+    attributes:
+      label: Message d'erreur
+      description: Copiez l'erreur affichée ou les dernières lignes de `donnees/jules.log`, après avoir retiré tout texte écrit par l'enfant.
+      render: text

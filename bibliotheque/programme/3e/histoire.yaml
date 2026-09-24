@@ -1,0 +1,180 @@
+matiere: Histoire
+id: histoire
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 3e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve d'histoire-géographie-enseignement moral et civique"
+    reference: "Note de service du 11-9-2026, NOR MENE2623228N, BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Programme d'histoire de la classe de 3e, dernière année du cycle 4. Le BO n° 31 du 30 juillet
+  2020 rattache explicitement trois thèmes à la « Classe de 3e » au titre des « Repères annuels
+  de programmation » : L'Europe, un théâtre majeur des guerres totales (1914-1945) ; Le monde
+  depuis 1945 ; Françaises et Français dans une République repensée. Le texte ne fournit pas,
+  pour le cycle 4, de liste de dates et de lieux à mémoriser distincte du corps du programme
+  (contrairement au programme du cycle 3, qui comporte une colonne « Repères ») : les repères
+  chronologiques et spatiaux attendus sont donc ceux mentionnés explicitement dans les
+  « démarches et contenus d'enseignement » de chaque sous-thème, repris ci-dessous en attendus.
+brevet:
+  evalue: true
+  epreuve: >
+    Épreuve écrite d'histoire-géographie-enseignement moral et civique, 2 heures, sans pause entre
+    les deux sous-épreuves. Sous-épreuve histoire-géographie (coefficient 1,5, notée sur 40 points
+    ramenés sur 20) : exercice 1 « Analyser et comprendre des documents en histoire ou en
+    géographie » (15 points, un ou deux documents dont éventuellement un document iconographique) ;
+    exercice 2 « Maîtriser différents langages pour raisonner et utiliser des repères historiques
+    et géographiques » (25 points) = développement construit d'au moins 30 lignes (18 points, dont
+    2 points de qualité de rédaction) + question de compréhension/traitement de données par
+    croquis, schéma ou frise chronologique (7 points). Les questions mobilisent les repères
+    chronologiques et spatiaux contenus dans les programmes d'histoire et de géographie de 3e (ou,
+    à défaut, du cycle 4). Sous-épreuve EMC distincte, coefficient 0,5 (voir emc.yaml).
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: europe-guerres-totales
+    titre: "L'Europe, un théâtre majeur des guerres totales (1914-1945)"
+    chapitres:
+      - id: civils-militaires-premiere-guerre-mondiale
+        titre: "Civils et militaires dans la Première Guerre mondiale"
+        notions:
+          - id: guerre-totale-1914-1918
+            titre: "La Première Guerre mondiale, une guerre totale"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre comment la Grande Guerre, en mobilisant civils et militaires, met à l'épreuve la cohésion des sociétés et fragilise durablement les régimes en place."
+              - "Connaître les violences extrêmes subies par les combattants et les civils, en particulier le génocide des Arméniens (1915)."
+              - "Situer les conséquences de la guerre totale en Russie : conditions de la révolution bolchevique puis établissement du communisme soviétique stalinien dans les années 1920."
+            mots_cles: ["Première Guerre mondiale", "guerre totale", "génocide des Arméniens", "révolution bolchevique"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Histoire (BOEN n° 31 du 30/07/2020, p. 85)"
+      - id: democraties-fragilisees-entre-deux-guerres
+        titre: "Démocraties fragilisées et expériences totalitaires dans l'Europe de l'entre-deux-guerres"
+        notions:
+          - id: totalitarismes-entre-deux-guerres
+            titre: "Crises et expériences totalitaires en Europe entre les deux guerres"
+            niveau_programme: "3e"
+            attendus:
+              - "Expliquer comment, après la paix de Versailles puis la Grande Dépression, le régime nazi s'impose en Allemagne et noue des alliances."
+              - "Situer l'expérience politique française du Front populaire dans un contexte marqué par la montée des périls."
+            mots_cles: ["régime nazi", "Grande Dépression", "Front populaire", "totalitarisme"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Histoire (BOEN n° 31 du 30/07/2020, p. 85)"
+      - id: deuxieme-guerre-mondiale-aneantissement
+        titre: "La Deuxième Guerre mondiale, une guerre d'anéantissement"
+        notions:
+          - id: deuxieme-guerre-mondiale-genocides
+            titre: "Violence de masse et anéantissement pendant la Seconde Guerre mondiale"
+            niveau_programme: "3e"
+            attendus:
+              - "Caractériser la Deuxième Guerre mondiale comme un conflit aux dimensions planétaires marqué par la violence de masse et l'anéantissement."
+              - "Connaître les génocides des Juifs et des Tziganes ainsi que la persécution d'autres minorités."
+            mots_cles: ["Seconde Guerre mondiale", "génocide des Juifs", "génocide des Tziganes", "anéantissement"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Histoire (BOEN n° 31 du 30/07/2020, p. 85)"
+      - id: france-defaite-occupee
+        titre: "La France défaite et occupée. Régime de Vichy, collaboration, Résistance"
+        notions:
+          - id: vichy-collaboration-resistance
+            titre: "La France défaite et occupée : Vichy, collaboration, Résistance"
+            niveau_programme: "3e"
+            attendus:
+              - "Situer, à l'échelle européenne comme à l'échelle française, l'opposition des résistances à l'occupation nazie et à la collaboration."
+              - "Expliquer comment, dans le contexte du choc de la défaite de 1940, la Résistance militaire et civile agit contre le régime de Vichy, négateur des valeurs républicaines."
+            mots_cles: ["régime de Vichy", "collaboration", "Résistance", "défaite de 1940", "occupation"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Histoire (BOEN n° 31 du 30/07/2020, p. 85)"
+  - id: monde-depuis-1945
+    titre: "Le monde depuis 1945"
+    chapitres:
+      - id: independances-nouveaux-etats
+        titre: "Indépendances et construction de nouveaux États"
+        notions:
+          - id: decolonisation-nouveaux-etats
+            titre: "L'effondrement des empires coloniaux et la construction de nouveaux États"
+            niveau_programme: "3e"
+            attendus:
+              - "Connaître l'effondrement rapide des empires coloniaux comme un fait majeur du second XXe siècle."
+              - "Étudier les modalités d'accès à l'indépendance à travers un exemple au choix."
+            mots_cles: ["décolonisation", "indépendances", "empires coloniaux"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Histoire (BOEN n° 31 du 30/07/2020, p. 85-86)"
+      - id: monde-bipolaire-guerre-froide
+        titre: "Un monde bipolaire au temps de la guerre froide"
+        notions:
+          - id: guerre-froide-bipolarisation
+            titre: "La guerre froide, confrontation Est-Ouest et modèles antagonistes"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre que la guerre froide s'inscrit dans une confrontation Est-Ouest créant des modèles antagonistes et engendrant des crises aux enjeux locaux et mondiaux."
+              - "Situer la guerre idéologique, culturelle, d'opinion et d'information que se livrent États-Unis et URSS pour affirmer leur puissance."
+              - "Comprendre comment les logiques bipolaires du monde sont remises en cause par l'indépendance de nouveaux États et l'émergence du Tiers Monde."
+            mots_cles: ["guerre froide", "bipolarisation", "États-Unis", "URSS", "Tiers Monde"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Histoire (BOEN n° 31 du 30/07/2020, p. 85-86)"
+      - id: construction-europeenne
+        titre: "Affirmation et mise en œuvre du projet européen"
+        notions:
+          - id: etapes-construction-europeenne
+            titre: "Les étapes et enjeux de la construction européenne"
+            niveau_programme: "3e"
+            attendus:
+              - "Situer les étapes et les enjeux de la construction européenne dans leur contexte international, à partir de réalisations concrètes."
+            mots_cles: ["construction européenne", "Union européenne"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Histoire (BOEN n° 31 du 30/07/2020, p. 86)"
+      - id: enjeux-conflits-apres-1989
+        titre: "Enjeux et conflits dans le monde après 1989"
+        notions:
+          - id: conflits-monde-contemporain
+            titre: "Rivalités et conflits dans le monde contemporain"
+            niveau_programme: "3e"
+            attendus:
+              - "Chercher des éléments de réponse à la question de la nature des rivalités et des conflits dans le monde contemporain à partir de l'étude d'un cas."
+              - "Illustrer, à partir de l'exemple d'une grande conférence mondiale pour le climat ou d'un sommet mondial pour le développement durable, le niveau global de l'action politique et le rôle des différents acteurs de la coopération internationale."
+            mots_cles: ["monde après 1989", "conflits contemporains", "coopération internationale", "climat"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Histoire (BOEN n° 31 du 30/07/2020, p. 86)"
+  - id: francaises-francais-republique-repensee
+    titre: "Françaises et Français dans une République repensée"
+    chapitres:
+      - id: refonder-republique-1944-1947
+        titre: "1944-1947 : refonder la République, redéfinir la démocratie"
+        notions:
+          - id: refondation-republicaine-liberation
+            titre: "La refondation républicaine à la Libération"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre comment la Libération autorise la restauration de la légalité républicaine dans une dynamique de refondation."
+              - "Savoir que la République intègre politiquement les femmes à cette période."
+              - "Connaître le programme de réformes du Conseil national de la Résistance, qui prolonge et complète celui du Front populaire et élargit la démocratie dans un sens social."
+            mots_cles: ["Libération", "refondation républicaine", "droit de vote des femmes", "Conseil national de la Résistance"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 3 Histoire (BOEN n° 31 du 30/07/2020, p. 85-86)"
+      - id: ve-republique-gaullienne-alternance-cohabitation
+        titre: "La Ve République, de la République gaullienne à l'alternance et à la cohabitation"
+        notions:
+          - id: naissance-ve-republique
+            titre: "La naissance et l'évolution de la Ve République"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que le retour au pouvoir du général de Gaulle en 1958 donne naissance à la Ve République, marquée par le renforcement du pouvoir exécutif et le scrutin majoritaire."
+              - "Contextualiser, en lien avec l'enseignement moral et civique, l'étude des institutions républicaines, des principes et des pratiques politiques."
+            mots_cles: ["Ve République", "1958", "Charles de Gaulle", "institutions"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 3 Histoire (BOEN n° 31 du 30/07/2020, p. 86)"
+      - id: femmes-hommes-societe-1950-1980
+        titre: "Femmes et hommes dans la société des années 1950 aux années 1980 : nouveaux enjeux sociaux et culturels, réponses politiques"
+        notions:
+          - id: transformations-societe-francaise
+            titre: "Les transformations de la société française de la fin du XXe siècle"
+            niveau_programme: "3e"
+            attendus:
+              - "Connaître les transformations décisives de la société française dans la seconde moitié du XXe siècle : place des femmes, nouvelles aspirations de la jeunesse, développement de l'immigration, vieillissement de la population, montée du chômage."
+              - "Comprendre, à partir de quelques exemples d'adaptation de la législation, certains enjeux du débat politique et les modalités de l'exercice de la citoyenneté au sein de la démocratie française."
+            mots_cles: ["place des femmes", "immigration", "chômage", "évolutions législatives", "citoyenneté"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 3 Histoire (BOEN n° 31 du 30/07/2020, p. 86)"

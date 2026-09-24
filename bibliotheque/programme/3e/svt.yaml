@@ -1,0 +1,282 @@
+matiere: Sciences de la vie et de la Terre
+id: svt
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences"
+    reference: "Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Le programme de SVT du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été réécrit pour
+  2026-2027 : il reste en vigueur tel quel en 3e. Il est écrit par cycle de 3 ans
+  (5e-4e-3e) autour de trois grandes thématiques travaillées chaque année avec une
+  complexité croissante. Seuls les « repères de progressivité » précisent ce qui est
+  explicitement réservé à la 3e (mécanismes nerveux à l'échelle cellulaire et fonctionnement
+  cérébral, mécanismes moléculaires de la digestion, explication globale de l'immunité) :
+  ces notions sont marquées niveau_programme "3e", le reste "cycle 4".
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: planete-terre-environnement-action-humaine
+    titre: "La planète Terre, l'environnement et l'action humaine"
+    chapitres:
+      - id: phenomenes-geologiques
+        titre: "Phénomènes géologiques liés au fonctionnement de la Terre"
+        notions:
+          - id: geodynamique-globale
+            titre: "Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer quelques phénomènes géologiques à partir du contexte géodynamique global."
+              - "La Terre dans le système solaire, les planètes telluriques et les planètes gazeuses ; le globe terrestre (forme, rotation, dynamique interne et tectonique des plaques lithosphériques) ; séismes, éruptions volcaniques."
+              - "Ères géologiques."
+            mots_cles: [tectonique des plaques, séisme, volcanisme, système solaire]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine », connaissances et compétences associées (BOEN n° 31 du 30/07/2020, p. 109)"
+      - id: meteorologie-climatologie
+        titre: "Météorologie et climatologie"
+        notions:
+          - id: meteo-climat-zones-climatiques
+            titre: "Différence entre météo et climat, grandes zones climatiques, répartition des faunes et flores"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer quelques phénomènes météorologiques et climatiques."
+              - "Météorologie ; dynamique des masses d'air et des masses d'eau ; vents et courants océaniques."
+              - "Différence entre météo et climat ; grandes zones climatiques de la Terre et répartition des faunes et des flores."
+            mots_cles: [météo, climat, courants océaniques, zones climatiques]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine »"
+          - id: changements-climatiques
+            titre: "Changements climatiques passés et actuels, influence des activités humaines"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Les changements climatiques passés (temps géologiques) et actuels (influence des activités humaines sur le climat, notamment par l'émission de gaz à effet de serre) ; leurs conséquences sur la répartition des êtres vivants."
+            mots_cles: [changement climatique, gaz à effet de serre, biodiversité]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine »"
+      - id: risques-naturels
+        titre: "Risques naturels et risques liés aux activités humaines"
+        notions:
+          - id: alea-vulnerabilite-risque
+            titre: "Aléas, vulnérabilité, risque, prévention, protection, adaptation, atténuation"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier les connaissances scientifiques sur les risques naturels (séismes, cyclones, inondations) ainsi que ceux liés aux activités humaines (pollution de l'air et des mers, réchauffement climatique, montée du niveau des océans…) aux mesures de prévention (quand c'est possible), de protection, d'adaptation, ou d'atténuation."
+              - "Notions d'aléas, de vulnérabilité et de risque en lien avec les phénomènes naturels ; prévisions."
+            mots_cles: [aléa, risque, vulnérabilité, prévention, adaptation]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine » (BOEN n° 31 du 30/07/2020, p. 110)"
+      - id: ressources-naturelles-ecosystemes
+        titre: "Ressources naturelles, écosystèmes et activités humaines"
+        notions:
+          - id: exploitation-ressources-naturelles
+            titre: "Exploitation des ressources naturelles par l'être humain (eau, sol, pétrole, charbon, bois, ressources minérales, ressources halieutiques)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comprendre et caractériser quelques-uns des principaux enjeux de l'exploitation d'une ressource naturelle par l'être humain, en lien avec quelques grandes questions de société."
+              - "Expliquer les choix en matière de gestion de ressources naturelles à différentes échelles."
+            mots_cles: [ressource naturelle, exploitation, gestion des ressources]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine » (BOEN n° 31 du 30/07/2020, p. 110)"
+          - id: activites-humaines-ecosystemes
+            titre: "Impact des activités humaines sur l'organisation et le fonctionnement des écosystèmes"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer comment une activité humaine peut modifier l'organisation et le fonctionnement des écosystèmes en lien avec quelques questions environnementales globales."
+              - "Analyser les impacts engendrés par le rythme, la nature (bénéfices/nuisances), l'importance et la variabilité des actions de l'être humain sur l'environnement."
+            mots_cles: [écosystème, activité humaine, biodiversité, impact environnemental]
+            brevet: true
+            source: "SVT, thème « La planète Terre, l'environnement et l'action humaine »"
+  - id: vivant-et-son-evolution
+    titre: "Le vivant et son évolution"
+    chapitres:
+      - id: nutrition-organismes
+        titre: "Nutrition des organismes"
+        notions:
+          - id: nutrition-cellules-animales
+            titre: "Besoins en nutriments et dioxygène des cellules animales, systèmes de transport"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier les besoins en nutriments et dioxygène des cellules animales et le rôle des systèmes de transport dans l'organisme."
+              - "Nutrition et organisation fonctionnelle à l'échelle de l'organisme, des organes, des tissus et des cellules."
+              - "Nutrition et interactions avec des micro-organismes."
+            mots_cles: [nutrition, dioxygène, système de transport, organisme]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+          - id: nutrition-plante-chlorophyllienne
+            titre: "Besoins et transport de matière chez une plante chlorophyllienne"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier les besoins des cellules d'une plante chlorophyllienne (CO2, eau, sels minéraux et énergie lumineuse), les lieux de production ou de prélèvement de matière et de stockage et les systèmes de transport au sein de la plante."
+            mots_cles: [plante chlorophyllienne, photosynthèse, sève, transport]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+      - id: dynamique-populations-reproduction
+        titre: "Reproduction et dynamique des populations"
+        notions:
+          - id: reproduction-sexuee-asexuee
+            titre: "Reproduction sexuée et asexuée, milieux et modes de reproduction, gamètes"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier des éléments de biologie de la reproduction sexuée et asexuée des êtres vivants et l'influence du milieu sur la survie des individus, à la dynamique des populations."
+              - "Reproductions sexuée et asexuée, rencontre des gamètes, milieux et modes de reproduction et de dissémination."
+              - "Gamètes et patrimoine génétique chez les Vertébrés et les plantes à fleurs."
+            mots_cles: [reproduction sexuée, reproduction asexuée, gamète, dissémination]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+          - id: dynamique-populations
+            titre: "Dynamique des populations et paramètres d'influence"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Dynamique des populations et paramètres d'influence."
+              - "Il est possible d'étudier les conséquences de l'augmentation de la température globale de la Terre sur la reproduction de certains organismes vivants."
+            mots_cles: [dynamique des populations, réchauffement climatique]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+          - id: applications-biotechnologiques
+            titre: "Applications biotechnologiques : culture de cellules, OGM, clonage"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Ce thème se prête aussi aux applications biotechnologiques, lorsque l'élève réalise des cultures de cellules ou étudie des protocoles d'obtention d'organismes génétiquement modifiés (OGM), de lignées de cellules ou de clonage."
+              - "Il est envisageable d'étudier l'exemple d'une sélection génétique par l'être humain sous forme d'OGM."
+            mots_cles: [biotechnologie, OGM, clonage, culture de cellules]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+      - id: diversite-genetique-classification-evolution
+        titre: "Diversité génétique, classification et évolution"
+        notions:
+          - id: relations-parente-classification
+            titre: "Relations de parenté entre êtres vivants et classification, y compris Homo sapiens"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier l'étude des relations de parenté entre les êtres vivants, et l'évolution."
+              - "Caractères partagés et classification."
+              - "Les grands groupes d'êtres vivants, dont Homo sapiens, leur parenté et leur évolution."
+            mots_cles: [classification, parenté, évolution, Homo sapiens]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+          - id: diversite-stabilite-genetique
+            titre: "Diversité et stabilité génétique des individus : ADN, mutations, brassage, méiose, fécondation"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer sur quoi reposent la diversité et la stabilité génétique des individus."
+              - "Expliquer les mécanismes à l'origine de la diversité et de la stabilité génétique des individus."
+              - "Expliquer comment les phénotypes sont déterminés par les génotypes et par l'action de l'environnement."
+              - "ADN, mutations, brassage, gène, méiose et fécondation."
+            mots_cles: [ADN, mutation, méiose, fécondation, génotype, phénotype]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+          - id: evolution-especes
+            titre: "Évolution des espèces : traces fossiles, hasard, sélection naturelle"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mettre en évidence des faits d'évolution des espèces et donner des arguments en faveur de quelques mécanismes de l'évolution."
+              - "Apparition et disparition d'espèces au cours du temps (traces fossiles des premiers organismes vivants sur Terre)."
+              - "Maintien des formes aptes à se reproduire, hasard, sélection naturelle."
+            mots_cles: [évolution, fossile, sélection naturelle, biodiversité]
+            brevet: true
+            source: "SVT, thème « Le vivant et son évolution »"
+  - id: corps-humain-et-sante
+    titre: "Le corps humain et la santé"
+    chapitres:
+      - id: effort-physique-systeme-nerveux
+        titre: "Effort physique, systèmes cardiovasculaire, respiratoire et nerveux"
+        notions:
+          - id: systemes-effort-musculaire
+            titre: "Rôle des systèmes nerveux, respiratoire et cardiovasculaire lors d'un effort musculaire"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer comment le système nerveux, le système respiratoire et le système cardiovasculaire interviennent lors d'un effort musculaire, en identifiant les capacités et les limites de l'organisme."
+              - "Rythmes cardiaque et respiratoire, et effort physique."
+            mots_cles: [effort musculaire, système cardiovasculaire, système respiratoire]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"
+          - id: role-cerveau-message-nerveux
+            titre: "Rôle du cerveau, message nerveux, centres nerveux"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mettre en évidence le rôle du cerveau dans la réception et l'intégration d'informations multiples."
+              - "Message nerveux, centres nerveux, nerfs, cellules nerveuses."
+            mots_cles: [cerveau, message nerveux, nerf, cellule nerveuse]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"
+          - id: mecanismes-nerveux-cellulaire
+            titre: "Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral"
+            niveau_programme: "3e"
+            attendus:
+              - "Les mécanismes nerveux à l'échelle cellulaire et le fonctionnement cérébral ne seront développés qu'à partir de la 4e (approfondissement et formalisation atteints en 3e)."
+              - "Relier quelques comportements à leurs effets sur le fonctionnement du système nerveux : hygiène de vie, dopage, entraînement."
+            mots_cles: [neurone, fonctionnement cérébral, dopage, hygiène de vie]
+            brevet: true
+            source: "SVT, repères de progressivité : « les mécanismes nerveux à l'échelle cellulaire et le fonctionnement cérébral ne seront développés qu'à partir de la 4e »"
+      - id: alimentation-digestion-monde-microbien
+        titre: "Alimentation, digestion et monde microbien"
+        notions:
+          - id: devenir-aliments-tube-digestif
+            titre: "Devenir des aliments dans le tube digestif : digestion, absorption"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer le devenir des aliments dans le tube digestif."
+              - "Système digestif, digestion, absorption ; aliments et nutriments."
+              - "Relier la nature des aliments et leurs apports qualitatifs et quantitatifs pour comprendre l'importance de l'alimentation pour l'organisme."
+            mots_cles: [digestion, absorption, nutriment, besoins alimentaires]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"
+          - id: mecanismes-moleculaires-digestion
+            titre: "Mécanismes moléculaires de la digestion"
+            niveau_programme: "3e"
+            attendus:
+              - "L'étude des mécanismes moléculaires de la digestion est réservée à la classe de 3e."
+            mots_cles: [digestion, enzyme, mécanisme moléculaire]
+            brevet: true
+            source: "SVT, repères de progressivité : « on réserve l'étude des mécanismes moléculaires à la classe de 3e »"
+          - id: monde-microbien-immunite
+            titre: "Monde microbien hébergé par l'organisme et réactions immunitaires"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier le monde microbien hébergé par notre organisme et son fonctionnement."
+              - "Ubiquité, diversité et évolution du monde bactérien (dont la résistance aux antibiotiques)."
+              - "Expliquer les réactions qui permettent à l'organisme de se préserver des micro-organismes pathogènes."
+              - "Relier ses connaissances aux politiques de prévention et de lutte contre la contamination et/ou l'infection : mesures d'hygiène, vaccination, action des antiseptiques et des antibiotiques."
+            mots_cles: [microbe, immunité, vaccination, antibiotique]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"
+          - id: explication-globale-immunite
+            titre: "Explication globale des réactions immunitaires"
+            niveau_programme: "3e"
+            attendus:
+              - "L'explication globale de l'immunité est atteinte en classe de 3e."
+            mots_cles: [immunité, réaction immunitaire]
+            brevet: true
+            source: "SVT, repères de progressivité : « on aborde également tout au long du cycle les mécanismes concernant les mesures d'hygiène, la vaccination et les antibiotiques, en découvrant quelques manifestations de l'immunité dont l'explication globale est atteinte en classe de 3e »"
+      - id: reproduction-et-sexualite
+        titre: "Reproduction et sexualité"
+        notions:
+          - id: appareils-reproducteurs-puberte
+            titre: "Appareils reproducteurs, puberté, production de cellules reproductrices, contrôles hormonaux"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier le fonctionnement des appareils reproducteurs à partir de la puberté aux principes de la maîtrise de la reproduction."
+              - "Puberté, organes reproducteurs, production de cellules reproductrices, contrôles hormonaux."
+            mots_cles: [puberté, appareil reproducteur, hormone]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"
+          - id: comportements-responsables-sexualite
+            titre: "Comportements responsables en matière de sexualité : contraception, IST, procréation"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer sur quoi reposent les comportements responsables dans le domaine de la sexualité : fertilité, grossesse, respect de l'autre, choix raisonné de la procréation, contraception, prévention des infections sexuellement transmissibles."
+            mots_cles: [contraception, IST, procréation, fertilité]
+            brevet: true
+            source: "SVT, thème « Le corps humain et la santé »"

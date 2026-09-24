@@ -1,0 +1,314 @@
+matiere: Technologie
+id: technologie
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Annexe — Programme de technologie du cycle 4"
+    reference: "BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Ressources d'accompagnement du programme de technologie au cycle 4 — calendrier d'application (5e 2024-2025, 4e 2025-2026, 3e 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences"
+    reference: "Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Contrairement à la physique-chimie et à la SVT, la technologie change de programme à la
+  rentrée 2026-2027 : le nouveau programme de cycle 4 (BO n° 9 du 29 février 2024) entre en
+  application en 3e à cette rentrée (il est entré en 5e en 2024-2025 et en 4e en 2025-2026).
+  C'est ce nouveau texte qui est utilisé ici, à l'exclusion de l'ancien programme de 2020.
+  Le texte est structuré en trois thèmes, chacun décliné en compétences de fin de cycle,
+  avec pour chaque compétence un tableau « Repères de progressivité 5e / 4e / 3e » qui
+  détaille les attendus par année. Les notions sont marquées niveau_programme "3e" quand
+  le texte (tableau de progressivité ou paragraphe de synthèse « En classe de 3e… ») les
+  attribue explicitement à cette année ; sinon "cycle 4".
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: usages-et-interactions-des-ost
+    titre: "Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et analyser"
+    chapitres:
+      - id: liens-usages-evolutions-technologiques
+        titre: "Décrire les liens entre usages et évolutions technologiques des objets et des systèmes techniques"
+        notions:
+          - id: evolution-des-ost
+            titre: "Évolution des objets et systèmes techniques : besoins, innovation, contraintes sociétales"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Comparer des principes techniques pour une même fonction technique, mettre en relation les OST avec leurs usages."
+              - "Identifier les avantages et les inconvénients associés aux évolutions technologiques et informatiques."
+              - "Justifier l'évolution d'un OST pour répondre à l'évolution des besoins ; identifier les innovations de rupture."
+              - "Mettre en relation une découverte scientifique avec ses développements technologiques et leurs effets sur la société."
+              - "Connaissances : éléments qui participent à l'évolution des besoins (invention, innovation, développement durable) ; fonction technique, principe technique ; famille et lignée d'OST ; contraintes sociétales ; grands types d'apprentissage des intelligences artificielles et leurs usages ; incidences sociétales, notamment biais et effets de l'usage d'une IA."
+            mots_cles: [évolution technologique, innovation, intelligence artificielle, contraintes sociétales]
+            brevet: true
+            source: "Technologie, thème 1, compétence « Décrire les liens entre usages et évolutions technologiques », rubrique « L'évolution des OST »"
+          - id: usages-impacts-societaux-numerique
+            titre: "Usages et impacts sociétaux du numérique : stockage, cybersécurité, cyberviolence"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Décrire le rôle des systèmes d'information dans le partage d'information ; recenser, classer, représenter, stocker des données dans des fichiers, les retrouver dans une arborescence."
+              - "Identifier des règles permettant de sécuriser un environnement numérique (bases de la cybersécurité) et des règles de respect de la propriété intellectuelle."
+              - "Appréhender la responsabilité de chacun dans les dérives (cyberviolence, atteinte à la vie privée, usurpation d'identité)."
+              - "Connaissances : système d'information et stockage des données (types de fichiers, unités bit/octet) ; cybersécurité (protection des données personnelles, traces numériques, authentification) ; cyberviolence."
+            mots_cles: [numérique, cybersécurité, données personnelles, cyberviolence]
+            brevet: true
+            source: "Technologie, thème 1, compétence « Décrire les liens entre usages et évolutions technologiques », rubrique « Usages et impacts sociétaux du numérique »"
+      - id: interactions-ost-environnement-utilisateurs
+        titre: "Décrire les interactions entre un objet ou un système technique, son environnement et les utilisateurs"
+        notions:
+          - id: ost-dans-son-environnement
+            titre: "L'OST dans son environnement : interacteurs, ergonomie, expérience utilisateur"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Faire la liste des interacteurs extérieurs d'un OST ; repérer et expliquer les choix de conception (ergonomie, sécurité, développement durable)."
+              - "Décrire l'expérience de l'utilisateur d'un OST à l'aide de modes de représentation choisis (croquis, schéma, graphique, algorithme, modélisation)."
+              - "Repérer et expliquer les contraintes et exigences prises en compte (sécurité, incidences environnementales, formes et fonctions, ergonomie, qualité, fiabilité)."
+              - "Connaissances : interacteurs extérieurs (usagers, données, autres objets, environnement) ; modes de représentation ; contraintes (normes, cahier des charges, labels, certifications) ; ergonomie liée à l'usage."
+            mots_cles: [ergonomie, expérience utilisateur, cahier des charges, interacteur]
+            brevet: true
+            source: "Technologie, thème 1, compétence « Décrire les interactions entre un OST, son environnement et les utilisateurs »"
+      - id: caracteriser-choisir-ost
+        titre: "Caractériser et choisir un objet ou un système technique selon différents critères"
+        notions:
+          - id: choix-ost-developpement-durable
+            titre: "Choix d'un OST dans un contexte de développement durable : cycle de vie, indice de réparabilité"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Repérer pour un OST les matériaux, les sources et formes d'énergie, le traitement de l'information ; identifier les étapes du cycle de vie influencées par ces choix."
+              - "Comparer qualitativement et/ou quantitativement (incidences environnementales, bilan carbone, efficacité énergétique) plusieurs OST répondant au même besoin et arrêter un choix."
+              - "Choisir un OST et argumenter ce choix en prenant en compte son cycle de vie et les trois piliers du développement durable."
+              - "Connaissances : composantes d'une notice technique ; indice énergétique et indice de réparabilité ; impacts environnementaux (air, eau, sol, santé) ; piliers du développement durable ; cycle de vie d'un OST ; critères de choix (qualité, efficacité énergétique, durabilité, recyclabilité)."
+            mots_cles: [développement durable, cycle de vie, indice de réparabilité, bilan carbone]
+            brevet: true
+            source: "Technologie, thème 1, compétence « Caractériser et choisir un OST selon différents critères », rubrique « Le choix d'un OST dans un contexte de développement durable »"
+          - id: performance-ost
+            titre: "Performance d'un objet ou système technique : protocole de mesure"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Définir et mettre en œuvre un protocole pour mesurer une caractéristique, une performance d'un OST."
+              - "Connaissances : critères de performance d'un OST (grandeurs mesurables : vitesse, autonomie énergétique, etc.)."
+            mots_cles: [performance, protocole de test, mesure]
+            brevet: true
+            source: "Technologie, thème 1, compétence « Caractériser et choisir un OST selon différents critères », rubrique « La performance des OST »"
+      - id: synthese-liens-sciences-technologies-3e
+        titre: "Formuler les liens entre sciences, technologies, innovations et inventions (synthèse de fin de cycle)"
+        notions:
+          - id: liens-sciences-technologies-inventions
+            titre: "Liens entre sciences, technologies, innovations et inventions en tenant compte des besoins, usages et cycle de vie"
+            niveau_programme: "3e"
+            attendus:
+              - "En classe de 3e, toujours dans le cadre d'activités pratiques, il s'agit d'amener les élèves à formuler les liens entre sciences, technologies, innovations et inventions, en tenant compte des besoins, des usages et du cycle de vie de ces objets ou de ces systèmes."
+            mots_cles: [sciences et technologies, invention, innovation, cycle de vie]
+            brevet: true
+            source: "Technologie, thème 1, « Progressivité pour atteindre ces compétences en fin de cycle », paragraphe « En classe de 3e »"
+  - id: structure-fonctionnement-comportement
+    titre: "Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre"
+    chapitres:
+      - id: organisation-interne-echanges-environnement
+        titre: "Décrire et caractériser l'organisation interne d'un OST et ses échanges avec son environnement (énergies, données)"
+        notions:
+          - id: chaine-energie
+            titre: "Chaîne d'énergie : constituants, conversions, transmission et transformation de mouvements"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier des constituants de la chaîne d'énergie d'un objet technique et les associer à leurs fonctions ; repérer les transformations et flux d'énergie ; élaborer un schéma bloc de la chaîne d'énergie."
+              - "Connaissances : formes d'énergie (électrique, cinétique, potentielle, thermique, lumineuse) ; conversions d'énergie (moteur électrique, lampe, radiateur, génératrice, vérin) ; fonctions de la batterie et du relais/interrupteur ; mécanismes de transmission et transformation de mouvements (engrenages, courroies, chaînes)."
+            mots_cles: [chaîne d'énergie, conversion d'énergie, engrenage, schéma bloc]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « Fonctions, solutions, constituants de la chaîne d'énergie »"
+          - id: materiaux-et-procedes
+            titre: "Matériaux et procédés de mise en forme, cycle de vie d'un OST"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les principaux matériaux constitutifs d'un OST ; mettre en relation la forme d'une pièce avec le procédé de réalisation."
+              - "Justifier le choix d'un matériau et de son procédé de mise en forme au regard des contraintes techniques et environnementales."
+              - "Connaissances : caractéristiques et propriétés des principaux matériaux ; procédés de mise en forme ; étapes du cycle de vie d'un OST (extraction, traitement, fabrication, assemblage, utilisation, fin de vie, transport) et incidence environnementale."
+            mots_cles: [matériau, procédé de fabrication, cycle de vie]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « Matériaux et procédés »"
+          - id: chaine-information
+            titre: "Chaîne d'information : capteurs, microcontrôleur, interface homme-machine"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les constituants de la chaîne d'information d'un OST et les associer à leur fonction ; décrire un OST en caractérisant sa chaîne d'information."
+              - "Associer des grandeurs analogiques issues d'un OST à des données exploitables."
+              - "Connaissances : fonctions des capteurs (température, présence, distance, etc.), du microcontrôleur, des composants d'une interface humain-machine (boutons, afficheurs, etc.)."
+            mots_cles: [chaîne d'information, capteur, microcontrôleur, IHM]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « Fonctions, solutions, constituants de la chaîne d'information »"
+          - id: structuration-traitement-donnees
+            titre: "Structuration et traitement des données : types, formats, tableur"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Déterminer des descripteurs permettant de décrire des objets sous forme de données en précisant leurs types et formats."
+              - "Décrire et analyser la structuration d'une table de données permettant l'exploitation et l'interprétation du comportement d'un OST."
+              - "Connaissances : vocabulaire des données (objet, descripteur, collection, type) ; représentation des données (bit, booléen, ASCII étendu, nombres entiers) ; traitement de données (calculs, filtre, tri) dans un tableur."
+            mots_cles: [donnée, tableur, bit, type de données]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « Structuration et traitement des données »"
+          - id: circulation-information-reseau
+            titre: "Circulation de l'information dans un réseau informatique (réseau local, Internet)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les composants qui constituent un réseau local (terminaux, commutateurs, liaisons filaires et sans fil) et sa topologie."
+              - "Paramétrer une adresse IP fixe pour ajouter un objet connecté à un réseau local."
+              - "Identifier et représenter la circulation d'une information dans le réseau Internet ; justifier la nécessité d'un protocole de routage."
+              - "Connaissances : réseau local et réseau mondial (Internet) ; rôle d'un terminal, d'une carte réseau, d'un commutateur, d'un routeur, d'un serveur ; rôle et structure d'une adresse IP, tables de routage ; débit."
+            mots_cles: [réseau local, Internet, adresse IP, routage]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « La circulation de l'information dans un réseau informatique »"
+          - id: caracterisation-chaines-fonctions-3e
+            titre: "Caractérisation des chaînes d'énergie et d'information en matière de fonctions ; numérisation et circulation des données sur Internet"
+            niveau_programme: "3e"
+            attendus:
+              - "En classe de 3e, les élèves caractérisent les chaînes d'information et d'énergie en matière de fonctions. Ils utilisent des modèles pour caractériser les objets et les systèmes techniques et intervenir sur eux (nouvelle fonctionnalité, réparation)."
+              - "Les élèves découvrent la façon dont des données de différentes natures sont numérisées, stockées, mises en forme et transmises par un objet ou un système technique. La circulation de ces données dans le réseau Internet est étudiée."
+            mots_cles: [chaîne d'énergie, chaîne d'information, numérisation, réseau Internet]
+            brevet: true
+            source: "Technologie, thème 2, « Progressivité pour atteindre ces compétences en fin de cycle », paragraphe « En classe de 3e »"
+      - id: identifier-remedier-dysfonctionnement
+        titre: "Identifier un dysfonctionnement d'un objet technique et y remédier"
+        notions:
+          - id: depannage-reparation
+            titre: "Dépannage et réparation : protocole, fiabilité, indice de réparabilité, moyens de fabrication"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Proposer un protocole permettant de vérifier l'origine d'un dysfonctionnement ; formuler des hypothèses expliquant le dysfonctionnement d'un objet technique."
+              - "Proposer un protocole de dépannage puis de réparation ; réaliser le dépannage ou la réparation d'un système défectueux."
+              - "Connaissances : fiabilité, durabilité, indice de réparabilité ; règles de sécurité dans un atelier de fabrication collaboratif ; procédés d'obtention et de mise en forme de pièce ; moyens de production (découpe laser, centre d'usinage, impression 3D)."
+            mots_cles: [dépannage, réparation, indice de réparabilité, fabrication additive]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « Le dépannage et la réparation »"
+          - id: fabrication-piece-sur-mesure-3e
+            titre: "Fabrication d'une pièce sur mesure pour réparer un objet technique"
+            niveau_programme: "3e"
+            attendus:
+              - "Les élèves fabriquent une pièce sur mesure ou utilisent des composants issus de bibliothèques (réelles ou virtuelles) pour remédier à un dysfonctionnement."
+              - "Réaliser une pièce sur mesure pour réparer un objet technique."
+            mots_cles: [pièce sur mesure, réparation, fabrication additive]
+            brevet: true
+            source: "Technologie, thème 2, « Progressivité pour atteindre ces compétences en fin de cycle », paragraphe « En classe de 3e » ; rubrique « Le dépannage et la réparation »"
+      - id: comprendre-modifier-programme
+        titre: "Comprendre et modifier un programme associé à une fonctionnalité d'un objet ou d'un système technique"
+        notions:
+          - id: programmation-nouvelle-fonctionnalite
+            titre: "Analyse et modification d'un programme : variables, opérateurs, instructions conditionnelles et itératives"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier les données utilisées et produites par le programme associé à une fonctionnalité d'un OST."
+              - "Comprendre et traduire en un algorithme en langage naturel le programme associé à une fonctionnalité d'un OST ; modifier les paramètres d'un programme et évaluer ses effets."
+              - "Connaissances : instruction d'affectation, variable (mot, nombre, booléen) ; opérateurs arithmétiques et logiques (ET, OU, NON) ; instruction conditionnelle ; instructions itératives ; structure de données « listes » ; événement ; entrées/sorties d'un programme ; programmation graphique par blocs."
+            mots_cles: [algorithme, variable, boucle, programmation par blocs]
+            brevet: true
+            source: "Technologie, thème 2, rubrique « La programmation d'une nouvelle fonctionnalité »"
+          - id: algorithme-nouvelle-fonctionnalite-3e
+            titre: "Conception, programmation et test de l'algorithme d'une nouvelle fonctionnalité"
+            niveau_programme: "3e"
+            attendus:
+              - "Ils déterminent les données et conçoivent l'algorithme associé à une nouvelle fonctionnalité d'un objet ou d'un système technique, puis le programment et le testent."
+              - "Déterminer les données utilisées et produites par un programme associé à une fonctionnalité en vue de le modifier ; programmer un algorithme lié à une nouvelle fonctionnalité ; modifier et tester le programme."
+              - "Lien entre la programmation graphique par blocs et la programmation textuelle (fin de 3e)."
+            mots_cles: [algorithme, programmation textuelle, nouvelle fonctionnalité, test]
+            brevet: true
+            source: "Technologie, thème 2, « Progressivité pour atteindre ces compétences en fin de cycle », paragraphe « En classe de 3e » ; rubrique « La programmation d'une nouvelle fonctionnalité »"
+  - id: creation-conception-realisation-innovations
+    titre: "Création, conception, réalisation, innovations : des objets à concevoir et à réaliser"
+    chapitres:
+      - id: imaginer-concevoir-realiser-solution
+        titre: "Imaginer, concevoir et réaliser une ou des solutions en réponse à un besoin"
+        notions:
+          - id: gestion-projet-technique
+            titre: "Gestion de projet technique : planification des tâches, écoconception"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Élaborer un processus de conception et de réalisation dans une durée, avec des tâches identifiées."
+              - "Connaissances : diagramme de planification des tâches ; étapes d'un projet, rôle d'une revue de projet ; écoconception."
+            mots_cles: [gestion de projet, planification, écoconception]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « La gestion de projet technique »"
+          - id: prototypage-solutions
+            titre: "Prototypage de solutions : conception et fabrication d'un nouvel OST"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Proposer et fabriquer un ensemble de solutions pour produire un nouvel OST (croquis, schéma, graphique, algorithme, modélisation)."
+              - "Connaissances mobilisées : modes de représentation ; mécanismes de transmission et transformation de mouvements ; procédés d'obtention et d'assemblage de pièce ; ergonomie ; règles de sécurité en atelier de fabrication collaboratif."
+            mots_cles: [prototypage, modélisation, atelier de fabrication]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « Le prototypage de solutions »"
+          - id: choix-materiaux-energie-assemblage
+            titre: "Choix des matériaux, choix d'une source d'énergie, assemblage de constituants"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Choisir un matériau constitutif d'un objet et/ou système technique."
+              - "Choisir une source d'énergie pour un OST."
+              - "Choisir les constituants et assembler un prototype."
+            mots_cles: [choix de matériau, source d'énergie, assemblage]
+            brevet: true
+            source: "Technologie, thème 3, rubriques « Le choix des matériaux », « Le choix d'une source d'énergie », « L'assemblage de constituants »"
+          - id: modelisation-fabrication-objets-communicants
+            titre: "Modélisation, fabrication et interfaçage d'objets communicants"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Modéliser une forme voulue ; choisir les moyens et produire la forme voulue."
+              - "Interfacer deux objets techniques communicants."
+              - "Connaissances : instruments de mesure ; moyens de production (découpe laser, centre d'usinage, impression 3D) ; rôle des composants réseau ; composants d'une IHM."
+            mots_cles: [modélisation, objets communicants, interfaçage]
+            brevet: true
+            source: "Technologie, thème 3, rubriques « La modélisation et la fabrication », « Les objets communicants »"
+          - id: projet-groupe-developpement-durable-3e
+            titre: "Projet technique en groupe sur une thématique liée au développement durable (synthèse de fin de cycle)"
+            niveau_programme: "3e"
+            attendus:
+              - "En classe de 3e, en traitant de thématiques choisies, par exemple en lien avec les objectifs du développement durable, les élèves s'investissent dans un projet mené en groupe, leur permettant de mettre en œuvre les compétences développées lors des niveaux précédents."
+            mots_cles: [projet de groupe, développement durable, démarche de projet]
+            brevet: true
+            source: "Technologie, thème 3, « Progressivité pour atteindre ces compétences de fin de cycle », paragraphe « En classe de 3e »"
+      - id: valider-solutions-simulations-tests
+        titre: "Valider les solutions techniques par des simulations ou par des protocoles de tests"
+        notions:
+          - id: validation-comportement-mecanique
+            titre: "Validation du comportement mécanique d'un matériau par simulation ou protocole de test"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mettre en œuvre une simulation pour valider la tenue mécanique d'un matériau ; proposer un protocole de test pour valider la tenue mécanique d'un matériau."
+              - "Connaissances mobilisées : modes de sollicitation des matériaux (flexion, torsion) ; indice énergétique et indice de réparabilité."
+            mots_cles: [simulation, tenue mécanique, protocole de test]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « La validation du comportement mécanique d'un matériau »"
+          - id: validation-performances-ost
+            titre: "Validation des performances d'un objet ou système technique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Proposer un protocole de test pour valider le comportement et les performances d'un objet technique."
+              - "Connaissances mobilisées : paramètres et grandeurs mesurées associés à un protocole ; exigences et contraintes issues des normes ou d'un cahier des charges."
+            mots_cles: [performance, protocole de test, validation]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « La validation des performances d'un OST »"
+      - id: concevoir-ecrire-tester-programme
+        titre: "Concevoir, écrire, tester et mettre au point un programme"
+        notions:
+          - id: programmation-ost
+            titre: "Programmation d'un OST : analyse, algorithme, test et mise au point"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Modifier un algorithme permettant de répondre au besoin ou au problème posé ; traduire un algorithme en un programme."
+              - "Réaliser et mettre au point un programme commandant un système réel incluant éventuellement une interaction entre un humain et une machine."
+              - "Connaissances : modularité (sous-programme, fonction) ; structuration d'un programme (organisation, modularité, commentaires)."
+            mots_cles: [algorithme, programme, sous-programme, mise au point]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « La programmation des OST »"
+          - id: algorithme-structure-programme-teste-3e
+            titre: "Élaboration d'un algorithme structuré (sous-programmes/fonctions), traduction en programme, test"
+            niveau_programme: "3e"
+            attendus:
+              - "Élaborer ou concevoir un algorithme permettant de répondre au besoin visé, puis le traduire en un programme structuré (appel de sous-programmes ou de fonctions), le tester et le mettre au point."
+              - "Réaliser et mettre au point un programme commandant un système réel incluant une interaction entre un humain et une machine."
+            mots_cles: [algorithme structuré, sous-programme, fonction, test]
+            brevet: true
+            source: "Technologie, thème 3, rubrique « La programmation des OST », tableau « Repères de progressivité 5e 4e 3e », colonne 3e"

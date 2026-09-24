@@ -1,0 +1,24 @@
+name: Idée ou amélioration
+description: Proposer une fonction, un mode, une persona...
+labels: [idee]
+body:
+  - type: textarea
+    id: besoin
+    attributes:
+      label: Le besoin
+      description: Quel problème cela résout-il, pour l'enfant ou pour le parent ?
+    validations:
+      required: true
+  - type: textarea
+    id: proposition
+    attributes:
+      label: Ce que vous proposez
+  - type: checkboxes
+    id: principes
+    attributes:
+      label: Principes du projet
+      options:
+        - label: L'idée respecte la règle « Jules ne donne jamais la réponse ».
+          required: true
+        - label: Elle ne fait sortir aucune donnée de la maison sans l'accord du parent.
+          required: true

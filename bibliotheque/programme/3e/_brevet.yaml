@@ -1,0 +1,194 @@
+# Diplôme national du brevet (DNB) — session 2027
+# Format libre mais structuré, comme demandé (pas le format "notions" du SCHEMA.md,
+# ce fichier décrit l'examen dans son ensemble, pas un programme disciplinaire).
+
+dnb:
+  session: 2027
+  niveau: 3e
+  annee_scolaire: "2026-2027"
+
+  cadre_reglementaire:
+    - intitule: "Arrêté du 31 décembre 2015 relatif aux modalités d'attribution du diplôme national du brevet (version consolidée)"
+      url: "https://www.legifrance.gouv.fr/loda/id/JORFTEXT000031742288/"
+      consulte_le: "2026-09-23"
+    - intitule: "Arrêté du 10 avril 2025 modifiant l'arrêté du 31 décembre 2015 (NOR MENE2415613A) — répartition 60 %/40 %, notation sur 20, mention « très bien avec félicitations du jury »"
+      url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051451951"
+      consulte_le: "2026-09-23"
+    - intitule: "Arrêté du 17 juillet 2026 modifiant l'arrêté du 31 décembre 2015 (NOR MENE2613731A), JO n° 0198 du 26 août 2026 — nouvelle rédaction de l'article 15 sur le périmètre des sujets"
+      url: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054746921"
+      consulte_le: "2026-09-23"
+    - intitule: "Modalités d'attribution du diplôme national du brevet à compter de la session 2027 (note de service du 11-9-2026, NOR MENE2623194N)"
+      url: "https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N"
+      consulte_le: "2026-09-23"
+    - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 (note de service du 11-9-2026, NOR MENE2623228N)"
+      url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+      consulte_le: "2026-09-23"
+    - intitule: "Les épreuves du DNB (page de synthèse, format/durée/barèmes)"
+      url: "https://eduscol.education.gouv.fr/5607/les-epreuves-du-dnb"
+      consulte_le: "2026-09-23"
+
+  candidats:
+    scolaires:
+      description: >
+        Élèves de 3e scolarisés (série générale par défaut ; série professionnelle pour les classes
+        3e prépa-métiers, EGPA, Ulis/UPE2A sur choix, 3e agricole obligatoirement, ou sur dérogation
+        pour élèves en situation de handicap ou bénéficiant d'un accompagnement spécifique).
+      calcul_note: "40 % contrôle continu + 60 % épreuves terminales (4 écrits + 1 oral de soutenance)"
+      source: "https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N"
+    individuels:
+      description: >
+        Candidats non scolarisés en établissement (art. 4 de l'arrêté du 31 décembre 2015 modifié :
+        élèves scolarisés au-delà de la 3e, instruction en famille, etc.).
+      calcul_note: "100 % épreuves terminales écrites (4 épreuves communes + épreuve écrite de langue vivante étrangère, coefficient 2, à la place de l'oral et sans contrôle continu)"
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N (partie III)"
+
+  obtention:
+    seuil: "Moyenne finale ≥ 10 sur 20"
+    mentions:
+      - { nom: "Assez bien", seuil: "≥ 12/20" }
+      - { nom: "Bien", seuil: "≥ 14/20" }
+      - { nom: "Très bien", seuil: "≥ 16/20" }
+      - { nom: "Très bien avec les félicitations du jury", seuil: "≥ 18/20", note: "mention introduite par l'arrêté du 10 avril 2025" }
+    source: "https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N ; https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000051451951"
+
+  repartition_generale:
+    controle_continu:
+      part: "40 % de la note globale (candidats scolaires uniquement)"
+      calcul: >
+        Moyenne des moyennes annuelles de l'ensemble des enseignements obligatoires suivis en classe
+        de 3e, exprimée sur 20. Les enseignements optionnels de 3e sont également pris en compte.
+        Pour les enseignements facultatifs suivis (langues et cultures régionales, chant choral, langue
+        des signes française…), seuls les points au-dessus de 10/20 de leur moyenne s'ajoutent en bonus
+        au total du contrôle continu, sans faire dépasser 20/20.
+      source: "https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N ; https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    epreuves_terminales:
+      part: "60 % de la note globale (candidats scolaires) / 100 % (candidats individuels)"
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+
+  epreuves:
+    - id: francais
+      intitule: "Épreuve écrite de français"
+      coefficient: 2
+      duree: "3 heures"
+      notee_sur: 20
+      structure:
+        - "Travail sur texte littéraire et, éventuellement, une image (50 points — 1 h 10)"
+        - "Dictée (10 points — 20 minutes ; ~600 signes série générale, ~400 signes série professionnelle)"
+        - "Rédaction, au choix entre sujet de réflexion et sujet d'imagination (40 points — 1 h 30)"
+      programme_de_reference: >
+        Programme de français de la classe de 3e s'il est en vigueur, ou à défaut du cycle 4. Pour la
+        session 2027 : le nouveau programme de français par année n'atteint la 3e qu'à la rentrée 2028
+        (arrêté du 18 février 2026) — la référence effective des sujets 2027 reste donc le programme
+        de cycle 4.
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    - id: mathematiques
+      intitule: "Épreuve écrite de mathématiques"
+      coefficient: 2
+      duree: "2 heures"
+      notee_sur: 20
+      structure:
+        - "Partie 1 : automatismes et applications directes (6 points — 20 minutes, sans calculatrice)"
+        - "Partie 2 : raisonnement et résolution de problèmes (14 points — 1 h 40, avec calculatrice)"
+      programme_de_reference: >
+        Programme de mathématiques de la classe de 3e s'il est en vigueur, ou à défaut du cycle 4. Pour
+        la session 2027 : le nouveau programme de mathématiques par année n'atteint la 3e qu'à la
+        rentrée 2028 (arrêté du 18 février 2026) — référence effective 2027 : programme de cycle 4.
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    - id: histoire-geographie-emc
+      intitule: "Épreuve écrite d'histoire-géographie et enseignement moral et civique"
+      coefficient_global: "coefficient 1,5 (histoire-géographie) + coefficient 0,5 (EMC)"
+      duree: "2 heures (les deux sous-épreuves sans pause)"
+      structure:
+        - "Sous-épreuve histoire-géographie (coefficient 1,5, notée sur 40 puis ramenée sur 20) : exercice 1 analyse de documents (15 points), exercice 2 développement construit + croquis/schéma/frise (25 points)"
+        - "Sous-épreuve enseignement moral et civique (coefficient 0,5, notée sur 20) : situation pratique ou thématique appuyée sur 1-2 documents"
+      programme_de_reference: >
+        Programme d'histoire-géographie de la classe de 3e s'il est en vigueur, ou à défaut du cycle 4 ;
+        programme d'EMC de la classe de 3e s'il est en vigueur, ou à défaut du cycle 4. POINT NOTABLE
+        POUR 2027 : le nouveau programme d'EMC entre en application en 3e dès la rentrée 2026-2027 —
+        c'est donc la seule des quatre épreuves écrites dont le référentiel change réellement pour la
+        session 2027 (histoire-géographie reste sur le programme de cycle 4).
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N ; https://www.digischool.fr/articles/college/brevet/programme-brevet-2027"
+    - id: sciences
+      intitule: "Épreuve écrite de sciences (physique-chimie, SVT, technologie — 2 disciplines sur 3)"
+      coefficient: 2
+      duree: "1 heure (deux fois 30 minutes indicatives)"
+      notee_sur: 20
+      structure:
+        - "Deux disciplines parmi physique-chimie, SVT et technologie sont retenues à chaque session ; le choix est signifié deux mois avant l'examen."
+        - "10 points par discipline retenue."
+      programme_de_reference: >
+        Programmes de la classe de 3e des disciplines concernées s'ils sont en vigueur, ou à défaut des
+        programmes du cycle 4. Référence effective 2027 : programmes de cycle 4 (pas de nouveau
+        programme de 3e publié pour ces disciplines à cette date).
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    - id: oral-soutenance
+      intitule: "Épreuve orale de soutenance (candidats scolaires uniquement)"
+      coefficient: 2
+      duree: "15 minutes (individuel) / 25 minutes (collectif, jusqu'à 3 candidats, chacun évalué individuellement)"
+      notee_sur: 20
+      structure:
+        - "Exposé d'environ 5 minutes suivi d'un entretien avec le jury (~10 minutes en individuel)."
+        - "Porte sur un objet d'étude d'histoire des arts, ou un projet mené en enseignement pratique interdisciplinaire (EPI) du cycle 4, ou dans le cadre d'un parcours éducatif (Avenir, citoyen, santé, éducation artistique et culturelle)."
+        - "Jusqu'à 5 minutes de la prestation peuvent être faites en langue vivante étrangère ou régionale, valorisées par le jury."
+        - "Se déroule entre le 15 avril et le dernier jour des épreuves écrites."
+      programme_de_reference: "N'est pas concernée par la bascule cycle 4 / classe de 3e (celle-ci ne vise que les épreuves écrites)."
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N (partie II)"
+    - id: langue-vivante-etrangere-individuels
+      intitule: "Épreuve écrite de langue vivante étrangère (candidats individuels uniquement)"
+      coefficient: 2
+      duree: "1 heure 30"
+      notee_sur: 20
+      remarque: "Ne concerne pas les candidats scolaires, qui n'ont pas d'épreuve d'anglais écrite au DNB : leur note d'anglais LV1 vient uniquement du contrôle continu."
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N (partie III)"
+    - id: mention-internationale-franco-allemande
+      intitule: "Épreuves complémentaires pour la mention « internationale » ou « franco-allemande » (sections concernées uniquement)"
+      structure:
+        - "Oral dans la langue de la section ou allemand pour les établissements franco-allemands (coefficient 1)"
+        - "Oral dans la discipline non linguistique — DNL (coefficient 1)"
+      condition: "Mention attribuée si note ≥ 10/20 à chacune des deux épreuves ; ces notes sont intégrées au calcul de la moyenne des épreuves terminales."
+      source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+
+  maitrise_de_la_langue:
+    description: >
+      Quatre dimensions de la maîtrise de la langue (orthographe, syntaxe/construction des phrases,
+      lexique, mise en forme et organisation de la réflexion) sont évaluées dans TOUTES les épreuves
+      écrites du DNB à compter de la session 2027, avec une pondération propre à chaque épreuve/exercice.
+    source: "https://www.education.gouv.fr/bo/2026/Special4/MENE2623195N ; https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+
+  calendrier_session_2027:
+    epreuves_ecrites_session_normale: "jeudi 24, vendredi 25 et lundi 28 juin 2027"
+    epreuve_lv_candidats_individuels: "mardi 29 juin 2027"
+    remarque: >
+      Dates publiées par la circulaire du 24 août 2026 (NOR MENE2622686N), Bulletin officiel spécial
+      n° 2 du 25 août 2026. L'accès direct à cette page education.gouv.fr a échoué techniquement au
+      moment de la recherche (erreur d'extraction) ; les dates ont donc été reprises via deux sources
+      secondaires convergentes (post officiel Service Public / service-public.fr, et digischool.fr qui
+      cite explicitement cette circulaire comme sa source primaire). À revérifier directement sur
+      https://www.education.gouv.fr/bo/2026/Special2/MENE2622686N avant usage pédagogique ferme.
+    source: "https://www.education.gouv.fr/bo/2026/Special2/MENE2622686N (circulaire du 24 août 2026, NOR MENE2622686N) ; dates confirmées via Service Public (facebook.com/ServicePublicFr) et digischool.fr"
+
+  reforme_recente_periometre_programmes:
+    principe_general: >
+      Depuis l'arrêté du 17 juillet 2026 (JO du 26 août 2026), l'article 15 de l'arrêté du 31 décembre
+      2015 modifié dispose que les sujets des épreuves ÉCRITES du DNB portent sur les programmes de la
+      classe de 3e "s'ils sont en vigueur ou, à défaut, du programme du cycle 4". Cette formulation
+      remplace la version antérieure (issue de l'arrêté du 10 avril 2025) qui annonçait un basculement
+      pur et simple vers un « programme de 3e » à partir de la session 2027, sans cette clause de secours.
+    consequence_session_2027: >
+      Comme la plupart des disciplines n'ont pas encore de programme spécifique à la classe de 3e
+      (les nouveaux programmes de cycle 4 se déploient niveau par niveau, en commençant par la 5e à la
+      rentrée 2026), le programme de cycle 4 (BO n° 31 du 30 juillet 2020, ou son remplaçant matière par
+      matière) continue de s'appliquer pour le français, les mathématiques, l'histoire-géographie et les
+      sciences en 2026-2027. Seul l'enseignement moral et civique dispose d'un nouveau programme de 3e
+      en vigueur dès la rentrée 2026, ce qui en fait la seule bascule réelle de référentiel pour la
+      session 2027.
+    calendrier_futur: >
+      Français et mathématiques : nouveau programme de cycle 4 appliqué en 5e à la rentrée 2026, en 4e
+      à la rentrée 2027, en 3e à la rentrée 2028 — donc référentiel de 3e pleinement applicable au DNB
+      seulement à partir de la session 2029.
+    source: "https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000054746921 ; https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N ; https://www.digischool.fr/articles/college/brevet/programme-brevet-2027 (synthèse secondaire, sourcée elle-même sur Légifrance et le BO)"
+
+points_de_doute:
+  - "Le calendrier précis des épreuves de la session 2027 (24-25-28 juin, LV individuels le 29 juin) provient de communications officielles relayées (Service-public.fr pour 2026 par analogie, digischool.fr citant la circulaire NOR MENE2622686N pour 2027) ; l'extraction directe du BO spécial n° 2 du 25 août 2026 a échoué techniquement lors de cette recherche et devra être revérifiée directement sur education.gouv.fr avant usage pédagogique ferme des dates."
+  - "Pour l'anglais (LVE) en 3e, le programme du cycle 4 renvoie pour le détail grammatical/lexical par langue à des documents d'accompagnement éduscol distincts par langue ; seul le tronc commun « Grammaire / Phonologie » du texte du BO a pu être extrait ici (voir bibliotheque/programme/3e/anglais.yaml) — les repères spécifiques à l'anglais (temps, lexique par thème) mériteraient un complément si la bibliothèque veut aller plus loin que le texte réglementaire commun aux langues vivantes."
+  - "Le contenu détaillé des sujets zéro / automatismes de mathématiques n'a pas été extrait (hors périmètre de cette tâche, qui porte sur langues/arts/DNB)."

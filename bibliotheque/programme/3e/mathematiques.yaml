@@ -1,0 +1,429 @@
+matiere: Mathématiques
+id: mathematiques
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Mathématiques"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Attendus de fin d'année de 3e — Mathématiques"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Repères annuels de progression — Mathématiques, cycle 4"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027"
+    reference: "Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Le programme de mathématiques de cycle 4 (BO n° 31 du 30 juillet 2020) est fixé pour les trois
+  années 5e-4e-3e sans détail réglementaire année par année : les notions n'y sont associées qu'à
+  des « attendus de fin de cycle ». Le document éduscol « Attendus de fin d'année de 3e » précise
+  ce qui doit être maîtrisé au sortir de la 3e et sert ici de critère pour distinguer
+  niveau_programme: "3e" (notion explicitement décrite dans ce document) de niveau_programme:
+  "cycle 4" (notion du programme non détaillée spécifiquement pour la 3e dans ce document, en
+  l'absence d'accès complet aux repères annuels de progression détaillés par le présent travail).
+brevet:
+  evalue: true
+  epreuve: >
+    Épreuve écrite de mathématiques du DNB (coefficient 2), durée 2 heures, notée sur 20.
+    Porte sur les connaissances et compétences attendues en fin de cycle 4, déclinées par le
+    programme de la classe de troisième s'il est en vigueur ou, à défaut, du cycle 4.
+    Partie 1 — automatismes et applications directes : 6 points, 20 minutes, sans calculatrice,
+    questions à réponses courtes. Partie 2 — raisonnement et résolution de problèmes : 14 points,
+    1 h 40, avec calculatrice, aucune modalité QCM, réponses justifiées, 2 points évalués sur la
+    maîtrise de la langue. Les deux parties sont traitées sans pause mais sur deux copies séparées,
+    la première étant relevée à l'issue de la partie 1.
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: nombres-et-calculs
+    titre: "Nombres et calculs"
+    chapitres:
+      - id: nombres-rationnels-puissances
+        titre: "Nombres rationnels, puissances, racine carrée"
+        notions:
+          - id: ecritures-et-comparaison-nombres
+            titre: "Représentations et comparaison des nombres rationnels"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Utiliser diverses représentations d'un même nombre (écriture décimale ou fractionnaire, notation scientifique, repérage sur une droite graduée) et passer de l'une à l'autre."
+              - "Comparer, ranger, encadrer des nombres rationnels en écriture décimale, fractionnaire ou scientifique."
+              - "Repérer et placer un nombre rationnel sur une droite graduée."
+              - "Associer à des objets des ordres de grandeur."
+            mots_cles: [nombres rationnels, écriture décimale, écriture fractionnaire, droite graduée, ordre de grandeur]
+            brevet: true
+            source: "Programme cycle 4, thème A, § Utiliser les nombres pour comparer, calculer et résoudre des problèmes"
+          - id: puissances-notation-scientifique
+            titre: "Puissances et notation scientifique"
+            niveau_programme: "3e"
+            attendus:
+              - "Utiliser les puissances d'exposants positifs ou négatifs pour simplifier l'écriture des produits."
+              - "Résoudre des problèmes avec des puissances, notamment en utilisant la notation scientifique."
+            mots_cles: [puissance, exposant, notation scientifique]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: racine-carree
+            titre: "Racine carrée"
+            niveau_programme: "3e"
+            attendus:
+              - "Résoudre des problèmes mettant en jeu des racines carrées (connaître les carrés parfaits de 1 à 144, la définition de la racine carrée)."
+            mots_cles: [racine carrée, carré parfait]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: calcul-nombres-rationnels
+            titre: "Calcul (exact ou approché) avec les nombres rationnels"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer avec les nombres rationnels, notamment dans le cadre de résolution de problèmes."
+              - "Vérifier la vraisemblance d'un résultat, notamment en estimant son ordre de grandeur."
+            mots_cles: [calcul, nombres relatifs, fractions, ordre de grandeur]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+      - id: divisibilite-nombres-premiers
+        titre: "Divisibilité et nombres premiers"
+        notions:
+          - id: multiples-diviseurs-division-euclidienne
+            titre: "Multiples, diviseurs, division euclidienne, critères de divisibilité"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Déterminer si un entier est ou n'est pas multiple ou diviseur d'un autre entier."
+              - "Utiliser les critères de divisibilité par 2, 3, 5, 9, 10."
+              - "Déterminer les diviseurs d'un nombre à la main, à l'aide d'un tableur, d'une calculatrice."
+            mots_cles: [multiple, diviseur, division euclidienne, critère de divisibilité]
+            brevet: true
+            source: "Programme cycle 4, thème A, § Comprendre et utiliser les notions de divisibilité et de nombres premiers"
+          - id: nombres-premiers-decomposition
+            titre: "Nombres premiers, décomposition en facteurs premiers"
+            niveau_programme: "3e"
+            attendus:
+              - "Décomposer un nombre entier en produit de facteurs premiers (à la main, à l'aide d'un tableur ou d'un logiciel de programmation)."
+            mots_cles: [nombre premier, décomposition en facteurs premiers]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: fractions-irreductibles
+            titre: "Fractions irréductibles"
+            niveau_programme: "3e"
+            attendus:
+              - "Simplifier une fraction pour la rendre irréductible."
+            mots_cles: [fraction irréductible, simplification]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: problemes-divisibilite
+            titre: "Problèmes utilisant la divisibilité (engrenages, conjonction de phénomènes)"
+            niveau_programme: "3e"
+            attendus:
+              - "Modéliser et résoudre des problèmes mettant en jeu la divisibilité (engrenages, conjonction de phénomènes...)."
+            mots_cles: [divisibilité, problème, PPCM implicite, engrenages]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+      - id: calcul-litteral-equations
+        titre: "Calcul littéral et équations"
+        notions:
+          - id: developper-factoriser-reduire
+            titre: "Développer, factoriser, réduire une expression littérale"
+            niveau_programme: "3e"
+            attendus:
+              - "Développer (par simple et double distributivités), factoriser, réduire des expressions algébriques simples."
+              - "Factoriser une expression du type a² - b² et développer des expressions du type (a + b)(a - b)."
+            mots_cles: [distributivité, développer, factoriser, réduire, identité remarquable]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: equations-premier-degre-et-produits
+            titre: "Résolution d'équations du premier degré, équations produits, équations x² = a"
+            niveau_programme: "3e"
+            attendus:
+              - "Résoudre algébriquement une équation du premier degré."
+              - "Résoudre une équation s'y ramenant (équation produit)."
+              - "Résoudre une équation de la forme x² = a sur des exemples simples."
+            mots_cles: [équation, équation produit, premier degré, x carré égale a]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+          - id: problemes-mise-en-equation
+            titre: "Mettre un problème en équation et le résoudre"
+            niveau_programme: "3e"
+            attendus:
+              - "Résoudre des problèmes se ramenant à une équation, internes aux mathématiques ou en lien avec d'autres disciplines."
+            mots_cles: [mise en équation, problème, résolution]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Nombres et calculs"
+  - id: organisation-gestion-donnees-fonctions
+    titre: "Organisation et gestion de données, fonctions"
+    chapitres:
+      - id: statistiques
+        titre: "Statistiques"
+        notions:
+          - id: indicateurs-position
+            titre: "Indicateurs de position : moyenne, médiane"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Calculer et interpréter des indicateurs de position (moyenne, médiane) d'une série statistique."
+            mots_cles: [moyenne, médiane, indicateur de position]
+            brevet: true
+            source: "Programme cycle 4, thème B, § Interpréter, représenter et traiter des données"
+          - id: effectifs-et-frequences
+            titre: "Effectifs et fréquences"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer des effectifs et des fréquences."
+            mots_cles: [effectif, fréquence]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: histogrammes
+            titre: "Lecture, interprétation et représentation de données sous forme d'histogrammes"
+            niveau_programme: "3e"
+            attendus:
+              - "Lire, interpréter et représenter des données sous forme d'histogrammes pour des classes de même amplitude."
+            mots_cles: [histogramme, classe d'amplitude, diagramme]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: etendue-serie-statistique
+            titre: "Étendue d'une série statistique"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer et interpréter l'étendue d'une série présentée sous forme de données brutes, d'un tableau, d'un diagramme en bâtons, d'un diagramme circulaire ou d'un histogramme."
+            mots_cles: [étendue, dispersion, série statistique]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+      - id: probabilites
+        titre: "Probabilités"
+        notions:
+          - id: probabilites-experiences-simples
+            titre: "Calcul de probabilités pour une expérience aléatoire simple"
+            niveau_programme: "3e"
+            attendus:
+              - "À partir de dénombrements, calculer des probabilités pour des expériences aléatoires simples à une épreuve."
+              - "Faire le lien entre stabilisation des fréquences et probabilités."
+            mots_cles: [probabilité, expérience aléatoire, fréquence, événement contraire]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: probabilites-deux-epreuves
+            titre: "Probabilités pour des expériences à deux épreuves"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer des probabilités pour des expériences aléatoires simples à deux épreuves, en utilisant une méthode de dénombrement (par exemple un tableau à double entrée)."
+            mots_cles: [probabilité, deux épreuves, dénombrement, tableau à double entrée]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+      - id: proportionnalite
+        titre: "Proportionnalité"
+        notions:
+          - id: ratio
+            titre: "Notion de ratio"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Partager une quantité en deux ou trois parts selon un ratio donné."
+            mots_cles: [ratio, partage proportionnel]
+            brevet: false
+            source: "Programme cycle 4, thème B, § Résoudre des problèmes de proportionnalité"
+          - id: modelisation-fonction-lineaire
+            titre: "Modéliser une situation de proportionnalité par une fonction linéaire"
+            niveau_programme: "3e"
+            attendus:
+              - "Modéliser une situation de proportionnalité à l'aide d'une fonction linéaire."
+            mots_cles: [proportionnalité, fonction linéaire, modélisation]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: pourcentages-coefficient-multiplicateur
+            titre: "Pourcentages d'évolution et coefficient multiplicateur"
+            niveau_programme: "3e"
+            attendus:
+              - "Utiliser le lien entre pourcentage d'évolution et coefficient multiplicateur."
+            mots_cles: [pourcentage, évolution, coefficient multiplicateur]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: proportionnalite-en-geometrie
+            titre: "Proportionnalité dans le cadre de la géométrie"
+            niveau_programme: "3e"
+            attendus:
+              - "Résoudre des problèmes en utilisant la proportionnalité dans le cadre de la géométrie (configurations de Thalès, triangles semblables, homothéties)."
+            mots_cles: [proportionnalité, Thalès, triangles semblables, homothétie]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+      - id: fonctions
+        titre: "Fonctions"
+        notions:
+          - id: vocabulaire-notations-fonctions
+            titre: "Vocabulaire et notations fonctionnelles"
+            niveau_programme: "3e"
+            attendus:
+              - "Utiliser les notations et le vocabulaire fonctionnels (variable, fonction, antécédent, image, notations f(x) et x ↦ f(x))."
+            mots_cles: [fonction, variable, notation f(x), antécédent, image]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: modes-representation-fonction
+            titre: "Passer d'un mode de représentation d'une fonction à un autre"
+            niveau_programme: "3e"
+            attendus:
+              - "Passer d'un mode de représentation d'une fonction à un autre (expression symbolique, tableau de valeurs, représentation graphique, programme de calcul)."
+            mots_cles: [fonction, représentation graphique, tableau de valeurs]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: image-et-antecedent
+            titre: "Déterminer une image et un antécédent par une fonction"
+            niveau_programme: "3e"
+            attendus:
+              - "Déterminer, à partir de tous les modes de représentation, l'image d'un nombre par une fonction."
+              - "Déterminer un antécédent à partir d'une représentation graphique ou d'un tableau de valeurs."
+              - "Déterminer de manière algébrique l'antécédent par une fonction, dans des cas se ramenant à la résolution d'une équation du premier degré."
+            mots_cles: [image, antécédent, fonction, équation]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: fonctions-lineaires-affines
+            titre: "Fonctions linéaires et fonctions affines : représentation graphique et paramètres"
+            niveau_programme: "3e"
+            attendus:
+              - "Représenter graphiquement une fonction linéaire, une fonction affine."
+              - "Interpréter les paramètres d'une fonction affine suivant l'allure de sa courbe représentative."
+            mots_cles: [fonction linéaire, fonction affine, coefficient directeur, ordonnée à l'origine]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+          - id: modelisation-et-problemes-par-fonctions
+            titre: "Modéliser un phénomène par une fonction et résoudre des problèmes"
+            niveau_programme: "3e"
+            attendus:
+              - "Modéliser un phénomène continu par une fonction."
+              - "Résoudre des problèmes modélisés par des fonctions en utilisant un ou plusieurs modes de représentation."
+            mots_cles: [fonction, modélisation, problème]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Organisation et gestion de données, fonctions"
+  - id: grandeurs-et-mesures
+    titre: "Grandeurs et mesures"
+    chapitres:
+      - id: calculs-de-grandeurs
+        titre: "Calculs de grandeurs"
+        notions:
+          - id: volume-boule-et-assemblages
+            titre: "Volume de la boule et d'assemblages de solides"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer le volume d'une boule."
+              - "Calculer les volumes d'assemblages de solides étudiés au cours du cycle."
+            mots_cles: [volume, boule, solides, assemblage]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Grandeurs et mesures"
+          - id: grandeurs-composees-et-conversions
+            titre: "Grandeurs composées et conversions d'unités"
+            niveau_programme: "3e"
+            attendus:
+              - "Mener des calculs sur des grandeurs mesurables, notamment des grandeurs composées, et exprimer les résultats dans les unités adaptées."
+              - "Résoudre des problèmes utilisant les conversions d'unités sur des grandeurs composées."
+              - "Vérifier la cohérence des résultats du point de vue des unités."
+            mots_cles: [grandeur composée, conversion d'unités, débit, vitesse]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Grandeurs et mesures"
+      - id: transformations-et-grandeurs
+        titre: "Effet des transformations sur les grandeurs géométriques"
+        notions:
+          - id: grandeurs-et-transformations
+            titre: "Calculer des grandeurs géométriques en utilisant les transformations"
+            niveau_programme: "3e"
+            attendus:
+              - "Calculer des grandeurs géométriques (longueurs, aires, volumes) en utilisant les transformations (symétries, rotations, translations, homothétie)."
+            mots_cles: [homothétie, symétrie, rotation, translation, aire, volume]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Grandeurs et mesures"
+          - id: proportionnalite-configurations-geometriques
+            titre: "Proportionnalité et transformations géométriques (agrandissement, réduction, triangles semblables, homothéties)"
+            niveau_programme: "3e"
+            attendus:
+              - "Résoudre des problèmes en utilisant la proportionnalité en géométrie dans le cadre de certaines configurations ou transformations."
+            mots_cles: [agrandissement, réduction, triangles semblables, homothétie, proportionnalité]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Grandeurs et mesures"
+  - id: espace-et-geometrie
+    titre: "Espace et géométrie"
+    chapitres:
+      - id: representer-espace
+        titre: "Représenter l'espace"
+        notions:
+          - id: reperage-sur-une-sphere
+            titre: "Repérage sur une sphère (latitude, longitude)"
+            niveau_programme: "3e"
+            attendus:
+              - "Se repérer sur une sphère à l'aide de la latitude et de la longitude."
+            mots_cles: [sphère, latitude, longitude, repérage]
+            brevet: false
+            source: "Attendus de fin d'année de 3e, Espace et géométrie"
+          - id: representations-de-solides
+            titre: "Représentations et sections planes de solides"
+            niveau_programme: "3e"
+            attendus:
+              - "Construire et mettre en relation différentes représentations des solides étudiés au cours du cycle (perspective cavalière, vues de face, de dessus, en coupe, patrons) et leurs sections planes."
+            mots_cles: [solide, perspective cavalière, patron, section plane]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Espace et géométrie"
+      - id: geometrie-plane-et-demonstration
+        titre: "Géométrie plane et démonstration"
+        notions:
+          - id: parallelisme-triangles-pythagore
+            titre: "Parallélisme, propriétés des triangles, théorème de Pythagore"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Caractérisation angulaire du parallélisme (angles alternes-internes, angles correspondants)."
+              - "Somme des angles d'un triangle, hauteurs et médiatrices, inégalité triangulaire, cas d'égalité des triangles."
+              - "Théorème de Pythagore et sa réciproque."
+            mots_cles: [parallélisme, triangle, Pythagore, angles]
+            brevet: true
+            source: "Programme cycle 4, thème D, § Utiliser les notions de géométrie plane pour démontrer"
+          - id: thales-triangles-semblables-trigonometrie
+            titre: "Théorème de Thalès, triangles semblables, lignes trigonométriques"
+            niveau_programme: "3e"
+            attendus:
+              - "Utiliser le théorème de Thalès et sa réciproque (configurations des triangles emboîtés et du papillon) pour effectuer des calculs de longueurs."
+              - "Utiliser une définition et une propriété caractéristique des triangles semblables."
+              - "Utiliser les lignes trigonométriques dans un triangle rectangle (cosinus, sinus, tangente) pour calculer des longueurs ou des mesures d'angles."
+            mots_cles: [Thalès, triangles semblables, cosinus, sinus, tangente, trigonométrie]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Espace et géométrie"
+          - id: rotations-et-homotheties
+            titre: "Rotations et homothéties : effet sur une figure et raisonnement"
+            niveau_programme: "3e"
+            attendus:
+              - "Transformer une figure par rotation et par homothétie ; comprendre l'effet d'une rotation et d'une homothétie."
+              - "Identifier des rotations et des homothéties dans des frises, des pavages et des rosaces."
+              - "Mobiliser les connaissances des figures, des configurations, de la rotation et de l'homothétie pour déterminer des grandeurs géométriques."
+              - "Mener des raisonnements en utilisant des propriétés des figures, des configurations, de la rotation et de l'homothétie."
+            mots_cles: [rotation, homothétie, frise, pavage, rosace, raisonnement]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Espace et géométrie"
+  - id: algorithmique-et-programmation
+    titre: "Algorithmique et programmation"
+    chapitres:
+      - id: ecrire-mettre-au-point-executer-un-programme
+        titre: "Écrire, mettre au point, exécuter un programme"
+        notions:
+          - id: algorithmique-niveau-1
+            titre: "Programme simple par blocs (niveau 1) : algorithmique débranchée, déplacement, boucle « répéter … fois »"
+            niveau_programme: "3e"
+            attendus:
+              - "Réaliser des activités d'algorithmique débranchée."
+              - "Mettre en ordre et/ou compléter des blocs fournis par le professeur pour construire un programme simple."
+              - "Écrire un script de déplacement ou de construction géométrique utilisant des instructions conditionnelles et/ou la boucle « Répéter … fois »."
+            mots_cles: [algorithme, programme par blocs, boucle, instruction conditionnelle]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Algorithmique et programmation, niveau 1"
+          - id: algorithmique-niveau-2
+            titre: "Programme avec événement, séquence et variable (niveau 2)"
+            niveau_programme: "3e"
+            attendus:
+              - "Gérer le déclenchement d'un script en réponse à un événement."
+              - "Écrire une séquence d'instructions (condition « si … alors » et boucle « répéter … fois »)."
+              - "Intégrer une variable dans un programme de déplacement, de construction géométrique ou de calcul."
+            mots_cles: [événement, variable, séquence d'instructions, condition]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Algorithmique et programmation, niveau 2"
+          - id: algorithmique-niveau-3
+            titre: "Décomposition en sous-problèmes, blocs personnalisés, boucles imbriquées (niveau 3)"
+            niveau_programme: "3e"
+            attendus:
+              - "Décomposer un problème en sous-problèmes et traduire un sous-problème en créant un « bloc personnalisé »."
+              - "Construire une figure en créant un motif et en le reproduisant à l'aide d'une boucle."
+              - "Utiliser simultanément les boucles « Répéter … fois » et « Répéter jusqu'à … » ainsi que les instructions conditionnelles pour réaliser des figures, des programmes de calculs, des déplacements, des simulations d'expérience aléatoire."
+              - "Écrire plusieurs scripts fonctionnant en parallèle pour gérer des interactions et créer des jeux."
+            mots_cles: [bloc personnalisé, boucle imbriquée, sous-problème, simulation]
+            brevet: true
+            source: "Attendus de fin d'année de 3e, Algorithmique et programmation, niveau 3"

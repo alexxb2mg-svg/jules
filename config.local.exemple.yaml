@@ -1,0 +1,63 @@
+# Modele de reglages locaux. Copier ce fichier en config.local.yaml puis l'adapter.
+# config.local.yaml n'est jamais publie (.gitignore) : c'est ici que vont les reglages de la famille.
+# Les cles API ne vont PAS ici : elles restent dans des variables d'environnement (voir .env.exemple).
+
+# 1. Le profil de l'enfant : copier profils/exemple.yaml en profils/<prenom>.yaml, le remplir,
+#    puis indiquer son nom ici.
+profil: exemple
+
+# 2. Le moteur d'IA : decommenter UN des blocs ci-dessous.
+
+# --- Anthropic (Claude), cle API payante -------------------------------------
+# llm:
+#   backend: anthropic
+#   cle_env: ANTHROPIC_API_KEY
+#   modeles:
+#     principal: claude-sonnet-5
+#     rapide: claude-haiku-4-5
+
+# --- OpenAI, cle API payante -------------------------------------------------
+# llm:
+#   backend: openai_compatible
+#   url: https://api.openai.com/v1
+#   cle_env: OPENAI_API_KEY
+#   modeles:                  # noms a jour : https://platform.openai.com/docs/models
+#     principal: gpt-5-mini
+#     rapide: gpt-5-nano
+
+# --- Mistral (entreprise francaise), cle API ---------------------------------
+# llm:
+#   backend: openai_compatible
+#   url: https://api.mistral.ai/v1
+#   cle_env: MISTRAL_API_KEY
+#   modeles:
+#     principal: mistral-medium-latest
+#     rapide: mistral-small-latest
+
+# --- Ollama : modele local, gratuit, rien ne sort de la maison ----------------
+# Installer Ollama (https://ollama.com), puis : ollama pull qwen3-vl:8b (lit aussi les photos).
+# Sans carte graphique, une reponse peut prendre plus d'une minute : augmenter delai_s.
+# llm:
+#   backend: openai_compatible
+#   url: http://127.0.0.1:11434/v1
+#   delai_s: 300
+#   modeles:
+#     principal: qwen3-vl:8b
+#     rapide: qwen3-vl:8b
+#   parametres:
+#     reasoning_effort: none   # coupe la « reflexion » cachee des modeles qwen3 : bien plus rapide
+
+# 3. Acces depuis une tablette sur le wifi de la maison (optionnel).
+#    Definir d'abord les deux codes (jules code eleve / jules code parent) :
+#    le serveur refuse de s'ouvrir au reseau sans eux.
+# serveur:
+#   hote: 0.0.0.0
+
+# 4. Alertes et rapport du soir sur Telegram (optionnel) : jeton et identifiant dans .env
+# notifieurs:
+#   - id: fichier
+#   - id: telegram
+#     actif: true
+#     reglages:
+#       token_env: JULES_TELEGRAM_TOKEN
+#       chat_id_env: JULES_TELEGRAM_CHAT_ID

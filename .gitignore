@@ -1,0 +1,37 @@
+# --- Donnees de la famille : ne jamais publier -------------------------------
+donnees/
+config.local.yaml
+.env
+.env.*
+!.env.exemple
+profils/*
+!profils/exemple.yaml
+*.db
+*.sqlite
+*.key
+*.log
+
+# --- Python -------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# --- Outils -------------------------------------------------------------------
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# --- Editeurs et systemes -----------------------------------------------------
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

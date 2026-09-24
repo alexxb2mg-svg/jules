@@ -1,0 +1,132 @@
+matiere: Enseignement moral et civique
+id: emc
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP — séquence « Troisième : Faire vivre la démocratie »"
+    reference: "BO n° 24 du 13 juin 2024, arrêté du 29 mai 2024 (NOR : MENE2411598A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf"
+    consulte_le: "2026-09-23"
+  - intitule: "Ressources d'accompagnement pour l'enseignement moral et civique au collège — application progressive du nouveau programme"
+    reference: "éduscol, application confirmée en classe de 3e à la rentrée 2026"
+    url: "https://eduscol.education.gouv.fr/4752/ressources-d-accompagnement-pour-l-enseignement-moral-et-civique-au-college"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — sous-épreuve enseignement moral et civique"
+    reference: "Note de service du 11-9-2026, NOR MENE2623228N, BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  L'EMC change de programme à la rentrée 2026 en classe de 3e : c'est le NOUVEAU programme
+  publié au BO n° 24 du 13 juin 2024 (arrêté du 29 mai 2024) qui s'applique, et non l'ancien
+  programme d'EMC du cycle 4 (BO du 26 juillet 2018). L'application est progressive :
+  rentrée 2024 (CP, CM1, 5e), rentrée 2025 (CE1, CM2, 4e), rentrée 2026 (CE2, 6e, 3e). Le
+  programme 2024 structure la classe de 3e en une séquence intitulée « Troisième : faire vivre
+  la démocratie », elle-même composée de trois volets thématiques : « Les règles du jeu
+  démocratique » (6 à 8 heures), « Les acteurs du jeu démocratique et leur engagement (1) :
+  l'opinion » (5 à 6 heures) et « Les acteurs du jeu démocratique et leur engagement (2) :
+  l'engagement collectif » (5 à 6 heures). Le volume horaire annuel d'EMC au collège est de
+  30 minutes hebdomadaires.
+brevet:
+  evalue: true
+  epreuve: >
+    Sous-épreuve écrite d'enseignement moral et civique, intégrée à l'épreuve d'histoire-
+    géographie-enseignement moral et civique (durée totale de l'épreuve : 2 heures, sans pause
+    entre les deux sous-épreuves). Coefficient 0,5, notée sur 20 points. Une problématique
+    d'enseignement moral et civique est posée à partir de la présentation d'une situation
+    pratique ou d'une thématique appuyée sur un ou deux documents ; les questions ou consignes
+    amènent le candidat à approfondir progressivement l'analyse de cette situation. Les réponses
+    sont rédigées : l'énoncé précise si une réponse courte (une ou deux phrases) ou une réponse
+    construite et développée (nombre de lignes indiqué) est attendue. La qualité de la rédaction
+    compte pour 2 points dans le barème.
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: faire-vivre-la-democratie
+    titre: "Troisième : Faire vivre la démocratie"
+    chapitres:
+      - id: regles-jeu-democratique
+        titre: "Les règles du jeu démocratique (6 à 8 heures)"
+        notions:
+          - id: constitution-ve-republique
+            titre: "La Constitution, norme juridique fondamentale"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que la Constitution garantit les droits et libertés, détermine la séparation des pouvoirs et le contrôle de l'action du gouvernement par le Parlement."
+              - "Savoir que la Constitution de la Ve République fait référence à d'autres textes à valeur constitutionnelle : Déclaration des droits de l'homme et du citoyen, préambule de la Constitution de 1946, Charte de l'environnement."
+              - "Comprendre, à partir d'une question prioritaire de constitutionnalité (QPC), l'indépendance de l'autorité judiciaire et la garantie des droits et libertés."
+              - "Connaître les évolutions de la Constitution depuis 1958 (élection du président au suffrage universel direct en 1962, rôle accru du Conseil constitutionnel, parité en 1999, quinquennat en 2000, décentralisation en 2003, Charte de l'environnement en 2004, réforme de 2008)."
+            mots_cles: ["Constitution", "Ve République", "séparation des pouvoirs", "QPC", "Conseil constitutionnel"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les règles du jeu démocratique » (BO n° 24 du 13/06/2024)"
+          - id: laicite-etat-3e
+            titre: "Séparation des pouvoirs et laïcité de l'État"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que la Constitution affirme que la République est laïque, ce qui signifie que l'autorité politique est indépendante des autorités religieuses."
+              - "Comprendre que les autorités religieuses peuvent néanmoins participer au débat public dans les limites fixées par la loi de 1905 (art. 35.1 et 36.3)."
+            mots_cles: ["laïcité", "loi de 1905", "séparation des pouvoirs"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les règles du jeu démocratique » (BO n° 24 du 13/06/2024)"
+          - id: institutions-europeennes-citoyennete
+            titre: "Institutions européennes et citoyenneté européenne"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que la démocratie française s'inscrit, depuis l'après-guerre, dans les institutions du Conseil de l'Europe et de l'Union européenne."
+              - "Comprendre qu'au sein de l'UE, les États membres sont tenus d'appliquer le droit communautaire (traités, règlements, directives, décisions de la Cour de justice de l'UE)."
+              - "Savoir qu'un citoyen européen peut faire valoir ses droits devant une juridiction européenne (Cour de justice de l'Union européenne, Cour européenne des droits de l'Homme)."
+            mots_cles: ["institutions européennes", "citoyenneté européenne", "Cour de justice de l'UE", "CEDH"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les règles du jeu démocratique » (BO n° 24 du 13/06/2024)"
+      - id: acteurs-jeu-democratique-opinion
+        titre: "Les acteurs du jeu démocratique et leur engagement (1) : l'opinion (5 à 6 heures)"
+        notions:
+          - id: democratie-deliberative-opinion-publique
+            titre: "Démocratie délibérative et opinion publique"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre que la démocratie est un régime où l'opinion publique joue un rôle capital, qui s'exprime par l'intermédiaire des médias, dont les médias sociaux, et qu'on essaie de saisir par des sondages de natures diverses."
+              - "Développer l'esprit critique à partir d'une réflexion sur la notion d'opinion publique et sur la conception, la conduite et le rôle des sondages."
+            mots_cles: ["opinion publique", "démocratie délibérative", "sondages", "médias sociaux"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les acteurs du jeu démocratique et leur engagement (1) : l'opinion » (BO n° 24 du 13/06/2024)"
+          - id: information-desinformation-complotisme
+            titre: "Information, désinformation, complotisme"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier des exemples de désinformation et d'opérations de déstabilisation en s'appuyant sur la loi du 22 décembre 2018 relative à la lutte contre la manipulation de l'information."
+              - "Montrer comment la désinformation peut nourrir le complotisme, en lien notamment avec le racisme et l'antisémitisme."
+              - "Comprendre l'importance de l'établissement rigoureux des faits et la distinction entre croyance, opinion et savoir."
+            mots_cles: ["désinformation", "complotisme", "loi du 22 décembre 2018", "intelligence artificielle"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les acteurs du jeu démocratique et leur engagement (1) : l'opinion » (BO n° 24 du 13/06/2024)"
+          - id: lanceurs-alerte
+            titre: "Lanceurs d'alerte"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que les médias sociaux sont un lieu de débats et de mobilisations où des lanceurs d'alerte prennent des risques pour informer leurs concitoyens."
+              - "Analyser des exemples de mobilisation (mouvement #MeToo, affaires financières) et des cas de lanceurs d'alerte, en s'appuyant sur la loi du 21 mars 2022 visant à améliorer la protection des lanceurs d'alerte."
+            mots_cles: ["lanceur d'alerte", "loi du 21 mars 2022", "MeToo"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les acteurs du jeu démocratique et leur engagement (1) : l'opinion » (BO n° 24 du 13/06/2024)"
+      - id: acteurs-jeu-democratique-engagement-collectif
+        titre: "Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif (5 à 6 heures)"
+        notions:
+          - id: elections-referendum
+            titre: "Élections et référendum, moments décisifs de la vie démocratique"
+            niveau_programme: "3e"
+            attendus:
+              - "Savoir que les campagnes électorales et référendaires sont des occasions de débat et des moments décisifs de la vie démocratique, le vote n'étant pas obligatoire mais marquant un engagement au sein de la cité."
+              - "Connaître les différentes temporalités et modalités électorales : élections présidentielles, législatives, sénatoriales, régionales, départementales, municipales, européennes."
+            mots_cles: ["élections", "référendum", "campagne électorale", "vote"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif » (BO n° 24 du 13/06/2024)"
+          - id: formes-engagement-citoyen
+            titre: "Les formes de l'engagement citoyen"
+            niveau_programme: "3e"
+            attendus:
+              - "Connaître les formes traditionnelles de l'engagement : engagement politique et exercice d'un mandat, engagement syndical, engagement associatif ou humanitaire, démocratie scolaire."
+              - "Savoir que l'engagement peut prendre la forme d'un service dans les institutions : armée, police, justice, éducation."
+              - "Comprendre que l'exercice de la liberté de manifester permet aux citoyens d'exprimer leurs opinions et de faire pression sur les gouvernements."
+              - "Connaître le service national universel (SNU) comme dispositif national de découverte des formes et domaines d'engagement."
+            mots_cles: ["engagement citoyen", "engagement associatif", "liberté de manifester", "SNU", "démocratie scolaire"]
+            brevet: true
+            source: "Programme EMC 2024, séquence Troisième, volet « Les acteurs du jeu démocratique et leur engagement (2) : l'engagement collectif » (BO n° 24 du 13/06/2024)"

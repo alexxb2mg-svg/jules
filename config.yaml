@@ -1,0 +1,45 @@
+# Jules - configuration commune (publiee). Ne rien mettre de personnel ici.
+# Les reglages propres a une famille (profil de l'enfant, codes, moteur IA, acces tablette)
+# vont dans config.local.yaml, cree a partir de config.local.exemple.yaml et jamais publie.
+#
+# Chaque brique se choisit par son id (= nom du fichier) :
+#   persona/<id>/               -> personnalite du bot (persona.yaml + fichiers .md)
+#   profils/<id>.yaml           -> ce que le bot sait de l'eleve
+#   jules/modules/<id>.py       -> fonctions (memoire, suivi, rapport...)
+#   jules/notifieurs/<id>.py    -> canaux vers le parent
+#   jules/llm/<id>.py           -> moteur d'IA
+
+serveur:
+  hote: 127.0.0.1          # seulement cet ordinateur. Tablette sur le wifi : voir config.local.exemple.yaml
+  port: 8795
+
+persona: jules
+profil: exemple            # eleve fictive ; le vrai profil se choisit dans config.local.yaml
+
+llm:
+  backend: demo            # demo (sans IA, pour decouvrir) | anthropic | openai_compatible (OpenAI, Mistral, Ollama...)
+  delai_s: 180
+  historique_max: 30       # nombre de messages renvoyes au modele a chaque tour
+
+acces:
+  # Empreintes des codes (jamais le code en clair), ecrites par `python lancer.py code eleve|parent`
+  # dans config.local.yaml. Vide = acces libre, refuse des que le serveur est visible sur le reseau.
+  code_eleve: ""
+  code_parent: ""
+
+modules:
+  - id: modes          # modes de travail = fichiers consignes/modes/*.md
+  - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
+  - id: suivi          # analyse chaque echange (matiere, notion, statut)
+  - id: vigilance      # signaux inquietants -> alerte immediate au parent
+  - id: rapport        # resume quotidien pour le parent
+    reglages:
+      heure: "20:00"
+
+notifieurs:
+  - id: fichier        # donnees/notifications/AAAA-MM-JJ.log
+  - id: telegram
+    actif: false       # a activer dans config.local.yaml
+    reglages:
+      token_env: JULES_TELEGRAM_TOKEN
+      chat_id_env: JULES_TELEGRAM_CHAT_ID

@@ -1,0 +1,195 @@
+matiere: Éducation musicale
+id: education-musicale
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie « Éducation musicale »"
+    reference: "BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Enseigner au cycle 4 — confirme que le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Le programme d'éducation musicale du cycle 4 (BO n° 31 du 30 juillet 2020) est un programme de cycle,
+  non décliné par année (5e/4e/3e) : deux champs de compétences (production et perception) organisent
+  le programme sur l'ensemble du cycle, structurés autour de six domaines de connaissances complémentaires.
+  Aucune notion n'est réservée explicitement à la 3e seule ; toutes portent la mention "cycle 4". Ce
+  programme est inchangé pour l'année 2026-2027.
+brevet:
+  evalue: true
+  epreuve: >
+    Pas d'épreuve écrite spécifique d'éducation musicale au DNB. La discipline est évaluée via le
+    contrôle continu (moyenne annuelle de 3e, 40 % de la note finale du DNB) ; l'enseignement facultatif
+    de chant choral, s'il est suivi, ajoute au contrôle continu les points au-dessus de 10/20 de sa
+    moyenne. La discipline peut aussi alimenter l'épreuve orale de soutenance si l'élève y présente un
+    objet d'étude ou un projet lié à la musique (histoire des arts, EPI, parcours d'éducation artistique
+    et culturelle).
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N ; https://www.education.gouv.fr/bo/2026/Special4/MENE2623194N"
+themes:
+  - id: competences-travaillees
+    titre: "Compétences travaillées"
+    chapitres:
+      - id: quatre-competences
+        titre: "Les quatre compétences travaillées"
+        notions:
+          - id: realiser-projets-musicaux
+            titre: "Réaliser des projets musicaux d'interprétation ou de création"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Définir les caractéristiques musicales d'un projet, puis en assurer la mise en œuvre en mobilisant les ressources adaptées."
+              - "Interpréter un projet devant d'autres élèves et présenter les choix artistiques effectués."
+            mots_cles: [interprétation, création, projet musical]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: ecouter-comparer-construire-culture
+            titre: "Écouter, comparer, construire une culture musicale commune"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Analyser des œuvres musicales en utilisant un vocabulaire précis."
+              - "Situer et comparer des musiques de styles proches ou éloignés dans l'espace et/ou dans le temps pour construire des repères techniques et culturels."
+              - "Identifier par comparaison les différences et ressemblances dans l'interprétation d'une œuvre donnée."
+            mots_cles: [écoute, comparaison, culture musicale]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: explorer-imaginer-creer-produire
+            titre: "Explorer, imaginer, créer et produire"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Réutiliser certaines caractéristiques (style, technique, etc.) d'une œuvre connue pour nourrir son travail."
+              - "Concevoir, réaliser, arranger, pasticher une courte pièce préexistante, notamment à l'aide d'outils numériques."
+              - "Réinvestir ses expériences personnelles de la création musicale pour écouter, comprendre et commenter celles des autres."
+            mots_cles: [exploration, création, arrangement, numérique]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+          - id: echanger-partager-argumenter-debattre
+            titre: "Échanger, partager, argumenter et débattre"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Porter un regard critique sur sa production individuelle."
+              - "Développer une critique constructive sur une production collective."
+              - "Argumenter une critique adossée à une analyse objective."
+              - "Distinguer les postures de créateur, d'interprète et d'auditeur."
+              - "Respecter les sources et les droits d'auteur et l'utilisation de sons libres de droit."
+            mots_cles: [critique, argumentation, droits d'auteur]
+            brevet: false
+            source: "Programme cycle 4, section « Compétences travaillées »"
+  - id: attendus-fin-de-cycle
+    titre: "Attendus de fin de cycle"
+    chapitres:
+      - id: attendus
+        titre: "Les quatre attendus de fin de cycle"
+        notions:
+          - id: mobiliser-techniques-vocales
+            titre: "Mobiliser des techniques vocales et corporelles au service d'un projet"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mobiliser des techniques vocales et corporelles au service d'un projet d'interprétation ou de création."
+            mots_cles: [voix, corps, technique vocale]
+            brevet: false
+            source: "Programme cycle 4, « Attendus de fin de cycle »"
+          - id: identifier-decrire-organisation-musicale
+            titre: "Identifier, décrire, commenter une organisation musicale complexe"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Identifier, décrire, commenter une organisation musicale complexe et la situer dans un réseau de références musicales et artistiques diversifiées."
+            mots_cles: [analyse, organisation musicale, références]
+            brevet: false
+            source: "Programme cycle 4, « Attendus de fin de cycle »"
+          - id: concevoir-creer-realiser-pieces
+            titre: "Concevoir, créer et réaliser des pièces musicales"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Concevoir, créer et réaliser des pièces musicales en référence à des styles, des œuvres, des contraintes d'interprétation ou de diffusion."
+            mots_cles: [création, réalisation, styles]
+            brevet: false
+            source: "Programme cycle 4, « Attendus de fin de cycle »"
+          - id: presenter-justifier-choix
+            titre: "Présenter et justifier des choix d'interprétation et de création"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Présenter et justifier des choix d'interprétation et de création, justifier un avis sur une œuvre et défendre un point de vue en l'argumentant."
+            mots_cles: [justification, argumentation, point de vue]
+            brevet: false
+            source: "Programme cycle 4, « Attendus de fin de cycle »"
+  - id: six-domaines
+    titre: "Les six domaines de connaissances complémentaires"
+    chapitres:
+      - id: domaines
+        titre: "Timbre et espace, dynamique, temps et rythme, forme, successif et simultané, styles"
+        notions:
+          - id: timbre-et-espace
+            titre: "Le timbre et l'espace"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+            mots_cles: [timbre, espace sonore]
+            brevet: false
+            source: "Programme cycle 4, « les situations d'apprentissage… six domaines complémentaires : le timbre et l'espace ; la dynamique ; le temps et le rythme ; la forme ; le successif et le simultané ; les styles »"
+          - id: dynamique
+            titre: "La dynamique"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+            mots_cles: [dynamique, nuances]
+            brevet: false
+            source: "Programme cycle 4, « six domaines complémentaires »"
+          - id: temps-et-rythme
+            titre: "Le temps et le rythme"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+            mots_cles: [temps, rythme]
+            brevet: false
+            source: "Programme cycle 4, « six domaines complémentaires »"
+          - id: forme
+            titre: "La forme"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+            mots_cles: [forme musicale]
+            brevet: false
+            source: "Programme cycle 4, « six domaines complémentaires »"
+          - id: successif-et-simultane
+            titre: "Le successif et le simultané"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+            mots_cles: [successif, simultané, polyphonie]
+            brevet: false
+            source: "Programme cycle 4, « six domaines complémentaires »"
+          - id: styles
+            titre: "Les styles"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Domaine de connaissances mobilisé en permanence dans les activités de production et de perception, structurant l'acquisition du vocabulaire du langage musical au cycle 4."
+              - "Lexique du langage musical, grandes catégories musicales (vocale, instrumentale, électroacoustique, mixte, etc.), grandes œuvres représentatives du patrimoine français, européen, occidental et non occidental ; marqueurs stylistiques."
+            mots_cles: [styles, esthétiques musicales, patrimoine]
+            brevet: false
+            source: "Programme cycle 4, « six domaines complémentaires » et « Connaissances et compétences associées »"
+  - id: risques-auditifs-et-numerique
+    titre: "Prévention des risques auditifs et apports du numérique"
+    chapitres:
+      - id: sante-auditive-et-numerique
+        titre: "Physiologie de l'audition, notions d'acoustique, numérique"
+        notions:
+          - id: physiologie-audition
+            titre: "Physiologie et fonctionnement de l'audition ; connaissance des risques"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Physiologie et fonctionnement de l'audition ; connaissance des risques."
+              - "Environnement sonore et développement."
+              - "Notions d'acoustique et de physique du son ; notion de décibel (dB), de compression du son."
+            mots_cles: [audition, risques auditifs, acoustique, décibel]
+            brevet: false
+            source: "Programme cycle 4, « Connaissances et compétences associées »"
+          - id: apports-numerique-creation-diffusion
+            titre: "Apports du numérique à la création et à la diffusion musicales"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Apports du numérique à la création et à la diffusion musicales."
+              - "Outils numériques simples pour capter les sons (enregistrement), les manipuler (timbre) et les organiser dans le temps (séquence)."
+            mots_cles: [numérique, création, diffusion, enregistrement]
+            brevet: false
+            source: "Programme cycle 4, « Connaissances et compétences associées »"

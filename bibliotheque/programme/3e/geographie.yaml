@@ -1,0 +1,133 @@
+matiere: Géographie
+id: geographie
+niveau: 3e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 3e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-23"
+  - intitule: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve d'histoire-géographie-enseignement moral et civique"
+    reference: "Note de service du 11-9-2026, NOR MENE2623228N, BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    consulte_le: "2026-09-23"
+perimetre: >
+  Programme de géographie de la classe de 3e, dernière année du cycle 4. Le BO n° 31 du 30
+  juillet 2020 rattache explicitement trois thèmes à la « Classe de 3e » au titre des « Repères
+  annuels de programmation » : Dynamiques territoriales de la France contemporaine ; Pourquoi et
+  comment aménager le territoire ? ; La France et l'Union européenne. L'orientation de la classe
+  de 3e est de fournir aux élèves les bases de la géographie de la France et de l'Union
+  européenne ; le troisième thème de géographie est explicitement complémentaire du thème 2
+  d'histoire (construction européenne) pour la même classe. Comme pour l'histoire, le programme
+  cycle 4 ne fournit pas de liste de repères spatiaux distincte du corps du texte : les repères
+  attendus sont ceux mentionnés dans les « démarches et contenus d'enseignement » de chaque
+  sous-thème.
+brevet:
+  evalue: true
+  epreuve: >
+    Épreuve écrite d'histoire-géographie-enseignement moral et civique, 2 heures, sans pause entre
+    les deux sous-épreuves. Sous-épreuve histoire-géographie (coefficient 1,5, notée sur 40 points
+    ramenés sur 20) : exercice 1 « Analyser et comprendre des documents en histoire ou en
+    géographie » (15 points, un ou deux documents dont éventuellement un document iconographique) ;
+    exercice 2 « Maîtriser différents langages pour raisonner et utiliser des repères historiques
+    et géographiques » (25 points) = développement construit d'au moins 30 lignes (18 points, dont
+    2 points de qualité de rédaction) + question de compréhension/traitement de données par
+    croquis, schéma ou frise chronologique (7 points) — en géographie, le croquis de l'organisation
+    du territoire est un exercice explicitement prévu par le programme (thème « Aménager le
+    territoire »). Les questions mobilisent les repères spatiaux contenus dans les programmes de
+    géographie de 3e (ou, à défaut, du cycle 4). Sous-épreuve EMC distincte, coefficient 0,5 (voir
+    emc.yaml).
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: dynamiques-territoriales-france
+    titre: "Dynamiques territoriales de la France contemporaine"
+    chapitres:
+      - id: aires-urbaines-france-mondialisee
+        titre: "Les aires urbaines, une nouvelle géographie d'une France mondialisée"
+        notions:
+          - id: geographie-aires-urbaines
+            titre: "La géographie des aires urbaines en France"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre que le territoire français a profondément changé depuis 50 ans en raison de l'urbanisation, qui a modifié les genres de vie et redistribué les populations et les activités économiques."
+              - "Distinguer la diversité des espaces concernés par l'urbanisation : espaces centraux, péricentraux, périurbains, suburbains."
+              - "Analyser les relations entre les aires d'influence urbaines."
+            mots_cles: ["aire urbaine", "urbanisation", "périurbain", "France mondialisée"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+      - id: espaces-productifs-evolutions
+        titre: "Les espaces productifs et leurs évolutions"
+        notions:
+          - id: mutations-espaces-productifs
+            titre: "Les mutations des espaces productifs français"
+            niveau_programme: "3e"
+            attendus:
+              - "Analyser les mutations des espaces productifs à dominante industrielle, agricole, touristique ou d'affaires, en lien avec l'urbanisation et la mondialisation qui en redessinent la géographie."
+            mots_cles: ["espace productif", "industrie", "agriculture", "tourisme", "mondialisation"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+      - id: espaces-faible-densite
+        titre: "Les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) et leurs atouts"
+        notions:
+          - id: dynamiques-espaces-faible-densite
+            titre: "La diversité des dynamiques des espaces de faible densité"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre que les espaces de faible densité (espaces ruraux, montagnes, secteurs touristiques peu urbanisés) ne sont pas seulement des marges délaissées, mais présentent une diversité de dynamiques et d'atouts."
+              - "Identifier leurs ressources productives, notamment agricoles, touristiques, ou liées à l'accueil de nouveaux types d'habitants."
+            mots_cles: ["espace de faible densité", "espace rural", "montagne", "tourisme"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 1 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+  - id: amenager-territoire
+    titre: "Pourquoi et comment aménager le territoire ?"
+    chapitres:
+      - id: amenager-inegalites-territoires
+        titre: "Aménager pour répondre aux inégalités croissantes entre territoires français, à toutes les échelles"
+        notions:
+          - id: amenagement-du-territoire
+            titre: "L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales"
+            niveau_programme: "3e"
+            attendus:
+              - "Comprendre l'aménagement du territoire comme une tentative des pouvoirs publics de compenser les inégalités économiques, sociales et d'accès aux équipements publics entre territoires."
+              - "Connaître les outils et acteurs de l'aménagement français et européen."
+              - "Réaliser un croquis de l'organisation du territoire national à partir d'une étude de cas mise en perspective aux échelles nationale et européenne."
+            mots_cles: ["aménagement du territoire", "inégalités territoriales", "acteurs de l'aménagement"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+      - id: territoires-ultramarins
+        titre: "Les territoires ultra-marins français : une problématique spécifique"
+        notions:
+          - id: territoires-ultramarins-francais
+            titre: "La problématique spécifique des territoires ultra-marins français"
+            niveau_programme: "3e"
+            attendus:
+              - "Étudier la problématique spécifique de l'aménagement des territoires ultra-marins français à partir de cartes à différentes échelles et d'exemples concrets."
+            mots_cles: ["territoires ultra-marins", "outre-mer"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 2 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+  - id: france-union-europeenne
+    titre: "La France et l'Union européenne"
+    chapitres:
+      - id: union-europeenne-territoire-reference
+        titre: "L'Union européenne, un nouveau territoire de référence et d'appartenance"
+        notions:
+          - id: territoire-union-europeenne
+            titre: "Les caractéristiques du territoire de l'Union européenne"
+            niveau_programme: "3e"
+            attendus:
+              - "Présenter les caractéristiques du territoire de l'Union européenne en insistant sur la position du territoire français dans cette géographie européenne."
+              - "Comprendre le potentiel que représente l'UE pour la France, en intégrant l'examen d'une région transfrontalière."
+            mots_cles: ["Union européenne", "territoire européen", "région transfrontalière"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 3 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"
+      - id: france-europe-dans-le-monde
+        titre: "La France et l'Europe dans le monde"
+        notions:
+          - id: place-france-europe-monde
+            titre: "La place et l'influence de la France et de l'Europe dans le monde"
+            niveau_programme: "3e"
+            attendus:
+              - "Examiner, à partir d'exemples concrets, la question de la place et de l'influence culturelle, géopolitique, économique de la France et de l'Europe dans le monde."
+            mots_cles: ["influence géopolitique", "France dans le monde", "Europe dans le monde"]
+            brevet: true
+            source: "Programme cycle 4, classe de 3e, thème 3 Géographie (BOEN n° 31 du 30/07/2020, p. 91)"

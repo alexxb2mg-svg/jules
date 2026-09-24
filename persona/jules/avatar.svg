@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Jules">
+  <circle cx="60" cy="60" r="58" fill="#1F4E8C"/>
+  <circle cx="60" cy="56" r="30" fill="#FFFFFF"/>
+  <path d="M30 50 Q34 24 60 24 Q86 24 90 50 Q80 36 60 36 Q40 36 30 50 Z" fill="#3A2A1E"/>
+  <circle cx="49" cy="55" r="8" fill="none" stroke="#1E1446" stroke-width="3"/>
+  <circle cx="71" cy="55" r="8" fill="none" stroke="#1E1446" stroke-width="3"/>
+  <line x1="57" y1="55" x2="63" y2="55" stroke="#1E1446" stroke-width="3"/>
+  <circle cx="49" cy="56" r="3" fill="#1E1446"/>
+  <circle cx="71" cy="56" r="3" fill="#1E1446"/>
+  <path d="M46 68 Q60 76 74 68 Q70 80 60 80 Q50 80 46 68 Z" fill="#3A2A1E"/>
+  <path d="M50 70 Q60 76 70 70" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+  <rect x="36" y="92" width="48" height="16" rx="3" fill="#FFFFFF"/>
+  <line x1="60" y1="92" x2="60" y2="108" stroke="#1F4E8C" stroke-width="2"/>
+  <line x1="42" y1="97" x2="55" y2="97" stroke="#C8102E" stroke-width="2"/>
+  <line x1="42" y1="102" x2="55" y2="102" stroke="#C8102E" stroke-width="2"/>
+  <line x1="65" y1="97" x2="78" y2="97" stroke="#C8102E" stroke-width="2"/>
+  <line x1="65" y1="102" x2="78" y2="102" stroke="#C8102E" stroke-width="2"/>
+</svg>

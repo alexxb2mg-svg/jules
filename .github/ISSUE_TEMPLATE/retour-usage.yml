@@ -1,0 +1,29 @@
+name: Retour d'usage
+description: Vous avez essayé Jules avec un enfant ? Racontez-nous.
+labels: [retour-usage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ces retours sont précieux. **Ne collez aucune conversation réelle** : décrivez-la avec vos mots, sans prénom.
+  - type: input
+    id: contexte
+    attributes:
+      label: Niveau et matière
+      placeholder: 5e, français
+  - type: textarea
+    id: bien
+    attributes:
+      label: Ce qui a bien marché
+  - type: textarea
+    id: coince
+    attributes:
+      label: Ce qui a coincé
+      description: Jules a donné la réponse ? Il était trop long, trop difficile, trop scolaire ? L'enfant a décroché ?
+    validations:
+      required: true
+  - type: dropdown
+    id: moteur
+    attributes:
+      label: Moteur d'IA
+      options: [Démo, Ollama, Mistral, Anthropic, OpenAI, Autre]

@@ -1,0 +1,41 @@
+name: Fiche de cours
+description: Proposer ou demander une fiche pour une notion du programme
+labels: [contenu, fiche]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pas besoin de connaître git : collez votre fiche ci-dessous, un mainteneur la mettra au format.
+        Une bonne fiche : l'essentiel du cours, la méthode pas à pas, un exemple rédigé, deux ou trois exercices corrigés.
+  - type: input
+    id: matiere
+    attributes:
+      label: Matière et niveau
+      placeholder: Mathématiques, 3e
+    validations:
+      required: true
+  - type: input
+    id: notion
+    attributes:
+      label: Notion
+      description: Son intitulé, ou son identifiant dans bibliotheque/programme/3e/ si vous le connaissez.
+      placeholder: Théorème de Thalès
+    validations:
+      required: true
+  - type: textarea
+    id: fiche
+    attributes:
+      label: La fiche
+      description: Laissez vide si vous demandez une fiche sans la proposer.
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Programme officiel, éduscol, manuel libre (ne copiez pas un manuel protégé).
+  - type: checkboxes
+    id: accord
+    attributes:
+      label: Licence
+      options:
+        - label: J'accepte que ce contenu soit publié sous la licence MIT du projet.
+          required: true
