@@ -35,6 +35,7 @@ modules:
   - id: rapport        # resume quotidien pour le parent
     reglages:
       heure: "20:00"
+      questions: true  # une ou deux questions a poser a l'eleve, sans savoir faire l'exercice
 
 notifieurs:
   - id: fichier        # donnees/notifications/AAAA-MM-JJ.log

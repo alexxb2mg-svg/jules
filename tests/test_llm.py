@@ -78,6 +78,8 @@ def test_demo_fonctionne_sans_rien():
     moteur = demo.Brique({})
     assert "mode démo" in moteur.repondre("sys", [Tour("user", "x")])
     assert json.loads(moteur.repondre("Réponds en JSON", [], "rapide"))["niveau"] == "aucun"
+    bilan = json.loads(moteur.repondre('Réponds en JSON : {"resume": "...", "questions": []}', [], "rapide"))
+    assert bilan["questions"] == []  # en mode demo, les questions du soir viennent des notions, pas d'une IA
 
 
 def test_nettoyer_blocs_de_reflexion():

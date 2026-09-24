@@ -9,7 +9,7 @@ import pytest
 from jules.briques import ErreurBrique, classe_brique
 from jules.modules.base import Tache, extraire_json
 from jules.modules.memoire import bilan_notions
-from jules.modules.rapport import donnees_du_jour, minutes_travail
+from jules.modules.rapport import donnees_du_jour, lire_synthese, minutes_travail, questions_de_secours, texte_rapport
 from jules.modules.vigilance import doit_alerter
 from jules.planificateur import Planificateur
 
@@ -123,6 +123,69 @@ def test_rapport_du_jour(tuteur):
     assert r["envoye"] is True
     assert "[BLOQUE] Mathématiques : fractions : addition" in r["texte"]
     assert "Belle séance" in r["texte"]
+    # le modele a repondu en texte libre : une question de secours est construite sur la notion bloquee
+    assert r["questions"] == ["Sur « fractions : addition » : montre-moi jusqu'où tu arrives, et dis-moi où ça coince."]
+    assert "pas besoin de savoir faire l'exercice" in r["texte"]
+    assert r["texte"].rstrip().endswith("où ça coince.")
+
+
+def test_rapport_questions_du_modele(tuteur):
+    regle_normale = tuteur.llm.regle
+
+    def regle(systeme, tours, modele):
+        if "résumé de sa séance" in systeme:
+            return (
+                '```json\n{"resume": "Camille a travaillé les fractions.", "questions": '
+                '["Explique-moi comment tu additionnes deux fractions.", "Montre-moi ton brouillon.", "Trop."]}\n```'
+            )
+        return regle_normale(systeme, tours, modele)
+
+    tuteur.llm.regle = regle
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.echanger(conv.id, "1/2 + 1/3 ?")
+    tuteur.attendre_fond()
+    r = tuteur.module("rapport").rapport(datetime.now().astimezone().date().isoformat())
+    assert r["questions"] == ["Explique-moi comment tu additionnes deux fractions.", "Montre-moi ton brouillon."]
+    assert "Camille a travaillé les fractions." in r["texte"]
+    assert "```" not in r["texte"] and '"resume"' not in r["texte"]
+    assert "- Montre-moi ton brouillon." in r["texte"] and "Trop." not in r["texte"]
+
+
+def test_rapport_questions_desactivables(tuteur):
+    tuteur.module("rapport").reglages["questions"] = False
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.echanger(conv.id, "1/2 + 1/3 ?")
+    tuteur.attendre_fond()
+    r = tuteur.module("rapport").rapport(datetime.now().astimezone().date().isoformat())
+    assert r["questions"] == [] and "À demander" not in r["texte"]
+
+
+def test_questions_de_secours_notion_bloquee_d_abord():
+    d = {
+        "notions": {
+            "SVT : cellule": {"statut": "compris", "resume": ""},
+            "Maths : Thalès": {"statut": "en_cours", "resume": ""},
+            "Maths : nombres premiers": {"statut": "bloque", "resume": ""},
+        }
+    }
+    questions = questions_de_secours(d)
+    assert len(questions) == 2
+    assert questions[0].startswith("Sur « nombres premiers » : montre-moi")
+    assert questions[1].startswith("Sur « Thalès » : raconte-moi")
+    assert questions_de_secours({"notions": {}}) == []
+
+
+def test_lire_synthese_tolere_les_reponses_bancales():
+    assert lire_synthese("Belle séance.") == ("Belle séance.", [])
+    assert lire_synthese('{"resume": "Bien.", "questions": "Explique-moi."}') == ("Bien.", ["Explique-moi."])
+    assert lire_synthese('{"resume": "Bien.", "questions": ["", "  "]}') == ("Bien.", [])
+    assert lire_synthese('{"questions": ["' + "x" * 500 + '"]}')[1][0] == "x" * 240
+
+
+def test_rapport_vide_sans_question():
+    d = donnees_du_jour([], [], [])
+    texte = texte_rapport("Camille", "2026-09-23", d, "", ["Explique-moi."])
+    assert texte == "Camille n'a pas utilisé Jules le 2026-09-23."
 
 
 def test_minutes_travail_ignore_les_pauses():
