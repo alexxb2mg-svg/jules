@@ -1,0 +1,132 @@
+notion: equations-premier-degre-et-produits
+titre: "Résoudre des équations : premier degré, équations produit, x² = a"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Équation et inéquation/Définitions »"
+    url: "https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/D%C3%A9finitions&oldid=886171"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Équation et inéquation/Équation produit et équation quotient »"
+    url: "https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/%C3%89quation_produit_et_%C3%A9quation_quotient&oldid=977736"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Résoudre algébriquement une équation du premier degré."
+      - "Résoudre une équation produit (A × B = 0)."
+      - "Résoudre une équation de la forme x² = a."
+
+  - type: texte
+    titre: "Résoudre une équation du premier degré"
+    contenu: >-
+      Résoudre une équation d'inconnue **x**, c'est trouver toutes les valeurs de x qui rendent
+      l'égalité vraie (les **solutions**). On obtient une équation qui a les mêmes solutions en
+      **ajoutant** (ou soustrayant) un même nombre aux deux membres, ou en les **multipliant** (ou
+      divisant) par un même nombre non nul. Une équation du premier degré se ramène toujours à la
+      forme **ax = b** avec a ≠ 0 : sa solution unique est **x = b/a**. Méthode : développer si
+      besoin, regrouper les termes en x d'un côté et les nombres de l'autre, puis diviser par le
+      coefficient de x.
+
+  - type: exemple
+    enonce: "Résoudre 4x + 5 = 2x − 3."
+    etapes:
+      - "On regroupe les x à gauche et les nombres à droite : 4x − 2x = −3 − 5."
+      - "2x = −8"
+      - "x = −8 / 2 = −4"
+      - "Vérification : 4 × (−4) + 5 = −11 et 2 × (−4) − 3 = −11. Les deux membres sont égaux."
+
+  - type: texte
+    titre: "Équation produit"
+    contenu: >-
+      Un produit de deux facteurs est nul **si et seulement si** l'un au moins de ses facteurs est
+      nul. Donc **A × B = 0** équivaut à **A = 0 ou B = 0**. Pour utiliser cette règle, il faut
+      d'abord vérifier qu'un membre de l'équation est bien 0 et que l'autre est écrit comme un
+      produit ; sinon, il faut tout ramener d'un côté et factoriser. On écrit ensuite « A = 0 ou
+      B = 0 », puis on résout chacune des deux petites équations séparément.
+
+  - type: exemple
+    enonce: "Résoudre (3x − 9)(x + 2) = 0."
+    etapes:
+      - "Le membre de droite est 0 et le membre de gauche est déjà un produit de deux facteurs."
+      - "D'après la règle du produit nul : 3x − 9 = 0 ou x + 2 = 0."
+      - "3x − 9 = 0 donne x = 3 ; x + 2 = 0 donne x = −2."
+      - "L'équation a deux solutions : x = 3 ou x = −2."
+
+  - type: texte
+    titre: "Équation x² = a"
+    contenu: >-
+      Pour résoudre **x² = a** : si **a > 0**, il y a deux solutions, **√a** et **−√a** ; si **a =
+      0**, il y a une seule solution, 0 ; si **a < 0**, il n'y a **aucune solution**, car un carré
+      est toujours positif ou nul. Ne pas confondre avec 2x = a, qui se résout en divisant par 2 :
+      ici l'inconnue est élevée au carré, donc il faut prendre la racine carrée, ce qui donne en
+      général deux solutions (une positive, une négative).
+
+  - type: exercice
+    enonce: "Résoudre 7 − 2x = 3x + 22."
+    forme: nombre
+    reponse: -3
+    tolerance: 0.01
+    indices:
+      - "Regroupe les x à droite ou à gauche, au choix."
+      - "Écris d'abord l'équation sous la forme (nombre) × x = (nombre)."
+    explication: "−2x − 3x = 22 − 7, donc −5x = 15 et x = −3 (vérification : 7 − 2×(−3) = 13 et 3×(−3) + 22 = 13)."
+
+  - type: exercice
+    enonce: "Résoudre 3(x − 2) = 5x + 4."
+    forme: nombre
+    reponse: -5
+    tolerance: 0.01
+    indices:
+      - "Développe d'abord le membre de gauche."
+      - "Regroupe ensuite les termes en x d'un même côté."
+    explication: "3x − 6 = 5x + 4, donc −2x = 10 et x = −5 (vérification : −21 = −21)."
+
+  - type: exercice
+    enonce: "Résoudre (2x − 6)(x + 5) = 0. Donne la plus petite des deux solutions."
+    forme: nombre
+    reponse: -5
+    tolerance: 0.01
+    indices:
+      - "Un produit est nul si l'un au moins de ses facteurs est nul."
+      - "Résous séparément 2x − 6 = 0 et x + 5 = 0."
+    explication: "2x − 6 = 0 donne x = 3 ; x + 5 = 0 donne x = −5. Les deux solutions sont 3 et −5 ; la plus petite est −5."
+
+  - type: exercice
+    enonce: "Résoudre x² = 64. Donne la solution positive."
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    indices:
+      - "Cherche un nombre positif dont le carré vaut 64."
+      - "Il existe deux solutions, une positive et une négative : ici on ne te demande que la positive."
+    explication: "64 > 0, donc x² = 64 a deux solutions : x = 8 ou x = −8. La solution positive est 8."
+
+  - type: exercice
+    enonce: "L'équation x² = −9 a-t-elle une solution ? Réponds par 'oui' ou 'non'."
+    forme: reponse_courte
+    reponse: "non"
+    reponses_acceptees: ["Non", "aucune solution", "pas de solution"]
+    indices:
+      - "Un carré peut-il être négatif ?"
+      - "Compare le signe de −9 à ce que peut valoir un carré."
+    explication: "Un carré est toujours positif ou nul ; il ne peut jamais être égal à −9. L'équation x² = −9 n'a donc aucune solution."
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi la règle « un produit est nul si et seulement si l'un des facteurs est nul » ne
+      s'applique-t-elle pas directement à une équation comme (x − 1)(x + 3) = 5 ? Explique avec tes
+      mots.
+    indices:
+      - "Regarde bien à quoi le produit est égal dans cette équation."
+      - "La règle du produit nul ne parle que du cas où le produit vaut exactement 0."
+    criteres:
+      - "L'élève remarque que le membre de droite n'est pas 0 (il vaut 5, pas 0)."
+      - "L'élève comprend qu'il faudrait d'abord tout ramener d'un côté pour obtenir un produit égal à 0, avant de pouvoir appliquer la règle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois phrases, comment tu reconnais si une équation est du
+      premier degré, une équation produit, ou du type x² = a, et quelle méthode tu utilises pour
+      chacune.

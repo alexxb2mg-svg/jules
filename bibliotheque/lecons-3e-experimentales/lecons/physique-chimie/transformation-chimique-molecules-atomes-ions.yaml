@@ -1,0 +1,136 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: transformation-chimique-molecules-atomes-ions
+titre: "Transformation chimique : molécules, atomes, ions"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Réaction chimique »"
+    url: "https://fr.wikipedia.org/wiki/R%C3%A9action_chimique"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Conservation de la masse »"
+    url: "https://fr.wikipedia.org/wiki/Conservation_de_la_masse"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Ion »"
+    url: "https://fr.wikipedia.org/wiki/Ion"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer une transformation chimique d'un mélange ou d'une transformation physique."
+      - "Utiliser le vocabulaire atome, molécule, ion."
+      - "Interpréter une équation de réaction comme une redistribution des atomes et vérifier la conservation de la masse."
+
+  - type: texte
+    titre: "Une transformation chimique, qu'est-ce que c'est ?"
+    contenu: >-
+      Une **réaction chimique** (ou transformation chimique) est une transformation de la matière
+      au cours de laquelle des espèces chimiques, appelées **réactifs**, sont consommées pour
+      former de nouvelles espèces chimiques, appelées **produits**, aux propriétés différentes.
+      Elle se distingue d'une simple **transformation physique** (comme un changement d'état :
+      fusion, évaporation...), où la nature chimique de la matière ne change pas, ainsi que d'un
+      simple **mélange**, où les espèces initiales restent présentes telles quelles.
+
+  - type: texte
+    titre: "Molécules, atomes, ions : le vocabulaire"
+    contenu: >-
+      La matière est constituée d'**atomes**, les briques élémentaires, représentés par des
+      symboles (H, O, C, Fe...). Une **molécule** est un assemblage d'atomes liés entre eux, décrit
+      par une formule chimique : par exemple l'eau H2O (deux atomes d'hydrogène, un atome
+      d'oxygène), le dioxyde de carbone CO2, le dioxygène O2 ou le méthane CH4. Un **ion** est un
+      atome (ou un groupe d'atomes) qui a gagné ou perdu un ou plusieurs électrons et qui porte donc
+      une charge électrique : un **cation** est chargé positivement (comme l'ion sodium Na+), un
+      **anion** est chargé négativement (comme l'ion chlorure Cl−).
+
+  - type: texte
+    titre: "La conservation de la masse et l'équation de réaction"
+    contenu: >-
+      Lors d'une réaction chimique, les atomes des réactifs ne disparaissent pas : ils se
+      réorganisent pour former les produits. Depuis les travaux du chimiste Lavoisier (1777), on
+      sait qu'une réaction chimique se fait **sans variation mesurable de la masse totale** : la
+      masse des produits obtenus est égale à la masse des réactifs consommés. Une **équation de
+      réaction** traduit cette redistribution des atomes à l'aide de formules chimiques et de
+      nombres (coefficients) placés devant elles, choisis pour qu'il y ait le même nombre de chaque
+      type d'atome de part et d'autre de la flèche.
+
+  - type: exemple
+    enonce: >-
+      Vérifier que l'équation de réaction de la combustion du méthane, CH4 + 2 O2 → CO2 + 2 H2O,
+      respecte la conservation des atomes.
+    etapes:
+      - "Compter les atomes à gauche : 1 atome de carbone (dans CH4), 4 atomes d'hydrogène (dans CH4), et 2 × 2 = 4 atomes d'oxygène (dans 2 O2)."
+      - "Compter les atomes à droite : 1 atome de carbone (dans CO2), 2 × 2 = 4 atomes d'hydrogène (dans 2 H2O), et 2 atomes d'oxygène (dans CO2) + 2 atomes d'oxygène (dans 2 H2O) = 4 atomes d'oxygène."
+      - "Il y a bien le même nombre de chaque atome (1 C, 4 H, 4 O) de chaque côté : l'équation respecte la conservation des atomes."
+
+  - type: exercice
+    enonce: >-
+      On chauffe 4 g de cuivre en présence de dioxygène. Après la réaction, on obtient 5 g d'oxyde
+      de cuivre, et il ne reste plus de cuivre. D'après la conservation de la masse, quelle masse
+      de dioxygène (en g) a été consommée ?
+    forme: nombre
+    reponse: 1
+    tolerance: 0.1
+    unite: g
+    indices:
+      - "La masse totale des réactifs consommés est égale à la masse du produit obtenu."
+      - "Que faut-il ajouter à la masse de cuivre pour obtenir la masse d'oxyde de cuivre ?"
+    explication: >-
+      D'après la conservation de la masse, masse de cuivre + masse de dioxygène = masse d'oxyde de
+      cuivre, soit 4 + masse de dioxygène = 5, donc masse de dioxygène = 1 g.
+
+  - type: exercice
+    enonce: >-
+      L'équation de réaction 2 H2 + O2 → 2 H2O décrit la formation de l'eau. Combien de molécules
+      de dihydrogène (H2) faut-il faire réagir pour obtenir 2 molécules d'eau ?
+    forme: nombre
+    reponse: 2
+    tolerance: 0.1
+    unite: molécules
+    indices:
+      - "Regarde le coefficient (le nombre) placé juste devant la formule du dihydrogène dans l'équation."
+    explication: "Le coefficient devant H2 dans l'équation 2 H2 + O2 → 2 H2O est 2 : il faut donc 2 molécules de dihydrogène."
+
+  - type: exercice
+    enonce: "Laquelle de ces trois transformations est une transformation CHIMIQUE (formation d'une nouvelle substance) ?"
+    forme: qcm
+    choix:
+      - "La fonte d'un glaçon"
+      - "La combustion du bois dans une cheminée"
+      - "L'évaporation de l'eau d'une flaque"
+    reponse: 1
+    indices:
+      - "Une transformation chimique fait apparaître des espèces chimiques nouvelles, aux propriétés différentes de celles du départ."
+      - "Un changement d'état (fusion, évaporation) ne change pas la nature chimique de la matière."
+    explication: >-
+      La combustion du bois transforme le bois et le dioxygène en cendres, dioxyde de carbone et
+      eau : ce sont des espèces chimiques nouvelles, donc une transformation chimique. La fonte et
+      l'évaporation sont de simples changements d'état, des transformations physiques.
+
+  - type: exercice
+    enonce: >-
+      L'atome de sodium (Na) qui a perdu un électron devient un ion chargé positivement. Comment
+      appelle-t-on, en général, un ion chargé positivement ?
+    forme: reponse_courte
+    reponse: "cation"
+    reponses_acceptees: ["un cation", "cations"]
+    indices:
+      - "Ce mot désigne aussi ce que devient l'ion H+ ou l'ion Na+."
+      - "Il s'oppose à un autre mot, qui désigne un ion chargé négativement."
+    explication: "Un ion chargé positivement, comme Na+, s'appelle un cation ; un ion chargé négativement, comme Cl−, s'appelle un anion."
+
+  - type: question_ouverte
+    question: >-
+      Explique avec tes mots pourquoi on dit qu'une réaction chimique est une « redistribution »
+      d'atomes plutôt qu'une disparition ou une création de matière.
+    indices:
+      - "Repense à l'exemple de la combustion du méthane : les atomes de départ se retrouvent-ils tous dans les produits ?"
+    criteres:
+      - "L'élève explique que les atomes des réactifs ne sont ni détruits ni créés, mais se réorganisent pour former de nouvelles molécules dans les produits."
+      - "L'élève relie cette idée à la conservation de la masse."
+
+  - type: synthese
+    consigne: >-
+      Écris, en trois ou quatre phrases, la différence entre un atome, une molécule et un ion, puis
+      explique avec tes mots pourquoi la masse est conservée au cours d'une réaction chimique.

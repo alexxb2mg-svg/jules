@@ -1,0 +1,112 @@
+notion: geographie-aires-urbaines
+titre: "La géographie des aires urbaines en France"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Aire urbaine »"
+    url: "https://fr.vikidia.org/wiki/Aire_urbaine"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Périurbanisation »"
+    url: "https://fr.vikidia.org/wiki/P%C3%A9riurbanisation"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir ce qu'est une aire urbaine et distinguer ville-centre, banlieue et couronne périurbaine."
+      - "Comprendre que le territoire français a profondément changé depuis 50 ans en raison de l'urbanisation."
+      - "Expliquer le phénomène de périurbanisation et ses conséquences (étalement urbain, migrations pendulaires)."
+
+  - type: texte
+    titre: "Qu'est-ce qu'une aire urbaine ?"
+    contenu: >-
+      En géographie, une **aire urbaine** est un ensemble composé d'une **ville-centre**, de ses **banlieues**, et
+      de sa **couronne périurbaine**. La ville-centre et ses banlieues forment une **agglomération**. Dans les
+      communes de la couronne périurbaine, plus de 40 % des habitants travaillent dans la ville-centre : ces
+      trajets domicile-travail quotidiens produisent une **migration pendulaire**. En France, environ 85 % de la
+      population vit dans une aire urbaine ; les plus grandes sont celles de Paris, Lyon, Marseille et Toulouse.
+
+  - type: texte
+    titre: "Une France transformée par l'urbanisation"
+    contenu: >-
+      Depuis une cinquantaine d'années, le territoire français a profondément changé sous l'effet de
+      l'**urbanisation** : elle a modifié les genres de vie et redistribué les populations et les activités
+      économiques. Les aires urbaines attirent sans arrêt de nouvelles activités et de nouveaux habitants. Comme
+      les logements de la ville-centre sont chers, ces habitants s'installent de plus en plus dans la banlieue ou
+      dans la couronne périurbaine, tout en gardant leur emploi dans la ville-centre.
+
+  - type: texte
+    titre: "La périurbanisation, un espace en expansion"
+    contenu: >-
+      La **périurbanisation** (ou rurbanisation) est l'extension de l'espace habité à la périphérie d'une
+      agglomération, dans l'espace rural voisin : nouveaux quartiers, lotissements résidentiels, villes nouvelles.
+      On parle aussi d'**étalement urbain**. Ce phénomène a des conséquences : diminution des surfaces naturelles
+      et agricoles, augmentation des migrations pendulaires (avec bouchons et saturation des transports), et
+      besoin de nouveaux équipements collectifs (écoles, routes, réseaux d'eau) dans des communes qui grandissent
+      vite.
+
+  - type: exemple
+    enonce: "Explique la différence entre l'agglomération et l'aire urbaine d'une ville."
+    etapes:
+      - "L'agglomération, c'est la ville-centre et ses banlieues, c'est-à-dire l'espace bâti en continu."
+      - "L'aire urbaine ajoute à l'agglomération la couronne périurbaine : les communes où plus de 40 % des actifs travaillent dans la ville-centre, même si l'habitat y est moins dense."
+      - "L'aire urbaine est donc plus vaste que l'agglomération : elle inclut les zones liées à la ville-centre par les migrations domicile-travail."
+
+  - type: exercice
+    enonce: "Quelle proportion de la population française vit dans une aire urbaine, environ ?"
+    forme: qcm
+    choix:
+      - "Environ 85 %"
+      - "Environ 30 %"
+      - "Environ 50 %"
+    reponse: 0
+    indices:
+      - "C'est une très large majorité de la population française."
+      - "Le chiffre est proche de neuf habitants sur dix."
+    explication: "En France, environ 85 % de la population vit dans une aire urbaine, d'après l'Insee."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on les trajets quotidiens entre le domicile (couronne périurbaine) et le travail (ville-centre) ?"
+    forme: reponse_courte
+    reponse: "migration pendulaire"
+    reponses_acceptees:
+      - "migrations pendulaires"
+      - "les migrations pendulaires"
+      - "une migration pendulaire"
+    indices:
+      - "Le mot évoque un mouvement régulier, comme le balancier d'une horloge."
+      - "Cela concerne les trajets domicile-travail répétés chaque jour."
+    explication: "Ces trajets quotidiens et réguliers entre le domicile et le lieu de travail s'appellent des migrations pendulaires."
+
+  - type: exercice
+    enonce: "Pourquoi de nombreux habitants s'installent-ils dans la couronne périurbaine plutôt que dans la ville-centre ?"
+    forme: qcm
+    choix:
+      - "Parce que les logements de la ville-centre sont trop chers"
+      - "Parce que la ville-centre n'a plus d'emplois"
+      - "Parce que la loi interdit d'habiter en ville-centre"
+    reponse: 0
+    indices:
+      - "Pense au prix de l'immobilier dans les grandes villes."
+      - "Les habitants gardent souvent leur emploi dans la ville-centre malgré ce choix."
+    explication: "Les logements de la ville-centre étant trop chers, de nombreux habitants s'installent en banlieue ou dans la couronne périurbaine tout en travaillant dans la ville-centre."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : à partir d'un exemple d'aire urbaine française de ton choix (Paris, Lyon,
+      Marseille, Toulouse...), montre comment l'urbanisation a transformé le territoire depuis 50 ans. Rédige une
+      phrase d'introduction, deux exemples précis, et une phrase de conclusion.
+    indices:
+      - "Distingue ville-centre, banlieue et couronne périurbaine dans ton exemple."
+      - "Cite au moins une conséquence de la périurbanisation (étalement urbain, migrations pendulaires...)."
+    criteres:
+      - "Le développement contient une phrase d'introduction qui définit l'aire urbaine choisie et une phrase de conclusion sur les transformations du territoire."
+      - "L'élève distingue au moins deux espaces de l'aire urbaine (ville-centre, banlieue, couronne périurbaine)."
+      - "L'élève cite une conséquence précise de la périurbanisation (étalement urbain, migrations pendulaires, artificialisation des sols)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens de cette leçon : ce qu'est une
+      aire urbaine, comment elle est organisée (ville-centre, banlieue, couronne périurbaine), et un effet de la
+      périurbanisation sur le territoire français.

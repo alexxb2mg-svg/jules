@@ -1,0 +1,171 @@
+notion: thales-triangles-semblables-trigonometrie
+titre: "Thalès, triangles semblables et trigonométrie"
+duree_minutes: 35
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Triangles et parallèles/Théorème de Thalès »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangles_et_parall%C3%A8les/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s&oldid=983153"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Triangles semblables »"
+    url: "https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikiversité, « Triangle rectangle/Trigonométrie »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Trigonom%C3%A9trie&oldid=726623"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser le théorème de Thalès pour calculer une longueur."
+      - "Utiliser la réciproque du théorème de Thalès pour prouver un parallélisme (ou non)."
+      - "Reconnaître des triangles semblables et utiliser leurs propriétés."
+      - "Utiliser cos, sin et tan dans un triangle rectangle pour calculer une longueur ou un angle."
+
+  - type: texte
+    titre: "Le théorème de Thalès"
+    contenu: >-
+      Deux droites (d) et (d') sont sécantes en A ; B et M sont sur (d), C et N sur (d'). Si (MN) et
+      (BC) sont **parallèles**, alors **AM/AB = AN/AC = MN/BC**. Cela vaut dans la configuration
+      « triangle » (M sur [AB], N sur [AC]) comme dans la configuration « papillon » (A entre M et
+      B, et entre N et C). Ce théorème sert à **calculer des longueurs**, à condition d'avoir déjà
+      justifié que les deux droites sont parallèles.
+
+  - type: exemple
+    enonce: >-
+      M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC). AM = 4 cm, AB = 10 cm, AN = 3 cm et
+      BC = 7,5 cm. Calculer AC et MN.
+    etapes:
+      - "Les droites (AB) et (AC) sont sécantes en A, et (MN) est parallèle à (BC) : les conditions du théorème de Thalès sont réunies."
+      - "D'après Thalès : AM/AB = AN/AC = MN/BC, soit 4/10 = 3/AC = MN/7,5."
+      - "AC = 3 × 10 / 4 = 7,5 cm"
+      - "MN = 7,5 × 4 / 10 = 3 cm"
+
+  - type: texte
+    titre: "La réciproque de Thalès"
+    contenu: >-
+      Pour **prouver** qu'un parallélisme existe (et non le supposer), il faut la **réciproque** :
+      si **AM/AB = AN/AC** et si les points A, M, B d'une part, et A, N, C d'autre part, sont
+      alignés **dans le même ordre**, alors (MN) et (BC) sont parallèles. Si les deux rapports sont
+      **différents**, les droites ne sont **pas** parallèles. Méthode : calculer séparément les deux
+      rapports, les comparer, vérifier l'ordre des points, puis conclure.
+
+  - type: exemple
+    enonce: >-
+      A, D, B sont alignés dans cet ordre, ainsi que A, E, C. AD = 3 cm, AB = 7,5 cm, AE = 4 cm, AC
+      = 10 cm. Les droites (DE) et (BC) sont-elles parallèles ?
+    etapes:
+      - "On calcule séparément les deux rapports : AD/AB = 3/7,5 = 0,4 et AE/AC = 4/10 = 0,4."
+      - "Les deux rapports sont égaux, et les points sont alignés dans le même ordre (A, D, B et A, E, C)."
+      - "D'après la réciproque du théorème de Thalès, (DE) est parallèle à (BC)."
+
+  - type: texte
+    titre: "Triangles semblables"
+    contenu: >-
+      Deux triangles sont **semblables** quand leurs angles sont deux à deux de même mesure ; c'est
+      équivalent à dire que leurs **côtés sont proportionnels**. Le coefficient de proportionnalité
+      est le rapport d'agrandissement ou de réduction entre les deux triangles. Dans une
+      configuration de Thalès, les triangles AMN et ABC sont toujours semblables. Pour montrer que
+      deux triangles sont semblables, il suffit de montrer que **deux** paires d'angles sont égales
+      (la troisième l'est automatiquement, car la somme des angles d'un triangle vaut toujours
+      180°), ou que les rapports des côtés homologues (qui se correspondent) sont tous égaux.
+
+  - type: texte
+    titre: "La trigonométrie dans le triangle rectangle"
+    contenu: >-
+      Dans un triangle rectangle, pour un angle aigu Â : **cos Â = côté adjacent / hypoténuse** ;
+      **sin Â = côté opposé / hypoténuse** ; **tan Â = côté opposé / côté adjacent** (on retient
+      souvent ces formules avec le moyen mnémotechnique SOH-CAH-TOA). Ces formules servent à
+      calculer une **longueur** (si on connaît un angle et une longueur), ou un **angle** (si on
+      connaît deux longueurs, avec les touches cos⁻¹, sin⁻¹ ou tan⁻¹ de la calculatrice, en mode
+      degrés).
+
+  - type: exemple
+    enonce: "DEF est rectangle en E, DF = 10 cm et l'angle D̂ mesure 35°. Calculer DE au dixième."
+    etapes:
+      - "Par rapport à l'angle D̂, le côté DE est le côté adjacent, et DF est l'hypoténuse (le côté opposé à l'angle droit en E)."
+      - "On utilise donc la formule du cosinus : cos D̂ = DE / DF."
+      - "cos 35° = DE / 10, donc DE = 10 × cos 35°."
+      - "DE ≈ 8,2 cm"
+
+  - type: exercice
+    enonce: >-
+      Les droites (BE) et (CD) se coupent en A ; A est entre B et E, et entre C et D ; (BC) est
+      parallèle à (DE). AB = 4 cm, AE = 6 cm, AC = 5 cm et BC = 3,5 cm. Calcule AD.
+    forme: nombre
+    reponse: 7.5
+    tolerance: 0.05
+    unite: cm
+    indices:
+      - "C'est une configuration « papillon » de Thalès."
+      - "Écris l'égalité des trois rapports avec les lettres de la figure : AB/AE = AC/AD = BC/DE."
+    explication: "AB/AE = AC/AD, soit 4/6 = 5/AD, donc AD = 5 × 6 / 4 = 7,5 cm."
+
+  - type: exercice
+    enonce: >-
+      Le triangle ABC a pour côtés AB = 4 cm, BC = 5 cm, AC = 6 cm ; le triangle DEF a pour côtés DE
+      = 6 cm, EF = 7,5 cm, DF = 9 cm. Calcule le rapport DE/AB pour voir si les triangles sont dans
+      une proportion constante.
+    forme: nombre
+    reponse: 1.5
+    tolerance: 0.01
+    indices:
+      - "Range les côtés des deux triangles du plus petit au plus grand pour les faire correspondre."
+      - "Calcule les trois rapports (côté du grand triangle / côté correspondant du petit) et compare-les."
+    explication: "En rangeant les côtés (4;5;6) et (6;7,5;9), on trouve 6/4 = 7,5/5 = 9/6 = 1,5 : les trois rapports sont égaux, donc les triangles sont semblables, de rapport 1,5."
+
+  - type: exercice
+    enonce: >-
+      Un triangle a deux angles de 50° et 70° ; un autre triangle a deux angles de 70° et 60°. Ces
+      deux triangles sont-ils semblables ?
+    forme: qcm
+    choix:
+      - "Oui, ils ont les trois mêmes angles."
+      - "Non, leurs angles sont différents."
+      - "On ne peut pas savoir sans connaître les longueurs des côtés."
+    reponse: 0
+    indices:
+      - "La somme des angles d'un triangle vaut toujours 180° : calcule le troisième angle de chaque triangle."
+    explication: "Le premier triangle a un troisième angle de 180 − 50 − 70 = 60°, donc ses angles sont 50°, 60°, 70°. Le deuxième a un troisième angle de 180 − 70 − 60 = 50°, donc ses angles sont aussi 50°, 60°, 70°. Les deux triangles ont les mêmes angles : ils sont semblables."
+
+  - type: exercice
+    enonce: "GHI est rectangle en H, GH = 4 cm et HI = 3 cm. Calcule l'angle Ĝ, au dixième de degré."
+    forme: nombre
+    reponse: 36.9
+    tolerance: 0.2
+    unite: degrés
+    indices:
+      - "Par rapport à l'angle Ĝ, quel côté est opposé et lequel est adjacent ?"
+      - "Utilise la formule qui relie le côté opposé et le côté adjacent (celle avec tan)."
+    explication: "tan Ĝ = HI / GH = 3/4 = 0,75, donc Ĝ = tan⁻¹(0,75) ≈ 36,9°."
+
+  - type: exercice
+    enonce: >-
+      Une échelle posée contre un mur forme un angle de 40° avec le sol ; son pied est à une
+      distance x du mur et elle touche le mur à 6 m de haut. Calcule x, au dixième de mètre.
+    forme: nombre
+    reponse: 7.2
+    tolerance: 0.1
+    unite: m
+    indices:
+      - "Dessine le triangle rectangle formé par l'échelle, le mur et le sol : où se trouve l'angle droit ?"
+      - "Le côté de 6 m est opposé à l'angle de 40°, et x est le côté adjacent : quelle formule les relie ?"
+    explication: "tan 40° = 6 / x, donc x = 6 / tan 40° ≈ 7,2 m."
+
+  - type: question_ouverte
+    question: >-
+      Pour utiliser le théorème de Thalès, il ne suffit pas de savoir que deux droites sont
+      parallèles : il faut aussi une autre condition sur les points. Laquelle, et pourquoi est-elle
+      nécessaire ? Explique avec tes mots.
+    indices:
+      - "Relis la configuration décrite au début de la leçon : quelles droites doivent être sécantes ?"
+      - "Pense à ce qui permettrait d'écrire les longueurs AM, AB, AN, AC à partir d'une figure."
+    criteres:
+      - "L'élève mentionne que les deux droites qui portent les points doivent être sécantes en un même point (A)."
+      - "L'élève comprend que sans ce point commun, on ne pourrait pas écrire les rapports de longueurs à partir de ce même sommet."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, la différence entre utiliser le
+      théorème de Thalès et utiliser sa réciproque, et dans quel cas tu choisirais plutôt la
+      trigonométrie pour résoudre un problème de longueur ou d'angle.

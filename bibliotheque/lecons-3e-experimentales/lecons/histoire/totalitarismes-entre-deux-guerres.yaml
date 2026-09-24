@@ -1,0 +1,112 @@
+notion: totalitarismes-entre-deux-guerres
+titre: "Crises et expériences totalitaires en Europe entre les deux guerres"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Krach de 1929 »"
+    url: "https://fr.vikidia.org/wiki/Krach_de_1929"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Nazisme »"
+    url: "https://fr.vikidia.org/wiki/Nazisme"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Front populaire »"
+    url: "https://fr.vikidia.org/wiki/Front_populaire"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer comment le krach de 1929 déclenche une crise économique mondiale, la Grande Dépression."
+      - "Expliquer comment cette crise favorise l'arrivée d'Hitler au pouvoir en Allemagne en 1933 et l'installation d'un régime totalitaire."
+      - "Situer le Front populaire en France (1936) dans le contexte européen de « montée des périls »."
+
+  - type: texte
+    titre: "1929 : un krach boursier devient une crise mondiale"
+    contenu: >-
+      Le **krach de 1929** (24-29 octobre 1929) est un effondrement brutal de la Bourse de New York, provoqué par
+      la spéculation boursière. Il déclenche la **Grande Dépression**, une crise économique mondiale marquée par
+      des faillites bancaires, la fermeture d'usines et un chômage massif, qui dure jusqu'à la Seconde Guerre
+      mondiale.
+
+  - type: texte
+    titre: "L'Allemagne bascule dans le nazisme"
+    contenu: >-
+      En Allemagne, la Grande Dépression s'ajoute aux difficultés héritées de la défaite de 1918 et du traité de
+      Versailles : le pays est instable et le chômage y est très fort. En janvier 1933, **Adolf Hitler** devient
+      chancelier. Il installe rapidement un régime **totalitaire**, le **nazisme** : parti unique (le NSDAP),
+      opposition interdite, propagande d'État omniprésente, et une idéologie raciste et antisémite qui vise en
+      particulier les Juifs. L'Allemagne nazie noue ensuite des alliances avec l'Italie fasciste de Mussolini et
+      le Japon.
+
+  - type: texte
+    titre: "La France face à la crise : le Front populaire"
+    contenu: >-
+      En France, la crise économique et la montée des ligues d'extrême droite (émeutes du 6 février 1934)
+      inquiètent la gauche, qui s'unit en 1934 dans le **Front populaire** (Parti radical, SFIO, Parti communiste).
+      Cette alliance électorale remporte les élections de mai 1936 ; le gouvernement de **Léon Blum** (SFIO) fait
+      voter d'importantes réformes sociales (congés payés, semaine de 40 heures), dans un contexte européen de
+      « montée des périls » face aux régimes totalitaires voisins.
+
+  - type: exemple
+    enonce: "Explique le lien entre la crise de 1929 et l'arrivée d'Hitler au pouvoir en Allemagne."
+    etapes:
+      - "Le krach de 1929 provoque une crise économique mondiale : faillites bancaires, fermetures d'usines, chômage massif."
+      - "En Allemagne, cette crise s'ajoute aux difficultés de l'après-guerre (défaite de 1918, traité de Versailles) et rend le pays très instable."
+      - "Hitler et le parti nazi profitent de ce contexte de crise pour gagner des soutiens ; Hitler devient chancelier en janvier 1933, puis installe un régime totalitaire."
+
+  - type: exercice
+    enonce: "En quelle année a lieu le krach boursier de Wall Street qui déclenche la Grande Dépression ?"
+    forme: nombre
+    reponse: 1929
+    tolerance: 0
+    indices:
+      - "C'est un krach survenu fin octobre, à la Bourse de New York."
+      - "L'événement donne son nom à la crise : « krach de... » "
+    explication: "Le krach de Wall Street a lieu du 24 au 29 octobre 1929 et déclenche la Grande Dépression."
+
+  - type: exercice
+    enonce: "Quel régime politique Adolf Hitler installe-t-il en Allemagne à partir de janvier 1933 ?"
+    forme: reponse_courte
+    reponse: "un régime totalitaire"
+    reponses_acceptees:
+      - "régime totalitaire"
+      - "le nazisme"
+      - "un régime nazi"
+      - "totalitarisme"
+    indices:
+      - "C'est un régime à parti unique, avec propagande et interdiction de toute opposition."
+      - "Le nom de ce régime vient de « national-socialisme »."
+    explication: "Hitler installe un régime totalitaire, le nazisme : parti unique (NSDAP), opposition interdite, propagande d'État et idéologie raciste et antisémite."
+
+  - type: exercice
+    enonce: "Quelle coalition politique remporte les élections françaises de mai 1936 ?"
+    forme: qcm
+    choix:
+      - "Le Front populaire"
+      - "Le Parti nazi"
+      - "La Triple-Entente"
+    reponse: 0
+    indices:
+      - "C'est une alliance de plusieurs partis de gauche, formée en 1934."
+      - "Son gouvernement est dirigé par Léon Blum et fait voter les congés payés."
+    explication: "Le Front populaire (Parti radical, SFIO, Parti communiste), formé en 1934, remporte les élections de mai 1936 ; le gouvernement de Léon Blum fait voter congés payés et semaine de 40 heures."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre, en t'appuyant sur les exemples de l'Allemagne et de la France, que la
+      crise de 1929 a des conséquences politiques, pas seulement économiques. Rédige une phrase d'introduction,
+      tes deux exemples, et une phrase de conclusion.
+    indices:
+      - "En Allemagne, quel régime arrive au pouvoir et quand ?"
+      - "En France, quelle coalition se forme pour répondre à la crise et à la montée de l'extrême droite ?"
+    criteres:
+      - "Le développement contient une phrase d'introduction qui situe la crise de 1929 et une phrase de conclusion sur ses conséquences politiques."
+      - "L'élève cite l'exemple allemand (arrivée d'Hitler en 1933, régime totalitaire) avec une date précise."
+      - "L'élève cite l'exemple français (Front populaire, élections de mai 1936, réformes sociales) et relie les deux exemples à l'idée de « montée des périls » en Europe."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens de cette leçon : ce qu'est la
+      Grande Dépression, comment elle favorise l'arrivée d'Hitler au pouvoir, et ce qu'est le Front populaire en
+      France.

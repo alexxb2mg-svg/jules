@@ -1,0 +1,114 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: formation-des-mots
+titre: "La formation des mots : dérivation, composition, étymologie"
+duree_minutes: 20
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Formation des mots »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Formation_des_mots&oldid=238428798"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Dérivation lexicale »"
+    url: "https://fr.wikipedia.org/w/index.php?title=D%C3%A9rivation_lexicale&oldid=229957313"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un mot formé par dérivation d'un mot formé par composition."
+      - "Repérer le changement de catégorie grammaticale entraîné par une dérivation."
+      - "Reconnaître une locution figée et son fonctionnement comme un seul mot de sens."
+
+  - type: texte
+    titre: "Deux grands procédés"
+    contenu: >-
+      Les mots nouveaux se forment surtout par **dérivation** (ajout d'un préfixe et/ou d'un
+      suffixe à un radical : décorer → décoration) et par **composition** (assemblage de deux mots
+      ou éléments autonomes qui existent chacun par ailleurs : porte-monnaie, grand-mère,
+      tire-bouchon).
+
+  - type: texte
+    titre: "La dérivation change souvent de catégorie grammaticale"
+    contenu: >-
+      La dérivation change souvent la **catégorie grammaticale** du mot de départ : un verbe peut
+      devenir un nom (déménager → déménagement), un adjectif peut devenir un nom (beau → beauté) ou
+      un adverbe (lent → lentement). Ce changement de catégorie a des conséquences
+      orthographiques : le suffixe impose sa propre terminaison, parfois avec des modifications du
+      radical (beau → beauté, avec un seul t final).
+
+  - type: texte
+    titre: "Étymologie, néologie et locutions"
+    contenu: >-
+      L'**étymologie** éclaire l'origine d'un mot, souvent latine ou grecque (biologie, du grec
+      *bio-* : vie, et *-logie* : étude) ; la **néologie** crée des mots nouveaux pour désigner des
+      réalités nouvelles. Une **locution** est un groupe de mots figé qui fonctionne comme un seul
+      mot de sens (« pomme de terre », « tout à coup ») : elle ne se modifie pas comme un groupe
+      libre.
+
+  - type: exemple
+    enonce: "Analyser la formation de « déménagement » à partir de « déménager » : procédé et changement de catégorie."
+    etapes:
+      - "On ajoute le suffixe -ment au radical du verbe « déménager »."
+      - "C'est donc une dérivation suffixale, pas une composition (il n'y a qu'un seul mot autonome de départ)."
+      - "Le verbe « déménager » (catégorie : verbe) devient le nom « déménagement » (catégorie : nom)."
+      - "Ce changement de catégorie change l'emploi du mot dans la phrase : « déménagement » peut être sujet ou complément, ce que ne peut pas faire un verbe conjugué."
+
+  - type: exercice
+    enonce: "Former le nom dérivé de l'adjectif « beau » (avec le suffixe -té). Réponds par un seul mot."
+    forme: reponse_courte
+    reponse: "beauté"
+    reponses_acceptees: []
+    indices:
+      - "Ajoute le suffixe -té au radical de « beau »."
+      - "Attention à l'orthographe : un seul « t » avant le é final."
+    explication: "beau + suffixe -té → beauté (l'adjectif devient un nom)."
+
+  - type: exercice
+    enonce: "« Porte-monnaie » est-il formé par dérivation ou par composition ?"
+    forme: qcm
+    choix:
+      - "Dérivation, car on a ajouté un suffixe à « porte »."
+      - "Composition, car « porte » et « monnaie » sont deux mots autonomes qui existent chacun par ailleurs, assemblés sans préfixe ni suffixe."
+    reponse: 1
+    indices:
+      - "« porte » (du verbe porter) et « monnaie » existent-ils chacun comme mot autonome, en dehors de ce mot composé ?"
+      - "Y a-t-il un préfixe ou un suffixe ajouté à l'un des deux éléments ?"
+    explication: "« porte-monnaie » assemble deux mots autonomes (porte + monnaie), sans ajout de préfixe ni de suffixe : c'est une composition."
+
+  - type: exercice
+    enonce: "Dans le mot « biologie », que désigne l'élément d'origine grecque « -logie » ? Réponds en un mot."
+    forme: reponse_courte
+    reponse: "étude"
+    reponses_acceptees: ["etude", "l'etude", "l'étude"]
+    indices:
+      - "« biologie » vient du grec bio- (la vie) et -logie."
+      - "Pense à d'autres mots en « -logie » comme géologie, psychologie : que désignent-ils tous ?"
+    explication: "« -logie », du grec, signifie « étude » : la biologie est l'étude (-logie) de la vie (bio-)."
+
+  - type: exercice
+    enonce: "Peut-on écrire « des pommes de terres » au pluriel, en mettant un « s » à la fois à « pomme » et à « terre » ?"
+    forme: qcm
+    choix:
+      - "Oui, c'est un groupe nominal libre, chaque mot s'accorde normalement."
+      - "Non, « pomme de terre » est une locution figée : seul le premier mot varie au pluriel (des pommes de terre)."
+    reponse: 1
+    indices:
+      - "Une locution figée fonctionne comme un seul mot de sens : est-ce que chaque élément varie librement ?"
+      - "« de terre » précise « pomme » un peu comme un adjectif invariable dans ce groupe figé."
+    explication: "« pomme de terre » est une locution figée : elle ne se modifie pas comme un groupe libre, seul « pomme » prend la marque du pluriel (des pommes de terre)."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots pourquoi « lentement » et « porte-monnaie » ne sont pas formés par le même procédé, en précisant à chaque fois s'il y a un ou plusieurs mots autonomes de départ."
+    indices:
+      - "Compte, dans chaque mot, combien d'éléments existent déjà comme mots autonomes en dehors de ce mot."
+      - "Repère s'il y a un préfixe ou un suffixe ajouté à un seul radical, ou l'assemblage de deux mots complets."
+    criteres:
+      - "L'élève identifie « lentement » comme une dérivation (suffixe -ment ajouté à l'adjectif lent) et « porte-monnaie » comme une composition (deux mots autonomes assemblés)."
+      - "L'élève justifie la différence par le nombre de mots autonomes de départ et la présence ou l'absence d'un affixe, pas seulement par une affirmation sans preuve."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu distingues un mot formé
+      par dérivation d'un mot formé par composition, puis donne toi-même un exemple de chaque
+      (différent de ceux de cette leçon).
