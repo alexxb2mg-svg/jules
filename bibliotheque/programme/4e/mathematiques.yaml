@@ -1,0 +1,243 @@
+matiere: Mathématiques
+id: mathematiques
+niveau: 4e
+annee_scolaire: "2026-2027"
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Mathématiques"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Attendus de fin d'année de 4e — Mathématiques"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/16-maths-4e-attendus-eduscol1114746pdf-74682.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Repères annuels de progression — Mathématiques, cycle 4"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le nouveau programme de mathématiques de cycle 4 (arrêté du 18 février 2026, BO n° 10 du
+  5 mars 2026) n'entre en application qu'en classe de 5e à la rentrée 2026-2027 (et se
+  généralisera en 4e à la rentrée 2027-2028 selon le déploiement progressif annoncé). La
+  classe de 4e reste donc régie en 2026-2027 par l'ancien programme de cycle 4 (BO n° 31 du
+  30 juillet 2020), qui est écrit par cycle de 3 ans sans répartition annuelle stricte. Le
+  découpage 4e retenu ici s'appuie sur les « attendus de fin d'année de 4e » publiés par
+  éduscol (2019), qui explicitent ce qui est exigible à l'issue de la classe de 4e.
+brevet:
+  evalue: false
+themes:
+  - id: nombres-et-calculs-4e
+    titre: "Nombres et calculs"
+    chapitres:
+      - id: puissances-racine-carree
+        titre: "Puissances et racine carrée"
+        notions:
+          - id: 4e-puissances-notation-scientifique
+            titre: "Puissances de 10, écriture scientifique, préfixes d'unités"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser les puissances de 10 d'exposants positifs ou négatifs."
+              - "Associer, dans le cas des nombres décimaux, écriture décimale, écriture fractionnaire et notation scientifique."
+              - "Utiliser les préfixes de nano à giga."
+              - "Utiliser les puissances de 10 pour comparer des nombres, comparer, ranger et encadrer des nombres rationnels (positifs ou négatifs)."
+            mots_cles: [puissances de 10, notation scientifique, préfixes, comparaison de nombres]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Nombres / Comparaison de nombres »"
+          - id: 4e-racine-carree
+            titre: "Racine carrée d'un nombre positif"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser les carrés parfaits de 1 à 144 ; connaître la définition de la racine carrée d'un nombre positif."
+              - "Encadrer la racine carrée d'un nombre positif entre deux entiers consécutifs."
+              - "Utiliser la calculatrice pour déterminer une valeur approchée de la racine carrée d'un nombre positif."
+              - "Utiliser la racine carrée d'un nombre positif en lien avec des situations géométriques (théorème de Pythagore, agrandissement, réduction et aires)."
+            mots_cles: [racine carrée, carrés parfaits, encadrement, Pythagore]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Nombres / Pratiquer le calcul »"
+      - id: calcul-nombres-rationnels
+        titre: "Calcul avec les nombres rationnels"
+        notions:
+          - id: 4e-calcul-rationnels
+            titre: "Addition, soustraction, multiplication, division de nombres rationnels relatifs"
+            niveau_programme: "4e"
+            attendus:
+              - "Effectuer avec des nombres décimaux relatifs des produits et des quotients."
+              - "Calculer avec les nombres rationnels : addition, soustraction, multiplication, division ; utiliser l'inverse pour calculer."
+              - "Résoudre des problèmes avec des nombres rationnels ; utiliser les ordres de grandeur pour vérifier ses résultats."
+            mots_cles: [nombres rationnels, relatifs, quotient, inverse]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Pratiquer le calcul exact ou approché »"
+          - id: 4e-divisibilite-nombres-premiers
+            titre: "Divisibilité et nombres premiers"
+            niveau_programme: "4e"
+            attendus:
+              - "Déterminer la liste des nombres premiers inférieurs à 100."
+              - "Décomposer un nombre entier en produit de facteurs premiers."
+              - "Utiliser les nombres premiers inférieurs à 100 pour reconnaître et produire des fractions égales, simplifier des fractions."
+              - "Modéliser et résoudre des problèmes simples mettant en jeu les notions de divisibilité et de nombre premier."
+            mots_cles: [divisibilité, nombres premiers, décomposition, fractions égales]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Comprendre et utiliser les notions de divisibilité et de nombres premiers »"
+      - id: calcul-litteral-4e
+        titre: "Calcul littéral et équations"
+        notions:
+          - id: 4e-calcul-litteral-developpement
+            titre: "Développer, factoriser et réduire une expression littérale"
+            niveau_programme: "4e"
+            attendus:
+              - "Identifier la structure d'une expression littérale (somme, produit)."
+              - "Utiliser la propriété de distributivité simple pour développer un produit, factoriser une somme ou réduire une expression littérale."
+              - "Démontrer l'équivalence de deux programmes de calcul."
+            mots_cles: [calcul littéral, développer, factoriser, réduire, distributivité]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Utiliser le calcul littéral »"
+          - id: 4e-equations-premier-degre
+            titre: "Mise en équation et résolution d'une équation du premier degré"
+            niveau_programme: "4e"
+            attendus:
+              - "Introduire une lettre pour désigner une valeur inconnue et mettre un problème en équation."
+              - "Tester si un nombre est solution d'une équation."
+              - "Résoudre algébriquement une équation du premier degré."
+            mots_cles: [équation, inconnue, résolution algébrique]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Nombres et calculs — Utiliser le calcul littéral »"
+  - id: organisation-gestion-donnees-fonctions
+    titre: "Organisation et gestion de données, fonctions"
+    chapitres:
+      - id: donnees-probabilites-4e
+        titre: "Données et probabilités"
+        notions:
+          - id: 4e-diagrammes-mediane
+            titre: "Diagrammes circulaires et médiane d'une série de données"
+            niveau_programme: "4e"
+            attendus:
+              - "Lire, interpréter et représenter des données sous forme de diagrammes circulaires."
+              - "Calculer et interpréter la médiane d'une série de données de petit effectif total (inférieur ou égal à 30)."
+            mots_cles: [diagramme circulaire, médiane, série statistique]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Organisation et gestion de données, fonctions — Interpréter, représenter et traiter des données »"
+          - id: 4e-probabilites-4e
+            titre: "Probabilités : vocabulaire, événement contraire, calcul de probabilités"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser le vocabulaire des probabilités : expérience aléatoire, issues, événement, probabilité, événement certain, événement impossible, événement contraire."
+              - "Reconnaître des événements contraires et s'en servir pour calculer des probabilités."
+              - "Savoir que la probabilité d'un événement est un nombre compris entre 0 et 1 ; exprimer des probabilités sous diverses formes."
+            mots_cles: [probabilités, événement contraire, expérience aléatoire]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Organisation et gestion de données, fonctions — Comprendre et utiliser des notions élémentaires de probabilités »"
+      - id: proportionnalite-fonctions-4e
+        titre: "Proportionnalité et fonctions"
+        notions:
+          - id: 4e-proportionnalite-4e
+            titre: "Résoudre des problèmes de proportionnalité (quatrième proportionnelle, formules)"
+            niveau_programme: "4e"
+            attendus:
+              - "Reconnaître sur un graphique une situation de proportionnalité ou de non-proportionnalité."
+              - "Calculer une quatrième proportionnelle par la procédure de son choix."
+              - "Utiliser une formule liant deux grandeurs dans une situation de proportionnalité ; résoudre des problèmes de proportionnalité en géométrie (agrandissement-réduction, configuration de Thalès)."
+            mots_cles: [proportionnalité, quatrième proportionnelle, Thalès]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Organisation et gestion de données, fonctions — Résoudre des problèmes de proportionnalité »"
+          - id: 4e-notion-fonction
+            titre: "Notion de fonction : formule littérale et représentation graphique"
+            niveau_programme: "4e"
+            attendus:
+              - "Produire une formule littérale représentant la dépendance de deux grandeurs."
+              - "Représenter la dépendance de deux grandeurs par un graphique."
+              - "Utiliser un graphique représentant la dépendance de deux grandeurs pour lire et interpréter des valeurs sur l'axe des abscisses ou des ordonnées."
+            mots_cles: [fonction, formule littérale, graphique, dépendance de grandeurs]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Organisation et gestion de données, fonctions — Comprendre et utiliser la notion de fonction »"
+  - id: grandeurs-et-mesures-4e
+    titre: "Grandeurs et mesures"
+    chapitres:
+      - id: calcul-grandeurs-4e
+        titre: "Calculer avec des grandeurs mesurables"
+        notions:
+          - id: 4e-volumes-pyramide-cone
+            titre: "Volume de la pyramide et du cône, conversions de grandeurs composées"
+            niveau_programme: "4e"
+            attendus:
+              - "Calculer le volume d'une pyramide, d'un cône."
+              - "Effectuer des conversions d'unités sur des grandeurs composées (débits, vitesses)."
+            mots_cles: [volume, pyramide, cône, grandeurs composées, conversion]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Grandeurs et mesures — Calculer avec des grandeurs mesurables »"
+          - id: 4e-agrandissement-reduction-translation
+            titre: "Effet d'un agrandissement, d'une réduction et d'une translation sur les figures"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser un rapport d'agrandissement ou de réduction pour calculer des longueurs, des aires, des volumes ; construire un agrandissement ou une réduction d'une figure donnée."
+              - "Comprendre l'effet d'une translation : conservation du parallélisme, des longueurs, des aires et des angles."
+            mots_cles: [agrandissement, réduction, translation, conservation des propriétés]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Grandeurs et mesures — Comprendre l'effet de quelques transformations sur les figures géométriques »"
+  - id: espace-et-geometrie-4e
+    titre: "Espace et géométrie"
+    chapitres:
+      - id: representer-espace-4e
+        titre: "Représenter l'espace"
+        notions:
+          - id: 4e-reperage-espace
+            titre: "Repérage dans l'espace : abscisse, ordonnée, altitude"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser le vocabulaire du repérage : abscisse, ordonnée, altitude ; se repérer dans un pavé droit."
+              - "Dans un repère de l'espace, lire les coordonnées d'un point et placer un point de coordonnées données."
+            mots_cles: [repérage dans l'espace, coordonnées, pavé droit]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Espace et géométrie — Représenter l'espace »"
+          - id: 4e-patron-pyramide-cone
+            titre: "Perspective cavalière et patron de la pyramide et du cône de révolution"
+            niveau_programme: "4e"
+            attendus:
+              - "Construire et mettre en relation une représentation en perspective cavalière et un patron d'une pyramide, d'un cône de révolution."
+            mots_cles: [perspective cavalière, patron, pyramide, cône]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Espace et géométrie — Représenter l'espace »"
+      - id: geometrie-plane-demonstration-4e
+        titre: "Géométrie plane : démonstration"
+        notions:
+          - id: 4e-theoreme-pythagore
+            titre: "Théorème de Pythagore et sa réciproque"
+            niveau_programme: "4e"
+            attendus:
+              - "Calculer la longueur d'un côté d'un triangle rectangle à partir de la connaissance des longueurs des deux autres côtés."
+              - "Démontrer qu'un triangle est un triangle rectangle à partir de la connaissance des longueurs de ses côtés (réciproque du théorème de Pythagore)."
+            mots_cles: [théorème de Pythagore, triangle rectangle, réciproque]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Espace et géométrie — Utiliser les notions de géométrie plane pour démontrer »"
+          - id: 4e-cosinus-angle
+            titre: "Cosinus d'un angle aigu dans un triangle rectangle"
+            niveau_programme: "4e"
+            attendus:
+              - "Dans un triangle rectangle, utiliser le cosinus pour déterminer la mesure d'un angle."
+            mots_cles: [cosinus, triangle rectangle, angle]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Espace et géométrie — Utiliser les notions de géométrie plane pour démontrer »"
+          - id: 4e-translation-pavages
+            titre: "Translation : construction, propriétés, frises et pavages"
+            niveau_programme: "4e"
+            attendus:
+              - "Transformer une figure par translation ; identifier des translations dans des frises et des pavages."
+              - "Mobiliser les connaissances des figures, des configurations et de la translation pour déterminer des grandeurs géométriques et mener des raisonnements."
+              - "Démontrer le parallélisme de deux droites en s'appuyant sur des rapports de longueurs (théorème de Thalès et sa réciproque dans la configuration des triangles emboîtés)."
+            mots_cles: [translation, frise, pavage, théorème de Thalès]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Espace et géométrie — Utiliser les notions de géométrie plane pour démontrer »"
+  - id: algorithmique-programmation-4e
+    titre: "Algorithmique et programmation"
+    chapitres:
+      - id: programmation-4e
+        titre: "Écrire, mettre au point et exécuter un programme"
+        notions:
+          - id: 4e-algorithmique-niveaux-1-2
+            titre: "Écrire, mettre au point et exécuter un programme simple (niveaux 1 et 2)"
+            niveau_programme: "4e"
+            attendus:
+              - "Les niveaux 1 et 2 d'algorithmique et de programmation sont attendus en fin de 4e ; il est possible que certains élèves aillent au-delà."
+              - "Écrire, mettre au point, exécuter un programme."
+            mots_cles: [algorithmique, programmation, programme]
+            brevet: false
+            source: "Attendus de fin d'année de 4e, éduscol 2019, rubrique « Algorithmique et programmation »"

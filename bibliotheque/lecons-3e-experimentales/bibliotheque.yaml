@@ -1,0 +1,18 @@
+# Fiche d'identite de la bibliotheque (format : bibliotheque/README.md)
+id: lecons-3e-experimentales
+titre: "Leçons 3e expérimentales"
+type: lecons
+statut: experimentale
+licence: CC-BY-SA-4.0          # adaptation de contenus CC BY-SA : même licence (partage à l'identique)
+pays: FR
+niveaux: [3e]
+avertissement: >-
+  Bibliothèque EXPÉRIMENTALE, pour tester Jules. Leçons écrites par les contributeurs du projet à
+  partir de ressources libres (sources et licences citées dans chaque leçon), sans validation par
+  un enseignant ni par l'Éducation nationale. Elles peuvent contenir des erreurs. Le cours de
+  l'élève fait toujours foi.
+description: >-
+  Leçons guidées par notion, avec objectifs, exemple résolu, exercices d'entraînement à indices
+  progressifs, question ouverte et synthèse écrite par l'élève. Trois leçons pour l'instant :
+  théorème de Pythagore (mathématiques), accord du participe passé avec avoir (français), la
+  Première Guerre mondiale comme guerre totale (histoire). Sources et licences : SOURCES.md.

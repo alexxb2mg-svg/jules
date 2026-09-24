@@ -5,10 +5,11 @@ type: referentiel          # la liste des notions ; les autres bibliotheques s'y
 statut: experimentale
 licence: etalab-2.0        # textes officiels résumés ; le résumé est publié sous la licence du dépôt (MIT)
 pays: FR
-niveaux: [3e]
+niveaux: [5e, 4e, 3e]
 avertissement: >-
   Découpage du programme en notions fait par les contributeurs de Jules à partir des textes
   officiels (sources citées notion par notion). Ce n'est pas une publication du ministère.
 description: >-
-  Programme de 3e découpé en notions (252), avec les attendus officiels et la source de chacune.
+  Programme du cycle 4 découpé en notions, une liste par classe (5e, 4e, 3e), avec les attendus
+  officiels et la source de chacune. Seul le niveau de l'élève est chargé (classe du profil).
   Format des fichiers : SCHEMA.md.

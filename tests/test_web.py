@@ -161,3 +161,21 @@ def test_avatar_de_la_persona_est_un_png_carre(client_protege):
     largeur = int.from_bytes(r.content[16:20], "big")
     hauteur = int.from_bytes(r.content[20:24], "big")
     assert largeur == hauteur >= 256
+
+
+def test_page_cours_renvoie_la_page(client_protege):
+    """La page eleve de cours (lot D) doit repondre 200 et servir du HTML."""
+    r = client_protege.get("/cours")
+    assert r.status_code == 200
+    assert "text/html" in r.headers["content-type"]
+    assert "cours.js" in r.text
+    assert "cours.css" in r.text
+
+
+def test_cours_html_couvert_par_verification_style_script():
+    """cours.html doit bien exister et etre balaye par test_pages_sans_style_ni_script_en_ligne (glob *.html)."""
+    from pathlib import Path
+
+    statique = Path(__file__).resolve().parents[1] / "jules" / "web" / "static"
+    pages = {p.name for p in statique.glob("*.html")}
+    assert "cours.html" in pages
