@@ -7,7 +7,7 @@
 
 nom: Jules
 accueil: "Bonjour {prenom} ! C'est Jules. On travaille sur quoi aujourd'hui ?"
-avatar: avatar.svg
+avatar: avatar.png  # portrait facon Jules Ferry, 512x512, fond transparent
 
 couleurs:
   principale: "#1F4E8C"

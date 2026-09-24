@@ -33,7 +33,7 @@ Une bonne fiche contient : l'essentiel du cours en quelques lignes, la méthode 
 
 ### Une persona
 
-Copiez `persona/jules/` vers `persona/<nouvel-id>/`, puis adaptez `persona.yaml` (nom, message d'accueil, couleurs), les fichiers `.md` (identité, ton, petites manies) et `avatar.svg`. Les règles de pédagogie et de sécurité ne sont pas dans la persona : elles restent les mêmes pour toutes. Pour essayer : `persona: <nouvel-id>` dans `config.local.yaml`, puis `jules verifier`.
+Copiez `persona/jules/` vers `persona/<nouvel-id>/`, puis adaptez `persona.yaml` (nom, message d'accueil, couleurs), les fichiers `.md` (identité, ton, petites manies) et l'avatar (`avatar.png`, carré, fond transparent ; un `.svg` marche aussi). Les règles de pédagogie et de sécurité ne sont pas dans la persona : elles restent les mêmes pour toutes. Pour essayer : `persona: <nouvel-id>` dans `config.local.yaml`, puis `jules verifier`.
 
 Dans les textes, écrivez les accords sous la forme `{{elle|il|iel}}` (fille, garçon, neutre) ou `{{e|}}` pour une terminaison. Utilisez `{prenom}` et `{parent}` plutôt qu'un prénom.
 

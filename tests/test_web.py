@@ -133,3 +133,31 @@ def test_faux_png_refuse(client_protege):
         files=[("photos", ("exo.png", io.BytesIO(b"<script>alert(1)</script>"), "image/png"))],
     )
     assert r.status_code == 400
+
+
+def test_icones_servies_sans_code(client_protege):
+    """Icone d'onglet, d'ecran d'accueil et manifeste : publics (le navigateur les charge avant le code)."""
+    for chemin, debut in [
+        ("/static/favicon.ico", b"\x00\x00\x01\x00"),
+        ("/static/icone-192.png", b"\x89PNG"),
+        ("/static/icone-512.png", b"\x89PNG"),
+        ("/static/apple-touch-icon.png", b"\x89PNG"),
+    ]:
+        r = client_protege.get(chemin)
+        assert r.status_code == 200, chemin
+        assert r.content.startswith(debut), chemin
+    manifeste = client_protege.get("/static/manifest.webmanifest").json()
+    assert manifeste["short_name"] == "Jules"
+    assert {i["sizes"] for i in manifeste["icons"]} == {"192x192", "512x512"}
+    page = client_protege.get("/").text
+    assert 'rel="manifest"' in page
+    assert 'rel="apple-touch-icon"' in page
+
+
+def test_avatar_de_la_persona_est_un_png_carre(client_protege):
+    r = client_protege.get("/api/persona/avatar")
+    assert r.status_code == 200
+    assert r.content.startswith(b"\x89PNG")
+    largeur = int.from_bytes(r.content[16:20], "big")
+    hauteur = int.from_bytes(r.content[20:24], "big")
+    assert largeur == hauteur >= 256
