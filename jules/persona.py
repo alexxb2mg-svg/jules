@@ -62,7 +62,7 @@ def charger_persona(dossier: Path, variables: dict[str, str] | None = None, genr
             raise ErreurPersona(f"Fichier de persona manquant : {entree['fichier']}")
         texte = remplir(chemin.read_text(encoding="utf-8"), variables, genre)
         sections.append((str(entree.get("titre") or chemin.stem), texte.strip()))
-    avatar = _dans(dossier, str(brut.get("avatar") or "avatar.svg"))
+    avatar = _dans(dossier, str(brut.get("avatar") or "avatar.png"))
     return Persona(
         id=dossier.name,
         nom=str(brut.get("nom") or dossier.name),

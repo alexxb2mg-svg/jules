@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/jules-logo.png" alt="Jules, petit personnage barbu à nœud papillon, à son pupitre" width="220"></p>
+
 # Jules
 
 **Un tuteur de devoirs libre et gratuit pour les collégiens. Il guide pas à pas et ne donne jamais la réponse.**
