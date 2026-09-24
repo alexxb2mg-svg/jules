@@ -45,7 +45,7 @@ _NOMS_TYPE: dict[str, str] = {
     "carte_mentale": "une carte mentale",
     "fiche": "une fiche",
     "quiz": "un quiz",
-    "cartes_memoire": "des cartes memoire",
+    "cartes_memoire": "des cartes mémoire",
 }
 
 _NOMS_ELEMENTS: dict[str, str] = {
@@ -107,7 +107,7 @@ def valider_champ(type_support: str, chemin: list[str | int], valeur: str) -> No
     nom_liste, champs = _verifier_type(type_support)
     if len(valeur) > TAILLE_CHAMP_MAX:
         raise ErreurStudio(
-            f"C'est trop long ({len(valeur)} caracteres, {TAILLE_CHAMP_MAX} maximum) : "
+            f"C'est trop long ({len(valeur)} caractères, {TAILLE_CHAMP_MAX} au maximum) : "
             "essaie de resumer en une phrase ou deux."
         )
     if list(chemin) == ["titre"]:
@@ -121,7 +121,7 @@ def valider_champ(type_support: str, chemin: list[str | int], valeur: str) -> No
         and chemin[2] in champs
     )
     if not chemin_valide:
-        raise ErreurStudio(f"Ce champ n'existe pas pour {_NOMS_TYPE[type_support]} : verifie l'emplacement.")
+        raise ErreurStudio(f"Ce champ n'existe pas pour {_NOMS_TYPE[type_support]} : vérifie l'emplacement.")
 
 
 def _normaliser_pour_comparaison(texte: str) -> str:
@@ -154,9 +154,24 @@ def _verifier_nombre_elements(support: Support) -> None:
     minimum = _MINIMUM_ELEMENTS[support.type]
     if nombre < minimum:
         raise ErreurStudio(
-            f"Encore un peu court pour etre un support utile : il faut au moins {minimum} "
+            f"Encore un peu court pour être un support utile : il faut au moins {minimum} "
             f"{_NOMS_ELEMENTS[support.type]} pour {_NOMS_TYPE[support.type]}."
         )
+
+
+# Un champ de l'eleve est considere comme recopie s'il est identique a un texte de reference, ou
+# s'il en reprend un passage d'au moins ce nombre de mots (en dessous, une coincidence est
+# normale : « le theoreme de Pythagore », « en 1905 »...).
+MOTS_MIN_PASSAGE_RECOPIE = 8
+
+
+def _est_recopie(valeur_normalisee: str, references: set[str]) -> bool:
+    if valeur_normalisee in references:
+        return True
+    if len(valeur_normalisee.split()) < MOTS_MIN_PASSAGE_RECOPIE:
+        return False
+    motif = f" {valeur_normalisee} "
+    return any(motif in f" {reference} " for reference in references)
 
 
 def pret_a_valider(support: Support, lecon_textes: list[str], messages_jules: list[str]) -> None:
@@ -171,10 +186,10 @@ def pret_a_valider(support: Support, lecon_textes: list[str], messages_jules: li
         valeur = valeur.strip()
         if not valeur:
             continue
-        if _normaliser_pour_comparaison(valeur) in references:
+        if _est_recopie(_normaliser_pour_comparaison(valeur), references):
             raise ErreurStudio(
-                f"Ce que tu as ecrit dans « {nom_champ} » est recopie mot pour mot de la lecon "
-                "ou d'un message de Jules : reecris-le avec tes propres mots."
+                f"Ce que tu as écrit dans « {nom_champ} » est recopié mot pour mot de la leçon "
+                "ou d'un message de Jules : réécris-le avec tes propres mots."
             )
 
 

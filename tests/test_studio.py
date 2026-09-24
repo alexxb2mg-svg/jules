@@ -11,6 +11,7 @@ from typing import Any
 import pytest
 
 from jules.studio import (
+    MOTS_MIN_PASSAGE_RECOPIE,
     STATUTS_SUPPORT,
     TAILLE_CHAMP_MAX,
     TYPES_SUPPORT,
@@ -386,3 +387,27 @@ def test_ressemble_a_un_support_redige_laisse_passer_une_question_ou_remarque_co
 def test_ressemble_a_un_support_redige_refuse_un_texte_vide():
     assert ressemble_a_un_support_redige("") is False
     assert ressemble_a_un_support_redige("   ") is False
+
+
+LECON_LONGUE = (
+    "Le théorème de Pythagore. Dans un triangle rectangle, le carré de la longueur de "
+    "l'hypoténuse est égal à la somme des carrés des longueurs des deux autres côtés. "
+    "On l'utilise pour calculer une longueur manquante."
+)
+
+
+def test_pret_a_valider_refuse_un_passage_recopie_d_un_texte_plus_long():
+    passage = "le carré de la longueur de l'hypoténuse est égal à la somme des carrés"
+    assert len(passage.split()) >= MOTS_MIN_PASSAGE_RECOPIE
+    s = support("fiche", fiche_contenu(passage, "Ça sert à trouver un côté quand on connaît les deux autres."))
+    with pytest.raises(ErreurStudio):
+        pret_a_valider(s, lecon_textes=[LECON_LONGUE], messages_jules=[])
+
+
+def test_pret_a_valider_tolere_une_courte_expression_reprise_de_la_lecon():
+    s = support(
+        "fiche",
+        fiche_contenu("Triangle rectangle", "Ça sert à trouver un côté quand on connaît les deux autres."),
+        titre="Mon résumé",
+    )
+    pret_a_valider(s, lecon_textes=[LECON_LONGUE], messages_jules=[])
