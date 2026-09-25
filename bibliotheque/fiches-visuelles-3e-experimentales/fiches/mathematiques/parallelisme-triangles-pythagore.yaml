@@ -73,3 +73,10 @@ blocs:
       - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
       - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
     jules: "Entraîne-toi aussi avec la réciproque : elle se confond souvent avec le théorème."
+
+  - id: schema
+    type: schema
+    titre: "Quel théorème utiliser ?"
+    svg: "parallelisme-triangles-pythagore.svg"
+    jules: "Le théorème calcule une longueur, la réciproque prouve un angle droit : ce ne sont pas les mêmes questions."
+

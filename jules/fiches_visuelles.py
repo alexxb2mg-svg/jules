@@ -38,10 +38,12 @@ from jules.bibliotheques import (
     Notion,
     lire_identite,
 )
+from jules.svg_sur import ErreurSvg, nettoyer_svg
 
 # --- constantes du format --------------------------------------------------------
 
-TYPES_BLOCS = ("formule", "carte", "graphe", "methode", "piege", "exemple", "renfort")
+TYPES_BLOCS = ("formule", "carte", "graphe", "methode", "piege", "exemple", "renfort", "schema")
+TAILLE_MAX_SVG = 100_000  # octets : un schema est un dessin simple, pas une image lourde
 ID_ATTENDUS = "attendus"  # adresse reservee : reprend automatiquement les attendus du referentiel
 _ID_BLOC = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
@@ -383,6 +385,36 @@ def _verifier_renfort(d: dict[str, Any], ou: str) -> dict[str, Any]:
     return {"liens": liens}
 
 
+def _verifier_schema(d: dict[str, Any], ou: str, dossier_fiche: Path) -> dict[str, Any]:
+    """Bloc `schema` : un SVG nettoye par liste blanche (jules/svg_sur.py), jamais servi brut.
+
+    `svg` est soit un SVG en ligne (commence par `<svg`), soit le nom d'un fichier .svg a cote
+    de la fiche (jamais un chemin absolu ni `..` : voir le controle ci-dessous, meme regle que
+    pour l'entree d'un outil, jules/outils.py `_controler_entree`).
+    """
+    titre = _texte(d.get("titre"), "titre", ou, limite=LIMITE_TITRE)
+    brut_svg = str(d.get("svg") or "").strip()
+    if not brut_svg:
+        raise ErreurFicheVisuelle(f"{ou} : champ 'svg' manquant")
+    if brut_svg.lstrip().startswith("<svg"):
+        source_svg = brut_svg
+    else:
+        chemin = Path(brut_svg)
+        if chemin.is_absolute() or ".." in chemin.parts or chemin.suffix.lower() != ".svg":
+            raise ErreurFicheVisuelle(f"{ou} : 'svg' doit etre un SVG en ligne ou un fichier .svg local ({brut_svg!r})")
+        fichier = dossier_fiche / chemin
+        if not fichier.is_file():
+            raise ErreurFicheVisuelle(f"{ou} : fichier SVG introuvable ({brut_svg})")
+        if fichier.stat().st_size > TAILLE_MAX_SVG:
+            raise ErreurFicheVisuelle(f"{ou} : fichier SVG trop gros ({brut_svg})")
+        source_svg = fichier.read_text(encoding="utf-8")
+    try:
+        propre = nettoyer_svg(source_svg, ou=ou)
+    except ErreurSvg as err:
+        raise ErreurFicheVisuelle(str(err)) from err
+    return {"titre": titre, "svg": propre}
+
+
 _VERIFICATEURS = {
     "formule": _verifier_formule,
     "carte": _verifier_carte,
@@ -394,7 +426,7 @@ _VERIFICATEURS = {
 }
 
 
-def _verifier_bloc(bloc: dict[str, Any], position: int, nom: str) -> BlocFiche:
+def _verifier_bloc(bloc: dict[str, Any], position: int, nom: str, dossier_fiche: Path) -> BlocFiche:
     ou = f"{nom}, bloc {position + 1}"
     if not isinstance(bloc, dict):
         raise ErreurFicheVisuelle(f"{ou} : un objet est attendu")
@@ -407,7 +439,8 @@ def _verifier_bloc(bloc: dict[str, Any], position: int, nom: str) -> BlocFiche:
     if type_ not in TYPES_BLOCS:
         raise ErreurFicheVisuelle(f"{ou} : type {type_!r} inconnu (attendu : {', '.join(TYPES_BLOCS)})")
     jules = _verifier_jules(bloc.get("jules"), ou)
-    donnees = _VERIFICATEURS[type_]({k: v for k, v in bloc.items() if k not in ("id", "type", "jules")}, ou)
+    champs = {k: v for k, v in bloc.items() if k not in ("id", "type", "jules")}
+    donnees = _verifier_schema(champs, ou, dossier_fiche) if type_ == "schema" else _VERIFICATEURS[type_](champs, ou)
     return BlocFiche(id=identifiant, type=type_, donnees=donnees, jules=jules)
 
 
@@ -447,7 +480,7 @@ def lire_fiche_visuelle(chemin: Path, notions: dict[str, Notion], bibliotheque: 
     blocs_bruts = brut.get("blocs") or []
     if not isinstance(blocs_bruts, list) or not MIN_BLOCS <= len(blocs_bruts) <= MAX_BLOCS:
         raise ErreurFicheVisuelle(f"{nom} : entre {MIN_BLOCS} et {MAX_BLOCS} blocs attendus")
-    blocs = [_verifier_bloc(b, i, nom) for i, b in enumerate(blocs_bruts)]
+    blocs = [_verifier_bloc(b, i, nom, chemin.parent) for i, b in enumerate(blocs_bruts)]
     ids = [b.id for b in blocs]
     if len(ids) != len(set(ids)):
         raise ErreurFicheVisuelle(f"{nom} : des ids de blocs sont en double")

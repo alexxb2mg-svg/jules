@@ -116,13 +116,20 @@ def test_fiche_valide_se_lit(notions, biblio):
 
 @pytest.mark.parametrize("notion_id", NOTIONS_ATTENDUES)
 def test_les_cinq_fiches_publiees_sont_valides(notions, biblio, notion_id):
-    """Les 5 fiches livrees existent, sont valides, et couvrent les 8 types de blocs."""
+    """Les 5 fiches livrees existent, sont valides, et couvrent au moins les 7 types de base.
+
+    La fiche Pythagore porte en plus un bloc `schema` (premier schema reel, voir docs/EXTENSIONS.md
+    et jules_architecture_plugins.md) : elle a donc un type de plus que les quatre autres.
+    """
     chemin = BIBLIOTHEQUES / BIBLIO_ID / "fiches" / "mathematiques" / f"{notion_id}.yaml"
     assert chemin.is_file(), f"fiche manquante : {chemin}"
     fiche = lire_fiche_visuelle(chemin, notions, biblio)
     assert fiche.notion == notion_id
     types = {b.type for b in fiche.blocs}
-    assert types == {"formule", "carte", "graphe", "methode", "piege", "exemple", "renfort"}
+    types_attendus = {"formule", "carte", "graphe", "methode", "piege", "exemple", "renfort"}
+    if notion_id == "parallelisme-triangles-pythagore":
+        types_attendus = types_attendus | {"schema"}
+    assert types == types_attendus
     for bloc in fiche.blocs:
         assert bloc.jules, f"{notion_id}, bloc {bloc.id} : commentaire 'jules' manquant"
 
