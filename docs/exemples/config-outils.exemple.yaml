@@ -1,0 +1,8 @@
+# Exemple de configuration pour activer le module "outils" (étape 3, docs/OUTILS-CONTRAT.md).
+# Ce fichier n'est PAS chargé automatiquement : à copier dans config.yaml (bloc "modules") une
+# fois l'intégration décidée (voir la section 6 de docs/OUTILS-CONTRAT.md et la description de
+# la pull request de l'étape 3 pour l'accrochage au bloc `type: outil` des leçons).
+
+modules:
+  - id: outils
+    actif: false  # mettre à true pour servir les outils sous /api/eleve/outils

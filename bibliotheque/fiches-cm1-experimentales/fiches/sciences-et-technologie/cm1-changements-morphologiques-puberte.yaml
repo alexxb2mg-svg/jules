@@ -1,0 +1,61 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-changements-morphologiques-puberte
+declencheurs:
+- puberté
+- grandir vite
+- changements du corps
+- pilosité
+- courbe de croissance
+- changer à l'adolescence
+- poils
+- est-ce que c'est normal
+essentiel: 'À partir de documents, on repère les principaux changements morphologiques qui se produisent à la puberté
+  : augmentation de la taille et de la masse corporelle, développement de la pilosité, développement des seins et
+  élargissement des hanches, développement des organes génitaux externes.
+
+  La puberté se produit à des âges différents selon les individus, elle n''a pas les mêmes effets chez tout le monde,
+  et ces changements sont normaux.
+
+  À partir de l''exploitation de courbes de croissance, on met en évidence que la puberté est une phase d''augmentation
+  rapide de la taille et de la masse corporelle, et que cette phase ne se produit pas au même moment selon les personnes.'
+methode:
+- Observer des documents décrivant les changements du corps à la puberté.
+- 'Repérer les principaux changements : taille, masse corporelle, pilosité, seins, hanches, organes génitaux externes.'
+- Lire une courbe de croissance pour repérer la phase où la taille et la masse augmentent rapidement.
+- Comparer plusieurs courbes de croissance pour constater que cette phase arrive à des moments différents selon
+  les personnes.
+erreurs_frequentes:
+- Croire que la puberté se produit au même âge pour tout le monde.
+- Croire qu'un changement qui arrive plus tôt ou plus tard que chez les camarades est anormal.
+- Confondre les changements morphologiques de la puberté avec d'autres changements du corps qui n'y sont pas liés.
+exemple:
+  enonce: Sur une courbe de croissance, comment repérer la période de la puberté ?
+  solution: 'On repère la période où la courbe de taille (ou de masse) monte beaucoup plus vite que d''habitude
+    : c''est la phase d''augmentation rapide caractéristique de la puberté.'
+exercices:
+- enonce: Cite trois changements morphologiques qui peuvent se produire à la puberté.
+  indices:
+  - Pense à la taille, aux poils, à la silhouette.
+  solution: 'Par exemple : augmentation de la taille, développement de la pilosité, développement des organes génitaux
+    externes (ou masse corporelle, seins, hanches).'
+- enonce: Deux camarades du même âge n'ont pas commencé leur puberté au même moment. Est-ce normal ?
+  indices:
+  - Relis la deuxième phrase de l'essentiel.
+  solution: 'Oui, c''est normal : la puberté se produit à des âges différents selon les individus.'
+- enonce: Que montre la comparaison de plusieurs courbes de croissance d'élèves différents ?
+  indices:
+  - Est-ce que la phase d'augmentation rapide arrive au même moment pour tous ?
+  solution: Elle montre que la phase d'augmentation rapide de la puberté ne se produit pas au même moment selon
+    les personnes.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 15
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

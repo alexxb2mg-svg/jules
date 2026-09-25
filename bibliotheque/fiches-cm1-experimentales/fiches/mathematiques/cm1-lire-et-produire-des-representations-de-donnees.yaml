@@ -1,0 +1,63 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-lire-et-produire-des-representations-de-donnees
+declencheurs:
+- tableau
+- diagramme
+- graphique
+- courbe
+- enquête
+- combien de garçons
+- combien de filles
+essentiel: 'On recueille des données (une enquête, des mesures) et on les présente dans un tableau, un diagramme
+  en barres, ou un ensemble de points dans un repère (parfois relié par une courbe).
+
+  Pour lire un diagramme ou une courbe, on utilise les axes et leur graduation (l''échelle).
+
+  Un tableau peut avoir une seule entrée (une seule information par ligne) ou une double entrée (deux informations
+  croisées, par exemple filles/garçons et moyen de transport).
+
+  On résout des problèmes en une ou plusieurs étapes à partir des données d''un tableau, d''un diagramme en barres
+  ou d''une courbe.'
+methode:
+- Repérer le titre et les axes ou colonnes du tableau/diagramme (ce qu'ils représentent).
+- Lire l'échelle des axes avant de lire une valeur.
+- Prélever les données utiles pour répondre à la question.
+- Faire les calculs nécessaires (somme, comparaison...) à partir des données lues.
+vocabulaire:
+- terme: tableau à double entrée
+  definition: tableau qui croise deux informations, par exemple filles/garçons et moyen de transport
+erreurs_frequentes:
+- Lire la mauvaise graduation ou se tromper d'échelle sur un axe.
+- Confondre les lignes et les colonnes d'un tableau à double entrée.
+- Répondre sans avoir vérifié le titre ou la légende du graphique.
+exemple:
+  enonce: Un diagramme en barres montre les moyens de transport des élèves de CM1. La barre « bus » atteint 12.
+    Que représente ce nombre ?
+  solution: Ce nombre représente le nombre d'élèves de CM1 qui viennent à l'école en bus.
+exercices:
+- enonce: Dans un tableau à double entrée, une ligne montre les filles et une colonne montre « à pied ». Comment
+    trouver combien de filles viennent à pied ?
+  indices:
+  - Cherche la case à l'intersection de la ligne et de la colonne.
+  solution: On regarde la case qui croise la ligne « filles » et la colonne « à pied ».
+- enonce: Sur une courbe des précipitations, comment savoir quel mois il a le plus plu ?
+  indices:
+  - Regarde le point le plus haut de la courbe.
+  solution: 'On cherche le point de la courbe qui est le plus haut : il correspond au mois où il a le plus plu.'
+- enonce: Un diagramme donne 11 filles dans une classe et un total de 24 élèves. Combien y a-t-il de garçons ?
+  indices:
+  - Le total, ce sont les filles plus les garçons.
+  solution: 24 − 11 = 13. Il y a 13 garçons.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 23-24
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

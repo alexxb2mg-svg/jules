@@ -1,0 +1,93 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Enseignement moral et civique
+id: emc
+niveau: 4e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP — séquence « Quatrième : Défendre les droits et les libertés »"
+    reference: "BO n° 24 du 13 juin 2024, arrêté du 29 mai 2024 (NOR : MENE2411598A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Ressources d'accompagnement pour l'enseignement moral et civique au collège — application progressive du nouveau programme"
+    reference: "éduscol, application confirmée en classe de 4e à la rentrée 2025"
+    url: "https://eduscol.education.gouv.fr/4752/ressources-d-accompagnement-pour-l-enseignement-moral-et-civique-au-college"
+    consulte_le: "2026-09-24"
+perimetre: >
+  L'EMC change de programme à la rentrée 2025 en classe de 4e : c'est le NOUVEAU programme
+  publié au BO n° 24 du 13 juin 2024 (arrêté du 29 mai 2024) qui s'applique, et non l'ancien
+  programme d'EMC du cycle 4 (BO du 26 juillet 2018). L'application est progressive : rentrée
+  2024 (CP, CM1, 5e), rentrée 2025 (CE1, CM2, 4e), rentrée 2026 (CE2, 6e, 3e) — la 4e est donc
+  sur ce nouveau texte depuis la rentrée 2025, et le reste en 2026-2027. Le programme 2024
+  structure la classe de 4e en une séquence intitulée « Quatrième : Défendre les droits et les
+  libertés », composée de deux volets thématiques : « L'État de droit et les libertés » (9
+  heures) et « Défendre le cadre démocratique : sécurité et défense nationale » (9 heures). Le
+  volume horaire annuel d'EMC au collège est de 30 minutes hebdomadaires.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 4e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 4e-defendre-les-droits-et-les-libertes
+    titre: "Quatrième : Défendre les droits et les libertés"
+    chapitres:
+      - id: 4e-etat-de-droit-et-libertes
+        titre: "L'État de droit et les libertés (9 heures)"
+        notions:
+          - id: 4e-libertes-individuelles-et-collectives
+            titre: "Libertés individuelles et libertés collectives, garanties par les textes fondamentaux"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que les libertés individuelles permettent aux citoyennes et citoyens d'être maîtres de leurs mouvements et de leurs choix (circulation, mariage), de leurs opinions et croyances, ainsi que de les exprimer."
+              - "Comprendre que les libertés collectives permettent de s'associer et de s'engager dans la vie de la société (droit de réunion, d'association, de manifestation, droit syndical, liberté de la presse)."
+              - "À partir de la Déclaration des droits de l'homme et du citoyen (préambule, art. 2), de la Déclaration universelle des droits de l'homme (préambule, art. 1 et 2) et de la Convention internationale des droits de l'enfant, comprendre que ces textes garantissent des droits et libertés au quotidien."
+            mots_cles: [libertés individuelles, libertés collectives, DDHC, CIDE]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Quatrième, « L'État de droit et les libertés »"
+          - id: 4e-liberte-expression-et-liberte-presse
+            titre: "Liberté d'expression et liberté de la presse : définition, fondement en droit, enjeux, limites"
+            niveau_programme: "4e"
+            attendus:
+              - "À partir d'un exemple, étudier différents aspects de la liberté d'expression et de la liberté de la presse (définition, fondement en droit, enjeux, menaces, limites)."
+              - "[EMI] Travailler sur la liberté d'expression en ligne."
+            mots_cles: [liberté d'expression, liberté de la presse, EMI]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Quatrième, « L'État de droit et les libertés »"
+          - id: 4e-ordre-public-et-limites-des-libertes
+            titre: "Ordre public : encadrement légal des libertés"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que les libertés sont encadrées par la loi et limitées, en premier lieu par les libertés des autres (art. 4 DDHC), ensuite par la défense de l'ordre public (sécurité, tranquillité, salubrité, dignité de la personne humaine)."
+              - "À partir de l'exemple de la lutte contre les dérives sectaires, montrer que la loi ne définit pas la secte mais permet de réprimer les dérives portant atteinte à l'ordre public, aux droits fondamentaux, à la sécurité ou à l'intégrité des personnes."
+            mots_cles: [ordre public, dérive sectaire, limitation des libertés]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Quatrième, « L'État de droit et les libertés »"
+      - id: 4e-defendre-cadre-democratique-securite-defense
+        titre: "Défendre le cadre démocratique : sécurité et défense nationale (9 heures)"
+        notions:
+          - id: 4e-ordre-public-souverainete-nationale
+            titre: "Sûreté, ordre public et souveraineté nationale : forces de sécurité intérieure et armées"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que la « sûreté » fait partie des droits affirmés par la DDHC (art. 2) et que les forces de sécurité intérieure (police, gendarmerie, pompiers, douanes) répondent à cette exigence."
+              - "Comprendre que les forces armées ont vocation à défendre la souveraineté nationale et à servir la Nation dans le cadre de traités ou d'organisations internationales comme l'ONU."
+              - "Aborder des exemples (plan Vigipirate, crise du Covid) ; appréhender les missions des forces de sécurité et des armées."
+            mots_cles: [sûreté, forces armées, sécurité intérieure, défense nationale]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Quatrième, « Défendre le cadre démocratique : sécurité et défense nationale »"
+          - id: 4e-nouveaux-enjeux-defense-cyberdefense
+            titre: "Nouveaux enjeux de défense : guerre informationnelle et cyberdéfense"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre que la défense doit affronter de nouveaux enjeux comme la guerre informationnelle et la cyberdéfense."
+              - "[EMI] À partir de l'étude de tentatives d'ingérences étrangères repérées par VIGINUM, comprendre les mécanismes et enjeux de la guerre informationnelle."
+              - "Comprendre que la police de l'environnement assure la protection du droit de chacun à vivre dans un environnement sain et équilibré."
+            mots_cles: [cyberdéfense, guerre informationnelle, VIGINUM, EMI]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Quatrième, « Défendre le cadre démocratique : sécurité et défense nationale »"

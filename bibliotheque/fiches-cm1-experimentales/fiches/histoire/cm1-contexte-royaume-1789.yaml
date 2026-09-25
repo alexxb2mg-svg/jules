@@ -1,0 +1,49 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-contexte-royaume-1789
+declencheurs:
+- avant la révolution
+- les lumières
+- cahiers de doléances
+- état des choses en 1789
+- philosophe des lumières
+couverture: 'Ne couvre que ce que dit le programme : le contexte social, économique et intellectuel du royaume en
+  1789, les idées des Lumières, et le repère du printemps 1789 (cahiers de doléances, États-Généraux).'
+essentiel: 'En 1789, le royaume de France connaît un contexte social, économique et intellectuel particulier.
+
+  Des idées nouvelles circulent : ce sont les idées des Lumières, portées par des philosophes.
+
+  Au printemps 1789, des cahiers de doléances sont rédigés, et les États-Généraux se réunissent.'
+methode:
+- 'Distinguer les trois aspects du contexte de 1789 : social, économique, intellectuel.'
+- Citer au moins une idée des Lumières.
+- Relier le printemps 1789 aux cahiers de doléances et à la réunion des États-Généraux.
+vocabulaire:
+- terme: les Lumières
+  definition: mouvement d'idées de philosophes dont les idées circulent en France en 1789
+erreurs_frequentes:
+- 'Oublier qu''il y a trois aspects au contexte de 1789 : social, économique et intellectuel.'
+- 'Placer la rédaction des cahiers de doléances à une mauvaise période : c''est le printemps 1789.'
+exemple:
+  enonce: Que se passe-t-il au printemps 1789 ?
+  solution: Les cahiers de doléances sont rédigés, et les États-Généraux se réunissent.
+exercices:
+- enonce: Cite les trois aspects du contexte du royaume de France en 1789.
+  indices:
+  - Pense à la société, à l'argent et aux idées.
+  solution: Le contexte social, économique et intellectuel.
+- enonce: À quel mouvement d'idées appartiennent les philosophes dont les idées circulent en 1789 ?
+  indices:
+  - Ce mot est un mot-clé du programme.
+  solution: Les Lumières.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.6
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

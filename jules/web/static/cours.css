@@ -1,0 +1,161 @@
+/* Jules - page de cours (lot D). Variables et classes communes : voir style.css. */
+
+.cache-visuel {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+
+.cours-appli { display: flex; flex-direction: column; height: 100%; }
+
+.cours-entete {
+  display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--bord);
+  background: var(--p-fond);
+}
+.cours-marque { flex: 1; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--texte); text-decoration: none; justify-content: center; }
+.cours-marque img { width: 36px; height: 36px; }
+.bouton-panneau {
+  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: 14px;
+  color: var(--texte); display: none; align-items: center; gap: 6px;
+}
+.bouton-panneau:hover, .bouton-panneau:focus-visible { border-color: var(--p-principale); }
+
+.cours-corps { flex: 1; display: flex; min-height: 0; }
+
+/* --- parcours (gauche) --- */
+.parcours {
+  width: 300px; flex-shrink: 0; border-right: 1px solid var(--bord); background: #FAF9FF;
+  padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto;
+}
+.parcours .panneau-entete { display: none; }
+.panneau-jules .panneau-entete .fermer { display: none; }
+.parcours label { font-weight: 600; font-size: 14px; }
+.parcours select {
+  font: inherit; padding: 8px 10px; border: 2px solid var(--bord); border-radius: 10px; background: #FFFFFF;
+}
+.parcours-liste { display: flex; flex-direction: column; gap: 14px; }
+.chapitre-titre { font-weight: 700; font-size: 14px; color: var(--gris); text-transform: uppercase; margin: 4px 0 2px; }
+.notion-ligne {
+  display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: none; border: none;
+  border-radius: 10px; padding: 8px; color: var(--texte); font: inherit;
+}
+.notion-ligne:hover:not(:disabled), .notion-ligne:focus-visible { background: var(--p-bulle-bot); }
+.notion-ligne.active { background: var(--p-bulle-bot); outline: 2px solid var(--p-principale); }
+.notion-ligne:disabled { color: var(--gris); cursor: default; }
+.notion-ligne .nom { flex: 1; }
+.notion-ligne .sans-lecon { display: block; font-size: 12px; color: var(--gris); }
+.pastille-etat {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 2px 9px; border-radius: 999px;
+  border: 1px solid transparent; flex-shrink: 0; white-space: nowrap;
+}
+.pastille-etat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.pastille-etat.a_venir { background: #F1F0F7; color: var(--gris); }
+.pastille-etat.a_venir::before { background: #A7A3BE; }
+.pastille-etat.en_cours { background: #FFF3E0; color: #8A5300; }
+.pastille-etat.en_cours::before { background: #EF6C00; }
+.pastille-etat.bloque { background: #FDECEC; color: #A31515; }
+.pastille-etat.bloque::before { background: #C62828; }
+.pastille-etat.compris { background: #E8F3EC; color: #1E6B3C; }
+.pastille-etat.compris::before { background: #2E9E5B; }
+.pastille-etat.acquis { background: #E4F0FC; color: #12508F; }
+.pastille-etat.acquis::before { background: var(--p-principale); }
+
+/* --- centre : la lecon --- */
+.lecon-zone { flex: 1; min-width: 0; overflow-y: auto; padding: 20px 24px 40px; }
+.lecon-vide { max-width: 700px; margin: 60px auto; text-align: center; color: var(--gris); font-size: 18px; }
+.lecon { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.lecon-entete h1 { margin: 0; font-size: 24px; }
+.lecon-meta { margin: 2px 0 0; color: var(--gris); font-size: 14px; }
+
+.progression { display: flex; align-items: center; gap: 10px; }
+.progression-barre { flex: 1; height: 10px; background: var(--p-bulle-bot); border-radius: 999px; overflow: hidden; }
+.progression-remplie { height: 100%; background: var(--p-principale); border-radius: 999px; transition: width .25s; width: 0%; }
+.progression-texte { font-size: 13px; color: var(--gris); white-space: nowrap; }
+
+.blocs { display: flex; flex-direction: column; gap: 16px; }
+.bloc {
+  border: 2px solid var(--bord); border-radius: 16px; padding: 16px 18px; background: #FFFFFF;
+  opacity: 0.75;
+}
+.bloc.courant { border-color: var(--p-principale); opacity: 1; box-shadow: 0 2px 10px rgba(31,78,140,0.08); }
+.bloc.reussi { border-color: #2E9E5B; }
+.bloc.a_revoir { border-color: #C62828; }
+.bloc-entete { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.bloc-entete strong { flex: 1; font-size: 15px; }
+.bloc-etat { font-size: 12px; color: var(--gris); padding: 2px 9px; border-radius: 999px; background: #F1F0F7; }
+.bloc-etat.reussi { background: #E8F3EC; color: #1E6B3C; }
+.bloc-etat.a_revoir { background: #FDECEC; color: #A31515; }
+.bloc-etat.fait { background: #E4F0FC; color: #12508F; }
+.bloc-etat.en_cours { background: #FFF3E0; color: #8A5300; }
+
+.bloc ul { margin: 4px 0; padding-left: 22px; }
+.bloc ol.etapes { margin: 8px 0; padding-left: 22px; }
+.bloc ol.etapes li { margin-bottom: 4px; }
+.bloc-enonce { margin: 0 0 12px; }
+
+.reponse-champ { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+.reponse-champ input[type="text"], .reponse-champ input[type="number"] {
+  font: inherit; padding: 9px 12px; border: 2px solid var(--bord); border-radius: 10px; flex: 1; min-width: 140px;
+}
+.reponse-champ input:focus { outline: none; border-color: var(--p-principale); }
+.reponse-unite { color: var(--gris); }
+.qcm-liste { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.qcm-option {
+  display: flex; align-items: center; gap: 10px; border: 2px solid var(--bord); border-radius: 10px; padding: 8px 12px;
+  cursor: pointer;
+}
+.qcm-option:has(input:checked) { border-color: var(--p-principale); background: var(--p-bulle-bot); }
+.qcm-option input { accent-color: var(--p-principale); }
+
+.bloc-actions { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.bloc-actions .bouton:disabled, .bloc-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.indices-vus { list-style: none; margin: 4px 0 10px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.indices-vus li { background: #FFF9E8; border-left: 4px solid #EFAF00; border-radius: 8px; padding: 6px 10px; font-size: 14px; }
+
+.retour-tentative { margin-top: 10px; padding: 10px 12px; border-radius: 10px; font-weight: 600; }
+.retour-tentative.juste { background: #E8F3EC; color: #1E6B3C; }
+.retour-tentative.faux { background: #FDECEC; color: #A31515; }
+.explication { margin-top: 8px; background: var(--p-bulle-bot); border-radius: 10px; padding: 10px 12px; }
+
+.zone-libre { width: 100%; font: inherit; padding: 10px 12px; border: 2px solid var(--bord); border-radius: 12px; min-height: 90px; resize: vertical; }
+.zone-libre:focus { outline: none; border-color: var(--p-principale); }
+
+.outil-a-venir { color: var(--gris); font-style: italic; background: #F7F6FC; border-radius: 10px; padding: 10px 12px; }
+
+.lecon-fin { text-align: center; border: 2px dashed var(--p-principale); border-radius: 16px; padding: 20px; }
+.lecon-fin p { font-size: 18px; margin: 0 0 12px; }
+
+/* --- droite : Jules --- */
+.panneau-jules {
+  width: 320px; flex-shrink: 0; border-left: 1px solid var(--bord); background: #FAF9FF;
+  display: flex; flex-direction: column; min-height: 0;
+}
+.panneau-jules .panneau-entete { padding: 12px 14px; border-bottom: 1px solid var(--bord); }
+.panneau-jules .panneau-entete img { width: 30px; height: 30px; }
+.panneau-jules .panneau-entete strong { flex: 1; }
+.jules-fil { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+.jules-saisie { border-top: 1px solid var(--bord); padding: 10px; display: flex; gap: 8px; align-items: flex-end; }
+.jules-saisie textarea {
+  flex: 1; resize: none; font: inherit; padding: 10px 12px; border: 2px solid var(--bord); border-radius: 14px;
+  max-height: 140px; min-height: 44px;
+}
+.jules-saisie textarea:focus { outline: none; border-color: var(--p-principale); }
+
+.attente-ligne { color: var(--gris); font-style: italic; padding: 8px 4px; }
+.cours-erreur-ligne { color: #C62828; font-size: 14px; margin: 6px 0; }
+
+/* --- responsive : tablette < 900px --- */
+@media (max-width: 900px) {
+  .bouton-panneau { display: inline-flex; }
+  .parcours, .panneau-jules {
+    position: fixed; top: 0; bottom: 0; width: 86%; max-width: 340px; z-index: 30;
+    box-shadow: 0 0 40px rgba(0,0,0,0.25); transition: transform .2s;
+  }
+  .parcours { left: 0; transform: translateX(-100%); }
+  .parcours.ouvert { transform: none; }
+  .panneau-jules { right: 0; transform: translateX(100%); }
+  .panneau-jules.ouvert { transform: none; }
+  .parcours .panneau-entete, .panneau-jules .panneau-entete { display: flex; }
+  .panneau-jules .panneau-entete .fermer { display: inline-flex; }
+  .lecon-zone { padding: 16px; }
+}

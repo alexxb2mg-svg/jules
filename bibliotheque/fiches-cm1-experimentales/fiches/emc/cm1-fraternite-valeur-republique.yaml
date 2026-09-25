@@ -1,0 +1,51 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-fraternite-valeur-republique
+declencheurs:
+- fraternité
+- devise de la République
+- s'entraider
+- liberté égalité fraternité
+- débat en classe
+essentiel: 'La fraternité est une valeur et un principe de la République française, avec la liberté et l''égalité.
+
+  Elle signifie que l''on considère les autres comme des membres d''une même communauté, avec qui l''on peut s''entraider.
+
+  Lors d''un débat réglé, la fraternité s''exprime en exprimant son opinion tout en tenant compte de la sensibilité
+  des autres.'
+methode:
+- Rappelle que la fraternité fait partie de la devise de la République, avec la liberté et l'égalité.
+- Dans un débat, vérifie si l'opinion exprimée tient compte de la sensibilité des autres.
+- Relie l'entraide entre personnes à l'idée de fraternité.
+vocabulaire:
+- terme: fraternité
+  definition: une valeur et un principe de la République qui invite à considérer les autres comme des membres d'une
+    même communauté
+erreurs_frequentes:
+- Oublier que la fraternité est, avec la liberté et l'égalité, l'un des trois termes de la devise de la République.
+- Croire qu'un débat réglé consiste à imposer son opinion sans tenir compte des autres.
+exemple:
+  enonce: Lors d'un débat en classe, un élève donne son avis, mais reste attentif à ne pas blesser les camarades
+    qui pensent différemment. Quelle valeur met-il en pratique ?
+  solution: 'Il met en pratique la fraternité : il exprime son opinion tout en tenant compte de la sensibilité des
+    autres.'
+exercices:
+- enonce: Cite les trois termes de la devise de la République française.
+  indices:
+  - Le troisième terme est étudié dans cette fiche.
+  solution: Liberté, Égalité, Fraternité.
+- enonce: Donne un exemple d'entraide entre camarades qui illustre la fraternité.
+  indices:
+  - Pense à une situation où l'on aide quelqu'un sans y être obligé.
+  solution: 'Réponse variable, par exemple : aider un camarade en difficulté sur un exercice, partager son matériel.'
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

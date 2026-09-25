@@ -1,0 +1,276 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Français
+id: francais
+niveau: 4e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3), enseignement du français"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Attendus de fin d'année de 4e — Français"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/15-francais-4e-attendus-eduscolpdf-74679.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Repères annuels de progression pour le cycle 4 — Français"
+    reference: "éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le nouveau programme de français du cycle 4 (arrêté du 18 février 2026, BO n° 10 du 5 mars
+  2026) ne s'applique en 4e qu'à partir de la rentrée 2027-2028 (article 3 de l'arrêté) : en
+  2026-2027, la classe de 4e reste donc régie par l'ancien programme de cycle 4 (BO n° 31 du 30
+  juillet 2020). Ce texte organise la culture littéraire et artistique en quatre entrées
+  annuelles (« Se chercher, se construire », « Vivre en société, participer à la société »,
+  « Regarder le monde, inventer des mondes », « Agir sur le monde ») ; en 4e, les questionnements
+  obligatoires sont respectivement « Dire l'amour », « Individu et société : confrontations de
+  valeurs ? », « La fiction pour interroger le réel » et « Informer, s'informer, déformer ? »,
+  complétés par un questionnement complémentaire au choix (« La ville, lieu de tous les
+  possibles ? » ou libre). Le document éduscol « Attendus de fin d'année de 4e » (2019) précise
+  ce qui doit être maîtrisé au sortir de la 4e pour l'oral, la lecture, l'écriture, le vocabulaire
+  et la grammaire, et sert ici de critère : niveau_programme "4e" pour les notions qu'il détaille
+  explicitement pour la 4e.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 4e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: culture-litteraire-et-artistique
+    titre: "Culture littéraire et artistique"
+    chapitres:
+      - id: 4e-dire-lamour
+        titre: "Dire l'amour (questionnement obligatoire de 4e)"
+        notions:
+          - id: 4e-lyrisme-amoureux
+            titre: "Poèmes lyriques et variations du discours amoureux"
+            niveau_programme: "4e"
+            attendus:
+              - "Découvrir des poèmes lyriques de différentes époques exprimant les variations du discours amoureux."
+              - "Comprendre les nuances du sentiment amoureux et les raisons qui en font un thème majeur de l'expression littéraire et artistique."
+              - "S'interroger sur le rôle des images et des références dans le lyrisme amoureux."
+            mots_cles: [lyrisme, poésie amoureuse, sentiment]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Dire l'amour »"
+          - id: 4e-corpus-dire-lamour
+            titre: "Corpus de référence : poèmes d'amour et théâtre du sentiment amoureux"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier un ensemble de poèmes d'amour, de l'Antiquité à nos jours."
+              - "Étudier éventuellement une tragédie du XVIIe siècle, une comédie du XVIIIe siècle ou un drame du XIXe siècle, ou des extraits de nouvelles, de romans et de films présentant l'analyse du sentiment amoureux."
+            mots_cles: [groupement de poèmes, tragédie, drame romantique]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Dire l'amour »"
+      - id: 4e-individu-et-societe
+        titre: "Individu et société : confrontations de valeurs ? (questionnement obligatoire de 4e)"
+        notions:
+          - id: 4e-confrontation-de-valeurs
+            titre: "Confrontation des valeurs portées par les personnages dans le théâtre et le roman"
+            niveau_programme: "4e"
+            attendus:
+              - "Découvrir, à travers des textes relevant des genres dramatique et romanesque, la confrontation des valeurs portées par les personnages."
+              - "Comprendre que la structure et le dynamisme de l'action dramatique ou romanesque ont partie liée avec les conflits, et saisir les intérêts et valeurs qu'ils mettent en jeu."
+              - "S'interroger sur les conciliations possibles ou non entre les systèmes de valeurs mis en jeu."
+            mots_cles: [conflit de valeurs, théâtre, roman]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Individu et société : confrontations de valeurs ? »"
+          - id: 4e-corpus-individu-et-societe
+            titre: "Corpus de référence : tragédie, tragicomédie, comédie et roman des XVIIIe-XXIe siècles"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier une tragédie ou une tragicomédie du XVIIe siècle (lecture intégrale), ou une comédie du XVIIIe siècle (lecture intégrale)."
+              - "Étudier éventuellement, sous forme de groupement de textes, des extraits de romans ou de nouvelles des XVIIIe, XIXe, XXe et XXIe siècles."
+            mots_cles: [lecture intégrale, tragicomédie, comédie]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Individu et société : confrontations de valeurs ? »"
+      - id: 4e-la-fiction-pour-interroger-le-reel
+        titre: "La fiction pour interroger le réel (questionnement obligatoire de 4e)"
+        notions:
+          - id: 4e-realisme-naturalisme-fantastique
+            titre: "Roman réaliste ou naturaliste et récit fantastique"
+            niveau_programme: "4e"
+            attendus:
+              - "Découvrir des œuvres et des textes narratifs relevant de l'esthétique réaliste ou naturaliste."
+              - "Comprendre les ambitions du roman réaliste ou naturaliste au XIXe siècle en matière de représentation de la société."
+              - "Comprendre comment le récit fantastique, tout en s'inscrivant dans cette esthétique, interroge le statut et les limites du réel ; s'interroger sur la manière dont les personnages sont dessinés et sur leur rôle dans la peinture de la réalité."
+            mots_cles: [réalisme, naturalisme, fantastique, XIXe siècle]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « La fiction pour interroger le réel »"
+          - id: 4e-corpus-fiction-interroger-reel
+            titre: "Corpus de référence : roman ou nouvelles réalistes/naturalistes et nouvelle fantastique"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier, en lien avec la programmation annuelle en histoire (XIXe siècle), un roman ou des nouvelles réalistes ou naturalistes (lecture intégrale)."
+              - "Étudier une nouvelle fantastique (lecture intégrale) ; on peut aussi s'appuyer sur une adaptation cinématographique ou télévisuelle."
+            mots_cles: [lecture intégrale, adaptation cinématographique, croisement histoire]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « La fiction pour interroger le réel »"
+      - id: 4e-informer-sinformer-deformer
+        titre: "Informer, s'informer, déformer ? (questionnement obligatoire de 4e)"
+        notions:
+          - id: 4e-education-aux-medias
+            titre: "Articles, reportages et vérification de l'information"
+            niveau_programme: "4e"
+            attendus:
+              - "Découvrir des articles, des reportages, des images d'information sur des supports et formats divers, se rapportant à un même événement ou à une question de société."
+              - "Comprendre l'importance de la vérification et du recoupement des sources, la différence entre fait brut et information, les effets de la rédaction et du montage."
+              - "S'interroger sur les évolutions éditoriales de l'information."
+            mots_cles: [médias, information, sources, montage]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Informer, s'informer, déformer ? »"
+          - id: 4e-corpus-informer-sinformer
+            titre: "Corpus de référence : presse, médias et fiction sur le journalisme"
+            niveau_programme: "4e"
+            attendus:
+              - "Étudier des textes et documents issus de la presse et des médias (journaux, revues, enregistrements radio ou télévisés, médias numériques), en lien possible avec la Semaine de la presse et des médias."
+              - "Étudier éventuellement des extraits de romans, de nouvelles ou de films des XIXe, XXe et XXIe siècles traitant du monde de la presse et du journalisme."
+            mots_cles: [presse, semaine de la presse, documents composites]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, « Informer, s'informer, déformer ? »"
+      - id: 4e-la-ville-lieu-de-tous-les-possibles
+        titre: "La ville, lieu de tous les possibles ? (questionnement complémentaire de 4e, au choix)"
+        notions:
+          - id: 4e-la-ville-en-litterature
+            titre: "Représentations littéraires et artistiques de la ville"
+            niveau_programme: "4e"
+            attendus:
+              - "Montrer comment la ville inspire les écrivains — poètes, auteurs de romans policiers, grands romanciers des XIXe et XXe siècles — et les artistes qui la représentent."
+              - "S'interroger sur les ambivalences des représentations du milieu urbain : lieu d'évasion, de liberté, de rencontres, mais aussi de « perdition », de solitude, de désillusion, de peurs ou d'utopies."
+              - "Réfléchir aux conséquences à venir du développement des mégalopoles."
+            mots_cles: [ville, roman policier, mégalopole, ambivalence]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Français — Culture littéraire et artistique, Quatrième, questionnement complémentaire « La ville, lieu de tous les possibles ? »"
+  - id: lecture-et-comprehension
+    titre: "Lecture et compréhension de l'écrit et de l'image"
+    chapitres:
+      - id: 4e-elaborer-une-interpretation-litteraire
+        titre: "Élaborer une interprétation de textes littéraires"
+        notions:
+          - id: 4e-caracteristiques-des-genres-et-contexte
+            titre: "Caractéristiques des genres littéraires, lien œuvre-époque et effets esthétiques"
+            niveau_programme: "4e"
+            attendus:
+              - "Affiner ses connaissances des caractéristiques propres à chaque genre."
+              - "Faire le lien entre une œuvre et son époque."
+              - "Percevoir certains effets esthétiques et significatifs de la langue littéraire et savoir les reconnaître et les apprécier d'un texte à l'autre."
+            mots_cles: [genre littéraire, contextualisation, effets esthétiques]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Élaborer une interprétation de textes littéraires »"
+      - id: 4e-lire-des-oeuvres-et-frequenter-les-arts
+        titre: "Lire des œuvres littéraires et fréquenter des œuvres d'art"
+        notions:
+          - id: 4e-lectures-integrales-et-cursives
+            titre: "Lectures intégrales, cursives et groupements de textes de 4e"
+            niveau_programme: "4e"
+            attendus:
+              - "Lire au moins trois œuvres complètes du patrimoine en lecture intégrale étudiées en classe, au moins trois œuvres complètes en lecture cursive (littérature jeunesse notamment) et au moins trois groupements de textes."
+              - "Rendre compte régulièrement de ses lectures cursives, de différentes manières."
+              - "Relier création littéraire et création artistique."
+            mots_cles: [lecture intégrale, lecture cursive, groupement de textes]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Lire des œuvres littéraires et fréquenter des œuvres d'art »"
+      - id: 4e-textes-non-litteraires-et-documents-composites
+        titre: "Lire des textes non littéraires, des images et des documents composites"
+        notions:
+          - id: 4e-mise-en-relation-documents
+            titre: "Identification et mise en relation de documents composites"
+            niveau_programme: "4e"
+            attendus:
+              - "Sur un même support, identifier et nommer des documents relevant de différents genres et comprendre leur mise en relation (illustration, ajout d'information)."
+              - "Décrire une image fixe ou mobile en utilisant un vocabulaire adapté (formes, couleurs, contrastes, plans, cadrage et point de vue)."
+            mots_cles: [document composite, image fixe, image mobile]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Lire des textes non littéraires, des images et des documents composites »"
+  - id: ecriture
+    titre: "Écriture"
+    chapitres:
+      - id: 4e-fonctions-de-lecrit
+        titre: "Exploiter les principales fonctions de l'écrit"
+        notions:
+          - id: 4e-ecrit-reflexif-et-prise-de-notes
+            titre: "Écrit réflexif, prise de notes et techniques associées"
+            niveau_programme: "4e"
+            attendus:
+              - "Comprendre les enjeux sociaux et psychologiques de l'écriture."
+              - "Utiliser l'écrit pour penser et pour apprendre : résumer un document, prendre des notes sur un texte, expliquer la démarche choisie."
+              - "Connaître quelques techniques et usages de la prise de notes."
+              - "Rédiger un texte de 2 000 à 3 000 signes environ selon la nature des écrits demandés."
+            mots_cles: [écrit réflexif, prise de notes, résumé]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Exploiter les principales fonctions de l'écrit »"
+  - id: oral
+    titre: "Oral"
+    chapitres:
+      - id: 4e-comprehension-et-interpretation-oral
+        titre: "Comprendre et interpréter des messages et des discours oraux complexes"
+        notions:
+          - id: 4e-visees-et-implicite-inferences-internes
+            titre: "Visées d'un discours oral et implicite : inférences internes"
+            niveau_programme: "4e"
+            attendus:
+              - "Identifier les visées d'un discours oral, organiser les informations qu'il contient, mémoriser des éléments importants."
+              - "Distinguer ce qui est explicite de ce qui est implicite (inférences internes)."
+            mots_cles: [discours oral, implicite, inférence]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Comprendre et interpréter des messages et des discours oraux complexes »"
+      - id: 4e-expression-devant-un-auditoire
+        titre: "S'exprimer de façon maîtrisée en s'adressant à un auditoire"
+        notions:
+          - id: 4e-compte-rendu-expose-avis
+            titre: "Comptes rendus, exposés et expression d'un avis personnel"
+            niveau_programme: "4e"
+            attendus:
+              - "Pratiquer régulièrement différents types de compte rendu et d'exposé."
+              - "Exprimer ses sensations et sentiments à la suite de la découverte d'une œuvre."
+              - "Formuler un avis personnel en employant un vocabulaire précis et étendu."
+            mots_cles: [compte rendu, exposé, avis personnel]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « S'exprimer de façon maîtrisée en s'adressant à un auditoire »"
+      - id: 4e-echanges-oraux-constructifs
+        titre: "Participer de façon constructive à des échanges oraux"
+        notions:
+          - id: 4e-debat-et-argumentation-orale
+            titre: "Débat, points de vue argumentés et rôles dans les échanges"
+            niveau_programme: "4e"
+            attendus:
+              - "Participer à un débat sur un sujet donné."
+              - "Exprimer son point de vue dans un discours argumenté en cherchant à convaincre ses interlocuteurs."
+              - "Assumer différents rôles dans un débat (animateur, contradicteur, gardien du temps ou de l'ordre, rapporteur)."
+            mots_cles: [débat, argumentation orale, rôles du débat]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Participer de façon constructive à des échanges oraux »"
+      - id: 4e-ressources-expressives-parole
+        titre: "Exploiter les ressources expressives et créatives de la parole"
+        notions:
+          - id: 4e-recitation-et-lecture-expressive
+            titre: "Lecture à voix haute, récitation d'un texte de 15 à 20 lignes"
+            niveau_programme: "4e"
+            attendus:
+              - "Lire un texte à voix haute."
+              - "Réciter un texte mémorisé en utilisant les ressources de la voix, de la respiration, du regard et éventuellement de la gestuelle."
+              - "Recourir à des technologies numériques pour associer des sons, des textes."
+            mots_cles: [récitation, lecture expressive, technologies numériques]
+            brevet: false
+            source: "Attendus de fin d'année de 4e — Français, « Exploiter les ressources expressives et créatives de la parole »"
+  - id: etude-de-la-langue
+    titre: "Étude de la langue (grammaire, orthographe, lexique, conjugaison)"
+    chapitres:
+      - id: 4e-fonctionnement-des-textes-et-discours
+        titre: "Construire les notions permettant l'analyse et l'élaboration des textes et des discours"
+        notions:
+          - id: 4e-niveaux-de-langue-et-enonciation
+            titre: "Niveaux de langue, situation d'énonciation et paroles rapportées"
+            niveau_programme: "4e"
+            attendus:
+              - "Repérer ce qui détermine un niveau de langue (situation de communication, enjeu) et ce qui le caractérise (lexique, syntaxe)."
+              - "Identifier et interpréter les éléments de la situation d'énonciation : qui parle à qui ? où ? quand ? (marques de personne, de lieu et de temps)."
+              - "Prendre en compte la situation d'énonciation dans la production d'écrits."
+            mots_cles: [niveau de langue, énonciation, paroles rapportées]
+            brevet: false
+            source: "Repères annuels de progression pour le cycle 4 — Français, Étude de la langue, 4e"

@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-lecture-expressive
+declencheurs:
+- lire à voix haute
+- je n'ai pas d'intonation
+- lire comme un robot
+- mettre le ton
+- lire une pièce de théâtre
+- présenter un texte devant la classe
+essentiel: 'Lire à voix haute avec expressivité, c''est faire vivre un texte qu''on a déjà préparé, pas seulement
+  le déchiffrer.
+
+  On adapte le rythme de sa lecture : ni trop vite, ni trop lentement, en respectant la ponctuation et les groupes
+  de mots qui vont ensemble.
+
+  On marque avec la voix les points d''exclamation et d''interrogation, ainsi que les pauses et les liaisons entre
+  les mots.
+
+  On peut aussi jouer sur l''intensité de sa voix (le volume, la vitesse) pour que les auditeurs comprennent bien
+  l''histoire et les dialogues.'
+methode:
+- Lire le texte plusieurs fois pour le préparer avant de le lire aux autres.
+- Repérer les points d'exclamation, d'interrogation et les passages de dialogue.
+- Choisir où faire des pauses, en suivant la ponctuation et le sens des groupes de mots.
+- S'entraîner à voix haute en variant le volume et la vitesse selon les personnages ou les émotions.
+- Se relire ou s'écouter pour vérifier qu'on facilite la compréhension de ceux qui écoutent.
+erreurs_frequentes:
+- Lire tout le texte sur le même ton, sans marquer les exclamations ni les questions.
+- Lire trop vite pour aller plus vite, ce qui empêche l'auditoire de comprendre.
+- Ne pas préparer le texte avant de le lire devant les autres.
+exemple:
+  enonce: 'Lis à voix haute ce dialogue en marquant bien les phrases : « — Où vas-tu donc ? demanda le loup. — Je
+    vais chez ma grand-mère ! répondit le Petit Chaperon rouge. »'
+  solution: On lève légèrement la voix sur « Où vas-tu donc ? » pour marquer la question, puis on marque l'enthousiasme
+    sur « Je vais chez ma grand-mère ! » pour l'exclamation, en changeant un peu de voix entre les deux personnages.
+exercices:
+- enonce: Choisis un court texte de ton livre avec au moins une phrase interrogative et une phrase exclamative.
+    Prépare-le puis lis-le à un adulte de la famille.
+  indices:
+  - Souligne d'abord les points d'exclamation et d'interrogation.
+  - Entraîne-toi seul avant de lire devant quelqu'un.
+  solution: 'Critères de réussite : la voix monte sur les questions, s''anime sur les exclamations, et l''auditeur
+    comprend l''histoire sans relire le texte.'
+- enonce: Lis à voix haute deux répliques d'un dialogue en changeant de voix entre les deux personnages.
+  indices:
+  - Choisis une voix plus grave ou plus aiguë pour distinguer les personnages.
+  solution: On doit pouvoir reconnaître, rien qu'à la voix, quand c'est un personnage ou l'autre qui parle.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

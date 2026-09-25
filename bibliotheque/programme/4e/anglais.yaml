@@ -1,0 +1,340 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Anglais (langue vivante)
+id: anglais
+niveau: 4e
+annee_scolaire: 2026-2027
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+- intitule: Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) »
+  reference: BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  consulte_le: '2026-09-24'
+- intitule: Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège
+    (confirme le maintien du programme 2020 pour la 4e et la 3e en 2026-2027 ; les nouveaux programmes
+    LV n'entrent en 5e qu'en 2026 et n'atteignent la 4e/3e qu'en 2027/2028)
+  reference: éduscol
+  url: https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college
+  consulte_le: '2026-09-24'
+- intitule: Langues vivantes — Attendus de fin d'année de 4e — anglais
+  reference: éduscol, annexe langues vivantes (anglais)
+  url: https://eduscol.education.fr/document/53115/download
+  consulte_le: '2026-09-24'
+perimetre: |
+  Pour l'année scolaire 2026-2027, les classes de 5e et de 4e restent régies par le programme de
+  langues vivantes du cycle 4 (BO n° 31 du 30 juillet 2020), qui ne détaille pas les notions par année
+  (thèmes culturels, repères linguistiques) mais fixe des objectifs de fin de cycle. Le document éduscol
+  « Attendus de fin d'année de 4e – anglais » précise cependant, activité langagière par activité
+  langagière, le sous-palier CECRL attendu à la fin de 4e (A1+ vers A2+) ; ce document sert ici de
+  critère pour distinguer niveau_programme: "4e" (la progression CECRL, propre à cette année) de
+  niveau_programme: "cycle 4" (compétences travaillées, thèmes culturels, repères linguistiques, non
+  détaillés par année dans le programme). Les nouveaux programmes de langues vivantes par année (arrêté
+  du 5 mai 2025, BO n° 22 du 29 mai 2025) entrent en application en 5e à la rentrée 2026 et n'atteignent
+  la 4e qu'à la rentrée 2027 puis la 3e qu'à la rentrée 2028 : ils ne s'appliquent donc pas encore
+  pleinement à 4e en 2026-2027 et ne sont pas utilisés dans ce fichier ; seul le programme 2020
+  (cycle 4) et ses attendus annuels sont cités.
+brevet:
+  evalue: false
+  epreuve: |
+    Pas d'épreuve écrite d'anglais pour les candidats scolaires au DNB série générale : l'épreuve de
+    langue vivante étrangère écrite (coefficient 2) ne concerne que les candidats "individuels"
+    (art. 4 de l'arrêté du 31 décembre 2015 modifié). Pour un candidat scolaire, l'anglais LV1 n'est
+    évalué qu'en fin de 3e via le contrôle continu (moyenne annuelle de 3e, 40 % de la note finale du
+    DNB) ; les notions de 4e n'entrent donc pas directement dans la notation du DNB.
+  source: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+themes:
+- id: competences-travaillees
+  titre: Compétences travaillées (5 activités langagières + culture)
+  chapitres:
+  - id: activites-langagieres
+    titre: Les cinq activités langagières
+    notions:
+    - id: 4e-ecouter-et-comprendre
+      titre: Écouter et comprendre
+      niveau_programme: cycle 4
+      attendus:
+      - Comprendre des messages oraux et des documents sonores de nature et de complexité variables.
+      - Se familiariser aux réalités sonores de la langue, et s'entraîner à la mémorisation.
+      - Repérer des indices pertinents, extralinguistiques ou linguistiques, pour identifier la situation
+        d'énonciation et déduire le sens d'un message.
+      - Savoir lire des documents vidéo et savoir mettre en relation images et documents sonores.
+      mots_cles:
+      - écoute
+      - compréhension orale
+      - indices
+      - énonciation
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 4e-lire
+      titre: Lire
+      niveau_programme: cycle 4
+      attendus:
+      - Comprendre des documents écrits de nature et de difficultés variées issus de sources diverses.
+      - Développer des stratégies de lecteur par le biais de lectures régulières.
+      - 'S''approprier le document en utilisant des repérages de nature différente : indices extralinguistiques,
+        linguistiques, reconstitution du sens, mise en relation d''éléments significatifs.'
+      mots_cles:
+      - lecture
+      - compréhension écrite
+      - stratégies de lecteur
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 4e-parler-en-continu
+      titre: Parler en continu
+      niveau_programme: cycle 4
+      attendus:
+      - Mobiliser à bon escient ses connaissances lexicales, culturelles, grammaticales pour produire
+        un texte oral sur des sujets variés.
+      - Développer des stratégies pour surmonter un manque lexical lors d'une prise de parole, s'autocorriger
+        et reformuler pour se faire comprendre.
+      - Respecter un registre et un niveau de langue.
+      - Mettre en voix son discours par la prononciation, l'intonation et la gestuelle adéquates.
+      - Prendre la parole pour raconter, décrire, expliquer, argumenter.
+      mots_cles:
+      - expression orale
+      - prononciation
+      - intonation
+      - argumentation
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 4e-ecrire
+      titre: Écrire
+      niveau_programme: cycle 4
+      attendus:
+      - S'appuyer sur les stratégies développées à l'oral pour apprendre à structurer son écrit.
+      - Mobiliser les outils pour écrire, corriger, modifier son écrit.
+      - Reformuler un message, rendre compte, raconter, décrire, expliquer, argumenter.
+      mots_cles:
+      - expression écrite
+      - structuration
+      - réécriture
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 4e-reagir-et-dialoguer
+      titre: Réagir et dialoguer
+      niveau_programme: cycle 4
+      attendus:
+      - Développer des stratégies de compréhension orale en repérant des indices extralinguistiques ou
+        linguistiques et en élaborant un discours commun.
+      - Réagir spontanément à des sollicitations verbales, en mobilisant des énoncés adéquats au contexte,
+        dans une succession d'échanges qui alimentent le message ou le contredisent.
+      mots_cles:
+      - interaction orale
+      - dialogue
+      - spontanéité
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 4e-aspects-culturels
+      titre: Découvrir les aspects culturels d'une langue vivante étrangère et régionale
+      niveau_programme: cycle 4
+      attendus:
+      - Percevoir les spécificités culturelles des pays et des régions de la langue étudiée en dépassant
+        la vision figée et schématique des stéréotypes et des clichés.
+      - Mobiliser des références culturelles pour interpréter les éléments d'un message, d'un texte, d'un
+        document sonore.
+      - Mobiliser ses connaissances culturelles pour décrire des personnages réels ou imaginaires, raconter.
+      mots_cles:
+      - culture
+      - interculturalité
+      - stéréotypes
+      brevet: false
+      source: Programme cycle 4, section « Compétences travaillées »
+  - id: niveaux-cecrl
+    titre: Niveaux visés (CECRL) en fin de 4e
+    notions:
+    - id: 4e-progression-cecrl-lv1
+      titre: Progression CECRL visée en fin de 4e pour la LV1 (anglais généralement LV1)
+      niveau_programme: 4e
+      attendus:
+      - En fin de 4e, l'élève est attendu au niveau A2 consolidé (noté A1+/A2+ dans le document éduscol),
+        poursuivant la progression vers l'objectif de fin de cycle 4 (A2 dans les 5 activités langagières
+        pour la LV1, B1 dans plusieurs).
+      - 'Compréhension de l''oral : passer d''A1+ (isoler des informations simples dans un message clair
+        et les relier à un titre ou un thème) à A2+ (identifier la trame d''un message oral, mettre en
+        lien les informations simples et les hiérarchiser).'
+      - Les autres activités langagières (lire, parler en continu, écrire, réagir et dialoguer) suivent
+        la même logique de progression A1+ vers A2+, précisée par activité dans le document « Attendus
+        de fin d'année de 4e – anglais ».
+      mots_cles:
+      - CECRL
+      - A1+
+      - A2+
+      - LV1
+      - progression annuelle
+      brevet: false
+      source: Langues vivantes – Attendus de fin d'année de 4e – anglais, p. 1-3 (compréhension de l'oral,
+        cadre A1+→A2+)
+    - id: 4e-progression-cecrl-lv2
+      titre: Niveau visé en fin de cycle 4 pour la LV2 (rappel, non détaillé par année)
+      niveau_programme: cycle 4
+      attendus:
+      - 'Pour la LV2, le programme fixe un objectif de fin de cycle (A2 du CECRL dans au moins deux activités
+        langagières) sans document d''attendus par année publié séparément : la progression en 4e relève
+        du professeur, en cohérence avec cet objectif final.'
+      mots_cles:
+      - CECRL
+      - A2
+      - LV2
+      - fin de cycle
+      brevet: false
+      source: Programme cycle 4, section « Activités langagières »
+- id: themes-culturels
+  titre: Thèmes culturels du cycle 4 (communs à la LV1 et à la LV2)
+  chapitres:
+  - id: quatre-thematiques
+    titre: Les quatre thèmes culturels
+    notions:
+    - id: 4e-theme-langages
+      titre: Langages
+      niveau_programme: cycle 4
+      attendus:
+      - Codes socio-culturels et dimensions géographiques et historiques ; graphiques, schémas, cartes,
+        logos, tableaux.
+      - Media, modes de communication, réseaux sociaux, publicité ; extraits de manuels scolaires de pays
+        ou de la région de la langue cible.
+      - 'Langages artistiques : peinture, musique et chansons, poésie, cinéma et théâtre, littérature,
+        BD, science-fiction ; représentations de sculptures, tableaux, œuvres architecturales, monuments.'
+      mots_cles:
+      - langages
+      - médias
+      - arts
+      - codes socio-culturels
+      brevet: false
+      source: Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »
+    - id: 4e-theme-ecole-et-societe
+      titre: École et société
+      niveau_programme: cycle 4
+      attendus:
+      - Comparaison des systèmes scolaires.
+      - Place de la question de l'environnement dans le quotidien des élèves des pays concernés (eau,
+        espaces verts, urbanisme, déchets et recyclage, économies d'énergie, pollution, consommation responsable).
+      - 'Activités scolaires et extrascolaires : loisirs écoresponsables, consommation écoresponsable,
+        parcs urbains et nationaux.'
+      - 'Découverte du monde du travail : fiches métier, notamment métiers liés à l''environnement (transition
+        énergétique, recyclage, traitement de l''eau…) ; numérique et environnement.'
+      mots_cles:
+      - école
+      - société
+      - environnement
+      - monde du travail
+      brevet: false
+      source: Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »
+    - id: 4e-theme-voyages-et-migrations
+      titre: Voyages et migrations
+      niveau_programme: cycle 4
+      attendus:
+      - Voyages scolaires, touristiques ; tourisme écoresponsable, empreinte carbone.
+      - Exil, migration et émigration ; l'imaginaire, le rêve, le fantastique.
+      mots_cles:
+      - voyages
+      - migrations
+      - exil
+      - tourisme
+      brevet: false
+      source: Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »
+    - id: 4e-theme-rencontres-autres-cultures
+      titre: Rencontres avec d'autres cultures
+      niveau_programme: cycle 4
+      attendus:
+      - 'Repères historiques et géographiques : patrimoine historique, naturel et architectural ; inclusion
+        et exclusion ; parcs nationaux ; réserves de biosphères.'
+      - Spécificités climatiques des pays concernés, leur biodiversité.
+      - Énergies renouvelables développées dans les pays concernés.
+      mots_cles:
+      - interculturalité
+      - patrimoine
+      - biodiversité
+      - rencontres
+      brevet: false
+      source: Programme cycle 4, « Lexique et pistes de réflexion en lien avec les thèmes culturels »
+- id: reperes-linguistiques
+  titre: Repères linguistiques (grammaire, phonologie)
+  chapitres:
+  - id: grammaire
+    titre: Grammaire
+    notions:
+    - id: 4e-nom-et-groupe-nominal
+      titre: Nom et groupe nominal
+      niveau_programme: cycle 4
+      attendus:
+      - Genre, pronoms personnels compléments et réfléchis.
+      mots_cles:
+      - nom
+      - groupe nominal
+      - pronoms
+      - genre
+      brevet: false
+      source: Programme cycle 4, section « Grammaire »
+    - id: 4e-determination
+      titre: Détermination
+      niveau_programme: cycle 4
+      attendus:
+      - Articles, quantifieurs.
+      mots_cles:
+      - articles
+      - quantifieurs
+      - détermination
+      brevet: false
+      source: Programme cycle 4, section « Grammaire »
+    - id: 4e-groupe-verbal
+      titre: Groupe verbal
+      niveau_programme: cycle 4
+      attendus:
+      - Expression du présent, du passé, de l'avenir.
+      - Modaux.
+      - Passif.
+      - Construction des verbes.
+      mots_cles:
+      - groupe verbal
+      - temps
+      - modaux
+      - passif
+      brevet: false
+      source: Programme cycle 4, section « Grammaire »
+    - id: 4e-enonces-simples-et-complexes
+      titre: Énoncés simples et complexes
+      niveau_programme: cycle 4
+      attendus:
+      - Coordination. Subordination. Relatifs.
+      - Discours indirect. Interrogation indirecte.
+      - Connecteurs.
+      mots_cles:
+      - coordination
+      - subordination
+      - relatifs
+      - discours indirect
+      - connecteurs
+      brevet: false
+      source: Programme cycle 4, section « Grammaire »
+  - id: phonologie
+    titre: Phonologie
+    notions:
+    - id: 4e-regularites-langue-orale
+      titre: Régularités de la langue orale
+      niveau_programme: cycle 4
+      attendus:
+      - Prendre conscience des régularités de la langue orale.
+      - Prendre conscience des variations phoniques et phonologiques dans les usages d'une même langue.
+      mots_cles:
+      - phonologie
+      - prononciation
+      - variations
+      brevet: false
+      source: Programme cycle 4, section « Phonologie »
+    - id: 4e-fluidite-et-securite-linguistique
+      titre: Fluidité, intelligibilité, sécurité linguistique
+      niveau_programme: cycle 4
+      attendus:
+      - 'Viser la fluidité, l''intelligibilité, la sécurité linguistique personnelle dans la production
+        orale : ne pas viser « l''accent natif ».'
+      mots_cles:
+      - fluidité
+      - intelligibilité
+      - accent
+      brevet: false
+      source: Programme cycle 4, section « Phonologie »

@@ -1,0 +1,57 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-mesurer-distance-et-duree
+declencheurs:
+- chronomètre
+- durée
+- distance parcourue
+- combien de temps
+- mètre
+- point de départ
+- point d'arrivée
+essentiel: 'Lors du déplacement d''un objet, on peut mesurer une distance (avec un gabarit, un mètre ou un autre
+  instrument adapté) et une durée (avec un chronomètre ou un autre instrument adapté).
+
+  Pour mesurer une distance, on repère un point de départ et un point d''arrivée, puis on mesure l''écart entre
+  les deux.
+
+  Une durée est l''intervalle entre deux instants : le moment où l''objet part et celui où il arrive.'
+methode:
+- Repérer clairement le point de départ et le point d'arrivée du déplacement.
+- Choisir un instrument adapté à la distance (mètre, gabarit) ou à la durée (chronomètre).
+- Mesurer la distance parcourue entre le point de départ et le point d'arrivée.
+- Mesurer la durée comme l'intervalle entre l'instant de départ et l'instant d'arrivée.
+erreurs_frequentes:
+- Oublier de bien fixer le point de départ avant de commencer à mesurer.
+- Confondre distance parcourue et durée du trajet.
+- Utiliser un instrument mal adapté (par exemple un mètre trop court pour une longue distance).
+exemple:
+  enonce: Une petite voiture roule sur la table de la classe. Comment mesurer la distance qu'elle a parcourue et
+    le temps que ça a pris ?
+  solution: On marque le point de départ et le point d'arrivée avec un repère, on mesure la distance entre les deux
+    avec un mètre, et on mesure la durée du déplacement avec un chronomètre déclenché au départ et arrêté à l'arrivée.
+exercices:
+- enonce: Lors d'une course d'EPS, que dois-tu repérer avant de mesurer la distance parcourue par un camarade ?
+  indices:
+  - Deux points sont nécessaires.
+  solution: Il faut repérer un point de départ et un point d'arrivée, puis mesurer la distance entre les deux.
+- enonce: Comment mesurer la durée du déplacement d'un objet roulant ?
+  indices:
+  - Quel instrument sert à mesurer un temps qui passe ?
+  solution: On utilise un chronomètre (ou un autre instrument de mesure adapté) déclenché au départ et arrêté à
+    l'arrivée.
+- enonce: Qu'est-ce qu'une durée, exactement ?
+  indices:
+  - Pense à deux moments précis.
+  solution: 'C''est l''intervalle entre deux instants : l''instant de départ et l''instant d''arrivée.'
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,12 @@
+id: calculatrice
+titre: "Calculatrice"
+matieres: [mathematiques, physique-chimie]
+niveaux: [CM1, CM2, 6e, 5e, 4e, 3e, 2de, 1re, Tle]
+entree: index.html
+actions:
+  - afficher
+evenements:
+  - calcul_effectue
+permissions: []
+auteurs: ["jules-outils-s2"]
+licence: MIT

@@ -17,6 +17,8 @@ Ce fichier ne fait que lire et verifier : il ne parle ni au modele d'IA ni a l'i
 
 from __future__ import annotations
 
+import copy
+import hashlib
 import logging
 import re
 import unicodedata
@@ -26,9 +28,18 @@ from typing import Any
 
 import yaml
 
+# Lecteur YAML en C (libyaml) quand il est installe : 10 a 20 fois plus rapide que le lecteur
+# pur Python, meme resultat (chargement sur, sans objet Python arbitraire).
+_Lecteur = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+
+# Memoire des fichiers deja lus, indexee par l'empreinte du CONTENU (pas par le chemin) : un fichier
+# modifie est relu, une copie identique ailleurs ne l'est pas. On rend toujours une copie profonde,
+# pour qu'un appelant qui modifie le dictionnaire ne corrompe pas la memoire.
+_DEJA_LUS: dict[str, Any] = {}
+
 journal = logging.getLogger("jules.bibliotheques")
 
-TYPES = ("referentiel", "fiches", "direction")
+TYPES = ("referentiel", "fiches", "direction", "lecons")  # lecons : voir jules/lecons.py
 STATUTS = ("experimentale", "certifiee", "enseignant", "exemple")
 # Licences qui autorisent a reutiliser, modifier et redistribuer (identifiants SPDX quand ils existent).
 LICENCES_LIBRES = (
@@ -75,6 +86,7 @@ class Notion:
     mots_cles: list[str] = field(default_factory=list)
     brevet: bool = False
     source: str = ""
+    limites: list[str] = field(default_factory=list)  # bornes fixees par le texte officiel a ce niveau
 
 
 @dataclass
@@ -172,7 +184,11 @@ class Catalogue:
 def _lire_yaml(chemin: Path) -> dict[str, Any]:
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurBibliotheque(f"{chemin.name} : fichier trop gros")
-    brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    texte = chemin.read_text(encoding="utf-8")
+    cle = hashlib.sha256(texte.encode("utf-8")).hexdigest()
+    if cle not in _DEJA_LUS:
+        _DEJA_LUS[cle] = yaml.load(texte, Loader=_Lecteur) or {}  # noqa: S506 - CSafeLoader est un lecteur sur
+    brut = copy.deepcopy(_DEJA_LUS[cle])
     if not isinstance(brut, dict):
         raise ErreurBibliotheque(f"{chemin.name} : un objet YAML est attendu")
     return brut
@@ -242,6 +258,7 @@ def lire_referentiel(biblio: Bibliotheque, niveaux: list[str] | None = None) -> 
                             mots_cles=[str(m) for m in n.get("mots_cles") or []],
                             brevet=bool(n.get("brevet")),
                             source=str(n.get("source") or ""),
+                            limites=[str(li) for li in n.get("limites") or []],
                         )
     return notions
 
@@ -421,8 +438,21 @@ def texte_fiche(fiche: dict[str, Any], limite: int = 7000) -> str:
         lignes = ["Exercices d'entraînement (solutions réservées à toi : jamais avant que l'élève ait cherché) :"]
         for i, ex in enumerate(exercices, 1):
             lignes.append(f"{i}) {str(ex['enonce']).strip()}")
-            for j, indice in enumerate(_liste(ex.get("indices")), 1):
-                lignes.append(f"   Indice {j} : {indice}")
+            indices = ex.get("indices")
+            if isinstance(indices, dict):  # fiche v2 : echelle nommee, servie dans l'ordre relance, methode, etape
+                paliers = [indices[p] for p in ("relance", "methode", "etape") if indices.get(p)]
+                for j, indice in enumerate(paliers, 1):
+                    lignes.append(f"   Indice {j} : {str(indice).strip()}")
+            else:
+                for j, indice in enumerate(_liste(indices), 1):
+                    lignes.append(f"   Indice {j} : {indice}")
+            for critere in _liste(ex.get("criteres")):
+                lignes.append(f"   Critère de réussite : {critere}")
+            for piege in ex.get("pieges") or []:
+                if isinstance(piege, dict) and piege.get("relance"):
+                    lignes.append(
+                        f"   Si l'élève tombe dans un piège fréquent, relance : {str(piege['relance']).strip()}"
+                    )
             if ex.get("solution"):
                 lignes.append(f"   Solution : {str(ex['solution']).strip()}")
         blocs.append("\n".join(lignes))

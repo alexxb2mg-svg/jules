@@ -1,0 +1,489 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Anglais (langue vivante)
+id: anglais
+niveau: 5e
+annee_scolaire: 2026-2027
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+- intitule: Programmes d'enseignements communs et optionnels de langues vivantes étrangères pour les classes
+    de collège et de lycée général et technologique (arrêté du 5 mai 2025)
+  reference: 'BO n° 22 du 29 mai 2025 (NOR : MENE2504621A)'
+  url: https://www.education.gouv.fr/bo/2025/Hebdo22/MENE2504621A
+  consulte_le: '2026-09-24'
+- intitule: Programme d'anglais pour les classes de collège (annexe 3 de l'arrêté du 5 mai 2025), section
+    « Classe de cinquième »
+  reference: Annexe 3 au BO n° 22 du 29 mai 2025
+  url: https://www.education.gouv.fr/sites/default/files/annexe-3-programme-d-anglais-pour-les-classes-de-coll-ge-440358.pdf
+  consulte_le: '2026-09-24'
+perimetre: 'L''article 4 de l''arrêté du 5 mai 2025 (BO n° 22 du 29 mai 2025, NOR MENE2504621A) échelonne
+  l''entrée en vigueur des nouveaux programmes de langues vivantes étrangères classe par classe : classe
+  de sixième à la rentrée 2025, classe de cinquième à la rentrée 2026, classe de quatrième à la rentrée
+  2027, classe de troisième à la rentrée 2028. Pour l''année scolaire 2026-2027, la classe de 5e est donc
+  régie par ce nouveau programme, qui remplace pour elle le programme de langues vivantes du cycle 4 (BO
+  n° 31 du 30 juillet 2020) et qui, à la différence de ce dernier, détaille des contenus propres à chaque
+  année (niveaux de maitrise CECRL, six axes culturels dont un axe consacré à un pays de l''aire anglophone
+  — le Royaume-Uni en 5e —, repères linguistiques). Les classes de 4e et de 3e, elles, ne basculent respectivement
+  qu''aux rentrées 2027 et 2028 et restent en 2026-2027 sur le programme du cycle 4 de 2020 (voir bibliotheque/programme/4e/anglais.yaml
+  et bibliotheque/programme/3e/anglais.yaml, non modifiés). Le programme distingue la nomenclature LVA
+  (= LV1) et LVB (= LV2) ; ce fichier reprend les deux niveaux visés en fin de 5e (A1+ en LVB, A2 en LVA)
+  et l''ensemble des contenus culturels et linguistiques de la section « Classe de cinquième », qui ne
+  sont pas distingués par langue vivante 1 ou 2 dans le texte.'
+brevet:
+  evalue: false
+  epreuve: 'Pas d''épreuve écrite d''anglais pour les candidats scolaires au DNB série générale : l''épreuve
+    de langue vivante étrangère écrite (coefficient 2) ne concerne que les candidats "individuels" (art.
+    4 de l''arrêté du 31 décembre 2015 modifié). Pour un candidat scolaire, l''anglais LV1 n''est évalué
+    qu''en fin de 3e via le contrôle continu (moyenne annuelle de 3e, 40 % de la note finale du DNB) ;
+    les notions de 5e n''entrent donc pas directement dans la notation du DNB.
+
+    '
+  source: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+themes:
+- id: niveaux-maitrise-linguistique
+  titre: Niveaux de maîtrise linguistique visés à la fin de la 5e
+  chapitres:
+  - id: cecrl-fin-5e
+    titre: Niveaux CECRL visés en LVA et en LVB
+    notions:
+    - id: 5e-niveaux-cecrl-lva-lvb
+      titre: Niveaux de maitrise linguistique visés à la fin de la classe de cinquième
+      niveau_programme: 5e
+      attendus:
+      - 'Niveaux de maitrise linguistique visés pour le collège à la fin de l''année de cinquième : A1+
+        en LVB (langue vivante B, correspondant à la LV2) et A2 en LVA (langue vivante A, correspondant
+        à la LV1, apprise dès le primaire ou à partir de la 6e).'
+      - Lorsque le niveau visé est accompagné du signe « + », cela signifie que le niveau supérieur est
+        atteint dans au moins l'une des activités langagières.
+      mots_cles:
+      - CECRL
+      - A1+
+      - A2
+      - LVA
+      - LVB
+      - fin de 5e
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Niveaux de maitrise linguistique visés à la fin de l'année » ; préambule
+        commun, « Niveaux de maitrise linguistique visés pour le collège à la fin de chaque année »
+- id: reperes-culturels
+  titre: Repères culturels — les six axes de la classe de cinquième
+  chapitres:
+  - id: six-axes
+    titre: Les six axes culturels de 5e (dont l'axe 6, propre au Royaume-Uni)
+    notions:
+    - id: 5e-regle-choix-des-axes
+      titre: Règle de traitement des six axes culturels en 5e
+      niveau_programme: 5e
+      attendus:
+      - Cinq axes parmi les six proposés doivent être traités pendant l'année, dont obligatoirement l'axe
+        6.
+      - Les professeurs peuvent traiter les axes dans l'ordre de leur choix. Ils peuvent aussi en associer
+        deux, reliés par une problématique commune, dans une même séquence.
+      - Les professeurs abordent chaque axe à travers au moins un objet d'étude ; les objets d'étude proposés
+        le sont à titre indicatif.
+      mots_cles:
+      - axes culturels
+      - 5e
+      - axe 6 obligatoire
+      - objets d'étude
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe1-portrait-autoportrait
+      titre: Axe 1. Portrait, autoportrait
+      niveau_programme: 5e
+      attendus:
+      - Cet axe s'intéresse à la tradition du portrait, du musée à l'ère numérique, individuel ou d'une
+        société, en mots ou en images. Quelles traces donne-t-on à voir de soi et des autres ?
+      - 'Objets d''étude possibles : Les yearbooks et la valorisation des talents des élèves ; Les familles
+        présidentielles américaines ; The National Portrait Gallery, l''histoire britannique en image
+        ; Écrire sur soi et sur les autres, l''espace intime et ludique de la poésie.'
+      mots_cles:
+      - portrait
+      - autoportrait
+      - yearbook
+      - National Portrait Gallery
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe2-quotidien-lieux-rythmes-saisons
+      titre: 'Axe 2. Le quotidien : lieux, rythmes, saisons'
+      niveau_programme: 5e
+      attendus:
+      - Avec cet axe, l'élève est amené à se représenter les modes de vie et à comprendre comment ils
+        sont étroitement liés aux lieux de vie, aux rythmes scolaires, aux saisons et aux rituels et aux
+        moments partagés traditionnels des pays du monde anglophone.
+      - 'Objets d''étude possibles : Les rythmes et saisons à travers la peinture ; Les vacances au rythme
+        des saisons ; Rythmes de vie, les moyens de déplacement ; Autour de la table.'
+      mots_cles:
+      - quotidien
+      - rythmes scolaires
+      - saisons
+      - modes de vie
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe3-reel-et-imaginaire
+      titre: Axe 3. Le réel et l'imaginaire
+      niveau_programme: 5e
+      attendus:
+      - Cet axe explore le lien entre le réel et l'imaginaire qui se nourrissent l'un de l'autre et se
+        complètent, construisant ainsi une représentation des sociétés anglophones. Les personnages de
+        la littérature de langue anglaise évoluent dans des mondes fictifs qui s'inspirent du réel et
+        s'en échappent parfois.
+      - 'Objets d''étude possibles : Mondes réels, mondes rêvés, de la cité idéale de la famille Cadbury
+        à l''imaginaire de Roald Dahl ; Un imaginaire nourri de clichés, les images véhiculées par les
+        médias sur les pays anglophones ; L''imaginaire pour penser le réel dans la littérature fantastique
+        ; Rêveries initiatiques (naviguer avec Mark Twain).'
+      mots_cles:
+      - réel
+      - imaginaire
+      - littérature
+      - Roald Dahl
+      - Mark Twain
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe4-ecole-et-loisirs
+      titre: Axe 4. École et loisirs
+      niveau_programme: 5e
+      attendus:
+      - Cet axe interroge plusieurs aspects fondamentaux de la vie des élèves anglophones. Comment les
+        élèves vivent-ils l'école dans la diversité de leur quotidien ? Parviennent-ils à concilier école
+        et loisirs ? Cet équilibre, source d'épanouissement, contribue-t-il à former de jeunes citoyens
+        engagés dans la société ?
+      - 'Objets d''étude possibles : Découvrir des formes scolaires inhabituelles ; Des cliques aux fraternités
+        et sororités ; Les clubs à l''école ; Représenter, raconter l''école dans les œuvres littéraires
+        et cinématographiques.'
+      mots_cles:
+      - école
+      - loisirs
+      - clubs
+      - vie scolaire
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe5-langues-lieux-histoires
+      titre: Axe 5. Des langues, des lieux, des histoires
+      niveau_programme: 5e
+      attendus:
+      - Cet axe a pour objectif de sensibiliser à la diversité et au dynamisme de la langue anglaise et
+        à la façon dont elle évolue et s'enrichit au gré des lieux, des populations et des évolutions
+        techniques. La géographie de la langue anglaise est une source d'inspiration, de petites histoires
+        et de traces témoignant de l'histoire.
+      - 'Objets d''étude possibles : Migrations, lieux de passage, lieux de mémoire ; Écrire sur la ville,
+        écrire dans la ville ; Une langue, des déclinaisons, comprendre l''évolution de la langue anglaise
+        au regard des transformations des sociétés anglophones ; Un patrimoine, des histoires, l''exemple
+        de Columbus Day, Thanksgiving ou Juneteenth aux États-Unis.'
+      mots_cles:
+      - diversité de la langue
+      - migrations
+      - patrimoine
+      - histoire de la langue
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+    - id: 5e-axe6-royaume-uni
+      titre: Axe 6. Le Royaume-Uni (axe obligatoire, propre à l'aire anglophone)
+      niveau_programme: 5e
+      attendus:
+      - La focalisation sur un pays, en l'occurrence le Royaume-Uni, représente une particularité du programme
+        de 5e. Ce sixième axe permet à l'élève d'approfondir ses connaissances de l'histoire, de la géographie,
+        de la société et de la culture de ce pays voisin de la France qui partage avec lui une partie
+        de son passé.
+      - Pays voisin de la France, le Royaume-Uni a une histoire riche, parfois commune avec la France.
+        L'élève découvre les multiples facettes de ce pays, incluant le patrimoine et la culture, qui
+        comprend plusieurs nations et régions avec des accents, traditions et identités propres. Cet axe
+        permet à l'élève de se constituer des repères géographiques, historiques, sociétaux et culturels
+        sur le Royaume-Uni.
+      - 'Objets d''étude possibles : Découvrir le patrimoine britannique grâce au National Trust ; Du
+        Nord au Sud, un Royaume-Uni aux multiples identités ; La famille royale à travers son iconographie
+        ; La BBC, une institution dans la vie des familles britanniques.'
+      mots_cles:
+      - Royaume-Uni
+      - axe 6
+      - patrimoine britannique
+      - National Trust
+      - BBC
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Repères culturels »
+- id: reperes-linguistiques-activites
+  titre: Repères linguistiques — activités langagières
+  chapitres:
+  - id: activites-langagieres
+    titre: Compréhension, expression, interaction et médiation en 5e
+    notions:
+    - id: 5e-comprehension-oral-ecrit
+      titre: Compréhension de l'oral et de l'écrit
+      niveau_programme: 5e
+      attendus:
+      - En 5e, les activités de réception s'inscrivent dans la continuité des apprentissages de la classe
+        de 6e, et s'articulent avec les activités de production. À l'oral comme à l'écrit, les documents
+        sont variés mais simples, en lien avec le programme culturel.
+      - 'Ce que sait faire l''élève au niveau A1+ : il peut comprendre et relier à un titre ou à un thème
+        des expressions isolées dans des énoncés très simples, courts et concrets à propos de sujets familiers
+        et quotidiens. Il peut suivre des consignes et instructions en situation prévisible à condition,
+        en compréhension de l''oral, que le débit soit lent.'
+      - 'Ce que sait faire l''élève au niveau A2 : il peut comprendre et repérer des informations simples,
+        relevant de situations prévisibles, exprimées dans une langue usuelle, à l''aide d''expressions
+        connues, dans des textes, des histoires, ou des conversations. Il peut suivre les points essentiels
+        de consignes et d''instructions à condition, en compréhension de l''oral, que la diction soit
+        claire, bien articulée et lente.'
+      mots_cles:
+      - compréhension orale
+      - compréhension écrite
+      - A1+
+      - A2
+      - stratégies de compréhension
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Activités langagières »
+    - id: 5e-expression-orale-ecrite
+      titre: Expression orale et écrite
+      niveau_programme: 5e
+      attendus:
+      - En 5e, la prise de parole fait l'objet d'un entrainement régulier ; elle est encouragée afin que
+        l'élève développe des compétences linguistiques et gagne en assurance. L'expression écrite est
+        préparée à l'aide de notes (mots-clés, cartes mentales, etc.) ; l'élève produit des contenus simples,
+        mais structurés.
+      - 'Ce que sait faire l''élève au niveau A1+ : il peut décrire brièvement des personnes ou des personnages,
+        des lieux et des objets de son environnement familier en coordonnant des éléments simples ou en
+        commençant à les organiser en suivant un modèle ou une trame connus. Il peut exprimer ses gouts
+        ou ses souhaits de manière simple, raconter brièvement des évènements ou des expériences grâce
+        à un répertoire mémorisé ainsi que paraphraser, imiter et reprendre à son compte des phrases simples
+        avec une aide éventuelle.'
+      - 'Ce que sait faire l''élève au niveau A2 : il peut décrire des activités quotidiennes, des personnes
+        et des lieux, ou parler brièvement de ses projets dans un futur proche en utilisant un vocabulaire
+        de tous les jours et des expressions élémentaires avec des connecteurs simples. Il peut dire ce
+        qu''il aime ou n''aime pas faire, ou donner ses impressions et son opinion sur des sujets d''intérêt
+        personnel. Il peut écrire le début d''une histoire ou en continuer une, à condition de pouvoir
+        consulter un dictionnaire et des ouvrages de référence.'
+      mots_cles:
+      - expression orale
+      - expression écrite
+      - A1+
+      - A2
+      - prise de parole
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Activités langagières »
+    - id: 5e-interaction-mediation
+      titre: Interaction orale et écrite, médiation
+      niveau_programme: 5e
+      attendus:
+      - L'élève est encouragé à participer, à interagir en classe dans des situations de communication
+        authentiques. Le travail en groupe ou en binôme est particulièrement propice à la médiation, qu'il
+        s'agisse de reformuler ou de restituer pour autrui un propos, une information ou le contenu d'un
+        document.
+      - 'Ce que sait faire l''élève au niveau A1+ : il peut interagir de façon stéréotypée dans des situations
+        répétées. Il peut répondre à des questions simples et en poser, s''appuyer sur les réactions de
+        son interlocuteur pour faire part de ses sentiments sur des sujets très concrets, familiers et
+        prévisibles. Il peut engager et clore une conversation de manière adaptée à son interlocuteur.
+        Il peut identifier une difficulté de compréhension d''ordre culturel et la signaler, faciliter
+        la coopération en vérifiant si la compréhension est effective, demander de l''aide ou signaler
+        le besoin d''aide d''autrui.'
+      - 'Ce que sait faire l''élève au niveau A2 : il peut communiquer dans le cadre d''une tâche simple
+        et courante ne demandant qu''un échange d''information simple et direct sur des sujets familiers.
+        Il peut participer à des échanges de type social très courts, mais sa capacité à soutenir une
+        conversation dépend fortement de l''aide que l''interlocuteur peut lui apporter. Il peut reconnaitre
+        les difficultés et indiquer en langage simple la nature apparente d''un problème. Il peut transmettre
+        les points principaux de conversations ou de textes sur des sujets d''intérêt immédiat à condition
+        qu''ils soient exprimés clairement et en langage simple.'
+      mots_cles:
+      - interaction orale
+      - interaction écrite
+      - médiation
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Activités langagières »
+- id: reperes-linguistiques-outils
+  titre: Repères linguistiques — outils linguistiques
+  chapitres:
+  - id: phonologie-et-prosodie
+    titre: Phonologie et prosodie
+    notions:
+    - id: 5e-phonologie-et-prosodie
+      titre: Phonologie et prosodie
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : l''intonation des énoncés affirmatifs et interrogatifs ; la prononciation du -s
+        à la 3e personne du singulier (looks, goes, matches), ainsi que pour le génitif (Jack''s bike,
+        Jane''s book) et le pluriel régulier (ghosts, zebras, witches) ; la prononciation du -ed (played,
+        wanted, watched). L''accentuation des mots polysyllabiques : intelligent, beautiful, comfortable,
+        interesting, favourite. La prononciation des formes faibles : of/to/at/from.'
+      - 'Niveau A2 : les schémas intonatifs, l''intonation montante (questions fermées, opposition, étonnement,
+        sympathie) et l''intonation descendante (questions ouvertes, exclamations, ordres). Le rythme
+        de la phrase (mots accentués porteurs de sens) et du mot (place de l''accent tonique). Les formes
+        contractées. Les voyelles longues et courtes (sheep/ship, cat/car, door/good/blue). Les diphtongues.'
+      mots_cles:
+      - phonologie
+      - prosodie
+      - intonation
+      - accentuation
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Phonologie et prosodie »
+  - id: lexique
+    titre: Lexique
+    notions:
+    - id: 5e-lexique-domaines-culturels
+      titre: Lexique en lien avec les axes culturels
+      niveau_programme: 5e
+      attendus:
+      - 'L''école et le rythme scolaire : timetable, schedule, school subjects, holiday, club, classmate,
+        hobbies, pastime, leisure (A1+) ; skill, knowledge, to belong to, extracurricular (A2).'
+      - 'La description physique et morale : proud, slim, huge, smart, generous, honest, friendly (A1+)
+        ; skinny, tiny, healthy/unhealthy, tolerant, keen, enthusiastic (A2).'
+      - 'Les transports et les déplacements : to travel, to go on a trip, public transport, bus, bike,
+        underground, traffic (A1+) ; journey, to get from…to…, sightseeing, migration, migrant (A2).'
+      - 'Les paysages et les saisons : weather, season, climate, hill, mountain, forest, river, lake (A1+)
+        ; landscape, waterfall, hurricane, humid, flood, summit (A2).'
+      - 'Les lieux : place, city, town, street, village, road, museum, monument, cottage (A1+) ; location,
+        alley, downtown, suburbs, countryside, territory (A2).'
+      - 'Les traditions culinaires : cook, recipe, speciality, traditional, dish, family meal, fork, knife/knives,
+        plate, ingredients (A1+) ; to cater, cutlery, to lay the table, course, flavour, spicy (A2).'
+      - 'L''art : author, painter, writer, photographer, architecture, picture, portrait, to admire (A1+)
+        ; character, scenery, setting, portrayal, to depict (A2).'
+      - 'L''aventure, la découverte : to contemplate, to discover, to explore, to find yourself, team,
+        expedition, story, tale, courageous (A1+) ; to gaze, worldwide, to trek, to encounter, quest (A2).'
+      - 'L''imaginaire : to dream, to imagine, imaginary, vision, real/unreal, hope, wonderland, legend,
+        hero/heroine, ghost (A1+) ; tale, event, to long for, to escape from, strange, utopia (A2).'
+      - 'Les sentiments et émotions : Wow ! Yummy ! Yuk !, incredible, disgusting, to like, to love, to
+        hate, joy, sadness (A1+) ; to enjoy, to dislike, to appreciate, to be keen on, to be fond of,
+        gloom, sorrow (A2).'
+      mots_cles:
+      - lexique
+      - vocabulaire
+      - axes culturels
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Lexique en lien avec les axes culturels »
+  - id: grammaire
+    titre: Grammaire
+    notions:
+    - id: 5e-grammaire-verbe
+      titre: 'Grammaire : le verbe'
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : le présent simple (forme affirmative, négative et interrogative) ; le présent be+ing
+        (reconnaitre quelques formes courantes : He is wearing a uniform) et son usage pour exprimer un
+        futur proche (I''m watching a rugby match tonight) ; l''expression du passé, reconnaitre quelques
+        verbes courants du prétérit (was/were, verbes réguliers et irréguliers) ; les auxiliaires de modalité
+        can/can''t, must/mustn''t ; exprimer une intention sous forme lexicalisée (I want to, I would
+        like to) ; l''impératif affirmatif et négatif ; le gérondif.'
+      - 'Niveau A2 : l''expression du passé avec les verbes courants du prétérit (réguliers et irréguliers)
+        ; l''expression du futur avec will et be going to + BV ; les auxiliaires de modalité should/shouldn''t,
+        could/couldn''t ; l''expression du souhait sous forme lexicalisée (I wish to, I would love to)
+        ; l''expression de l''opinion (I think, I believe, For me, In my opinion).'
+      mots_cles:
+      - verbe
+      - présent simple
+      - prétérit
+      - futur
+      - modaux
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Grammaire »
+    - id: 5e-grammaire-nom-et-groupe-nominal
+      titre: 'Grammaire : le nom, forme et fonction du groupe nominal'
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : appliquer les règles d''accord élémentaire sur un champ lexical plus large (person/people,
+        knife/knives, mouse/mice, box/boxes) ; les articles et déterminants démonstratifs (a, the, Ø,
+        this/these, that/those) ; le déterminant possessif et le génitif (my father, her, its, Greg''s
+        neighbour) ; la dérivation des noms avec un suffixe ou un préfixe (recognise/recognisable/unrecognisable).'
+      - 'Niveau A2 : utiliser des antonymes (separation/union, quiet/noisy, urban/rural) ; établir des
+        comparaisons en utilisant des adjectifs connus associés à des comparatifs et des superlatifs (longer
+        than, more famous than, as sporty as, the best year of my life).'
+      mots_cles:
+      - nom
+      - groupe nominal
+      - articles
+      - génitif
+      - comparatifs
+      - superlatifs
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Grammaire »
+    - id: 5e-grammaire-pronoms
+      titre: 'Grammaire : les pronoms'
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : les pronoms personnels sujets et compléments (I, he, they, me, him, her, them) ;
+        les pronoms possessifs (mine, his, hers) ; les mots interrogatifs (who, what, where, when, why,
+        which, how).'
+      - 'Niveau A2 : les quantifieurs (much, many, some) ; les pronoms personnels réfléchis (myself, himself,
+        themselves).'
+      mots_cles:
+      - pronoms
+      - possessifs
+      - interrogatifs
+      - quantifieurs
+      - réfléchis
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Grammaire »
+    - id: 5e-grammaire-adverbes-et-groupes-prepositionnels
+      titre: 'Grammaire : les adverbes et les groupes prépositionnels pour situer dans le temps et l''espace'
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : exprimer les dates ; utiliser des marqueurs temporels simples (today, this morning,
+        tomorrow, yesterday) ; situer dans l''espace à l''aide de prépositions ou d''expressions lexicalisées
+        (under, above, over, on the right, at the top, next to) ; utiliser des adverbes de fréquence.'
+      - 'Niveau A2 : utiliser des marqueurs temporels (at two o''clock, every day, last month, six months
+        ago, in two years) ; situer dans l''espace (in the foreground/in the background, at the top/bottom,
+        on the right/left) ; exprimer une opposition, une concession ou un contraste (but, whereas, however,
+        or).'
+      mots_cles:
+      - adverbes
+      - marqueurs temporels
+      - prépositions
+      - opposition
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Grammaire »
+    - id: 5e-grammaire-phrase-et-organisation
+      titre: 'Grammaire : la phrase et son organisation'
+      niveau_programme: 5e
+      attendus:
+      - 'Niveau A1+ : former des phrases simples (affirmatives, négatives avec not et interrogatives)
+        ; faire varier le degré d''intensité de la qualité à l''aide d''adverbes de degré (very, much,
+        too) ; utiliser quelques conjonctions de coordination dans des énoncés simples (and, but, or)
+        ; utiliser quelques connecteurs chronologiques ou logiques (first, then, like, for example, so)
+        ; utiliser les modalisateurs maybe ou perhaps.'
+      - 'Niveau A2 : exprimer l''intensité avec des adverbes (so, enough, really, completely, almost,
+        quite) ; formuler des hypothèses, y compris sous forme lexicalisée (If you gaze at this painting,
+        you''ll notice…) ; passer du discours direct au discours indirect (The author wonders if the city
+        ever sleeps).'
+      mots_cles:
+      - phrase
+      - conjonctions
+      - connecteurs
+      - hypothèse
+      - discours indirect
+      - A1+
+      - A2
+      brevet: false
+      source: Programme d'anglais pour les classes de collège (annexe 3, arrêté du 5 mai 2025), section
+        « Classe de cinquième », « Outils linguistiques », « Grammaire »

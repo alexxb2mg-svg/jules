@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-progres-techniques-navigation
+declencheurs:
+- boussole
+- caravelle
+- bateau des explorateurs
+- naviguer loin en mer
+- grands explorateurs
+couverture: 'Ne couvre que ce que dit le programme : les progrès techniques (nommés par les mots-clés boussole et
+  caravelle) qui ont permis aux Européens de s''aventurer vers de nouveaux territoires, et les repères 1492 et 1519-1522.'
+essentiel: 'À partir du XVe siècle, des progrès techniques permettent aux Européens de s''aventurer vers de nouveaux
+  territoires, en naviguant au grand large.
+
+  Deux de ces inventions sont la boussole et la caravelle, un type de bateau.
+
+  En 1492, Christophe Colomb débarque en Amérique.
+
+  De 1519 à 1522, l''expédition de Magellan fait le tour du monde.'
+methode:
+- 'Mémoriser le nom d''au moins deux inventions : la boussole et la caravelle.'
+- Relier 1492 à l'arrivée de Christophe Colomb en Amérique.
+- Relier 1519-1522 à l'expédition de Magellan, qui fait le tour du monde.
+vocabulaire:
+- terme: caravelle
+  definition: type de bateau utilisé par les Européens pour naviguer au grand large
+erreurs_frequentes:
+- Confondre la date de l'arrivée de Christophe Colomb en Amérique (1492) et la durée de l'expédition de Magellan
+  (1519-1522).
+- Oublier de nommer au moins une invention (boussole ou caravelle) permettant la navigation au grand large.
+exemple:
+  enonce: Cite le nom d'une invention qui permet aux Européens de naviguer au grand large.
+  solution: La boussole, ou la caravelle.
+exercices:
+- enonce: En quelle année Christophe Colomb débarque-t-il en Amérique ? Combien d'années dure l'expédition de Magellan
+    (1519-1522) ?
+  indices:
+  - Pour la durée, soustrais la date de début à la date de fin.
+  solution: Christophe Colomb débarque en Amérique en 1492. L'expédition de Magellan dure 1522 - 1519 = 3 ans.
+- enonce: 'Range ces deux évènements dans l''ordre chronologique : « expédition de Magellan », « arrivée de Christophe
+    Colomb en Amérique ».'
+  indices:
+  - Compare les dates 1492 et 1519.
+  solution: D'abord l'arrivée de Christophe Colomb en Amérique (1492), puis l'expédition de Magellan (1519-1522).
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

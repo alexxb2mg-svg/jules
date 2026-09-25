@@ -120,7 +120,9 @@ def test_epreuve_de_bout_en_bout(tuteur):
 
 def test_mode_epreuve_ni_dans_la_grille_ni_ouvrable_directement(tuteur):
     modes = tuteur.infos_interface()["modes"]
-    assert [m["id"] for m in modes if m["cache"]] == ["epreuve"]
+    # Membership plutôt qu'égalité stricte : d'autres modes cachés (ex. "cours", lancé par le
+    # module cours et non depuis la grille) peuvent coexister sans invalider ce test.
+    assert "epreuve" in [m["id"] for m in modes if m["cache"]]
     assert tuteur.module("modes").valider("epreuve") == "aide-devoirs"
 
 

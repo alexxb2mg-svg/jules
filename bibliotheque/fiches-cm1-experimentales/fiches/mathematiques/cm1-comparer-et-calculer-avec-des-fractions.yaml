@@ -1,0 +1,75 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-comparer-et-calculer-avec-des-fractions
+declencheurs:
+- comparer des fractions
+- additionner des fractions
+- soustraire des fractions
+- un tiers de
+- un quart de
+- part d'un gâteau
+- moitié de
+essentiel: 'Deux fractions qui ont le même dénominateur se comparent en regardant seulement le numérateur : plus
+  il est grand, plus la fraction est grande. Par exemple, 5/12 est plus petit que 5/8, car pour un même numérateur,
+  plus le dénominateur est grand, plus les parts sont petites.
+
+  Pour additionner ou soustraire deux fractions de même dénominateur, on additionne ou on soustrait les numérateurs
+  et on garde le même dénominateur : 5/6 - 1/12 se calcule après avoir remarqué que 5/6 = 10/12.
+
+  Quand un dénominateur est un multiple de l''autre (par exemple 4 et 12), on transforme la fraction avec le petit
+  dénominateur pour obtenir le même dénominateur que l''autre, en s''appuyant sur les tables de multiplication.
+
+  Calculer une fraction unitaire d''une quantité, c''est partager cette quantité en parts égales : un tiers de 12
+  œufs, c''est partager 12 œufs en 3 parts égales, donc 4 œufs.'
+methode:
+- 'Pour comparer deux fractions de même dénominateur : comparer les numérateurs.'
+- 'Pour comparer deux fractions dont un dénominateur est multiple de l''autre : transformer la fraction au petit
+  dénominateur en fraction équivalente au grand dénominateur, puis comparer les numérateurs.'
+- 'Pour additionner ou soustraire : ramener les deux fractions au même dénominateur si besoin, puis additionner
+  ou soustraire seulement les numérateurs.'
+- 'Pour une fraction unitaire d''une quantité : partager la quantité en autant de parts égales que l''indique le
+  dénominateur, et prendre une part.'
+- Vérifier la réponse avec un dessin, une manipulation ou une phrase orale.
+erreurs_frequentes:
+- Additionner numérateurs et dénominateurs entre eux (5/8 + 1/8 = 6/16 est faux).
+- Comparer seulement les numérateurs sans vérifier que les dénominateurs sont bien identiques.
+- Oublier de transformer une fraction en fraction équivalente avant de l'additionner à une autre.
+- Pour une fraction d'une quantité, multiplier au lieu de partager.
+exemple:
+  enonce: Calcule 3/2 + 7/4 en donnant le résultat sous forme d'une seule fraction.
+  solution: '4 est un multiple de 2 (2 × 2 = 4), donc on transforme 3/2 en quarts : 3/2 = 6/4. 6/4 + 7/4 = 13/4.'
+exercices:
+- enonce: Compare 5/12 et 5/8. Laquelle est la plus grande ?
+  indices:
+  - Les deux fractions ont le même numérateur.
+  - Des huitièmes sont-ils plus grands ou plus petits que des douzièmes ?
+  solution: '5/8 est plus grand que 5/12 : pour un même numérateur, plus le dénominateur est petit, plus chaque
+    part est grande.'
+- enonce: Calcule 5/6 - 1/12.
+  indices:
+  - '12 est un multiple de 6 : transforme 5/6 en douzièmes.'
+  solution: 5/6 = 10/12, donc 5/6 - 1/12 = 10/12 - 1/12 = 9/12.
+- enonce: Une boulangère a fabriqué 60 kg de farine en sacs. Elle en utilise un quart pour le pain. Quelle masse
+    de farine utilise-t-elle pour le pain ?
+  indices:
+  - Un quart, c'est partager en 4 parts égales.
+  - 60 divisé par 4 ?
+  solution: '60 kg partagés en 4 parts égales font 15 kg par part : elle utilise 15 kg de farine.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.5-6
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

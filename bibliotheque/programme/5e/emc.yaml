@@ -1,0 +1,74 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Enseignement moral et civique
+id: emc
+niveau: 5e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'enseignement moral et civique du cours préparatoire à la classe terminale des voies générale, technologique et professionnelle et des classes préparant au CAP — séquence « Cinquième : Égalité, fraternité et solidarité »"
+    reference: "BO n° 24 du 13 juin 2024, arrêté du 29 mai 2024 (NOR : MENE2411598A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Ressources d'accompagnement pour l'enseignement moral et civique au collège — application progressive du nouveau programme"
+    reference: "éduscol, application confirmée en classe de 5e dès la rentrée 2024"
+    url: "https://eduscol.education.gouv.fr/4752/ressources-d-accompagnement-pour-l-enseignement-moral-et-civique-au-college"
+    consulte_le: "2026-09-24"
+perimetre: >
+  L'EMC a changé de programme dès la rentrée 2024 en classe de 5e : c'est le NOUVEAU programme
+  publié au BO n° 24 du 13 juin 2024 (arrêté du 29 mai 2024) qui s'applique, et non l'ancien
+  programme d'EMC du cycle 4 (BO du 26 juillet 2018). L'application est progressive : rentrée
+  2024 (CP, CM1, 5e), rentrée 2025 (CE1, CM2, 4e), rentrée 2026 (CE2, 6e, 3e) — la 5e est donc
+  déjà sur ce nouveau texte depuis deux ans en 2026-2027. Le programme 2024 structure la classe
+  de 5e en une séquence intitulée « Cinquième : Égalité, fraternité et solidarité », composée de
+  deux volets thématiques : « Agir pour l'égalité femmes-hommes et lutter contre les
+  discriminations » (9 à 11 heures) et « La solidarité et ses échelles » (7 à 9 heures). Le
+  volume horaire annuel d'EMC au collège est de 30 minutes hebdomadaires.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 5e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 5e-egalite-fraternite-et-solidarite
+    titre: "Cinquième : Égalité, fraternité et solidarité"
+    chapitres:
+      - id: 5e-agir-pour-legalite-femmes-hommes
+        titre: "Agir pour l'égalité femmes-hommes et lutter contre les discriminations (9-11 heures)"
+        notions:
+          - id: 5e-egalite-femmes-hommes-droit-et-parite
+            titre: "Égalité femmes-hommes : principe constitutionnel, droit et parité"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre que l'égalité entre les femmes et les hommes est un principe fondamental de la République, garanti par la Constitution (article 3 du préambule de 1946) et un objectif de développement durable (ODD5)."
+              - "Comprendre que, dans la vie professionnelle et quotidienne, de nombreuses inégalités demeurent et que les violences sexistes et sexuelles persistent, nécessitant l'action des pouvoirs publics et de la société civile."
+              - "À partir de textes de loi (droit de vote des femmes en 1944, droit d'exercer une profession sans autorisation du mari en 1965, loi IVG de 1975, autorité parentale conjointe en 1987, loi sur la parité en 2000), montrer les progrès et les enjeux qui demeurent."
+            mots_cles: [égalité femmes-hommes, parité, discrimination, ODD5]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Cinquième, « Agir pour l'égalité femmes-hommes et lutter contre les discriminations »"
+      - id: 5e-la-solidarite-et-ses-echelles
+        titre: "La solidarité et ses échelles (7-9 heures)"
+        notions:
+          - id: 5e-principe-de-solidarite-et-acteurs
+            titre: "Principe de solidarité : État, collectivités territoriales et associations"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre que le principe de solidarité signifie que la Nation assure aux individus libres et égaux en droit une protection, au nom de l'idéal de fraternité."
+              - "Identifier les acteurs de la solidarité : l'État, les collectivités territoriales et la société civile (associations), qui unissent leurs forces pour réduire les inégalités et protéger contre les risques sociaux et environnementaux."
+              - "Comprendre que l'impôt traduit la participation des citoyennes et citoyens à la solidarité nationale, et que la solidarité s'exerce aussi à l'échelle de l'Union européenne et, dans le cadre de l'aide au développement, à l'échelle mondiale."
+            mots_cles: [solidarité, fraternité, collectivités territoriales, impôt]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Cinquième, « La solidarité et ses échelles »"
+          - id: 5e-risques-sociaux-et-securite-sociale
+            titre: "Risques sociaux et Sécurité sociale"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre que les risques sociaux (maladie, accident, invalidité, grossesse non désirée, perte d'emploi, perte d'autonomie liée à l'âge) sont des événements auxquels les individus risquent de ne pouvoir faire face avec leurs seules ressources."
+              - "Comprendre que la Sécurité sociale et le système public de santé participent de la solidarité nationale, et que le droit international garantit aux enfants le droit à la santé et à la sécurité sociale (art. 24 à 26 de la Convention internationale des droits de l'enfant)."
+            mots_cles: [risque social, Sécurité sociale, protection sociale]
+            brevet: false
+            source: "Programme d'EMC (BO n° 24 du 13 juin 2024), Cinquième, « La solidarité et ses échelles »"

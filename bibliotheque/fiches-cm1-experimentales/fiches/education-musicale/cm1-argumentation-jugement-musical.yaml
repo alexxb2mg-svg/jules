@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-argumentation-jugement-musical
+declencheurs:
+- j'aime pas cette musique
+- donner son avis sur une musique
+- argumenter un avis
+- goûts musicaux
+- pourquoi j'aime une chanson
+- débat sur la musique
+- respecter les avis des autres
+essentiel: 'Avoir un avis sur une musique, ce n''est pas seulement dire si on aime ou pas : c''est exprimer ses
+  goûts au-delà de son ressenti immédiat.
+
+  Argumenter un jugement, c''est expliquer pourquoi on pense cela, avec des mots précis (le tempo, les instruments,
+  l''ambiance...).
+
+  Il faut aussi écouter et respecter le point de vue des autres, même s''il est différent du tien.
+
+  Quand un groupe doit choisir une interprétation collective, chacun peut argumenter son choix pour convaincre les
+  autres, dans le respect.'
+methode:
+- Écoute la musique attentivement, en entier.
+- Réfléchis à ton ressenti immédiat (j'aime / je n'aime pas / ça me fait quelque chose).
+- Cherche une raison précise à ce ressenti (le tempo, un instrument, les paroles, l'ambiance...).
+- Formule une phrase avec ton avis ET ta raison.
+- Écoute les avis des autres et compare-les au tien, sans te moquer.
+erreurs_frequentes:
+- Dire seulement « c'est nul » ou « c'est génial » sans donner de raison.
+- Se moquer de l'avis de quelqu'un d'autre parce qu'il est différent du sien.
+- Changer d'avis juste pour être d'accord avec tout le monde, sans réfléchir.
+exemple:
+  enonce: Un camarade dit qu'il n'aime pas du tout une musique que tu adores. Comment réagir en respectant la règle
+    d'argumenter un jugement musical ?
+  solution: 'Demander à ton camarade pourquoi il ne l''aime pas, écouter sa raison sans te moquer, puis expliquer
+    à ton tour ta propre raison d''aimer cette musique (par exemple le rythme ou l''instrument utilisé) : chacun
+    garde son avis, dans le respect de l''autre.'
+exercices:
+- enonce: Écoute une musique que tu ne connais pas et donne ton avis avec au moins une raison précise (pas seulement
+    « j'aime » ou « j'aime pas »).
+  indices:
+  - Pense au tempo, aux instruments, aux paroles ou à l'ambiance générale.
+  - 'Dis une phrase complète : « J''aime / je n''aime pas cette musique parce que... ».'
+  solution: 'Critères de réussite : ton avis est accompagné d''au moins une raison précise et compréhensible par
+    quelqu''un d''autre.'
+- enonce: Demande à une personne de ta famille son avis sur une musique que vous écoutez ensemble, puis compare
+    son avis au tien sans te moquer si vous n'êtes pas d'accord.
+  indices:
+  - Écoute sa raison en entier avant de répondre.
+  solution: 'Critères de réussite : tu rapportes l''avis de l''autre personne et sa raison, même si elle est différente
+    de la tienne, sans jugement négatif.'
+- enonce: Avec deux ou trois personnes, choisissez ensemble une musique à écouter parmi deux propositions, en argumentant
+    chacun son choix.
+  indices:
+  - Chacun doit donner au moins une raison pour défendre sa proposition.
+  solution: 'Critères de réussite : chaque personne a exprimé un avis argumenté, et le groupe est arrivé à un choix
+    collectif dans le respect des avis de chacun.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

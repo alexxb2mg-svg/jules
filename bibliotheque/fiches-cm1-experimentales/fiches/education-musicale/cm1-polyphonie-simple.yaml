@@ -1,0 +1,73 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-polyphonie-simple
+declencheurs:
+- chanter à plusieurs voix
+- chanter en canon
+- ma voix se mélange à l'autre
+- chorale
+- tenir sa partie
+- chanter en même temps que les autres
+- polyphonie
+essentiel: 'La polyphonie, c''est quand plusieurs voix ou parties chantent ou jouent en même temps, mais pas exactement
+  la même chose.
+
+  Tenir sa partie, c''est continuer à chanter (ou jouer) ce qui t''est demandé, même si tu entends une autre voix
+  faire autre chose à côté.
+
+  Chaque partie a un rôle complémentaire : les parties simultanées s''assemblent pour créer un ensemble, comme dans
+  une chorale à plusieurs voix.
+
+  Il faut interpréter sa partie avec expressivité, en respectant les choix (nuances, tempo) donnés avant.'
+methode:
+- Écoute d'abord chaque partie séparément, pour bien la connaître.
+- Chante ou joue ta partie seul, plusieurs fois, jusqu'à la savoir sans hésiter.
+- Écoute ensuite l'autre partie pendant que quelqu'un la chante, sans chanter la tienne.
+- Essaie de tenir ta partie pendant que l'autre partie est chantée en même temps.
+- Recommence en gardant ton attention sur ta partie sans te laisser entraîner par l'autre.
+erreurs_frequentes:
+- Se mettre à chanter la partie de l'autre parce qu'on l'entend plus fort.
+- Ne pas avoir assez répété sa propre partie seul avant d'essayer à plusieurs.
+- Chanter trop fort ou trop vite pour « couvrir » l'autre partie au lieu de s'accorder avec elle.
+exemple:
+  enonce: 'Dans un jeu vocal à deux groupes, le groupe A chante une phrase pendant que le groupe B tape un rythme
+    avec les mains, en même temps. Tu es dans le groupe A : que dois-tu faire si tu entends le rythme du groupe
+    B se mélanger à ta phrase ?'
+  solution: 'Continuer à chanter ta phrase telle que tu l''as apprise, sans t''arrêter ni changer ton chant à cause
+    du rythme du groupe B : c''est justement cela, tenir sa partie dans une polyphonie.'
+exercices:
+- enonce: Avec une personne de ta famille, chacun apprend une phrase différente d'une comptine découpée en deux.
+    Essayez de les chanter en même temps.
+  indices:
+  - Apprenez d'abord chacun votre phrase séparément, bien à fond.
+  - Comptez ensemble avant de démarrer pour partir en même temps.
+  solution: 'Critères de réussite : chacun a chanté sa phrase du début à la fin sans s''arrêter, même en entendant
+    l''autre phrase en même temps.'
+- enonce: Frappe un rythme simple avec tes mains pendant qu'une autre personne chante une chanson que tu connais.
+  indices:
+  - Choisis un rythme régulier et facile à répéter (par exemple taper à chaque pulsation).
+  solution: 'Critères de réussite : tu as gardé ton rythme régulier du début à la fin, sans t''arrêter pour suivre
+    le chant de l''autre personne.'
+- enonce: Chante une comptine en boucle pendant qu'une autre personne chante la même comptine en commençant deux
+    secondes après toi, comme un canon.
+  indices:
+  - 'Ne t''arrête pas quand tu entends l''autre commencer : continue ta propre phrase.'
+  solution: 'Critères de réussite : les deux voix décalées se sont bien entendues en même temps, chacun ayant tenu
+    sa partie sans se perdre.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Construire une séquence en éducation musicale au cycle 3 », p. 6
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c3eartemusconstruire-sequence-dm613816pdf-74919.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'exemple de séquence : polyphonie en percussions corporelles et chant'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

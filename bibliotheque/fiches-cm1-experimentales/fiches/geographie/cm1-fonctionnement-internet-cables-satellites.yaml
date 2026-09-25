@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-fonctionnement-internet-cables-satellites
+declencheurs:
+- internet
+- câble sous-marin
+- satellite
+- comment marche internet
+- réseau
+- wifi
+essentiel: 'Internet est un réseau qui permet de communiquer et d''échanger des informations à l''échelle du monde
+  entier.
+
+  Ce réseau repose sur deux types d''équipements : des câbles (continentaux et sous-marins, posés au fond des océans)
+  et des satellites, qui tournent autour de la Terre.
+
+  Les câbles sous-marins relient les aires régionales entre elles, et les satellites complètent ce réseau, notamment
+  là où il n''y a pas de câbles.'
+methode:
+- 'Distingue les deux types d''équipements du réseau internet : les câbles et les satellites.'
+- Rappelle que les câbles sous-marins sont posés au fond des océans et relient les aires régionales.
+- Rappelle que les satellites tournent autour de la Terre et complètent le réseau de câbles.
+vocabulaire:
+- terme: câble sous-marin
+  definition: un câble posé au fond des océans qui transporte les données d'internet entre les continents
+- terme: satellite
+  definition: un appareil qui tourne autour de la Terre et qui peut transmettre des données d'internet
+erreurs_frequentes:
+- Croire qu'internet fonctionne uniquement grâce aux satellites, sans câbles.
+- Penser que les câbles d'internet passent uniquement sur terre, et jamais sous les océans.
+exemple:
+  enonce: Un message envoyé depuis la France arrive presque instantanément sur un autre continent. Par quels équipements
+    ce message peut-il passer ?
+  solution: Il peut passer par un câble sous-marin qui relie les aires régionales, ou par un satellite qui tourne
+    autour de la Terre.
+exercices:
+- enonce: Cite les deux types d'équipements sur lesquels repose le fonctionnement d'internet dans le monde.
+  indices:
+  - L'un est posé au fond des océans, l'autre tourne autour de la Terre.
+  solution: Les câbles (continentaux et sous-marins) et les satellites.
+- enonce: Explique où se trouvent les câbles sous-marins d'internet.
+  indices:
+  - Le mot « sous-marin » donne un indice sur leur emplacement.
+  solution: Les câbles sous-marins sont posés au fond des océans et relient les aires régionales entre elles.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

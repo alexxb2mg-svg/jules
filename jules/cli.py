@@ -5,6 +5,7 @@
   jules verifier             charge toutes les briques et affiche le prompt assemble
   jules code eleve           definit le code d'acces eleve (idem : parent)
   jules rapport [JOUR]       affiche le rapport d'un jour (AAAA-MM-JJ), sans l'envoyer
+  jules fiches verifier      controle les fiches v2 (contrat, index) ; `jules fiches signer DOSSIER` les scelle
 
 Sans installation : `python lancer.py <commande>` depuis le dossier du projet.
 """
@@ -19,7 +20,7 @@ from typing import Any
 
 import yaml
 
-from jules.acces import LONGUEUR_MIN, ROLES, empreinte, verifier_exposition
+from jules.acces import LONGUEUR_MIN, ROLES, code_evident, empreinte, verifier_exposition
 from jules.config import RACINE, charger_config
 from jules.moteur import Tuteur
 from jules.stockage import Conversation
@@ -72,7 +73,60 @@ def verifier() -> None:
     print("Taches : " + ", ".join(f"{t.nom} @ {t.heure}" for t in tuteur.taches()))
     print("\n----- PROMPT SYSTEME ASSEMBLE -----\n")
     print(tuteur.systeme(conv))
+    verifier_lecons(config)
     tuteur.fermer()
+
+
+def verifier_lecons(config: Any) -> None:
+    """Si le module `cours` est configure (reglage `bibliotheques`), charge ses lecons et rapporte
+
+    le nombre charge et, pour chaque lecon ecartee, son motif. Sans module `cours` dans la config,
+    ne fait rien (comportement d'avant l'etape 2 inchange).
+    """
+    module_cours = next((m for m in config.modules if m.id == "cours" and m.actif), None)
+    if module_cours is None:
+        return
+
+    from jules.bibliotheques import charger_catalogue
+    from jules.lecons import charger_lecons
+
+    ids_lecons = [str(i) for i in module_cours.reglages.get("bibliotheques") or []]
+    print("\n----- LECONS (module 'cours') -----\n")
+    if not ids_lecons:
+        print("Module 'cours' configure sans 'bibliotheques' : rien a charger.")
+        return
+
+    module_notions = next((m for m in config.modules if m.id == "notions"), None)
+    ids_referentiel = [
+        str(i) for i in (module_notions.reglages.get("bibliotheques") if module_notions else None) or ["programme"]
+    ]
+    catalogue = charger_catalogue(config.dossier_bibliotheques, ids_referentiel, None)
+
+    ecartees: list[str] = []
+
+    class _CaptureEcarts(logging.Handler):
+        def emit(self, record: logging.LogRecord) -> None:
+            ecartees.append(record.getMessage())
+
+    logger_lecons = logging.getLogger("jules.lecons")
+    capture = _CaptureEcarts()
+    propage_avant = logger_lecons.propagate
+    logger_lecons.propagate = False
+    logger_lecons.addHandler(capture)
+    try:
+        lecons = charger_lecons(config.dossier_bibliotheques, ids_lecons, catalogue.notions)
+    finally:
+        logger_lecons.removeHandler(capture)
+        logger_lecons.propagate = propage_avant
+
+    if lecons:
+        print(f"{len(lecons)} lecon(s) chargee(s) : " + ", ".join(sorted(lecons)))
+    else:
+        print("0 lecon chargee")
+    if ecartees:
+        print(f"{len(ecartees)} lecon(s) ecartee(s) :")
+        for motif in ecartees:
+            print(f"  - {motif}")
 
 
 def enregistrer_code(fichier: Path, role: str, code: str) -> None:
@@ -90,8 +144,11 @@ def definir_code(role: str) -> None:
         sys.exit(f"Role inconnu : {role} (attendu : {', '.join(ROLES)})")
     minimum = LONGUEUR_MIN[role]
     code = getpass.getpass(f"Nouveau code {role} ({minimum} caracteres minimum, rien ne s'affiche) : ")
-    if len(code.strip()) < minimum:
-        sys.exit("Code trop court.")
+    nettoye = code.strip()
+    if len(nettoye) < minimum:
+        sys.exit(f"Code trop court ({minimum} caracteres minimum).")
+    if code_evident(nettoye):
+        sys.exit("Code trop evident (suite, caractere repete ou mot de passe courant) : choisis-en un autre.")
     if getpass.getpass("Confirme : ") != code:
         sys.exit("Les deux saisies different.")
     enregistrer_code(FICHIER_LOCAL, role, code)
@@ -133,6 +190,10 @@ def main(args: list[str] | None = None) -> None:
         definir_code(args[1])
     elif args[0] == "rapport":
         rapport(args[1] if len(args) > 1 else None)
+    elif args[0] == "fiches":
+        from jules.fiches.commande import main as fiches
+
+        fiches(args[1:], RACINE / "bibliotheque")
     else:
         print(__doc__)
 

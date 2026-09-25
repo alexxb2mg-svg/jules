@@ -1,0 +1,50 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-m-identifier-reperes-culturels
+declencheurs:
+- les différences entre la France et l'Angleterre
+- les fêtes anglaises
+- les habitudes anglaises différentes
+- la date s'écrit pas pareil en anglais
+- repères culturels anglais
+essentiel: 'Identifier les repères culturels, c''est remarquer une similitude ou une différence entre la culture
+  française et une culture anglophone.
+
+  Par exemple, la façon d''écrire la date ou de dire l''heure peut être différente.
+
+  On peut informer ou alerter quelqu''un avec des formules ou des gestes simples : wait, please, stop.'
+methode:
+- Observer un document (date, horaire, fête) venant d'un pays anglophone.
+- Comparer avec ce qu'on connaît en France.
+- Nommer ce qui est pareil et ce qui est différent.
+vocabulaire:
+- terme: différence culturelle
+  definition: une façon de faire qui change d'un pays à l'autre
+erreurs_frequentes:
+- Croire que toutes les habitudes sont identiques d'un pays à l'autre.
+- Ne pas remarquer qu'une date ou une heure est écrite différemment.
+exemple:
+  enonce: 'Un texte anglais dit l''heure ainsi : « half past seven » pour 7h30. Est-ce la même façon de dire l''heure
+    qu''en France ?'
+  solution: 'Non : en anglais on dit « la moitié après sept » (half past seven) alors qu''en français on dit « sept
+    heures et demie » : c''est une différence culturelle.'
+exercices:
+- enonce: Dis « stop » à un camarade pour l'empêcher de continuer une action dangereuse, en anglais.
+  indices:
+  - Utilise un mot très simple, universel dans ce contexte.
+  solution: Stop!
+- enonce: Une date anglaise s'écrit « Tuesday the fourth of July ». Comment dirait-on cette date en français ?
+  indices:
+  - Repère le jour, le nombre et le mois.
+  solution: Mardi 4 juillet.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 28
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-comprehension-lecture-autonome
+declencheurs:
+- comprendre ce que je lis
+- trouver la réponse dans le texte
+- question sur un texte
+- information cachée
+- c'est écrit où
+- comprendre tout seul un texte
+- sous-entendu
+essentiel: 'Comprendre un texte tout seul demande des stratégies : il ne suffit pas de lire les mots, il faut se
+  représenter ce qui se passe.
+
+  Certaines informations sont explicites : elles sont écrites noir sur blanc dans le texte.
+
+  D''autres informations sont implicites : elles ne sont pas écrites, mais on peut les deviner grâce à des indices
+  dans le texte.
+
+  On peut aussi reconnaître le genre d''un texte (théâtre, poème, texte narratif) grâce à sa mise en page et à ses
+  caractéristiques d''écriture : les vers et les rimes pour un poème, la mise en page du dialogue pour le théâtre.'
+methode:
+- Lire le texte en entier une première fois pour comprendre l'histoire dans les grandes lignes.
+- 'Repérer les informations explicites : ce qui est écrit clairement dans le texte.'
+- 'Chercher les informations implicites : ce que l''on comprend sans que ce soit écrit, grâce aux indices.'
+- Regarder la mise en page (vers, dialogue, paragraphes) pour identifier le genre du texte.
+- Répondre aux questions en s'appuyant sur une phrase précise du texte quand c'est possible.
+erreurs_frequentes:
+- Répondre de mémoire sans revenir vérifier dans le texte.
+- Confondre ce qui est écrit dans le texte et ce qu'on imagine sans indice.
+- Ne pas reconnaître un poème ou un extrait de théâtre à cause de sa mise en page particulière.
+exemple:
+  enonce: 'Dans ce texte : « Léo enfila son manteau et son écharpe avant de sortir : la neige tombait depuis le
+    matin. » Que peut-on deviner sans que ce soit écrit ?'
+  solution: 'Le texte ne dit pas qu''il fait froid, mais on le devine (information implicite) : Léo met un manteau
+    et une écharpe, et il neige.'
+exercices:
+- enonce: 'Lis : « Marion regarda le ciel se couvrir de nuages noirs et courut ramasser le linge étendu dans le
+    jardin. » Le texte dit-il qu''il va pleuvoir ? Comment le sais-tu ?'
+  indices:
+  - Cherche si la phrase « il va pleuvoir » est écrite mot pour mot.
+  - 'Regarde ce que fait Marion : pourquoi court-elle ?'
+  solution: Le texte ne dit pas « il va pleuvoir » (ce n'est pas explicite), mais on le devine (implicite) grâce
+    aux nuages noirs et à Marion qui se dépêche de rentrer le linge.
+- enonce: 'Voici un court texte disposé en lignes courtes qui riment deux à deux. À quel genre de texte cela te
+    fait-il penser : un poème, une pièce de théâtre ou un texte narratif ?'
+  indices:
+  - Souviens-toi de ce qui caractérise la mise en page d'un poème.
+  solution: 'C''est probablement un poème : les vers courts et les rimes sont des caractéristiques de la mise en
+    page d''un poème.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -74,14 +74,18 @@ Une règle de fond s'applique aux outils comme au reste : **un outil ne fait pas
 
 ## 3. Une interface de cours, pas de chat
 
-L'élève ne parle plus à une fenêtre de conversation : il suit une **leçon**, faite de blocs qui s'enchaînent. Voir la [maquette](maquette-cours.png).
+**Construite (étape 2).** L'élève ne parle plus à une fenêtre de conversation pour suivre une leçon : il suit une **leçon en blocs**, avec Jules à côté. Voir la [maquette](maquette-cours.png), qui reste la cible visuelle (outils de matière et studio non encore branchés).
 
-- **Au centre, le cours** : objectifs, explication, outil, exercice, question ouverte. Une barre de progression montre où en est l'élève.
-- **À côté, Jules** : il voit ce que fait l'élève dans le cours. Il le laisse d'abord essayer, puis pose des questions, donne des indices progressifs et renvoie vers le bon endroit du cours au lieu de répondre. Il ne parle de lui-même qu'après une tentative, et seulement par une question.
-- **Le parcours** : les notions de la matière, avec leur état (comprise, en cours, à venir). Cet état est une estimation de l'IA, affichée comme telle.
-- **Le studio** : à partir de la leçon, l'élève fabrique ses supports de révision (carte mentale, fiche, quiz, cartes mémoire avec répétition espacée). À la différence de NotebookLM, Jules ne les génère pas : il propose une trame vide, pose des questions, puis relit et corrige ce que l'élève a écrit.
+- **Au centre, le cours** : les blocs `objectifs`, `texte`, `exemple`, `exercice` (nombre, réponse courte, QCM), `question_ouverte` et `synthese` s'enchaînent avec une barre de progression. Le bloc `outil` est prévu au format (étape 3) mais affiché comme « à venir ».
+- **À côté, Jules** : il voit la leçon, le bloc en cours, la réponse attendue et les tentatives déjà faites, mais ne les révèle jamais. Il ne parle de lui-même qu'après une tentative de l'élève, toujours par une question, jamais par la réponse ; un garde-fou serveur (`contient_la_reponse`) rejoue l'échange si Jules se trompe. Après plusieurs tentatives fausses, l'explication s'affiche sans qu'il ait à la répéter.
+- **Le parcours** (à gauche) : les notions de la matière choisie, groupées par chapitre, avec leur état (compris, en cours, bloqué, à venir) — une estimation de l'IA, affichée comme telle. Les notions qui ont une leçon sont cliquables.
+- **Le studio** (report à l'étape 4) : pas encore construit. La fin d'une leçon écrit déjà un événement de suivi qui alimente le bilan du soir et l'épreuve sans aide, comme un échange en conversation classique.
 
-Proposition de format d'une leçon (un fichier par leçon, écrit par un contributeur ou préparé par Jules à partir d'une notion) :
+Trois premières leçons expérimentales existent (mathématiques : théorème de Pythagore ; français : accord du participe passé avec avoir ; histoire : la guerre totale 1914-1918), dans `bibliotheque/lecons-3e-experimentales/`, format décrit dans [`bibliotheque/README.md`](../bibliotheque/README.md) et `bibliotheque/SCHEMA-LECON.md`. Elles sont marquées `a_relire` : un enseignant doit les valider avant un usage réel.
+
+**Reste à faire sur cet axe** : d'autres leçons (une notion sur 252 a aujourd'hui une leçon en blocs, les autres n'ont qu'une fiche de repères pour l'aide aux devoirs), le bloc `outil` une fois l'étape 3 avancée, et le studio de révision (étape 4).
+
+Proposition de format d'une leçon (documentée en détail dans `docs/COURS-CONTRAT.md`, qui reste la référence technique) :
 
 ```yaml
 notion: guerre-totale-1914-1918      # identifiant dans la bibliothèque
@@ -165,10 +169,10 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, programme et fiches de 3e ; reste le chargement selon l'âge |
-| 2 | Interface de cours : leçons en blocs, Jules à côté du cours | à faire |
+| 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, trois leçons expérimentales `a_relire`) ; reste le bloc `outil` et le studio |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
-| 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (dans la conversation ; à reprendre dans l'interface de cours) |
+| 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |
 | 5 | Catalogue communautaire de bibliothèques et d'outils | à faire |
 | à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
 

@@ -1,0 +1,60 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-modes-de-vie-seigneurs-paysans-villes
+declencheurs:
+- vie des paysans
+- travaux des champs
+- impôts au moyen âge
+- marché et foire
+- artisan
+- corvée pour le seigneur
+couverture: 'Ne couvre que ce que dit le programme : le calendrier des travaux et les obligations des paysannes
+  et paysans envers le seigneur et l''Église, et les activités des villes (marché, foire, artisanat).'
+essentiel: 'Au Moyen Âge, les modes de vie sont différents selon qu''on est seigneur, paysanne ou paysan, ou habitant
+  d''une ville.
+
+  Les paysannes et les paysans travaillent selon un calendrier annuel des travaux : ils cultivent la terre au fil
+  des saisons.
+
+  Ils ont des obligations envers le seigneur et envers l''Église : ce sont des redevances et des services qu''ils
+  doivent donner.
+
+  Dans les villes, on trouve des marchés et des foires où l''on vend et achète, et de l''artisanat, où des artisans
+  fabriquent des objets à la main.'
+methode:
+- 'Se demander qui fait l''action : le paysan aux champs, ou le marchand et l''artisan en ville.'
+- Se souvenir que les paysannes et paysans suivent un calendrier annuel de travaux.
+- Se rappeler qu'ils doivent des obligations au seigneur et à l'Église.
+- 'Associer la ville médiévale à deux activités précises : marché/foire et artisanat.'
+vocabulaire:
+- terme: paysanne et paysan
+  definition: personne qui cultive la terre et doit des obligations au seigneur et à l'Église
+erreurs_frequentes:
+- 'Croire que tout le monde au Moyen Âge vit dans un château : la majorité vit et travaille aux champs.'
+- Oublier que les paysans doivent des obligations au seigneur ET à l'Église, pas seulement à l'un des deux.
+- Confondre les activités des villes (marché, foire, artisanat) avec celles des campagnes.
+exemple:
+  enonce: Explique en une phrase ce que doit faire une paysanne au Moyen Âge, en plus de cultiver ses propres terres.
+  solution: Elle doit aussi des obligations envers le seigneur et envers l'Église, en plus de suivre le calendrier
+    annuel des travaux.
+exercices:
+- enonce: Cite deux activités que l'on peut voir dans une ville au Moyen Âge.
+  indices:
+  - Pense à un lieu où l'on vend et achète, et à un lieu où l'on fabrique des objets.
+  solution: On peut voir un marché ou une foire, et de l'artisanat.
+- enonce: 'Une paysanne dit : « Je dois donner une partie de mes récoltes et travailler pour d''autres personnes
+    sans être payée. » À qui doit-elle ces obligations ?'
+  indices:
+  - Il y a deux destinataires possibles dans le programme.
+  solution: Elle doit ces obligations au seigneur et à l'Église.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.4-5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

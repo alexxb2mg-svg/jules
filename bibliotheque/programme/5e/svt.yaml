@@ -1,0 +1,134 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Sciences de la vie et de la Terre
+id: svt
+niveau: 5e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de SVT du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été réécrit pour
+  2026-2027 : il reste en vigueur tel quel en 5e. Il est écrit par cycle de 3 ans
+  (5e-4e-3e) autour de trois grandes thématiques travaillées chaque année avec une
+  complexité croissante, sans découpage annuel officiel strict. Seuls les paragraphes
+  « Repères de progressivité » précisent explicitement ce qui est réservé à la classe de
+  4e ou de 3e (mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral à
+  partir de la 4e, mécanismes moléculaires de la digestion et explication globale de
+  l'immunité réservés à la 3e) : faute de repère annuel explicite pour la 5e dans ce
+  texte cycle 4, ce fichier retient les notions d'ouverture de chaque thématique
+  (explicitement introductives ou non réservées à une année ultérieure) avec
+  niveau_programme "cycle 4", en l'absence de découpage 5e/4e/3e officiel pour cette
+  matière.
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: planete-terre-environnement-action-humaine-5e
+    titre: "La planète Terre, l'environnement et l'action humaine"
+    chapitres:
+      - id: phenomenes-geologiques-meteorologie-5e
+        titre: "Phénomènes géologiques, météorologie et climatologie"
+        notions:
+          - id: 5e-geodynamique-globale
+            titre: "Contexte géodynamique global : place de la Terre dans le système solaire, tectonique des plaques, séismes, volcanisme"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer quelques phénomènes géologiques à partir du contexte géodynamique global : la Terre dans le système solaire, dynamique interne et tectonique des plaques lithosphériques, séismes, éruptions volcaniques."
+              - "Aléas, vulnérabilité, risques, prévision, prévention et protection sont abordés tout au long du cycle, quels que soient les choix d'entrée retenus (phénomènes géologiques ou météorologiques et climatologiques)."
+            mots_cles: [tectonique des plaques, séisme, volcanisme, système solaire]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « La planète Terre, l'environnement et l'action humaine », rubrique « Expliquer quelques phénomènes géologiques » et Repères de progressivité : « aléas, vulnérabilité, risques... seront abordés tout au long du cycle »"
+          - id: 5e-meteorologie-climatologie
+            titre: "Météorologie et climatologie : différence météo/climat, zones climatiques"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer quelques phénomènes météorologiques et climatiques : météorologie, dynamique des masses d'air et des masses d'eau, vents et courants océaniques."
+              - "Différencier météo et climat ; connaître les grandes zones climatiques de la Terre et la répartition des faunes et des flores."
+            mots_cles: [météorologie, climat, masses d'air, zones climatiques]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « La planète Terre, l'environnement et l'action humaine », rubrique « Expliquer quelques phénomènes météorologiques et climatiques »"
+      - id: ressources-ecosystemes-5e
+        titre: "Ressources naturelles, écosystèmes et activités humaines"
+        notions:
+          - id: 5e-exploitation-ressources-naturelles
+            titre: "Exploitation des ressources naturelles par l'être humain"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Caractériser quelques-uns des principaux enjeux de l'exploitation d'une ressource naturelle par l'être humain (eau, sol, pétrole, charbon, bois, ressources minérales, ressources halieutiques) pour ses besoins en nourriture et ses activités quotidiennes."
+            mots_cles: [ressources naturelles, exploitation, développement durable]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « La planète Terre, l'environnement et l'action humaine », rubrique « Caractériser quelques-uns des principaux enjeux de l'exploitation d'une ressource naturelle » ; Repères de progressivité : « L'exploration peut débuter au niveau local ou au niveau régional par l'étude du fonctionnement de différents écosystèmes... ces observations peuvent ensuite être remobilisées dans le contexte global... travaillé plutôt en fin de cycle »"
+  - id: vivant-et-son-evolution-5e
+    titre: "Le vivant et son évolution"
+    chapitres:
+      - id: nutrition-reproduction-5e
+        titre: "Nutrition et reproduction des organismes"
+        notions:
+          - id: 5e-nutrition-organismes
+            titre: "Nutrition des organismes animaux et végétaux"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier les besoins en nutriments et dioxygène des cellules animales et le rôle des systèmes de transport dans l'organisme (organisation fonctionnelle à l'échelle de l'organisme, des organes, des tissus et des cellules)."
+              - "Relier les besoins des cellules d'une plante chlorophyllienne (CO2, eau, sels minéraux, énergie lumineuse), les lieux de production ou de prélèvement de matière et les systèmes de transport au sein de la plante."
+            mots_cles: [nutrition, organisation fonctionnelle, plante chlorophyllienne]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le vivant et son évolution », rubrique « Relier les besoins en nutriments et dioxygène des cellules animales... »"
+          - id: 5e-reproduction-dynamique-populations
+            titre: "Reproduction sexuée et asexuée, dynamique des populations"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier des éléments de biologie de la reproduction sexuée et asexuée des êtres vivants et l'influence du milieu sur la survie des individus, à la dynamique des populations."
+              - "Étudier les reproductions sexuée et asexuée, la rencontre des gamètes, les milieux et modes de reproduction et de dissémination."
+            mots_cles: [reproduction sexuée, reproduction asexuée, gamètes, dynamique des populations]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le vivant et son évolution », rubrique « Relier des éléments de biologie de la reproduction... » ; Repères de progressivité : « on passe progressivement de l'étude de la diversité des modes de reproduction et des modalités de rencontre des gamètes à la transmission du patrimoine génétique »"
+      - id: classification-vivant-5e
+        titre: "Classification du vivant"
+        notions:
+          - id: 5e-classification-parente
+            titre: "Relations de parenté entre les êtres vivants et classification"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier l'étude des relations de parenté entre les êtres vivants et l'évolution : caractères partagés et classification, grands groupes d'êtres vivants dont Homo sapiens, leur parenté et leur évolution."
+            mots_cles: [classification du vivant, parenté, caractères partagés]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le vivant et son évolution », rubrique « Relier l'étude des relations de parenté entre les êtres vivants, et l'évolution » ; Repères de progressivité : « dans le prolongement du cycle 3 et tout au long du cycle 4, les élèves découvrent de nouvelles espèces et de nouveaux groupes »"
+  - id: corps-humain-sante-5e
+    titre: "Le corps humain et la santé"
+    chapitres:
+      - id: activite-physique-systemes-5e
+        titre: "Activité physique et systèmes cardio-vasculaire, respiratoire et nerveux"
+        notions:
+          - id: 5e-effort-systemes-cardio-respiratoire
+            titre: "Rôle des systèmes respiratoire et cardio-vasculaire lors d'un effort musculaire"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer comment le système nerveux, le système respiratoire et le système cardiovasculaire interviennent lors d'un effort musculaire, en identifiant les capacités et les limites de l'organisme (rythmes cardiaque et respiratoire, effort physique)."
+              - "L'étude du mouvement ou de l'adaptation cardio-respiratoire permet dès le début du cycle de découvrir l'organisation fonctionnelle du système nerveux, y compris au niveau cellulaire."
+            mots_cles: [système cardio-vasculaire, système respiratoire, effort musculaire]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le corps humain et la santé », rubrique « Expliquer comment le système nerveux, le système respiratoire et le système cardiovasculaire interviennent lors d'un effort musculaire » ; Repères de progressivité"
+          - id: 5e-alimentation-digestion
+            titre: "Alimentation et digestion (approche générale, hors mécanismes moléculaires)"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer le devenir des aliments dans le tube digestif : système digestif, digestion, absorption, aliments et nutriments."
+              - "Relier la nature des aliments et leurs apports qualitatifs et quantitatifs pour comprendre l'importance de l'alimentation pour l'organisme (besoins nutritionnels)."
+              - "Ce thème peut être abordé à tout moment du cycle, mais l'étude des mécanismes moléculaires est réservée à la classe de 3e."
+            mots_cles: [alimentation, digestion, nutriments, besoins nutritionnels]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le corps humain et la santé », rubrique « Expliquer le devenir des aliments dans le tube digestif » ; Repères de progressivité : « Ce thème peut être abordé à tout moment, mais on réserve l'étude des mécanismes moléculaires à la classe de 3e »"

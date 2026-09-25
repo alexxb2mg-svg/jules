@@ -1,0 +1,109 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Sciences de la vie et de la Terre
+id: svt
+niveau: 4e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de SVT du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été réécrit pour
+  2026-2027 : il reste en vigueur tel quel en 4e. Il est écrit par cycle de 3 ans
+  (5e-4e-3e) autour de trois grandes thématiques, sans découpage annuel officiel strict.
+  Seul le paragraphe « Repères de progressivité » du thème « Le corps humain et la santé »
+  attribue explicitement une notion à la classe de 4e (mécanismes nerveux à l'échelle
+  cellulaire et fonctionnement cérébral) : c'est la seule notion marquée niveau_programme
+  "4e" dans ce fichier ; les autres reprennent des rubriques de milieu de cycle décrites
+  comme approfondissements progressifs (marquées "cycle 4" faute de repère annuel plus
+  précis).
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: planete-terre-environnement-action-humaine-4e
+    titre: "La planète Terre, l'environnement et l'action humaine"
+    chapitres:
+      - id: risques-naturels-activites-humaines-4e
+        titre: "Risques naturels et impacts des activités humaines sur l'environnement"
+        notions:
+          - id: 4e-risques-naturels-prevention
+            titre: "Risques naturels et technologiques : prévention, protection, adaptation"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier les connaissances scientifiques sur les risques naturels (séismes, cyclones, inondations) ainsi que ceux liés aux activités humaines (pollution de l'air et des mers, réchauffement climatique, montée du niveau des océans) aux mesures de prévention, de protection, d'adaptation ou d'atténuation."
+              - "Connaître les notions d'aléas, de vulnérabilité et de risque en lien avec les phénomènes naturels, ainsi que les prévisions."
+            mots_cles: [risques naturels, prévention, vulnérabilité, aléas]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « La planète Terre, l'environnement et l'action humaine », rubrique « Relier les connaissances scientifiques sur les risques naturels... »"
+          - id: 4e-impacts-activites-humaines-ecosystemes
+            titre: "Impacts des activités humaines sur les écosystèmes et la biodiversité"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer comment une activité humaine peut modifier l'organisation et le fonctionnement des écosystèmes en lien avec quelques questions environnementales globales."
+              - "Analyser les impacts engendrés par le rythme, la nature (bénéfices/nuisances), l'importance et la variabilité des actions de l'être humain sur l'environnement."
+            mots_cles: [écosystème, biodiversité, impact environnemental]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « La planète Terre, l'environnement et l'action humaine », rubrique « Expliquer comment une activité humaine peut modifier l'organisation et le fonctionnement des écosystèmes »"
+  - id: vivant-et-son-evolution-4e
+    titre: "Le vivant et son évolution"
+    chapitres:
+      - id: diversite-genetique-evolution-4e
+        titre: "Diversité génétique et évolution des espèces"
+        notions:
+          - id: 4e-diversite-genetique-individus
+            titre: "Diversité et stabilité génétique des individus"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Expliquer sur quoi reposent la diversité et la stabilité génétique des individus, et les mécanismes à l'origine de cette diversité et de cette stabilité."
+              - "Expliquer comment les phénotypes sont déterminés par les génotypes et par l'action de l'environnement (ADN, mutations, brassage, gène, méiose et fécondation)."
+            mots_cles: [diversité génétique, ADN, mutation, génotype, phénotype]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le vivant et son évolution », rubrique « Expliquer sur quoi reposent la diversité et la stabilité génétique des individus » ; Repères de progressivité : « on passe progressivement du constat de la diversité des êtres vivants... aux mécanismes à l'origine de cette diversité »"
+          - id: 4e-evolution-especes
+            titre: "Évolution des espèces : apparition, disparition, sélection naturelle"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Mettre en évidence des faits d'évolution des espèces et donner des arguments en faveur de quelques mécanismes de l'évolution."
+              - "Étudier l'apparition et la disparition d'espèces au cours du temps (traces fossiles des premiers organismes vivants sur Terre) et le maintien des formes aptes à se reproduire par hasard et sélection naturelle."
+            mots_cles: [évolution, sélection naturelle, fossiles, extinction]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le vivant et son évolution », rubrique « Mettre en évidence des faits d'évolution des espèces »"
+  - id: corps-humain-sante-4e
+    titre: "Le corps humain et la santé"
+    chapitres:
+      - id: systeme-nerveux-microbien-4e
+        titre: "Système nerveux, monde microbien et immunité"
+        notions:
+          - id: 4e-systeme-nerveux-cellulaire-cerebral
+            titre: "Mécanismes nerveux à l'échelle cellulaire et fonctionnement cérébral"
+            niveau_programme: "4e"
+            attendus:
+              - "Mettre en évidence le rôle du cerveau dans la réception et l'intégration d'informations multiples (message nerveux, centres nerveux, nerfs, cellules nerveuses)."
+              - "Relier quelques comportements à leurs effets sur le fonctionnement du système nerveux (activité cérébrale, hygiène de vie, perturbations par certaines consommations : seuils, excès, dopage)."
+            mots_cles: [système nerveux, cellule nerveuse, activité cérébrale]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le corps humain et la santé », Repères de progressivité : « les mécanismes nerveux à l'échelle cellulaire et le fonctionnement cérébral ne seront développés qu'à partir de la 4e »"
+          - id: 4e-monde-microbien-immunite
+            titre: "Relations avec le monde microbien : hygiène, vaccination, antibiotiques"
+            niveau_programme: "cycle 4"
+            attendus:
+              - "Relier le monde microbien hébergé par notre organisme et son fonctionnement : ubiquité, diversité et évolution du monde bactérien (dont la résistance aux antibiotiques)."
+              - "Expliquer les réactions qui permettent à l'organisme de se préserver des micro-organismes pathogènes (réactions immunitaires) et relier ses connaissances aux politiques de prévention (mesures d'hygiène, vaccination, action des antiseptiques et des antibiotiques)."
+              - "On découvre progressivement l'importance du monde microbien tout au long du cycle ; l'explication globale de l'immunité est atteinte en classe de 3e."
+            mots_cles: [monde microbien, vaccination, antibiotiques, immunité]
+            brevet: true
+            source: "Programme SVT cycle 4 (BO n°31 du 30/07/2020), thème « Le corps humain et la santé », rubrique « Relier le monde microbien hébergé par notre organisme et son fonctionnement » ; Repères de progressivité : « on découvre progressivement quelques manifestations de l'immunité dont l'explication globale est atteinte en classe de 3e »"

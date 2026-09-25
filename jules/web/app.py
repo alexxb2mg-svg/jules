@@ -100,6 +100,14 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     def page_parent() -> HTMLResponse:
         return HTMLResponse((STATIQUE / "parent.html").read_text(encoding="utf-8"))
 
+    @app.get("/cours", response_class=HTMLResponse)
+    def page_cours() -> HTMLResponse:
+        return HTMLResponse((STATIQUE / "cours.html").read_text(encoding="utf-8"))
+
+    @app.get("/studio", response_class=HTMLResponse)
+    def page_studio() -> HTMLResponse:
+        return HTMLResponse((STATIQUE / "studio.html").read_text(encoding="utf-8"))
+
     app.mount("/static", StaticFiles(directory=STATIQUE), name="static")
 
     # --- session ---------------------------------------------------------

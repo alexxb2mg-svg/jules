@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espece-et-classification-emboitee
+declencheurs:
+- espèce
+- classification
+- groupes emboîtés
+- qui est plus proche de qui
+- se reproduire entre eux
+- lien de parenté animaux
+essentiel: 'Une espèce est un ensemble d''individus interféconds, c''est-à-dire capables de se reproduire entre
+  eux.
+
+  On peut réaliser une classification en groupes emboîtés à partir d''un petit nombre d''espèces qui ont des attributs
+  identifiés (par exemple morpho-anatomiques, faciles à reconnaître) : les espèces qui partagent le plus d''attributs
+  sont regroupées dans les mêmes groupes.
+
+  À partir de cette classification en groupes emboîtés, on peut déduire des liens de parenté entre les espèces étudiées
+  : « qui est plus proche de qui ? »'
+methode:
+- Observer les attributs (caractéristiques) de chaque espèce de la collection étudiée.
+- Repérer les attributs partagés par plusieurs espèces.
+- Regrouper les espèces qui partagent le plus d'attributs dans des groupes emboîtés les uns dans les autres.
+- Déduire de ces groupes emboîtés quelles espèces sont les plus proches parentes.
+erreurs_frequentes:
+- Croire qu'une espèce est définie par la ressemblance physique et non par la capacité à se reproduire entre eux.
+- Classer des espèces sans s'appuyer sur des attributs identifiés et partagés.
+- Confondre classification (groupes emboîtés selon des attributs) et identification (retrouver le nom d'une espèce
+  avec une clé de détermination).
+exemple:
+  enonce: On étudie un chat, un chien et un poisson. Comment savoir lesquels sont les plus proches parents avec
+    une classification en groupes emboîtés ?
+  solution: 'On repère les attributs partagés : le chat et le chien partagent plus d''attributs (quatre pattes,
+    poils, etc.) que chacun avec le poisson. Le chat et le chien forment donc un groupe emboîté plus proche l''un
+    de l''autre, et ce groupe est emboîté avec le poisson dans un groupe plus large.'
+exercices:
+- enonce: Deux animaux peuvent-ils appartenir à la même espèce s'ils ne peuvent pas se reproduire ensemble et avoir
+    une descendance ?
+  indices:
+  - 'Qu''est-ce qui définit une espèce : l''aspect, ou le fait d''avoir des petits ensemble ?'
+  solution: 'Non : une espèce est un ensemble d''individus interféconds, donc capables de se reproduire entre eux
+    ; s''ils ne le peuvent pas, ils n''appartiennent pas à la même espèce.'
+- enonce: Dans une classification en groupes emboîtés de 4 espèces, comment sait-on que deux espèces sont proches
+    parentes ?
+  indices:
+  - Pense aux attributs partagés.
+  solution: Deux espèces sont proches parentes quand elles partagent beaucoup d'attributs et se retrouvent dans
+    les mêmes groupes emboîtés, les plus petits et les plus précis.
+- enonce: Pourquoi utilise-t-on des attributs « facilement identifiables et reconnaissables » pour classer les espèces
+    d'une collection ?
+  indices:
+  - Qui doit pouvoir observer ces attributs ?
+  solution: Pour que les élèves puissent observer eux-mêmes ces attributs sur les espèces et construire la classification
+    à partir de leurs propres observations.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,112 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Technologie
+id: technologie
+niveau: 4e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Annexe — Programme de technologie du cycle 4"
+    reference: "BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    consulte_le: "2026-09-24"
+  - intitule: "Ressources d'accompagnement du programme de technologie au cycle 4 — calendrier d'application (5e 2024-2025, 4e 2025-2026, 3e 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le nouveau programme de technologie de cycle 4 (BO n° 9 du 29 février 2024) est entré
+  en application en 4e à la rentrée 2025-2026 : il est donc pleinement en vigueur en 4e
+  en 2026-2027 (deuxième année d'application pour ce niveau). Le texte est structuré en
+  trois thèmes, chacun décliné en compétences de fin de cycle assorties d'un paragraphe
+  « Progressivité pour atteindre ces compétences en fin de cycle » qui détaille
+  explicitement ce qui est attendu « en classe de 4e », dans le prolongement de la 5e.
+  Les notions ci-dessous reprennent les éléments explicitement attribués à la classe de
+  4e par ces paragraphes.
+brevet:
+  evalue: true
+  epreuve: "Épreuve écrite « sciences » (physique-chimie, SVT, technologie) — 2 fois 30 min (1 h au total), coefficient 2. Seules 2 des 3 disciplines sont retenues à chaque session, choix signifié 2 mois avant l'examen. Porte sur les programmes de 3e s'ils sont en vigueur, sinon sur ceux du cycle 4."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: usages-et-interactions-des-ost-4e
+    titre: "Les objets et les systèmes techniques : leurs usages et leurs interactions à découvrir et à analyser"
+    chapitres:
+      - id: usages-conditions-contraintes-4e
+        titre: "Approfondir les usages en intégrant conditions et contraintes"
+        notions:
+          - id: 4e-usages-conditions-contraintes
+            titre: "Usages d'objets techniques : conditions et contraintes associées"
+            niveau_programme: "4e"
+            attendus:
+              - "Dans le prolongement et la continuité des activités pratiques découvertes en 5e, approfondir les usages et la culture technologique en intégrant les conditions et les contraintes associées aux différents objets et systèmes techniques."
+            mots_cles: [objet technique, contrainte, usage, culture technologique]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 1, compétence « Décrire les liens entre usages et évolutions technologiques », Progressivité : « En classe de 4e, dans le prolongement et la continuité des activités pratiques découvertes en 5e, il s'agit d'approfondir ces usages et cette culture technologiques »"
+  - id: structure-fonctionnement-comportement-4e
+    titre: "Structure, fonctionnement, comportement : des objets et des systèmes techniques à comprendre"
+    chapitres:
+      - id: composition-interne-chaines-4e
+        titre: "Composition interne, chaînes d'énergie et d'information"
+        notions:
+          - id: 4e-chaines-energie-information
+            titre: "Composants et solutions techniques des chaînes d'énergie et d'information"
+            niveau_programme: "4e"
+            attendus:
+              - "En étudiant la composition interne des objets et des systèmes techniques, explorer et étudier les composants et les solutions techniques qui constituent les chaînes d'énergie et d'information."
+              - "Aborder et caractériser les flux d'information, d'énergie et de matière pour comprendre les éléments qui les constituent."
+            mots_cles: [chaîne d'énergie, chaîne d'information, flux, composants]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 2, compétence « Décrire et caractériser l'organisation interne d'un objet ou d'un système technique », Progressivité : « En classe de 4e, en étudiant la composition interne des objets et des systèmes techniques, les élèves explorent et étudient les composants et les solutions techniques... »"
+          - id: 4e-programme-analyse-donnees
+            titre: "Analyser des données et compléter un programme pour modifier une fonctionnalité"
+            niveau_programme: "4e"
+            attendus:
+              - "Analyser les données, compléter et tester un programme pour modifier une fonctionnalité d'un objet ou d'un système technique."
+              - "Aborder l'architecture de réseaux locaux pour étudier un système et ses données."
+            mots_cles: [programme, données, réseau local, fonctionnalité]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 2, compétence « Décrire et caractériser l'organisation interne d'un objet ou d'un système technique », Progressivité : « Les élèves analysent les données, complètent et testent un programme pour modifier une fonctionnalité... L'étude d'un système et de ses données nécessite d'aborder l'architecture de réseaux locaux »"
+          - id: 4e-protocole-reparation
+            titre: "Définir et mettre en œuvre un protocole de réparation"
+            niveau_programme: "4e"
+            attendus:
+              - "Après avoir identifié un dysfonctionnement, définir un protocole de réparation et le mettre en œuvre."
+            mots_cles: [dysfonctionnement, protocole de réparation]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 2, compétence « Identifier un dysfonctionnement d'un objet technique et y remédier », Progressivité : « Après avoir identifié un dysfonctionnement, les élèves définissent un protocole de réparation et le mettent en œuvre »"
+  - id: creation-conception-realisation-4e
+    titre: "Création, conception, réalisation, innovations : des objets à concevoir et à réaliser"
+    chapitres:
+      - id: besoins-fonctions-solutions-4e
+        titre: "Relation besoins-fonctions-solutions et résolution de problème"
+        notions:
+          - id: 4e-besoins-fonctions-solutions
+            titre: "Relation entre besoins, fonctions et solutions techniques"
+            niveau_programme: "4e"
+            attendus:
+              - "Mettre l'accent sur la relation entre les besoins, les fonctions, les solutions, dans la continuité de la démarche engagée en 5e."
+              - "Identifier et résoudre un problème portant sur un objet ou un système technique existant."
+            mots_cles: [besoin, fonction, solution technique, résolution de problème]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 3, Progressivité : « En classe de 4e, l'accent est mis sur la relation entre les besoins, les fonctions, les solutions dans la continuité de la démarche engagée en 5e... ils identifient et résolvent un problème portant sur un objet ou un système technique existant »"
+          - id: 4e-approche-mei-environnement
+            titre: "Ajouter une fonctionnalité en approche Matériaux-Énergies-Information et impact environnemental"
+            niveau_programme: "4e"
+            attendus:
+              - "Être en mesure d'ajouter une fonctionnalité en respectant les spécifications attendues par une approche Matériaux, Énergies, Information, en prenant conscience de ses effets sur l'environnement."
+            mots_cles: [matériaux, énergie, information, impact environnemental]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 3, Progressivité : « ils doivent être en mesure d'ajouter une fonctionnalité en respectant les spécifications attendues par une approche Matériaux, Énergies, Information »"
+          - id: 4e-organiser-processus-conception
+            titre: "Organiser un processus de conception et de réalisation"
+            niveau_programme: "4e"
+            attendus:
+              - "Organiser un processus de conception et de réalisation dans une durée, avec des tâches identifiées."
+            mots_cles: [gestion de projet, organisation, tâches]
+            brevet: true
+            source: "Programme technologie cycle 4 (BO n°9 du 29/02/2024), thème 3, rubrique « La gestion de projet technique », tableau Repères de progressivité 5e 4e 3e : ligne 4e « Organiser un processus de conception et de réalisation dans une durée, avec des tâches identifiées »"

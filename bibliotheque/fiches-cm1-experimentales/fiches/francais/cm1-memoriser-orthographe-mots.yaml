@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-memoriser-orthographe-mots
+declencheurs:
+- comment ça s'écrit
+- orthographe d'un mot
+- j'écris mal ce mot
+- faute d'orthographe
+- mot difficile à écrire
+- dictée
+essentiel: 'Mémoriser l''orthographe des mots, c''est apprendre à écrire correctement les mots les plus fréquents
+  de la langue française, en t''appuyant sur des régularités.
+
+  Beaucoup de mots se ressemblent parce qu''ils viennent du même mot d''origine : hasardeux, hasarder et hasard
+  s''écrivent avec la même base.
+
+  D''autres mots se ressemblent parce qu''ils appartiennent à un même groupe : les métiers en -eur/-ice comme agriculteur
+  et agricultrice s''écrivent selon une régularité.
+
+  Pour les mots irréguliers les plus fréquents, il n''y a pas de règle simple : il faut les mémoriser directement.'
+methode:
+- Repérer si le mot a une famille (d'autres mots qui lui ressemblent) qui peut t'aider à l'orthographier.
+- Chercher un mot de la même famille plus facile à entendre, pour retrouver une lettre muette.
+- Repérer si le mot appartient à un groupe régulier (comme les métiers en -eur/-ice).
+- Pour les mots irréguliers fréquents, les mémoriser directement en les écrivant plusieurs fois.
+- Relire tes écrits pour vérifier l'orthographe des mots que tu as appris.
+vocabulaire:
+- terme: orthographe lexicale
+  definition: la façon correcte d'écrire un mot, indépendamment des accords
+erreurs_frequentes:
+- Oublier une lettre muette qu'on retrouverait en cherchant un mot de la même famille (laid → laideur).
+- Ne pas s'appuyer sur la régularité d'un groupe de mots pour écrire un mot nouveau du même type.
+- Confondre deux mots qui se ressemblent à l'oral mais s'écrivent différemment.
+exemple:
+  enonce: Comment savoir qu'il faut écrire « progrès » avec un « s » final, grâce à un mot de la même famille ?
+  solution: 'On pense au verbe « progresser », qui montre le son du "s" : cela confirme que "progrès" s''écrit bien
+    avec un s final, comme l''indique sa famille de mots.'
+exercices:
+- enonce: Écris le mot « hasard » puis deux mots de sa famille pour vérifier son orthographe.
+  indices:
+  - Pense à un adjectif et à un verbe formés sur la même base.
+  solution: 'hasard, hasardeux, hasarder : les trois mots partagent la même base, ce qui aide à mémoriser l''orthographe
+    de « hasard ».'
+- enonce: À partir du modèle agriculteur/agricultrice, écris le féminin du métier « instituteur ».
+  indices:
+  - Le groupe -eur devient -rice au féminin dans ce type de mots.
+  solution: institutrice (comme agriculteur → agricultrice).
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Mémoriser l'orthographe des mots » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 11-12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Mémoriser l'orthographe des mots »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

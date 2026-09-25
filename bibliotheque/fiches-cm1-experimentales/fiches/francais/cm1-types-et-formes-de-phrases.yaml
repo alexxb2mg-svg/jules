@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-types-et-formes-de-phrases
+declencheurs:
+- phrase interrogative
+- phrase exclamative
+- point d'interrogation
+- point d'exclamation
+- type de phrase
+- phrase négative
+- poser une question à l'écrit
+essentiel: 'Une phrase a un type et peut aussi avoir une forme particulière.
+
+  Il existe trois types de phrases : le type déclaratif sert à donner une information (Le facteur distribue le courrier),
+  le type interrogatif sert à poser une question (Vas-tu à la plage ?), le type impératif sert à donner un ordre
+  (Ouvrez la fenêtre !).
+
+  Une phrase peut aussi être, en plus de son type, de forme négative (elle ne distribue pas le courrier) ou de forme
+  exclamative, qui marque une émotion forte.
+
+  Pour poser une question à l''écrit, on peut inverser le sujet et le verbe (Vas-tu…?), utiliser « est-ce que »
+  (Est-ce que tu vas…?) ou un mot interrogatif comme qui, quand, pourquoi.'
+methode:
+- 'Repérer si la phrase donne une information, pose une question ou donne un ordre : c''est le type.'
+- 'Vérifier si la phrase porte en plus une négation (ne...pas) ou une forte émotion (point d''exclamation) : c''est
+  la forme.'
+- Pour transformer une phrase en question, essayer l'inversion du sujet ou « est-ce que ».
+- Pour transformer une phrase à la forme négative, ajouter ne...pas autour du verbe.
+- 'Vérifier la ponctuation finale : point, point d''interrogation ou point d''exclamation.'
+vocabulaire:
+- terme: type de phrase
+  definition: 'déclaratif, interrogatif ou impératif : ce que fait la phrase (informer, questionner, ordonner)'
+- terme: forme de phrase
+  definition: 'négative ou exclamative : une caractéristique qui s''ajoute au type de la phrase'
+erreurs_frequentes:
+- Confondre le type et la forme d'une phrase (croire que « négative » est un type de phrase).
+- Oublier d'inverser le sujet et le verbe pour transformer une phrase déclarative en question.
+- Mettre un point d'interrogation à une question indirecte (Je te demande si tu viens.) alors qu'elle n'en prend
+  pas.
+exemple:
+  enonce: Transforme la phrase « Alice va à la plage. » en phrase de type interrogatif, avec inversion du sujet.
+  solution: Alice va-t-elle à la plage ? (inversion du sujet complexe, avec le "t" d'euphonie).
+exercices:
+- enonce: 'Donne le type et la forme de la phrase : « Ne mange pas ce fruit ! »'
+  indices:
+  - Cherche d'abord si c'est un ordre, une question ou une information.
+  - Cherche ensuite s'il y a une négation ou une émotion forte.
+  solution: Type impératif (un ordre), forme négative (ne...pas) et exclamative (point d'exclamation).
+- enonce: Transforme la phrase « Tu as fini tes devoirs. » en question avec « est-ce que », puis à la forme négative.
+  indices:
+  - Place « est-ce que » en tête de phrase pour la première transformation.
+  solution: 'Question : Est-ce que tu as fini tes devoirs ? Forme négative : Tu n''as pas fini tes devoirs.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Connaître les trois types de phrases et leurs formes » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 67-68
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions des types déclaratif et interrogatif
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-participer-echanges-verbaux
+declencheurs:
+- débat
+- discuter en classe
+- donner mon avis
+- couper la parole
+- échanger
+- parler trop fort
+- écouter les autres parler
+- parler devant la classe
+essentiel: 'Participer à un échange, c''est prendre la parole en respectant des règles : ne pas couper la parole,
+  attendre son tour, écouter les autres.
+
+  Tu adaptes ta façon de parler selon la situation : devant toute la classe, tu parles plus fort et plus lentement
+  que face à un seul camarade.
+
+  Tu construis ton propos petit à petit, en apportant des informations qui font avancer la discussion du groupe.
+
+  Après avoir parlé, tu peux juger ta propre façon de t''exprimer, ou celle d''un camarade, avec des critères précis
+  (le débit, la clarté).'
+methode:
+- Attendre que la personne qui parle ait fini pour prendre la parole à ton tour.
+- Parler assez fort et articuler pour être entendu de tous.
+- Regarder la personne ou le groupe à qui tu t'adresses.
+- Apporter une idée ou une information qui fait avancer l'échange, sans répéter ce qui a déjà été dit.
+- Écouter une production orale (la tienne ou celle d'un camarade) et repérer un point à améliorer.
+vocabulaire:
+- terme: registre de langue
+  definition: 'la façon de parler adaptée à une situation (ici : le registre courant à l''école)'
+erreurs_frequentes:
+- Couper la parole à un camarade avant qu'il ait fini de parler.
+- Parler trop bas ou trop vite pour être compris de tout le groupe.
+- Répéter une idée déjà dite au lieu d'apporter une information nouvelle.
+exemple:
+  enonce: 'Pendant un débat sur le recyclage, un camarade vient de dire : « il faut trier les déchets ». Donne une
+    phrase qui apporte une information nouvelle à l''échange.'
+  solution: 'Par exemple : « Je suis d''accord, et on pourrait aussi installer des bacs de tri dans la cour de récréation.
+    » (nouvelle idée, pas une simple répétition).'
+exercices:
+- enonce: Organise un petit échange à la maison sur un sujet simple (le film préféré, un jeu). Note une règle que
+    tu as respectée (ne pas couper la parole, regarder l'autre...).
+  indices:
+  - Choisis une seule règle et vérifie que tu l'as bien suivie pendant l'échange.
+  solution: Réussite si tu identifies clairement une règle de communication respectée et si tu donnes un exemple
+    concret pendant l'échange.
+- enonce: 'Enregistre-toi (ou fais-toi écouter par un adulte) en train de raconter ta journée. Repère un point à
+    améliorer : le débit de parole ou la clarté.'
+  indices:
+  - Écoute-toi ou fais-toi écouter une seconde fois pour comparer.
+  solution: Réussite si tu identifies un point précis à améliorer, par exemple parler moins vite ou articuler davantage.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Participer à des échanges verbaux » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Participer à des échanges verbaux »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

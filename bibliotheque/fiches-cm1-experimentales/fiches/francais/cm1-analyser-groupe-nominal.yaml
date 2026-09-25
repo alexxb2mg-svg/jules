@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-analyser-groupe-nominal
+declencheurs:
+- groupe nominal
+- nom noyau
+- épithète
+- déterminant nom adjectif
+- GN
+- le petit chat
+- quel est le noyau
+essentiel: 'Le groupe nominal (GN) est formé d''un déterminant, d''un nom noyau, et parfois d''un adjectif qui apporte
+  une précision.
+
+  Le nom noyau est le mot le plus important du groupe nominal : c''est lui qui donne son sens principal au groupe
+  (le petit chat noir : le noyau est chat).
+
+  Le groupe nominal peut suivre plusieurs constructions : Déterminant + Nom (le chat), Déterminant + Nom + Adjectif
+  (le chat noir), Déterminant + Adjectif + Nom (le petit chat).
+
+  Quand un adjectif est directement relié au nom, sans préposition, il occupe la fonction épithète (une avocate
+  remarquable).'
+methode:
+- Repérer le groupe nominal dans la phrase (souvent introduit par un déterminant).
+- 'Trouver le nom noyau : le mot autour duquel le groupe est construit.'
+- 'Repérer si un adjectif est directement relié au nom, sans préposition : c''est un adjectif épithète.'
+- 'Identifier l''ordre des mots : Dét. + Nom, Dét. + Nom + Adj., ou Dét. + Adj. + Nom.'
+vocabulaire:
+- terme: groupe nominal (GN)
+  definition: groupe formé d'un déterminant, d'un nom noyau et éventuellement d'une expansion
+- terme: nom noyau
+  definition: le nom principal autour duquel s'organise le groupe nominal
+- terme: épithète
+  definition: fonction d'un adjectif directement relié au nom, sans préposition
+erreurs_frequentes:
+- Confondre le nom noyau avec le déterminant ou l'adjectif du groupe nominal.
+- Oublier l'adjectif épithète quand il est placé avant le nom (le petit chat).
+- Découper mal le groupe nominal en oubliant un de ses éléments.
+exemple:
+  enonce: Dans le groupe nominal « le petit chat noir », trouve le nom noyau et les adjectifs épithètes.
+  solution: 'Le nom noyau est chat. Les adjectifs épithètes sont petit (placé avant) et noir (placé après) : ils
+    sont tous deux directement reliés au nom, sans préposition.'
+exercices:
+- enonce: 'Repère le groupe nominal et son nom noyau dans la phrase : « Une grande maison blanche domine la vallée.
+    »'
+  indices:
+  - Le groupe nominal sujet commence par le déterminant « une ».
+  solution: 'Groupe nominal : une grande maison blanche. Nom noyau : maison.'
+- enonce: Construis un groupe nominal de type Déterminant + Adjectif + Nom avec le nom « voiture ».
+  indices:
+  - L'adjectif doit se placer avant le nom, comme dans « le petit chat ».
+  solution: 'Exemple : la belle voiture (déterminant la, adjectif belle, nom noyau voiture).'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Analyser le groupe nominal » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 75-76
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définition du groupe nominal, nom noyau et fonction épithète
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

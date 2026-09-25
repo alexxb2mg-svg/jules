@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-masses
+declencheurs:
+- gramme
+- kilogramme
+- tonne
+- peser
+- balance
+- convertir une masse
+- plus lourd
+essentiel: 'Les unités de masse vont du milligramme au kilogramme, avec aussi la tonne pour les masses très grandes
+  : milligramme (mg), centigramme (cg), décigramme (dg), gramme (g), décagramme (dag), hectogramme (hg), kilogramme
+  (kg), tonne (t).
+
+  Deux unités qui se suivent sont liées par 10 : 1 kg = 10 hg, et 1 hg = 1/10 kg = 0,1 kg.
+
+  1 tonne vaut 1 000 kilogrammes.
+
+  Au cours moyen, on n''utilise pas de tableau pour convertir : on s''appuie sur les relations connues entre les
+  unités, comme pour les longueurs.
+
+  Pour comparer ou additionner deux masses données dans des unités différentes, on les exprime d''abord dans la
+  même unité.'
+methode:
+- Repérer les deux unités en jeu et la relation qui les relie (par exemple 1 kg = 1 000 g).
+- Convertir toutes les masses dans la même unité avant de comparer, d'additionner ou de soustraire.
+- Vérifier que le résultat obtenu est cohérent (une masse ne peut pas être négative).
+erreurs_frequentes:
+- Confondre le sens de la conversion (multiplier au lieu de diviser par 1 000 pour passer de g à kg).
+- Oublier qu'une tonne vaut 1 000 kg et non 100 kg.
+- Comparer deux masses sans les avoir mises dans la même unité.
+exemple:
+  enonce: Convertis 6,2 t en kilogrammes.
+  solution: 1 t = 1 000 kg, donc 6,2 t = 6 200 kg.
+exercices:
+- enonce: 'Range dans l''ordre croissant : 0,33 t et 565 kg.'
+  indices:
+  - Convertis 0,33 t en kilogrammes.
+  solution: 0,33 t = 330 kg. Comme 330 kg < 565 kg, l'ordre croissant est 0,33 t < 565 kg.
+- enonce: 'Calcule la somme de deux masses données dans des unités différentes : 8,2 kg + 840 g.'
+  indices:
+  - '1 kg = 1 000 g : convertis 840 g en kilogrammes, ou 8,2 kg en grammes.'
+  solution: 8,2 kg = 8 200 g, donc 8 200 g + 840 g = 9 040 g, soit 9,04 kg.
+- enonce: Un sac de farine pèse 1/4 kg. Exprime cette masse en grammes.
+  indices:
+  - 1/4 kg, c'est la moitié de la moitié de 1 kg.
+  solution: 'La moitié de 1 kg est 500 g, la moitié de 500 g est 250 g : le sac pèse 250 g, soit 0,25 kg.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.15
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.16-17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite : pas de tableau de conversion au cours moyen'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

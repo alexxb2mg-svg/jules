@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pytest
 
-from jules.acces import ErreurAcces, code_correct, empreinte, verifier_exposition
+from jules.acces import ErreurAcces, code_correct, code_evident, empreinte, verifier_exposition
 from jules.persona import ErreurPersona, charger_persona
 
 
@@ -18,6 +18,41 @@ def test_empreinte_salee_et_verifiable():
 @pytest.mark.parametrize("attendu", ["", "abc", "md5$00$11", "scrypt$zz$11", "scrypt$00$"])
 def test_empreinte_invalide_refusee(attendu):
     assert not code_correct("1234", attendu)
+
+
+@pytest.mark.parametrize(
+    "code",
+    [
+        "aaaaaa",
+        "111111",
+        "AAAAAAAA",  # caractere unique repete
+        "123456",
+        "abcdef",
+        "654321",
+        "fedcba",
+        "12345678",  # suites
+        "azerty",
+        "azertyui",
+        "qwerty",
+        "password",
+        "motdepasse",
+        "soleil",
+        "marseille",
+        "  123456  ",  # espaces autour : nettoye avant comparaison
+        "AZERTY",  # casse ignoree
+    ],
+)
+def test_code_evident_refuse(code):
+    assert code_evident(code)
+
+
+@pytest.mark.parametrize("code", ["tr0ub4dor", "chat-violet-19", "PjK4mLwq", "framboise7X"])
+def test_code_non_evident_accepte(code):
+    assert not code_evident(code)
+
+
+def test_code_evident_chaine_vide_non_signalee():
+    assert not code_evident("")
 
 
 def test_serveur_local_sans_code_autorise():
@@ -54,3 +89,40 @@ def test_env_charge_sans_ecraser(tmp_path, monkeypatch):
 
     assert os.environ["NOUVELLE"] == "valeur" and os.environ["DEJA_LA"] == "systeme"
     monkeypatch.delenv("NOUVELLE")
+
+
+# --- saisie d'un code par `jules code eleve|parent` ---------------------------------
+
+
+def saisir(monkeypatch, tmp_path, *saisies: str):
+    """Simule les saisies clavier de `definir_code` et ecrit dans un config.local.yaml jetable."""
+    import jules.cli as cli
+
+    reponses = iter(saisies)
+    monkeypatch.setattr(cli.getpass, "getpass", lambda _invite="": next(reponses))
+    monkeypatch.setattr(cli, "FICHIER_LOCAL", tmp_path / "config.local.yaml")
+    return cli
+
+
+@pytest.mark.parametrize(("role", "trop_court"), [("eleve", "k7Pq2"), ("parent", "k7Pq2mZ")])
+def test_code_trop_court_refuse(monkeypatch, tmp_path, role, trop_court):
+    cli = saisir(monkeypatch, tmp_path, trop_court, trop_court)
+    with pytest.raises(SystemExit, match="trop court"):
+        cli.definir_code(role)
+    assert not (tmp_path / "config.local.yaml").exists()
+
+
+@pytest.mark.parametrize("role", ["eleve", "parent"])
+def test_code_evident_refuse_a_la_saisie(monkeypatch, tmp_path, role):
+    cli = saisir(monkeypatch, tmp_path, "12345678", "12345678")
+    with pytest.raises(SystemExit, match="evident"):
+        cli.definir_code(role)
+    assert not (tmp_path / "config.local.yaml").exists()
+
+
+@pytest.mark.parametrize(("role", "code"), [("eleve", "k7Pq2m"), ("parent", "k7Pq2mZx")])
+def test_code_juste_assez_long_accepte(monkeypatch, tmp_path, role, code):
+    cli = saisir(monkeypatch, tmp_path, code, code)
+    cli.definir_code(role)
+    contenu = (tmp_path / "config.local.yaml").read_text(encoding="utf-8")
+    assert f"code_{role}: scrypt$" in contenu and code not in contenu

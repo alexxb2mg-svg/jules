@@ -140,7 +140,7 @@ def lancer(racine: Path, demander: Callable[[str], str] = input, afficher: Calla
         genre = normaliser_genre(choix_genre)
     except ValueError:
         genre = GENRE_DEFAUT
-    classe = demander("Classe (6e, 5e, 4e, 3e) [laisser vide si inconnue] : ").strip()
+    classe = demander("Classe (CM1, CM2, 6e, 5e, 4e, 3e) [laisser vide si inconnue] : ").strip()
     parent = demander("Comment Jules doit nommer l'adulte à prévenir [ses parents] : ").strip() or "ses parents"
 
     afficher("\nMoteur d'intelligence artificielle :")

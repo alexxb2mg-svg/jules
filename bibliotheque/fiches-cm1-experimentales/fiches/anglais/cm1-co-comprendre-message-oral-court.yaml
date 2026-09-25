@@ -1,0 +1,63 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-co-comprendre-message-oral-court
+declencheurs:
+- consigne en anglais
+- comprendre un message oral en anglais
+- comprendre l'anglais parlé
+- reconnaître les mots en anglais à l'oral
+- comprendre une conversation simple en anglais
+essentiel: 'Pour comprendre un message oral court, il faut d''abord repérer les mots de salutation : Hello, Good
+  morning, Goodbye, Hi, How are you?
+
+  On s''aide ensuite des mots qu''on connaît déjà, sur soi et sur sa famille.
+
+  On repère les mots qui posent une question : Who?, What?, Where?, When? Ils annoncent qu''on attend une réponse
+  précise.
+
+  On repère aussi qui parle grâce aux pronoms : I, you, he, she, it, et à qui appartient quelque chose grâce à my,
+  your, his, her, its.
+
+  Enfin, on écoute l''émotion dans la voix (joie, tristesse, colère) pour comprendre le sens même si on ne connaît
+  pas tous les mots.
+
+  Cela marche seulement si la personne parle lentement et distinctement.'
+methode:
+- 'Repérer d''abord les formules de salutation : elles indiquent le début de l''échange.'
+- Écouter les pronoms interrogatifs (Who? What? Where? When?) pour savoir ce qu'on demande.
+- Repérer les pronoms personnels (I, you, he, she) pour savoir de qui on parle.
+- S'aider du ton de la voix pour deviner l'émotion de la personne qui parle.
+- Demander de répéter si on n'a pas compris (voir la fiche « clarifier un point »).
+vocabulaire:
+- terme: pronom interrogatif
+  definition: un mot qui sert à poser une question, comme Who, What, Where, When
+- terme: pronom possessif
+  definition: un mot qui dit à qui appartient quelque chose, comme my, your, his, her
+erreurs_frequentes:
+- Ne pas reconnaître Who, What, Where, When et donc ne pas comprendre qu'une question est posée.
+- Confondre he et she, ou my et your.
+- Ne pas s'aider de l'émotion dans la voix pour comprendre le sens général du message.
+exemple:
+  enonce: 'Le professeur dit : « Hello, come in! Sit down! ». Que doit faire l''élève ?'
+  solution: 'L''élève reconnaît une salutation (Hello) suivie d''une consigne : il entre et s''assoit.'
+exercices:
+- enonce: 'Tu entends : « Where do you live? ». Quel pronom interrogatif reconnais-tu et que te demande-t-on ?'
+  indices:
+  - Where veut dire « où ».
+  solution: 'Where : on te demande où tu habites.'
+- enonce: 'Tu entends quelqu''un dire d''une voix triste : « I''m sad because I''m out of peanuts. ». Même sans
+    connaître peanuts, que comprends-tu ?'
+  indices:
+  - Écoute l'émotion dans la voix et le mot sad.
+  solution: Tu comprends que la personne est triste (sad), même sans connaître le mot peanuts.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 4
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,125 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Géographie
+id: geographie
+niveau: CM1
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'histoire-géographie pour le cycle 3 — partie Géographie, Cours moyen première année : la diversité des modes de vie dans le monde"
+    reference: "Arrêté du 22-4-2026, BO n° 22 du 28 mai 2026 (NOR MENE2608631A)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme d'histoire-géographie du cycle 3 change à la rentrée 2026 (arrêté du 22-4-2026, BO n° 22
+  du 28 mai 2026) et introduit, pour la première fois, une répartition explicite par année du cours moyen.
+  Ce fichier ne retient que la partie Géographie de la section « Cours moyen première année : la diversité
+  des modes de vie dans le monde » (p.11-12), soit les quatre thèmes prévus pour le CM1 : se nourrir, les
+  inégalités dans le monde, se déplacer, communiquer dans le monde avec Internet. Sont exclus les trois
+  thèmes de la section « Cours moyen deuxième année : la France, l'Union européenne » (p.12-13), propres
+  au CM2, ainsi que les quatre thèmes de la section « Sixième : habiter le monde » (p.13-15). Les
+  « repères » indiqués dans la troisième colonne du tableau officiel sont repris comme éléments de contexte
+  dans les attendus, faute de champ dédié dans ce référentiel.
+themes:
+  - id: se-nourrir
+    titre: "Se nourrir"
+    chapitres:
+      - id: diversite-pratiques-alimentaires
+        titre: "La diversité des pratiques alimentaires dans le monde"
+        notions:
+          - id: cm1-diversite-pratiques-alimentaires
+            titre: "La diversité des pratiques alimentaires dans le monde"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la diversité des pratiques alimentaires dans le monde."
+              - "Décrire les différences des pratiques alimentaires entre un pays riche et un pays en développement."
+              - "Repère : deux pays à ration alimentaire très riche situés sur deux continents différents ; deux pays à ration alimentaire insuffisante situés sur deux continents différents."
+            mots_cles: ["malnutrition", "sous-nutrition", "alimentation"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 1 « Se nourrir », hg_c3_2026.txt p.11"
+      - id: provenance-chaine-production-aliments
+        titre: "La provenance des aliments et la chaîne de production"
+        notions:
+          - id: cm1-provenance-aliments-produits-transformes
+            titre: "La provenance des aliments consommés et la chaîne de production"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la provenance des principaux aliments que les élèves consomment."
+              - "Décrire la différence entre produits agricoles et produits transformés."
+              - "Décrire la chaîne de production d'un aliment consommé (yaourt, biscuit, fruit, etc.)."
+            mots_cles: ["produit agricole", "produit alimentaire transformé"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 1 « Se nourrir », hg_c3_2026.txt p.11"
+  - id: inegalites-dans-le-monde
+    titre: "Les inégalités dans le monde"
+    chapitres:
+      - id: inegal-acces-eau-sante-education
+        titre: "L'inégal accès à l'eau, à la santé ou à l'éducation"
+        notions:
+          - id: cm1-inegal-acces-eau-sante-education
+            titre: "L'inégal accès à l'eau, à la santé ou à l'éducation dans le monde"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître l'inégal accès à l'eau, à la santé ou à l'éducation."
+              - "Identifier les manifestations des inégalités de niveau de vie dans le monde."
+            mots_cles: ["inégalités", "accès à l'eau", "accès à la santé", "accès à l'éducation"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 2 « Les inégalités dans le monde », hg_c3_2026.txt p.11"
+      - id: aires-regionales-planisphere
+        titre: "Les grandes aires régionales du monde"
+        notions:
+          - id: cm1-localiser-nommer-aires-regionales
+            titre: "Localiser et nommer les grandes aires régionales du monde sur un planisphère"
+            niveau_programme: "CM1"
+            attendus:
+              - "Localiser et nommer sur un planisphère les aires régionales."
+              - "Repère : Afrique subsaharienne, Maghreb, Amérique du Nord, Amérique du Sud, Asie du Sud-Est, Asie de l'Est, Europe, Océanie."
+            mots_cles: ["aire régionale", "planisphère", "continent"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 2 « Les inégalités dans le monde », hg_c3_2026.txt p.11-12"
+  - id: se-deplacer
+    titre: "Se déplacer"
+    chapitres:
+      - id: modalites-deplacement-monde
+        titre: "Les modalités de déplacement dans le monde"
+        notions:
+          - id: cm1-modalites-deplacement-transports
+            titre: "Les modes de transport et les modalités de déplacement dans le monde"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître les modalités de déplacement des élèves de la classe (dont la marche) à différentes échelles de temps (par exemple journée, semaine, etc.)."
+              - "Connaître les principaux modes de transport de personnes et les infrastructures associées (avion/aéroport ; bateau/port ; train/gare ; voiture/route ; métro/station ; vélo/voie cyclable)."
+              - "Identifier la diversité des modalités de déplacement au cours de différentes périodes de temps, en les associant à la distance à parcourir."
+              - "Repère : deux unités de mesure des déplacements, la distance kilométrique et la distance en temps."
+            mots_cles: ["transport", "déplacement", "distance"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 3 « Se déplacer », hg_c3_2026.txt p.12"
+  - id: communiquer-avec-internet
+    titre: "Communiquer dans le monde avec Internet"
+    chapitres:
+      - id: fonctionnement-internet-cables-satellites
+        titre: "Le fonctionnement d'Internet dans le monde"
+        notions:
+          - id: cm1-fonctionnement-internet-cables-satellites
+            titre: "Le fonctionnement d'Internet, un réseau de câbles et de satellites"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître la diversité des usages d'Internet à partir des pratiques des élèves."
+              - "Connaître le fonctionnement d'Internet grâce à un réseau de câbles et de satellites qui connectent les espaces à l'échelle mondiale."
+              - "Expliquer qu'Internet repose sur un réseau de câbles continentaux et sous-marins reliant les aires régionales, ainsi que sur des satellites."
+              - "Repère : les principales concentrations de câbles sous-marins."
+            mots_cles: ["internet", "câble sous-marin", "réseau", "satellite"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 4 « Communiquer dans le monde avec Internet », hg_c3_2026.txt p.12"
+      - id: inegal-acces-internet
+        titre: "L'inégal accès à Internet"
+        notions:
+          - id: cm1-inegal-acces-internet-monde-france
+            titre: "L'inégal accès à Internet dans le monde et en France"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître l'inégal accès à Internet à l'échelle mondiale et à l'échelle de la France."
+              - "Décrire les inégalités d'accès à Internet à l'échelle mondiale à partir de la carte du taux d'accès de la population ayant accès à Internet, par pays."
+              - "Décrire les inégalités d'accès à Internet à l'échelle nationale à partir de la carte du déploiement de la 5G en France."
+              - "Repère : une aire régionale très bien reliée à Internet ; une aire régionale faiblement reliée à Internet."
+            mots_cles: ["inégalités numériques", "accès à internet", "5G"]
+            source: "Programme d'histoire-géographie cycle 3, Géographie, Cours moyen première année, thème 4 « Communiquer dans le monde avec Internet », hg_c3_2026.txt p.12"

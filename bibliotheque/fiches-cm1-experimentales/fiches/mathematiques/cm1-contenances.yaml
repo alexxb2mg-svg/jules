@@ -1,0 +1,78 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-contenances
+declencheurs:
+- litre
+- litres
+- millilitre
+- contenance
+- combien ça contient
+- verre gradué
+- bouteille
+- arrosoir
+- centilitre
+- centilitres
+essentiel: 'La contenance, c''est ce que peut contenir un récipient : un verre, une bouteille, un arrosoir.
+
+  On la mesure en litres (L). Les autres unités sont hL, daL, L, dL, cL, mL : chacune est 10 fois plus petite que
+  la précédente, comme pour les nombres décimaux.
+
+  1 L = 10 dL = 100 cL = 1000 mL.
+
+  Pour comparer ou calculer des contenances données dans des unités différentes, on les remet dans la même unité
+  en utilisant ces relations : pas besoin de tableau, on raisonne comme pour les nombres à virgule.
+
+  Un verre gradué sert à mesurer ou à préparer un volume de liquide précis.'
+methode:
+- Repérer l'unité de chaque contenance (L, dL, cL, mL...).
+- Si les unités sont différentes, convertir en utilisant les relations connues (1 L = 100 cL, etc.), sans tableau.
+- Comparer ou calculer une fois que tout est dans la même unité.
+- Vérifier que le résultat est raisonnable (une baignoire ne contient pas 2 mL).
+vocabulaire:
+- terme: contenance
+  definition: ce qu'un récipient peut contenir, mesuré en litres et ses unités
+- terme: litre (L)
+  definition: unité de référence pour mesurer une contenance
+erreurs_frequentes:
+- 'Chercher un tableau de conversion : au CM1, on utilise les relations entre unités, pas de tableau.'
+- Additionner deux contenances sans les mettre dans la même unité (1 L + 25 cL n'est pas 26).
+- Confondre la contenance (ce que contient le récipient) avec sa taille ou son poids.
+exemple:
+  enonce: Un verre contient 20 cL et une bouteille contient 1,5 L. Combien de verres peut-on remplir avec la bouteille
+    ?
+  solution: '1,5 L = 150 cL. 150 cL ÷ 20 cL = 7,5 : on peut remplir 7 verres pleins (et il reste 10 cL).'
+exercices:
+- enonce: 'Range dans l''ordre croissant : 3 L, 25 cL, 400 mL, 1 dL.'
+  indices:
+  - Mets toutes les contenances en centilitres.
+  - 1 L = 100 cL, 1 dL = 10 cL, 1 mL = 0,1 cL.
+  solution: 'En cL : 3 L = 300 cL, 25 cL, 400 mL = 40 cL, 1 dL = 10 cL. Ordre croissant : 1 dL, 25 cL, 400 mL, 3
+    L.'
+- enonce: 'Calcule : 1 L − 25 cL. Donne le résultat en cL.'
+  indices:
+  - 1 L = 100 cL.
+  solution: 1 L = 100 cL, donc 100 cL − 25 cL = 75 cL.
+- enonce: Un arrosoir contient environ 8 L. Estime le nombre d'arrosoirs pleins nécessaires pour remplir un bassin
+    de 100 L.
+  indices:
+  - Divise 100 par la contenance d'un arrosoir.
+  - 'Le résultat n''est pas un nombre entier : arrondis.'
+  solution: 100 ÷ 8 = 12,5, donc il faut environ 12 à 13 arrosoirs pleins.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 17
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 16
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : pas de tableau de conversion'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

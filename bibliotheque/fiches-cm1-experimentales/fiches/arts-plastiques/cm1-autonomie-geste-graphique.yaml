@@ -1,0 +1,70 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-autonomie-geste-graphique
+declencheurs:
+- mon geste
+- peindre au pinceau
+- chaque dessin différent
+- original
+- copie
+- plusieurs fois le même dessin
+- série de dessins
+essentiel: 'Le geste, c''est la façon dont ta main bouge quand tu dessines, peins ou modèles : vite ou lentement,
+  fort ou léger, en ligne continue ou par petites touches.
+
+  Deux personnes qui font « le même » dessin ne font jamais exactement le même geste : chaque œuvre reste donc unique,
+  même quand on essaie de recopier.
+
+  Un original, c''est l''œuvre unique faite à la main. Une copie essaie de reproduire un original. Un multiple ou
+  une série, c''est plusieurs œuvres liées entre elles (par exemple plusieurs dessins du même sujet, chacun un peu
+  différent).
+
+  En essayant plusieurs gestes différents pour le même sujet, on découvre que le geste change complètement le résultat.'
+methode:
+- Choisir un même sujet simple (une ligne, une forme, un objet).
+- Le représenter une première fois avec un geste lent et contrôlé.
+- Le représenter une deuxième fois avec un geste rapide ou moins contrôlé.
+- 'Comparer les deux résultats : qu''est-ce que le geste a changé ?'
+vocabulaire:
+- terme: geste
+  definition: la manière dont la main bouge pour dessiner, peindre ou sculpter
+- terme: original
+  definition: l'œuvre unique, faite à la main
+- terme: série
+  definition: plusieurs œuvres liées entre elles autour d'un même sujet
+erreurs_frequentes:
+- Penser qu'il existe un seul bon geste pour bien dessiner.
+- Vouloir que deux dessins d'un même sujet soient absolument identiques.
+- Ne jamais changer de vitesse ou de pression du geste, toujours dessiner pareil.
+exemple:
+  enonce: 'Tu traces trois fois la même vague sur une feuille : une fois vite, une fois lentement, une fois en appuyant
+    très fort. Les trois vagues seront-elles identiques ?'
+  solution: 'Non : même en essayant de tracer « la même » vague, la vitesse et la pression du geste changent l''épaisseur,
+    la régularité et l''aspect du trait. Chaque vague est unique, à la fois parce que le geste change et parce qu''aucune
+    main ne refait jamais un tracé identique.'
+exercices:
+- enonce: Trace la même forme (par exemple un rond) cinq fois de suite sur une feuille, en changeant à chaque fois
+    la vitesse de ton geste (de très lent à très rapide).
+  indices:
+  - Garde le même crayon et la même forme à chaque essai.
+  - Observe l'épaisseur et la régularité du trait à chaque vitesse.
+  solution: 'Réussite si : les cinq ronds sont visiblement différents les uns des autres bien qu''ils représentent
+    la même forme, et l''élève peut dire quel geste a produit quel effet.'
+- enonce: Fais une petite série de trois dessins du même objet, en changeant à chaque fois un geste (la main qui
+    appuie fort, qui appuie léger, qui tremble).
+  indices:
+  - Le sujet reste le même dans les trois dessins.
+  - C'est le geste qui doit varier, pas le sujet.
+  solution: 'Réussite si : les trois dessins forment une série reconnaissable comme représentant le même objet,
+    tout en étant clairement différents grâce au geste.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 42-43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

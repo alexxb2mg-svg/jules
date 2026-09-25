@@ -1,0 +1,57 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoc-raconter
+declencheurs:
+- raconter une histoire en anglais
+- raconter ce que j'ai fait en anglais
+- me présenter en anglais
+- raconter une journée en anglais
+essentiel: 'Pour raconter en anglais, on utilise des phrases simples juxtaposées, en s''aidant d''images.
+
+  On nomme et on compte les personnes, les objets, les lieux avec des mots simples (l''école, la famille) et en
+  comptant avec les nombres (one, two, three).
+
+  On situe dans le temps avec des mots comme today, now, this morning, yesterday, tomorrow, et on peut dire la date
+  (Friday, November 25th).
+
+  On situe dans l''espace avec des mots comme in front of, on, near, behind.
+
+  On peut reprendre le modèle d''une histoire répétitive découverte en classe pour raconter à son tour.'
+methode:
+- Choisir les images ou les étapes de l'histoire à raconter, dans l'ordre.
+- Pour chaque étape, faire une phrase simple avec un verbe d'action.
+- Ajouter un repère de temps (today, then, after) ou de lieu si besoin.
+- Relier deux phrases simples avec and ou but si besoin.
+- S'entraîner à dire les phrases dans l'ordre, en s'aidant des images.
+vocabulaire:
+- terme: règle d'accord
+  definition: la règle qui change un mot selon qu'il y en a un ou plusieurs, comme dog/dogs ou foot/feet
+erreurs_frequentes:
+- Oublier de mettre le pluriel (dog au lieu de dogs) quand on parle de plusieurs choses.
+- Ne pas relier ses phrases avec and, ce qui rend le récit haché.
+- Ne pas s'appuyer sur les images alors qu'elles aident à ne rien oublier.
+exemple:
+  enonce: Raconte en deux phrases simples, à l'aide d'images, l'histoire d'un enfant qui va à l'école puis rentre
+    chez lui.
+  solution: 'Picture 1: Anna goes to school. Picture 2: She comes back home.'
+exercices:
+- enonce: 'Reproduis le modèle répétitif suivant en changeant l''aliment : « I went to the zoopermarket and I bought
+    some crazy crisps. » avec des biscuits (biscuits).'
+  indices:
+  - Garde la même structure, change seulement le nom de l'aliment.
+  solution: I went to the zoopermarket and I bought some biscuits.
+- enonce: Dis aujourd'hui est mardi, le 2 octobre, en anglais (comme un modèle de date).
+  indices:
+  - Utilise le modèle Today is ... , the ... of ...
+  solution: Today is Tuesday, the 2nd of October.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 13-14
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -5,12 +5,13 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 
 > **État actuel : expérimental.** Les bibliothèques publiées ici servent à tester le mécanisme. Aucune n'est validée par l'Éducation nationale ni par un enseignant. Le jour où des bibliothèques certifiées, ou les contenus d'un enseignant, seront disponibles, elles se brancheront au même endroit, sans toucher au code.
 
-## Les trois types
+## Les quatre types
 
 | Type | Rôle | Exemple ici |
 |---|---|---|
-| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : programme officiel de 3e, 252 notions |
-| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) |
+| `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : référentiel **expérimental** du programme officiel, CM1 (158 notions), 5e, 4e et 3e, non relu |
+| `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) ; `fiches-cm1-experimentales/` : les 158 notions de CM1, 10 matières, ressources officielles éduscol uniquement (données d'expérimentation, à relire) |
+| `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
 
 Chaque bibliothèque déclare aussi un **statut**, que Jules transmet au modèle et que l'élève voit dans le sélecteur :
@@ -41,7 +42,7 @@ modules:
 
 - **Priorité** : pour une même notion, si deux bibliothèques de fiches remplissent le même champ (par exemple `methode`), c'est la première de la liste qui l'emporte ; les champs manquants sont complétés par les suivantes.
 - **Directions** : elles s'additionnent (celle de la matière, puis celle de la notion). Jules les suit en priorité, sans jamais passer outre ses règles de pédagogie et de sécurité.
-- **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « 3e », « 3ème », « troisième »...).
+- **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « CM1 », « cours moyen première année », « 3e », « 3ème », « troisième »...).
 - Une bibliothèque illisible est signalée dans le journal et ignorée : Jules continue sans elle.
 
 ## Format
@@ -65,6 +66,10 @@ description: >-
 ### Référentiel
 
 `<niveau>/<matiere>.yaml`, format décrit dans [`programme/SCHEMA.md`](programme/SCHEMA.md). Les fichiers qui commencent par `_` sont des annexes (ex. `_brevet.yaml`) et ne contiennent pas de notions.
+
+### Leçons : `lecons/<matiere>/<notion>.yaml`
+
+Format complet (les sept types de blocs, ce qui fait refuser une leçon, la règle « la réponse ne quitte jamais le serveur ») dans [`SCHEMA-LECON.md`](SCHEMA-LECON.md), écrit pour un contributeur non développeur ; contrat technique complet dans `docs/COURS-CONTRAT.md`. Une leçon porte sur une seule notion du référentiel, fait 3 à 20 blocs et sert l'interface de cours (`/cours`), à la différence d'une fiche qui alimente l'aide aux devoirs en conversation.
 
 ### Fiches : `fiches/<matiere>/<id-de-notion>.yaml`
 
@@ -107,6 +112,13 @@ Une fiche dont la `notion` n'existe pas dans le référentiel est ignorée (et s
 
 `declencheurs` ne va pas dans le prompt : il aide seulement la détection automatique à retrouver la notion quand l'élève ne la nomme pas (« un pull à −30 % », « le lutin avance de 50 pas »). Comme pour les `mots_cles` du référentiel, un déclencheur trouvé en entier compte plus qu'un déclencheur trouvé en partie ; les mots de moins de trois lettres et les mots vides sont ignorés, et « % » ou « √ » tapés par l'élève valent « pourcent » et « racine ».
 
+### Fiches v2 (corrigées sans IA)
+
+Une fiche qui commence par `format: 2` suit un contrat plus strict, fait pour que Jules la serve sans IA :
+exercices typés et corrigés par le code, échelle de trois indices, pièges, prérequis, empreinte de
+vérification. Le contrat est dans [docs/FICHES-V2.md](../docs/FICHES-V2.md) ; `jules fiches verifier` le
+contrôle. Deux fiches de démonstration : `fiches-v2-demonstration/`.
+
 ### Direction d'un enseignant
 
 - `matieres/<id-de-matiere>.yaml` : ce qui vaut pour toute la matière ;
@@ -127,7 +139,7 @@ Les clés ci-dessus ont un libellé prévu ; toute autre clé est transmise tell
 
 ## Règles pour publier une bibliothèque ici
 
-1. **Contenu libre uniquement.** Licences acceptées : domaine public, CC0, CC BY, CC BY-SA, Licence Ouverte (etalab-2.0), GFDL, MIT. Refusées : NC (pas d'usage commercial), ND (pas de modification), « droits réservés », « usage en classe seulement », licence non indiquée. La liste des sources vérifiées est dans [`fiches-3e-experimentales/SOURCES.md`](fiches-3e-experimentales/SOURCES.md).
+1. **Contenu libre uniquement.** Licences acceptées : domaine public, CC0, CC BY, CC BY-SA, Licence Ouverte (etalab-2.0), GFDL, MIT. Refusées : NC (pas d'usage commercial), ND (pas de modification), « droits réservés », « usage en classe seulement », licence non indiquée. La liste des sources vérifiées est dans [`fiches-3e-experimentales/SOURCES.md`](fiches-3e-experimentales/SOURCES.md) et, pour le CM1 (sources officielles uniquement), dans [`fiches-cm1-experimentales/SOURCES.md`](fiches-cm1-experimentales/SOURCES.md).
 2. **Chaque fiche cite ses sources**, avec leur licence et le lien vers la version consultée. Un contenu adapté d'une source CC BY-SA reste en CC BY-SA.
 3. **Rien de copié tel quel depuis un manuel ou un site non libre**, même « gratuit ».
 4. **Les calculs des exercices sont vérifiés** avant publication.

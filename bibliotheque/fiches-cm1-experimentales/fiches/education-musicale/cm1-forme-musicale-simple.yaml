@@ -1,0 +1,77 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-forme-musicale-simple
+declencheurs:
+- couplet refrain
+- structure d'une chanson
+- ça se répète dans la musique
+- forme ABA
+- organisation d'une musique
+- motif qui revient
+essentiel: 'La forme d''une musique, c''est la façon dont elle est organisée dans le temps : ce qui se répète, ce
+  qui change.
+
+  Une organisation simple, c''est par exemple la répétition d''une mélodie, d''un motif rythmique, d''un thème ou
+  d''une partie caractéristique.
+
+  Une forme très connue est couplet/refrain : le refrain revient plusieurs fois, identique, entre des couplets différents.
+
+  Une autre forme est ABA : une partie A, puis une partie B différente, puis un retour à la partie A.
+
+  Repérer la forme d''une musique t''aide à mieux la comprendre et à en déduire son organisation générale.'
+methode:
+- Écoute la musique en entier une première fois.
+- Repère si un morceau de mélodie ou de rythme revient plusieurs fois (une répétition).
+- Compte combien de parties différentes tu entends (A, B, un refrain, un couplet...).
+- Regarde dans quel ordre ces parties reviennent.
+- 'Nomme la forme que tu as trouvée : couplet/refrain, ABA, ou une autre organisation simple.'
+vocabulaire:
+- terme: couplet
+  definition: une partie d'une chanson qui change de paroles à chaque fois qu'elle revient
+- terme: refrain
+  definition: une partie d'une chanson qui revient identique, avec les mêmes paroles et la même mélodie
+erreurs_frequentes:
+- Confondre le couplet et le refrain (le refrain est celui qui ne change pas).
+- Croire qu'une seule écoute suffit pour repérer une répétition.
+- Dire « ABA » sans avoir vérifié que la partie A revient bien identique à la fin.
+exemple:
+  enonce: 'Dans une chanson, tu entends : une première partie, une deuxième partie différente, puis un retour à
+    la première partie identique. Quelle forme reconnais-tu ?'
+  solution: 'C''est une forme ABA : la partie A revient après la partie B, ce qui crée un retour à l''organisation
+    de départ.'
+exercices:
+- enonce: Écoute une chanson que tu connais bien et compte combien de fois le refrain revient.
+  indices:
+  - Le refrain a toujours les mêmes paroles et la même mélodie à chaque fois.
+  - Note à quel moment (au début, entre les couplets, à la fin) il revient.
+  solution: 'Critères de réussite : tu donnes le nombre exact de refrains entendus et tu expliques comment tu les
+    as reconnus (mêmes paroles, même mélodie).'
+- enonce: Choisis un chant en couplet/refrain et chante seulement le refrain, deux fois, en gardant la même interprétation
+    à chaque fois.
+  indices:
+  - Fais bien attention à garder exactement la même mélodie et le même tempo les deux fois.
+  solution: 'Critères de réussite : les deux interprétations du refrain sont bien identiques, ce qui montre que
+    tu as compris ce qui « ne change pas ».'
+- enonce: Écoute un morceau instrumental (sans paroles) et essaie de repérer si un motif musical (une petite phrase)
+    revient plusieurs fois.
+  indices:
+  - Un motif qui revient peut être joué par le même instrument ou par un instrument différent.
+  solution: 'Critères de réussite : tu indiques si le motif revient identique, un peu modifié, ou pas du tout, avec
+    un exemple précis du moment où tu l''as entendu.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Éducation musicale — Repères pour l'écoute » (cycles 2, 3, 4), p. 4
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c2c3emusecouterepere-ecoute837653pdf-74949.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: détail des structures musicales simples pour l'écoute
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

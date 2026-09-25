@@ -1,0 +1,96 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 4e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Physique-Chimie
+id: physique-chimie
+niveau: 4e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020)"
+    reference: "BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+  - intitule: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027)"
+    reference: "éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de physique-chimie du cycle 4 (BO n° 31 du 30 juillet 2020) n'a pas été
+  réécrit pour 2026-2027 : il reste en vigueur tel quel en 4e. Il est structuré par cycle
+  de 3 ans (5e-4e-3e), avec quatre thèmes travaillés chaque année avec une complexité
+  croissante, sans découpage annuel officiel. Seuls les paragraphes « Repères de
+  progressivité » de chaque thème précisent explicitement ce qui peut être abordé « à
+  partir de la classe de 4e » ou « en classe de 4e » : ce sont ces notions, et elles
+  seules, qui sont retenues ici avec niveau_programme "4e".
+brevet:
+  evalue: false
+themes:
+  - id: organisation-et-transformations-de-la-matiere-4e
+    titre: "Organisation et transformations de la matière"
+    chapitres:
+      - id: masse-volumique-tableau-periodique-4e
+        titre: "Masse volumique et tableau périodique"
+        notions:
+          - id: 4e-masse-volumique
+            titre: "Grandeur quotient masse volumique"
+            niveau_programme: "4e"
+            attendus:
+              - "Introduire progressivement la grandeur quotient masse volumique à partir de la classe de 4e."
+              - "Proposer et mettre en œuvre un protocole expérimental pour déterminer une masse volumique d'un liquide ou d'un solide ; exploiter des mesures de masse volumique pour différencier des espèces chimiques."
+            mots_cles: [masse volumique, grandeur quotient]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Organisation et transformations de la matière », Repères de progressivité : « L'introduction de la grandeur quotient masse volumique se fait progressivement à partir de la classe de 4e »"
+          - id: 4e-equations-reaction-tableau-periodique
+            titre: "Équations de réaction et tableau périodique comme outil de classement"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser une équation de réaction chimique fournie pour décrire une transformation chimique observée, dans des cas simples."
+              - "Utiliser le tableau périodique comme outil de classement et de repérage des atomes constitutifs de la matière (sans insister sur la notion d'élément chimique)."
+              - "Associer les symboles aux éléments à l'aide de la classification périodique ; interpréter une formule chimique en termes atomiques."
+            mots_cles: [équation de réaction, tableau périodique, classification périodique, formule chimique]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Organisation et transformations de la matière », Repères de progressivité : « L'utilisation d'équations de réaction... peut être initiée en classe de 4e dans des cas simples. Le tableau périodique est considéré à partir de la classe de 4e comme un outil de classement... »"
+  - id: mouvement-et-interactions-4e
+    titre: "Mouvement et interactions"
+    chapitres:
+      - id: forces-modelisation-4e
+        titre: "Modéliser une action par une force"
+        notions:
+          - id: 4e-modelisation-force
+            titre: "Modélisation d'une interaction par une force (point d'application, direction, sens, valeur)"
+            niveau_programme: "4e"
+            attendus:
+              - "Modéliser une interaction, si possible dès la classe de 4e, par la notion de force caractérisée par une valeur, une direction, un sens et un point d'application."
+              - "Identifier les actions mises en jeu (de contact ou à distance) et les modéliser par des forces ; associer la notion d'interaction à la notion de force."
+            mots_cles: [force, interaction, point d'application, direction, sens]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « Mouvement et interactions », Repères de progressivité : « Progressivement et si possible dès la classe de 4e, ces interactions sont modélisées par la notion de force »"
+  - id: energie-transferts-conversions-4e
+    titre: "L'énergie, ses transferts et ses conversions"
+    chapitres:
+      - id: puissance-electricite-4e
+        titre: "Puissance, énergie et lois de l'électricité"
+        notions:
+          - id: 4e-relation-puissance-energie
+            titre: "Relation entre puissance et énergie (exemples de complexité croissante)"
+            niveau_programme: "4e"
+            attendus:
+              - "Utiliser la relation liant puissance, énergie et durée, en s'appuyant sur des exemples de complexité croissante (la pleine maîtrise étant un objectif de fin de cycle)."
+              - "Analyser une situation où, pour un système donné, les valeurs des transferts d'énergie entrant et sortant sont différentes."
+            mots_cles: [puissance, énergie, durée, transfert d'énergie]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « L'énergie, ses transferts et ses conversions », Repères de progressivité : « La pleine maîtrise de la relation entre puissance et énergie est un objectif de fin de cycle. Elle s'acquiert en s'appuyant sur des exemples de complexité croissante »"
+          - id: 4e-lois-electricite-formalisme
+            titre: "Lois de l'électricité avec le formalisme requis (tension, intensité)"
+            niveau_programme: "4e"
+            attendus:
+              - "Reprendre l'étude des propriétés du courant électrique et de la tension avec le formalisme requis (abordées qualitativement dès la 5e)."
+              - "Exploiter les lois de l'électricité (loi d'additivité des tensions, loi d'unicité des tensions, relation tension-courant / loi d'Ohm), abordées en 4e et en 3e sans ordre imposé."
+            mots_cles: [loi d'Ohm, tension, intensité, dipôles, circuit électrique]
+            brevet: false
+            source: "Programme physique-chimie cycle 4 (BO n°31 du 30/07/2020), thème « L'énergie, ses transferts et ses conversions », Repères de progressivité : « En classes de 4e et de 3e, elle sera reprise avec le formalisme requis... les différentes lois de l'électricité peuvent être abordées sans qu'un ordre précis ne s'impose »"

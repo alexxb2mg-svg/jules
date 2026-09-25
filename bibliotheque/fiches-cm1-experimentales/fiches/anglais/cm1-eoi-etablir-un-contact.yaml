@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoi-etablir-un-contact
+declencheurs:
+- hello
+- saluer en anglais
+- au revoir en anglais
+- se présenter à quelqu'un en anglais
+- thank you
+- goodbye
+- good morning
+essentiel: 'Pour engager un échange, on utilise des formules d''adresse : Hello, Good morning, Good afternoon, Hi.
+
+  On utilise des formules de politesse : Thank you, Please, Sorry, Excuse me.
+
+  On peut relancer la conversation avec des questions simples : Who? What? Where? When?
+
+  Pour clore une conversation, on utilise des mots simples : Thank you, Ok, Goodbye, See you soon.'
+methode:
+- Choisir la formule de salutation adaptée au moment de la journée.
+- Utiliser une formule de politesse pendant l'échange (merci, s'il te plaît, pardon).
+- Poser une question simple pour continuer l'échange si besoin.
+- Terminer poliment la conversation avec une formule de congé.
+vocabulaire:
+- terme: formule de politesse
+  definition: une expression toute faite pour être poli, comme Thank you ou Please
+erreurs_frequentes:
+- Dire Good morning l'après-midi au lieu de Good afternoon.
+- Oublier de dire au revoir à la fin d'un échange.
+- Ne pas utiliser Please ou Thank you dans une demande.
+exemple:
+  enonce: Tu croises ton professeur d'anglais l'après-midi. Que dis-tu ?
+  solution: Good afternoon!
+exercices:
+- enonce: Tu veux remercier l'assistante de langue à la fin de sa présentation. Que dis-tu ?
+  indices:
+  - Utilise une formule de remerciement.
+  solution: Thanks a lot! Thank you very much.
+- enonce: Tu quittes un ami à la fin de la journée d'école, en lui disant que tu le reverras bientôt. Que dis-tu
+    ?
+  indices:
+  - Utilise une expression pour clore la conversation.
+  solution: See you soon!
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 20
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -135,6 +135,20 @@
       grille.appendChild(b);
     }
     fil.appendChild(grille);
+    if (etat.infos.cours) {
+      const lienCours = document.createElement("a");
+      lienCours.className = "bouton secondaire espace-haut";
+      lienCours.href = "/cours";
+      lienCours.textContent = "📘 Suivre un cours";
+      fil.appendChild(lienCours);
+    }
+    if (etat.infos.studio) {
+      const lienStudio = document.createElement("a");
+      lienStudio.className = "bouton secondaire espace-haut";
+      lienStudio.href = "/studio";
+      lienStudio.textContent = "🛠️ Mon studio";
+      fil.appendChild(lienStudio);
+    }
     proposerEpreuve(fil);
     marquerActif(null);
   }

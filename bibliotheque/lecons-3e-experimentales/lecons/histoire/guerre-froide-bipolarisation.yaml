@@ -1,0 +1,105 @@
+notion: guerre-froide-bipolarisation
+titre: "La guerre froide, confrontation Est-Ouest et modèles antagonistes"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Guerre froide »"
+    url: "https://fr.vikidia.org/wiki/Guerre_froide"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Décolonisation »"
+    url: "https://fr.vikidia.org/wiki/D%C3%A9colonisation"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer dans le temps la guerre froide (1947-1991) et nommer les deux blocs qui s'affrontent."
+      - "Expliquer pourquoi la guerre froide est surtout une confrontation idéologique, sans affrontement militaire direct entre les deux superpuissances."
+      - "Comprendre comment les indépendances et le mouvement des non-alignés remettent en cause la logique bipolaire du monde."
+
+  - type: texte
+    titre: "Deux blocs, deux modèles"
+    contenu: >-
+      La **guerre froide** (1947-1991) est une période de tensions et de rivalité entre les deux « superpuissances
+      » issues de la Seconde Guerre mondiale : les **États-Unis**, attachés au capitalisme et à la démocratie
+      libérale, et l'**URSS**, attachée au communisme. Le monde est coupé en deux blocs par un « rideau de fer »
+      (1946), symbolisé par le **mur de Berlin**, construit en 1961.
+
+  - type: texte
+    titre: "Une guerre « froide » : idéologique plutôt que militaire"
+    contenu: >-
+      C'est une confrontation surtout **idéologique, culturelle et d'opinion** : chaque camp cherche à montrer la
+      supériorité de son modèle économique et politique, sans affrontement militaire direct entre les deux
+      superpuissances — d'où le mot « froide ». Le bloc communiste est organisé autour de l'URSS (**pacte de
+      Varsovie**), le bloc occidental autour des États-Unis (**OTAN**). Il existe cependant des crises et des
+      conflits locaux où les deux blocs s'opposent indirectement.
+
+  - type: texte
+    titre: "Le tiers monde bouscule la logique des deux blocs"
+    contenu: >-
+      Après la Seconde Guerre mondiale, les pays colonisés par des États européens obtiennent progressivement leur
+      indépendance : c'est la **décolonisation**, réalisée en Asie de 1945 à 1955 puis en Afrique de 1955 à 1975.
+      Une partie de ces nouveaux États refuse de choisir un camp et forme le mouvement des **non-alignés**
+      (conférence de Bandung, 1955). Ces indépendances remettent en cause la logique bipolaire du monde en faisant
+      émerger de nouveaux États qui ne s'alignent pas automatiquement sur un bloc.
+
+  - type: exemple
+    enonce: "Pourquoi dit-on que la guerre froide est une guerre « idéologique » ?"
+    etapes:
+      - "L'affrontement entre les deux blocs se joue surtout par les idées, la propagande et la culture, pas par des combats directs."
+      - "Chaque camp (États-Unis / URSS) cherche à montrer la supériorité de son modèle économique et politique auprès de l'opinion mondiale."
+      - "Il n'y a pas de combat armé direct entre les deux superpuissances : c'est pour cela qu'on parle de guerre « froide »."
+
+  - type: exercice
+    enonce: "En quelle année commence la guerre froide, marquée par la coupure de l'Europe par le « rideau de fer » ?"
+    forme: nombre
+    reponse: 1947
+    tolerance: 0
+    indices:
+      - "C'est peu après la fin de la Seconde Guerre mondiale (1945)."
+      - "Relis le premier paragraphe de la leçon : la période de la guerre froide y est donnée, de son début à sa fin."
+    explication: "La guerre froide commence en 1947 et se termine en 1989-1991, avec la chute du bloc soviétique."
+
+  - type: exercice
+    enonce: "Quelle alliance militaire regroupe les pays du bloc communiste pendant la guerre froide ?"
+    forme: qcm
+    choix:
+      - "Le pacte de Varsovie"
+      - "L'OTAN"
+      - "Le mouvement des non-alignés"
+    reponse: 0
+    indices:
+      - "Ce n'est pas l'alliance occidentale menée par les États-Unis."
+      - "Cette alliance est organisée autour de l'URSS."
+    explication: "Le pacte de Varsovie regroupe le bloc communiste autour de l'URSS ; l'OTAN regroupe le bloc occidental autour des États-Unis."
+
+  - type: exercice
+    enonce: "Quel événement symbolise le mieux la coupure de l'Europe pendant la guerre froide ?"
+    forme: reponse_courte
+    reponse: "le mur de Berlin"
+    reponses_acceptees:
+      - "mur de Berlin"
+      - "la construction du mur de Berlin"
+    indices:
+      - "C'est une construction de 1961, dans la capitale allemande."
+      - "Elle sépare physiquement Berlin-Ouest et Berlin-Est."
+    explication: "Le mur de Berlin, construit en 1961, symbolise la coupure entre bloc occidental et bloc communiste, matérialisant le « rideau de fer » qui traverse l'Europe."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : explique comment les indépendances des colonies et le mouvement des non-alignés
+      remettent en cause la logique bipolaire du monde pendant la guerre froide.
+    indices:
+      - "Rappelle d'abord ce qu'est la logique bipolaire (deux blocs rivaux)."
+      - "Que veulent les non-alignés ? Cite la conférence de Bandung (1955)."
+    criteres:
+      - "Le développement rappelle la logique bipolaire du monde (bloc occidental contre bloc communiste)."
+      - "L'élève explique que de nombreux nouveaux États indépendants (décolonisation) refusent de s'aligner sur un des deux blocs, en citant la conférence de Bandung (1955) et le mouvement des non-alignés."
+      - "L'élève montre que cela complique la vision d'un monde coupé seulement en deux."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens de cette leçon : les deux
+      blocs de la guerre froide et leurs dates, pourquoi cette guerre est dite « froide », et le rôle du tiers
+      monde dans la remise en cause de cette logique bipolaire.

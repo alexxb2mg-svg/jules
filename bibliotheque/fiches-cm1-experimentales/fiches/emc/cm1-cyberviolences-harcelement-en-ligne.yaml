@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-cyberviolences-harcelement-en-ligne
+declencheurs:
+- insultes en ligne
+- harcèlement sur internet
+- cyberharcèlement
+- moqueries sur les réseaux
+- méchant sur internet
+essentiel: 'Les cyberviolences sont des actes de violence commis en ligne, par exemple des insultes ou des moqueries
+  répétées.
+
+  Ces actes peuvent entraîner du harcèlement en ligne, quand ils sont répétés contre la même personne.
+
+  Une règle et un droit s''appliquent face aux cyberviolences : elles ne sont pas autorisées, comme les violences
+  hors ligne.'
+methode:
+- Vérifie si l'acte décrit se passe en ligne (internet, réseaux, messages).
+- Vérifie s'il s'agit d'un acte isolé ou répété contre la même personne (harcèlement).
+- Rappelle que la règle et le droit s'appliquent aussi en ligne.
+vocabulaire:
+- terme: cyberviolence
+  definition: un acte de violence commis en ligne
+- terme: harcèlement en ligne
+  definition: des cyberviolences répétées contre une même personne
+erreurs_frequentes:
+- Croire que les cyberviolences ne sont pas de vraies violences parce qu'elles ne sont pas physiques.
+- Penser que la règle et le droit ne s'appliquent pas sur internet.
+exemple:
+  enonce: Un élève reçoit chaque jour des messages moqueurs de la part d'un camarade sur un jeu en ligne. Comment
+    appelle-t-on cette situation ?
+  solution: 'C''est une situation de harcèlement en ligne : des cyberviolences répétées contre la même personne.'
+exercices:
+- enonce: Explique la différence entre une cyberviolence isolée et du harcèlement en ligne.
+  indices:
+  - Pense à la répétition de l'acte.
+  solution: Une cyberviolence isolée est un seul acte. Le harcèlement en ligne, c'est quand des cyberviolences se
+    répètent contre la même personne.
+- enonce: Que doit faire un élève témoin de cyberviolences envers un camarade ?
+  indices:
+  - Pense à qui peut aider dans cette situation.
+  solution: Il doit en parler à un adulte de confiance (parent, enseignant), car la règle et le droit s'appliquent
+    face aux cyberviolences.
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

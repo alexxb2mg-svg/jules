@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-1789-fin-monarchie-absolue
+declencheurs:
+- prise de la bastille
+- 14 juillet
+- abolition des privilèges
+- marche des femmes sur versailles
+- fin de l'ancien régime
+couverture: 'Ne couvre que ce que dit le programme : 1789, fin de la monarchie absolue et de l''Ancien Régime, et
+  les repères du 14 juillet, de la nuit du 4 août, et de la marche des femmes des 5-6 octobre 1789.'
+essentiel: 'L''année 1789 marque la fin de la monarchie absolue et de l''Ancien Régime en France.
+
+  Le 14 juillet, c''est la prise de la Bastille.
+
+  Dans la nuit du 4 août, les privilèges sont abolis.
+
+  Les 5 et 6 octobre 1789, des femmes marchent jusqu''à Versailles.
+
+  Ces évènements marquants de l''année 1789 peuvent se placer sur une frise chronologique.'
+methode:
+- 'Retenir l''ordre des évènements : 14 juillet, nuit du 4 août, 5-6 octobre 1789.'
+- Relier chaque date à son évènement précis (prise de la Bastille, abolition des privilèges, marche des femmes).
+- Situer ces évènements sur une frise chronologique de l'année 1789.
+vocabulaire:
+- terme: Révolution
+  definition: les changements de 1789 qui mettent fin à la monarchie absolue et à l'Ancien Régime
+erreurs_frequentes:
+- Confondre les dates du 14 juillet (prise de la Bastille) et de la nuit du 4 août (abolition des privilèges).
+- Oublier la marche des femmes à Versailles, un évènement des 5-6 octobre 1789.
+exemple:
+  enonce: Que se passe-t-il le 14 juillet 1789 ?
+  solution: C'est la prise de la Bastille.
+exercices:
+- enonce: 'Range dans l''ordre chronologique : « marche des femmes à Versailles », « prise de la Bastille », « abolition
+    des privilèges ».'
+  indices:
+  - 'Compare les dates : 14 juillet, nuit du 4 août, 5-6 octobre.'
+  solution: D'abord la prise de la Bastille (14 juillet), puis l'abolition des privilèges (nuit du 4 août), puis
+    la marche des femmes à Versailles (5-6 octobre).
+- enonce: Raconte en une phrase l'action d'une femme ou de femmes au cours de l'année 1789.
+  indices:
+  - Un évènement précis de l'année 1789 concerne des femmes.
+  solution: Les 5 et 6 octobre 1789, des femmes marchent jusqu'à Versailles.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.6
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -53,6 +53,10 @@ class Config:
         return self.racine / "bibliotheque"
 
     @property
+    def dossier_outils(self) -> Path:
+        return self.racine / "outils"
+
+    @property
     def dossier_persona(self) -> Path:
         return self.racine / "persona" / self.persona
 

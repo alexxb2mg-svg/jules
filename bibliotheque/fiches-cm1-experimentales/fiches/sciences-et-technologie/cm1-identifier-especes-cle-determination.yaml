@@ -1,0 +1,62 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-identifier-especes-cle-determination
+declencheurs:
+- clé de détermination
+- identifier une espèce
+- reconnaître un animal
+- reconnaître une plante
+- quelle est cette espèce
+- trouver le nom d'un animal
+- l'application me propose plusieurs noms
+- questions les unes après les autres
+essentiel: 'Pour identifier des espèces de son environnement proche, on utilise une clé de détermination : elle
+  pose des questions successives sur l''aspect de l''espèce pour arriver à son nom.
+
+  On peut confronter cette identification avec celle obtenue par une application numérique basée sur l''intelligence
+  artificielle, qui propose les identifications les plus probables plutôt qu''une réponse unique.
+
+  Ces outils numériques permettent de vérifier ou valider une identification, mais ne remplacent pas le travail
+  d''observation, de description et d''identification par l''élève lui-même.'
+methode:
+- 'Observer attentivement l''espèce à identifier : forme, couleur, taille, détails.'
+- Suivre la clé de détermination question par question jusqu'au nom de l'espèce.
+- Si possible, confronter le résultat avec une application numérique d'identification.
+- Comparer les deux résultats pour vérifier ou valider l'identification.
+erreurs_frequentes:
+- Se fier uniquement à une application numérique sans avoir observé et décrit l'espèce soi-même.
+- Confondre identification (retrouver le nom avec une clé) et classification (regrouper des espèces par attributs).
+- Croire qu'une application numérique donne toujours une réponse unique et certaine.
+exemple:
+  enonce: Comment identifier un arbre observé dans la cour de l'école avec une clé de détermination ?
+  solution: On observe les feuilles, l'écorce, la forme de l'arbre, puis on suit la clé de détermination question
+    par question jusqu'à trouver le nom de l'espèce ; on peut ensuite vérifier avec une application numérique.
+exercices:
+- enonce: Une application numérique propose plusieurs noms possibles pour une plante observée, classés par probabilité.
+    Pourquoi ne donne-t-elle pas une seule réponse certaine ?
+  indices:
+  - Pense à ce que dit le texte officiel sur ces outils.
+  solution: Les outils d'identification ne donnent pas une réponse unique mais proposent des hypothèses classées
+    selon un degré de probabilité, car l'identification à partir d'une photo reste incertaine.
+- enonce: Pourquoi l'élève doit-il d'abord observer et décrire l'espèce avant d'utiliser une application numérique
+    ?
+  indices:
+  - Que ne doit pas remplacer l'application ?
+  solution: Parce que l'utilisation d'une application ne doit pas se substituer au travail d'observation, de description
+    et d'identification par les élèves, qui sont des objectifs d'apprentissage.
+- enonce: Quel outil utilise-t-on en priorité pour identifier une espèce à l'aide de questions successives sur son
+    aspect ?
+  indices:
+  - C'est dans le titre de la notion.
+  solution: Une clé de détermination.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 10
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

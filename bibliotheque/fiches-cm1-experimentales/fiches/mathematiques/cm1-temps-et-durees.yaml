@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-temps-et-durees
+declencheurs:
+- heure
+- minute
+- durée
+- horloge
+- combien de temps
+- quelle heure
+- aiguilles
+essentiel: 'Une horloge a une petite aiguille (les heures) et une grande aiguille (les minutes). On sait lire l''heure
+  sur un cadran à aiguilles ou un affichage digital.
+
+  Une demi-heure = 30 minutes, un quart d''heure = 15 minutes, trois-quarts d''heure = 45 minutes.
+
+  Pour calculer une durée entre deux instants (par exemple entre 8 h 52 min et 11 h 37 min), on avance mentalement
+  par étapes, en passant par des instants intermédiaires faciles (l''heure pile).
+
+  On peut utiliser un axe du temps pour positionner des instants ou représenter une durée.
+
+  Au cours moyen, on ne pose pas de calcul écrit avec les heures et les minutes : on raisonne par étapes.'
+methode:
+- Repérer l'heure de départ et l'heure d'arrivée.
+- 'Avancer par étapes faciles : d''abord jusqu''à l''heure pile suivante, puis par tranches de minutes ou d''heures
+  entières.'
+- Additionner les durées de chaque étape pour trouver la durée totale.
+- Vérifier avec un axe du temps ou une horloge dessinée si besoin.
+vocabulaire:
+- terme: durée
+  definition: le temps écoulé entre deux instants
+erreurs_frequentes:
+- Compter en base 10 au lieu de base 60 (1 heure = 60 minutes, pas 100).
+- Oublier une étape intermédiaire et se tromper de plusieurs minutes.
+- Confondre l'heure (un instant) et la durée (un temps écoulé).
+exemple:
+  enonce: Ismaël est sorti de chez lui à 7 h 47 min. Il est arrivé au travail à 8 h 16 min. Combien de temps a-t-il
+    mis ?
+  solution: 'De 7 h 47 min à 8 h : 13 minutes. De 8 h à 8 h 16 min : 16 minutes. 13 + 16 = 29 minutes.'
+exercices:
+- enonce: Lucie a mis 1 h 17 min pour la première étape d'une course. Elle a franchi l'arrivée à 12 h 10 min. À
+    quelle heure est-elle partie ?
+  indices:
+  - Retire d'abord 10 minutes pour atteindre midi, puis le reste.
+  - Termine en retirant l'heure entière.
+  solution: 12 h 10 min − 10 min = 12 h ; 12 h − 7 min = 11 h 53 min ; 11 h 53 min − 1 h = 10 h 53 min. Elle est
+    partie à 10 h 53 min.
+- enonce: Une demi-heure, c'est combien de minutes ? Et trois-quarts d'heure ?
+  indices:
+  - Un quart d'heure = 15 minutes.
+  solution: Une demi-heure = 30 minutes (2 × 15 min). Trois-quarts d'heure = 45 minutes (3 × 15 min).
+- enonce: Le train part à 7 h 43 min. Il met 1 h 34 min pour la première gare, puis 52 min de plus pour la deuxième.
+    À quelle heure arrive-t-il à la deuxième gare ?
+  indices:
+  - Calcule d'abord l'heure d'arrivée à la première gare.
+  - Ajoute ensuite 52 minutes.
+  solution: 7 h 43 min + 1 h 34 min = 9 h 17 min (première gare). 9 h 17 min + 52 min = 10 h 9 min (deuxième gare).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 18-19
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

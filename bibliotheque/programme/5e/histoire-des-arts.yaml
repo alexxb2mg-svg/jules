@@ -1,0 +1,280 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Histoire des arts
+id: histoire-des-arts
+niveau: 5e
+annee_scolaire: 2026-2027
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+- intitule: Programme du cycle 4 (annexe 3) — partie « Histoire des arts »
+  reference: BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  consulte_le: '2026-09-24'
+- intitule: Enseigner au cycle 4 — confirme que le programme d'histoire des arts 2020 est inchangé pour
+    la rentrée 2026-2027
+  reference: éduscol
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  consulte_le: '2026-09-24'
+perimetre: |
+  L'histoire des arts est un enseignement transversal de culture artistique, sans horaire dédié propre, organisé au cycle 4 par le BO n° 31 du 30 juillet 2020 autour de huit thématiques transversales périodisées, présentées dans l'ordre chronologique mais pouvant être abordées dans un ordre différent selon l'équipe pédagogique et le parcours des élèves sur l'ensemble du cycle. Aucune thématique n'est réservée à la 3e seule ; toutes portent la mention "cycle 4". Ce programme est inchangé pour l'année 2026-2027.
+
+  Ce fichier 5e reprend donc le même choix que le référentiel de 3e : les huit thématiques transversales périodisées ne sont pas réparties par année car le texte officiel ne le fait pas lui-même (elles sont « travaillées sur les trois années du cycle », l'ordre de traitement relevant du projet pédagogique de l'équipe) ; les mêmes thématiques s'appliquent donc identiquement en 5e, en 4e et en 3e.
+brevet:
+  evalue: false
+  epreuve: |
+    L'histoire des arts est la matière de référence principale de l'épreuve orale de soutenance du DNB, qui se déroule en classe de 3e (coefficient 2, 15 minutes) ; les objets d'étude ou projets présentés peuvent avoir été construits dès la classe de 5e, dans le cadre du parcours d'éducation artistique et culturelle mené sur les trois années du cycle. Depuis la session 2026, le contrôle continu se fonde uniquement sur les moyennes annuelles des enseignements obligatoires suivis en classe de 3e (note de service du 2 septembre 2025, BO du 4 septembre 2025) : les notes d'histoire des arts obtenues en classe de 5e n'entrent donc pas dans le calcul du contrôle continu du DNB, mais le travail mené en classe de 5e prépare directement la soutenance.
+  source: 'https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N (partie II, Épreuve orale pour les
+    candidats scolaires : soutenance) ; note de service du 2 septembre 2025 (BO du 4 septembre 2025) sur
+    le contrôle continu'
+themes:
+- id: competences-travaillees
+  titre: Compétences travaillées et attendus de fin de cycle
+  chapitres:
+  - id: competences
+    titre: Compétences travaillées
+    notions:
+    - id: 5e-decrire-oeuvre-lexique
+      titre: Décrire une œuvre d'art en employant un lexique simple adapté
+      niveau_programme: cycle 4
+      attendus:
+      - Décrire une œuvre d'art en employant un lexique simple adapté.
+      - Associer une œuvre à une époque et une civilisation à partir des éléments observés.
+      mots_cles:
+      - description
+      - lexique
+      - œuvre
+      brevet: true
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 5e-analyse-critique-interpretation
+      titre: Proposer une analyse critique simple et une interprétation d'une œuvre
+      niveau_programme: cycle 4
+      attendus:
+      - Proposer une analyse critique simple et une interprétation d'une œuvre.
+      mots_cles:
+      - analyse critique
+      - interprétation
+      brevet: true
+      source: Programme cycle 4, section « Compétences travaillées »
+    - id: 5e-construire-expose
+      titre: Construire un exposé sur un ensemble d'œuvres ou une problématique artistique
+      niveau_programme: cycle 4
+      attendus:
+      - Construire un exposé de quelques minutes sur un petit ensemble d'œuvres ou une problématique artistique.
+      mots_cles:
+      - exposé
+      - problématique artistique
+      brevet: true
+      source: Programme cycle 4, section « Compétences travaillées » (compétence directement mobilisée
+        à l'oral de soutenance du DNB)
+    - id: 5e-rendre-compte-visite
+      titre: Rendre compte d'une visite ou d'une rencontre avec un métier du patrimoine
+      niveau_programme: cycle 4
+      attendus:
+      - Rendre compte de la visite d'un lieu de conservation ou de diffusion artistique ou de la rencontre
+        avec un métier du patrimoine.
+      mots_cles:
+      - visite
+      - patrimoine
+      - métiers de l'art
+      brevet: true
+      source: Programme cycle 4, section « Compétences travaillées »
+- id: huit-thematiques
+  titre: Les huit thématiques transversales périodisées
+  chapitres:
+  - id: thematiques
+    titre: Thématiques 1 à 8
+    notions:
+    - id: 5e-theme-1-arts-societe-antique
+      titre: 1. Arts et société à l'époque antique et au haut Moyen Âge
+      niveau_programme: cycle 4
+      attendus:
+      - De la ville antique à la ville médiévale.
+      - Formes et décor de l'architecture antique.
+      - Les mythes fondateurs et leur illustration.
+      - La représentation de la personne humaine.
+      mots_cles:
+      - antiquité
+      - haut Moyen Âge
+      - architecture
+      - mythes
+      brevet: true
+      source: Programme cycle 4, « Thématiques, objets d'étude possibles », thématique 1
+    - id: 5e-theme-2-formes-circulations-medievales
+      titre: 2. Formes et circulations artistiques (IXe-XVe s.)
+      niveau_programme: cycle 4
+      attendus:
+      - 'La question de l''image entre Orient et Occident : iconoclasme et discours de l''image.'
+      - Architectures et décors civils, urbains, militaires et religieux au Moyen Âge.
+      - Les circulations de formes artistiques autour de la Méditerranée médiévale.
+      - Musique et texte(s) au Moyen Âge.
+      - 'Le manuscrit médiéval : matériaux, calligraphie, développement de l''écriture musicale et enluminure.'
+      mots_cles:
+      - Moyen Âge
+      - circulations artistiques
+      - manuscrit
+      - enluminure
+      brevet: true
+      source: Programme cycle 4, thématique 2
+    - id: 5e-theme-3-sacre-artiste
+      titre: 3. Le sacre de l'artiste (XIVe-début XVIIe s.)
+      niveau_programme: cycle 4
+      attendus:
+      - 'L''artiste, ses inspirations et ses mécènes dans les cités-États italiennes : peintures, sculptures
+        et architectures du Trecento au Cinquecento.'
+      - 'Flandres, France et Italie : circulations des formes, des styles et des écoles.'
+      - 'Naissance du multiple : la gravure et l''imprimerie.'
+      - 'Nouveaux rapports entre poésie et musique : motets, chansons et madrigaux.'
+      - 'Développement des arts du spectacle : le tragique, le sacré, le comique et la fête.'
+      mots_cles:
+      - Renaissance
+      - mécénat
+      - gravure
+      - imprimerie
+      brevet: true
+      source: Programme cycle 4, thématique 3
+    - id: 5e-theme-4-etat-societe-modes-vie
+      titre: 4. État, société et modes de vie (XIIIe-XVIIIe s.)
+      niveau_programme: cycle 4
+      attendus:
+      - Définition et hiérarchie des genres artistiques.
+      - Changements dans l'habitat, le décor et le mobilier.
+      - 'Évolution du rapport à la nature : art du paysage, bestiaires et classifications.'
+      - Danse populaire, danse de cour, danse stylisée.
+      - Évolution des sciences et techniques, évolution des arts.
+      mots_cles:
+      - genres artistiques
+      - habitat
+      - paysage
+      - danse
+      brevet: true
+      source: Programme cycle 4, thématique 4
+    - id: 5e-theme-5-lumieres-revolutions
+      titre: 5. L'art au temps des Lumières et des révolutions (1750-1850)
+      niveau_programme: cycle 4
+      attendus:
+      - Émergence des publics et de la critique, naissance des médias.
+      - Sensation et sensibilité.
+      - L'art, expression de la pensée politique.
+      - Foi dans le progrès et recours au passé.
+      mots_cles:
+      - Lumières
+      - révolutions
+      - critique d'art
+      - pensée politique
+      brevet: true
+      source: Programme cycle 4, thématique 5
+    - id: 5e-theme-6-belle-epoque-annees-folles
+      titre: '6. De la Belle Époque aux « années folles » : l''ère des avant-gardes (1870-1930)'
+      niveau_programme: cycle 4
+      attendus:
+      - Paysages du réel, paysages intérieurs.
+      - 'Photographie, cinéma et enregistrement phonographique : un nouveau rapport au réel.'
+      - 'La recherche des racines dans un monde qui s''ouvre : primitivismes, écoles nationales et régionalismes.'
+      - 'Métropoles et spectacles nouveaux : jazz, cirque et music-hall.'
+      mots_cles:
+      - avant-gardes
+      - photographie
+      - cinéma
+      - jazz
+      brevet: true
+      source: Programme cycle 4, thématique 6
+    - id: 5e-theme-7-liberte-propagande
+      titre: 7. Les arts entre liberté et propagande (1910-1945)
+      niveau_programme: cycle 4
+      attendus:
+      - De l'autonomie des formes et des couleurs à la naissance de l'abstraction.
+      - 'Art et pouvoir : contestation, dénonciation ou propagande.'
+      - L'émancipation de la femme artiste.
+      - La « Fée électricité » dans les arts.
+      mots_cles:
+      - abstraction
+      - propagande
+      - femme artiste
+      brevet: true
+      source: Programme cycle 4, thématique 7
+    - id: 5e-theme-8-consommation-de-masse
+      titre: 8. Les arts à l'ère de la consommation de masse (de 1945 à nos jours)
+      niveau_programme: cycle 4
+      attendus:
+      - 'Réalismes et abstractions : les arts face à la réalité contemporaine.'
+      - 'Architecture et design : entre nouvelles technologies et nouveaux modes de vie.'
+      - Arts, énergies, climatologie et développement durable.
+      - Un monde ouvert ? Les métissages artistiques à l'époque de la globalisation.
+      mots_cles:
+      - art contemporain
+      - design
+      - mondialisation
+      - développement durable
+      brevet: true
+      source: Programme cycle 4, thématique 8
+- id: champs-artistiques
+  titre: Champs artistiques couverts
+  chapitres:
+  - id: champs
+    titre: Cinq grands champs artistiques
+    notions:
+    - id: 5e-champ-beaux-arts
+      titre: Le champ classique des « Beaux-Arts »
+      niveau_programme: cycle 4
+      attendus:
+      - Architecture, peinture, sculpture, dessin, gravure.
+      mots_cles:
+      - beaux-arts
+      - architecture
+      - peinture
+      - sculpture
+      brevet: false
+      source: Programme cycle 4, introduction de la partie « Histoire des arts »
+    - id: 5e-champ-spectacle-vivant
+      titre: Musique, théâtre, opéra, danse, cirque, marionnette
+      niveau_programme: cycle 4
+      attendus:
+      - La musique, le théâtre, l'opéra et la danse, le cirque et la marionnette.
+      mots_cles:
+      - musique
+      - théâtre
+      - opéra
+      - danse
+      - cirque
+      brevet: false
+      source: Programme cycle 4, introduction de la partie « Histoire des arts »
+    - id: 5e-champ-photo-cinema
+      titre: Photographie et cinéma
+      niveau_programme: cycle 4
+      attendus:
+      - La photographie et le cinéma.
+      mots_cles:
+      - photographie
+      - cinéma
+      brevet: false
+      source: Programme cycle 4, introduction de la partie « Histoire des arts »
+    - id: 5e-champ-arts-decoratifs
+      titre: Arts décoratifs, design, métiers d'art, affiche, publicité, caricature
+      niveau_programme: cycle 4
+      attendus:
+      - Les arts décoratifs et appliqués, le vêtement, le design et les métiers d'art, l'affiche, la publicité,
+        la caricature.
+      mots_cles:
+      - arts décoratifs
+      - design
+      - publicité
+      brevet: false
+      source: Programme cycle 4, introduction de la partie « Histoire des arts »
+    - id: 5e-champ-genres-hybrides
+      titre: Genres hybrides ou éphémères des XXe-XXIe siècles
+      niveau_programme: cycle 4
+      attendus:
+      - Bande dessinée, performance, vidéo, installation, arts de la rue, etc.
+      - La poésie, l'éloquence, la littérature comme champs artistiques associés.
+      mots_cles:
+      - bande dessinée
+      - performance
+      - vidéo
+      - arts de la rue
+      brevet: false
+      source: Programme cycle 4, introduction de la partie « Histoire des arts »

@@ -1,0 +1,60 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-evolutions-objets-techniques
+declencheurs:
+- évolution des objets
+- objet technique dans le temps
+- comparer deux objets
+- avant et maintenant
+- objets selon les besoins
+essentiel: 'Un objet technique évolue dans différents contextes : historique, géographique, économique, culturel,
+  technologique, ou dans le cadre du développement durable. On peut repérer ces évolutions en comparant les objets
+  utilisés dans deux situations analogues à des époques ou dans des contextes différents (par exemple l''évolution
+  du transport ferroviaire, ou l''évolution des textiles).
+
+  On peut aussi comparer des réponses à un même besoin selon le contexte d''utilisation : par exemple s''hydrater
+  (verre à table, gourde à l''école, poche à eau en randonnée, perfusion à l''hôpital) prend des formes techniques
+  différentes selon la situation.'
+methode:
+- Choisir deux situations analogues à des époques ou dans des contextes différents.
+- Identifier les objets techniques utilisés dans chaque situation.
+- Comparer leurs caractéristiques pour repérer ce qui a évolué (matériaux, forme, usage).
+- Pour un même besoin, comparer les réponses techniques apportées selon le contexte d'utilisation.
+erreurs_frequentes:
+- Comparer deux objets qui ne répondent pas au même besoin, ce qui empêche de voir une évolution.
+- Oublier de préciser le contexte (historique, géographique...) dans lequel chaque objet est utilisé.
+- Croire qu'un seul type de contexte (par exemple seulement historique) peut expliquer une évolution.
+exemple:
+  enonce: Comment le besoin de s'hydrater est-il satisfait différemment selon le contexte ?
+  solution: 'À table on utilise un verre et une carafe, à l''école une gourde, en randonnée une poche à eau, à l''hôpital
+    une perfusion : le même besoin (boire) est satisfait par des objets techniques différents selon le contexte
+    d''utilisation.'
+exercices:
+- enonce: Cite deux contextes qui peuvent expliquer l'évolution d'un objet technique.
+  indices:
+  - Pense à l'époque, au lieu, aux techniques disponibles.
+  solution: Par exemple le contexte historique et le contexte technologique (on accepte aussi géographique, économique,
+    culturel, ou lié au développement durable).
+- enonce: Pourquoi compare-t-on des « situations analogues » et non deux situations complètement différentes pour
+    étudier l'évolution d'un objet ?
+  indices:
+  - Que faut-il garder identique pour bien comparer ?
+  solution: Pour que la comparaison porte sur le même besoin ou le même usage, seul le contexte (époque, lieu...)
+    change, ce qui permet de voir clairement l'évolution de l'objet.
+- enonce: Le transport ferroviaire d'aujourd'hui est-il identique à celui du 19e siècle ? Pourquoi étudier cette
+    évolution ?
+  indices:
+  - Pense au matériel et aux usages.
+  solution: Non, il a évolué (matériel et usages) ; l'étudier permet de repérer les évolutions d'un objet technique
+    dans un contexte historique.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

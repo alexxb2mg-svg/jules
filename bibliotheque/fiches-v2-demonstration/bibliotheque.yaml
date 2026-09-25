@@ -1,0 +1,16 @@
+# Fiche d'identite de la bibliotheque (format : bibliotheque/README.md ; fiches v2 : docs/FICHES-V2.md)
+id: fiches-v2-demonstration
+titre: "Fiches v2 : démonstration"
+type: fiches
+statut: experimentale
+licence: CC-BY-SA-4.0          # adaptation de contenus CC BY-SA : même licence (partage à l'identique)
+pays: FR
+niveaux: [3e]
+avertissement: >-
+  Bibliothèque de DÉMONSTRATION du format v2 (fiches corrigées sans IA). Deux fiches, générées par
+  une IA à partir des fiches expérimentales et des sources libres citées, vérifiées par le code
+  (chaque exercice se corrige lui-même, aucun indice ne contient la réponse), mais pas relues par un
+  enseignant. Le cours de l'élève et la parole de son professeur font toujours foi.
+description: >-
+  Sert à éprouver le contrat des fiches v2 sur une notion de mathématiques (nombres premiers) et une
+  notion d'histoire (la Première Guerre mondiale) avant de convertir les 252 fiches.

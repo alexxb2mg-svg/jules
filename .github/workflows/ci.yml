@@ -16,7 +16,7 @@ jobs:
   qualite:
     name: Lint, types, tests (Python ${{ matrix.python }}, ${{ matrix.os }})
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 15
+    timeout-minutes: 25   # la bibliotheque grossit : Windows depassait 15 min (25/09/2026)
     strategy:
       fail-fast: false
       matrix:

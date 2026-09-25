@@ -1,0 +1,73 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
+declencheurs:
+- fois plus
+- fois moins
+- proportionnel
+- au prix de
+- le double
+- le triple
+essentiel: 'Deux grandeurs sont proportionnelles quand, si on multiplie l''une par un nombre, l''autre est multipliée
+  par le même nombre.
+
+  Par exemple, si des manuels identiques ont tous la même masse, la masse d''une pile de manuels est proportionnelle
+  au nombre de manuels : trois fois plus de manuels, c''est trois fois plus lourd.
+
+  Attention, deux grandeurs ne sont pas toujours proportionnelles : l''âge et la taille d''une personne ne le sont
+  pas.
+
+  Pour résoudre un problème de proportionnalité, on raisonne avec des phrases comme « si j''achète 3 fois plus,
+  je paie 3 fois plus », sans utiliser de tableau de proportionnalité.
+
+  Au cours moyen, ces problèmes portent toujours sur des grandeurs concrètes (prix, masse, longueur...), jamais
+  sur des suites de nombres seules.'
+methode:
+- Vérifier que la situation est bien une situation de proportionnalité (deux grandeurs liées par une multiplication).
+- Repérer le lien entre les deux valeurs connues (fois plus, fois moins).
+- Appliquer ce même lien à la grandeur cherchée, en langage naturel.
+- Vérifier que la réponse est cohérente avec l'énoncé.
+vocabulaire:
+- terme: proportionnalité
+  definition: lien entre deux grandeurs où multiplier l'une par un nombre multiplie l'autre par le même nombre
+erreurs_frequentes:
+- Utiliser un tableau de proportionnalité (pas au programme du cours moyen).
+- Appliquer une règle de proportionnalité à des grandeurs qui ne sont pas proportionnelles.
+- Chercher le prix ou la quantité « à l'unité » alors qu'un raisonnement direct (fois plus, fois moins) suffit.
+exemple:
+  enonce: Cinq manuels identiques pèsent 2 kg. Quelle est la masse de quinze de ces manuels ?
+  solution: '15 manuels, c''est 3 fois plus que 5 manuels (15 = 3 × 5). Donc la masse est 3 fois plus grande : 2
+    kg × 3 = 6 kg.'
+exercices:
+- enonce: 400 g de cerises coûtent 7 €. Quel est le prix de 200 g de cerises ?
+  indices:
+  - 200 g, c'est deux fois moins que 400 g.
+  solution: '200 g est 2 fois moins que 400 g, donc le prix est 2 fois moins cher : 7 € ÷ 2 = 3,50 €.'
+- enonce: Dix allumettes mises bout à bout mesurent 50 cm. Combien d'allumettes faudrait-il pour obtenir 1 km (100
+    000 cm) ?
+  indices:
+  - Cherche par combien il faut multiplier 50 cm pour obtenir 100 000 cm.
+  - Applique le même facteur à 10 allumettes.
+  solution: '100 000 ÷ 50 = 2000. Il faut 2000 fois plus d''allumettes : 10 × 2000 = 20 000 allumettes.'
+- enonce: L'âge et la taille d'une personne sont-ils proportionnels ? Explique.
+  indices:
+  - Pense à une personne de 40 ans et une de 20 ans.
+  solution: 'Non : à 40 ans, on n''est pas deux fois plus grand qu''à 20 ans. Ce ne sont pas des grandeurs proportionnelles.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 26
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 26
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limites officielles : pas de tableau, cadre des grandeurs'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

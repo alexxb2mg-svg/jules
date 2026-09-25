@@ -1,0 +1,50 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-se-decouvrir-saffirmer
+declencheurs:
+- se découvrir à travers un livre
+- personnage qui grandit
+- rencontre qui change un personnage
+- trouver sa place
+essentiel: 'Se découvrir est une aventure à la fois intime et collective, que l''on retrouve dans de nombreux récits,
+  romans, bandes dessinées et pièces de théâtre.
+
+  Face aux défis de l''existence, les personnages se construisent et se redéfinissent, au gré de leurs rencontres
+  et de leur propre cheminement.
+
+  Grâce à ces lectures, aux échanges et aux activités en classe, l''élève s''ouvre à la complexité humaine et grandit
+  lui aussi.'
+methode:
+- Repérer un personnage qui change au cours de l'histoire.
+- Identifier l'événement ou la rencontre qui provoque ce changement.
+- Décrire comment le personnage est différent à la fin de l'histoire par rapport au début.
+- Faire le lien, si possible, avec sa propre expérience de grandir ou de changer.
+erreurs_frequentes:
+- Décrire un personnage seulement au début ou seulement à la fin, sans voir son évolution.
+- Ne pas relier le changement du personnage à un événement précis de l'histoire.
+exemple:
+  enonce: Au début d'un roman, un enfant timide n'ose pas parler en classe. À la fin, il prend la parole devant
+    tout le monde après s'être fait un nouvel ami. Comment ce personnage s'est-il découvert ?
+  solution: La rencontre avec un nouvel ami lui a donné confiance en lui ; l'enfant s'est affirmé au fil de l'histoire,
+    en passant de la timidité à la prise de parole.
+exercices:
+- enonce: Choisis un personnage d'un livre que tu as lu qui change au cours de l'histoire. Décris-le au début, puis
+    à la fin.
+  indices:
+  - Compare son caractère, ses peurs ou ses envies au début et à la fin.
+  solution: La réponse doit montrer une différence claire entre le personnage du début et celui de la fin.
+- enonce: Quel événement ou quelle rencontre a provoqué ce changement chez le personnage ?
+  indices:
+  - Cherche un moment précis de l'histoire, pas une impression générale.
+  solution: La réponse doit citer un événement ou une rencontre précise de l'histoire.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

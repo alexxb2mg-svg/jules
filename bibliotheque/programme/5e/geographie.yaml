@@ -1,0 +1,117 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Géographie
+id: geographie
+niveau: 5e
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 5e"
+    reference: "BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme de géographie de la classe de 5e, première année du cycle 4. Le BO n° 31 du 30
+  juillet 2020 rattache explicitement trois thèmes à la « Classe de 5e » au titre des « Repères
+  annuels de programmation » : La question démographique et l'inégal développement ; Des
+  ressources limitées, à gérer et à renouveler ; Prévenir les risques, s'adapter au changement
+  global. La 5e fait suite au cycle 3, centré sur la notion « Habiter » ; elle initie les élèves
+  aux enjeux du développement durable et de la mondialisation à l'échelle mondiale, avant que la
+  4e n'approfondisse la mondialisation et que la 3e ne se concentre sur la France et l'Union
+  européenne. Comme pour l'histoire, le texte ne fournit pas de liste de repères spatiaux
+  distincte : les repères attendus sont ceux mentionnés dans les « démarches et contenus
+  d'enseignement » de chaque sous-thème.
+brevet:
+  evalue: false
+  epreuve: "Sans objet en 5e — le DNB porte sur le programme de 3e en vigueur au moment de l'examen."
+  source: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+themes:
+  - id: 5e-question-demographique-et-inegal-developpement
+    titre: "La question démographique et l'inégal développement"
+    chapitres:
+      - id: 5e-croissance-demographique-et-effets
+        titre: "La croissance démographique et ses effets"
+        notions:
+          - id: 5e-croissance-demographique-etudes-de-cas
+            titre: "Croissance démographique : puissance émergente et pays d'Afrique, mise en perspective"
+            niveau_programme: "5e"
+            attendus:
+              - "Sensibiliser les élèves aux problèmes posés aux espaces humains par le changement global et la tension sur les ressources essentielles (énergie, eau, alimentation)."
+              - "Étudier la problématique de la croissance démographique à partir de deux études de cas : une puissance émergente (la Chine ou l'Inde) et un pays d'Afrique au choix."
+              - "Mettre en perspective ces cas avec les États-Unis et l'Europe, où la question démographique se pose différemment, en montrant aussi les points communs (comme le vieillissement)."
+            mots_cles: [croissance démographique, développement durable, puissance émergente, vieillissement]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 1 « La question démographique et l'inégal développement », « La croissance démographique et ses effets »"
+      - id: 5e-repartition-richesse-pauvrete
+        titre: "Répartition de la richesse et de la pauvreté dans le monde"
+        notions:
+          - id: 5e-inegale-repartition-des-richesses
+            titre: "Géographie de la richesse et de la pauvreté à l'échelle du monde"
+            niveau_programme: "5e"
+            attendus:
+              - "Aborder à grands traits la géographie de la richesse et de la pauvreté à l'échelle du monde."
+              - "Sensibiliser les élèves à l'inégale répartition des richesses dans le monde."
+            mots_cles: [richesse, pauvreté, inégalités mondiales]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 1 « La question démographique et l'inégal développement », « Répartition de la richesse et de la pauvreté dans le monde »"
+  - id: 5e-ressources-limitees-a-gerer-et-renouveler
+    titre: "Des ressources limitées, à gérer et à renouveler"
+    chapitres:
+      - id: 5e-energie-eau-ressources-a-menager
+        titre: "L'énergie, l'eau : des ressources à ménager et à mieux utiliser"
+        notions:
+          - id: 5e-gestion-energie-et-eau
+            titre: "Gestion et enjeux des ressources énergétiques et en eau"
+            niveau_programme: "5e"
+            attendus:
+              - "Insister sur l'importance des espaces ruraux et agricoles dans la fourniture des ressources essentielles."
+              - "Montrer les enjeux liés à la recherche de nouvelles formes de développement économique assurant une vie matérielle décente sans surexploitation des ressources."
+              - "Étudier ce sous-thème à partir d'une étude de cas au choix du professeur, contextualisée à l'échelle mondiale."
+            mots_cles: [ressources énergétiques, eau, développement durable, étude de cas]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 2 « Des ressources limitées, à gérer et à renouveler », « L'énergie, l'eau »"
+      - id: 5e-alimentation-nourrir-humanite
+        titre: "L'alimentation : comment nourrir une humanité en croissance démographique ?"
+        notions:
+          - id: 5e-defi-alimentaire-mondial
+            titre: "Défi alimentaire face à la croissance démographique et à la sous-alimentation"
+            niveau_programme: "5e"
+            attendus:
+              - "Comprendre les enjeux liés à la fourniture des ressources alimentaires, alors qu'une partie de l'humanité est toujours sous-alimentée ou mal alimentée."
+              - "Étudier ce sous-thème par une présentation de type géo-histoire, en lien avec le programme d'histoire du cycle 4."
+            mots_cles: [sécurité alimentaire, sous-alimentation, géo-histoire]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 2 « Des ressources limitées, à gérer et à renouveler », « L'alimentation »"
+  - id: 5e-prevenir-les-risques-sadapter-au-changement-global
+    titre: "Prévenir les risques, s'adapter au changement global"
+    chapitres:
+      - id: 5e-changement-global-effets-regionaux
+        titre: "Le changement global et ses principaux effets géographiques régionaux"
+        notions:
+          - id: 5e-changement-climatique-effets-regionaux
+            titre: "Changement climatique, urbanisation généralisée, déforestation : effets régionaux"
+            niveau_programme: "5e"
+            attendus:
+              - "Aborder la question du changement global (changement climatique, urbanisation généralisée, déforestation)."
+              - "Étudier ce sous-thème à partir d'une étude de cas simple, au choix du professeur, des effets potentiels d'un changement climatique et d'une politique pour les éviter, les modérer ou s'y adapter."
+            mots_cles: [changement global, changement climatique, résilience]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 3 « Prévenir les risques, s'adapter au changement global », « Le changement global et ses effets géographiques régionaux »"
+      - id: 5e-prevenir-risques-industriels-technologiques
+        titre: "Prévenir les risques industriels et technologiques"
+        notions:
+          - id: 5e-vulnerabilite-risques-industriels
+            titre: "Vulnérabilité et résilience des sociétés face aux risques industriels et technologiques"
+            niveau_programme: "5e"
+            attendus:
+              - "Appréhender la vulnérabilité et la résilience des sociétés face aux risques industriels ou technologiques."
+              - "Étudier ce sous-thème à partir d'une étude de cas sur un risque industriel et technologique."
+              - "Nouer des liens avec les programmes de sciences de la vie et de la Terre et de technologie."
+            mots_cles: [risque industriel, risque technologique, résilience, vulnérabilité]
+            brevet: false
+            source: "Programme cycle 4, annexe 3, Géographie — Classe de 5e, Thème 3 « Prévenir les risques, s'adapter au changement global », « Prévenir les risques industriels et technologiques »"

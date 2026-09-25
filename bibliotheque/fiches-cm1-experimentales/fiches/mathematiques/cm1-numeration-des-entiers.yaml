@@ -1,0 +1,78 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-numeration-des-entiers
+declencheurs:
+- dizaine
+- centaine
+- millier
+- grand nombre
+- chiffre
+- ranger les nombres
+- plus grand que
+- plus petit que
+- compris entre
+essentiel: 'Un nombre entier s''écrit avec des chiffres. La position de chaque chiffre lui donne sa valeur : à partir
+  de la droite, ce sont les unités, puis les dizaines, les centaines, les milliers, les dizaines de milliers, les
+  centaines de milliers.
+
+  Un même nombre peut s''écrire de plusieurs façons : en chiffres (3 405), en lettres (trois mille quatre cent cinq),
+  en unités de numération (3 milliers 4 centaines 5 unités), ou encore en décomposition additive (3 000 + 400 +
+  5).
+
+  Pour comparer deux nombres, on regarde d''abord combien ils ont de chiffres : le nombre qui en a le plus est le
+  plus grand. S''ils en ont autant, on compare chiffre par chiffre en partant de la gauche.
+
+  On utilise les signes = (égal à), < (inférieur à, plus petit) et > (supérieur à, plus grand).
+
+  Sur une demi-droite graduée, plus un nombre est loin de 0 (l''origine), plus il est grand.'
+methode:
+- 'Compter le nombre de chiffres : le nombre avec le plus de chiffres est le plus grand.'
+- Si les deux nombres ont autant de chiffres, comparer chiffre par chiffre à partir de la gauche.
+- 'S''arrêter au premier chiffre différent : celui qui a le chiffre le plus grand à cette position l''emporte.'
+- 'Écrire le résultat avec le bon symbole : =, < ou >.'
+- Pour ranger plusieurs nombres, comparer les deux premiers, puis insérer les suivants un par un.
+erreurs_frequentes:
+- Croire qu'un nombre qui commence par un grand chiffre est toujours le plus grand, sans compter le nombre de chiffres.
+- Confondre le sens des symboles < et >.
+- Oublier un espace entre les tranches de trois chiffres quand on écrit un grand nombre.
+- Sur la demi-droite graduée, compter les traits au lieu des intervalles entre 0 et le nombre.
+exemple:
+  enonce: 'Range dans l''ordre croissant : 4 705 ; 4 075 ; 4 750 ; 4 057.'
+  solution: 'Les quatre nombres ont 4 chiffres, donc on compare chiffre par chiffre à partir de la gauche. Tous
+    commencent par 4. Au chiffre des centaines : 0 (4 075 et 4 057) puis 7 (4 705 et 4 750). Entre 4 075 et 4 057,
+    le chiffre des dizaines les distingue : 5 < 7. Entre 4 705 et 4 750, le chiffre des dizaines les distingue aussi
+    : 0 < 5. Ordre croissant : 4 057 < 4 075 < 4 705 < 4 750.'
+exercices:
+- enonce: Écris le nombre 6 208 en lettres, puis donne sa décomposition additive.
+  indices:
+  - Repère le chiffre des unités, des dizaines, des centaines et des milliers.
+  - 6 208 = 6 000 + 200 + 0 + 8.
+  solution: 6 208 s'écrit « six mille deux cent huit » et se décompose en 6 000 + 200 + 8.
+- enonce: 'Complète avec =, < ou > : 3 199 … 3 209.'
+  indices:
+  - Les deux nombres ont 4 chiffres et commencent par 3 1 ou 3 2.
+  - Compare le chiffre des centaines.
+  solution: 3 199 < 3 209, car au chiffre des centaines, 1 est inférieur à 2.
+- enonce: Un point A est placé sur une demi-droite graduée de 100 en 100, entre 2 400 et 2 500, plus proche de 2
+    500. Ce point peut-il avoir pour abscisse 2 410 ? Explique.
+  indices:
+  - 2 410 est-il plus proche de 2 400 ou de 2 500 ?
+  solution: 'Non : 2 410 est proche de 2 400, pas de 2 500. Le point A a plutôt une abscisse comme 2 480 ou 2 490.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.5
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
