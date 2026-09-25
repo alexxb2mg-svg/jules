@@ -1,0 +1,130 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: chaine-energie
+titre: "La chaîne d'énergie d'un objet technique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Chaîne énergétique »"
+    url: "https://fr.wikipedia.org/wiki/Cha%C3%AEne_%C3%A9nerg%C3%A9tique"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Moteur »"
+    url: "https://fr.vikidia.org/wiki/Moteur"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Identifier les constituants de la chaîne d'énergie d'un objet technique et leurs fonctions."
+      - "Associer des convertisseurs courants aux formes d'énergie qu'ils transforment."
+      - "Calculer le rendement d'un convertisseur d'énergie."
+
+  - type: texte
+    titre: "Les fonctions de la chaîne d'énergie"
+    contenu: >-
+      Un objet technique a besoin d'énergie pour fonctionner. La **chaîne d'énergie** décrit, sous
+      forme d'un schéma bloc, les grandes fonctions par lesquelles cette énergie passe :
+      **alimenter** (fournir l'énergie, par exemple une pile ou le secteur), **distribuer**
+      (autoriser ou couper le passage de l'énergie, par exemple un interrupteur ou un relais),
+      **convertir** (transformer l'énergie d'une forme en une autre, par exemple un moteur),
+      **transmettre** (faire parvenir l'énergie convertie jusqu'à l'endroit utile, par exemple des
+      engrenages), et enfin **agir** (produire l'effet recherché, par exemple faire tourner une
+      roue ou éclairer).
+
+  - type: texte
+    titre: "Les formes d'énergie et quelques convertisseurs"
+    contenu: >-
+      L'énergie existe sous plusieurs formes : électrique, mécanique (elle-même cinétique, liée au
+      mouvement, ou potentielle, liée à la position), thermique (la chaleur), lumineuse, ou
+      chimique. La fonction convertir change une forme d'énergie en une autre : un **moteur
+      électrique** convertit l'énergie électrique en énergie mécanique ; une **lampe** convertit
+      l'énergie électrique en énergie lumineuse (et en chaleur) ; un **radiateur** convertit
+      l'énergie électrique en énergie thermique ; à l'inverse, une **génératrice** convertit de
+      l'énergie mécanique en énergie électrique.
+
+  - type: texte
+    titre: "Transmettre et transformer un mouvement"
+    contenu: >-
+      La fonction transmettre fait parvenir l'énergie mécanique jusqu'à l'endroit où elle doit
+      agir, parfois en changeant sa vitesse ou son sens : des **engrenages** (roues dentées qui
+      s'engrènent), des **courroies** ou des **chaînes** relient un axe moteur à un autre axe.
+      Certains mécanismes transforment aussi le mouvement, par exemple un mouvement de rotation en
+      mouvement de translation (comme une vis, ou un vérin).
+
+  - type: texte
+    titre: "Le rendement : l'énergie utile et les pertes"
+    contenu: >-
+      Aucun convertisseur n'est parfait : une partie de l'énergie consommée est réellement utile,
+      le reste est dissipé, le plus souvent sous forme de chaleur. Le **rendement** d'un
+      convertisseur est le rapport entre l'énergie utile qu'il produit et l'énergie qu'il consomme.
+      Par exemple, une lampe à incandescence a un rendement de moins de 10 % : sur l'énergie
+      électrique consommée, moins d'un dixième est converti en lumière, le reste est perdu sous forme
+      de chaleur.
+
+  - type: exemple
+    enonce: >-
+      Décrire, fonction par fonction, la chaîne d'énergie d'une perceuse électrique sans fil qui
+      perce un trou dans une planche.
+    etapes:
+      - "Alimenter : la batterie fournit l'énergie électrique."
+      - "Distribuer : la gâchette (interrupteur) laisse passer ou coupe le courant vers le moteur."
+      - "Convertir : le moteur électrique convertit l'énergie électrique en énergie mécanique de rotation."
+      - "Transmettre : des engrenages transmettent ce mouvement de rotation à la mèche, en adaptant sa vitesse."
+      - "Agir : la mèche, en tournant, perce la planche."
+
+  - type: exercice
+    enonce: "Dans la chaîne d'énergie d'une lampe de poche, quelle fonction assure l'interrupteur ?"
+    forme: qcm
+    choix:
+      - "Alimenter (fournir l'énergie)"
+      - "Distribuer (autoriser ou couper le passage de l'énergie)"
+      - "Convertir (changer la forme de l'énergie)"
+    reponse: 1
+    indices:
+      - "L'interrupteur ne fabrique pas d'énergie et ne change pas sa forme : il agit seulement sur son passage."
+    explication: >-
+      L'interrupteur assure la fonction distribuer : il autorise ou coupe le passage de l'énergie
+      électrique vers l'ampoule, sans en changer la forme ni la fournir lui-même.
+
+  - type: exercice
+    enonce: >-
+      Quel composant de la chaîne d'énergie convertit l'énergie électrique en énergie mécanique de
+      rotation, par exemple dans un ventilateur ou une perceuse ?
+    forme: reponse_courte
+    reponse: "le moteur électrique"
+    reponses_acceptees: ["moteur électrique", "un moteur électrique", "moteur"]
+    indices:
+      - "C'est le convertisseur le plus courant pour obtenir un mouvement de rotation à partir de l'électricité."
+      - "On le trouve aussi dans un lave-linge ou dans un ventilateur."
+    explication: "C'est le moteur électrique qui assure la fonction convertir : il transforme l'énergie électrique en énergie mécanique de rotation."
+
+  - type: exercice
+    enonce: >-
+      Une lampe consomme 100 J d'énergie électrique et produit 12 J d'énergie lumineuse utile (le
+      reste est perdu en chaleur). Calcule le rendement de cette lampe, en %.
+    forme: nombre
+    reponse: 12
+    tolerance: 0.5
+    unite: "%"
+    indices:
+      - "Le rendement est le rapport entre l'énergie utile et l'énergie consommée, exprimé en pourcentage."
+      - "Divise l'énergie utile par l'énergie consommée, puis multiplie par 100."
+    explication: "Rendement = (énergie utile / énergie consommée) × 100 = (12 / 100) × 100 = 12 %."
+
+  - type: question_ouverte
+    question: >-
+      Un vélo classique transmet le mouvement des pédales à la roue arrière à l'aide d'une chaîne
+      et de deux pignons de tailles différentes. Explique avec tes mots à quoi sert cette
+      différence de taille entre les deux pignons.
+    indices:
+      - "Repense à la fonction « transmettre » de la chaîne d'énergie : peut-elle aussi changer la vitesse ou la force du mouvement ?"
+      - "Compare le nombre de tours que fait la roue arrière pour un tour de pédalier, selon la taille des pignons."
+    criteres:
+      - "L'élève relie la différence de taille des pignons à un changement de vitesse de rotation (ou de force) entre le pédalier et la roue."
+      - "L'élève montre qu'il comprend que la fonction transmettre peut adapter le mouvement, pas seulement le transporter tel quel."
+
+  - type: synthese
+    consigne: >-
+      Écris, en trois ou quatre phrases, les cinq grandes fonctions de la chaîne d'énergie d'un
+      objet technique, avec un exemple de composant pour chacune.

@@ -1,0 +1,119 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: emplois-du-subjonctif
+titre: "Les principaux emplois du subjonctif"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Subjonctif en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Subjonctif_en_fran%C3%A7ais&oldid=237843267"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître les situations où le subjonctif est obligatoire dans une subordonnée."
+      - "Distinguer les verbes et conjonctions qui imposent le subjonctif de ceux qui imposent l'indicatif."
+      - "Conjuguer correctement un verbe au subjonctif présent après une conjonction comme « bien que » ou « pour que »."
+
+  - type: texte
+    titre: "Le principe"
+    contenu: >-
+      Le subjonctif s'emploie dans une proposition subordonnée quand le fait exprimé est
+      **envisagé** (souhaité, redouté, ordonné, mis en doute), et non présenté comme une réalité
+      certaine. À l'inverse, un verbe d'opinion ou de déclaration à la forme affirmative (penser
+      que, dire que, être sûr que) est suivi de **l'indicatif**, car le fait est présenté comme
+      certain.
+
+  - type: texte
+    titre: "Après quels verbes et quelles conjonctions ?"
+    contenu: >-
+      On trouve le subjonctif après des verbes exprimant le **souhait** ou le désir (vouloir que,
+      souhaiter que, aimer que), un **ordre** (falloir que, ordonner que), un **doute** ou une
+      incertitude (douter que, ne pas être sûr que), un **sentiment** (regretter que, avoir peur
+      que, être content que).
+
+      On le trouve aussi après certaines **conjonctions de subordination** : but (pour que, afin
+      que), concession (bien que, quoique), condition (à condition que, pourvu que), crainte (de
+      crainte que, de peur que), temps antérieur (avant que, jusqu'à ce que).
+
+  - type: texte
+    titre: "Méthode et repère de conjugaison"
+    contenu: >-
+      Pour choisir le mode : repérer le verbe ou la conjonction qui introduit la subordonnée, puis
+      se demander si le fait est présenté comme certain (indicatif) ou seulement
+      envisagé/souhaité/redouté (subjonctif). Au subjonctif présent, les terminaisons
+      caractéristiques sont **-e, -es, -e, -ions, -iez, -ent**, ce qui permet de distinguer un
+      subjonctif d'un indicatif de forme proche (par exemple « que tu ailles » au subjonctif contre
+      « tu vas » à l'indicatif).
+
+  - type: exemple
+    enonce: "Choisir le mode qui convient : « Je doute qu'il (venir) à la réunion. »"
+    etapes:
+      - "Le verbe introducteur est « douter que »."
+      - "« douter que » exprime une incertitude, un fait non présenté comme certain."
+      - "Il impose donc le subjonctif."
+      - "Phrase correcte : « Je doute qu'il vienne à la réunion. »"
+
+  - type: exercice
+    enonce: "Choisir le mode : « Bien qu'il (pleuvoir), nous sommes sortis nous promener. » Réponds par la forme conjuguée attendue (un seul mot)."
+    forme: reponse_courte
+    reponse: "pleuve"
+    reponses_acceptees: []
+    indices:
+      - "« bien que » exprime la concession : quel mode impose-t-il toujours ?"
+      - "Conjugue « pleuvoir » au subjonctif présent, 3e personne du singulier."
+    explication: "« bien que » impose toujours le subjonctif : « Bien qu'il pleuve, nous sommes sortis nous promener. »"
+
+  - type: exercice
+    enonce: "Choisir le mode : « Je pense qu'elle (avoir) raison. » Réponds en recopiant toute la subordonnée correctement conjuguée (« qu'elle... »)."
+    forme: reponse_courte
+    reponse: "qu'elle a raison"
+    reponses_acceptees: ["quelle a raison", "qu elle a raison"]
+    indices:
+      - "« penser que » à la forme affirmative présente-t-il le fait comme certain ou seulement envisagé ?"
+      - "Conjugue le verbe « avoir » à l'indicatif présent, 3e personne du singulier."
+    explication: "« penser que » à la forme affirmative est suivi de l'indicatif : « Je pense qu'elle a raison. »"
+
+  - type: exercice
+    enonce: "Dans « Range ta chambre avant que tes parents (rentrer). », quel mode faut-il employer après « avant que » ?"
+    forme: qcm
+    choix:
+      - "L'indicatif, car le fait est déjà réalisé au moment où l'on parle."
+      - "Le subjonctif, car « avant que » introduit un fait seulement envisagé, non encore réalisé."
+      - "Le conditionnel, car il s'agit d'une hypothèse."
+    reponse: 1
+    indices:
+      - "« avant que » introduit-il un fait déjà accompli, ou un fait qui n'a pas encore eu lieu au moment de l'énoncé ?"
+      - "Compare avec « après que », qui introduit un fait réalisé : ce n'est pas le même cas."
+    explication: "« avant que » introduit toujours un fait non encore réalisé au moment de l'énoncé : il impose le subjonctif (« avant que tes parents rentrent »)."
+
+  - type: exercice
+    enonce: "Parmi ces quatre verbes ou conjonctions, lequel n'impose PAS le subjonctif dans sa subordonnée ?"
+    forme: qcm
+    choix:
+      - "il faut que"
+      - "afin que"
+      - "je suis sûr que"
+      - "de crainte que"
+    reponse: 2
+    indices:
+      - "Un verbe de certitude, à la forme affirmative, présente-t-il le fait comme sûr ou comme seulement envisagé ?"
+      - "Les trois autres expriment un ordre, un but ou une crainte : ce sont des déclencheurs classiques du subjonctif."
+    explication: "« je suis sûr que » présente le fait comme certain : il est suivi de l'indicatif, contrairement aux trois autres qui imposent le subjonctif."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots pourquoi « après que » est suivi de l'indicatif alors que « avant que » est suivi du subjonctif, bien que les deux conjonctions parlent de temps."
+    indices:
+      - "Demande-toi, dans chaque cas, si le fait dont on parle est déjà arrivé ou pas encore, au moment où l'on parle."
+      - "Relie cette différence à la règle générale du subjonctif : fait certain ou fait seulement envisagé."
+    criteres:
+      - "L'élève relie le choix du mode au caractère réalisé (après que) ou non réalisé (avant que) du fait, et non à une règle apprise par cœur sans justification."
+      - "L'élève montre qu'il comprend que le subjonctif marque un fait envisagé, pas un fait certain."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu choisis entre indicatif
+      et subjonctif dans une subordonnée, puis donne toi-même un exemple de phrase (différent de
+      ceux de cette leçon) avec une conjonction qui impose le subjonctif.

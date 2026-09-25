@@ -1,0 +1,143 @@
+notion: probabilites-experiences-simples
+titre: "Probabilités : expériences aléatoires simples"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Probabilités (mathématiques)/Déterminer la probabilité d'un événement »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/D%C3%A9terminer_la_probabilit%C3%A9_d%27un_%C3%A9v%C3%A9nement&oldid=985513"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Probabilités (mathématiques)/Notion d'expérience aléatoire et vocabulaire des probabilités »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/Notion_d%27exp%C3%A9rience_al%C3%A9atoire_et_vocabulaire_des_probabilit%C3%A9s&oldid=921349"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer la probabilité d'un événement pour une expérience aléatoire à une épreuve."
+      - "Utiliser l'événement contraire pour calculer une probabilité."
+      - "Faire le lien entre fréquence observée et probabilité."
+
+  - type: texte
+    titre: "Vocabulaire : expérience, issue, événement"
+    contenu: >-
+      Une expérience est **aléatoire** quand on connaît à l'avance tous les résultats possibles
+      (les **issues**), sans pouvoir prévoir lequel va se produire (lancer un dé, tirer une carte,
+      lancer une pièce...). Un **événement** est un ensemble d'issues (par exemple « obtenir un
+      nombre pair » regroupe plusieurs issues d'un lancer de dé).
+
+  - type: texte
+    titre: "Calculer une probabilité par équiprobabilité"
+    contenu: >-
+      La probabilité d'un événement est un nombre compris entre 0 et 1 : **0** pour un événement
+      impossible, **1** pour un événement certain. La somme des probabilités de toutes les issues
+      vaut toujours **1**. Quand toutes les issues ont la même chance de se produire
+      (**équiprobabilité** : dé équilibré, pièce bien équilibrée, tirage au hasard dans un sac...),
+      on calcule : **P(A) = nombre d'issues favorables / nombre total d'issues**. Méthode : lister
+      ou compter toutes les issues possibles et vérifier qu'elles sont équiprobables ; compter les
+      issues qui réalisent l'événement ; écrire la probabilité sous forme de fraction simplifiée
+      (puis en décimal ou en pourcentage si demandé) ; vérifier que le résultat est bien entre 0 et
+      1.
+
+  - type: exemple
+    enonce: "On lance un dé équilibré à six faces. Quelle est la probabilité d'obtenir un nombre pair ?"
+    etapes:
+      - "Il y a 6 issues possibles (1, 2, 3, 4, 5, 6), toutes équiprobables (le dé est équilibré)."
+      - "Les issues favorables à « nombre pair » sont 2, 4 et 6 : il y en a 3."
+      - "P(pair) = nombre d'issues favorables / nombre total d'issues = 3/6."
+      - "3/6 se simplifie en 1/2."
+
+  - type: texte
+    titre: "L'événement contraire"
+    contenu: >-
+      L'événement contraire d'un événement A (noté « non A ») regroupe toutes les issues qui ne
+      réalisent **pas** A. Comme la somme des probabilités de toutes les issues vaut 1 : **P(non A)
+      = 1 − P(A)**. Cette règle est très utile pour les événements du type « ne pas... » ou « au
+      moins... », qui sont parfois plus longs à compter directement que leur contraire.
+
+  - type: texte
+    titre: "Fréquence et probabilité"
+    contenu: >-
+      Si l'on répète une expérience aléatoire un **grand nombre de fois**, la **fréquence
+      observée** d'un événement (le nombre de fois où il s'est produit, divisé par le nombre total
+      d'essais) se **stabilise** autour de sa probabilité, mais elle ne lui est en général pas
+      exactement égale. Un petit écart entre fréquence observée et probabilité théorique est donc
+      normal et ne signifie pas forcément que l'expérience est truquée.
+
+  - type: exercice
+    enonce: >-
+      Un sac contient 5 boules rouges, 3 vertes et 2 bleues, indiscernables au toucher. On tire une
+      boule au hasard. Quelle est la probabilité qu'elle soit verte ? Donne le résultat sous forme
+      de fraction irréductible (par exemple 1/2 s'écrit comme réponse_courte "1/2").
+    forme: reponse_courte
+    reponse: "3/10"
+    indices:
+      - "Combien de boules y a-t-il en tout dans le sac ?"
+      - "Combien de boules vertes y a-t-il ?"
+    explication: "Il y a 5 + 3 + 2 = 10 boules en tout, dont 3 vertes. P(verte) = 3/10 (déjà une fraction irréductible)."
+
+  - type: exercice
+    enonce: >-
+      Avec le même sac (5 boules rouges, 3 vertes, 2 bleues, 10 boules en tout), quelle est la
+      probabilité de tirer une boule qui ne soit pas rouge ? Donne le résultat sous forme de
+      fraction irréductible.
+    forme: reponse_courte
+    reponse: "1/2"
+    indices:
+      - "« Pas rouge » est l'événement contraire de « rouge » : utilise P(non A) = 1 − P(A)."
+      - "Combien de boules rouges y a-t-il sur les 10 boules du sac ?"
+    explication: "P(rouge) = 5/10. Donc P(pas rouge) = 1 − 5/10 = 5/10, qui se simplifie en 1/2."
+
+  - type: exercice
+    enonce: >-
+      Une roue est partagée en 8 secteurs égaux numérotés de 1 à 8. On la fait tourner et elle
+      s'arrête sur un secteur au hasard. Combien de secteurs portent un nombre premier ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    indices:
+      - "Un nombre premier a exactement deux diviseurs : 1 et lui-même. Attention, 1 n'est pas un nombre premier."
+      - "Repasse en revue chaque numéro de la roue, du plus petit au plus grand, et note ceux qui sont premiers."
+    explication: "Les nombres premiers entre 1 et 8 sont 2, 3, 5 et 7 : il y en a 4 (donc P = 4/8 = 1/2)."
+
+  - type: exercice
+    enonce: "On tire une carte au hasard dans un jeu de 32 cartes. Quelle est la probabilité de tirer un roi ?"
+    forme: reponse_courte
+    reponse: "1/8"
+    reponses_acceptees: ["4/32"]
+    indices:
+      - "Combien y a-t-il de rois dans un jeu de 32 cartes ?"
+      - "Simplifie la fraction obtenue si possible."
+    explication: "Il y a 4 rois sur 32 cartes. P(roi) = 4/32, qui se simplifie en 1/8."
+
+  - type: exercice
+    enonce: >-
+      Une pièce lancée 1 000 fois est tombée 512 fois sur « pile ». Cela prouve-t-il que la pièce
+      est truquée ?
+    forme: qcm
+    choix:
+      - "Oui, car 512 est différent de 500."
+      - "Non, l'écart est faible et normal, il ne prouve rien à lui seul."
+      - "On ne peut jamais savoir si une pièce est truquée."
+    reponse: 1
+    indices:
+      - "Calcule la fréquence observée de « pile » (512 divisé par 1000) et compare-la à la probabilité théorique attendue pour une pièce équilibrée."
+    explication: "La fréquence observée est 512/1000 = 0,512, très proche de 0,5 (la probabilité théorique pour une pièce équilibrée). Un tel écart est normal ; il ne permet pas de conclure que la pièce est truquée."
+
+  - type: question_ouverte
+    question: >-
+      Un joueur affirme : « J'ai obtenu pile 5 fois de suite en lançant une pièce, donc la
+      prochaine fois j'ai plus de chances d'obtenir face. » A-t-il raison ? Explique pourquoi, avec
+      tes mots.
+    indices:
+      - "Est-ce qu'une pièce (ou un dé) « se souvient » des résultats précédents ?"
+      - "La probabilité d'obtenir face au prochain lancer dépend-elle de ce qui s'est passé avant ?"
+    criteres:
+      - "L'élève affirme que le joueur a tort."
+      - "L'élève explique qu'un objet aléatoire (pièce, dé) n'a pas de mémoire des lancers précédents, donc la probabilité reste la même à chaque nouveau lancer."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu calcules la probabilité
+      d'un événement quand toutes les issues ont la même chance, et à quoi sert l'événement
+      contraire.
