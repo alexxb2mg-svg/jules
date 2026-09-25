@@ -192,16 +192,20 @@ def lire_outil(dossier: Path) -> Outil:
     )
 
 
-def charger_outils(racine: Path) -> dict[str, Outil]:
-    """Charge tous les outils de `racine` (dossier `outils/`).
+def charger_outils(racine: Path, dossiers_extensions: list[Path] | None = None) -> dict[str, Outil]:
+    """Charge tous les outils de `racine` (dossier `outils/`), puis ceux des extensions actives
+    (`dossiers_extensions`, voir `dossiers_outils` de jules/extensions.py), vérifiés de la même façon.
 
     Un outil illisible (fiche invalide, motif interdit dans le code...) est écarté et journalisé :
-    Jules continue sans lui, comme pour une bibliothèque (voir `jules/bibliotheques.py`).
+    Jules continue sans lui, comme pour une bibliothèque (voir `jules/bibliotheques.py`). Un id
+    déjà chargé l'emporte sur un doublon venu ensuite.
     """
     outils: dict[str, Outil] = {}
-    if not racine.is_dir():
-        return outils
-    for dossier in sorted(p for p in racine.iterdir() if p.is_dir()):
+    dossiers = sorted(p for p in racine.iterdir() if p.is_dir()) if racine.is_dir() else []
+    for dossier in [*dossiers, *(dossiers_extensions or [])]:
+        if dossier.name in outils:
+            journal.error("Outil %s écarté : id déjà fourni ailleurs", dossier.name)
+            continue
         try:
             outils[dossier.name] = lire_outil(dossier)
         except (ErreurOutil, OSError, yaml.YAMLError) as err:

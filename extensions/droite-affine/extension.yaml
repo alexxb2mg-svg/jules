@@ -1,0 +1,8 @@
+id: droite-affine
+titre: "Figure : droite affine f(x) = ax + b"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [droite-affine]
+permissions: {}

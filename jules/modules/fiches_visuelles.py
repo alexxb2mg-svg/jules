@@ -17,6 +17,7 @@ from typing import Any
 
 from fastapi import APIRouter, HTTPException
 
+from jules.extensions import figures_fournies
 from jules.fiches_visuelles import FicheVisuelle, charger_fiches_visuelles
 from jules.modules.base import Module
 
@@ -46,7 +47,10 @@ class Brique(Module):
         if self._fiches is None:
             catalogue = self.notions_module.catalogue
             self._fiches = charger_fiches_visuelles(
-                self.tuteur.config.dossier_bibliotheques, self.ids, catalogue.notions
+                self.tuteur.config.dossier_bibliotheques,
+                self.ids,
+                catalogue.notions,
+                frozenset(figures_fournies(self.tuteur.extensions)),
             )
         return self._fiches
 

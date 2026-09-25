@@ -1,0 +1,8 @@
+id: lexique
+titre: "Lexique"
+version: "1.0.0"
+licence: MIT
+auteurs: ["jules-outils-s2"]
+fournit:
+  outils: [lexique]
+permissions: {}

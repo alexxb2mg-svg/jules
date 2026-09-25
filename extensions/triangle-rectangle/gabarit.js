@@ -1,5 +1,5 @@
 // Jules - gabarit "triangle-rectangle" : triangle rectangle en C, cotes ac et bc reglables.
-// Contrat : jules/fiches_visuelles.py (GABARITS_CONNUS). Rendu SVG pur, aucun eval().
+// Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
 window.GABARITS = window.GABARITS || {};

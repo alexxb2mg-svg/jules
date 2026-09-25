@@ -86,3 +86,15 @@ notifieurs:
     reglages:
       token_env: JULES_TELEGRAM_TOKEN
       chat_id_env: JULES_TELEGRAM_CHAT_ID
+
+# Extensions activees (voir docs/EXTENSIONS.md) : un dossier extensions/<id>/ n'est pris en compte
+# que s'il est cite ici. Les figures et les outils de reference sont livres comme extensions.
+extensions:
+  - droite-affine             # figures des fiches visuelles (fournit.figures)
+  - triangle-thales
+  - triangle-rectangle
+  - equation-solutions
+  - probabilites-frequences
+  - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
+  - frise-chronologique
+  - lexique

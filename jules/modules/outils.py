@@ -1,5 +1,6 @@
-"""Module 'outils' : sert les outils du dossier `outils/` sous `/api/eleve/outils` (voir
-docs/OUTILS-CONTRAT.md). Volontairement séparé de `jules/web/app.py` (mécanisme `routes_eleve()`
+"""Module 'outils' : sert les outils du dossier `outils/` et ceux des extensions actives
+(`fournit.outils`, voir docs/EXTENSIONS.md) sous `/api/eleve/outils` (voir docs/OUTILS-CONTRAT.md).
+Volontairement séparé de `jules/web/app.py` (mécanisme `routes_eleve()`
 existant, comme tous les modules) : rien n'y est ajouté par cette étape.
 
 Chaque réponse porte ses propres en-têtes de sécurité (CSP sans réseau, `X-Frame-Options:
@@ -18,6 +19,7 @@ from typing import Any
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import FileResponse, Response
 
+from jules.extensions import dossiers_outils
 from jules.modules.base import Module
 from jules.outils import Outil, charger_outils
 
@@ -74,7 +76,7 @@ class Brique(Module):
     @property
     def outils(self) -> dict[str, Outil]:
         if self._outils is None:
-            self._outils = charger_outils(self.tuteur.config.dossier_outils)
+            self._outils = charger_outils(self.tuteur.config.dossier_outils, dossiers_outils(self.tuteur.extensions))
         return self._outils
 
     def recharger(self) -> None:

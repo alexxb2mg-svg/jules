@@ -34,8 +34,9 @@ def regle_par_defaut(systeme: str, tours, modele: str) -> str:
 
 @pytest.fixture
 def projet(tmp_path: Path) -> Path:
-    """Copie des fichiers de contenu (persona, consignes, profils, bibliotheques) dans un dossier jetable."""
-    for dossier in ("persona", "consignes", "profils", "bibliotheque"):
+    """Copie des fichiers de contenu (persona, consignes, profils, bibliotheques, extensions) dans un
+    dossier jetable."""
+    for dossier in ("persona", "consignes", "profils", "bibliotheque", "extensions"):
         shutil.copytree(RACINE / dossier, tmp_path / dossier)
     return tmp_path
 

@@ -77,8 +77,9 @@ fonction, une parenthèse, un opérateur non listé, une variable inconnue du bl
 
 ## Gabarits de figures interactives connus
 
-Un gabarit est un fichier `jules/web/static/gabarits/<id>.js` qui dessine du SVG à partir des
-valeurs de curseurs, jamais de code libre embarqué dans la fiche :
+Un gabarit est fourni par une extension active (`extensions/<id>/gabarit.js`, voir
+`docs/EXTENSIONS.md`) et dessine du SVG à partir des valeurs de curseurs, jamais de code libre
+embarqué dans la fiche. Les cinq gabarits livrés :
 
 - `droite-affine` : f(x) = ax + b (curseurs `a`, `b`)
 - `triangle-thales` : configuration de Thalès (curseur `t`, position de M sur [AB])
@@ -86,8 +87,9 @@ valeurs de curseurs, jamais de code libre embarqué dans la fiche :
 - `equation-solutions` : x² = a sur une droite graduée (curseur `a`)
 - `probabilites-frequences` : fréquence observée qui se stabilise avec n (curseur `n`)
 
-Ajouter un gabarit = déposer le fichier JS, l'ajouter à `GABARITS_CONNUS`
-(`jules/fiches_visuelles.py`) et l'inclure dans `accueil.html`.
+Ajouter un gabarit = créer une extension `extensions/<id>/` (`extension.yaml` avec
+`fournit: figures: [<id>]`, et `gabarit.js`) puis l'activer dans `extensions:` de `config.yaml` :
+ni `jules/fiches_visuelles.py` ni `accueil.html` ne changent.
 
 ## Contrôles automatiques (voir `jules/fiches_visuelles.py`)
 
@@ -95,7 +97,7 @@ Ajouter un gabarit = déposer le fichier JS, l'ajouter à `GABARITS_CONNUS`
   `attendus` automatiquement.
 - Chaque `id` de bloc est unique ; les types sont limités aux 7 listés ci-dessus (`attendus` est
   réservé).
-- Le `gabarit` d'un `graphe` doit être dans `GABARITS_CONNUS` ; ses curseurs et lectures sont
+- Le `gabarit` d'un `graphe` doit être fourni par une extension active ; ses curseurs et lectures sont
   validés (bornes cohérentes, valeur de départ dans les bornes, conditions lisibles par
   l'analyseur sûr).
 - Longueurs plafonnées partout (voir tableau ci-dessus) pour rester lisible sur tablette.

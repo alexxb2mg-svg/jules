@@ -11,7 +11,7 @@ une fiche visuelle est faite pour etre AFFICHEE telle quelle, sans passer par un
 (voir `jules_cadrage_interface.md` : rendu 100% deterministe). Chaque bloc a un `id` unique dans
 la fiche ; son adresse est `fiche/<id>` (et `fiche/<id>/<sous-id>` pour ses elements, ex. un
 curseur). C'est ce que Jules recevra plus tard pour commenter, et ce sur quoi les gabarits de
-figures interactives (jules/web/static/gabarits/*.js) s'appuient pour leurs lectures.
+figures interactives (extensions/<id>/gabarit.js, voir docs/EXTENSIONS.md) s'appuient pour leurs lectures.
 
 Regle de securite : les conditions `si` d'un bloc `graphe` (ex. "a > 0", "a >= 1 && b < 0") ne
 sont JAMAIS evaluees par eval() : `analyser_condition` les decoupe en une petite liste de
@@ -47,17 +47,10 @@ TAILLE_MAX_SVG = 100_000  # octets : un schema est un dessin simple, pas une ima
 ID_ATTENDUS = "attendus"  # adresse reservee : reprend automatiquement les attendus du referentiel
 _ID_BLOC = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
-# Gabarits connus de figures interactives (jules/web/static/gabarits/<id>.js) : une fiche ne peut
-# pas embarquer de code libre, seulement choisir un gabarit declare et lui donner ses parametres.
-GABARITS_CONNUS = frozenset(
-    {
-        "droite-affine",
-        "triangle-thales",
-        "triangle-rectangle",
-        "equation-solutions",
-        "probabilites-frequences",
-    }
-)
+# Gabarits de figures interactives : une fiche ne peut pas embarquer de code libre, seulement
+# choisir un gabarit declare et lui donner ses parametres. Les gabarits acceptes sont ceux que
+# fournissent les extensions actives (`figures_fournies` de jules/extensions.py) : ce fichier n'en
+# connait aucun par son nom, ils lui sont passes en parametre (`gabarits`).
 
 # Longueurs plafonnees pour rester lisible sur tablette (cadrage interface, 25/09/2026).
 LIMITE_JULES = 320  # 1 a 3 phrases
@@ -255,12 +248,11 @@ def _verifier_lectures(lectures: Any, noms_curseurs: set[str], ou: str) -> list[
     return resultat
 
 
-def _verifier_figure(figure: dict[str, Any], ou: str) -> dict[str, Any]:
+def _verifier_figure(figure: dict[str, Any], ou: str, gabarits: frozenset[str]) -> dict[str, Any]:
     gabarit = str(figure.get("gabarit") or "")
-    if gabarit not in GABARITS_CONNUS:
-        raise ErreurFicheVisuelle(
-            f"{ou} : gabarit {gabarit!r} inconnu (attendu : {', '.join(sorted(GABARITS_CONNUS))})"
-        )
+    if gabarit not in gabarits:
+        attendus = ", ".join(sorted(gabarits)) or "aucune extension de figures active"
+        raise ErreurFicheVisuelle(f"{ou} : gabarit {gabarit!r} inconnu (attendu : {attendus})")
     curseurs = _verifier_curseurs(figure.get("curseurs"), ou)
     noms = {c["nom"] for c in curseurs}
     lectures = _verifier_lectures(figure.get("lectures"), noms, ou)
@@ -348,7 +340,7 @@ def _verifier_piege(d: dict[str, Any], ou: str) -> dict[str, Any]:
     }
 
 
-def _verifier_exemple(d: dict[str, Any], ou: str) -> dict[str, Any]:
+def _verifier_exemple(d: dict[str, Any], ou: str, gabarits: frozenset[str]) -> dict[str, Any]:
     resultat: dict[str, Any] = {
         "situation": _texte(d.get("situation"), "situation", ou, limite=400),
         "calcul": _texte(d.get("calcul"), "calcul", ou, limite=400, obligatoire=False),
@@ -357,7 +349,7 @@ def _verifier_exemple(d: dict[str, Any], ou: str) -> dict[str, Any]:
     if d.get("figure"):
         if not isinstance(d["figure"], dict):
             raise ErreurFicheVisuelle(f"{ou} : 'figure' doit etre un objet")
-        resultat["figure"] = _verifier_figure(d["figure"], f"{ou}, figure")
+        resultat["figure"] = _verifier_figure(d["figure"], f"{ou}, figure", gabarits)
     return resultat
 
 
@@ -418,15 +410,17 @@ def _verifier_schema(d: dict[str, Any], ou: str, dossier_fiche: Path) -> dict[st
 _VERIFICATEURS = {
     "formule": _verifier_formule,
     "carte": _verifier_carte,
-    "graphe": _verifier_figure,
     "methode": _verifier_methode,
     "piege": _verifier_piege,
-    "exemple": _verifier_exemple,
     "renfort": _verifier_renfort,
 }
+# Blocs qui peuvent contenir une figure : leur verificateur recoit les gabarits acceptes.
+_VERIFICATEURS_FIGURE = {"graphe": _verifier_figure, "exemple": _verifier_exemple}
 
 
-def _verifier_bloc(bloc: dict[str, Any], position: int, nom: str, dossier_fiche: Path) -> BlocFiche:
+def _verifier_bloc(
+    bloc: dict[str, Any], position: int, nom: str, dossier_fiche: Path, gabarits: frozenset[str]
+) -> BlocFiche:
     ou = f"{nom}, bloc {position + 1}"
     if not isinstance(bloc, dict):
         raise ErreurFicheVisuelle(f"{ou} : un objet est attendu")
@@ -440,15 +434,25 @@ def _verifier_bloc(bloc: dict[str, Any], position: int, nom: str, dossier_fiche:
         raise ErreurFicheVisuelle(f"{ou} : type {type_!r} inconnu (attendu : {', '.join(TYPES_BLOCS)})")
     jules = _verifier_jules(bloc.get("jules"), ou)
     champs = {k: v for k, v in bloc.items() if k not in ("id", "type", "jules")}
-    donnees = _verifier_schema(champs, ou, dossier_fiche) if type_ == "schema" else _VERIFICATEURS[type_](champs, ou)
+    if type_ == "schema":
+        donnees = _verifier_schema(champs, ou, dossier_fiche)
+    elif type_ in _VERIFICATEURS_FIGURE:
+        donnees = _VERIFICATEURS_FIGURE[type_](champs, ou, gabarits)
+    else:
+        donnees = _VERIFICATEURS[type_](champs, ou)
     return BlocFiche(id=identifiant, type=type_, donnees=donnees, jules=jules)
 
 
 # --- lecture -------------------------------------------------------------------------
 
 
-def lire_fiche_visuelle(chemin: Path, notions: dict[str, Notion], bibliotheque: Bibliotheque) -> FicheVisuelle:
-    """Lit et verifie une fiche visuelle. Leve ErreurFicheVisuelle avec un message clair sinon."""
+def lire_fiche_visuelle(
+    chemin: Path, notions: dict[str, Notion], bibliotheque: Bibliotheque, gabarits: frozenset[str]
+) -> FicheVisuelle:
+    """Lit et verifie une fiche visuelle. Leve ErreurFicheVisuelle avec un message clair sinon.
+
+    `gabarits` : ids des figures acceptees (celles des extensions actives, voir jules/extensions.py).
+    """
     nom = chemin.name
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurFicheVisuelle(f"{nom} : fichier trop gros")
@@ -480,7 +484,7 @@ def lire_fiche_visuelle(chemin: Path, notions: dict[str, Notion], bibliotheque: 
     blocs_bruts = brut.get("blocs") or []
     if not isinstance(blocs_bruts, list) or not MIN_BLOCS <= len(blocs_bruts) <= MAX_BLOCS:
         raise ErreurFicheVisuelle(f"{nom} : entre {MIN_BLOCS} et {MAX_BLOCS} blocs attendus")
-    blocs = [_verifier_bloc(b, i, nom, chemin.parent) for i, b in enumerate(blocs_bruts)]
+    blocs = [_verifier_bloc(b, i, nom, chemin.parent, gabarits) for i, b in enumerate(blocs_bruts)]
     ids = [b.id for b in blocs]
     if len(ids) != len(set(ids)):
         raise ErreurFicheVisuelle(f"{nom} : des ids de blocs sont en double")
@@ -499,7 +503,9 @@ def lire_fiche_visuelle(chemin: Path, notions: dict[str, Notion], bibliotheque: 
     )
 
 
-def charger_fiches_visuelles(racine: Path, ids: list[str], notions: dict[str, Notion]) -> dict[str, FicheVisuelle]:
+def charger_fiches_visuelles(
+    racine: Path, ids: list[str], notions: dict[str, Notion], gabarits: frozenset[str]
+) -> dict[str, FicheVisuelle]:
     """Fiches visuelles des bibliotheques citees, par ordre de priorite (une notion = une fiche).
 
     Une fiche non conforme est signalee dans le journal et ecartee : Jules continue sans elle.
@@ -519,7 +525,7 @@ def charger_fiches_visuelles(racine: Path, ids: list[str], notions: dict[str, No
             continue
         for fichier in sorted((biblio.dossier / "fiches").rglob("*.yaml")):
             try:
-                fiche = lire_fiche_visuelle(fichier, notions, biblio)
+                fiche = lire_fiche_visuelle(fichier, notions, biblio, gabarits)
             except (ErreurFicheVisuelle, OSError) as err:
                 journal.error("Fiche visuelle ecartee : %s", err)
                 continue

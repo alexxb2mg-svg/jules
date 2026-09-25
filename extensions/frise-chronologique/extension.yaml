@@ -1,0 +1,8 @@
+id: frise-chronologique
+titre: "Frise chronologique"
+version: "1.0.0"
+licence: MIT
+auteurs: ["jules-outils-s2"]
+fournit:
+  outils: [frise-chronologique]
+permissions: {}

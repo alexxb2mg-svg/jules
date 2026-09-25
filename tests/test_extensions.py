@@ -35,6 +35,8 @@ def creer_extension(racine: Path, identifiant: str, manifeste: str | None = None
     (dossier / "extension.yaml").write_text(
         manifeste if manifeste is not None else MANIFESTE_VALIDE.format(id=identifiant), encoding="utf-8"
     )
+    # le manifeste valide fournit une figure : son code est attendu dans gabarit.js
+    (dossier / "gabarit.js").write_text('window.GABARITS["ma-figure"] = {};\n', encoding="utf-8")
     return dossier
 
 

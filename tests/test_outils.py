@@ -137,9 +137,11 @@ def test_charger_outils_racine_absente(tmp_path):
 
 
 def test_les_trois_outils_de_reference_sont_valides():
-    """Les outils livrés avec cette étape doivent tous se charger sans erreur."""
-    racine = Path(__file__).resolve().parents[1] / "outils"
-    outils = charger_outils(racine)
+    """Les outils livrés avec cette étape doivent tous se charger sans erreur (ils vivent dans
+    extensions/<id>/ depuis l'étape 2 des extensions, voir docs/EXTENSIONS.md)."""
+    racine = Path(__file__).resolve().parents[1] / "extensions"
+    ids = ("frise-chronologique", "calculatrice", "lexique")
+    outils = charger_outils(racine / "n_existe_plus", [racine / i for i in ids])
     assert set(outils) == {"frise-chronologique", "calculatrice", "lexique"}
     for outil in outils.values():
         assert outil.licence == "MIT"
