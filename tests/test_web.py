@@ -326,11 +326,3 @@ def test_studio_js_echappe_tout_texte_serveur_avant_innerhtml():
                 continue
             # autorise : constantes / longueurs / index numeriques, pas de champ texte libre
             assert re.fullmatch(r"(lbl \? .*: \"\")|[\w.]+(\.length)?( ?[+][+]? ?\d*)?", interpolation), interpolation
-
-
-def test_page_studio_absente_sans_le_module_serveur(client_protege):
-    """Le lot B (module serveur) n'existe pas encore dans ce worktree : documenter l'etat reel
-    plutot que d'inventer une route. Si /studio finit par repondre 200 un jour (app.py modifie
-    par l'integrateur), ce test echouera et devra etre mis a jour a ce moment-la."""
-    r = client_protege.get("/studio")
-    assert r.status_code == 404
