@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-reperage-musee-lieu-art
+declencheurs:
+- visiter un musée
+- se repérer dans un musée
+- plan du musée
+- sortie au musée
+- métiers du musée
+- protéger une œuvre
+- restauration d'une œuvre
+essentiel: 'Se repérer dans un musée, un lieu d''art ou un site patrimonial demande de savoir préparer et s''orienter
+  pendant une visite.
+
+  On peut effectuer une recherche, dans le cadre d''un exercice collectif et sur la base de consignes précises,
+  pour préparer une sortie culturelle.
+
+  Se repérer dans un musée ou un lieu d''art passe aussi par la lecture et la compréhension des plans et indications
+  proposés sur place.
+
+  Enfin, il est important d''être sensibilisé à la vulnérabilité du patrimoine : les œuvres et monuments peuvent
+  s''abîmer, ce qui explique le travail des métiers de la conservation, de la restauration et de la diffusion.'
+methode:
+- Avant la visite, chercher des informations sur le lieu et préparer des questions précises.
+- Sur place, lire le plan du musée ou du lieu pour repérer les salles ou zones à visiter.
+- Suivre les indications et respecter les consignes qui protègent les œuvres (distance, silence).
+- Se rappeler que les œuvres sont fragiles et qu'il existe des métiers dédiés à leur protection.
+vocabulaire:
+- terme: patrimoine
+  definition: l'ensemble des œuvres et lieux anciens transmis et à protéger
+- terme: restauration
+  definition: le travail qui répare et entretient une œuvre abîmée par le temps
+erreurs_frequentes:
+- Se déplacer dans un musée sans jamais regarder le plan ou les indications fournies.
+- Croire que les œuvres d'un musée ne risquent jamais de s'abîmer.
+- Ne pas préparer de questions avant une sortie culturelle, et donc ne pas savoir quoi chercher sur place.
+exemple:
+  enonce: Avant une visite de musée, la classe prépare une petite recherche pour savoir quelles salles visiter en
+    priorité. Pourquoi est-ce utile ?
+  solution: Cette recherche préparatoire, faite sur la base de consignes précises, permet de savoir à l'avance ce
+    qu'on va chercher à observer, et facilite ensuite le repérage dans le musée grâce à la lecture du plan une fois
+    sur place.
+exercices:
+- enonce: Cherche le plan d'un musée (sur son site internet ou dans un dépliant) et repère sur ce plan deux salles
+    ou zones différentes, en notant comment tu ferais pour aller de l'une à l'autre.
+  indices:
+  - Regarde s'il y a une légende avec des symboles sur le plan.
+  - Repère l'entrée et suis un chemin logique entre les deux salles choisies.
+  solution: 'Réussite si : l''élève identifie correctement deux zones sur un plan de musée réel et décrit un chemin
+    cohérent entre elles.'
+- enonce: Explique en deux ou trois phrases pourquoi on ne doit pas toucher les œuvres dans un musée, en utilisant
+    l'idée de vulnérabilité du patrimoine.
+  indices:
+  - 'Pense à ce qui pourrait abîmer une œuvre : la lumière, la sueur des mains, les chocs.'
+  - Relie ton explication au travail des métiers de la restauration.
+  solution: 'Réussite si : l''explication mentionne que les œuvres sont fragiles (vulnérables) et qu''il existe
+    des métiers chargés de les conserver ou de les restaurer.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 54-55
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

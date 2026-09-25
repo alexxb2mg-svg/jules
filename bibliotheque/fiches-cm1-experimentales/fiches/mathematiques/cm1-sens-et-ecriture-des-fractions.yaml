@@ -1,0 +1,80 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-sens-et-ecriture-des-fractions
+declencheurs:
+- quarts
+- tiers
+- numérateur
+- dénominateur
+- bande de papier
+- pizza
+- parts
+- gâteau
+- partager
+essentiel: 'Une fraction dit combien de parts égales on prend quand on partage une unité (une pizza, une bande,
+  un segment).
+
+  Dans 7/4 (« sept quarts »), le nombre du bas, le dénominateur, dit en combien de parts égales on coupe l''unité
+  : ici 4, ce sont des quarts. Le nombre du haut, le numérateur, dit combien de parts on prend : ici 7.
+
+  7/4, c''est 7 fois un quart : 1/4 + 1/4 + 1/4 + 1/4 + 1/4 + 1/4 + 1/4.
+
+  Quatre quarts font une unité entière (4/4 = 1). Donc 7/4 = 4/4 + 3/4 = 1 + 3/4 : une pizza entière et trois quarts
+  de pizza. Une fraction peut être plus grande que 1.
+
+  On peut alors l''encadrer entre deux nombres entiers qui se suivent : 1 < 7/4 < 2.
+
+  Sur une demi-droite graduée, on place 7/4 en partageant chaque unité en 4 et en comptant 7 petits intervalles
+  depuis 0.'
+methode:
+- 'Lire le dénominateur : en combien de parts égales l''unité est-elle partagée ?'
+- 'Lire le numérateur : combien de ces parts prend-on ?'
+- Regrouper les parts par paquets qui font une unité (par exemple 3/3 = 1) pour trouver combien d'unités entières
+  il y a.
+- 'Écrire le reste comme une fraction plus petite que 1 : 8/3 = 3/3 + 3/3 + 2/3 = 2 + 2/3.'
+- Vérifier avec un dessin (bande, pizza) ou sur la demi-droite graduée.
+vocabulaire:
+- terme: numérateur
+  definition: 'le nombre du haut : combien de parts on prend'
+- terme: dénominateur
+  definition: 'le nombre du bas : en combien de parts égales on partage l''unité'
+erreurs_frequentes:
+- 'Croire qu''une fraction est toujours plus petite que 1 : 7/4 est plus grand que 1.'
+- Inverser numérateur et dénominateur (lire 7/4 comme « quatre septièmes »).
+- Partager l'unité en parts qui ne sont pas égales sur le dessin.
+- Sur la demi-droite graduée, compter les traits au lieu des intervalles.
+exemple:
+  enonce: Écris 9/4 comme un nombre entier plus une fraction plus petite que 1.
+  solution: 4/4 = 1, donc 9/4 = 4/4 + 4/4 + 1/4 = 1 + 1 + 1/4 = 2 + 1/4. 9/4 est entre 2 et 3.
+exercices:
+- enonce: Écris 2 + 2/3 sous la forme d'une seule fraction.
+  indices:
+  - Combien de tiers y a-t-il dans une unité ?
+  - 2 unités, c'est 3/3 + 3/3.
+  solution: 2 = 6/3, donc 2 + 2/3 = 6/3 + 2/3 = 8/3.
+- enonce: Entre quels nombres entiers qui se suivent se trouve 21/8 ?
+  indices:
+  - Combien de huitièmes font une unité ?
+  solution: '8/8 = 1, donc 16/8 = 2 et 24/8 = 3 : 21/8 = 2 + 5/8, il est entre 2 et 3.'
+- enonce: 'Relie les écritures qui désignent le même nombre : « neuf quarts », 9/4, 9 × 1/4, 2 + 1/4.'
+  indices:
+  - Écris chacune comme un nombre de quarts.
+  solution: 'Les quatre écritures désignent le même nombre : neuf quarts.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 4-5
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-reemployer-vocabulaire
+declencheurs:
+- réutiliser un mot
+- employer un mot appris
+- utiliser un mot nouveau
+- mot polysémique
+- mot qui a plusieurs sens
+- réutiliser dans une rédaction
+essentiel: 'Réemployer le vocabulaire, c''est utiliser à bon escient, à l''oral comme à l''écrit, les mots que tu
+  as appris, pour te les approprier durablement.
+
+  Certains mots ont plusieurs sens selon le contexte : on dit qu''ils sont polysémiques. Tu dois apprendre à bien
+  les utiliser dans différentes matières.
+
+  Réemployer un mot appris dans un exposé ou une rédaction montre que tu l''as vraiment compris, pas seulement mémorisé
+  pour un contrôle.
+
+  Tu peux t''aider d''outils comme une liste de synonymes ou d''antonymes pour améliorer un texte que tu écris.'
+methode:
+- Repérer, dans une liste de mots appris, ceux qui correspondent à ce que tu veux dire.
+- Vérifier que le sens du mot correspond bien à la situation (surtout pour un mot polysémique).
+- Utiliser le mot dans une phrase complète, à l'oral ou à l'écrit.
+- Relire ou réécouter pour vérifier que le mot est employé correctement.
+- Réutiliser régulièrement les mots appris dans de nouvelles situations pour ne pas les oublier.
+vocabulaire:
+- terme: mot polysémique
+  definition: un mot qui a plusieurs sens selon le contexte où il est employé
+erreurs_frequentes:
+- Employer un mot polysémique avec le mauvais sens pour la situation.
+- N'utiliser un mot appris qu'une seule fois puis l'oublier.
+- Ne pas relire son texte pour vérifier que le vocabulaire appris est bien utilisé.
+exemple:
+  enonce: 'Le mot « feuille » est polysémique. Utilise-le dans deux phrases avec un sens différent : une en lien
+    avec les arbres, une en lien avec l''école.'
+  solution: 'Exemple : « La feuille de l''arbre est tombée. » (partie d''une plante) et « J''ai pris une feuille
+    pour écrire. » (papier).'
+exercices:
+- enonce: Écris deux phrases en réemployant le mot « champ » avec deux sens différents (un lien avec l'agriculture,
+    un lien avec un domaine d'étude comme « le champ lexical »).
+  indices:
+  - Pense à un terrain cultivé.
+  - Pense à un ensemble de mots ou d'idées liées à un thème.
+  solution: 'Exemple : « Le paysan laboure son champ. » et « Le champ lexical de la mer contient le mot vague. »'
+- enonce: Dans une rédaction que tu écris, remplace le verbe « dire » utilisé trois fois par trois synonymes différents
+    (expliquer, raconter, affirmer par exemple).
+  indices:
+  - Choisis un synonyme adapté au sens exact de chaque phrase.
+  solution: Réussite si les trois synonymes conviennent au sens de chaque phrase et évitent la répétition du mot
+    « dire ».
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Réemployer le vocabulaire étudié » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 11
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Réemployer le vocabulaire étudié »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

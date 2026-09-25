@@ -1,0 +1,60 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-heroines-heros
+declencheurs:
+- c'est quoi un héros
+- pourquoi ce personnage est courageux
+- un héros a-t-il peur
+- les valeurs d'un héros
+- personnage qui sauve les autres
+essentiel: 'En lisant des œuvres de littérature patrimoniale et de littérature de jeunesse (épopée, roman, fable,
+  conte, nouvelle, pièce de théâtre), on découvre des héroïnes et des héros.
+
+  Réfléchir sur ce qui constitue une héroïne ou un héros aide à ouvrir le champ de ses représentations et à les
+  dépasser : un héros n''est pas toujours parfait.
+
+  On cherche à comprendre les motivations de ces personnages, mais aussi à percevoir leurs éventuelles fragilités.
+
+  On s''interroge aussi sur les valeurs morales et culturelles que ces personnages portent (le courage, la justice,
+  la loyauté...).'
+methode:
+- Identifier le personnage principal de l'histoire et ce qu'il accomplit.
+- Chercher ce qui motive ce personnage à agir.
+- 'Repérer ses éventuelles peurs ou fragilités : un héros peut avoir peur.'
+- S'interroger sur les valeurs que ce personnage défend (le courage, l'entraide, la justice...).
+erreurs_frequentes:
+- Croire qu'un héros ou une héroïne n'a jamais peur ni de doutes.
+- Ne retenir que les actions du personnage sans réfléchir à ses motivations ni à ses valeurs.
+exemple:
+  enonce: Dans une histoire, un jeune garçon a très peur mais décide quand même d'aider son ami en danger. Peut-on
+    dire que c'est un héros ?
+  solution: 'Oui : avoir peur ne l''empêche pas d''être un héros. Ce qui compte, c''est qu''il agit malgré sa fragilité,
+    poussé par une valeur comme l''entraide ou le courage.'
+exercices:
+- enonce: Pense à un personnage de livre que tu considères comme une héroïne ou un héros. Quelle est sa motivation
+    pour agir ?
+  indices:
+  - 'Une motivation peut être : sauver quelqu''un, réparer une injustice, protéger sa famille...'
+  solution: 'Il n''y a pas une seule bonne réponse : il faut expliquer précisément pourquoi le personnage agit,
+    et pas seulement décrire ce qu''il fait.'
+- enonce: Ce même personnage a-t-il une fragilité (une peur, un doute, un défaut) ? Laquelle ?
+  indices:
+  - Une fragilité peut être une peur, une faiblesse physique, un manque de confiance...
+  solution: Il faut repérer un moment du livre où le personnage doute ou a peur, ce qui montre qu'un héros n'est
+    pas parfait.
+- enonce: Quelle valeur morale ce personnage porte-t-il selon toi (courage, justice, loyauté, entraide...) ? Justifie
+    avec un exemple du livre.
+  indices:
+  - Cherche une action du personnage qui illustre cette valeur.
+  solution: La réponse doit citer une valeur précise et l'illustrer par une action du personnage dans l'histoire.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

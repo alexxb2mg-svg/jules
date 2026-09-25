@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-classes-de-mots-variations
+declencheurs:
+- ce mot change
+- genre du mot
+- nombre du mot
+- variation
+- masculin féminin
+- le mot varie
+- singulier pluriel
+- mon amie
+- pourquoi on dit mon
+essentiel: 'Certaines classes de mots varient selon des critères précis : le genre (masculin/féminin), le nombre
+  (singulier/pluriel), la personne ou le temps.
+
+  Le déterminant, le nom, l''adjectif, le pronom personnel et le verbe sont des classes de mots qui peuvent varier.
+
+  Les déterminants (articles, possessifs, démonstratifs) varient en genre et en nombre pour s''accorder avec le
+  nom qu''ils précèdent : mon amie (et non « ma amie »).
+
+  Pour retenir ces variations, tu peux t''appuyer sur des outils de référence comme un tableau ou un aide-mémoire.'
+methode:
+- Identifier la classe grammaticale du mot que tu observes.
+- Vérifier s'il varie en genre (masculin/féminin).
+- Vérifier s'il varie en nombre (singulier/pluriel).
+- Pour un verbe, vérifier aussi s'il varie en personne et en temps.
+- Utiliser un tableau ou un aide-mémoire pour vérifier les formes correctes.
+vocabulaire:
+- terme: genre
+  definition: masculin ou féminin, une des variations possibles d'un mot
+- terme: nombre
+  definition: singulier ou pluriel, une des variations possibles d'un mot
+erreurs_frequentes:
+- Oublier d'accorder le déterminant possessif ou démonstratif avec le nom qu'il précède.
+- 'Confondre les critères de variation : croire qu''un adverbe varie alors qu''il est invariable.'
+- Ne pas vérifier ses réponses avec un outil de référence en cas de doute.
+exemple:
+  enonce: Pourquoi dit-on « mon amie » et non « ma amie », alors qu'amie est féminin ?
+  solution: 'Devant un nom féminin commençant par une voyelle, le déterminant possessif « mon » remplace « ma »
+    pour faciliter la prononciation : c''est une forme particulière à mémoriser.'
+exercices:
+- enonce: 'Mets au pluriel le groupe nominal : « ce cheval blanc ».'
+  indices:
+  - Le déterminant démonstratif, le nom et l'adjectif doivent tous varier.
+  solution: ces chevaux blancs (le déterminant, le nom et l'adjectif varient tous en nombre).
+- enonce: 'Change le genre du groupe nominal : « un petit garçon ».'
+  indices:
+  - Le déterminant, l'adjectif et le nom doivent tous changer de genre si besoin.
+  solution: 'une petite fille (ou une petite garçonne n''existe pas : on utilise un nom différent pour ce cas particulier
+    ; avec un nom variable en genre : « un petit élève » devient « une petite élève »).'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Identifier les classes de mots subissant des variations » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 13
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite sur les variations des classes de mots
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

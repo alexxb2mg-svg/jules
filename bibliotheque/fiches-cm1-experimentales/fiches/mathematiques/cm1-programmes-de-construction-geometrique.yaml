@@ -1,0 +1,59 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-programmes-de-construction-geometrique
+declencheurs:
+- programme de construction
+- trace un rectangle
+- instructions pour
+- construire une figure à partir de
+essentiel: 'Un programme de construction, c''est une suite d''instructions qui permet de tracer une figure géométrique,
+  étape par étape.
+
+  Ces instructions portent par exemple sur des segments, des droites parallèles ou perpendiculaires, des cercles
+  de centre et de rayon donnés, ou des polygones usuels.
+
+  Pour réussir, il faut suivre les instructions dans l''ordre, avec les bons outils (règle, équerre, compas).
+
+  On peut aussi réaliser un programme de construction avec un logiciel de géométrie dynamique.'
+methode:
+- Lire toutes les instructions avant de commencer, pour avoir une idée de la figure finale.
+- Tracer les instructions une par une, dans l'ordre donné.
+- Utiliser l'outil adapté à chaque instruction (règle pour un segment, équerre pour une perpendiculaire, compas
+  pour un cercle).
+- Vérifier la figure obtenue à la fin (mesures, angles droits).
+erreurs_frequentes:
+- Changer l'ordre des instructions.
+- Se tromper d'outil (par exemple, tracer un cercle à main levée au lieu d'utiliser le compas).
+- Oublier une instruction du programme.
+exemple:
+  enonce: 'Programme : « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui
+    passe par le milieu du côté [AB]. » Quelle est la dernière étape ?'
+  solution: La dernière étape est de tracer, avec le compas, le cercle de centre A passant par le milieu de [AB]
+    (donc de rayon 2,5 cm).
+exercices:
+- enonce: Trace un carré KLMN de 6 cm de côté. Quel outil utilises-tu en premier ?
+  indices:
+  - Il faut d'abord tracer les longueurs.
+  solution: On utilise d'abord la règle graduée pour tracer un côté de 6 cm, puis l'équerre pour les angles droits.
+- enonce: 'Un programme de construction dit : « Trace un segment [AB] de 4 cm. Trace la droite perpendiculaire à
+    (AB) passant par A. » Que dois-tu faire en deuxième étape ?'
+  indices:
+  - La deuxième instruction utilise l'équerre.
+  solution: On utilise l'équerre pour tracer, en A, la droite perpendiculaire à (AB).
+- enonce: Pourquoi suivre les instructions dans l'ordre est-il important dans un programme de construction ?
+  indices:
+  - Pense à une instruction qui dépend d'une figure déjà tracée.
+  solution: 'Parce que certaines instructions s''appuient sur des éléments tracés avant (par exemple, un cercle
+    centré sur un point déjà construit) : changer l''ordre peut rendre la construction impossible ou fausse.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 21
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

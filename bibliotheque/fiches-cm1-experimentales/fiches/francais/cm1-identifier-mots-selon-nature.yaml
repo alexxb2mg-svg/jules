@@ -1,0 +1,78 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-identifier-mots-selon-nature
+declencheurs:
+- déterminant
+- conjonction de coordination
+- adverbe
+- pronom personnel
+- mais ou et ni or car
+- article défini
+- article indéfini
+- un mot invariable
+essentiel: 'Plusieurs classes de mots servent à construire une phrase.
+
+  Le déterminant se place avant le nom : article défini (le, la, les), article indéfini (un, une, des), déterminant
+  possessif (mon, ta) ou démonstratif (ce, cette).
+
+  La conjonction de coordination (mais, ou, et, or, ni, car) relie des mots, des groupes de mots ou des phrases
+  de même fonction.
+
+  L''adverbe est un mot invariable qui apporte une précision à un verbe, un adjectif ou un autre adverbe (Elle agit
+  fermement).
+
+  Le pronom personnel remplace un nom : sujet (je, tu, il...) ou complément (me, le, lui...). On peut remplacer
+  un groupe nominal sujet par un pronom personnel sujet, et de même pour l''objet.'
+methode:
+- 'Vérifier si le mot se place avant un nom pour l''identifier : c''est peut-être un déterminant.'
+- 'Vérifier si le mot relie deux mots, groupes ou phrases : c''est peut-être une conjonction de coordination.'
+- 'Vérifier si le mot est invariable et précise un verbe, un adjectif ou un autre adverbe : c''est peut-être un
+  adverbe.'
+- 'Vérifier si le mot remplace un nom : c''est peut-être un pronom personnel, sujet ou complément.'
+- Classer les mots trouvés dans un tableau selon leur nature.
+vocabulaire:
+- terme: déterminant
+  definition: mot placé avant le nom, qui contribue à son identification
+- terme: conjonction de coordination
+  definition: mot invariable qui relie des mots, groupes ou propositions de même fonction (mais, ou, et, or, ni,
+    car)
+- terme: adverbe
+  definition: mot invariable qui se rapporte à un verbe, un adjectif ou un autre adverbe
+- terme: pronom personnel
+  definition: mot qui remplace un nom et varie selon sa fonction (sujet ou complément)
+erreurs_frequentes:
+- Confondre un déterminant possessif (mon, ta) avec un pronom personnel.
+- Oublier qu'un adverbe est toujours invariable, contrairement à un adjectif.
+- Confondre pronom personnel sujet (il, elle) et pronom personnel complément (le, lui).
+exemple:
+  enonce: Dans la phrase « Il travaille fermement mais lentement. », identifie l'adverbe et la conjonction de coordination.
+  solution: 'Adverbes : fermement et lentement (ils précisent le verbe travaille, ils sont invariables). Conjonction
+    de coordination : mais (elle relie les deux adverbes).'
+exercices:
+- enonce: Dans la phrase « Le facteur le distribue. », quelle est la nature du mot « le » et quelle est sa fonction
+    ?
+  indices:
+  - Ce « le » remplace-t-il un nom ou précède-t-il un nom ?
+  solution: « le » est ici un pronom personnel complément (il remplace « le courrier »), de fonction complément
+    d'objet direct.
+- enonce: 'Complète avec une conjonction de coordination : « J''aime les pommes ... les poires. »'
+  indices:
+  - 'Choisis parmi : mais, ou, et, or, ni, car.'
+  solution: J'aime les pommes et les poires. (« et » relie deux groupes nominaux de même fonction).
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Identifier les mots selon leur nature » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 43
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définition de la conjonction de coordination
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

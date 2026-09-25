@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-creation-organisation-sonore
+declencheurs:
+- inventer une musique
+- créer des sons
+- organiser des sons
+- partition graphique
+- musicogramme
+- composer un morceau
+- fabriquer une musique avec des objets
+essentiel: 'Créer une organisation sonore, c''est choisir des sons et les mettre dans un ordre pour construire quelque
+  chose de nouveau.
+
+  On peut imaginer des représentations graphiques (dessins, symboles) pour organiser une succession de sons et d''événements
+  sonores.
+
+  On peut inventer une organisation simple à partir de sources sonores sélectionnées, y compris la voix, puis l''interpréter.
+
+  Il y a plusieurs postures : explorateur du son (on cherche, on écoute) puis compositeur (on trie, on choisit,
+  on organise).'
+methode:
+- Explore plusieurs sources sonores (voix, objets, instruments) sans encore chercher à créer.
+- Trie les sons que tu préfères ou qui te semblent intéressants.
+- 'Choisis un ordre pour les organiser (par exemple : doux puis fort, court puis long).'
+- Dessine une représentation graphique simple de ton organisation (symboles, dessins).
+- Interprète ton organisation en suivant ta représentation graphique.
+erreurs_frequentes:
+- Choisir des sons au hasard sans réfléchir à un ordre ou une organisation.
+- Oublier de garder une trace (dessin, symboles) de son organisation sonore.
+- Changer l'organisation prévue au moment de l'interpréter, sans le vouloir.
+exemple:
+  enonce: 'Tu veux créer une petite organisation sonore avec ta voix : un son grave et long, puis trois sons aigus
+    et courts, puis un silence. Comment la représenter graphiquement ?'
+  solution: 'On peut dessiner une ligne longue et basse pour le son grave et long, puis trois petits points hauts
+    pour les sons aigus et courts, puis un espace vide pour le silence : cette représentation graphique aide à se
+    souvenir de l''organisation et à l''interpréter.'
+exercices:
+- enonce: Choisis trois sons différents que tu peux produire avec ta voix ou des objets. Organise-les dans un ordre
+    précis et dessine une représentation graphique de cet ordre.
+  indices:
+  - Utilise des formes ou des couleurs différentes pour chaque son.
+  - Relis ton dessin avant de jouer pour vérifier que tu t'en souviens.
+  solution: 'Critères de réussite : ton dessin permet de retrouver l''ordre exact des trois sons, et tu arrives
+    à les interpréter en suivant ce dessin.'
+- enonce: Invente une courte organisation sonore avec seulement ta voix (pas d'instrument), en choisissant au moins
+    deux sons différents.
+  indices:
+  - Pense à varier la hauteur ou la durée entre les deux sons.
+  solution: 'Critères de réussite : les deux sons choisis sont bien différents l''un de l''autre et tu les interprètes
+    dans l''ordre que tu avais prévu.'
+- enonce: Avec des objets de la maison, explore d'abord plusieurs sons (posture explorateur), puis choisis-en trois
+    pour créer une petite organisation (posture compositeur).
+  indices:
+  - N'hésite pas à essayer plusieurs objets avant de choisir.
+  - Trie tes sons préférés avant de les organiser dans un ordre.
+  solution: 'Critères de réussite : tu peux expliquer pourquoi tu as choisi ces trois sons précis et dans quel ordre
+    tu les as organisés.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

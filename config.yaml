@@ -35,6 +35,7 @@ modules:
       bibliotheques:   # ordre = priorite (la premiere qui renseigne un point l'emporte)
         - programme                    # referentiel : les notions du programme officiel
         - fiches-3e-experimentales     # fiches de test, contenus libres, NON certifiees
+        - fiches-cm1-experimentales    # fiches de test CM1, ressources officielles eduscol, NON certifiees
       detection: true  # reconnait la notion dans le texte ou la photo de l'exercice
   - id: cours          # interface de lecon guidee, notion par notion (etape 2)
     reglages:

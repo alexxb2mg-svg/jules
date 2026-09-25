@@ -1,0 +1,72 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-enrichir-vocabulaire
+declencheurs:
+- mot que je connais pas
+- c'est quoi ce mot
+- chercher dans le dictionnaire
+- mot inconnu
+- sens d'un mot
+- vocabulaire
+- préfixe
+- suffixe
+essentiel: 'Enrichir son vocabulaire, c''est apprendre de nouveaux mots dans toutes les matières (sciences, histoire,
+  mathématiques...), pas seulement en français.
+
+  Un même mot peut avoir plusieurs usages : le mot « vue » sert dans « une belle vue », « avoir une bonne vue »,
+  « un point de vue ».
+
+  Quand tu rencontres un mot inconnu en lisant, tu peux chercher son sens en observant sa formation (les morceaux
+  du mot) ou en t''aidant du contexte, c''est-à-dire des mots autour de lui.
+
+  Tu utilises aussi le dictionnaire régulièrement pour vérifier ou approfondir le sens d''un mot.'
+methode:
+- Repérer le mot inconnu dans la phrase que tu lis.
+- Observer les morceaux du mot (début, milieu, fin) pour voir s'ils t'aident à deviner le sens.
+- Regarder les mots autour de lui (le contexte) pour deviner de quoi on parle.
+- Vérifier ton hypothèse dans le dictionnaire si besoin.
+- Réutiliser le mot appris plus tard pour te l'approprier durablement.
+vocabulaire:
+- terme: contexte
+  definition: les mots et phrases autour d'un mot, qui aident à comprendre son sens
+- terme: morphologie
+  definition: la façon dont un mot est formé, à partir de plus petits morceaux de sens
+erreurs_frequentes:
+- Sauter un mot inconnu sans essayer de deviner son sens.
+- Ne pas vérifier son hypothèse dans le dictionnaire quand on n'est pas sûr.
+- Oublier qu'un même mot peut avoir plusieurs sens selon la phrase où il apparaît.
+exemple:
+  enonce: 'Le mot « vue » apparaît dans ces phrases : « une belle vue », « avoir une bonne vue », « un point de
+    vue ». Explique en une phrase pourquoi c''est le même mot mais pas le même sens.'
+  solution: 'C''est le même mot « vue », mais son sens change selon la phrase : le paysage qu''on voit, la capacité
+    de voir, ou une opinion.'
+exercices:
+- enonce: Trouve un mot inconnu dans un livre ou un texte que tu lis. Essaie de deviner son sens grâce au contexte,
+    puis vérifie dans le dictionnaire.
+  indices:
+  - Relis la phrase entière et la phrase d'avant.
+  - Compare ton hypothèse avec la définition trouvée.
+  solution: Réussite si tu proposes un sens plausible avant de vérifier, et si tu corriges ton hypothèse si besoin.
+- enonce: 'Cite trois façons différentes d''utiliser le mot « tête » (par exemple : « avoir mal à la tête », « la
+    tête d''un cortège », ...).'
+  indices:
+  - Pense au corps, mais aussi à d'autres domaines (un groupe, un classement).
+  solution: 'Réussite avec trois emplois différents du mot « tête », par exemple : partie du corps, personne qui
+    dirige, début d''une file.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Enrichir son vocabulaire » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Enrichir son vocabulaire »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

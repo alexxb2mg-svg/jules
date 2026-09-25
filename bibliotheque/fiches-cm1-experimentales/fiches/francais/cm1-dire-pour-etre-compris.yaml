@@ -1,0 +1,70 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-dire-pour-etre-compris
+declencheurs:
+- exposé
+- je dois présenter
+- lire à voix haute
+- faire un exposé
+- raconter devant la classe
+- réciter
+- parler devant les autres
+- présentation orale
+essentiel: 'Dire pour être compris, c''est organiser ce que tu dis à l''oral pour que les autres comprennent bien
+  : raconter, expliquer, argumenter ou partager ce que tu sais.
+
+  Quand tu lis un texte à voix haute devant un public, tu dois le faire vivre : mettre le ton, marquer les pauses,
+  pour qu''on ait envie d''écouter.
+
+  Tu utilises aussi l''oral pour réfléchir : expliquer comment tu as procédé, dire où tu t''es trompé et pourquoi.
+
+  Pour réussir une présentation, tu peux t''appuyer sur des mots et des phrases que le professeur te donne (« ce
+  tableau montre que… », « le pourcentage de… varie de… à… »).'
+methode:
+- 'Préparer ce que tu vas dire : les idées, dans un ordre clair.'
+- Utiliser le vocabulaire appris en lien avec le sujet.
+- Lire ou parler avec une voix claire, en marquant le ton et les pauses.
+- Après avoir dit ou fait quelque chose, expliquer comment tu as procédé.
+- Utiliser les critères donnés par le professeur pour t'évaluer et progresser.
+vocabulaire:
+- terme: lecture expressive
+  definition: lire un texte à voix haute en y mettant le ton
+- terme: outil réflexif
+  definition: utiliser l'oral pour expliquer comment on a procédé
+erreurs_frequentes:
+- Lire un texte à voix haute d'une voix plate, sans ton ni pauses.
+- Présenter des idées dans le désordre sans préparation.
+- Oublier d'utiliser le vocabulaire du sujet appris en classe.
+exemple:
+  enonce: 'Tu dois présenter un tableau de résultats. Complète : « Ce tableau ... que le nombre d''élèves qui aiment
+    les sciences ... de 10 à 25 entre le CE2 et le CM1. »'
+  solution: Ce tableau montre que le nombre d'élèves qui aiment les sciences varie de 10 à 25 entre le CE2 et le
+    CM1.
+exercices:
+- enonce: Choisis un court texte (une fable, un poème) et entraîne-toi à le lire à voix haute trois fois, en changeant
+    le ton selon les phrases.
+  indices:
+  - Une phrase qui pose une question ne se lit pas comme une phrase qui donne un ordre.
+  solution: Réussite si le ton change selon le sens des phrases et si la voix est claire et posée, sans lecture
+    monotone.
+- enonce: Explique à quelqu'un comment tu as résolu un exercice de calcul, en disant où tu t'es peut-être trompé.
+  indices:
+  - Utilise « J'ai procédé de cette manière » ou « Si je me suis trompé, c'est peut-être que… ».
+  solution: Réussite si tu expliques clairement tes étapes et si tu identifies une source possible d'erreur.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Dire pour être compris » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Dire pour être compris »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

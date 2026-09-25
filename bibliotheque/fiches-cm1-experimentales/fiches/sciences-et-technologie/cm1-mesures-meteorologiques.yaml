@@ -1,0 +1,58 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-mesures-meteorologiques
+declencheurs:
+- météo
+- thermomètre
+- pluviomètre
+- anémomètre
+- température de l'air
+- mesurer la pluie
+- vitesse du vent
+essentiel: 'On réalise et exploite des mesures météorologiques en utilisant des capteurs : le thermomètre (mesure
+  la température), le pluviomètre (mesure la pluie) et l''anémomètre (mesure le vent).
+
+  Ces mesures régulières de paramètres physiques (température, pluviométrie, direction et vitesse du vent) peuvent
+  être représentées sous forme de tableaux ou de graphiques avec des unités adéquates.
+
+  On caractérise les variations météorologiques de son espace de vie au cours du temps (journée, semaine, mois,
+  saison), et on peut constater une variation saisonnière des paramètres météorologiques.'
+methode:
+- 'Choisir le bon capteur selon ce qu''on veut mesurer : thermomètre, pluviomètre ou anémomètre.'
+- Réaliser des mesures régulières (par exemple chaque jour) et noter la date de chaque mesure.
+- Représenter les mesures sous forme de tableau ou de graphique, avec les unités adaptées.
+- Comparer les mesures dans le temps pour caractériser les variations (journée, semaine, mois, saison).
+erreurs_frequentes:
+- Confondre les trois capteurs et ce qu'ils mesurent (thermomètre, pluviomètre, anémomètre).
+- Oublier les unités adéquates en représentant les mesures dans un tableau ou un graphique.
+- Faire une seule mesure et en tirer une conclusion sur les variations, alors qu'il en faut plusieurs dans le temps.
+exemple:
+  enonce: Comment savoir si le mois de janvier a été plus pluvieux que le mois de juillet dans son école ?
+  solution: On relève chaque jour, pendant ces deux mois, les mesures du pluviomètre, on les représente dans un
+    tableau ou un graphique avec les unités adaptées, puis on compare les totaux des deux mois.
+exercices:
+- enonce: Quel capteur utilise-t-on pour mesurer la vitesse du vent ?
+  indices:
+  - Son nom commence par « ané ».
+  solution: L'anémomètre.
+- enonce: Pourquoi représenter les mesures météorologiques sous forme de tableau ou de graphique plutôt que de les
+    garder seulement en mémoire ?
+  indices:
+  - Que permet une représentation qu'on ne peut pas faire de tête ?
+  solution: Cela permet de comparer facilement les mesures entre elles dans le temps et de constater des variations
+    (par exemple saisonnières).
+- enonce: Sur quelles durées peut-on observer des variations de la météo ? Cite-en au moins deux.
+  indices:
+  - De la plus courte (une journée) à la plus longue (une saison).
+  solution: La journée, la semaine, le mois et la saison.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

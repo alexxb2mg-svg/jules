@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-civisme-action-bien-public
+declencheurs:
+- bien commun
+- agir pour tous
+- respecter les règles
+- civisme
+- c'est quoi être civique
+essentiel: 'Le civisme, c''est agir en fonction du bien public, c''est-à-dire en pensant à ce qui est utile à tous,
+  et dans le respect des règles.
+
+  Être civique, c''est par exemple respecter les autres, prendre soin des lieux communs (la classe, l''école) et
+  respecter l''environnement.
+
+  Le civisme peut se pratiquer dans la vie quotidienne, à l''école, dans la rue ou même en ligne.'
+methode:
+- Demande-toi si l'action décrite profite seulement à une personne ou à tout le monde.
+- Vérifie si l'action respecte les règles communes.
+- Si les deux conditions sont réunies, c'est un exemple de civisme.
+vocabulaire:
+- terme: civisme
+  definition: l'action d'une personne en fonction du bien public et dans le respect des règles
+erreurs_frequentes:
+- Confondre civisme et simple politesse.
+- Penser que le civisme ne concerne que l'école, jamais la vie de tous les jours.
+- Croire qu'une action civique doit toujours être une grande action, et non un petit geste quotidien.
+exemple:
+  enonce: Un élève ramasse un papier tombé dans la cour de récréation, alors que ce n'est pas lui qui l'a jeté.
+    Est-ce un exemple de civisme ? Pourquoi ?
+  solution: 'Oui, c''est un exemple de civisme : cet élève agit dans l''intérêt de tous (une cour propre) et respecte
+    les règles de la vie commune, sans que ce soit une obligation.'
+exercices:
+- enonce: Donne un exemple de comportement civique que tu pourrais avoir dans ta classe.
+  indices:
+  - Pense à une action qui profite à tout le groupe, pas seulement à toi.
+  solution: 'Réponse variable, par exemple : ranger le matériel commun, respecter le tour de parole, ou prévenir
+    un adulte en cas de problème.'
+- enonce: Explique pourquoi jeter ses déchets à la poubelle dans la cour est un geste civique.
+  indices:
+  - 'Pense au bien public : à qui profite une cour propre ?'
+  solution: 'Parce que cela respecte les règles et profite à tous les élèves qui utilisent la cour : c''est une
+    action pour le bien public.'
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

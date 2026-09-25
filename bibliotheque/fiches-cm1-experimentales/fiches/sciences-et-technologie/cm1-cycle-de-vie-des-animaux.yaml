@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-cycle-de-vie-des-animaux
+declencheurs:
+- naissance des animaux
+- œuf
+- fécondation
+- ovipare
+- vivipare
+- éclosion
+- comment naissent les animaux
+- pourquoi la poule pond un œuf
+- naître dans un œuf
+- naître du ventre
+essentiel: 'Le développement d''un animal se déroule en plusieurs étapes de la fécondation à la naissance : fécondation,
+  développement de l''embryon (dans l''œuf ou dans les voies génitales de la femelle), puis éclosion (pour un œuf)
+  ou naissance (pour un petit qui se développe dans le corps de la mère) de la larve ou du jeune.
+
+  On distingue deux modes de reproduction selon le type de fécondation : ovipare (l''embryon se développe dans un
+  œuf pondu à l''extérieur du corps de la mère) et vivipare (l''embryon se développe dans les voies génitales de
+  la femelle, jusqu''à la naissance).
+
+  Le type de fécondation (interne ou externe) est mis en relation avec le mode de reproduction ovipare ou vivipare
+  de l''animal.'
+methode:
+- 'Repérer l''étape de fécondation : c''est le début du développement de l''animal.'
+- 'Observer où se développe l''embryon : dans un œuf (ovipare) ou dans le corps de la mère (vivipare).'
+- 'Repérer l''étape de fin de développement : éclosion (pour un œuf) ou naissance (pour un vivipare).'
+- Mettre en relation le type de fécondation (interne ou externe) avec le mode de reproduction observé.
+erreurs_frequentes:
+- Croire que tous les animaux qui pondent des œufs sont identiques (certains ovipares ont une fécondation interne,
+  d'autres externe).
+- Confondre éclosion (sortie de l'œuf) et naissance (sortie directe du corps de la mère).
+- Oublier l'étape de développement de l'embryon entre la fécondation et l'éclosion ou la naissance.
+exemple:
+  enonce: 'Une poule pond un œuf qui éclot plus tard : est-elle ovipare ou vivipare ?'
+  solution: 'La poule est ovipare : son embryon se développe dans un œuf pondu à l''extérieur de son corps, jusqu''à
+    l''éclosion.'
+exercices:
+- enonce: Un chat met bas des chatons déjà formés, sans œuf visible. Ovipare ou vivipare ?
+  indices:
+  - Où l'embryon s'est-il développé ?
+  solution: 'Le chat est vivipare : l''embryon se développe dans les voies génitales de la mère jusqu''à la naissance.'
+- enonce: 'Range dans l''ordre les étapes du développement d''un animal : naissance, fécondation, développement
+    de l''embryon.'
+  indices:
+  - Que faut-il en premier pour qu'un embryon existe ?
+  solution: Fécondation, puis développement de l'embryon, puis naissance (ou éclosion selon le mode de reproduction).
+- enonce: Quelle est la différence entre l'éclosion et la naissance ?
+  indices:
+  - Pense aux deux modes de reproduction.
+  solution: L'éclosion est la sortie de la larve ou du jeune hors de l'œuf (animaux ovipares), la naissance est
+    la sortie directe du corps de la mère (animaux vivipares).
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

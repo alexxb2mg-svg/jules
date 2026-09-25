@@ -1,0 +1,58 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-civisme-numerique
+declencheurs:
+- sur internet
+- en ligne
+- réseaux sociaux
+- civisme numérique
+- sur l'ordinateur
+- espace numérique de travail
+essentiel: 'Le civisme numérique, c''est le civisme appliqué à ce que l''on fait en ligne : sur un espace numérique
+  de travail, un blog de classe ou internet.
+
+  Les règles que l''on respecte hors ligne (respect des autres, des règles communes) s''appliquent aussi en ligne.
+
+  Être civique en ligne, c''est aussi penser à la sobriété numérique, c''est-à-dire limiter sa consommation d''outils
+  numériques pour respecter l''environnement.'
+methode:
+- Demande-toi si la même règle s'appliquerait dans la vie de tous les jours, hors ligne.
+- Vérifie que l'action en ligne respecte les autres et les règles communes.
+- Pense à l'impact environnemental de l'usage du numérique (sobriété numérique).
+vocabulaire:
+- terme: civisme numérique
+  definition: le civisme appliqué aux comportements en ligne
+erreurs_frequentes:
+- Croire que les règles de civisme ne s'appliquent pas quand on est en ligne.
+- Penser que l'utilisation du numérique n'a aucune conséquence sur l'environnement.
+exemple:
+  enonce: Sur un espace numérique de travail de la classe, un élève écrit un message respectueux pour aider un camarade
+    en difficulté sur un exercice. Est-ce un exemple de civisme numérique ?
+  solution: 'Oui : c''est un comportement civique (aider un camarade, avec respect) exercé dans un espace numérique.'
+exercices:
+- enonce: Cite une règle que tu respectes hors ligne et qui s'applique aussi en ligne.
+  indices:
+  - Pense à la politesse ou au respect des autres.
+  solution: 'Réponse variable, par exemple : être poli, ne pas insulter les autres, respecter les règles données
+    par un adulte.'
+- enonce: Explique en une phrase ce qu'est la sobriété numérique.
+  indices:
+  - Le mot « sobriété » veut dire « limiter, ne pas gaspiller ».
+  solution: La sobriété numérique, c'est le fait de limiter son usage des outils numériques pour respecter l'environnement.
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Enseignement moral et civique — Livret d'accompagnement de programme, CM1 » (2025), p. 6
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/2025livretaccompagnementemccm1-112047.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -75,6 +75,7 @@ class Notion:
     mots_cles: list[str] = field(default_factory=list)
     brevet: bool = False
     source: str = ""
+    limites: list[str] = field(default_factory=list)  # bornes fixees par le texte officiel a ce niveau
 
 
 @dataclass
@@ -242,6 +243,7 @@ def lire_referentiel(biblio: Bibliotheque, niveaux: list[str] | None = None) -> 
                             mots_cles=[str(m) for m in n.get("mots_cles") or []],
                             brevet=bool(n.get("brevet")),
                             source=str(n.get("source") or ""),
+                            limites=[str(li) for li in n.get("limites") or []],
                         )
     return notions
 

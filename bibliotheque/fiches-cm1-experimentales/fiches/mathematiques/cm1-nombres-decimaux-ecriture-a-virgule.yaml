@@ -1,0 +1,75 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-nombres-decimaux-ecriture-a-virgule
+declencheurs:
+- virgule
+- nombre décimal
+- partie entière
+- arrondi
+- 4,17
+- après la virgule
+couverture: ne couvre que l'écriture à virgule jusqu'aux centièmes, sans dépasser deux chiffres après la virgule
+  (limite officielle du CM1).
+essentiel: 'Dans l''écriture à virgule d''un nombre décimal, la virgule sert à repérer le chiffre des unités : le
+  chiffre juste avant la virgule est celui des unités. Le chiffre juste après la virgule est celui des dixièmes,
+  et le suivant celui des centièmes.
+
+  Au CM1, les nombres décimaux ne vont pas plus loin que les centièmes : ils ont au plus deux chiffres après la
+  virgule.
+
+  4 + 1/10 + 7/100 peut s''écrire 4,17, qui se lit « quatre et dix-sept centièmes » ou « quatre unités, un dixième
+  et sept centièmes ».
+
+  2,6 est égal à 2,60 : ajouter un zéro à la fin d''un nombre décimal ne change pas sa valeur.
+
+  La partie entière d''un nombre décimal est le nombre avant la virgule. L''arrondi à l''entier est le nombre entier
+  le plus proche : 5,78 s''arrondit à 6, et 3,5 s''arrondit à 4.'
+methode:
+- 'Repérer la virgule : le chiffre juste avant est celui des unités.'
+- Lire le premier chiffre après la virgule comme des dixièmes, le deuxième comme des centièmes.
+- 'Pour la partie entière : garder tout ce qui est avant la virgule.'
+- 'Pour l''arrondi à l''entier : regarder le chiffre des dixièmes ; s''il est 5 ou plus, arrondir au nombre entier
+  supérieur.'
+- Pour comparer deux décimaux, comparer d'abord la partie entière, puis les dixièmes, puis les centièmes.
+erreurs_frequentes:
+- Croire que 4,7 est plus petit que 4,52 parce que 7 est un seul chiffre alors que 52 en a deux.
+- Oublier que 2,6 et 2,60 désignent le même nombre.
+- Confondre le rang des dixièmes et celui des centièmes.
+- Arrondir 3,5 à 3 au lieu de 4.
+exemple:
+  enonce: Compare 4,52 et 4,7. Lequel est le plus grand ?
+  solution: 'Les deux nombres ont la même partie entière (4). Au chiffre des dixièmes, 5 (dans 4,52) est plus petit
+    que 7 (dans 4,7). Donc 4,52 < 4,7 : 4,7 est le plus grand.'
+exercices:
+- enonce: Donne la partie entière de 135,78, puis son arrondi à l'entier.
+  indices:
+  - La partie entière est ce qui est avant la virgule.
+  - Regarde le chiffre des dixièmes pour arrondir.
+  solution: 'Partie entière : 135. Comme le chiffre des dixièmes est 7 (supérieur à 5), l''arrondi à l''entier est
+    136.'
+- enonce: 'Range dans l''ordre croissant : 2,12 ; 2,09 ; 2,6.'
+  indices:
+  - Compare d'abord les dixièmes de chaque nombre.
+  solution: 2,09 < 2,12 < 2,6, car 0 < 1 < 6 au chiffre des dixièmes.
+- enonce: Trouve un nombre décimal compris entre 1,9 et 2.
+  indices:
+  - '1,9 = 1,90 : pense aux centièmes.'
+  solution: Par exemple 1,95 convient, car 1,90 < 1,95 < 2,00.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.7-8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.6
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1, limité aux centièmes
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

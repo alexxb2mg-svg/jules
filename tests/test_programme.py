@@ -45,7 +45,9 @@ def test_un_niveau_ne_charge_que_ses_notions(niveau):
 def test_les_trois_niveaux_ensemble_sans_doublon():
     """Profil sans classe : tout est charge. Un identifiant en double entre deux niveaux ferait echouer."""
     cat = charger_catalogue(BIBLIOTHEQUES, ["programme"], None)
-    par_niveau = [len(charger_catalogue(BIBLIOTHEQUES, ["programme"], n).notions) for n in NIVEAUX]
+    declares = lire_identite(PROGRAMME).niveaux  # tous les niveaux declares (CM1 compris), pas seulement le cycle 4
+    assert set(NIVEAUX) <= set(declares)
+    par_niveau = [len(charger_catalogue(BIBLIOTHEQUES, ["programme"], n).notions) for n in declares]
     assert len(cat.notions) == sum(par_niveau)
 
 

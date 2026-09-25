@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-multiples-et-diviseurs
+declencheurs:
+- multiple
+- diviseur
+- table de multiplication
+- divisible par
+- partager en groupes égaux
+- reste
+essentiel: 'Un nombre est un multiple d''un autre nombre si on peut l''obtenir en multipliant cet autre nombre par
+  un nombre entier. Par exemple, 72 est un multiple de 9 car 8 × 9 = 72.
+
+  Un nombre entier inférieur ou égal à 10 est un diviseur d''un nombre donné si ce nombre peut se partager exactement
+  (sans reste) en groupes de cette taille.
+
+  Pour savoir si un nombre est multiple de 2, on regarde juste son dernier chiffre : il doit être pair (0, 2, 4,
+  6, 8). Pour 5 : le dernier chiffre doit être 0 ou 5. Pour 10 : le dernier chiffre doit être 0.
+
+  Pour les autres nombres (3, 4, 6, 7, 8, 9), il n''y a pas de règle simple à connaître au CM1 : on s''appuie sur
+  les tables de multiplication ou on effectue une division.'
+methode:
+- 'Pour tester 2, 5 ou 10 : regarder uniquement le dernier chiffre du nombre.'
+- 'Pour tester un autre diviseur (3, 4, 6, 7, 8, 9) : chercher dans la table de multiplication ou effectuer la division.'
+- Si la division tombe juste (reste 0), le diviseur testé est bien un diviseur du nombre.
+- Si la division laisse un reste, le nombre testé n'est pas un diviseur.
+erreurs_frequentes:
+- Appliquer une règle de dernier chiffre à 3, 4, 6, 7, 8 ou 9, qui n'existe pas au CM1.
+- 'Confondre « multiple de » et « diviseur de » : 72 est un multiple de 9, et 9 est un diviseur de 72.'
+- Oublier de vérifier que la division tombe bien juste avant de conclure.
+exemple:
+  enonce: 141 est-il un multiple de 2 ? Est-il un multiple de 7 ?
+  solution: '141 n''est pas un multiple de 2, car 141 est un nombre impair (son dernier chiffre est 1). Pour 7 :
+    141 = 7 × 20 + 1, la division laisse un reste de 1, donc 141 n''est pas un multiple de 7.'
+exercices:
+- enonce: Parmi 130, 205, 348, quels nombres sont des multiples de 5 ? Lesquels sont des multiples de 10 ?
+  indices:
+  - Regarde seulement le dernier chiffre de chaque nombre.
+  solution: 'Multiples de 5 : 130 et 205 (dernier chiffre 0 ou 5). Multiple de 10 : seulement 130 (dernier chiffre
+    0).'
+- enonce: 3 est-il un diviseur de 141 ?
+  indices:
+  - Essaie de trouver un nombre entier qui, multiplié par 3, donne 141.
+  solution: 'Oui : 3 × 47 = 141, donc 3 est un diviseur de 141.'
+- enonce: Léo veut ranger 75 billes dans des sachets contenant tous le même nombre de billes, sans en garder aucune
+    de côté. Peut-il faire des sachets de 10 billes ? de 5 billes ?
+  indices:
+  - 75 est-il un multiple de 10 ? Est-il un multiple de 5 ?
+  solution: '75 n''est pas un multiple de 10 (dernier chiffre 5, pas 0) : impossible en sachets de 10. 75 est un
+    multiple de 5 (dernier chiffre 5) : possible en sachets de 5, cela fait 15 sachets.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.5
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,76 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-vocabulaire-expression-musicale
+declencheurs:
+- nuances en musique
+- tempo d'une chanson
+- chanter fort ou doucement
+- vitesse d'une chanson
+- caractère d'une musique
+- vocabulaire de la musique
+- expression musicale
+essentiel: 'Pour bien interpréter une musique, on utilise un vocabulaire précis pour dire comment la chanter ou
+  la jouer.
+
+  Les nuances disent si on chante fort ou doucement.
+
+  Le tempo, c''est la vitesse de la musique : lent, rapide, modéré...
+
+  Le caractère, c''est l''ambiance donnée à la musique : joyeux, triste, solennel...
+
+  Dans une polyphonie, chaque partie a un rôle complémentaire : les parties simultanées se complètent sans faire
+  la même chose.
+
+  Le mot « interprétation » désigne la façon dont une musique est chantée ou jouée : deux interprétations d''un
+  même chant peuvent être différentes.'
+methode:
+- 'Écoute une musique en te demandant : est-ce fort ou doux (nuance) ?'
+- Demande-toi si c'est lent, rapide ou modéré (tempo).
+- 'Cherche le caractère : qu''est-ce que cette musique te fait ressentir ?'
+- Si plusieurs voix ou instruments jouent ensemble, repère leurs rôles différents.
+- Utilise ces mots (nuance, tempo, caractère, interprétation) pour décrire ce que tu entends ou ce que tu chantes.
+vocabulaire:
+- terme: nuance
+  definition: le fait de chanter ou jouer plus ou moins fort
+- terme: tempo
+  definition: la vitesse de la musique (lent, rapide, modéré)
+- terme: interprétation
+  definition: la façon de chanter ou de jouer une musique
+erreurs_frequentes:
+- Confondre nuance (fort/doux) et tempo (vitesse).
+- Croire qu'une interprétation doit toujours être exactement pareille à une autre.
+- Ne pas savoir dire pourquoi une musique paraît joyeuse ou triste (le caractère).
+exemple:
+  enonce: 'Tu écoutes deux versions de la même chanson : la première est chantée très vite et fort, la deuxième
+    lentement et doucement. Utilise le vocabulaire musical pour les comparer.'
+  solution: 'La première interprétation a un tempo rapide et une nuance forte, la deuxième a un tempo lent et une
+    nuance douce : ce sont deux interprétations différentes de la même chanson.'
+exercices:
+- enonce: Choisis une chanson que tu connais et chante-la deux fois avec un tempo différent (une fois lentement,
+    une fois plus vite).
+  indices:
+  - Compte dans ta tête pour garder une vitesse régulière.
+  - Fais bien sentir la différence entre les deux vitesses.
+  solution: 'Critères de réussite : les deux interprétations ont un tempo clairement différent, mais on reconnaît
+    toujours la même chanson.'
+- enonce: 'Chante un couplet en changeant la nuance au milieu : commence doucement, puis termine fort.'
+  indices:
+  - Pense à une vague qui grossit petit à petit.
+  solution: 'Critères de réussite : le passage du doux au fort est audible et progressif, sans casser la mélodie.'
+- enonce: Écoute une musique (à la radio, dans un film) et dis à voix haute son caractère (joyeux, triste, énergique,
+    calme...) en expliquant pourquoi.
+  indices:
+  - Appuie-toi sur le tempo et les nuances que tu entends pour justifier ton choix.
+  solution: 'Critères de réussite : tu donnes un caractère et tu l''expliques avec au moins un mot de vocabulaire
+    musical (nuance ou tempo).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

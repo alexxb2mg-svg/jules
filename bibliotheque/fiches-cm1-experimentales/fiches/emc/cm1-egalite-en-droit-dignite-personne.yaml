@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-egalite-en-droit-dignite-personne
+declencheurs:
+- égalité
+- dignité
+- tout le monde pareil devant la loi
+- respecter une personne
+- discrimination
+essentiel: 'L''égalité en droit signifie que toutes les personnes ont les mêmes droits, quelle que soit leur différence.
+
+  Le principe de dignité de la personne humaine signifie que chaque être humain doit être respecté, sans exception.
+
+  Une discrimination ou une atteinte à la personne d''autrui, c''est quand ce respect ou cette égalité ne sont pas
+  respectés.'
+methode:
+- Vérifie si toutes les personnes de la situation ont les mêmes droits.
+- Vérifie si le respect dû à chaque personne humaine est bien présent.
+- Si l'égalité ou la dignité ne sont pas respectées, identifie qu'il s'agit d'une atteinte ou d'une discrimination.
+vocabulaire:
+- terme: égalité
+  definition: le fait que toutes les personnes aient les mêmes droits
+- terme: dignité de la personne humaine
+  definition: le respect dû à chaque être humain, sans exception
+erreurs_frequentes:
+- Croire que l'égalité en droit signifie que tout le monde doit être traité exactement de la même manière en toute
+  situation.
+- Penser que le respect de la dignité ne concerne que les adultes.
+exemple:
+  enonce: Dans une situation fictive, deux enfants ont le droit de participer à un jeu de la cour, quelles que soient
+    leurs différences. Quel principe cette situation illustre-t-elle ?
+  solution: 'Cette situation illustre l''égalité en droit : les deux enfants ont les mêmes droits, malgré leurs
+    différences.'
+exercices:
+- enonce: Explique avec tes mots ce que veut dire « dignité de la personne humaine ».
+  indices:
+  - Pense au respect que l'on doit à chaque être humain.
+  solution: Cela veut dire que chaque être humain mérite le respect, sans exception.
+- enonce: Donne un exemple, réel ou inventé, où l'égalité entre deux personnes n'est pas respectée.
+  indices:
+  - Pense à une situation où une personne n'a pas les mêmes droits qu'une autre.
+  solution: 'Réponse variable, par exemple : une personne empêchée de participer à une activité à cause d''une différence
+    (origine, apparence, etc.), sans raison valable.'
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

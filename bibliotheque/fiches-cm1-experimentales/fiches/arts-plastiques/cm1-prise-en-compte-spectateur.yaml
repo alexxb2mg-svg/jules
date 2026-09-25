@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-prise-en-compte-spectateur
+declencheurs:
+- quand on regarde mon dessin
+- montrer aux autres
+- exposition de classe
+- faire attention à qui regarde
+- accrochage de dessins
+- présenter à la classe
+- tourner autour
+- spectateurs
+- public
+- point de vue
+essentiel: 'Quand on crée une production plastique, on peut penser à la personne qui va la regarder : c''est prendre
+  en compte le spectateur.
+
+  Il existe différentes façons de présenter une œuvre pour que le spectateur la reçoive bien : l''accrochage (comment
+  elle est fixée ou posée), la mise en espace, la mise en scène.
+
+  La frontalité, c''est quand on regarde l''œuvre bien en face ; la circulation ou le parcours, c''est quand il
+  faut se déplacer autour ou à travers pour tout voir.
+
+  Le spectateur peut être passif (il regarde sans bouger) ou participer activement (il doit se déplacer, toucher,
+  agir). Le rapport d''échelle (une œuvre très grande ou très petite) change aussi l''effet recherché sur le spectateur.'
+methode:
+- Se demander qui va regarder la production et comment il va se placer devant elle.
+- Choisir si l'œuvre se regarde de face (frontalité) ou si le spectateur doit se déplacer.
+- Décider de la taille de l'œuvre en pensant à l'effet voulu sur celui qui la regarde.
+- Vérifier, en regardant sa propre production comme un spectateur, si l'effet recherché fonctionne.
+vocabulaire:
+- terme: frontalité
+  definition: le fait de regarder une œuvre bien en face, sans se déplacer
+- terme: parcours
+  definition: déplacement du spectateur autour ou à travers une œuvre pour la découvrir
+erreurs_frequentes:
+- Créer une production sans jamais se demander comment le spectateur va la voir.
+- Faire une œuvre minuscule alors qu'on veut qu'elle impressionne de loin, ou l'inverse.
+- Oublier que la façon d'accrocher ou de poser une production change son effet sur le spectateur.
+exemple:
+  enonce: Pour la fête de l'école, tu dois présenter un dessin. Dois-tu le poser sur une petite table basse ou l'accrocher
+    haut sur un mur bien éclairé ?
+  solution: 'Cela dépend de l''effet recherché : accroché haut sur un mur éclairé, le dessin est vu de loin par
+    beaucoup de monde dès l''entrée (bonne visibilité pour un grand public) ; posé bas sur une table, il invite
+    le spectateur à s''approcher et à le regarder de près, dans un moment plus intime.'
+exercices:
+- enonce: Choisis un dessin et installe-le à trois hauteurs différentes dans une pièce (par terre, sur une chaise,
+    sur une étagère haute). Demande à quelqu'un de la maison lequel il remarque en premier en entrant.
+  indices:
+  - Ne change que la hauteur, pas le dessin lui-même.
+  - Observe si la personne doit se baisser, se pencher ou lever les yeux.
+  solution: 'Réussite si : l''élève constate que la hauteur de présentation change la façon dont le spectateur découvre
+    le dessin, et sait dire laquelle attire le regard en premier.'
+- enonce: Fabrique une petite production en volume (avec de la pâte à modeler ou du papier) que l'on ne peut comprendre
+    entièrement qu'en tournant autour.
+  indices:
+  - Cache un détail important sur un seul côté de l'objet.
+  - Vérifie qu'il faut vraiment se déplacer pour tout voir.
+  solution: 'Réussite si : la production nécessite que le spectateur se déplace (parcours) pour découvrir tous ses
+    détails, et l''élève peut expliquer quel détail est caché de quel côté.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

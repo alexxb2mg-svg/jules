@@ -1,0 +1,80 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-analyser-phrase-simple
+declencheurs:
+- complément circonstanciel
+- complément d'objet
+- groupe sujet
+- groupe verbal
+- qu'est-ce que le sujet
+- manipulation syntaxique
+- COD
+- COI
+essentiel: 'Une phrase simple s''organise autour d''un verbe conjugué, qui a un sujet.
+
+  Le groupe sujet (GS) règle l''accord du verbe : Le facteur distribue le courrier / Les facteurs distribuent le
+  courrier. Il peut être un groupe nominal ou un pronom personnel.
+
+  Le verbe peut avoir un complément d''objet : sans préposition, c''est un complément d''objet direct (COD, ex.
+  distribue le courrier) ; avec une préposition, c''est un complément d''objet indirect (COI, ex. parle à sa collègue).
+
+  Le complément circonstanciel donne des précisions (temps, lieu, manière) et peut être déplacé ou supprimé, contrairement
+  au complément d''objet.
+
+  Pour repérer le groupe sujet, on peut le remplacer par un pronom ou l''encadrer par « c''est... qui ».'
+methode:
+- Repérer le verbe conjugué de la phrase.
+- Trouver le groupe sujet en posant « qui est-ce qui fait l'action ? » ou en encadrant par « c'est... qui ».
+- Chercher s'il y a un complément d'objet directement après le verbe (COD) ou introduit par une préposition (COI).
+- 'Repérer les groupes qui peuvent être déplacés ou supprimés sans rendre la phrase incorrecte : ce sont des compléments
+  circonstanciels.'
+- Vérifier en manipulant la phrase (déplacement, suppression, remplacement).
+vocabulaire:
+- terme: groupe sujet (GS)
+  definition: le groupe qui règle l'accord du verbe
+- terme: complément d'objet direct (COD)
+  definition: complément du verbe non introduit par une préposition
+- terme: complément d'objet indirect (COI)
+  definition: complément du verbe introduit par une préposition
+- terme: manipulation syntaxique
+  definition: déplacement, suppression, substitution ou encadrement d'un groupe pour l'identifier
+erreurs_frequentes:
+- 'Confondre complément d''objet et complément circonstanciel : le complément d''objet ne peut généralement pas
+  être supprimé ni déplacé.'
+- Oublier de vérifier la préposition pour distinguer COD et COI.
+- Chercher le sujet juste avant le verbe, alors qu'un groupe sujet peut être plus long ou inversé.
+exemple:
+  enonce: Dans la phrase « Le facteur donne une lettre à ma voisine. », identifie le groupe sujet, le COD et le
+    COI.
+  solution: 'Groupe sujet : le facteur. COD : une lettre (donne quoi ? une lettre, sans préposition). COI : à ma
+    voisine (donne à qui ? à ma voisine, avec la préposition à).'
+exercices:
+- enonce: Dans la phrase « Les chevaux galopent dans la prairie chaque matin. », identifie le groupe sujet et dis
+    si le verbe a un complément d'objet.
+  indices:
+  - Pose la question « qui est-ce qui galope ? ».
+  - Le verbe galoper peut-il avoir un complément d'objet direct ?
+  solution: 'Groupe sujet : les chevaux. Le verbe « galoper » est intransitif : il n''a ni COD ni COI. « Dans la
+    prairie » et « chaque matin » sont des compléments circonstanciels.'
+- enonce: 'Remplace le groupe sujet par un pronom personnel dans la phrase : « Le facteur distribue le courrier.
+    »'
+  indices:
+  - 'Le facteur, c''est une personne : quel pronom personnel le remplace ?'
+  solution: Il distribue le courrier.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Analyser une phrase simple » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 85
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions du COD et du COI
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

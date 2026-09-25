@@ -1,0 +1,102 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: "Histoire des arts"
+id: histoire-des-arts
+niveau: CM1
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme du cycle 3 (annexe 2) — partie Histoire des arts"
+    reference: "Arrêté du 9-11-2015 modifié, version consolidée BO n° 31 du 30 juillet 2020"
+    url: "https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Programme du cycle 3, partie « Histoire des arts ». Attention aux bornes indiquées
+  dans les consignes initiales (p.51-52) : la vérification sur les marqueurs [p.N] du
+  texte source montre que la rubrique commence juste après le marqueur [p.51] (qui suit
+  la fin du chapitre « Éducation musicale ») et se termine juste avant le marqueur
+  [p.56], qui ouvre le chapitre suivant « Éducation physique et sportive » — soit p.51 à
+  55, et non p.51-52. Ce programme n'est pas découpé par année scolaire : toutes les
+  notions ont donc niveau_programme "cycle 3". Le texte précise que l'enseignement de
+  l'histoire des arts est porté par le professeur des écoles en CM1-CM2 (« durant les
+  deux premières années du cycle 3, le professeur des écoles exerce sa polyvalence
+  pour trouver les cadres... ») et devient pluridisciplinaire, associant plusieurs
+  professeurs, « à partir de la classe de sixième » : c'est une organisation
+  pédagogique (qui enseigne), pas une restriction de contenu. Vérification faite dans
+  l'ensemble de la rubrique : aucune compétence, aucun attendu et aucune connaissance
+  du programme d'histoire des arts n'est explicitement réservé à la 6e — le
+  développement de l'enseignement en CM1 porte sur les mêmes quatre compétences que
+  pour le reste du cycle. Les 4 notions retenues correspondent donc aux quatre
+  compétences travaillées du cycle (Identifier, Analyser, Situer, Se repérer), avec
+  leurs connaissances et exemples d'activités associés. Fichier volontairement court :
+  le chapitre officiel lui-même est bref et peu subdivisé (4 compétences seulement,
+  sans les questionnements détaillés des arts plastiques ou de l'éducation musicale) ;
+  ne sont pas repris l'introduction générale, le tableau de synthèse « Compétences
+  travaillées » (redondant) ni les colonnes « Lien à d'autres enseignements » (qui
+  listent des matières, pas des notions d'histoire des arts).
+themes:
+  - id: identifier
+    titre: "Identifier"
+    chapitres:
+      - id: avis-argumente-oeuvre-art
+        titre: "Avis argumenté sur une œuvre d'art"
+        notions:
+          - id: cm1-avis-argumente-oeuvre-art
+            titre: "Donner un avis argumenté sur ce que représente ou exprime une œuvre d'art"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Observer et identifier des personnages mythologiques ou religieux, des objets, des types d'espaces, des éclairages."
+              - "Résumer une action représentée en image, déroulée sur scène ou sur un écran, et en caractériser les personnages."
+              - "Caractériser un morceau de musique en termes simples."
+            mots_cles: ["œuvre d'art", "avis", "mythologie", "musique"]
+            source: "Programme cycle 3, Histoire des arts, « Identifier — Donner un avis argumenté... », p.52-53"
+  - id: analyser
+    titre: "Analyser"
+    chapitres:
+      - id: caracteristiques-techniques-formelles
+        titre: "Caractéristiques techniques et formelles d'une œuvre"
+        notions:
+          - id: cm1-caracteristiques-techniques-formelles-oeuvre
+            titre: "Dégager les principales caractéristiques techniques et formelles d'une œuvre"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Identifier des matériaux, y compris sonores, et la manière dont l'artiste leur a donné forme."
+              - "Retrouver des formes géométriques et comprendre leur agencement dans une façade, un tableau, un pavement, un tapis."
+              - "Dégager d'une forme artistique des éléments de sens."
+            mots_cles: ["matériaux", "forme géométrique", "analyse d'œuvre"]
+            source: "Programme cycle 3, Histoire des arts, « Analyser — Dégager... ses principales caractéristiques techniques et formelles », p.53"
+  - id: situer
+    titre: "Situer"
+    chapitres:
+      - id: contexte-historique-culturel
+        titre: "Contexte historique et culturel d'une œuvre"
+        notions:
+          - id: cm1-contexte-historique-culturel-oeuvre
+            titre: "Relier une œuvre d'art à ses usages et à son contexte historique et culturel"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Mettre en relation une ou plusieurs œuvres avec un fait historique, une époque, une aire géographique ou un texte étudiés en histoire, en géographie ou en français."
+              - "Mettre en relation un texte connu (récit, fable, poésie, texte religieux ou mythologique) et plusieurs de ses illustrations ou transpositions visuelles, musicales, scéniques, chorégraphiques ou filmiques."
+              - "Mettre en relation des œuvres et objets mobiliers avec des usages et des modes de vie."
+            mots_cles: ["contexte historique", "époque", "musée imaginaire"]
+            source: "Programme cycle 3, Histoire des arts, « Situer — Relier des caractéristiques d'une œuvre d'art... », p.53-54"
+  - id: se-reperer
+    titre: "Se repérer"
+    chapitres:
+      - id: reperage-musee-lieu-art
+        titre: "Repérage dans un musée ou un lieu d'art"
+        notions:
+          - id: cm1-reperage-musee-lieu-art
+            titre: "Se repérer dans un musée, un lieu d'art, un site patrimonial"
+            niveau_programme: "cycle 3"
+            attendus:
+              - "Effectuer une recherche, dans le cadre d'un exercice collectif et sur la base de consignes précises, en vue de préparer une sortie culturelle."
+              - "Se repérer dans un musée ou un lieu d'art par la lecture et la compréhension des plans et indications."
+              - "Être sensibilisé à la vulnérabilité du patrimoine."
+            mots_cles: ["musée", "patrimoine", "sortie culturelle", "restauration"]
+            source: "Programme cycle 3, Histoire des arts, « Se repérer dans un musée, un lieu d'art, un site patrimonial », p.54-55"

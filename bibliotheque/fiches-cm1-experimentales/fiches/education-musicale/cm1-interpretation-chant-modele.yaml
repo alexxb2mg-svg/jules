@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-interpretation-chant-modele
+declencheurs:
+- chanter juste
+- apprendre un chant
+- reproduire une mélodie
+- chanter en rythme
+- intonation juste
+- chanter avec de l'expression
+- j'apprends une chanson
+- chanter en imitant
+essentiel: 'Interpréter un chant, c''est le chanter en respectant la mélodie (la suite des notes) et le rythme donnés
+  par le modèle (professeur, enregistrement).
+
+  D''abord tu écoutes et tu répètes par imitation, comme un miroir avec ta voix.
+
+  Ensuite tu cherches à chanter avec une intonation juste : les notes ne sont ni trop hautes ni trop basses.
+
+  Une intention expressive, c''est le sentiment que tu mets dans ta voix : doux, joyeux, triste, énergique...
+
+  Tu peux aussi mobiliser ton corps : bouger, marquer la pulsation avec les mains, ou jouer d''un instrument en
+  même temps que tu chantes.'
+methode:
+- Écoute plusieurs fois le modèle (professeur, enregistrement) avant de chanter.
+- Repère la mélodie (les notes qui montent et qui descendent) et le rythme (les durées).
+- Chante en imitant d'abord exactement ce que tu entends.
+- 'Ajoute une intention expressive : choisis comment tu veux faire ressentir la chanson.'
+- Utilise ton corps (gestes, pas, instrument) pour accompagner ton chant.
+erreurs_frequentes:
+- Chanter trop vite sans avoir bien écouté le modèle en entier.
+- Garder la même voix « plate » du début à la fin, sans intention expressive.
+- Oublier une partie du rythme parce qu'on a chanté sans écouter la pulsation.
+exemple:
+  enonce: Ta classe apprend une chanson sur l'automne. La maîtresse la chante deux fois, lentement et doucement.
+    Que dois-tu faire avant de chanter à ton tour ?
+  solution: Écouter le modèle en entier au moins deux fois pour bien entendre la mélodie et le rythme, puis chanter
+    en imitant l'intonation et l'intention douce de la maîtresse, avant d'ajouter ta propre expression.
+exercices:
+- enonce: Choisis un chant que tu connais déjà (comptine, chanson apprise en classe). Écoute-le une fois en entier
+    sans chanter, puis chante-le en essayant de reproduire exactement la mélodie et le rythme.
+  indices:
+  - Ferme les yeux pendant l'écoute pour mieux te concentrer sur les notes.
+  - Tape doucement la pulsation avec la main pendant que tu écoutes.
+  solution: 'Critères de réussite : tu as chanté toutes les notes dans le bon ordre, en gardant à peu près le même
+    rythme que le modèle, sans t''arrêter au milieu.'
+- enonce: 'Chante deux fois la même phrase d''une chanson : une fois avec une intention joyeuse, une fois avec une
+    intention calme.'
+  indices:
+  - Change la vitesse ou la force de ta voix selon l'intention.
+  - Pense à un moment joyeux, puis à un moment calme, avant de chanter.
+  solution: 'Critères de réussite : les deux interprétations sont reconnaissables et différentes l''une de l''autre,
+    tout en gardant la même mélodie.'
+- enonce: Chante un couplet d'une chanson en marquant la pulsation avec tes mains ou tes pieds.
+  indices:
+  - La pulsation, c'est le battement régulier, comme un cœur qui bat.
+  solution: 'Critères de réussite : tes gestes tombent régulièrement, en même temps que ta voix, sans accélérer
+    ni ralentir.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et connaissances associées, Chanter et interpréter
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

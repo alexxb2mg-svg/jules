@@ -1,0 +1,62 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-masse-et-volume
+declencheurs:
+- masse
+- balance
+- peser
+- lourd
+- léger
+- tarer
+- plus lourd que
+- poids du bol
+- sans compter le poids
+- farine
+essentiel: 'La masse dit si un objet est lourd ou léger. On la compare avec un dispositif simple (poulie et cordelette,
+  balance romaine, à fléau, à plateaux) : l''objet le plus lourd fait pencher la balance.
+
+  On peut aussi mesurer la masse avec une balance (romaine, à plateaux, électronique), en grammes ou en kilogrammes.
+
+  Pour peser un liquide ou des grains dans un récipient sans peser le récipient, on utilise la fonction « tare »
+  de la balance (elle remet à zéro avec le récipient posé), ou on pèse le récipient vide puis plein et on calcule
+  la différence.'
+methode:
+- Choisir un dispositif de comparaison (poulie, balance romaine, à fléau, à plateaux) ou une balance de mesure.
+- 'Pour comparer : observer de quel côté ça penche, l''objet le plus lourd fait pencher son côté.'
+- Pour vérifier, refaire la comparaison avec un autre dispositif.
+- 'Pour mesurer une masse : peser directement, ou tarer la balance avec le récipient vide avant d''ajouter la matière.'
+- 'Sans tare : peser le récipient vide, peser le récipient plein, calculer la différence.'
+erreurs_frequentes:
+- Oublier de tarer la balance et donc compter la masse du récipient dans le résultat.
+- Confondre masse et volume (un gros objet n'est pas forcément le plus lourd).
+- Ne vérifier le résultat qu'avec un seul dispositif sans tester sa robustesse avec un autre.
+exemple:
+  enonce: Comment peser seulement la farine contenue dans un bol, sans balance à tare ?
+  solution: 'On pèse le bol vide, puis le bol avec la farine dedans, puis on calcule la différence : masse de la
+    farine = masse (bol + farine) − masse (bol vide).'
+exercices:
+- enonce: Un bol vide pèse 150 g. Avec de la farine dedans, il pèse 420 g. Quelle est la masse de la farine ?
+  indices:
+  - Utilise la différence entre le bol plein et le bol vide.
+  solution: 420 − 150 = 270 g de farine.
+- enonce: Tu veux savoir lequel de deux cailloux est le plus lourd, sans balance électronique. Que fais-tu ?
+  indices:
+  - Pense à un dispositif simple avec une poulie et une cordelette, ou une balance à plateaux.
+  solution: 'On accroche chaque caillou à un côté d''une balance à fléau ou à plateaux : le côté qui penche porte
+    le caillou le plus lourd.'
+- enonce: Comment vérifier que le résultat d'une comparaison de masses est fiable ?
+  indices:
+  - Un seul essai suffit-il ?
+  solution: On refait la comparaison avec un autre dispositif (par exemple une autre balance) pour tester la robustesse
+    du résultat.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

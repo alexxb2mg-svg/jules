@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-art-roman-art-gothique
+declencheurs:
+- église toute ronde
+- cathédrale pointue
+- style des églises au moyen âge
+- art roman
+- art gothique
+- comparer deux photos d'églises
+- reconnaître le style d'une cathédrale
+couverture: 'Ne couvre que ce que dit le programme : différencier l''art roman de l''art gothique.'
+essentiel: 'Au Moyen Âge, les églises et les cathédrales sont construites selon deux grands styles : l''art roman
+  et l''art gothique.
+
+  Le programme demande de savoir différencier ces deux arts, notamment en observant des bâtiments comme une abbaye
+  ou une cathédrale.'
+methode:
+- Observer un bâtiment religieux du Moyen Âge (abbaye, cathédrale).
+- 'Se demander à quel style il appartient : art roman ou art gothique.'
+- Justifier son choix en comparant deux photos ou dessins différents.
+vocabulaire:
+- terme: art roman
+  definition: un des deux styles d'architecture religieuse du Moyen Âge, à différencier de l'art gothique
+- terme: art gothique
+  definition: un des deux styles d'architecture religieuse du Moyen Âge, à différencier de l'art roman
+erreurs_frequentes:
+- Croire qu'il n'existe qu'un seul style d'église au Moyen Âge.
+- Ne pas savoir dire à quel style appartient un bâtiment donné, faute de l'avoir observé.
+exemple:
+  enonce: On te montre deux photos d'églises construites au Moyen Âge. Quelle question peux-tu te poser en les comparant
+    ?
+  solution: 'Laquelle est de style roman et laquelle est de style gothique : ce sont les deux styles d''architecture
+    religieuse du Moyen Âge à différencier.'
+exercices:
+- enonce: Cite les deux grands styles d'architecture des églises du Moyen Âge.
+  indices:
+  - L'un commence par R, l'autre par G.
+  solution: L'art roman et l'art gothique.
+- enonce: Ta classe visite une cathédrale du Moyen Âge. Quelle question dois-tu te poser pour utiliser ce que tu
+    sais ?
+  indices:
+  - 'Pense au but de la notion : différencier deux styles.'
+  solution: Je dois me demander si cette cathédrale est de style roman ou de style gothique.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

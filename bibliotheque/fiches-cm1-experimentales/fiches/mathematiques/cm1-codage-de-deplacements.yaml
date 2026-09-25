@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-codage-de-deplacements
+declencheurs:
+- coder un déplacement
+- robot
+- programmer un trajet
+- suite d'instructions
+- aller de
+essentiel: 'On peut coder un déplacement : décrire, avec des instructions précises (en langage naturel ou codées),
+  comment aller d''un point de départ à un point d''arrivée.
+
+  Au CM1, on utilise et on produit ces codages dans des environnements de plus en plus grands : un quartier, une
+  ville.
+
+  Si la classe a un robot, on peut lui faire exécuter un déplacement programmé avec ces instructions.
+
+  Une suite d''instructions doit être précise et dans le bon ordre pour arriver exactement au bon endroit.'
+methode:
+- Repérer le point de départ, le point d'arrivée et les repères disponibles (rues, cases du quadrillage).
+- Découper le trajet en étapes simples (avancer, tourner...).
+- Écrire ou suivre les instructions dans l'ordre exact.
+- Vérifier le résultat en suivant les instructions pas à pas sur le plan ou le quadrillage.
+erreurs_frequentes:
+- Changer l'ordre des instructions.
+- Oublier une étape du trajet.
+- Confondre la gauche et la droite en suivant les instructions.
+exemple:
+  enonce: 'Instructions : « Depuis la mairie, avancer vers le nord, puis prendre la deuxième rue à droite. » Que
+    doit faire la personne qui suit ce codage ?'
+  solution: Elle part de la mairie, avance vers le nord jusqu'à la deuxième rue, puis tourne à droite dans cette
+    rue.
+exercices:
+- enonce: Écris une suite d'instructions pour aller d'une case à une autre sur un quadrillage, séparées de 2 cases
+    vers l'est et 1 case vers le sud.
+  indices:
+  - Utilise avancer et tourner d'un quart de tour.
+  solution: Avancer de 2 cases vers l'est, tourner d'un quart de tour, avancer d'1 case vers le sud.
+- enonce: Un robot doit avancer puis tourner d'un quart de tour à droite. Écris le programme pour ce déplacement.
+  indices:
+  - Utilise le vocabulaire des déplacements dans l'ordre.
+  solution: 1. Avancer. 2. Tourner d'un quart de tour à droite.
+- enonce: Pourquoi est-il important de donner les instructions dans le bon ordre ?
+  indices:
+  - Pense à ce qui se passe si on inverse deux instructions.
+  solution: 'Parce qu''inverser l''ordre change le trajet : on n''arrive plus au même endroit.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 28
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

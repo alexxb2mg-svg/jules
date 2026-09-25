@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-memorisation-chant-solo
+declencheurs:
+- chanter par cœur
+- chanter tout seul
+- chanter en solo
+- retenir une chanson
+- j'oublie les paroles
+- chanter sans le texte
+- mémoriser une chanson
+essentiel: 'Mémoriser un chant, c''est apprendre à le chanter par cœur, sans lire les paroles ni écouter le modèle
+  en même temps.
+
+  On apprend un chant par imitation : on écoute, on répète, plusieurs fois, jusqu''à connaître toutes les paroles
+  et toute la mélodie.
+
+  Une fois le chant su par cœur, tu peux soutenir un bref moment de chant en solo : chanter seul, sans les autres,
+  pendant quelques secondes ou quelques phrases.
+
+  Il est normal de rencontrer des difficultés (un mot qui coince, une note trop haute) : les identifier t''aide
+  à savoir sur quoi t''entraîner.'
+methode:
+- Écoute et chante le chant plusieurs fois avec le modèle, en entier.
+- Découpe le chant en petits morceaux (une phrase à la fois) pour mémoriser plus facilement.
+- Chante sans regarder le texte, en te faisant aider par quelqu'un au début.
+- 'Repère les endroits où tu hésites : ce sont tes difficultés à travailler.'
+- Essaie de chanter seul un petit passage (un solo), même bref.
+erreurs_frequentes:
+- Vouloir mémoriser tout le chant d'un coup, au lieu d'un morceau après l'autre.
+- Chanter toujours en même temps que les autres, sans jamais essayer seul.
+- Ne pas repérer les passages où l'on hésite, donc ne jamais s'entraîner dessus.
+exemple:
+  enonce: Tu dois savoir chanter par cœur un couplet d'une chanson apprise en classe. Comment t'entraîner à la maison
+    ?
+  solution: Réécouter le couplet plusieurs fois, le chanter en entier avec l'enregistrement, puis essayer de le
+    chanter seul, sans l'enregistrement, en repérant les passages où tu hésites pour les répéter encore.
+exercices:
+- enonce: Choisis un chant appris en classe. Essaie de le chanter en entier par cœur, sans regarder le texte.
+  indices:
+  - Si tu bloques, reprends seulement la phrase où tu as hésité.
+  - 'Chante-le trois fois de suite : la mémoire s''installe avec la répétition.'
+  solution: 'Critères de réussite : tu as chanté toutes les paroles et toute la mélodie sans regarder le texte,
+    du début à la fin.'
+- enonce: Chante en solo, devant un adulte de ta famille, une seule phrase d'un chant que tu connais bien.
+  indices:
+  - Choisis la phrase que tu maîtrises le mieux pour ton premier essai.
+  - Respire avant de commencer pour ne pas être essoufflé.
+  solution: 'Critères de réussite : tu as chanté la phrase seul, sans t''arrêter, avec une intonation juste.'
+- enonce: Dis à quelqu'un une difficulté que tu rencontres dans un chant que tu apprends (un mot, une note, un passage).
+  indices:
+  - Réécoute plusieurs fois seulement ce passage difficile.
+  solution: 'Critères de réussite : tu as identifié précisément le passage qui pose problème et tu peux dire pourquoi
+    (mot trop rapide, note trop haute, etc.).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 48
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

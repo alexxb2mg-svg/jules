@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-effets-geste-instrument
+declencheurs:
+- pinceau
+- outil pour dessiner
+- trace sur la feuille
+- geste qui appuie
+- éponge pour peindre
+- griffer la peinture
+- outil inventé
+essentiel: 'En arts plastiques, on peut élargir la notion d''outil : la main elle-même, les brosses et pinceaux
+  de tailles différentes, les chiffons, les éponges, mais aussi des outils inventés par l''élève.
+
+  Chaque outil, en dialogue avec la matière, produit des effets différents : la touche, la trace, la texture, la
+  facture, la griffure, la traînée, la découpe, la coulure.
+
+  Le geste peut être ample (grand, large) ou retenu (petit, contrôlé) ; il peut être maîtrisé ou au contraire imprévisible.
+
+  Explorer les qualités plastiques et les effets visuels obtenus avec des outils, des médiums et des supports variés
+  permet de mieux choisir ses moyens selon l''effet recherché.'
+methode:
+- Choisir un médium (peinture, encre) et plusieurs outils différents pour l'appliquer.
+- Tester chaque outil sur le support en variant l'amplitude du geste (grand, petit).
+- 'Observer et nommer les traces obtenues : griffure, coulure, texture, touche.'
+- Choisir l'outil et le geste qui produisent l'effet le plus proche de ce qu'on recherche.
+vocabulaire:
+- terme: trace
+  definition: la marque laissée sur le support par un outil et un geste
+- terme: coulure
+  definition: trace laissée par une matière liquide qui coule sur le support
+erreurs_frequentes:
+- N'utiliser qu'un seul outil (le pinceau classique) sans explorer d'autres possibilités.
+- Toujours faire le même geste sans varier son amplitude ou sa vitesse.
+- Vouloir absolument contrôler le geste alors qu'un effet imprévu peut être intéressant.
+exemple:
+  enonce: Tu peins une ligne avec un pinceau fin, puis la même ligne avec une éponge. Les deux traces sont-elles
+    identiques ?
+  solution: 'Non : le pinceau fin laisse une ligne nette et régulière (une touche précise), tandis que l''éponge
+    laisse une texture plus irrégulière, plus granuleuse. Chaque outil, en dialogue avec la matière, produit un
+    effet plastique différent.'
+exercices:
+- enonce: Trace la même ligne avec 3 outils différents (un pinceau, une éponge, un coton-tige ou tes doigts) en
+    utilisant de la peinture, et compare les 3 traces obtenues.
+  indices:
+  - Utilise la même peinture et la même feuille pour comparer justement.
+  - 'Décris chaque trace avec un mot : lisse, texturée, épaisse, fine.'
+  solution: 'Réussite si : les 3 traces sont visiblement différentes et l''élève peut décrire au moins une différence
+    entre chaque outil utilisé.'
+- enonce: 'Peins un même motif deux fois : une fois avec un geste très ample (grand mouvement du bras), une fois
+    avec un geste très retenu (petit mouvement du poignet). Compare.'
+  indices:
+  - Garde la même quantité de peinture et le même pinceau pour les deux essais.
+  - Observe la taille et la régularité des traces obtenues.
+  solution: 'Réussite si : les deux versions du motif sont nettement différentes en taille ou en régularité, et
+    l''élève relie cette différence à l''amplitude du geste.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

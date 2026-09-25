@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-incivilites-regles-civilite
+declencheurs:
+- impoli
+- bousculer sans excuse
+- règles de politesse
+- incivilité
+- mal se comporter en société
+essentiel: 'Les règles de civilité sont les règles de politesse et de respect que l''on applique en société.
+
+  Une incivilité est un comportement qui ne respecte pas ces règles, comme bousculer quelqu''un sans s''excuser
+  ou salir un lieu commun.
+
+  Les incivilités nuisent à la vie en commun, même si elles ne sont pas toujours interdites par la loi.'
+methode:
+- Identifie la règle de civilité qui n'a pas été respectée.
+- Explique en quoi ce comportement gêne les autres, donc nuit à la vie en commun.
+- Distingue une incivilité d'un simple désaccord ou d'un accident.
+vocabulaire:
+- terme: civilité
+  definition: l'ensemble des règles de politesse et de respect en société
+- terme: incivilité
+  definition: un comportement qui ne respecte pas les règles de la vie en société
+erreurs_frequentes:
+- Croire qu'une incivilité est toujours interdite par la loi.
+- Confondre incivilité et simple maladresse involontaire.
+exemple:
+  enonce: Dans une file d'attente, une personne passe devant tout le monde sans s'excuser. S'agit-il d'une incivilité
+    ? Pourquoi ?
+  solution: 'Oui, c''est une incivilité : cette personne ne respecte pas les règles de civilité (attendre son tour)
+    et gêne les autres, ce qui nuit à la vie en commun.'
+exercices:
+- enonce: Donne un exemple d'incivilité que tu as pu observer dans la vie de tous les jours.
+  indices:
+  - Pense à un comportement qui ne respecte pas les autres ou un lieu commun.
+  solution: 'Réponse variable, par exemple : jeter un déchet par terre, parler fort dans un lieu calme, ne pas tenir
+    la porte à quelqu''un.'
+- enonce: Explique pourquoi les incivilités nuisent à la vie en commun, même quand elles ne sont pas punies par
+    la loi.
+  indices:
+  - Pense au respect des autres et au confort de tous.
+  solution: Parce qu'elles gênent les autres et rendent la vie en société moins agréable, même si elles ne sont
+    pas toujours des infractions à la loi.
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

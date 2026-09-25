@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espace-trois-dimensions
+declencheurs:
+- modelage
+- pâte à modeler
+- sculpture
+- construire en volume
+- faire du relief
+- objet en 3d
+- construction en carton
+- tenir debout
+- empiler
+- équilibre
+essentiel: 'Travailler en trois dimensions, c''est créer des productions qui ont du volume, qu''on peut voir sous
+  plusieurs angles : par le modelage, l''assemblage, la construction, ou l''installation.
+
+  On utilise des notions par paires opposées pour parler du volume : forme fermée / forme ouverte, vide / plein,
+  intérieur / extérieur, enveloppe / structure.
+
+  Une forme fermée cache son intérieur (comme une boule pleine), une forme ouverte laisse voir à travers ou dedans
+  (comme une cage).
+
+  L''espace en trois dimensions s''explore aussi en lien avec l''architecture, en jouant sur l''équilibre et le
+  déséquilibre des volumes.'
+methode:
+- 'Choisir une technique en volume : modeler, assembler, construire.'
+- Décider si la forme sera fermée (pleine) ou ouverte (avec du vide à l'intérieur).
+- 'Construire en pensant à l''équilibre : la production doit-elle tenir debout, être stable ?'
+- Regarder sa production sous plusieurs angles pour vérifier qu'elle fonctionne en volume.
+vocabulaire:
+- terme: volume
+  definition: l'espace occupé par une forme en trois dimensions
+- terme: forme ouverte / forme fermée
+  definition: une forme qui laisse voir son intérieur, ou qui le cache
+erreurs_frequentes:
+- Faire un dessin à plat en pensant avoir fait une œuvre en volume.
+- Ne jamais vérifier la stabilité d'une construction qui doit tenir debout.
+- Ne regarder sa production que d'un seul côté, en oubliant les autres angles.
+exemple:
+  enonce: Avec de la pâte à modeler, tu fais une boule pleine, puis tu fais une forme creuse en forme de coupe.
+    Quelle est la différence en termes de volume ?
+  solution: 'La boule pleine est une forme fermée : il n''y a que du plein, pas de vide à l''intérieur. La coupe
+    est une forme plus ouverte : elle a un vide à l''intérieur (le creux) entouré d''une enveloppe de matière. Les
+    deux occupent un volume, mais organisent le plein et le vide différemment.'
+exercices:
+- enonce: 'Avec de la pâte à modeler ou de la pâte à sel, fabrique deux petites formes : une fermée (pleine) et
+    une ouverte (avec un vide visible à l''intérieur).'
+  indices:
+  - Une forme fermée peut être une boule ou un cube plein.
+  - Une forme ouverte peut être un bol, un tube ou une forme percée.
+  solution: 'Réussite si : les deux formes sont bien distinctes (une pleine, une avec un vide visible) et l''élève
+    peut nommer laquelle est fermée et laquelle est ouverte.'
+- enonce: Construis une petite tour avec des objets empilables (boîtes, cubes, livres) en cherchant l'équilibre
+    le plus haut possible sans qu'elle tombe.
+  indices:
+  - Commence par les éléments les plus grands ou les plus lourds en bas.
+  - Teste plusieurs fois si la tour tient debout toute seule.
+  solution: 'Réussite si : la construction tient en équilibre debout sans être tenue, et l''élève peut expliquer
+    comment il a cherché l''équilibre.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

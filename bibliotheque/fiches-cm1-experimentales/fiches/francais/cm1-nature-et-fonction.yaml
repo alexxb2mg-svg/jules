@@ -1,0 +1,68 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-nature-et-fonction
+declencheurs:
+- nature d'un mot
+- classe grammaticale
+- fonction d'un mot
+- c'est quoi comme mot
+- nature ou fonction
+- quelle nature
+essentiel: 'Un mot a une nature (on dit aussi une classe grammaticale) et il occupe une fonction dans la phrase.
+
+  La nature d''un mot, c''est sa catégorie : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom. Un
+  mot garde toujours la même nature, quelle que soit la phrase.
+
+  La fonction, c''est le rôle que joue un mot ou un groupe de mots dans une phrase précise : par exemple, sujet
+  ou complément.
+
+  Le verbe (ou le groupe verbal) est considéré comme le pivot de la phrase : c''est autour de lui que s''organisent
+  les autres éléments, comme le sujet.'
+methode:
+- Pour trouver la nature d'un mot, se demander à quelle catégorie il appartient (nom, verbe, adjectif...).
+- Pour trouver la fonction d'un mot ou d'un groupe, se demander quel rôle il joue dans cette phrase précise.
+- Se rappeler qu'un nom propre, un pronom ou un groupe nominal, même différents en nature, peuvent avoir la même
+  fonction (sujet).
+- 'Utiliser la substitution pour vérifier : remplacer un groupe nominal sujet par un pronom personnel.'
+vocabulaire:
+- terme: nature (ou classe grammaticale)
+  definition: 'la catégorie d''un mot : nom, verbe, adjectif, adverbe, déterminant, conjonction, pronom'
+- terme: fonction
+  definition: le rôle que joue un mot ou un groupe dans une phrase précise, comme sujet
+erreurs_frequentes:
+- 'Confondre nature et fonction : dire qu''un mot « est sujet » comme s''il s''agissait de sa nature.'
+- Penser qu'un mot change de nature selon la phrase, alors que seule sa fonction peut changer.
+- Oublier que des mots de natures différentes (nom propre, pronom, groupe nominal) peuvent avoir la même fonction.
+exemple:
+  enonce: Dans la phrase « Il distribue le courrier. », quelle est la nature du mot « Il » et quelle est sa fonction
+    ?
+  solution: « Il » est un pronom personnel (nature). Dans cette phrase, il occupe la fonction de sujet du verbe
+    « distribue ».
+exercices:
+- enonce: Dans les phrases « Le facteur travaille. » et « Il travaille. », le sujet a-t-il changé de fonction ?
+    Et de nature ?
+  indices:
+  - '« Le facteur » est un groupe nominal, « Il » est un pronom personnel : ce sont deux natures différentes.'
+  solution: 'La fonction ne change pas : dans les deux phrases, c''est le sujet du verbe. La nature change : groupe
+    nominal dans la première phrase, pronom personnel dans la seconde.'
+- enonce: 'Remplace le groupe nominal sujet par un pronom personnel dans : « Ma sœur range sa chambre. »'
+  indices:
+  - « Ma sœur » désigne une personne féminine.
+  solution: Elle range sa chambre.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Distinguer les notions de nature ou classe grammaticale et de fonction » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite sur nature et fonction
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

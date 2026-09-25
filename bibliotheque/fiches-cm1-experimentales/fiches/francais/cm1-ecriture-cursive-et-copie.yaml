@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ecriture-cursive-et-copie
+declencheurs:
+- écriture attachée
+- copier un texte sans erreur
+- écrire proprement
+- recopier une leçon
+- stratégie pour copier vite
+essentiel: 'En CM1, on continue à s''entraîner aux gestes de l''écriture cursive (l''écriture attachée), commencés
+  plus tôt à l''école.
+
+  Copier un texte demande des stratégies : il ne s''agit pas de recopier lettre par lettre, mais de mémoriser des
+  groupes de mots pour aller plus vite et sans erreur.
+
+  L''objectif est de recopier de façon lisible, régulière et soignée des textes d''une quinzaine de lignes, rapidement,
+  sans erreurs d''orthographe ni de ponctuation.
+
+  Un texte bien copié se reconnaît aussi à sa mise en forme lisible et soignée.'
+methode:
+- Lire d'abord tout le texte ou une phrase entière avant de commencer à écrire.
+- Mémoriser un groupe de mots (pas seulement une lettre) avant de l'écrire.
+- Écrire ce groupe de mots sans regarder à nouveau le modèle, si possible.
+- Vérifier ensuite l'orthographe et la ponctuation en comparant avec le texte d'origine.
+- 'Soigner la présentation : écriture régulière, lisible, marges respectées.'
+erreurs_frequentes:
+- Copier lettre par lettre, ce qui est très lent et fatigant.
+- Oublier de vérifier la ponctuation après avoir copié une phrase.
+- Ne pas relire son texte copié pour repérer les erreurs.
+exemple:
+  enonce: 'Tu dois recopier la phrase : « Le vieux chêne se dressait fièrement au milieu de la clairière. » Comment
+    procéder efficacement ?'
+  solution: On lit toute la phrase, on mémorise « Le vieux chêne se dressait fièrement », on l'écrit sans regarder,
+    puis on vérifie l'orthographe et la ponctuation en comparant avec le modèle, avant de continuer avec la fin
+    de la phrase.
+exercices:
+- enonce: 'Recopie ce texte court en mémorisant des groupes de mots plutôt que des lettres : « La pluie tombait
+    doucement sur le toit de la maison. »'
+  indices:
+  - Découpe la phrase en deux ou trois groupes de mots à mémoriser.
+  - Relis ta copie en la comparant au modèle.
+  solution: 'Critère de réussite : le texte est recopié sans erreur d''orthographe ni de ponctuation, avec une écriture
+    cursive lisible et régulière.'
+- enonce: Chronomètre-toi pour recopier cinq lignes de ton livre de lecture. Relis ensuite pour corriger d'éventuelles
+    erreurs.
+  indices:
+  - Ne regarde pas le modèle à chaque lettre.
+  - Vérifie la ponctuation à la fin.
+  solution: 'Critère de réussite : la copie est lisible, sans erreur, et le temps mis diminue avec l''entraînement.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 8
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

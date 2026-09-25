@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-louis-xiv-pouvoir-absolu
+declencheurs:
+- roi soleil
+- château de versailles
+- roi tout-puissant
+- pouvoir absolu
+- louis xiv
+couverture: 'Ne couvre que ce que dit le programme : Louis XIV (1643-1715), roi qui affirme son pouvoir absolu,
+  le château de Versailles, et le rôle des femmes à la Cour de Versailles.'
+essentiel: 'Louis XIV est un roi de France qui a régné de 1643 à 1715, un règne très long.
+
+  C''est un roi qui affirme son pouvoir absolu : il détient tout le pouvoir.
+
+  Le château de Versailles exprime ce pouvoir absolu du roi : sa taille et sa richesse montrent sa puissance.
+
+  Les femmes ont un rôle à la Cour de Versailles, l''entourage du roi.'
+methode:
+- Retenir que Louis XIV règne de 1643 à 1715.
+- Associer Louis XIV à l'expression « pouvoir absolu ».
+- Expliquer comment le château de Versailles exprime ce pouvoir absolu du roi.
+- Se rappeler que les femmes ont un rôle à la Cour de Versailles.
+vocabulaire:
+- terme: monarchie absolue
+  definition: un pouvoir royal où le roi détient tout le pouvoir, affirmé par Louis XIV
+erreurs_frequentes:
+- 'Oublier que Louis XIV a régné très longtemps : de 1643 à 1715.'
+- Ne pas savoir expliquer en quoi le château de Versailles est un symbole du pouvoir absolu, et pas seulement une
+  belle maison.
+exemple:
+  enonce: Explique en une phrase comment le château de Versailles exprime le pouvoir absolu de Louis XIV.
+  solution: Par sa taille immense et sa richesse, le château de Versailles montre à tous la puissance du roi qui
+    détient tout le pouvoir.
+exercices:
+- enonce: Combien d'années a duré le règne de Louis XIV (1643-1715) ?
+  indices:
+  - Soustrais la date de début à la date de fin.
+  solution: 1715 - 1643 = 72 ans.
+- enonce: À la Cour de Versailles, qui entoure le roi Louis XIV ?
+  indices:
+  - La Cour, ce ne sont pas seulement des hommes.
+  solution: 'Des nobles, hommes et femmes : les femmes ont aussi un rôle à la Cour. Ton cours ou ta maîtresse te
+    diront lequel.'
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

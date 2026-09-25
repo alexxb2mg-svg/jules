@@ -1,0 +1,58 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-traite-esclaves-plantations
+declencheurs:
+- traite des esclaves
+- commerce triangulaire
+- plantations
+- code noir
+- esclavage entre l'afrique et l'amérique
+couverture: 'Ne couvre que ce que dit le programme : la traite des esclaves entre l''Afrique et l''Amérique, la
+  vie dans les plantations, les échanges commerciaux avec les colonies, des denrées nommées, et le Code noir (1685).'
+essentiel: 'Entre le XVe et le XVIIe siècle, une traite des esclaves se met en place entre l''Afrique et l''Amérique
+  : des femmes et des hommes africains sont emmenés de force en Amérique.
+
+  Dans les plantations d''Amérique, les esclaves vivent et travaillent dans des conditions difficiles.
+
+  En 1685, le roi Louis XIV signe un édit royal appelé le « Code noir ».
+
+  Des échanges commerciaux ont lieu avec les colonies : on en rapporte des denrées comme la tomate, le chocolat,
+  le haricot, la pomme de terre ou le sucre de canne.'
+methode:
+- Situer la traite des esclaves entre l'Afrique et l'Amérique.
+- Décrire les conditions de vie des esclaves dans une plantation.
+- Relier l'année 1685 au Code noir, un édit royal de Louis XIV.
+- Nommer au moins une denrée issue des colonies.
+vocabulaire:
+- terme: commerce triangulaire
+  definition: échanges commerciaux entre l'Europe, l'Afrique et l'Amérique liés à la traite des esclaves
+- terme: plantation
+  definition: grande exploitation agricole des colonies où travaillent des esclaves
+erreurs_frequentes:
+- 'Oublier que la traite des esclaves se fait entre deux continents : l''Afrique et l''Amérique.'
+- Confondre les denrées venues des colonies avec des produits d'Europe.
+- 'Placer le Code noir à une mauvaise date : il date de 1685.'
+exemple:
+  enonce: En quelle année Louis XIV signe-t-il l'édit royal appelé le « Code noir » ?
+  solution: En 1685.
+exercices:
+- enonce: Nomme deux denrées issues des colonies citées par le programme.
+  indices:
+  - Pense à des aliments que tu manges peut-être.
+  solution: Par exemple le chocolat et la pomme de terre (ou la tomate, le haricot, le sucre de canne).
+- enonce: Décris en une phrase les conditions de vie des esclaves dans une plantation.
+  indices:
+  - Le programme demande de les décrire comme des conditions de vie.
+  solution: Les esclaves vivent et travaillent dans une plantation d'Amérique, dans des conditions de vie difficiles
+    imposées par leurs propriétaires.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

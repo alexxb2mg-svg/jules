@@ -1,0 +1,59 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-definir-un-ecosysteme
+declencheurs:
+- écosystème
+- milieu de vie
+- biodiversité
+- coopération entre animaux
+- prédation
+- chaîne alimentaire du milieu
+- mare de l'école
+- grenouilles et algues
+essentiel: 'Un écosystème est un ensemble d''êtres vivants, leur milieu de vie et leurs relations.
+
+  En observant, mesurant et expérimentant dans un environnement proche, on peut décrire les caractéristiques géographiques
+  et physicochimiques d''un écosystème (altitude, latitude, humidité, pluviométrie, luminosité, température) ainsi
+  que sa biodiversité.
+
+  On met en relation la présence d''êtres vivants avec les caractéristiques physiques du milieu, et on caractérise
+  des relations entre individus d''espèces distinctes : coopération et prédation.'
+methode:
+- 'Observer un milieu proche : quelles espèces y vivent ?'
+- 'Mesurer ses caractéristiques physiques : température, humidité, luminosité, pluviométrie, altitude, latitude.'
+- Relier la présence de certains êtres vivants aux caractéristiques du milieu observées.
+- 'Repérer des relations entre espèces différentes : qui coopère avec qui, qui est prédateur de qui.'
+erreurs_frequentes:
+- Réduire un écosystème aux seuls êtres vivants, en oubliant le milieu de vie et les relations.
+- Confondre coopération (les deux espèces s'entraident) et prédation (une espèce mange l'autre).
+- Décrire le milieu sans le relier à la présence des êtres vivants qui y habitent.
+exemple:
+  enonce: Dans une mare, il y a des grenouilles, des libellules et des algues. Comment décrire cet écosystème ?
+  solution: On décrit le milieu de vie (température de l'eau, luminosité, humidité), les êtres vivants présents
+    (grenouilles, libellules, algues) et leurs relations (les libellules peuvent être prédatrices d'insectes, les
+    algues profitent de la lumière et de l'eau).
+exercices:
+- enonce: Donne la définition d'un écosystème en trois éléments.
+  indices:
+  - Relis la première phrase de l'essentiel.
+  solution: Un écosystème est un ensemble d'êtres vivants, leur milieu de vie et leurs relations.
+- enonce: Une fourmi protège des pucerons pour se nourrir de leur miellat, en échange les pucerons sont protégés
+    des prédateurs. Comment nomme-t-on cette relation ?
+  indices:
+  - Les deux espèces y gagnent quelque chose.
+  solution: C'est une relation de coopération.
+- enonce: Cite deux caractéristiques physicochimiques qu'on peut mesurer pour décrire un écosystème.
+  indices:
+  - Pense à ce qu'on mesure avec un thermomètre, ou à la quantité de pluie.
+  solution: Par exemple la température et l'humidité (ou l'altitude, la latitude, la pluviométrie, la luminosité).
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

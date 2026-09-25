@@ -1,0 +1,50 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoi-exprimer-emotions-souhaits
+declencheurs:
+- content en anglais
+- exprimer mes émotions en anglais
+- dire que j'ai peur en anglais
+- réagir à une histoire en anglais
+essentiel: 'Pour exprimer une émotion, on peut utiliser des expressions toutes faites comme I''m fine, It''s difficult,
+  It''s easy.
+
+  On peut aussi utiliser des onomatopées : Yummy! (miam), Wow! (waouh), Ouch! (aïe), Bang!, Splash!
+
+  On réagit à ce que dit ou fait quelqu''un, positivement ou négativement.
+
+  Ces expressions servent dans des situations connues, comme réagir à une chanson ou à une histoire.'
+methode:
+- Identifier l'émotion ressentie (joie, tristesse, surprise, peur).
+- Choisir l'expression ou l'onomatopée qui correspond le mieux.
+- Dire la réaction avec l'intonation qui va avec l'émotion.
+- S'appuyer sur la réaction de la personne en face pour continuer l'échange.
+vocabulaire:
+- terme: onomatopée
+  definition: un mot qui imite un bruit ou une réaction, comme Wow! ou Ouch!
+erreurs_frequentes:
+- Utiliser toujours la même expression (I'm fine) pour toutes les émotions.
+- Ne pas faire varier l'intonation selon l'émotion exprimée.
+exemple:
+  enonce: Tu goûtes un nouveau plat et tu le trouves délicieux. Que dis-tu ?
+  solution: Yummy!
+exercices:
+- enonce: Tu te fais mal en trébuchant. Quelle onomatopée utilises-tu ?
+  indices:
+  - C'est une réaction à la douleur.
+  solution: Ouch!
+- enonce: Un ami te raconte une histoire drôle. Comment réagis-tu simplement en anglais ?
+  indices:
+  - Utilise une expression simple pour dire que tu trouves ça drôle ou que tu es content.
+  solution: 'Réponse possible : It''s a funny story! I feel happy.'
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 17-18
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

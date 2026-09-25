@@ -1,0 +1,19 @@
+# Fiche d'identite de la bibliotheque (format : bibliotheque/README.md)
+# DONNÉES D'EXPÉRIMENTATION : fiches écrites pour tester Jules, non relues par un enseignant.
+id: fiches-cm1-experimentales
+titre: "Fiches CM1 expérimentales"
+type: fiches
+statut: experimentale
+licence: CC-BY-SA-4.0          # fiches rédigées à partir de ressources sous Licence Ouverte etalab-2.0 (réutilisation libre, source citée)
+pays: FR
+niveaux: [CM1]
+avertissement: >-
+  Bibliothèque EXPÉRIMENTALE, pour tester Jules. Fiches écrites par les contributeurs du projet à
+  partir des seules ressources officielles du ministère de l'Éducation nationale (éduscol,
+  education.gouv.fr), publiées sous Licence Ouverte et citées dans chaque fiche, sans validation par un enseignant ni par
+  l'Éducation nationale. Elles peuvent contenir des erreurs. Le cours de l'élève et la parole de sa
+  maîtresse ou de son maître font toujours foi.
+description: >-
+  Repères par notion du référentiel CM1 2026-2027 : essentiel du cours, méthode, erreurs fréquentes,
+  exemple résolu et exercices avec indices, au niveau d'un enfant de 9-10 ans. Aucune fiche n'est
+  encore relue. Sources admises et écartées : SOURCES.md.

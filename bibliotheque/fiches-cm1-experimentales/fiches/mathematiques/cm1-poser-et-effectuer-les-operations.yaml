@@ -1,0 +1,72 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-poser-et-effectuer-les-operations
+declencheurs:
+- poser l'opération
+- addition posée
+- soustraction posée
+- poser la multiplication
+- division
+- reste
+- quotient
+- ordre de grandeur
+essentiel: 'Au cours moyen, on n''a pas de calculatrice personnelle : on pose les opérations en colonnes ou on calcule
+  mentalement.
+
+  Avant de calculer, on peut estimer un ordre de grandeur du résultat en remplaçant les nombres par des nombres
+  ronds proches : 52 × 37 est proche de 50 × 40, donc proche de 2 000. On utilise le symbole ≈ pour écrire une estimation.
+
+  Dans un calcul avec des parenthèses, on effectue toujours ce qu''il y a dans les parenthèses en premier.
+
+  On sait poser et effectuer des additions et des soustractions de nombres décimaux, des multiplications de deux
+  nombres entiers ou d''un nombre décimal par un nombre entier inférieur à 10, et des divisions euclidiennes avec
+  un diviseur à un seul chiffre.
+
+  Dans une division euclidienne, le dividende est le nombre partagé, le diviseur le nombre de parts, le quotient
+  le résultat, et le reste ce qui n''a pas pu être partagé.'
+methode:
+- Avant de poser l'opération, estimer un ordre de grandeur pour pouvoir vérifier le résultat ensuite.
+- S'il y a des parenthèses, calculer d'abord ce qu'elles contiennent.
+- Aligner correctement les chiffres selon leur rang (unités sous unités, dixièmes sous dixièmes…) avant de poser.
+- Poser l'opération et effectuer le calcul étape par étape.
+- 'Comparer le résultat obtenu à l''ordre de grandeur estimé au début : est-ce cohérent ?'
+erreurs_frequentes:
+- Mal aligner les chiffres d'une addition ou d'une soustraction de nombres décimaux (oublier d'aligner les virgules).
+- Oublier de calculer d'abord ce qui est entre parenthèses.
+- Ne pas vérifier que le résultat est cohérent avec l'ordre de grandeur estimé.
+- Confondre le dividende et le diviseur dans une division.
+exemple:
+  enonce: 'Estime puis calcule : 3 × (10 - 6).'
+  solution: 'On calcule d''abord la parenthèse : 10 - 6 = 4. Puis 3 × 4 = 12.'
+exercices:
+- enonce: Estime le résultat de 212 m + 298 m + 496 m, puis calcule la somme exacte.
+  indices:
+  - Remplace chaque longueur par un nombre rond proche (200, 300, 500).
+  solution: 'Estimation : 200 + 300 + 500 = 1 000 m. Calcul exact : 212 + 298 + 496 = 1 006 m, ce qui est cohérent
+    avec l''estimation.'
+- enonce: Pose et effectue 56,75 + 234 + 0,8.
+  indices:
+  - Aligne bien les virgules avant d'additionner.
+  solution: 56,75 + 234,00 + 0,80 = 291,55.
+- enonce: Pose et effectue la division euclidienne de 743 par 9. Donne le quotient et le reste.
+  indices:
+  - 743 est le dividende, 9 est le diviseur.
+  solution: 743 = 9 × 82 + 5, donc le quotient est 82 et le reste est 5.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.10-11
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'attendus de fin de CM1 ; limite : pas de calculatrice personnelle'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

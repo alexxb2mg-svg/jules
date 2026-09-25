@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-comprendre-interroger-morale
+declencheurs:
+- qu'est-ce que la justice
+- ce que le personnage aurait dû faire
+- la morale de l'histoire
+- fable avec une leçon
+- c'est juste ou pas juste
+essentiel: 'En lisant certaines œuvres, on découvre des fondements de la vie en commun : la justice, la tolérance,
+  la liberté, le respect des différences, la préservation de l''environnement.
+
+  On apprend à comprendre les valeurs morales portées par les personnages, c''est-à-dire ce qui guide leurs actions
+  (être juste, être honnête, respecter les autres...).
+
+  On s''interroge sur les conséquences des actions des personnages et sur leurs effets sur le collectif (le groupe,
+  la société).
+
+  Cela développe l''esprit critique du lecteur et sa propre sensibilité.'
+methode:
+- Repérer une action importante d'un personnage dans l'histoire.
+- Se demander si cette action est juste ou injuste, et pourquoi.
+- Identifier les conséquences de cette action sur les autres personnages ou sur le groupe.
+- Donner son propre avis sur ce que le personnage aurait pu faire différemment.
+erreurs_frequentes:
+- Juger une action sans expliquer pourquoi elle est juste ou injuste.
+- Ne pas relier l'action du personnage à ses conséquences sur les autres.
+exemple:
+  enonce: Dans une fable, un renard trompe un corbeau pour lui voler son fromage. Quelle valeur morale ce récit
+    interroge-t-il ?
+  solution: 'Ce récit interroge l''honnêteté et la ruse malhonnête : le renard agit en trompant l''autre pour son
+    propre intérêt, ce qui pose la question de ce qui est juste ou pas envers autrui.'
+exercices:
+- enonce: Dans une histoire que tu connais, un personnage ment pour éviter d'être puni. Est-ce juste selon toi ?
+    Quelles peuvent être les conséquences de ce mensonge ?
+  indices:
+  - Pense à ce qui se passe si le mensonge est découvert plus tard.
+  solution: La réponse doit relier le mensonge à ses conséquences possibles (perte de confiance, punition plus grande...)
+    et donner un avis justifié.
+- enonce: Choisis une fable de La Fontaine que tu connais. Quelle leçon de vie en commun peut-on en tirer ?
+  indices:
+  - Une fable se termine souvent par une leçon, explicite ou implicite.
+  solution: La réponse doit citer une valeur (justice, prudence, modestie...) illustrée par l'histoire de la fable
+    choisie.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

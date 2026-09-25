@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ressemblance-ecart-representation
+declencheurs:
+- dessiner
+- ressemble pas
+- pas beau
+- copier
+- modèle
+- vrai dessin
+- comme dans la vraie vie
+- raté mon dessin
+essentiel: "Dessiner ou peindre, ce n'est pas recopier exactement ce qu'on voit : c'est un choix. \nLa ressemblance,\
+  \ c'est quand une représentation fait reconnaître facilement la chose réelle. \nL'écart, c'est la différence volontaire\
+  \ entre le réel et ce qu'on représente (une couleur inventée, une forme déformée, un détail agrandi).\nCet écart\
+  \ n'est pas une erreur : il sert à exprimer quelque chose (une émotion, une idée) que la copie exacte ne montrerait\
+  \ pas.\nOn peut chercher à imiter le réel, à l'accentuer, à l'interpréter à sa façon, ou à s'en éloigner complètement\
+  \ : ce sont des choix différents, pas des ratés."
+methode:
+- 'Observer d''abord ce qu''on veut représenter : sa forme, ses proportions, ses couleurs.'
+- 'Décider d''un choix : imiter le plus possible, ou accentuer un détail, ou s''en éloigner.'
+- Assumer ce choix jusqu'au bout du dessin plutôt que de vouloir « corriger » vers le réel.
+- Se demander ce que l'écart choisi fait comprendre ou ressentir de plus qu'une copie exacte.
+vocabulaire:
+- terme: ressemblance
+  definition: ce qui, dans une représentation, fait reconnaître la chose réelle
+- terme: écart
+  definition: la différence volontaire entre le réel et sa représentation
+- terme: interprétation
+  definition: une façon personnelle de représenter, différente d'une copie exacte
+erreurs_frequentes:
+- Croire qu'un dessin n'est réussi que s'il ressemble parfaitement au modèle.
+- Effacer un écart volontaire (couleur, forme) en pensant que c'est une erreur à corriger.
+- Ne faire que de l'imitation sans jamais oser accentuer ou interpréter.
+exemple:
+  enonce: Tu dessines ton chat, mais tu le dessines tout bleu avec des moustaches immenses. Est-ce raté ?
+  solution: 'Non : le chat reste reconnaissable (la ressemblance), mais la couleur bleue et les moustaches immenses
+    sont des écarts volontaires qui peuvent montrer, par exemple, que ce chat est mystérieux ou qu''il sent très
+    bien les odeurs. C''est un choix d''interprétation, pas une erreur.'
+exercices:
+- enonce: 'Dessine un objet de ta maison (une tasse, une chaise) deux fois : une fois en cherchant à bien lui ressembler,
+    une fois en accentuant énormément un seul détail (sa taille, sa couleur, sa forme).'
+  indices:
+  - Choisis un seul détail à accentuer, pas plusieurs à la fois.
+  - Le deuxième dessin doit rester reconnaissable comme le même objet.
+  solution: 'Réussite si : les deux dessins représentent le même objet reconnaissable, et le deuxième dessin exagère
+    clairement un détail choisi par rapport au premier.'
+- enonce: Choisis un animal et dessine-le en changeant volontairement sa couleur réelle. Explique à l'oral, en une
+    phrase, ce que cette nouvelle couleur donne à voir ou à ressentir.
+  indices:
+  - Une couleur peut suggérer une émotion (le rouge peut dire la colère, le bleu le calme).
+  - Garde la forme de l'animal reconnaissable.
+  solution: 'Réussite si : l''animal reste identifiable malgré la couleur changée, et l''élève sait dire en une
+    phrase simple ce que ce choix de couleur exprime.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,82 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-reperes-culture-musicale
+declencheurs:
+- orchestre symphonique
+- grandes œuvres de musique
+- compositeur célèbre
+- musique classique
+- instruments de l'orchestre
+- culture musicale
+- repères sur la musique
+essentiel: 'Écouter des musiques permet de construire des repères de culture musicale : connaître quelques grandes
+  œuvres et savoir les relier à d''autres savoirs.
+
+  L''orchestre symphonique a des caractéristiques principales : plusieurs familles d''instruments (cordes, vents,
+  percussions) jouent ensemble.
+
+  La musique peut être produite sous des formes variées : vocales (chantées), instrumentales (jouées), ou en solistes
+  (un seul interprète).
+
+  Associer une œuvre à des connaissances d''autres matières (histoire, géographie, français...) aide à mieux comprendre
+  son contexte.'
+methode:
+- Écoute l'œuvre en entier et repère si elle est chantée, jouée par des instruments, ou les deux.
+- Cherche si un ou plusieurs interprètes jouent (soliste ou ensemble).
+- Si c'est un orchestre, essaie de repérer une famille d'instruments (cordes, vents, percussions).
+- Relie ce que tu entends à ce que tu sais déjà (une époque, un pays, une histoire apprise en classe).
+- Retiens le titre et le nom du compositeur ou de l'interprète pour construire tes repères.
+vocabulaire:
+- terme: orchestre symphonique
+  definition: un grand ensemble de musiciens qui jouent ensemble plusieurs familles d'instruments (cordes, vents,
+    percussions)
+- terme: soliste
+  definition: un musicien ou un chanteur qui interprète seul
+erreurs_frequentes:
+- Croire qu'un orchestre symphonique n'a qu'une seule famille d'instruments.
+- Ne pas faire le lien entre une œuvre écoutée et d'autres connaissances apprises en classe.
+- Confondre une œuvre vocale (chantée) et une œuvre instrumentale (jouée sans voix).
+exemple:
+  enonce: Ta classe écoute un extrait de l'opéra Carmen de Bizet, avec un chanteur soliste et un orchestre. Que
+    peux-tu dire pour construire tes repères de culture musicale ?
+  solution: 'C''est une œuvre du patrimoine, à la fois vocale (le soliste chante) et instrumentale (l''orchestre
+    joue) : je retiens le titre (Carmen), le compositeur (Bizet), et que c''est un extrait d''opéra.'
+exercices:
+- enonce: Écoute un extrait d'une œuvre déjà travaillée en classe et dis si elle est vocale, instrumentale, ou les
+    deux.
+  indices:
+  - Une voix qui chante = vocale ; des instruments seuls = instrumentale.
+  - Certaines œuvres mélangent les deux.
+  solution: 'Critères de réussite : tu identifies correctement le type de production (vocale, instrumentale, ou
+    les deux) et tu peux dire pourquoi.'
+- enonce: Cite le titre d'une œuvre du patrimoine que tu as écoutée en classe (par exemple Carmen de Bizet, Les
+    Noces de Figaro de Mozart, ou une autre) et dis un lien avec une autre matière (histoire, géographie...).
+  indices:
+  - Pense à l'époque ou au pays de l'œuvre.
+  - Un opéra peut être relié à une histoire ou une pièce de théâtre.
+  solution: 'Critères de réussite : tu donnes un titre réel écouté en classe et un lien précis avec une autre connaissance
+    scolaire.'
+- enonce: Écoute un extrait d'orchestre symphonique et essaie de repérer une famille d'instruments (cordes, vents
+    ou percussions).
+  indices:
+  - Les cordes (violon, violoncelle) ont un son qui se prolonge quand on frotte l'archet.
+  - Les percussions marquent souvent le rythme.
+  solution: 'Critères de réussite : tu nommes au moins une famille d''instruments entendue, avec un exemple précis
+    de ce que tu as reconnu.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 49
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Éduscol, « Construire une séquence en éducation musicale au cycle 3 », p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/ra16c3eartemusconstruire-sequence-dm613816pdf-74919.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemple de séquence citant des œuvres du patrimoine
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

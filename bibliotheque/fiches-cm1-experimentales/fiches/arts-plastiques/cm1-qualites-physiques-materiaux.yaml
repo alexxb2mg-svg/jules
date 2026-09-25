@@ -1,0 +1,70 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-qualites-physiques-materiaux
+declencheurs:
+- matériau rugueux
+- matériau qui absorbe l'eau
+- matériau mou
+- matériau de récupération
+- quels matériaux utiliser
+- toucher un matériau
+essentiel: 'Les matériaux utilisés en arts plastiques peuvent être de récupération (déjà utilisés avant), non transformés
+  (naturels, bruts), ou issus de transformations physiques ou chimiques.
+
+  Chaque matériau a des qualités physiques qu''on peut observer et nommer : la porosité (il absorbe l''eau ou non),
+  la rugosité (il est lisse ou râpeux), la liquidité, la malléabilité (il se déforme facilement ou non).
+
+  Ces qualités physiques ont des incidences (des conséquences) différentes selon qu''on travaille à plat, en deux
+  dimensions (le papier absorbe la peinture différemment selon sa porosité), ou en volume, en trois dimensions (une
+  pâte malléable se modèle, un matériau rigide se construit).
+
+  Explorer ces qualités aide à choisir le bon matériau pour peindre, dessiner, sculpter ou construire selon ce qu''on
+  veut faire.'
+methode:
+- Choisir plusieurs matériaux différents (papier, carton, tissu, pâte à modeler).
+- 'Tester leurs qualités physiques : les toucher, essayer de les plier, d''y mettre de l''eau.'
+- 'Nommer ce que l''on observe : rugueux, lisse, poreux, malléable, rigide.'
+- Choisir le matériau le plus adapté selon ce qu'on veut réaliser (peindre, modeler, construire).
+vocabulaire:
+- terme: porosité
+  definition: la capacité d'un matériau à absorber un liquide
+- terme: malléabilité
+  definition: la capacité d'un matériau à se déformer et garder sa nouvelle forme
+- terme: rugosité
+  definition: le caractère lisse ou râpeux de la surface d'un matériau
+erreurs_frequentes:
+- Utiliser toujours le même matériau sans tester s'il convient à ce qu'on veut faire.
+- Confondre la rugosité (le toucher de la surface) et la porosité (l'absorption d'un liquide).
+- Croire qu'un matériau de récupération ne peut pas avoir d'intérêt plastique.
+exemple:
+  enonce: Tu peins avec de l'aquarelle sur une feuille de papier journal, puis sur une feuille de papier épais pour
+    aquarelle. Pourquoi le résultat est-il différent ?
+  solution: 'Les deux papiers n''ont pas la même porosité : le papier journal, plus fin et plus absorbant, boit
+    vite la peinture et gondole ; le papier épais pour aquarelle absorbe l''eau plus régulièrement et garde sa forme.
+    La qualité physique du matériau change donc l''effet obtenu.'
+exercices:
+- enonce: Rassemble 4 matériaux différents à la maison (papier, carton, tissu, plastique) et teste pour chacun s'il
+    est plutôt rigide ou malléable, lisse ou rugueux. Note tes observations.
+  indices:
+  - Essaie de plier légèrement chaque matériau pour tester sa souplesse.
+  - Passe ton doigt dessus pour juger la rugosité.
+  solution: 'Réussite si : l''élève a testé les 4 matériaux et peut donner au moins une qualité physique observée
+    pour chacun (rigide/malléable, lisse/rugueux).'
+- enonce: Verse quelques gouttes d'eau sur trois matériaux différents (papier, plastique, tissu) et observe lequel
+    absorbe l'eau (poreux) et lequel la fait glisser.
+  indices:
+  - Fais le test sur une petite surface protégée pour ne rien abîmer.
+  - Observe si l'eau reste en goutte ou si elle s'étale dans la matière.
+  solution: 'Réussite si : l''élève identifie correctement quel matériau est poreux (l''eau est absorbée) et lequel
+    ne l''est pas (l''eau reste en surface).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44-45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

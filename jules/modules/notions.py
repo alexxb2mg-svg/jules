@@ -66,8 +66,11 @@ Liste (identifiant | matière | notion) :
 
 
 def niveau_du_profil(classe: str) -> str | None:
-    """'3e', '3ème', 'troisième' -> '3e' ; renvoie None si la classe est inconnue."""
+    """'3e', '3ème', 'troisième' -> '3e' ; 'CM1', 'cours moyen 1' -> 'CM1' ; None si la classe est inconnue."""
     c = classe.lower().replace("è", "e").replace("é", "e").strip()
+    ecole = re.match(r"^(?:cm|cours moyen)\s*(1|2|premiere|deuxieme)\b", c)
+    if ecole:
+        return "CM1" if ecole.group(1) in ("1", "premiere") else "CM2"
     correspondances = {"6": "6e", "5": "5e", "4": "4e", "3": "3e"}
     m = re.match(r"^(\d)\s*(?:e|eme|ieme)?\b", c)
     if m and m.group(1) in correspondances:
@@ -207,8 +210,15 @@ class Brique(Module):
             )
         if notion.attendus:
             referentiel = self.catalogue.referentiel
-            nom_ref = f" (bibliothèque « {referentiel.titre} »)" if referentiel else ""
+            nom_ref = (
+                f" (bibliothèque « {referentiel.titre} »{self._mention(referentiel.statut)})" if referentiel else ""
+            )
             parties.append(f"Ce que le programme attend{nom_ref} :\n" + "\n".join(f"- {a}" for a in notion.attendus))
+        if notion.limites:
+            parties.append(
+                "Limites fixées par le programme à ce niveau (ne pas aller au-delà, ne pas imposer d'autre méthode) :\n"
+                + "\n".join(f"- {li}" for li in notion.limites)
+            )
         directions = self.catalogue.directions(notion)
         if directions:
             lignes = [

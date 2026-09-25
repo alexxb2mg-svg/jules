@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-lecture-documents-disciplines
+declencheurs:
+- lire un document en sciences
+- d'où vient ce document
+- lire un tableau
+- chercher une réponse dans un texte documentaire
+- plusieurs documents sur le même sujet
+- lire une photo légendée
+essentiel: 'Pour apprendre dans toutes les matières (sciences, histoire, géographie...), il faut savoir lire différents
+  types de documents.
+
+  On commence par donner la nature d''un document (un texte, une image, un tableau, un graphique, une photographie...)
+  et sa source (qui l''a écrit ou publié, d''où il vient).
+
+  Un document composite mélange plusieurs types d''informations (texte et image, par exemple) : il faut les mettre
+  en lien pour comprendre le document en entier.
+
+  Pour trouver une réponse, on cherche dans le document les informations utiles à la question posée, sans lire forcément
+  tout le texte.'
+methode:
+- 'Identifier la nature du document : texte, image, tableau, graphique, photographie...'
+- Repérer sa source si elle est indiquée (auteur, livre, site, date).
+- Lire la question ou la consigne avant de chercher dans le document.
+- Parcourir le document pour trouver les informations utiles, en s'aidant du titre et des légendes.
+- Répondre en citant l'endroit du document où l'on a trouvé l'information.
+erreurs_frequentes:
+- Ne pas regarder la légende d'une image ou d'un graphique avant de répondre.
+- Confondre la nature d'un document (par exemple prendre un tableau pour un texte).
+- Chercher la réponse sans avoir lu la question, ce qui fait perdre du temps.
+exemple:
+  enonce: On te donne une photographie légendée « Le cycle de l'eau, éditions Sciences Jeunesse, 2020 » qui montre
+    des flèches entre un nuage, la pluie et une rivière. Quelle est la nature de ce document et sa source ?
+  solution: C'est une image (un schéma) accompagné d'une légende ; sa source est « éditions Sciences Jeunesse, 2020
+    ».
+exercices:
+- enonce: 'On te donne un tableau de chiffres sur la population de plusieurs villes, avec en dessous « Source :
+    recensement 2023 ». Quelle est la nature du document ? Quelle est sa source ?'
+  indices:
+  - Un tableau range des informations en lignes et en colonnes.
+  - La source est souvent écrite en petit, sous ou à côté du document.
+  solution: La nature du document est un tableau de chiffres ; sa source est le recensement 2023.
+- enonce: Un document composite présente un texte sur les volcans et une photo d'éruption avec sa légende. Pourquoi
+    faut-il lire le texte ET regarder la photo pour bien comprendre ?
+  indices:
+  - Pense à ce qu'apporte chaque partie du document.
+  - Un document composite mélange plusieurs types d'informations.
+  solution: Le texte et la photo apportent chacun des informations différentes et complémentaires ; il faut les
+    mettre en lien pour comprendre le document composite en entier.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

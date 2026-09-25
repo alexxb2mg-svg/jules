@@ -1,0 +1,69 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-premieres-notions-de-probabilite
+declencheurs:
+- hasard
+- au hasard
+- chance
+- impossible
+- certain
+- probable
+- dé
+- pièce
+essentiel: 'Une expérience aléatoire, c''est une expérience dont on ne connaît pas le résultat à l''avance (lancer
+  un dé, une pièce, tirer une carte).
+
+  On peut lister toutes les issues possibles d''une expérience aléatoire simple, sans en oublier et sans en répéter.
+
+  Un évènement peut être impossible (il ne peut jamais arriver), certain (il arrive à coup sûr), ou seulement possible
+  (probable ou peu probable, sans certitude).
+
+  Quand deux issues ont exactement les mêmes chances de se réaliser, on dit qu''il y a équiprobabilité : par exemple
+  pile ou face avec une pièce non truquée.
+
+  Avoir deux issues possibles ne veut pas toujours dire qu''elles ont chacune une chance sur deux : il faut vérifier
+  si elles sont vraiment équiprobables.'
+methode:
+- Identifier l'expérience aléatoire et lister toutes les issues possibles.
+- Se demander si l'évènement étudié est impossible, certain ou seulement possible.
+- 'Comparer deux évènements : lequel est le plus probable ?'
+- Vérifier s'il y a équiprobabilité avant de dire « une chance sur deux ».
+vocabulaire:
+- terme: expérience aléatoire
+  definition: expérience dont on ne connaît pas le résultat à l'avance
+- terme: équiprobabilité
+  definition: situation où plusieurs issues ont exactement la même chance de se réaliser
+erreurs_frequentes:
+- Croire que deux issues possibles ont toujours chacune une chance sur deux.
+- Confondre « improbable » et « impossible ».
+- Oublier une issue possible en les listant.
+exemple:
+  enonce: On lance un dé à 6 faces. L'évènement « obtenir un nombre inférieur à 7 » est-il certain, possible ou
+    impossible ?
+  solution: 'Il est certain : toutes les faces du dé portent un nombre inférieur à 7.'
+exercices:
+- enonce: On lance un dé à 6 faces. Liste toutes les issues possibles.
+  indices:
+  - Un dé classique a six faces numérotées.
+  solution: Les issues possibles sont 1, 2, 3, 4, 5, 6.
+- enonce: On lance une pièce non truquée. Y a-t-il autant de chances d'obtenir pile que face ?
+  indices:
+  - Une pièce non truquée a deux faces équivalentes.
+  solution: 'Oui, il y a autant de chances (une chance sur deux) d''obtenir pile que face : c''est une situation
+    d''équiprobabilité.'
+- enonce: Dans un sac, il y a seulement des billes rouges. Quelle est la probabilité de tirer une bille bleue ?
+  indices:
+  - Aucune bille bleue n'est dans le sac.
+  solution: 'C''est impossible : il n''y a aucune bille bleue dans le sac.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 24-25
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

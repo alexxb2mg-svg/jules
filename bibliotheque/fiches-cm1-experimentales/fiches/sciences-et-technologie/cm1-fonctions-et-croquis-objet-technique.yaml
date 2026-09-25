@@ -1,0 +1,57 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-fonctions-et-croquis-objet-technique
+declencheurs:
+- à quoi sert cette partie
+- croquis d'un objet
+- composants d'un objet
+- fonction technique
+- dessiner un objet technique
+- sous-ensemble
+essentiel: 'Un objet technique est composé de différents composants, formes ou matériaux, chacun assurant une fonction
+  : on identifie ces fonctions et on associe les solutions technologiques aux fonctions techniques qu''elles assurent.
+
+  Par exemple, sur un stylo à bille, on liste et justifie l''utilité de chaque élément (bouchon pour protéger la
+  pointe, tube pour contenir l''encre...). Sur un casque de vélo, on liste les composants et justifie leur usage
+  (coque externe rigide, mousse intérieure, sangle...).
+
+  On représente graphiquement les éléments d''un objet technique à l''aide de croquis à main levée, on identifie
+  les sous-ensembles qui le constituent, et on décrit à l''aide d''un croquis son fonctionnement.'
+methode:
+- Observer chaque composant, forme ou matériau de l'objet technique.
+- Pour chaque élément, identifier la fonction qu'il assure et justifier son utilité.
+- Repérer les sous-ensembles qui composent l'objet.
+- Réaliser un croquis à main levée légendé qui représente l'objet et explique son fonctionnement.
+erreurs_frequentes:
+- Décrire un objet sans justifier l'utilité de chaque élément par sa fonction.
+- Confondre un composant isolé avec un sous-ensemble (plusieurs composants organisés ensemble).
+- Faire un croquis sans légende, qui ne permet pas d'expliquer le fonctionnement de l'objet.
+exemple:
+  enonce: Pourquoi un stylo à bille a-t-il un bouchon ?
+  solution: 'Le bouchon assure une fonction technique : il protège la pointe du stylo et permet de l''accrocher
+    à une feuille ou une poche.'
+exercices:
+- enonce: Sur un casque de vélo, quelle est la fonction de la mousse intérieure ?
+  indices:
+  - Pense à ce qui protège la tête en cas de choc.
+  solution: La mousse intérieure amortit les chocs et protège la tête à l'intérieur du casque.
+- enonce: Quelle est la différence entre un composant et un sous-ensemble d'un objet technique ?
+  indices:
+  - Un sous-ensemble regroupe-t-il un ou plusieurs composants ?
+  solution: Un composant est un élément isolé de l'objet, un sous-ensemble regroupe plusieurs composants qui fonctionnent
+    ensemble pour assurer une partie du fonctionnement de l'objet.
+- enonce: Que doit permettre le croquis légendé d'un objet technique réalisé par l'élève ?
+  indices:
+  - Que doit expliquer le croquis, en plus de dessiner l'objet ?
+  solution: Il doit décrire l'objet et expliquer son fonctionnement à l'oral ou à l'écrit.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

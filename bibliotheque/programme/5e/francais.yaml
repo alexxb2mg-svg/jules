@@ -1,7 +1,15 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 matiere: Français
 id: francais
 niveau: 5e
 annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
 textes_officiels:
   - intitule: "Programmes d'enseignement de français et de mathématiques du cycle des approfondissements (cycle 4) — Annexe 1, Programme de français pour le cycle 4"
     reference: "Arrêté du 18 février 2026, BO n° 10 du 5 mars 2026 (MENE2602912A)"

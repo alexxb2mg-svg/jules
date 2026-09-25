@@ -1,0 +1,74 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-materialite-qualite-couleur
+declencheurs:
+- mélanger des couleurs
+- peinture épaisse
+- couleur qui coule
+- couleur vive
+- petite touche de couleur
+- aplat de couleur
+- diluer
+- dilué
+- épaisse
+- transparent
+essentiel: 'La couleur n''est pas seulement une sensation qu''on voit : elle vient aussi d''une matière colorée
+  bien concrète, faite de pigments, de substances, de liants (qui font tenir le pigment) et parfois de siccatifs
+  (qui font sécher plus vite).
+
+  Il existe différents usages de la couleur qui produisent des effets différents : le jus (très dilué), le glacis
+  (fine couche transparente), l''empâtement (couche épaisse), l''aplat (couleur unie), la giclure (projetée).
+
+  La quantité de couleur (le format, la surface couverte) et la qualité de la couleur (la teinte, l''intensité,
+  les nuances, la lumière) sont liées : une petite touche de couleur vive n''a pas le même effet qu''un grand aplat
+  de la même couleur.
+
+  Les mélanges avec d''autres médiums et le support choisi changent aussi l''effet final de la couleur.'
+methode:
+- Choisir une couleur et un médium (peinture, encre, feutre).
+- 'Essayer plusieurs usages : une couche très diluée, une couche très épaisse, une petite touche.'
+- Observer comment la quantité de couleur change l'intensité ressentie.
+- Comparer les effets obtenus pour choisir l'usage le plus adapté à l'intention voulue.
+vocabulaire:
+- terme: aplat
+  definition: surface couverte d'une seule couleur unie et uniforme
+- terme: empâtement
+  definition: couche de peinture épaisse, appliquée en relief
+- terme: pigment
+  definition: matière colorée qui donne sa couleur à la peinture
+erreurs_frequentes:
+- Toujours utiliser la peinture de la même façon (même épaisseur, même dilution).
+- Penser que la couleur ne dépend que de la teinte, sans tenir compte de sa quantité ou de son épaisseur.
+- Ignorer que le support (papier, carton) change aussi l'effet de la couleur appliquée.
+exemple:
+  enonce: Tu appliques du bleu très dilué (un jus) sur une feuille, puis du bleu épais directement sorti du tube
+    (un empâtement) à côté. Les deux bleus donnent-ils la même impression ?
+  solution: 'Non : le jus de bleu très dilué donne une couleur pâle, transparente, presque une ombre ; l''empâtement
+    de bleu épais donne une couleur intense, en relief, qui attire davantage le regard. C''est la même teinte, mais
+    la qualité de la matière colorée change complètement l''effet.'
+exercices:
+- enonce: 'Avec une seule couleur de peinture, réalise sur une même feuille trois zones : un jus très dilué, un
+    aplat moyen, un empâtement épais. Observe les différences.'
+  indices:
+  - Ajoute beaucoup d'eau pour le jus, très peu pour l'empâtement.
+  - Laisse sécher avant de comparer les trois zones.
+  solution: 'Réussite si : les trois zones sont nettement différentes en intensité et en relief, et l''élève sait
+    les nommer (jus, aplat, empâtement).'
+- enonce: Peins une petite touche de couleur vive au centre d'une grande feuille blanche, puis peins un grand aplat
+    de la même couleur sur une autre feuille. Compare l'impression donnée par chacune.
+  indices:
+  - Utilise exactement la même couleur dans les deux cas.
+  - Pense à ce que « quantité » de couleur change dans la perception.
+  solution: 'Réussite si : l''élève constate et explique que la petite touche et le grand aplat de la même couleur
+    ne produisent pas la même impression.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 45
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

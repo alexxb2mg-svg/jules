@@ -1,0 +1,46 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ee-epeler-copier-ecrire-sous-dictee
+declencheurs:
+- copier des mots anglais
+- écrire sous la dictée en anglais
+- épeler un mot en anglais à l'écrit
+essentiel: 'Pour épeler, copier ou écrire sous la dictée en anglais, on recopie dans son cahier des éléments écrits
+  au tableau ou dans un texte court.
+
+  On retranscrit aussi quelques mots qu''on entend, à condition qu''ils soient déjà connus.
+
+  L''important est de bien recopier chaque lettre, sans en oublier.'
+methode:
+- Regarder le mot ou la phrase à copier en entier avant de commencer.
+- Copier lettre par lettre, en vérifiant chaque mot.
+- Relire ce qu'on a écrit en le comparant au modèle.
+- Pour un mot entendu, le répéter dans sa tête avant de l'écrire.
+vocabulaire: []
+erreurs_frequentes:
+- Oublier une lettre en copiant un mot anglais.
+- Confondre des lettres qui se ressemblent à l'écrit (b et d, par exemple).
+- Ne pas relire ce qu'on a copié.
+exemple:
+  enonce: Tu dois copier la phrase « In my schoolbag, there is a ruler, a blue pen. » depuis l'affichage de la classe.
+  solution: Tu recopies la phrase entière, lettre par lettre, en vérifiant chaque mot avec l'affichage.
+exercices:
+- enonce: 'Copie ce mot déjà connu sans erreur : « scissors ».'
+  indices:
+  - Vérifie chaque lettre avant d'écrire la suivante.
+  solution: scissors
+- enonce: 'Le professeur dicte lentement : « a pair of scissors ». Écris ce que tu entends.'
+  indices:
+  - Répète les mots dans ta tête avant de les écrire.
+  solution: a pair of scissors
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 21
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
