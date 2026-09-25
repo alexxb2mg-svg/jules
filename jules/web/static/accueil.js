@@ -138,19 +138,38 @@
     renfort: "Ensuite, pour ancrer",
   };
 
+  // Couleurs declarees dans les fiches (mots francais) -> couleurs CSS fixes. Inconnu -> bleu Jules.
+  const COULEURS = { bleu: "#1D4E89", orange: "#D9480F", vert: "#2B8A3E", rouge: "#C92A2A", violet: "#7048E8", gris: "#6B7686" };
+  function couleurCss(nom) {
+    return COULEURS[nom] || "#1D4E89";
+  }
+
   const CONSTRUCTEURS = {
     formule(bloc) {
       const div = creer("div", "bloc-formule");
       const expr = creer("div", "formule-expression");
-      expr.textContent = bloc.expression || "";
+      // "[a]" dans l'expression = terme colore (couleur declaree dans termes) ; le reste en texte brut.
+      const termesDecl = bloc.termes || {};
+      for (const morceau of String(bloc.expression || "").split(/(\[[^\]]+\])/)) {
+        const m = morceau.match(/^\[([^\]]+)\]$/);
+        if (m) {
+          const span = document.createElement("span");
+          span.textContent = m[1];
+          span.style.color = couleurCss((termesDecl[m[1]] || {}).couleur);
+          span.style.fontWeight = "700";
+          expr.appendChild(span);
+        } else if (morceau) {
+          expr.appendChild(document.createTextNode(morceau));
+        }
+      }
       div.appendChild(expr);
       const termes = creer("div", "formule-termes");
       for (const [nom, info] of Object.entries(bloc.termes || {})) {
         const ligne = document.createElement("div");
-        ligne.style.borderColor = info.couleur || "#1F4E8C";
+        ligne.style.borderColor = couleurCss(info.couleur);
         const b = document.createElement("b");
         b.textContent = nom + " ";
-        b.style.color = info.couleur || "#1F4E8C";
+        b.style.color = couleurCss(info.couleur);
         ligne.appendChild(b);
         ligne.appendChild(document.createTextNode(info.legende || ""));
         termes.appendChild(ligne);
@@ -163,15 +182,16 @@
       const div = creer("div", "bloc-carte");
       const svgns = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(svgns, "svg");
-      svg.setAttribute("viewBox", "0 0 860 260");
+      svg.setAttribute("viewBox", "0 0 860 230");
       svg.setAttribute("role", "img");
       svg.setAttribute("aria-label", "Carte des notions");
       const positions = new Map();
       const noeuds = bloc.noeuds || [];
-      const largeur = 860 / Math.max(noeuds.length, 1);
-      noeuds.forEach((n, i) => {
-        positions.set(n.id, { x: largeur * i + largeur / 2, y: n.principal ? 40 : 140 });
-      });
+      // Le noeud principal en haut au centre, les autres repartis sur la ligne du dessous.
+      const secondaires = noeuds.filter((n) => !n.principal);
+      const pas = 860 / Math.max(secondaires.length, 1);
+      noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 430, y: 40 }));
+      secondaires.forEach((n, i) => positions.set(n.id, { x: pas * i + pas / 2, y: 190 }));
       const g = (nom, attrs) => {
         const e = document.createElementNS(svgns, nom);
         for (const k in attrs) e.setAttribute(k, attrs[k]);
@@ -180,8 +200,13 @@
       for (const lien of bloc.liens || []) {
         const de = positions.get(lien.de), vers = positions.get(lien.vers);
         if (!de || !vers) continue;
-        svg.appendChild(g("line", { x1: de.x, y1: de.y + 24, x2: vers.x, y2: vers.y - 24, stroke: "#8A94A3", "stroke-width": 2 }));
-        const texte = g("text", { x: (de.x + vers.x) / 2, y: (de.y + vers.y) / 2, "font-size": 12, fill: "#6B7686", "text-anchor": "middle" });
+        // Meme ligne : on relie les bords lateraux ; sinon le bas du haut au haut du bas.
+        const memeLigne = de.y === vers.y;
+        const sens = vers.x > de.x ? 1 : -1;
+        const x1 = memeLigne ? de.x + sens * 100 : de.x, y1 = memeLigne ? de.y : de.y + 24;
+        const x2 = memeLigne ? vers.x - sens * 100 : vers.x, y2 = memeLigne ? vers.y : vers.y - 24;
+        svg.appendChild(g("line", { x1, y1, x2, y2, stroke: "#8A94A3", "stroke-width": 2 }));
+        const texte = g("text", { x: (x1 + x2) / 2, y: (y1 + y2) / 2 - 6, "font-size": 12, fill: "#4A5566", "text-anchor": "middle", "paint-order": "stroke", stroke: "#FFFFFF", "stroke-width": 4 });
         texte.textContent = lien.libelle || "";
         svg.appendChild(texte);
       }
@@ -369,6 +394,11 @@
     pile.querySelectorAll(".bulle-jules").forEach((b) => b.classList.add("ancienne"));
     pile.appendChild(bulle);
     while (pile.children.length > 2) pile.firstElementChild.remove();
+    // Une bulle ne reste pas indefiniment par-dessus le cours : elle s'efface d'elle-meme.
+    setTimeout(() => {
+      bulle.classList.add("ancienne");
+      setTimeout(() => bulle.remove(), 8000);
+    }, 12000);
   }
 
   function fermerRail() {
