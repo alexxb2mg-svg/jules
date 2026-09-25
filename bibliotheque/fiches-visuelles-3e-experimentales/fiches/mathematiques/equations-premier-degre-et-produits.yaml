@@ -1,0 +1,76 @@
+notion: equations-premier-degre-et-produits
+titre: "Résoudre des équations : premier degré, équations produit, x² = a"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Équation et inéquation/Définitions »"
+    url: "https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/D%C3%A9finitions&oldid=886171"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Équation et inéquation/Équation produit et équation quotient »"
+    url: "https://fr.wikiversity.org/w/index.php?title=%C3%89quation_et_in%C3%A9quation/%C3%89quation_produit_et_%C3%A9quation_quotient&oldid=977736"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "[a]x = [b]  →  x = b/a"
+    termes:
+      a: {couleur: orange, legende: "coefficient de x, doit être différent de 0"}
+      b: {couleur: vert, legende: "le nombre isolé de l'autre côté"}
+    jules: "Une équation du premier degré se ramène toujours à cette forme, puis on divise par a."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: equation, titre: "Équation", sous_titre: "trouver les solutions", principal: true}
+      - {id: premier-degre, titre: "Premier degré", sous_titre: "ax = b"}
+      - {id: produit, titre: "Équation produit", sous_titre: "A × B = 0"}
+      - {id: carre, titre: "x² = a", sous_titre: "0, 1 ou 2 solutions"}
+    liens:
+      - {de: equation, vers: premier-degre, libelle: "forme ax = b"}
+      - {de: equation, vers: produit, libelle: "un produit égal à 0"}
+      - {de: equation, vers: carre, libelle: "x au carré"}
+    jules: "Trois familles, trois méthodes : repère d'abord à quelle famille appartient l'équation."
+
+  - id: graphe
+    type: graphe
+    gabarit: equation-solutions
+    curseurs:
+      - {id: curseur-a, nom: a, min: -9, max: 9, pas: 1, depart: 9}
+    lectures:
+      - {si: "a > 0", texte: "a est positif : x² = a a deux solutions, √a et −√a."}
+      - {si: "a == 0", texte: "a = 0 : x² = a a une seule solution, 0."}
+      - {si: "a < 0", texte: "a est négatif : x² = a n'a aucune solution (un carré n'est jamais négatif)."}
+    jules: "Bouge le curseur vers les négatifs : les deux points de solution disparaissent."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Reconnaître la forme de l'équation (premier degré, produit, ou x² = a)."
+      - "Premier degré : regrouper les x d'un côté, les nombres de l'autre, puis diviser."
+      - "Équation produit : écrire « A = 0 ou B = 0 », puis résoudre chaque petite équation."
+      - "x² = a : regarder le signe de a pour savoir combien il y a de solutions."
+    jules: "La bonne méthode dépend entièrement de la forme reconnue à l'étape 1."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Appliquer la règle du produit nul à (x − 1)(x + 3) = 5."
+    pourquoi_faux: "La règle ne s'applique que si le produit est égal à 0, pas à un autre nombre."
+    bonne_idee: "Il faut d'abord développer et tout ramener d'un côté pour obtenir une équation égale à 0."
+    jules: "Vérifie toujours qu'un membre de l'équation est exactement 0 avant d'utiliser la règle du produit nul."
+
+  - id: exemple
+    type: exemple
+    situation: "Résoudre (3x − 9)(x + 2) = 0."
+    calcul: "Le membre de droite est 0 et la gauche est déjà un produit : 3x − 9 = 0 ou x + 2 = 0, donc x = 3 ou x = −2."
+    conclusion: "L'équation a deux solutions : x = 3 ou x = −2."
+    jules: "Résous chaque petite équation séparément, sans les mélanger."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Entraîne-toi à reconnaître la famille d'une équation avant même de chercher à la résoudre."

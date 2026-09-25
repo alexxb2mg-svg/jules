@@ -1,0 +1,75 @@
+notion: thales-triangles-semblables-trigonometrie
+titre: "Thalès, triangles semblables et trigonométrie"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Triangles et parallèles/Théorème de Thalès »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangles_et_parall%C3%A8les/Th%C3%A9or%C3%A8me_de_Thal%C3%A8s&oldid=983153"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Triangles semblables »"
+    url: "https://fr.vikidia.org/w/index.php?title=Triangles_semblables&oldid=1526272"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikiversité, « Triangle rectangle/Trigonométrie »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Trigonom%C3%A9trie&oldid=726623"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "AM/AB = AN/AC = MN/BC"
+    termes:
+      AM: {couleur: orange, legende: "sur la petite droite, du sommet A au point M"}
+      AB: {couleur: bleu, legende: "sur la grande droite, du sommet A au point B"}
+    jules: "Les trois rapports sont toujours égaux quand (MN) est parallèle à (BC)."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: thales, titre: "Configuration de Thalès", sous_titre: "(MN) parallèle à (BC)", principal: true}
+      - {id: semblables, titre: "Triangles semblables", sous_titre: "AMN et ABC"}
+      - {id: trigonometrie, titre: "Trigonométrie", sous_titre: "dans un triangle rectangle"}
+    liens:
+      - {de: thales, vers: semblables, libelle: "AMN et ABC le sont toujours"}
+      - {de: semblables, vers: trigonometrie, libelle: "cas particulier : angle droit"}
+    jules: "Dans une configuration de Thalès, les deux triangles sont toujours semblables."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-thales
+    curseurs:
+      - {id: curseur-t, nom: t, min: 0.3, max: 0.9, pas: 0.1, depart: 0.5}
+    lectures:
+      - {si: "t < 0.5", texte: "M est proche de A : le petit triangle AMN est très réduit par rapport à ABC."}
+      - {si: "t >= 0.5", texte: "M s'éloigne de A : le petit triangle se rapproche de la taille du grand."}
+    jules: "Bouge le curseur : (MN) reste parallèle à (BC), et les trois rapports restent égaux."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier que les deux droites sont sécantes en A et que (MN) est parallèle à (BC)."
+      - "Écrire l'égalité des trois rapports avec les lettres de la figure : AM/AB = AN/AC = MN/BC."
+      - "Remplacer les longueurs connues, puis calculer la longueur cherchée par produit en croix."
+    jules: "Écris toujours les trois rapports dans le même ordre : du sommet commun vers chaque côté."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Utiliser Thalès sans avoir justifié que les droites sont parallèles."
+    pourquoi_faux: "Le théorème ne s'applique que si le parallélisme est déjà connu ou donné dans l'énoncé."
+    bonne_idee: "Pour prouver un parallélisme (et non le supposer), il faut la réciproque de Thalès : comparer les deux rapports."
+    jules: "Théorème et réciproque ne servent pas à la même chose : théorème pour calculer, réciproque pour prouver."
+
+  - id: exemple
+    type: exemple
+    situation: "M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC). AM = 4 cm, AB = 10 cm, AN = 3 cm, BC = 7,5 cm."
+    calcul: "D'après Thalès : 4/10 = 3/AC = MN/7,5, donc AC = 3 × 10 / 4 = 7,5 cm et MN = 7,5 × 4 / 10 = 3 cm."
+    conclusion: "AC = 7,5 cm et MN = 3 cm."
+    jules: "Repère d'abord le rapport dont tu connais les deux termes : 4/10, c'est ton point de départ."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Entraîne-toi ensuite avec la configuration papillon, un peu plus difficile à repérer."

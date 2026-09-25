@@ -1,0 +1,75 @@
+notion: parallelisme-triangles-pythagore
+titre: "Le théorème de Pythagore"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Triangle rectangle/Théorèmes de Pythagore »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Triangle_rectangle/Th%C3%A9or%C3%A8mes_de_Pythagore&oldid=923259"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Théorème de Pythagore » (sections Théorème, Réciproque, Nature d'un triangle)"
+    url: "https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Pythagore"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "AB² = AC² + BC²"
+    termes:
+      AB: {couleur: rouge, legende: "l'hypoténuse : le côté opposé à l'angle droit, toujours le plus long"}
+      AC: {couleur: bleu, legende: "un des deux côtés de l'angle droit"}
+    jules: "Le carré du plus long côté (l'hypoténuse) égale la somme des carrés des deux autres."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: rectangle, titre: "Triangle rectangle en C", sous_titre: "angle droit en C", principal: true}
+      - {id: theoreme, titre: "Théorème", sous_titre: "calcule une longueur"}
+      - {id: reciproque, titre: "Réciproque", sous_titre: "prouve que l'angle est droit"}
+    liens:
+      - {de: rectangle, vers: theoreme, libelle: "si le triangle est déjà rectangle"}
+      - {de: rectangle, vers: reciproque, libelle: "pour prouver qu'il l'est"}
+    jules: "Théorème et réciproque ne partent pas de la même information : l'un suppose l'angle droit, l'autre le prouve."
+
+  - id: graphe
+    type: graphe
+    gabarit: triangle-rectangle
+    curseurs:
+      - {id: curseur-ac, nom: ac, min: 3, max: 12, pas: 1, depart: 6}
+      - {id: curseur-bc, nom: bc, min: 3, max: 12, pas: 1, depart: 8}
+    lectures:
+      - {si: "ac == 6", texte: "AC vaut 6 : compare-le à BC pour voir de quel côté penche le triangle."}
+      - {si: "ac > 8", texte: "AC est grand : l'hypoténuse penche davantage du côté de AC."}
+      - {si: "ac < 5", texte: "AC est petit : l'hypoténuse penche surtout du côté de BC."}
+    jules: "Bouge un côté et regarde l'hypoténuse recalculée : AB² = AC² + BC² à chaque fois."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'angle droit et donc l'hypoténuse (le côté opposé, le plus long)."
+      - "Écrire l'égalité de Pythagore avec les lettres du triangle."
+      - "Additionner (pour l'hypoténuse) ou soustraire (pour un côté de l'angle droit) les carrés connus."
+      - "Prendre la racine carrée : une longueur est toujours positive."
+    jules: "L'étape 4 est essentielle : on cherche une longueur, jamais un carré."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Utiliser AB² = AC² + BC² pour prouver qu'un triangle est rectangle."
+    pourquoi_faux: "Le théorème seul ne prouve rien : il part d'un triangle déjà connu comme rectangle."
+    bonne_idee: "Pour prouver qu'un triangle est rectangle, il faut la réciproque : comparer le carré du plus grand côté à la somme des carrés des deux autres."
+    jules: "Cette confusion est l'erreur la plus fréquente au brevet : théorème pour calculer, réciproque pour prouver."
+
+  - id: exemple
+    type: exemple
+    situation: "DEF est rectangle en E, avec DE = 9 cm et EF = 12 cm."
+    calcul: "DF² = DE² + EF² = 9² + 12² = 81 + 144 = 225, donc DF = √225."
+    conclusion: "DF = 15 cm."
+    jules: "225 est un carré parfait pratique à reconnaître : 15 × 15 = 225."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Entraîne-toi aussi avec la réciproque : elle se confond souvent avec le théorème."

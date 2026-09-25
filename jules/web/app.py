@@ -93,7 +93,13 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
 
     # --- pages -----------------------------------------------------------
     @app.get("/", response_class=HTMLResponse)
+    def page_accueil() -> HTMLResponse:
+        """« Mes fiches » : nouvel ecran d'accueil de l'eleve (fiches visuelles)."""
+        return HTMLResponse((STATIQUE / "accueil.html").read_text(encoding="utf-8"))
+
+    @app.get("/discuter", response_class=HTMLResponse)
     def page_eleve() -> HTMLResponse:
+        """L'ancien chat, deplace de / vers /discuter (« Discuter avec Jules »)."""
         return HTMLResponse((STATIQUE / "eleve.html").read_text(encoding="utf-8"))
 
     @app.get("/parent", response_class=HTMLResponse)

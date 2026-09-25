@@ -1,0 +1,76 @@
+notion: probabilites-experiences-simples
+titre: "Probabilités : expériences aléatoires simples"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Probabilités (mathématiques)/Déterminer la probabilité d'un événement »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/D%C3%A9terminer_la_probabilit%C3%A9_d%27un_%C3%A9v%C3%A9nement&oldid=985513"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Probabilités (mathématiques)/Notion d'expérience aléatoire et vocabulaire des probabilités »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Probabilit%C3%A9s_%28math%C3%A9matiques%29/Notion_d%27exp%C3%A9rience_al%C3%A9atoire_et_vocabulaire_des_probabilit%C3%A9s&oldid=921349"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "P(A) = [favorables] / [total]"
+    termes:
+      favorables: {couleur: vert, legende: "nombre d'issues qui réalisent l'événement A"}
+      total: {couleur: bleu, legende: "nombre total d'issues possibles (équiprobables)"}
+    jules: "Cette formule ne marche que si toutes les issues ont la même chance de se produire."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: experience, titre: "Expérience aléatoire", sous_titre: "issues possibles", principal: true}
+      - {id: evenement, titre: "Événement", sous_titre: "ensemble d'issues"}
+      - {id: contraire, titre: "Événement contraire", sous_titre: "P(non A) = 1 − P(A)"}
+      - {id: frequence, titre: "Fréquence observée", sous_titre: "se stabilise vers P(A)"}
+    liens:
+      - {de: experience, vers: evenement, libelle: "regroupe des issues"}
+      - {de: evenement, vers: contraire, libelle: "toutes les autres issues"}
+      - {de: experience, vers: frequence, libelle: "en répétant beaucoup"}
+    jules: "L'événement contraire et la fréquence observée sont deux idées à ne pas confondre."
+
+  - id: graphe
+    type: graphe
+    gabarit: probabilites-frequences
+    curseurs:
+      - {id: curseur-n, nom: n, min: 10, max: 500, pas: 10, depart: 50}
+    lectures:
+      - {si: "n < 50", texte: "Peu de lancers : la fréquence observée peut s'écarter beaucoup de la probabilité théorique."}
+      - {si: "n >= 50 && n < 200", texte: "Avec plus de lancers, la fréquence commence à se stabiliser."}
+      - {si: "n >= 200", texte: "Avec beaucoup de lancers, la fréquence observée se rapproche nettement de la probabilité théorique."}
+    jules: "Augmente le nombre de lancers : la courbe des fréquences se stabilise peu à peu."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lister ou compter toutes les issues possibles, et vérifier qu'elles sont équiprobables."
+      - "Compter les issues qui réalisent l'événement demandé."
+      - "Écrire P(A) = issues favorables / issues totales, sous forme de fraction simplifiée."
+      - "Vérifier que le résultat est bien compris entre 0 et 1."
+    jules: "L'étape 1 est la plus importante : une erreur de comptage fausse tout le reste."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Après 5 « pile » d'affilée, penser que « face » a plus de chances au prochain lancer."
+    pourquoi_faux: "Une pièce (ou un dé) n'a pas de mémoire : chaque lancer est indépendant des précédents."
+    bonne_idee: "La probabilité de « face » reste la même à chaque nouveau lancer, quel que soit l'historique."
+    jules: "C'est une idée fausse très répandue (parfois appelée « erreur du joueur »)."
+
+  - id: exemple
+    type: exemple
+    situation: "Un sac contient 5 boules rouges, 3 vertes et 2 bleues, indiscernables au toucher. On tire une boule au hasard."
+    calcul: "Il y a 5 + 3 + 2 = 10 boules en tout, dont 3 vertes, donc P(verte) = 3/10."
+    conclusion: "La probabilité de tirer une boule verte est 3/10."
+    jules: "Vérifie toujours que le total des boules correspond bien à la somme donnée dans l'énoncé."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Entraîne-toi avec l'événement contraire : il simplifie souvent beaucoup les calculs."

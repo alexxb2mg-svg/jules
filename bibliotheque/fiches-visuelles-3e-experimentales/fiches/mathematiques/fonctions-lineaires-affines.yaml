@@ -1,0 +1,76 @@
+notion: fonctions-lineaires-affines
+titre: "Fonctions linéaires et fonctions affines"
+matiere: mathematiques
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Fonctions affines et linéaires/Fonctions linéaires »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_lin%C3%A9aires&oldid=968959"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Fonctions affines et linéaires/Fonctions affines »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_affines&oldid=985043"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: formule
+    type: formule
+    expression: "f(x) = [a]x + [b]"
+    termes:
+      a: {couleur: orange, legende: "coefficient directeur : la pente de la droite"}
+      b: {couleur: vert, legende: "ordonnée à l'origine : où la droite coupe l'axe vertical"}
+    jules: "Retiens juste ça : a fait pencher la droite, b la fait monter ou descendre."
+
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: affine, titre: "Fonction affine", sous_titre: "f(x) = ax + b", principal: true}
+      - {id: lineaire, titre: "Fonction linéaire", sous_titre: "f(x) = ax"}
+      - {id: constante, titre: "Fonction constante", sous_titre: "f(x) = b"}
+    liens:
+      - {de: affine, vers: lineaire, libelle: "si b = 0"}
+      - {de: affine, vers: constante, libelle: "si a = 0"}
+    jules: "La fonction linéaire n'est qu'un cas particulier de la fonction affine."
+
+  - id: graphe
+    type: graphe
+    gabarit: droite-affine
+    curseurs:
+      - {id: curseur-a, nom: a, min: -3, max: 3, pas: 0.5, depart: 2}
+      - {id: curseur-b, nom: b, min: -4, max: 4, pas: 1, depart: 1}
+    lectures:
+      - {si: "a > 0", texte: "a est positif : la droite monte."}
+      - {si: "a < 0", texte: "a est négatif : la droite descend."}
+      - {si: "a == 0", texte: "a = 0 : la droite est horizontale (fonction constante)."}
+      - {si: "b == 0", texte: "b = 0 : la droite passe par l'origine, la fonction est linéaire."}
+    jules: "Bouge un seul curseur à la fois et regarde ce qui change."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Lire b : là où la droite coupe l'axe vertical."
+      - "Lire a : avancer de 1 vers la droite, compter de combien on monte (ou descend)."
+      - "Avec deux points A et B : a = (yB − yA) / (xB − xA), puis retrouver b en remplaçant un point dans y = ax + b."
+    jules: "L'étape 2 est celle qu'on oublie le plus : on avance de 1, pas de 2 ou de 3."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "f(x) = 3x + 2 est une fonction linéaire."
+    pourquoi_faux: "b = 2, différent de 0 : la droite ne passe pas par l'origine."
+    bonne_idee: "Toute fonction linéaire est affine (avec b = 0), mais une fonction affine n'est pas toujours linéaire."
+    jules: "Au brevet, cette confusion coûte souvent des points : demande-toi si la droite passe par (0 ; 0)."
+
+  - id: exemple
+    type: exemple
+    situation: "Un cinéma propose un abonnement à 20 € par an et la séance à 5 € ; sans abonnement, la séance coûte 8 €."
+    calcul: "Sans abonnement (linéaire) : S(n) = 8n. Avec abonnement (affine) : A(n) = 5n + 20. Pour 7 séances : S(7) = 56 €, A(7) = 55 €."
+    conclusion: "À partir de 7 séances, l'abonnement coûte moins cher."
+    jules: "Avant de lire la réponse : combien paierais-tu pour 10 séances dans chaque cas ?"
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🧠", titre: "Carte mentale à compléter", description: "outil à venir"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Quand tu te sens prêt, une carte mentale à compléter permettra de vérifier ce qui est acquis."
