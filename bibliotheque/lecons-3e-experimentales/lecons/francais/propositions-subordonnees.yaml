@@ -1,0 +1,119 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: propositions-subordonnees
+titre: "Les propositions subordonnées relatives"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Proposition relative »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Proposition_relative&oldid=233932611"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Pronom relatif en français »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Pronom_relatif_en_fran%C3%A7ais&oldid=218440136"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer une proposition subordonnée relative dans une phrase complexe."
+      - "Trouver l'antécédent du pronom relatif et la fonction de ce pronom dans sa subordonnée."
+      - "Distinguer une subordonnée relative d'une subordonnée conjonctive complétive."
+
+  - type: texte
+    titre: "Le principe"
+    contenu: >-
+      Une proposition subordonnée dépend d'une proposition principale et occupe, dans la phrase
+      complexe, une fonction grammaticale par rapport à celle-ci. La **subordonnée relative** est
+      introduite par un **pronom relatif** (qui, que, quoi, dont, où, lequel...) qui reprend un nom
+      ou un pronom appelé **antécédent** : toute la subordonnée relative est alors complément de
+      cet antécédent, comme une expansion du nom.
+
+  - type: texte
+    titre: "La fonction du pronom relatif, à l'intérieur de sa subordonnée"
+    contenu: >-
+      Le pronom relatif a lui-même une fonction **à l'intérieur** de sa propre subordonnée : sujet
+      (qui), COD (que), complément du nom (dont), complément circonstanciel de lieu ou de temps
+      (où), complément prépositionnel (lequel, à qui...). Pour la trouver, on peut remplacer
+      mentalement le pronom relatif par son antécédent dans la subordonnée.
+
+      Méthode : repérer le verbe conjugué de la subordonnée → chercher son sujet, son COD ou son
+      complément → si ce mot est le pronom relatif, remonter à l'antécédent juste avant lui pour
+      connaître son genre et son nombre.
+
+  - type: texte
+    titre: "Ne pas confondre avec la subordonnée conjonctive"
+    contenu: >-
+      Le mot « que » peut aussi être une **conjonction de subordination**, sans antécédent, qui
+      introduit une subordonnée complétive (COD du verbe de la principale) : « Je pense **que** tu
+      as raison. » Ici, « que » ne remplace rien : ce n'est pas une relative.
+
+  - type: exemple
+    enonce: "Analyser : « La ville où mes grands-parents sont nés a beaucoup changé. »"
+    etapes:
+      - "Proposition principale : « La ville... a beaucoup changé. »"
+      - "Subordonnée relative : « où mes grands-parents sont nés », introduite par « où »."
+      - "Antécédent de « où » : « la ville »."
+      - "Fonction de « où » dans la relative : complément circonstanciel de lieu de « sont nés » (nés où ? dans cette ville)."
+      - "Fonction de la relative entière : complément de l'antécédent « la ville »."
+
+  - type: exercice
+    enonce: "Dans « Le livre que j'ai emprunté à la bibliothèque parle d'un voyage. », quel mot est l'antécédent du pronom relatif « que » ?"
+    forme: reponse_courte
+    reponse: "le livre"
+    reponses_acceptees: ["livre"]
+    indices:
+      - "Le pronom relatif « que » reprend un nom déjà cité juste avant lui."
+      - "De quoi la phrase parle-t-elle, avant la virgule... enfin avant le pronom « que » ?"
+    explication: "« que » reprend « le livre » : c'est l'antécédent de la relative « que j'ai emprunté à la bibliothèque »."
+
+  - type: exercice
+    enonce: "Dans « Je connais bien l'auteur dont tu parles. », quelle est la fonction de « dont » dans la subordonnée relative ?"
+    forme: qcm
+    choix:
+      - "Sujet de « parles »"
+      - "Complément d'objet indirect de « parles » (tu parles de l'auteur)"
+      - "Complément du nom « auteur »"
+    reponse: 1
+    indices:
+      - "« dont » remplace un complément introduit par la préposition « de » : de qui parle-t-on ?"
+      - "Le verbe « parler » se construit-il avec « de quelque chose » ou « quelque chose » directement ?"
+    explication: "On parle « de l'auteur » : « dont » reprend ce complément introduit par « de » et a la fonction de COI de « parles »."
+
+  - type: exercice
+    enonce: "Dans « Je pense que tu as raison. », la subordonnée « que tu as raison » est-elle une proposition subordonnée relative ?"
+    forme: qcm
+    choix:
+      - "Oui, « que » est un pronom relatif qui reprend un antécédent."
+      - "Non, « que » est ici une conjonction de subordination, sans antécédent : c'est une subordonnée conjonctive complétive."
+    reponse: 1
+    indices:
+      - "Cherche un antécédent juste avant « que » : y en a-t-il un ?"
+      - "Que remplace « que » dans cette phrase ? Rien, ou un mot précis ?"
+    explication: "Il n'y a pas d'antécédent avant « que » : ce « que » est une conjonction de subordination, et la subordonnée est COD du verbe « pense », pas une relative."
+
+  - type: exercice
+    enonce: "Dans « Les amis à qui j'ai écrit n'ont pas répondu. », quelle est la fonction de la subordonnée « à qui j'ai écrit » par rapport à son antécédent « les amis » ?"
+    forme: reponse_courte
+    reponse: "complément du nom"
+    reponses_acceptees: ["complement du nom", "complement de l'antecedent", "complément de l'antécédent"]
+    indices:
+      - "Une subordonnée relative fonctionne, par rapport à son antécédent, comme une expansion du nom."
+      - "Que fait cette subordonnée pour le nom « les amis » : elle le complète, elle le remplace, ou elle est son sujet ?"
+    explication: "La relative « à qui j'ai écrit » apporte une précision sur « les amis » : elle est complément de l'antécédent (complément du nom)."
+
+  - type: question_ouverte
+    question: "Dans « La ville où mes grands-parents sont nés » et « La ville que j'ai visitée », le pronom relatif change (« où » puis « que »). Explique avec tes mots pourquoi ce choix dépend de la fonction du pronom dans sa subordonnée."
+    indices:
+      - "Regarde ce que fait chaque pronom relatif dans sa propre subordonnée : est-il complément de lieu, ou COD ?"
+      - "Essaie de remplacer chaque pronom relatif par son antécédent dans la subordonnée pour voir sa fonction."
+    criteres:
+      - "L'élève identifie que « où » a une fonction de complément circonstanciel de lieu dans la première subordonnée."
+      - "L'élève identifie que « que » a une fonction de COD dans la seconde subordonnée, et relie ce choix à la fonction, pas seulement au sens de « ville »."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la méthode que tu utilises pour
+      trouver l'antécédent d'un pronom relatif et sa fonction dans la subordonnée, puis donne
+      toi-même un exemple de phrase (différent de ceux de cette leçon) avec une subordonnée
+      relative introduite par « dont » ou par « où ».

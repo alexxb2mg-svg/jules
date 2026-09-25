@@ -1,0 +1,107 @@
+notion: laicite-etat-3e
+titre: "Séparation des pouvoirs et laïcité de l'État"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Laïcité »"
+    url: "https://fr.vikidia.org/wiki/La%C3%AFcit%C3%A9"
+    licence: CC-BY-SA-3.0
+  - titre: "Ministère de l'Intérieur, « La loi de 1905, pierre angulaire de la laïcité en France »"
+    url: "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/loi-de-1905-pierre-angulaire-de-laicite-en-france"
+    licence: "Licence Ouverte / Etalab"
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir la laïcité comme le principe de séparation entre la religion et l'État."
+      - "Savoir que la Constitution affirme que la République française est laïque."
+      - "Connaître la loi de 1905 de séparation des Églises et de l'État et ses conséquences concrètes."
+
+  - type: texte
+    titre: "La laïcité, un principe de séparation"
+    contenu: >-
+      La **laïcité** est le principe de séparation de la religion et de l'**État**. Elle permet à chacun de
+      choisir ou non une religion (**liberté de conscience**) et de la pratiquer librement (**liberté de culte**).
+      La laïcité empêche l'État de privilégier une religion par rapport à une autre : il n'y a pas de religion
+      officielle en France. L'État n'intervient pas dans l'organisation des religions, et les autorités
+      religieuses ne dictent pas les décisions des institutions de l'État — même si elles peuvent faire connaître
+      leur point de vue dans le débat public.
+
+  - type: texte
+    titre: "La loi de 1905 : une religion, une affaire privée"
+    contenu: >-
+      En France, il a fallu attendre le début du XXe siècle pour que ce principe devienne une loi : la **loi du 9
+      décembre 1905** de séparation des Églises et de l'État. Elle interdit à l'État de financer un culte (la
+      religion devient une affaire privée) et garantit à la fois la liberté de conscience et la liberté de culte.
+      Concrètement : l'État ne reconnaît que le mariage civil ; l'école publique ne tient pas compte de la
+      religion des élèves ; les agents de l'État n'affichent pas leurs croyances religieuses dans l'exercice de
+      leurs fonctions.
+
+  - type: texte
+    titre: "La laïcité aujourd'hui : Constitution et débat public"
+    contenu: >-
+      La **Constitution** de 1958 affirme dès son article 1er que la République française est laïque : l'autorité
+      politique est indépendante des autorités religieuses. Cela ne veut pas dire que la religion est interdite de
+      débat public : les autorités religieuses peuvent s'exprimer sur des sujets de société, mais dans les limites
+      fixées par la loi de 1905 (par exemple sans financement public de leur activité cultuelle). C'est un
+      équilibre entre neutralité de l'État et liberté d'expression de chacun.
+
+  - type: exemple
+    enonce: "Un maire peut-il financer avec l'argent de sa commune la construction d'un nouveau lieu de culte ?"
+    etapes:
+      - "La loi de 1905 interdit à l'État et aux collectivités publiques de financer un culte."
+      - "Un lieu de culte est un bâtiment lié à la pratique d'une religion : sa construction relève donc du financement d'un culte."
+      - "Un maire ne peut donc pas, en principe, financer avec l'argent public la construction d'un lieu de culte : ce financement doit venir des fidèles ou d'une association cultuelle."
+
+  - type: exercice
+    enonce: "En quelle année la loi de séparation des Églises et de l'État est-elle votée en France ?"
+    forme: nombre
+    reponse: 1905
+    tolerance: 0
+    indices:
+      - "C'est au tout début du XXe siècle, sous la Troisième République."
+      - "C'est l'année où Émile Combes puis Aristide Briand font aboutir la séparation, quelques années après 1900."
+    explication: "La loi de séparation des Églises et de l'État est votée le 9 décembre 1905."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le principe de séparation entre la religion et l'État ?"
+    forme: reponse_courte
+    reponse: "la laïcité"
+    reponses_acceptees:
+      - "laïcité"
+      - "le principe de laïcité"
+    indices:
+      - "Relis le titre et la première phrase du premier paragraphe de la leçon."
+      - "C'est le principe affirmé dès l'article 1er de la Constitution française."
+    explication: "Ce principe de séparation entre la religion et l'État s'appelle la laïcité."
+
+  - type: exercice
+    enonce: "Que garantit la loi de 1905 aux citoyens, en plus de séparer l'État des Églises ?"
+    forme: qcm
+    choix:
+      - "La liberté de conscience et la liberté de culte"
+      - "L'obligation de pratiquer une religion"
+      - "L'interdiction de toute religion en France"
+    reponse: 0
+    indices:
+      - "La loi protège la possibilité de croire ou de ne pas croire, et de pratiquer librement."
+      - "Ce n'est pas une loi contre les religions, mais une loi de séparation et de liberté."
+    explication: "La loi de 1905 garantit la liberté de conscience (croire ou non) et la liberté de culte (pratiquer librement sa religion), tout en interdisant à l'État de financer un culte."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : explique pourquoi on dit que la laïcité, en France, est à la fois une séparation
+      et une garantie de liberté. Appuie-toi sur la loi de 1905 et sur au moins un exemple concret.
+    indices:
+      - "Une phrase peut porter sur la séparation (l'État ne finance pas les cultes)."
+      - "Une autre phrase peut porter sur la liberté garantie (conscience, culte)."
+    criteres:
+      - "Le développement contient une phrase d'introduction qui définit la laïcité et une phrase de conclusion sur son équilibre entre séparation et liberté."
+      - "L'élève cite la loi de 1905 avec sa date et au moins une de ses conséquences concrètes (financement des cultes, mariage civil, neutralité des agents publics)."
+      - "L'élève relie explicitement la séparation Église-État à la garantie de liberté de conscience et de culte pour chaque citoyen."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens de cette leçon : ce qu'est la
+      laïcité, ce que dit la loi de 1905, et ce que dit la Constitution française à ce sujet.

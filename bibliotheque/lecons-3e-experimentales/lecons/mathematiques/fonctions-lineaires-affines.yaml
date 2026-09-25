@@ -1,0 +1,121 @@
+notion: fonctions-lineaires-affines
+titre: "Fonctions linéaires et fonctions affines"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikiversité, « Fonctions affines et linéaires/Fonctions linéaires »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_lin%C3%A9aires&oldid=968959"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikiversité, « Fonctions affines et linéaires/Fonctions affines »"
+    url: "https://fr.wikiversity.org/w/index.php?title=Fonctions_affines_et_lin%C3%A9aires/Fonctions_affines&oldid=985043"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître une fonction linéaire ou affine et identifier a et b."
+      - "Calculer l'image d'un nombre, et l'antécédent d'un nombre, par une fonction affine."
+      - "Retrouver l'expression d'une fonction affine à partir de deux points de sa droite."
+
+  - type: texte
+    titre: "Fonction affine, fonction linéaire"
+    contenu: >-
+      Une fonction **affine** s'écrit **f(x) = ax + b** : **a** est le coefficient directeur, **b**
+      est l'ordonnée à l'origine. Si **b = 0**, f(x) = ax est une fonction **linéaire** : elle
+      traduit une situation de proportionnalité (l'image est proportionnelle à x). Sa représentation
+      graphique est une droite qui passe par l'origine du repère.
+
+  - type: texte
+    titre: "La représentation graphique"
+    contenu: >-
+      La représentation graphique d'une fonction affine est une **droite**. Le nombre **b** se lit
+      là où la droite coupe l'axe des ordonnées (le point de coordonnées (0 ; b)). Le nombre **a**
+      indique ce qu'on ajoute à y quand x augmente de 1 : si **a > 0**, la droite **monte** ; si
+      **a < 0**, elle **descend**. Si une droite passe par deux points A(x₁ ; y₁) et B(x₂ ; y₂),
+      alors **a = (y₂ − y₁) / (x₂ − x₁)** ; on retrouve ensuite b en remplaçant les coordonnées d'un
+      des deux points dans y = ax + b.
+
+  - type: exemple
+    enonce: >-
+      Un cinéma propose un abonnement à 20 € par an et la séance à 5 € ; sans abonnement, la séance
+      coûte 8 €. Exprimer le coût pour n séances dans chaque cas, et dire quelle formule est une
+      fonction linéaire.
+    etapes:
+      - "Sans abonnement : le coût est proportionnel au nombre de séances, S(n) = 8n. C'est une fonction linéaire (pas de partie fixe)."
+      - "Avec abonnement : il y a une partie fixe (20 €) et une partie proportionnelle (5 € par séance), donc A(n) = 5n + 20."
+      - "A(n) = 5n + 20 est une fonction affine mais pas linéaire, car b = 20 est différent de 0."
+
+  - type: exercice
+    enonce: "Soit f(x) = −2x + 3. Calcule l'image de 4 par f."
+    forme: nombre
+    reponse: -5
+    tolerance: 0.01
+    indices:
+      - "Pour calculer une image, on remplace x par la valeur donnée dans l'expression de f(x)."
+      - "f(4) = −2 × 4 + 3"
+    explication: "f(4) = −2 × 4 + 3 = −8 + 3 = −5."
+
+  - type: exercice
+    enonce: "Soit f(x) = −2x + 3. Calcule l'antécédent de 0 par f (résous −2x + 3 = 0)."
+    forme: nombre
+    reponse: 1.5
+    tolerance: 0.01
+    indices:
+      - "Chercher un antécédent, c'est résoudre une équation : on pose f(x) = 0 et on résout."
+      - "−2x + 3 = 0, donc −2x = −3."
+    explication: "−2x + 3 = 0 donne −2x = −3, donc x = 3/2 = 1,5."
+
+  - type: exercice
+    enonce: "Une droite passe par A(1 ; 1) et B(3 ; 7). Calcule le coefficient directeur a de cette droite."
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "a = (différence des ordonnées) / (différence des abscisses), dans le même ordre pour les deux points."
+      - "a = (y_B − y_A) / (x_B − x_A) : remplace par les coordonnées de A et de B."
+    explication: "a = (7 − 1) / (3 − 1) = 6 / 2 = 3."
+
+  - type: exercice
+    enonce: >-
+      Une droite passe par A(1 ; 1) et B(3 ; 7), et son coefficient directeur est a = 3. Calcule
+      l'ordonnée à l'origine b de cette droite (remplace les coordonnées de A dans y = 3x + b).
+    forme: nombre
+    reponse: -2
+    tolerance: 0.01
+    indices:
+      - "Remplace x et y par les coordonnées du point A dans l'équation y = 3x + b, puis résous pour trouver b."
+      - "1 = 3 × 1 + b"
+    explication: "1 = 3 × 1 + b, donc 1 = 3 + b, donc b = 1 − 3 = −2. La fonction est f(x) = 3x − 2."
+
+  - type: exercice
+    enonce: >-
+      Avec les tarifs du cinéma de l'exemple (S(n) = 8n sans abonnement, A(n) = 5n + 20 avec
+      abonnement), quelle formule est la moins chère pour 7 séances : l'abonnement ou sans
+      abonnement ?
+    forme: qcm
+    choix:
+      - "L'abonnement (A)"
+      - "Sans abonnement (S)"
+      - "Les deux coûtent exactement le même prix"
+    reponse: 0
+    indices:
+      - "Calcule A(7) et S(7) séparément, puis compare les deux résultats."
+    explication: "A(7) = 5 × 7 + 20 = 55 €. S(7) = 8 × 7 = 56 €. 55 € est moins cher que 56 €, donc l'abonnement est la formule la moins chère pour 7 séances."
+
+  - type: question_ouverte
+    question: >-
+      Une fonction affine f(x) = ax + b a un coefficient directeur a négatif. Que peux-tu dire de
+      l'allure de sa droite, et pourquoi ? Explique avec tes mots.
+    indices:
+      - "Pense à ce que représente a : ce qu'on ajoute à y quand x augmente de 1."
+      - "Si on ajoute un nombre négatif à y à chaque fois que x augmente, que fait y ?"
+    criteres:
+      - "L'élève relie le signe de a au sens de variation de la droite (a négatif → la droite descend)."
+      - "L'élève explique le lien avec le fait que y diminue quand x augmente, sans juste réciter la règle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une fonction
+      linéaire et une fonction affine, et comment tu retrouves a et b quand tu connais deux points
+      de la droite.
