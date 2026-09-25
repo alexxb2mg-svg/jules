@@ -17,6 +17,8 @@ Ce fichier ne fait que lire et verifier : il ne parle ni au modele d'IA ni a l'i
 
 from __future__ import annotations
 
+import copy
+import hashlib
 import logging
 import re
 import unicodedata
@@ -25,6 +27,15 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+
+# Lecteur YAML en C (libyaml) quand il est installe : 10 a 20 fois plus rapide que le lecteur
+# pur Python, meme resultat (chargement sur, sans objet Python arbitraire).
+_Lecteur = getattr(yaml, "CSafeLoader", yaml.SafeLoader)
+
+# Memoire des fichiers deja lus, indexee par l'empreinte du CONTENU (pas par le chemin) : un fichier
+# modifie est relu, une copie identique ailleurs ne l'est pas. On rend toujours une copie profonde,
+# pour qu'un appelant qui modifie le dictionnaire ne corrompe pas la memoire.
+_DEJA_LUS: dict[str, Any] = {}
 
 journal = logging.getLogger("jules.bibliotheques")
 
@@ -173,7 +184,11 @@ class Catalogue:
 def _lire_yaml(chemin: Path) -> dict[str, Any]:
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurBibliotheque(f"{chemin.name} : fichier trop gros")
-    brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    texte = chemin.read_text(encoding="utf-8")
+    cle = hashlib.sha256(texte.encode("utf-8")).hexdigest()
+    if cle not in _DEJA_LUS:
+        _DEJA_LUS[cle] = yaml.load(texte, Loader=_Lecteur) or {}  # noqa: S506 - CSafeLoader est un lecteur sur
+    brut = copy.deepcopy(_DEJA_LUS[cle])
     if not isinstance(brut, dict):
         raise ErreurBibliotheque(f"{chemin.name} : un objet YAML est attendu")
     return brut
