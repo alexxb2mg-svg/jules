@@ -255,8 +255,8 @@ def test_valider_avec_un_contenu_conforme_passe_valide_et_ecrit_le_suivi(tuteur)
     _remplir_fiche_conforme(module, support.id)
     resultat = module.valider(support.id)
     assert resultat.statut == "valide"
-    evenements = tuteur.stockage.evenements("suivi")
-    ev = next(e for e in evenements if e["donnees"].get("statut") == "support_cree")
+    evenements = tuteur.stockage.evenements("studio")
+    ev = next(e for e in evenements if e["donnees"].get("action") == "support_cree")
     assert ev["donnees"]["matiere"] == NOM_MATIERE
     assert ev["donnees"]["notion"] == TITRE_NOTION
 
@@ -296,7 +296,7 @@ def test_devalider_repasse_en_brouillon_et_ecrit_le_suivi(tuteur):
     module.valider(support.id)
     resultat = module.devalider(support.id)
     assert resultat.statut == "brouillon"
-    ev = next(e for e in tuteur.stockage.evenements("suivi") if e["donnees"].get("statut") == "support_devalide")
+    ev = next(e for e in tuteur.stockage.evenements("studio") if e["donnees"].get("action") == "support_devalide")
     assert ev["donnees"]["notion"] == TITRE_NOTION
     # redevient modifiable
     module.ecrire(support.id, ["titre"], "Retour au travail")
@@ -589,3 +589,24 @@ def test_ecriture_n_expose_jamais_les_champs_de_la_lecon(tuteur):
     texte = json.dumps(support.public(), ensure_ascii=False)
     for interdit in ("25 est 5", "5 × 5", "évoque que le carré", "tolerance", "criteres"):
         assert interdit not in texte
+
+
+def test_valider_puis_devalider_ne_change_pas_l_etat_de_la_notion(tuteur):
+    """Regression : le studio ne doit pas ecraser le dernier statut de suivi (compris, bloque...)
+    que lisent memoire, rapport, epreuve et cours."""
+    from datetime import date
+
+    from jules.modules.memoire import bilan_notions
+
+    tuteur.stockage.ajouter_evenement(
+        "suivi", {"matiere": NOM_MATIERE, "notion": TITRE_NOTION, "statut": "compris", "resume": "ok"}
+    )
+    module = tuteur.module("studio")
+    support = module.creer(NOTION, "fiche")
+    _remplir_fiche_conforme(module, support.id)
+    module.valider(support.id)
+    module.devalider(support.id)
+    suivis = tuteur.stockage.evenements("suivi", limite=400)
+    assert all(e["donnees"].get("statut") == "compris" for e in suivis)
+    bilan = bilan_notions(suivis, 30, date.today())
+    assert f"{NOM_MATIERE} : {TITRE_NOTION}" in bilan["compris"]

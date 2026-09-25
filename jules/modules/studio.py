@@ -124,14 +124,18 @@ class Brique(Module):
             raise RuntimeError("Le module 'studio' nécessite le module 'cours'")
         return module
 
-    def _titre_notion(self, notion_id: str) -> str:
+    def _notion(self, notion_id: str) -> Any:
         module = self.tuteur.module("notions")
-        notion = module.catalogue.notion(notion_id) if module else None
+        if module is None:
+            return None
+        return module.catalogue.notion(notion_id)  # type: ignore[attr-defined]  # module 'notions' expose 'catalogue'
+
+    def _titre_notion(self, notion_id: str) -> str:
+        notion = self._notion(notion_id)
         return notion.titre if notion else notion_id
 
     def _nom_matiere(self, notion_id: str) -> str:
-        module = self.tuteur.module("notions")
-        notion = module.catalogue.notion(notion_id) if module else None
+        notion = self._notion(notion_id)
         return notion.nom_matiere if notion else ""
 
     def _aujourdhui(self) -> date:
@@ -241,7 +245,8 @@ class Brique(Module):
         if list(chemin) == ["titre"]:
             support.titre = valeur
         else:
-            nom_liste, index, champ = chemin[0], chemin[1], chemin[2]
+            # valider_champ a deja verifie la forme du chemin : [liste, index, champ]
+            nom_liste, index, champ = str(chemin[0]), int(chemin[1]), str(chemin[2])
             elements = support.contenu.setdefault(nom_liste, [])
             if index == len(elements):
                 elements.append(_ELEMENTS_DEFAUT[support.type](_nouvel_id()[:8]))
@@ -307,12 +312,15 @@ class Brique(Module):
 
     # --- valider / devalider ------------------------------------------------------
     def _evenement_suivi(self, support: Support, statut: str, resume: str, conv_id: str) -> None:
+        # Type d'evenement propre au studio, PAS "suivi" : memoire, rapport, epreuve et cours prennent
+        # le dernier evenement "suivi" d'une notion comme son etat (compris, bloque...). Un support
+        # valide ou devalide ne dit rien de la comprehension : il ne doit pas l'ecraser.
         self.tuteur.stockage.ajouter_evenement(
-            "suivi",
+            "studio",
             {
                 "matiere": self._nom_matiere(support.notion),
                 "notion": self._titre_notion(support.notion),
-                "statut": statut,
+                "action": statut,
                 "resume": resume,
                 "titre": support.titre,
             },
@@ -413,7 +421,7 @@ class Brique(Module):
 
     def infos_interface(self) -> dict[str, Any]:
         cours = self.tuteur.module("cours")
-        return {"studio": bool(cours and cours.lecons)}
+        return {"studio": bool(cours and cours.lecons)}  # type: ignore[attr-defined]  # module 'cours' expose 'lecons'
 
     # --- routes eleve ---------------------------------------------------------
     def routes_eleve(self) -> APIRouter:
