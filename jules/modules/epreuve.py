@@ -112,6 +112,11 @@ class Brique(Module):
         derniere = self.tuteur.stockage.lire_etat(ESPACE, "derniere") or {}
         if derniere.get("jour") == self.aujourdhui().isoformat():
             return []  # une epreuve par jour au plus
+        modele = self.tuteur.module("modele_eleve")
+        if modele is not None and hasattr(modele, "notions_a_reviser"):
+            # modele de l'eleve actif : l'epreuve arrive quand la retention predite passe sous la cible (§5.4)
+            choix: list[dict[str, str]] = modele.notions_a_reviser(int(self.reglages.get("notions_max", 3)))
+            return choix
         return candidates(
             self.tuteur.stockage.evenements("suivi", limite=2000),
             self.aujourdhui(),

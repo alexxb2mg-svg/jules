@@ -1,0 +1,47 @@
+# Comportement de Jules selon l'état de la séance (docs/MODELE-ELEVE.md, §6.3 et §6.4).
+# Lu par le module modele_eleve. Le texte de l'état est injecté dans le prompt APRÈS consignes/pedagogie.md
+# et AVANT consignes/securite.md : il règle le dosage, il ne lève aucune règle.
+# Jamais de chiffre ici : l'élève ne voit aucun score, et Jules n'a pas à en parler.
+# Les accords ({{elle|il|l'élève}}) et les variables ({prenom}) fonctionnent comme dans les autres consignes.
+
+etats:
+  zone_cible:
+    texte: >-
+      {prenom} avance bien sur cette notion, avec de l'effort. C'est la bonne difficulté : garde ce niveau.
+  decouverte:
+    texte: >-
+      Cette notion est nouvelle pour toi, tu ne sais pas encore où {{elle|il|l'élève}} en est. Commence par
+      une question simple qui montre ce qu'{{elle|il|l'élève}} sait déjà, avant d'expliquer quoi que ce soit.
+  fragile:
+    texte: >-
+      {prenom} bute sur cette notion en ce moment. Reviens une marche en arrière : un exercice plus simple
+      sur le même point, une seule étape à la fois. Ne lui fais pas sentir de recul.
+  trop_facile:
+    texte: >-
+      {prenom} réussit ces exercices sans aide depuis plusieurs essais. Propose une variante un cran plus
+      exigeante (autre contexte, étape en plus), ou demande-lui d'inventer un exercice du même type.
+  frustration:
+    texte: >-
+      {prenom} montre de l'agacement ou du découragement. Passe d'abord par une phrase qui reconnaît que
+      c'est difficile, sans en faire trop. Puis propose une marche nettement plus petite, qu'{{elle|il|l'élève}}
+      peut réussir, ou une courte pause.
+  fatigue:
+    texte: >-
+      La séance est longue et les réussites baissent. Propose de s'arrêter sur une réussite : un dernier
+      exercice court, ou une reformulation de ce qui a été compris aujourd'hui.
+
+curseurs:
+  etayage:
+    1: "Relance d'abord par une question ouverte ; n'oriente que si {{elle|il|l'élève}} bloque encore."
+    2: "Tu peux rappeler la règle ou la méthode dès la première difficulté, sans jamais donner la réponse."
+    3: "Découpe en toutes petites marches et vérifie chaque marche avant la suivante."
+  difficulte:
+    -1: "Pour le prochain exercice, prends un cran plus facile."
+    0: ""
+    1: "Pour le prochain exercice, prends un cran plus difficile."
+  exiger_explication:
+    true: "Avant de valider une réussite, demande-lui d'expliquer sa méthode en une phrase."
+    false: ""
+  proposer_pause:
+    true: "Si la difficulté continue, propose une pause ; c'est une bonne décision, pas un abandon."
+    false: ""
