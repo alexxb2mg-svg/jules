@@ -107,6 +107,31 @@ blocs:
 
 La conversation actuelle ne disparaît pas : elle reste disponible pour l'aide aux devoirs avec photo, qui est un usage à part entière.
 
+## 2 bis. Des fiches visuelles, sans appel à l'IA
+
+**Construite (étape 2 bis).** L'écran d'accueil de l'élève (`/`, « Mes fiches ») affiche, pour
+chaque notion qui en a une, une fiche visuelle en 8 types de blocs (`attendus`, `formule`,
+`carte`, `graphe` interactif, `methode`, `piege`, `exemple`, `renfort`), un rail à gauche pour
+naviguer entre les notions, et Jules qui commente en bulles préécrites (jamais générées) quand
+l'élève clique sur un bloc. Le format complet est décrit dans
+[`bibliotheque/SCHEMA-FICHE-VISUELLE.md`](../bibliotheque/SCHEMA-FICHE-VISUELLE.md) ;
+`jules/fiches_visuelles.py` lit et vérifie chaque fiche (source et licence obligatoires, gabarit
+de figure connu, conditions `si` analysées sans jamais d'`eval()`).
+
+Contrairement au chat et à la leçon en blocs, cette page ne fait **aucun appel au modèle d'IA** :
+tout le contenu est préécrit, relu, et rendu par du code déterministe (cadrage
+`jules_cadrage_interface.md`). Le chat existant est déplacé sur `/discuter` (« Discuter avec
+Jules ») ; ouvrir la petite fenêtre de chat depuis une fiche y renvoie avec la notion de la fiche
+déjà choisie.
+
+Cinq fiches expérimentales de mathématiques 3e existent dans
+`bibliotheque/fiches-visuelles-3e-experimentales/` (fonctions linéaires et affines, Thalès et
+triangles semblables, théorème de Pythagore, équations, probabilités), marquées `a_relire`.
+
+**Reste à faire sur cet axe** : les autres matières et niveaux, plus de gabarits de figures, et
+brancher plus finement la fenêtre de chat flottante à la conversation en cours si l'élève y est
+déjà.
+
 ## 4. La sécurité des outils
 
 Jules est utilisé par des enfants. Des outils écrits par n'importe qui ne peuvent y entrer qu'avec des garanties fortes. Ce protocole est une proposition à durcir ensemble **avant** d'accepter le premier outil extérieur.
@@ -170,6 +195,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, programme et fiches de 3e ; reste le chargement selon l'âge |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, trois leçons expérimentales `a_relire`) ; reste le bloc `outil` et le studio |
+| 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`, cinq fiches expérimentales `a_relire` en mathématiques 3e) ; reste les autres matières et niveaux |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
 | 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |

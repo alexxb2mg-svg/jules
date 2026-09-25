@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jules - Mes fiches</title>
+  <link rel="icon" href="/static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/static/icone-192.png">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <meta name="theme-color" content="#1F4E8C">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/accueil.css">
+</head>
+<body>
+  <div id="porte" class="porte cache">
+    <img src="/api/persona/avatar" alt="">
+    <h1>Jules</h1>
+    <p>Tape ton code secret pour commencer</p>
+    <form id="porte-form" class="rangee colonne">
+      <input id="porte-code" type="password" autocomplete="current-password" inputmode="text" aria-label="Code">
+      <button class="bouton" type="submit">Entrer</button>
+    </form>
+    <div id="porte-erreur" class="erreur"></div>
+  </div>
+
+  <div id="contenu" class="accueil-appli">
+    <button type="button" class="bouton-panneau" id="menu-rail" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="rail">☰ <span>Menu</span></button>
+
+    <nav id="rail" class="rail" aria-label="Sections de Jules">
+      <div class="marque"><img id="av-marque" src="/api/persona/avatar" alt=""><span id="nom-persona">Jules</span></div>
+      <a href="/" class="rail-lien actif">📘 Mes fiches</a>
+      <a href="/discuter" class="rail-lien">💬 Discuter avec Jules</a>
+      <a href="/studio" class="rail-lien">🛠️ M'entraîner</a>
+      <a href="/parent" class="rail-lien">📈 Mon suivi</a>
+      <div id="rail-notions" class="rail-notions" aria-live="polite"></div>
+    </nav>
+
+    <main class="fiche-zone">
+      <div id="fiche-vide" class="fiche-vide">
+        <p>👈 Choisis une notion dans le menu pour ouvrir sa fiche.</p>
+      </div>
+      <div id="fiche-attente" class="attente-ligne cache">Chargement…</div>
+      <div id="fiche-erreur" class="erreur-page cache" role="alert"></div>
+
+      <article id="fiche" class="fiche cache">
+        <p id="fiche-fil" class="fiche-fil"></p>
+        <h1 id="fiche-titre"></h1>
+        <p id="fiche-avertissement" class="avertissement cache"></p>
+        <div id="fiche-attendus" class="fiche-attendus"></div>
+        <div id="fiche-blocs" class="fiche-blocs"></div>
+        <p id="fiche-sources" class="fiche-sources"></p>
+      </article>
+    </main>
+  </div>
+
+  <!-- Jules : bulles flottantes translucides, en bas a droite -->
+  <aside class="jules-bulles" id="jules-bulles" aria-live="polite">
+    <div id="bulles" class="bulles-pile"></div>
+    <div class="jules-pied">
+      <button type="button" class="avatar-jules" id="avatar-jules" title="Jules : ouvrir la discussion">J</button>
+    </div>
+  </aside>
+
+  <section class="chat-flottant" id="chat-flottant" aria-label="Discussion avec Jules">
+    <div class="chat-flottant-tete">
+      <span><strong id="chat-flottant-nom">Jules</strong><span id="chat-flottant-notion"></span></span>
+      <span class="chat-flottant-actions">
+        <button type="button" class="rond" id="chat-flottant-reglages" title="Paramètres (à venir)">⚙</button>
+        <button type="button" class="rond" id="chat-flottant-reduire" title="Réduire">—</button>
+      </span>
+    </div>
+    <div class="chat-flottant-corps" id="chat-flottant-corps">
+      <p>Pour discuter avec Jules à propos de cette notion, ouvre « Discuter avec Jules ».</p>
+      <a class="bouton" id="chat-flottant-lien" href="/discuter">💬 Discuter avec Jules</a>
+    </div>
+  </section>
+
+  <script src="/static/commun.js"></script>
+  <script src="/static/gabarits/droite-affine.js"></script>
+  <script src="/static/gabarits/triangle-thales.js"></script>
+  <script src="/static/gabarits/triangle-rectangle.js"></script>
+  <script src="/static/gabarits/equation-solutions.js"></script>
+  <script src="/static/gabarits/probabilites-frequences.js"></script>
+  <script src="/static/accueil.js"></script>
+</body>
+</html>

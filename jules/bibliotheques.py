@@ -39,7 +39,13 @@ _DEJA_LUS: dict[str, Any] = {}
 
 journal = logging.getLogger("jules.bibliotheques")
 
-TYPES = ("referentiel", "fiches", "direction", "lecons")  # lecons : voir jules/lecons.py
+TYPES = (
+    "referentiel",
+    "fiches",
+    "direction",
+    "lecons",  # lecons : voir jules/lecons.py
+    "fiches-visuelles",  # fiches visuelles : voir jules/fiches_visuelles.py
+)
 STATUTS = ("experimentale", "certifiee", "enseignant", "exemple")
 # Licences qui autorisent a reutiliser, modifier et redistribuer (identifiants SPDX quand ils existent).
 LICENCES_LIBRES = (

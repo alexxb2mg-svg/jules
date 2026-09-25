@@ -18,6 +18,7 @@ def test_briques_chargees_depuis_la_config(tuteur):
     assert [m.id for m in tuteur.modules] == [
         "modes",
         "notions",
+        "fiches_visuelles",
         "cours",
         "studio",
         "memoire",

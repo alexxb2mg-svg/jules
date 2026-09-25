@@ -325,6 +325,12 @@
     document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") fermerChoix(); });
     ecranAccueil();
     chargerHistorique();
+    // Arrivee depuis « Mes fiches » avec ?notion=... : ouvre une discussion deja rattachee a la notion.
+    const notionDemandee = new URLSearchParams(location.search).get("notion");
+    if (notionDemandee) {
+      await demarrer("aide-devoirs");
+      try { await choisirNotion(notionDemandee); } catch (_) { /* notion inconnue : on continue sans */ }
+    }
   }
 
   demarrage().catch((err) => { document.body.innerHTML = `<p class="erreur-page">Erreur : ${MS.echapper(err.message)}</p>`; });
