@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jules - studio</title>
+  <link rel="icon" href="/static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/static/icone-192.png">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <link rel="manifest" href="/static/manifest.webmanifest">
+  <meta name="theme-color" content="#1F4E8C">
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/studio.css">
+</head>
+<body>
+  <div id="porte" class="porte cache">
+    <img src="/api/persona/avatar" alt="">
+    <h1>Jules</h1>
+    <p>Tape ton code secret pour commencer</p>
+    <form id="porte-form" class="rangee colonne">
+      <input id="porte-code" type="password" autocomplete="current-password" inputmode="text" aria-label="Code">
+      <button class="bouton" type="submit">Entrer</button>
+    </form>
+    <div id="porte-erreur" class="erreur"></div>
+  </div>
+
+  <div id="contenu" class="studio-appli">
+    <header class="studio-entete">
+      <button type="button" class="bouton-panneau" id="menu-notions" aria-label="Ouvrir mes supports" aria-expanded="false" aria-controls="notions">☰ <span>Mes supports</span></button>
+      <a class="studio-marque" href="/">
+        <img src="/api/persona/avatar" alt="">
+        <span id="nom-persona">Jules</span>
+      </a>
+      <button type="button" class="bouton-panneau" id="menu-jules" aria-label="Ouvrir les retours de Jules" aria-expanded="false" aria-controls="panneau-jules">💬 <span>Retours</span></button>
+    </header>
+
+    <div class="studio-corps">
+      <aside id="notions" class="notions" aria-label="Mes supports">
+        <div class="panneau-entete">
+          <strong>Mes supports</strong>
+          <button type="button" class="fermer" id="notions-fermer" aria-label="Fermer">✕</button>
+        </div>
+        <label for="select-matiere">Matière</label>
+        <select id="select-matiere"></select>
+        <div id="notions-liste" class="notions-liste" aria-live="polite"></div>
+        <div id="notions-attente" class="attente-ligne cache" aria-live="polite">Chargement…</div>
+      </aside>
+
+      <main class="support-zone">
+        <div id="accueil-studio" class="support-vide">
+          <p>🛠️ Choisis une notion puis un support dans « Mes supports » pour commencer, ou crées-en un nouveau.</p>
+          <button type="button" class="bouton cache" id="bouton-revision">🗂️ Réviser mes cartes</button>
+        </div>
+
+        <div id="support" class="support cache">
+          <div class="support-entete">
+            <h1 id="support-titre"></h1>
+            <p id="support-meta" class="support-meta"></p>
+          </div>
+          <p id="support-avertissement" class="avertissement cache"></p>
+
+          <div id="trame" class="trame"></div>
+
+          <p id="support-aide-validation" class="avertissement cache"></p>
+
+          <div class="bloc-actions">
+            <button type="button" class="bouton secondaire" id="bouton-relire">Relire</button>
+            <button type="button" class="bouton" id="bouton-valider">Valider</button>
+            <button type="button" class="bouton secondaire cache" id="bouton-devalider">Dévalider</button>
+            <button type="button" class="bouton secondaire cache" id="bouton-supprimer">Supprimer</button>
+          </div>
+        </div>
+
+        <div id="support-erreur" class="erreur-page cache" role="alert"></div>
+      </main>
+
+      <aside id="panneau-jules" class="panneau-jules" aria-label="Retours de Jules">
+        <div class="panneau-entete">
+          <img src="/api/persona/avatar" alt="">
+          <strong id="jules-nom">Jules</strong>
+          <button type="button" class="fermer" id="jules-fermer" aria-label="Fermer le panneau de Jules">✕</button>
+        </div>
+        <div id="retours-fil" class="jules-fil" aria-live="polite"></div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="choix-type" class="voile cache" role="dialog" aria-modal="true" aria-labelledby="choix-type-titre">
+    <div class="panneau">
+      <div class="panneau-entete">
+        <strong id="choix-type-titre">Quel type de support ?</strong>
+        <button type="button" class="fermer" id="choix-type-fermer" aria-label="Fermer">✕</button>
+      </div>
+      <div id="choix-type-liste" class="choix-type-liste"></div>
+    </div>
+  </div>
+
+  <div id="confirmation-devalidation" class="voile cache" role="dialog" aria-modal="true" aria-labelledby="confirmation-titre">
+    <div class="panneau">
+      <div class="panneau-entete">
+        <strong id="confirmation-titre">Dévalider ces cartes mémoire ?</strong>
+        <button type="button" class="fermer" id="confirmation-fermer" aria-label="Fermer">✕</button>
+      </div>
+      <p>⚠️ La programmation des révisions de ces cartes sera perdue : elles repartiront de zéro. Continuer ?</p>
+      <div class="bloc-actions">
+        <button type="button" class="bouton secondaire" id="confirmation-annuler">Annuler</button>
+        <button type="button" class="bouton danger" id="confirmation-confirmer">Dévalider quand même</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="ecran-revision" class="voile cache" role="dialog" aria-modal="true" aria-labelledby="revision-titre">
+    <div class="panneau">
+      <div class="panneau-entete">
+        <strong id="revision-titre">Réviser mes cartes</strong>
+        <button type="button" class="fermer" id="revision-fermer" aria-label="Fermer">✕</button>
+      </div>
+      <p id="revision-compteur" class="avertissement"></p>
+      <div id="revision-carte" class="revision-carte"></div>
+      <div class="bloc-actions">
+        <button type="button" class="bouton secondaire" id="revision-retourner">Retourner la carte</button>
+      </div>
+      <div id="revision-reponses" class="revision-reponses cache">
+        <button type="button" class="bouton reponse-facile" id="revision-facile">😄 Facile</button>
+        <button type="button" class="bouton reponse-difficile" id="revision-difficile">😕 Difficile</button>
+        <button type="button" class="bouton reponse-rate" id="revision-rate">😖 Raté</button>
+      </div>
+      <p id="revision-fin" class="cache">🎉 Bravo, tu as fini tes révisions du jour !</p>
+    </div>
+  </div>
+
+  <script src="/static/commun.js"></script>
+  <script src="/static/studio.js"></script>
+</body>
+</html>

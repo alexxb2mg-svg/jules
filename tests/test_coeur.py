@@ -19,6 +19,7 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "modes",
         "notions",
         "cours",
+        "studio",
         "memoire",
         "suivi",
         "vigilance",
