@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-heterogeneite-coherence-plastiques
+declencheurs:
+- mélanger des matériaux
+- coller plein de choses différentes
+- assemblage
+- des trucs qui ne vont pas ensemble
+- collage de plein de matières
+essentiel: 'En arts plastiques, on peut associer des matériaux, des objets ou des images très différents les uns
+  des autres : c''est ce qu''on appelle l''hétérogénéité (des choses variées, pas pareilles).
+
+  Même quand les éléments sont très différents, on peut créer une cohérence, c''est-à-dire faire en sorte qu''ils
+  aillent ensemble et forment un tout qui a du sens.
+
+  Cela demande de faire des choix et d''établir des relations formelles (de forme, de couleur, de matière) entre
+  les éléments assemblés.
+
+  On travaille cette question aussi bien à plat (en deux dimensions, par exemple un collage) qu''en volume (en trois
+  dimensions, par exemple un assemblage d''objets).'
+methode:
+- Rassembler plusieurs matériaux ou images très différents entre eux.
+- 'Chercher un point commun possible entre eux : une couleur, une forme, un thème.'
+- Organiser les éléments pour qu'ils se répondent, même s'ils restent très différents.
+- Vérifier que l'ensemble a un sens ou un effet voulu, malgré la diversité des éléments.
+vocabulaire:
+- terme: hétérogène
+  definition: composé d'éléments très différents les uns des autres
+- terme: cohérence
+  definition: le fait que des éléments différents s'organisent ensemble avec du sens
+erreurs_frequentes:
+- Coller des éléments au hasard sans chercher aucun lien entre eux.
+- N'utiliser que des matériaux très ressemblants, ce qui n'explore pas l'hétérogénéité.
+- Penser que « différent » veut dire automatiquement « incohérent ».
+exemple:
+  enonce: Tu colles sur une feuille un morceau de tissu, un bouchon en plastique et un bout de papier journal. Comment
+    leur donner de la cohérence ?
+  solution: Tu peux, par exemple, choisir de tout peindre dans les mêmes couleurs (bleu et blanc) ou organiser les
+    trois éléments pour qu'ils dessinent ensemble une même forme (un bateau, un visage). Même si le tissu, le plastique
+    et le papier sont très différents comme matières, l'organisation ou la couleur commune crée la cohérence.
+exercices:
+- enonce: Rassemble 3 à 5 objets ou matériaux très différents que tu as à la maison (bouchon, papier, tissu, coquillage,
+    bouton...) et assemble-les sur une feuille pour qu'ils forment ensemble une seule image reconnaissable.
+  indices:
+  - Choisis un sujet simple avant de commencer (un visage, un paysage, un animal).
+  - Les matériaux peuvent garder leur aspect d'origine.
+  solution: 'Réussite si : au moins 3 matériaux différents sont utilisés et l''ensemble forme une image cohérente
+    et reconnaissable, pas un assemblage au hasard.'
+- enonce: 'Fais deux collages avec les mêmes matériaux hétéroclites : un où tu ne cherches aucun lien entre les
+    éléments, un où tu organises tout autour d''une seule couleur dominante. Compare l''effet.'
+  indices:
+  - Utilise les mêmes matériaux dans les deux collages.
+  - Dans le deuxième, choisis une seule couleur qui revient partout.
+  solution: 'Réussite si : l''élève constate que le deuxième collage (organisé autour d''une couleur) paraît plus
+    cohérent que le premier, et peut expliquer pourquoi.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

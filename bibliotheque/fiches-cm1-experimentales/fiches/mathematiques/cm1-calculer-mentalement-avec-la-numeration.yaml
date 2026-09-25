@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-calculer-mentalement-avec-la-numeration
+declencheurs:
+- multiplier par 10
+- multiplier par 100
+- diviser par 10
+- ajouter sans retenue
+- décaler la virgule
+essentiel: 'Pour multiplier un nombre entier par 10, 100 ou 1 000, chaque chiffre prend une valeur plus grande :
+  les unités deviennent des dizaines (× 10), des centaines (× 100) ou des milliers (× 1 000), et ainsi de suite
+  pour les autres chiffres.
+
+  Pour multiplier un nombre décimal par 10, chaque chiffre prend une valeur 10 fois plus grande : un dixième devient
+  une unité, un centième devient un dixième. Par exemple, 10 × 72,41 = 724,1.
+
+  Pour diviser un nombre décimal par 10, chaque chiffre prend une valeur 10 fois plus petite : une unité devient
+  un dixième, une dizaine devient une unité.
+
+  Pour ajouter ou soustraire un petit nombre (moins de 10) sans retenue, on repère le bon chiffre à modifier, par
+  exemple les dixièmes ou les centièmes, et on ne touche pas aux autres.'
+methode:
+- Identifier ce qu'on multiplie ou divise (un nombre entier ou décimal) et par quoi (10, 100 ou 1 000).
+- Se rappeler que multiplier rend chaque chiffre plus grand, diviser le rend plus petit.
+- Décaler mentalement la valeur de chaque chiffre d'un rang (pour ×10 ou ÷10), deux rangs (×100), trois rangs (×1
+  000).
+- Pour une addition ou soustraction sans retenue, repérer directement le chiffre concerné et le modifier seul.
+erreurs_frequentes:
+- Ajouter des zéros à un nombre décimal sans réfléchir au sens (10 × 4,5 n'est pas 4,50).
+- Confondre le sens de ×10 (les chiffres grandissent) et ÷10 (les chiffres rapetissent).
+- Oublier de décaler tous les chiffres, pas seulement le premier.
+exemple:
+  enonce: Calcule 10 × 72,41 et explique ce qui se passe pour chaque chiffre.
+  solution: '10 × 72,41 = 724,1. Chaque chiffre prend une valeur 10 fois plus grande : le 7 des dizaines devient
+    centaines, le 2 des unités devient dizaines, le 4 des dixièmes devient unités, le 1 des centièmes devient dixième.'
+exercices:
+- enonce: Calcule 1 462 + 300.
+  indices:
+  - Seul le chiffre des centaines change.
+  solution: 1 462 + 300 = 1 762.
+- enonce: Calcule 100 × 24 et 1 000 × 24.
+  indices:
+  - Chaque chiffre de 24 se décale de deux rangs, puis de trois rangs.
+  solution: 100 × 24 = 2 400. 1 000 × 24 = 24 000.
+- enonce: Calcule 4,45 + 0,3.
+  indices:
+  - Regarde quel chiffre de 4,45 correspond aux dixièmes.
+  solution: 4,45 + 0,3 = 4,75 (on ajoute 3 dixièmes à 4 dixièmes).
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.7
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

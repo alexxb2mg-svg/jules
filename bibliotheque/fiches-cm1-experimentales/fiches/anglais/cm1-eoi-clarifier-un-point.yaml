@@ -1,0 +1,51 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoi-clarifier-un-point
+declencheurs:
+- mot inconnu en anglais
+- can you repeat
+- demander la traduction d'un mot
+- épeler un mot en anglais
+essentiel: 'Quand on ne comprend pas, on peut le dire simplement : I don''t understand.
+
+  On peut demander de répéter : Can you repeat?
+
+  On peut demander le sens d''un mot : What''s the English for...? ou How do you say... in English?
+
+  On peut aussi épeler un mot familier, lettre par lettre, en connaissant l''alphabet.
+
+  Enfin, on peut répéter une consigne pour être sûr de l''avoir bien comprise.'
+methode:
+- Dire simplement qu'on n'a pas compris, sans avoir honte.
+- Demander de répéter ou demander le sens d'un mot précis.
+- Répéter la consigne avec ses propres mots pour vérifier qu'on a compris.
+- Épeler un mot lettre par lettre si besoin, en utilisant l'alphabet anglais.
+vocabulaire:
+- terme: épeler
+  definition: dire un mot lettre par lettre
+erreurs_frequentes:
+- Ne rien dire quand on n'a pas compris, au lieu de demander de l'aide.
+- Confondre demander de répéter (Can you repeat?) et demander le sens d'un mot (What's the English for...?).
+exemple:
+  enonce: Tu n'as pas compris une consigne donnée à l'oral. Que dis-tu ?
+  solution: Sorry, I don't understand. Can you repeat, please?
+exercices:
+- enonce: Tu veux savoir comment on dit « stylo » en anglais. Quelle question poses-tu ?
+  indices:
+  - Utilise la formule pour demander une traduction.
+  solution: How do you say « stylo » in English?
+- enonce: On te demande d'épeler ton prénom en anglais. Que fais-tu ?
+  indices:
+  - Il faut dire chaque lettre l'une après l'autre.
+  solution: Tu dis chaque lettre de ton prénom une par une, en anglais.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 18-19
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

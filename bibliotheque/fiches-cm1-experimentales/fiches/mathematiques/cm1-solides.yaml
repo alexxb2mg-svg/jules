@@ -1,0 +1,72 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-solides
+declencheurs:
+- cube
+- pavé
+- pyramide
+- prisme
+- patron
+- solide
+- face
+- arête
+- sommet du solide
+essentiel: 'Un solide, c''est un objet en trois dimensions : cube, boule, pavé, cône, pyramide, cylindre, prisme
+  droit.
+
+  Un cube et un pavé ont des faces (carrées ou rectangulaires), des sommets et des arêtes.
+
+  Une pyramide a des faces triangulaires qui se rejoignent en un sommet commun, sauf une face : la base (un polygone).
+
+  Un prisme droit a deux bases (des polygones superposables) et des faces latérales qui sont des rectangles.
+
+  Un patron de cube, c''est un assemblage de six carrés qui, plié, forme un cube.
+
+  On construit un cube, un pavé, une pyramide ou un prisme droit à partir d''un modèle, d''une représentation ou
+  d''une description.'
+methode:
+- Compter le nombre et observer la forme des faces (carrés, rectangles, triangles...) du solide.
+- 'Utiliser le vocabulaire précis : face, arête, sommet, base, face latérale.'
+- Pour reconnaître un patron de cube, vérifier qu'il forme bien un cube une fois plié (par manipulation si possible).
+- Pour construire un patron, tracer six carrés de la même longueur d'arête, bien disposés.
+vocabulaire:
+- terme: arête
+  definition: segment où se rejoignent deux faces d'un solide
+- terme: patron
+  definition: figure plane qui, une fois pliée, forme un solide
+- terme: base (d'une pyramide ou d'un prisme)
+  definition: la face qui n'est pas un triangle latéral (pyramide) ou l'une des deux faces superposables (prisme)
+erreurs_frequentes:
+- Confondre pyramide et prisme droit (les faces latérales ne sont pas les mêmes).
+- Croire qu'un assemblage de six carrés est toujours un patron de cube.
+- Se tromper sur le nombre de faces d'un pavé (il en a six).
+exemple:
+  enonce: Un solide a six faces carrées identiques. Quel est ce solide ?
+  solution: 'C''est un cube : un pavé dont les six faces sont des carrés identiques.'
+exercices:
+- enonce: Un solide a des faces triangulaires qui se rejoignent en un point, et une face qui est un carré. Quel
+    est ce solide ?
+  indices:
+  - Le point commun aux triangles est le sommet du solide.
+  solution: C'est une pyramide à base carrée.
+- enonce: Un assemblage de six carrés t'est donné. Comment savoir si c'est un patron de cube ?
+  indices:
+  - On peut le manipuler (le découper et le plier) pour vérifier.
+  solution: 'On le plie (réellement ou mentalement) : si les six carrés forment un cube sans trou ni superposition,
+    c''est un patron de cube.'
+- enonce: Un prisme droit a deux bases pentagonales. Quelle est la forme de ses faces latérales ?
+  indices:
+  - Les faces latérales d'un prisme droit sont toujours les mêmes.
+  solution: Ses faces latérales sont des rectangles.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 21-22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

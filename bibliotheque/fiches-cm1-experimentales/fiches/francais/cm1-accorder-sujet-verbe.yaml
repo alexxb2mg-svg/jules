@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-accorder-sujet-verbe
+declencheurs:
+- accord sujet verbe
+- le verbe s'accorde
+- j'accorde mal le verbe
+- accord du participe passé
+- auxiliaire être
+- est tombée
+essentiel: 'Le verbe s''accorde toujours avec son sujet, en nombre et en personne.
+
+  Pour bien accorder, il faut d''abord repérer le sujet du verbe, notamment le nom noyau quand le sujet est un groupe
+  nominal.
+
+  Au passé composé, le participe passé s''accorde avec le sujet uniquement quand le verbe est employé avec l''auxiliaire
+  être : Anna est tombée dans le jardin (accord avec Anna, féminin singulier).
+
+  Il ne faut pas confondre les variations du verbe avec celles du nom : il élève / tu élèves / elles élèvent (verbe)
+  sont différentes de une élève / des élèves (nom).'
+methode:
+- Repérer le sujet du verbe (le nom noyau si c'est un groupe nominal, ou le pronom).
+- Vérifier le genre et le nombre du sujet.
+- Accorder le verbe en personne et en nombre avec ce sujet.
+- Si le verbe est au passé composé avec l'auxiliaire être, accorder aussi le participe passé avec le sujet.
+- Vérifier que tu n'as pas confondu la terminaison du verbe avec celle d'un nom qui lui ressemble.
+vocabulaire:
+- terme: auxiliaire
+  definition: le verbe être ou avoir utilisé avec le participe passé pour former un temps composé
+- terme: participe passé
+  definition: la forme du verbe utilisée avec un auxiliaire (mangé, tombée...)
+erreurs_frequentes:
+- Oublier d'accorder le participe passé avec le sujet quand l'auxiliaire est être.
+- Accorder le participe passé avec le sujet même quand l'auxiliaire est avoir (dans les cas simples étudiés au CM1,
+  il reste invariable).
+- Confondre la terminaison d'un verbe et celle d'un nom qui se prononce pareil.
+exemple:
+  enonce: 'Accorde le participe passé dans : « Les filles sont (tomber) dans la cour. »'
+  solution: 'Les filles sont tombées dans la cour : l''auxiliaire être impose l''accord du participe passé avec
+    le sujet « les filles » (féminin pluriel).'
+exercices:
+- enonce: 'Accorde le verbe entre parenthèses : « Le chien (aboyer, présent) fort. »'
+  indices:
+  - Le sujet « le chien » est à la 3e personne du singulier.
+  solution: Le chien aboie fort.
+- enonce: 'Accorde le participe passé : « Marie et Paul sont (partir) tôt ce matin. »'
+  indices:
+  - 'Le sujet est composé de deux personnes : quel est son nombre et son genre ?'
+  solution: Marie et Paul sont partis tôt ce matin (sujet pluriel, masculin car il y a un masculin dans le groupe).
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Accorder le sujet et le verbe » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 149
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: règle d'accord du participe passé avec l'auxiliaire être
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

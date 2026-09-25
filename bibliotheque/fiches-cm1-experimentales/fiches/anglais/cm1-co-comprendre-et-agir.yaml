@@ -1,0 +1,59 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-co-comprendre-et-agir
+declencheurs:
+- comprendre une consigne en anglais
+- faire ce qu'on me dit en anglais
+- suivre les instructions en anglais
+- un jeu où on doit écouter en anglais
+- comprendre stand up sit down
+essentiel: 'Comprendre et agir, c''est écouter une consigne en anglais et faire ce qu''elle demande, sans avoir
+  besoin de la traduire mot à mot.
+
+  On reconnaît des formes de l''impératif, la façon de donner un ordre en anglais : Listen, Don''t move, Let''s
+  start, Add.
+
+  On reconnaît aussi les mots can et can''t, qui disent ce qu''on a le droit de faire ou pas.
+
+  Des mots comme on, in, under, over, between, in front of, above disent où se trouve quelque chose, et des verbes
+  comme go, sit, jump, walk disent quoi faire.
+
+  On s''appuie enfin sur une image pour deviner ce que la consigne demande.'
+methode:
+- 'Repérer le verbe à l''impératif : c''est souvent le premier mot de la phrase.'
+- Repérer un mot de lieu (on, in, under, between...) pour savoir où agir.
+- 'Vérifier si can ou can''t est présent : cela dit ce qui est permis ou interdit.'
+- S'aider d'une image ou d'un geste du professeur si on hésite.
+- Réaliser l'action, puis vérifier avec les autres élèves qu'on a bien compris.
+vocabulaire:
+- terme: impératif
+  definition: la forme du verbe qui sert à donner un ordre ou une consigne, comme Listen ou Don't move
+- terme: auxiliaire modal
+  definition: un petit mot comme can ou can't qui dit ce qu'on peut ou ne peut pas faire
+erreurs_frequentes:
+- Ne pas repérer l'impératif et donc ne pas comprendre qu'il faut agir tout de suite.
+- 'Confondre can (autorisation) et can''t (interdiction) : un seul son de différence.'
+- Ignorer les mots de lieu (in, on, under) et donc se tromper d'endroit.
+exemple:
+  enonce: 'Le professeur dit : « Jump over the hoop. ». Que doit faire l''élève ?'
+  solution: 'Jump (sauter) et over (au-dessus de) : l''élève doit sauter par-dessus le cerceau.'
+exercices:
+- enonce: 'On te dit : « Put the pen on the table. ». Où dois-tu poser le stylo ?'
+  indices:
+  - On veut dire « sur ».
+  solution: Tu dois poser le stylo sur la table.
+- enonce: 'On te dit : « You can''t run in the classroom. ». As-tu le droit de courir dans la classe ?'
+  indices:
+  - Can't est la forme négative de can.
+  solution: 'Non : can''t veut dire que ce n''est pas autorisé, tu n''as pas le droit de courir.'
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 5
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

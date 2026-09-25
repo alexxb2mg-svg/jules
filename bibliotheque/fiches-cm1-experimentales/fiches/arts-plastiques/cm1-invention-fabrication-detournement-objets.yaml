@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-invention-fabrication-detournement-objets
+declencheurs:
+- transformer un objet
+- détourner un objet
+- faire un objet avec
+- objet recyclé
+- inventer un objet
+- sculpture avec des objets
+essentiel: 'En arts plastiques, on peut créer des objets, intervenir sur des objets déjà existants, les transformer
+  ou les manipuler, pour raconter une histoire, exprimer une idée symbolique ou quelque chose de poétique.
+
+  Un même objet peut avoir différents statuts : artistique (une œuvre), symbolique (il représente une idée), utilitaire
+  (il sert à quelque chose) ou de communication.
+
+  Détourner un objet, c''est lui donner un autre usage ou un autre sens que celui pour lequel il a été fabriqué
+  (par exemple, une fourchette qui devient un peigne dans une histoire imaginée).
+
+  Cette transformation joue sur la relation entre la forme d''un objet et sa fonction habituelle.'
+methode:
+- Choisir un objet du quotidien et observer sa forme et son usage habituel.
+- Imaginer un nouvel usage ou un nouveau sens, différent de sa fonction d'origine.
+- Transformer l'objet (le peindre, l'assembler à un autre objet, le déformer) pour ce nouvel usage.
+- Vérifier que le nouvel objet raconte bien quelque chose de différent de l'objet de départ.
+vocabulaire:
+- terme: détournement
+  definition: donner à un objet un usage ou un sens différent de celui prévu au départ
+- terme: statut de l'objet
+  definition: 'le rôle d''un objet : artistique, symbolique, utilitaire ou de communication'
+erreurs_frequentes:
+- Ne faire qu'assembler des objets sans leur donner un nouveau sens ou une nouvelle fonction.
+- Garder l'objet exactement dans son usage d'origine, ce qui n'est pas un détournement.
+- Oublier de dire ou montrer ce que le nouvel usage imaginé représente.
+exemple:
+  enonce: Tu prends une vieille boîte à chaussures et tu la transformes en petit théâtre pour des personnages en
+    papier. Qu'as-tu fait ?
+  solution: Tu as détourné un objet utilitaire (une boîte servant à ranger des chaussures) pour lui donner un nouveau
+    statut artistique et narratif (un théâtre), en changeant sa fonction sans forcément changer beaucoup sa forme.
+exercices:
+- enonce: Choisis un objet du quotidien (un vieux bouchon, une cuillère en plastique, un rouleau de papier toilette)
+    et transforme-le pour qu'il devienne un personnage ou un petit décor.
+  indices:
+  - Pense à ce que la forme de l'objet te fait déjà penser (une tête, un chapeau...).
+  - Tu peux peindre, coller ou assembler d'autres éléments dessus.
+  solution: 'Réussite si : l''objet de départ est reconnaissable mais a clairement changé de fonction ou de sens
+    grâce à la transformation.'
+- enonce: Prends deux objets différents de la maison et assemble-les pour créer un objet imaginaire qui n'existe
+    pas, en expliquant à l'oral à quoi il pourrait servir dans une histoire inventée.
+  indices:
+  - Les deux objets doivent être visiblement assemblés, pas juste posés côte à côte.
+  - Invente une petite fonction ou un petit pouvoir pour cet objet imaginaire.
+  solution: 'Réussite si : les deux objets sont assemblés en un seul nouvel objet, et l''élève sait expliquer en
+    une ou deux phrases son nouvel usage imaginaire.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

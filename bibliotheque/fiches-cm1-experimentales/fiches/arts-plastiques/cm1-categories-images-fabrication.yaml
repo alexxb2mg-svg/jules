@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-categories-images-fabrication
+declencheurs:
+- photo
+- appareil photo
+- vidéo
+- collage
+- montage photo
+- image découpée
+- photo ou dessin
+- modifier une image
+essentiel: 'Il existe plusieurs sortes d''images : des images artistiques (dessin, peinture, photo d''art) et des
+  images scientifiques ou documentaires (une photo pour montrer un fait, un schéma).
+
+  Une image peut être fabriquée de différentes façons : dessinée, peinte, photographiée, filmée.
+
+  On peut aussi utiliser un appareil photo ou une caméra pour créer soi-même des images, ou bien transformer des
+  images déjà existantes pour changer leur sens : collage, dessin ajouté par-dessus, peinture, montage, outils numériques.
+
+  Transformer une image existante permet de lui donner un nouveau sens, différent de son sens de départ.'
+methode:
+- 'Regarder d''abord l''image de départ : que montre-t-elle exactement ?'
+- 'Choisir une technique de transformation : collage, dessin par-dessus, découpage, montage.'
+- Modifier l'image en gardant une intention claire (que veut-on dire de nouveau ?).
+- Comparer le sens de l'image avant et après la transformation.
+vocabulaire:
+- terme: collage
+  definition: coller des éléments (images, papiers) découpés sur un support
+- terme: montage
+  definition: assembler plusieurs images ou parties d'images pour en créer une nouvelle
+erreurs_frequentes:
+- Confondre une image artistique (qui exprime quelque chose) et une image documentaire (qui informe).
+- Transformer une image sans intention, juste en découpant au hasard.
+- Croire qu'une photographie est forcément plus « vraie » qu'un dessin.
+exemple:
+  enonce: Tu prends la photo d'un arbre dans ton jardin, puis tu colles dessus un morceau de papier découpé en forme
+    de soleil orange. Qu'as-tu fait ?
+  solution: 'Tu as transformé une image existante (la photo) par un collage : tu as ajouté un élément qui change
+    l''ambiance de l''image (l''arbre paraît maintenant au soleil couchant), sans changer l''arbre lui-même.'
+exercices:
+- enonce: Prends ou choisis une photo (d'un objet, d'un lieu) et colle par-dessus un ou deux éléments découpés dans
+    un magazine ou dessinés par toi, pour changer son sens.
+  indices:
+  - Choisis d'abord ce que tu veux raconter de nouveau avec cette image.
+  - Les éléments ajoutés doivent être visibles et bien collés.
+  solution: 'Réussite si : l''image obtenue est clairement différente de l''image de départ dans ce qu''elle raconte,
+    et l''élève peut expliquer ce qu''il a voulu changer.'
+- enonce: 'Fabrique deux images du même sujet (par exemple un fruit) : une par le dessin, une par la photo. Compare-les
+    à l''oral : que montre chacune de plus ou de moins ?'
+  indices:
+  - Le dessin peut inventer des détails que la photo ne peut pas inventer.
+  - La photo montre exactement ce qui existait devant l'appareil.
+  solution: 'Réussite si : l''élève identifie au moins une différence entre l''image dessinée et l''image photographiée
+    (par exemple : le dessin peut inventer une couleur, la photo montre le fruit réel).'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 43
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

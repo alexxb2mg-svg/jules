@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoc-se-presenter-exprimer-gouts
+declencheurs:
+- se présenter en anglais
+- dire mon prénom en anglais
+- dire ce que j'aime en anglais
+- présenter un copain en anglais
+- my name is en anglais
+essentiel: 'Pour se présenter en anglais, on répète ou on récite un modèle qu''on a appris : My name''s Lea. I''m
+  9 years old. I come from Poitiers.
+
+  On peut aussi décrire brièvement quelqu''un d''autre (un camarade, un animal), après s''être entraîné.
+
+  On utilise le présent d''un verbe courant à la première personne (I have) ou à la troisième personne (he has,
+  he goes).
+
+  Pour présenter un camarade, on remplace I par he ou she : His name is Paul. He is 10 years old.'
+methode:
+- 'Choisir les informations à donner : nom, âge, ville, famille.'
+- Construire chaque phrase avec I ou he/she selon qui on présente.
+- S'entraîner à voix haute avant de parler devant les autres.
+- Ajouter un détail (un animal, une activité) pour enrichir la présentation.
+vocabulaire:
+- terme: présent
+  definition: le temps utilisé pour parler de ce qui est vrai maintenant, par exemple I have ou he has
+erreurs_frequentes:
+- Oublier le s à la troisième personne du présent (he go au lieu de he goes).
+- Confondre I et he/she en présentant un camarade au lieu de soi-même.
+- Réciter sans s'être entraîné avant, ce qui rend la présentation peu compréhensible.
+exemple:
+  enonce: Présente ton camarade Paul, qui a 10 ans et vit à Bordeaux.
+  solution: His name is Paul. He is 10 years old. He lives in Bordeaux.
+exercices:
+- enonce: Présente-toi en trois phrases très simples (nom, âge, ville).
+  indices:
+  - Utilise I am / My name is / I come from.
+  solution: 'Exemple possible : My name is Léo. I am 9 years old. I come from Lyon.'
+- enonce: Ton camarade Tom aime le football. Comment le dis-tu en anglais, à la troisième personne ?
+  indices:
+  - N'oublie pas le s à la troisième personne du singulier.
+  solution: Tom likes football.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

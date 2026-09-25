@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-provenance-aliments-produits-transformes
+declencheurs:
+- yaourt
+- biscuit
+- d'où vient cet aliment
+- produit transformé
+- usine
+- fabriqué avec quoi
+- produit agricole
+essentiel: 'Les aliments que l''on mange ont une origine : un produit agricole vient directement d''un champ, d''un
+  élevage ou d''une pêche (un fruit, du lait, du poisson).
+
+  Un produit alimentaire transformé est fabriqué à partir d''un ou plusieurs produits agricoles, souvent dans une
+  usine (un yaourt, un biscuit).
+
+  Entre le produit agricole et l''aliment que l''on achète, il y a une chaîne de production : récolte ou élevage,
+  transport, transformation dans une usine, puis vente.
+
+  Connaître la provenance des aliments, c''est savoir d''où ils viennent et par quelles étapes ils sont passés avant
+  d''arriver dans notre assiette.'
+methode:
+- 'Identifie l''aliment de départ : d''où vient-il (champ, élevage, pêche) ?'
+- Cherche s'il est vendu tel quel (produit agricole) ou après une fabrication (produit transformé).
+- 'Reconstitue les étapes dans l''ordre : récolte/élevage, transport, transformation, vente.'
+- Vérifie que chaque étape de la chaîne de production est bien présente dans ta réponse.
+vocabulaire:
+- terme: produit agricole
+  definition: un aliment qui vient directement d'un champ, d'un élevage ou d'une pêche, sans transformation en usine
+- terme: produit alimentaire transformé
+  definition: un aliment fabriqué en usine à partir d'un ou plusieurs produits agricoles
+erreurs_frequentes:
+- Croire qu'un produit transformé n'a jamais de produit agricole à son origine.
+- Oublier l'étape du transport entre le lieu de récolte et l'usine.
+- Penser qu'un fruit vendu tel quel est un produit transformé.
+exemple:
+  enonce: Un yaourt est vendu au supermarché. Explique la chaîne de production qui permet de passer du produit agricole
+    de départ au yaourt.
+  solution: Le produit agricole de départ est le lait, produit par une vache dans un élevage. Le lait est transporté
+    vers une usine, où il est transformé en yaourt (avec des ferments). Le yaourt est ensuite transporté et vendu
+    au supermarché.
+exercices:
+- enonce: 'Range ces deux aliments dans la bonne catégorie : une pomme cueillie dans un verger, un biscuit au chocolat.'
+  indices:
+  - Un produit agricole n'a pas besoin d'usine pour être mangé.
+  solution: La pomme est un produit agricole (elle vient directement du verger). Le biscuit au chocolat est un produit
+    alimentaire transformé (fabriqué en usine).
+- enonce: Choisis un aliment transformé que tu manges à la maison et décris les grandes étapes de sa fabrication,
+    du produit agricole jusqu'à ton assiette.
+  indices:
+  - Commence toujours par le produit agricole de départ.
+  - N'oublie pas l'étape de la transformation en usine.
+  solution: 'Réponse variable : l''important est de citer le produit agricole de départ, le transport, la transformation
+    en usine, puis la vente.'
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

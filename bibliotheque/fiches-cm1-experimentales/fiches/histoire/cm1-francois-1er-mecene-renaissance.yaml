@@ -1,0 +1,56 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-francois-1er-mecene-renaissance
+declencheurs:
+- roi de la renaissance
+- léonard de vinci
+- roi qui aime les artistes
+- mécène
+- françois 1er
+couverture: 'Ne couvre que ce que dit le programme : François Ier (1515-1547), roi mécène de la Renaissance, et
+  son lien avec Léonard de Vinci (1515-1519 en France).'
+essentiel: 'François Ier est un roi de France qui a régné de 1515 à 1547.
+
+  C''est un roi mécène de la Renaissance : un mécène est quelqu''un qui aide et soutient des artistes.
+
+  Léonard de Vinci vient vivre en France à partir de 1515, invité par François Ier, jusqu''à sa mort en 1519.
+
+  Cet exemple montre le rôle d''un roi dans la diffusion de la Renaissance, ce mouvement artistique et culturel.'
+methode:
+- Retenir que François Ier règne de 1515 à 1547.
+- 'Associer François Ier au mot « mécène » : il soutient les artistes.'
+- Relier François Ier à Léonard de Vinci, venu vivre en France de 1515 à sa mort en 1519.
+vocabulaire:
+- terme: mécène
+  definition: personne qui aide et soutient des artistes
+erreurs_frequentes:
+- Confondre la date du début du règne de François Ier (1515) et la date de la mort de Léonard de Vinci (1519).
+- Oublier que « mécène » signifie qu'il soutient des artistes, pas qu'il est lui-même artiste.
+exemple:
+  enonce: Pourquoi dit-on que François Ier est un roi mécène de la Renaissance ?
+  solution: Parce qu'il soutient des artistes, comme Léonard de Vinci qu'il fait venir vivre en France à partir
+    de 1515.
+exercices:
+- enonce: En quelle année commence le règne de François Ier ? Combien d'années Léonard de Vinci a-t-il vécu en France,
+    de son arrivée à sa mort ?
+  indices:
+  - Le règne commence la même année que l'arrivée de Léonard de Vinci en France.
+  solution: Le règne de François Ier commence en 1515. Léonard de Vinci a vécu en France de 1515 à 1519, soit 4
+    ans.
+- enonce: Explique avec l'exemple de François Ier et de Léonard de Vinci le rôle d'un roi dans la diffusion de la
+    Renaissance.
+  indices:
+  - Pense à ce qu'un mécène permet à un artiste de faire.
+  solution: En accueillant et en soutenant Léonard de Vinci en France, François Ier aide à faire connaître les idées
+    et les œuvres de la Renaissance dans son royaume.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

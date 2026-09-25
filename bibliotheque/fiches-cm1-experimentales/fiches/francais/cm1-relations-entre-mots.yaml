@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-relations-entre-mots
+declencheurs:
+- synonyme
+- antonyme
+- mot contraire
+- même famille de mots
+- famille de mots
+- mot qui veut dire pareil
+- un mot pour un autre
+essentiel: 'Les mots sont reliés entre eux de plusieurs façons.
+
+  Deux mots sont des synonymes quand leurs sens sont proches et qu''on peut parfois les remplacer l''un par l''autre
+  : jouer et s''amuser, se cacher et se dissimuler.
+
+  Deux mots sont des antonymes quand ils ont des sens contraires : chaud et froid, grand et petit.
+
+  Des mots de la même famille se ressemblent parce qu''ils partagent la même racine : cœur, cardiaque, cordial viennent
+  tous de la même origine liée au cœur.
+
+  Un synonyme ou un antonyme doit toujours respecter la classe grammaticale du mot de départ : à un nom correspond
+  un nom, à un verbe correspond un verbe.'
+methode:
+- Identifier la classe grammaticale du mot de départ (nom, verbe, adjectif...).
+- Chercher un mot de sens proche (synonyme) de la même classe grammaticale.
+- Chercher un mot de sens contraire (antonyme) de la même classe grammaticale.
+- Pour une famille de mots, repérer la racine ou le radical commun aux mots.
+- Vérifier dans un dictionnaire si le sens proposé correspond bien au contexte.
+vocabulaire:
+- terme: synonymie
+  definition: relation entre des mots de sens proche, de même classe grammaticale
+- terme: antonymie
+  definition: relation entre des mots de sens contraire, de même classe grammaticale
+- terme: famille de mots
+  definition: ensemble de mots ayant en commun une même racine ou un même radical
+erreurs_frequentes:
+- Proposer un synonyme d'une autre classe grammaticale que le mot de départ (par exemple un adjectif pour un verbe).
+- Confondre un mot de la même famille avec un simple synonyme.
+- Croire qu'un antonyme est toujours l'exact opposé, alors que certains couples ont des nuances intermédiaires (entre
+  chaud et froid, il y a tiède).
+exemple:
+  enonce: Donne un synonyme et un antonyme du mot « grand » (adjectif).
+  solution: 'Synonyme possible : immense (adjectif, sens proche). Antonyme possible : petit (adjectif, sens contraire).'
+exercices:
+- enonce: 'Range ces mots en deux familles selon leur racine : cœur, cardiaque, cordial, nation, national, international.'
+  indices:
+  - Cherche le morceau de mot qui revient dans chaque famille.
+  solution: 'Famille de cœur : cœur, cardiaque, cordial. Famille de nation : nation, national, international.'
+- enonce: Trouve un antonyme du verbe « monter » et un synonyme du verbe « regarder ».
+  indices:
+  - Le verbe contraire de monter évoque le sens inverse.
+  - Pense à un verbe qui veut dire presque la même chose que regarder.
+  solution: 'Antonyme de monter : descendre. Synonyme de regarder : observer (par exemple).'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Établir des relations entre les mots » CM1
+- titre: Éduscol, guide « La grammaire du français — Terminologie grammaticale », p. 173-174
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définitions de la synonymie et de l'antonymie
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

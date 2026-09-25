@@ -1,0 +1,49 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ce-traiter-informations-et-agir
+declencheurs:
+- lire une recette en anglais
+- suivre un mode d'emploi en anglais
+- comprendre des instructions écrites en anglais
+essentiel: 'Pour comprendre un texte informatif, une recette ou un mode d''emploi en anglais, on s''appuie sur l''image
+  pour comprendre les étapes ou les ingrédients.
+
+  On reconnaît l''impératif à la forme affirmative (take, mix, sit down) et on adapte son geste.
+
+  On comprend le lexique simple des fournitures scolaires (pencil, rubber, paper, a pair of scissors) ou des ustensiles
+  de cuisine (spoon, knife, bowl).'
+methode:
+- Regarder les images pour comprendre l'ordre des étapes.
+- Repérer les verbes à l'impératif qui disent quoi faire (take, mix, add).
+- Repérer le nom des objets ou ingrédients nécessaires.
+- Réaliser l'action étape par étape, dans l'ordre du texte.
+vocabulaire:
+- terme: mode d'emploi
+  definition: un texte qui explique, étape par étape, comment faire quelque chose
+erreurs_frequentes:
+- Ne pas suivre l'ordre des étapes indiqué par le texte.
+- Confondre des ustensiles proches, comme spoon (cuillère) et knife (couteau).
+exemple:
+  enonce: 'Une recette dit : « Pour the flour in the bowl. Add the eggs. ». Que dois-tu faire en premier ?'
+  solution: Verser la farine dans le saladier (pour the flour in the bowl), puis ajouter les œufs (add the eggs).
+exercices:
+- enonce: 'On te dit : « Take a square piece of paper. Fold the paper. ». Que fais-tu, dans l''ordre ?'
+  indices:
+  - 'Repère les deux verbes à l''impératif : take et fold.'
+  solution: Tu prends une feuille de papier carrée, puis tu la plies.
+- enonce: Pour préparer des pancakes, il te faut 2 eggs, 120g of flour, 25cl of milk. Traduis simplement cette liste
+    d'ingrédients.
+  indices:
+  - Eggs, flour et milk sont des mots simples de cuisine.
+  solution: 2 œufs, 120 g de farine, 25 cl de lait.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

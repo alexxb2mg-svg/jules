@@ -1,0 +1,62 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-modalites-deplacement-transports
+declencheurs:
+- transport
+- aller à l'école
+- vélo
+- voiture
+- avion
+- combien de temps pour aller
+- distance
+essentiel: 'On peut se déplacer de plusieurs façons, à différentes échelles de temps (dans une journée, une semaine...)
+  : à pied, en vélo, en voiture, en train, en bateau ou en avion.
+
+  Chaque mode de transport de personnes est lié à une infrastructure : avion et aéroport, bateau et port, train
+  et gare, voiture et route, métro et station, vélo et voie cyclable.
+
+  On mesure un déplacement de deux façons : la distance kilométrique (en kilomètres) et la distance en temps (en
+  minutes ou en heures).
+
+  Le choix du mode de transport dépend souvent de la distance à parcourir.'
+methode:
+- Identifie le mode de transport utilisé dans la situation.
+- Retrouve l'infrastructure associée à ce mode de transport.
+- Distingue la distance kilométrique de la distance en temps.
+- Relie le mode de transport choisi à la distance à parcourir.
+vocabulaire:
+- terme: distance kilométrique
+  definition: la longueur d'un trajet mesurée en kilomètres
+- terme: distance en temps
+  definition: la durée d'un trajet mesurée en minutes ou en heures
+erreurs_frequentes:
+- Associer un mode de transport à la mauvaise infrastructure (par exemple un train et un aéroport).
+- Confondre distance kilométrique et distance en temps.
+- Oublier la marche comme modalité de déplacement.
+exemple:
+  enonce: Pour aller de sa maison à son école, à cinq cents mètres, un élève marche. Pour aller voir ses grands-parents,
+    à trois cents kilomètres, sa famille prend le train. Quelles sont les deux infrastructures utilisées ?
+  solution: Pour la marche, il n'y a pas d'infrastructure particulière citée dans le programme ; pour le train,
+    l'infrastructure associée est la gare.
+exercices:
+- enonce: 'Associe chaque mode de transport à son infrastructure : avion, bateau, vélo.'
+  indices:
+  - Un avion décolle et atterrit dans un lieu précis.
+  - Un vélo roule sur une voie qui lui est dédiée.
+  solution: Avion → aéroport ; bateau → port ; vélo → voie cyclable.
+- enonce: Explique la différence entre distance kilométrique et distance en temps pour un même trajet.
+  indices:
+  - L'une se mesure en kilomètres, l'autre en minutes ou en heures.
+  solution: La distance kilométrique donne la longueur du trajet en kilomètres. La distance en temps donne la durée
+    du trajet, par exemple en minutes ou en heures.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 12
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

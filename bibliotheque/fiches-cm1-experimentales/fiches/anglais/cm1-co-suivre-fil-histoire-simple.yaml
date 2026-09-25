@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-co-suivre-fil-histoire-simple
+declencheurs:
+- j'écoute une histoire en anglais
+- suivre une histoire anglaise
+- comprendre une chanson en anglais
+- une comptine en anglais
+- histoire en anglais
+- écouter un conte anglais
+essentiel: 'Quand on écoute une histoire, une chanson ou un conte en anglais, on n''a pas besoin de comprendre chaque
+  mot.
+
+  On s''appuie sur ce qu''on voit (une image, un dessin) et sur ce qu''on entend (la musique, les bruitages) pour
+  deviner de quoi ça parle.
+
+  On repère les mots qu''on connaît déjà, par exemple ceux qui parlent de soi et de sa famille : body, food, family.
+
+  On écoute aussi la voix : est-ce une question, une affirmation, une exclamation de surprise ou de peur ? L''intonation
+  aide à comprendre.
+
+  On reconnaît des phrases qu''on a déjà entendues souvent, comme I am, I like, This is.'
+methode:
+- 'Regarder l''image ou le titre avant d''écouter : cela donne une idée du thème.'
+- Écouter une première fois sans chercher à tout comprendre, juste pour repérer l'ambiance.
+- Repérer les mots connus du champ lexical de soi et de sa famille.
+- Écouter l'intonation de la voix pour savoir si c'est une question ou une exclamation.
+- Réécouter pour vérifier ce qu'on a compris.
+vocabulaire:
+- terme: champ lexical
+  definition: un ensemble de mots qui parlent du même sujet, par exemple la famille
+- terme: intonation
+  definition: la façon dont la voix monte ou descend, qui change le sens d'une phrase
+erreurs_frequentes:
+- Vouloir traduire chaque mot au lieu de s'appuyer sur les images et les sons.
+- Abandonner dès qu'un mot est inconnu, au lieu de continuer à écouter.
+- Ne pas utiliser l'intonation de la voix pour deviner si c'est une question ou une exclamation.
+exemple:
+  enonce: 'Dans une chanson, on entend : « I have a pet. He is a mouse. And he says, ''Squeak, squeak, squeak''
+    ». Que peut-on comprendre sans connaître tous les mots ?'
+  solution: Grâce au mot pet (animal familier) et au bruit squeak (couinement), on comprend que l'animal est une
+    petite bête qui couine, même sans connaître mouse.
+exercices:
+- enonce: Tu écoutes une histoire accompagnée d'images de la météo dans plusieurs villes. Comment fais-tu pour comprendre
+    sans tout traduire ?
+  indices:
+  - Que peux-tu utiliser en plus des mots que tu entends ?
+  solution: Tu associes les images (soleil, pluie, nuages) aux mots que tu reconnais et à l'endroit où ils sont
+    dits.
+- enonce: 'Une phrase entendue monte à la fin : « Are you ready? ». Est-ce une question ou une affirmation ?'
+  indices:
+  - Écoute comment l'intonation de la voix évolue à la fin de la phrase.
+  solution: 'C''est une question : l''intonation qui monte à la fin signale une question en anglais.'
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 2
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

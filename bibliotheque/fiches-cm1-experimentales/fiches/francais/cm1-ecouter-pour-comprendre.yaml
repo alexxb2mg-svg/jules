@@ -1,0 +1,76 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ecouter-pour-comprendre
+declencheurs:
+- écouter
+- j'ai pas écouté
+- comprendre ce qu'on entend
+- reportage
+- interview
+- on m'a raconté
+- j'écoute pas bien
+- écoute
+essentiel: 'Écouter pour comprendre, ce n''est pas juste entendre : c''est garder toute son attention sur ce que
+  dit quelqu''un, en fonction de ce qu''on cherche à savoir.
+
+  Quand tu écoutes une histoire, une interview ou un reportage, tu retiens les informations importantes et tu peux
+  les redire avec tes propres mots.
+
+  Pour bien montrer que tu as compris, tu relies entre elles les informations que tu as entendues, au lieu de les
+  répéter dans le désordre.
+
+  Tu peux aussi deviner des informations qui ne sont pas dites clairement, en mettant en lien plusieurs passages
+  entendus.
+
+  Enfin, tu peux dire ce que le texte t''a fait ressentir (peur, rire, surprise) en expliquant pourquoi.'
+methode:
+- 'Avant d''écouter, se demander ce qu''on cherche : une information précise, une histoire, un avis ?'
+- Pendant l'écoute, rester concentré sur le but recherché, sans se laisser distraire.
+- Repérer les personnages, le lieu, le moment et les événements importants.
+- Reformuler avec ses propres mots ce qui a été dit, sans recopier les phrases entendues.
+- Relier les informations entre elles pour comprendre ce qui n'est pas dit directement.
+vocabulaire:
+- terme: écoute active
+  definition: une attention orientée vers un but, pas seulement entendre
+- terme: reformuler
+  definition: redire une idée entendue avec ses propres mots
+erreurs_frequentes:
+- Répéter mot pour mot ce qui a été dit au lieu de reformuler avec ses propres mots.
+- Ne retenir qu'un détail et oublier les informations essentielles du message.
+- Ne pas relier les informations entre elles pour comprendre ce qui n'est pas dit clairement.
+exemple:
+  enonce: 'Tu écoutes ce reportage : « Le renard vit la nuit. Il mange des petits animaux et des fruits. Il creuse
+    un terrier pour se cacher. » Explique en une phrase ce que tu as compris.'
+  solution: 'Je peux dire : le reportage explique que le renard est un animal nocturne qui se nourrit de petits
+    animaux et de fruits, et qui vit dans un terrier.'
+exercices:
+- enonce: Demande à un adulte de te raconter à voix haute une courte histoire (5 phrases). Redis-la ensuite avec
+    tes propres mots, sans regarder de texte.
+  indices:
+  - Retiens qui fait quoi, où et quand.
+  - Utilise des phrases comme « La personne dit que… ».
+  solution: Réussite si tu retrouves les personnages, le lieu et les événements principaux, dans l'ordre, sans réciter
+    par cœur.
+- enonce: Écoute une publicité ou une annonce à la radio ou à la télévision. Dis ce qu'elle explique et ce qu'elle
+    te fait ressentir.
+  indices:
+  - Sépare bien l'information (ce qui est dit) de ton ressenti (ce que ça te fait).
+  solution: Réussite si tu distingues clairement l'information donnée et ta réaction personnelle, justifiée par
+    une raison.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 11-12
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Écouter pour comprendre » CM1
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9-10
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: exemples de réussite « Écouter pour comprendre »
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

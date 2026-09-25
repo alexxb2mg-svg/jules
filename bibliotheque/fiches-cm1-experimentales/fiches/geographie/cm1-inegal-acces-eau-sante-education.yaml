@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-inegal-acces-eau-sante-education
+declencheurs:
+- accès à l'eau
+- pas d'hôpital
+- pas d'école
+- se soigner
+- eau potable
+- inégalités dans le monde
+essentiel: 'Dans le monde, tout le monde n''a pas le même accès à l''eau potable, à la santé ou à l''éducation.
+
+  Dans certains endroits, l''eau potable, les hôpitaux ou les écoles sont proches et faciles à utiliser.
+
+  Ailleurs, certaines personnes doivent parcourir une longue distance pour avoir de l''eau propre, se faire soigner
+  ou aller à l''école.
+
+  Ces différences d''accès sont des manifestations des inégalités de niveau de vie dans le monde.'
+methode:
+- 'Identifie de quel domaine il s''agit : l''eau, la santé ou l''éducation.'
+- Cherche si l'accès est facile (proche, rapide) ou difficile (loin, rare, cher).
+- Relie cette difficulté d'accès à l'idée d'inégalité de niveau de vie dans le monde.
+erreurs_frequentes:
+- Croire que les inégalités d'accès ne concernent qu'un seul continent.
+- Penser que le manque d'accès à l'eau, à la santé ou à l'éducation touche toujours les trois domaines en même temps
+  dans un même lieu.
+exemple:
+  enonce: Dans un village, les habitants doivent marcher plusieurs heures pour trouver de l'eau potable. Dans une
+    ville, l'eau potable arrive directement au robinet. De quoi cet exemple est-il une manifestation ?
+  solution: C'est une manifestation de l'inégal accès à l'eau, donc des inégalités de niveau de vie dans le monde.
+exercices:
+- enonce: Cite les trois domaines pour lesquels le programme de géographie demande de connaître l'inégal accès dans
+    le monde.
+  indices:
+  - Un de ces domaines concerne un liquide essentiel à la vie.
+  solution: L'eau, la santé et l'éducation.
+- enonce: Explique pourquoi un enfant qui doit marcher longtemps pour aller à l'école la plus proche vit une situation
+    d'inégalité.
+  indices:
+  - Compare avec un enfant qui a une école tout près de chez lui.
+  solution: 'Parce que l''accès à l''éducation n''est pas le même pour tous les enfants dans le monde : certains
+    ont une école proche, d''autres doivent parcourir une longue distance.'
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

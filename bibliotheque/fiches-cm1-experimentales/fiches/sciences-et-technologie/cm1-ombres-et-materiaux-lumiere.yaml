@@ -1,0 +1,63 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ombres-et-materiaux-lumiere
+declencheurs:
+- ombre
+- ombre portée
+- ombre propre
+- opaque
+- transparent
+- translucide
+- objet qui laisse passer la lumière
+- silhouette au sol
+essentiel: 'Un matériau peut être transparent (laisse bien passer la lumière), opaque (ne laisse pas passer la lumière)
+  ou translucide (laisse passer un peu de lumière, mais on ne voit pas net à travers).
+
+  Une ombre est produite par un objet opaque qui bloque la lumière d''une source : c''est un déficit de lumière.
+  L''ombre propre est la partie de l''objet non éclairée ; l''ombre portée est l''ombre projetée sur le sol ou sur
+  un écran.
+
+  La position et la taille de l''ombre portée dépendent des positions de la source de lumière, de l''objet opaque
+  et de l''écran (ou du sol) : faire varier l''un des trois en gardant les deux autres fixes fait varier l''ombre.'
+methode:
+- 'Classer les matériaux en les testant face à une lumière : transparent, opaque ou translucide.'
+- 'Pour produire une ombre : placer un objet opaque entre une source de lumière et un écran (ou le sol).'
+- Distinguer sur l'objet l'ombre propre (la partie non éclairée de l'objet) de l'ombre portée (projetée à côté).
+- 'Pour faire varier la taille ou la position de l''ombre : déplacer l''écran, ou la source, ou l''objet, en gardant
+  les deux autres éléments constants.'
+erreurs_frequentes:
+- Confondre l'ombre propre (sur l'objet) et l'ombre portée (sur le sol ou l'écran).
+- Croire qu'un objet translucide est transparent (on ne voit pas net à travers un translucide).
+- Faire varier plusieurs éléments à la fois (source, objet, écran) et ne plus savoir ce qui a changé l'ombre.
+exemple:
+  enonce: Comment obtenir une grande ombre portée sur un mur avec une lampe de poche et un objet opaque ?
+  solution: 'On rapproche l''objet opaque de la lampe (ou on éloigne l''écran/le mur), en gardant les autres éléments
+    fixes : plus l''objet est proche de la source, plus l''ombre portée est grande.'
+exercices:
+- enonce: 'Classe ces matériaux : une vitre, un carton, du papier calque. Lequel est transparent, lequel est opaque,
+    lequel est translucide ?'
+  indices:
+  - Teste chacun devant une lumière et regarde ce que tu vois à travers.
+  solution: La vitre est transparente (on voit net à travers), le carton est opaque (aucune lumière ne passe), le
+    papier calque est translucide (la lumière passe mais on ne voit pas net).
+- enonce: Sur ton propre corps éclairé par le Soleil, où se trouve l'ombre propre ?
+  indices:
+  - Ce n'est pas au sol.
+  solution: L'ombre propre est la partie de ton corps qui n'est pas éclairée par le Soleil (par exemple le dos,
+    si le Soleil est devant toi).
+- enonce: Tu veux rendre une ombre portée plus petite sans bouger la lampe ni l'écran. Que peux-tu faire ?
+  indices:
+  - 'Un seul élément doit bouger : lequel reste-t-il ?'
+  solution: On déplace l'objet opaque, en l'éloignant de la source de lumière (ou en le rapprochant de l'écran),
+    la taille de l'ombre portée change.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

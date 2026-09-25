@@ -1,0 +1,414 @@
+# DONNÉES D'EXPÉRIMENTATION — référentiel CM1 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
+matiere: Mathématiques
+id: mathematiques
+niveau: CM1
+annee_scolaire: "2026-2027"
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
+textes_officiels:
+  - intitule: "Programme de mathématiques pour le cycle 3"
+    reference: "Arrêté du 10-4-2025, BO n° 16 du 17 avril 2025 (MENE2504620A) — en vigueur en CM1 depuis la rentrée 2025"
+    url: "https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf"
+    consulte_le: "2026-09-24"
+perimetre: >
+  Le programme de mathématiques de cycle 3 (BO n° 16 du 17 avril 2025) découpe chaque domaine par
+  année : « Cours moyen première année », « Cours moyen deuxième année », « Sixième ». Seules les
+  notions placées sous « Cours moyen première année » sont retenues ici, pour les sept domaines qui
+  en comportent une section CM1 : Nombres, calcul et résolution de problèmes (dont Algèbre),
+  Grandeurs et mesures, Espace et géométrie, Organisation et gestion de données et probabilités, La
+  proportionnalité et Initiation à la pensée informatique. Tout ce qui est placé sous « Cours moyen
+  deuxième année » ou « Sixième » est exclu, y compris quand un paragraphe d'introduction du domaine
+  décrit une progression CM1-CM2 commune : dans ce cas, seule la phrase concernant explicitement le
+  CM1 est retenue. La section « Initiation à la pensée informatique » du CM1 ne comporte pas de
+  liste « Objectifs d'apprentissage » séparée ; son contenu propre (codage de déplacements,
+  programmes de construction géométrique) qui n'est pas déjà listé sous Algèbre ou Géométrie a été
+  repris sous forme de deux notions supplémentaires.
+themes:
+  - id: nombres-calcul-et-resolution-de-problemes
+    titre: "Nombres, calcul et résolution de problèmes"
+    chapitres:
+      - id: nombres-entiers
+        titre: "Les nombres entiers"
+        notions:
+          - id: cm1-numeration-des-entiers
+            titre: "Numération des nombres entiers jusqu'à 999 999"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comparer et dénombrer des collections en les organisant ; construire des collections de cardinal donné."
+              - "Connaître et utiliser les relations entre les unités de numération, et connaître la suite écrite et la suite orale des nombres jusqu'à 999 999."
+              - "Connaître la valeur des chiffres en fonction de leur position dans un nombre ; connaître et utiliser diverses représentations d'un nombre et passer de l'une à l'autre."
+              - "Comprendre et savoir utiliser les expressions « égal à », « supérieur à », « inférieur à », « compris entre … et … » ; comparer, encadrer, intercaler des nombres entiers en utilisant les symboles =, < et >."
+              - "Ordonner des nombres dans l'ordre croissant ou décroissant."
+              - "Savoir placer des nombres et repérer des points sur une demi-droite graduée."
+            mots_cles: [nombres entiers, dizaines de milliers, centaines de milliers, comparer des nombres, demi-droite graduée]
+            limites:                   # citations du texte officiel
+              - "Les connaissances et les savoir-faire attendus en fin de CM1 concernent les nombres s'écrivant avec au plus six chiffres. (p.5)"
+              - "On se limite, pendant les deux premières périodes de l'année, aux nombres entiers s'écrivant avec au plus quatre chiffres. (p.5)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres entiers », p.5"
+          - id: cm1-multiples-et-diviseurs
+            titre: "Multiples et diviseurs (critères de divisibilité par 2, 5 et 10)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Savoir reconnaître les multiples de 2, de 5 et de 10 à partir de leur écriture chiffrée."
+              - "Savoir déterminer si un nombre entier donné est un multiple d'un nombre entier inférieur ou égal à 10."
+              - "Savoir déterminer si un nombre entier inférieur ou égal à 10 est un diviseur d'un nombre entier donné."
+            mots_cles: [multiple, diviseur, table de multiplication, divisible par 2, divisible par 5, divisible par 10]
+            limites:                   # citations du texte officiel
+              - "Seuls les critères de divisibilité par 2, par 5 et par 10 figurent au programme. (p.5)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres entiers », p.5"
+      - id: fractions
+        titre: "Les fractions"
+        notions:
+          - id: cm1-sens-et-ecriture-des-fractions
+            titre: "Sens et écriture des fractions, y compris supérieures à 1"
+            niveau_programme: "CM1"
+            attendus:
+              - "Savoir interpréter, représenter, écrire et lire des fractions."
+              - "Savoir écrire une fraction supérieure à 1 comme la somme d'un entier et d'une fraction inférieure à 1, et réciproquement."
+              - "Savoir encadrer une fraction par deux nombres entiers consécutifs."
+              - "Savoir placer une fraction ou la somme d'un nombre entier et d'une fraction inférieure à 1 sur une demi-droite graduée, et repérer un point de cette demi-droite par une fraction."
+            mots_cles: [fraction, numérateur, dénominateur, fraction supérieure à 1, demi-droite graduée]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les fractions », p.6"
+          - id: cm1-comparer-et-calculer-avec-des-fractions
+            titre: "Comparer, additionner, soustraire des fractions et calculer une fraction d'une quantité"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comparer des fractions."
+              - "Additionner et soustraire des fractions."
+              - "Déterminer une fraction d'une quantité ou d'une grandeur (fractions unitaires utilisées comme opérateur multiplicatif, par exemple un tiers de 12 billes ou un quart de 100 mètres)."
+            mots_cles: [comparer des fractions, additionner des fractions, soustraire des fractions, fraction d'une quantité]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les fractions », p.5-6"
+      - id: nombres-decimaux
+        titre: "Les nombres décimaux"
+        notions:
+          - id: cm1-fractions-decimales-et-ecriture-a-virgule
+            titre: "Fractions décimales et passage à l'écriture à virgule"
+            niveau_programme: "CM1"
+            attendus:
+              - "Interpréter, représenter, écrire et lire des fractions décimales ; connaître et utiliser les relations entre unités simples, dixièmes et centièmes."
+              - "Placer une fraction décimale sur une demi-droite graduée et repérer un point d'une demi-droite graduée par une fraction décimale."
+              - "Écrire une fraction décimale supérieure à 1 comme la somme d'un nombre entier et d'une ou plusieurs fractions décimales."
+              - "Comparer, encadrer, intercaler des fractions décimales en utilisant les symboles =, < et > ; ordonner des fractions décimales dans l'ordre croissant ou décroissant."
+              - "Passer d'une écriture sous forme d'une fraction décimale ou d'une somme de fractions décimales à une écriture à virgule, et réciproquement."
+            mots_cles: [fraction décimale, dixième, centième, écriture à virgule]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres décimaux », p.6"
+          - id: cm1-nombres-decimaux-ecriture-a-virgule
+            titre: "Nombres décimaux en écriture à virgule, jusqu'aux centièmes"
+            niveau_programme: "CM1"
+            attendus:
+              - "Interpréter, représenter, écrire et lire des nombres décimaux en écriture à virgule (au CM1, sans dépasser les centièmes)."
+              - "Placer un nombre décimal en écriture à virgule sur une demi-droite graduée et repérer un point d'une demi-droite graduée par un nombre décimal."
+              - "Savoir donner la partie entière et l'arrondi à l'entier d'un nombre décimal."
+              - "Comparer, encadrer, intercaler, ordonner par ordre croissant ou décroissant des nombres décimaux donnés par leur écriture à virgule en utilisant les symboles =, < et >."
+            mots_cles: [nombre décimal, virgule, partie entière, arrondi, comparer des décimaux]
+            limites:                   # citations du texte officiel
+              - "Au CM1, les nombres décimaux rencontrés ne vont pas au-delà des centièmes et s'écrivent donc avec au plus deux chiffres après la virgule. (p.6)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les nombres décimaux », p.6"
+      - id: calcul-mental
+        titre: "Le calcul mental"
+        notions:
+          - id: cm1-memoriser-des-faits-numeriques
+            titre: "Mémoriser des faits numériques (tables, fractions et décimaux usuels)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître des faits numériques usuels relatifs aux nombres entiers."
+              - "Connaître quelques relations entre des fractions usuelles."
+              - "Connaître l'écriture décimale de fractions usuelles."
+            mots_cles: [tables d'addition, tables de multiplication, calcul mental, faits numériques]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Le calcul mental », p.7"
+          - id: cm1-calculer-mentalement-avec-la-numeration
+            titre: "Utiliser la numération pour calculer mentalement (×10, ×100, ×1000, ÷10)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Ajouter ou soustraire un nombre entier inférieur à 10, d'unités, de dizaines, de centaines, de dixièmes ou de centièmes à un nombre décimal, lorsqu'il n'y a pas de retenue."
+              - "Multiplier un nombre entier par 10, 100 ou 1 000."
+              - "Multiplier un nombre décimal par 10 ; diviser un nombre décimal par 10."
+            mots_cles: [multiplier par 10, multiplier par 100, diviser par 10, calcul mental]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Le calcul mental », p.7"
+          - id: cm1-procedures-de-calcul-mental
+            titre: "Procédures de calcul mental (ajouter/soustraire 8-9-18-19…, distributivité)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Ajouter ou soustraire 8, 9, 18, 19, 28, 29, 38 ou 39 à un nombre."
+              - "Multiplier un nombre entier inférieur à 10 par un nombre entier de dizaines ou de centaines."
+              - "Multiplier un nombre entier par 4 ou par 8, et multiplier un nombre entier par 5."
+              - "Utiliser la distributivité de la multiplication par rapport à l'addition dans des cas simples."
+            mots_cles: [calcul mental, distributivité, multiplier par 4, multiplier par 5]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Le calcul mental », p.7"
+      - id: quatre-operations
+        titre: "Les quatre opérations"
+        notions:
+          - id: cm1-poser-et-effectuer-les-operations
+            titre: "Poser et effectuer additions, soustractions, multiplications et divisions"
+            niveau_programme: "CM1"
+            attendus:
+              - "Estimer le résultat d'une opération."
+              - "Savoir effectuer un calcul contenant des parenthèses."
+              - "Poser en colonnes et effectuer des additions et des soustractions de nombres décimaux."
+              - "Poser et effectuer des multiplications de deux nombres entiers, et d'un nombre décimal par un nombre entier inférieur à 10."
+              - "Poser et effectuer des divisions euclidiennes avec un diviseur à un chiffre."
+            mots_cles: [addition posée, soustraction posée, multiplication posée, division euclidienne, ordre de grandeur]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves ne disposent pas de calculatrice personnelle. (p.7)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les quatre opérations », p.7"
+      - id: resolution-de-problemes
+        titre: "La résolution de problèmes"
+        notions:
+          - id: cm1-methode-de-resolution-de-problemes
+            titre: "La méthode en quatre phases : comprendre, modéliser, calculer, répondre"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comprendre l'énoncé et la question posée, en étant capable de reformuler « l'histoire » du problème avec ses propres mots."
+              - "Modéliser : identifier la ou les opérations à effectuer pour trouver le résultat cherché, en s'appuyant si besoin sur du matériel ou des représentations schématiques."
+              - "Calculer, en mobilisant le calcul mental ou le calcul posé, modalités privilégiées au CM1."
+              - "Répondre en communiquant une solution, puis réguler en adoptant une attitude critique sur la vraisemblance du résultat trouvé (par exemple : « 4,5 m pour la longueur d'une voiture, est-ce plausible ? »)."
+            mots_cles: [comprendre, modéliser, calculer, répondre, résolution de problèmes]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La résolution de problèmes », p.8"
+          - id: cm1-types-de-problemes-arithmetiques
+            titre: "Types de problèmes arithmétiques (additifs, multiplicatifs, mixtes, dénombrement, optimisation)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Résoudre des problèmes additifs en une étape des types « parties-tout » et « comparaison »."
+              - "Résoudre des problèmes additifs en deux ou trois étapes."
+              - "Résoudre des problèmes multiplicatifs de type « parties-tout » en une étape, et des problèmes de comparaison multiplicative."
+              - "Résoudre des problèmes mixtes en deux ou trois étapes."
+              - "Résoudre des problèmes de dénombrement."
+              - "Résoudre des problèmes d'optimisation."
+            mots_cles: [problème additif, problème multiplicatif, comparaison, dénombrement, optimisation]
+            limites:                   # citations du texte officiel
+              - "Les données des problèmes proposés aux élèves sont dans le champ numérique maîtrisé au CM1, à savoir les nombres entiers jusqu'à 999 999, les nombres décimaux et les fractions. (p.8)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La résolution de problèmes », p.8"
+      - id: algebre
+        titre: "Algèbre"
+        notions:
+          - id: cm1-nombres-inconnus-et-egalites-a-trous
+            titre: "Nombres inconnus, symboles et égalités à trous"
+            niveau_programme: "CM1"
+            attendus:
+              - "Trouver le nombre manquant dans une égalité à trous."
+              - "Déterminer la valeur d'un nombre inconnu en utilisant un symbole ou une lettre pour le représenter."
+              - "Résoudre des problèmes algébriques."
+            mots_cles: [égalité à trous, nombre inconnu, symbole, pensée algébrique]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Algèbre », p.9"
+          - id: cm1-programmes-de-calcul-et-suites
+            titre: "Exécuter un programme de calcul et poursuivre une suite"
+            niveau_programme: "CM1"
+            attendus:
+              - "Exécuter un programme de calcul."
+              - "Identifier et formuler une règle de calcul pour poursuivre une suite de nombres."
+              - "Identifier des régularités et poursuivre une suite de motifs évolutive."
+            mots_cles: [programme de calcul, suite de nombres, régularité, suite de motifs]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Algèbre », p.9"
+  - id: grandeurs-et-mesures
+    titre: "Grandeurs et mesures"
+    chapitres:
+      - id: longueurs
+        titre: "Les longueurs"
+        notions:
+          - id: cm1-longueurs
+            titre: "Unités de longueur, comparaison, périmètre d'un polygone"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître et utiliser les unités de longueur du millimètre au kilomètre et les symboles associés ; connaître les relations entre les unités de longueur."
+              - "Choisir une unité adaptée pour exprimer une longueur ; comparer des longueurs ; disposer de quelques longueurs de référence ; estimer la longueur d'un objet ou d'une distance."
+              - "Savoir ce qu'est le périmètre d'une figure plane ; déterminer le périmètre d'un polygone en utilisant une règle graduée."
+              - "Résoudre des problèmes mettant en jeu les longueurs des côtés d'un polygone et son périmètre."
+            mots_cles: [longueur, mètre, périmètre, unités de longueur]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les longueurs », p.17"
+      - id: masses
+        titre: "Les masses"
+        notions:
+          - id: cm1-masses
+            titre: "Unités de masse et comparaison de masses"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître et utiliser les unités de masse du milligramme au kilogramme et la tonne, et les symboles associés ; connaître les relations entre les unités de masse."
+              - "Choisir une unité adaptée pour exprimer une masse ; comparer des masses ; disposer de quelques masses de référence ; estimer la masse d'un objet."
+            mots_cles: [masse, gramme, kilogramme, tonne, peser]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les masses », p.17"
+      - id: contenances
+        titre: "Les contenances"
+        notions:
+          - id: cm1-contenances
+            titre: "Unités de contenance et comparaison de contenances"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître et utiliser les unités de contenance du millilitre à l'hectolitre et les symboles associés ; connaître les relations entre les unités de contenance."
+              - "Choisir une unité adaptée pour exprimer une contenance ; comparer des contenances."
+            mots_cles: [contenance, litre, millilitre, hectolitre]
+            limites:                   # citations du texte officiel
+              - "Au cours moyen, les élèves n'utilisent pas de tableaux pour effectuer des conversions (p.16)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les contenances », p.17"
+      - id: aires
+        titre: "Les aires"
+        notions:
+          - id: cm1-aires
+            titre: "Comparer et déterminer des aires en centimètres carrés"
+            niveau_programme: "CM1"
+            attendus:
+              - "Comparer les aires de différentes figures planes."
+              - "Déterminer des aires ; connaître et utiliser les centimètres carrés pour exprimer des aires (aucune formule de périmètre ou d'aire n'est exigée par cœur au CM1)."
+            mots_cles: [aire, surface, centimètre carré]
+            limites:                   # citations du texte officiel
+              - "Il n'est pas attendu de mémorisation de formules de périmètres ou d'aires de figures planes au CM1, l'enseignement privilégiant l'acquisition de leur sens et la détermination de mesures s'appuyant sur des pavages. (p.17)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les aires », p.17"
+      - id: angles
+        titre: "Les angles"
+        notions:
+          - id: cm1-angles
+            titre: "Vocabulaire, notations et comparaison des angles saillants"
+            niveau_programme: "CM1"
+            attendus:
+              - "Utiliser le lexique spécifique associé aux angles ; comprendre et utiliser les notations des angles."
+              - "Comparer des angles (au CM1, seuls les angles saillants sont travaillés)."
+            mots_cles: [angle, angle droit, comparer des angles]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les angles », p.17"
+      - id: reperage-dans-le-temps-et-durees
+        titre: "Le repérage dans le temps et les durées"
+        notions:
+          - id: cm1-temps-et-durees
+            titre: "Lire l'heure et calculer des durées en heures et minutes"
+            niveau_programme: "CM1"
+            attendus:
+              - "Lire l'heure sur une horloge à aiguilles."
+              - "Positionner les aiguilles d'une horloge correspondant à une heure donnée en heure et minute."
+              - "Comparer et mesurer des durées écoulées entre deux instants affichés sur une horloge, instants et durées étant exprimés en heure et minute."
+              - "Résoudre des problèmes à une ou deux étapes impliquant des durées."
+            mots_cles: [heure, minute, durée, horloge]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Le repérage dans le temps et les durées », p.18"
+  - id: espace-et-geometrie
+    titre: "Espace et géométrie"
+    chapitres:
+      - id: geometrie-plane
+        titre: "La géométrie plane"
+        notions:
+          - id: cm1-vocabulaire-et-outils-geometriques
+            titre: "Vocabulaire géométrique, outils, perpendicularité et parallélisme"
+            niveau_programme: "CM1"
+            attendus:
+              - "Utiliser le vocabulaire géométrique approprié dans le contexte d'apprentissage des notions correspondantes."
+              - "Utiliser les outils géométriques usuels : règle, règle graduée, équerre et compas ; connaître les codes usuels utilisés en géométrie."
+              - "Décrire et reconnaître un cercle et un disque comme un ensemble de points caractérisés par leur distance à un point donné."
+              - "Reconnaître et utiliser la notion de perpendicularité ; reconnaître et utiliser la notion de parallélisme."
+            mots_cles: [règle, équerre, compas, cercle, disque, perpendiculaire, parallèle]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La géométrie plane », p.20"
+          - id: cm1-figures-planes-usuelles
+            titre: "Reconnaître, décrire et construire les figures planes usuelles"
+            niveau_programme: "CM1"
+            attendus:
+              - "Reconnaître et nommer les figures suivantes en faisant référence à leur définition : triangle, triangle rectangle, triangle isocèle, triangle équilatéral, quadrilatère, carré, rectangle et losange."
+              - "Connaître les propriétés de parallélisme des côtés opposés, des égalités de longueurs et d'angles pour ces figures usuelles."
+              - "Reproduire ou construire un carré, un rectangle, un triangle, un triangle rectangle ou un cercle, ou des assemblages de ces figures, sur tout support, avec une règle graduée, une équerre ou un compas."
+              - "Construire une figure géométrique composée de segments, de droites, de polygones usuels et de cercles."
+            mots_cles: [triangle, carré, rectangle, losange, quadrilatère, construire une figure]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La géométrie plane », p.20-21"
+          - id: cm1-symetrie-axiale
+            titre: "Reconnaître et construire une figure symétrique (axe horizontal ou vertical)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Reconnaître si une figure possède un ou plusieurs axes de symétrie."
+              - "Compléter une figure pour la rendre symétrique par rapport à une droite donnée, horizontale ou verticale."
+              - "Construire, sur papier quadrillé, la figure symétrique d'une figure donnée par rapport à une droite horizontale ou verticale."
+            mots_cles: [symétrie, axe de symétrie, figure symétrique, papier quadrillé]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La géométrie plane », p.21"
+      - id: solides
+        titre: "Les solides"
+        notions:
+          - id: cm1-solides
+            titre: "Nommer, décrire et construire cube, pavé, pyramide, prisme droit"
+            niveau_programme: "CM1"
+            attendus:
+              - "Nommer un cube, une boule, un pavé, un cône, une pyramide, un cylindre et un prisme droit."
+              - "Décrire un cube, un pavé, une pyramide et un prisme droit en faisant référence à des propriétés et en utilisant le vocabulaire approprié."
+              - "Connaître le nombre et la nature des faces d'un cube ou d'un pavé ; connaître la nature des faces d'une pyramide et d'un prisme droit."
+              - "Construire un cube, un pavé, une pyramide ou un prisme droit."
+              - "Reconnaître un patron d'un cube ; construire un patron d'un cube."
+            mots_cles: [cube, pavé, pyramide, prisme droit, cône, cylindre, patron]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les solides », p.21"
+      - id: reperage-dans-lespace
+        titre: "Le repérage dans l'espace"
+        notions:
+          - id: cm1-reperage-dans-espace
+            titre: "Vocabulaire des déplacements et problèmes sur des assemblages de cubes"
+            niveau_programme: "CM1"
+            attendus:
+              - "Connaître et utiliser le vocabulaire lié aux déplacements."
+              - "Comprendre, utiliser et produire une suite d'instructions qui décrivent un déplacement en utilisant un vocabulaire spatial précis."
+              - "Résoudre des problèmes portant sur des assemblages de cubes."
+            mots_cles: [déplacement, se repérer, vocabulaire spatial, assemblage de cubes]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Le repérage dans l'espace », p.21"
+  - id: organisation-et-gestion-de-donnees-et-probabilites
+    titre: "Organisation et gestion de données et probabilités"
+    chapitres:
+      - id: organisation-et-gestion-de-donnees
+        titre: "Organisation et gestion de données"
+        notions:
+          - id: cm1-lire-et-produire-des-representations-de-donnees
+            titre: "Recueillir, présenter et lire des données (tableau, diagramme en barres, courbe)"
+            niveau_programme: "CM1"
+            attendus:
+              - "Recueillir des données et produire un tableau, un diagramme en barres ou un ensemble de points dans un repère pour les présenter."
+              - "Lire et interpréter les données d'un tableau à simple ou double entrée, d'un diagramme en barres ou d'une courbe."
+              - "Résoudre des problèmes en une ou plusieurs étapes en utilisant les données d'un tableau à simple ou double entrée, d'un diagramme en barres ou d'une courbe."
+            mots_cles: [tableau, diagramme en barres, courbe, données]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Organisation et gestion de données », p.24"
+      - id: les-probabilites
+        titre: "Les probabilités"
+        notions:
+          - id: cm1-premieres-notions-de-probabilite
+            titre: "Expériences aléatoires : impossible, possible, certain, équiprobabilité"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier des expériences aléatoires et identifier toutes les issues possibles lors d'une expérience aléatoire simple."
+              - "Comprendre et utiliser le vocabulaire approprié : « impossible », « possible », « certain », « probable », « peu probable », « une chance sur deux »."
+              - "Comparer des issues d'expériences aléatoires ou des évènements selon leur probabilité de réalisation."
+              - "Comprendre que ce n'est pas parce qu'il y a deux issues possibles que chacune a une chance sur deux de se réaliser ; reconnaître des situations d'équiprobabilité."
+            mots_cles: [probabilité, hasard, certain, impossible, une chance sur deux]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Les probabilités », p.24"
+  - id: la-proportionnalite
+    titre: "La proportionnalité"
+    chapitres:
+      - id: proportionnalite
+        titre: "Proportionnalité"
+        notions:
+          - id: cm1-identifier-et-resoudre-un-probleme-de-proportionnalite
+            titre: "Identifier et résoudre un problème de proportionnalité par la linéarité"
+            niveau_programme: "CM1"
+            attendus:
+              - "Identifier une situation de proportionnalité, dans le cadre des grandeurs."
+              - "Savoir résoudre un problème de proportionnalité en s'appuyant sur un raisonnement de linéarité pour la multiplication, formulé en langage naturel (au CM1, sans tableau de proportionnalité)."
+            mots_cles: [proportionnalité, fois plus, fois moins, raisonnement]
+            limites:                   # citations du texte officiel
+              - "Les élèves n'utilisent pas de tableaux de proportionnalité au cours moyen. (p.26)"
+              - "Au cours moyen, les problèmes posés le sont tous dans le cadre des grandeurs et ne portent pas sur des suites de nombres hors contexte. (p.26)"
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « La proportionnalité », p.26"
+  - id: initiation-a-la-pensee-informatique
+    titre: "Initiation à la pensée informatique"
+    chapitres:
+      - id: pensee-informatique
+        titre: "Initiation à la pensée informatique"
+        notions:
+          - id: cm1-codage-de-deplacements
+            titre: "Coder et produire des déplacements, éventuellement avec un robot"
+            niveau_programme: "CM1"
+            attendus:
+              - "Utiliser et produire des codages de déplacements en élargissant les environnements dans lesquels ces déplacements ont lieu (quartier, ville, etc.)."
+              - "Envisager la programmation d'un robot lorsque l'école en est équipée."
+            mots_cles: [codage, déplacement, robot, programmation]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Initiation à la pensée informatique », p.28"
+          - id: cm1-programmes-de-construction-geometrique
+            titre: "Réaliser une figure à partir d'un programme de construction"
+            niveau_programme: "CM1"
+            attendus:
+              - "Réaliser une figure géométrique en suivant un programme de construction, par exemple « Trace un rectangle ABCD tel que AB = 5 cm et BC = 3 cm. Trace le cercle de centre A qui passe par le milieu du côté [AB]. »."
+            mots_cles: [programme de construction, tracer une figure, instructions]
+            source: "Programme de mathématiques cycle 3 (BO n° 16 du 17-4-2025), CM1, « Initiation à la pensée informatique », p.28"

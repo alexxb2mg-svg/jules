@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-cerveau-grandes-fonctions
+declencheurs:
+- cerveau
+- mémoire
+- attention
+- se concentrer
+- illusion
+- perception
+- rêve
+- comment retenir
+- deux traits de longueurs différentes
+essentiel: 'Le cerveau est un organe qu''on peut localiser dans le corps. Il est impliqué dans plusieurs fonctions
+  : la perception sensorielle, l''élaboration de la commande motrice, le langage, l''apprentissage et la mémorisation,
+  l''élaboration des émotions, la production des rêves.
+
+  À partir d''expériences fondées sur des illusions sensorielles, on comprend que notre perception du monde peut
+  être différente de sa réalité physique.
+
+  On peut déterminer des stratégies pour focaliser son attention sur une tâche ou pour mémoriser une information
+  : cela mobilise la mémoire à court terme et la mémoire à long terme.'
+methode:
+- Repérer sur un document ou un schéma les zones du cerveau spécialisées dans différentes fonctions.
+- Observer une illusion sensorielle et décrire ce qu'on ressent, puis le comparer à la réalité physique.
+- Confronter sa perception à celle des autres élèves.
+- Tester différentes stratégies d'attention et de mémorisation pour identifier celles qui fonctionnent le mieux.
+erreurs_frequentes:
+- Croire que le cerveau ne sert qu'à réfléchir, alors qu'il gère aussi les perceptions, les mouvements, les émotions
+  et les rêves.
+- Croire que ce que l'on perçoit correspond toujours exactement à la réalité physique.
+- Confondre mémoire à court terme et mémoire à long terme.
+exemple:
+  enonce: Une illusion d'optique fait paraître deux traits de même longueur comme différents. Que montre cette expérience
+    ?
+  solution: Elle montre que la perception du monde par le cerveau peut être différente de la réalité physique (les
+    deux traits sont bien de la même longueur, même si on ne les perçoit pas ainsi).
+exercices:
+- enonce: Cite trois choses que tu fais et dans lesquelles ton cerveau travaille.
+  indices:
+  - Pense à voir, parler, te souvenir, bouger...
+  solution: 'Par exemple : la perception sensorielle, le langage et la mémorisation (on accepte aussi la commande
+    motrice, les émotions, les rêves).'
+- enonce: Pourquoi confronte-t-on ce que l'on a ressenti face à une illusion sensorielle avec ce qu'ont ressenti
+    les autres élèves ?
+  indices:
+  - Cela permet de vérifier quelque chose sur la perception.
+  solution: Pour constater que la perception peut varier d'une personne à l'autre et comprendre que la perception
+    peut être différente de la réalité physique.
+- enonce: Quelles sont les deux types de mémoire cités pour mémoriser une information ?
+  indices:
+  - Regarde la fin de l'essentiel.
+  solution: La mémoire à court terme et la mémoire à long terme.
+sources:
+- titre: Programme de sciences et technologie du cycle 3, arrêté du 5-6-2026, BO n° 24 du 11/06/2026, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-2-programme-de-sciences-et-technologie-du-cycle-3-517292.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus et démarches de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

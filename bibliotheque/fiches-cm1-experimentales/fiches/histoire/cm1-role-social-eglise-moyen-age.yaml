@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-role-social-eglise-moyen-age
+declencheurs:
+- l'église aide les pauvres
+- abbaye
+- cathédrale
+- qui enseigne au moyen âge
+- moines
+- malades
+couverture: 'Ne couvre que ce que dit le programme : le rôle social de l''Église (assistance aux pauvres et malades,
+  enseignement) et les repères d''une abbaye et d''une cathédrale.'
+essentiel: 'Au Moyen Âge, l''Église joue un rôle important dans la vie des femmes et des hommes.
+
+  Elle a un rôle social : elle assiste les pauvres et les malades, et elle assure l''enseignement.
+
+  Deux bâtiments sont des repères de ce rôle : une abbaye (par exemple l''abbaye de Cluny) et une cathédrale (par
+  exemple Notre-Dame de Paris).'
+methode:
+- 'Se demander ce que fait l''Église pour aider les gens : assistance ou enseignement.'
+- Associer « abbaye » à un lieu religieux de référence (par exemple Cluny).
+- Associer « cathédrale » à un autre lieu religieux de référence (par exemple Notre-Dame de Paris).
+vocabulaire:
+- terme: abbaye
+  definition: bâtiment religieux, repère du rôle de l'Église au Moyen Âge
+- terme: cathédrale
+  definition: grande église, repère du rôle de l'Église au Moyen Âge
+erreurs_frequentes:
+- 'Oublier que l''Église a un rôle social concret : aider les pauvres et les malades, pas seulement prier.'
+- 'Confondre une abbaye et une cathédrale : ce sont deux repères différents cités par le programme.'
+exemple:
+  enonce: Cite les deux aspects du rôle social de l'Église au Moyen Âge.
+  solution: L'assistance aux pauvres et aux malades, et l'enseignement.
+exercices:
+- enonce: Donne le nom d'une abbaye et d'une cathédrale citées comme repères du Moyen Âge.
+  indices:
+  - Le nom de l'abbaye commence par C ; la cathédrale est à Paris.
+  solution: L'abbaye de Cluny et la cathédrale Notre-Dame de Paris.
+- enonce: Un enfant du Moyen Âge apprend à lire auprès de moines. À quel rôle de l'Église cela correspond-il ?
+  indices:
+  - 'Il y a deux rôles sociaux possibles : lequel concerne le savoir ?'
+  solution: Cela correspond à l'enseignement, un des deux rôles sociaux de l'Église.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.4-5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

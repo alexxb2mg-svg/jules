@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-chaine-accords-groupe-nominal
+declencheurs:
+- chaîne d'accords
+- accorder le groupe nominal
+- donneur d'accord
+- accord dans le groupe nominal
+- féminin pluriel du groupe
+essentiel: 'Dans un groupe nominal, tous les mots doivent s''accorder avec le nom noyau : c''est la chaîne d''accords.
+
+  Le nom noyau est le donneur d''accord : c''est lui qui impose son genre et son nombre au déterminant et à l''adjectif
+  (une grande maison : maison est le donneur d''accord, une et grande s''accordent avec lui).
+
+  Pour transformer le genre ou le nombre d''un groupe nominal, il faut changer tous les mots qui l''accompagnent,
+  pas seulement le nom.
+
+  Il faut aussi savoir justifier ces variations, par exemple en expliquant pourquoi on écrit « des chevaux » et
+  non « des chevals ».'
+methode:
+- 'Repérer le nom noyau du groupe nominal : c''est le donneur d''accord.'
+- Identifier le genre et le nombre du nom noyau.
+- Accorder le déterminant avec le genre et le nombre du nom noyau.
+- Accorder les adjectifs (épithètes) avec le genre et le nombre du nom noyau.
+- Vérifier chaque mot du groupe nominal pour s'assurer qu'il est bien accordé.
+vocabulaire:
+- terme: donneur d'accord
+  definition: le nom noyau, qui impose son genre et son nombre aux autres mots du groupe nominal
+- terme: chaîne d'accords
+  definition: l'ensemble des accords en genre et en nombre à réaliser dans le groupe nominal
+erreurs_frequentes:
+- Accorder seulement le nom et oublier d'accorder le déterminant ou l'adjectif.
+- Se tromper de donneur d'accord quand le groupe nominal contient plusieurs noms.
+- Ne pas connaître les formes irrégulières du pluriel (cheval → chevaux).
+exemple:
+  enonce: 'Mets au féminin pluriel le groupe nominal : « un petit ours ».'
+  solution: 'une petite ourse : le nom devient ourse (forme féminine), le déterminant devient une, l''adjectif devient
+    petite ; tous s''accordent avec le nom noyau, qui reste ici au singulier dans cet exemple féminin.'
+exercices:
+- enonce: 'Accorde tous les mots du groupe nominal au pluriel : « ce beau cheval ».'
+  indices:
+  - Le nom cheval a un pluriel irrégulier.
+  - N'oublie pas le déterminant et l'adjectif.
+  solution: ces beaux chevaux (déterminant, adjectif et nom accordés au pluriel).
+- enonce: Dans le groupe nominal « la grande maison bleue », identifie le donneur d'accord et les mots qui s'accordent
+    avec lui.
+  indices:
+  - Le donneur d'accord est toujours le nom noyau.
+  solution: 'Donneur d''accord : maison. Mots accordés avec lui : la, grande, bleue (tous au féminin singulier).'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus « Réaliser la chaîne d'accords au sein du groupe nominal » CM1
+- titre: Éduscol, guide fondamental « La grammaire du français du CP à la 6e », p. 99
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-du-cp-la-6e-97251.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: définition du donneur d'accord et de la chaîne d'accords
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

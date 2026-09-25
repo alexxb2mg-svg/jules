@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-diversite-pratiques-alimentaires
+declencheurs:
+- nourriture
+- manger
+- repas
+- pays riche
+- pays pauvre
+- faim
+- pas assez à manger
+- alimentation
+essentiel: 'Dans le monde, on ne mange pas tous la même chose, ni en même quantité.
+
+  Dans un pays riche, les gens mangent en général à leur faim, souvent avec beaucoup de produits transformés (biscuits,
+  plats préparés).
+
+  Dans un pays en développement, une partie de la population peut ne pas avoir assez à manger : c''est la sous-nutrition.
+
+  Quand l''alimentation d''une personne n''est pas équilibrée (trop, pas assez, ou mal), on parle de malnutrition.
+
+  Ces différences viennent surtout de la richesse du pays, pas d''un choix des habitants.'
+methode:
+- Repère si la situation décrite se passe dans un pays riche ou dans un pays en développement.
+- Cherche s'il est question de manger trop, de mal manger, ou de ne pas manger assez.
+- 'Utilise le bon mot : sous-nutrition (pas assez à manger), malnutrition (alimentation déséquilibrée).'
+- Compare toujours deux situations sur deux continents différents, comme le demande le programme.
+vocabulaire:
+- terme: malnutrition
+  definition: une alimentation mal équilibrée (trop, pas assez, ou mauvaise qualité)
+- terme: sous-nutrition
+  definition: le fait de ne pas avoir assez à manger pour rester en bonne santé
+erreurs_frequentes:
+- Penser que la faim dans le monde ne touche qu'un seul continent.
+- Confondre « ne pas aimer un aliment » et « ne pas avoir assez à manger ».
+- Croire que tous les habitants d'un pays riche mangent forcément à leur faim.
+exemple:
+  enonce: Dans un pays, les récoltes de fruits et légumes sont abondantes presque toute l'année et les habitants
+    mangent en général à leur faim. Dans un autre pays, des sécheresses fréquentes touchent les récoltes et une
+    partie de la population n'a pas assez à manger. Quel mot utiliser pour décrire la deuxième situation ?
+  solution: 'C''est un exemple de sous-nutrition : une partie de la population n''a pas une alimentation suffisante
+    pour rester en bonne santé.'
+exercices:
+- enonce: Explique avec tes mots la différence entre un pays où les gens mangent à leur faim et un pays touché par
+    la sous-nutrition.
+  indices:
+  - Pense à la quantité de nourriture disponible pour les habitants.
+  - Le mot « sous-nutrition » veut dire « pas assez ».
+  solution: Dans un pays où les gens mangent à leur faim, la nourriture est suffisante pour presque tout le monde.
+    Dans un pays touché par la sous-nutrition, une partie des habitants n'a pas assez à manger.
+- enonce: Pourquoi dit-on que les pratiques alimentaires sont différentes « dans le monde » et pas seulement en
+    France ?
+  indices:
+  - Le programme demande de comparer deux pays situés sur deux continents différents.
+  solution: Parce que les habitudes alimentaires et les quantités de nourriture disponibles changent beaucoup d'un
+    continent à l'autre, selon la richesse des pays.
+- enonce: Donne un exemple de produit alimentaire transformé que tu manges parfois.
+  indices:
+  - Un produit transformé est fabriqué à partir de produits agricoles.
+  solution: 'Par exemple un biscuit, un yaourt ou une conserve : ce sont des produits agricoles transformés.'
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

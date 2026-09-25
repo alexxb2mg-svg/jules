@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-volume-annuel-lectures
+declencheurs:
+- combien de livres lire cette année
+- lire des livres anciens
+- roman de littérature jeunesse
+- œuvre du patrimoine
+- objectif de lecture de l'année
+essentiel: 'Au CM1, il y a un nombre de livres à lire dans l''année, fixé par le programme officiel.
+
+  Il faut lire au moins 2 œuvres issues du patrimoine (des textes anciens, connus depuis longtemps) et 5 ouvrages
+  de littérature de jeunesse (des livres plus récents, écrits pour les enfants).
+
+  Il ne suffit pas de lire : il faut aussi garder trace de ses lectures et les partager, par exemple avec un carnet
+  de lecture ou en en parlant en classe.'
+methode:
+- Noter chaque livre lu dans l'année dans un carnet ou une liste de lecture.
+- Vérifier si le livre est une œuvre du patrimoine ou un ouvrage de littérature de jeunesse.
+- Continuer à lire régulièrement pour atteindre le nombre de livres attendu dans l'année.
+- Partager régulièrement ses lectures (résumé oral, présentation, échange avec un camarade).
+erreurs_frequentes:
+- Ne lire que des œuvres du patrimoine ou que de la littérature de jeunesse, sans varier.
+- Lire des livres sans en garder aucune trace pour pouvoir les partager plus tard.
+exemple:
+  enonce: Léa a lu 1 œuvre du patrimoine et 3 ouvrages de littérature de jeunesse depuis la rentrée. A-t-elle atteint
+    l'objectif de l'année pour le CM1 ?
+  solution: 'Pas encore : il faut au moins 2 œuvres du patrimoine (il lui en manque 1) et au moins 5 ouvrages de
+    littérature de jeunesse (il lui en manque 2).'
+exercices:
+- enonce: Fais la liste des livres que tu as lus depuis la rentrée. Combien sont des œuvres du patrimoine, combien
+    sont de la littérature de jeunesse ?
+  indices:
+  - Une œuvre du patrimoine est en général un texte ancien et connu (conte, fable...).
+  - La littérature de jeunesse regroupe des livres plus récents écrits pour les enfants.
+  solution: 'Il n''y a pas une seule bonne réponse : le but est de vérifier si on se rapproche de 2 œuvres du patrimoine
+    et 5 ouvrages de littérature de jeunesse dans l''année.'
+- enonce: Explique à quelqu'un de ta famille comment tu gardes trace de tes lectures (carnet, liste, autre méthode).
+  indices:
+  - 'Pense à ce que tu notes : titre, auteur, avis...'
+  - Un simple cahier peut suffire.
+  solution: 'Critère de réussite : la méthode permet de retrouver facilement, plus tard, les livres déjà lus dans
+    l''année.'
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3-4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

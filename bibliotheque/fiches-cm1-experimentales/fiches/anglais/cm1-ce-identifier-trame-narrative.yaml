@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ce-identifier-trame-narrative
+declencheurs:
+- comprendre l'histoire d'un album en anglais
+- suivre les étapes d'un récit en anglais
+- comprendre l'ordre d'une histoire en anglais
+essentiel: 'Pour identifier la trame d''un récit (comment l''histoire est construite), on s''appuie sur les images
+  pour deviner ce qui se passe.
+
+  On repère les phrases affirmatives et les phrases négatives, avec le mot not.
+
+  On repère des connecteurs simples comme and et but, qui relient les idées.
+
+  On reconnaît des mots sur la famille et le caractère (nice, funny, friendly) et des verbes d''activités quotidiennes
+  (eat, drink, sleep, play).'
+methode:
+- Observer les images dans l'ordre pour deviner l'histoire avant de lire.
+- Repérer les connecteurs and et but qui relient les phrases.
+- Repérer si une phrase est affirmative ou négative (présence de not).
+- Vérifier sa compréhension en résumant l'histoire avec ses propres mots.
+vocabulaire:
+- terme: connecteur
+  definition: un petit mot qui relie deux phrases ou deux idées, comme and ou but
+- terme: phrase négative
+  definition: une phrase qui dit que quelque chose n'est pas le cas, avec le mot not
+erreurs_frequentes:
+- Ne pas remarquer le mot not et donc comprendre le contraire de ce qui est écrit.
+- Lire le texte sans s'aider des images qui racontent déjà une partie de l'histoire.
+exemple:
+  enonce: 'Tu lis : « The rabbit doesn''t want to hug the tortoise. ». Que comprends-tu grâce à doesn''t ?'
+  solution: 'Doesn''t contient not : le lapin ne veut pas faire un câlin à la tortue.'
+exercices:
+- enonce: 'Relie ces deux idées avec and : « The tortoise is feeling sad. » et « It asks for a hug. »'
+  indices:
+  - And sert à ajouter une idée à une autre.
+  solution: The tortoise is feeling sad and it asks for a hug.
+- enonce: Une phrase dit « Monday is wet. Mr Wolf puts on his raincoat. ». Quelle image t'aiderait à comprendre
+    wet sans le traduire ?
+  indices:
+  - Pense à ce qu'on porte quand il pleut.
+  solution: Une image de pluie et d'un imperméable (raincoat) aide à deviner que wet veut dire qu'il pleut.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 8
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

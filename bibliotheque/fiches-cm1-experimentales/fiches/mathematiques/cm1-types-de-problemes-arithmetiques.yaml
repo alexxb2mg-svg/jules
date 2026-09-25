@@ -1,0 +1,78 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-types-de-problemes-arithmetiques
+declencheurs:
+- fois plus
+- fois moins
+- partager équitablement
+- combien de façons
+- problème avec plusieurs étapes
+- trouver le nombre maximum
+essentiel: 'Il existe plusieurs types de problèmes. Les problèmes additifs de type « parties-tout » demandent de
+  réunir ou de séparer des quantités ; les problèmes de « comparaison » demandent de trouver un écart ou une quantité
+  à partir d''un écart connu.
+
+  Certains problèmes se résolvent en une seule étape, d''autres en deux ou trois étapes : il faut alors trouver
+  un résultat intermédiaire avant de pouvoir répondre à la question finale.
+
+  Les problèmes multiplicatifs de « parties-tout » cherchent la valeur d''un tout formé de plusieurs parts égales.
+  Les problèmes de comparaison multiplicative utilisent « fois plus » ou « fois moins », à ne pas confondre avec
+  « de plus » ou « de moins » (comparaison additive).
+
+  Les problèmes de dénombrement demandent de compter tous les cas possibles sans oubli ni répétition, en s''aidant
+  d''un tableau, d''un arbre ou d''une liste organisée.
+
+  Les problèmes d''optimisation demandent de trouver la meilleure solution parmi plusieurs possibles, en respectant
+  plusieurs contraintes à la fois.'
+methode:
+- Repérer si le problème compare deux quantités, en réunit plusieurs, ou demande de compter des cas.
+- Chercher les mots « fois plus »/« fois moins » (comparaison multiplicative) ou « de plus »/« de moins » (comparaison
+  additive) et ne pas les confondre.
+- Pour un problème en plusieurs étapes, écrire d'abord ce que l'on peut calculer avec les données connues.
+- Pour un dénombrement, organiser les cas dans un tableau, un arbre ou une liste, sans en oublier ni en compter
+  deux fois.
+- Pour un problème d'optimisation, vérifier que chaque contrainte est bien respectée avant de conclure.
+erreurs_frequentes:
+- Confondre « trois fois plus » (multiplication) avec « trois de plus » (addition).
+- Oublier une étape intermédiaire dans un problème à deux ou trois étapes.
+- Compter deux fois le même cas, ou en oublier, dans un problème de dénombrement.
+- Ne vérifier qu'une seule contrainte dans un problème d'optimisation.
+exemple:
+  enonce: Une trottinette coûte quatre fois plus cher qu'un casque. Le casque coûte 32 €. Combien coûte la trottinette
+    ?
+  solution: '« Quatre fois plus cher » est une comparaison multiplicative : on multiplie. 32 × 4 = 128. La trottinette
+    coûte 128 €.'
+exercices:
+- enonce: Léo a 25,60 €. Lucie a 7,55 € de plus que Léo. Combien d'euros les deux enfants ont-ils en tout ?
+  indices:
+  - Trouve d'abord combien Lucie a d'euros, puis additionne les deux sommes.
+  solution: Lucie a 25,60 + 7,55 = 33,15 €. Ensemble, ils ont 25,60 + 33,15 = 58,75 €.
+- enonce: Un enfant veut habiller son ours avec un tee-shirt (parmi 4 différents) et un pantalon (parmi 3 différents).
+    De combien de façons différentes peut-il l'habiller ?
+  indices:
+  - Organise les possibilités dans un tableau à double entrée ou un arbre.
+  solution: Il y a 4 × 3 = 12 façons différentes d'habiller l'ours.
+- enonce: Pour un collier, il faut 5 perles rouges et 3 perles bleues. On dispose de 22 perles rouges et de 10 perles
+    bleues. Combien de colliers identiques peut-on fabriquer au maximum ?
+  indices:
+  - Combien de colliers permettent les perles rouges ? Combien permettent les perles bleues ?
+  solution: 'Avec les perles rouges : 22 ÷ 5 = 4 colliers possibles (reste 2). Avec les perles bleues : 10 ÷ 3 =
+    3 colliers possibles (reste 1). La contrainte la plus stricte limite à 3 colliers au maximum.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.11-12
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,65 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-reperage-dans-espace
+declencheurs:
+- se déplacer
+- avancer
+- tourner
+- plan d'une ville
+- assemblage de cubes
+- itinéraire
+essentiel: 'Pour décrire un déplacement, on utilise un vocabulaire précis : avancer, reculer, tourner d''un quart
+  de tour à gauche ou à droite, faire demi-tour.
+
+  On peut représenter un déplacement sur un quadrillage, sur le plan d''une ville, en suivant des instructions en
+  langage naturel ou codées.
+
+  À partir d''un point de départ et d''un point d''arrivée, on peut décrire le déplacement avec des instructions.
+
+  On résout aussi des problèmes sur des assemblages de cubes : par exemple, compter combien de petits cubes composent
+  un solide (certains cubes peuvent être cachés).'
+methode:
+- Repérer le point de départ et la direction de départ.
+- 'Suivre ou produire les instructions une par une : avancer, tourner, reculer...'
+- Vérifier le trajet sur le quadrillage ou le plan.
+- Pour un assemblage de cubes, compter couche par couche, sans oublier les cubes cachés.
+vocabulaire:
+- terme: quart de tour
+  definition: un quart d'un tour complet, pour tourner à gauche ou à droite
+erreurs_frequentes:
+- Confondre la gauche et la droite dans les instructions.
+- Oublier de compter les cubes cachés dans un assemblage.
+- Mélanger l'ordre des instructions d'un déplacement.
+exemple:
+  enonce: Depuis la mairie, on avance vers le nord puis on tourne d'un quart de tour à droite. Dans quelle direction
+    se dirige-t-on ensuite ?
+  solution: En partant vers le nord et en tournant d'un quart de tour à droite, on se dirige ensuite vers l'est.
+exercices:
+- enonce: 'Décris, avec le vocabulaire des déplacements, comment aller d''une case à une autre sur un quadrillage
+    : 3 cases vers l''est puis 2 cases vers le nord.'
+  indices:
+  - Utilise avancer et tourner d'un quart de tour.
+  solution: On avance de 3 cases, on tourne d'un quart de tour, puis on avance de 2 cases.
+- enonce: 'Un solide est formé d''un empilement de cubes : une couche de 4 cubes au sol, et une couche de 2 cubes
+    au-dessus. Combien de cubes au total ?'
+  indices:
+  - Additionne les cubes de chaque couche.
+  solution: 4 + 2 = 6 cubes.
+- enonce: Si un robot est programmable dans la classe, que peut-on lui faire faire avec le vocabulaire des déplacements
+    ?
+  indices:
+  - Le vocabulaire des déplacements sert aussi à programmer.
+  solution: 'On peut programmer le robot pour qu''il effectue un déplacement : avancer, reculer, tourner d''un quart
+    de tour, faire demi-tour.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 22
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

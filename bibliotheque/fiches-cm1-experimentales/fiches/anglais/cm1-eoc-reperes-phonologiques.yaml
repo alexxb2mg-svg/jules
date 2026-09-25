@@ -1,0 +1,58 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-eoc-reperes-phonologiques
+declencheurs:
+- bien prononcer en anglais
+- je prononce mal les mots anglais
+- lire un texte à voix haute en anglais
+- l'accent en anglais
+- réciter une poésie en anglais
+essentiel: 'Pour bien parler anglais, il faut s''entraîner à prononcer un ensemble de mots et d''expressions qu''on
+  a appris par cœur, de façon à ce qu''on puisse nous comprendre.
+
+  On peut lire à voix haute un petit texte (dialogue, poème, extrait d''album) si on l''a préparé avant.
+
+  On répète des phrases simples avec l''aide d''un camarade ou du professeur.
+
+  L''anglais a des sons particuliers qu''il faut travailler, et il faut aussi connaître l''intonation des phrases
+  affirmatives et des questions.'
+methode:
+- Écouter d'abord un modèle (le professeur, un enregistrement) avant de répéter.
+- S'entraîner à voix basse, seul, plusieurs fois.
+- 'Faire attention à l''intonation : monte-t-elle en fin de question ?'
+- Lire le texte préparé à voix haute devant les autres.
+- 'Demander un retour : est-ce qu''on m''a compris ?'
+vocabulaire:
+- terme: prononciation
+  definition: la manière de dire les sons d'une langue
+- terme: intonation
+  definition: la façon dont la voix monte ou descend pendant une phrase
+erreurs_frequentes:
+- Lire un texte anglais à voix haute sans l'avoir préparé avant.
+- Ne pas faire varier sa voix entre une phrase affirmative et une question.
+- Vouloir dire une phrase entière sans s'être entraîné sur les mots difficiles.
+exemple:
+  enonce: Avant de lire un poème en anglais devant la classe, que doit faire l'élève ?
+  solution: Il doit s'être entraîné à le lire à voix haute plusieurs fois auparavant, pour le prononcer de manière
+    compréhensible.
+exercices:
+- enonce: 'Tu dois dire la phrase « Are you ready? » : ta voix doit-elle monter ou descendre à la fin ?'
+  indices:
+  - C'est une question.
+  solution: Ta voix doit monter à la fin, comme pour une question.
+- enonce: 'Entraîne-toi à répéter trois fois de suite, en changeant seulement l''objet : « In my bag, I put a red
+    pen. » puis « In my bag, I put a red pen and a ruler. » Que dois-tu vérifier à chaque fois ?'
+  indices:
+  - 'Écoute-toi : peux-tu être compris facilement ?'
+  solution: Il faut vérifier qu'on prononce chaque mot de manière compréhensible avant d'ajouter le mot suivant.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 10-11
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

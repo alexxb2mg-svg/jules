@@ -1,0 +1,52 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-cours-moyen-sept-oeuvres
+declencheurs:
+- sept livres à lire dans l'année
+- conte, fable ou pièce de théâtre à lire
+- livres étudiés en classe cette année
+- œuvre complète
+essentiel: 'Au cours moyen (CM1 et CM2), les professeurs font lire aux élèves au moins sept œuvres complètes par
+  an.
+
+  Ces œuvres viennent du patrimoine et de la littérature de jeunesse : ce sont des contes, des récits, des fables,
+  des poèmes, des pièces de théâtre, des albums ou des textes documentaires.
+
+  Le professeur propose des lectures variées : lecture offerte par l''enseignant, lecture à voix haute, lecture
+  silencieuse, ou lecture enregistrée.'
+methode:
+- Repérer, au fil de l'année, les œuvres complètes étudiées en classe.
+- 'Identifier le genre de chaque œuvre : conte, fable, poème, pièce de théâtre, album, texte documentaire.'
+- Noter les œuvres déjà lues pour suivre sa progression vers l'objectif de l'année.
+erreurs_frequentes:
+- Croire qu'un seul genre (par exemple uniquement des contes) suffit à remplir l'objectif de l'année.
+- Confondre un extrait de texte et une œuvre complète.
+exemple:
+  enonce: 'En classe, on a lu cette année : un recueil de fables, un album, une pièce de théâtre et un roman. Ces
+    œuvres correspondent-elles à ce que demande le programme au cours moyen ?'
+  solution: Oui, ce sont bien des œuvres complètes de genres variés (fables, album, théâtre, récit), comme le prévoit
+    le programme, qui vise au moins sept œuvres complètes par an au cours moyen.
+exercices:
+- enonce: Fais la liste des œuvres complètes étudiées en classe depuis la rentrée. Indique le genre de chacune.
+  indices:
+  - Une œuvre complète, c'est un livre entier, pas juste un extrait.
+  - 'Les genres possibles sont : conte, récit, fable, poème, pièce de théâtre, album, texte documentaire.'
+  solution: 'Il n''y a pas une seule bonne réponse : le but est de vérifier qu''on se rapproche de sept œuvres complètes
+    dans l''année, de genres variés.'
+- enonce: Le professeur propose une lecture offerte (il lit un texte à voix haute à la classe). En quoi cela peut-il
+    aider à découvrir de nouvelles œuvres ?
+  indices:
+  - Pense aux œuvres encore trop longues ou difficiles à lire seul.
+  solution: La lecture offerte permet de découvrir des œuvres complètes, même longues ou difficiles, grâce à la
+    voix du professeur qui aide à comprendre le texte.
+sources:
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 3
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

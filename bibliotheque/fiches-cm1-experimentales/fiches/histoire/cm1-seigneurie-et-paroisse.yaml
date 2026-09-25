@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-seigneurie-et-paroisse
+declencheurs:
+- château fort
+- seigneur
+- qui commande au moyen âge
+- paroisse
+- domaine du seigneur
+- 1000 ans avant nous
+couverture: 'Ne couvre que ce que dit le programme : les définitions de la seigneurie et de la paroisse, les trois
+  fonctions du château, et la frise du Moyen Âge (476-1492, XIe-XIIIe siècle).'
+essentiel: 'Au Moyen Âge, entre le XIe et le XIIIe siècle, la vie des femmes et des hommes est organisée par deux
+  cadres.
+
+  La seigneurie, c''est la domination d''un seigneur sur un territoire et sur les hommes qui y vivent.
+
+  La paroisse, c''est l''encadrement par l''Église de la vie des femmes et des hommes, de leur naissance à leur
+  mort.
+
+  Le seigneur habite un château. Ce château a trois fonctions : il protège, il sert de lieu de vie au seigneur,
+  et il est le symbole de sa puissance.
+
+  Sur la frise chronologique, le Moyen Âge va de 476 à 1492 ; les XIe-XIIIe siècles se situent au milieu de cette
+  longue période.'
+methode:
+- Repérer si la phrase parle du territoire et du pouvoir (→ seigneurie) ou de l'Église (→ paroisse).
+- 'Se rappeler les trois rôles du château : protéger, loger le seigneur, montrer sa puissance.'
+- Situer une date ou une période sur la frise du Moyen Âge (476-1492).
+- 'Vérifier : « qui commande le territoire ? » = le seigneur ; « qui encadre les âmes ? » = l''Église.'
+vocabulaire:
+- terme: seigneurie
+  definition: la domination d'un seigneur sur un territoire et les hommes qui y vivent
+- terme: paroisse
+  definition: l'encadrement par l'Église de la vie des femmes et des hommes, de leur naissance à leur mort
+erreurs_frequentes:
+- Confondre seigneurie (pouvoir sur le territoire) et paroisse (encadrement religieux).
+- Croire que le château ne sert qu'à se battre, en oubliant qu'il est aussi le lieu de vie du seigneur et un symbole
+  de sa puissance.
+- Placer le Moyen Âge n'importe où sur la frise, alors qu'il va précisément de 476 à 1492.
+exemple:
+  enonce: 'Un document dit : « Le seigneur possède des terres et les hommes qui y vivent lui doivent des services.
+    » De quel cadre parle-t-on : la seigneurie ou la paroisse ?'
+  solution: 'On parle de la seigneurie : le texte décrit la domination du seigneur sur un territoire et sur les
+    hommes qui y vivent.'
+exercices:
+- enonce: 'Range ces mots dans la bonne colonne : « seigneur », « terre », « Église », « paroisse ». Colonne 1 :
+    seigneurie. Colonne 2 : paroisse.'
+  indices:
+  - La seigneurie concerne le territoire et le pouvoir du seigneur.
+  - La paroisse concerne l'encadrement par l'Église.
+  solution: 'Seigneurie : seigneur, terre. Paroisse : Église, paroisse.'
+- enonce: Sur une frise allant de 400 à 1500, place le début et la fin du Moyen Âge.
+  indices:
+  - Le Moyen Âge va de 476 à 1492.
+  solution: Le Moyen Âge commence en 476 et finit en 1492, ce qui fait 1016 ans (1492 - 476).
+- enonce: Cite les trois fonctions d'un château fort de seigneur.
+  indices:
+  - Pense à la sécurité, à l'habitation, et à ce que le château montre aux autres.
+  solution: Un château est un lieu de protection, le lieu de vie du seigneur, et un symbole de sa puissance.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.4
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

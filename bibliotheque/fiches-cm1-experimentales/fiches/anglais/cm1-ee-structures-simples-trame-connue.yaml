@@ -1,0 +1,47 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-ee-structures-simples-trame-connue
+declencheurs:
+- écrire une carte postale en anglais
+- écrire un message à un correspondant anglais
+- décrire un objet par écrit en anglais
+essentiel: 'Pour écrire des phrases en s''appuyant sur une trame connue, on produit de manière autonome quelques
+  phrases sur soi-même, sur les autres ou sur des personnages, en s''appuyant sur des modèles déjà vus.
+
+  On peut rédiger un courrier bref et simple, comme un message électronique court, une carte postale ou une lettre,
+  en suivant un modèle.'
+methode:
+- Relire un modèle déjà vu (carte postale, message) pour s'en inspirer.
+- Remplacer les informations du modèle par les siennes (nom, description).
+- Vérifier qu'on a gardé la même structure que le modèle.
+- Relire pour vérifier l'orthographe des mots déjà appris.
+vocabulaire: []
+erreurs_frequentes:
+- Copier le modèle sans changer les informations personnelles.
+- Oublier une partie attendue du modèle (la formule de salutation par exemple).
+exemple:
+  enonce: En t'appuyant sur un modèle de devinette (« He is a boy. He has red hair. Who is it? »), décris un camarade
+    qui porte un pull bleu.
+  solution: He is a boy. He wears a blue jumper. Who is it?
+exercices:
+- enonce: Écris un court message d'anniversaire à une amie qui s'appelle Fiona, en t'appuyant sur le modèle « Hi
+    Fiona, happy birthday! ».
+  indices:
+  - Change juste le prénom si besoin, garde la structure.
+  solution: Hi Fiona, happy birthday!
+- enonce: 'Rédige une carte postale très courte en t''appuyant sur le modèle : dis que tu es à Londres et qu''il
+    fait très froid.'
+  indices:
+  - Utilise I am in... et It's very cold.
+  solution: Dear parents, I am in London. It's very cold.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 24
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

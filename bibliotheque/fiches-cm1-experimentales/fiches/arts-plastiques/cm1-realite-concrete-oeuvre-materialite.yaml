@@ -1,0 +1,71 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-realite-concrete-oeuvre-materialite
+declencheurs:
+- c'est fait avec quoi
+- la matière de l'œuvre
+- toucher une œuvre
+- matériau de la production
+- objet devenu œuvre
+- récupérer des objets pour créer
+- accident
+- tache
+- collage
+- journal
+essentiel: 'Une production plastique ou une œuvre d''art existe toujours matériellement : elle est faite d''une
+  matière qu''on peut voir, parfois toucher, et cette matière produit des effets sur celui qui la regarde.
+
+  Faire l''expérience de la matérialité d''une œuvre, c''est prendre conscience de cette matière concrète (papier,
+  peinture épaisse, bois, tissu) et en tirer parti pour créer.
+
+  En art, un objet ou une image déjà existants peuvent eux-mêmes devenir le matériau d''une nouvelle réalisation
+  (par exemple, une vieille photo découpée pour un collage).
+
+  Dans une réalisation, il y a toujours une part de hasard (ce qu''on n''avait pas prévu) et une part d''intention
+  (ce qu''on a voulu faire) : apprendre à reconnaître les deux fait progresser.'
+methode:
+- 'Choisir une matière concrète et l''observer : sa texture, son épaisseur, sa couleur.'
+- Manipuler cette matière pour découvrir ce qu'elle permet de faire (étaler, plier, empiler).
+- Accepter les effets de hasard qui apparaissent pendant le travail, sans forcément les corriger.
+- Distinguer, à la fin, ce qui vient d'une intention voulue et ce qui vient du hasard.
+vocabulaire:
+- terme: matérialité
+  definition: le fait qu'une œuvre est faite d'une matière concrète, réelle
+- terme: hasard
+  definition: un effet non prévu qui apparaît pendant la réalisation d'une œuvre
+erreurs_frequentes:
+- Vouloir effacer tout effet de hasard au lieu d'observer ce qu'il apporte.
+- Ne jamais toucher ni tester la matière avant de commencer, et donc mal la connaître.
+- Penser qu'un objet récupéré ne peut plus servir à créer une nouvelle œuvre.
+exemple:
+  enonce: En peignant, une goutte de peinture tombe par accident et crée une belle forme inattendue sur ta feuille.
+    Dois-tu forcément l'effacer ?
+  solution: 'Non : cette goutte est un effet de hasard, mais elle fait maintenant partie de la matérialité concrète
+    de ton dessin. Tu peux choisir de l''intégrer volontairement à la suite de ton travail plutôt que de l''effacer,
+    ce qui transforme le hasard en une nouvelle intention.'
+exercices:
+- enonce: Laisse tomber une goutte de peinture ou d'eau colorée sur une feuille, observe la forme obtenue par hasard,
+    puis complète le dessin autour pour en faire un animal ou un objet reconnaissable.
+  indices:
+  - Ne cherche pas à corriger la forme de la goutte, utilise-la telle quelle.
+  - Ajoute seulement quelques traits autour pour la transformer.
+  solution: 'Réussite si : la forme obtenue par hasard est reconnaissable comme point de départ du dessin final,
+    et l''élève explique ce qui relevait du hasard et ce qu''il a ajouté volontairement.'
+- enonce: Récupère un objet ou une image que tu n'utilises plus (vieux journal, emballage) et utilise-le comme matériau
+    pour une nouvelle petite production plastique.
+  indices:
+  - L'objet de départ doit rester au moins partiellement visible dans le résultat.
+  - Pense à ce que cet objet apporte comme matière (couleur, texture, forme).
+  solution: 'Réussite si : l''objet récupéré est bien reconnaissable comme matériau dans la nouvelle production,
+    et l''élève peut dire pourquoi il l''a choisi.'
+sources:
+- titre: Programme du cycle 3 (annexe 2), version consolidée BO n° 31 du 30/07/2020, p. 44
+  url: https://cache.media.education.gouv.fr/file/31/88/7/ensel714_annexe2_1312887.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

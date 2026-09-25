@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-democratie-suffrage-direct
+declencheurs:
+- voter
+- élection
+- démocratie
+- suffrage direct
+- conseil d'élèves
+- élire un délégué
+essentiel: 'La démocratie est un système où les citoyens participent aux décisions, notamment par le vote.
+
+  Le suffrage direct est une façon de voter où les citoyens votent eux-mêmes pour élire une personne, sans intermédiaire.
+
+  En France, la démocratie repose sur des principes présents dans la Déclaration des droits de l''homme et du citoyen
+  (articles 3, 6 et 16) : la souveraineté populaire, l''égalité devant la loi et la séparation des pouvoirs.
+
+  Un conseil d''élèves est une première expérience de démocratie scolaire.'
+methode:
+- Vérifie s'il s'agit d'une décision prise par le vote des citoyens.
+- Distingue le suffrage direct (les citoyens votent eux-mêmes) d'un autre mode de décision.
+- Relie la situation aux principes de citoyenneté, de vote et de participation aux décisions.
+vocabulaire:
+- terme: démocratie
+  definition: un système où les citoyens participent aux décisions, notamment par le vote
+- terme: suffrage direct
+  definition: un vote où les citoyens élisent eux-mêmes une personne, sans intermédiaire
+erreurs_frequentes:
+- Croire que la démocratie se limite au seul acte de voter, sans lien avec la participation aux décisions.
+- Confondre voter et être obligé de suivre l'avis d'une seule personne.
+exemple:
+  enonce: Dans une classe, chaque élève vote directement pour élire un délégué qui représentera la classe. Quel
+    mot désigne ce type de vote ?
+  solution: 'C''est un exemple de suffrage direct : les élèves votent eux-mêmes, sans intermédiaire, pour élire
+    leur délégué.'
+exercices:
+- enonce: Explique avec tes mots ce que signifie le mot « démocratie ».
+  indices:
+  - Pense à qui participe aux décisions dans une démocratie.
+  solution: La démocratie est un système où les citoyens participent aux décisions, par exemple en votant.
+- enonce: Pourquoi organiser l'élection d'un délégué de classe est-il une première expérience de démocratie ?
+  indices:
+  - Pense au vote et à la participation de chaque élève.
+  solution: Parce que chaque élève participe à une décision commune en votant, comme les citoyens dans une démocratie.
+sources:
+- titre: Programme d'enseignement moral et civique, arrêté du 29-5-2024, BO n° 24 du 13/06/2024, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20d%E2%80%99enseignement%20moral%20et%20civique%20du%20cours%20pr%C3%A9paratoire%20%C3%A0%20la%20classe%20terminale%20des%20voies%20g%C3%A9n%C3%A9rale%2C%20technologique%20et%20professionnelle%20et%20des%20classes%20pr%C3%A9parant%20au%20CAP-402159.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,66 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-produire-ecrits-varies
+declencheurs:
+- raconter une sortie
+- écrire un brouillon
+- imaginer la suite d'un texte
+- donner son avis à l'écrit
+- améliorer son texte
+essentiel: 'En CM1, on découvre et on explore des situations variées d''écriture : raconter, expliquer.
+
+  On écrit au quotidien des textes personnels : donner son avis, imaginer une suite de texte, formuler des hypothèses.
+
+  On utilise le brouillon pour préparer son texte avant de l''écrire au propre.
+
+  On doit rester vigilant au respect des codes de l''écrit (orthographe, ponctuation) et à la cohérence du texte,
+  puis on améliore tout ou partie de son texte à partir des remarques du professeur ou des autres élèves.'
+methode:
+- 'Comprendre ce que l''on doit écrire : raconter, expliquer, donner son avis...'
+- Préparer des idées sur un brouillon avant de rédiger.
+- Rédiger le texte en respectant l'ordre des événements ou des idées.
+- Relire pour vérifier l'orthographe, la ponctuation et si le texte se comprend bien.
+- Améliorer le texte grâce aux remarques du professeur ou d'un camarade.
+erreurs_frequentes:
+- Écrire directement au propre sans passer par un brouillon.
+- Ne pas relire son texte après l'avoir écrit.
+- Refuser de modifier son texte après avoir reçu des remarques.
+exemple:
+  enonce: Tu dois raconter en quelques lignes une sortie scolaire. Comment t'y prendre ?
+  solution: On note d'abord sur un brouillon les étapes de la sortie dans l'ordre (départ, ce qu'on a vu, retour),
+    puis on rédige le texte en respectant cet ordre, et on relit pour vérifier l'orthographe et la ponctuation.
+exercices:
+- enonce: Écris un brouillon puis un texte de trois phrases pour raconter une sortie ou une activité récente, en
+    respectant l'ordre des événements.
+  indices:
+  - Commence par noter les étapes dans l'ordre sur le brouillon.
+  - Utilise des mots comme « d'abord », « ensuite », « enfin ».
+  solution: 'Critère de réussite : le texte respecte la chronologie des événements et a été relu pour corriger les
+    erreurs.'
+- enonce: 'Imagine et écris une suite possible (deux phrases) à cette histoire : « Le bateau quitta le port sous
+    un grand soleil. Soudain, le ciel s''assombrit. »'
+  indices:
+  - Pense à ce qui pourrait arriver avec ce changement de temps.
+  solution: 'Critère de réussite : la suite est cohérente avec le début du texte et respecte les codes de l''écrit
+    (orthographe, ponctuation).'
+- enonce: Relis un texte que tu as écrit récemment. Trouve une phrase à améliorer et réécris-la.
+  indices:
+  - Cherche une phrase peu claire ou avec une erreur d'orthographe.
+  solution: 'Critère de réussite : la nouvelle phrase est plus claire ou corrigée par rapport à la version précédente.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 9
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

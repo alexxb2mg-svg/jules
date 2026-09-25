@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-symetrie-axiale
+declencheurs:
+- symétrie
+- axe de symétrie
+- figure symétrique
+- pliage
+- papier quadrillé
+essentiel: 'Une figure a un axe de symétrie si, en pliant la feuille le long de cette droite, les deux parties de
+  la figure se superposent exactement.
+
+  Une figure peut avoir un axe de symétrie, plusieurs, ou aucun.
+
+  Au CM1, on travaille avec un axe de symétrie horizontal ou vertical (pas penché).
+
+  Pour construire le symétrique d''un point, d''un segment ou d''une figure par rapport à une droite, on utilise
+  le quadrillage : chaque point du symétrique est à la même distance de l''axe que le point de départ, de l''autre
+  côté.
+
+  On vérifie sa construction en pliant la feuille selon l''axe : les deux figures doivent se superposer.'
+methode:
+- Repérer l'axe de symétrie (horizontal ou vertical) sur le quadrillage.
+- Pour chaque point de la figure, compter le nombre de carreaux jusqu'à l'axe.
+- Reporter la même distance de l'autre côté de l'axe pour placer le point symétrique.
+- Relier les points symétriques pour obtenir la figure complète.
+- Vérifier par pliage le long de l'axe.
+vocabulaire:
+- terme: axe de symétrie
+  definition: droite par rapport à laquelle une figure se superpose à elle-même par pliage
+- terme: figure symétrique
+  definition: figure obtenue en retournant une figure de l'autre côté d'un axe
+erreurs_frequentes:
+- Compter les carreaux à partir du mauvais point de départ.
+- Oublier de vérifier le résultat par pliage.
+- Chercher un axe de symétrie penché alors qu'au CM1 on ne travaille qu'avec des axes horizontaux ou verticaux.
+exemple:
+  enonce: Un point M est à 3 carreaux à gauche d'un axe de symétrie vertical. Où placer son symétrique M' ?
+  solution: On place M' à 3 carreaux à droite de l'axe, sur la même ligne horizontale que M.
+exercices:
+- enonce: Une figure se superpose à elle-même quand on plie la feuille selon une droite horizontale. Que peut-on
+    dire de cette droite ?
+  indices:
+  - C'est la définition d'un axe de symétrie.
+  solution: C'est un axe de symétrie de la figure.
+- enonce: Sur un quadrillage, un segment ne coupe pas l'axe de symétrie vertical. Comment construire son symétrique
+    ?
+  indices:
+  - Compte les carreaux entre chaque extrémité et l'axe.
+  solution: Pour chaque extrémité du segment, on reporte la même distance à l'axe, de l'autre côté, puis on relie
+    les deux nouveaux points.
+- enonce: Comment vérifier qu'une figure construite est bien le symétrique attendu ?
+  indices:
+  - Une manipulation simple permet de vérifier.
+  solution: 'On plie la feuille selon la droite (l''axe) : les deux figures doivent se superposer exactement.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 21
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

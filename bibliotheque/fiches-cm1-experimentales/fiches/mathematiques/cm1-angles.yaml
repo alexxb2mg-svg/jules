@@ -1,0 +1,77 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-angles
+declencheurs:
+- angle
+- angle droit
+- angle aigu
+- angle obtus
+- équerre
+- comparer des angles
+- sommet
+essentiel: 'Un angle a un sommet et deux côtés. Au CM1, on étudie les angles saillants (les angles "normaux", pas
+  ceux qui font plus qu''un demi-tour).
+
+  Le vocabulaire : sommet de l''angle, côtés de l''angle, angle droit, angle aigu (plus petit qu''un angle droit),
+  angle obtus (plus grand qu''un angle droit).
+
+  On note un angle avec une lettre (l''angle a) ou trois lettres (l''angle ABC, où B est le sommet) ou une lettre
+  majuscule (l''angle A) si ça ne prête pas à confusion.
+
+  Quand ce n''est pas évident, on utilise une équerre pour dire si un angle est aigu, droit ou obtus, ou pour comparer
+  deux angles avec un gabarit.
+
+  La longueur des côtés ne change rien à la mesure d''un angle : prolonger les côtés ne modifie pas l''angle.'
+methode:
+- Repérer le sommet et les deux côtés de l'angle.
+- Regarder si l'angle ressemble à un angle droit, est plus petit (aigu) ou plus grand (obtus).
+- En cas de doute, vérifier avec l'équerre.
+- Pour comparer deux angles, utiliser un gabarit ou superposer les angles par le sommet.
+vocabulaire:
+- terme: angle aigu
+  definition: angle plus petit qu'un angle droit
+- terme: angle obtus
+  definition: angle plus grand qu'un angle droit
+- terme: angle saillant
+  definition: angle « normal », le seul type étudié au cours moyen
+erreurs_frequentes:
+- Penser qu'un angle est plus grand parce que ses côtés sont plus longs sur le dessin.
+- Confondre angle aigu et angle obtus.
+- Modifier l'angle en prolongeant ses côtés (cela ne change rien à l'angle).
+exemple:
+  enonce: Sur une figure, l'angle BAC a ses côtés qui s'écartent plus qu'un angle droit. Comment s'appelle cet angle
+    ?
+  solution: C'est un angle obtus, car il est plus grand qu'un angle droit.
+exercices:
+- enonce: Sans utiliser d'équerre, dis si un angle qui ressemble beaucoup à l'angle d'un coin de feuille est aigu,
+    droit ou obtus.
+  indices:
+  - Le coin d'une feuille forme un angle droit.
+  solution: C'est probablement un angle droit ; en cas de doute, on vérifie avec l'équerre.
+- enonce: Explique comment noter l'angle qui a pour sommet le point B et pour côtés [BA) et [BC).
+  indices:
+  - Le sommet se met au milieu des trois lettres.
+  solution: On le note l'angle ABC, car B est le sommet, entre les deux autres lettres.
+- enonce: Deux angles ont été dessinés avec des côtés de longueurs différentes mais le même écartement. Ont-ils
+    la même mesure ?
+  indices:
+  - La longueur des côtés n'intervient pas dans la comparaison des angles.
+  solution: 'Oui, ils ont la même mesure : seul l''écartement compte, pas la longueur des côtés.'
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p. 18
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 17
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: 'limite officielle : seuls les angles saillants au CM1'
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

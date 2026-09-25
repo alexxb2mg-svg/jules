@@ -1,0 +1,74 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-fluidite-lecture
+declencheurs:
+- lire vite
+- je bute sur les mots
+- je lis trop lentement
+- mots par minute
+- je relis un mot plusieurs fois
+- je perds le fil en lisant
+- lecture silencieuse
+essentiel: 'Lire avec fluidité, c''est lire un texte sans effort, que ce soit dans ta tête (lecture silencieuse)
+  ou à voix haute.
+
+  Pour bien lire à voix haute, il faut d''abord préparer le texte : le lire une première fois pour ne pas buter
+  sur les mots difficiles.
+
+  Il faut aussi reconnaître très vite des mots fréquents mais irréguliers, comme second, monsieur, oignon, œufs,
+  femme ou chœur.
+
+  Le but en CM1 est de lire correctement environ 110 mots par minute en moyenne.
+
+  Une bonne lecture à voix haute respecte la ponctuation (point, virgule) : on fait de petites pauses qui aident
+  à comprendre et à se faire comprendre.'
+methode:
+- Lire le texte une première fois dans sa tête pour repérer les mots difficiles.
+- Chercher le sens des mots inconnus ou demander de l'aide.
+- S'entraîner à lire les mots difficiles à voix haute, seul.
+- Relire le texte à voix haute en marquant les pauses aux virgules et aux points.
+- Vérifier qu'on ne bute plus sur les mots qui posaient problème.
+erreurs_frequentes:
+- Lire sans préparation un texte inconnu à voix haute, ce qui fait buter sur les mots difficiles.
+- Ne pas s'arrêter aux points et aux virgules, ce qui rend la lecture difficile à comprendre pour les autres.
+- Deviner un mot au lieu de bien regarder toutes ses lettres.
+exemple:
+  enonce: 'Prépare puis lis à voix haute : « Le corbeau, honteux et confus, jura, mais un peu tard, qu''on ne l''y
+    prendrait plus. »'
+  solution: On lit d'abord la phrase en silence pour repérer « honteux », « confus » et « jura ». Puis on la lit
+    à voix haute en marquant une petite pause aux virgules, sans buter sur les mots déjà repérés.
+exercices:
+- enonce: 'Lis cette phrase dans ta tête, puis répète-la à voix haute sans hésiter : « La corneille tenait un fromage
+    dans son bec. »'
+  indices:
+  - Repère d'abord les mots les plus longs.
+  - Relis deux fois avant de lire à voix haute.
+  solution: On doit pouvoir la lire d'une traite, sans buter, en marquant le point final.
+- enonce: 'Choisis un court paragraphe de ton livre de lecture. Chronomètre-toi une minute : combien de mots as-tu
+    lus à voix haute sans erreur ?'
+  indices:
+  - Prépare le texte en silence avant de te chronométrer.
+  - Vise environ 110 mots en une minute.
+  solution: 'Il n''y a pas un seul bon score : le but est de lire sans buter sur les mots déjà préparés, en se rapprochant
+    de 110 mots par minute.'
+- enonce: 'Lis ces mots à voix haute sans hésiter : second, monsieur, oignon, œufs, femme, chœur.'
+  indices:
+  - 'Ce sont des mots fréquents mais irréguliers : leur écriture ne se prononce pas comme on l''attend.'
+  solution: On doit les reconnaître d'un coup d'œil, sans les déchiffrer lettre par lettre.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de français en CM1 » (2025), p. 3
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1-francaispdf-111546.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de français pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-fran-ais-pour-le-cycle-3-439824.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

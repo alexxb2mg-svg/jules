@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-nombres-inconnus-et-egalites-a-trous
+declencheurs:
+- égalité à trou
+- nombre mystère
+- nombre inconnu
+- trouver le nombre caché
+- j'ai choisi un nombre
+essentiel: 'Dans une égalité à trous, un nombre est caché par un trou ou un point d''interrogation : il faut trouver
+  quel nombre irait à sa place pour que l''égalité soit vraie.
+
+  On peut aussi représenter un nombre inconnu par un symbole ou par une lettre, comme N. Cela permet d''écrire une
+  relation mathématique même si on ne connaît pas encore la valeur du nombre.
+
+  Pour trouver le nombre manquant, on utilise ses connaissances en calcul : par exemple dans 347 = 20 + …, on cherche
+  ce qu''il faut ajouter à 20 pour obtenir 347.
+
+  Pour un problème comme « Rose a choisi un nombre N et a calculé 3 × (2 + N), elle a trouvé 27 », on raisonne à
+  l''envers : on défait d''abord la multiplication, puis l''addition.'
+methode:
+- Repérer ce qui est connu et ce qui est inconnu dans l'égalité.
+- Si l'inconnue est isolée d'un seul côté, calculer directement l'autre côté.
+- Si l'inconnue est prise dans plusieurs opérations, les défaire dans l'ordre inverse de leur écriture.
+- Vérifier la solution trouvée en la remplaçant dans l'égalité de départ.
+erreurs_frequentes:
+- Défaire les opérations dans le mauvais ordre (oublier de commencer par la dernière opération effectuée).
+- Oublier de vérifier la solution en la remettant dans l'égalité de départ.
+- Confondre le symbole représentant le nombre inconnu avec un vrai chiffre.
+exemple:
+  enonce: Rose a choisi un nombre N et a effectué le calcul 3 × (2 + N). Elle a trouvé 27. Quel est le nombre N
+    ?
+  solution: '3 × (2 + N) = 27, donc 2 + N = 27 ÷ 3 = 9 (on défait d''abord la multiplication). Puis N = 9 - 2 =
+    7. Vérification : 3 × (2 + 7) = 3 × 9 = 27. Le nombre choisi est N = 7.'
+exercices:
+- enonce: 'Complète : 5 760 - … = 5 360.'
+  indices:
+  - Cherche ce qu'il faut retirer à 5 760 pour obtenir 5 360.
+  solution: 5 760 - 400 = 5 360, donc le nombre manquant est 400.
+- enonce: 'Complète à l''écrit : 748 + … = 1 200.'
+  indices:
+  - Calcule 1 200 - 748.
+  solution: 1 200 - 748 = 452, donc 748 + 452 = 1 200.
+- enonce: Maxime a choisi un nombre. En ajoutant 7 au triple de ce nombre, il trouve 100. Quel est le nombre choisi
+    par Maxime ?
+  indices:
+  - Défais d'abord l'addition de 7, puis le triple.
+  solution: Le triple du nombre plus 7 vaut 100, donc le triple vaut 100 - 7 = 93. Le nombre choisi est 93 ÷ 3 =
+    31.
+sources:
+- titre: Éduscol, « Exemples pour la mise en œuvre du programme de mathématiques en CM1 — Exemples de réussite »
+    (2025), p.13
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/exemplesmiseenoeuvrecm1mathspdf-111543.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+- titre: Programme de mathématiques pour le cycle 3, arrêté du 10-4-2025, BO n° 16 du 17/04/2025, p.8-9
+  url: https://www.education.gouv.fr/sites/default/files/programme-de-math-matiques-pour-le-cycle-3-439827.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: attendus de fin de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

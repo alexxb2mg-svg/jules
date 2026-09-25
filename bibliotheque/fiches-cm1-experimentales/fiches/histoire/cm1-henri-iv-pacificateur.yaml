@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-henri-iv-pacificateur
+declencheurs:
+- roi qui fait la paix
+- guerres de religion
+- édit de nantes
+- catholiques et protestants
+- henri iv
+couverture: 'Ne couvre que ce que dit le programme : Henri IV (1589-1610), roi pacificateur, dans le contexte des
+  guerres de religion, et l''édit de Nantes (1598).'
+essentiel: 'Henri IV est un roi de France qui a régné de 1589 à 1610.
+
+  C''est un roi pacificateur du royaume : il ramène la paix après un temps de guerres de religion, entre catholiques
+  et protestants.
+
+  En 1598, il signe l''édit de Nantes, un texte qui pacifie le royaume dans ce contexte.'
+methode:
+- Retenir que Henri IV règne de 1589 à 1610.
+- 'Associer Henri IV au mot « pacificateur » : il ramène la paix.'
+- Relier Henri IV à l'édit de Nantes, signé en 1598, dans le contexte des guerres de religion.
+vocabulaire:
+- terme: guerres de religion
+  definition: conflits entre catholiques et protestants que Henri IV cherche à apaiser
+erreurs_frequentes:
+- Confondre la date du règne de Henri IV (1589-1610) et la date de l'édit de Nantes (1598), qui est au milieu de
+  son règne.
+- 'Oublier le mot « pacificateur » : Henri IV est connu pour avoir ramené la paix, pas pour avoir fait la guerre.'
+exemple:
+  enonce: Pourquoi appelle-t-on Henri IV un roi « pacificateur » ?
+  solution: Parce qu'il pacifie le royaume de France dans le contexte des guerres de religion, notamment avec l'édit
+    de Nantes en 1598.
+exercices:
+- enonce: En quelle année Henri IV signe-t-il l'édit de Nantes ? Ce texte se situe-t-il au début ou pendant son
+    règne (1589-1610) ?
+  indices:
+  - Compare 1598 aux deux dates du règne.
+  solution: L'édit de Nantes date de 1598, donc pendant son règne (1589-1610), pas au tout début.
+- enonce: Explique comment Henri IV pacifie le royaume de France dans le contexte des guerres de religion.
+  indices:
+  - Pense au mot « pacificateur » et à l'édit de Nantes.
+  solution: Henri IV, roi pacificateur, met fin aux violences des guerres de religion entre catholiques et protestants,
+    notamment en signant l'édit de Nantes en 1598.
+sources:
+- titre: Programme d'histoire-géographie du cycle 3, arrêté du 22-4-2026, BO n° 22 du 28/05/2026, p.5
+  url: https://www.education.gouv.fr/sites/default/files/document/annexe-4-programme-d-histoire-geographie-cycle-3-516779.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: programme officiel, reformulé pour un enfant de CM1
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

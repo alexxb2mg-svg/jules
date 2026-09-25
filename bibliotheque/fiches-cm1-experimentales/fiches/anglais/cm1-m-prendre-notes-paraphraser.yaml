@@ -1,0 +1,48 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-m-prendre-notes-paraphraser
+declencheurs:
+- noter des informations en anglais
+- recopier une liste de mots anglais
+- reformuler en anglais
+essentiel: 'Prendre des notes, c''est lister et transmettre, à l''écrit ou à l''oral, des informations importantes
+  (des noms, des nombres, des prix, des détails).
+
+  On recopie sans erreurs un court texte ou une liste de mots, et on copie sous la dictée quelques mots très courants
+  déjà connus.
+
+  On peut aussi passer d''une langue à l''autre pour aider un camarade à comprendre une consigne : c''est la traduction.'
+methode:
+- Écouter ou lire attentivement pour repérer les informations importantes (nom, nombre, prix).
+- Noter ces informations avec des mots simples ou des dessins.
+- Transmettre l'information à l'oral ou à l'écrit, sans erreur.
+- Traduire une consigne pour un camarade s'il en a besoin.
+vocabulaire:
+- terme: médiation
+  definition: le fait d'aider une autre personne à comprendre, par exemple en traduisant
+erreurs_frequentes:
+- Noter trop d'informations et oublier l'essentiel (nom, nombre).
+- Recopier une liste de mots avec des erreurs.
+exemple:
+  enonce: 'Un camarade dit à l''oral : « His name is Tom. He is 7. ». Note ces informations.'
+  solution: 'Nom : Tom. Âge : 7 ans.'
+exercices:
+- enonce: 'Recopie sans erreur cette courte liste de mots : « pencil, rubber, ruler ».'
+  indices:
+  - Vérifie chaque mot lettre par lettre.
+  solution: pencil, rubber, ruler
+- enonce: Un camarade ne comprend pas la consigne « Draw a blank line for each letter. ». Traduis-la pour l'aider.
+  indices:
+  - Draw = dessiner, blank line = trait, letter = lettre.
+  solution: Dessine un trait pour chaque lettre.
+sources:
+- titre: Éduscol, « Anglais CM1 — Attendus de fin d'année », p. 27
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/c3langues-vivantes-cm1-attendusanglais-v1pdf-104457.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
