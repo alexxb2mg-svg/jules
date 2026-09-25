@@ -1,0 +1,25 @@
+# Profils que Jules reçoit pendant le banc (élèves fictifs, écrits dans profils/banc-<id>.yaml le temps du run).
+camille:
+  prenom: Camille
+  genre: fille
+  parent: sa maman
+  classe: 3e
+  langues_vivantes: [Anglais, Espagnol]
+  centres_interet: [handball, dessin, séries]
+noah:
+  prenom: Noah
+  genre: garcon
+  parent: son père
+  classe: 3e
+  langues_vivantes: [Anglais, Allemand]
+  centres_interet: [jeux vidéo, foot, YouTube]
+lea:
+  prenom: Léa
+  genre: fille
+  parent: sa maman
+  classe: 3e
+  langues_vivantes: [Anglais, Espagnol]
+  centres_interet: [chevaux, musique]
+  remarques: >-
+    Dyslexique et dysorthographique (suivie en orthophonie). Lit lentement : messages courts, une
+    idée par phrase. Ne pas relever ses fautes d'orthographe hors exercice de français.
