@@ -136,6 +136,7 @@
     piege: "Le piège classique",
     exemple: "Dans la vraie vie",
     renfort: "Ensuite, pour ancrer",
+    schema: "Un schéma pour s'y retrouver",
   };
 
   // Couleurs declarees dans les fiches (mots francais) -> couleurs CSS fixes. Inconnu -> bleu Jules.
@@ -353,6 +354,26 @@
         tuile.appendChild(document.createTextNode(lien.titre || ""));
         if (lien.description) tuile.appendChild(creer("small", null, lien.description));
         div.appendChild(tuile);
+      }
+      return div;
+    },
+
+    // Le SVG a deja ete nettoye cote serveur par liste blanche (jules/svg_sur.py, jamais de
+    // <script>, de gestionnaire on*, ni de lien externe). On l'importe par DOMParser + import de
+    // noeuds plutot que innerHTML : chaque noeud est verifie par le parseur XML du navigateur et
+    // seuls les noeuds du document XML sont copies, jamais une chaine executee telle quelle.
+    schema(bloc) {
+      const div = creer("div", "bloc-schema");
+      const analyseur = new DOMParser();
+      const document_svg = analyseur.parseFromString(String(bloc.svg || ""), "image/svg+xml");
+      const racine = document_svg.documentElement;
+      if (racine && racine.tagName === "svg" && !document_svg.querySelector("parsererror")) {
+        // Le SVG nettoye n'a plus d'attribut "height" fixe (garde sa taille responsive) : le
+        // navigateur calcule alors sa hauteur a partir du ratio naturel du viewBox, sans besoin
+        // de fixer nous-memes un style — a condition de ne pas forcer "height: auto" en CSS.
+        div.appendChild(document.importNode(racine, true));
+      } else {
+        div.appendChild(creer("p", "avertissement", "Schéma illisible."));
       }
       return div;
     },

@@ -1,0 +1,8 @@
+id: exemple-figure
+titre: "Figure d'exemple : cercle avec rayon réglable"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [exemple-cercle]
+permissions: {}

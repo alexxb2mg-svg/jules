@@ -92,6 +92,64 @@
 .renfort-tuile .icone { font-size: 24px; display: block; margin-bottom: 6px; }
 .renfort-tuile small { color: var(--gris); display: block; margin-top: 4px; }
 
+/* schema : SVG nettoye par le code (jules/svg_sur.py), avec les classes du systeme de design
+   "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
+.bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
+.bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
+.bloc-schema .t  { font-family: inherit; font-size: 14px; fill: #1a1a18; }
+.bloc-schema .ts { font-family: inherit; font-size: 12px; fill: #5f5e5a; }
+.bloc-schema .th { font-family: inherit; font-size: 14px; fill: #1a1a18; font-weight: 500; }
+.bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
+.bloc-schema .arr { stroke: #5f5e5a; stroke-width: 1.5px; fill: none; }
+.bloc-schema .leader { stroke: #88877f; stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
+.bloc-schema .node { cursor: pointer; transition: opacity .15s; }
+.bloc-schema .node:hover { opacity: .82; }
+
+.bloc-schema .c-purple > rect, .bloc-schema .c-purple > circle, .bloc-schema .c-purple > ellipse { fill: #EEEDFE; stroke: #534AB7; }
+.bloc-schema .c-purple > .th, .bloc-schema .c-purple > text.th { fill: #3C3489; }
+.bloc-schema .c-purple > .ts, .bloc-schema .c-purple > text.ts { fill: #534AB7; }
+.bloc-schema .c-purple > .t,  .bloc-schema .c-purple > text.t  { fill: #3C3489; }
+
+.bloc-schema .c-teal > rect, .bloc-schema .c-teal > circle, .bloc-schema .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
+.bloc-schema .c-teal > .th, .bloc-schema .c-teal > text.th { fill: #085041; }
+.bloc-schema .c-teal > .ts, .bloc-schema .c-teal > text.ts { fill: #0F6E56; }
+.bloc-schema .c-teal > .t,  .bloc-schema .c-teal > text.t  { fill: #085041; }
+
+.bloc-schema .c-coral > rect, .bloc-schema .c-coral > circle, .bloc-schema .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
+.bloc-schema .c-coral > .th, .bloc-schema .c-coral > text.th { fill: #712B13; }
+.bloc-schema .c-coral > .ts, .bloc-schema .c-coral > text.ts { fill: #993C1D; }
+.bloc-schema .c-coral > .t,  .bloc-schema .c-coral > text.t  { fill: #712B13; }
+
+.bloc-schema .c-pink > rect, .bloc-schema .c-pink > circle, .bloc-schema .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
+.bloc-schema .c-pink > .th, .bloc-schema .c-pink > text.th { fill: #72243E; }
+.bloc-schema .c-pink > .ts, .bloc-schema .c-pink > text.ts { fill: #993556; }
+.bloc-schema .c-pink > .t,  .bloc-schema .c-pink > text.t  { fill: #72243E; }
+
+.bloc-schema .c-gray > rect, .bloc-schema .c-gray > circle, .bloc-schema .c-gray > ellipse { fill: #F1EFE8; stroke: #5F5E5A; }
+.bloc-schema .c-gray > .th, .bloc-schema .c-gray > text.th { fill: #444441; }
+.bloc-schema .c-gray > .ts, .bloc-schema .c-gray > text.ts { fill: #5F5E5A; }
+.bloc-schema .c-gray > .t,  .bloc-schema .c-gray > text.t  { fill: #444441; }
+
+.bloc-schema .c-blue > rect, .bloc-schema .c-blue > circle, .bloc-schema .c-blue > ellipse { fill: #E6F1FB; stroke: #185FA5; }
+.bloc-schema .c-blue > .th, .bloc-schema .c-blue > text.th { fill: #0C447C; }
+.bloc-schema .c-blue > .ts, .bloc-schema .c-blue > text.ts { fill: #185FA5; }
+.bloc-schema .c-blue > .t,  .bloc-schema .c-blue > text.t  { fill: #0C447C; }
+
+.bloc-schema .c-green > rect, .bloc-schema .c-green > circle, .bloc-schema .c-green > ellipse { fill: #EAF3DE; stroke: #3B6D11; }
+.bloc-schema .c-green > .th, .bloc-schema .c-green > text.th { fill: #27500A; }
+.bloc-schema .c-green > .ts, .bloc-schema .c-green > text.ts { fill: #3B6D11; }
+.bloc-schema .c-green > .t,  .bloc-schema .c-green > text.t  { fill: #27500A; }
+
+.bloc-schema .c-amber > rect, .bloc-schema .c-amber > circle, .bloc-schema .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
+.bloc-schema .c-amber > .th, .bloc-schema .c-amber > text.th { fill: #633806; }
+.bloc-schema .c-amber > .ts, .bloc-schema .c-amber > text.ts { fill: #854F0B; }
+.bloc-schema .c-amber > .t,  .bloc-schema .c-amber > text.t  { fill: #633806; }
+
+.bloc-schema .c-red > rect, .bloc-schema .c-red > circle, .bloc-schema .c-red > ellipse { fill: #FCEBEB; stroke: #A32D2D; }
+.bloc-schema .c-red > .th, .bloc-schema .c-red > text.th { fill: #791F1F; }
+.bloc-schema .c-red > .ts, .bloc-schema .c-red > text.ts { fill: #A32D2D; }
+.bloc-schema .c-red > .t,  .bloc-schema .c-red > text.t  { fill: #791F1F; }
+
 .jules-comment { font-size: 13px; color: var(--p-principale); margin-top: 12px; font-style: italic; }
 
 /* --- Jules : bulles flottantes en bas a droite --- */

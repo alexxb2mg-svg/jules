@@ -26,7 +26,7 @@ relecture: {statut: a_relire}  # 'a_relire' ou 'relue'
 blocs: [...]                   # entre 3 et 12 blocs, ids uniques
 ```
 
-## Les 8 types de blocs
+## Les types de blocs (8 de la maquette, +1 : `schema`)
 
 Le bloc `attendus` n'est **jamais écrit dans le fichier** : il est ajouté automatiquement à
 l'affichage, à partir des `attendus` du référentiel officiel pour cette `notion`. Les 7 autres
@@ -42,6 +42,26 @@ types se déclarent dans `blocs:`, chacun avec un `id` unique (minuscules, chiff
 | `piege` | `mauvaise_idee`, `pourquoi_faux`, `bonne_idee` | chacun ≤ 260 car. |
 | `exemple` | `situation`, `calcul?`, `conclusion`, `figure?: {gabarit, curseurs}` | chaque champ ≤ 400 car. |
 | `renfort` | `liens: [{icone?, titre, description?, outil?}]` | 1 à 6 liens |
+| `schema` | `titre`, `svg` (SVG en ligne ou nom d'un fichier `.svg` à côté de la fiche) | titre ≤ 90 car. ; le SVG est nettoyé par liste blanche avant d'être servi (voir plus bas) |
+
+### Le bloc `schema`
+
+Ajouté avec le contrat d'extension (`docs/EXTENSIONS.md`) : un schéma fixe, dessiné en amont
+(à la main ou avec le skill `concept-diagrams`), jamais généré à l'affichage. `svg` est soit un
+SVG en ligne (commence par `<svg`), soit le nom d'un fichier `.svg` posé à côté du fichier de la
+fiche (jamais un chemin absolu ni `..`).
+
+Avant d'être servi, le SVG est **nettoyé par le code** (`jules/svg_sur.py`), par liste blanche
+d'éléments (`svg`, `g`, `defs`, `marker`, `path`, `line`, `polyline`, `polygon`, `rect`, `circle`,
+`ellipse`, `text`, `tspan`, `title`, `desc`) et d'attributs (géométrie, `class`, `transform`,
+couleurs, `marker-end`/`marker-start` en ancre locale uniquement, `viewBox`...). Sont **toujours
+refusés** : `<script>`, `foreignObject`, tout attribut `on*`, `href`/`xlink:href` externe, un
+`style` contenant `url(`, et tout fichier avec `<!DOCTYPE` ou `<!ENTITY`. Une fiche dont le
+schéma ne passe pas ce filtre est écartée comme n'importe quelle fiche non conforme.
+
+L'affichage utilise les classes de couleur du système de design `concept-diagrams` (mode clair
+uniquement, embarquées dans `accueil.css` sous `.bloc-schema`) : `.t .ts .th .box .arr .leader
+.node` et `.c-purple .c-teal .c-coral .c-pink .c-gray .c-blue .c-green .c-amber .c-red`.
 
 ## Les conditions `si` d'un bloc `graphe`
 

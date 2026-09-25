@@ -199,7 +199,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
 | 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |
-| 5 | Catalogue communautaire de bibliothèques et d'outils | à faire |
+| 5 | Catalogue communautaire de bibliothèques et d'outils | en cours : contrat d'extension (`docs/EXTENSIONS.md`, `jules/extensions.py`), une extension d'exemple ; reste le catalogue et l'installation par empreinte |
 | à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
 
 ## Questions ouvertes
