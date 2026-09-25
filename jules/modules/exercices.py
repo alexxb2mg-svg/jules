@@ -39,9 +39,9 @@ ESPACE = "exercices"
 MODE = "exercice"
 REPONSE_MAX = 300  # au-dela, la reponse est coupee avant meme d'etre lue par le correcteur
 
-TRANSITION_REUSSI = "\n\nC'est juste, on continue.\n\n"
+TRANSITION_REUSSI = "\n\nOn continue.\n\n"
 TRANSITION_ECHEC = "\n\nOn passe au suivant.\n\n"
-MESSAGE_FIN_TOUT_REUSSI = "Bravo, tu as fait tous les exercices sans aide, et ils sont tous justes !"
+MESSAGE_FIN_TOUT_REUSSI = "Bravo, tu as trouvé tous les exercices de cette série !"
 MESSAGE_FIN_PARTIEL = "C'est fini pour cette série : ce qui n'a pas tenu, on le retravaillera."
 MESSAGE_APRES_FIN = "Cette série d'exercices est terminée. Lance-en une nouvelle depuis l'écran d'accueil."
 
@@ -144,9 +144,9 @@ class Brique(Module):
         tout_reussi = bool(donnees["faits"]) and len(donnees["reussis"]) == len(donnees["faits"])
         statut = "compris" if tout_reussi else "en_cours"
         resume = (
-            f"Exercices sans aide sur « {titre_notion} » : tous justes."
+            f"Exercices sans IA sur « {titre_notion} » : tous trouvés (avec ou sans indice)."
             if tout_reussi
-            else f"Exercices sans aide sur « {titre_notion} » : une partie n'a pas tenu, à retravailler."
+            else f"Exercices sans IA sur « {titre_notion} » : une partie n'a pas été trouvée, à retravailler."
         )
         self.tuteur.stockage.ajouter_evenement(
             "suivi",
