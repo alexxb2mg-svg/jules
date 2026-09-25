@@ -197,7 +197,7 @@
     if (!notions.length || etat.conv) return;
     const encart = document.createElement("div");
     encart.className = "encart-epreuve";
-    encart.innerHTML = `<p><strong>📝 S'entraîner sans IA</strong> : des exercices corrigés directement par le code, sans aide du modèle.</p>`;
+    encart.innerHTML = `<p><strong>📝 S'entraîner sans IA</strong> : des exercices corrigés tout de suite, avec un indice si tu bloques.</p>`;
     for (const n of notions) {
       const b = document.createElement("button");
       b.className = "bouton secondaire";
