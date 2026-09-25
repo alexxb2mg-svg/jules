@@ -40,6 +40,7 @@ modules:
     reglages:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
         - lecons-3e-experimentales     # ecrite par le lot B ; absente = module actif sans lecon
+  - id: studio         # l'eleve fabrique ses supports de revision, Jules relit (etape 4) ; apres 'cours'
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent

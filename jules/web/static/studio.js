@@ -89,7 +89,10 @@
     }
   }
 
-  function afficherNotions(notions) {
+  function afficherNotions(toutes) {
+    // le studio ne sert qu'aux notions qui ont une lecon : les autres encombreraient la liste
+    const notions = toutes.filter((n) => n.lecon);
+    const sansLecon = toutes.length - notions.length;
     const zone = $("notions-liste");
     zone.innerHTML = "";
     const chapitres = [];
@@ -100,8 +103,11 @@
       parChapitre.get(cle).push(n);
     }
     if (!chapitres.length) {
-      zone.appendChild(creer("p", "avertissement", "Aucune notion pour cette matière pour le moment."));
+      zone.appendChild(creer("p", "avertissement", "Pas encore de leçon dans cette matière : le studio n'y est pas encore utilisable."));
       return;
+    }
+    if (sansLecon) {
+      zone.appendChild(creer("p", "sans-support", `Les ${sansLecon} autres notions de la matière n'ont pas encore de leçon.`));
     }
     for (const chap of chapitres) {
       if (chap) zone.appendChild(creer("div", "notion-bloc-titre", MS.echapper(chap)));

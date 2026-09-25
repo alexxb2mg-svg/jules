@@ -143,6 +143,15 @@ def test_parcours_matiere_par_defaut_si_inconnue(tuteur):
     assert parcours["matiere"] in {m["id"] for m in parcours["matieres"]}
 
 
+def test_parcours_par_defaut_ouvre_une_matiere_qui_a_une_lecon(tuteur):
+    """Sans matiere demandee, l'eleve arrive sur une matiere ou il y a quelque chose a faire,
+    pas sur la premiere de l'alphabet (anglais) qui n'a aucune lecon."""
+    module = tuteur.module("cours")
+    parcours = module.parcours()
+    assert parcours["matiere"] == MATIERE_ID
+    assert any(n["lecon"] for n in parcours["notions"])
+
+
 # --- ouverture / reprise ---------------------------------------------------------
 
 

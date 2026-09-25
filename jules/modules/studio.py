@@ -269,20 +269,20 @@ class Brique(Module):
         contenu = support.contenu
         if support.type == "carte_mentale":
             noeuds = contenu.get("noeuds") or []
-            lignes = [f"- [{i}] {n.get('texte') or '(vide)'}" for i, n in enumerate(noeuds)]
+            lignes = [f"- Branche {i} : {n.get('texte') or '(vide)'}" for i, n in enumerate(noeuds, start=1)]
             parties.append("Branches déjà écrites :\n" + ("\n".join(lignes) if lignes else "(aucune pour l'instant)"))
         elif support.type == "fiche":
             sections = contenu.get("sections") or []
             lignes = [
-                f"- [{i}] {s.get('titre') or '(sans titre)'} : {s.get('contenu') or '(vide)'}"
-                for i, s in enumerate(sections)
+                f"- Section {i} : {s.get('titre') or '(sans titre)'} : {s.get('contenu') or '(vide)'}"
+                for i, s in enumerate(sections, start=1)
             ]
             parties.append("Sections déjà écrites :\n" + ("\n".join(lignes) if lignes else "(aucune pour l'instant)"))
         elif support.type == "quiz":
             questions = contenu.get("questions") or []
             lignes = [
-                f"- [{i}] Q : {q.get('question') or '(vide)'} / R : {q.get('reponse') or '(vide)'}"
-                for i, q in enumerate(questions)
+                f"- Question {i} : {q.get('question') or '(vide)'} / R : {q.get('reponse') or '(vide)'}"
+                for i, q in enumerate(questions, start=1)
             ]
             parties.append(
                 "Questions déjà écrites par l'élève :\n" + ("\n".join(lignes) if lignes else "(aucune pour l'instant)")
@@ -290,8 +290,8 @@ class Brique(Module):
         elif support.type == "cartes_memoire":
             cartes = contenu.get("cartes") or []
             lignes = [
-                f"- [{i}] Recto : {c.get('recto') or '(vide)'} / Verso : {c.get('verso') or '(vide)'}"
-                for i, c in enumerate(cartes)
+                f"- Carte {i} : recto {c.get('recto') or '(vide)'} / verso {c.get('verso') or '(vide)'}"
+                for i, c in enumerate(cartes, start=1)
             ]
             parties.append("Cartes déjà écrites :\n" + ("\n".join(lignes) if lignes else "(aucune pour l'instant)"))
         parties.append(RAPPEL_GARDE_FOU)

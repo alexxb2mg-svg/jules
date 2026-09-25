@@ -35,6 +35,24 @@
 .notions-liste { display: flex; flex-direction: column; gap: 14px; }
 .notion-bloc-titre { font-weight: 700; font-size: 14px; color: var(--gris); text-transform: uppercase; margin: 4px 0 2px; }
 .notion-supports { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.notion-ligne-titre { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; }
+.notion-ligne-titre .nom { flex: 1; min-width: 0; }
+.pastille-etat {
+  display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 2px 9px; border-radius: 999px;
+  border: 1px solid transparent; flex-shrink: 0; white-space: nowrap;
+}
+.pastille-etat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.pastille-etat.a_venir { background: #F1F0F7; color: var(--gris); }
+.pastille-etat.a_venir::before { background: #A7A3BE; }
+.pastille-etat.en_cours { background: #FFF3E0; color: #8A5300; }
+.pastille-etat.en_cours::before { background: #EF6C00; }
+.pastille-etat.bloque { background: #FDECEC; color: #A31515; }
+.pastille-etat.bloque::before { background: #C62828; }
+.pastille-etat.compris { background: #E8F3EC; color: #1E6B3C; }
+.pastille-etat.compris::before { background: #2E9E5B; }
+.pastille-etat.acquis { background: #E4F0FC; color: #12508F; }
+.pastille-etat.acquis::before { background: var(--p-principale); }
+
 .support-ligne {
   display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: none; border: none;
   border-radius: 10px; padding: 8px; color: var(--texte); font: inherit;

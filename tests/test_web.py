@@ -172,6 +172,15 @@ def test_page_cours_renvoie_la_page(client_protege):
     assert "cours.css" in r.text
 
 
+def test_page_studio_renvoie_la_page(client_protege):
+    """La page eleve du studio doit etre servie par l'application, comme /cours."""
+    r = client_protege.get("/studio")
+    assert r.status_code == 200
+    assert "text/html" in r.headers["content-type"]
+    assert "studio.js" in r.text
+    assert "studio.css" in r.text
+
+
 def test_cours_html_couvert_par_verification_style_script():
     """cours.html doit bien exister et etre balaye par test_pages_sans_style_ni_script_en_ligne (glob *.html)."""
     from pathlib import Path

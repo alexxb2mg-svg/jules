@@ -176,7 +176,9 @@ class Brique(Module):
         if not matieres:
             return {"matieres": [], "matiere": "", "notions": [], "estimation": ESTIMATION_TEXTE}
         ids_dispo = {mid for mid, _, _ in matieres}
-        matiere_use = matiere_id if matiere_id in ids_dispo else matieres[0][0]
+        # par defaut : la premiere matiere qui a au moins une lecon, sinon la premiere tout court
+        avec_lecon = [mid for mid, _, ns in matieres if any(n.id in self.lecons for n in ns)]
+        matiere_use = matiere_id if matiere_id in ids_dispo else (avec_lecon or [matieres[0][0]])[0]
         _, nom_matiere, notions = next(m for m in matieres if m[0] == matiere_use)
         statuts = self._derniers_statuts()
         resultat_notions = []
