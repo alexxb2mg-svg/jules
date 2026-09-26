@@ -25,7 +25,7 @@ from jules.web.app import creer_app
 RACINE = Path(__file__).resolve().parents[1]
 FIGURES = {"droite-affine", "triangle-thales", "triangle-rectangle", "equation-solutions", "probabilites-frequences"}
 OUTILS = {"calculatrice", "frise-chronologique", "lexique"}
-RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais"}
+RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais"}
 
 MANIFESTE = """\
 id: {id}

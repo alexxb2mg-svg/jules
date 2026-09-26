@@ -1,0 +1,8 @@
+id: rappels-anglais
+titre: "Rappels au survol : anglais (phonétique, grammaire, niveaux du CECRL)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  rappels: [phonetique, abreviations-anglais, structures-anglais]
+permissions: {}

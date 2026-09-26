@@ -52,7 +52,7 @@ def test_le_coeur_ne_connait_aucune_regle_de_matiere():
 def test_les_extensions_de_rappels_actives():
     extensions = charger_extensions(RACINE / "extensions", ACTIVES)
     code = code_des_rappels(extensions)
-    for identifiant in ("rappels-sciences", "rappels-histoire", "rappels-francais"):
+    for identifiant in ("rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais"):
         assert f"// --- extension {identifiant} ---" in code
     elements = re.findall(r"\b([A-Z][a-z]?): \"", code.split("elements: {")[1].split("},")[0])
     assert len(elements) == len(set(elements)) == 118
@@ -112,6 +112,12 @@ TEXTES = [
         "Dans « il mange une pomme », le GN « une pomme » est COD ; adj. qualificatif.",
     ),
     ("sans_matiere", {}, "Sans notion : 10 kg de CO₂ au XIXe siècle."),
+    (
+        "anglais",
+        {"matiere": "anglais"},
+        "Le son /θ/ de think ; think se lit /θɪŋk/. Présent en -ing : sujet + BE + V-ing. "
+        "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg.",
+    ),
     ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
 ]
 
@@ -255,3 +261,12 @@ def test_svt_sigles_et_chimie_sans_histoire(annotations):
 
 def test_formule_avec_un_nombre_negatif(annotations):
     assert annotations["negatif"]["formules"] == ["(190 − 250) ÷ 250 × 100 = −60 ÷ 250 × 100 = −24"]
+
+
+def test_anglais_phonetique_structures_et_niveaux(annotations):
+    bulles = _bulles(annotations, "anglais")
+    assert "/θ/ : th sourd, comme dans think (langue entre les dents, sans voix)" in bulles
+    assert any(b.startswith("/θɪŋk/ : prononciation") and "θ = th sourd" in b for b in bulles)
+    assert annotations["anglais"]["formules"] == ["sujet + BE + V-ing"]
+    assert any(b.startswith("A2 : niveau A2 du CECRL") for b in bulles) and "sb : somebody : quelqu'un" in bulles
+    assert not any(b.startswith("kg") or b.startswith("/05") for b in bulles)  # ni unites ni dates en anglais

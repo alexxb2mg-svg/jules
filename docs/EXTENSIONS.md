@@ -92,7 +92,8 @@ matière, les lettres et abréviations de la notion, et dit si le texte est dans
 deux règles reconnaissent le même endroit, la lecture la plus longue l'emporte, puis le rang.
 Extensions livrées : `rappels-sciences` (unités, chimie, formules en gras), `rappels-histoire`
 (siècles, numéros de règne, av. J.-C., sigles d'histoire-géographie et d'EMC), `rappels-francais`
-(abréviations de grammaire). Ajouter les règles d'une matière = ajouter une extension et
+(abréviations de grammaire), `rappels-anglais` (sons de l'alphabet phonétique, abréviations
+sb/sth/BV/V-ing, niveaux du CECRL, structures « BE + V-ing » en gras). Ajouter les règles d'une matière = ajouter une extension et
 l'activer dans `extensions:`, sans toucher au cœur ni aux pages.
 
 **Outils.** Un outil fourni garde exactement le format de `docs/OUTILS-CONTRAT.md`
