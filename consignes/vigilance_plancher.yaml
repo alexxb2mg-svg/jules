@@ -1,0 +1,57 @@
+# Plancher deterministe de la brique vigilance (jules/modules/vigilance.py).
+#
+# Ces expressions declenchent une alerte meme si le modele de langage est en panne ou repond
+# n'importe quoi. On reste etroit et precis : mieux vaut manquer une formulation rare que
+# sermonner un eleve qui plaisante avec ses copains. Le modele reste le dispositif principal ;
+# ce fichier est un filet de secours, pas un remplacement.
+#
+# Chaque motif est une expression reguliere (re.IGNORECASE), testee sur le message de l'eleve
+# (pas sur la reponse du tuteur). Avant de chercher les motifs de niveau, toute portion du texte
+# qui correspond a une exclusion est retiree (expressions courantes, contexte scolaire, blagues
+# connues) : « ma mère va me tuer », « ce contrôle va me tuer », « mdr », « lol » ne declenchent
+# donc pas le plancher a eux seuls.
+
+niveaux:
+  eleve:
+    motif_du_niveau: "Message de l'élève : possibles idées suicidaires ou d'auto-agression."
+    motifs:
+      - '\bme\s+suicid(er|e|ait)\b'
+      - '\benvie\s+de\s+(me\s+)?mourir\b'
+      - "\\bje\\s+veux\\s+(plus\\s+)?(être|etre)\\s+là\\b"
+      - '\bplus\s+être\s+là\b'
+      - '\bme\s+tuer\b'
+      - '\bme\s+pendre\b'
+      - '\bme\s+jeter\s+par\s+la\s+fenêtre\b'
+      - '\bme\s+faire\s+du\s+mal\b'
+      - '\bme\s+scarifier\b'
+      - '\bme\s+couper\b'
+      - '\bme\s+taillader\b'
+  moyen:
+    motif_du_niveau: "Message de l'élève : violence subie, harcèlement, ou contact inquiétant avec un adulte."
+    motifs:
+      - '\bil\s+(me\s+)?frappe\b'
+      - '\belle\s+(me\s+)?frappe\b'
+      - '\bon\s+me\s+frappe\b'
+      - '\bmon\s+(père|beau-père)\s+(me\s+)?(frappe|tape|bat)\b'
+      - '\bma\s+(mère|belle-mère)\s+(me\s+)?(frappe|tape|bat)\b'
+      - '\bils?\s+(me\s+)?(tapent|tape)\s+(à|a)\s+l.école\b'
+      - '\bharc[eè]l[eé]'
+      - '\bils?\s+se\s+moquent\s+tous\s+de\s+moi\b'
+      - '\bgroupe\s+(snap|insta|whatsapp)\s+sur\s+moi\b'
+      - '\bveut\s+qu.on\s+se\s+voie\b'
+      - '\bveut\s+me\s+voir\s+en\s+vrai\b'
+      - '\ben\s+parle\s+pas\s+(à|a)\s+t(a|es)\s+(mère|parents|père)\b'
+      - '\bne\s+le\s+dis\s+pas\s+(à|a)\s+t(a|es)\s+(mère|parents|père)\b'
+      - '\bgarder?\s+ça\s+secret\b'
+      - '\benvoie(r)?\s+(une\s+)?photo\s+de\s+toi\b'
+      - '\bm.envoie(r)?\s+des?\s+photos?\b'
+
+exclusions:
+  - '\bmdr\b'
+  - '\blol\b'
+  - '\bptdr\b'
+  - '\bma\s+mère\s+va\s+me\s+tuer\b'
+  - '\bmon\s+père\s+va\s+me\s+tuer\b'
+  - '\b(ce\s+)?contr[oô]le\s+va\s+me\s+tuer\b'
+  - '\bje\s+suis\s+mort(e)?\s+mdr\b'
+  - '\bme\s+pendre\s+avec\s+ma\s+trousse\b'
