@@ -183,49 +183,101 @@
       const div = creer("div", "bloc-carte");
       const svgns = "http://www.w3.org/2000/svg";
       const svg = document.createElementNS(svgns, "svg");
-      svg.setAttribute("viewBox", "0 0 860 230");
       svg.setAttribute("role", "img");
       svg.setAttribute("aria-label", "Carte des notions");
-      const positions = new Map();
       const noeuds = bloc.noeuds || [];
-      // Le noeud principal en haut au centre, les autres repartis sur la ligne du dessous.
       const secondaires = noeuds.filter((n) => !n.principal);
-      const pas = 860 / Math.max(secondaires.length, 1);
-      noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 430, y: 40 }));
-      secondaires.forEach((n, i) => positions.set(n.id, { x: pas * i + pas / 2, y: 190 }));
       const g = (nom, attrs) => {
         const e = document.createElementNS(svgns, nom);
         for (const k in attrs) e.setAttribute(k, attrs[k]);
         return e;
       };
+      // Texte coupe en lignes selon la largeur de la boite (estimation : un caractere ~ 0,58 em).
+      const lignes = (texte, largeur, taille) => {
+        const max = Math.max(8, Math.floor(largeur / (taille * 0.58)));
+        const sortie = [];
+        let courante = "";
+        for (const mot of String(texte || "").split(/\s+/).filter(Boolean)) {
+          if (courante && (courante + " " + mot).length > max) { sortie.push(courante); courante = mot; }
+          else courante = courante ? courante + " " + mot : mot;
+        }
+        if (courante) sortie.push(courante);
+        return sortie;
+      };
+      const T_TITRE = 16, T_SOUS = 14, T_LIEN = 13, H_TITRE = 20, H_SOUS = 18;
+      // Jusqu'a 4 notions : en eventail sous le noeud principal. Au-dela : le principal a gauche et
+      // les notions en colonne a droite, pour que rien ne se chevauche (2 a 8 noeuds permis).
+      const enColonne = secondaires.length > 4;
+      const largeur = (n) => (enColonne ? (n.principal ? 230 : 380) : n.principal ? 260 : Math.min(220, 860 / Math.max(secondaires.length, 1) - 16));
+      const contenu = new Map();
+      for (const n of noeuds) {
+        const l = largeur(n) - 20;
+        const titre = lignes(n.titre, l, T_TITRE), sous = n.sous_titre ? lignes(n.sous_titre, l, T_SOUS) : [];
+        contenu.set(n.id, { titre, sous, hauteur: 22 + titre.length * H_TITRE + sous.length * H_SOUS });
+      }
+      const hMax = Math.max(...secondaires.map((n) => contenu.get(n.id).hauteur), 56);
+      const positions = new Map();
+      let hauteurTotale;
+      if (enColonne) {
+        const pasY = hMax + 18;
+        hauteurTotale = secondaires.length * pasY + 10;
+        secondaires.forEach((n, i) => positions.set(n.id, { x: 650, y: 10 + pasY * i + pasY / 2 }));
+        noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 125, y: hauteurTotale / 2 }));
+      } else {
+        const hPrincipal = Math.max(...noeuds.filter((n) => n.principal).map((n) => contenu.get(n.id).hauteur), 56);
+        const pas = 860 / Math.max(secondaires.length, 1);
+        const yBas = hPrincipal + 130 + hMax / 2;
+        hauteurTotale = yBas + hMax / 2 + 6;
+        noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 430, y: 4 + hPrincipal / 2 }));
+        secondaires.forEach((n, i) => positions.set(n.id, { x: pas * i + pas / 2, y: yBas }));
+      }
+      svg.setAttribute("viewBox", `0 0 860 ${Math.ceil(hauteurTotale)}`);
+      const boite = (n) => {
+        const pos = positions.get(n.id), h = n.principal ? contenu.get(n.id).hauteur : hMax, w = largeur(n);
+        return { gauche: pos.x - w / 2, droite: pos.x + w / 2, haut: pos.y - h / 2, bas: pos.y + h / 2 };
+      };
       for (const lien of bloc.liens || []) {
-        const de = positions.get(lien.de), vers = positions.get(lien.vers);
-        if (!de || !vers) continue;
-        // Meme ligne : on relie les bords lateraux ; sinon le bas du haut au haut du bas.
-        const memeLigne = de.y === vers.y;
-        const sens = vers.x > de.x ? 1 : -1;
-        const x1 = memeLigne ? de.x + sens * 100 : de.x, y1 = memeLigne ? de.y : de.y + 24;
-        const x2 = memeLigne ? vers.x - sens * 100 : vers.x, y2 = memeLigne ? vers.y : vers.y - 24;
+        const a = noeuds.find((n) => n.id === lien.de), b = noeuds.find((n) => n.id === lien.vers);
+        if (!a || !b || !positions.has(a.id) || !positions.has(b.id)) continue;
+        const pa = positions.get(a.id), pb = positions.get(b.id), ba = boite(a), bb = boite(b);
+        let x1, y1, x2, y2;
+        if (enColonne) {  // du bord droit de l'un au bord gauche de l'autre
+          [x1, y1, x2, y2] = pa.x < pb.x ? [ba.droite, pa.y, bb.gauche, pb.y] : [ba.gauche, pa.y, bb.droite, pb.y];
+        } else if (pa.y === pb.y) {  // meme ligne : bords lateraux
+          [x1, y1, x2, y2] = pa.x < pb.x ? [ba.droite, pa.y, bb.gauche, pb.y] : [ba.gauche, pa.y, bb.droite, pb.y];
+        } else {  // bas du noeud du haut vers le haut du noeud du bas
+          [x1, y1, x2, y2] = pa.y < pb.y ? [pa.x, ba.bas, pb.x, bb.haut] : [pa.x, ba.haut, pb.x, bb.bas];
+        }
         svg.appendChild(g("line", { x1, y1, x2, y2, stroke: "#8A94A3", "stroke-width": 2 }));
-        const texte = g("text", { x: (x1 + x2) / 2, y: (y1 + y2) / 2 - 6, "font-size": 12, fill: "#4A5566", "text-anchor": "middle", "paint-order": "stroke", stroke: "#FFFFFF", "stroke-width": 4 });
-        texte.textContent = lien.libelle || "";
-        svg.appendChild(texte);
+        if (lien.libelle) {
+          // Un peu plus pres de l'arrivee : les libelles s'ecartent. Entre deux boites d'une meme ligne,
+          // le libelle passe au-dessus des boites (l'espace entre elles est trop etroit).
+          const t = enColonne ? 0.62 : 0.55, memeLigne = !enColonne && pa.y === pb.y;
+          const yLibelle = memeLigne ? Math.min(ba.haut, bb.haut) - 8 : y1 + (y2 - y1) * t - 6;
+          const texte = g("text", { x: x1 + (x2 - x1) * t, y: yLibelle, "font-size": T_LIEN, fill: "#4A5566", "text-anchor": "middle", "paint-order": "stroke", stroke: "#FFFFFF", "stroke-width": 5 });
+          texte.textContent = lien.libelle;
+          svg.appendChild(texte);
+        }
       }
       for (const n of noeuds) {
-        const pos = positions.get(n.id);
+        const pos = positions.get(n.id), c = contenu.get(n.id), b = boite(n);
         const groupe = g("g", { class: "carte-noeud", "data-adresse": `carte/${n.id}` });
-        const largeurBoite = 200, hauteurBoite = 46;
         groupe.appendChild(g("rect", {
-          x: pos.x - largeurBoite / 2, y: pos.y - hauteurBoite / 2, width: largeurBoite, height: hauteurBoite,
-          rx: 12, fill: n.principal ? "#1F4E8C" : "#EAF1FA", stroke: n.principal ? "#1F4E8C" : "#B7C8DE",
+          x: b.gauche, y: b.haut, width: b.droite - b.gauche, height: b.bas - b.haut,
+          rx: 14, fill: n.principal ? "#1F4E8C" : "#EAF1FA", stroke: n.principal ? "#1F4E8C" : "#B7C8DE",
         }));
-        const titre = g("text", { x: pos.x, y: pos.y - 2, "font-size": 13, "font-weight": 700, "text-anchor": "middle", fill: n.principal ? "#FFFFFF" : "#14243B" });
-        titre.textContent = n.titre;
-        groupe.appendChild(titre);
-        if (n.sous_titre) {
-          const sous = g("text", { x: pos.x, y: pos.y + 15, "font-size": 12, "text-anchor": "middle", fill: n.principal ? "#DBE7F5" : "#4A5566" });
-          sous.textContent = n.sous_titre;
-          groupe.appendChild(sous);
+        let y = pos.y - (c.titre.length * H_TITRE + c.sous.length * H_SOUS) / 2 + 15;
+        for (const l of c.titre) {
+          const e = g("text", { x: pos.x, y, "font-size": T_TITRE, "font-weight": 700, "text-anchor": "middle", class: "carte-titre", fill: n.principal ? "#FFFFFF" : "#14243B" });
+          e.textContent = l;
+          groupe.appendChild(e);
+          y += H_TITRE;
+        }
+        for (const l of c.sous) {
+          const e = g("text", { x: pos.x, y: y + 1, "font-size": T_SOUS, "text-anchor": "middle", fill: n.principal ? "#DBE7F5" : "#4A5566" });
+          e.textContent = l;
+          groupe.appendChild(e);
+          y += H_SOUS;
         }
         svg.appendChild(groupe);
       }
