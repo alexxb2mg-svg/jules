@@ -27,8 +27,12 @@ const EXPRESSION = `(${releverVoix.toString()})()`;
 
 // Noms et langues viennent du navigateur : retours a la ligne et caracteres de controle neutralises
 // avant l'ecriture, pour qu'une valeur ne puisse pas fabriquer de fausses lignes dans le releve.
+// Retours a la ligne supprimes (forme reconnue par CodeQL, js/log-injection), autres caracteres de
+// controle et separateurs de ligne Unicode remplaces par « ? ».
 function propre(texte) {
-  return String(texte).replace(/[\r\n\u2028\u2029\u0000-\u001f\u007f-\u009f]/g, "?");
+  return String(texte)
+    .replace(/\r|\n/g, "")
+    .replace(/[\u0000-\u001f\u007f-\u009f\u2028\u2029]/g, "?");
 }
 
 function afficher(voix) {
