@@ -13,7 +13,7 @@ Profil de l'élève          ce que Jules charge                  ce qui l'enric
                            adaptations (troubles dys...)        remarques du parent
 ```
 
-Aujourd'hui Jules est un tuteur par conversation, avec une seule bibliothèque (le programme de 3e). La suite le fait évoluer sur quatre axes.
+Aujourd'hui Jules est un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e). La suite le fait évoluer sur quatre axes.
 
 ## Trois règles qui tiennent sur tous les axes
 
@@ -40,13 +40,13 @@ source: officielle         # officielle | enseignant | communaute
 licence: "Licence ouverte / MIT"
 ```
 
-Le programme de 3e existant deviendra la première bibliothèque à ce format. Les notions gardent leur identifiant et leur source officielle, pour que Jules puisse toujours dire d'où vient ce qu'il enseigne.
+Le programme officiel est décrit à ce format sur quatre niveaux (CM1, 5e, 4e, 3e ; `bibliotheque/programme/`). Les notions gardent leur identifiant et leur source officielle, pour que Jules puisse toujours dire d'où vient ce qu'il enseigne.
 
-**À construire avec la communauté :** les programmes du primaire (cycles 2 et 3), des autres classes de collège, et du lycée.
+**À construire avec la communauté :** les autres classes du primaire (cycles 2 et 3, hors CM1) et du collège (6e), et le lycée.
 
 ## 2. Des outils par matière
 
-Un outil est une petite application qui s'ouvre dans la leçon : frise chronologique en histoire, calculatrice ou géométrie dynamique en maths, carte muette en géographie, conjugueur en français, tableau périodique en physique-chimie. Chaque matière peut avoir les siens, écrits par la communauté.
+**En partie construite (étape 3).** Le contrat des outils (`docs/OUTILS-CONTRAT.md`), le chargeur (`jules/outils.py`) et le module qui les sert (`jules/modules/outils.py`) sont écrits : chaque outil tourne dans un cadre isolé (`iframe` sandbox, en-têtes propres), sans accès au réseau ni aux données de l'élève. Trois outils de référence existent comme extensions (`extensions/frise-chronologique`, `extensions/calculatrice`, `extensions/lexique`). Ce qui manque : le bloc `outil` d'une leçon n'ouvre pas encore l'outil dans la page `/cours` (il affiche « à venir », voir `jules/web/static/cours.js`), et le protocole de validation communautaire (section 4) reste à durcir avant d'accepter un outil extérieur.
 
 La leçon ou Jules peuvent ouvrir un outil (« ouvre la frise avec ces cinq dates ») et l'outil peut dire à Jules ce que fait l'élève (« l'élève a placé Verdun avant la mobilisation »). C'est ce qui permet à Jules de réagir à une erreur sans donner la réponse : il attend que l'élève ait fini sa tentative, puis il pose une question (« Qu'est-ce qui se passe d'abord, la mobilisation ou la bataille ? »).
 
@@ -79,11 +79,11 @@ Une règle de fond s'applique aux outils comme au reste : **un outil ne fait pas
 - **Au centre, le cours** : les blocs `objectifs`, `texte`, `exemple`, `exercice` (nombre, réponse courte, QCM), `question_ouverte` et `synthese` s'enchaînent avec une barre de progression. Le bloc `outil` est prévu au format (étape 3) mais affiché comme « à venir ».
 - **À côté, Jules** : il voit la leçon, le bloc en cours, la réponse attendue et les tentatives déjà faites, mais ne les révèle jamais. Il ne parle de lui-même qu'après une tentative de l'élève, toujours par une question, jamais par la réponse ; un garde-fou serveur (`contient_la_reponse`) rejoue l'échange si Jules se trompe. Après plusieurs tentatives fausses, l'explication s'affiche sans qu'il ait à la répéter.
 - **Le parcours** (à gauche) : les notions de la matière choisie, groupées par chapitre, avec leur état (compris, en cours, bloqué, à venir) — une estimation de l'IA, affichée comme telle. Les notions qui ont une leçon sont cliquables.
-- **Le studio** (report à l'étape 4) : pas encore construit. La fin d'une leçon écrit déjà un événement de suivi qui alimente le bilan du soir et l'épreuve sans aide, comme un échange en conversation classique.
+- **Le studio** (étape 4) : construit. L'élève fabrique une fiche, une carte mentale, un quiz ou des cartes mémoire, Jules relit ; les cartes mémoire suivent une répétition espacée (`jules/revisions.py`). La fin d'une leçon écrit déjà un événement de suivi qui alimente le bilan du soir et l'épreuve sans aide, comme un échange en conversation classique.
 
-Trois premières leçons expérimentales existent (mathématiques : théorème de Pythagore ; français : accord du participe passé avec avoir ; histoire : la guerre totale 1914-1918), dans `bibliotheque/lecons-3e-experimentales/`, format décrit dans [`bibliotheque/README.md`](../bibliotheque/README.md) et `bibliotheque/SCHEMA-LECON.md`. Elles sont marquées `a_relire` : un enseignant doit les valider avant un usage réel.
+19 leçons expérimentales existent aujourd'hui (8 matières : mathématiques, français, histoire, géographie, EMC, physique-chimie, SVT, technologie — par exemple le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), dans `bibliotheque/lecons-3e-experimentales/`, format décrit dans [`bibliotheque/README.md`](../bibliotheque/README.md) et `bibliotheque/SCHEMA-LECON.md`. Elles sont marquées `a_relire` : un enseignant doit les valider avant un usage réel.
 
-**Reste à faire sur cet axe** : d'autres leçons (une notion sur 252 a aujourd'hui une leçon en blocs, les autres n'ont qu'une fiche de repères pour l'aide aux devoirs), le bloc `outil` une fois l'étape 3 avancée, et le studio de révision (étape 4).
+**Reste à faire sur cet axe** : d'autres leçons (19 notions sur 252 ont aujourd'hui une leçon en blocs, les autres n'ont qu'une fiche de repères pour l'aide aux devoirs), le bloc `outil` une fois l'étape 3 avancée, et le studio de révision (étape 4).
 
 Proposition de format d'une leçon (documentée en détail dans `docs/COURS-CONTRAT.md`, qui reste la référence technique) :
 
@@ -183,8 +183,8 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 
 À dire honnêtement à qui l'installe :
 
-- **Le suivi des notions est une estimation.** L'état (comprise, en cours, bloquée) est déduit par le modèle d'IA à partir des conversations. Les grands modèles sont médiocres à cet exercice ; la recherche sur le suivi des connaissances des élèves n'a pas encore de méthode fiable à proposer.
-- **Aucune mesure des progrès.** Jules n'a été essayé que dans une famille. Rien ne montre encore qu'il fait progresser un élève ; un tuteur bien réglé évite surtout que l'IA fasse perdre.
+- **Le suivi des notions est une estimation.** L'état (comprise, en cours, bloquée) est déduit par le modèle d'IA à partir des conversations. Les grands modèles sont médiocres à cet exercice ; la recherche sur le suivi des connaissances des élèves n'a pas encore de méthode fiable à proposer. Exception : pour les fiches v2 (`docs/FICHES-V2.md`), les exercices sont corrigés par le code, pas estimés par un modèle.
+- **Aucune mesure des progrès.** Jules n'a été essayé que dans une famille. Rien ne montre encore qu'il fait progresser un élève ; un tuteur bien réglé évite surtout que l'IA fasse perdre. Un banc d'essai d'élèves simulés (`evaluation/eleves/`, 9 profils, plus de 35 scénarios, jugés par un modèle) existe pour repérer des pièges de conversation, mais il ne mesure rien chez un vrai élève.
 - **Les petits modèles locaux cèdent.** Un modèle de 8 milliards de paramètres a fini par donner la réponse quand l'élève insistait. Pour l'instant, gratuit et fiable ne vont pas ensemble.
 
 ## Feuille de route proposée
@@ -193,13 +193,14 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 |---|---|---|
 | 0 | Tuteur par conversation, bilan parent, vigilance, bibliothèque 3e | fait |
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
-| 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, programme et fiches de 3e ; reste le chargement selon l'âge |
-| 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, trois leçons expérimentales `a_relire`) ; reste le bloc `outil` et le studio |
+| 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, quatre niveaux migrés (CM1, 5e, 4e, 3e) ; reste le chargement selon l'âge et les autres niveaux |
+| 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, 19 leçons expérimentales `a_relire`, 8 matières) ; reste le bloc `outil` |
 | 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`, cinq fiches expérimentales `a_relire` en mathématiques 3e) ; reste les autres matières et niveaux |
-| 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | à faire |
-| 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | à faire |
+| 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | en partie fait : contrat (`docs/OUTILS-CONTRAT.md`), isolement (iframe sandbox), trois outils de référence livrés comme extensions ; reste l'ouverture du bloc `outil` depuis une leçon et le protocole de validation communautaire |
+| 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | fait (`jules/modules/studio.py`, `jules/studio.py`, `jules/revisions.py`, page `/studio`, `docs/STUDIO-CONTRAT.md`) |
 | 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |
-| 5 | Catalogue communautaire de bibliothèques et d'outils | en cours : contrat d'extension (`docs/EXTENSIONS.md`, `jules/extensions.py`), une extension d'exemple ; reste le catalogue et l'installation par empreinte |
+| 4 ter | Exercices sans IA, corrigés par le code (fiches v2) | en cours : contrat (`docs/FICHES-V2.md`), module `exercices`, deux fiches de démonstration ; reste la conversion des 252 fiches v1 |
+| 5 | Catalogue communautaire de bibliothèques et d'outils | en cours : contrat d'extension (`docs/EXTENSIONS.md`, `jules/extensions.py`), 10 extensions d'exemple ; reste le catalogue et l'installation par empreinte |
 | à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
 
 ## Questions ouvertes

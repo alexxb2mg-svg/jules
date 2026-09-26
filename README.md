@@ -14,12 +14,12 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 
 > **Pourquoi Jules.** Jules est né d'un essai, [*Après la dernière main levée*](docs/essai/), qui se demande ce que l'intelligence artificielle fait à l'apprentissage des enfants et à quelles conditions elle peut aider au lieu de faire à leur place. Sa lecture n'est pas nécessaire pour utiliser Jules. Elle montre d'où part le projet, les études sur lesquelles il s'appuie, et une postface dit ce que Jules en a repris, ce qu'il a corrigé et ce qui lui manque encore.
 
-> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec une première bibliothèque : le programme officiel de 3e. L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; trois leçons expérimentales (mathématiques, français, histoire) servent de premier contenu, à relire par un enseignant. Les outils par matière (étape 3) restent à concevoir ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e ; 683 notions). L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; 19 leçons expérimentales (8 matières, niveau 3e) servent de premier contenu, à relire par un enseignant. Les **outils par matière** (étape 3) sont en place et isolés (3 outils de référence, format d'extension) mais pas encore ouverts depuis une leçon ; le **studio** de révision (étape 4) est construit ; les adaptations aux troubles dys ont leur place réservée pour plus tard : voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
 ## Où va Jules
 
 <p align="center"><img src="docs/maquette-cours.png" alt="Maquette : une leçon d'histoire avec une frise chronologique interactive au centre, le parcours de l'élève et les outils de la matière à gauche, Jules et le studio de révision à droite" width="820"></p>
-<p align="center"><em>Maquette de principe, rien n'est encore branché. Au centre le cours, à gauche le parcours et les outils de la matière, à droite Jules qui accompagne.</em></p>
+<p align="center"><em>Maquette de principe. Le cours, le parcours, les fiches visuelles et le studio sont branchés ; les outils de la matière ne s'ouvrent pas encore depuis une leçon.</em></p>
 
 Quatre idées guident la suite :
 
@@ -38,16 +38,18 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 - **Aide aux devoirs** avec la photo de l'exercice, sans jamais donner la réponse, même si l'enfant insiste.
 - **Cinq modes de conversation** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
 - **Épreuve sans aide** : quelques jours après, Jules propose de reprendre sans aide les notions marquées comprises. Ce qui a tenu devient « acquis », ce qui n'a pas tenu repasse « en cours », et le bilan du soir le dit au parent.
+- **Fiches visuelles (page « Mes fiches »)** : pour les notions qui en ont une, une fiche en blocs (attendus, formule, carte, graphe interactif, méthode, piège, exemple, renfort), commentée par Jules en phrases préécrites, sans aucun appel au modèle d'IA. Cinq fiches expérimentales de mathématiques 3e existent aujourd'hui.
+- **Studio** : l'élève fabrique une fiche, une carte mentale, un quiz ou des cartes mémoire, que Jules relit ; les cartes mémoire suivent une répétition espacée (`jules/revisions.py`).
 - **Exercices sans IA (expérimental)** : sur deux notions de démonstration, l'élève peut s'entraîner sur des exercices corrigés entièrement par le code (aucun appel au modèle) — piège, indice, correction finale, comme pour un exercice fermé classique. Voir [docs/FICHES-V2.md](docs/FICHES-V2.md).
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent, avec une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice (« Explique-moi comment tu sais qu'un nombre est premier »). Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
 - **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
-- **Bibliothèques expérimentales** : le programme officiel de 3e (252 notions, source officielle de chacune), une fiche de repères pour chacune de ces notions dans les 12 matières, et trois premières leçons en blocs (théorème de Pythagore, accord du participe passé avec avoir, la guerre totale 1914-1918), écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux, du primaire au lycée, sont à construire.
+- **Bibliothèques expérimentales** : le programme officiel sur quatre niveaux (CM1 158 notions, 5e 132, 4e 141, 3e 252, soit 683 au total, source officielle de chacune ; seul le niveau de l'élève est chargé), une fiche de repères pour chaque notion de 3e (12 matières) et de CM1 (10 matières, sources officielles éduscol uniquement), 19 leçons en blocs (8 matières de 3e, dont le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), et 5 fiches visuelles de mathématiques 3e (page « Mes fiches », sans appel à l'IA), écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les autres niveaux (CP à CE2, CM2, 6e, lycée) sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on peut télécharger tout le dossier de l'élève (.zip), effacer une conversation, ou tout effacer d'un coup.
 
 ## Ce que Jules ne sait pas encore
 
-- **S'il fait progresser.** Jules n'a été essayé que dans une famille, sans mesure. Un tuteur bien réglé évite surtout que l'IA fasse le travail à la place de l'enfant ; les progrès mesurés dans les études viennent quand un adulte s'en mêle. Une épreuve sans aide, quelques jours après, vérifie déjà ce qui reste chez un élève ; ce n'est pas une étude.
+- **S'il fait progresser.** Jules n'a été essayé que dans une famille, sans mesure. Un tuteur bien réglé évite surtout que l'IA fasse le travail à la place de l'enfant ; les progrès mesurés dans les études viennent quand un adulte s'en mêle. Une épreuve sans aide, quelques jours après, vérifie déjà ce qui reste chez un élève ; ce n'est pas une étude. Un banc d'essai d'élèves simulés existe (`evaluation/eleves/`, 9 profils, plus de 35 scénarios) pour repérer des pièges de conversation ; il ne remplace pas une mesure sur de vrais élèves.
 - **Tenir la règle avec un petit modèle installé sur l'ordinateur** (voir plus bas).
 
 ## Installation
@@ -131,11 +133,12 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié | en place |
 | Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas | en place |
 | Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève | en place |
-| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance (plancher déterministe dans `consignes/vigilance_plancher.yaml` en plus du modèle), bilan du soir, module `cours` (interface de leçon) | en place |
+| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance (plancher déterministe dans `consignes/vigilance_plancher.yaml` en plus du modèle), bilan du soir, `cours` (interface de leçon), `studio` (fiche, carte mentale, quiz, cartes mémoire), `exercices` (exercices sans IA corrigés par le code), `fiches_visuelles` (page « Mes fiches »), `outils` (ouvre un outil dans un espace isolé) | en place |
 | Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
-| Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (3e) |
-| Outils | à définir | Frise, calculatrice, carte... ouverts par Jules pendant une leçon | à concevoir |
+| Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (CM1, 5e, 4e, 3e) |
+| Outils | `extensions/<id>/` + `jules/outils.py` | Frise, calculatrice, lexique... des extensions servies dans un espace isolé (iframe sandbox) | en place (3 outils de référence, pas encore ouverts depuis une leçon) |
+| Extensions | `extensions/<id>/extension.yaml` | Format qui accroche du contenu interactif à une leçon (points `bloc_consulte`, `fin_de_seance`) ; voir [docs/EXTENSIONS.md](docs/EXTENSIONS.md) | en place, 10 extensions d'exemple |
 | Adaptations | `adaptations/` | Besoins particuliers (troubles dys, attention...) : affichage et consignes adaptés | emplacement réservé |
 
 Les textes s'accordent selon le genre indiqué dans le profil (fille, garçon ou neutre) : `{{elle|il|iel}}` dans un fichier de consignes donne la bonne forme. Les variables `{prenom}`, `{classe}` et `{parent}` viennent aussi du profil.
@@ -160,7 +163,7 @@ Des tests et un contrôle au moment du commit empêchent ces fichiers privés d'
 - Les codes d'accès sont stockés sous forme d'empreinte salée (scrypt), jamais en clair.
 - Les pages web refusent tout script ou style venu d'ailleurs (Content-Security-Policy).
 - Les photos sont vérifiées (vraie image, 8 Mo au plus) avant d'être enregistrées.
-- Les futurs outils de la communauté tourneront dans un espace isolé, sans accès au réseau ni aux données de l'élève, et passeront une validation encadrée avant d'être proposés : voir [docs/VISION.md](docs/VISION.md#4-la-sécurité-des-outils).
+- Les outils (frise, calculatrice, lexique...) tournent déjà dans un espace isolé (iframe sandbox, en-têtes propres), sans accès au réseau ni aux données de l'élève ; le protocole de validation d'un outil proposé par la communauté reste à durcir : voir [docs/VISION.md](docs/VISION.md#4-la-sécurité-des-outils).
 
 Signaler une faille : voir [SECURITY.md](SECURITY.md).
 
