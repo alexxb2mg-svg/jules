@@ -42,6 +42,7 @@ def test_plancher_detecte(plancher, texte, niveau_attendu):
         "ma mère va me tuer si je rate encore ce contrôle",
         "je suis morte mdr, cette blague est nulle",
         "1/2 + 1/3 ?",
+        "je vais me couper les cheveux ce week-end",
         "le prof nous a mis une punition, c'est trop injuste",
         "jvais me pendre avec ma trousse 😂",
     ],

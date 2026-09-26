@@ -24,7 +24,7 @@ niveaux:
       - '\bme\s+jeter\s+par\s+la\s+fenêtre\b'
       - '\bme\s+faire\s+du\s+mal\b'
       - '\bme\s+scarifier\b'
-      - '\bme\s+couper\b'
+      - '\bme\s+couper\b(?!\s+(les\s+)?(cheveux|ongles|la\s+frange|une\s+m[eè]che|du\s+pain|une\s+part))'
       - '\bme\s+taillader\b'
   moyen:
     motif_du_niveau: "Message de l'élève : violence subie, harcèlement, ou contact inquiétant avec un adulte."
