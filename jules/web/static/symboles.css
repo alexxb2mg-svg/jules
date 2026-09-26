@@ -1,7 +1,9 @@
 /* Jules - bulles de rappel au survol (voir symboles.js) : symboles et lettres des formules. */
+/* Un gras tres leger signale qu'une bulle existe, sans souligner ni alourdir le texte. Les polices de
+   Jules n'ont pas de graisse intermediaire : un fin contour du trait epaissit la lettre d'un tiers de pixel. */
 .symbole {
-  cursor: help; border-radius: 3px;
-  text-decoration: underline dotted rgba(31, 78, 140, .45); text-decoration-thickness: 1px; text-underline-offset: 3px;
+  cursor: help; border-radius: 3px; text-decoration: none;
+  -webkit-text-stroke: .35px currentColor;
 }
 .symbole:hover, .symbole:focus { background: rgba(31, 78, 140, .10); outline: none; }
 .symbole:focus-visible { box-shadow: 0 0 0 2px rgba(31, 78, 140, .45); }
