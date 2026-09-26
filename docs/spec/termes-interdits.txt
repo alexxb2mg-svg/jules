@@ -1,0 +1,54 @@
+# Termes interdits dans les donnees versionnees (EX-005, EX-008) et dans le prompt.
+# Proprietaire : SPEC. Toute modification passe par la spec, pas par le code teste.
+#
+# Regles de recherche (obligatoires pour le test) :
+# - insensible a la casse ET aux accents (normaliser NFKD, retirer les diacritiques) ;
+# - apostrophes typographiques (U+2019, U+2018, U+02BC) remplacees par ' AVANT comparaison ;
+# - un terme sur deux mots est cherche avec n'importe quelle suite d'espaces entre eux ;
+# - une ligne = un RADICAL, cherche en sous-chaine : "dyslex" couvre dyslexie, dyslexique,
+#   dyslexiques ;
+# - une ligne prefixee "mot:" est cherchee en mot entier (sigles courts, pour eviter les
+#   faux positifs) ;
+# - lignes vides et lignes commencant par # ignorees.
+
+# Troubles dys (VISION section 5, adaptations/README.md)
+dyslex
+dysortho
+dyscalcul
+dyspraxi
+dysgraph
+dysphasi
+mot:dys
+mot:tsla
+
+# Attention
+deficit de l'attention
+deficit d'attention
+hyperactivit
+mot:tda
+mot:tdah
+mot:tdha
+
+# Deficiences sensorielles et autres troubles (perimetre elargi au-dela de VISION 5, decision SPEC)
+deficien
+malvoyan
+malentendan
+non-voyant
+non voyant
+aveugle
+cecit
+mot:surdite
+mot:surdites
+mot:sourd
+mot:sourde
+mot:sourds
+mot:sourdes
+autis
+mot:tsa
+
+# Vocabulaire medical. "diagnost" couvre diagnostic : sans risque, car EX-008 ne vise que
+# des fichiers de donnees (.yaml/.json/.md), pas le code Python des tests.
+pathologi
+handicap
+trouble
+diagnost
