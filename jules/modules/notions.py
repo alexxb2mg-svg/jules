@@ -161,11 +161,22 @@ class Brique(Module):
         essais = int(etat.get("essais", 0))
         if essais >= self.essais:
             return
+        # Les premiers messages d'un élève sont souvent vagues (« j'ai un exo », « jsp ») : on relit les
+        # messages précédents avec le dernier, et un message sans rien à rattacher ne consomme pas d'essai
+        # (mesure : evaluation/eleves, notions jamais détectées quand le sujet arrivait au 3e message).
+        precedents = [m.texte for m in conv.messages[:-1] if m.role == "eleve" and m.texte][-2:]
+        contexte = Message(role="eleve", texte="\n".join([*precedents, eleve.texte]).strip(), images=eleve.images)
+        if not self.a_rattacher(contexte):
+            return
         etat["essais"] = essais + 1
         self.tuteur.stockage.ecrire_etat(ESPACE, conv.id, etat)
-        trouvee = self.detecter(eleve)
+        trouvee = self.detecter(contexte)
         if trouvee:
             self.fixer(conv.id, trouvee[0], origine="auto", confiance=trouvee[1])
+
+    def a_rattacher(self, eleve: Message) -> bool:
+        """Un mot du programme reconnu, une photo ou un calcul : il y a de quoi appeler le modele."""
+        return bool(eleve.images or ressemble_a_un_calcul(eleve.texte) or candidats_notes(self.catalogue, eleve.texte))
 
     def detecter(self, eleve: Message) -> tuple[str, str] | None:
         """Propose (id de notion, confiance) pour un message de l'eleve, ou None."""
@@ -174,14 +185,18 @@ class Brique(Module):
         if not notes and not eleve.images and not calcul:
             return None  # ni mot reconnu, ni photo, ni calcul : rien a rattacher
         # Le modele voit toujours toute la liste (le vocabulaire des eleves deborde toujours des mots-cles :
-        # « periurbanisation », « il faut mettre un e et un s ? ») ; les notions dont un mot-cle est reconnu
-        # en entier passent en tete. Le prefiltre ne sert plus qu'a decider s'il faut appeler le modele.
+        # « periurbanisation », « il faut mettre un e et un s ? »). La liste garde un ordre FIXE (prompt
+        # systeme identique d'un appel a l'autre : le cache du fournisseur d'IA s'applique) ; les notions dont
+        # un mot-cle est reconnu en entier sont signalees a part, dans le message. Le prefiltre ne sert plus
+        # qu'a decider s'il faut appeler le modele.
         fortes = [n for score, n in notes if score >= SCORE_FORT and not calcul]
-        vues = {n.id for n in fortes}
-        liste = fortes + [n for n in self.catalogue.notions.values() if n.id not in vues]
+        liste = list(self.catalogue.notions.values())
         catalogue = "\n".join(f"{n.id} | {n.nom_matiere} | {n.titre}" for n in liste)
         images = [p for nom in eleve.images if (p := self.tuteur.stockage.chemin_image(nom))]
-        tour = Tour(role="user", texte=eleve.texte or TEXTE_PHOTO_SEULE, images=images)
+        texte = eleve.texte or TEXTE_PHOTO_SEULE
+        if fortes:
+            texte += "\n\n(Mots-clés reconnus, notions probables : " + ", ".join(n.id for n in fortes) + ")"
+        tour = Tour(role="user", texte=texte, images=images)
         brut = self.tuteur.llm.repondre(CONSIGNE_DETECTION + catalogue, [tour], "rapide")
         reponse = extraire_json(brut) or {}
         identifiant = str(reponse.get("notion") or "").strip()

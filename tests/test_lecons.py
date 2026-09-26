@@ -351,6 +351,15 @@ def test_contient_la_reponse_ignore_un_nombre_different():
     assert contient_la_reponse("As-tu essaye avec 100 ?", bloc) is False
 
 
+def test_contient_la_reponse_moins_typographique():
+    """Les modeles ecrivent souvent le moins typographique (U+2212) : « x = −3 » donne bien la reponse -3."""
+    bloc = Bloc("exercice", {"forme": "nombre", "reponse": -3, "tolerance": 0.01})
+    assert contient_la_reponse("Donc x = \u22123 !", bloc) is True
+    assert contient_la_reponse("tu as presque trouvé (\u22123.8 au lieu de \u22123)", bloc) is True
+    assert contient_la_reponse("7 \u2212 2x = 3x + 22", bloc) is False  # l'enonce seul ne donne pas -3
+    assert verifier_reponse(bloc, "\u22123") is True
+
+
 def test_contient_la_reponse_faux_positif_numero_de_question():
     """Pour une reponse 1 ou 2, un message 'Question 1/2' ne doit pas etre bloque a tort."""
     bloc = Bloc("exercice", {"forme": "nombre", "reponse": 1, "tolerance": 0.01})

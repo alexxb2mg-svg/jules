@@ -266,13 +266,16 @@ def test_detection_sur_un_calcul_sans_mot(tuteur):
     assert module.detecter(Message(role="eleve", texte="bonjour")) is None and not vus  # ni mot ni calcul : pas d'appel
 
 
-def test_detection_liste_complete_mots_reconnus_en_tete(tuteur):
-    """Le modele voit toujours toutes les notions ; celles dont un mot-cle est reconnu passent en tete."""
+def test_detection_liste_complete_ordre_fixe_mots_reconnus_signales(tuteur):
+    """Le modele voit toujours toutes les notions, dans un ordre fixe (prompt systeme identique d'un appel
+    a l'autre, donc mis en cache) ; les notions dont un mot-cle est reconnu sont signalees dans le message."""
     vus = []
+    messages = []
 
     def regle(systeme, tours, modele):
         if "UNE notion d'une liste fermée" in systeme:
-            vus.append(systeme.split("Liste (identifiant | matière | notion) :", 1)[1].strip().splitlines())
+            vus.append(systeme)
+            messages.append(tours[-1].texte)
             return '{"notion": "", "confiance": "faible"}'
         return "ok"
 
@@ -281,10 +284,36 @@ def test_detection_liste_complete_mots_reconnus_en_tete(tuteur):
     total = len(module.catalogue.notions)
     module.detecter(Message(role="eleve", texte="Je dois calculer l'hypoténuse avec Pythagore"))
     module.detecter(Message(role="eleve", texte="on étudie la périurbanisation autour de Lyon"))
-    assert len(vus[0]) == total and vus[0][0].startswith("parallelisme-triangles-pythagore |")
-    assert len(vus[1]) == total  # aucun mot-cle reconnu en entier : le modele juge sur le sens
+    liste = vus[0].split("Liste (identifiant | matière | notion) :", 1)[1].strip().splitlines()
+    assert len(liste) == total
+    assert vus[0] == vus[1]  # meme prompt systeme quel que soit le message : cache possible
+    assert "parallelisme-triangles-pythagore" in messages[0].split("notions probables", 1)[1]
+    assert "notions probables" not in messages[1]  # aucun mot-cle reconnu en entier : le modele juge sur le sens
     assert module.detecter(Message(role="eleve", texte="ok")) is None  # rien a rattacher : pas d'appel
     assert len(vus) == 2
+
+
+def test_detection_attend_un_message_rattachable_et_relit_les_precedents(tuteur):
+    """« j'ai un exo », « jsp » ne consomment pas d'essai ; quand le sujet arrive, le modele relit aussi
+    les messages precedents de l'eleve."""
+    vus = []
+
+    def regle(systeme, tours, modele):
+        if "UNE notion d'une liste fermée" in systeme:
+            vus.append(tours[-1].texte)
+            return '{"notion": "parallelisme-triangles-pythagore", "confiance": "haute"}'
+        return "D'accord."
+
+    tuteur.llm.regle = regle
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.echanger(conv.id, "jai un exo")
+    tuteur.echanger(conv.id, "jsp")
+    tuteur.echanger(conv.id, "jsp")
+    assert not vus  # rien a rattacher : pas d'appel, pas d'essai consomme
+    tuteur.echanger(conv.id, "c'est sur l'hypoténuse avec Pythagore")
+    tuteur.attendre_fond()
+    assert len(vus) == 1 and "jsp" in vus[0] and "hypoténuse" in vus[0]
+    assert tuteur.module("notions").notion_de(conv.id)["id"] == "parallelisme-triangles-pythagore"
 
 
 def test_detection_rejette_une_notion_inventee(tuteur):

@@ -5,6 +5,7 @@ Un module = jules/modules/<id>.py avec une classe `Brique(Module)`. Il peut :
   - decider seul de la reponse, sans IA     -> repondre_a_la_place(conv, eleve)
   - contribuer au prompt systeme           -> contribution(conv)
   - agir apres chaque echange (en tache de fond) -> apres_echange(conv, eleve, bot)
+  - relire la reponse avant envoi (garde-fou) -> filtrer_reponse(conv, texte, relancer)
   - declarer des taches planifiees          -> taches()
   - exposer des routes HTTP parent         -> routes()  (montees sous /api/modules/<id>)
   - exposer des routes HTTP eleve          -> routes_eleve()  (montees sous /api/eleve/<id>)
@@ -67,6 +68,13 @@ class Module:
         """L'eleve a ferme l'application, ou il est reste inactif : la seance est finie.
         `conv` est la derniere conversation touchee pendant la seance, s'il y en a une."""
         return None
+
+    def filtrer_reponse(self, conv: Conversation, texte: str, relancer: Callable[[], str]) -> str:
+        """Relit la reponse de Jules avant qu'elle soit enregistree et montree (garde-fou), qu'elle
+        vienne du modele ou d'un module ayant repondu a sa place. `relancer()` redemande une reponse
+        au modele avec le meme prompt (sans effet si la reponse initiale ne venait pas du modele).
+        Par defaut : rien a changer."""
+        return texte
 
     def taches(self) -> list[Tache]:
         return []

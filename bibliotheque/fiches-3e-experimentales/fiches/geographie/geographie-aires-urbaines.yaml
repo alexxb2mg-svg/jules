@@ -1,5 +1,7 @@
 # Fiche EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
 # Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+# 2026-09-25 : mise à jour sur le zonage INSEE de 2020 (aires d'attraction des villes). L'ancienne
+# version reprenait le zonage de 2010 (aire urbaine, seuil de 40 %, 85 %), qui n'est plus en vigueur.
 notion: geographie-aires-urbaines
 declencheurs:
 - ville centre
@@ -7,75 +9,101 @@ declencheurs:
 - périurbain
 - migrations pendulaires
 - étalement urbain
-- 85% des Français en ville
+- aire d'attraction
 - aire d'influence d'une ville
 - habiter loin de son travail
 - s'installer loin de la ville
-essentiel: 'Une aire urbaine est un ensemble formé d''une ville-centre, de ses banlieues (qui forment ensemble une
-  agglomération) et d''une couronne périurbaine, où plus de 40 % des habitants actifs travaillent dans la ville-centre.
+essentiel: 'Le programme parle d''« aires urbaines ». Depuis 2020, l''INSEE les appelle « aires d''attraction
+  des villes » : une aire est formée d''un pôle (la ville-centre et les communes denses autour, avec
+  beaucoup d''habitants et d''emplois) et d''une couronne, c''est-à-dire les communes dont au moins 15 %
+  des actifs vont travailler dans le pôle.
 
-  En France, environ 85 % de la population vit dans une aire urbaine, ce qui montre l''ampleur de l''urbanisation
-  depuis 50 ans. Les plus grandes aires urbaines françaises sont celles de Paris, Lyon, Marseille, Toulouse, Lille,
-  Bordeaux, Nice, Nantes, Rennes et Strasbourg.
+  En France, 93 % de la population vit dans l''aire d''attraction d''une ville (environ 51 % dans les pôles
+  et 43 % dans les couronnes) : c''est le signe d''une urbanisation très forte depuis 50 ans. L''aire de
+  Paris compte à elle seule environ 13 millions d''habitants, presque un Français sur cinq ; viennent
+  ensuite notamment Lyon, Marseille-Aix-en-Provence, Lille, Toulouse et Bordeaux.
 
-  L''urbanisation transforme les espaces : les logements de la ville-centre étant chers, de nombreux habitants s''installent
-  en banlieue, ou de plus en plus loin dans la couronne périurbaine, tout en conservant leur emploi en ville. On
-  parle d''étalement urbain (ou périurbanisation). Cela entraîne des migrations pendulaires quotidiennes (domicile-travail),
-  qui provoquent des problèmes de circulation et de pollution.'
+  L''urbanisation transforme les espaces : les logements des centres étant chers, beaucoup d''habitants
+  s''installent en banlieue ou dans des communes plus lointaines, tout en gardant leur emploi dans le pôle.
+  On parle de périurbanisation (ou d''étalement urbain). Elle entraîne des mobilités pendulaires
+  quotidiennes (domicile-travail), souvent en voiture, avec des embouteillages et de la pollution. Les
+  plus grandes villes concentrent aussi les emplois qualifiés et les fonctions de commandement : c''est la
+  métropolisation.'
 methode:
-- 'Distinguer les trois composantes d''une aire urbaine : ville-centre, banlieue, couronne périurbaine.'
-- 'Retenir le critère qui définit la couronne périurbaine : plus de 40 % des actifs travaillent dans la ville-centre.'
-- 'Relier étalement urbain et migrations pendulaires : plus la ville s''étend, plus les trajets domicile-travail
-  sont longs.'
-- 'Utiliser un vocabulaire précis dans un croquis ou une analyse de document : agglomération, périurbanisation,
-  aire d''influence.'
+- 'Distinguer les deux parties d''une aire : le pôle (habitants et emplois) et la couronne (communes
+  qui envoient au moins 15 % de leurs actifs travailler dans le pôle).'
+- 'Situer les espaces du centre vers la périphérie : ville-centre, banlieue, espace périurbain.'
+- 'Relier étalement urbain et mobilités pendulaires : plus on habite loin du pôle, plus les trajets
+  domicile-travail sont longs.'
+- 'Utiliser un vocabulaire précis dans un croquis ou une analyse de document : pôle, couronne,
+  périurbanisation, mobilités pendulaires, métropolisation.'
 vocabulaire:
-- terme: aire urbaine
-  definition: ville-centre + banlieue + couronne périurbaine
-- terme: migration pendulaire
+- terme: aire d'attraction d'une ville
+  definition: un pôle et sa couronne ; c'est le nom actuel (INSEE, 2020) de l'« aire urbaine » du programme
+- terme: pôle
+  definition: la ville-centre et les communes denses qui l'entourent, qui concentrent habitants et emplois
+- terme: couronne
+  definition: les communes autour du pôle dont au moins 15 % des actifs vont y travailler
+- terme: mobilité (migration) pendulaire
   definition: déplacement quotidien entre le domicile et le lieu de travail ou d'études
 - terme: périurbanisation
-  definition: l'extension de l'espace urbain sur les espaces ruraux environnants
+  definition: l'extension des espaces urbanisés sur les espaces ruraux autour des villes
+- terme: métropolisation
+  definition: la concentration des habitants, des emplois qualifiés et des fonctions de commandement dans
+    les plus grandes villes
 erreurs_frequentes:
-- Confondre agglomération (ville-centre + banlieue) et aire urbaine (agglomération + couronne périurbaine, plus
-  vaste).
-- 'Croire que la couronne périurbaine est un espace rural comme les autres : ses habitants sont majoritairement
-  liés à la ville par le travail.'
-- Oublier de citer un ordre de grandeur (85 % de la population française vit en aire urbaine).
-- Négliger les conséquences négatives de l'étalement urbain (pollution, embouteillages).
+- Confondre le pôle (la ville et ses communes denses) et l'aire d'attraction (le pôle plus sa couronne,
+  bien plus vaste).
+- 'Croire que la couronne est un espace rural comme les autres : une part importante de ses actifs
+  travaille dans le pôle.'
+- Reprendre des chiffres anciens (le seuil de 40 % et les 85 % datent de l'ancien zonage de 2010) au lieu
+  des chiffres actuels (15 % et 93 %).
+- Oublier les conséquences de l'étalement urbain (trajets, pollution, terres agricoles construites).
 exemple:
-  enonce: Explique en une phrase pourquoi une commune peut appartenir à une aire urbaine sans être elle-même une
-    ville.
-  solution: Une commune de la couronne périurbaine appartient à l'aire urbaine dès lors que plus de 40 % de ses
-    actifs vont travailler dans la ville-centre, même si elle a l'aspect d'un village ou d'une petite commune rurale.
+  enonce: Explique en une phrase pourquoi une commune peut appartenir à l'aire d'attraction d'une ville
+    sans être elle-même une ville.
+  solution: Une petite commune d'allure rurale fait partie de la couronne dès qu'au moins 15 % de ses
+    actifs vont travailler chaque jour dans le pôle.
 exercices:
-- enonce: Quelle est la principale aire urbaine française et quel ordre de grandeur de population représente-t-elle
-    ?
+- enonce: Quelle est la plus grande aire d'attraction française et quel ordre de grandeur de population
+    représente-t-elle ?
   indices:
   - C'est la capitale.
-  solution: L'aire urbaine de Paris est la plus peuplée de France, avec environ 15 millions d'habitants.
-- enonce: 'Développement construit : explique comment l''urbanisation a transformé les espaces français depuis 50
-    ans.'
+  solution: L'aire d'attraction de Paris, avec environ 13 millions d'habitants, presque un Français sur cinq.
+- enonce: 'Développement construit : explique comment l''urbanisation a transformé les espaces français depuis
+    50 ans.'
   indices:
-  - Parle de l'étalement urbain et des migrations pendulaires.
-  - Donne un ordre de grandeur (85 %).
-  solution: Un développement réussi doit rappeler qu'environ 85 % des Français vivent aujourd'hui dans une aire
-    urbaine ; expliquer que la hausse du prix des logements en ville pousse les habitants vers la périphérie, provoquant
-    un étalement urbain (périurbanisation) ; montrer que cela entraîne des migrations pendulaires croissantes et
-    des problèmes de transport et de pollution.
-- enonce: Pourquoi les migrations pendulaires posent-elles des problèmes environnementaux ?
+  - Parle de l'étalement urbain et des mobilités pendulaires.
+  - Donne un ordre de grandeur (93 %).
+  solution: Un développement réussi rappelle qu'environ 93 % des Français vivent dans l'aire d'attraction
+    d'une ville ; explique que le prix des logements dans les centres pousse les habitants vers la périphérie
+    (périurbanisation) ; montre que cela entraîne des mobilités pendulaires, des problèmes de transport et
+    de pollution, et que les grandes métropoles concentrent les emplois et les fonctions de commandement.
+- enonce: Pourquoi les mobilités pendulaires posent-elles des problèmes environnementaux ?
   indices:
   - Pense aux transports utilisés chaque jour.
-  solution: De nombreux habitants de la couronne périurbaine utilisent leur voiture pour se rendre chaque jour en
-    ville, ce qui provoque des embouteillages et augmente la pollution de l'air, en particulier quand les transports
-    en commun sont peu développés loin du centre.
+  solution: Beaucoup d'habitants des couronnes prennent leur voiture chaque jour pour aller travailler
+    dans le pôle, ce qui provoque des embouteillages et augmente la pollution de l'air, surtout quand les
+    transports en commun sont rares loin du centre.
 sources:
 - titre: Vikidia, « Aire urbaine »
   url: https://fr.vikidia.org/w/index.php?title=Aire_urbaine&oldid=2384584
   auteurs: Contributeurs de Vikidia (historique de la page)
   licence: CC-BY-SA-3.0
   consulte_le: '2026-09-24'
-  usage: reformulé et résumé
+  usage: reformulé et résumé (partie étalement urbain)
+- titre: INSEE, « Aire d'attraction des villes » (définition)
+  url: https://www.insee.fr/fr/metadonnees/definition/c2173
+  auteurs: INSEE
+  licence: etalab-2.0
+  consulte_le: '2026-09-25'
+  usage: définition et seuil de 15 % reformulés
+- titre: INSEE Focus n° 211, « En France, neuf personnes sur dix vivent dans l'aire d'attraction d'une ville »
+  url: https://www.insee.fr/fr/statistiques/4806694
+  auteurs: INSEE
+  licence: etalab-2.0
+  consulte_le: '2026-09-25'
+  usage: chiffres (93 %, 51 % / 43 %, aire de Paris environ 13 millions)
 relecture:
   statut: a_relire
   par: ''

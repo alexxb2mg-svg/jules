@@ -25,9 +25,16 @@ Réponds UNIQUEMENT par un objet JSON, sans texte autour :
 - matiere : Mathématiques, Français, Anglais, Espagnol, Allemand, Histoire-Géographie, EMC,
   SVT, Physique-Chimie, Technologie, Latin, Musique, Arts plastiques, Autre.
 - notion : la notion précise travaillée (ex. "fractions : addition", "passé composé"), 6 mots max.
-- statut : "compris" si l'élève a trouvé ou montre avoir compris ; "bloque" si l'élève bute
+  Laisse "" tant que l'élève n'a pas encore dit sur quoi il travaille (« j'ai un exo »).
+- Une ligne « [Correction automatique] Réponse juste » veut dire que l'élève a trouvé seul la bonne
+  réponse à l'exercice : c'est le dernier état de l'exercice, même si la discussion d'avant hésitait.
+- statut : "compris" seulement si l'élève a trouvé ou expliqué LUI-MÊME (une réponse donnée ou écrite
+  par le tuteur, puis recopiée ou approuvée par l'élève, ne compte pas) ; "bloque" si l'élève bute
   (erreurs répétées, "je comprends pas") ; "en_cours" sinon ; "hors_scolaire" si ce n'est pas scolaire.
-- resume : une phrase factuelle pour le parent (ce qui a été fait, où en est l'élève).
+  Un exercice scolaire reste scolaire même si l'élève répond par "jsp" ou très court.
+- resume : une phrase factuelle pour le parent (ce qui a été fait, où en est l'élève). Distingue ce que
+  l'élève a trouvé seul de ce que le tuteur a fourni (« le tuteur a donné la forme went »). Ne dis jamais
+  « maîtrise » ni « a construit seul » si le tuteur a fait une partie du travail.
 - titre : titre court de la conversation (4 mots max)."""
 
 
