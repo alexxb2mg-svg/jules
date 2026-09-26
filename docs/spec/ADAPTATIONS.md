@@ -26,7 +26,9 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - **EX-001** — Poignée de main. L'outil charge avec son contenu masqué et envoie
   `{type: "pret"}` à `window.parent`. L'hôte, après avoir vérifié
   `event.source === iframe.contentWindow`, répond `{type: "adaptations", leviers: {...}}`.
-  L'outil n'affiche son contenu qu'après avoir appliqué les leviers.
+  L'outil n'affiche son contenu qu'après avoir appliqué les leviers. L'hôte répond à
+  **chaque** `pret` reçu de l'iframe, pas seulement au premier : si l'iframe se recharge
+  (même `contentWindow`), elle refait la poignée de main et reçoit de nouveau ses leviers.
 - **EX-002** — Délai. Sans réponse de l'hôte après 500 ms, l'outil s'affiche avec les
   valeurs neutres et envoie `{type: "adaptations-absentes"}` à l'hôte. Un message
   `adaptations` valide reçu après ce délai est **appliqué** (mieux vaut un saut d'affichage
@@ -36,7 +38,7 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   ignore tout message dont la source n'est pas l'iframe.
   *Vérification EX-001 à 003* : test automatisé couvrant réponse reçue, délai dépassé,
   réponse reçue après le délai (appliquée), message d'une autre source (des deux côtés),
-  levier inconnu.
+  levier inconnu, rechargement de l'iframe (deuxième `pret` → deuxième réponse).
 
 ### Données de l'élève
 
@@ -139,6 +141,8 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - Emplacement du bouton de lecture côté élève : lot 2. Le lot 1 livre le module
   (`lecture-vocale.js`, EX-006/007) ; son branchement dans l'interface dépend du levier
   « lecture vocale » (proposée / automatique) et de l'aménagement qui l'active.
+- Activation du module `outils` dans `config.yaml` (inactif aujourd'hui) : décision
+  produit d'Alex, hors lot 1. Les tests d'EX-001 à 003 et 009 n'en dépendent pas.
 - Exécution des tests de navigateur en CI (installer Chromium dans le workflow) : hors lot 1.
   EX-012 s'applique à la revue, sur la machine du relecteur.
 - Message propre à un navigateur dans la page parent : non validé tant que le comportement
