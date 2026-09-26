@@ -45,7 +45,8 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   (`jules/composition.py`). *Vérification* : test qui assemble le prompt avec
   `profils/test-cumul.yaml` et vérifie qu'aucun identifiant d'aménagement n'y figure.
 - **EX-005** — Le modèle ne reçoit que les consignes d'expression découlant des
-  aménagements actifs (phrases courtes, découpage...), sans nom d'aménagement ni de trouble.
+  aménagements actifs (phrases courtes, découpage...), réunies dans un bloc unique
+  « Expression adaptée » sans titre par aménagement, sans nom d'aménagement ni de trouble.
   *Vérification* : même test, qui contrôle **uniquement les blocs issus des aménagements**
   (le prompt est construit sans contenu de leçon), vérifie la présence du bloc attendu et
   l'absence des termes listés dans `docs/spec/termes-interdits.txt` (noms de troubles) et
@@ -71,11 +72,16 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   (b) Prénoms réels : si la surcouche privée est présente, le test lit le champ `prenom` des
   profils qu'elle contient et les cherche dans les trois dossiers ; sinon il est marqué
   « ignoré » avec la raison affichée, jamais « réussi ».
-- **EX-011** — Le champ libre `remarques` reste transmis au modèle. La page parent affiche,
-  à côté de ce champ, un avertissement : il est lu par le moteur en ligne et ne doit contenir
-  ni diagnostic ni information médicale.
-  *Vérification* : test de la page parent qui vérifie la présence de l'avertissement au
-  voisinage du champ.
+- **EX-011** — Le champ libre `remarques` reste transmis au modèle. Partout où ce champ
+  est rédigé, un avertissement l'accompagne : il est lu par le moteur en ligne et ne doit
+  contenir aucune information médicale. Aujourd'hui le champ n'existe que dans le YAML du
+  profil (la page parent ne l'expose pas) : l'avertissement est un commentaire dans
+  `profils/exemple.yaml` et dans le YAML généré par l'assistant d'installation. Si un jour
+  la page parent expose ce champ, l'avertissement y est obligatoire.
+  *Vérification* : test qui vérifie la présence de l'avertissement au-dessus ou sur la
+  ligne de `remarques` dans `profils/exemple.yaml` et dans le YAML produit par
+  `jules/installation.py`. Le libellé de l'avertissement ne contient aucun terme de
+  `termes-interdits.txt` (sinon EX-008 échoue).
 
 ### Lecture vocale
 
@@ -118,6 +124,12 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   comptent seulement s'ils ont réellement tourné. *Vérification* : exécution avec
   `JULES_CHROMIUM` défini et `pytest -rs` ; zéro test de navigateur ignoré. Un test ignoré
   vaut un échec pour la revue.
+
+### Source unique de la liste
+
+- `docs/spec/termes-interdits.txt` n'a qu'une version qui fait foi : celle de la branche
+  spec. Toute branche de code qui en porte une copie la garde **identique octet pour
+  octet** au dernier commit de la spec ; la revue le vérifie par un diff vide.
 
 ## 3. Hors périmètre du lot 1
 
