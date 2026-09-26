@@ -26,7 +26,10 @@ Defauts constates :
 - Cinq pages, cinq systemes de navigation ; le rail n'existe que sur `/`.
 - Depuis `/discuter`, `/cours`, `/studio`, `/parent`, on ne peut que revenir a `/`.
 - `/cours` n'est atteignable depuis aucun menu.
-- « Mon suivi » cote eleve pointe vers `/parent`, protege par le code parent.
+- « Mon suivi » cote eleve pointe vers `/parent`. Protection reelle (mesure REVIEWER/DEV, 26/09) : sur l'install
+  d'Ellie `code_parent: ""`, donc `/parent` est libre (`acces.py`, `libre("parent")`) ; pas d'exposition
+  reseau (`hote: 127.0.0.1`, `verifier_exposition` refuse le reseau sans codes), mais ouvert a qui est devant
+  le PC. Remettre un code est une decision d'Alex, hors spec.
 - Trois choix de matiere independants (`/cours`, `/studio`, liste groupee de `/`).
 
 Donnees deja disponibles sans nouvel appel : chacune des trois pages de contenu recoit deja la liste
@@ -92,17 +95,27 @@ lien present dans la barre.
 
 **EX-205 - Suppression des navigations concurrentes.** Disparaissent : le bouton « Mes fiches » d'`eleve.html`,
 les liens logo -> `/` de `cours.html` et `studio.html`, les liens de sections du rail d'`accueil.html` (la liste
-des notions reste), les deux `select-matiere` internes de `/cours` et `/studio` (remplaces par EX-209). Les
+des notions reste), les deux `select-matiere` internes de `/cours` et `/studio` (remplaces par EX-209), les
+boutons « Suivre un cours » et « Mon studio » crees par `eleve.js` (audit NAV-07), et le bouton ⚙ « Paramètres
+(à venir) » du chat flottant (bouton mort). Les
 panneaux internes (Parcours, Mes supports, historique) restent, sans lien vers une autre section.
 Exemptions nommees, et seulement elles : `#chat-flottant-lien` d'`accueil.html` (lien `/discuter?notion=...`
 voulu par le cadrage du 25/09) et `#retour-eleve` de `parent.html` (EX-206).
-*Verification* : test statique : aucun `<a href>` vers une route de section dans les HTML hors composant, sauf
-ces deux identifiants.
+*Verification* : test statique sur les HTML **et** les `*.js` de `jules/web/static/` hors composant : aucun
+`<a href>` ni affectation `.href =` / `setAttribute("href"` vers une route de section (`/`, `/cours`,
+`/studio`, `/discuter`, `/parent`, avec ou sans `?`), sauf ces deux identifiants ; aucun element
+`#chat-flottant-reglages`.
 
-**EX-206 - Espace parent separe.** L'entree « Espace parent » porte une icone cadenas et l'indication « code
-parent » (texte ou `aria-label`). `/parent` n'affiche pas la barre eleve ; son unique lien de retour a l'id
+**EX-206 - Espace parent separe, sans fausse promesse.** L'entree « Espace parent » n'annonce une protection
+que si elle existe : l'etat vient de `GET /api/session` (deja appele par `MS.porte` dans `commun.js` sur chaque
+page ; le composant reutilise cette reponse, pas de second appel, cf. EX-210), jamais de la
+config. `parent: false` -> icone cadenas et « code parent » (texte ou `aria-label`). `parent: true` et
+`role !== "parent"` (aucun code parent defini) -> ni cadenas ni « code », mention « non protégé ».
+`role === "parent"` -> sans cadenas. `/parent` n'affiche pas la barre eleve ; son unique lien de retour a l'id
 `retour-eleve`, le libelle « Retour à l'espace élève » et le href `/`. Plus aucune entree « Mon suivi ».
-*Verification* : `/parent` sans `<nav aria-label="Sections de Jules">` ; `#retour-eleve` present ; aucun libelle
+*Verification (ajout)* : scenario section 6 avec les trois reponses de `/api/session` simulees par l'app de
+test (code defini non saisi, aucun code, parent connecte) : cadenas present dans le seul premier cas, « non
+protégé » dans le seul deuxieme. `/parent` sans `<nav aria-label="Sections de Jules">` ; `#retour-eleve` present ; aucun libelle
 « Mon suivi » dans les HTML ni dans le composant.
 
 **EX-207 - Tablette et telephone.** Sous 900 px de large, la barre devient un tiroir ouvert par un bouton ☰
@@ -151,7 +164,33 @@ reseau conformes a EX-210.
 section 6 : sur chaque page, l'ensemble des **chemins** `/api/...` appeles au chargement (parametres de requete
 ignores, `?matiere=` autorise) est identique avant et apres la carte, et chaque chemin n'est appele qu'une fois.
 
-## 6. Methode de test navigateur (EX-201, 203, 207, 208, 209)
+**EX-211 - Titre d'onglet par page (audit TEC-02).** `document.title` = `<nom persona> - <libelle de l'entree
+active>` sur les 4 pages eleve (« Jules - Discuter avec Jules », « Jules - Mes leçons »...), et « Jules - Espace
+parent » sur `/parent`. Aucun script de page ne reecrit le titre avec le seul nom (aujourd'hui `eleve.js`
+ecrase le titre de la PR #41).
+*Verification* : scenario section 6, titre relu apres chargement complet sur les 5 pages ; mutation : remettre
+`document.title = etat.infos.persona.nom` dans `eleve.js` fait echouer le test.
+
+**EX-212 - Liste des fiches par etapes (audit NAV-04).** Sur `/`, la liste des notions sous la barre ne montre
+que la matiere du selecteur (EX-209), groupee par `chapitre` (champ deja renvoye par
+`/api/eleve/fiches_visuelles/notions`) ; chaque chapitre est repliable (`<details>`/`<summary>` ou bouton
+`aria-expanded`), replie par defaut sauf celui de la notion ouverte. Un champ « Chercher une fiche » filtre les
+titres de toutes les matieres (insensible a la casse et aux accents) sans appel reseau. Titres courts rediges
+pour l'eleve et marque « deja vue » : hors lot (section 7).
+*Verification* : scenario section 6 sur une app de test servant **196 notions sur 9 matieres** (jeu genere par
+le test) a 1280 x 800 : hauteur de la liste au chargement <= 1 200 px (mesure `scrollHeight`, audit : 16 167 px) ;
+aucune notion d'une autre matiere visible ; recherche « thales » -> la notion « Théorème de Thalès » visible,
+compteur de resultats annonce (`aria-live`) ; aucun chemin `/api/...` nouveau (EX-210).
+
+**EX-213 - Telephone : Jules ne masque pas la fiche (audit NAV-05).** Sous 600 px de large, la bulle d'aide et
+le bouton J de `/` ne recouvrent aucun bloc de `#fiche` : ils sont places hors de la zone de lecture (bas de
+l'ecran, la fiche garde une marge basse equivalente) ou la bulle se ferme d'elle-meme apres affichage.
+Lisibilite du schema lui-meme : chantier fiches, hors lot.
+*Verification* : scenario section 6 a 390 x 844, apres ouverture d'une fiche et defilement jusqu'au schema :
+intersection nulle entre les `getBoundingClientRect()` de `#jules-bulles` / `#avatar-jules` et ceux des blocs
+visibles de `#fiche`.
+
+## 6. Methode de test navigateur (EX-201, 203, 206, 207, 208, 209, 211, 212, 213)
 
 - Outillage existant seulement : Chromium headless `--dump-dom`, comme `tests/test_symboles.py`.
   **Aucune dependance nouvelle** (ni Playwright, ni axe-core, ni client websocket).
@@ -173,6 +212,13 @@ ignores, `?matiere=` autorise) est identique avant et apres la carte, et chaque 
 - Ouvrir une notion par l'URL sur `/cours` et `/studio` (ni `?notion=` ni `#<id>` n'y sont lus aujourd'hui,
   et leurs API ne renvoient que la matiere demandee) : lot suivant.
 - Design fin, contenu des pages, espace parent (hors lien de retour), cablage de Jules sur les adresses.
+- Audit du 26/09 (`Projets/jules_audit_navigation_fiches_2026-09-26.docx`) : couverts ici NAV-01/02/03/06
+  (EX-201 a 209), NAV-04 (EX-212), NAV-05 en partie (EX-213), NAV-07 doublons (EX-205), TEC-02 (EX-211).
+  Hors lot : titres courts eleve et marque « deja vue » (NAV-04), lisibilite du schema sur telephone (NAV-05),
+  liste « S'entrainer sans IA » de `/discuter` (NAV-07, contenu de page), chantiers FIC et CNT (autre spec).
+- **Brancher les 196 fiches (TEC-01)** : une ligne de `config.local.yaml` chez Ellie, decision d'Alex, a faire
+  **apres** EX-212 (sinon la liste redevient inutilisable). Pas une carte DEV.
+- **Code parent chez Ellie** : decision d'Alex. EX-206 affiche l'etat reel quelle que soit la decision.
 
 ## 8. Prealables et ordre de fusion
 
