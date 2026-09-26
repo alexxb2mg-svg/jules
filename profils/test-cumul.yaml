@@ -1,5 +1,5 @@
 # Profil FICTIF publie pour les tests (docs/spec/ADAPTATIONS.md, EX-004 et EX-005) : plusieurs
-# amenagements cumules, dont un inconnu. Aucun prenom reel, aucun nom de trouble (EX-008).
+# amenagements cumules, dont un inconnu. Aucun prenom reel, aucun terme de la liste interdite (EX-008).
 # Les identifiants reapparaissent volontairement dans des champs libres : ils doivent en etre retires.
 prenom: Alix
 genre: neutre

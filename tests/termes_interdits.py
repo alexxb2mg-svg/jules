@@ -2,6 +2,8 @@
 
 Regles de recherche, fixees en tete de ce fichier de spec :
 - insensible a la casse et aux accents (NFKD, diacritiques retires) ;
+- apostrophes typographiques (U+2019, U+2018, U+02BC) remplacees par ' avant comparaison ;
+- un terme sur plusieurs mots est cherche avec n'importe quelle suite d'espaces entre eux ;
 - une ligne = un radical cherche en sous-chaine ;
 - une ligne prefixee « mot: » est cherchee en mot entier ;
 - lignes vides et commentaires (#) ignores.
@@ -17,6 +19,7 @@ from pathlib import Path
 
 FICHIER = Path(__file__).resolve().parents[1] / "docs" / "spec" / "termes-interdits.txt"
 PREFIXE_MOT = "mot:"
+APOSTROPHES = str.maketrans(dict.fromkeys("\u2019\u2018\u02bc", "'"))
 
 
 @dataclass(frozen=True)
@@ -27,9 +30,9 @@ class Terme:
 
 
 def normaliser(texte: str) -> str:
-    """Minuscules, sans accents (NFKD), apostrophe typographique ramenee a l'apostrophe droite."""
-    decompose = unicodedata.normalize("NFKD", texte.casefold())
-    return "".join(c for c in decompose if not unicodedata.combining(c)).replace("’", "'")
+    """Minuscules, sans accents (NFKD), apostrophes typographiques ramenees a l'apostrophe droite."""
+    decompose = unicodedata.normalize("NFKD", texte.casefold().translate(APOSTROPHES))
+    return "".join(c for c in decompose if not unicodedata.combining(c))
 
 
 def termes_interdits() -> list[Terme]:
@@ -40,7 +43,7 @@ def termes_interdits() -> list[Terme]:
             continue
         mot_entier = ligne.startswith(PREFIXE_MOT)
         texte = ligne[len(PREFIXE_MOT) :].strip() if mot_entier else ligne
-        echappe = re.escape(normaliser(texte))
+        echappe = r"\s+".join(re.escape(mot) for mot in normaliser(texte).split())
         motif = re.compile(rf"(?<![a-z0-9]){echappe}(?![a-z0-9])" if mot_entier else echappe)
         termes.append(Terme(texte, mot_entier, motif))
     return termes

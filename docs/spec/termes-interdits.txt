@@ -3,6 +3,8 @@
 #
 # Regles de recherche (obligatoires pour le test) :
 # - insensible a la casse ET aux accents (normaliser NFKD, retirer les diacritiques) ;
+# - apostrophes typographiques (U+2019, U+2018, U+02BC) remplacees par ' AVANT comparaison ;
+# - un terme sur deux mots est cherche avec n'importe quelle suite d'espaces entre eux ;
 # - une ligne = un RADICAL, cherche en sous-chaine : "dyslex" couvre dyslexie, dyslexique,
 #   dyslexiques ;
 # - une ligne prefixee "mot:" est cherchee en mot entier (sigles courts, pour eviter les
@@ -27,15 +29,26 @@ mot:tda
 mot:tdah
 mot:tdha
 
-# Deficiences sensorielles
-deficience visuelle
-deficient visuel
+# Deficiences sensorielles et autres troubles (perimetre elargi au-dela de VISION 5, decision SPEC)
+deficien
 malvoyan
-deficience auditive
-deficient auditif
 malentendan
+non-voyant
+non voyant
+aveugle
+cecit
+mot:surdite
+mot:surdites
+mot:sourd
+mot:sourde
+mot:sourds
+mot:sourdes
+autis
+mot:tsa
 
-# Vocabulaire medical. "diagnostic" est volontairement absent : c'est un nom de champ
-# technique du correcteur (tests/test_fiches_v2.py).
+# Vocabulaire medical. "diagnost" couvre diagnostic : sans risque, car EX-008 ne vise que
+# des fichiers de donnees (.yaml/.json/.md), pas le code Python des tests.
 pathologi
-mot:handicap
+handicap
+trouble
+diagnost
