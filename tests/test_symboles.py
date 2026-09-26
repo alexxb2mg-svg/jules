@@ -118,6 +118,11 @@ TEXTES = [
         "Le son /θ/ de think ; think se lit /θɪŋk/. Présent en -ing : sujet + BE + V-ing. "
         "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg. Le -ed se dit /t/, /d/ ou /ɪd/.",
     ),
+    (
+        "techno",
+        {"matiere": "technologie"},
+        "L'IHM de l'OST envoie 4 Mo à 20 Mbit/s ; le DNS donne l'adresse IP. Au début : x = x + 1.",
+    ),
     ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
 ]
 
@@ -271,3 +276,11 @@ def test_anglais_phonetique_structures_et_niveaux(annotations):
     assert any(b.startswith("A2 : niveau A2 du CECRL") for b in bulles) and "sb : somebody : quelqu'un" in bulles
     assert not any(b.startswith("kg") or b.startswith("/05") for b in bulles)  # ni unites ni dates en anglais
     assert {"/t/", "/d/", "/ɪd/"} <= {b.split(" : ")[0] for b in bulles}
+
+
+def test_technologie_sigles_et_unites_numeriques(annotations):
+    bulles = _bulles(annotations, "techno")
+    for debut in ("IHM :", "OST :", "Mo : mégaoctets", "Mbit/s : mégabits", "DNS :", "IP :"):
+        assert any(b.startswith(debut) for b in bulles), debut
+    assert not any(b.startswith("Au :") for b in bulles)
+    assert annotations["techno"]["formules"] == ["x = x + 1"]
