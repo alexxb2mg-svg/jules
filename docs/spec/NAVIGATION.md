@@ -123,19 +123,31 @@ Echap ; chaque entree accepte `focus()` et une regle `:focus-visible` la cible.
 `/studio`. Pas sur `/discuter` (la discussion couvre toutes les matieres). Il est rempli avec la liste
 `matieres [{id, nom}]` que la page recoit deja de son propre point d'API : **aucun appel ajoute, aucun champ
 ajoute a `/api/infos` ni a aucune reponse.** Le choix est memorise en localStorage (cle `jules.matiere`, valeur =
-l'`id` de matiere seul, aucune donnee de l'eleve) et filtre la page. Si la matiere memorisee est absente de la
-liste de la page, la page prend la premiere matiere de sa liste, l'indique, et n'ecrase pas la memoire.
-Priorite : **une notion demandee dans l'URL (`?notion=`) l'emporte** ; la page ouvre la notion, aligne le
-selecteur sur sa matiere et memorise cette matiere.
-*Verification* : scenario section 6 : choisir une matiere sur `/`, ouvrir `/studio` puis `/cours` -> meme
-matiere et liste filtree ; `/cours?notion=<notion d'une autre matiere>` -> la notion s'ouvre et le selecteur
-suit ; liste des appels `/api/...` identique avant/apres (EX-210).
+l'`id` de matiere seul, aucune donnee de l'eleve) et filtre la page.
+Matiere memorisee absente de la liste de la page :
+- `/cours` et `/studio` envoient l'id memorise tel quel (`?matiere=<id>`), en un seul appel ; le serveur
+  retombe deja sur sa matiere par defaut quand l'id est inconnu (`jules/modules/cours.py`, `parcours()` :
+  `matiere_id if matiere_id in ids_dispo else ...`, repris par `studio.notions()`) et renvoie la matiere
+  retenue dans le champ `matiere`. La page affiche cette matiere retenue et **n'ecrase pas** la memoire.
+- `/` (liste deja complete) affiche la premiere matiere de sa liste, sans ecraser la memoire.
+Notion demandee a l'ouverture : **seule `/` est concernee dans ce lot**, par le fragment `#<id>` qu'elle lit
+deja (`accueil.js`) ; toutes les matieres y sont chargees, donc la page ouvre la notion, aligne le selecteur
+sur sa matiere et memorise cette matiere. L'ouverture d'une notion par l'URL sur `/cours` et `/studio` est
+hors lot (section 7).
+*Verification* : scenario section 6 : (a) choisir une matiere sur `/`, ouvrir `/studio` puis `/cours` -> meme
+matiere selectionnee et liste filtree ; (b) `/#<notion d'une autre matiere que la memorisee>` -> la notion
+s'ouvre, le selecteur suit et `jules.matiere` vaut sa matiere ; (c) `jules.matiere = "inconnue"` puis `/cours`
+-> un seul appel `parcours?matiere=inconnue`, la page affiche la matiere renvoyee par le serveur, et
+`jules.matiere` vaut toujours `"inconnue"` ; (d) test API : `GET /api/eleve/cours/parcours?matiere=inconnue`
+-> 200, `matiere` = la matiere par defaut (idem `studio/notions`) ; (e) appels reseau conformes a EX-210.
 
 **EX-210 - Pas de regression, pas de donnee nouvelle.** Routes inchangees (HTTP 200 sur `/`, `/cours`,
 `/studio`, `/discuter`, `/parent`) ; aucune route ni champ d'API ajoute ; pied de barre = `prenom` de
 `/api/infos`, deja expose, rien d'autre du profil (ni niveau, ni age, ni etablissement).
 *Verification* : `pytest` complet vert ; le diff de la carte ne touche aucun `*.py` de `jules/` (routes,
-`infos_interface`) ; test statique : le composant ne lit que `persona` et `prenom` dans les infos.
+`infos_interface`) ; test statique : le composant ne lit que `persona` et `prenom` dans les infos ; scenario
+section 6 : sur chaque page, l'ensemble des **chemins** `/api/...` appeles au chargement (parametres de requete
+ignores, `?matiere=` autorise) est identique avant et apres la carte, et chaque chemin n'est appele qu'une fois.
 
 ## 6. Methode de test navigateur (EX-201, 203, 207, 208, 209)
 
@@ -156,6 +168,8 @@ suit ; liste des appels `/api/...` identique avant/apres (EX-210).
 - **D2** : « Mon suivi » cote eleve retire ; le suivi reste dans l'espace parent.
 - **D3** : page et entree « Brevet » (annales a gauche, Jules a droite) : chantier futur, aucune entree d'ici la.
 - **D4** : « Mes fiches » et « Mes leçons » restent deux entrees ; leur fusion est un autre chantier.
+- Ouvrir une notion par l'URL sur `/cours` et `/studio` (ni `?notion=` ni `#<id>` n'y sont lus aujourd'hui,
+  et leurs API ne renvoient que la matiere demandee) : lot suivant.
 - Design fin, contenu des pages, espace parent (hors lien de retour), cablage de Jules sur les adresses.
 
 ## 8. Prealables et ordre de fusion
