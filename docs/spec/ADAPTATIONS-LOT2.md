@@ -130,3 +130,10 @@ Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `
 Coloration syllabique ; dictée ; temps majoré tant que sa source n'est pas corrigée ;
 réglage fin des valeurs (attend un professionnel) ; activation du module `outils` dans
 `config.yaml` (décision d'Alex).
+
+## 7. Risque ouvert
+
+- Le PAP réel de l'élève de référence n'a pas été comparé au modèle officiel (Alex ne sait pas
+  encore s'il s'agit du modèle national ou d'un modèle d'établissement). Par défaut, Jules
+  affiche les libellés du modèle officiel. Les libellés sont des données
+  (`docs/spec/pap-libelles.txt`) : un modèle d'établissement s'ajoutera sans toucher au code.
