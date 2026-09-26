@@ -226,7 +226,7 @@ Symboles.enregistrer({
 // Des termes courts relies par des operateurs, avec au moins un « = », « → » ou « ≈ ». Termes :
 // nombre (avec son unite), unite seule (km/h → m/s), lettre(s) de grandeur, espece chimique.
 const UNITES = o.alternatives(Object.keys(DICOS.unites));
-const NOMBRE = String.raw`\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
+const NOMBRE = String.raw`−?\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
 const UNITE_SEULE = String.raw`(?:${o.alternatives(Object.keys(DICOS.unites).filter((u) => u.length > 1))})(?![\p{L}\p{N}])`;
 const TERME = String.raw`(?:${NOMBRE}|${UNITE_SEULE}|(?:\d+[  ])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
 const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
