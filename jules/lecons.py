@@ -194,6 +194,9 @@ def charger_lecons(racine: Path, ids: list[str], notions: dict[str, Notion]) -> 
 # --- correction -----------------------------------------------------------------
 
 _NOMBRE = re.compile(r"-?\d+(?:[.,]\d+)?")
+# Signes moins que les modeles ecrivent (moins typographique U+2212, tirets) : ramenes a "-" avant de chercher un
+# nombre, sinon « x = −3 » passe le garde-fou (mesure : evaluation/eleves).
+_MOINS = str.maketrans({"\u2212": "-", "\u2013": "-", "\u2012": "-", "\ufe63": "-", "\uff0d": "-"})
 
 
 def _nombre(valeur: object) -> float | None:
@@ -201,7 +204,7 @@ def _nombre(valeur: object) -> float | None:
         return None
     if isinstance(valeur, int | float):
         return float(valeur)
-    texte = str(valeur or "").replace("\u202f", "").replace("\xa0", "").replace(" ", "")
+    texte = str(valeur or "").replace("\u202f", "").replace("\xa0", "").replace(" ", "").translate(_MOINS)
     trouve = _NOMBRE.search(texte)
     if not trouve:
         return None
@@ -286,6 +289,7 @@ def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
         if attendu is None:
             return False
         tolerance = float(d.get("tolerance") or TOLERANCE_DEFAUT)
+        texte = texte.translate(_MOINS)
         for trouve in _NOMBRE.finditer(texte):
             if _ignorer_occurrence_nombre(texte, trouve.start(), trouve.end()):
                 continue

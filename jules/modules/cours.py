@@ -45,6 +45,11 @@ BLOCS_SANS_TENTATIVE = ("texte", "objectifs", "exemple", "outil")
 BLOCS_AVEC_TENTATIVE = ("exercice", "question_ouverte", "synthese")
 
 ESTIMATION_TEXTE = "Cet état est estimé par l'IA à partir de tes échanges avec Jules : il peut se tromper."
+NOTE_JUSTE = "[Correction automatique] Réponse juste, trouvée par l'élève (essai n° {tentatives})."
+NOTE_A_REVOIR = (
+    "[Correction automatique] Réponse encore fausse après {tentatives} essais : "
+    "la correction a été affichée, point à revoir."
+)
 QUESTION_DE_REPLI = "Qu'est-ce qui te fait penser ça ? Reprends l'énoncé étape par étape."
 RAPPEL_GARDE_FOU = (
     "Règle absolue : ne donne JAMAIS la réponse ni un calcul qui y mène directement, même partiellement. "
@@ -250,8 +255,54 @@ class Brique(Module):
         self.tuteur._lancer_apres_echange(conv, eleve_msg, bot2)
         return nouvelle
 
+    def _noter_correction(self, conv_id: str, message_eleve: str, note: str) -> None:
+        """Reponse corrigee par le code : l'essai et le verdict entrent dans la conversation, puis le suivi
+        tourne comme apres un echange. Sans cela, le suivi et le rapport du soir ne voyaient pas qu'un
+        exercice avait ete reussi (mesure : evaluation/eleves, rapports « il lui reste a calculer » faux)."""
+        stockage = self.tuteur.stockage
+        eleve = stockage.ajouter_message(conv_id, Message(role="eleve", texte=message_eleve))
+        bot = stockage.ajouter_message(conv_id, Message(role="bot", texte=note))
+        conv = stockage.conversation(conv_id)
+        suivi = self.tuteur.module("suivi")
+        if conv is not None and suivi is not None:
+            # seul le suivi : ni Jules ni la vigilance n'ont a relire un nombre corrige par le code
+            self.tuteur._fond.submit(suivi.apres_echange, conv, eleve, bot)
+
     def _relire(self, conv_id: str, message_eleve: str) -> str:
         return self.tuteur.echanger(conv_id, message_eleve).texte
+
+    # --- garde-fou sur TOUS les messages de Jules dans une lecon ------------------
+    def _bloc_a_proteger(self, conv: Conversation) -> Bloc | None:
+        """Exercice actif, pas encore resolu, de la lecon liee a cette conversation (sinon None)."""
+        if conv.mode != MODE:
+            return None
+        session_id = self.tuteur.stockage.lire_etat(ESPACE, self._cle_conv(conv.id))
+        etat = self.tuteur.stockage.lire_etat(ESPACE, session_id) if session_id else None
+        if not etat:
+            return None
+        lecon = self.lecons.get(etat["notion"])
+        if lecon is None:
+            return None
+        idx = etat.get("bloc_actif")
+        if idx is None or not 0 <= idx < len(lecon.blocs):
+            idx = self._bloc_courant(etat["blocs"])
+        if idx >= len(lecon.blocs):
+            return None
+        bloc = lecon.blocs[idx]
+        if bloc.type != "exercice" or etat["blocs"][idx]["etat"] not in ("a_faire", "en_cours"):
+            return None  # exercice resolu ou corrige : la reponse n'est plus un secret
+        return bloc
+
+    def filtrer_reponse(self, conv: Conversation, texte: str, relancer: Any) -> str:
+        """Le garde-fou valait seulement pour la reaction a une tentative ; il vaut aussi pour les
+        messages libres de l'eleve dans le panneau de Jules (mesure : evaluation/eleves, fuites de
+        « 12 × 12 = 144 » sur une question tapee a la main)."""
+        bloc = self._bloc_a_proteger(conv)
+        if bloc is None or not contient_la_reponse(texte, bloc):
+            return texte
+        journal.warning("Message libre de Jules ecarte (contenait la reponse) : %s", texte[:200])
+        nouvelle = relancer()
+        return QUESTION_DE_REPLI if contient_la_reponse(nouvelle, bloc) else nouvelle
 
     # --- fin de lecon -----------------------------------------------------------
     def _finaliser_si_besoin(self, etat: dict[str, Any], lecon: Lecon) -> None:
@@ -294,12 +345,12 @@ class Brique(Module):
         explication: str | None = None
         jules_texte: str | None = None
         if juste is True:
-            self.tuteur.stockage.ajouter_message(conv_id, Message(role="eleve", texte=message_eleve))
+            self._noter_correction(conv_id, message_eleve, NOTE_JUSTE.format(tentatives=bstate["tentatives"]))
             bstate["etat"] = "reussi"
             explication = bloc.donnees.get("explication")
         elif juste is False:
             if bstate["tentatives"] >= TENTATIVES_AVANT_CORRECTION:
-                self.tuteur.stockage.ajouter_message(conv_id, Message(role="eleve", texte=message_eleve))
+                self._noter_correction(conv_id, message_eleve, NOTE_A_REVOIR.format(tentatives=bstate["tentatives"]))
                 bstate["etat"] = "a_revoir"
                 explication = bloc.donnees.get("explication")
             else:

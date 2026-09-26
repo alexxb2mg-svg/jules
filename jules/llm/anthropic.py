@@ -29,9 +29,12 @@ def blocs_tour(tour: Tour) -> list[dict[str, Any]]:
 
 
 def corps_requete(systeme: str, tours: list[Tour], modele: str, max_tokens: int) -> dict[str, Any]:
+    # cache_control au niveau de la requete : cache automatique du prefixe (prompt systeme + historique).
+    # D'un message a l'autre d'une meme conversation, seul le dernier message est facture plein tarif.
     return {
         "model": modele,
         "max_tokens": max_tokens,
+        "cache_control": {"type": "ephemeral"},
         "system": systeme,
         "messages": [{"role": t.role, "content": blocs_tour(t)} for t in tours],
     }

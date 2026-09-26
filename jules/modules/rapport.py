@@ -32,9 +32,11 @@ CONSIGNE_SYNTHESE = """Tu écris à l'adulte qui suit {prenom},
 avec son tuteur IA, et une ou deux questions à lui poser ce soir. En français, ton simple et bienveillant.
 Réponds UNIQUEMENT par un objet JSON, sans texte autour :
 {"resume": "...", "questions": ["...", "..."]}
-- resume : 3 phrases maximum, sans titre ni liste. Désigne l'élève par son prénom et accorde au bon genre.
+- resume : 3 phrases maximum, sans titre ni liste. Désigne l'élève par son prénom et accorde au bon genre
+  ({prenom} est {{une fille|un garçon|un ou une élève : accorde au neutre}}).
   Dis ce qui a été travaillé, ce qui a bien marché, et le point à surveiller s'il y en a un.
-  N'invente rien au-delà des données fournies.
+  N'invente rien au-delà des données fournies. Si un résumé dit que le tuteur a fourni une réponse,
+  ne présente pas la notion comme maîtrisée par l'élève. N'invente ni score, ni exercice, ni erreur.
 - questions : 1 ou 2 questions que l'adulte pose à {prenom}, en le tutoyant, sur les notions du jour
   (une notion bloquée d'abord). L'adulte doit pouvoir les poser sans savoir faire l'exercice :
   l'élève explique, montre ou raconte comment il s'y prend.

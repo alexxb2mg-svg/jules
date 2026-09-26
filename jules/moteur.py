@@ -74,7 +74,10 @@ class Tuteur:
                 continue
             if texte:
                 contributions.append((module.titre or module.id, texte))
-        contributions.append(("Date", f"Nous sommes le {datetime.now().astimezone():%A %d/%m/%Y, %H:%M}."))
+        # A l'heure pres, pas a la minute : le prompt systeme reste identique d'un message a l'autre dans
+        # l'heure, et le cache du fournisseur d'IA s'applique (mesure : evaluation/eleves).
+        maintenant = datetime.now().astimezone()
+        contributions.append(("Date", f"Nous sommes le {maintenant:%A %d/%m/%Y}, vers {maintenant:%H} h."))
         return assembler(self.persona(), self.profil(), self.config.dossier_consignes, contributions)
 
     def tours(self, conv: Conversation) -> list[Tour]:
@@ -100,22 +103,38 @@ class Tuteur:
                 module.avant_echange(conv, eleve)
             except Exception:
                 journal.exception("Module %s : avant_echange en echec", module.id)
-        reponse: str | None = None
+        reponse_module: str | None = None
         for module in self.modules:
             try:
-                reponse = module.repondre_a_la_place(conv, eleve)
+                reponse_module = module.repondre_a_la_place(conv, eleve)
             except Exception:
                 journal.exception("Module %s : repondre_a_la_place en echec", module.id)
                 continue
-            if reponse is not None:
+            if reponse_module is not None:
                 break
-        if reponse is None:
-            try:
-                reponse = self.llm.repondre(self.systeme(conv), self.tours(conv), "principal")
-            except Exception as err:
-                journal.exception("Echec du moteur d'IA")
-                self.stockage.ajouter_evenement("erreur", {"message": str(err)[:500]}, conv_id)
-                return Message(role="bot", texte=MESSAGE_PANNE)
+        try:
+            if reponse_module is not None:
+                reponse = reponse_module
+
+                def relancer() -> str:
+                    return reponse_module
+
+            else:
+                systeme, tours = self.systeme(conv), self.tours(conv)
+                reponse = self.llm.repondre(systeme, tours, "principal")
+
+                def relancer() -> str:
+                    return self.llm.repondre(systeme, tours, "principal")
+
+            for module in self.modules:
+                try:
+                    reponse = module.filtrer_reponse(conv, reponse, relancer)
+                except Exception:
+                    journal.exception("Module %s : filtrer_reponse en echec", module.id)
+        except Exception as err:
+            journal.exception("Echec du moteur d'IA")
+            self.stockage.ajouter_evenement("erreur", {"message": str(err)[:500]}, conv_id)
+            return Message(role="bot", texte=MESSAGE_PANNE)
         bot = self.stockage.ajouter_message(conv_id, Message(role="bot", texte=reponse or "…"))
         conv.messages.append(bot)
         self._lancer_apres_echange(conv, eleve, bot)

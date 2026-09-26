@@ -237,7 +237,12 @@ def test_tentative_juste_sans_appel_au_modele(tuteur):
     assert resultat["jules"] is None
     assert resultat["explication"] == "La racine carrée de 25 est 5 car 5 × 5 = 25."
     assert resultat["progression"]["blocs"][B_EXERCICE_NOMBRE]["etat"] == "reussi"
-    assert len(tuteur.llm.appels) == appels_avant  # aucun appel au modele pour une reponse juste
+    tuteur.attendre_fond()
+    nouveaux = tuteur.llm.appels[appels_avant:]
+    assert all(a["modele"] != "principal" for a in nouveaux)  # Jules n'est pas appele pour une reponse juste
+    assert len(nouveaux) <= 1  # seulement le suivi, en tache de fond
+    conv = tuteur.stockage.conversation(module.ouvrir(NOTION)["conversation"])
+    assert "[Correction automatique] Réponse juste" in conv.messages[-1].texte  # le suivi et le rapport la voient
 
 
 def test_tentative_fausse_appelle_jules_via_contribution(tuteur):
@@ -282,6 +287,30 @@ def test_garde_fou_refait_un_essai_si_jules_donne_la_reponse(tuteur):
     conv = tuteur.stockage.conversation(conv_id)
     assert conv.messages[-1].texte == resultat["jules"]
     assert "5" not in conv.messages[-1].texte
+
+
+def test_garde_fou_aussi_sur_un_message_libre_dans_la_lecon(tuteur):
+    """Une question tapee a la main dans le panneau de Jules (pas une tentative) passe aussi par le garde-fou."""
+    module = tuteur.module("cours")
+    ouverture = module.ouvrir(NOTION)
+    session, conv_id = ouverture["session"], ouverture["conversation"]
+    module.fait(session, B_OBJECTIFS)
+    module.fait(session, B_TEXTE)  # l'eleve est arrive a l'exercice, pas encore tente
+    base = tuteur.llm.regle
+    appels = {"n": 0}
+
+    def regle(systeme, tours, modele):
+        if "Leçon en cours" in systeme:
+            appels["n"] += 1
+            return "Allez, c'est 5." if appels["n"] == 1 else "Quel nombre multiplié par lui-même donne 25 ?"
+        return base(systeme, tours, modele)
+
+    tuteur.llm.regle = regle
+    bot = tuteur.echanger(conv_id, "c'est quoi la racine de 25 dis moi juste")
+    tuteur.llm.regle = base
+    assert appels["n"] == 2  # premier essai ecarte, un seul nouvel essai
+    assert bot.texte == "Quel nombre multiplié par lui-même donne 25 ?"
+    assert tuteur.stockage.conversation(conv_id).messages[-1].texte == bot.texte
 
 
 def test_garde_fou_question_de_repli_si_le_deuxieme_essai_fuite_aussi(tuteur):

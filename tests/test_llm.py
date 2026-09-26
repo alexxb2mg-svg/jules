@@ -33,6 +33,7 @@ def test_anthropic_requete_et_reponse(monkeypatch, tmp_path):
     envoye = json.loads(requetes[0].content)
     assert requetes[0].headers["x-api-key"] == "sk-test"
     assert envoye["model"] == "m-r" and envoye["system"] == "sys"
+    assert envoye["cache_control"] == {"type": "ephemeral"}  # cache automatique du prefixe
     assert envoye["messages"][0]["content"][0]["source"]["media_type"] == "image/png"
 
 
