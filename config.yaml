@@ -112,3 +112,4 @@ extensions:
   - rappels-sciences          # bulles de rappel au survol (fournit.rappels) : unites, chimie, formules
   - rappels-histoire          # siecles, dates, sigles d'histoire-geographie et d'EMC
   - rappels-francais          # abreviations de grammaire
+  - rappels-anglais           # phonetique, abreviations de grammaire, niveaux du CECRL
