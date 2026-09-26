@@ -102,6 +102,13 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   100 % identiques avant/après sur l'accueil, une fiche, le studio, le cours et une bulle
   d'aide des symboles.
 
+### Règle de preuve commune
+
+- **EX-012** — Les tests qui ouvrent un navigateur (EX-001 à 003, EX-006, EX-007, EX-009)
+  comptent seulement s'ils ont réellement tourné. *Vérification* : exécution avec
+  `JULES_CHROMIUM` défini et `pytest -rs` ; zéro test de navigateur ignoré. Un test ignoré
+  vaut un échec pour la revue.
+
 ## 3. Hors périmètre du lot 1
 
 - **Dictée vocale** : la reconnaissance vocale des navigateurs envoie la voix à un serveur
