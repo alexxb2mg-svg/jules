@@ -434,3 +434,18 @@ def test_fiche_v2_histoire_ne_transmet_pas_non_plus_les_solutions_corrigees(hist
     for exercice in histoire["exercices"]:
         if exercice["type"] != "ouverte":
             assert exercice["solution"] not in texte
+
+
+def test_expression_ecrite_avec_son_nom():
+    exercice = {"type": "expression", "reponse": {"valeur": "1/2*m*v^2", "variables": ["m", "v"]}}
+    assert corriger(exercice, "Ec = 1/2*m*v^2").juste
+    assert corriger(exercice, "Ec=1/2 m v²").juste
+
+
+def test_fautes_tolerees_proportionnees_a_la_longueur():
+    exercice = {"type": "texte_court", "reponse": {"acceptees": ["ultraviolets", "UV"], "fautes_tolerees": 1}}
+    assert corriger(exercice, "ultraviolet").diagnostic == "orthographe"
+    for trop_court in ("u", "ux", "IR"):
+        assert not corriger(exercice, trop_court).juste
+    exercice["reponse"] = {"acceptees": ["non"], "fautes_tolerees": 2}
+    assert not corriger(exercice, "oui").juste
