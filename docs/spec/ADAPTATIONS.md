@@ -91,10 +91,13 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 
 - **EX-009** — La page hôte crée l'iframe d'outil et applique la vérification décrite dans
   `docs/OUTILS-CONTRAT.md` (section sécurité, « page hôte »). Prérequis d'EX-001.
-- **EX-010** — Aucune taille de police n'est écrite en `px` dans les CSS de
-  `jules/web/static/` : `rem` ou variables. Exceptions listées dans ce document si
-  nécessaire. *Vérification* : grep sans résultat hors exceptions, et captures à 100 %
-  identiques avant/après sur l'accueil, une fiche, le studio et le cours.
+- **EX-010** — Aucune taille de police n'est écrite en `px` dans **tous** les CSS de
+  `jules/web/static/`, y compris dans la forme raccourcie `font:` : `rem` ou variables.
+  Exceptions listées dans ce document si nécessaire.
+  *Vérification* : test qui parcourt tous les `*.css` du dossier (pas une liste fixe) et
+  détecte `font-size: …px` et `font: … …px`, sans résultat hors exceptions ; captures à
+  100 % identiques avant/après sur l'accueil, une fiche, le studio, le cours et une bulle
+  d'aide des symboles.
 
 ## 3. Hors périmètre du lot 1
 
@@ -115,5 +118,4 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 
 - L'appareil de l'élève n'est pas celui du développement (accès par le réseau local depuis
   une tablette) : les mesures faites sur la tour ne valent pas pour lui.
-- La PR #40 en cours touche `jules/web/static/accueil.js` : pas de conflit avec EX-010 (CSS
-  uniquement), mais EX-009 devra être ordonnée après sa fusion si elle touche le même JS.
+- PR #40 fusionnée dans `main` (`260adfe`) : plus de chevauchement avec EX-009.
