@@ -19,8 +19,9 @@ from jules.fiches.correction import (
     lire_expression,
     lire_nombre,
     lire_produit,
+    reponse_de_reference,
 )
-from jules.fiches.parcours import Etat, choisir, presenter, repondre
+from jules.fiches.parcours import Etat, aide_format, choisir, presenter, repondre
 from jules.fiches.schema import collisions, empreinte, servable_sans_ia, signer, verifier_fiche
 
 RACINE = Path(__file__).resolve().parents[1]
@@ -66,6 +67,20 @@ def exo(fiche: dict, identifiant: str) -> dict:
         ("en 1914", "1914"),
         ("c'est 7/10 !", "7/10"),
         ("−3", "-3"),
+        # unite recopiee apres le nombre : elle ne change pas la valeur (le % non plus, comme dans les enonces)
+        ("42 €", "42"),
+        ("27,5 %", "55/2"),
+        ("12 cm²", "12"),
+        ("20 m/s", "20"),
+        ("30 km/h", "30"),
+        ("65°", "65"),
+        ("6,5 kWh", "13/2"),
+        # notation scientifique et puissances de 10
+        ("7,2 × 10^-4", "9/12500"),
+        ("7.2*10^(-4)", "9/12500"),
+        ("7,2 × 10⁻⁴", "9/12500"),
+        ("3 x 10⁵", "300000"),
+        ("10⁻³", "1/1000"),
     ],
 )
 def test_lire_nombre(texte, attendu):
@@ -74,7 +89,7 @@ def test_lire_nombre(texte, attendu):
     assert lire_nombre(texte) == Fraction(attendu)
 
 
-@pytest.mark.parametrize("texte", ["quatorze", "1914 ou 1918", "3/0", "", "2 + 3"])
+@pytest.mark.parametrize("texte", ["quatorze", "1914 ou 1918", "3/0", "", "2 + 3", "5 fois 3", "10^999", "12 3"])
 def test_nombre_illisible(texte):
     with pytest.raises(ReponseIllisible):
         lire_nombre(texte)
@@ -147,6 +162,45 @@ def test_corriger_expression():
     exercice["reponse"] = {"valeur": "2x^2 + 3x", "variables": ["x"], "forme": "developpee"}
     assert corriger(exercice, "3x + 2x²").juste
     assert corriger(exercice, "x(2x+3)").diagnostic == "pas_developpee"
+
+
+def test_factorisation_incomplete():
+    exercice = {"type": "expression", "reponse": {"valeur": "x(x-2)(x+2)", "forme": "factorisee"}}
+    assert corriger(exercice, "x(x - 2)(x + 2)").juste
+    assert corriger(exercice, "-x(2 - x)(x + 2)").juste
+    for incomplet in ("x(x² - 4)", "(x² - 2x)(x + 2)"):
+        verdict = corriger(exercice, incomplet)
+        assert not verdict.juste and verdict.partiel and verdict.diagnostic == "factorisation_incomplete"
+    assert corriger(exercice, "x³ - 4x").diagnostic == "pas_factorisee"
+    # un facteur numerique non sorti n'est pas une factorisation incomplete au sens du college
+    exercice["reponse"] = {"valeur": "4(x + 2)(x + 1)", "forme": "factorisee"}
+    assert corriger(exercice, "(x + 2)(4x + 4)").juste
+    exercice["reponse"] = {"valeur": "(x - 3)^2", "forme": "factorisee"}
+    assert corriger(exercice, "(x - 3)(x - 3)").juste
+
+
+def test_notation_scientifique():
+    exercice = {"type": "nombre", "reponse": {"valeur": 0.00072, "forme": "scientifique"}}
+    assert corriger(exercice, "7,2 × 10^-4").juste
+    assert corriger(exercice, "7,2 × 10⁻⁴").juste
+    for mal_ecrit in ("0,00072", "72 × 10^-5"):
+        verdict = corriger(exercice, mal_ecrit)
+        assert not verdict.juste and verdict.partiel and verdict.diagnostic == "pas_scientifique"
+    assert corriger(exercice, "7,2 × 10^-3").diagnostic == "valeur_fausse"
+    assert reponse_de_reference(exercice) == "7,2 × 10^-4"
+    assert aide_format(exercice).startswith("Écris le nombre en notation scientifique")
+
+
+def test_une_fuite_en_notation_scientifique_est_vue(maths, notions):
+    fiche = copy.deepcopy(maths)
+    ex = fiche["exercices"][0]
+    ex.update(
+        type="nombre",
+        reponse={"valeur": 500, "forme": "libre"},
+        indices={"relance": "Quelle opération ?", "methode": "Divise.", "etape": "Écris 0,5 × 10³ en décimal."},
+    )
+    ex.pop("pieges", None)
+    assert any("contient la reponse" in e for e in verifier_fiche(fiche, notions, controler_empreinte=False))
 
 
 def test_corriger_choix_texte_ordre_association(maths, histoire):

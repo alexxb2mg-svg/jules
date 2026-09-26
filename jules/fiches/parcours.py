@@ -75,8 +75,9 @@ def melanger(elements: list[dict[str, Any]], graine: str) -> list[dict[str, Any]
 
 
 def aide_format(ex: dict[str, Any]) -> str:
-    if ex["type"] == "nombre" and (ex.get("reponse") or {}).get("forme") == "produit_premiers":
-        return AIDE_FORMAT["produit_premiers"]
+    forme = (ex.get("reponse") or {}).get("forme")
+    if ex["type"] == "nombre" and forme in ("produit_premiers", "scientifique"):
+        return AIDE_FORMAT[forme]
     return AIDE_FORMAT.get(ex["type"], "")
 
 

@@ -22,13 +22,20 @@ from jules.bibliotheques import normaliser
 
 TYPES_AUTO = ("nombre", "expression", "choix", "texte_court", "ordre", "association")
 TYPES = (*TYPES_AUTO, "ouverte")
-FORMES_NOMBRE = ("libre", "entier", "fraction_irreductible", "produit_premiers")
+FORMES_NOMBRE = ("libre", "entier", "fraction_irreductible", "produit_premiers", "scientifique")
 FORMES_EXPRESSION = ("libre", "developpee", "factorisee")
 
 # Diagnostics que chaque correcteur peut rendre sur une reponse fausse ou partielle.
 DIAGNOSTICS = {
-    "nombre": ("valeur_fausse", "produit_faux", "facteur_non_premier", "non_irreductible", "pas_une_fraction"),
-    "expression": ("non_equivalente", "pas_developpee", "pas_factorisee"),
+    "nombre": (
+        "valeur_fausse",
+        "produit_faux",
+        "facteur_non_premier",
+        "non_irreductible",
+        "pas_une_fraction",
+        "pas_scientifique",
+    ),
+    "expression": ("non_equivalente", "pas_developpee", "pas_factorisee", "factorisation_incomplete"),
     "choix": ("incomplet", "mauvais_choix"),
     "texte_court": ("mauvaise_reponse",),
     "ordre": ("inversion_voisine", "ordre_faux"),
@@ -40,6 +47,7 @@ DIAGNOSTICS = {
 AIDE_FORMAT = {
     "nombre": "Écris un nombre, par exemple 12, 3,5 ou 7/4.",
     "produit_premiers": "Écris un produit, par exemple 2^2 × 3 × 5 (ou 2² × 3 × 5).",
+    "scientifique": "Écris le nombre en notation scientifique, par exemple 7,2 × 10^-4 (ou 7,2 × 10⁻⁴).",
     "expression": "Écris une expression, par exemple 3x^2 - 2x + 1 (× ou * pour multiplier).",
     "choix": "Donne la ou les lettres choisies, par exemple « b » ou « a, c ».",
     "texte_court": "Réponds en un mot ou une courte expression.",
@@ -71,9 +79,19 @@ ILLISIBLE = "illisible"
 
 # --- nombres -------------------------------------------------------------------------
 
-_EXPOSANTS = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
+_EXPOSANTS = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹⁻⁺", "0123456789-+")
 _NOMBRE = re.compile(r"[+-]?\d+(?:\.\d+)?")
 _FRACTION = re.compile(r"([+-]?\d+(?:\.\d+)?)\s*/\s*([+-]?\d+(?:\.\d+)?)")
+# Notation scientifique ou puissance de 10 : « 7,2 × 10^-4 », « 7.2*10^(-4) », « 7,2 × 10⁻⁴ », « 10⁻³ ».
+_PUISSANCE_DIX = r"10\s*(?:\^\s*\(?\s*([+-]?\d+)\s*\)?|([⁻⁺]?[⁰¹²³⁴⁵⁶⁷⁸⁹]+))"
+_SCIENTIFIQUE = re.compile(rf"(?:([+-]?\d+(?:\.\d+)?)\s*[×x*·]\s*)?{_PUISSANCE_DIX}", re.IGNORECASE)
+# Unite recopiee apres le nombre (« 42 € », « 27,5 % », « 12 cm² », « 20 m/s ») : elle ne change pas la valeur.
+# Le pourcentage est traite comme une unite : « 27,5 % » vaut 27,5, comme le demandent les enonces.
+_UNITE = re.compile(
+    r"(?<=[\d)⁰¹²³⁴⁵⁶⁷⁸⁹])\s*(?:€|euros?|%|°\s*[cf]?|degrés?|km/h|m/s|k?wh|k?w|[kcdm]?m[²³23]?|m?m[²³23]|"
+    r"[kcdm]?l|[km]?g|t|min|h|s)$",
+    re.IGNORECASE,
+)
 
 
 def _nettoyer_nombre(texte: str) -> str:
@@ -82,11 +100,23 @@ def _nettoyer_nombre(texte: str) -> str:
     t = t.replace(",", ".")
     if "=" in t:  # « 252/360 = 7/10 » : on garde le dernier membre
         t = t.rsplit("=", 1)[1].strip()
-    return t.rstrip(".!? ").strip()
+    t = t.rstrip(".!? ").strip()
+    return _UNITE.sub("", t).strip()
+
+
+def _exposant(m: re.Match[str]) -> int:
+    exposant = int(m.group(2) if m.group(2) is not None else m.group(3).translate(_EXPOSANTS))
+    if abs(exposant) > EXPOSANT_MAX:
+        raise ReponseIllisible("exposant")
+    return exposant
 
 
 def lire_nombre(texte: str) -> Fraction:
     t = _nettoyer_nombre(texte)
+    scientifique = _SCIENTIFIQUE.fullmatch(t)
+    if scientifique:
+        mantisse = Fraction(scientifique.group(1)) if scientifique.group(1) else Fraction(1)
+        return mantisse * Fraction(10) ** _exposant(scientifique)
     fraction = _FRACTION.fullmatch(t)
     if fraction:
         denominateur = Fraction(fraction.group(2))
@@ -157,6 +187,41 @@ def ecrire_produit(facteurs: list[tuple[int, int]]) -> str:
     return " × ".join(f"{b}^{e}" if e > 1 else str(b) for b, e in facteurs)
 
 
+def ecrire_scientifique(x: Fraction) -> str:
+    """0,00072 -> « 7,2 × 10^-4 » (mantisse entre 1 et 10, ecriture decimale)."""
+    if x == 0:
+        return "0"
+    n = 0
+    a = abs(x)
+    while a >= 10:
+        a /= 10
+        n += 1
+    while a < 1:
+        a *= 10
+        n -= 1
+    decimal = _ecrire_decimal(a)
+    signe = "-" if x < 0 else ""
+    return f"{signe}{decimal} × 10^{n}"
+
+
+def _ecrire_decimal(x: Fraction) -> str:
+    entier, reste = divmod(x.numerator, x.denominator)
+    chiffres = ""
+    while reste and len(chiffres) < 12:
+        reste *= 10
+        chiffre, reste = divmod(reste, x.denominator)
+        chiffres += str(chiffre)
+    return f"{entier},{chiffres}" if chiffres else str(entier)
+
+
+def est_scientifique(texte: str) -> bool:
+    """« 7,2 × 10^-4 » et « 10^-3 » oui ; « 72 × 10^-5 » et « 0,00072 » non."""
+    m = _SCIENTIFIQUE.fullmatch(_nettoyer_nombre(texte))
+    if m is None:
+        return False
+    return not m.group(1) or 1 <= abs(Fraction(m.group(1))) < 10
+
+
 def _ecrire_nombre(x: Fraction) -> str:
     if x.denominator == 1:
         return str(x.numerator)
@@ -184,6 +249,8 @@ def corriger_nombre(attendu: dict[str, Any], reponse: str) -> Verdict:
     tolerance = Fraction(str(attendu.get("tolerance", 0)))
     if abs(nombre - valeur) > tolerance:
         return Verdict(False, diagnostic="valeur_fausse", lu=_ecrire_nombre(nombre))
+    if forme == "scientifique" and not est_scientifique(reponse):
+        return Verdict(False, partiel=True, diagnostic="pas_scientifique", lu=_ecrire_nombre(nombre))
     if forme == "fraction_irreductible" and valeur.denominator != 1:
         fractions = list(_FRACTION.finditer(_nettoyer_nombre(reponse)))
         m = fractions[0] if len(fractions) == 1 else None
@@ -313,7 +380,29 @@ def corriger_expression(attendu: dict[str, Any], reponse: str) -> Verdict:
         return Verdict(False, partiel=True, diagnostic="pas_developpee", lu=lu)
     if forme == "factorisee" and not est_produit(eleve):
         return Verdict(False, partiel=True, diagnostic="pas_factorisee", lu=lu)
+    if forme == "factorisee" and facteurs_variables(eleve.body) < facteurs_variables(reference.body):
+        # x(x² − 4) au lieu de x(x − 2)(x + 2) : un produit, mais un facteur se factorise encore
+        return Verdict(False, partiel=True, diagnostic="factorisation_incomplete", lu=lu)
     return Verdict(True, lu=lu)
+
+
+def facteurs_variables(noeud: ast.AST) -> int:
+    """Nombre de facteurs qui contiennent une variable (une puissance entiere compte autant de fois)."""
+    if isinstance(noeud, ast.UnaryOp):
+        return facteurs_variables(noeud.operand)
+    if isinstance(noeud, ast.BinOp) and isinstance(noeud.op, ast.Mult):
+        return facteurs_variables(noeud.left) + facteurs_variables(noeud.right)
+    if isinstance(noeud, ast.BinOp) and isinstance(noeud.op, ast.Div):
+        return facteurs_variables(noeud.left)
+    if (
+        isinstance(noeud, ast.BinOp)
+        and isinstance(noeud.op, ast.Pow)
+        and isinstance(noeud.right, ast.Constant)
+        and isinstance(noeud.right.value, int)
+        and 0 < noeud.right.value <= EXPOSANT_MAX
+    ):
+        return facteurs_variables(noeud.left) * noeud.right.value
+    return 1 if any(isinstance(n, ast.Name) for n in ast.walk(noeud)) else 0
 
 
 def est_produit(arbre: ast.Expression) -> bool:
@@ -542,6 +631,8 @@ def reponse_de_reference(exercice: dict[str, Any]) -> Any:
     if type_ == "nombre":
         if attendu.get("forme") == "produit_premiers":
             return ecrire_produit(decomposer(int(lire_nombre(str(attendu["valeur"])))))
+        if attendu.get("forme") == "scientifique":
+            return ecrire_scientifique(lire_nombre(str(attendu["valeur"])))
         return str(attendu["valeur"])
     if type_ == "expression":
         return str(attendu["valeur"])
