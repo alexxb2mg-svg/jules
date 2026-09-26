@@ -37,7 +37,7 @@ from jules.bibliotheques import (
     liste_racines,
 )
 from jules.config import RACINE
-from jules.extensions import charger_extensions, code_des_figures, figures_fournies
+from jules.extensions import charger_extensions, code_des_figures, code_des_rappels, figures_fournies
 from jules.fiches_visuelles import ErreurFicheVisuelle, FicheVisuelle, lire_fiche_visuelle
 
 CHARTE = RACINE / "docs" / "FICHES-VISUELLES.md"
@@ -241,6 +241,7 @@ def _donnees_simulees(racines: Racines, fiches: dict[str, FicheVisuelle]) -> dic
         )
         donnees[f"/api/eleve/fiches_visuelles/notions/{notion_id}"] = publique
         donnees[f"/api/eleve/fiches_visuelles/notions/{notion_id}/rappels"] = {
+            "matiere": notion.matiere,
             "variables": fiche.toutes_les_variables(),
             "abreviations": dict(fiche.abreviations),
         }
@@ -256,6 +257,7 @@ def construire_apercu(racines: Racines, fiches: dict[str, FicheVisuelle], sortie
     shutil.rmtree(sortie, ignore_errors=True)
     shutil.copytree(STATIQUE, sortie / "static")
     (sortie / "gabarits.js").write_text(code_des_figures(extensions), encoding="utf-8")
+    (sortie / "rappels.js").write_text(code_des_rappels(extensions), encoding="utf-8")
     donnees = json.dumps(_donnees_simulees(racines, fiches), ensure_ascii=False)
     (sortie / "simulation.js").write_text(
         "// Apercu hors serveur : reponses de l'API de Jules simulees, aucune donnee d'eleve.\n"
@@ -267,7 +269,7 @@ def construire_apercu(racines: Racines, fiches: dict[str, FicheVisuelle], sortie
     )
     html = (STATIQUE / "accueil.html").read_text(encoding="utf-8")
     html = html.replace("/api/persona/avatar", "static/icone-192.png").replace('"/static/', '"static/')
-    html = html.replace('"/gabarits.js"', '"gabarits.js"')
+    html = html.replace('"/gabarits.js"', '"gabarits.js"').replace('"/rappels.js"', '"rappels.js"')
     html = re.sub(r'href="/(discuter|studio|parent)?"', 'href="#"', html)
     html = html.replace(
         '<script src="static/commun.js">', '<script src="simulation.js"></script>\n  <script src="static/commun.js">'

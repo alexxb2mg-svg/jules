@@ -79,8 +79,8 @@ rappelée au survol partout où elle apparaît. Les deux sont servis par
 
 Ce qui est commun à tout le programme n'a rien à déclarer : symboles (`<`, `≤`, `≈`, `√`, `→`...),
 unités (`s`, `kg`, `N`, `km/h`...), éléments et espèces chimiques (`Fe`, `CO₂`, `Cu²⁺`...) ont leur
-bulle sur toutes les pages grâce aux dictionnaires de `jules/web/static/rappels.js` (des données :
-une ligne ajoutée = une bulle de plus partout) et au moteur `symboles.js`. Les formules écrites dans
+bulle sur toutes les pages grâce au cœur `jules/web/static/symboles.js` et aux extensions de la
+famille `rappels` (règles par matière, voir `docs/EXTENSIONS.md`). Les formules écrites dans
 le texte (« P = m × g ») passent seules en gras. Seul le texte des schémas SVG n'est pas concerné.
 
 ### Le bloc `schema`

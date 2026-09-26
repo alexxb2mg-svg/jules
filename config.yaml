@@ -108,3 +108,6 @@ extensions:
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
+  - rappels-sciences          # bulles de rappel au survol (fournit.rappels) : unites, chimie, formules
+  - rappels-histoire          # siecles, dates, sigles d'histoire-geographie et d'EMC
+  - rappels-francais          # abreviations de grammaire

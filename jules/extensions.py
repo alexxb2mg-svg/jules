@@ -6,9 +6,11 @@ ses permissions (reseau, appel IA, ecriture dans le dossier eleve, notification 
 
 Ce module ne fait que lire, verifier et charger la liste des extensions ACTIVEES (citees dans
 `extensions:` de config.yaml). Le Tuteur les charge une fois au demarrage (`Tuteur.extensions`) ;
-trois familles en dependent deja (etapes 2 et 3 de jules_architecture_plugins.md) :
+quatre familles en dependent deja (etapes 2 et 3 de jules_architecture_plugins.md) :
   - figures : le code `gabarit.js` de l'extension (voir `code_des_figures`), et les ids de
     `fournit.figures` sont les seuls gabarits acceptes dans une fiche visuelle ;
+  - rappels : le code `rappels.js` (voir `code_des_rappels`), regles des bulles de rappel au survol
+    (unites, chimie, siecles, grammaire...) enregistrees aupres de jules/web/static/symboles.js ;
   - outils : chaque outil fourni est lu par jules/outils.py comme un dossier `outils/<id>/`
     (voir `dossiers_outils`) ;
   - modules : le code `extensions/<id>/<module>.py` (classe `Brique(Module)`) est charge apres les
@@ -41,13 +43,16 @@ _ID_MODULE = re.compile(r"^[a-z][a-z0-9_]*$")  # nom d'un fichier Python : exten
 TAILLE_MAX_FICHIER = 50_000  # octets : un manifeste est un petit fichier declaratif
 TAILLE_MAX_GABARIT = 200_000  # octets : meme plafond que le code d'un outil (jules/outils.py)
 FICHIER_FIGURES = "gabarit.js"  # code des figures d'une extension (un seul fichier, une ou plusieurs figures)
+FICHIER_RAPPELS = "rappels.js"  # regles des bulles de rappel au survol (voir jules/web/static/symboles.js)
 # Le seul "http://" admis dans un gabarit : l'espace de noms SVG passe a createElementNS (ce n'est
 # pas un appel reseau). Toute autre adresse reste refusee par le premier filtre des outils.
 _ESPACE_SVG = "http://www.w3.org/2000/svg"
 
 # Familles connues sous `fournit:` (le coeur ne connait aucune extension par son nom, mais il
 # connait les familles : elargir le contrat = ajouter une cle ici, jamais un cas particulier).
-CLES_FOURNIT = frozenset({"modules", "moteurs", "notifieurs", "outils", "figures", "types_de_blocs", "bibliotheques"})
+CLES_FOURNIT = frozenset(
+    {"modules", "moteurs", "notifieurs", "outils", "figures", "rappels", "types_de_blocs", "bibliotheques"}
+)
 # Permissions connues sous `permissions:` ; toute cle absente vaut False.
 CLES_PERMISSIONS = frozenset({"reseau", "appel_ia", "ecriture_dossier_eleve", "notification_parent"})
 
@@ -132,20 +137,20 @@ def _lire_permissions(brut: Any, identifiant: str) -> dict[str, bool]:
     return resultat
 
 
-def _controler_gabarit(chemin: Path, identifiant: str) -> None:
-    """Le code des figures s'execute dans la page de l'eleve (pas dans une iframe isolee comme un
-    outil) : meme premier filtre que le code d'un outil (jules/outils.py), avant la relecture."""
+def _controler_gabarit(chemin: Path, identifiant: str, famille: str = "figures") -> None:
+    """Le code des figures et des rappels s'execute dans la page de l'eleve (pas dans une iframe
+    isolee comme un outil) : meme premier filtre que le code d'un outil (jules/outils.py)."""
     if not chemin.is_file():
-        raise ErreurExtension(f"{identifiant} : fournit des figures mais {FICHIER_FIGURES} est absent")
+        raise ErreurExtension(f"{identifiant} : fournit des {famille} mais {chemin.name} est absent")
     if chemin.stat().st_size > TAILLE_MAX_GABARIT:
-        raise ErreurExtension(f"{identifiant} : {FICHIER_FIGURES} trop gros")
+        raise ErreurExtension(f"{identifiant} : {chemin.name} trop gros")
     # Les lignes de commentaire entieres sont ignorees ("// ... aucun eval()" est une promesse, pas
     # un appel) ; une ligne de commentaire ne peut rien executer.
     lignes = chemin.read_text(encoding="utf-8", errors="replace").splitlines()
     texte = "\n".join(ligne for ligne in lignes if not ligne.strip().startswith("//")).replace(_ESPACE_SVG, "")
     for motif, nom in _MOTIFS_INTERDITS:
         if motif.search(texte):
-            raise ErreurExtension(f"{identifiant} : {FICHIER_FIGURES}, motif interdit ({nom})")
+            raise ErreurExtension(f"{identifiant} : {chemin.name}, motif interdit ({nom})")
 
 
 def _controler_modules(dossier: Path, identifiant: str, modules: list[str]) -> None:
@@ -175,6 +180,8 @@ def lire_extension(dossier: Path) -> Extension:
     permissions = _lire_permissions(brut.get("permissions"), identifiant)
     if fournit.get("figures"):
         _controler_gabarit(dossier / FICHIER_FIGURES, identifiant)
+    if fournit.get("rappels"):
+        _controler_gabarit(dossier / FICHIER_RAPPELS, identifiant, "rappels")
     _controler_modules(dossier, identifiant, fournit.get("modules", []))
     return Extension(
         id=identifiant,
@@ -235,6 +242,17 @@ def code_des_figures(extensions: dict[str, Extension]) -> str:
     for extension in extensions.values():
         if extension.fournit_liste("figures"):
             code = (extension.dossier / FICHIER_FIGURES).read_text(encoding="utf-8")
+            morceaux.append(f"// --- extension {extension.id} ---\n{code}\n;")
+    return "\n".join(morceaux)
+
+
+def code_des_rappels(extensions: dict[str, Extension]) -> str:
+    """Les `rappels.js` des extensions actives qui fournissent des rappels, mis bout a bout (dans
+    l'ordre de `extensions:`) : servi par /rappels.js, apres le coeur (static/symboles.js)."""
+    morceaux = []
+    for extension in extensions.values():
+        if extension.fournit_liste("rappels"):
+            code = (extension.dossier / FICHIER_RAPPELS).read_text(encoding="utf-8")
             morceaux.append(f"// --- extension {extension.id} ---\n{code}\n;")
     return "\n".join(morceaux)
 

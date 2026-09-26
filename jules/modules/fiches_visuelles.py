@@ -104,10 +104,14 @@ class Brique(Module):
         def rappels_route(notion_id: str) -> dict[str, Any]:
             # Pour toutes les pages (discussion, studio, cours) : ce qui est propre a la notion (sens
             # des lettres, abreviations), rappele au survol par symboles.js. Sans fiche : rien.
+            # La matiere choisit les regles des extensions (sciences, histoire, francais...).
+            notion = self.notions_module.catalogue.notion(notion_id)
             fiche = self.fiches.get(notion_id)
-            if fiche is None:
-                return {"variables": {}, "abreviations": {}}
-            return {"variables": fiche.toutes_les_variables(), "abreviations": dict(fiche.abreviations)}
+            return {
+                "matiere": notion.matiere if notion else None,
+                "variables": fiche.toutes_les_variables() if fiche else {},
+                "abreviations": dict(fiche.abreviations) if fiche else {},
+            }
 
         @routeur.get("/notions/{notion_id}")
         def fiche_route(notion_id: str) -> dict[str, Any]:

@@ -1,0 +1,8 @@
+id: rappels-francais
+titre: "Rappels au survol : abréviations de grammaire"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  rappels: [grammaire]
+permissions: {}

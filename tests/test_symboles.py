@@ -1,35 +1,34 @@
-"""Bulles de rappel au survol : un module commun a toutes les pages (jules/web/static/rappels.js et symboles.*)."""
+"""Bulles de rappel au survol : un coeur commun a toutes les pages (jules/web/static/symboles.*) et des
+regles par matiere fournies par les extensions de la famille `rappels` (servies par /rappels.js)."""
 
 from __future__ import annotations
 
 import json
 import re
-import shutil
 import subprocess
 from pathlib import Path
 
 import pytest
+import yaml
 
 from jules.chantier_visuel import _chromium
+from jules.extensions import ErreurExtension, charger_extensions, code_des_rappels, lire_extension
 
-STATIQUE = Path(__file__).resolve().parents[1] / "jules" / "web" / "static"
+RACINE = Path(__file__).resolve().parents[1]
+STATIQUE = RACINE / "jules" / "web" / "static"
 PAGES = sorted(STATIQUE.glob("*.html"))
-RAPPELS = (STATIQUE / "rappels.js").read_text(encoding="utf-8")
-
-
-def _section(nom: str) -> str:
-    return RAPPELS.split(f"  {nom}: {{", 1)[1].split("\n  },", 1)[0]
+ACTIVES = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))["extensions"]
 
 
 @pytest.mark.parametrize("page", PAGES, ids=lambda p: p.name)
-def test_chaque_page_charge_le_module(page):
+def test_chaque_page_charge_le_coeur_puis_les_extensions(page):
     html = page.read_text(encoding="utf-8")
     assert '<link rel="stylesheet" href="/static/symboles.css">' in html
-    # Dictionnaires, puis moteur, puis les scripts de la page : tout ce qu'ils affichent est observe.
-    assert html.index("/static/rappels.js") < html.index("/static/symboles.js") < html.index("/static/commun.js")
+    # Coeur, puis regles des extensions, puis les scripts de la page : tout ce qu'ils affichent est observe.
+    assert html.index("/static/symboles.js") < html.index('"/rappels.js"') < html.index("/static/commun.js")
 
 
-def test_chaque_page_rappelle_ce_qui_est_propre_a_sa_notion():
+def test_chaque_page_donne_le_contexte_de_sa_notion():
     for page, appel in [
         ("accueil.js", "Symboles.contexte("),
         ("eleve.js", "Symboles.notion("),
@@ -39,33 +38,79 @@ def test_chaque_page_rappelle_ce_qui_est_propre_a_sa_notion():
         assert appel in (STATIQUE / page).read_text(encoding="utf-8"), page
 
 
-def test_dictionnaires():
-    symboles = dict(re.findall(r'^\s+"(.+?)": "(.+?)",$', _section("symboles"), flags=re.M))
+def test_le_coeur_ne_connait_aucune_regle_de_matiere():
+    coeur = (STATIQUE / "symboles.js").read_text(encoding="utf-8")
+    assert "innerHTML" not in coeur.replace("Jamais d'innerHTML", "")
+    assert "kilogrammes" not in coeur and "dioxyde" not in coeur and "siècle :" not in coeur
+    symboles = dict(
+        re.findall(r'^\s+"(.+?)": "(.+?)",$', coeur.split("const SYMBOLES = {")[1].split("};")[0], flags=re.M)
+    )
     assert {"<", ">", "≤", "≥", "≠", "≈", "√", "π", "→"} <= set(symboles)
-    # Les operations evidentes n'ont pas de bulle : ce sont les lettres des formules qu'on rappelle.
-    assert not {"×", "÷", "+", "="} & set(symboles)
-    unites = dict(re.findall(r'^\s+"(.+?)": "(.+?)",$', _section("unites"), flags=re.M))
-    assert unites["s"] == "secondes" and unites["kg"] == "kilogrammes" and unites["m"] == "mètres"
-    assert {"N", "J", "W", "V", "A", "Ω", "Hz", "m/s", "km/h", "g/cm³", "°C"} <= set(unites)
-    elements = re.findall(r"\b([A-Z][a-z]?): \"", _section("elements"))
+    assert not {"×", "÷", "+", "="} & set(symboles)  # les operations evidentes n'ont pas de bulle
+
+
+def test_les_extensions_de_rappels_actives():
+    extensions = charger_extensions(RACINE / "extensions", ACTIVES)
+    code = code_des_rappels(extensions)
+    for identifiant in ("rappels-sciences", "rappels-histoire", "rappels-francais"):
+        assert f"// --- extension {identifiant} ---" in code
+    elements = re.findall(r"\b([A-Z][a-z]?): \"", code.split("elements: {")[1].split("},")[0])
     assert len(elements) == len(set(elements)) == 118
-    assert "innerHTML" not in (STATIQUE / "symboles.js").read_text(encoding="utf-8").replace("Jamais d'innerHTML", "")
+
+
+def _extension(dossier: Path, code: str | None) -> Path:
+    dossier = dossier / "rappels-essai"
+    dossier.mkdir(parents=True)
+    (dossier / "extension.yaml").write_text(
+        "id: rappels-essai\ntitre: essai\nversion: '1'\nlicence: MIT\nfournit:\n  rappels: [essai]\n",
+        encoding="utf-8",
+    )
+    if code is not None:
+        (dossier / "rappels.js").write_text(code, encoding="utf-8")
+    return dossier
+
+
+def test_une_extension_de_rappels_est_controlee_comme_une_figure(tmp_path):
+    with pytest.raises(ErreurExtension, match=r"rappels\.js est absent"):
+        lire_extension(_extension(tmp_path / "a", None))
+    with pytest.raises(ErreurExtension, match="motif interdit"):
+        lire_extension(_extension(tmp_path / "b", 'fetch("/api/eleve/notes");'))
+    valide = lire_extension(_extension(tmp_path / "c", 'Symboles.dictionnaire({id: "x", entrees: {}});'))
+    assert valide.fournit["rappels"] == ["essai"]
 
 
 # --- comportement, dans un vrai navigateur (saute si Chromium est absent) ---------------------------
 
+PHYSIQUE = {
+    "matiere": "physique-chimie",
+    "variables": {"P": "le poids", "m": "la masse", "g": "la pesanteur"},
+    "abreviations": {"ua": "unité astronomique"},
+}
 TEXTES = [
-    ("formule", "Pour un poids : écrire P = m × g, puis m = P ÷ g."),
-    ("unites", "Un sac de 10 kg pèse 98 N ; il tombe en 2 s, à 5 m/s."),
-    ("chimie", "La combustion rejette du CO₂ et de l'eau H₂O ; l'ion Cu²⁺ est bleu."),
-    ("elements", "Au début, les éléments légers : H, He. Le fer (Fe) et l'or (Au)."),
-    ("prose", "Si tu as une masse, il a raison : c'est la vitesse d'un objet."),
-    ("abreviation", "La Terre est à 1 ua du Soleil."),
-    ("parentheses", "La puissance en watts (W), la tension en volts (V) ; l'azote (N). Source : BO n° 31."),
-    ("equation", "Combustion : C + O₂ → CO₂, et on convertit km/h → m/s."),
-    ("mg", "Le poids : P = mg, soit 2 mg de poudre."),
-    ("unite_en", "La distance en m, la masse en g."),
-    ("phrase", "Vérifie que m est en kg et que la vitesse est en m/s : il y a une erreur, il a oublié g."),
+    ("formule", PHYSIQUE, "Pour un poids : écrire P = m × g, puis m = P ÷ g."),
+    ("unites", PHYSIQUE, "Un sac de 10 kg pèse 98 N ; il tombe en 2 s, à 5 m/s."),
+    ("chimie", PHYSIQUE, "La combustion rejette du CO₂ et de l'eau H₂O ; l'ion Cu²⁺ est bleu."),
+    ("elements", PHYSIQUE, "Au début, les éléments légers : H, He. Le fer (Fe) et l'or (Au)."),
+    ("prose", PHYSIQUE, "Si tu as une masse, il a raison : c'est la vitesse d'un objet."),
+    ("abreviation", PHYSIQUE, "La Terre est à 1 ua du Soleil."),
+    ("parentheses", PHYSIQUE, "La puissance en watts (W), la tension en volts (V) ; l'azote (N). Source : BO n° 31."),
+    ("equation", PHYSIQUE, "Combustion : C + O₂ → CO₂, et on convertit km/h → m/s."),
+    ("mg", PHYSIQUE, "Le poids : P = mg, soit 2 mg de poudre."),
+    ("unite_en", PHYSIQUE, "La distance en m, la masse en g."),
+    ("phrase", PHYSIQUE, "Vérifie que m est en kg et que la vitesse est en m/s : il y a une erreur, il a oublié g."),
+    (
+        "histoire",
+        {"matiere": "histoire"},
+        "Au XIXe siècle, Louis XIV est déjà loin ; la Ve République date de 1958. "
+        "Rome au Ier siècle av. J.-C. ; l'URSS et l'ONU.",
+    ),
+    ("histoire_sans_chimie", {"matiere": "histoire"}, "Le CO₂ et 10 kg : pas de sciences ici."),
+    (
+        "francais",
+        {"matiere": "francais"},
+        "Dans « il mange une pomme », le GN « une pomme » est COD ; adj. qualificatif.",
+    ),
+    ("sans_matiere", {}, "Sans notion : 10 kg de CO₂ au XIXe siècle."),
 ]
 
 
@@ -75,26 +120,35 @@ def annotations(tmp_path_factory):
     if not navigateur:
         pytest.skip("Chromium absent")
     dossier = tmp_path_factory.mktemp("symboles")
-    for f in ("rappels.js", "symboles.js"):
-        shutil.copy(STATIQUE / f, dossier / f)
-    paragraphes = "\n".join(f'<p id="{i}">{t}</p>' for i, t in TEXTES)
-    script = """
-      Symboles.contexte(document.body, {variables: {P: "le poids", m: "la masse", g: "la pesanteur"},
-                                        abreviations: {ua: "unité astronomique"}});
-      const r = {};
-      for (const p of document.querySelectorAll("p")) r[p.id] = {
-        formules: [...p.querySelectorAll(".formule-texte")].map((e) => e.textContent),
-        bulles: [...p.querySelectorAll("abbr.symbole")].map((e) => e.dataset.nom),
-      };
-      document.body.setAttribute("data-resultat", JSON.stringify(r));
+    (dossier / "symboles.js").write_text((STATIQUE / "symboles.js").read_text(encoding="utf-8"), encoding="utf-8")
+    (dossier / "rappels.js").write_text(
+        code_des_rappels(charger_extensions(RACINE / "extensions", ACTIVES)), encoding="utf-8"
+    )
+    zones = "\n".join(f'<div id="{i}"><p>{t}</p></div>' for i, _, t in TEXTES)
+    contextes = json.dumps({i: c for i, c, _ in TEXTES}, ensure_ascii=False)
+    script = f"""
+      const CONTEXTES = {contextes};
+      setTimeout(() => {{
+        for (const [id, c] of Object.entries(CONTEXTES)) Symboles.contexte(document.getElementById(id), c);
+        const r = {{}};
+        for (const id of Object.keys(CONTEXTES)) {{
+          const z = document.getElementById(id);
+          r[id] = {{
+            formules: [...z.querySelectorAll(".formule-texte")].map((e) => e.textContent),
+            bulles: [...z.querySelectorAll("abbr.symbole")].map((e) => e.dataset.nom),
+          }};
+        }}
+        document.body.setAttribute("data-resultat", JSON.stringify(r));
+      }}, 50);
     """
     page = dossier / "page.html"
     page.write_text(
-        f'<!doctype html><meta charset="utf-8"><body>{paragraphes}<script src="rappels.js"></script>'
-        f'<script src="symboles.js"></script><script>{script}</script></body>',
+        f'<!doctype html><meta charset="utf-8"><body>{zones}<script src="symboles.js"></script>'
+        f'<script src="rappels.js"></script><script>{script}</script></body>',
         encoding="utf-8",
     )
-    options = ["--headless=new", "--no-sandbox", "--disable-gpu", "--allow-file-access-from-files", "--dump-dom"]
+    options = ["--headless=new", "--no-sandbox", "--disable-gpu", "--allow-file-access-from-files"]
+    options += ["--virtual-time-budget=2000", "--dump-dom"]
     sortie = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
         [navigateur, *options, page.as_uri()], capture_output=True, text=True, timeout=120, check=True
     ).stdout
@@ -164,3 +218,26 @@ def test_les_lettres_de_la_notion_aussi_dans_les_phrases(annotations):
 
 def test_apres_en_c_est_une_unite(annotations):
     assert _bulles(annotations, "unite_en") == ["m : mètres", "g : grammes"]
+
+
+def test_histoire_siecles_regnes_ere_et_sigles(annotations):
+    bulles = _bulles(annotations, "histoire")
+    assert "XIXe : le 19e siècle : de 1801 à 1900" in bulles
+    assert "XIV : 14 (chiffres romains)" in bulles and "Ve : 5e (chiffres romains)" in bulles
+    assert "Ier : le 1er siècle avant J.-C. : de 100 à 1 av. J.-C. (on compte à rebours)" in bulles
+    assert any(b.startswith("av. J.-C. : avant Jésus-Christ") for b in bulles)
+    assert any(b.startswith("URSS : Union des républiques") for b in bulles)
+    assert any(b.startswith("ONU : Organisation des Nations unies") for b in bulles)  # « l'ONU » compte
+
+
+def test_chaque_matiere_ses_regles(annotations):
+    assert _bulles(annotations, "histoire_sans_chimie") == []  # ni chimie ni unites en histoire
+    francais = _bulles(annotations, "francais")
+    assert any(b.startswith("GN : groupe nominal") for b in francais) and any(b.startswith("COD :") for b in francais)
+    assert "adj. : adjectif" in francais
+
+
+def test_sans_matiere_toutes_les_regles(annotations):
+    bulles = _bulles(annotations, "sans_matiere")
+    assert "kg : kilogrammes" in bulles and any(b.startswith("CO₂ :") for b in bulles)
+    assert "XIXe : le 19e siècle : de 1801 à 1900" in bulles

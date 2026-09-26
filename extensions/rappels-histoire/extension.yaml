@@ -1,0 +1,8 @@
+id: rappels-histoire
+titre: "Rappels au survol : siècles, dates, sigles d'histoire-géographie et d'EMC"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  rappels: [siecles, numeros-de-regne, ere-chretienne, sigles-histoire-geo]
+permissions: {}

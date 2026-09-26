@@ -57,11 +57,11 @@ Dans cet ordre, 5 à 8 blocs :
   chimiques (H, O, C...), qui ne sont pas des grandeurs.
 - **Tout ce qui est abrégé a sa bulle** : l'élève doit pouvoir retrouver immédiatement ce que veut
   dire n'importe quel symbole, lettre ou abréviation, sur toutes les pages. Rien à déclarer pour ce
-  qui est commun à tout le programme, dans `jules/web/static/rappels.js` : symboles (≤, ≈, √, →),
-  unités (s : secondes, kg : kilogrammes, N : newtons, km/h...), les 118 éléments, les espèces
-  chimiques courantes (CO₂ : dioxyde de carbone, avec sa composition ; ions). Ce qui est propre à la
+  qui est commun à une matière : les extensions de la famille `rappels` (docs/EXTENSIONS.md) s'en
+  chargent (sciences : unités, éléments, espèces chimiques avec leur composition ; histoire :
+  siècles, dates, sigles ; français : grammaire). Ce qui est propre à la
   notion se déclare dans la fiche : `variables:` (lettres des formules) et `abreviations:` (ua, URSS,
-  av. J.-C....). Une abréviation utile à tout le programme s'ajoute plutôt dans `rappels.js`.
+  av. J.-C....). Une abréviation utile à toute une matière s'ajoute plutôt dans son extension de rappels.
 - **Les formules écrites dans le texte** (« P = m × g », « 36 km/h = 10 m/s ») ressortent seules en
   gras : on les écrit simplement, avec des espaces autour des signes, sans `**`.
 

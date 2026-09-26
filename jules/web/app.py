@@ -19,7 +19,7 @@ from starlette.concurrency import run_in_threadpool
 
 from jules import dossier
 from jules.acces import COOKIE, DUREE_S, Acces
-from jules.extensions import code_des_figures
+from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
 
 STATIQUE = Path(__file__).parent / "static"
@@ -135,6 +135,12 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         """Code des figures fournies par les extensions actives (voir jules/extensions.py) : public
         comme /static, ou vivaient les gabarits avant l'etape 2 des extensions."""
         return Response(code_des_figures(tuteur.extensions), media_type="text/javascript; charset=utf-8")
+
+    @app.get("/rappels.js")
+    def rappels() -> Response:
+        """Regles des bulles de rappel fournies par les extensions actives (famille `rappels`), a
+        charger apres le coeur /static/symboles.js : public comme /static et /gabarits.js."""
+        return Response(code_des_rappels(tuteur.extensions), media_type="text/javascript; charset=utf-8")
 
     app.mount("/static", StaticFiles(directory=STATIQUE), name="static")
 

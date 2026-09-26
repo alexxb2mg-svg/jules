@@ -1,46 +1,176 @@
-// Jules - bulles de rappel au survol, sur toutes les pages. Tout ce qui est abrege ou symbolique dans
-// un texte affiche a l'eleve montre ce qu'il veut dire dans une petite bulle (souris, toucher, clavier) :
-//   - les formules ecrites dans le texte (« P = m × g ») ressortent en gras ;
-//   - les LETTRES d'une formule (v, d, t, Ec...) : sens donne par la fiche visuelle de la notion
-//     (champ `variables`), reconnues seulement dans une formule, jamais le « a » du verbe avoir ;
-//   - les ESPECES CHIMIQUES (CO₂, H₂O, Cu²⁺, NaCl...) : nom et composition ;
-//   - les ELEMENTS (Fe, Na, O...) ; les UNITES (s, kg, N, km/h...) ; les SYMBOLES (≈, ≤, √, →...) ;
-//   - les ABREVIATIONS propres a une notion (champ `abreviations` de sa fiche : ua, URSS...).
-// Les dictionnaires communs sont dans rappels.js (des donnees : une ligne ajoutee = une bulle de plus
-// partout). Le module observe la page et annote aussi le texte ajoute plus tard (fiches, bulles et
-// reponses de Jules, exercices). API :
-//   - Symboles.notion(element, notionId) : rappels propres a cette notion dans element (null : aucun) ;
-//   - Symboles.contexte(element, {variables, abreviations}) : idem, avec des dictionnaires deja connus ;
-//   - Symboles.annoter(element) : annoter a la demande ; attribut data-sans-symboles : zone exclue.
+// Jules - bulles de rappel au survol, sur toutes les pages : tout ce qui est abrege ou symbolique
+// dans un texte affiche a l'eleve montre ce qu'il veut dire dans une petite bulle (souris, toucher,
+// clavier). Ce fichier est le COEUR : il parcourt la page, affiche les bulles, tient le contexte de
+// la notion (matiere, lettres des formules, abreviations de sa fiche visuelle) et ne connait que les
+// symboles communs a tout le programme (≤, ≈, →...). Les regles d'une matiere (unites et chimie en
+// sciences, siecles en histoire, grammaire en francais...) viennent des EXTENSIONS de la famille
+// `rappels` (docs/EXTENSIONS.md), servies par /rappels.js apres ce fichier. Une extension enregistre :
+//   Symboles.dictionnaire({id, matieres, entrees: {URSS: "Union des républiques..."}})  // donnees seules
+//   Symboles.enregistrer({
+//     id: "unites", matieres: ["physique-chimie", ...] (absent : toutes), rang: 3 (petit = prioritaire),
+//     trouver(texte, ctx, outils) -> [{debut, fin, sens, classe?}]   // une bulle par passage reconnu
+//     // ou bien, pour une mise en forme (formules en gras) :
+//     mettreEnForme(texte, ctx, outils) -> [{debut, fin, classe}], formule: true|false
+//   });
+// `ctx` : {matiere, variables, abreviations, formule (dans une formule ?), zone (l'element formule)}.
+// `outils` : aides partagees (avant, apres, isole, motAvant, motDevantParenthese, designe, motifDe...).
+// Quand la matiere est inconnue (discussion libre), toutes les regles s'appliquent.
+// API des pages : Symboles.notion(element, notionId) ; Symboles.contexte(element, {matiere,
+// variables, abreviations}) ; Symboles.annoter(element) ; attribut data-sans-symboles : zone exclue.
 // Jamais d'innerHTML : le texte est decoupe en noeuds texte et en elements crees un par un.
 "use strict";
 
 const Symboles = (() => {
-  const D = typeof RAPPELS !== "undefined" ? RAPPELS : { symboles: {}, unites: {}, elements: {}, especes: {}, elementsAmbigus: [] };
+  // Symboles communs a toutes les matieres. Les operations evidentes (+, ×, ÷, =) n'en ont pas.
+  const SYMBOLES = {
+    "<": "inférieur à (plus petit que)",
+    ">": "supérieur à (plus grand que)",
+    "≤": "inférieur ou égal à",
+    "⩽": "inférieur ou égal à",
+    "≥": "supérieur ou égal à",
+    "⩾": "supérieur ou égal à",
+    "≠": "différent de",
+    "≈": "environ égal à (valeur approchée)",
+    "±": "plus ou moins",
+    "√": "racine carrée",
+    "∝": "proportionnel à",
+    "∞": "infini",
+    "π": "pi : environ 3,14",
+    "°": "degré",
+    "‰": "pour mille",
+    "²": "au carré (exposant 2)",
+    "³": "au cube (exposant 3)",
+    "→": "flèche : « donne », « devient »",
+    "⇒": "donc (implique)",
+    "⇔": "équivaut à",
+    "↔": "dans les deux sens : l'un est l'inverse de l'autre",
+    "∥": "est parallèle à",
+    "⊥": "est perpendiculaire à",
+    "∠": "angle",
+    "∈": "appartient à",
+    "∉": "n'appartient pas à",
+    "∅": "ensemble vide",
+    "∩": "inter (les deux à la fois)",
+    "∪": "union (l'un ou l'autre)",
+    "∑": "somme",
+    "Δ": "delta : une variation, une différence",
+    "α": "alpha (lettre grecque)",
+    "β": "bêta (lettre grecque)",
+    "γ": "gamma (lettre grecque)",
+    "θ": "thêta (lettre grecque) : souvent un angle",
+    "λ": "lambda (lettre grecque) : souvent une longueur d'onde",
+    "ρ": "rhô (lettre grecque) : souvent une masse volumique",
+  };
   const SVG = "http://www.w3.org/2000/svg";
   const EXCLUS = new Set(["SCRIPT", "STYLE", "TEXTAREA", "INPUT", "SELECT", "OPTION", "CODE", "PRE", "KBD", "SAMP", "TITLE", "NOSCRIPT"]);
-  const ZONE_FORMULE = ".formule-expression, .formule-texte, [data-formule]";
+  const ZONE_FORMULE = ".formule-expression, .rappel-formule, [data-formule]";
+  const ZONE_FORME = ".formule-expression, .rappel-forme, [data-formule]";
   const OPERATEURS = "=×÷+−*<>≤≥≈≠()²³^·½¼¾→"; // pas « / » : il appartient aux unites (m/s)
   const COLLE = /[\p{L}\p{N}₀-₉'’_]/u; // un caractere qui colle a un mot
-  const AMBIGUS = new Set(D.elementsAmbigus || []);
-  const LETTRES_MOTS = new Set(["a", "y", "A", "Y", "à", "À", "ô"]); // « il a », « il y a » : dans une formule seulement
-  const INDICES = "₀₁₂₃₄₅₆₇₈₉", EXPOSANTS = "⁰¹²³⁴⁵⁶⁷⁸⁹";
+  const LETTRES_MOTS = new Set(["a", "y", "A", "Y", "à", "À", "ô"]); // « il a », « il y a » : formule seulement
+
+  // --- outils partages avec les extensions -------------------------------------------------------
   const echapper = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const alternatives = (cles) => cles.slice().sort((a, b) => b.length - a.length).map(echapper).join("|");
   const motifDe = (cles) => new RegExp(alternatives(cles), "gu");
+  const sansAccent = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const avant = (texte, i) => { while (i >= 0 && texte[i] === " ") i--; return i >= 0 ? texte[i] : ""; };
+  const apres = (texte, j) => { while (j < texte.length && texte[j] === " ") j++; return j < texte.length ? texte[j] : ""; };
+  const isole = (texte, debut, fin) => !(debut > 0 && COLLE.test(texte[debut - 1])) && !(fin < texte.length && COLLE.test(texte[fin]));
+  const motAvant = (texte, i) => texte.slice(0, i).trimEnd().split(/\s+/).pop() || "";
+  // « watts (W) » : le mot devant une lettre entre parentheses dit ce qu'elle est.
+  function motDevantParenthese(texte, debut, fin) {
+    if (texte[debut - 1] !== "(" || texte[fin] !== ")") return "";
+    return sansAccent(texte.slice(0, debut - 1).trimEnd().split(/\s+/).pop() || "");
+  }
+  const designe = (mot, sens) => Boolean(mot) && sansAccent(sens).split(/[\s(,]/)[0].replace(/s$/, "") === mot.replace(/s$/, "");
+  function parcourir(motif, texte, faire) {
+    motif.lastIndex = 0;
+    for (let m = motif.exec(texte); m; m = motif.exec(texte)) faire(m[0], m.index, m);
+  }
+  const outils = { echapper, alternatives, motifDe, sansAccent, avant, apres, isole, motAvant, motDevantParenthese, designe, parcourir, OPERATEURS, COLLE };
 
-  const motifSymboles = motifDe(Object.keys(D.symboles));
-  const motifUnites = motifDe(Object.keys(D.unites));
-  const motifChimie = /\(?(?:[A-Z][a-z]?[₀-₉]*|\((?:[A-Z][a-z]?[₀-₉]*)+\)[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹]*[⁺⁻]?/gu;
+  // --- les regles : celles du coeur, puis celles des extensions -----------------------------------
+  const reconnaisseurs = [];
+  const formes = [];
+  let demarre = false;
 
-  // Une formule ecrite dans le texte : des termes courts relies par des operateurs, avec au moins
-  // un « = », « → » ou « ≈ ». Termes : nombre (avec son unite), lettre(s) de grandeur, espece chimique.
-  const NOMBRE = String.raw`\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${alternatives(Object.keys(D.unites))})(?![\p{L}\p{N}]))?`;
-  const UNITE_SEULE = String.raw`(?:${alternatives(Object.keys(D.unites).filter((u) => u.length > 1))})(?![\p{L}\p{N}])`;
-  const TERME = String.raw`(?:${NOMBRE}|${UNITE_SEULE}|(?:\d+[  ])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
-  const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
+  function enregistrer(regle) {
+    if (!regle || typeof regle.id !== "string" || (typeof regle.trouver !== "function" && typeof regle.mettreEnForme !== "function")) {
+      console.warn("Symboles : regle ignoree (id et trouver() ou mettreEnForme() attendus)", regle);
+      return;
+    }
+    const r = { rang: 5, matieres: null, ...regle };
+    (r.mettreEnForme ? formes : reconnaisseurs).push(r);
+    if (demarre) annoter(document.body);
+  }
+  // Raccourci pour une extension faite de donnees seules : { abreviation: sens }, reconnue comme mot
+  // entier (« l'ONU » compte : l'apostrophe devant est admise), sensible a la casse.
+  function dictionnaire({ id, matieres = null, rang = 4, classe = "abreviation", entrees = {} }) {
+    const cles = Object.keys(entrees).filter((k) => k && entrees[k]);
+    if (!cles.length) return;
+    const motif = motifDe(cles);
+    enregistrer({
+      id, matieres, rang,
+      trouver(texte) {
+        const trouves = [];
+        parcourir(motif, texte, (mot, i) => {
+          const fin = i + mot.length;
+          if (i > 0 && /[\p{L}\p{N}_]/u.test(texte[i - 1])) return;
+          if (fin < texte.length && /[\p{L}\p{N}_]/u.test(texte[fin])) return;
+          trouves.push({ debut: i, fin, sens: `${mot} : ${entrees[mot]}`, classe });
+        });
+        return trouves;
+      },
+    });
+  }
+  const actives = (regles, matiere) => regles.filter((r) => !matiere || !r.matieres || r.matieres.includes(matiere));
 
-  const contextes = new WeakMap(); // element -> { variables, abreviations, motifVariables, motifAbreviations }
+  // Lettres des formules de la notion : dans une formule, ou dans une phrase si ce n'est pas un mot.
+  enregistrer({
+    id: "notion-lettres", rang: 0,
+    trouver(texte, ctx) {
+      if (!ctx.motifVariables) return [];
+      const trouves = [];
+      parcourir(ctx.motifVariables, texte, (mot, i) => {
+        if (!isole(texte, i, i + mot.length)) return;
+        if (/\d/.test(avant(texte, i - 1))) return; // « 5 m/s », « 10 m » : une unite
+        if (mot.length === 1 && ["en", "des", "par"].includes(motAvant(texte, i))) return; // « en m »
+        const voisin = OPERATEURS.includes(avant(texte, i - 1)) || OPERATEURS.includes(apres(texte, i + mot.length));
+        if (ctx.formule || voisin || !LETTRES_MOTS.has(mot)) {
+          trouves.push({ debut: i, fin: i + mot.length, sens: `${mot} : ${ctx.variables[mot]}`, classe: "variable" });
+        }
+      });
+      return trouves;
+    },
+  });
+  // Abreviations propres a la notion (champ `abreviations` de sa fiche visuelle).
+  enregistrer({
+    id: "notion-abreviations", rang: 1,
+    trouver(texte, ctx) {
+      if (!ctx.motifAbreviations) return [];
+      const trouves = [];
+      parcourir(ctx.motifAbreviations, texte, (mot, i) => {
+        if (isole(texte, i, i + mot.length)) trouves.push({ debut: i, fin: i + mot.length, sens: `${mot} : ${ctx.abreviations[mot]}`, classe: "abreviation" });
+      });
+      return trouves;
+    },
+  });
+  const motifSymboles = motifDe(Object.keys(SYMBOLES));
+  enregistrer({
+    id: "symboles", rang: 5,
+    trouver(texte) {
+      const trouves = [];
+      parcourir(motifSymboles, texte, (mot, i) => {
+        if (mot === "°" && !/\d/.test(avant(texte, i - 1))) return; // « n° 31 » n'est pas un degre
+        trouves.push({ debut: i, fin: i + mot.length, sens: `${mot} : ${SYMBOLES[mot]}` });
+      });
+      return trouves;
+    },
+  });
+
+  // --- contexte d'une zone de la page ---------------------------------------------------------------
+  const contextes = new WeakMap(); // element -> { matiere, variables, abreviations, motifVariables, motifAbreviations }
 
   function exclu(el) {
     for (let e = el; e && e.nodeType === 1; e = e.parentNode) {
@@ -50,194 +180,85 @@ const Symboles = (() => {
     return false;
   }
 
-  function contexteDe(el) {
-    for (let e = el; e && e.nodeType === 1; e = e.parentNode) if (contextes.has(e)) return contextes.get(e);
-    return null;
+  function contexteDe(parent) {
+    let base = {};
+    for (let e = parent; e && e.nodeType === 1; e = e.parentNode) if (contextes.has(e)) { base = contextes.get(e); break; }
+    const zone = parent.closest ? parent.closest(ZONE_FORMULE) : null;
+    return { ...base, formule: Boolean(zone), zone };
   }
 
-  const dansFormule = (el) => Boolean(el.closest && el.closest(ZONE_FORMULE));
-  const avant = (texte, i) => { while (i >= 0 && texte[i] === " ") i--; return i >= 0 ? texte[i] : ""; };
-  const apres = (texte, j) => { while (j < texte.length && texte[j] === " ") j++; return j < texte.length ? texte[j] : ""; };
-  // « watts (W) » : le mot devant une lettre entre parentheses dit ce qu'elle est.
-  const sansAccent = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-  function motDevantParenthese(texte, debut, fin) {
-    if (texte[debut - 1] !== "(" || texte[fin] !== ")") return "";
-    return sansAccent(texte.slice(0, debut - 1).trimEnd().split(/\s+/).pop() || "");
-  }
-  const designe = (mot, sens) => mot && sansAccent(sens).split(/[\s(,]/)[0].replace(/s$/, "") === mot.replace(/s$/, "");
-  const isole = (texte, debut, fin) => !(debut > 0 && COLLE.test(texte[debut - 1])) && !(fin < texte.length && COLLE.test(texte[fin]));
-
-  // --- composition d'une espece chimique -------------------------------------------------------
-  const chiffres = (s, table) => Number([...s].map((c) => table.indexOf(c)).join("")) || 1;
-  const elision = (nom) => (/^[aeiouyéèêh]/i.test(nom) ? `d'${nom}` : `de ${nom}`);
-
-  function composition(formule) {
-    const corps = formule.replace(/[⁰-⁹⁺⁻¹²³]+$/u, "").replace(/[⁺⁻]$/, "");
-    const compte = new Map();
-    const lire = (morceau, facteur) => {
-      for (const m of morceau.matchAll(/\(([^)]+)\)([₀-₉]*)|([A-Z][a-z]?)([₀-₉]*)/gu)) {
-        if (m[1]) lire(m[1], facteur * (m[2] ? chiffres(m[2], INDICES) : 1));
-        else compte.set(m[3], (compte.get(m[3]) || 0) + facteur * (m[4] ? chiffres(m[4], INDICES) : 1));
+  function appliquer(regles, fonction, texte, ctx, rangDefaut) {
+    const resultats = [];
+    for (const r of actives(regles, ctx.matiere)) {
+      let trouves = [];
+      try {
+        trouves = r[fonction](texte, ctx, outils) || [];
+      } catch (err) {
+        console.warn(`Symboles : la regle ${r.id} a echoue`, err);
       }
-    };
-    lire(corps, 1);
-    if ([...compte.keys()].some((s) => !D.elements[s])) return null;
-    return [...compte].map(([s, n]) => `${n} atome${n > 1 ? "s" : ""} ${elision(D.elements[s])}`).join(", ");
-  }
-
-  function charge(formule) {
-    const m = formule.match(/([⁰¹²³⁴⁵⁶⁷⁸⁹]*)([⁺⁻])$/u);
-    if (!m) return "";
-    const n = m[1] ? chiffres(m[1], EXPOSANTS) : 1;
-    return `${n} charge${n > 1 ? "s" : ""} ${m[2] === "⁺" ? "positive" : "négative"}${n > 1 ? "s" : ""}`;
-  }
-
-  function sensChimique(formule) {
-    const nom = D.especes[formule];
-    const compo = composition(formule);
-    if (!compo) return null;
-    const parties = compo.split(", ");
-    const ion = /[⁺⁻]$/.test(formule);
-    // Un seul atome sans charge : c'est un element, traite a part.
-    if (!nom && !ion && parties.length === 1 && parties[0].startsWith("1 ")) return null;
-    const detail = [compo, ion ? charge(formule) : ""].filter(Boolean).join(" ; ");
-    return nom ? `${nom} : ${detail}` : `${ion ? "ion" : "molécule"} : ${detail}`;
-  }
-
-  // --- reperage des rappels dans un texte ------------------------------------------------------
-  function candidats(texte, parent) {
-    const ctx = contexteDe(parent);
-    const formule = dansFormule(parent);
-    const trouves = [];
-    const ajouter = (debut, mot, sens, classe, rang) => trouves.push({ debut, fin: debut + mot.length, mot, sens, classe, rang });
-    const parcourir = (motif, faire) => {
-      motif.lastIndex = 0;
-      for (let m = motif.exec(texte); m; m = motif.exec(texte)) faire(m[0], m.index);
-    };
-
-    if (ctx && ctx.motifVariables) {
-      parcourir(ctx.motifVariables, (mot, i) => {
-        if (!isole(texte, i, i + mot.length)) return;
-        if (/\d/.test(avant(texte, i - 1))) return; // « 5 m/s », « 10 m » : une unite, pas une lettre
-        const motAvant = texte.slice(0, i).trimEnd().split(/\s+/).pop();
-        if (D.unites[mot] && ["en", "des", "par"].includes(motAvant)) return; // « en m » : des metres
-        // Dans une phrase aussi (« vérifie que m est en kg »), sauf les lettres qui sont des mots.
-        const voisin = OPERATEURS.includes(avant(texte, i - 1)) || OPERATEURS.includes(apres(texte, i + mot.length));
-        if (formule || voisin || !LETTRES_MOTS.has(mot)) ajouter(i, mot, `${mot} : ${ctx.variables[mot]}`, "variable", 0);
-      });
-    }
-    if (ctx && ctx.motifAbreviations) {
-      parcourir(ctx.motifAbreviations, (mot, i) => {
-        if (isole(texte, i, i + mot.length)) ajouter(i, mot, `${mot} : ${ctx.abreviations[mot]}`, "abreviation", 1);
-      });
-    }
-    parcourir(motifChimie, (mot, i) => {
-      if (mot.startsWith("(") || !isole(texte, i, i + mot.length)) return;
-      const multiple = /[₀-₉⁺⁻]/u.test(mot) || D.especes[mot] || (mot.match(/[A-Z]/g) || []).length > 1 && /[a-z]/.test(mot);
-      if (!multiple) return;
-      const sens = sensChimique(mot);
-      if (sens) ajouter(i, mot, `${mot} : ${sens}`, "chimie", 2);
-    });
-    parcourir(motifUnites, (mot, i) => {
-      const fin = i + mot.length;
-      if ((i > 0 && /[\p{L}_'’]/u.test(texte[i - 1])) || (fin < texte.length && COLLE.test(texte[fin]))) return;
-      const courte = mot.length === 1 || D.elements[mot]; // « m », « N », « Pa » : il faut un nombre ou « en »
-      const precede = avant(texte, i - 1);
-      const motAvant = texte.slice(0, i).trimEnd().split(/\s+/).pop();
-      const nomme = designe(motDevantParenthese(texte, i, fin), D.unites[mot]); // « watts (W) »
-      if (courte && !/\d/.test(precede) && !nomme && !["en", "des", "les", "par"].includes(motAvant)) return;
-      // Dans une formule, « mg » fait de lettres de la formule (m × g) n'est pas une unite.
-      if (formule && !/\d/.test(precede) && ctx && [...mot].every((c) => ctx.variables[c] || !/\p{L}/u.test(c))) return;
-      ajouter(i, mot, `${mot} : ${D.unites[mot]}`, "unite", 3);
-    });
-    parcourir(/[A-Z][a-z]?/gu, (mot, i) => {
-      const nom = D.elements[mot];
-      if (!nom || !isole(texte, i, i + mot.length)) return;
-      if (mot.length === 1 || AMBIGUS.has(mot)) {
-        // « watts (W) » : c'est l'unite, pas le tungstene.
-        if (D.unites[mot] && designe(motDevantParenthese(texte, i, i + mot.length), D.unites[mot])) return;
-        // Jamais suivi d'un mot : « Au début » et « Si tu » ne sont ni de l'or ni du silicium.
-        if (/\p{L}/u.test(apres(texte, i + mot.length))) return;
-        const precedent = avant(texte, i - 1);
-        const zone = formule && parent.closest(ZONE_FORMULE);
-        const equationChimique = Boolean(zone && /[₀-₉→]/u.test(zone.textContent));
-        if (mot.length === 1) {
-          // Une lettre seule (O, C, N...) : dans une equation chimique, ou dans une liste hors formule.
-          if (formule ? !equationChimique : !precedent || !"(,;:/+".includes(precedent)) return;
-        } else if (precedent && !"(,;:/+→".includes(precedent)) {
-          return;
+      for (const t of trouves) {
+        if (Number.isInteger(t.debut) && Number.isInteger(t.fin) && t.debut >= 0 && t.fin <= texte.length && t.fin > t.debut) {
+          resultats.push({ ...t, rang: r.rang ?? rangDefaut, formule: Boolean(r.formule) });
         }
       }
-      ajouter(i, mot, `${mot} : ${nom} (élément chimique)`, "chimie", 4);
-    });
-    parcourir(motifSymboles, (mot, i) => {
-      if (mot === "°" && !/\d/.test(avant(texte, i - 1))) return; // « n° 31 » n'est pas un degre
-      ajouter(i, mot, `${mot} : ${D.symboles[mot]}`, "", 5);
-    });
-
+    }
     // Au meme endroit, la lecture la plus longue l'emporte (« m/s » plutot que « m »), puis le rang.
-    trouves.sort((a, b) => a.debut - b.debut || b.fin - a.fin || a.rang - b.rang);
+    resultats.sort((a, b) => a.debut - b.debut || b.fin - a.fin || a.rang - b.rang);
     const retenus = [];
-    for (const t of trouves) {
+    for (const t of resultats) {
       const dernier = retenus[retenus.length - 1];
       if (!dernier || t.debut >= dernier.fin) retenus.push(t);
     }
     return retenus;
   }
 
-  function bulle(t) {
+  function bulle(texte, t) {
     const abbr = document.createElement("abbr");
-    abbr.className = `symbole ${t.classe}`.trim();
-    abbr.textContent = t.mot;
+    abbr.className = `symbole ${t.classe || ""}`.trim();
+    abbr.textContent = texte.slice(t.debut, t.fin);
     abbr.dataset.nom = t.sens;
     abbr.setAttribute("aria-label", t.sens);
     abbr.tabIndex = 0;
     return abbr;
   }
 
-  function remplacer(noeud, morceaux) {
+  function decouper(noeud, texte, retenus, fabriquer) {
+    const morceaux = [];
+    let pos = 0;
+    for (const t of retenus) {
+      if (t.debut > pos) morceaux.push(document.createTextNode(texte.slice(pos, t.debut)));
+      morceaux.push(fabriquer(t));
+      pos = t.fin;
+    }
+    if (pos < texte.length) morceaux.push(document.createTextNode(texte.slice(pos)));
     const fragment = document.createDocumentFragment();
     morceaux.forEach((m) => fragment.appendChild(m));
     noeud.parentNode.replaceChild(fragment, noeud);
+    return morceaux;
   }
 
   function annoterTexte(noeud) {
     const parent = noeud.parentNode;
     if (!parent) return;
     const texte = noeud.nodeValue;
-    // 1. Les formules ecrites dans le texte passent en gras ; leur contenu est annote ensuite.
-    if (!dansFormule(parent)) {
-      const morceaux = [];
-      let pos = 0;
-      motifFormule.lastIndex = 0;
-      for (let m = motifFormule.exec(texte); m; m = motifFormule.exec(texte)) {
-        if (!/[=→≈≤≥<>]/.test(m[0])) continue;
-        if (m.index > pos) morceaux.push(document.createTextNode(texte.slice(pos, m.index)));
-        const span = document.createElement("span");
-        span.className = "formule-texte";
-        span.textContent = m[0];
-        morceaux.push(span);
-        pos = m.index + m[0].length;
-      }
-      if (morceaux.length) {
-        if (pos < texte.length) morceaux.push(document.createTextNode(texte.slice(pos)));
-        remplacer(noeud, morceaux);
+    const ctx = contexteDe(parent);
+    // 1. Mises en forme (formules du texte en gras...) ; leur contenu est annote ensuite.
+    if (!(parent.closest && parent.closest(ZONE_FORME))) {
+      const zones = appliquer(formes, "mettreEnForme", texte, ctx, 5);
+      if (zones.length) {
+        const morceaux = decouper(noeud, texte, zones, (t) => {
+          const span = document.createElement("span");
+          span.className = `rappel-forme ${t.formule ? "rappel-formule " : ""}${t.classe || ""}`.trim();
+          span.textContent = texte.slice(t.debut, t.fin);
+          return span;
+        });
         morceaux.forEach((m) => annoter(m));
         return;
       }
     }
-    // 2. Les rappels : une bulle par mot reconnu.
-    const trouves = candidats(texte, parent);
-    if (!trouves.length) return;
-    const morceaux = [];
-    let pos = 0;
-    for (const t of trouves) {
-      if (t.debut > pos) morceaux.push(document.createTextNode(texte.slice(pos, t.debut)));
-      morceaux.push(bulle(t));
-      pos = t.fin;
-    }
-    if (pos < texte.length) morceaux.push(document.createTextNode(texte.slice(pos)));
-    remplacer(noeud, morceaux);
+    // 2. Les bulles.
+    const retenus = appliquer(reconnaisseurs, "trouver", texte, ctx, 5);
+    if (retenus.length) decouper(noeud, texte, retenus, (t) => bulle(texte, t));
   }
 
   function annoter(racine) {
@@ -255,23 +276,20 @@ const Symboles = (() => {
     noeuds.forEach(annoterTexte);
   }
 
-  // Rappels propres a une notion dans une zone : les anciens sont retires, puis la zone est relue.
-  function contexte(racine, { variables = {}, abreviations = {} } = {}) {
+  // Contexte d'une zone (la fiche, la discussion...) : matiere et rappels propres a la notion. Tout
+  // est relu : un rappel propre a la notion prime sur un rappel commun (« ua » de la fiche).
+  function contexte(racine, { matiere = null, variables = {}, abreviations = {} } = {}) {
     if (!racine) return;
-    // Tout est relu : un rappel propre a la notion prime sur un rappel commun (« ua » de la fiche).
     for (const a of racine.querySelectorAll("abbr.symbole")) a.replaceWith(document.createTextNode(a.textContent));
+    for (const s of racine.querySelectorAll(".rappel-forme")) s.replaceWith(document.createTextNode(s.textContent));
     racine.normalize();
     const cles = (d) => Object.keys(d || {}).filter((k) => k && d[k]);
     const cv = cles(variables), ca = cles(abreviations);
-    if (cv.length || ca.length) {
-      contextes.set(racine, {
-        variables, abreviations,
-        motifVariables: cv.length ? motifDe(cv) : null,
-        motifAbreviations: ca.length ? motifDe(ca) : null,
-      });
-    } else {
-      contextes.delete(racine);
-    }
+    contextes.set(racine, {
+      matiere, variables, abreviations,
+      motifVariables: cv.length ? motifDe(cv) : null,
+      motifAbreviations: ca.length ? motifDe(ca) : null,
+    });
     annoter(racine);
   }
 
@@ -288,7 +306,7 @@ const Symboles = (() => {
     if (demande === demandeNotion) contexte(racine, rappels);
   }
 
-  // --- la bulle : une seule pour la page, placee par le script, toujours dans l'ecran ----------
+  // --- la bulle : une seule pour la page, placee par le script, toujours dans l'ecran --------------
   let bulleAffichee = null, abbrCourant = null;
   function montrer(abbr) {
     abbrCourant = abbr;
@@ -318,7 +336,10 @@ const Symboles = (() => {
   }
   const cible = (e) => (e.target.closest ? e.target.closest("abbr.symbole") : null);
 
+  // Demarrage une fois toute la page lue : les extensions (/rappels.js) sont alors enregistrees.
   function demarrer() {
+    if (demarre) return;
+    demarre = true;
     document.addEventListener("mouseover", (e) => { const a = cible(e); if (a) montrer(a); });
     document.addEventListener("mouseout", (e) => { if (cible(e)) cacher(); });
     document.addEventListener("focusin", (e) => { const a = cible(e); if (a) montrer(a); else cacher(); });
@@ -333,9 +354,9 @@ const Symboles = (() => {
       }
     }).observe(document.body, { childList: true, subtree: true, characterData: true });
   }
+  if (document.readyState === "loading") addEventListener("DOMContentLoaded", demarrer);
+  else setTimeout(demarrer, 0);
 
-  if (document.body) demarrer();
-  else addEventListener("DOMContentLoaded", demarrer);
   const variables = (racine, dictionnaire) => contexte(racine, { variables: dictionnaire });
-  return { annoter, contexte, variables, notion, sensChimique };
+  return { enregistrer, dictionnaire, annoter, contexte, variables, notion, outils };
 })();

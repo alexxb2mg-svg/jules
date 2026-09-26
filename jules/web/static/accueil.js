@@ -84,7 +84,7 @@
       marquerNotionActive();
       // Rappels au survol propres a la notion (lettres, abreviations : symboles.js), fiche et bulles.
       if (typeof Symboles !== "undefined") {
-        const rappels = { variables: fiche.variables, abreviations: fiche.abreviations };
+        const rappels = { matiere: fiche.matiere, variables: fiche.variables, abreviations: fiche.abreviations };
         Symboles.contexte($("fiche"), rappels);
         Symboles.contexte($("bulles"), rappels);
       }

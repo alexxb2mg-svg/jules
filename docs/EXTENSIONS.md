@@ -50,7 +50,7 @@ extensions:
 Absente ou vide, cette clé signifie : aucune extension externe. C'est la même logique que pour
 les modules (`modules:` dans `config.yaml`).
 
-## Figures, outils et modules (branchés aux étapes 2 et 3)
+## Figures, rappels, outils et modules (branchés aux étapes 2 et 3)
 
 **Figures.** Une extension qui fournit des figures met leur code dans un seul fichier,
 `extensions/<id>/gabarit.js`, qui enregistre chaque figure de `fournit.figures` dans
@@ -63,6 +63,37 @@ est écartée. Le cœur en tire deux choses, sans connaître aucune figure par s
 - la page d'accueil charge un seul script, `/gabarits.js`, qui met bout à bout les `gabarit.js`
   des extensions actives (dans l'ordre de `extensions:`). Ajouter une figure = ajouter une
   extension et l'activer, sans toucher à `accueil.html`.
+
+**Rappels (bulles au survol).** Sur toutes les pages, ce qui est abrégé ou symbolique montre ce
+qu'il veut dire dans une petite bulle (souris, toucher, clavier). Le cœur,
+`jules/web/static/symboles.js`, ne connaît aucune règle de matière : il parcourt le texte affiché,
+tient le contexte de la notion (matière, lettres des formules et abréviations de sa fiche
+visuelle) et affiche les bulles. Les règles viennent des extensions qui déclarent
+`fournit: rappels: [<ids des règles>]` et mettent leur code dans `extensions/<id>/rappels.js`
+(même premier filtre que `gabarit.js`). La page charge un seul script, `/rappels.js`, qui met bout à
+bout les `rappels.js` des extensions actives, juste après le cœur. Deux façons d'écrire une règle :
+
+```js
+// Des données seules : une abréviation par ligne, reconnue comme mot entier.
+Symboles.dictionnaire({ id: "grammaire", matieres: ["francais"], entrees: { COD: "complément d'objet direct" } });
+
+// Une règle : un texte en entrée, les passages à expliquer en sortie.
+Symboles.enregistrer({
+  id: "siecles", matieres: ["histoire", "geographie", "emc"], rang: 2,   // rang petit = prioritaire
+  trouver(texte, ctx, outils) { return [{ debut, fin, sens: "XIXe : le 19e siècle : de 1801 à 1900" }]; },
+});
+// Ou une mise en forme (formules du texte en gras) : mettreEnForme(texte, ctx, outils) -> [{debut, fin, classe}].
+```
+
+`matieres` limite la règle aux notions de ces matières (identifiants du référentiel) ; quand la
+matière est inconnue (discussion sans notion), toutes les règles s'appliquent. `ctx` donne la
+matière, les lettres et abréviations de la notion, et dit si le texte est dans une formule ;
+`outils` offre les aides communes (mot isolé, mot avant, mot devant une parenthèse...). Quand
+deux règles reconnaissent le même endroit, la lecture la plus longue l'emporte, puis le rang.
+Extensions livrées : `rappels-sciences` (unités, chimie, formules en gras), `rappels-histoire`
+(siècles, numéros de règne, av. J.-C., sigles d'histoire-géographie et d'EMC), `rappels-francais`
+(abréviations de grammaire). Ajouter les règles d'une matière = ajouter une extension et
+l'activer dans `extensions:`, sans toucher au cœur ni aux pages.
 
 **Outils.** Un outil fourni garde exactement le format de `docs/OUTILS-CONTRAT.md`
 (`outil.yaml` + `index.html`, `.js`, `.css`), vérifié et servi de la même façon, sous
