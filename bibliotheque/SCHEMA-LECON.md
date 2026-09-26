@@ -143,10 +143,11 @@ C'est le bloc le plus riche. Trois formes possibles : `nombre`, `reponse_courte`
 
 Jules ne génère jamais ce résumé à la place de l'élève (règle 2 du contrat).
 
-### `outil` — réservé pour plus tard (étape 3)
+### `outil` — un outil isolé dans la leçon
 
-Le format est accepté dès maintenant, mais l'outil n'est pas encore branché : il s'affiche
-« à venir » à l'élève.
+L'outil s'ouvre dans une iframe isolée (voir `docs/OUTILS-CONTRAT.md`, « Page hôte ») et reçoit
+l'`action` avec ses `donnees`. Si le module `outils` n'est pas actif dans `config.yaml` ou que
+l'outil est inconnu, le bloc s'affiche « à venir » à l'élève.
 
 ```yaml
 - type: outil

@@ -115,8 +115,59 @@ assumées :
    photo — l'outil ne reçoit que ce que la leçon lui transmet, cf. §4).
 2. C'est donc à la **page hôte** de se protéger : vérifier `event.source === iframe.contentWindow`
    (jamais se fier à `event.origin`, qui vaudra `"null"`), puis valider strictement le schéma
-   avant d'utiliser `donnees`. Ce sera la responsabilité du code d'intégration (`cours.js`,
-   à l'étape suivante) — documenté ici pour que l'intégrateur ne l'oublie pas.
+   avant d'utiliser `donnees`. C'est fait par `jules/web/static/outils-hote.js`
+   (`OutilsHote.monter`, `OutilsHote.filtrer`), seul fichier de la page qui crée une iframe
+   d'outil ; `cours.js` l'appelle pour chaque bloc `outil` d'une leçon (EX-009,
+   `docs/spec/ADAPTATIONS.md`). Vérifié par `tests/test_outils_hote.py`, dont un essai dans un
+   vrai navigateur servi par un vrai serveur Jules.
+
+### Page hôte (`jules/web/static/outils-hote.js`)
+
+- Crée l'iframe avec `sandbox="allow-scripts"` (jamais `allow-same-origin`),
+  `referrerpolicy="no-referrer"`, `src="/api/eleve/outils/<id>/"`.
+- Un message reçu n'est transmis que si : `event.source === iframe.contentWindow` (l'iframe de
+  CET outil, pas une autre iframe de la page ni la page elle-même), c'est un objet de
+  `type: "evenement"`, et l'`evenement` est déclaré dans la fiche de l'outil (`evenements` de
+  `Outil.publique()`). Un `donnees` qui n'est pas un objet est ramené à `{}`. Tout le reste est
+  ignoré sans erreur.
+- N'envoie à l'outil que les actions déclarées dans sa fiche (`actions`), une fois l'iframe
+  chargée pour l'action du bloc de leçon.
+- Répond à chaque `{"type": "pret"}` de son iframe par `{"type": "adaptations", "leviers": ...}`
+  (voir « Adaptations » ci-dessous).
+- L'outil est démonté (écouteur retiré, iframe supprimée) quand l'élève change de leçon ou
+  revient au parcours.
+- Si le module `outils` n'est pas actif ou que l'outil n'est pas au catalogue, le bloc reste
+  affiché « à venir », sans iframe.
+
+### Adaptations : poignée de main page hôte ↔ outil
+
+Exigences EX-001 à EX-003 de `docs/spec/ADAPTATIONS.md`. La page hôte ne peut pas injecter de
+CSS dans l'iframe (origine opaque) : c'est l'outil qui applique lui-même les leviers
+d'adaptation de l'élève, qu'il reçoit par message.
+
+1. L'outil charge avec son contenu masqué (`<body hidden>` dans son `index.html`) et envoie
+   `{"type": "pret"}` à `window.parent`.
+2. La page hôte, après avoir vérifié `event.source === iframe.contentWindow`, répond
+   `{"type": "adaptations", "leviers": {...}}`. Elle répond à **chaque** `pret` reçu de son
+   iframe, pas seulement au premier : si l'iframe se recharge (même `contentWindow`), l'outil
+   refait la poignée de main et reçoit de nouveau ses leviers. `leviers` est un dictionnaire
+   opaque pour la page hôte (`OutilsHote.monter(..., {leviers})`, `{}` par défaut) ; ses valeurs
+   relèvent du lot 2.
+3. L'outil n'accepte `adaptations` que si `event.source === window.parent` ; il applique les
+   leviers qu'il connaît, ignore sans erreur les leviers inconnus, puis affiche son contenu
+   (`data-adaptations="appliquees"` sur `<html>`).
+4. Sans réponse après **500 ms**, l'outil s'affiche avec les valeurs neutres
+   (`data-adaptations="neutres"`) et envoie `{"type": "adaptations-absentes"}` ; la page hôte le
+   transmet à `options.surAdaptationsAbsentes()` (même contrôle de source). Un `adaptations`
+   valide reçu **après** ce délai est quand même appliqué.
+5. La page hôte ignore tout `pret` ou `adaptations-absentes` dont la source n'est pas son iframe.
+
+Ces messages ne passent pas par `actions`/`evenements` de la fiche : ils font partie du contrat
+commun à tous les outils. Chaque outil de référence embarque sa copie du code (`poigneeDeMain`,
+`appliquerAdaptations`, table `LEVIERS`, vide pour l'instant), comme sa fonction `recu`.
+Vérifié par `tests/test_adaptations_poignee.py` dans un vrai navigateur (les trois outils de
+référence, réponse reçue, délai dépassé, réponse tardive, autre source des deux côtés, levier
+inconnu, rechargement de l'iframe).
 
 ## 3. Isolement technique
 
@@ -207,4 +258,4 @@ modules:
 | Service HTTP | `jules/modules/outils.py`, `jules/config.py` (ajout de `dossier_outils`), `tests/test_module_outils.py` |
 | Outils de référence | `outils/frise-chronologique/**`, `outils/calculatrice/**`, `outils/lexique/**` |
 | Exemple de configuration | `docs/exemples/config-outils.exemple.yaml` |
-| Intégration (étape suivante, hors périmètre ici) | `config.yaml` (activation), `jules/web/static/cours.js` (ouverture de l'iframe, écoute des évènements), `jules/lecons.py` (déjà prêt : le bloc `outil` est accepté depuis l'étape 2) |
+| Intégration | `jules/web/static/outils-hote.js` et `cours.js` (ouverture de l'iframe, filtre des messages : fait, EX-009), `jules/lecons.py` (déjà prêt : le bloc `outil` est accepté depuis l'étape 2) ; reste à faire : `config.yaml` (activation du module `outils`) |
