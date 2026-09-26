@@ -41,6 +41,7 @@ modules:
     reglages:
       bibliotheques:
         - fiches-visuelles-3e-experimentales   # experimentale, relecture Alex en cours
+        - fiches-visuelles-3e                  # depot jules-bibliotheques (bibliotheques_externes) : absente = ignoree
   - id: cours          # interface de lecon guidee, notion par notion (etape 2)
     reglages:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
