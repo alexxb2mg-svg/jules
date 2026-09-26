@@ -63,7 +63,7 @@ blocs:
   - id: exemple
     type: exemple
     situation: "M est sur [AB] et N sur [AC], avec (MN) parallèle à (BC). AM = 4 cm, AB = 10 cm, AN = 3 cm, BC = 7,5 cm."
-    calcul: "D'après Thalès : 4/10 = 3/AC = MN/7,5, donc AC = 3 × 10 / 4 = 7,5 cm et MN = 7,5 × 4 / 10 = 3 cm."
+    calcul: "D'après Thalès : 4/10 = 3/AC = MN/7,5, donc AC = 3 × 10 ÷ 4 = 7,5 cm et MN = 7,5 × 4 ÷ 10 = 3 cm."
     conclusion: "AC = 7,5 cm et MN = 3 cm."
     jules: "Repère d'abord le rapport dont tu connais les deux termes : 4/10, c'est ton point de départ."
 

@@ -1,4 +1,13 @@
 /* Jules - styles communes. Couleurs de la persona injectees par app.js (variables --p-*). */
+/* Polices livrees avec Jules (licence SIL OFL 1.1, voir static/polices/OFL-*.txt) : aucune requete vers
+   un service de polices en ligne, rien ne sort de la machine. Outfit pour les titres (ronde, chaleureuse),
+   Work Sans pour le texte (grand oeil, lettres ouvertes : lisible a l'ecran pour des enfants). */
+@font-face { font-family: "Outfit"; src: url("polices/Outfit-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("polices/Outfit-Bold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("polices/WorkSans-Regular.ttf") format("truetype"); font-weight: 400 500; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("polices/WorkSans-Bold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("polices/WorkSans-Italic.ttf") format("truetype"); font-style: italic; font-display: swap; }
+
 :root {
   --p-principale: #1F4E8C;
   --p-secondaire: #C8102E;
@@ -8,16 +17,20 @@
   --texte: #1E1446;
   --gris: #6B6880;
   --bord: #E4E1F0;
+  --police-texte: "Work Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --police-titre: "Outfit", "Work Sans", "Segoe UI", Roboto, Arial, sans-serif;
 }
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
 body {
-  font-family: "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 17px;
+  font-family: var(--police-texte);
+  font-size: 18px;
+  line-height: 1.55;
   color: var(--texte);
   background: var(--p-fond);
 }
 button { font: inherit; cursor: pointer; }
+h1, h2, h3, h4, .marque { font-family: var(--police-titre); letter-spacing: .005em; }
 .cache { display: none !important; }
 
 /* --- ecran de code --- */

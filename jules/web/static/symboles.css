@@ -1,0 +1,27 @@
+/* Jules - bulles de rappel au survol (voir symboles.js) : symboles et lettres des formules. */
+/* Un gras tres leger signale qu'une bulle existe, sans souligner ni alourdir le texte. Les polices de
+   Jules n'ont pas de graisse intermediaire : un fin contour du trait epaissit la lettre d'un tiers de pixel. */
+.symbole {
+  cursor: help; border-radius: 3px; text-decoration: none;
+  -webkit-text-stroke: .35px currentColor;
+}
+.symbole:hover, .symbole:focus { background: rgba(31, 78, 140, .10); outline: none; }
+.symbole:focus-visible { box-shadow: 0 0 0 2px rgba(31, 78, 140, .45); }
+
+/* Formule ecrite dans le texte (« P = m × g ») : en gras, pour la distinguer des phrases. */
+.formule-texte { font-weight: 700; color: inherit; }
+
+/* Une seule bulle pour la page, placee par le script (jamais hors de l'ecran). */
+.symboles-bulle {
+  position: absolute; top: 0; left: 0; z-index: 60; pointer-events: none;
+  width: max-content; max-width: min(300px, calc(100vw - 16px));
+  background: #14243B; color: #FFFFFF; border-radius: 9px; padding: 7px 12px;
+  font: 500 15px/1.35 var(--police-texte, "Segoe UI", Roboto, Arial, sans-serif);
+  font-style: normal; letter-spacing: normal; text-transform: none; text-align: left;
+  box-shadow: 0 6px 18px rgba(20, 36, 59, .25);
+  opacity: 0; visibility: hidden; transition: opacity .12s, visibility .12s;
+}
+.symboles-bulle.visible { opacity: 1; visibility: visible; }
+@media (prefers-reduced-motion: reduce) {
+  .symboles-bulle { transition: none; }
+}

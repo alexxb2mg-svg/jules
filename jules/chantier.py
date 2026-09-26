@@ -11,6 +11,8 @@
       regles. Le meme paquet pour tout le monde : c'est lui qui normalise les contributions.
 
 La filiere complete (reserver, generer, verifier, proposer) est decrite dans docs/CHANTIER.md.
+Fiches visuelles : `jules chantier visuel` et `jules chantier apercu`
+(jules/chantier_visuel.py, charte : docs/FICHES-VISUELLES.md).
 """
 
 from __future__ import annotations
@@ -403,6 +405,11 @@ def _ecrire(texte: str, sortie: str | None) -> None:
 
 
 def main(args: list[str], racines: Racines) -> None:
+    if args and args[0] in ("visuel", "apercu"):  # le patron des fiches visuelles : jules/chantier_visuel.py
+        from jules import chantier_visuel
+
+        (chantier_visuel.main_visuel if args[0] == "visuel" else chantier_visuel.main_apercu)(args[1:], racines)
+        return
     if not args or args[0] not in ("etat", "paquet"):
         print(__doc__)
         return

@@ -146,6 +146,13 @@ class FicheVisuelle:
     relecture: str = "a_relire"
     blocs: list[BlocFiche] = field(default_factory=list)
     avertissement: str = ""
+    variables: dict[str, str] = field(default_factory=dict)
+    abreviations: dict[str, str] = field(default_factory=dict)
+
+    def toutes_les_variables(self) -> dict[str, str]:
+        """Le sens des lettres de grandeur de la notion (champ `variables:`), rappele au survol sur
+        toutes les pages. Seules les lettres declarees : jamais un symbole chimique ni une unite."""
+        return dict(self.variables)
 
     def publique(self, attendus: list[str]) -> dict[str, Any]:
         blocs: list[dict[str, Any]] = []
@@ -164,18 +171,110 @@ class FicheVisuelle:
             "avertissement": self.avertissement,
             "sources": self.sources,
             "blocs": blocs,
+            "variables": self.toutes_les_variables(),
+            "abreviations": dict(self.abreviations),
         }
 
 
 # --- verifications de contenu -------------------------------------------------------
 
 
-def _texte(valeur: Any, champ: str, ou: str, limite: int = LIMITE_TEXTE, obligatoire: bool = True) -> str:
+_ACCENT = re.compile(r"\*\*(.+?)\*\*")
+ACCENTS_MAX = 4  # notions cles par champ
+LIMITE_ACCENT = 40  # caracteres par notion cle
+PART_ACCENT_MAX = 0.6  # au plus 60 % du texte mis en valeur : sinon plus rien ne ressort
+
+
+def texte_sans_accents(texte: str) -> str:
+    """Le texte tel que l'eleve le lit, sans les marques ** des notions cles."""
+    return _ACCENT.sub(r"\1", texte)
+
+
+def _verifier_accents(v: str, champ: str, ou: str) -> str:
+    """Notions cles marquees **ainsi** : peu nombreuses, courtes, bien fermees. Renvoie le texte sans marques."""
+    segments = _ACCENT.findall(v)
+    lisible = texte_sans_accents(v)
+    if "**" in _ACCENT.sub("", v):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : marque ** non fermee")
+    if len(segments) > ACCENTS_MAX:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : {len(segments)} notions cles, max {ACCENTS_MAX}")
+    for seg in segments:
+        if seg != seg.strip() or len(seg) > LIMITE_ACCENT:
+            raise ErreurFicheVisuelle(
+                f"{ou} : champ {champ!r} : notion cle {seg!r} (sans espace au bord, {LIMITE_ACCENT} caracteres max)"
+            )
+    if segments and sum(len(x) for x in segments) > PART_ACCENT_MAX * len(lisible):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : trop de texte mis en valeur (60 % au plus)")
+    return lisible
+
+
+# Nom d'une grandeur dans une formule : une lettre (latine ou grecque), suivie au plus de 3 lettres,
+# chiffres ou indices (v, Ec, ρ, V₁, Epp). La bulle de la page rappelle son sens au survol.
+NOM_VARIABLE = re.compile(r"^[A-Za-zΑ-Ωα-ωµ][A-Za-z0-9₀-₉]{0,3}$")
+VARIABLES_MAX = 12
+LIMITE_VARIABLE = 120
+
+
+def _verifier_variables(brut: Any, nom: str) -> dict[str, str]:
+    if brut is None:
+        return {}
+    if not isinstance(brut, dict) or len(brut) > VARIABLES_MAX:
+        raise ErreurFicheVisuelle(f"{nom} : 'variables' doit etre un objet de {VARIABLES_MAX} lettres au plus")
+    variables: dict[str, str] = {}
+    for lettre, sens in brut.items():
+        lettre = str(lettre)
+        if not NOM_VARIABLE.match(lettre):
+            raise ErreurFicheVisuelle(f"{nom} : variable {lettre!r} : une lettre, puis 3 lettres, chiffres ou indices")
+        variables[lettre] = _texte(sens, f"variables.{lettre}", nom, limite=LIMITE_VARIABLE)
+    return variables
+
+
+# Division : l'eleve de college ecrit « ÷ » ; la barre « / » n'est permise que dans une unite collee
+# (m/s, g/cm³). Une barre entouree d'espaces (« m / V ») est refusee partout, schemas compris.
+_BARRE_DE_DIVISION = re.compile(r"\S\s+/\s+\S")
+
+
+def _verifier_division(texte: str, champ: str, ou: str) -> None:
+    if _BARRE_DE_DIVISION.search(texte):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
+
+
+# Abreviation propre a la notion (ua, URSS, av. J.-C.) : rappelee au survol partout ou elle apparait.
+ABREVIATION = re.compile(r"^\S(?:.{0,14}\S)?$")
+ABREVIATIONS_MAX = 20
+
+
+def _verifier_abreviations(brut: Any, nom: str) -> dict[str, str]:
+    if brut is None:
+        return {}
+    if not isinstance(brut, dict) or len(brut) > ABREVIATIONS_MAX:
+        raise ErreurFicheVisuelle(f"{nom} : 'abreviations' doit etre un objet de {ABREVIATIONS_MAX} entrees au plus")
+    abreviations: dict[str, str] = {}
+    for mot, sens in brut.items():
+        mot = str(mot)
+        if not ABREVIATION.match(mot) or "**" in mot:
+            raise ErreurFicheVisuelle(f"{nom} : abreviation {mot!r} : 1 a 16 caracteres, sans espace au bord")
+        abreviations[mot] = _texte(sens, f"abreviations.{mot}", nom, limite=LIMITE_VARIABLE)
+    return abreviations
+
+
+def _texte(
+    valeur: Any, champ: str, ou: str, limite: int = LIMITE_TEXTE, obligatoire: bool = True, riche: bool = False
+) -> str:
+    """Un champ texte. `riche` : l'affichage met en valeur les notions cles marquees **ainsi** ;
+    ailleurs (identifiants, titres de carte...) la marque est refusee, elle s'afficherait telle quelle."""
     v = str(valeur or "").strip()
     if obligatoire and not v:
         raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} manquant")
-    if len(v) > limite:
-        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} trop long ({len(v)} caracteres, max {limite})")
+    _verifier_division(v, champ, ou)
+    if riche:
+        lisible = _verifier_accents(v, champ, ou)
+    elif "**" in v:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : pas de mise en valeur ** dans ce champ")
+    else:
+        lisible = v
+    if len(lisible) > limite:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} trop long ({len(lisible)} caracteres, max {limite})")
     return v
 
 
@@ -183,9 +282,13 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
     texte = str(valeur or "").strip()
     if not texte:
         return ""
-    if len(texte) > LIMITE_JULES:
-        raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' trop long ({len(texte)} caracteres, max {LIMITE_JULES})")
-    phrases = [p for p in re.split(r"[.!?]+", texte) if p.strip()]
+    _verifier_division(texte, "jules", ou)
+    lisible = _verifier_accents(texte, "jules", ou)
+    if len(lisible) > LIMITE_JULES:
+        raise ErreurFicheVisuelle(
+            f"{ou} : commentaire 'jules' trop long ({len(lisible)} caracteres, max {LIMITE_JULES})"
+        )
+    phrases = [p for p in re.split(r"[.!?]+", lisible) if p.strip()]
     if not 1 <= len(phrases) <= 3:
         raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' doit tenir en 1 a 3 phrases (trouve {len(phrases)})")
     return texte
@@ -245,7 +348,7 @@ def _verifier_lectures(lectures: Any, noms_curseurs: set[str], ou: str) -> list[
                 raise ErreurFicheVisuelle(
                     f"{sous_ou} : variable {variable!r} inconnue (curseurs : {sorted(noms_curseurs)})"
                 )
-        texte = _texte(lecture.get("texte"), "texte", sous_ou)
+        texte = _texte(lecture.get("texte"), "texte", sous_ou, riche=True)
         resultat.append({"si": condition, "texte": texte})
     return resultat
 
@@ -272,7 +375,9 @@ def _verifier_formule(d: dict[str, Any], ou: str) -> dict[str, Any]:
             raise ErreurFicheVisuelle(f"{ou}, terme {lettre!r} : un objet est attendu")
         termes[str(lettre)] = {
             "couleur": _texte(info.get("couleur"), "couleur", f"{ou}, terme {lettre}", limite=20),
-            "legende": _texte(info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE),
+            "legende": _texte(
+                info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE, riche=True
+            ),
         }
     return {"expression": expression, "termes": termes}
 
@@ -330,23 +435,25 @@ def _verifier_methode(d: dict[str, Any], ou: str) -> dict[str, Any]:
     etapes_brutes = d.get("etapes") or []
     if not isinstance(etapes_brutes, list) or not 2 <= len(etapes_brutes) <= LIMITE_ETAPES:
         raise ErreurFicheVisuelle(f"{ou} : entre 2 et {LIMITE_ETAPES} etapes attendues")
-    etapes = [_texte(e, "etape", f"{ou}, etape {i + 1}", limite=LIMITE_TEXTE) for i, e in enumerate(etapes_brutes)]
+    etapes = [
+        _texte(e, "etape", f"{ou}, etape {i + 1}", limite=LIMITE_TEXTE, riche=True) for i, e in enumerate(etapes_brutes)
+    ]
     return {"etapes": etapes}
 
 
 def _verifier_piege(d: dict[str, Any], ou: str) -> dict[str, Any]:
     return {
-        "mauvaise_idee": _texte(d.get("mauvaise_idee"), "mauvaise_idee", ou),
-        "pourquoi_faux": _texte(d.get("pourquoi_faux"), "pourquoi_faux", ou),
-        "bonne_idee": _texte(d.get("bonne_idee"), "bonne_idee", ou),
+        "mauvaise_idee": _texte(d.get("mauvaise_idee"), "mauvaise_idee", ou, riche=True),
+        "pourquoi_faux": _texte(d.get("pourquoi_faux"), "pourquoi_faux", ou, riche=True),
+        "bonne_idee": _texte(d.get("bonne_idee"), "bonne_idee", ou, riche=True),
     }
 
 
 def _verifier_exemple(d: dict[str, Any], ou: str, gabarits: frozenset[str]) -> dict[str, Any]:
     resultat: dict[str, Any] = {
-        "situation": _texte(d.get("situation"), "situation", ou, limite=400),
-        "calcul": _texte(d.get("calcul"), "calcul", ou, limite=400, obligatoire=False),
-        "conclusion": _texte(d.get("conclusion"), "conclusion", ou, limite=400),
+        "situation": _texte(d.get("situation"), "situation", ou, limite=400, riche=True),
+        "calcul": _texte(d.get("calcul"), "calcul", ou, limite=400, obligatoire=False, riche=True),
+        "conclusion": _texte(d.get("conclusion"), "conclusion", ou, limite=400, riche=True),
     }
     if d.get("figure"):
         if not isinstance(d["figure"], dict):
@@ -404,6 +511,8 @@ def _verifier_schema(d: dict[str, Any], ou: str, dossier_fiche: Path) -> dict[st
         source_svg = fichier.read_text(encoding="utf-8")
     try:
         propre = nettoyer_svg(source_svg, ou=ou)
+        for texte_svg in re.findall(r">([^<]+)<", propre):
+            _verifier_division(texte_svg, "svg", ou)
     except ErreurSvg as err:
         raise ErreurFicheVisuelle(str(err)) from err
     return {"titre": titre, "svg": propre}
@@ -469,6 +578,7 @@ def lire_fiche_visuelle(
     if notion is None:
         raise ErreurFicheVisuelle(f"{nom} : notion {identifiant!r} inconnue du referentiel")
     titre = str(brut.get("titre") or "").strip() or notion.titre
+    _verifier_division(titre, "titre", nom)
     licence = str(brut.get("licence") or bibliotheque.licence)
     if licence not in LICENCES_LIBRES:
         raise ErreurFicheVisuelle(f"{nom} : licence {licence!r} non libre ou inconnue")
@@ -502,6 +612,8 @@ def lire_fiche_visuelle(
         relecture=relecture,
         blocs=blocs,
         avertissement=bibliotheque.avertissement,
+        variables=_verifier_variables(brut.get("variables"), nom),
+        abreviations=_verifier_abreviations(brut.get("abreviations"), nom),
     )
 
 

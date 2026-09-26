@@ -216,6 +216,8 @@
   }
 
   function afficherSupport() {
+    // Rappel au survol du sens des lettres de la notion du support (symboles.js).
+    if (typeof Symboles !== "undefined") Symboles.notion(document.body, etat.support && etat.support.notion);
     const support = etat.support;
     $("accueil-studio").classList.add("cache");
     $("support").classList.remove("cache");

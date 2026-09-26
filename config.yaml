@@ -41,6 +41,7 @@ modules:
     reglages:
       bibliotheques:
         - fiches-visuelles-3e-experimentales   # experimentale, relecture Alex en cours
+        - fiches-visuelles-3e                  # depot jules-bibliotheques (bibliotheques_externes) : absente = ignoree
   - id: cours          # interface de lecon guidee, notion par notion (etape 2)
     reglages:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
@@ -108,3 +109,6 @@ extensions:
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
+  - rappels-sciences          # bulles de rappel au survol (fournit.rappels) : unites, chimie, formules
+  - rappels-histoire          # siecles, dates, sigles d'histoire-geographie et d'EMC
+  - rappels-francais          # abreviations de grammaire

@@ -123,7 +123,16 @@ def test_permission_non_booleenne_refusee(tmp_path):
 
 def test_toutes_les_cles_du_contrat_sont_couvertes():
     """Documente le contrat : ces ensembles sont ceux de docs/EXTENSIONS.md."""
-    attendu_fournit = {"modules", "moteurs", "notifieurs", "outils", "figures", "types_de_blocs", "bibliotheques"}
+    attendu_fournit = {
+        "modules",
+        "moteurs",
+        "notifieurs",
+        "outils",
+        "figures",
+        "rappels",
+        "types_de_blocs",
+        "bibliotheques",
+    }
     attendu_permissions = {"reseau", "appel_ia", "ecriture_dossier_eleve", "notification_parent"}
     assert attendu_fournit == CLES_FOURNIT
     assert attendu_permissions == CLES_PERMISSIONS

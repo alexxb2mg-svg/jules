@@ -25,6 +25,7 @@ from jules.web.app import creer_app
 RACINE = Path(__file__).resolve().parents[1]
 FIGURES = {"droite-affine", "triangle-thales", "triangle-rectangle", "equation-solutions", "probabilites-frequences"}
 OUTILS = {"calculatrice", "frise-chronologique", "lexique"}
+RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais"}
 
 MANIFESTE = """\
 id: {id}
@@ -52,10 +53,11 @@ def creer(
 # --- les extensions du depot, telles qu'activees dans config.yaml --------------------
 
 
-def test_config_active_les_cinq_figures_et_les_trois_outils():
+def test_config_active_les_cinq_figures_les_trois_outils_et_les_rappels():
     ids = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))["extensions"]
     extensions = charger_extensions(RACINE / "extensions", ids)
-    assert set(extensions) == FIGURES | OUTILS  # aucune ecartee
+    assert set(extensions) == FIGURES | OUTILS | RAPPELS  # aucune ecartee
+    assert {e.id for e in extensions.values() if e.fournit_liste("rappels")} == RAPPELS
     assert set(figures_fournies(extensions)) == FIGURES
     dossiers = dossiers_outils(extensions)
     assert {d.name for d in dossiers} == OUTILS

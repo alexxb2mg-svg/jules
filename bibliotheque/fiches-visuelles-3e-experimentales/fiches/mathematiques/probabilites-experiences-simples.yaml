@@ -15,7 +15,7 @@ relecture: {statut: a_relire}
 blocs:
   - id: formule
     type: formule
-    expression: "P(A) = [favorables] / [total]"
+    expression: "P(A) = [favorables] ÷ [total]"
     termes:
       favorables: {couleur: vert, legende: "nombre d'issues qui réalisent l'événement A"}
       total: {couleur: bleu, legende: "nombre total d'issues possibles (équiprobables)"}
@@ -50,7 +50,7 @@ blocs:
     etapes:
       - "Lister ou compter toutes les issues possibles, et vérifier qu'elles sont équiprobables."
       - "Compter les issues qui réalisent l'événement demandé."
-      - "Écrire P(A) = issues favorables / issues totales, sous forme de fraction simplifiée."
+      - "Écrire P(A) = issues favorables ÷ issues totales, sous forme de fraction simplifiée."
       - "Vérifier que le résultat est bien compris entre 0 et 1."
     jules: "L'étape 1 est la plus importante : une erreur de comptage fausse tout le reste."
 

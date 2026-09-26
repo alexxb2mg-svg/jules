@@ -155,3 +155,12 @@ def test_gabarits_ne_font_jamais_appel_a_eval():
         ]
         js = "\n".join(lignes_code)
         assert not re.search(r"\beval\s*\(", js), fichier.name
+
+
+def test_rappels_d_une_notion_pour_toutes_les_pages(client_fiches):
+    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/fonctions-lineaires-affines/rappels")
+    assert r.status_code == 200 and set(r.json()) == {"matiere", "variables", "abreviations"}
+    assert r.json()["matiere"] == "mathematiques"  # choisit les regles des extensions de rappels
+    # Une notion sans fiche visuelle : sa matiere, rien d'autre, pas d'erreur (la page ne sait pas d'avance).
+    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/racine-carree/rappels")
+    assert r.status_code == 200 and r.json() == {"matiere": "mathematiques", "variables": {}, "abreviations": {}}

@@ -33,6 +33,12 @@ l'affichage, à partir des `attendus` du référentiel officiel pour cette `noti
 types se déclarent dans `blocs:`, chacun avec un `id` unique (minuscules, chiffres, tirets) et un
 `jules:` optionnel (1 à 3 phrases, 320 caractères max).
 
+Une fiche visuelle est une **fiche de révision** : elle donne les réponses et les explique. Le
+`jules:` d'un bloc (la bulle affichée quand l'élève clique dessus) est un **complément
+d'explication** (le pourquoi, ce qu'il faut retenir, une confusion fréquente, un moyen de s'en
+souvenir), jamais une question laissée ouverte. La règle « ne jamais donner la réponse » vaut
+pour les exercices, pas pour les fiches ni pour les cartes mentales.
+
 | type | champs | limites |
 |---|---|---|
 | `formule` | `expression`, `termes: {lettre: {couleur, legende}}` | expression ≤ 80 car., légende ≤ 160 car. |
@@ -43,6 +49,39 @@ types se déclarent dans `blocs:`, chacun avec un `id` unique (minuscules, chiff
 | `exemple` | `situation`, `calcul?`, `conclusion`, `figure?: {gabarit, curseurs}` | chaque champ ≤ 400 car. |
 | `renfort` | `liens: [{icone?, titre, description?, outil?}]` | 1 à 6 liens |
 | `schema` | `titre`, `svg` (SVG en ligne ou nom d'un fichier `.svg` à côté de la fiche) | titre ≤ 90 car. ; le SVG est nettoyé par liste blanche avant d'être servi (voir plus bas) |
+
+### Notions clés : `**ainsi**`
+
+Dans le texte courant d'une fiche (légendes de `formule`, étapes de `methode`, les trois champs
+de `piege`, `situation`/`calcul`/`conclusion` d'`exemple`, `lectures` d'un `graphe`, et `jules:`),
+une notion clé s'écrit entre doubles astérisques : `la **masse** se conserve`. L'affichage la met en
+gras avec un léger coup de surligneur, pour qu'elle se détache des mots de liaison. On marque les
+notions, grandeurs, unités et lois qui portent le sens, jamais les mots d'articulation (sauf s'ils
+sont eux-mêmes la clé, comme « **en série** » / « **en dérivation** »).
+
+Contrôlé par le code : au plus 4 notions clés par champ, 40 caractères chacune, sans espace au
+bord, au plus 60 % du texte mis en valeur, marques bien fermées ; les limites de longueur se
+comptent sans les `**`. Ailleurs (titres, carte, identifiants) la marque est refusée : elle
+s'afficherait telle quelle.
+
+### Le sens des lettres : `variables:`
+
+Champ de premier niveau, facultatif : `variables: {v: "la vitesse, en m/s ou en km/h", d: "la distance
+parcourue, en m ou en km"}`. Chaque lettre de grandeur des formules et calculs de la fiche y reçoit une
+définition courte ; l'élève la retrouve en survolant la lettre dans une formule, sur toutes les pages de
+Jules (fiche, discussion, entraînement, cours de la notion). Nom : une lettre latine ou grecque suivie
+d'au plus 3 lettres, chiffres ou indices (`v`, `Ec`, `ρ`, `U1`, `V₁`) ; 12 lettres au plus ; 120
+caractères par définition. Seules les lettres déclarées ont une bulle : jamais les symboles chimiques
+(H, O, CO₂) ni les unités. Même principe pour `abreviations:` (`{ua: "unité astronomique", URSS: "Union des républiques
+socialistes soviétiques"}`, 20 au plus, 1 à 16 caractères) : une abréviation propre à la notion,
+rappelée au survol partout où elle apparaît. Les deux sont servis par
+`GET /api/eleve/fiches_visuelles/notions/<id>/rappels`.
+
+Ce qui est commun à tout le programme n'a rien à déclarer : symboles (`<`, `≤`, `≈`, `√`, `→`...),
+unités (`s`, `kg`, `N`, `km/h`...), éléments et espèces chimiques (`Fe`, `CO₂`, `Cu²⁺`...) ont leur
+bulle sur toutes les pages grâce au cœur `jules/web/static/symboles.js` et aux extensions de la
+famille `rappels` (règles par matière, voir `docs/EXTENSIONS.md`). Les formules écrites dans
+le texte (« P = m × g ») passent seules en gras. Seul le texte des schémas SVG n'est pas concerné.
 
 ### Le bloc `schema`
 

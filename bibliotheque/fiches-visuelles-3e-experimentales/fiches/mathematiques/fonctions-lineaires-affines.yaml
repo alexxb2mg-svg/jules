@@ -50,7 +50,7 @@ blocs:
     etapes:
       - "Lire b : là où la droite coupe l'axe vertical."
       - "Lire a : avancer de 1 vers la droite, compter de combien on monte (ou descend)."
-      - "Avec deux points A et B : a = (yB − yA) / (xB − xA), puis retrouver b en remplaçant un point dans y = ax + b."
+      - "Avec deux points A et B : a = (yB − yA) ÷ (xB − xA), puis retrouver b en remplaçant un point dans y = ax + b."
     jules: "L'étape 2 est celle qu'on oublie le plus : on avance de 1, pas de 2 ou de 3."
 
   - id: piege
@@ -65,7 +65,7 @@ blocs:
     situation: "Un cinéma propose un abonnement à 20 € par an et la séance à 5 € ; sans abonnement, la séance coûte 8 €."
     calcul: "Sans abonnement (linéaire) : S(n) = 8n. Avec abonnement (affine) : A(n) = 5n + 20. Pour 7 séances : S(7) = 56 €, A(7) = 55 €."
     conclusion: "À partir de 7 séances, l'abonnement coûte moins cher."
-    jules: "Avant de lire la réponse : combien paierais-tu pour 10 séances dans chaque cas ?"
+    jules: "Chaque séance avec abonnement coûte **3 € de moins** : les 20 € sont rattrapés au bout de 20 ÷ 3 ≈ 6,7 séances, donc dès la 7e. Pour 10 séances : 80 € sans, 70 € avec."
 
   - id: renfort
     type: renfort

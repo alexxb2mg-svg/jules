@@ -7,6 +7,7 @@
   jules rapport [JOUR]       affiche le rapport d'un jour (AAAA-MM-JJ), sans l'envoyer
   jules fiches verifier      controle les fiches v2 (contrat, index) ; `jules fiches signer DOSSIER` les scelle
   jules chantier ...         appel a contributions : etat des fiches a generer, paquets de generation
+                             (fiches visuelles : `jules chantier visuel` puis `jules chantier apercu`)
 
 Sans installation : `python lancer.py <commande>` depuis le dossier du projet.
 """

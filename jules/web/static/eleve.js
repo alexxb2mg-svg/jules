@@ -47,6 +47,8 @@
 
   function afficherNotion(notion) {
     etat.notion = notion;
+    // Rappel au survol du sens des lettres de la notion travaillee (symboles.js).
+    if (typeof Symboles !== "undefined") Symboles.notion(document.body, notion && notion.id);
     const b = $("pastille-notion");
     if (!catalogueNotions() || !etat.conv || etat.conv.mode === "epreuve" || etat.conv.mode === "exercice") { b.classList.add("cache"); return; }
     b.classList.remove("cache");

@@ -16,6 +16,7 @@ from jules.fiches_visuelles import (
     charger_fiches_visuelles,
     evaluer_condition,
     lire_fiche_visuelle,
+    texte_sans_accents,
 )
 
 RACINE = Path(__file__).resolve().parents[1]
@@ -222,6 +223,94 @@ def test_commentaire_jules_trop_de_phrases_refuse(tmp_path, notions, biblio):
     brut["blocs"][0]["jules"] = "Un. Deux. Trois. Quatre."
     with pytest.raises(ErreurFicheVisuelle, match="1 a 3 phrases"):
         lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def _bloc(brut: dict, type_: str) -> dict:
+    return next(b for b in brut["blocs"] if b["type"] == type_)
+
+
+def test_notions_cles_acceptees_et_comptees_sans_marques(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    methode = _bloc(brut, "methode")
+    methode["etapes"][0] = "Repérer le **coefficient directeur** a, puis l'**ordonnée à l'origine** b dans f(x)."
+    # 260 caracteres lisibles : les marques ** ne comptent pas dans la limite.
+    methode["etapes"][1] = "Le **" + "x" * 30 + "** " + "y" * 226
+    _bloc(brut, "piege")["bonne_idee"] = "Une **fonction affine** s'écrit f(x) = ax + b."
+    brut["blocs"][0]["jules"] = "Regarde d'abord le **signe** de a."
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    etapes = next(b for b in fiche.blocs if b.type == "methode").donnees["etapes"]
+    assert etapes[0].count("**") == 4  # le texte garde ses marques : l'affichage les met en valeur
+    assert len(texte_sans_accents(etapes[1])) == 260
+
+
+@pytest.mark.parametrize(
+    "texte, motif",
+    [
+        ("Une **notion non fermée.", "non fermee"),
+        ("**un** **deux** **trois** **quatre** **cinq** et la suite du texte bien longue ici.", "notions cles"),
+        ("Une ** notion** avec un espace.", "notion cle"),
+        ("Une **" + "n" * 41 + "** trop longue, suivie d'assez de texte pour le reste de la phrase ici.", "notion cle"),
+        ("**Presque tout est en gras ici** ou pas.", "60 %"),
+    ],
+)
+def test_notions_cles_mal_marquees_refusees(tmp_path, notions, biblio, texte, motif):
+    brut = copy.deepcopy(fiche_valide())
+    _bloc(brut, "methode")["etapes"][0] = texte
+    with pytest.raises(ErreurFicheVisuelle, match=motif):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_notion_cle_refusee_hors_texte_courant(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    _bloc(brut, "carte")["noeuds"][0]["titre"] = "**Fonction**"  # dessine en SVG : la marque resterait visible
+    with pytest.raises(ErreurFicheVisuelle, match="pas de mise en valeur"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_variables_declarees_servies_telles_quelles(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["variables"] = {"a": "le coefficient directeur", "b": "l'ordonnée à l'origine", "V₁": "un volume"}
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    assert fiche.toutes_les_variables() == brut["variables"]
+    assert fiche.publique([])["variables"] == brut["variables"]
+    # Sans champ : aucune lettre rappelee (jamais un symbole chimique ou une unite par deduction).
+    assert lire_fiche_visuelle(ecrire(tmp_path, fiche_valide()), notions, biblio, GABARITS).variables == {}
+
+
+def test_abreviations_propres_a_la_notion(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["abreviations"] = {"ua": "unité astronomique", "av. J.-C.": "avant Jésus-Christ"}
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    assert fiche.publique([])["abreviations"] == brut["abreviations"]
+    brut["abreviations"] = {" ua": "espace au bord"}
+    with pytest.raises(ErreurFicheVisuelle, match="abreviation"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+@pytest.mark.parametrize("variables", [{"2 H₂O": "eau"}, {"vitesse": "trop long comme nom"}, {"v": ""}, ["v"]])
+def test_variables_mal_formees_refusees(tmp_path, notions, biblio, variables):
+    brut = copy.deepcopy(fiche_valide())
+    brut["variables"] = variables
+    with pytest.raises(ErreurFicheVisuelle):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+@pytest.mark.parametrize(
+    "champ, texte",
+    [("titre", "La masse volumique : ρ = m / V"), ("etape", "Calculer a = (yB − yA) / (xB − xA).")],
+)
+def test_division_s_ecrit_avec_le_signe_de_l_eleve(tmp_path, notions, biblio, champ, texte):
+    brut = copy.deepcopy(fiche_valide())
+    if champ == "titre":
+        brut["titre"] = texte
+    else:
+        _bloc(brut, "methode")["etapes"][0] = texte
+    with pytest.raises(ErreurFicheVisuelle, match="÷"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    # Les unites gardent leur barre collee.
+    _bloc(brut, "methode")["etapes"][0] = "Convertir 36 km/h en m/s : 36 ÷ 3,6 = 10 m/s."
+    brut["titre"] = "Fonctions"
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
 
 
 def test_source_sans_licence_libre_refusee(tmp_path, notions, biblio):

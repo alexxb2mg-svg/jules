@@ -120,6 +120,8 @@
       etat.session = r.session;
       etat.conversation = r.conversation;
       etat.lecon = r.lecon;
+      // Rappel au survol du sens des lettres de la notion de la lecon (symboles.js).
+      if (typeof Symboles !== "undefined") Symboles.notion(document.body, notionId);
       etat.progression = r.progression;
       $("lecon-vide").classList.add("cache");
       $("lecon").classList.remove("cache");
