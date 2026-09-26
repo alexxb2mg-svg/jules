@@ -107,15 +107,20 @@ voulu par le cadrage du 25/09) et `#retour-eleve` de `parent.html` (EX-206).
 `#chat-flottant-reglages`.
 
 **EX-206 - Espace parent separe, sans fausse promesse.** L'entree « Espace parent » n'annonce une protection
-que si elle existe : l'etat vient de `GET /api/session` (deja appele par `MS.porte` dans `commun.js` sur chaque
-page ; le composant reutilise cette reponse, pas de second appel, cf. EX-210), jamais de la
-config. `parent: false` -> icone cadenas et « code parent » (texte ou `aria-label`). `parent: true` et
+que si elle existe : l'etat vient de `GET /api/session`, deja appele par `MS.porte` (`commun.js`) sur chaque
+page. **Modification de `commun.js` exigee** : `MS.porte` renvoie l'etat de session qu'il a lu (`etat` si
+l'acces est deja accorde, sinon le **nouvel** etat `nouvel` relu apres saisie du code, passe a `resoudre`) ; les
+appelants existants qui ignorent la valeur restent inchanges. Le composant utilise cette valeur : pas de second
+appel (EX-210), jamais de lecture de la config. `parent: false` -> icone cadenas et « code parent » (texte ou `aria-label`). `parent: true` et
 `role !== "parent"` (aucun code parent defini) -> ni cadenas ni « code », mention « non protégé ».
 `role === "parent"` -> sans cadenas. `/parent` n'affiche pas la barre eleve ; son unique lien de retour a l'id
 `retour-eleve`, le libelle « Retour à l'espace élève » et le href `/`. Plus aucune entree « Mon suivi ».
 *Verification (ajout)* : scenario section 6 avec les trois reponses de `/api/session` simulees par l'app de
 test (code defini non saisi, aucun code, parent connecte) : cadenas present dans le seul premier cas, « non
-protégé » dans le seul deuxieme. `/parent` sans `<nav aria-label="Sections de Jules">` ; `#retour-eleve` present ; aucun libelle
+protégé » dans le seul deuxieme. Cas porte : codes eleve et parent definis, session vide ; saisie du code eleve
+sur la porte, puis barre affichee -> cadenas present (`parent: false` du nouvel etat) ; meme scenario avec un
+code qui ouvre aussi le parent (`role: "parent"`) -> pas de cadenas. Test unitaire : `MS.porte` resout avec
+l'objet de session dans les deux branches (acces deja accorde, acces apres saisie). `/parent` sans `<nav aria-label="Sections de Jules">` ; `#retour-eleve` present ; aucun libelle
 « Mon suivi » dans les HTML ni dans le composant.
 
 **EX-207 - Tablette et telephone.** Sous 900 px de large, la barre devient un tiroir ouvert par un bouton ☰
@@ -163,6 +168,8 @@ reseau conformes a EX-210.
 `infos_interface`) ; test statique : le composant ne lit que `persona` et `prenom` dans les infos ; scenario
 section 6 : sur chaque page, l'ensemble des **chemins** `/api/...` appeles au chargement (parametres de requete
 ignores, `?matiere=` autorise) est identique avant et apres la carte, et chaque chemin n'est appele qu'une fois.
+Mesure faite session deja ouverte ; la sequence de la porte apres saisie d'un code (GET, POST, GET
+`/api/session`, inchangee) est hors de ce compte.
 
 **EX-211 - Titre d'onglet par page (audit TEC-02).** `document.title` = `<nom persona> - <libelle de l'entree
 active>` sur les 4 pages eleve (« Jules - Discuter avec Jules », « Jules - Mes leçons »...), et « Jules - Espace
@@ -177,14 +184,16 @@ que la matiere du selecteur (EX-209), groupee par `chapitre` (champ deja renvoye
 `aria-expanded`), replie par defaut sauf celui de la notion ouverte. Un champ « Chercher une fiche » filtre les
 titres de toutes les matieres (insensible a la casse et aux accents) sans appel reseau. Titres courts rediges
 pour l'eleve et marque « deja vue » : hors lot (section 7).
-*Verification* : scenario section 6 sur une app de test servant **196 notions sur 9 matieres** (jeu genere par
-le test) a 1280 x 800 : hauteur de la liste au chargement <= 1 200 px (mesure `scrollHeight`, audit : 16 167 px) ;
+*Verification* : scenario section 6 sur une app de test servant **196 notions sur 9 matieres, chacune avec sa
+fiche visuelle** (jeu genere par le test ; `liste()` ecarte les notions sans fiche) ; le test verifie d'abord
+que la reponse de `/api/eleve/fiches_visuelles/notions` compte 196 notions, puis a 1280 x 800 : hauteur de la liste au chargement <= 1 200 px (mesure `scrollHeight`, audit : 16 167 px) ;
 aucune notion d'une autre matiere visible ; recherche « thales » -> la notion « Théorème de Thalès » visible,
 compteur de resultats annonce (`aria-live`) ; aucun chemin `/api/...` nouveau (EX-210).
 
 **EX-213 - Telephone : Jules ne masque pas la fiche (audit NAV-05).** Sous 600 px de large, la bulle d'aide et
 le bouton J de `/` ne recouvrent aucun bloc de `#fiche` : ils sont places hors de la zone de lecture (bas de
-l'ecran, la fiche garde une marge basse equivalente) ou la bulle se ferme d'elle-meme apres affichage.
+l'ecran, la fiche garde une marge basse au moins egale a leur hauteur), a tout instant. Pas de solution par
+fermeture temporisee (test dependant du delai).
 Lisibilite du schema lui-meme : chantier fiches, hors lot.
 *Verification* : scenario section 6 a 390 x 844, apres ouverture d'une fiche et defilement jusqu'au schema :
 intersection nulle entre les `getBoundingClientRect()` de `#jules-bulles` / `#avatar-jules` et ceux des blocs
