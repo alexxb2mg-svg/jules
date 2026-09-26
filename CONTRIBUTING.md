@@ -28,6 +28,15 @@ Les tickets marqués **good first issue** sont prévus pour une première contri
 
 ## Contribuer sans coder
 
+### Générer des fiches avec une IA : l'appel à contributions
+
+Jules a besoin d'une fiche v2 (exercices corrigés par le code) pour chacune des 683 notions du programme.
+Choisissez une ou plusieurs notions sur le tableau de bord du dépôt
+[jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques), réservez-les par un ticket, puis
+`jules chantier paquet <notion>` vous donne le texte à coller dans l'IA de votre choix. Le vérificateur
+(`jules fiches verifier`) dit ce qui manque, un enseignant relit ensuite. Toute la filière :
+[docs/CHANTIER.md](docs/CHANTIER.md). Les fiches sont publiées sous licence CC BY-SA 4.0.
+
 ### Une fiche de cours
 
 Le programme officiel est décrit dans `bibliotheque/programme/` (quatre niveaux aujourd'hui : CM1, 5e, 4e, 3e), une matière par fichier, au format expliqué dans `bibliotheque/programme/SCHEMA.md`. Chaque notion a un identifiant et sa source officielle. Les fiches vont dans `bibliotheque/fiches-3e-experimentales/fiches/<matiere>/<notion>.yaml` (ou `bibliotheque/fiches-cm1-experimentales/` pour le CM1), au format décrit dans [`bibliotheque/README.md`](bibliotheque/README.md). Pour proposer une fiche sans toucher à git, ouvrez un ticket « Fiche de cours » en indiquant la notion. Vous pouvez y coller votre texte directement : un mainteneur s'occupe de le mettre au bon format.

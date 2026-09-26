@@ -78,7 +78,9 @@ relecture: {statut: a_relire, par: "", le: ""}
 generation:                              # facultatif : qui a écrit la fiche, et à partir de quoi
   par: "..."
   le: "2026-09-24"
+  modele: "..."                          # facultatif : l'IA qui a écrit la fiche
   a_partir_de: "..."
+  paquet: "fiche-v2/..."                 # facultatif : version du paquet de génération (docs/CHANTIER.md)
 empreinte: sha256:...                    # écrite par `jules fiches signer`, ne pas modifier à la main
 ```
 
@@ -156,10 +158,13 @@ anonymisation et sans l'accord explicite du parent.
 
 ## Où vivent les fiches
 
-Le contrat (ce document, `jules/fiches/`, les tests) vit dans ce dépôt. Les fiches elles-mêmes ont vocation
-à vivre dans un dépôt de bibliothèques à part, avec ses propres relecteurs (des enseignants plutôt que des
-développeurs) et une intégration continue qui lance `jules fiches verifier` sur chaque proposition. D'ici là,
-`bibliotheque/fiches-v2-demonstration/` contient deux fiches pour éprouver le format :
+Le contrat (ce document, `jules/fiches/`, les tests) vit dans ce dépôt. Les fiches produites par la communauté
+vivent dans un dépôt à part, [`jules-bibliotheques`](https://github.com/alexxb2mg-svg/jules-bibliotheques), avec
+ses propres relecteurs (des enseignants plutôt que des développeurs) et une intégration continue qui lance
+`jules fiches verifier` sur chaque proposition. Jules le charge par le réglage `bibliotheques_externes`.
+L'appel à contributions, le paquet de génération et le tableau de bord sont décrits dans
+[CHANTIER.md](CHANTIER.md). `bibliotheque/fiches-v2-demonstration/` garde ici deux fiches qui servent de
+référence au contrat et aux tests :
 
 | Fiche | Exercices corrigés sans IA | Types |
 |---|---|---|
@@ -178,7 +183,7 @@ les repères (dates, acteurs, camps, chronologie, vocabulaire), le développemen
   `type` autre que `ouverte` ; il transmet à la place une consigne (« corrigé par le code : tu n'as pas
   la solution »). Les indices, critères et relances des pièges continuent de passer, ils ne contiennent
   jamais la réponse par contrat.
-- Convertir les 252 fiches v1, matière par matière, avec la filière ci-dessus.
+- Écrire les fiches v2 des 683 notions du référentiel : appel à contributions ouvert, voir [CHANTIER.md](CHANTIER.md).
 - Lever les 28 collisions de déclencheurs déjà mesurées sur les fiches v1.
 - Mesurer la détection de notion sans IA sur des phrases d'élèves écrites **indépendamment** des
   déclencheurs (les mesures actuelles sont optimistes : phrases et déclencheurs ont été écrits ensemble).

@@ -74,3 +74,8 @@ profil: exemple
 #     reglages:
 #       token_env: JULES_TELEGRAM_TOKEN
 #       chat_id_env: JULES_TELEGRAM_CHAT_ID
+
+# 5. Fiches de la communaute (optionnel) : le depot jules-bibliotheques, clone a cote de Jules.
+#    git clone https://github.com/alexxb2mg-svg/jules-bibliotheques ../jules-bibliotheques
+#    Voir docs/CHANTIER.md. Chemin relatif au dossier de Jules, ou absolu.
+# bibliotheques_externes: ["../jules-bibliotheques"]

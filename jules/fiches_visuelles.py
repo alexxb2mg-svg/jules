@@ -36,6 +36,8 @@ from jules.bibliotheques import (
     Bibliotheque,
     ErreurBibliotheque,
     Notion,
+    Racines,
+    dossier_bibliotheque,
     lire_identite,
 )
 from jules.svg_sur import ErreurSvg, nettoyer_svg
@@ -504,7 +506,7 @@ def lire_fiche_visuelle(
 
 
 def charger_fiches_visuelles(
-    racine: Path, ids: list[str], notions: dict[str, Notion], gabarits: frozenset[str]
+    racine: Racines, ids: list[str], notions: dict[str, Notion], gabarits: frozenset[str]
 ) -> dict[str, FicheVisuelle]:
     """Fiches visuelles des bibliotheques citees, par ordre de priorite (une notion = une fiche).
 
@@ -516,7 +518,7 @@ def charger_fiches_visuelles(
     fiches: dict[str, FicheVisuelle] = {}
     for identifiant in ids:
         try:
-            biblio = lire_identite(racine / identifiant)
+            biblio = lire_identite(dossier_bibliotheque(racine, identifiant))
         except (ErreurBibliotheque, OSError, yaml.YAMLError) as err:
             journal.error("Bibliotheque de fiches visuelles %s ecartee : %s", identifiant, err)
             continue

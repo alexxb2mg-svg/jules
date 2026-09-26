@@ -45,6 +45,9 @@ modules:
 - **Directions** : elles s'additionnent (celle de la matière, puis celle de la notion). Jules les suit en priorité, sans jamais passer outre ses règles de pédagogie et de sécurité.
 - **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « CM1 », « cours moyen première année », « 3e », « 3ème », « troisième »...).
 - Une bibliothèque illisible est signalée dans le journal et ignorée : Jules continue sans elle.
+- **Dépôts externes** : `bibliotheques_externes: ["../jules-bibliotheques"]` dans `config.local.yaml` ajoute
+  des dossiers où chercher une bibliothèque, après `bibliotheque/`. C'est là que vivent les fiches v2 de la
+  communauté ([docs/CHANTIER.md](../docs/CHANTIER.md)).
 
 ## Format
 

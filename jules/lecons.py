@@ -28,6 +28,8 @@ from jules.bibliotheques import (
     Bibliotheque,
     ErreurBibliotheque,
     Notion,
+    Racines,
+    dossier_bibliotheque,
     lire_identite,
     normaliser,
 )
@@ -166,7 +168,7 @@ def lire_lecon(chemin: Path, notions: dict[str, Notion], bibliotheque: Bibliothe
     )
 
 
-def charger_lecons(racine: Path, ids: list[str], notions: dict[str, Notion]) -> dict[str, Lecon]:
+def charger_lecons(racine: Racines, ids: list[str], notions: dict[str, Notion]) -> dict[str, Lecon]:
     """Lecons des bibliotheques citees, par ordre de priorite (une notion = une lecon).
 
     Une lecon non conforme est signalee dans le journal et ecartee : Jules continue sans elle.
@@ -174,7 +176,7 @@ def charger_lecons(racine: Path, ids: list[str], notions: dict[str, Notion]) -> 
     lecons: dict[str, Lecon] = {}
     for identifiant in ids:
         try:
-            biblio = lire_identite(racine / identifiant)
+            biblio = lire_identite(dossier_bibliotheque(racine, identifiant))
         except (ErreurBibliotheque, OSError, yaml.YAMLError) as err:
             journal.error("Bibliotheque de lecons %s ecartee : %s", identifiant, err)
             continue

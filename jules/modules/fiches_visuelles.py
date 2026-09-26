@@ -47,7 +47,7 @@ class Brique(Module):
         if self._fiches is None:
             catalogue = self.notions_module.catalogue
             self._fiches = charger_fiches_visuelles(
-                self.tuteur.config.dossier_bibliotheques,
+                self.tuteur.config.dossiers_bibliotheques,
                 self.ids,
                 catalogue.notions,
                 frozenset(figures_fournies(self.tuteur.extensions)),

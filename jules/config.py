@@ -44,6 +44,8 @@ class Config:
     modules: list[RefBrique]
     notifieurs: list[RefBrique]
     extensions: list[str] = field(default_factory=list)  # ids actives (voir docs/EXTENSIONS.md)
+    # Depots de bibliotheques installes a cote du projet (ex. jules-bibliotheques), apres `bibliotheque/`.
+    bibliotheques_externes: list[Path] = field(default_factory=list)
 
     @property
     def dossier_consignes(self) -> Path:
@@ -52,6 +54,11 @@ class Config:
     @property
     def dossier_bibliotheques(self) -> Path:
         return self.racine / "bibliotheque"
+
+    @property
+    def dossiers_bibliotheques(self) -> list[Path]:
+        """Ou chercher une bibliotheque, par ordre de priorite : le projet, puis les depots externes."""
+        return [self.dossier_bibliotheques, *self.bibliotheques_externes]
 
     @property
     def dossier_outils(self) -> Path:
@@ -70,6 +77,11 @@ class Config:
         return self.racine / "profils" / f"{self.profil}.yaml"
 
 
+def _chemin(racine: Path, valeur: Any) -> Path:
+    chemin = Path(str(valeur)).expanduser()
+    return chemin if chemin.is_absolute() else racine / chemin
+
+
 def depuis_dict(brut: dict[str, Any], racine: Path) -> Config:
     serveur = brut.get("serveur") or {}
     donnees = Path(brut.get("donnees") or "donnees")
@@ -85,6 +97,7 @@ def depuis_dict(brut: dict[str, Any], racine: Path) -> Config:
         modules=[RefBrique.depuis(m) for m in brut.get("modules") or []],
         notifieurs=[RefBrique.depuis(n) for n in brut.get("notifieurs") or []],
         extensions=[str(e) for e in brut.get("extensions") or []],
+        bibliotheques_externes=[_chemin(racine, c) for c in brut.get("bibliotheques_externes") or []],
     )
 
 

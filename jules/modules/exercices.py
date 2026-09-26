@@ -27,6 +27,7 @@ from typing import Any
 import yaml
 from fastapi import APIRouter, HTTPException
 
+from jules.bibliotheques import dossier_bibliotheque
 from jules.fiches.correction import TYPES_AUTO
 from jules.fiches.parcours import Etat, choisir, presenter, repondre
 from jules.fiches.schema import est_v2, servable_sans_ia
@@ -92,9 +93,9 @@ class Brique(Module):
     def _charger(self) -> dict[str, dict[str, Any]]:
         notions = self.notions_catalogue.notions
         trouvees: dict[str, dict[str, Any]] = {}
-        racine = self.tuteur.config.dossier_bibliotheques
+        racines = self.tuteur.config.dossiers_bibliotheques
         for identifiant in self.ids:
-            dossier = racine / identifiant / "fiches"
+            dossier = dossier_bibliotheque(racines, identifiant) / "fiches"
             if not dossier.is_dir():
                 continue
             for chemin in sorted(dossier.rglob("*.yaml")):

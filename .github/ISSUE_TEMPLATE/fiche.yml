@@ -6,6 +6,8 @@ body:
     attributes:
       value: |
         Pas besoin de connaître git : collez votre fiche ci-dessous, un mainteneur la mettra au format.
+        Vous voulez générer des fiches v2 avec une IA ? L'appel à contributions est sur
+        [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) (voir docs/CHANTIER.md).
         Une bonne fiche : l'essentiel du cours, la méthode pas à pas, un exemple rédigé, deux ou trois exercices corrigés.
   - type: input
     id: matiere
@@ -37,5 +39,5 @@ body:
     attributes:
       label: Licence
       options:
-        - label: J'accepte que ce contenu soit publié sous la licence MIT du projet.
+        - label: J'accepte que ce contenu soit publié sous licence CC BY-SA 4.0, la licence des fiches (le code du projet est sous MIT).
           required: true

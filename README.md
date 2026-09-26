@@ -121,6 +121,8 @@ jules                      démarre le serveur
 jules verifier             charge toutes les briques et affiche le prompt assemblé
 jules code eleve|parent    définit un code d'accès (seule son empreinte est enregistrée)
 jules rapport [AAAA-MM-JJ] affiche le bilan d'un jour, sans l'envoyer
+jules fiches verifier      contrôle les fiches v2 (docs/FICHES-V2.md)
+jules chantier paquet ID   paquet de génération d'une fiche v2 pour une IA (docs/CHANTIER.md)
 ```
 
 ## Comment c'est construit
@@ -168,6 +170,8 @@ Des tests et un contrôle au moment du commit empêchent ces fichiers privés d'
 Signaler une faille : voir [SECURITY.md](SECURITY.md).
 
 ## Contribuer
+
+**Appel à contributions : les fiches du programme.** 683 notions attendent leur fiche d'exercices corrigés par le code. Prenez-en une ou plusieurs, générez-les avec l'IA de votre choix à partir d'un paquet commun, le vérificateur fait le reste : voir [docs/CHANTIER.md](docs/CHANTIER.md) et le tableau de bord de [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques).
 
 Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cours, outils pour une matière, réflexion sur les adaptations aux troubles dys, nouvelles personas, relecture pédagogique, tests avec de vrais élèves : toutes les aides comptent. Pas besoin de savoir coder pour écrire une fiche ou décrire un outil. Le guide est dans [CONTRIBUTING.md](CONTRIBUTING.md), le code de conduite dans [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
