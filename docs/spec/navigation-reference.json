@@ -1,0 +1,19 @@
+{
+  "_note": "Liste de reference de la barre laterale (EX-202). Ecrite par SPEC ; DEV ne la modifie pas. Entrees soumises a D2/D3 absentes tant que non tranchees.",
+  "rubriques": [
+    {"titre": "Apprendre", "entrees": [
+      {"libelle": "Mes fiches", "href": "/"},
+      {"libelle": "Mes lecons", "href": "/cours"}
+    ]},
+    {"titre": "M'entrainer", "entrees": [
+      {"libelle": "Exercices et supports", "href": "/studio"}
+    ]},
+    {"titre": "Discuter", "entrees": [
+      {"libelle": "Discuter avec Jules", "href": "/discuter"}
+    ]},
+    {"titre": "Mon espace", "entrees": [
+      {"libelle": "Espace parent", "href": "/parent"}
+    ]}
+  ],
+  "regles_comparaison": "libelles compares sans accents ni casse, emojis retires"
+}
