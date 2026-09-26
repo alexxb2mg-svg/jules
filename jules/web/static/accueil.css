@@ -85,8 +85,8 @@
 
 /* notions cles marquees **ainsi** dans le texte : gras + leger coup de surligneur */
 .cle {
-  font-weight: 700; color: inherit; padding: 0 .12em; border-radius: .2em;
-  background: linear-gradient(180deg, transparent 52%, rgba(255, 214, 102, .55) 52%);
+  font-weight: 700; color: inherit; padding: .05em .22em; border-radius: .3em;
+  background: rgba(255, 214, 102, .45);
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 .exemple-conclusion .cle { font-weight: 800; }
@@ -169,11 +169,14 @@
 .jules-bulles > * { pointer-events: auto; }
 .bulles-pile { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .bulle-jules {
-  background: rgba(255,255,255,0.82); backdrop-filter: blur(6px); border: 1px solid rgba(31,78,140,0.25);
+  background: rgba(255,255,255,0.97); backdrop-filter: blur(6px); border: 1px solid rgba(31,78,140,0.25);
   border-radius: 16px 16px 4px 16px; padding: 12px 15px; font-size: 16px; line-height: 1.5;
-  box-shadow: 0 4px 16px rgba(20,36,59,0.10); max-width: 100%; transition: opacity .6s;
+  box-shadow: 0 4px 16px rgba(20,36,59,0.12); max-width: 100%;
 }
-.bulle-jules.ancienne { opacity: .45; }
+.bulle-jules { cursor: pointer; animation: bulle-entree .2s ease-out; }
+.bulle-jules.sortie { opacity: 0; transform: translateY(6px); transition: opacity .35s, transform .35s; }
+@keyframes bulle-entree { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .bulle-jules { animation: none; } .bulle-jules.sortie { transition: none; } }
 .jules-pied { display: flex; justify-content: flex-end; }
 .avatar-jules {
   width: 50px; height: 50px; border-radius: 50%; background: var(--p-principale); color: #FFFFFF; border: none;

@@ -33,6 +33,12 @@ l'affichage, à partir des `attendus` du référentiel officiel pour cette `noti
 types se déclarent dans `blocs:`, chacun avec un `id` unique (minuscules, chiffres, tirets) et un
 `jules:` optionnel (1 à 3 phrases, 320 caractères max).
 
+Une fiche visuelle est une **fiche de révision** : elle donne les réponses et les explique. Le
+`jules:` d'un bloc (la bulle affichée quand l'élève clique dessus) est un **complément
+d'explication** (le pourquoi, ce qu'il faut retenir, une confusion fréquente, un moyen de s'en
+souvenir), jamais une question laissée ouverte. La règle « ne jamais donner la réponse » vaut
+pour les exercices, pas pour les fiches ni pour les cartes mentales.
+
 | type | champs | limites |
 |---|---|---|
 | `formule` | `expression`, `termes: {lettre: {couleur, legende}}` | expression ≤ 80 car., légende ≤ 160 car. |

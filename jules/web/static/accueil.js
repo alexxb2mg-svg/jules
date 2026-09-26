@@ -488,18 +488,32 @@
     MS.api("/api/seance/bloc_consulte", MS.json({ adresse, notion: etat.notionActive })).catch(() => {});
   }
 
+  // Une seule bulle a la fois : une nouvelle explication remplace la precedente. Elle reste le temps
+  // de la lire (plus longue si le texte est long, en pause tant que la souris est dessus), puis
+  // s'efface completement ; un clic la ferme tout de suite.
+  let minuterieBulle = null;
   function ajouterBulle(texte) {
     const pile = $("bulles");
+    clearTimeout(minuterieBulle);
+    pile.replaceChildren();
     const bulle = creerRiche("div", "bulle-jules", texte);
-    pile.querySelectorAll(".bulle-jules").forEach((b) => b.classList.add("ancienne"));
+    bulle.title = "Clique pour fermer";
     pile.appendChild(bulle);
-    while (pile.children.length > 2) pile.firstElementChild.remove();
-    // Une bulle ne reste pas indefiniment par-dessus le cours : elle s'efface d'elle-meme.
-    setTimeout(() => {
-      bulle.classList.add("ancienne");
-      setTimeout(() => bulle.remove(), 8000);
-    }, 12000);
+    const fermer = () => {
+      clearTimeout(minuterieBulle);
+      bulle.classList.add("sortie");
+      setTimeout(() => bulle.remove(), 400);
+    };
+    const armer = () => {
+      clearTimeout(minuterieBulle);
+      minuterieBulle = setTimeout(fermer, Math.min(20000, 6000 + 60 * String(texte).length));
+    };
+    bulle.addEventListener("click", fermer);
+    bulle.addEventListener("mouseenter", () => clearTimeout(minuterieBulle));
+    bulle.addEventListener("mouseleave", armer);
+    armer();
   }
+
 
   function fermerRail() {
     $("rail").classList.remove("ouvert");
@@ -525,7 +539,7 @@
     MS.signalerFinDeSeance();
     $("avatar-jules").addEventListener("click", () => basculerChat());
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));
-    ajouterBulle("Clique sur un bloc de la fiche : je te dirai à quoi faire attention.");
+    ajouterBulle("Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir.");
     await chargerNotions();
     if (etat.notions.length) ouvrirFiche(etat.notions[0].id);
   }
