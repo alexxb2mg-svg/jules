@@ -459,7 +459,14 @@ def texte_fiche(fiche: dict[str, Any], limite: int = 7000) -> str:
                     lignes.append(
                         f"   Si l'élève tombe dans un piège fréquent, relance : {str(piege['relance']).strip()}"
                     )
-            if ex.get("solution"):
+            corrige_par_le_code = (ex.get("type") is not None and ex["type"] != "ouverte") or isinstance(
+                ex.get("reponse"), dict
+            )
+            if corrige_par_le_code:
+                # Fiche v2, exercice ferme : le code corrige (jules/fiches/correction.py), le modele ne
+                # doit jamais voir la solution ni la reponse attendue, sous peine de la donner trop tot.
+                lignes.append("   (corrigé par le code : tu n'as pas la solution, aide l'élève à chercher)")
+            elif ex.get("solution"):
                 lignes.append(f"   Solution : {str(ex['solution']).strip()}")
         blocs.append("\n".join(lignes))
     texte = "\n\n".join(blocs)
