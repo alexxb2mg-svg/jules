@@ -116,7 +116,7 @@ TEXTES = [
         "anglais",
         {"matiere": "anglais"},
         "Le son /θ/ de think ; think se lit /θɪŋk/. Présent en -ing : sujet + BE + V-ing. "
-        "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg.",
+        "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg. Le -ed se dit /t/, /d/ ou /ɪd/.",
     ),
     ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
 ]
@@ -270,3 +270,4 @@ def test_anglais_phonetique_structures_et_niveaux(annotations):
     assert annotations["anglais"]["formules"] == ["sujet + BE + V-ing"]
     assert any(b.startswith("A2 : niveau A2 du CECRL") for b in bulles) and "sb : somebody : quelqu'un" in bulles
     assert not any(b.startswith("kg") or b.startswith("/05") for b in bulles)  # ni unites ni dates en anglais
+    assert {"/t/", "/d/", "/ɪd/"} <= {b.split(" : ")[0] for b in bulles}
