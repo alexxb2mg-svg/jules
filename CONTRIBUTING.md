@@ -30,7 +30,7 @@ Les tickets marqués **good first issue** sont prévus pour une première contri
 
 ### Une fiche de cours
 
-Le programme de 3e est décrit dans `bibliotheque/programme/3e/`, une matière par fichier, au format expliqué dans `bibliotheque/programme/SCHEMA.md`. Chaque notion a un identifiant et sa source officielle. Les fiches vont dans `bibliotheque/fiches-3e-experimentales/fiches/<matiere>/<notion>.yaml`, au format décrit dans [`bibliotheque/README.md`](bibliotheque/README.md). Pour proposer une fiche sans toucher à git, ouvrez un ticket « Fiche de cours » en indiquant la notion. Vous pouvez y coller votre texte directement : un mainteneur s'occupe de le mettre au bon format.
+Le programme officiel est décrit dans `bibliotheque/programme/` (quatre niveaux aujourd'hui : CM1, 5e, 4e, 3e), une matière par fichier, au format expliqué dans `bibliotheque/programme/SCHEMA.md`. Chaque notion a un identifiant et sa source officielle. Les fiches vont dans `bibliotheque/fiches-3e-experimentales/fiches/<matiere>/<notion>.yaml` (ou `bibliotheque/fiches-cm1-experimentales/` pour le CM1), au format décrit dans [`bibliotheque/README.md`](bibliotheque/README.md). Pour proposer une fiche sans toucher à git, ouvrez un ticket « Fiche de cours » en indiquant la notion. Vous pouvez y coller votre texte directement : un mainteneur s'occupe de le mettre au bon format.
 
 Une bonne fiche contient : l'essentiel du cours en quelques lignes, la méthode pas à pas, les erreurs fréquentes, un exemple rédigé et deux ou trois exercices avec indices et solution. Citez vos sources, avec leur licence : seuls les contenus libres sont acceptés (liste des sources vérifiées dans `bibliotheque/fiches-3e-experimentales/SOURCES.md`). Ne copiez pas un manuel protégé, même gratuit.
 
@@ -45,6 +45,10 @@ Une leçon fait suivre à l'élève un parcours guidé sur **une seule notion** 
 3. Vérifiez vos calculs et vos exercices vous-même avant de proposer la leçon : un contributeur qui écrit une leçon de mathématiques doit refaire les calculs, pas seulement les recopier d'une source.
 4. Citez vos sources (mêmes règles que pour une fiche : contenu libre uniquement, licence indiquée). Pour proposer une leçon sans toucher à git, ouvrez un ticket « Leçon » avec votre texte : un mainteneur la met au format YAML.
 5. `jules verifier` charge et valide les leçons de la bibliothèque configurée ; il signale le motif de chaque leçon écartée.
+
+### Un outil ou une extension
+
+Un outil (frise, calculatrice, lexique...) est une extension : un dossier dans `extensions/<id>/` avec un manifeste `extension.yaml`, décrit dans [docs/EXTENSIONS.md](docs/EXTENSIONS.md). Il tourne dans un espace isolé (iframe sandbox), sans accès au réseau ni aux données de l'élève : le contrat technique complet est dans [docs/OUTILS-CONTRAT.md](docs/OUTILS-CONTRAT.md). Pour proposer une idée d'outil sans écrire de code, ouvrez un ticket « Idée ».
 
 ### Une persona
 
