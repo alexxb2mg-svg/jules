@@ -26,7 +26,7 @@ def charger(dossier: Path, modele: str) -> list[dict]:
     f = dossier / f"{modele}.jsonl"
     if not f.is_file():
         return []
-    return [json.loads(l) for l in f.read_text(encoding="utf-8").splitlines() if l.strip()]
+    return [json.loads(ligne) for ligne in f.read_text(encoding="utf-8").splitlines() if ligne.strip()]
 
 
 def par_profil(rs: list[dict]) -> dict[str, float]:

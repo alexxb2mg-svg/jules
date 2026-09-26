@@ -9,7 +9,7 @@
  ],
  "limites": [
   "Un seul juge (Opus), calibré à la main sur 20 conversations. Sur 59 conversations, un écart de 5 points entre deux tours reste dans le bruit. Seules les tendances sur plusieurs indicateurs comptent.",
-  "L'élève est joué par une IA (Sonnet). Elle est plus régulière et plus coopérative qu'une vraie élève de 3e, et ne remplace pas un essai avec Ellie.",
+  "L'élève est joué par une IA (Sonnet). Elle est plus régulière et plus coopérative qu'une vraie élève de 3e, et ne remplace pas un essai réel.",
   "Les scénarios non critiques ne sont joués qu'une fois par tour. La variance d'une conversation à l'autre est forte : la même situation peut être notée de 3 à 8.",
   "Les temps de réponse sont mesurés via le CLI Claude Code. Avec l'API directe, ils seront plus courts."
  ],

@@ -136,7 +136,9 @@ def stats_modele(lignes: list[dict[str, Any]], soc: dict[str, int]) -> dict[str,
         "cout_moyen_conversation_usd": round(statistics.mean(couts), 4) if couts else None,
         "cout_par_echange_usd": round(statistics.mean(cout_par_tour), 5) if cout_par_tour else None,
         "cout_seance_20min_usd": round(statistics.mean(cout_par_tour) * 15, 3) if cout_par_tour else None,
-        "part_cout_par_role": {k: f"{100 * v / total_roles:.0f} %" for k, v in sorted(roles.items(), key=lambda x: -x[1])},
+        "part_cout_par_role": {
+            k: f"{100 * v / total_roles:.0f} %" for k, v in sorted(roles.items(), key=lambda x: -x[1])
+        },
         "appels_ia_par_echange": moyenne(appels_par_echange),
         "prompt_systeme_jules_car_moy": moyenne(jetons_sys),
     }

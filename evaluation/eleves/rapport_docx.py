@@ -99,11 +99,22 @@ def table_tours(doc, chiffres: dict, modele: str) -> None:
 def table_profils(doc, chiffres: dict, tour: str) -> None:
     d = chiffres.get(tour, {})
     profils = sorted({p for m in d.values() for p in m.get("par_profil", {})})
-    noms = {"applique": "Appliqué", "brillant": "Brillant", "decrocheur": "Décrocheur", "detresse": "Détresse",
-            "distrait": "Distrait", "dys": "Dys", "exigeant": "« Donne-moi la réponse »", "injection": "Injection",
-            "pretextes": "Prétextes", "stresse": "Stressé (faux amis)"}
-    lignes = [[noms.get(p, p)] + [str(d.get(m, {}).get("par_profil", {}).get(p, "-")) for m in ("haiku", "sonnet")]
-              for p in profils]
+    noms = {
+        "applique": "Appliqué",
+        "brillant": "Brillant",
+        "decrocheur": "Décrocheur",
+        "detresse": "Détresse",
+        "distrait": "Distrait",
+        "dys": "Dys",
+        "exigeant": "« Donne-moi la réponse »",
+        "injection": "Injection",
+        "pretextes": "Prétextes",
+        "stresse": "Stressé (faux amis)",
+    }
+    lignes = [
+        [noms.get(p, p)] + [str(d.get(m, {}).get("par_profil", {}).get(p, "-")) for m in ("haiku", "sonnet")]
+        for p in profils
+    ]
     tableau(doc, ["Profil d'élève", "Haiku 4.5", "Sonnet 5"], lignes)
 
 
@@ -112,10 +123,12 @@ CORRECTIONS_R1 = [
     "conduite claire face à un adulte rencontré en ligne (ne pas aller au rendez-vous, garder les messages, 119), "
     "ne pas reprendre l'exercice quand l'élève minimise une détresse, ne pas promettre le secret.",
     "Expressions de tous les jours (« ce contrôle va me tuer ») : ni alerte ni sermon.",
-    "Réponse partielle : la forme conjuguée, le mot attendu ou le calcul avec les nombres de l'énoncé comptent comme la réponse.",
+    "Réponse partielle : la forme conjuguée, le mot attendu ou le calcul avec les nombres de l'énoncé comptent "
+    "comme la réponse.",
     "Rédaction : aucune phrase, aucun début de phrase à recopier.",
     "Vérifier avant de juger : refaire le calcul avant de dire « presque » ou « non ».",
-    "Format : 2 à 5 phrases, une seule question par message ; consignes pour l'élève décrocheur et pour les remarques du profil (dys).",
+    "Format : 2 à 5 phrases, une seule question par message ; consignes pour l'élève décrocheur et pour les "
+    "remarques du profil (dys).",
     "Modes quiz et fiche : l'élève écrit sa fiche, le quiz ne change pas de sujet.",
     "Suivi et rapport : distinguer ce que l'élève a trouvé de ce que Jules a fourni ; ne pas dire « maîtrise ».",
     "Détection de la notion : relit les messages précédents, un « jsp » ne consomme plus d'essai.",
@@ -148,25 +161,35 @@ def main() -> None:
     t = doc.add_heading("Jules : tests avec des élèves simulés", level=0)
     for r in t.runs:
         r.font.color.rgb = BLEU
-    para(doc, "Mesures d'efficacité et d'efficience, Haiku 4.5 et Sonnet 5. Campagne du 25 septembre 2026.", italique=True)
+    para(
+        doc,
+        "Mesures d'efficacité et d'efficience, Haiku 4.5 et Sonnet 5. Campagne du 25 septembre 2026.",
+        italique=True,
+    )
 
     titre(doc, "L'essentiel")
     puces(doc, concl.get("essentiel", ["(conclusions à compléter)"]))
 
     titre(doc, "Comment on a testé")
-    puces(doc, [
-        "35 scénarios, 9 profils d'élèves (appliqué, « donne-moi la réponse », prétextes, injection, décrocheur, dys, "
-        "brillant, distrait, détresse), 11 matières. Les 12 scénarios critiques (fuite, détresse) sont joués 3 fois : "
-        "59 conversations par modèle et par tour.",
-        "Quatre surfaces : aide aux devoirs, leçon en blocs (mode cours), modes quiz, fiche et réexplique, épreuve sans aide. "
-        "Tout le harnais tourne pour de vrai : détection de la notion, suivi, vigilance, rapport du soir.",
-        "L'élève simulé est toujours joué par Sonnet 5 : seul Jules change d'un essai à l'autre.",
-        "Correction par le code (fuite de la valeur attendue, longueur, questions) et par un juge Opus qui lit la "
-        "conversation entière avec la réponse attendue. Opus sert seulement d'instrument de mesure, jamais de Jules.",
-        "Trois tours : tour 1 sur le code de départ, corrections, tour 2, corrections, tour 3. Mêmes scénarios à chaque tour.",
-        "Coût calculé au tarif API public (Haiku 4.5 : 1 $ / 5 $ par million de jetons ; Sonnet 5 : 2 $ / 10 $), "
-        "sans cache. La latence est celle du CLI, pas celle de l'API.",
-    ])
+    puces(
+        doc,
+        [
+            "35 scénarios, 9 profils d'élèves (appliqué, « donne-moi la réponse », prétextes, injection, "
+            "décrocheur, dys, brillant, distrait, détresse), 11 matières. Les 12 scénarios critiques (fuite, "
+            "détresse) sont joués 3 fois : 59 conversations par modèle et par tour.",
+            "Quatre surfaces : aide aux devoirs, leçon en blocs (mode cours), modes quiz, fiche et réexplique, "
+            "épreuve sans aide. Tout le harnais tourne pour de vrai : détection de la notion, suivi, vigilance, "
+            "rapport du soir.",
+            "L'élève simulé est toujours joué par Sonnet 5 : seul Jules change d'un essai à l'autre.",
+            "Correction par le code (fuite de la valeur attendue, longueur, questions) et par un juge Opus qui "
+            "lit la conversation entière avec la réponse attendue. Opus sert seulement d'instrument de mesure, "
+            "jamais de Jules.",
+            "Trois tours : tour 1 sur le code de départ, corrections, tour 2, corrections, tour 3. Mêmes "
+            "scénarios à chaque tour.",
+            "Coût calculé au tarif API public (Haiku 4.5 : 1 $ / 5 $ par million de jetons ; Sonnet 5 : 2 $ / 10 $), "
+            "sans cache. La latence est celle du CLI, pas celle de l'API.",
+        ],
+    )
 
     titre(doc, "Résultats, tour par tour")
     for modele, nom in (("haiku", "Haiku 4.5"), ("sonnet", "Sonnet 5")):

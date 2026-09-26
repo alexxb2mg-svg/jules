@@ -18,6 +18,7 @@ scénario déjà fait est sauté).
 from __future__ import annotations
 
 import argparse
+import contextlib
 import json
 import random
 import re
@@ -85,7 +86,9 @@ def pose_question(texte: str) -> bool:
 
 
 # --- installation jetable ------------------------------------------------------------
-def monter_jules(dossier: Path, modele_jules: str, modele_rapide: str, profil: dict[str, Any], journal: Journal) -> Tuteur:
+def monter_jules(
+    dossier: Path, modele_jules: str, modele_rapide: str, profil: dict[str, Any], journal: Journal
+) -> Tuteur:
     """Copie legere du depot (liens vers le code et les contenus), profil fictif, donnees vides."""
     dossier.mkdir(parents=True, exist_ok=True)
     for nom in ("consignes", "persona", "bibliotheque", "outils"):
@@ -107,8 +110,13 @@ def monter_jules(dossier: Path, modele_jules: str, modele_rapide: str, profil: d
 
 # --- eleve simule ------------------------------------------------------------------------
 def message_eleve(
-    appel: MoteurCLI, fiche: dict[str, Any], scenario: dict[str, Any], fil: list[dict[str, str]], numero: int,
-    maximum: int, surface: str,
+    appel: MoteurCLI,
+    fiche: dict[str, Any],
+    scenario: dict[str, Any],
+    fil: list[dict[str, str]],
+    numero: int,
+    maximum: int,
+    surface: str,
 ) -> str:
     consigne = CONSIGNE_ELEVE.format(
         nom=fiche["nom"], description=fiche["description"].strip(), style=fiche["style"].strip(),
@@ -185,7 +193,7 @@ def derouler_cours(tuteur: Tuteur, eleve_ia: MoteurCLI, fiche: dict, scenario: d
         debut = time.perf_counter()
         marque = re.search(r"R[EÉ]PONSE\s*:", texte, re.IGNORECASE)
         if marque:
-            reponse = texte[marque.end():].strip().splitlines()[0].strip() if texte[marque.end():].strip() else ""
+            reponse = texte[marque.end() :].strip().splitlines()[0].strip() if texte[marque.end() :].strip() else ""
             r = cours.tentative(session, index, reponse)  # type: ignore[union-attr]
             tentatives.append({"reponse": reponse, "juste": r["juste"]})
             fil.append({"role": "eleve", "texte": f"📝 Ma réponse (bloc {index}) : {reponse}"})
@@ -223,8 +231,8 @@ def derouler_cours(tuteur: Tuteur, eleve_ia: MoteurCLI, fiche: dict, scenario: d
 def semer_epreuve(tuteur: Tuteur, semees: list[dict[str, Any]]) -> None:
     """Notions 'comprises' il y a 5 jours (horodatage force, directement en base)."""
     il_y_a = (datetime.now().astimezone() - timedelta(days=5)).isoformat(timespec="seconds")
-    cx = tuteur.stockage._cx  # noqa: SLF001 (banc d'essai : on antidate volontairement)
-    with tuteur.stockage._verrou, cx:  # noqa: SLF001
+    cx = tuteur.stockage._cx
+    with tuteur.stockage._verrou, cx:
         for n in semees:
             donnees = {"matiere": n["matiere"], "notion": n["notion"], "statut": "compris", "resume": "", "titre": ""}
             cx.execute(
@@ -342,11 +350,17 @@ def jouer(scenario: dict, repetition: int, modele_jules: str, modele_rapide: str
     tours_max = int(scenario.get("tours_max", 8))
     debut = time.perf_counter()
     resultat: dict[str, Any] = {
-        "id": scenario["id"], "repetition": repetition, "jules": modele_jules, "rapide": modele_rapide, "eleve": scenario["eleve"],
-        "matiere": scenario["matiere"], "surface": scenario["surface"]["type"],
-        "mode": scenario["surface"].get("mode", scenario["surface"]["type"]), "critique": bool(scenario.get("critique")),
+        "id": scenario["id"],
+        "repetition": repetition,
+        "jules": modele_jules,
+        "rapide": modele_rapide,
+        "eleve": scenario["eleve"],
+        "matiere": scenario["matiere"],
+        "surface": scenario["surface"]["type"],
+        "mode": scenario["surface"].get("mode", scenario["surface"]["type"]),
+        "critique": bool(scenario.get("critique")),
         "date": datetime.now().astimezone().isoformat(timespec="seconds"),
-    }  # fmt: skip
+    }
     try:
         type_surface = scenario["surface"]["type"]
         derouler = {"conversation": derouler_conversation, "cours": derouler_cours, "epreuve": derouler_epreuve}
@@ -363,14 +377,12 @@ def jouer(scenario: dict, repetition: int, modele_jules: str, modele_rapide: str
         resultat["juge"] = juger(scenario, fiche, resultat, journal)
     except LimiteAtteinte as err:
         resultat["erreur"] = f"LIMITE: {err}"
-    except Exception as err:  # noqa: BLE001
+    except Exception as err:
         resultat["erreur"] = f"{type(err).__name__}: {err}"
         resultat["trace"] = traceback.format_exc()[-2000:]
     finally:
-        try:
+        with contextlib.suppress(Exception):
             tuteur.fermer()
-        except Exception:  # noqa: BLE001, S110
-            pass
         shutil.rmtree(racine_tmp, ignore_errors=True)
     resultat["duree_totale_s"] = round(time.perf_counter() - debut, 1)
     resultat["appels"] = journal.appels
@@ -415,7 +427,7 @@ def main() -> None:
         for rep in range(args.repetitions if s.get("critique") else 1):
             if (s["id"], rep) not in faits:
                 travaux.append((s, rep))
-    random.Random(7).shuffle(travaux)
+    random.Random(7).shuffle(travaux)  # noqa: S311 (repartition reproductible entre executions, pas de la crypto)
     print(f"{len(travaux)} conversations a jouer ({len(faits)} deja faites) -> {fichier}", flush=True)
     verrou = threading.Lock()
     arret = threading.Event()
