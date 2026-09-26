@@ -255,7 +255,13 @@
         noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 430, y: 4 + hPrincipal / 2 }));
         secondaires.forEach((n, i) => positions.set(n.id, { x: pas * i + pas / 2, y: yBas }));
       }
-      svg.setAttribute("viewBox", `0 0 860 ${Math.ceil(hauteurTotale)}`);
+      // Un lien entre deux notions du meme rang passerait sous les boites (et son libelle avec) :
+      // il fait un coude, sous la ligne (disposition en eventail) ou a droite de la colonne.
+      const principaux = new Set(noeuds.filter((n) => n.principal).map((n) => n.id));
+      const lateraux = (bloc.liens || []).filter((l) => !principaux.has(l.de) && !principaux.has(l.vers) && positions.has(l.de) && positions.has(l.vers));
+      const largeurTotale = enColonne && lateraux.length ? 1000 : 860;
+      if (!enColonne && lateraux.length) hauteurTotale += 22 + 26 * lateraux.length;
+      svg.setAttribute("viewBox", `0 0 ${largeurTotale} ${Math.ceil(hauteurTotale)}`);
       const boite = (n) => {
         const pos = positions.get(n.id), h = n.principal ? contenu.get(n.id).hauteur : hMax, w = largeur(n);
         return { gauche: pos.x - w / 2, droite: pos.x + w / 2, haut: pos.y - h / 2, bas: pos.y + h / 2 };
@@ -264,6 +270,25 @@
         const a = noeuds.find((n) => n.id === lien.de), b = noeuds.find((n) => n.id === lien.vers);
         if (!a || !b || !positions.has(a.id) || !positions.has(b.id)) continue;
         const pa = positions.get(a.id), pb = positions.get(b.id), ba = boite(a), bb = boite(b);
+        const libelle = (x, y, ancre = "middle") => {
+          if (!lien.libelle) return;
+          const texte = g("text", { x, y, "font-size": T_LIEN, fill: "#4A5566", "text-anchor": ancre, "paint-order": "stroke", stroke: "#FFFFFF", "stroke-width": 5 });
+          texte.textContent = lien.libelle;
+          svg.appendChild(texte);
+        };
+        const rang = lateraux.indexOf(lien);
+        if (rang >= 0) {  // coude entre deux notions du meme rang
+          if (enColonne) {
+            const x = ba.droite + 24 + 14 * rang;
+            svg.appendChild(g("polyline", { points: `${ba.droite},${pa.y} ${x},${pa.y} ${x},${pb.y} ${bb.droite},${pb.y}`, fill: "none", stroke: "#8A94A3", "stroke-width": 2 }));
+            libelle(x + 6, (pa.y + pb.y) / 2 + 4, "start");
+          } else {
+            const y = Math.max(ba.bas, bb.bas) + 14 + 26 * rang;
+            svg.appendChild(g("polyline", { points: `${pa.x},${ba.bas} ${pa.x},${y} ${pb.x},${y} ${pb.x},${bb.bas}`, fill: "none", stroke: "#8A94A3", "stroke-width": 2 }));
+            libelle((pa.x + pb.x) / 2, y + 16);
+          }
+          continue;
+        }
         let x1, y1, x2, y2;
         if (enColonne) {  // du bord droit de l'un au bord gauche de l'autre
           [x1, y1, x2, y2] = pa.x < pb.x ? [ba.droite, pa.y, bb.gauche, pb.y] : [ba.gauche, pa.y, bb.droite, pb.y];
