@@ -225,9 +225,12 @@ visibles de `#fiche`.
   (EX-201 a 209), NAV-04 (EX-212), NAV-05 en partie (EX-213), NAV-07 doublons (EX-205), TEC-02 (EX-211).
   Hors lot : titres courts eleve et marque « deja vue » (NAV-04), lisibilite du schema sur telephone (NAV-05),
   liste « S'entrainer sans IA » de `/discuter` (NAV-07, contenu de page), chantiers FIC et CNT (autre spec).
-- **Brancher les 196 fiches (TEC-01)** : une ligne de `config.local.yaml` chez Ellie, decision d'Alex, a faire
-  **apres** EX-212 (sinon la liste redevient inutilisable). Pas une carte DEV.
-- **Code parent chez Ellie** : decision d'Alex. EX-206 affiche l'etat reel quelle que soit la decision.
+- **Brancher les 196 fiches (TEC-01)** : fait le 26/09/2026 sur decision d'Alex (« il faut brancher les fiches,
+  evidemment »), sans attendre EX-212 : `bibliotheques_externes: ["../jules-bibliotheques"]` dans
+  `config.local.yaml` d'Ellie. Mesure : `fiches_visuelles.liste()` renvoie 196 notions, 9 matieres. Pas une carte DEV.
+  Jusqu'a EX-212, la liste de `/` est longue (audit : 16 167 px) : accepte, phase de construction.
+- **Code parent chez Ellie** : decision d'Alex du 26/09/2026 : pas de code pendant la construction. EX-206 affiche
+  l'etat reel (« non protégé ») ; a reposer avant tout usage hors construction ou toute ouverture reseau.
 
 ## 8. Prealables et ordre de fusion
 
