@@ -69,6 +69,9 @@
       marquerNotionActive();
       afficherFiche(fiche);
       $("fiche").classList.remove("cache");
+      // Nouvelle fiche : on repart de son titre, pas de la position de defilement de la precedente.
+      document.querySelector(".fiche-zone").scrollTop = 0;
+      window.scrollTo(0, 0);
       $("chat-flottant-notion").textContent = " · " + fiche.titre;
       $("chat-flottant-lien").href = `/discuter?notion=${encodeURIComponent(notionId)}`;
     } catch (err) {
