@@ -6,6 +6,9 @@
 .symbole:hover, .symbole:focus { background: rgba(31, 78, 140, .10); outline: none; }
 .symbole:focus-visible { box-shadow: 0 0 0 2px rgba(31, 78, 140, .45); }
 
+/* Formule ecrite dans le texte (« P = m × g ») : en gras, pour la distinguer des phrases. */
+.formule-texte { font-weight: 700; color: inherit; }
+
 /* Une seule bulle pour la page, placee par le script (jamais hors de l'ecran). */
 .symboles-bulle {
   position: absolute; top: 0; left: 0; z-index: 60; pointer-events: none;

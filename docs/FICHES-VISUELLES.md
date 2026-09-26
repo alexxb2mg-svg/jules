@@ -55,8 +55,15 @@ Dans cet ordre, 5 à 8 blocs :
   (v, d, t, Ec, ρ, U, I...) reçoit une définition courte (« la vitesse, en m/s ou en km/h »).
   L'élève la retrouve en survolant la lettre, sur toutes les pages de Jules. Jamais les symboles
   chimiques (H, O, C...), qui ne sont pas des grandeurs.
-- **Les symboles** (≤, ≈, √, π, Ω, °C...) n'ont rien à déclarer : leur nom s'affiche au survol
-  partout (`jules/web/static/symboles.js`).
+- **Tout ce qui est abrégé a sa bulle** : l'élève doit pouvoir retrouver immédiatement ce que veut
+  dire n'importe quel symbole, lettre ou abréviation, sur toutes les pages. Rien à déclarer pour ce
+  qui est commun à tout le programme, dans `jules/web/static/rappels.js` : symboles (≤, ≈, √, →),
+  unités (s : secondes, kg : kilogrammes, N : newtons, km/h...), les 118 éléments, les espèces
+  chimiques courantes (CO₂ : dioxyde de carbone, avec sa composition ; ions). Ce qui est propre à la
+  notion se déclare dans la fiche : `variables:` (lettres des formules) et `abreviations:` (ua, URSS,
+  av. J.-C....). Une abréviation utile à tout le programme s'ajoute plutôt dans `rappels.js`.
+- **Les formules écrites dans le texte** (« P = m × g », « 36 km/h = 10 m/s ») ressortent seules en
+  gras : on les écrit simplement, avec des espaces autour des signes, sans `**`.
 
 ## 4. Les schémas (SVG)
 

@@ -240,8 +240,9 @@ def _donnees_simulees(racines: Racines, fiches: dict[str, FicheVisuelle]) -> dic
             licence=fiche.licence, nom_matiere=notion.nom_matiere, relecture_a_relire=fiche.relecture == "a_relire"
         )
         donnees[f"/api/eleve/fiches_visuelles/notions/{notion_id}"] = publique
-        donnees[f"/api/eleve/fiches_visuelles/notions/{notion_id}/variables"] = {
-            "variables": fiche.toutes_les_variables()
+        donnees[f"/api/eleve/fiches_visuelles/notions/{notion_id}/rappels"] = {
+            "variables": fiche.toutes_les_variables(),
+            "abreviations": dict(fiche.abreviations),
         }
         entree = matieres.setdefault(notion.matiere, {"id": notion.matiere, "nom": notion.nom_matiere, "notions": []})
         entree["notions"].append({"id": notion_id, "titre": notion.titre, "chapitre": notion.chapitre})

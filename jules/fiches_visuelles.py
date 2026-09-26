@@ -147,6 +147,7 @@ class FicheVisuelle:
     blocs: list[BlocFiche] = field(default_factory=list)
     avertissement: str = ""
     variables: dict[str, str] = field(default_factory=dict)
+    abreviations: dict[str, str] = field(default_factory=dict)
 
     def toutes_les_variables(self) -> dict[str, str]:
         """Le sens des lettres de grandeur de la notion (champ `variables:`), rappele au survol sur
@@ -171,6 +172,7 @@ class FicheVisuelle:
             "sources": self.sources,
             "blocs": blocs,
             "variables": self.toutes_les_variables(),
+            "abreviations": dict(self.abreviations),
         }
 
 
@@ -235,6 +237,25 @@ _BARRE_DE_DIVISION = re.compile(r"\S\s+/\s+\S")
 def _verifier_division(texte: str, champ: str, ou: str) -> None:
     if _BARRE_DE_DIVISION.search(texte):
         raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
+
+
+# Abreviation propre a la notion (ua, URSS, av. J.-C.) : rappelee au survol partout ou elle apparait.
+ABREVIATION = re.compile(r"^\S(?:.{0,14}\S)?$")
+ABREVIATIONS_MAX = 20
+
+
+def _verifier_abreviations(brut: Any, nom: str) -> dict[str, str]:
+    if brut is None:
+        return {}
+    if not isinstance(brut, dict) or len(brut) > ABREVIATIONS_MAX:
+        raise ErreurFicheVisuelle(f"{nom} : 'abreviations' doit etre un objet de {ABREVIATIONS_MAX} entrees au plus")
+    abreviations: dict[str, str] = {}
+    for mot, sens in brut.items():
+        mot = str(mot)
+        if not ABREVIATION.match(mot) or "**" in mot:
+            raise ErreurFicheVisuelle(f"{nom} : abreviation {mot!r} : 1 a 16 caracteres, sans espace au bord")
+        abreviations[mot] = _texte(sens, f"abreviations.{mot}", nom, limite=LIMITE_VARIABLE)
+    return abreviations
 
 
 def _texte(
@@ -592,6 +613,7 @@ def lire_fiche_visuelle(
         blocs=blocs,
         avertissement=bibliotheque.avertissement,
         variables=_verifier_variables(brut.get("variables"), nom),
+        abreviations=_verifier_abreviations(brut.get("abreviations"), nom),
     )
 
 

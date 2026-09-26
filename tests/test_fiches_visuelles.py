@@ -277,6 +277,16 @@ def test_variables_declarees_servies_telles_quelles(tmp_path, notions, biblio):
     assert lire_fiche_visuelle(ecrire(tmp_path, fiche_valide()), notions, biblio, GABARITS).variables == {}
 
 
+def test_abreviations_propres_a_la_notion(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["abreviations"] = {"ua": "unité astronomique", "av. J.-C.": "avant Jésus-Christ"}
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    assert fiche.publique([])["abreviations"] == brut["abreviations"]
+    brut["abreviations"] = {" ua": "espace au bord"}
+    with pytest.raises(ErreurFicheVisuelle, match="abreviation"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
 @pytest.mark.parametrize("variables", [{"2 H₂O": "eau"}, {"vitesse": "trop long comme nom"}, {"v": ""}, ["v"]])
 def test_variables_mal_formees_refusees(tmp_path, notions, biblio, variables):
     brut = copy.deepcopy(fiche_valide())

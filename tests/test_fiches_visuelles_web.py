@@ -157,9 +157,9 @@ def test_gabarits_ne_font_jamais_appel_a_eval():
         assert not re.search(r"\beval\s*\(", js), fichier.name
 
 
-def test_variables_d_une_notion_pour_toutes_les_pages(client_fiches):
-    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/fonctions-lineaires-affines/variables")
-    assert r.status_code == 200 and isinstance(r.json()["variables"], dict)
+def test_rappels_d_une_notion_pour_toutes_les_pages(client_fiches):
+    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/fonctions-lineaires-affines/rappels")
+    assert r.status_code == 200 and set(r.json()) == {"variables", "abreviations"}
     # Une notion sans fiche visuelle : rien a rappeler, pas d'erreur (la page ne sait pas d'avance).
-    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/racine-carree/variables")
-    assert r.status_code == 200 and r.json() == {"variables": {}}
+    r = client_fiches.get("/api/eleve/fiches_visuelles/notions/racine-carree/rappels")
+    assert r.status_code == 200 and r.json() == {"variables": {}, "abreviations": {}}

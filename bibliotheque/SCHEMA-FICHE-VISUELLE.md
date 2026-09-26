@@ -72,12 +72,16 @@ définition courte ; l'élève la retrouve en survolant la lettre dans une formu
 Jules (fiche, discussion, entraînement, cours de la notion). Nom : une lettre latine ou grecque suivie
 d'au plus 3 lettres, chiffres ou indices (`v`, `Ec`, `ρ`, `U1`, `V₁`) ; 12 lettres au plus ; 120
 caractères par définition. Seules les lettres déclarées ont une bulle : jamais les symboles chimiques
-(H, O, CO₂) ni les unités. Servi aussi par `GET /api/eleve/fiches_visuelles/notions/<id>/variables`.
+(H, O, CO₂) ni les unités. Même principe pour `abreviations:` (`{ua: "unité astronomique", URSS: "Union des républiques
+socialistes soviétiques"}`, 20 au plus, 1 à 16 caractères) : une abréviation propre à la notion,
+rappelée au survol partout où elle apparaît. Les deux sont servis par
+`GET /api/eleve/fiches_visuelles/notions/<id>/rappels`.
 
-Les symboles (`<`, `≤`, `≈`, `√`, `π`, `Ω`, `°C`...) n'ont rien à marquer : sur toutes les
-pages de Jules, le module commun `jules/web/static/symboles.js` affiche leur nom dans une petite
-bulle au survol, au toucher ou au clavier (liste à compléter dans ce fichier). Seul le texte des
-schémas SVG n'est pas concerné.
+Ce qui est commun à tout le programme n'a rien à déclarer : symboles (`<`, `≤`, `≈`, `√`, `→`...),
+unités (`s`, `kg`, `N`, `km/h`...), éléments et espèces chimiques (`Fe`, `CO₂`, `Cu²⁺`...) ont leur
+bulle sur toutes les pages grâce aux dictionnaires de `jules/web/static/rappels.js` (des données :
+une ligne ajoutée = une bulle de plus partout) et au moteur `symboles.js`. Les formules écrites dans
+le texte (« P = m × g ») passent seules en gras. Seul le texte des schémas SVG n'est pas concerné.
 
 ### Le bloc `schema`
 

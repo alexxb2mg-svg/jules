@@ -82,10 +82,11 @@
       etat.fiche = fiche;
       etat.notionActive = notionId;
       marquerNotionActive();
-      // Rappel au survol du sens des lettres de la notion (symboles.js), dans la fiche et les bulles.
+      // Rappels au survol propres a la notion (lettres, abreviations : symboles.js), fiche et bulles.
       if (typeof Symboles !== "undefined") {
-        Symboles.variables($("fiche"), fiche.variables);
-        Symboles.variables($("bulles"), fiche.variables);
+        const rappels = { variables: fiche.variables, abreviations: fiche.abreviations };
+        Symboles.contexte($("fiche"), rappels);
+        Symboles.contexte($("bulles"), rappels);
       }
       afficherFiche(fiche);
       $("fiche").classList.remove("cache");
