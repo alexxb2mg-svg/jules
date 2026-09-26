@@ -60,10 +60,49 @@
 
   var GESTIONNAIRES = { afficher_termes: afficherTermes };
 
+  // --- adaptations : poignee de main avec la page hote (docs/OUTILS-CONTRAT.md, §2) --------
+  // Le contenu reste masque (<body hidden>) jusqu'a ce que les leviers de l'eleve soient
+  // appliques. Sans reponse de la page apres DELAI_ADAPTATIONS ms, l'outil s'affiche avec les
+  // valeurs neutres et le signale ; une reponse tardive valide est quand meme appliquee.
+  // Code volontairement duplique dans chaque outil (un outil reste un dossier autonome).
+  var LEVIERS = {}; // levier connu -> function (valeur) ; aucun pour l'instant, le reste est ignore
+  var DELAI_ADAPTATIONS = 500;
+  var attenteAdaptations = null;
+
+  function afficherContenu(etatAdaptations) {
+    document.documentElement.setAttribute("data-adaptations", etatAdaptations);
+    document.body.hidden = false;
+  }
+
+  function appliquerAdaptations(leviers) {
+    if (!leviers || typeof leviers !== "object" || Array.isArray(leviers)) return;
+    if (attenteAdaptations !== null) {
+      clearTimeout(attenteAdaptations);
+      attenteAdaptations = null;
+    }
+    Object.keys(leviers).forEach(function (nom) {
+      if (Object.prototype.hasOwnProperty.call(LEVIERS, nom)) LEVIERS[nom](leviers[nom]);
+    });
+    afficherContenu("appliquees");
+  }
+
+  function poigneeDeMain() {
+    attenteAdaptations = setTimeout(function () {
+      attenteAdaptations = null;
+      afficherContenu("neutres");
+      window.parent.postMessage({ type: "adaptations-absentes" }, "*");
+    }, DELAI_ADAPTATIONS);
+    window.parent.postMessage({ type: "pret" }, "*");
+  }
+
   function recu(event) {
     if (event.source !== window.parent) return;
     var message = event.data;
     if (!message || typeof message !== "object") return;
+    if (message.type === "adaptations") {
+      appliquerAdaptations(message.leviers);
+      return;
+    }
     if (message.type !== "action") return;
     if (ACTIONS.indexOf(message.action) === -1) return;
     var gestionnaire = GESTIONNAIRES[message.action];
@@ -76,4 +115,5 @@
     rendre(recherche.value);
   });
   window.addEventListener("message", recu);
+  poigneeDeMain();
 })();
