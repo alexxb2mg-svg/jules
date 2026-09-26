@@ -46,7 +46,8 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   `profils/test-cumul.yaml` et vérifie qu'aucun identifiant d'aménagement n'y figure.
 - **EX-005** — Le modèle ne reçoit que les consignes d'expression découlant des
   aménagements actifs (phrases courtes, découpage...), sans nom d'aménagement ni de trouble.
-  *Vérification* : même test, qui vérifie la présence du bloc de consignes attendu et
+  *Vérification* : même test, qui contrôle **uniquement les blocs issus des aménagements**
+  (le prompt est construit sans contenu de leçon), vérifie la présence du bloc attendu et
   l'absence des termes listés dans `docs/spec/termes-interdits.txt` (noms de troubles) et
   des identifiants d'aménagement. La liste vit sous `docs/`, hors du champ d'EX-008.
   Elle appartient à la spec (le code testé ne la modifie pas) et ses règles de recherche,
@@ -59,7 +60,9 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - **EX-008** — Aucun fichier de données versionné (`.yaml`, `.yml`, `.json`, `.md` hors
   `README.md`) sous `profils/`, `adaptations/`, `consignes/` et `tests/` ne contient un nom
   de trouble ni le prénom d'un élève réel. Ne sont pas concernés : `docs/`, les `README.md`
-  (documentation du périmètre), le code Python des tests, et les jeux de données qui
+  (documentation du périmètre), le code Python des tests, le contenu pédagogique
+  (`bibliotheque/`, `extensions/` : ils ne sont pas dans le périmètre et y restent, un cours
+  d'histoire peut parler de « personnes handicapées »), et les jeux de données qui
   testent justement le filtrage de ces termes, listés nommément ici :
   `tests/cas/modele_eleve/lecons_filtre.yaml`. Toute nouvelle exemption passe par la spec.
   *Vérification* : test d'hygiène en deux parties.
@@ -101,6 +104,13 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   détecte `font-size: …px` et `font: … …px`, sans résultat hors exceptions ; captures à
   100 % identiques avant/après sur l'accueil, une fiche, le studio, le cours et une bulle
   d'aide des symboles.
+
+- **EX-013** — Le filtre anti-diagnostic du carnet (`jules/apprentissage/carnet.py`) lit
+  `docs/spec/termes-interdits.txt` **en plus** de ses propres termes, qu'il garde (il est
+  volontairement plus large : vocabulaire de jugement, `dys` en sous-chaîne...).
+  *Vérification* : assertion que chaque terme de la liste de la spec est refusé par le
+  carnet ; `tests/cas/modele_eleve/lecons_filtre.yaml` relancé à l'identique, sans
+  régression.
 
 ### Règle de preuve commune
 

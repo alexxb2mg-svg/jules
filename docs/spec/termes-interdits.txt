@@ -37,7 +37,8 @@ non-voyant
 non voyant
 aveugle
 cecit
-surdit
+mot:surdite
+mot:surdites
 mot:sourd
 mot:sourde
 mot:sourds
@@ -45,7 +46,9 @@ mot:sourdes
 autis
 mot:tsa
 
-# Vocabulaire medical. "diagnostic" est volontairement absent : c'est un nom de champ
-# technique du correcteur (tests/test_fiches_v2.py).
+# Vocabulaire medical. "diagnost" couvre diagnostic : sans risque, car EX-008 ne vise que
+# des fichiers de donnees (.yaml/.json/.md), pas le code Python des tests.
 pathologi
 handicap
+trouble
+diagnost
