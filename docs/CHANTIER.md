@@ -40,8 +40,8 @@ liste. `jules fiches verifier` sans argument parcourt aussi les dépôts externe
 ## La filière
 
 ```
-choisir ──> réserver ──> générer (paquet + IA) ──> vérifier en local ──> pull request ──> CI ──> fusion ──> relecture
- CHANTIER.md   ticket     jules chantier paquet     jules fiches verifier                 idem   signée     enseignant
+choisir ──> réserver ──> générer (paquet + IA) ──> vérifier et signer en local ──> pull request ──> CI ──> relecture
+ CHANTIER.md   ticket     jules chantier paquet     jules fiches verifier / signer       idem      enseignant
 ```
 
 1. **Choisir** une ou plusieurs notions « à faire » dans `CHANTIER.md` (dépôt `jules-bibliotheques`). Il vaut
@@ -55,9 +55,11 @@ choisir ──> réserver ──> générer (paquet + IA) ──> vérifier en l
    (`fiche-v2/<empreinte>`) est inscrite dans `generation.paquet` de chaque fiche.
 4. **Vérifier** : `jules fiches verifier <dossier>` jusqu'à « Conforme. ». En cas de manquement, on renvoie la
    sortie du vérificateur à l'IA, qui corrige seulement ce qui est signalé.
-5. **Proposer** : une pull request sur `jules-bibliotheques`. La CI relance le vérificateur. À la fusion, un
-   mainteneur signe (`jules fiches signer`) : la fiche passe `verifiee` et Jules la sert sans IA, marquée
-   expérimentale.
+5. **Signer et proposer** : `jules fiches signer <dossier>` scelle les fiches conformes (`verifiee`,
+   `empreinte`) ; puis une pull request sur `jules-bibliotheques`. La CI relance le vérificateur, qui refuse
+   aussi une fiche modifiée après signature. Une fois fusionnée, Jules sert la fiche sans IA, marquée
+   expérimentale. Le contributeur peut signer lui-même : la signature ne vaut que conformité au contrat,
+   le vérificateur est déterministe et la CI le rejoue.
 6. **Relire** : un enseignant relit, corrige si besoin et renseigne `relecture` ; la fiche passe `relue`.
 
 ### Plusieurs générations pour une notion
@@ -86,7 +88,7 @@ Un essai a été fait le 26/09/2026 sur la notion `ratio` (3e), avec une IA qui 
 version avait trois défauts, tous signalés par le vérificateur : un YAML cassé par un « : » non protégé, un
 indice qui contenait la réponse (« 1 800 ÷ 9 » quand la réponse est 800) et un exercice ouvert sans échelle
 d'indices. Deux allers-retours ont suffi pour arriver à « Conforme. ». Depuis cet essai, le paquet rappelle
-la règle des guillemets et le vérificateur signale un YAML cassé au lieu de s'arrêter.
+la règle des guillemets et le vérificateur signale un YAML cassé au lieu de s'arrêter. La fiche obtenue est la première de `jules-bibliotheques` (`fiches-v2-3e`), en attente de relecture.
 
 ## Commandes
 
