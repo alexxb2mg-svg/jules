@@ -5,10 +5,13 @@ qu'elle fournit (modules, moteurs, notifieurs, outils, figures, types de blocs, 
 ses permissions (reseau, appel IA, ecriture dans le dossier eleve, notification parent).
 
 Ce module ne fait que lire, verifier et charger la liste des extensions ACTIVEES (citees dans
-`extensions:` de config.yaml) : il ne branche rien lui-meme dans le reste de l'application. Les
-six familles historiques (modules, moteurs, notifieurs, outils, figures, bibliotheques) restent
-chargees exactement comme avant (jules/briques.py, jules/outils.py, jules/bibliotheques.py...) :
-ce fichier est une couche ajoutee, pas un remplacement (etape 1 de jules_architecture_plugins.md).
+`extensions:` de config.yaml). Le Tuteur les charge une fois au demarrage (`Tuteur.extensions`) ;
+deux familles en dependent deja (etape 2 de jules_architecture_plugins.md) :
+  - figures : le code `gabarit.js` de l'extension (voir `code_des_figures`), et les ids de
+    `fournit.figures` sont les seuls gabarits acceptes dans une fiche visuelle ;
+  - outils : chaque outil fourni est lu par jules/outils.py comme un dossier `outils/<id>/`
+    (voir `dossiers_outils`).
+Les autres familles (modules, moteurs, notifieurs, bibliotheques) restent chargees comme avant.
 """
 
 from __future__ import annotations
@@ -21,10 +24,17 @@ from typing import Any
 
 import yaml
 
+from jules.outils import _MOTIFS_INTERDITS
+
 journal = logging.getLogger("jules.extensions")
 
 _ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 TAILLE_MAX_FICHIER = 50_000  # octets : un manifeste est un petit fichier declaratif
+TAILLE_MAX_GABARIT = 200_000  # octets : meme plafond que le code d'un outil (jules/outils.py)
+FICHIER_FIGURES = "gabarit.js"  # code des figures d'une extension (un seul fichier, une ou plusieurs figures)
+# Le seul "http://" admis dans un gabarit : l'espace de noms SVG passe a createElementNS (ce n'est
+# pas un appel reseau). Toute autre adresse reste refusee par le premier filtre des outils.
+_ESPACE_SVG = "http://www.w3.org/2000/svg"
 
 # Familles connues sous `fournit:` (le coeur ne connait aucune extension par son nom, mais il
 # connait les familles : elargir le contrat = ajouter une cle ici, jamais un cas particulier).
@@ -113,6 +123,22 @@ def _lire_permissions(brut: Any, identifiant: str) -> dict[str, bool]:
     return resultat
 
 
+def _controler_gabarit(chemin: Path, identifiant: str) -> None:
+    """Le code des figures s'execute dans la page de l'eleve (pas dans une iframe isolee comme un
+    outil) : meme premier filtre que le code d'un outil (jules/outils.py), avant la relecture."""
+    if not chemin.is_file():
+        raise ErreurExtension(f"{identifiant} : fournit des figures mais {FICHIER_FIGURES} est absent")
+    if chemin.stat().st_size > TAILLE_MAX_GABARIT:
+        raise ErreurExtension(f"{identifiant} : {FICHIER_FIGURES} trop gros")
+    # Les lignes de commentaire entieres sont ignorees ("// ... aucun eval()" est une promesse, pas
+    # un appel) ; une ligne de commentaire ne peut rien executer.
+    lignes = chemin.read_text(encoding="utf-8", errors="replace").splitlines()
+    texte = "\n".join(ligne for ligne in lignes if not ligne.strip().startswith("//")).replace(_ESPACE_SVG, "")
+    for motif, nom in _MOTIFS_INTERDITS:
+        if motif.search(texte):
+            raise ErreurExtension(f"{identifiant} : {FICHIER_FIGURES}, motif interdit ({nom})")
+
+
 def lire_extension(dossier: Path) -> Extension:
     """Lit et verifie `extension.yaml`. Leve ErreurExtension avec un message clair sinon."""
     fichier = dossier / "extension.yaml"
@@ -130,6 +156,8 @@ def lire_extension(dossier: Path) -> Extension:
     auteurs = _liste_textes(brut.get("auteurs"), f"{identifiant}, auteurs")
     fournit = _lire_fournit(brut.get("fournit"), identifiant)
     permissions = _lire_permissions(brut.get("permissions"), identifiant)
+    if fournit.get("figures"):
+        _controler_gabarit(dossier / FICHIER_FIGURES, identifiant)
     return Extension(
         id=identifiant,
         titre=titre,
@@ -180,3 +208,24 @@ def figures_fournies(extensions: dict[str, Extension]) -> dict[str, str]:
         for figure in extension.fournit_liste("figures"):
             resultat[figure] = extension.id
     return resultat
+
+
+def code_des_figures(extensions: dict[str, Extension]) -> str:
+    """Les `gabarit.js` des extensions actives qui fournissent des figures, mis bout a bout (dans
+    l'ordre de `extensions:`) : c'est le seul script de figures que charge la page d'accueil."""
+    morceaux = []
+    for extension in extensions.values():
+        if extension.fournit_liste("figures"):
+            code = (extension.dossier / FICHIER_FIGURES).read_text(encoding="utf-8")
+            morceaux.append(f"// --- extension {extension.id} ---\n{code}\n;")
+    return "\n".join(morceaux)
+
+
+def dossiers_outils(extensions: dict[str, Extension]) -> list[Path]:
+    """Dossier de chaque outil fourni : l'extension elle-meme si l'outil porte son id (cas d'une
+    extension qui embarque un seul outil), sinon son sous-dossier `<id de l'outil>/`."""
+    return [
+        extension.dossier if outil == extension.id else extension.dossier / outil
+        for extension in extensions.values()
+        for outil in extension.fournit_liste("outils")
+    ]

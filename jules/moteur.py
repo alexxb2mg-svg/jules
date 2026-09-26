@@ -14,6 +14,7 @@ from typing import Any
 from jules.briques import classe_brique
 from jules.composition import Profil, assembler, charger_profil
 from jules.config import Config
+from jules.extensions import charger_extensions
 from jules.llm.base import MoteurLLM, Tour
 from jules.modules.base import Module, Tache
 from jules.persona import Persona, charger_persona
@@ -33,6 +34,7 @@ class Tuteur:
         self.stockage = Stockage(config.donnees)
         self.llm: MoteurLLM = llm or classe_brique("llm", config.llm.get("backend", "demo"))(config.llm)
         self.historique_max = int(config.llm.get("historique_max", 30))
+        self.extensions = charger_extensions(config.dossier_extensions, config.extensions)
         self.notifieurs = [
             classe_brique("notifieurs", ref.id)(config, ref.reglages) for ref in config.notifieurs if ref.actif
         ]

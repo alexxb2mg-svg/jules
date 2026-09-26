@@ -56,7 +56,9 @@ dossier, `actions`/`evenements` mal formés, **permission non explicitement vali
 (`PERMISSIONS_CONNUES`, vide pour l'instant — voir §4), licence manquante, et tout motif
 interdit détecté dans le code de l'outil (voir §4, premier filtre automatique).
 
-`charger_outils(racine) -> dict[str, Outil]` charge tous les dossiers de `outils/` ; un outil
+`charger_outils(racine, dossiers_extensions) -> dict[str, Outil]` charge tous les dossiers de
+`outils/`, puis ceux des outils fournis par les extensions actives (`docs/EXTENSIONS.md` ; les
+trois outils de référence vivent dans `extensions/<id>/` depuis l'étape 2 des extensions) ; un outil
 qui échoue à la vérification est écarté et journalisé, Jules continue sans lui (même logique
 que `jules/bibliotheques.py`). `Outil.publique()` ne renvoie jamais le contenu des fichiers,
 seulement l'identité (id, titre, matières, niveaux, actions, évènements) : c'est ce que

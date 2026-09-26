@@ -1,6 +1,6 @@
 // Jules - gabarit d'exemple fourni par l'extension "exemple-figure" (voir extensions/exemple-figure/
 // extension.yaml et docs/EXTENSIONS.md). Un cercle dont le rayon depend d'un curseur "r".
-// Meme contrat que les gabarits integres (jules/fiches_visuelles.py GABARITS_CONNUS) : rendu SVG
+// Meme contrat que les autres gabarits (extensions/<id>/gabarit.js, voir docs/EXTENSIONS.md) : rendu SVG
 // pur, aucun eval(), aucun reseau.
 "use strict";
 

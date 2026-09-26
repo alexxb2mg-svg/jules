@@ -99,6 +99,10 @@ def test_page_discuter_sert_l_ancien_chat(client_fiches):
 
 
 def test_gabarits_javascript_servis(client_fiches):
+    """Les 5 figures livrees comme extensions (config.yaml, extensions:) sont servies par /gabarits.js."""
+    r = client_fiches.get("/gabarits.js")
+    assert r.status_code == 200
+    assert "javascript" in r.headers["content-type"]
     for gabarit in (
         "droite-affine",
         "triangle-thales",
@@ -106,9 +110,15 @@ def test_gabarits_javascript_servis(client_fiches):
         "equation-solutions",
         "probabilites-frequences",
     ):
-        r = client_fiches.get(f"/static/gabarits/{gabarit}.js")
-        assert r.status_code == 200, gabarit
-        assert "javascript" in r.headers["content-type"]
+        assert f'window.GABARITS["{gabarit}"]' in r.text, gabarit
+    # une extension presente dans le depot mais non activee n'est pas servie
+    assert "exemple-cercle" not in r.text
+
+
+def test_accueil_charge_les_gabarits_par_les_extensions():
+    html = (STATIQUE / "accueil.html").read_text(encoding="utf-8")
+    assert '<script src="/gabarits.js"></script>' in html
+    assert "/static/gabarits/" not in html
 
 
 def test_accueil_html_couvert_par_verification_style_script():
@@ -137,7 +147,9 @@ def test_accueil_js_echappe_tout_texte_serveur_avant_innerhtml():
 def test_gabarits_ne_font_jamais_appel_a_eval():
     import re
 
-    for fichier in (STATIQUE / "gabarits").glob("*.js"):
+    fichiers = list((RACINE / "extensions").glob("*/gabarit.js"))
+    assert len(fichiers) >= 5
+    for fichier in fichiers:
         lignes_code = [
             ligne for ligne in fichier.read_text(encoding="utf-8").splitlines() if not ligne.strip().startswith("//")
         ]

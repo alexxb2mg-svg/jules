@@ -1,5 +1,5 @@
 // Jules - gabarit "triangle-thales" : configuration de Thales, curseur t = AM/AB (0<t<1).
-// Contrat : jules/fiches_visuelles.py (GABARITS_CONNUS). Rendu SVG pur, aucun eval().
+// Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
 window.GABARITS = window.GABARITS || {};

@@ -43,6 +43,7 @@ class Config:
     acces: dict[str, str]
     modules: list[RefBrique]
     notifieurs: list[RefBrique]
+    extensions: list[str] = field(default_factory=list)  # ids actives (voir docs/EXTENSIONS.md)
 
     @property
     def dossier_consignes(self) -> Path:
@@ -55,6 +56,10 @@ class Config:
     @property
     def dossier_outils(self) -> Path:
         return self.racine / "outils"
+
+    @property
+    def dossier_extensions(self) -> Path:
+        return self.racine / "extensions"
 
     @property
     def dossier_persona(self) -> Path:
@@ -79,6 +84,7 @@ def depuis_dict(brut: dict[str, Any], racine: Path) -> Config:
         acces=dict(brut.get("acces") or {}),
         modules=[RefBrique.depuis(m) for m in brut.get("modules") or []],
         notifieurs=[RefBrique.depuis(n) for n in brut.get("notifieurs") or []],
+        extensions=[str(e) for e in brut.get("extensions") or []],
     )
 
 

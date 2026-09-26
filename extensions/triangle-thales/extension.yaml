@@ -1,0 +1,8 @@
+id: triangle-thales
+titre: "Figure : configuration de Thalès"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [triangle-thales]
+permissions: {}

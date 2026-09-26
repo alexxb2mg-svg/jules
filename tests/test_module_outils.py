@@ -8,7 +8,6 @@ servi, 404 propre).
 
 from __future__ import annotations
 
-import shutil
 from pathlib import Path
 
 import pytest
@@ -27,9 +26,8 @@ def client_outils(projet, brut_config):
     from jules.llm.factice import Brique as Factice
     from tests.conftest import regle_par_defaut
 
-    # La fixture "projet" (tests/conftest.py) ne copie pas outils/ (pas encore une brique commune
-    # à tous les tests) : on l'ajoute ici, propre à ce fichier.
-    shutil.copytree(RACINE / "outils", projet / "outils")
+    # Les trois outils de référence sont livrés comme extensions (extensions/<id>/, activées dans
+    # config.yaml) : la fixture "projet" (tests/conftest.py) copie déjà extensions/.
     brut_config["acces"] = {"code_eleve": empreinte("1234"), "code_parent": empreinte("parent67")}
     brut_config["modules"] = [*brut_config["modules"], {"id": "outils", "actif": True}]
     llm = Factice()

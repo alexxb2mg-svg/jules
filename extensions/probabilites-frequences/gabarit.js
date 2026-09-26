@@ -1,6 +1,6 @@
 // Jules - gabarit "probabilites-frequences" : frequence observee (simulation deterministe par
 // graine fixe) qui se stabilise avec n, comparee a la probabilite theorique 0,5.
-// Contrat : jules/fiches_visuelles.py (GABARITS_CONNUS). Rendu SVG pur, aucun eval().
+// Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
 window.GABARITS = window.GABARITS || {};

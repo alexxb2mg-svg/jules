@@ -1,0 +1,8 @@
+id: equation-solutions
+titre: "Figure : solutions d'une équation"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [equation-solutions]
+permissions: {}

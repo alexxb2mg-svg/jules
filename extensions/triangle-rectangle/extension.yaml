@@ -1,0 +1,8 @@
+id: triangle-rectangle
+titre: "Figure : triangle rectangle (Pythagore)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [triangle-rectangle]
+permissions: {}

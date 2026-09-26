@@ -1,0 +1,8 @@
+id: probabilites-frequences
+titre: "Figure : fréquences et probabilité"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [probabilites-frequences]
+permissions: {}
