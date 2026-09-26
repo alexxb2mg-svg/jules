@@ -62,10 +62,10 @@ Seuls les items sur lesquels un logiciel peut agir sont repris.
 
 | Id | Collège (p. 7-8) | Élémentaire | Leviers réglés |
 |---|---|---|---|
-| `supports-aeres-agrandis` | « Proposer des supports écrits aérés et agrandis (exemple : ARIAL14) » p. 7 | « Agrandir les formats des supports écrits (A3) » p. 4 | espacement-lettres, espacement-mots, interligne, taille-texte, longueur-ligne |
+| `supports-aeres-agrandis` | « Proposer des supports écrits aérés et agrandis (exemple : ARIAL14) » p. 7 | « Agrandir les formats des supports écrits (A 3) » p. 4 | espacement-lettres, espacement-mots, interligne, taille-texte, longueur-ligne |
 | `temps-majore` | « Accorder un temps majoré » p. 7 | « Accorder un temps majoré » p. 4 | temps-majore **[en attente collecte]** |
 | `limiter-quantite-ecrit` | « Limiter la quantité d'écrit (recours possible aux QCM, exercices à trous, schémas ...) » p. 7 | « Diminuer la quantité d'écrit sur chaque feuille » p. 5 | densite = un exercice |
-| `surligner-mots-cles` | « Surligner les mots-clés ou nouveaux » p. 8 (histoire-géographie) | « Surligner des mots clés / passages importants pour faciliter la lecture de l'élève » p. 4 | surlignage-mots-cles |
+| `surligner-mots-cles` | « Surligner les mots-clés ou nouveaux » p. 8 (histoire-géographie) | « Surligner des mots clés /passages importants pour faciliter la lecture de l'élève » p. 4 | surlignage-mots-cles |
 | `lecture-oralisee` | aucun item : « Autres aménagements » | « Proposer à l'élève une lecture oralisée (enseignant ou autre élève) ou une écoute audio des textes supports de la séance » p. 4 | lecture-vocale = proposée |
 | `reformulation` | aucun item : « Autres aménagements » | « Aider à la compréhension par une explicitation ou une reformulation de la part de l'enseignant » p. 4 | phrases-courtes |
 | `consignes-decomposees` | aucun item : « Autres aménagements » | aucun item (maternelle p. 2 : « Décomposer les consignes et informations complexes ») | consignes-decoupees, phrases-courtes |
