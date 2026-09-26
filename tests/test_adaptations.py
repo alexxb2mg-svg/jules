@@ -121,15 +121,15 @@ def test_identifiant_inconnu_ou_malforme_ignore(tmp_path: Path, caplog):
 
 
 def test_ids_effaces_des_champs_libres_imbriques():
-    ids = ["phrases-courtes"]
+    ids = ["amenagement-test-a"]
     valeur = {
-        "remarques": "Suivi PHRASES-COURTES ; relecture phrases-courtes-bis",
-        "liste": ["phrases-courtes", "maths"],
-        "phrases_courtes": "cle retiree",
-        "sous": {"x": ["a phrases-courtes b"]},
+        "remarques": "Suivi AMENAGEMENT-TEST-A ; relecture amenagement-test-a-bis",
+        "liste": ["amenagement-test-a", "maths"],
+        "amenagement_test_a": "cle retiree",
+        "sous": {"x": ["a amenagement-test-a b"]},
     }
     assert effacer_ids(valeur, ids) == {
-        "remarques": "Suivi ; relecture phrases-courtes-bis",
+        "remarques": "Suivi ; relecture amenagement-test-a-bis",
         "liste": ["maths"],
         "sous": {"x": ["a b"]},
     }
@@ -182,7 +182,7 @@ def test_regles_de_recherche_cas_temoin():
 
 def test_ex008_perimetre():
     fichiers = {p.relative_to(RACINE).as_posix() for p in fichiers_ex008()}
-    assert "profils/test-cumul.yaml" in fichiers and "consignes/amenagements/phrases-courtes.md" in fichiers
+    assert "profils/test-cumul.yaml" in fichiers and "consignes/amenagements/amenagement-test-a.md" in fichiers
     assert not {f for f in fichiers if f.endswith((".py", "README.md"))}
     assert not fichiers & EXEMPTIONS_EX008
     for exemption in EXEMPTIONS_EX008:

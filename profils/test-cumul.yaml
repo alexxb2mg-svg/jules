@@ -5,7 +5,7 @@ prenom: Alix
 genre: neutre
 parent: ses parents
 classe: "4e"
-amenagements: [phrases-courtes, consignes-fractionnees, amenagement-inexistant]
-centres_interet: [astronomie, phrases-courtes]
-points_a_travailler: [consignes-fractionnees]
-remarques: "Suivi phrases-courtes depuis la rentrée ; aime les exemples concrets."
+amenagements: [amenagement-test-a, amenagement-test-b, amenagement-inexistant]
+centres_interet: [astronomie, amenagement-test-a]
+points_a_travailler: [amenagement-test-b]
+remarques: "Suivi amenagement-test-a depuis la rentrée ; aime les exemples concrets."

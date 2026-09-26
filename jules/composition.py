@@ -8,7 +8,7 @@ Ordre d'assemblage (le dernier bloc prime en cas de conflit) :
   4. contributions des modules (mode choisi, memoire...)
   5. securite (non negociable, toujours en dernier)
 
-Amenagements : le profil liste des identifiants (`amenagements: [phrases-courtes, ...]`). Ces
+Amenagements : le profil liste des identifiants (`amenagements: [amenagement-test-a, ...]`). Ces
 identifiants ne partent JAMAIS chez le fournisseur du modele : ils sont retires des champs libres du
 profil, et le modele ne recoit que le texte des consignes d'expression correspondantes
 (consignes/amenagements/<id>.md), sous un titre neutre.
