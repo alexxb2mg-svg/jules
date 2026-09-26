@@ -309,7 +309,7 @@ def capturer(index: Path, notions: list[str], dossier: Path) -> list[Path]:
             "--hide-scrollbars",
             "--allow-file-access-from-files",
         ]
-        options += ["--virtual-time-budget=4000", "--window-size=1280,3200", f"--screenshot={capture}"]
+        options += ["--virtual-time-budget=4000", "--window-size=1280,6000", f"--screenshot={capture}"]
         commande = [navigateur, *options, f"{index.as_uri()}#{notion}"]  # navigateur local, arguments fixes
         subprocess.run(commande, check=True, capture_output=True, timeout=120)  # noqa: S603
         captures.append(capture)
