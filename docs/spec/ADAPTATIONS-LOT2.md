@@ -54,7 +54,9 @@ recopié en entier depuis le PDF officiel (SHA-256
 `cd9709e9145a2b380fa04ff0e3b973c94d003c839cfefb69287f65743222f55a`), avec sa page. La page
 parent affiche le libellé du niveau de l'élève. Quand ce niveau n'a pas d'item correspondant,
 l'aménagement est affiché sous le titre du PAP « Autres aménagements et adaptations » (rubrique
-libre présente à chaque niveau), avec la mention « à inscrire par l'équipe éducative ».
+libre présente en élémentaire p. 5, collège p. 8 et lycée p. 11), avec la mention « à inscrire
+par l'équipe éducative ». La maternelle n'a pas cette rubrique et Jules ne vise pas ce niveau :
+un profil de niveau maternelle n'affiche que les aménagements qui y ont un libellé.
 
 Seuls les items sur lesquels un logiciel peut agir sont repris.
 
@@ -69,8 +71,9 @@ Seuls les items sur lesquels un logiciel peut agir sont repris.
 | `consignes-decomposees` | aucun item : « Autres aménagements » | aucun item (maternelle p. 2 : « Décomposer les consignes et informations complexes ») | consignes-decoupees, phrases-courtes |
 | `reperes-couleur-calcul` | aucun item : « Autres aménagements » | « Présenter les calculs en colonnes avec des repères de couleur (ex : colonne des unités en rouge, des dizaines en bleu et des centaines en vert) » p. 5 | reperes-rang-chiffres |
 
-Les pages sont à vérifier une fois sur le PDF par REVIEWER, puis figées dans
-`docs/spec/pap-libelles.txt` (une ligne par libellé : niveau, page, texte complet).
+Référence figée : `docs/spec/pap-libelles.txt` (propriété SPEC ; texte **affiché** du PDF, pas
+son extraction automatique). REVIEWER le vérifie une fois contre le PDF ; EX-103 n'est testable
+qu'après cette vérification.
 
 Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `fond`,
 `lecture-vocale = automatique`.

@@ -1,0 +1,26 @@
+# Libelles officiels du PAP repris par Jules (EX-103). Proprietaire : SPEC.
+# Source : modele de PAP, annexe de la circulaire n. 2015-016 du 22-1-2015, PDF
+# https://aefe.gouv.fr/sites/default/files/asset/file/modele-plan-accompagnement-personnalise-pap-education-nationale.pdf
+# SHA-256 cd9709e9145a2b380fa04ff0e3b973c94d003c839cfefb69287f65743222f55a
+#
+# Regle : le texte est celui AFFICHE dans le PDF (lu a l'ecran), pas celui de l'extraction
+# automatique, qui altere certains passages (ex. "(A3)" extrait en "(a 3)", "mots cles / passages"
+# en "mots cles /passages"). Accents et typographie du PDF conserves ; apostrophes en ' droite.
+# La comparaison d'EX-103 normalise apostrophes et suites d'espaces, rien d'autre.
+#
+# Format : identifiant | niveau | page du PDF | libelle complet
+# Niveau absent = aucun item a ce niveau (affichage sous "Autres amenagements et adaptations",
+# rubrique presente en elementaire p. 5, college p. 8, lycee p. 11 ; absente en maternelle).
+#
+supports-aeres-agrandis | college | 7 | Proposer des supports écrits aérés et agrandis (exemple : ARIAL14)
+supports-aeres-agrandis | elementaire | 4 | Agrandir les formats des supports écrits (A3)
+temps-majore | college | 7 | Accorder un temps majoré
+temps-majore | elementaire | 4 | Accorder un temps majoré
+limiter-quantite-ecrit | college | 7 | Limiter la quantité d'écrit (recours possible aux QCM, exercices à trous, schémas ...)
+limiter-quantite-ecrit | elementaire | 5 | Diminuer la quantité d'écrit sur chaque feuille
+surligner-mots-cles | college | 8 | Surligner les mots-clés ou nouveaux
+surligner-mots-cles | elementaire | 4 | Surligner des mots clés / passages importants pour faciliter la lecture de l'élève
+lecture-oralisee | elementaire | 4 | Proposer à l'élève une lecture oralisée (enseignant ou autre élève) ou une écoute audio des textes supports de la séance
+reformulation | elementaire | 4 | Aider à la compréhension par une explicitation ou une reformulation de la part de l'enseignant
+consignes-decomposees | maternelle | 2 | Décomposer les consignes et informations complexes (Utiliser de préférence des consignes simples)
+reperes-couleur-calcul | elementaire | 5 | Présenter les calculs en colonnes avec des repères de couleur (ex : colonne des unités en rouge, des dizaines en bleu et des centaines en vert)
