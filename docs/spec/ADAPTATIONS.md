@@ -136,6 +136,11 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - **Dictée vocale** : la reconnaissance vocale des navigateurs envoie la voix à un serveur
   tiers. Exclue tant qu'aucune solution locale n'est retenue.
 - Valeurs des leviers, liste des aménagements, règles de combinaison : lot 2.
+- Emplacement du bouton de lecture côté élève : lot 2. Le lot 1 livre le module
+  (`lecture-vocale.js`, EX-006/007) ; son branchement dans l'interface dépend du levier
+  « lecture vocale » (proposée / automatique) et de l'aménagement qui l'active.
+- Exécution des tests de navigateur en CI (installer Chromium dans le workflow) : hors lot 1.
+  EX-012 s'applique à la revue, sur la machine du relecteur.
 - Message propre à un navigateur dans la page parent : non validé tant que le comportement
   d'Edge en affichage normal n'est pas mesuré.
 
