@@ -194,6 +194,15 @@ def test_fiche_tronquee():
     assert len(texte) < 130 and texte.endswith("[… fiche tronquée]")
 
 
+def test_fiche_v1_garde_sa_solution_dans_le_prompt(mini):
+    """Une fiche v1 (pas de champ `type` sur l'exercice) : le modele reste le seul correcteur, la solution passe."""
+    cat = charger_catalogue(mini, ["ref", "fiches"], "3e")
+    fiche, _ = cat.fiche("pythagore")
+    texte = texte_fiche(fiche)
+    assert "Solution : 5" in texte
+    assert "corrigé par le code" not in texte
+
+
 # --- module dans le tuteur ------------------------------------------------------
 
 

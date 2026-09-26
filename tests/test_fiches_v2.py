@@ -359,3 +359,24 @@ def test_fiche_v2_dans_le_prompt(maths):
     assert "Indice 1 : " + exo(maths, "decomposer-360")["indices"]["relance"] in texte
     assert "Critère de réussite" in texte and "piège fréquent" in texte
     assert "{'relance'" not in texte
+
+
+def test_fiche_v2_ne_transmet_pas_la_solution_des_exercices_corriges_par_le_code(maths):
+    """Le modele ne doit jamais voir la solution ni la reponse d'un exercice que le code corrige."""
+    texte = texte_fiche(maths, limite=20000)
+    exercice = exo(maths, "irreductible-252-360")
+    assert exercice["type"] == "nombre"
+    assert exercice["solution"] not in texte
+    assert exercice["reponse"]["valeur"] not in texte  # "7/10" : la reponse attendue
+    assert "corrigé par le code" in texte
+    # l'exercice ouvert, lui, garde sa solution : personne d'autre que l'adulte/le modele ne corrige
+    ouverte = exo(maths, "justifier-97")
+    assert ouverte["type"] == "ouverte"
+    assert ouverte["solution"] in texte
+
+
+def test_fiche_v2_histoire_ne_transmet_pas_non_plus_les_solutions_corrigees(histoire):
+    texte = texte_fiche(histoire, limite=20000)
+    for exercice in histoire["exercices"]:
+        if exercice["type"] != "ouverte":
+            assert exercice["solution"] not in texte
