@@ -79,11 +79,7 @@ ESSAI_OUTIL_JS = """"use strict";
     c.iframe.contentWindow.addEventListener("error", function (err) { c.erreurs.push(String(err.message)); });
     if (c.scenario === "reponse") c.iframe.contentWindow.postMessage(REPONSE, "*");
     if (c.scenario === "tardif") setTimeout(function () { c.iframe.contentWindow.postMessage(REPONSE, "*"); }, 800);
-    if (c.scenario === "autre-source") {
-      var intrus = document.createElement("iframe");
-      intrus.src = "/essai-intrus?cible=" + c.index;
-      document.body.appendChild(intrus);
-    }
+    if (c.scenario === "autre-source") c.intrus.contentWindow.postMessage({ type: "go", cible: c.index }, "*");
     setTimeout(function () { c.a300 = etatDe(c); }, 300);
     setTimeout(function () { c.a700 = etatDe(c); }, 700);
   });
@@ -91,6 +87,13 @@ ESSAI_OUTIL_JS = """"use strict";
   OUTILS.forEach(function (outil) {
     SCENARIOS.forEach(function (scenario) {
       var c = { index: cadres.length, outil: outil, scenario: scenario, journal: [], erreurs: [] };
+      if (scenario === "autre-source") {
+        // Fenetre intruse chargee a l'avance (sinon son chargement mange le delai de 500 ms) ;
+        // elle n'agit qu'au signal envoye quand l'outil cible a dit « pret ».
+        c.intrus = document.createElement("iframe");
+        c.intrus.src = "/essai-intrus";
+        document.body.appendChild(c.intrus);
+      }
       c.iframe = document.createElement("iframe");
       c.iframe.id = "cadre-" + c.index;
       c.iframe.src = "/essai-cadre/" + outil;
@@ -114,10 +117,13 @@ ESSAI_OUTIL_JS = """"use strict";
 # Autre fenetre de la meme page (pas le parent de l'outil) : envoie des adaptations a l'outil cible.
 ESSAI_INTRUS_JS = """"use strict";
 (function () {
-  var cible = Number(new URLSearchParams(location.search).get("cible"));
-  var fenetre = parent.document.getElementById("cadre-" + cible).contentWindow;
-  fenetre.postMessage({ type: "adaptations", leviers: {} }, "*");
-  parent.postMessage({ type: "intrus-envoye", cible: cible }, "*");
+  window.addEventListener("message", function (e) {
+    if (e.source !== parent || !e.data || e.data.type !== "go") return;
+    var cible = e.data.cible;
+    var fenetre = parent.document.getElementById("cadre-" + cible).contentWindow;
+    fenetre.postMessage({ type: "adaptations", leviers: {} }, "*");
+    parent.postMessage({ type: "intrus-envoye", cible: cible }, "*");
+  });
 })();
 """
 
@@ -303,11 +309,12 @@ def _resultat(url: str, profil: Path) -> object:
     # outil sandboxe ne s'ecoule jamais pendant l'essai. L'isolement teste reste celui du sandbox.
     options += ["--disable-features=IsolateSandboxedIframes"]
     options += ["--virtual-time-budget=10000", "--dump-dom"]
-    sortie = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, url], capture_output=True, text=True, timeout=120, check=True
-    ).stdout
+    fini = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
+        [navigateur, *options, url], capture_output=True, text=True, timeout=180, check=False
+    )
+    sortie = fini.stdout
     trouve = re.search(r'data-resultat="([^"]*)"', sortie)
-    assert trouve, sortie[-2000:]
+    assert trouve, f"code {fini.returncode}\n{fini.stderr[-2000:]}\n{sortie[-2000:]}"
     return json.loads(trouve.group(1).replace("&quot;", '"').replace("&amp;", "&"))
 
 
