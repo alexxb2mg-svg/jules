@@ -52,7 +52,10 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   Elle appartient à la spec (le code testé ne la modifie pas) et ses règles de recherche,
   écrites en tête du fichier, sont obligatoires : insensible à la casse et aux accents,
   radicaux en sous-chaîne, sigles préfixés `mot:` en mot entier. Le test contient un
-  cas témoin qui vérifie que « Dyslexique » et « DYSPRAXIE » sont bien détectés.
+  cas témoin qui vérifie que « Dyslexique » et « DYSPRAXIE » sont bien détectés, ainsi que
+  « déficiences visuelles », « déficit de l’attention » (apostrophe typographique) et
+  « handicapé ». Le périmètre de la liste dépasse VISION §5 (autisme, surdité, cécité) :
+  le « etc. » de VISION est lu au sens large.
 - **EX-008** — Aucun fichier de données versionné (`.yaml`, `.yml`, `.json`, `.md` hors
   `README.md`) sous `profils/`, `adaptations/`, `consignes/` et `tests/` ne contient un nom
   de trouble ni le prénom d'un élève réel. Ne sont pas concernés : `docs/`, les `README.md`
