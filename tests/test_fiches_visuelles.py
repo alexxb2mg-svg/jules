@@ -267,6 +267,42 @@ def test_notion_cle_refusee_hors_texte_courant(tmp_path, notions, biblio):
         lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
 
 
+def test_variables_declarees_servies_telles_quelles(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["variables"] = {"a": "le coefficient directeur", "b": "l'ordonnée à l'origine", "V₁": "un volume"}
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    assert fiche.toutes_les_variables() == brut["variables"]
+    assert fiche.publique([])["variables"] == brut["variables"]
+    # Sans champ : aucune lettre rappelee (jamais un symbole chimique ou une unite par deduction).
+    assert lire_fiche_visuelle(ecrire(tmp_path, fiche_valide()), notions, biblio, GABARITS).variables == {}
+
+
+@pytest.mark.parametrize("variables", [{"2 H₂O": "eau"}, {"vitesse": "trop long comme nom"}, {"v": ""}, ["v"]])
+def test_variables_mal_formees_refusees(tmp_path, notions, biblio, variables):
+    brut = copy.deepcopy(fiche_valide())
+    brut["variables"] = variables
+    with pytest.raises(ErreurFicheVisuelle):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+@pytest.mark.parametrize(
+    "champ, texte",
+    [("titre", "La masse volumique : ρ = m / V"), ("etape", "Calculer a = (yB − yA) / (xB − xA).")],
+)
+def test_division_s_ecrit_avec_le_signe_de_l_eleve(tmp_path, notions, biblio, champ, texte):
+    brut = copy.deepcopy(fiche_valide())
+    if champ == "titre":
+        brut["titre"] = texte
+    else:
+        _bloc(brut, "methode")["etapes"][0] = texte
+    with pytest.raises(ErreurFicheVisuelle, match="÷"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+    # Les unites gardent leur barre collee.
+    _bloc(brut, "methode")["etapes"][0] = "Convertir 36 km/h en m/s : 36 ÷ 3,6 = 10 m/s."
+    brut["titre"] = "Fonctions"
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
 def test_source_sans_licence_libre_refusee(tmp_path, notions, biblio):
     brut = copy.deepcopy(fiche_valide())
     brut["sources"] = [{"titre": "x", "url": "https://exemple.fr", "licence": "tous-droits-reserves"}]

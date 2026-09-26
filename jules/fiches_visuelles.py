@@ -146,6 +146,12 @@ class FicheVisuelle:
     relecture: str = "a_relire"
     blocs: list[BlocFiche] = field(default_factory=list)
     avertissement: str = ""
+    variables: dict[str, str] = field(default_factory=dict)
+
+    def toutes_les_variables(self) -> dict[str, str]:
+        """Le sens des lettres de grandeur de la notion (champ `variables:`), rappele au survol sur
+        toutes les pages. Seules les lettres declarees : jamais un symbole chimique ni une unite."""
+        return dict(self.variables)
 
     def publique(self, attendus: list[str]) -> dict[str, Any]:
         blocs: list[dict[str, Any]] = []
@@ -164,6 +170,7 @@ class FicheVisuelle:
             "avertissement": self.avertissement,
             "sources": self.sources,
             "blocs": blocs,
+            "variables": self.toutes_les_variables(),
         }
 
 
@@ -199,6 +206,37 @@ def _verifier_accents(v: str, champ: str, ou: str) -> str:
     return lisible
 
 
+# Nom d'une grandeur dans une formule : une lettre (latine ou grecque), suivie au plus de 3 lettres,
+# chiffres ou indices (v, Ec, ρ, V₁, Epp). La bulle de la page rappelle son sens au survol.
+NOM_VARIABLE = re.compile(r"^[A-Za-zΑ-Ωα-ωµ][A-Za-z0-9₀-₉]{0,3}$")
+VARIABLES_MAX = 12
+LIMITE_VARIABLE = 120
+
+
+def _verifier_variables(brut: Any, nom: str) -> dict[str, str]:
+    if brut is None:
+        return {}
+    if not isinstance(brut, dict) or len(brut) > VARIABLES_MAX:
+        raise ErreurFicheVisuelle(f"{nom} : 'variables' doit etre un objet de {VARIABLES_MAX} lettres au plus")
+    variables: dict[str, str] = {}
+    for lettre, sens in brut.items():
+        lettre = str(lettre)
+        if not NOM_VARIABLE.match(lettre):
+            raise ErreurFicheVisuelle(f"{nom} : variable {lettre!r} : une lettre, puis 3 lettres, chiffres ou indices")
+        variables[lettre] = _texte(sens, f"variables.{lettre}", nom, limite=LIMITE_VARIABLE)
+    return variables
+
+
+# Division : l'eleve de college ecrit « ÷ » ; la barre « / » n'est permise que dans une unite collee
+# (m/s, g/cm³). Une barre entouree d'espaces (« m / V ») est refusee partout, schemas compris.
+_BARRE_DE_DIVISION = re.compile(r"\S\s+/\s+\S")
+
+
+def _verifier_division(texte: str, champ: str, ou: str) -> None:
+    if _BARRE_DE_DIVISION.search(texte):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
+
+
 def _texte(
     valeur: Any, champ: str, ou: str, limite: int = LIMITE_TEXTE, obligatoire: bool = True, riche: bool = False
 ) -> str:
@@ -207,6 +245,7 @@ def _texte(
     v = str(valeur or "").strip()
     if obligatoire and not v:
         raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} manquant")
+    _verifier_division(v, champ, ou)
     if riche:
         lisible = _verifier_accents(v, champ, ou)
     elif "**" in v:
@@ -222,6 +261,7 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
     texte = str(valeur or "").strip()
     if not texte:
         return ""
+    _verifier_division(texte, "jules", ou)
     lisible = _verifier_accents(texte, "jules", ou)
     if len(lisible) > LIMITE_JULES:
         raise ErreurFicheVisuelle(
@@ -450,6 +490,8 @@ def _verifier_schema(d: dict[str, Any], ou: str, dossier_fiche: Path) -> dict[st
         source_svg = fichier.read_text(encoding="utf-8")
     try:
         propre = nettoyer_svg(source_svg, ou=ou)
+        for texte_svg in re.findall(r">([^<]+)<", propre):
+            _verifier_division(texte_svg, "svg", ou)
     except ErreurSvg as err:
         raise ErreurFicheVisuelle(str(err)) from err
     return {"titre": titre, "svg": propre}
@@ -515,6 +557,7 @@ def lire_fiche_visuelle(
     if notion is None:
         raise ErreurFicheVisuelle(f"{nom} : notion {identifiant!r} inconnue du referentiel")
     titre = str(brut.get("titre") or "").strip() or notion.titre
+    _verifier_division(titre, "titre", nom)
     licence = str(brut.get("licence") or bibliotheque.licence)
     if licence not in LICENCES_LIBRES:
         raise ErreurFicheVisuelle(f"{nom} : licence {licence!r} non libre ou inconnue")
@@ -548,6 +591,7 @@ def lire_fiche_visuelle(
         relecture=relecture,
         blocs=blocs,
         avertissement=bibliotheque.avertissement,
+        variables=_verifier_variables(brut.get("variables"), nom),
     )
 
 

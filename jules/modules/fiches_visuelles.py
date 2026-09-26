@@ -100,6 +100,13 @@ class Brique(Module):
         def liste_route() -> dict[str, Any]:
             return self.liste()
 
+        @routeur.get("/notions/{notion_id}/variables")
+        def variables_route(notion_id: str) -> dict[str, Any]:
+            # Pour toutes les pages (discussion, studio, cours) : le sens des lettres de la notion,
+            # affiche au survol par symboles.js. Sans fiche pour cette notion : rien a rappeler.
+            fiche = self.fiches.get(notion_id)
+            return {"variables": fiche.toutes_les_variables() if fiche else {}}
+
         @routeur.get("/notions/{notion_id}")
         def fiche_route(notion_id: str) -> dict[str, Any]:
             try:

@@ -1,27 +1,22 @@
-/* Jules - nom des symboles (voir symboles.js) : bulle au survol, au toucher ou au clavier. */
+/* Jules - bulles de rappel au survol (voir symboles.js) : symboles et lettres des formules. */
 .symbole {
-  position: relative; cursor: help; border-radius: 3px;
+  cursor: help; border-radius: 3px;
   text-decoration: underline dotted rgba(31, 78, 140, .45); text-decoration-thickness: 1px; text-underline-offset: 3px;
 }
 .symbole:hover, .symbole:focus { background: rgba(31, 78, 140, .10); outline: none; }
 .symbole:focus-visible { box-shadow: 0 0 0 2px rgba(31, 78, 140, .45); }
-.symbole::after, .symbole::before {
-  position: absolute; left: 50%; pointer-events: none; opacity: 0; z-index: 50;
-  transition: opacity .12s, transform .12s; transform: translate(-50%, 4px);
-}
-.symbole::after {
-  content: attr(data-nom); bottom: calc(100% + 9px); width: max-content; max-width: min(280px, 80vw); white-space: normal;
-  background: #14243B; color: #FFFFFF; border-radius: 9px; padding: 6px 11px;
-  font: 500 15px/1.3 var(--police-texte, "Segoe UI", Roboto, Arial, sans-serif);
-  font-style: normal; letter-spacing: normal; text-transform: none;
+
+/* Une seule bulle pour la page, placee par le script (jamais hors de l'ecran). */
+.symboles-bulle {
+  position: absolute; top: 0; left: 0; z-index: 60; pointer-events: none;
+  width: max-content; max-width: min(300px, calc(100vw - 16px));
+  background: #14243B; color: #FFFFFF; border-radius: 9px; padding: 7px 12px;
+  font: 500 15px/1.35 var(--police-texte, "Segoe UI", Roboto, Arial, sans-serif);
+  font-style: normal; letter-spacing: normal; text-transform: none; text-align: left;
   box-shadow: 0 6px 18px rgba(20, 36, 59, .25);
+  opacity: 0; visibility: hidden; transition: opacity .12s, visibility .12s;
 }
-.symbole::before {
-  content: ""; bottom: calc(100% + 3px); border: 6px solid transparent; border-bottom: 0; border-top-color: #14243B;
-}
-.symbole:hover::after, .symbole:hover::before, .symbole:focus::after, .symbole:focus::before {
-  opacity: 1; transform: translate(-50%, 0);
-}
+.symboles-bulle.visible { opacity: 1; visibility: visible; }
 @media (prefers-reduced-motion: reduce) {
-  .symbole::after, .symbole::before { transition: none; }
+  .symboles-bulle { transition: none; }
 }

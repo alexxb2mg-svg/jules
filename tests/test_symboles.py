@@ -19,9 +19,21 @@ def test_chaque_page_charge_le_module_des_symboles(page):
     assert html.index("/static/symboles.js") < html.index("/static/commun.js")
 
 
+def test_chaque_page_rappelle_les_lettres_de_sa_notion():
+    for page, appel in [
+        ("accueil.js", "Symboles.variables("),
+        ("eleve.js", "Symboles.notion("),
+        ("studio.js", "Symboles.notion("),
+        ("cours.js", "Symboles.notion("),
+    ]:
+        assert appel in (STATIQUE / page).read_text(encoding="utf-8"), page
+
+
 def test_le_module_n_utilise_jamais_innerhtml():
     code = (STATIQUE / "symboles.js").read_text(encoding="utf-8")
     assert "innerHTML" not in code.replace("Jamais d'innerHTML", "")
     noms = re.findall(r'^\s+"(.+?)": "(.+?)",$', code, flags=re.M)
     assert len(noms) >= 30 and len({s for s, _ in noms}) == len(noms)
-    assert {"<", ">", "≤", "≥", "≠", "≈", "×", "÷", "√", "π"} <= {s for s, _ in noms}
+    assert {"<", ">", "≤", "≥", "≠", "≈", "√", "π", "Ω"} <= {s for s, _ in noms}
+    # Les operations evidentes n'ont pas de bulle : ce sont les lettres des formules qu'on rappelle.
+    assert not {"×", "÷", "+", "="} & {s for s, _ in noms}

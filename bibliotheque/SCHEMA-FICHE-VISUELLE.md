@@ -64,7 +64,17 @@ bord, au plus 60 % du texte mis en valeur, marques bien fermées ; les limites d
 comptent sans les `**`. Ailleurs (titres, carte, identifiants) la marque est refusée : elle
 s'afficherait telle quelle.
 
-Les symboles (`<`, `≤`, `×`, `÷`, `√`, `π`, `Ω`, `°C`...) n'ont rien à marquer : sur toutes les
+### Le sens des lettres : `variables:`
+
+Champ de premier niveau, facultatif : `variables: {v: "la vitesse, en m/s ou en km/h", d: "la distance
+parcourue, en m ou en km"}`. Chaque lettre de grandeur des formules et calculs de la fiche y reçoit une
+définition courte ; l'élève la retrouve en survolant la lettre dans une formule, sur toutes les pages de
+Jules (fiche, discussion, entraînement, cours de la notion). Nom : une lettre latine ou grecque suivie
+d'au plus 3 lettres, chiffres ou indices (`v`, `Ec`, `ρ`, `U1`, `V₁`) ; 12 lettres au plus ; 120
+caractères par définition. Seules les lettres déclarées ont une bulle : jamais les symboles chimiques
+(H, O, CO₂) ni les unités. Servi aussi par `GET /api/eleve/fiches_visuelles/notions/<id>/variables`.
+
+Les symboles (`<`, `≤`, `≈`, `√`, `π`, `Ω`, `°C`...) n'ont rien à marquer : sur toutes les
 pages de Jules, le module commun `jules/web/static/symboles.js` affiche leur nom dans une petite
 bulle au survol, au toucher ou au clavier (liste à compléter dans ce fichier). Seul le texte des
 schémas SVG n'est pas concerné.

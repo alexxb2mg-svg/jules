@@ -50,7 +50,7 @@ blocs:
     etapes:
       - "Lire b : là où la droite coupe l'axe vertical."
       - "Lire a : avancer de 1 vers la droite, compter de combien on monte (ou descend)."
-      - "Avec deux points A et B : a = (yB − yA) / (xB − xA), puis retrouver b en remplaçant un point dans y = ax + b."
+      - "Avec deux points A et B : a = (yB − yA) ÷ (xB − xA), puis retrouver b en remplaçant un point dans y = ax + b."
     jules: "L'étape 2 est celle qu'on oublie le plus : on avance de 1, pas de 2 ou de 3."
 
   - id: piege

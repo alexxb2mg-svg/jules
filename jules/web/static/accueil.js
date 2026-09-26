@@ -82,6 +82,11 @@
       etat.fiche = fiche;
       etat.notionActive = notionId;
       marquerNotionActive();
+      // Rappel au survol du sens des lettres de la notion (symboles.js), dans la fiche et les bulles.
+      if (typeof Symboles !== "undefined") {
+        Symboles.variables($("fiche"), fiche.variables);
+        Symboles.variables($("bulles"), fiche.variables);
+      }
       afficherFiche(fiche);
       $("fiche").classList.remove("cache");
       // Nouvelle fiche : on repart de son titre, pas de la position de defilement de la precedente.
@@ -541,7 +546,10 @@
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));
     ajouterBulle("Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir.");
     await chargerNotions();
-    if (etat.notions.length) ouvrirFiche(etat.notions[0].id);
+    // Lien direct vers une fiche : /#<identifiant de la notion> ; sinon la premiere de la liste.
+    const demandee = decodeURIComponent(location.hash.slice(1));
+    const aOuvrir = etat.notions.find((n) => n.id === demandee) || etat.notions[0];
+    if (aOuvrir) ouvrirFiche(aOuvrir.id);
   }
 
   demarrage().catch((err) => {
