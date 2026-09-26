@@ -3,6 +3,7 @@
 - EX-004 : les identifiants d'amenagement ne partent jamais chez le fournisseur du modele.
 - EX-005 : le modele recoit seulement les consignes d'expression des amenagements actifs.
 - EX-008 : aucun nom de trouble ni prenom d'eleve reel dans les donnees versionnees.
+- EX-011 : le champ libre `remarques` porte un avertissement (exemple et profil genere).
 
 Les termes sont lus dans docs/spec/termes-interdits.txt ; seul le cas temoin impose par la spec les
 ecrit en clair (le code Python des tests est hors du champ d'EX-008).
@@ -26,6 +27,7 @@ from jules.composition import (
     effacer_ids,
 )
 from jules.config import depuis_dict
+from jules.installation import profil_yaml
 from jules.llm.factice import Brique as Factice
 from jules.moteur import Tuteur
 from jules.persona import charger_persona
@@ -162,13 +164,20 @@ def test_regles_de_recherche_cas_temoin():
     assert trouver_terme("Elle est Dyslexique.", termes) is not None
     assert trouver_terme("DYSPRAXIE", termes) is not None
     assert trouver_terme("dÉficit de l’attention", termes) is not None  # accents + apostrophe typographique
+    assert trouver_terme("Des déficiences visuelles.", termes) is not None  # radical
+    assert trouver_terme("Il est handicapé.", termes) is not None  # radical, accent final
+    for apostrophe in ("\u2018", "\u02bc", "'"):  # les trois apostrophes de la regle, et la droite
+        assert trouver_terme(f"deficit d{apostrophe}attention", termes) is not None, hex(ord(apostrophe))
+    assert trouver_terme("deficit  de\tl'attention", termes) is not None  # suite d'espaces entre les mots
     sigles = [t for t in termes if t.mot_entier]
     assert sigles, "aucun terme « mot: » dans la liste"
     for sigle in sigles:
         assert trouver_terme(f"({sigle.texte.upper()})", termes) == sigle.texte
         assert trouver_terme(f"x{sigle.texte}x", [sigle]) is None  # mot entier : pas de sous-chaine
-    # rien de faux sur un texte ordinaire (dont « diagnostic », volontairement absent de la liste)
-    assert trouver_terme("Le diagnostic du correcteur : facteur non premier, avec de l'attention.", termes) is None
+    # rien de faux sur un texte ordinaire : « surdite » et « sourd » sont en mot entier
+    assert trouver_terme("Quelle absurdité ! Joue en sourdine, avec de l'attention.", termes) is None
+    assert trouver_terme("absurdité", termes) is None
+    assert trouver_terme("sourdine", termes) is None
 
 
 def test_ex008_perimetre():
@@ -226,3 +235,31 @@ def test_ex008_b_aucun_prenom_reel():
         if any(m.search(normaliser(f.read_text(encoding="utf-8", errors="replace"))) for m in motifs.values())
     ]  # le prenom n'est pas recopie dans le message : il ne doit pas finir dans un journal de CI
     assert not fautifs, f"prenom d'un eleve reel dans : {fautifs}"
+
+
+# --- EX-011 : avertissement sur le champ libre `remarques` ---------------------------
+def avertissement_remarques(texte: str) -> str | None:
+    """Commentaire d'avertissement porte par la ligne `remarques:` ou par le commentaire juste au-dessus."""
+    lignes = texte.splitlines()
+    index = next((i for i, ligne in enumerate(lignes) if ligne.startswith("remarques:")), None)
+    assert index is not None, "champ `remarques` absent"
+    candidats = [lignes[index].partition("#")[2]]
+    if index > 0 and lignes[index - 1].lstrip().startswith("#"):
+        candidats.append(lignes[index - 1])
+    for candidat in candidats:
+        n = normaliser(candidat)
+        if "moteur" in n and "en ligne" in n and "aucune information medicale" in n:
+            return candidat
+    return None
+
+
+@pytest.mark.parametrize("source", ["profils/exemple.yaml", "jules/installation.py"])
+def test_ex011_avertissement_sur_remarques(source: str):
+    if source == "profils/exemple.yaml":
+        texte = (RACINE / source).read_text(encoding="utf-8")
+    else:
+        texte = profil_yaml("Sam", "garcon", "4e", "son oncle")
+        assert yaml.safe_load(texte)["remarques"] == ""  # le champ reste transmis, le YAML reste lisible
+    avertissement = avertissement_remarques(texte)
+    assert avertissement, f"{source} : pas d'avertissement au-dessus ou sur la ligne `remarques`"
+    assert trouver_terme(avertissement, termes_interdits()) is None  # sinon EX-008 echouerait

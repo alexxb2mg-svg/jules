@@ -14,5 +14,5 @@ points_a_travailler: []
 centres_interet: []       # le bot s'en sert pour ses exemples (ex. [chevaux, dessin, Minecraft])
 amenagements: []          # identifiants de consignes/amenagements/ (ex. [phrases-courtes]) : jamais envoyes
                           # au modele, seul le texte des consignes correspondantes lui est transmis
+# ATTENTION : `remarques` est lu par le moteur d'IA en ligne. Aucune information medicale.
 remarques: ""             # ex. "a besoin d'etre rassure(e) avant les controles"
-                          # ATTENTION : lu par le moteur d'IA en ligne. Ni diagnostic ni information medicale.

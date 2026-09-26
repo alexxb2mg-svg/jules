@@ -20,6 +20,9 @@ import yaml
 
 from jules.texte import GENRE_DEFAUT, GENRES, normaliser_genre
 
+# EX-011 : commentaire YAML place juste au-dessus du champ `remarques` du profil genere.
+AVERTISSEMENT_REMARQUES = "# ATTENTION : `remarques` est lu par le moteur d'IA en ligne. Aucune information medicale."
+
 
 @dataclass(frozen=True)
 class Moteur:
@@ -109,10 +112,12 @@ def profil_yaml(prenom: str, genre: str, classe: str, parent: str) -> str:
         "classe": classe,
         "centres_interet": [],
         "points_a_travailler": [],
-        "remarques": "",
     }
-    return "# Profil cree par l'assistant d'installation. Jamais publie.\n" + yaml.safe_dump(
-        donnees, allow_unicode=True, sort_keys=False
+    return (
+        "# Profil cree par l'assistant d'installation. Jamais publie.\n"
+        + yaml.safe_dump(donnees, allow_unicode=True, sort_keys=False)
+        + f"{AVERTISSEMENT_REMARQUES}\n"
+        + yaml.safe_dump({"remarques": ""}, allow_unicode=True, sort_keys=False)
     )
 
 
