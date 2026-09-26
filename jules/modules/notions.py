@@ -43,8 +43,9 @@ journal = logging.getLogger("jules.notions")
 
 ESPACE = "notions"
 ORIGINES = ("eleve", "auto")
-# Pendant l'epreuve sans aide, Jules ne recoit ni fiche ni attendus : ce serait une aide.
-MODES_SANS_NOTION = ("epreuve",)
+# Pendant l'epreuve sans aide et les exercices sans IA, Jules ne recoit ni fiche ni attendus (ce serait
+# une aide), et la conversation n'appelle jamais le modele : la detection automatique serait perdue.
+MODES_SANS_NOTION = ("epreuve", "exercice")
 # Un calcul tape par l'eleve (« (2x-6)(x+5) = 0 », « 2/3 + 5/6 ») : un operateur colle a un nombre ou a une
 # parenthese. « peut-être » ou « m/s » n'en sont pas.
 _CALCUL = re.compile(r"[0-9)²³]\s*[-+*/×÷=^]|[-+*/×÷=^]\s*[0-9(√]")

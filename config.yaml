@@ -46,6 +46,10 @@ modules:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
         - lecons-3e-experimentales     # ecrite par le lot B ; absente = module actif sans lecon
   - id: studio         # l'eleve fabrique ses supports de revision, Jules relit (etape 4) ; apres 'cours'
+  - id: exercices      # entrainement sans IA sur les fiches v2 servables sans IA (docs/FICHES-V2.md)
+    reglages:
+      bibliotheques:   # dossiers de bibliotheque/ contenant des fiches v2, par ordre de priorite
+        - fiches-v2-demonstration       # demonstration : deux fiches, EXPERIMENTALE
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent

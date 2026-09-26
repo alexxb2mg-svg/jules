@@ -21,6 +21,7 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "fiches_visuelles",
         "cours",
         "studio",
+        "exercices",
         "memoire",
         "suivi",
         "vigilance",
