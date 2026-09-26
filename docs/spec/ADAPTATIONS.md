@@ -160,3 +160,9 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - L'appareil de l'élève n'est pas celui du développement (accès par le réseau local depuis
   une tablette) : les mesures faites sur la tour ne valent pas pour lui.
 - PR #40 fusionnée dans `main` (`260adfe`) : plus de chevauchement avec EX-009.
+- Les tests navigateur d'EX-001 à 003 lancent Chrome avec `--disable-features=IsolateSandboxedIframes`
+  (sans cela, le délai de 500 ms ne s'écoule pas en temps virtuel). Le comportement réel de Chrome,
+  où l'iframe isolée tourne dans un processus séparé, n'est donc pas couvert par le test automatique.
+  Condition pour activer le module `outils` dans `config.yaml` : une vérification manuelle dans un
+  Chrome normal (outil qui s'affiche avec les adaptations, et en neutre après coupure de l'hôte),
+  consignée dans la carte d'activation.
