@@ -173,8 +173,11 @@ les repères (dates, acteurs, camps, chronologie, vocabulaire), le développemen
 
 - ~~Brancher le parcours sur la conversation (un mode « exercice » servi sans IA quand la fiche est
   `verifiee`)~~ : fait, module `exercices` (voir « Le parcours sans IA » ci-dessus).
-- Aux niveaux avec IA, ne plus mettre les solutions dans le prompt quand le code corrige : le modèle n'a
-  pas besoin de connaître une réponse qu'il ne doit jamais donner.
+- ~~Aux niveaux avec IA, ne plus mettre les solutions dans le prompt quand le code corrige~~ : fait,
+  `texte_fiche` (`jules/bibliotheques.py`) n'écrit ni `solution` ni `reponse` pour un exercice qui a un
+  `type` autre que `ouverte` ; il transmet à la place une consigne (« corrigé par le code : tu n'as pas
+  la solution »). Les indices, critères et relances des pièges continuent de passer, ils ne contiennent
+  jamais la réponse par contrat.
 - Convertir les 252 fiches v1, matière par matière, avec la filière ci-dessus.
 - Lever les 28 collisions de déclencheurs déjà mesurées sur les fiches v1.
 - Mesurer la détection de notion sans IA sur des phrases d'élèves écrites **indépendamment** des
