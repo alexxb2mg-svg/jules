@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import logging
 import threading
+from collections.abc import Callable
 from datetime import datetime
 
 from jules.modules.base import Tache
@@ -23,8 +24,15 @@ def est_due(tache: Tache, instant: datetime, dernier_jour: str | None) -> bool:
 
 
 class Planificateur:
-    def __init__(self, taches: list[Tache], stockage: Stockage, periode_s: int = 30) -> None:
+    def __init__(
+        self,
+        taches: list[Tache],
+        stockage: Stockage,
+        periode_s: int = 30,
+        veilles: list[Callable[[], object]] | None = None,
+    ) -> None:
         self.taches = taches
+        self.veilles = veilles or []  # verifications sans heure fixe, refaites a chaque tour
         self.stockage = stockage
         self.periode_s = periode_s
         self._arret = threading.Event()
@@ -42,6 +50,11 @@ class Planificateur:
                 lancees.append(tache.nom)
             except Exception:
                 journal.exception("Tache %s en echec", tache.nom)
+        for veille in self.veilles:
+            try:
+                veille()
+            except Exception:
+                journal.exception("Veille en echec")
         return lancees
 
     def demarrer(self) -> None:

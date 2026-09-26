@@ -6,29 +6,38 @@ ses permissions (reseau, appel IA, ecriture dans le dossier eleve, notification 
 
 Ce module ne fait que lire, verifier et charger la liste des extensions ACTIVEES (citees dans
 `extensions:` de config.yaml). Le Tuteur les charge une fois au demarrage (`Tuteur.extensions`) ;
-deux familles en dependent deja (etape 2 de jules_architecture_plugins.md) :
+trois familles en dependent deja (etapes 2 et 3 de jules_architecture_plugins.md) :
   - figures : le code `gabarit.js` de l'extension (voir `code_des_figures`), et les ids de
     `fournit.figures` sont les seuls gabarits acceptes dans une fiche visuelle ;
   - outils : chaque outil fourni est lu par jules/outils.py comme un dossier `outils/<id>/`
-    (voir `dossiers_outils`).
-Les autres familles (modules, moteurs, notifieurs, bibliotheques) restent chargees comme avant.
+    (voir `dossiers_outils`) ;
+  - modules : le code `extensions/<id>/<module>.py` (classe `Brique(Module)`) est charge apres les
+    modules de `config.yaml` (voir `modules_des_extensions`) ; c'est ce qui les rend observateurs des
+    points d'accroche `bloc_consulte` et `fin_de_seance` (voir jules/modules/base.py).
+Les autres familles (moteurs, notifieurs, bibliotheques) restent chargees comme avant.
 """
 
 from __future__ import annotations
 
+import importlib.util
 import logging
 import re
+import sys
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 import yaml
 
 from jules.outils import _MOTIFS_INTERDITS
 
+if TYPE_CHECKING:
+    from jules.modules.base import Module
+
 journal = logging.getLogger("jules.extensions")
 
 _ID = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+_ID_MODULE = re.compile(r"^[a-z][a-z0-9_]*$")  # nom d'un fichier Python : extensions/<id>/<module>.py
 TAILLE_MAX_FICHIER = 50_000  # octets : un manifeste est un petit fichier declaratif
 TAILLE_MAX_GABARIT = 200_000  # octets : meme plafond que le code d'un outil (jules/outils.py)
 FICHIER_FIGURES = "gabarit.js"  # code des figures d'une extension (un seul fichier, une ou plusieurs figures)
@@ -139,6 +148,14 @@ def _controler_gabarit(chemin: Path, identifiant: str) -> None:
             raise ErreurExtension(f"{identifiant} : {FICHIER_FIGURES}, motif interdit ({nom})")
 
 
+def _controler_modules(dossier: Path, identifiant: str, modules: list[str]) -> None:
+    for module in modules:
+        if not _ID_MODULE.match(module):
+            raise ErreurExtension(f"{identifiant} : identifiant de module invalide ({module!r}, attendu : a-z, 0-9, _)")
+        if not (dossier / f"{module}.py").is_file():
+            raise ErreurExtension(f"{identifiant} : fournit le module {module!r} mais {module}.py est absent")
+
+
 def lire_extension(dossier: Path) -> Extension:
     """Lit et verifie `extension.yaml`. Leve ErreurExtension avec un message clair sinon."""
     fichier = dossier / "extension.yaml"
@@ -158,6 +175,7 @@ def lire_extension(dossier: Path) -> Extension:
     permissions = _lire_permissions(brut.get("permissions"), identifiant)
     if fournit.get("figures"):
         _controler_gabarit(dossier / FICHIER_FIGURES, identifiant)
+    _controler_modules(dossier, identifiant, fournit.get("modules", []))
     return Extension(
         id=identifiant,
         titre=titre,
@@ -229,3 +247,43 @@ def dossiers_outils(extensions: dict[str, Extension]) -> list[Path]:
         for extension in extensions.values()
         for outil in extension.fournit_liste("outils")
     ]
+
+
+def modules_des_extensions(tuteur: Any, extensions: dict[str, Extension], deja_charges: set[str]) -> list[Module]:
+    """Instancie les modules fournis par les extensions actives (`fournit.modules`).
+
+    Chaque `extensions/<id>/<module>.py` expose une classe `Brique(Module)`, comme un module de
+    `jules/modules/`. Un module dont l'id existe deja (`deja_charges`) ou qui ne se charge pas est
+    ecarte et journalise : Jules continue sans lui. Le coeur les traite tous pareil, sans connaitre
+    aucune extension par son nom.
+    """
+    modules: list[Module] = []
+    ids = set(deja_charges)
+    for extension in extensions.values():
+        for nom in extension.fournit_liste("modules"):
+            try:
+                module = _charger_module(tuteur, extension, nom)
+            except Exception:
+                journal.exception("Extension %s : module %s ecarte (chargement en echec)", extension.id, nom)
+                continue
+            if module.id in ids:
+                journal.error("Extension %s : module %s ecarte (id %r deja pris)", extension.id, nom, module.id)
+                continue
+            ids.add(module.id)
+            modules.append(module)
+    return modules
+
+
+def _charger_module(tuteur: Any, extension: Extension, nom: str) -> Module:
+    chemin = extension.dossier / f"{nom}.py"
+    nom_python = f"jules_extension_{extension.id.replace('-', '_')}_{nom}"
+    spec = importlib.util.spec_from_file_location(nom_python, chemin)
+    if spec is None or spec.loader is None:
+        raise ErreurExtension(f"{extension.id} : {nom}.py illisible")
+    fichier = importlib.util.module_from_spec(spec)
+    sys.modules[nom_python] = fichier
+    spec.loader.exec_module(fichier)
+    classe = getattr(fichier, "Brique", None)
+    if classe is None:
+        raise ErreurExtension(f"{extension.id} : {nom}.py ne definit pas de classe Brique")
+    return classe(tuteur, {})

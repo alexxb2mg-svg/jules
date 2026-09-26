@@ -52,7 +52,7 @@ def servir() -> None:
     verifier_exposition(config.hote, config.acces)
     journaliser(config.donnees)
     tuteur = Tuteur(config)
-    planificateur = Planificateur(tuteur.taches(), tuteur.stockage)
+    planificateur = Planificateur(tuteur.taches(), tuteur.stockage, veilles=[tuteur.verifier_inactivite])
     planificateur.demarrer()
     print(f"Jules : http://{config.hote}:{config.port}/  (parent : /parent)")
     try:
