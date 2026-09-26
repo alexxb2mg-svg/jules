@@ -31,6 +31,7 @@ from jules.fiches.correction import (
     corriger,
     decomposer,
     ecrire_produit,
+    ecrire_scientifique,
     lire_expression,
     lire_nombre,
     piege_declenche,
@@ -228,6 +229,8 @@ def _formes_de_la_reponse(ex: dict[str, Any]) -> list[str]:
         if rep.get("forme") == "produit_premiers":
             facteurs = decomposer(int(lire_nombre(str(rep["valeur"]))))
             return [cle_texte(ecrire_produit(facteurs)), cle_texte(" × ".join(str(b) for b, _ in facteurs))]
+        if rep.get("forme") == "scientifique":
+            return [cle_texte(rep["valeur"]), cle_texte(ecrire_scientifique(lire_nombre(str(rep["valeur"]))))]
         return [cle_texte(rep["valeur"])]
     if type_ == "expression":
         return [cle_texte(rep["valeur"])]
