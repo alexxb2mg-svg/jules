@@ -12,9 +12,11 @@ Deux niveaux :
 from __future__ import annotations
 
 import json
+import os
 import re
 import socket
 import subprocess
+import sys
 import threading
 import time
 from pathlib import Path
@@ -32,6 +34,18 @@ from jules.web.app import creer_app
 RACINE = Path(__file__).resolve().parents[1]
 STATIQUE = RACINE / "jules" / "web" / "static"
 HOTE_JS = (STATIQUE / "outils-hote.js").read_text(encoding="utf-8")
+
+# Les tests navigateur a temps virtuel (--virtual-time-budget) bloquent Chromium jusqu'au delai
+# maximal en CI Linux (4 tests : celui-ci et trois dans test_adaptations_poignee.py). Ils sont
+# ignores la seulement ; en revue locale ils restent obligatoires (EX-012). JULES_CHROMIUM_OBLIGATOIRE
+# force leur execution partout. Reparation sous Linux : lot 3.
+RAISON_TEMPS_VIRTUEL = "temps virtuel bloque Chromium en CI Linux, vérifié en revue locale (EX-012), réparation lot 3"
+temps_virtuel_hors_ci_linux = pytest.mark.skipif(
+    sys.platform.startswith("linux")
+    and bool(os.environ.get("CI"))
+    and not os.environ.get("JULES_CHROMIUM_OBLIGATOIRE"),
+    reason=RAISON_TEMPS_VIRTUEL,
+)
 
 
 # --- statique -------------------------------------------------------------------------------
@@ -209,6 +223,7 @@ def test_en_tetes_servis_aux_outils_et_a_la_page(serveur):
     assert "default-src 'self'" in cours.headers["content-security-policy"]
 
 
+@temps_virtuel_hors_ci_linux
 def test_hote_dans_un_vrai_navigateur(serveur, tmp_path):
     navigateur = _chromium()
     if not navigateur:

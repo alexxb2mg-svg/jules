@@ -28,7 +28,7 @@ import pytest
 from fastapi.responses import HTMLResponse, Response
 
 from jules.chantier_visuel import _chromium
-from tests.test_outils_hote import INDEX, _port_libre
+from tests.test_outils_hote import INDEX, _port_libre, temps_virtuel_hors_ci_linux
 
 RACINE = Path(__file__).resolve().parents[1]
 OUTILS_REELS = ("calculatrice", "frise-chronologique", "lexique")
@@ -338,6 +338,7 @@ def _resultat(url: str, profil: Path) -> object:
     return json.loads(trouve.group(1).replace("&quot;", '"').replace("&amp;", "&"))
 
 
+@temps_virtuel_hors_ci_linux
 def test_les_trois_outils_suivent_la_poignee_de_main(serveur, tmp_path):
     """Cote outil (EX-001, EX-002, EX-003) pour calculatrice, frise-chronologique et lexique."""
     resultats = _resultat(f"{serveur}/essai-outil", tmp_path / "profil")
@@ -374,6 +375,7 @@ def test_les_trois_outils_suivent_la_poignee_de_main(serveur, tmp_path):
             assert r["fin"] == {"cache": False, "adaptations": "neutres"}, cas
 
 
+@temps_virtuel_hors_ci_linux
 def test_hote_repond_a_chaque_pret_de_son_iframe_et_seulement_a_elle(serveur, tmp_path):
     """Cote hote (EX-001, EX-003) : reponse a chaque « pret » de l'iframe, y compris apres
     rechargement ; « pret » et « adaptations-absentes » d'une autre source ignores."""
@@ -389,6 +391,7 @@ def test_hote_repond_a_chaque_pret_de_son_iframe_et_seulement_a_elle(serveur, tm
     assert r["absentes"] == 1
 
 
+@temps_virtuel_hors_ci_linux
 def test_vrais_outils_sandboxes_avec_et_sans_hote(serveur, tmp_path):
     """Bout en bout, iframes sandboxees reelles : avec OutilsHote, l'outil ne signale jamais
     d'adaptations absentes ; sans page qui repond, il le signale au bout du delai."""
