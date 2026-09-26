@@ -1,0 +1,11 @@
+id: exemple-observateur
+titre: "Un observateur d'exemple"
+version: "1.0.0"
+licence: MIT
+auteurs: ["alexxb2mg-svg"]
+# Exemple minimal des points d'accroche bloc_consulte et fin_de_seance (docs/EXTENSIONS.md) : il note
+# chaque evenement dans le journal. NON active dans config.yaml : il ne doit pas tourner en famille.
+fournit:
+  modules: [observateur]
+permissions:
+  ecriture_dossier_eleve: true   # il ecrit dans le journal de l'eleve (jules.db)

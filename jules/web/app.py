@@ -5,6 +5,7 @@ Les routes des modules sont montees automatiquement sous /api/modules/<id> (acce
 
 from __future__ import annotations
 
+import re
 import time
 from collections import defaultdict, deque
 from pathlib import Path
@@ -13,7 +14,7 @@ from typing import Any
 from fastapi import APIRouter, Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
 
 from jules import dossier
@@ -27,6 +28,7 @@ IMAGE_MAX_OCTETS = 8 * 1024 * 1024
 IMAGES_PAR_MESSAGE = 3
 TEXTE_MAX = 6000
 ESSAIS_MAX = 8  # tentatives de code par tranche de 10 min et par adresse
+ADRESSE_BLOC = re.compile(r"[a-z_]+(?:/[\w.-]+){1,3}")  # type de bloc, puis un a trois identifiants
 ENTETES_SECURITE = {
     # Aucun script, style ou image venant d'ailleurs ; pas d'affichage dans un cadre d'un autre site.
     "Content-Security-Policy": (
@@ -55,6 +57,19 @@ def extension_reelle(contenu: bytes) -> str | None:
 
 class CodeEntree(BaseModel):
     code: str
+
+
+class BlocConsulte(BaseModel):
+    adresse: str = Field(max_length=200)  # « fiche/<id> », « carte/<id> », « fiche/<id>/<sous-id> »...
+    notion: str | None = Field(default=None, max_length=80)
+    conversation: str | None = Field(default=None, max_length=32)
+
+    @field_validator("adresse")
+    @classmethod
+    def adresse_bien_formee(cls, valeur: str) -> str:
+        if not ADRESSE_BLOC.fullmatch(valeur):
+            raise ValueError("adresse de bloc mal formee")
+        return valeur
 
 
 class NouvelleConversation(BaseModel):
@@ -217,6 +232,17 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         except KeyError as err:
             raise HTTPException(404, "Conversation introuvable") from err
         return {"reponse": reponse.texte, "horodatage": reponse.horodatage}
+
+    # --- parcours de l'eleve : points d'accroche des extensions (docs/EXTENSIONS.md) ---
+    @app.post("/api/seance/bloc_consulte")
+    def bloc_consulte(entree: BlocConsulte, _: str = eleve) -> dict[str, bool]:
+        tuteur.bloc_consulte(entree.adresse, entree.notion, entree.conversation)
+        return {"ok": True}
+
+    @app.post("/api/seance/fin")
+    def fin_de_seance(_: str = eleve) -> dict[str, bool]:
+        """Appelee par le navigateur a la fermeture de la page (navigator.sendBeacon, sans corps)."""
+        return {"ok": tuteur.fin_de_seance()}
 
     @app.get("/api/images/{nom}")
     def image(nom: str, _: str = eleve) -> FileResponse:

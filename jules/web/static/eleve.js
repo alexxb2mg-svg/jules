@@ -297,6 +297,7 @@
 
   async function demarrage() {
     await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    MS.signalerFinDeSeance();
     etat.infos = await MS.api("/api/infos");
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     document.title = etat.infos.persona.nom;

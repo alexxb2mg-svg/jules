@@ -8,6 +8,9 @@ Un module = jules/modules/<id>.py avec une classe `Brique(Module)`. Il peut :
   - exposer des routes HTTP parent         -> routes()  (montees sous /api/modules/<id>)
   - exposer des routes HTTP eleve          -> routes_eleve()  (montees sous /api/eleve/<id>)
   - donner des infos a l'interface          -> infos_interface()
+  - observer le parcours de l'eleve         -> bloc_consulte(conv, adresse, notion), fin_de_seance(conv)
+    (points d'accroche des extensions, voir docs/EXTENSIONS.md : ils ne donnent que ce que leur nom
+    promet et ne declenchent jamais d'appel IA par eux-memes)
 Tout est optionnel : un module n'implemente que ce dont il a besoin.
 """
 
@@ -48,6 +51,16 @@ class Module:
         return None
 
     def apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> None:
+        return None
+
+    def bloc_consulte(self, conv: Conversation | None, adresse: str, notion: str | None = None) -> None:
+        """L'eleve a clique sur un bloc de fiche (adresse `fiche/<id>`, `carte/<id>`, `graphe/<id>`...).
+        `conv` n'est renseignee que si la page a une conversation en cours (jamais sur « Mes fiches »)."""
+        return None
+
+    def fin_de_seance(self, conv: Conversation | None) -> None:
+        """L'eleve a ferme l'application, ou il est reste inactif : la seance est finie.
+        `conv` est la derniere conversation touchee pendant la seance, s'il y en a une."""
         return None
 
     def taches(self) -> list[Tache]:
