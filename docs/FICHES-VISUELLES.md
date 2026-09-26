@@ -77,6 +77,8 @@ Dans cet ordre, 5 à 8 blocs :
   perdue ; `c-blue` = froid, électrique). Symboles normalisés pour les circuits (lampe = cercle
   barré d'une croix, résistor = rectangle, A et V dans un cercle).
 - « Pas à l'échelle » écrit quand c'est le cas.
+- Du code (programme, pseudo-code) dans un schéma : `class="t code"` (ou `ts code`), police à
+  chasse fixe ; l'attribut `font-family` n'a pas d'effet, les classes l'emportent.
 
 ## 5. La boucle de contrôle (obligatoire)
 

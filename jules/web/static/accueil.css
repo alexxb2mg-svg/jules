@@ -108,6 +108,8 @@
 .bloc-schema .t  { font-family: inherit; font-size: 14px; fill: #1a1a18; }
 .bloc-schema .ts { font-family: inherit; font-size: 12px; fill: #5f5e5a; }
 .bloc-schema .th { font-family: inherit; font-size: 14px; fill: #1a1a18; font-weight: 500; }
+/* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
+.bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
 .bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
 .bloc-schema .arr { stroke: #5f5e5a; stroke-width: 1.5px; fill: none; }
 .bloc-schema .leader { stroke: #88877f; stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
