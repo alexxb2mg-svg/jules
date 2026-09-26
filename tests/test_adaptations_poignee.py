@@ -25,6 +25,7 @@ import subprocess
 from pathlib import Path
 
 import pytest
+from fastapi import HTTPException
 from fastapi.responses import HTMLResponse, Response
 
 from jules.chantier_visuel import _chromium
@@ -293,17 +294,28 @@ def serveur(projet, brut_config):
     def essai_intrus() -> HTMLResponse:
         return page("/essai-intrus.js")
 
+    # L'index.html reel de chaque outil, dont les fichiers relatifs pointent vers la route de l'outil.
+    # Pages construites d'avance sur la liste blanche OUTILS_REELS : la route ne renvoie jamais le
+    # parametre de chemin (404 si outil inconnu).
+    cadres: dict[str, str] = {}
+    for ident in OUTILS_REELS:
+        html = (projet / "extensions" / ident / "index.html").read_text(encoding="utf-8")
+        cadres[ident] = html.replace("<head>", f'<head><base href="/api/eleve/outils/{ident}/">', 1)
+
     @app.get("/essai-cadre/{outil_id}", response_class=HTMLResponse)
     def essai_cadre(outil_id: str) -> HTMLResponse:
-        # L'index.html reel de l'outil, dont les fichiers relatifs pointent vers la route de l'outil.
-        assert outil_id in OUTILS_REELS
-        html = (projet / "extensions" / outil_id / "index.html").read_text(encoding="utf-8")
-        html = html.replace("<head>", f'<head><base href="/api/eleve/outils/{outil_id}/">', 1)
+        html = cadres.get(outil_id)
+        if html is None:
+            raise HTTPException(status_code=404)
         return HTMLResponse(html, headers=ENTETES_CADRE)
 
     @app.get("/{nom}.js")
     def essai_js(nom: str) -> Response:
-        return Response(scripts_js[f"{nom}.js"], media_type="text/javascript; charset=utf-8")
+        # Table fermee : 404 si le script est inconnu, le nom demande n'est jamais renvoye.
+        script = scripts_js.get(f"{nom}.js")
+        if script is None:
+            raise HTTPException(status_code=404)
+        return Response(script, media_type="text/javascript; charset=utf-8")
 
     port = _port_libre()
     serveur_uv = uvicorn.Server(uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning"))

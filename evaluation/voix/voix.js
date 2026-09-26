@@ -25,14 +25,21 @@ function releverVoix() {
 }
 const EXPRESSION = `(${releverVoix.toString()})()`;
 
+// Noms et langues viennent du navigateur : retours a la ligne et caracteres de controle neutralises
+// avant l'ecriture, pour qu'une valeur ne puisse pas fabriquer de fausses lignes dans le releve.
+function propre(texte) {
+  return String(texte).replace(/[\r\n\u2028\u2029\u0000-\u001f\u007f-\u009f]/g, "?");
+}
+
 function afficher(voix) {
   const locales = voix.filter((v) => v.locale);
   // Par defaut : les voix locales et les voix francaises ; --tout pour la liste complete.
   const tout = typeof process !== "undefined" && process.argv && process.argv.includes("--tout");
   for (const v of voix) {
-    if (tout || v.locale || /^fr\b/i.test(v.langue)) console.log(`${v.locale ? "LOCALE  " : "EN LIGNE"}  ${v.langue}  ${v.nom}`);
+    if (tout || v.locale || /^fr\b/i.test(v.langue)) console.log(propre(`${v.locale ? "LOCALE  " : "EN LIGNE"}  ${v.langue}  ${v.nom}`));
   }
-  console.log(`total ${voix.length}, locales ${locales.length}, locales fr ${locales.filter((v) => /^fr\b/i.test(v.langue)).length}`);
+  const nbFr = locales.filter((v) => /^fr\b/i.test(v.langue)).length;
+  console.log(propre(`total ${Number(voix.length)}, locales ${Number(locales.length)}, locales fr ${Number(nbFr)}`));
   console.log(locales.length ? "Verdict : lecture vocale DISPONIBLE" : "Verdict : lecture vocale INDISPONIBLE");
   return locales.length;
 }
