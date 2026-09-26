@@ -117,7 +117,7 @@ class Tuteur:
                 reponse = reponse_module
 
                 def relancer() -> str:
-                    return reponse_module  # type: ignore[return-value]
+                    return reponse_module
 
             else:
                 systeme, tours = self.systeme(conv), self.tours(conv)
