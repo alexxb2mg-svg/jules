@@ -1,4 +1,5 @@
-// Page parent : rapport, signaux, notes, lecture des conversations, export et effacement du dossier.
+// Page parent : rapport, signaux, notes, lecture des conversations, lecture vocale, export et effacement
+// du dossier.
 "use strict";
 
 (() => {
@@ -136,6 +137,10 @@
     await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations()]);
     chargerRapport();
   }
+
+  // Lecture vocale (EX-007) : constat local, independant du serveur, fait des le chargement.
+  LectureVocale.initialiser();
+  LectureVocale.indiquer($("lecture-vocale-etat"));
 
   demarrage().catch((err) => { document.body.innerHTML = `<p class="erreur-page">Erreur : ${MS.echapper(err.message)}</p>`; });
 })();
