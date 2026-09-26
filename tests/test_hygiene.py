@@ -62,9 +62,12 @@ def test_fichiers_prives_ignores_par_git():
         assert motif in ignores.splitlines(), motif
 
 
-def test_seul_le_profil_exemple_est_publie():
-    profils = [p.name for p in fichiers_publies() if p.parent.name == "profils"]
-    assert profils == ["exemple.yaml"]
+PROFILS_PUBLIES = ["exemple.yaml", "test-cumul.yaml"]  # fictifs ; test-cumul sert aux tests d'adaptations
+
+
+def test_seuls_les_profils_fictifs_sont_publies():
+    profils = sorted(p.name for p in fichiers_publies() if p.parent.name == "profils")
+    assert profils == PROFILS_PUBLIES
 
 
 def test_config_publiee_sure_par_defaut():

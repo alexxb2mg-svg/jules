@@ -18,13 +18,18 @@ Idees reprises du fonctionnement d'Hermes (agent/background_review.py, agent/cur
 
 from __future__ import annotations
 
+import logging
 import re
 import unicodedata
 from collections.abc import Sequence
 from dataclasses import replace
 from datetime import datetime
+from functools import lru_cache
+from pathlib import Path
 
 from jules.apprentissage.etat import Lecon
+
+journal = logging.getLogger(__name__)
 
 TAILLE_MAX = 200
 SIMILARITE_DOUBLON = 0.6
@@ -42,6 +47,47 @@ MOTS_INTERDITS: tuple[str, ...] = (
     "mauvais eleve", "pas doue", "manque d'intelligence", "intelligent", "menteu", "mensong", "trich",
     "capricieu", "immature", "de mauvaise foi",
 )  # fmt: skip
+
+# EX-013 : la liste de la spec (noms de troubles, propriete SPEC) s'ajoute a MOTS_INTERDITS sans la
+# remplacer. Elle est lue telle quelle, avec les regles de recherche ecrites en tete du fichier, qui
+# different de celles de _contient : radical en sous-chaine n'importe ou, « mot: » en mot entier.
+FICHIER_TERMES_SPEC = Path(__file__).resolve().parents[2] / "docs" / "spec" / "termes-interdits.txt"
+PREFIXE_MOT_ENTIER = "mot:"
+APOSTROPHES_TYPOGRAPHIQUES = str.maketrans({"\u2019": "'", "\u2018": "'", "\u02bc": "'"})
+
+
+def normaliser_spec(texte: str) -> str:
+    """Regles de termes-interdits.txt : apostrophes typographiques ramenees a « ' » avant tout, puis
+    casse et accents retires (NFKD)."""
+    decompose = unicodedata.normalize("NFKD", texte.translate(APOSTROPHES_TYPOGRAPHIQUES).casefold())
+    return "".join(c for c in decompose if not unicodedata.combining(c))
+
+
+@lru_cache(maxsize=1)
+def termes_spec() -> tuple[tuple[str, re.Pattern[str]], ...]:
+    """(terme tel qu'ecrit, motif) pour chaque ligne utile du fichier de la spec.
+
+    Leve OSError si le fichier est illisible : motif_refus refuse alors toute lecon (le filtre ne
+    s'ouvre pas en silence parce qu'une liste manque)."""
+    termes = []
+    for brute in FICHIER_TERMES_SPEC.read_text(encoding="utf-8").splitlines():
+        ligne = brute.strip()
+        if not ligne or ligne.startswith("#"):
+            continue
+        mot_entier = ligne.startswith(PREFIXE_MOT_ENTIER)
+        terme = ligne[len(PREFIXE_MOT_ENTIER) :].strip() if mot_entier else ligne
+        # un terme sur plusieurs mots : n'importe quelle suite d'espaces entre eux
+        corps = r"\s+".join(re.escape(morceau) for morceau in normaliser_spec(terme).split())
+        motif = rf"(?<![a-z0-9]){corps}(?![a-z0-9])" if mot_entier else corps
+        termes.append((terme, re.compile(motif)))
+    return tuple(termes)
+
+
+def terme_spec_present(texte: str) -> str | None:
+    """Premier terme de docs/spec/termes-interdits.txt present dans le texte, ou None."""
+    t = normaliser_spec(texte)
+    return next((terme for terme, motif in termes_spec() if motif.search(t)), None)
+
 
 # Une lecon ne peut pas pousser Jules a faire le travail a la place de l'eleve (regle 1 de l'essai).
 CONTOURNEMENTS: tuple[str, ...] = (
@@ -128,6 +174,13 @@ def motif_refus(lecon: Lecon, actives: Sequence[Lecon]) -> str | None:
         return f"ressemble a une instruction a recopier dans le prompt : « {racine} »"
     if racine := _contient(texte, MOTS_INTERDITS):
         return f"vocabulaire de diagnostic ou de jugement : « {racine} »"
+    try:
+        terme = terme_spec_present(texte)
+    except OSError as erreur:
+        journal.error("Liste des termes interdits illisible (%s) : %s", FICHIER_TERMES_SPEC, erreur)
+        return "liste des termes interdits illisible : lecon refusee par prudence"
+    if terme:
+        return f"nom de trouble (docs/spec/termes-interdits.txt) : « {terme} »"
     if racine := _contient(texte, CONTOURNEMENTS):
         return f"contourne la regle « l'eleve essaie d'abord » : « {racine} »"
     if racine := _contient(texte, EVITEMENTS):
