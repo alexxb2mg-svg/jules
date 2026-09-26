@@ -59,6 +59,19 @@ ESSAI_OUTIL_JS = """"use strict";
     for (var i = 0; i < cadres.length; i++) if (cadres[i].iframe.contentWindow === source) return cadres[i];
     return null;
   }
+  function parIntrus(source) {
+    for (var i = 0; i < cadres.length; i++) {
+      if (cadres[i].intrus && cadres[i].intrus.contentWindow === source) return cadres[i];
+    }
+    return null;
+  }
+  // Le signal part au dernier des deux evenements : « pret » de l'outil cible recu ET ecouteur de la
+  // fenetre intruse pose (sinon le signal tomberait dans son document about:blank initial, perdu).
+  function signalerIntrus(c) {
+    if (c.goEnvoye || !c.intrusPret || c.tPret === undefined) return;
+    c.goEnvoye = true;
+    c.intrus.contentWindow.postMessage({ type: "go", cible: c.index }, "*");
+  }
   function etatDe(c) {
     var d = c.iframe.contentDocument;
     return { cache: d.body.hidden, adaptations: d.documentElement.getAttribute("data-adaptations") };
@@ -70,6 +83,11 @@ ESSAI_OUTIL_JS = """"use strict";
       cadres[m.cible].intrusApres = Math.round(performance.now() - cadres[m.cible].tPret);
       return;
     }
+    if (m && m.type === "intrus-pret") {
+      var ci = parIntrus(e.source);
+      if (ci) { ci.intrusPret = true; signalerIntrus(ci); }
+      return;
+    }
     var c = parSource(e.source);
     if (!c) return;
     c.journal.push(m && m.type);
@@ -79,7 +97,7 @@ ESSAI_OUTIL_JS = """"use strict";
     c.iframe.contentWindow.addEventListener("error", function (err) { c.erreurs.push(String(err.message)); });
     if (c.scenario === "reponse") c.iframe.contentWindow.postMessage(REPONSE, "*");
     if (c.scenario === "tardif") setTimeout(function () { c.iframe.contentWindow.postMessage(REPONSE, "*"); }, 800);
-    if (c.scenario === "autre-source") c.intrus.contentWindow.postMessage({ type: "go", cible: c.index }, "*");
+    if (c.scenario === "autre-source") signalerIntrus(c);
     setTimeout(function () { c.a300 = etatDe(c); }, 300);
     setTimeout(function () { c.a700 = etatDe(c); }, 700);
   });
@@ -89,7 +107,8 @@ ESSAI_OUTIL_JS = """"use strict";
       var c = { index: cadres.length, outil: outil, scenario: scenario, journal: [], erreurs: [] };
       if (scenario === "autre-source") {
         // Fenetre intruse chargee a l'avance (sinon son chargement mange le delai de 500 ms) ;
-        // elle n'agit qu'au signal envoye quand l'outil cible a dit « pret ».
+        // elle n'agit qu'au signal, envoye quand l'outil cible a dit « pret » et qu'elle-meme a
+        // annonce « intrus-pret » (voir signalerIntrus).
         c.intrus = document.createElement("iframe");
         c.intrus.src = "/essai-intrus";
         document.body.appendChild(c.intrus);
@@ -124,6 +143,7 @@ ESSAI_INTRUS_JS = """"use strict";
     fenetre.postMessage({ type: "adaptations", leviers: {} }, "*");
     parent.postMessage({ type: "intrus-envoye", cible: cible }, "*");
   });
+  parent.postMessage({ type: "intrus-pret" }, "*");
 })();
 """
 
@@ -347,7 +367,8 @@ def test_les_trois_outils_suivent_la_poignee_de_main(serveur, tmp_path):
             assert r["fin"] == {"cache": False, "adaptations": "appliquees"}, cas
         else:
             # Adaptations envoyees par une autre fenetre que le parent, avant la fin du delai : ignorees.
-            assert r["intrusApres"] is not None and r["intrusApres"] < 450, cas
+            intrus_apres = r.get("intrusApres")
+            assert intrus_apres is not None and intrus_apres < 450, (cas, intrus_apres)
             assert r["a300"] == {"cache": True, "adaptations": None}, cas
             assert r["journal"] == ["pret", "adaptations-absentes"], cas
             assert r["fin"] == {"cache": False, "adaptations": "neutres"}, cas
