@@ -218,6 +218,14 @@ def test_commentaire_jules_trop_long_refuse(tmp_path, notions, biblio):
         lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
 
 
+def test_un_point_dans_un_mot_ne_termine_pas_une_phrase(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = (
+        "La box a l'adresse 172.16.1.1 sur le réseau. Rome existait déjà au Ier siècle av. J.-C. et bien après."
+    )
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
 def test_commentaire_jules_trop_de_phrases_refuse(tmp_path, notions, biblio):
     brut = copy.deepcopy(fiche_valide())
     brut["blocs"][0]["jules"] = "Un. Deux. Trois. Quatre."

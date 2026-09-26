@@ -70,6 +70,7 @@ const DICOS = {
     "N/kg": "newtons par kilogramme",
     "o": "octets (8 bits : de quoi coder un caractère)",
     "Ko": "kilooctets : environ 1 000 octets",
+    "ko": "kilooctets : environ 1 000 octets",
     "Mo": "mégaoctets : environ un million d'octets",
     "Go": "gigaoctets : environ un milliard d'octets",
     "To": "téraoctets : environ mille milliards d'octets",

@@ -278,6 +278,11 @@ def _texte(
     return v
 
 
+# Fin de phrase : un point (ou ! ?) suivi d'un espace ou en fin de texte, sauf apres une abreviation
+# courante (« av. J.-C. », « env. », « ex. », « cf. ») ; « 172.16.1.1 » ou « 3.5 » ne coupent rien.
+_FIN_DE_PHRASE = re.compile(r"(?<!\bav)(?<!\bapr)(?<!J\.-C)(?<!\benv)(?<!\bex)(?<!\bcf)[.!?]+(?=\s|$)")
+
+
 def _verifier_jules(valeur: Any, ou: str) -> str:
     texte = str(valeur or "").strip()
     if not texte:
@@ -288,7 +293,7 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
         raise ErreurFicheVisuelle(
             f"{ou} : commentaire 'jules' trop long ({len(lisible)} caracteres, max {LIMITE_JULES})"
         )
-    phrases = [p for p in re.split(r"[.!?]+", lisible) if p.strip()]
+    phrases = [p for p in _FIN_DE_PHRASE.split(lisible) if p.strip()]
     if not 1 <= len(phrases) <= 3:
         raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' doit tenir en 1 a 3 phrases (trouve {len(phrases)})")
     return texte
