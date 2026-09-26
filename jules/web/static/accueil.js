@@ -124,7 +124,7 @@
     const constructeur = CONSTRUCTEURS[bloc.type];
     if (constructeur) section.appendChild(constructeur(bloc));
 
-    section.addEventListener("click", () => activerBloc(section, bloc));
+    section.addEventListener("click", (evenement) => activerBloc(section, bloc, evenement.target));
     return section;
   }
 
@@ -403,10 +403,19 @@
   }
 
   // --- Jules : bulles preecrites, 2 maximum, la plus ancienne s'estompe -----
-  function activerBloc(section, bloc) {
+  function activerBloc(section, bloc, cible) {
     document.querySelectorAll(".fiche-bloc.actif").forEach((b) => b.classList.remove("actif"));
     section.classList.add("actif");
     if (bloc.jules) ajouterBulle(bloc.jules);
+    // Point d'accroche « bloc_consulte » des extensions : l'adresse la plus precise touchee (un
+    // noeud de carte, un curseur) ou, a defaut, celle du bloc. Rien n'est attendu en retour.
+    const cibleAdresse = cible && cible.closest ? cible.closest("[data-adresse]") : null;
+    signalerBlocConsulte((cibleAdresse || section).dataset.adresse);
+  }
+
+  function signalerBlocConsulte(adresse) {
+    if (!adresse) return;
+    MS.api("/api/seance/bloc_consulte", MS.json({ adresse, notion: etat.notionActive })).catch(() => {});
   }
 
   function ajouterBulle(texte) {
@@ -443,6 +452,7 @@
       $("rail").classList.toggle("ouvert");
       $("menu-rail").classList.toggle("cache", $("rail").classList.contains("ouvert"));
     });
+    MS.signalerFinDeSeance();
     $("avatar-jules").addEventListener("click", () => basculerChat());
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));
     ajouterBulle("Clique sur un bloc de la fiche : je te dirai à quoi faire attention.");

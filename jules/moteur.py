@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import logging
 import threading
+import time
 from concurrent.futures import Future, ThreadPoolExecutor
 from datetime import datetime
 from typing import Any
@@ -14,7 +15,7 @@ from typing import Any
 from jules.briques import classe_brique
 from jules.composition import Profil, assembler, charger_profil
 from jules.config import Config
-from jules.extensions import charger_extensions
+from jules.extensions import charger_extensions, modules_des_extensions
 from jules.llm.base import MoteurLLM, Tour
 from jules.modules.base import Module, Tache
 from jules.persona import Persona, charger_persona
@@ -26,6 +27,8 @@ MESSAGE_PANNE = (
     "Oups, mon cerveau a fait une petite pause. Réessaie dans un instant, "
     "et si ça continue, préviens un adulte à la maison."
 )
+
+INACTIVITE_S = 20 * 60  # apres ce delai sans activite de l'eleve, la seance est finie
 
 
 class Tuteur:
@@ -41,6 +44,11 @@ class Tuteur:
         self.modules: list[Module] = [
             classe_brique("modules", ref.id)(self, ref.reglages) for ref in config.modules if ref.actif
         ]
+        self.modules += modules_des_extensions(self, self.extensions, {m.id for m in self.modules})
+        self.inactivite_s = INACTIVITE_S
+        self._horloge = time.monotonic  # remplacable dans les tests
+        self._seance: dict[str, Any] | None = None  # {"conv": id ou None, "dernier": instant} tant qu'une seance court
+        self._verrou_seance = threading.Lock()
         self._fond = ThreadPoolExecutor(max_workers=1, thread_name_prefix="jules-fond")
         self._verrou_conv = threading.Lock()
 
@@ -84,6 +92,7 @@ class Tuteur:
         conv = self.stockage.conversation(conv_id)
         if conv is None:
             raise KeyError(conv_id)
+        self._activite(conv_id)
         eleve = self.stockage.ajouter_message(conv_id, Message(role="eleve", texte=texte, images=images or []))
         conv.messages.append(eleve)
         for module in self.modules:
@@ -111,6 +120,56 @@ class Tuteur:
                 module.apres_echange(conv, eleve, bot)
             except Exception:
                 journal.exception("Module %s : apres_echange en echec", module.id)
+
+    # --- points d'accroche du parcours de l'eleve (voir docs/EXTENSIONS.md) ---
+    # Un module ne recoit que ce que le nom du point promet (l'adresse, la conversation en cours) ; le
+    # coeur ne lance aucun appel IA a cette occasion. Les modules sont prevenus en tache de fond, comme
+    # apres_echange : un clic ne doit jamais attendre un module lent, et un module en echec ne gene personne.
+    def bloc_consulte(self, adresse: str, notion: str | None = None, conv_id: str | None = None) -> None:
+        """L'eleve a clique sur un bloc de fiche : ouvre (ou prolonge) la seance et previent les modules."""
+        self._activite(conv_id)
+        self._fond.submit(self._diffuser, "bloc_consulte", conv_id, adresse, notion)
+
+    def fin_de_seance(self) -> bool:
+        """L'eleve a ferme l'application : clot la seance en cours. Sans seance ouverte, ne fait rien
+        (le signal de fermeture part parfois plusieurs fois, et sans qu'on ait rien fait)."""
+        return self._clore_seance(seulement_si_perimee=False)
+
+    def verifier_inactivite(self) -> bool:
+        """Clot la seance si l'eleve est inactif depuis trop longtemps (appele par le planificateur)."""
+        return self._clore_seance(seulement_si_perimee=True)
+
+    def _seance_perimee(self, instant: float) -> bool:
+        return self._seance is not None and instant - self._seance["dernier"] > self.inactivite_s
+
+    def _clore_seance(self, seulement_si_perimee: bool) -> bool:
+        with self._verrou_seance:
+            seance = self._seance
+            if seance is None or (seulement_si_perimee and not self._seance_perimee(self._horloge())):
+                return False
+            self._seance = None
+        self._fond.submit(self._diffuser, "fin_de_seance", seance["conv"])
+        return True
+
+    def _activite(self, conv_id: str | None) -> None:
+        """Note une activite de l'eleve. Si la derniere est trop ancienne, la seance d'avant se termine
+        ici (cas d'un eleve qui revient apres une longue pause, sans que le planificateur l'ait vu)."""
+        with self._verrou_seance:
+            instant = self._horloge()
+            perimee = self._seance if self._seance_perimee(instant) else None
+            precedente = None if perimee else self._seance
+            conv = conv_id or (precedente["conv"] if precedente else None)
+            self._seance = {"conv": conv, "dernier": instant}
+        if perimee:
+            self._fond.submit(self._diffuser, "fin_de_seance", perimee["conv"])
+
+    def _diffuser(self, point: str, conv_id: str | None, *args: Any) -> None:
+        conv = self.stockage.conversation(conv_id) if conv_id else None
+        for module in self.modules:
+            try:
+                getattr(module, point)(conv, *args)
+            except Exception:
+                journal.exception("Module %s : %s en echec", module.id, point)
 
     def attendre_fond(self) -> None:
         """Attend la fin des traitements de fond (tests, arret propre)."""

@@ -25,6 +25,15 @@ const MS = {
     return { method: methode, headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps) };
   },
 
+  // Point d'accroche « fin_de_seance » : a la fermeture de la page, un signal sans corps part vers
+  // le serveur (sendBeacon survit a la fermeture d'un onglet, contrairement a fetch). Le serveur
+  // ignore les signaux quand aucune seance n'est ouverte : plusieurs envois ne coutent rien.
+  signalerFinDeSeance() {
+    addEventListener("pagehide", () => {
+      if (navigator.sendBeacon) navigator.sendBeacon("/api/seance/fin");
+    });
+  },
+
   appliquerCouleurs(couleurs) {
     const correspondance = {
       principale: "--p-principale", secondaire: "--p-secondaire", fond: "--p-fond",
