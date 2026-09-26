@@ -83,6 +83,14 @@
 .piege-non { background: #FFF4F2; border: 1px solid #F5C6BD; }
 .piege-oui { background: #F1FAF3; border: 1px solid #BFE3C7; }
 
+/* notions cles marquees **ainsi** dans le texte : gras + leger coup de surligneur */
+.cle {
+  font-weight: 700; color: inherit; padding: 0 .12em; border-radius: .2em;
+  background: linear-gradient(180deg, transparent 52%, rgba(255, 214, 102, .55) 52%);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.exemple-conclusion .cle { font-weight: 800; }
+
 /* exemple */
 .bloc-exemple p { margin: 12px 0; }
 .exemple-conclusion { font-weight: 600; }

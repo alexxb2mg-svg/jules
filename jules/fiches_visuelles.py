@@ -170,12 +170,51 @@ class FicheVisuelle:
 # --- verifications de contenu -------------------------------------------------------
 
 
-def _texte(valeur: Any, champ: str, ou: str, limite: int = LIMITE_TEXTE, obligatoire: bool = True) -> str:
+_ACCENT = re.compile(r"\*\*(.+?)\*\*")
+ACCENTS_MAX = 4  # notions cles par champ
+LIMITE_ACCENT = 40  # caracteres par notion cle
+PART_ACCENT_MAX = 0.6  # au plus 60 % du texte mis en valeur : sinon plus rien ne ressort
+
+
+def texte_sans_accents(texte: str) -> str:
+    """Le texte tel que l'eleve le lit, sans les marques ** des notions cles."""
+    return _ACCENT.sub(r"\1", texte)
+
+
+def _verifier_accents(v: str, champ: str, ou: str) -> str:
+    """Notions cles marquees **ainsi** : peu nombreuses, courtes, bien fermees. Renvoie le texte sans marques."""
+    segments = _ACCENT.findall(v)
+    lisible = texte_sans_accents(v)
+    if "**" in _ACCENT.sub("", v):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : marque ** non fermee")
+    if len(segments) > ACCENTS_MAX:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : {len(segments)} notions cles, max {ACCENTS_MAX}")
+    for seg in segments:
+        if seg != seg.strip() or len(seg) > LIMITE_ACCENT:
+            raise ErreurFicheVisuelle(
+                f"{ou} : champ {champ!r} : notion cle {seg!r} (sans espace au bord, {LIMITE_ACCENT} caracteres max)"
+            )
+    if segments and sum(len(x) for x in segments) > PART_ACCENT_MAX * len(lisible):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : trop de texte mis en valeur (60 % au plus)")
+    return lisible
+
+
+def _texte(
+    valeur: Any, champ: str, ou: str, limite: int = LIMITE_TEXTE, obligatoire: bool = True, riche: bool = False
+) -> str:
+    """Un champ texte. `riche` : l'affichage met en valeur les notions cles marquees **ainsi** ;
+    ailleurs (identifiants, titres de carte...) la marque est refusee, elle s'afficherait telle quelle."""
     v = str(valeur or "").strip()
     if obligatoire and not v:
         raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} manquant")
-    if len(v) > limite:
-        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} trop long ({len(v)} caracteres, max {limite})")
+    if riche:
+        lisible = _verifier_accents(v, champ, ou)
+    elif "**" in v:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : pas de mise en valeur ** dans ce champ")
+    else:
+        lisible = v
+    if len(lisible) > limite:
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} trop long ({len(lisible)} caracteres, max {limite})")
     return v
 
 
@@ -183,9 +222,12 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
     texte = str(valeur or "").strip()
     if not texte:
         return ""
-    if len(texte) > LIMITE_JULES:
-        raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' trop long ({len(texte)} caracteres, max {LIMITE_JULES})")
-    phrases = [p for p in re.split(r"[.!?]+", texte) if p.strip()]
+    lisible = _verifier_accents(texte, "jules", ou)
+    if len(lisible) > LIMITE_JULES:
+        raise ErreurFicheVisuelle(
+            f"{ou} : commentaire 'jules' trop long ({len(lisible)} caracteres, max {LIMITE_JULES})"
+        )
+    phrases = [p for p in re.split(r"[.!?]+", lisible) if p.strip()]
     if not 1 <= len(phrases) <= 3:
         raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' doit tenir en 1 a 3 phrases (trouve {len(phrases)})")
     return texte
@@ -245,7 +287,7 @@ def _verifier_lectures(lectures: Any, noms_curseurs: set[str], ou: str) -> list[
                 raise ErreurFicheVisuelle(
                     f"{sous_ou} : variable {variable!r} inconnue (curseurs : {sorted(noms_curseurs)})"
                 )
-        texte = _texte(lecture.get("texte"), "texte", sous_ou)
+        texte = _texte(lecture.get("texte"), "texte", sous_ou, riche=True)
         resultat.append({"si": condition, "texte": texte})
     return resultat
 
@@ -272,7 +314,9 @@ def _verifier_formule(d: dict[str, Any], ou: str) -> dict[str, Any]:
             raise ErreurFicheVisuelle(f"{ou}, terme {lettre!r} : un objet est attendu")
         termes[str(lettre)] = {
             "couleur": _texte(info.get("couleur"), "couleur", f"{ou}, terme {lettre}", limite=20),
-            "legende": _texte(info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE),
+            "legende": _texte(
+                info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE, riche=True
+            ),
         }
     return {"expression": expression, "termes": termes}
 
@@ -330,23 +374,25 @@ def _verifier_methode(d: dict[str, Any], ou: str) -> dict[str, Any]:
     etapes_brutes = d.get("etapes") or []
     if not isinstance(etapes_brutes, list) or not 2 <= len(etapes_brutes) <= LIMITE_ETAPES:
         raise ErreurFicheVisuelle(f"{ou} : entre 2 et {LIMITE_ETAPES} etapes attendues")
-    etapes = [_texte(e, "etape", f"{ou}, etape {i + 1}", limite=LIMITE_TEXTE) for i, e in enumerate(etapes_brutes)]
+    etapes = [
+        _texte(e, "etape", f"{ou}, etape {i + 1}", limite=LIMITE_TEXTE, riche=True) for i, e in enumerate(etapes_brutes)
+    ]
     return {"etapes": etapes}
 
 
 def _verifier_piege(d: dict[str, Any], ou: str) -> dict[str, Any]:
     return {
-        "mauvaise_idee": _texte(d.get("mauvaise_idee"), "mauvaise_idee", ou),
-        "pourquoi_faux": _texte(d.get("pourquoi_faux"), "pourquoi_faux", ou),
-        "bonne_idee": _texte(d.get("bonne_idee"), "bonne_idee", ou),
+        "mauvaise_idee": _texte(d.get("mauvaise_idee"), "mauvaise_idee", ou, riche=True),
+        "pourquoi_faux": _texte(d.get("pourquoi_faux"), "pourquoi_faux", ou, riche=True),
+        "bonne_idee": _texte(d.get("bonne_idee"), "bonne_idee", ou, riche=True),
     }
 
 
 def _verifier_exemple(d: dict[str, Any], ou: str, gabarits: frozenset[str]) -> dict[str, Any]:
     resultat: dict[str, Any] = {
-        "situation": _texte(d.get("situation"), "situation", ou, limite=400),
-        "calcul": _texte(d.get("calcul"), "calcul", ou, limite=400, obligatoire=False),
-        "conclusion": _texte(d.get("conclusion"), "conclusion", ou, limite=400),
+        "situation": _texte(d.get("situation"), "situation", ou, limite=400, riche=True),
+        "calcul": _texte(d.get("calcul"), "calcul", ou, limite=400, obligatoire=False, riche=True),
+        "conclusion": _texte(d.get("conclusion"), "conclusion", ou, limite=400, riche=True),
     }
     if d.get("figure"):
         if not isinstance(d["figure"], dict):

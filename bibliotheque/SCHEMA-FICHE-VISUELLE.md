@@ -44,6 +44,25 @@ types se déclarent dans `blocs:`, chacun avec un `id` unique (minuscules, chiff
 | `renfort` | `liens: [{icone?, titre, description?, outil?}]` | 1 à 6 liens |
 | `schema` | `titre`, `svg` (SVG en ligne ou nom d'un fichier `.svg` à côté de la fiche) | titre ≤ 90 car. ; le SVG est nettoyé par liste blanche avant d'être servi (voir plus bas) |
 
+### Notions clés : `**ainsi**`
+
+Dans le texte courant d'une fiche (légendes de `formule`, étapes de `methode`, les trois champs
+de `piege`, `situation`/`calcul`/`conclusion` d'`exemple`, `lectures` d'un `graphe`, et `jules:`),
+une notion clé s'écrit entre doubles astérisques : `la **masse** se conserve`. L'affichage la met en
+gras avec un léger coup de surligneur, pour qu'elle se détache des mots de liaison. On marque les
+notions, grandeurs, unités et lois qui portent le sens, jamais les mots d'articulation (sauf s'ils
+sont eux-mêmes la clé, comme « **en série** » / « **en dérivation** »).
+
+Contrôlé par le code : au plus 4 notions clés par champ, 40 caractères chacune, sans espace au
+bord, au plus 60 % du texte mis en valeur, marques bien fermées ; les limites de longueur se
+comptent sans les `**`. Ailleurs (titres, carte, identifiants) la marque est refusée : elle
+s'afficherait telle quelle.
+
+Les symboles (`<`, `≤`, `×`, `÷`, `√`, `π`, `Ω`, `°C`...) n'ont rien à marquer : sur toutes les
+pages de Jules, le module commun `jules/web/static/symboles.js` affiche leur nom dans une petite
+bulle au survol, au toucher ou au clavier (liste à compléter dans ce fichier). Seul le texte des
+schémas SVG n'est pas concerné.
+
 ### Le bloc `schema`
 
 Ajouté avec le contrat d'extension (`docs/EXTENSIONS.md`) : un schéma fixe, dessiné en amont

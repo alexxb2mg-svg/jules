@@ -42,6 +42,21 @@
     }
   }
 
+  // Texte d'une fiche ou les notions cles sont marquees **ainsi** (controle cote serveur : peu nombreuses,
+  // courtes). Jamais d'innerHTML : noeuds texte et <strong> crees un par un.
+  function ecrireRiche(el, texte) {
+    String(texte || "").split(/\*\*(.+?)\*\*/).forEach((morceau, i) => {
+      if (!morceau) return;
+      if (i % 2) el.appendChild(creer("strong", "cle", morceau));
+      else el.appendChild(document.createTextNode(morceau));
+    });
+    return el;
+  }
+
+  function creerRiche(balise, classe, texte) {
+    return ecrireRiche(creer(balise, classe), texte);
+  }
+
   function creer(balise, classe, texte) {
     const el = document.createElement(balise);
     if (classe) el.className = classe;
@@ -175,7 +190,7 @@
         b.textContent = nom + " ";
         b.style.color = couleurCss(info.couleur);
         ligne.appendChild(b);
-        ligne.appendChild(document.createTextNode(info.legende || ""));
+        ecrireRiche(ligne, info.legende);
         termes.appendChild(ligne);
       }
       div.appendChild(termes);
@@ -338,7 +353,7 @@
           if (evaluerCondition(l.si, valeurs)) {
             const p = document.createElement("p");
             p.style.margin = "0 0 6px";
-            p.textContent = l.texte;
+            ecrireRiche(p, l.texte);
             lecture.appendChild(p);
           }
         }
@@ -355,7 +370,7 @@
         const num = creer("span", "methode-num", String(i + 1));
         li.appendChild(num);
         const texte = document.createElement("div");
-        texte.textContent = etape;
+        ecrireRiche(texte, etape);
         li.appendChild(texte);
         ol.appendChild(li);
       });
@@ -365,13 +380,13 @@
     piege(bloc) {
       const div = creer("div", "bloc-piege");
       const mauvais = creer("div", "piege-non");
-      mauvais.textContent = "✗ " + (bloc.mauvaise_idee || "");
+      ecrireRiche(mauvais, "✗ " + (bloc.mauvaise_idee || ""));
       div.appendChild(mauvais);
       const bon = creer("div", "piege-oui");
-      bon.textContent = "✓ " + (bloc.bonne_idee || "");
+      ecrireRiche(bon, "✓ " + (bloc.bonne_idee || ""));
       div.appendChild(bon);
       if (bloc.pourquoi_faux) {
-        const pourquoi = creer("p", "muet", bloc.pourquoi_faux);
+        const pourquoi = creerRiche("p", "muet", bloc.pourquoi_faux);
         pourquoi.style.gridColumn = "1 / -1";
         div.appendChild(pourquoi);
       }
@@ -380,8 +395,8 @@
 
     exemple(bloc) {
       const div = creer("div", "bloc-exemple");
-      if (bloc.situation) div.appendChild(creer("p", null, bloc.situation));
-      if (bloc.calcul) div.appendChild(creer("p", null, bloc.calcul));
+      if (bloc.situation) div.appendChild(creerRiche("p", null, bloc.situation));
+      if (bloc.calcul) div.appendChild(creerRiche("p", null, bloc.calcul));
       if (bloc.figure) {
         const svgns = "http://www.w3.org/2000/svg";
         const svg = document.createElementNS(svgns, "svg");
@@ -396,7 +411,7 @@
           gabarit.dessiner(svg, valeurs);
         }
       }
-      if (bloc.conclusion) div.appendChild(creer("p", "exemple-conclusion", bloc.conclusion));
+      if (bloc.conclusion) div.appendChild(creerRiche("p", "exemple-conclusion", bloc.conclusion));
       return div;
     },
 
@@ -475,7 +490,7 @@
 
   function ajouterBulle(texte) {
     const pile = $("bulles");
-    const bulle = creer("div", "bulle-jules", texte);
+    const bulle = creerRiche("div", "bulle-jules", texte);
     pile.querySelectorAll(".bulle-jules").forEach((b) => b.classList.add("ancienne"));
     pile.appendChild(bulle);
     while (pile.children.length > 2) pile.firstElementChild.remove();
