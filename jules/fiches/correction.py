@@ -285,8 +285,8 @@ def preparer_expression(texte: str) -> str:
     t = str(texte).strip().lower()
     if len(t) > TAILLE_REPONSE_MAX:
         raise ReponseIllisible("trop long")
-    if "=" in t:
-        t = t.rsplit("=", 1)[1]
+    if "=" in t:  # « Ec = 1/2 m v² » : on garde le dernier membre, sans l'espace qui le precede
+        t = t.rsplit("=", 1)[1].strip()
     for avant, apres in (("×", "*"), ("·", "*"), ("÷", "/"), ("−", "-"), (",", "."), ("^", "**")):
         t = t.replace(avant, apres)
     t = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda m: "**" + m.group(1).translate(_EXPOSANTS), t)
@@ -498,7 +498,10 @@ def corriger_texte_court(attendu: dict[str, Any], reponse: Any) -> Verdict:
             return Verdict(True, lu=a)
     tolerees = int(attendu.get("fautes_tolerees", 0))
     for a in acceptees:
-        if tolerees and distance(cle, _cle_texte(a)) <= tolerees:
+        # Au plus une faute par tranche de 4 lettres : sur « UV » ou « oui », une faute tolérée accepterait
+        # presque n'importe quoi (« u », « ux », « non »).
+        permises = min(tolerees, len(_cle_texte(a)) // 4)
+        if permises and distance(cle, _cle_texte(a)) <= permises:
             return Verdict(True, diagnostic="orthographe", lu=a)
     return Verdict(False, diagnostic="mauvaise_reponse", lu=texte.strip())
 
