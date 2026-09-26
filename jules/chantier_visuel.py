@@ -99,7 +99,14 @@ def _modele(racines: Racines, notions: list[Notion]) -> tuple[str, str, list[tup
     candidats: list[Path] = []
     for dossier in _bibliotheques(racines, "fiches-visuelles"):
         candidats += sorted((dossier / "fiches").rglob("*.yaml"))
-    candidats.sort(key=lambda c: (c.parent.name not in matieres, c.stem != MODELE_PAR_DEFAUT, str(c)))
+
+    # Meme matiere d'abord ; sinon une fiche au format complet de la charte (lettres des formules
+    # declarees, notions cles), plus proche de ce qu'on attend qu'une fiche de demonstration.
+    def complete(chemin: Path) -> bool:
+        texte = chemin.read_text(encoding="utf-8")
+        return "\nvariables:" in texte and "**" in texte
+
+    candidats.sort(key=lambda c: (c.parent.name not in matieres, not complete(c), c.stem != MODELE_PAR_DEFAUT, str(c)))
     for chemin in candidats:
         if chemin.stem in demandees:
             continue
@@ -302,7 +309,7 @@ def capturer(index: Path, notions: list[str], dossier: Path) -> list[Path]:
             "--hide-scrollbars",
             "--allow-file-access-from-files",
         ]
-        options += ["--virtual-time-budget=4000", "--window-size=1280,3200", f"--screenshot={capture}"]
+        options += ["--virtual-time-budget=4000", "--window-size=1280,6000", f"--screenshot={capture}"]
         commande = [navigateur, *options, f"{index.as_uri()}#{notion}"]  # navigateur local, arguments fixes
         subprocess.run(commande, check=True, capture_output=True, timeout=120)  # noqa: S603
         captures.append(capture)

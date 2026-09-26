@@ -4,5 +4,5 @@ version: "1.0.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
-  rappels: [unites, chimie-especes, chimie-elements, formules]
+  rappels: [unites, chimie-especes, chimie-elements, formules, sigles-svt]
 permissions: {}

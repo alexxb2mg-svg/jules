@@ -226,7 +226,7 @@ Symboles.enregistrer({
 // Des termes courts relies par des operateurs, avec au moins un « = », « → » ou « ≈ ». Termes :
 // nombre (avec son unite), unite seule (km/h → m/s), lettre(s) de grandeur, espece chimique.
 const UNITES = o.alternatives(Object.keys(DICOS.unites));
-const NOMBRE = String.raw`\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
+const NOMBRE = String.raw`−?\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
 const UNITE_SEULE = String.raw`(?:${o.alternatives(Object.keys(DICOS.unites).filter((u) => u.length > 1))})(?![\p{L}\p{N}])`;
 const TERME = String.raw`(?:${NOMBRE}|${UNITE_SEULE}|(?:\d+[  ])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
 const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
@@ -239,6 +239,25 @@ Symboles.enregistrer({
       if (/[=→≈≤≥<>]/.test(mot)) zones.push({ debut: i, fin: i + mot.length, classe: "formule-texte" });
     });
     return zones;
+  },
+});
+
+// --- sigles de SVT (donnees seules) ------------------------------------------------------------
+Symboles.dictionnaire({
+  id: "sigles-svt", matieres: ["svt"],
+  entrees: {
+    ADN: "acide désoxyribonucléique : la molécule qui porte l'information génétique",
+    ARN: "acide ribonucléique : copie d'une partie de l'ADN, utilisée par la cellule",
+    VIH: "virus de l'immunodéficience humaine, responsable du sida",
+    sida: "syndrome d'immunodéficience acquise, causé par le VIH",
+    IST: "infection sexuellement transmissible",
+    OGM: "organisme génétiquement modifié",
+    PMA: "procréation médicalement assistée",
+    FIV: "fécondation in vitro (en laboratoire)",
+    GIEC: "Groupe d'experts intergouvernemental sur l'évolution du climat",
+    FSH: "hormone de l'hypophyse qui stimule les ovaires ou les testicules",
+    LH: "hormone de l'hypophyse qui déclenche l'ovulation ; stimule aussi les testicules",
+    IRM: "imagerie par résonance magnétique : image de l'intérieur du corps",
   },
 });
 })();
