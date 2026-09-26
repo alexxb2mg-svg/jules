@@ -137,3 +137,14 @@ réglage fin des valeurs (attend un professionnel) ; activation du module `outil
   encore s'il s'agit du modèle national ou d'un modèle d'établissement). Par défaut, Jules
   affiche les libellés du modèle officiel. Les libellés sont des données
   (`docs/spec/pap-libelles.txt`) : un modèle d'établissement s'ajoutera sans toucher au code.
+
+## 8. Méthode (décidée le 26/09/2026 après le lot 1)
+
+- **Spec figée** : le lot 2 est figé au tag local `spec-lot2-fige`. Une remarque qui ne bloque
+  pas une exigence passe au lot 3. Une correction bloquante donne un nouveau tag et un commentaire
+  sur chaque carte concernée, jamais une modification silencieuse.
+- **Tests** : chaque carte lance ses tests ciblés, navigateur compris (EX-012). La suite complète
+  ne tourne qu'une fois, sur la branche d'intégration du lot.
+- **Revue** : une carte dont le dernier commit date de plus de 15 minutes sans demande de revue
+  est passée en revue par SPEC, après contrôle que la copie de travail ne contient rien de non
+  commité.
