@@ -1,0 +1,11 @@
+# Profil FICTIF publie pour les tests (docs/spec/ADAPTATIONS.md, EX-004 et EX-005) : plusieurs
+# amenagements cumules, dont un inconnu. Aucun prenom reel, aucun nom de trouble (EX-008).
+# Les identifiants reapparaissent volontairement dans des champs libres : ils doivent en etre retires.
+prenom: Alix
+genre: neutre
+parent: ses parents
+classe: "4e"
+amenagements: [phrases-courtes, consignes-fractionnees, amenagement-inexistant]
+centres_interet: [astronomie, phrases-courtes]
+points_a_travailler: [consignes-fractionnees]
+remarques: "Suivi phrases-courtes depuis la rentrée ; aime les exemples concrets."
