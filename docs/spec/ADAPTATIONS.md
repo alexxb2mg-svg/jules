@@ -28,12 +28,15 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   `event.source === iframe.contentWindow`, répond `{type: "adaptations", leviers: {...}}`.
   L'outil n'affiche son contenu qu'après avoir appliqué les leviers.
 - **EX-002** — Délai. Sans réponse de l'hôte après 500 ms, l'outil s'affiche avec les
-  valeurs neutres et envoie `{type: "adaptations-absentes"}` à l'hôte.
+  valeurs neutres et envoie `{type: "adaptations-absentes"}` à l'hôte. Un message
+  `adaptations` valide reçu après ce délai est **appliqué** (mieux vaut un saut d'affichage
+  qu'un élève privé de ses adaptations pour toute la séance).
 - **EX-003** — Contrôles. L'outil n'accepte `adaptations` que si
   `event.source === window.parent` ; il ignore sans erreur les leviers inconnus. L'hôte
   ignore tout message dont la source n'est pas l'iframe.
   *Vérification EX-001 à 003* : test automatisé couvrant réponse reçue, délai dépassé,
-  message d'une autre source (des deux côtés), levier inconnu.
+  réponse reçue après le délai (appliquée), message d'une autre source (des deux côtés),
+  levier inconnu.
 
 ### Données de l'élève
 
@@ -44,10 +47,22 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - **EX-005** — Le modèle ne reçoit que les consignes d'expression découlant des
   aménagements actifs (phrases courtes, découpage...), sans nom d'aménagement ni de trouble.
   *Vérification* : même test, qui vérifie la présence du bloc de consignes attendu et
-  l'absence de toute liste de termes interdits (noms de troubles, identifiants).
-- **EX-008** — Aucun fichier de données versionné (profils, aménagements, tests) ne contient
-  un prénom réel ni un nom de trouble. La documentation n'est pas concernée.
-  *Vérification* : test d'hygiène sur `profils/`, `adaptations/` et `tests/`.
+  l'absence des termes listés dans `docs/spec/termes-interdits.txt` (noms de troubles) et
+  des identifiants d'aménagement. La liste vit sous `docs/`, hors du champ d'EX-008.
+- **EX-008** — Aucun fichier de données versionné sous `profils/`, `adaptations/` et
+  `tests/` ne contient un nom de trouble ni le prénom d'un élève réel. `docs/` n'est pas
+  concerné.
+  *Vérification* : test d'hygiène en deux parties.
+  (a) Noms de troubles : recherche insensible à la casse des termes de
+  `docs/spec/termes-interdits.txt`.
+  (b) Prénoms réels : si la surcouche privée est présente, le test lit le champ `prenom` des
+  profils qu'elle contient et les cherche dans les trois dossiers ; sinon il est marqué
+  « ignoré » avec la raison affichée, jamais « réussi ».
+- **EX-011** — Le champ libre `remarques` reste transmis au modèle. La page parent affiche,
+  à côté de ce champ, un avertissement : il est lu par le moteur en ligne et ne doit contenir
+  ni diagnostic ni information médicale.
+  *Vérification* : test de la page parent qui vérifie la présence de l'avertissement au
+  voisinage du champ.
 
 ### Lecture vocale
 
@@ -61,6 +76,9 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   sur l'appareil réel de l'élève.
 - **EX-007** — La page parent indique si la lecture vocale est disponible sur cet appareil,
   en constatant le résultat du filtre, sans nommer de navigateur.
+  *Vérification* : les quatre cas simulés d'EX-006, en contrôlant le texte affiché sur la
+  page parent (disponible / indisponible, et passage de l'un à l'autre après
+  `voiceschanged`).
 
 ### Prérequis techniques
 
@@ -79,11 +97,12 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
 - Message propre à un navigateur dans la page parent : non validé tant que le comportement
   d'Edge en affichage normal n'est pas mesuré.
 
-## 4. Questions ouvertes (décision d'Alex)
+## 4. Décisions d'Alex (26/09/2026)
 
-- Champ libre `remarques` du profil : continuer à le transmettre au modèle ? Proposition :
-  oui, avec un avertissement sur la page parent.
-- Relecture par un professionnel avant ou après le premier code du lot 2.
+- Champ `remarques` : transmis au modèle, avec avertissement (EX-011).
+- Pas encore de relecteur professionnel officiel : la spec et le code avancent sur la base
+  documentée (collecte sourcée, niveau de preuve par levier). Les valeurs du lot 2 restent
+  marquées « à relire par un professionnel » jusqu'à ce qu'un relecteur les valide.
 
 ## 5. Risques
 
