@@ -29,9 +29,9 @@ autorisée, une règle de combinaison, un canal (affichage CSS, consigne au mod�
 | Id | Canal | Neutre | Plage autorisée (départ sourcé) | Combinaison | Source |
 |---|---|---|---|---|---|
 | `espacement-lettres` | CSS | 0 | 0 à 0,18em (Zorzi : 2,5 pt / 14 pt) | max | étude |
-| `espacement-mots` | CSS | 0 | 0 à 0,5em | max | étude (Zorzi, ×3) / usage (BDA) |
+| `espacement-mots` | CSS | 0 | 0 à 0,5em (Zorzi : 3 espaces au lieu d'1, soit +2 espaces ; une espace ≈ 0,25em, donc +0,5em) | max | étude (Zorzi) |
 | `interligne` | CSS | actuel (1,55 ; bulles 1,45) | jusqu'à 2,0, jamais sous la valeur actuelle | max | norme WCAG 1.4.8 / usage BDA |
-| `longueur-ligne` | CSS | actuelle | 60 à 80ch | min | norme WCAG 1.4.8 (≤ 80) |
+| `longueur-ligne` | CSS | aucune limite en `ch` (pas de `max-width` ajouté) | une seule valeur active : 80ch au plus. Aucune borne basse sourcée, à fixer avec un professionnel | min | norme WCAG 1.4.8 (≤ 80) |
 | `taille-texte` | CSS | 1,125rem | 1 à 1,5 × la neutre | max | norme WCAG 1.4.4 / usage BDA |
 | `police` | CSS | `--police-texte` | liste fermée de sans-serif, aucune police « spéciale » | arbitrage parent | étude (Wery 2017, Kuster 2018, Marinus 2016) |
 | `fond` | CSS | blanc | blanc, crème, bleu pâle ; contraste ≥ 4,5:1 | arbitrage parent | norme WCAG 1.4.3 / préférence |
@@ -48,23 +48,33 @@ français : chantier à part, lot 3) et **dictée** (hors périmètre, lot 1).
 
 ## 3. Aménagements (ce que coche le parent)
 
-Chaque aménagement porte le **libellé exact du PAP** (collecte §PAP) et un identifiant neutre.
-Seuls les items sur lesquels un logiciel peut agir sont repris ; les autres (installation en
-classe, tutorat, clé USB...) sont hors champ.
+Le PAP a un modèle par niveau (maternelle, élémentaire, collège, lycée) et ne dit pas la même
+chose à chaque niveau. Un aménagement a donc un identifiant neutre et **un libellé par niveau**,
+recopié en entier depuis le PDF officiel (SHA-256
+`cd9709e9145a2b380fa04ff0e3b973c94d003c839cfefb69287f65743222f55a`), avec sa page. La page
+parent affiche le libellé du niveau de l'élève. Quand ce niveau n'a pas d'item correspondant,
+l'aménagement est affiché sous le titre du PAP « Autres aménagements et adaptations » (rubrique
+libre présente à chaque niveau), avec la mention « à inscrire par l'équipe éducative ».
 
-| Id | Libellé PAP affiché au parent | Leviers réglés |
-|---|---|---|
-| `supports-aeres-agrandis` | « Proposer des supports écrits aérés et agrandis » | espacement-lettres, espacement-mots, interligne, taille-texte, longueur-ligne |
-| `lecture-oralisee` | « Proposer à l'élève une lecture oralisée [...] ou une écoute audio » | lecture-vocale = proposée |
-| `consignes-decomposees` | « Décomposer les consignes et informations complexes » | consignes-decoupees, phrases-courtes |
-| `reformulation` | « Aider à la compréhension par une explicitation ou une reformulation » | phrases-courtes |
-| `diminuer-quantite-ecrit` | « Diminuer la quantité d'écrit sur chaque feuille » | densite = un exercice |
-| `reperes-couleur-calcul` | « Présenter les calculs en colonnes avec des repères de couleur » | reperes-rang-chiffres |
-| `surligner-mots-cles` | « Surligner des mots clés / passages importants » | surlignage-mots-cles |
-| `temps-majore` | « Accorder un temps majoré » | temps-majore **[en attente collecte]** |
+Seuls les items sur lesquels un logiciel peut agir sont repris.
+
+| Id | Collège (p. 7-8) | Élémentaire | Leviers réglés |
+|---|---|---|---|
+| `supports-aeres-agrandis` | « Proposer des supports écrits aérés et agrandis (exemple : ARIAL14) » p. 7 | « Agrandir les formats des supports écrits (A3) » p. 4 | espacement-lettres, espacement-mots, interligne, taille-texte, longueur-ligne |
+| `temps-majore` | « Accorder un temps majoré » p. 7 | « Accorder un temps majoré » p. 4 | temps-majore **[en attente collecte]** |
+| `limiter-quantite-ecrit` | « Limiter la quantité d'écrit (recours possible aux QCM, exercices à trous, schémas ...) » p. 7 | « Diminuer la quantité d'écrit sur chaque feuille » p. 5 | densite = un exercice |
+| `surligner-mots-cles` | « Surligner les mots-clés ou nouveaux » p. 8 (histoire-géographie) | « Surligner des mots clés / passages importants pour faciliter la lecture de l'élève » p. 4 | surlignage-mots-cles |
+| `lecture-oralisee` | aucun item : « Autres aménagements » | « Proposer à l'élève une lecture oralisée (enseignant ou autre élève) ou une écoute audio des textes supports de la séance » p. 4 | lecture-vocale = proposée |
+| `reformulation` | aucun item : « Autres aménagements » | « Aider à la compréhension par une explicitation ou une reformulation de la part de l'enseignant » p. 4 | phrases-courtes |
+| `consignes-decomposees` | aucun item : « Autres aménagements » | aucun item (maternelle p. 2 : « Décomposer les consignes et informations complexes ») | consignes-decoupees, phrases-courtes |
+| `reperes-couleur-calcul` | aucun item : « Autres aménagements » | « Présenter les calculs en colonnes avec des repères de couleur (ex : colonne des unités en rouge, des dizaines en bleu et des centaines en vert) » p. 5 | reperes-rang-chiffres |
+
+Les pages sont à vérifier une fois sur le PDF par REVIEWER, puis figées dans
+`docs/spec/pap-libelles.txt` (une ligne par libellé : niveau, page, texte complet).
 
 Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `fond`,
 `lecture-vocale = automatique`.
+
 
 ## 4. Conflits connus (montrés au parent, jamais tranchés en silence)
 
@@ -83,9 +93,11 @@ Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `
 - **EX-102** — Avec tous les leviers à leur valeur neutre, le rendu est identique à
   aujourd'hui. *Vérification* : captures avant/après identiques (méthode d'EX-010).
 - **EX-103** — Chaque aménagement est un fichier sous `adaptations/amenagements/` avec son
-  identifiant, son libellé PAP exact et les valeurs de leviers ; il ne cite aucun terme de
-  `termes-interdits.txt`. *Vérification* : test de chargement + test d'hygiène d'EX-008 ;
-  chaque libellé est comparé à la liste PAP de la collecte.
+  identifiant, ses libellés par niveau (complets, jamais tronqués, avec la page) et les valeurs
+  de leviers ; il ne cite aucun terme de `termes-interdits.txt`. *Vérification* : test de
+  chargement + test d'hygiène d'EX-008 ; chaque libellé est comparé caractère pour caractère à
+  `docs/spec/pap-libelles.txt` (apostrophes et espaces normalisées), lui-même vérifié une fois
+  à la main contre le PDF officiel dont le SHA-256 est donné au §3.
 - **EX-104** — La combinaison de plusieurs aménagements suit la règle de chaque levier, et
   tout conflit du §4 est renvoyé comme conflit. *Vérification* : test avec `test-cumul.yaml`
   (valeurs attendues calculées à la main) et un cas par conflit du §4.
@@ -103,7 +115,12 @@ Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `
   `parent.html` avec `test-cumul.yaml`.
 - **EX-109** — Le bouton de lecture côté élève apparaît quand `lecture-vocale` vaut
   « proposée » ou « automatique » et qu'une voix locale existe (EX-006), sur chaque bulle de
-  Jules et chaque consigne. *Vérification* : test navigateur, avec voix simulées.
+  Jules et chaque consigne. En mode « automatique » : chaque nouvelle bulle de Jules est lue
+  une fois, à son affichage complet ; les consignes ne sont lues qu'au clic ; les messages de
+  l'élève ne sont jamais lus ; une nouvelle bulle interrompt la lecture en cours ; la lecture
+  s'arrête dès que l'élève tape dans le champ de saisie ou clique sur « arrêter » ; « arrêter »
+  vaut pour la bulle en cours seulement, pas pour la suite de la séance. *Vérification* : test
+  navigateur, voix et `speechSynthesis` simulées, un cas par règle ci-dessus.
 
 ## 6. Hors périmètre du lot 2
 
