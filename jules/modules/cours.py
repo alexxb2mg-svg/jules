@@ -107,7 +107,7 @@ class Brique(Module):
         """Lecons chargees (une bibliotheque absente ou vide : le module demarre sans lecon)."""
         if self._lecons is None:
             self._lecons = charger_lecons(
-                self.tuteur.config.dossier_bibliotheques, self.ids, self.notions_catalogue.notions
+                self.tuteur.config.dossiers_bibliotheques, self.ids, self.notions_catalogue.notions
             )
         return self._lecons
 

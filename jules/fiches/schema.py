@@ -88,7 +88,8 @@ CHAMPS_REPONSE = {
     "association": {"gauche", "droite", "paires"},
 }
 CHAMPS_SOURCE = {"titre", "url", "auteurs", "licence", "consulte_le", "usage"}
-CHAMPS_GENERATION = {"par", "le", "a_partir_de"}
+# `modele` : l'IA qui a ecrit la fiche ; `paquet` : la version du paquet de generation (`jules chantier paquet`).
+CHAMPS_GENERATION = {"par", "le", "a_partir_de", "modele", "paquet"}
 # Hors empreinte : ce qui change sans que le contenu change (etat, relecture, empreinte elle-meme).
 HORS_EMPREINTE = {"etat", "relecture", "empreinte", "version"}
 
@@ -468,7 +469,7 @@ def verifier_fiche(fiche: Any, notions_connues: set[str] | None = None, controle
         erreurs.append(f"{nom} : `etat: relue` sans relecture renseignee")
     generation = fiche.get("generation")
     if generation is not None and (not isinstance(generation, dict) or set(generation) - CHAMPS_GENERATION):
-        erreurs.append(f"{nom} : `generation` = {{par, le, a_partir_de}}")
+        erreurs.append(f"{nom} : `generation` = {{{', '.join(sorted(CHAMPS_GENERATION))}}}")
     # scellé
     if controler_empreinte and fiche["etat"] in ETATS_SANS_IA and fiche.get("empreinte") != empreinte(fiche):
         erreurs.append(f"{nom} : contenu modifie depuis la verification (empreinte) : relancer `jules fiches signer`")

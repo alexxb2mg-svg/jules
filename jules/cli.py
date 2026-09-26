@@ -6,6 +6,7 @@
   jules code eleve           definit le code d'acces eleve (idem : parent)
   jules rapport [JOUR]       affiche le rapport d'un jour (AAAA-MM-JJ), sans l'envoyer
   jules fiches verifier      controle les fiches v2 (contrat, index) ; `jules fiches signer DOSSIER` les scelle
+  jules chantier ...         appel a contributions : etat des fiches a generer, paquets de generation
 
 Sans installation : `python lancer.py <commande>` depuis le dossier du projet.
 """
@@ -100,7 +101,7 @@ def verifier_lecons(config: Any) -> None:
     ids_referentiel = [
         str(i) for i in (module_notions.reglages.get("bibliotheques") if module_notions else None) or ["programme"]
     ]
-    catalogue = charger_catalogue(config.dossier_bibliotheques, ids_referentiel, None)
+    catalogue = charger_catalogue(config.dossiers_bibliotheques, ids_referentiel, None)
 
     ecartees: list[str] = []
 
@@ -114,7 +115,7 @@ def verifier_lecons(config: Any) -> None:
     logger_lecons.propagate = False
     logger_lecons.addHandler(capture)
     try:
-        lecons = charger_lecons(config.dossier_bibliotheques, ids_lecons, catalogue.notions)
+        lecons = charger_lecons(config.dossiers_bibliotheques, ids_lecons, catalogue.notions)
     finally:
         logger_lecons.removeHandler(capture)
         logger_lecons.propagate = propage_avant
@@ -167,6 +168,14 @@ def rapport(jour: str | None) -> None:
     tuteur.fermer()
 
 
+def racines_bibliotheques() -> list[Path]:
+    """`bibliotheque/` du projet, puis les depots externes de config(.local).yaml s'il se lit."""
+    try:
+        return charger_config(FICHIER_CONFIG).dossiers_bibliotheques
+    except (OSError, KeyError, yaml.YAMLError):
+        return [RACINE / "bibliotheque"]
+
+
 def console_utf8() -> None:
     """Les consoles Windows sont souvent en cp1252 : sans cela, un caractere comme « √ » fait planter."""
     for flux in (sys.stdout, sys.stderr):
@@ -193,7 +202,11 @@ def main(args: list[str] | None = None) -> None:
     elif args[0] == "fiches":
         from jules.fiches.commande import main as fiches
 
-        fiches(args[1:], RACINE / "bibliotheque")
+        fiches(args[1:], racines_bibliotheques())
+    elif args[0] == "chantier":
+        from jules.chantier import main as chantier
+
+        chantier(args[1:], racines_bibliotheques())
     else:
         print(__doc__)
 

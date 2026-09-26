@@ -102,7 +102,7 @@ class Brique(Module):
     def catalogue(self) -> Catalogue:
         if self._catalogue is None:
             niveau = niveau_du_profil(self.tuteur.profil().classe)
-            self._catalogue = charger_catalogue(self.tuteur.config.dossier_bibliotheques, self.ids, niveau)
+            self._catalogue = charger_catalogue(self.tuteur.config.dossiers_bibliotheques, self.ids, niveau)
             journal.info(
                 "Bibliotheques : %s notions (niveau %s), contenus : %s",
                 len(self._catalogue.notions),

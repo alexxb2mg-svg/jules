@@ -22,9 +22,10 @@ import hashlib
 import logging
 import re
 import unicodedata
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any
+from typing import Any, TypeAlias
 
 import yaml
 
@@ -73,6 +74,28 @@ TAILLE_MAX_FICHIER = 200_000  # octets : une fiche est un texte court, pas un ma
 
 class ErreurBibliotheque(ValueError):
     pass
+
+
+# Un dossier de bibliotheques (`bibliotheque/` du projet) ou plusieurs, par ordre de priorite : le dossier du
+# projet puis les depots de bibliotheques installes a cote (reglage `bibliotheques_externes`, voir config.py).
+Racines: TypeAlias = Path | Sequence[Path]
+
+
+def liste_racines(racines: Racines) -> list[Path]:
+    return [racines] if isinstance(racines, Path) else list(racines)
+
+
+def dossier_bibliotheque(racines: Racines, identifiant: str) -> Path:
+    """Dossier de la bibliotheque `identifiant` : la premiere racine qui la contient l'emporte.
+
+    Si aucune ne la contient, renvoie le chemin dans la premiere racine (l'erreur « bibliotheque.yaml
+    manquant » sera alors signalee par lire_identite, comme avant).
+    """
+    liste = liste_racines(racines)
+    for racine in liste:
+        if (racine / identifiant / "bibliotheque.yaml").is_file():
+            return racine / identifiant
+    return liste[0] / identifiant
 
 
 # --- structures ------------------------------------------------------------------
@@ -284,7 +307,7 @@ def lire_contenus(biblio: Bibliotheque, notions: dict[str, Notion]) -> None:
             biblio.directions_matieres[str(brut.get("matiere") or fichier.stem)] = brut["direction"]
 
 
-def charger_catalogue(racine: Path, ids: list[str], niveau: str | None = None) -> Catalogue:
+def charger_catalogue(racine: Racines, ids: list[str], niveau: str | None = None) -> Catalogue:
     """Charge les bibliotheques citees (dans l'ordre de priorite) pour un niveau donne (tous si None).
 
     Une bibliotheque illisible est signalee et ecartee : Jules continue sans elle.
@@ -299,7 +322,7 @@ def charger_catalogue(racine: Path, ids: list[str], niveau: str | None = None) -
             journal.error("Identifiant de bibliotheque invalide : %r", identifiant)
             continue
         try:
-            lues.append(lire_identite(racine / identifiant))
+            lues.append(lire_identite(dossier_bibliotheque(racine, identifiant)))
         except (ErreurBibliotheque, OSError, yaml.YAMLError) as err:
             journal.error("Bibliotheque %s ecartee : %s", identifiant, err)
     for biblio in lues:

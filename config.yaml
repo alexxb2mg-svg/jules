@@ -50,6 +50,12 @@ modules:
     reglages:
       bibliotheques:   # dossiers de bibliotheque/ contenant des fiches v2, par ordre de priorite
         - fiches-v2-demonstration       # demonstration : deux fiches, EXPERIMENTALE
+        # Fiches de la communaute (depot jules-bibliotheques, docs/CHANTIER.md) : ignorees tant que le depot
+        # n'est pas declare dans `bibliotheques_externes` (config.local.yaml).
+        - fiches-v2-3e
+        - fiches-v2-4e
+        - fiches-v2-5e
+        - fiches-v2-cm1
   - id: memoire        # ce que le bot retient du parcours de l'eleve (notions, faits)
   - id: suivi          # analyse chaque echange (matiere, notion, statut)
   - id: vigilance      # signaux inquietants -> alerte immediate au parent
