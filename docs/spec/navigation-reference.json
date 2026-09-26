@@ -1,11 +1,12 @@
 {
-  "_note": "Liste de reference de la barre laterale (EX-202). Ecrite par SPEC ; DEV ne la modifie pas. Entrees soumises a D2/D3 absentes tant que non tranchees.",
+  "_note": "Reference de la barre laterale (EX-202). Ecrite par SPEC ; DEV ne la modifie pas. Comparaison exacte (accents et casse compris) apres retrait des emojis et normalisation des espaces.",
+  "nav_aria_label": "Sections de Jules",
   "rubriques": [
     {"titre": "Apprendre", "entrees": [
       {"libelle": "Mes fiches", "href": "/"},
-      {"libelle": "Mes lecons", "href": "/cours"}
+      {"libelle": "Mes leçons", "href": "/cours"}
     ]},
-    {"titre": "M'entrainer", "entrees": [
+    {"titre": "M'entraîner", "entrees": [
       {"libelle": "Exercices et supports", "href": "/studio"}
     ]},
     {"titre": "Discuter", "entrees": [
@@ -15,5 +16,6 @@
       {"libelle": "Espace parent", "href": "/parent"}
     ]}
   ],
-  "regles_comparaison": "libelles compares sans accents ni casse, emojis retires"
+  "exemptions_ex205": ["chat-flottant-lien", "retour-eleve"],
+  "cles_localstorage": ["jules.nav.repliee", "jules.matiere"]
 }

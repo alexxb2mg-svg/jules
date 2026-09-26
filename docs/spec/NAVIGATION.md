@@ -1,42 +1,50 @@
 # Jules : navigation unique, sur le modele DinoBot
 
-Statut : brouillon SPEC du 26/09/2026, a relire par REVIEWER et a valider par Alex (decisions D1 a D4).
+Statut : v2 du 26/09/2026. Decisions D1 a D4 tranchees par Alex ; bloquants et remarques de la relecture
+REVIEWER du 26/09 integres. A relire par REVIEWER avant creation des cartes DEV.
 Numerotation : lot 3, EX-201 a EX-2xx (EX-0xx et EX-1xx sont pris par la spec adaptations).
+
+**Base de reference : `origin/main` `23c6262` (#43).** Les numeros de ligne cites sont lus sur cette base.
+Toute carte DEV part de la tete d'`origin/main` obtenue apres les fusions prealables (section 8).
 
 ## 1. Demande
 
 Alex, 26/09/2026 : « la navigation est franchement pourrie. On avait un super exemple avec dinobot pour
 organiser ca de facon coherente et logique, simple et fluide, la c'est l'enfer, il va falloir revoir ca. »
 
-## 2. Etat de depart (mesure sur main 6717025, fichiers `jules/web/static/*.html` et `jules/web/app.py`)
+## 2. Etat de depart (lu sur `23c6262`)
 
 | Page | Route | Navigation propre a la page |
 |---|---|---|
-| Mes fiches | `/` (accueil.html) | rail gauche : Mes fiches, Discuter avec Jules, M'entrainer (`/studio`), Mon suivi (`/parent`) |
+| Mes fiches | `/` (accueil.html) | rail gauche : Mes fiches, Discuter avec Jules, M'entraîner (`/studio`), Mon suivi (`/parent`) + liste des notions groupee par matiere |
 | Discuter | `/discuter` (eleve.html) | colonne gauche d'historique + un seul bouton « Mes fiches » |
-| Cours | `/cours` (cours.html) | panneau « Parcours » (☰), logo -> `/`, panneau Jules a droite. **Absent du rail.** |
-| M'entrainer | `/studio` (studio.html) | panneau « Mes supports » (☰), logo -> `/`, panneau Jules a droite |
-| Espace parent | `/parent` (parent.html) | bouton « Page eleve » |
+| Cours | `/cours` (cours.html) | panneau « Parcours » (☰) avec son propre `select-matiere`, logo -> `/`, panneau Jules a droite. **Absent du rail.** |
+| M'entraîner | `/studio` (studio.html) | panneau « Mes supports » (☰) avec son propre `select-matiere`, logo -> `/`, panneau Jules a droite |
+| Espace parent | `/parent` (parent.html) | bouton « Page élève » |
 
 Defauts constates :
-- Cinq pages, cinq systemes de navigation differents ; le rail n'existe que sur `/`.
-- Depuis `/discuter`, `/cours`, `/studio`, `/parent`, on ne peut que revenir a `/` : pas de passage direct d'une section a l'autre.
-- `/cours` (les lecons) n'est atteignable depuis aucun menu.
-- « Mon suivi » cote eleve pointe vers `/parent`, protege par le code parent : l'eleve tombe sur un ecran de code.
-- Aucun choix de matiere commun : chaque page gere son propre choix de notion.
+- Cinq pages, cinq systemes de navigation ; le rail n'existe que sur `/`.
+- Depuis `/discuter`, `/cours`, `/studio`, `/parent`, on ne peut que revenir a `/`.
+- `/cours` n'est atteignable depuis aucun menu.
+- « Mon suivi » cote eleve pointe vers `/parent`, protege par le code parent.
+- Trois choix de matiere independants (`/cours`, `/studio`, liste groupee de `/`).
 
-## 3. Le modele DinoBot (vu dans le compte d'essai, captures du 26/09/2026)
+Donnees deja disponibles sans nouvel appel : chacune des trois pages de contenu recoit deja la liste
+`matieres [{id, nom}]` de son propre point d'API (`/api/eleve/fiches_visuelles/notions`,
+`/api/eleve/cours/parcours`, `/api/eleve/studio/notions`) ; `/api/infos` renvoie deja `prenom`.
 
-- Une **barre laterale unique**, identique sur tous les ecrans, groupee en rubriques titrees :
-  ACTIVITES (Chat, Fiches, Cours illustre, Exercice, Brevet, Evaluation, Historique),
-  MON ESPACE (Mes cours, Mes informations, Mes offres), INFORMATIONS & SUPPORT (Aide).
-  Entree active surlignee, icone + libelle court, repliable, profil de l'eleve en pied.
-- **Un selecteur de matiere unique en haut au centre**, qui s'applique a toutes les activites.
-- Dans une activite, **contenu a gauche, tuteur a droite**, bascule d'affichage en haut a droite.
+Contraintes existantes que le composant doit respecter (releve DEV) : aucun `<script>` en ligne, aucun
+`onX=`, aucun `style=` dans les HTML (`tests/test_web.py`, CSP `script-src 'self'`) ; ordre de chargement
+`symboles.js < /rappels.js < commun.js` (`tests/test_symboles.py`) ; `/discuter` servi sans code.
+Aucun test existant ne controle la navigation : les tests EX-2xx sont tous neufs.
 
-On reprend la structure, pas l'habillage. Le cadrage interface du 25/09 reste valable pour l'ecran d'une
-fiche (cours au centre, Jules en bulles et fenetre flottante) : cette spec ne porte que sur le passage
-d'un ecran a l'autre.
+## 3. Le modele DinoBot (compte d'essai, captures du 26/09/2026)
+
+- Une barre laterale unique, identique sur tous les ecrans, groupee en rubriques titrees, entree active
+  surlignee, icone + libelle court, repliable, prenom de l'eleve en pied.
+- Un selecteur de matiere unique en haut au centre, qui s'applique a toutes les activites.
+
+On reprend la structure, pas l'habillage. Le cadrage interface du 25/09 reste valable pour l'ecran d'une fiche.
 
 ## 4. Arborescence cible
 
@@ -44,90 +52,123 @@ d'un ecran a l'autre.
 [Barre laterale, sur toutes les pages eleve]
   Jules (marque)                         [replier]
   APPRENDRE
-    Mes fiches            /              (accueil)
-    Mes lecons            /cours
-  M'ENTRAINER
-    Exercices et supports /studio
-    Brevet                (D3, non livre dans ce lot)
+    Mes fiches               /
+    Mes leçons               /cours
+  M'ENTRAÎNER
+    Exercices et supports    /studio
   DISCUTER
-    Discuter avec Jules   /discuter      (l'historique des discussions reste DANS la page)
+    Discuter avec Jules      /discuter   (l'historique reste DANS la page)
   MON ESPACE
-    Mon suivi             (D2)
-    Espace parent         /parent        (code parent, icone cadenas)
-  pied : prenom de l'eleve, niveau
+    Espace parent            /parent     (icone cadenas)
+  pied : prenom de l'eleve
 
-[En-tete, centre] selecteur de matiere (D1)
+[En-tete, centre] selecteur de matiere sur /, /cours, /studio
 ```
+
+La reference fait foi : `docs/spec/navigation-reference.json` (ecrite par SPEC, DEV ne la modifie pas).
 
 ## 5. Exigences
 
-**EX-201 - Une seule barre laterale.** Toutes les pages eleve (`/`, `/cours`, `/studio`, `/discuter`)
-affichent la meme barre laterale, produite par un seul composant partage (un fichier JS et un fichier CSS
-communs), et non recopiee dans chaque HTML.
-*Verification* : test qui charge les 4 pages et compare la liste ordonnee (libelle, href) des liens de la
-barre : identique partout ; `git grep` montre que les libelles de la barre n'existent que dans le composant.
+**EX-201 - Une seule barre laterale.** Les pages eleve (`/`, `/cours`, `/studio`, `/discuter`) affichent la
+meme barre, produite par un seul composant partage (un JS et un CSS communs, en fichiers externes, dans le
+respect des contraintes de la section 2).
+*Verification* : test Chromium (section 6) qui compare la liste ordonnee (rubrique, libelle, href) de la barre
+sur les 4 pages : identique. Test statique limite aux balises `<a>` et `<nav>` des `jules/web/static/*.html` :
+aucun libelle de la barre en dur hors composant (`<title>`, `document.title`, commentaires et tests exclus).
 
-**EX-202 - Contenu et ordre de la barre.** Rubriques et entrees exactement comme en section 4 (hors entrees
-soumises a D2/D3 tant qu'elles ne sont pas tranchees). Libelles en francais, sans jargon technique.
-*Verification* : le test d'EX-201 compare a une liste de reference ecrite par SPEC (`docs/spec/navigation-reference.json`), pas par DEV.
+**EX-202 - Contenu, ordre et libelles.** Rubriques et entrees exactement comme `navigation-reference.json`.
+Les libelles affiches portent leurs accents (« Mes leçons », « M'entraîner »).
+*Verification* : comparaison **exacte** au JSON apres seulement retrait des emojis et normalisation des espaces ;
+accents et casse compares. Cas temoin negatif dans le test : « Mes lecons » doit echouer.
 
 **EX-203 - Entree active.** L'entree de la page courante porte `aria-current="page"` et un style distinct ;
-une seule entree active a la fois.
-*Verification* : test par page : exactement 1 element `[aria-current=page]` dans la barre, dont le href est la route chargee.
+une seule a la fois. Elle se choisit sur `location.pathname` seul, parametres `?...` ignores.
+*Verification* : par page, exactement 1 `[aria-current=page]` dont le href est le chemin charge ; cas
+`/discuter?notion=x` -> « Discuter avec Jules » active.
 
-**EX-204 - Tout ecran est a un clic de tout autre.** Depuis n'importe quelle page eleve, chaque section est
-atteignable en un clic via la barre. Plus aucune page eleve atteignable seulement par l'URL.
-*Verification* : test qui, pour chaque couple (page A, section B), trouve dans A un lien vers B.
+**EX-204 - Tout ecran a un clic de tout autre.** Depuis chaque page eleve, chaque entree de la reference est un
+lien present dans la barre.
+*Verification* : test pour chaque couple (page A, entree B).
 
-**EX-205 - Suppression des navigations concurrentes.** Les boutons « Mes fiches » de `/discuter`, le lien
-logo -> `/` de `/cours` et `/studio` et le rail propre a `accueil.html` disparaissent au profit de la barre.
-Les panneaux internes a une page (« Parcours » de `/cours`, « Mes supports » de `/studio`, historique de
-`/discuter`) restent, mais ne contiennent plus aucun lien vers une autre section.
-*Verification* : `git grep` sur `jules/web/static/*.html` : aucun `href="/..."` de section hors composant ; revue visuelle REVIEWER.
+**EX-205 - Suppression des navigations concurrentes.** Disparaissent : le bouton « Mes fiches » d'`eleve.html`,
+les liens logo -> `/` de `cours.html` et `studio.html`, les liens de sections du rail d'`accueil.html` (la liste
+des notions reste), les deux `select-matiere` internes de `/cours` et `/studio` (remplaces par EX-209). Les
+panneaux internes (Parcours, Mes supports, historique) restent, sans lien vers une autre section.
+Exemptions nommees, et seulement elles : `#chat-flottant-lien` d'`accueil.html` (lien `/discuter?notion=...`
+voulu par le cadrage du 25/09) et `#retour-eleve` de `parent.html` (EX-206).
+*Verification* : test statique : aucun `<a href>` vers une route de section dans les HTML hors composant, sauf
+ces deux identifiants.
 
-**EX-206 - Espace parent separe.** L'entree « Espace parent » porte une icone cadenas et un libelle qui
-annonce le code. `/parent` ne montre pas la barre eleve ; il garde un seul lien « Retour a l'espace eleve ».
-Aucune entree eleve ne mene a un ecran de code sans le signaler.
-*Verification* : test : `/parent` sans barre eleve ; l'entree « Mon suivi » (si D2 = page eleve) ne pointe pas vers `/parent`.
+**EX-206 - Espace parent separe.** L'entree « Espace parent » porte une icone cadenas et l'indication « code
+parent » (texte ou `aria-label`). `/parent` n'affiche pas la barre eleve ; son unique lien de retour a l'id
+`retour-eleve`, le libelle « Retour à l'espace élève » et le href `/`. Plus aucune entree « Mon suivi ».
+*Verification* : `/parent` sans `<nav aria-label="Sections de Jules">` ; `#retour-eleve` present ; aucun libelle
+« Mon suivi » dans les HTML ni dans le composant.
 
-**EX-207 - Tablette et telephone.** En dessous de 900 px de large, la barre se replie en tiroir ouvert par un
-bouton ☰ unique, place au meme endroit sur toutes les pages ; le tiroir se ferme apres un clic sur une entree
-et par Echap. Au-dessus, la barre est visible et repliable en icones, et l'etat replie est memorise (localStorage).
-*Verification* : test navigateur (Chromium, 0 test ignore) a 768 px et 1280 px sur les 4 pages.
+**EX-207 - Tablette et telephone.** Sous 900 px de large, la barre devient un tiroir ouvert par un bouton ☰
+unique, au meme endroit sur les 4 pages ; il se ferme apres un clic sur une entree et par Echap. A partir de
+900 px, la barre est visible et repliable en icones ; l'etat replie est memorise en localStorage (cle
+`jules.nav.repliee`, booleen, rien d'autre).
+*Verification* : scenario section 6, a 768 x 1024 et 1280 x 800, sur les 4 pages.
 
-**EX-208 - Accessibilite.** La barre est un `<nav aria-label="Sections de Jules">`, les rubriques sont des
-titres, tout est utilisable au clavier (Tab, Entree, Echap) avec un focus visible ; les emojis des libelles
-sont `aria-hidden`. Compatible avec les reglages d'adaptation existants (police, taille en rem).
-*Verification* : test clavier navigateur + controle axe-core sans erreur « serious/critical » sur la barre.
+**EX-208 - Accessibilite, controles explicites (pas d'axe-core).** La barre est un
+`<nav aria-label="Sections de Jules">` ; chaque rubrique est un titre ; chaque entree est un `<a>` dont le nom
+accessible est son libelle ; les emojis sont dans un `<span aria-hidden="true">` ; le bouton ☰ tient
+`aria-expanded` et `aria-controls` a jour ; une regle `:focus-visible` couvre entrees et bouton ; l'ordre DOM
+suit l'ordre visuel ; tailles en `rem`.
+*Verification* : test statique (DOM et CSS) + scenario section 6 : `aria-expanded` bascule a l'ouverture et a
+Echap ; chaque entree accepte `focus()` et une regle `:focus-visible` la cible.
 
-**EX-209 - Selecteur de matiere commun (soumis a D1).** Un selecteur unique dans l'en-tete, identique sur les
-pages eleve, liste les matieres disponibles pour le niveau de l'eleve (lues dans le programme charge, jamais
-codees en dur). Le choix est memorise et filtre Mes fiches, Mes lecons et M'entrainer.
-*Verification* : test : changer la matiere sur `/` puis ouvrir `/studio` : meme matiere affichee et liste filtree.
+**EX-209 - Selecteur de matiere commun (D1 = oui).** Un seul selecteur, dans l'en-tete, sur `/`, `/cours` et
+`/studio`. Pas sur `/discuter` (la discussion couvre toutes les matieres). Il est rempli avec la liste
+`matieres [{id, nom}]` que la page recoit deja de son propre point d'API : **aucun appel ajoute, aucun champ
+ajoute a `/api/infos` ni a aucune reponse.** Le choix est memorise en localStorage (cle `jules.matiere`, valeur =
+l'`id` de matiere seul, aucune donnee de l'eleve) et filtre la page. Si la matiere memorisee est absente de la
+liste de la page, la page prend la premiere matiere de sa liste, l'indique, et n'ecrase pas la memoire.
+Priorite : **une notion demandee dans l'URL (`?notion=`) l'emporte** ; la page ouvre la notion, aligne le
+selecteur sur sa matiere et memorise cette matiere.
+*Verification* : scenario section 6 : choisir une matiere sur `/`, ouvrir `/studio` puis `/cours` -> meme
+matiere et liste filtree ; `/cours?notion=<notion d'une autre matiere>` -> la notion s'ouvre et le selecteur
+suit ; liste des appels `/api/...` identique avant/apres (EX-210).
 
-**EX-210 - Pas de regression.** Les routes existantes repondent toujours (y compris liens deja partages et
-favoris de l'ecran d'accueil de la tablette), la suite de tests reste verte, aucun appel API ajoute par la navigation.
-*Verification* : `pytest` complet vert ; test HTTP 200 sur `/`, `/cours`, `/studio`, `/discuter`, `/parent`.
+**EX-210 - Pas de regression, pas de donnee nouvelle.** Routes inchangees (HTTP 200 sur `/`, `/cours`,
+`/studio`, `/discuter`, `/parent`) ; aucune route ni champ d'API ajoute ; pied de barre = `prenom` de
+`/api/infos`, deja expose, rien d'autre du profil (ni niveau, ni age, ni etablissement).
+*Verification* : `pytest` complet vert ; le diff de la carte ne touche aucun `*.py` de `jules/` (routes,
+`infos_interface`) ; test statique : le composant ne lit que `persona` et `prenom` dans les infos.
 
-## 6. Decisions attendues d'Alex
+## 6. Methode de test navigateur (EX-201, 203, 207, 208, 209)
 
-- **D1 - Selecteur de matiere en haut, comme DinoBot ?** Proposition : oui (EX-209).
-- **D2 - « Mon suivi » cote eleve** : a) une page eleve simple (notions vues, reussites, temps), a specifier
-  dans un lot suivant, l'entree est masquee d'ici la ; b) on retire l'entree, le suivi reste reserve au parent.
-  Proposition : b pour ce lot.
-- **D3 - Entree « Brevet »** (annales PDF a gauche, Jules a droite, repris de DinoBot) : a specifier plus tard ;
-  l'entree n'apparait pas tant que la page n'existe pas. Proposition : hors de ce lot.
-- **D4 - Fiches et lecons** : on garde deux entrees (« Mes fiches » = condense visuel, « Mes lecons » = cours
-  complet) ; les fusionner est un chantier a part. Proposition : deux entrees.
+- Outillage existant seulement : Chromium headless `--dump-dom`, comme `tests/test_symboles.py`.
+  **Aucune dependance nouvelle** (ni Playwright, ni axe-core, ni client websocket).
+- Le test sert la page par une app de test qui injecte, **uniquement en test**, un script de scenario
+  (`/_test/scenario-nav.js`). Ce script clique (`element.click()`), envoie un `keydown` Echap, lit
+  `localStorage`, `getComputedStyle` et les `aria-*`, et ecrit ses resultats en JSON dans un
+  `<pre id="resultat-scenario">` relu par `--dump-dom`. Taille par `--window-size`. Le HTML de production
+  n'est pas modifie pour le test.
+- La touche Tab ne se simule pas : le parcours clavier est couvert par l'ordre DOM et `focus()` (EX-208).
+- **Un test ignore compte comme un echec** : avec `JULES_CHROMIUM_OBLIGATOIRE=1`, ces tests echouent (pas de
+  `skip`) si Chromium manque ; la revue exige `pytest -rs` avec 0 test EX-2xx ignore.
 
-## 7. Hors perimetre
+## 7. Hors perimetre (decisions d'Alex du 26/09/2026)
 
-Design fin (couleurs, icones definitives), contenu des pages, page Brevet, page de suivi eleve, espace parent
-(hors lien de retour), cablage de Jules sur les adresses.
+- **D1** : selecteur de matiere en haut, oui (EX-209).
+- **D2** : « Mon suivi » cote eleve retire ; le suivi reste dans l'espace parent.
+- **D3** : page et entree « Brevet » (annales a gauche, Jules a droite) : chantier futur, aucune entree d'ici la.
+- **D4** : « Mes fiches » et « Mes leçons » restent deux entrees ; leur fusion est un autre chantier.
+- Design fin, contenu des pages, espace parent (hors lien de retour), cablage de Jules sur les adresses.
 
-## 8. Risques
+## 8. Prealables et ordre de fusion
 
-- Les tests existants qui cherchent le rail ou le bouton « Mes fiches » (`tests/test_web.py`,
-  `tests/test_fiches_visuelles_web.py`) casseront : a mettre a jour dans la meme carte, pas a supprimer.
-- Les branches en cours qui touchent les memes HTML (adaptations EX-006/007/009/010) : conflits probables,
-  a fusionner avant de commencer.
+1. `adaptations/ex-010-rem` (CSS global en `rem`) fusionnee sur `origin/main`.
+2. `adaptations/ex-001-002-003-poignee` fusionnee. **Decision SPEC : c'est elle qu'on garde.** Elle contient
+   deja les deux commits d'`adaptations/ex-009-iframe` (69c7592, 0ac5e64 ; verifie par
+   `git merge-base --is-ancestor`) : son `outils-hote.js` prolonge celui d'EX-009, ce n'est pas une version
+   concurrente. `ex-009-iframe` n'est pas fusionnee a part ; la branche reste en place.
+3. Carte navigation : ne demarre qu'apres 1 et 2, sur la tete d'`origin/main` qui en resulte.
+`ex-006-007-voix` et `ex-013-carnet` (risque faible) peuvent passer avant ou apres ; si apres, rebase sur la navigation.
+
+## 9. Risques
+
+- Branches anciennes `origin/cours-*`, `studio-*`, `interface-cours` sur les memes HTML : a confirmer abandonnees
+  par Alex ; ignorees par ce lot, rien n'est supprime.
