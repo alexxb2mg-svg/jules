@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "jules-tuteur"
 version = "0.1.0"
-description = "Tuteur de devoirs libre et gratuit pour collégiens : il guide sans jamais donner la réponse."
+description = "Tuteur de devoirs libre et gratuit, du CM1 à la 3e aujourd'hui : il guide sans jamais donner la réponse."
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
 requires-python = ">=3.10"
 authors = [{ name = "Les contributeurs de Jules" }]
-keywords = ["education", "tuteur", "college", "ia", "socratique"]
+keywords = ["education", "tuteur", "primaire", "college", "ia", "socratique"]
 classifiers = [
   "Programming Language :: Python :: 3",
   "Natural Language :: French",
