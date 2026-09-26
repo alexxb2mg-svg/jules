@@ -115,8 +115,27 @@ assumées :
    photo — l'outil ne reçoit que ce que la leçon lui transmet, cf. §4).
 2. C'est donc à la **page hôte** de se protéger : vérifier `event.source === iframe.contentWindow`
    (jamais se fier à `event.origin`, qui vaudra `"null"`), puis valider strictement le schéma
-   avant d'utiliser `donnees`. Ce sera la responsabilité du code d'intégration (`cours.js`,
-   à l'étape suivante) — documenté ici pour que l'intégrateur ne l'oublie pas.
+   avant d'utiliser `donnees`. C'est fait par `jules/web/static/outils-hote.js`
+   (`OutilsHote.monter`, `OutilsHote.filtrer`), seul fichier de la page qui crée une iframe
+   d'outil ; `cours.js` l'appelle pour chaque bloc `outil` d'une leçon (EX-009,
+   `docs/spec/ADAPTATIONS.md`). Vérifié par `tests/test_outils_hote.py`, dont un essai dans un
+   vrai navigateur servi par un vrai serveur Jules.
+
+### Page hôte (`jules/web/static/outils-hote.js`)
+
+- Crée l'iframe avec `sandbox="allow-scripts"` (jamais `allow-same-origin`),
+  `referrerpolicy="no-referrer"`, `src="/api/eleve/outils/<id>/"`.
+- Un message reçu n'est transmis que si : `event.source === iframe.contentWindow` (l'iframe de
+  CET outil, pas une autre iframe de la page ni la page elle-même), c'est un objet de
+  `type: "evenement"`, et l'`evenement` est déclaré dans la fiche de l'outil (`evenements` de
+  `Outil.publique()`). Un `donnees` qui n'est pas un objet est ramené à `{}`. Tout le reste est
+  ignoré sans erreur.
+- N'envoie à l'outil que les actions déclarées dans sa fiche (`actions`), une fois l'iframe
+  chargée pour l'action du bloc de leçon.
+- L'outil est démonté (écouteur retiré, iframe supprimée) quand l'élève change de leçon ou
+  revient au parcours.
+- Si le module `outils` n'est pas actif ou que l'outil n'est pas au catalogue, le bloc reste
+  affiché « à venir », sans iframe.
 
 ## 3. Isolement technique
 
@@ -207,4 +226,4 @@ modules:
 | Service HTTP | `jules/modules/outils.py`, `jules/config.py` (ajout de `dossier_outils`), `tests/test_module_outils.py` |
 | Outils de référence | `outils/frise-chronologique/**`, `outils/calculatrice/**`, `outils/lexique/**` |
 | Exemple de configuration | `docs/exemples/config-outils.exemple.yaml` |
-| Intégration (étape suivante, hors périmètre ici) | `config.yaml` (activation), `jules/web/static/cours.js` (ouverture de l'iframe, écoute des évènements), `jules/lecons.py` (déjà prêt : le bloc `outil` est accepté depuis l'étape 2) |
+| Intégration | `jules/web/static/outils-hote.js` et `cours.js` (ouverture de l'iframe, filtre des messages : fait, EX-009), `jules/lecons.py` (déjà prêt : le bloc `outil` est accepté depuis l'étape 2) ; reste à faire : `config.yaml` (activation du module `outils`) |
