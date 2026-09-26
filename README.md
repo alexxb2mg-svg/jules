@@ -131,7 +131,7 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié | en place |
 | Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas | en place |
 | Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève | en place |
-| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance, bilan du soir, module `cours` (interface de leçon) | en place |
+| Modules | `jules/modules/<id>.py` | Mémoire, suivi, vigilance (plancher déterministe dans `consignes/vigilance_plancher.yaml` en plus du modèle), bilan du soir, module `cours` (interface de leçon) | en place |
 | Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
 | Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (3e) |
