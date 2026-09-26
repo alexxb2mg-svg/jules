@@ -139,7 +139,9 @@ matiere selectionnee et liste filtree ; (b) `/#<notion d'une autre matiere que l
 s'ouvre, le selecteur suit et `jules.matiere` vaut sa matiere ; (c) `jules.matiere = "inconnue"` puis `/cours`
 -> un seul appel `parcours?matiere=inconnue`, la page affiche la matiere renvoyee par le serveur, et
 `jules.matiere` vaut toujours `"inconnue"` ; (d) test API : `GET /api/eleve/cours/parcours?matiere=inconnue`
--> 200, `matiere` = la matiere par defaut (idem `studio/notions`) ; (e) appels reseau conformes a EX-210.
+-> 200, `matiere` = la premiere matiere du catalogue qui a au moins une lecon (sinon la premiere tout court),
+calculee par le test a partir du catalogue et des lecons, pas codee en dur (idem `studio/notions`) ; (e) appels
+reseau conformes a EX-210.
 
 **EX-210 - Pas de regression, pas de donnee nouvelle.** Routes inchangees (HTTP 200 sur `/`, `/cours`,
 `/studio`, `/discuter`, `/parent`) ; aucune route ni champ d'API ajoute ; pied de barre = `prenom` de
