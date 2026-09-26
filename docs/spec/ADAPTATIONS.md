@@ -49,9 +49,16 @@ Le profil ne stocke que des identifiants d'aménagements, jamais un nom de troub
   *Vérification* : même test, qui vérifie la présence du bloc de consignes attendu et
   l'absence des termes listés dans `docs/spec/termes-interdits.txt` (noms de troubles) et
   des identifiants d'aménagement. La liste vit sous `docs/`, hors du champ d'EX-008.
-- **EX-008** — Aucun fichier de données versionné sous `profils/`, `adaptations/` et
-  `tests/` ne contient un nom de trouble ni le prénom d'un élève réel. `docs/` n'est pas
-  concerné.
+  Elle appartient à la spec (le code testé ne la modifie pas) et ses règles de recherche,
+  écrites en tête du fichier, sont obligatoires : insensible à la casse et aux accents,
+  radicaux en sous-chaîne, sigles préfixés `mot:` en mot entier. Le test contient un
+  cas témoin qui vérifie que « Dyslexique » et « DYSPRAXIE » sont bien détectés.
+- **EX-008** — Aucun fichier de données versionné (`.yaml`, `.yml`, `.json`, `.md` hors
+  `README.md`) sous `profils/`, `adaptations/`, `consignes/` et `tests/` ne contient un nom
+  de trouble ni le prénom d'un élève réel. Ne sont pas concernés : `docs/`, les `README.md`
+  (documentation du périmètre), le code Python des tests, et les jeux de données qui
+  testent justement le filtrage de ces termes, listés nommément ici :
+  `tests/cas/modele_eleve/lecons_filtre.yaml`. Toute nouvelle exemption passe par la spec.
   *Vérification* : test d'hygiène en deux parties.
   (a) Noms de troubles : recherche insensible à la casse des termes de
   `docs/spec/termes-interdits.txt`.
