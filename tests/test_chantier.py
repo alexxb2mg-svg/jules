@@ -74,9 +74,10 @@ def test_une_bibliotheque_externe_se_charge_apres_celles_du_projet(externe):
 
 
 def test_config_bibliotheques_externes_relatives_a_la_racine(tmp_path):
-    brut = {"persona": "jules", "profil": "exemple", "bibliotheques_externes": ["../depot", "/absolu/depot"]}
+    absolu = tmp_path / "ailleurs" / "depot"  # absolu sur tous les systemes (« /x » ne l'est pas sous Windows)
+    brut = {"persona": "jules", "profil": "exemple", "bibliotheques_externes": ["../depot", str(absolu)]}
     config = depuis_dict(brut, tmp_path)
-    assert config.dossiers_bibliotheques == [tmp_path / "bibliotheque", tmp_path / "../depot", Path("/absolu/depot")]
+    assert config.dossiers_bibliotheques == [tmp_path / "bibliotheque", tmp_path / "../depot", absolu]
     assert depuis_dict({"persona": "jules", "profil": "exemple"}, tmp_path).dossiers_bibliotheques == [
         tmp_path / "bibliotheque"
     ]
