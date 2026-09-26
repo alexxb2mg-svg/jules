@@ -111,6 +111,7 @@ TEXTES = [
         "Dans « il mange une pomme », le GN « une pomme » est COD ; adj. qualificatif.",
     ),
     ("sans_matiere", {}, "Sans notion : 10 kg de CO₂ au XIXe siècle."),
+    ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
 ]
 
 
@@ -241,3 +242,11 @@ def test_sans_matiere_toutes_les_regles(annotations):
     bulles = _bulles(annotations, "sans_matiere")
     assert "kg : kilogrammes" in bulles and any(b.startswith("CO₂ :") for b in bulles)
     assert "XIXe : le 19e siècle : de 1801 à 1900" in bulles
+
+
+def test_svt_sigles_et_chimie_sans_histoire(annotations):
+    bulles = _bulles(annotations, "svt")
+    assert any(b.startswith("ADN : acide désoxyribonucléique") for b in bulles)
+    assert any(b.startswith("VIH :") for b in bulles) and any(b.startswith("IST :") for b in bulles)
+    assert any(b.startswith("C₆H₁₂O₆ : glucose : 6 atomes de carbone") for b in bulles) and "g : grammes" in bulles
+    assert not any(b.startswith("XIXe") for b in bulles)  # les siecles sont une regle d'histoire
