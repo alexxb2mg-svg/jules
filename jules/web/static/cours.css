@@ -121,6 +121,8 @@
 .zone-libre:focus { outline: none; border-color: var(--p-principale); }
 
 .outil-a-venir { color: var(--gris); font-style: italic; background: #F7F6FC; border-radius: 10px; padding: 10px 12px; }
+.outil-zone { margin: 4px 0 8px; }
+.outil-cadre { display: block; width: 100%; min-height: 26rem; border: 1px solid #E3E0F0; border-radius: 10px; background: #FFFFFF; }
 
 .lecon-fin { text-align: center; border: 2px dashed var(--p-principale); border-radius: 16px; padding: 20px; }
 .lecon-fin p { font-size: 18px; margin: 0 0 12px; }
