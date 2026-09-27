@@ -140,7 +140,11 @@ FICHES_N7 = {
             ],
         },
         {"id": "francais", "nom": "Français", "notions": [{"id": "fr1", "titre": "Le récit", "chapitre": "Lire"}]},
-        {"id": "histoire", "nom": "Histoire", "notions": [{"id": "h1", "titre": "La guerre froide", "chapitre": "XXe"}]},
+        {
+            "id": "histoire",
+            "nom": "Histoire",
+            "notions": [{"id": "h1", "titre": "La guerre froide", "chapitre": "XXe"}],
+        },
         {"id": "arts-plastiques", "nom": "Arts plastiques", "notions": [{"id": "ap1", "titre": "La couleur"}]},
         {"id": MATIERE_INCONNUE, "nom": "Astronomie", "notions": [{"id": "as1", "titre": "Les planètes"}]},
     ]
@@ -180,7 +184,8 @@ RELEVE = r"""
   const page = () => { const p = barre.querySelector(".barre-sous-page:not([hidden]) .barre-page");
     return p ? Number(p.dataset.etape) : 1; };
   const titre = () => { const t = barre.querySelector("#barre-page-titre"); if (!t) return null;
-    const s = getComputedStyle(t); return { texte: t.textContent, police: s.fontFamily, graisse: Number(s.fontWeight) }; };
+    const s = getComputedStyle(t);
+    return { texte: t.textContent, police: s.fontFamily, graisse: Number(s.fontWeight) }; };
   const fil = () => { const f = barre.querySelector(".barre-sous-page:not([hidden]) .barre-fil");
     return f ? f.textContent : null; };
   const pastilles = () => [...barre.querySelectorAll(".barre-matiere")].map((b) => {
@@ -231,7 +236,11 @@ def test_ex214_etape1_cliquables_chevrons_et_entree_active(banc, chemin):
     _verifier_cliquables(r)
     entrees = [c for c in r["cliquables"] if "barre-entree" in c["classes"]]
     assert [c["texte"] for c in entrees] == [
-        "Mes fiches", "Mes leçons", "Exercices et supports", "Discuter avec Jules", "Espace parent",
+        "Mes fiches",
+        "Mes leçons",
+        "Exercices et supports",
+        "Discuter avec Jules",
+        "Espace parent",
     ]
     actives = [c for c in entrees if c["courant"] == "page"]
     assert len(actives) == 1
@@ -296,8 +305,10 @@ def test_ex214_identite_cahier_mesuree(banc):
           rubrique: { police: s(rub).fontFamily, casse: s(rub).textTransform, couleur: s(rub).color,
                       espacement: s(rub).letterSpacing },
           ligne: { style: s(ligne).borderBottomStyle, couleur: s(ligne).borderBottomColor },
-          pastilleActive: { fond: s(active, "::before").backgroundColor, rayon: s(active, "::before").borderTopLeftRadius },
-          polices: { outfit: document.fonts.check("800 16px Outfit"), work: document.fonts.check("400 16px 'Work Sans'") },
+          pastilleActive: { fond: s(active, "::before").backgroundColor,
+                            rayon: s(active, "::before").borderTopLeftRadius },
+          polices: { outfit: document.fonts.check("800 16px Outfit"),
+                     work: document.fonts.check("400 16px 'Work Sans'") },
         };
         """,
     )
