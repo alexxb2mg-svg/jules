@@ -72,7 +72,10 @@ h1, h2, h3, h4, .marque { font-family: var(--police-titre); letter-spacing: .005
   display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--bord);
 }
 .entete .titre { flex: 1; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.entete .menu-cote { display: none; background: none; border: none; font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); }
+.entete .menu-cote {
+  display: none; min-height: 2.75rem; padding: 0 0.75rem; background: none; color: var(--p-principale);
+  border: 1px solid var(--bord); border-radius: 0.75rem; font-size: calc(1rem * var(--adapt-echelle-texte, 1)); font-weight: 600;
+}
 .pastille-mode {
   background: var(--p-bulle-bot); color: var(--p-principale); border-radius: 999px; padding: 4px 12px; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1));
 }
