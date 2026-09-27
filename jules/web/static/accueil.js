@@ -189,6 +189,9 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     formule(bloc) {
       const div = creer("div", "bloc-formule");
       const expr = creer("div", "formule-expression");
+      const longueur = String(bloc.expression || "").replace(/[\[\]]/g, "").length;
+      if (longueur > 50) expr.classList.add("tres-longue");
+      else if (longueur > 32) expr.classList.add("longue");
       // "[a]" dans l'expression = terme colore (couleur declaree dans termes) ; le reste en texte brut.
       const termesDecl = bloc.termes || {};
       for (const morceau of String(bloc.expression || "").split(/(\[[^\]]+\])/)) {
