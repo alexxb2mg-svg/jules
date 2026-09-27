@@ -18,6 +18,7 @@ from jules.generateurs.mathematiques import (
     equations_premier_degre_et_produits,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
+    probabilites_experiences_simples,
 )
 
 Generateur = Callable[..., dict[str, Any]]
@@ -28,6 +29,7 @@ MODULES: dict[str, Any] = {
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
         equations_premier_degre_et_produits,
+        probabilites_experiences_simples,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
