@@ -84,3 +84,13 @@ def test_outil_inconnu_404(client_outils):
 def test_sans_code_acces_refuse(client_outils):
     client_outils.delete("/api/session")
     assert client_outils.get("/api/eleve/outils/catalogue").status_code == 401
+
+
+def test_module_outils_actif_dans_config_yaml_publiee(tuteur):
+    """Activation (carte t_1983a6ca) : config.yaml telle que publiee, sans ajout par le test, charge
+    le module 'outils' une seule fois, et /api/infos expose le catalogue a la page de cours."""
+    ids = [m.id for m in tuteur.modules]
+    assert ids.count("outils") == 1
+    with TestClient(creer_app(tuteur)) as client:
+        infos = client.get("/api/infos").json()
+    assert {o["id"] for o in infos["outils"]["catalogue"]} == {"frise-chronologique", "calculatrice", "lexique"}
