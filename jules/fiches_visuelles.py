@@ -278,9 +278,14 @@ def _texte(
     return v
 
 
-# Fin de phrase : un point (ou ! ?) suivi d'un espace ou en fin de texte, sauf apres une abreviation
-# courante (« av. J.-C. », « env. », « ex. », « cf. ») ; « 172.16.1.1 » ou « 3.5 » ne coupent rien.
-_FIN_DE_PHRASE = re.compile(r"(?<!\bav)(?<!\bapr)(?<!J\.-C)(?<!\benv)(?<!\bex)(?<!\bcf)[.!?]+(?=\s|$)")
+# Fin de phrase : un point (ou ! ?), un guillemet fermant eventuel, puis la fin du texte ou un mot qui ne
+# commence pas par une minuscule. Ne coupent rien : « 172.16.1.1 », « 3.5 », une abreviation courante
+# (« av. J.-C. », « env. », « ex. », « cf. »), un « ? » dans une citation suivie de la phrase
+# (« tu te demandes « pourquoi ? » et c'est normal »).
+_FIN_DE_PHRASE = re.compile(
+    r"(?<!\bav)(?<!\bapr)(?<!J\.-C)(?<!\benv)(?<!\bex)(?<!\bcf)[.!?]+(?:\s*»)?"
+    r"(?=\s*$|\s+[^\sa-zàâäçéèêëîïôöùûüÿœ»])"
+)
 
 
 def _verifier_jules(valeur: Any, ou: str) -> str:
@@ -384,7 +389,8 @@ def _verifier_formule(d: dict[str, Any], ou: str) -> dict[str, Any]:
                 info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE, riche=True
             ),
         }
-    return {"expression": expression, "termes": termes}
+    # L'ordre ecrit dans la fiche : un objet JavaScript range d'abord les cles numeriques (« 4 », « 1 »).
+    return {"expression": expression, "termes": termes, "ordre": list(termes)}
 
 
 def _verifier_carte(d: dict[str, Any], ou: str) -> dict[str, Any]:

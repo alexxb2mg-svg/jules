@@ -361,3 +361,9 @@ def test_bibliotheque_absente_est_ignoree_sans_lever(notions):
     """Une bibliotheque de fiches visuelles introuvable : Jules demarre sans elle, sans lever."""
     fiches = charger_fiches_visuelles(BIBLIOTHEQUES, ["bibliotheque-qui-n-existe-pas"], notions, GABARITS)
     assert fiches == {}
+
+
+def test_un_point_d_interrogation_dans_une_citation_ne_coupe_pas_la_phrase(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Tu te demandes « pourquoi ? » et c'est normal. Quoi ? Oui, c'est ainsi."
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)

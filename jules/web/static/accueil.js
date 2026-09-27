@@ -189,7 +189,8 @@
       }
       div.appendChild(expr);
       const termes = creer("div", "formule-termes");
-      for (const [nom, info] of Object.entries(bloc.termes || {})) {
+      const termesListe = (bloc.ordre || Object.keys(bloc.termes || {})).map((nom) => [nom, (bloc.termes || {})[nom]]);
+      for (const [nom, info] of termesListe.filter(([, i]) => i)) {
         const ligne = document.createElement("div");
         ligne.style.borderColor = couleurCss(info.couleur);
         const b = document.createElement("b");
@@ -221,7 +222,9 @@
         const max = Math.max(8, Math.floor(largeur / (taille * 0.58)));
         const sortie = [];
         let courante = "";
-        for (const mot of String(texte || "").split(/\s+/).filter(Boolean)) {
+        // Un nombre (« 12 500 ») et la ponctuation haute (« ? », « : ») ne sont jamais separes du mot voisin.
+        const insecable = String(texte || "").replace(/(\d) (?=\d{3}(?!\d))/g, "$1\u202F").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+        for (const mot of insecable.split(/[ \t\n]+/).filter(Boolean)) {
           if (courante && (courante + " " + mot).length > max) { sortie.push(courante); courante = mot; }
           else courante = courante ? courante + " " + mot : mot;
         }
