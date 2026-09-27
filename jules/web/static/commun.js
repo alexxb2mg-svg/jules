@@ -119,6 +119,12 @@ const MS = {
     return String(texte).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
   },
 
+  // Typographie francaise des titres (#46) : « Titre : suite », « Pourquoi ? » ; l'espace devant la ponctuation
+  // haute devient insecable, le signe ne commence jamais une ligne. Partagee par la barre et les pages.
+  typo(texte) {
+    return String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+  },
+
   echapper(texte) {
     return String(texte).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   },

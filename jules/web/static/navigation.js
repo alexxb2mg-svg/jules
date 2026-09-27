@@ -211,7 +211,7 @@ const Navigation = (() => {
     b.type = "button";
     b.setAttribute("aria-expanded", "false");
     if (classe === "barre-matiere") b.append(decor("barre-pastille", ""));
-    b.append(creer("span", "barre-libelle", libelle));
+    b.append(creer("span", "barre-libelle", MS.typo(libelle)));  // #46 : ponctuation haute jamais en debut de ligne
     b.title = libelle;  // EX-212 : texte complet d'un titre affiche sur quelques lignes
     if (nombre !== undefined) b.append(creer("span", "barre-effectif", String(nombre)));
     b.append(decor("barre-chevron", "›"));
@@ -225,7 +225,7 @@ const Navigation = (() => {
     const li = creer("li", "barre-ligne");
     const a = creer("a", "barre-entree barre-element");
     a.href = href;
-    a.append(creer("span", "barre-libelle", libelle));
+    a.append(creer("span", "barre-libelle", MS.typo(libelle)));
     a.title = libelle;
     if (mention) a.append(creer("span", "barre-mention", mention));
     if (courant) a.setAttribute("aria-current", "true");
@@ -271,7 +271,7 @@ const Navigation = (() => {
   }
 
   function titrePage(texte) {
-    const titre = creer("h2", "barre-page-titre", texte);
+    const titre = creer("h2", "barre-page-titre", MS.typo(texte));
     titre.title = texte;
     titre.id = "barre-page-titre";
     titre.tabIndex = -1;
@@ -335,7 +335,7 @@ const Navigation = (() => {
         // EX-212 : le chapitre en intertitre porte son effectif, comme les chapitres de Mes fiches.
         const intertitre = creer("h3", "barre-intertitre");
         intertitre.title = c.titre;
-        intertitre.append(creer("span", "barre-libelle", c.titre), creer("span", "barre-effectif", String(c.notions.length)));
+        intertitre.append(creer("span", "barre-libelle", MS.typo(c.titre)), creer("span", "barre-effectif", String(c.notions.length)));
         bloc.appendChild(intertitre);
         const sous = creer("ul", "barre-liste");
         for (const n of c.notions) {

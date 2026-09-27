@@ -3,9 +3,8 @@
 // (navigation.js, etape 4 de Mes fiches) : plus de rail propre a la page (EX-216).
 "use strict";
 
-// Typographie francaise des titres : « Titre : suite », « Pourquoi ? » ; l'espace devant la
-// ponctuation haute devient insecable, le signe ne commence jamais une ligne.
-const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+// Typographie francaise des titres (#46) : definie une seule fois dans commun.js (MS.typo), partagee avec la barre.
+const typo = (texte) => MS.typo(texte);
 
 (() => {
   const $ = (id) => document.getElementById(id);
