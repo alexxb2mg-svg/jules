@@ -16,6 +16,7 @@ from typing import Any
 
 from jules.generateurs.mathematiques import (
     fractions_irreductibles,
+    equations_premier_degre_et_produits,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
 )
@@ -24,7 +25,12 @@ Generateur = Callable[..., dict[str, Any]]
 
 MODULES: dict[str, Any] = {
     module.NOTION: module
-    for module in (fractions_irreductibles, nombres_premiers_decomposition, pourcentages_coefficient_multiplicateur)
+    for module in (
+        nombres_premiers_decomposition,
+        pourcentages_coefficient_multiplicateur,
+        equations_premier_degre_et_produits,
+        fractions_irreductibles,
+    )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
 
