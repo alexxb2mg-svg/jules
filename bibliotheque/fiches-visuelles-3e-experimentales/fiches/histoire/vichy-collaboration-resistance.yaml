@@ -65,7 +65,7 @@ blocs:
     titre: "Trois réalités après la défaite de 1940"
     svg: |-
       <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-        <text x="340" y="28" class="th" text-anchor="middle">1940 - 1943 : Vichy, Résistance, France libre</text>
+        <text x="340" y="28" class="th" text-anchor="middle">1940 – 1943 : Vichy, Résistance, France libre</text>
         <rect x="230" y="45" width="220" height="45" class="box c-gray"/>
         <text x="340" y="72" class="t" text-anchor="middle">22 juin 1940 : armistice</text>
         <line x1="340" y1="90" x2="150" y2="140" class="leader c-gray"/>

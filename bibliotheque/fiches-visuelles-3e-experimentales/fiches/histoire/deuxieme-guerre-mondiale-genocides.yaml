@@ -21,7 +21,7 @@ blocs:
   - id: carte
     type: carte
     noeuds:
-      - {id: seconde-guerre, titre: "Seconde Guerre mondiale", sous_titre: "1er sept. 1939 - 2 sept. 1945", principal: true}
+      - {id: seconde-guerre, titre: "Seconde Guerre mondiale", sous_titre: "1er sept. 1939 – 2 sept. 1945", principal: true}
       - {id: shoah, titre: "Shoah", sous_titre: "génocide des Juifs, 6 millions"}
       - {id: samudaripen, titre: "Samudaripen", sous_titre: "génocide des Tziganes"}
     liens:
@@ -63,7 +63,7 @@ blocs:
     titre: "Deux génocides pendant la Seconde Guerre mondiale"
     svg: |-
       <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
-        <text x="340" y="28" class="th" text-anchor="middle">1939 - 1945 : guerre d'anéantissement</text>
+        <text x="340" y="28" class="th" text-anchor="middle">1939 – 1945 : guerre d'anéantissement</text>
         <line x1="60" y1="90" x2="620" y2="90" class="arr c-gray"/>
         <circle cx="100" cy="90" r="8" class="node c-blue"/>
         <text x="100" y="72" class="t" text-anchor="middle">1939</text>

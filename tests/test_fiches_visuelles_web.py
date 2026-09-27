@@ -39,8 +39,8 @@ def test_liste_notions_fiches_visuelles(client_fiches):
     r = client_fiches.get("/api/eleve/fiches_visuelles/notions")
     assert r.status_code == 200
     matieres = r.json()["matieres"]
-    assert len(matieres) == 1
-    maths = matieres[0]
+    assert [m["id"] for m in matieres] == ["geographie", "histoire", "mathematiques"]
+    maths = matieres[2]
     assert maths["id"] == "mathematiques"
     ids = {n["id"] for n in maths["notions"]}
     assert ids == {

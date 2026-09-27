@@ -21,7 +21,7 @@ blocs:
   - id: carte
     type: carte
     noeuds:
-      - {id: guerre-totale, titre: "Guerre totale", sous_titre: "28 juillet 1914 - 11 nov. 1918", principal: true}
+      - {id: guerre-totale, titre: "Guerre totale", sous_titre: "28 juillet 1914 – 11 nov. 1918", principal: true}
       - {id: triple-entente, titre: "Triple-Entente", sous_titre: "France, Royaume-Uni, Empire russe"}
       - {id: empires-centraux, titre: "Empires centraux", sous_titre: "Allemagne, Autriche-Hongrie"}
       - {id: genocide-armeniens, titre: "Génocide des Arméniens", sous_titre: "1915-1916, Empire ottoman"}
@@ -67,7 +67,7 @@ blocs:
     titre: "Chronologie de la guerre totale"
     svg: |-
       <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
-        <text x="340" y="28" class="th" text-anchor="middle">1914 - 1918 : une guerre totale</text>
+        <text x="340" y="28" class="th" text-anchor="middle">1914 – 1918 : une guerre totale</text>
         <line x1="60" y1="130" x2="620" y2="130" class="arr c-gray"/>
         <circle cx="100" cy="130" r="8" class="node c-blue"/>
         <text x="100" y="112" class="t" text-anchor="middle">1914</text>

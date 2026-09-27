@@ -102,7 +102,7 @@ def donnees(client) -> dict[str, Any]:
     }
     assert MATIERE_SANS_LECON in matieres and MATIERE_SANS_LECON not in faits["avec_lecon"]
     assert MATIERE_SANS_LECON not in faits["fiches"]
-    assert faits["fiches"] == ["mathematiques"]
+    assert faits["fiches"] == ["geographie", "histoire", "mathematiques"]
     maths = {n["id"]: n for n in par_matiere["mathematiques"]["notions"]}
     assert maths[NOTION_THALES]["lecon"] is True
     assert NOTION_HISTOIRE in {n["id"] for n in par_matiere["histoire"]["notions"]}
