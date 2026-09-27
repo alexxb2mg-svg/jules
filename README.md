@@ -159,7 +159,7 @@ Tout se branche par la configuration, sans toucher au cœur :
 | `profils/` | ce que Jules sait de l'élève |
 | `bibliotheque/` | le programme et les fiches |
 | `extensions/` | les outils par matière |
-| `adaptations/` | les besoins particuliers (à venir) |
+| `adaptations/` | les aménagements et leviers d'affichage (dys, attention) |
 | `docs/` | la documentation |
 | `tests/` | les vérifications automatiques |
 

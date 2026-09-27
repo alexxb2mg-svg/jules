@@ -32,6 +32,10 @@ voir [bibliotheque/README.md](bibliotheque/README.md)) : la plupart des fiches s
 reformulations de contenus sous Licence Ouverte etalab-2.0 (ressources éduscol) ou sous licence
 libre équivalente, redistribuées en CC BY-SA 4.0 par la bibliothèque qui les héberge.
 
+## Essai
+
+`docs/essai/` (le texte fondateur) est sous **CC BY-NC-ND 4.0** : [docs/essai/LICENCE.md](docs/essai/LICENCE.md).
+
 ## Logo, avatar, images
 
 - `persona/jules/avatar.png` (avatar de la persona par défaut) ;
