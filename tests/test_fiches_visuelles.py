@@ -376,3 +376,9 @@ def test_une_citation_compte_dans_la_phrase_qui_la_cite(tmp_path, notions, bibli
         "sans avoir honte. Tout le monde le fait. C'est comme ça qu'on apprend."
     )
     lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_barre_entre_deux_mots_n_est_pas_une_division(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Les mots and / but relient ; on dit il / elle selon le cas."
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)

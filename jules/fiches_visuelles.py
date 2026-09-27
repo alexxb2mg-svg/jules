@@ -231,12 +231,16 @@ def _verifier_variables(brut: Any, nom: str) -> dict[str, str]:
 
 # Division : l'eleve de college ecrit « ÷ » ; la barre « / » n'est permise que dans une unite collee
 # (m/s, g/cm³). Une barre entouree d'espaces (« m / V ») est refusee partout, schemas compris.
-_BARRE_DE_DIVISION = re.compile(r"\S\s+/\s+\S")
+_BARRE_DE_DIVISION = re.compile(r"(\S+)\s+/\s+(\S+)")
 
 
 def _verifier_division(texte: str, champ: str, ou: str) -> None:
-    if _BARRE_DE_DIVISION.search(texte):
-        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
+    # « m / V », « 10 / 2 », « (v2 − v1) / t » sont des divisions : un nombre d'un cote, ou deux lettres
+    # de formule courtes. « and / but », « il / elle » ou deux vers cites sont des alternatives de mots.
+    for gauche, droite in _BARRE_DE_DIVISION.findall(texte):
+        g, d = gauche.strip("()[]«»\"'.,;:"), droite.strip("()[]«»\"'.,;:")
+        if re.search(r"\d", g + d) or (len(g) <= 2 and len(d) <= 2):
+            raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
 
 
 # Abreviation propre a la notion (ua, URSS, av. J.-C.) : rappelee au survol partout ou elle apparait.
