@@ -610,3 +610,44 @@ def test_valider_puis_devalider_ne_change_pas_l_etat_de_la_notion(tuteur):
     assert all(e["donnees"].get("statut") == "compris" for e in suivis)
     bilan = bilan_notions(suivis, 30, date.today())
     assert f"{NOM_MATIERE} : {TITRE_NOTION}" in bilan["compris"]
+
+
+# --- carte mentale : rattachement d'une branche (contrat §1, noeud {id, texte, parent}) ---------
+
+
+def test_carte_mentale_une_branche_se_rattache_a_une_idee_existante(tuteur):
+    module = tuteur.module("studio")
+    support = module.creer(NOTION, "carte_mentale")
+    racine = module.ecrire(support.id, ["noeuds", 0, "texte"], "Racine carree").contenu["noeuds"][0]["id"]
+    module.ecrire(support.id, ["noeuds", 1, "texte"], "Definition")
+    resultat = module.rattacher(support.id, 1, racine)
+    assert resultat.contenu["noeuds"][1]["parent"] == racine
+    assert module.rattacher(support.id, 1, None).contenu["noeuds"][1]["parent"] is None
+
+
+def test_carte_mentale_rattachement_inconnu_ou_en_boucle_refuse(tuteur):
+    module = tuteur.module("studio")
+    support = module.creer(NOTION, "carte_mentale")
+    module.ecrire(support.id, ["noeuds", 0, "texte"], "A")
+    b = module.ecrire(support.id, ["noeuds", 1, "texte"], "B").contenu["noeuds"][1]["id"]
+    with pytest.raises(ErreurStudio):
+        module.rattacher(support.id, 1, "inconnu")
+    with pytest.raises(ErreurStudio):  # une branche ne peut se rattacher a une branche ecrite apres elle
+        module.rattacher(support.id, 0, b)
+    with pytest.raises(ErreurStudio):
+        module.rattacher(support.id, 5, None)
+
+
+def test_rattacher_refuse_hors_carte_mentale_et_route(tuteur):
+    module = tuteur.module("studio")
+    fiche = module.creer(NOTION, "fiche")
+    module.ecrire(fiche.id, ["sections", 0, "titre"], "S")
+    with pytest.raises(ErreurStudio):
+        module.rattacher(fiche.id, 0, None)
+    carte = module.creer(NOTION, "carte_mentale")
+    a = module.ecrire(carte.id, ["noeuds", 0, "texte"], "A").contenu["noeuds"][0]["id"]
+    module.ecrire(carte.id, ["noeuds", 1, "texte"], "B")
+    with TestClient(creer_app(tuteur)) as client:
+        r = client.post(f"/api/eleve/studio/supports/{carte.id}/rattacher", json={"index": 1, "parent": a})
+        assert r.status_code == 200 and r.json()["support"]["contenu"]["noeuds"][1]["parent"] == a
+        assert client.post(f"/api/eleve/studio/supports/{carte.id}/rattacher", json={"index": 1, "parent": "zz"}).status_code == 400

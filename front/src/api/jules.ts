@@ -101,6 +101,42 @@ export const exercices = {
   repondre: (conv: string, reponse: ReponseExercice) => api<Verdict>(`${E(conv)}/repondre`, json({ reponse })),
 }
 
+/* ---- studio : l'élève fabrique ses supports, Jules relit (docs/STUDIO-CONTRAT.md §3) ---- */
+
+export type TypeSupport = "carte_mentale" | "fiche" | "quiz" | "cartes_memoire"
+export type StatutSupport = "brouillon" | "relu" | "valide"
+export type Noeud = { id: string; texte: string; parent: string | null }
+export type Section = { id: string; titre: string; contenu: string }
+export type QuestionQuiz = { id: string; question: string; reponse: string; forme: string }
+export type CarteMemoire = { id: string; recto: string; verso: string; etat: string; prochaine_revision: string | null; palier: number }
+export type Support = {
+  id: string; notion: string; type: TypeSupport; titre: string; statut: StatutSupport; cree_le: string; modifie_le: string
+  contenu: { noeuds?: Noeud[]; sections?: Section[]; questions?: QuestionQuiz[]; cartes?: CarteMemoire[] }
+}
+export type ResumeSupport = { id: string; type: TypeSupport; titre: string; statut: StatutSupport }
+export type NotionStudio = { id: string; titre: string; chapitre: string; etat: string; lecon: boolean; supports: ResumeSupport[] }
+export type CatalogueStudio = { matieres: { id: string; nom: string }[]; matiere: string; notions: NotionStudio[]; estimation?: string }
+export type CarteDue = { support: string; carte_id: string; recto: string; notion: string }
+export type ReponseCarte = "facile" | "difficile" | "rate"
+
+const SUP = (id: string) => `/api/eleve/studio/supports/${encodeURIComponent(id)}`
+type AvecSupport = { support: Support }
+
+export const studio = {
+  notions: (matiere?: string) => api<CatalogueStudio>(`/api/eleve/studio/notions${matiere ? `?matiere=${encodeURIComponent(matiere)}` : ""}`),
+  creer: (notion: string, type: TypeSupport) => api<AvecSupport>(`/api/eleve/studio/notions/${encodeURIComponent(notion)}/creer`, json({ type })),
+  lire: (id: string) => api<AvecSupport>(SUP(id)),
+  ecrire: (id: string, chemin: (string | number)[], valeur: string) => api<AvecSupport>(`${SUP(id)}/ecrire`, json({ chemin, valeur })),
+  rattacher: (id: string, index: number, parent: string | null) => api<AvecSupport>(`${SUP(id)}/rattacher`, json({ index, parent })),
+  relire: (id: string) => api<{ retours: { chemin: (string | number)[]; message: string }[]; support: Support }>(`${SUP(id)}/relire`, { method: "POST" }),
+  valider: (id: string) => api<AvecSupport>(`${SUP(id)}/valider`, { method: "POST" }),
+  devalider: (id: string) => api<AvecSupport>(`${SUP(id)}/devalider`, { method: "POST" }),
+  supprimer: async (id: string) => { const r = await fetch(SUP(id), { method: "DELETE", credentials: "same-origin" }); if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail ?? `${r.status}`) },
+  revisions: () => api<{ cartes: CarteDue[]; nombre_du_jour: number }>("/api/eleve/studio/revisions"),
+  repondreCarte: (support: string, carte: string, reponse: ReponseCarte) =>
+    api<{ carte: Omit<CarteMemoire, "verso">; restantes: number }>(`/api/eleve/studio/revisions/${encodeURIComponent(support)}/${encodeURIComponent(carte)}/reponse`, json({ reponse })),
+}
+
 /* ---- cours : leçons à blocs, correction par le code ---- */
 
 export type EtatBloc = "a_faire" | "en_cours" | "reussi" | "a_revoir" | "fait"

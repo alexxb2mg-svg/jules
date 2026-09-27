@@ -24,7 +24,7 @@ export const RUBRIQUES: Rubrique[] = [
     { id: "lecons", nom: "Mes leçons", Icone: GraduationCap },
   ] },
   { titre: "M'entraîner", entrees: [
-    { id: "supports", nom: "Exercices et supports", Icone: Dumbbell, pageExistante: "/studio" },
+    { id: "supports", nom: "Exercices et supports", Icone: Dumbbell },
   ] },
   { titre: "Discuter", entrees: [
     { id: "discuter", nom: "Discuter avec Jules", Icone: MessageCircle, pageExistante: "/discuter" },

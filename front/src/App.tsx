@@ -14,6 +14,7 @@ import type { SectionId } from "@/config/navigation"
 const ROUTE_DE_SECTION: Partial<Record<SectionId, Route>> = {
   fiches: { ecran: "fiches", matiere: null },
   lecons: { ecran: "lecons", matiere: null },
+  supports: { ecran: "supports", matiere: null },
 }
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
   }, [])
   const Ecran = ECRANS[route.ecran]
-  const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}` : route.ecran
+  const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}` : route.ecran === "support" ? `support-${route.id}` : route.ecran
 
   return (
     <TooltipProvider delayDuration={300}>

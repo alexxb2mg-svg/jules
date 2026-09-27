@@ -5,6 +5,9 @@ import { Bibliotheque } from "@/modules/fiches/Bibliotheque"
 import { FicheVisuelle } from "@/modules/fiches/FicheVisuelle"
 import { Lecons } from "@/ecrans/Lecons"
 import { EcranPartage } from "@/ecrans/EcranPartage"
+import { Studio } from "@/modules/studio/Studio"
+import { EditeurSupport } from "@/modules/studio/EditeurSupport"
+import { Revision } from "@/modules/studio/Revision"
 
 export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
 type Ecran = (p: PropsEcran) => React.JSX.Element | null
@@ -34,4 +37,18 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
     <EcranPartage notion={route.notion} fil="Mes leçons"
       onRetour={() => history.length > 1 ? history.back() : aller({ ecran: "lecons", matiere: null })} />
   ),
+  supports: ({ route, aller }) => route.ecran !== "supports" ? null : (
+    <div className="h-full overflow-y-auto">
+      <Studio matiere={route.matiere}
+        onMatiere={(m) => aller({ ecran: "supports", matiere: m })}
+        onOuvrir={(id, m) => aller({ ecran: "support", matiere: m, id })}
+        onReviser={() => aller({ ecran: "revision" })} />
+    </div>
+  ),
+  support: ({ route, aller }) => route.ecran !== "support" ? null : (
+    <EditeurSupport id={route.id} matiere={route.matiere}
+      onRetour={() => aller({ ecran: "supports", matiere: route.matiere })}
+      onSupprime={() => aller({ ecran: "supports", matiere: route.matiere })} />
+  ),
+  revision: ({ aller }) => <Revision onRetour={() => aller({ ecran: "supports", matiere: null })} />,
 }
