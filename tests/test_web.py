@@ -70,6 +70,30 @@ def test_trop_d_essais(client_protege):
     assert client_protege.post("/api/session", json={"code": "1234"}).status_code == 429
 
 
+def test_plafond_global_malgre_plusieurs_ip_sous_leur_plafond(projet, brut_config):
+    """Plusieurs appareils du LAN (adresses IP differentes), chacun sous les 8 essais par IP,
+    doivent tout de meme se voir opposer le plafond global (jules/web/limite.py)."""
+    from fastapi.testclient import TestClient
+
+    from jules.llm.factice import Brique as Factice
+    from tests.conftest import regle_par_defaut
+
+    brut_config["acces"] = {"code_eleve": empreinte("1234"), "code_parent": empreinte("parent67")}
+    llm = Factice()
+    llm.regle = regle_par_defaut
+    tuteur = Tuteur(depuis_dict(brut_config, projet), llm=llm)
+    app = creer_app(tuteur)
+    try:
+        adresses = [f"10.0.0.{i}" for i in range(6)]
+        clients = [TestClient(app, client=(adresse, 12345)) for adresse in adresses]
+        for i in range(30):  # 5 essais par adresse : chacune reste sous le plafond par IP (8)
+            clients[i % len(clients)].post("/api/session", json={"code": "faux"})
+        for client in clients:
+            assert client.post("/api/session", json={"code": "1234"}).status_code == 429
+    finally:
+        tuteur.fermer()
+
+
 def test_conversation_avec_photo(client_protege):
     client_protege.post("/api/session", json={"code": "1234"})
     conv = client_protege.post("/api/conversations", json={"mode": "aide-devoirs"}).json()

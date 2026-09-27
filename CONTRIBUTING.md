@@ -2,6 +2,8 @@
 
 Merci de votre intérêt. Jules est un projet de parents, d'enseignants et de bénévoles, pour les enfants. Toute aide compte, même petite.
 
+Qui décide de quoi et comment une contribution est validée : voir [GOUVERNANCE.md](GOUVERNANCE.md).
+
 ## Par où commencer
 
 | Vous êtes... | Vous pouvez... | Il faut coder ? |
@@ -21,7 +23,7 @@ Les tickets marqués **good first issue** sont prévus pour une première contri
 ## Règles de fond
 
 1. **Jules ne donne jamais la réponse.** Toute contribution qui l'amènerait à faire le devoir à la place de l'enfant sera refusée.
-2. **La sécurité des enfants passe avant tout.** Les fichiers `consignes/securite.md` et `jules/modules/vigilance.py` demandent la relecture de deux mainteneurs.
+2. **La sécurité des enfants passe avant tout.** Les fichiers `consignes/securite.md` et `jules/modules/vigilance.py` sont relus avec une attention particulière par le mainteneur avant fusion (aujourd'hui unique, voir [GOUVERNANCE.md](GOUVERNANCE.md)).
 3. **Rien de personnel dans le dépôt** : pas de prénom réel, d'adresse, de photo d'enfant, de conversation réelle, de clé API. Pour un exemple, utilisez l'élève fictive « Camille ».
 4. **Tout en français**, dans des mots simples : le code, les commentaires, les messages et la documentation.
 5. **Pas de nouvelle dépendance sans discussion** dans un ticket : chaque bibliothèque ajoutée doit être maintenue, populaire et sous licence compatible avec MIT.
@@ -94,6 +96,8 @@ python -m pytest --cov
 ```
 
 Tout doit passer : la CI de GitHub lance les mêmes contrôles sous Linux, Windows et macOS, plus une analyse de sécurité (CodeQL) et un audit des dépendances.
+
+Les tests marqués `lent` (quelques secondes chacun, module inactif en prod) sont exclus de la suite par défaut pour garder les refactors rapides à tester ; ils tournent quand même en CI. Pour les lancer en local : `python -m pytest -m lent`.
 
 ### Écrire un module
 

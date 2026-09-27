@@ -166,6 +166,9 @@ MOTS_MIN_PASSAGE_RECOPIE = 8
 
 
 def _est_recopie(valeur_normalisee: str, references: set[str]) -> bool:
+    # Voir aussi : lecons.contient_la_reponse, fiches/schema._fuite,
+    # generateurs/mathematiques/calcul_nombres_rationnels._fuite_texte ; duplication voulue (chaque
+    # brique reste autonome), reporter tout correctif dans les autres.
     if valeur_normalisee in references:
         return True
     if len(valeur_normalisee.split()) < MOTS_MIN_PASSAGE_RECOPIE:

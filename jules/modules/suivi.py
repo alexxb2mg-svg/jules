@@ -19,6 +19,68 @@ STATUTS = ("compris", "en_cours", "bloque", "hors_scolaire")
 # "acquis" n'est jamais donne par l'analyse : seul le module epreuve l'ecrit, apres une epreuve sans aide.
 MODES_IGNORES = ("epreuve", "exercice")
 
+# Chaque evenement 'suivi' porte son origine : qui a decide du statut. Un evenement sans ce champ
+# (ecrit avant son introduction) est traite comme 'analyse', l'origine la moins fiable (voir
+# dernier_statut ci-dessous et docs/EPREUVE-PROTOCOLE.md).
+ORIGINES_SUIVI = ("analyse", "epreuve", "cours", "exercices", "studio")
+ORIGINE_DEFAUT = "analyse"
+# 'acquis' n'est retrograde que par une origine qui reprend directement la notion (l'epreuve sans
+# aide, une nouvelle lecon ou une nouvelle serie d'exercices sur la meme notion) : jamais par la
+# simple analyse du modele rapide sur un echange qui peut etre hors sujet (constat de revue du
+# 27/09/2026 : une classification d'un echange ordinaire ecrasait un "acquis" en "en_cours").
+ORIGINES_RETROGRADENT_ACQUIS = ("epreuve", "exercices", "cours")
+
+
+def evenement_suivi(
+    matiere: str, notion: str, statut: str, resume: str = "", titre: str = "", origine: str = ORIGINE_DEFAUT
+) -> dict[str, str]:
+    """Construit les donnees d'un evenement 'suivi', origine incluse.
+
+    Centralise le format pour que tous les producteurs (suivi, epreuve, cours, exercices) restent
+    coherents : ne pas construire ce dict a la main ailleurs.
+    """
+    if origine not in ORIGINES_SUIVI:
+        raise ValueError(f"origine de suivi inconnue : {origine!r}")
+    return {
+        "matiere": matiere,
+        "notion": notion,
+        "statut": statut,
+        "resume": resume,
+        "titre": titre,
+        "origine": origine,
+    }
+
+
+def dernier_statut(evenements: list[dict[str, Any]]) -> dict[tuple[str, str], dict[str, Any]]:
+    """(matiere, notion) en casefold -> evenement 'suivi' retenu comme etat actuel de la notion.
+
+    `evenements` : du plus recent au plus ancien (ordre de Stockage.evenements ; le champ
+    'horodatage' peut manquer dans des donnees de test, il est alors traite comme le plus ancien).
+    Ignore les evenements sans notion/matiere et les evenements 'hors_scolaire'.
+
+    Arbitrage (revue du 27/09/2026) : un evenement d'origine 'analyse' (le modele rapide, en tache de
+    fond, sur un echange qui peut etre hors sujet) ne retrograde jamais un statut 'acquis' deja
+    retenu. Seule une origine de ORIGINES_RETROGRADENT_ACQUIS peut le faire. Les autres statuts
+    (compris, en_cours, bloque) sont toujours remplaces par le plus recent, quelle que soit l'origine.
+    Usage unique pour tout lecteur qui prend "le dernier evenement suivi" comme etat d'une notion :
+    jules.modules.cours._derniers_statuts, jules.modules.memoire.bilan_notions,
+    jules.modules.epreuve.candidates, jules.modules.rapport.donnees_du_jour.
+    """
+    etats: dict[tuple[str, str], dict[str, Any]] = {}
+    for ev in reversed(evenements):  # du plus ancien au plus recent
+        d = ev["donnees"]
+        if not d.get("notion") or not d.get("matiere") or d.get("statut") == "hors_scolaire":
+            continue
+        cle = (str(d["matiere"]).casefold(), str(d["notion"]).casefold())
+        origine = str(d.get("origine") or ORIGINE_DEFAUT)
+        actuel = etats.get(cle)
+        acquis_protege = actuel is not None and actuel["donnees"].get("statut") == "acquis"
+        if acquis_protege and origine not in ORIGINES_RETROGRADENT_ACQUIS:
+            continue  # 'acquis' protege : cet evenement d'analyse ne le retrograde pas
+        etats[cle] = ev
+    return etats
+
+
 CONSIGNE = """Tu analyses un échange entre un élève de collège et son tuteur IA, pour le suivi scolaire.
 Réponds UNIQUEMENT par un objet JSON, sans texte autour :
 {"matiere": "...", "notion": "...", "statut": "...", "resume": "...", "titre": "..."}
@@ -91,7 +153,7 @@ class Brique(Module):
             journal.warning("Analyse de suivi illisible : %s", brut[:200])
             return
         donnees = normaliser(analyse)
-        self.tuteur.stockage.ajouter_evenement("suivi", donnees, conv.id)
+        self.tuteur.stockage.ajouter_evenement("suivi", evenement_suivi(**donnees, origine=ORIGINE_DEFAUT), conv.id)
         if not conv.titre and donnees["titre"]:
             self.tuteur.stockage.renommer(conv.id, donnees["titre"])
             conv.titre = donnees["titre"]
