@@ -328,6 +328,28 @@ def test_ex207_un_seul_bouton_menu_par_page(banc, page, taille):
         assert r["menuCote"] == {"nom": "Discussions", "expanded": None}, r
 
 
+@pytest.mark.parametrize("taille", TAILLES_TIROIR, ids=lambda t: f"{t[0]}x{t[1]}")
+def test_ex207_panneau_discussions_sous_le_bouton_menu(banc, taille):
+    """/discuter, panneau Discussions ouvert : le bouton ☰ fixe ne recouvre pas son coin haut gauche."""
+    etapes = (
+        ATTENDRE_BARRE
+        + r"""
+  const cote = S.el("#cote");
+  cote.style.transition = "none";
+  S.clic("#menu-cote");
+  await S.pause(50);
+  const c = cote.getBoundingClientRect();
+  const b = S.el("#barre-jules-bouton").getBoundingClientRect();
+  const sous = document.elementFromPoint(c.left + 20, c.top + 20);
+  return { ouvert: cote.classList.contains("ouvert"), haut: c.top, basBouton: b.bottom,
+           sousDansCote: !!sous && cote.contains(sous) };
+"""
+    )
+    r = banc.jouer("/discuter", etapes, taille=taille, budget_ms=8000)
+    assert r["ouvert"] is True, r
+    assert r["haut"] >= r["basBouton"] and r["sousDansCote"] is True, r
+
+
 def test_ex207_menu_cote_statique():
     html = (STATIQUE / "eleve.html").read_text(encoding="utf-8")
     bouton = re.findall(r"<button\b[^>]*\bid=\"menu-cote\"[^>]*>(.*?)</button>", html, re.S)
