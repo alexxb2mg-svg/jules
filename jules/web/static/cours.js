@@ -697,6 +697,8 @@
     Navigation.surChoixMatiere(suivreLaBarre);
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
+    // EX-217 : calculatrice juste a cote du bouton qui ouvre Jules (absente si l'outil n'est pas au catalogue).
+    Calculatrice.monter(etat.infos, { voisin: $("menu-jules"), place: "avant", leviers: etat.leviers });
     $("nom-persona").textContent = etat.infos.persona.nom;
     $("jules-nom").textContent = etat.infos.persona.nom;
     LectureVocale.initialiser();
