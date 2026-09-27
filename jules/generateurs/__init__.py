@@ -15,8 +15,8 @@ from collections.abc import Callable
 from typing import Any
 
 from jules.generateurs.mathematiques import (
-    ecritures_et_comparaison_nombres,
     developper_factoriser_reduire,
+    ecritures_et_comparaison_nombres,
     equations_premier_degre_et_produits,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
