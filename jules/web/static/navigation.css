@@ -125,12 +125,15 @@ body.avec-barre { padding-left: var(--barre-largeur); }
 
 /* EX-212 : petites pages courtes. Un titre long (jusqu'a 140 caracteres, pire cas mesure) ne s'affiche que sur
    quelques lignes ; le texte complet reste dans le DOM (nom accessible) et dans l'infobulle (attribut title).
-   Chapitres : 2 lignes ; elements (fiches, lecons, notions) et titre de petite page : 3 lignes. */
-.barre-page .barre-libelle {
-  flex: 1 1 auto; min-width: 0; overflow: hidden; overflow-wrap: anywhere;
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;
+   Chapitres de Mes fiches (boutons de l'etape 3) : 2 lignes ; matieres, elements (fiches, lecons, notions) et
+   titre de petite page : 3 lignes.
+   EX-216 : les intertitres de chapitre (etape 4 de Mes lecons et d'Exercices) ne sont jamais tronques : titre
+   complet, retour a la ligne. Aucune regle de troncature ne les vise (la regle ci-dessous nomme ses cibles). */
+.barre-page .barre-libelle { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.barre-page .barre-entree .barre-libelle {
+  overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;
 }
-.barre-page .barre-chapitre .barre-libelle, .barre-intertitre .barre-libelle { -webkit-line-clamp: 2; line-clamp: 2; }
+.barre-page .barre-chapitre .barre-libelle { -webkit-line-clamp: 2; line-clamp: 2; }
 .barre-page-titre {
   overflow: hidden; overflow-wrap: anywhere;
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;

@@ -54,6 +54,7 @@ const Navigation = (() => {
     courante: null,   // matiere de depart des rubriques : celle de l'adresse, sinon la matiere retenue
     notion: null,     // notion ouverte dans la page (aria-current a l'etape 4)
     sequence: 0,      // la derniere demande d'affichage gagne (reponses arrivees dans le desordre)
+    ecouteurs: [],    // pages qui suivent la matiere choisie dans la barre (EX-216, surChoixMatiere)
   };
 
   function creer(balise, classe, texte) {
@@ -242,10 +243,31 @@ const Navigation = (() => {
   }
 
   function choisirMatiere(rubrique, id) {
+    const change = id !== etat.courante;
     etat.courante = id;
     MS.retenirMatiere(id);
     const suite = rubrique === "fiches" ? { etape: 3, rubrique, matiere: id } : { etape: 4, rubrique, matiere: id };
+    // EX-216 : sur /cours et /studio, la zone centrale suit la matiere choisie dans la barre (adresse ?matiere=,
+    // puis la page, qui lit sa liste dans le cache de MS.api) : jamais deux matieres differentes a l'ecran.
+    if (rubrique === rubriqueDeLaPage()) {
+      if (change) etat.notion = null;  // la notion de l'adresse appartenait a l'autre matiere
+      ecrireMatiereAdresse(id);
+      for (const ecouteur of etat.ecouteurs) ecouteur(id);
+    }
     afficher(suite, { utilisateur: true });
+  }
+
+  // Rubrique dont la page courante affiche la liste au centre (/cours : lecons, /studio : supports), sinon null.
+  function rubriqueDeLaPage() {
+    return Object.keys(PAGE_DE_RUBRIQUE).find((r) => PAGE_DE_RUBRIQUE[r] === location.pathname) || null;
+  }
+
+  // ?matiere=<id> sans rechargement (EX-216) ; une notion demandee par l'ancienne adresse ne vaut plus.
+  function ecrireMatiereAdresse(id) {
+    const p = new URLSearchParams(location.search);
+    p.set("matiere", id);
+    p.delete("notion");
+    history.replaceState(history.state, "", location.pathname + "?" + p.toString() + location.hash);
   }
 
   function titrePage(texte) {
@@ -473,9 +495,21 @@ const Navigation = (() => {
     return false;
   }
 
-  // Une page a choisi une matiere (liste « Choisis une matière » de /cours et /studio) : la barre en repart.
+  // Une page a choisi une matiere dans sa zone centrale (liste « Choisis une matière » de /cours et /studio) : la
+  // barre en repart et, symetrie d'EX-216, se place sur cette matiere dans la rubrique de la page (etape 4). La
+  // liste vient du cache de MS.api (meme cle que la page) : aucun appel de plus. Le focus reste dans la page.
   function suivreMatiere(id) {
     etat.courante = id;
+    const rubrique = rubriqueDeLaPage();
+    if (!rubrique || !etat.barre) return;
+    ecrireMatiereAdresse(id);
+    etat.notion = null;
+    afficher({ etape: 4, rubrique, matiere: id }).then(() => { if (etat.vue.etape > 0) ecrireFragment(etat.vue); });
+  }
+
+  // La page s'abonne au choix d'une matiere dans la barre (rubrique de la page) : elle recharge sa liste.
+  function surChoixMatiere(ecouteur) {
+    etat.ecouteurs.push(ecouteur);
   }
 
   // EX-207 : sous 900 px, tiroir ; a partir de 900 px, barre repliable en icones (etat dans localStorage).
@@ -614,11 +648,11 @@ const Navigation = (() => {
 
     // Point de depart (EX-209). Sur /cours et /studio, ?matiere= (clic explicite) l'emporte sur la memoire et sur
     // la matiere de #nav= ; seule la rubrique de #nav= est alors reprise.
-    const rubriqueDeLaPage = Object.keys(PAGE_DE_RUBRIQUE).find((r) => PAGE_DE_RUBRIQUE[r] === location.pathname);
+    const rubriquePage = rubriqueDeLaPage();
     const parametres = new URLSearchParams(location.search);
-    const matiereAdresse = rubriqueDeLaPage ? parametres.get("matiere") : null;
+    const matiereAdresse = rubriquePage ? parametres.get("matiere") : null;
     etat.courante = matiereAdresse || MS.matiereRetenue();
-    if (rubriqueDeLaPage) etat.notion = parametres.get("notion");
+    if (rubriquePage) etat.notion = parametres.get("notion");
 
     if (location.pathname === "/") {
       addEventListener("hashchange", () => { suivreNotionDeLAccueil(); });
@@ -638,5 +672,5 @@ const Navigation = (() => {
     afficher(vue).then(() => { if (etat.vue.etape > 0) ecrireFragment(etat.vue); });
   }
 
-  return { monter, suivreMatiere, RUBRIQUES };
+  return { monter, suivreMatiere, surChoixMatiere, RUBRIQUES };
 })();
