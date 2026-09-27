@@ -130,3 +130,7 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+/* Énoncés d'exercice : symboles.js y repère parfois une partie d'équation seulement (« 4x − 17 = 15 » :
+   le « − » typographique n'est pas dans sa ZONE_FORMULE). Le rappel au survol reste, sans la demi-mise en gras. */
+[data-bloc="entrainement"] .formule-texte { font-weight: inherit; }

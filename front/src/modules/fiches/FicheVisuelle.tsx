@@ -2,9 +2,10 @@
 // la lecture, Jules en bulles préécrites. Données : GET /api/eleve/fiches_visuelles/notions/<id>, sans IA.
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
-import { BookOpen, ChevronDown, ChevronLeft, Info, Target } from "lucide-react"
+import { BookOpen, ChevronDown, ChevronLeft, Dumbbell, Info, Target } from "lucide-react"
 import { cn } from "@/lib/utils"
-import { cours, fiches } from "@/api/jules"
+import { cours, exercices, fiches, type NotionExercices } from "@/api/jules"
+import { Entrainement } from "@/modules/exercices/Entrainement"
 import type { BlocAttendus, BlocFiche, Fiche, LienRenfort } from "./types"
 import { BlocVisuel, RENDUS, TYPES, type ContexteRendu } from "./blocs"
 import { BulleJules, useBulleJules } from "./Jules"
@@ -29,6 +30,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
   const [fiche, setFiche] = useState<Fiche | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
   const [avecLecon, setAvecLecon] = useState(false)
+  const [entrainement, setEntrainement] = useState<NotionExercices | null>(null)
   const [actif, setActif] = useState<string | null>(null)
   const [attendusOuverts, setAttendusOuverts] = useState(false)
   const zone = useRef<HTMLDivElement>(null)
@@ -39,7 +41,9 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
 
   useEffect(() => {
     let annule = false
-    setFiche(null); setErreur(null); setActif(null); setAvecLecon(false)
+    setFiche(null); setErreur(null); setActif(null); setAvecLecon(false); setEntrainement(null)
+    // Série d'exercices de la fiche v2 de la notion, si elle est servable sans IA.
+    exercices.notions().then((l) => !annule && setEntrainement(l.find((n) => n.id === notion) ?? null)).catch(() => {})
     fiches.lire(notion).then((f) => {
       if (annule) return
       setFiche(f)
@@ -100,6 +104,12 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
                       <Target size={15} /> Ce qu'on attend de toi <ChevronDown size={15} className={cn("transition-transform", attendusOuverts && "rotate-180")} />
                     </button>
                   )}
+                  {entrainement && (
+                    <button onClick={() => document.getElementById("bloc-entrainement")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+                      className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief">
+                      <Dumbbell size={15} /> M'entraîner
+                    </button>
+                  )}
                   {avecLecon && (
                     <button onClick={() => onOuvrirLecon(notion)}
                       className="inline-flex items-center gap-1.5 rounded-full bg-(--m-texte) px-3.5 py-1.5 text-[0.9rem] font-semibold text-white shadow-relief">
@@ -132,12 +142,13 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
               {blocs.map((b, i) => (
                 <BlocVisuel key={`${notion}-${b.id}`} bloc={b} index={i} actif={actif === b.id} ctx={ctx} onActiver={activer} />
               ))}
+              {entrainement && <Entrainement key={notion} notion={notion} nb={entrainement.nb} generateur={entrainement.generateur} />}
               <p data-sans-symboles className="m-0 text-[0.8rem] leading-relaxed text-gris">
                 Sources : {fiche.sources.map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ")} — fiche sous licence {fiche.licence}
               </p>
             </article>
             <aside className="sticky top-6 hidden flex-col gap-6 self-start lg:flex">
-              <Sommaire blocs={blocs} actif={actif} zone={zone} />
+              <Sommaire blocs={blocs} actif={actif} zone={zone} entrainement={!!entrainement} />
               <div ref={bulleColonne}>
                 <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={`/discuter?notion=${encodeURIComponent(notion)}`} />
               </div>
@@ -156,7 +167,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
 }
 
 /** Sommaire de la fiche : suit la lecture (bloc le plus haut visible) et y mène au clic. */
-function Sommaire({ blocs, actif, zone }: { blocs: BlocFiche[]; actif: string | null; zone: React.RefObject<HTMLDivElement | null> }) {
+function Sommaire({ blocs, actif, zone, entrainement }: { blocs: BlocFiche[]; actif: string | null; zone: React.RefObject<HTMLDivElement | null>; entrainement: boolean }) {
   const [visible, setVisible] = useState<string | null>(blocs[0]?.id ?? null)
   useEffect(() => {
     const racine = zone.current
@@ -166,15 +177,18 @@ function Sommaire({ blocs, actif, zone }: { blocs: BlocFiche[]; actif: string | 
       if (vus[0]) setVisible(vus[0].target.id.replace(/^bloc-/, ""))
     }, { root: racine, rootMargin: "-10% 0px -60% 0px" })
     blocs.forEach((b) => { const el = document.getElementById(`bloc-${b.id}`); if (el) obs.observe(el) })
+    const ex = document.getElementById("bloc-entrainement")
+    if (ex) obs.observe(ex)
     return () => obs.disconnect()
-  }, [blocs, zone])
+  }, [blocs, zone, entrainement])
   const courant = actif ?? visible
   return (
     <nav data-sans-symboles aria-label="Sommaire de la fiche">
       <p className="mt-0 mb-2 text-[0.8rem] font-semibold tracking-wide text-gris">Dans cette fiche</p>
       <ul className="relative m-0 flex list-none flex-col gap-0.5 border-l-2 border-bord p-0">
-        {blocs.map((b) => {
-          const t = TYPES[b.type]!
+        {[...blocs.map((b) => ({ id: b.id, Icone: TYPES[b.type]!.Icone, titre: b.titre || TYPES[b.type]!.titre })),
+          ...(entrainement ? [{ id: "entrainement", Icone: Dumbbell, titre: "M'entraîner" }] : [])].map((b) => {
+          const t = b
           const on = courant === b.id
           return (
             <li key={b.id} className="relative">
@@ -183,7 +197,7 @@ function Sommaire({ blocs, actif, zone }: { blocs: BlocFiche[]; actif: string | 
                 className={cn("flex w-full items-center gap-2 rounded-r-lg py-1.5 pr-2 pl-3 text-left text-[0.88rem] leading-snug transition-colors",
                   on ? "font-semibold text-(--m-texte)" : "text-gris hover:text-encre")}>
                 <t.Icone size={15} className="shrink-0" />
-                <span className="line-clamp-2"><Riche texte={(b.titre || t.titre).replace(/\*\*/g, "")} /></span>
+                <span className="line-clamp-2"><Riche texte={t.titre.replace(/\*\*/g, "")} /></span>
               </button>
             </li>
           )

@@ -27,10 +27,12 @@ from typing import Any
 
 import yaml
 from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel
 
 from jules.bibliotheques import dossier_bibliotheque
-from jules.fiches.correction import TYPES_AUTO
+from jules.fiches.correction import ILLISIBLE, TYPES_AUTO
 from jules.fiches.parcours import Etat, choisir, presenter, repondre
+from jules.fiches.parcours import exercice as exercice_de
 from jules.fiches.schema import est_v2, servable_sans_ia
 from jules.generateurs import GENERATEURS, serie_generee
 from jules.modules.base import Module
@@ -48,6 +50,28 @@ TRANSITION_ECHEC = "\n\nOn passe au suivant.\n\n"
 MESSAGE_FIN_TOUT_REUSSI = "Bravo, tu as trouvé tous les exercices de cette série !"
 MESSAGE_FIN_PARTIEL = "C'est fini pour cette série : ce qui n'a pas tenu, on le retravaillera."
 MESSAGE_APRES_FIN = "Cette série d'exercices est terminée. Lance-en une nouvelle depuis l'écran d'accueil."
+
+
+ELEMENTS_MAX = 20  # une liste ou des paires plus longues ne viennent pas d'un exercice de fiche
+ELEMENT_MAX = 100
+
+
+class ReponseEntree(BaseModel):
+    reponse: str | list[str] | dict[str, str]
+
+
+def lire_reponse_structuree(reponse: Any) -> tuple[Any, str]:
+    """(reponse telle que le correcteur la lit, texte ecrit dans l'historique). Tailles bornees."""
+    if isinstance(reponse, str):
+        texte = reponse[:REPONSE_MAX]
+        return texte, texte
+    if isinstance(reponse, list):
+        if len(reponse) > ELEMENTS_MAX or any(len(x) > ELEMENT_MAX for x in reponse):
+            raise HTTPException(422, "réponse trop longue")
+        return list(reponse), ", ".join(reponse)
+    if len(reponse) > ELEMENTS_MAX or any(len(k) > ELEMENT_MAX or len(v) > ELEMENT_MAX for k, v in reponse.items()):
+        raise HTTPException(422, "réponse trop longue")
+    return dict(reponse), ", ".join(f"{k}-{v}" for k, v in reponse.items())
 
 
 def _rendre_exercice(vue: dict[str, Any]) -> str:
@@ -74,6 +98,9 @@ class Brique(Module):
         super().__init__(tuteur, reglages)
         self.ids = [str(i) for i in reglages.get("bibliotheques") or []]
         self._fiches: dict[str, dict[str, Any]] | None = None
+        # Reponse structuree (liste, paires) deposee par la route /repondre juste avant Tuteur.echanger :
+        # repondre_a_la_place la corrige telle quelle au lieu du texte affiche dans l'historique.
+        self._reponses_structurees: dict[str, Any] = {}
 
     # --- catalogue de notions (module 'notions', pour les titres et le referentiel) ------------
     @property
@@ -196,7 +223,8 @@ class Brique(Module):
         self._sauver(conv.id, donnees)
         vue = presenter(premier)
         stockage.ajouter_message(conv.id, Message(role="bot", texte=_rendre_exercice(vue)))
-        return {"conversation": conv.id, "exercice": vue}
+        total = sum(1 for e in fiche.get("exercices") or [] if e.get("type") in TYPES_AUTO)
+        return {"conversation": conv.id, "exercice": vue, "total": total}
 
     def _fiche_de(self, donnees: dict[str, Any]) -> dict[str, Any] | None:
         """La serie generee rangee avec la conversation, sinon la fiche figee de la notion."""
@@ -216,32 +244,74 @@ class Brique(Module):
             journal.error("Fiche %s introuvable pour la conversation %s", donnees["notion"], conv.id)
             return None
         etat = Etat(**donnees["etat"])
-        reponse_texte = (eleve.texte or "")[:REPONSE_MAX]
-        retour = repondre(fiche, etat, reponse_texte)
+        if conv.id in self._reponses_structurees:
+            reponse: Any = self._reponses_structurees.pop(conv.id)
+        else:
+            reponse = (eleve.texte or "")[:REPONSE_MAX]
+        pieges_avant, paliers_avant = len(etat.pieges_dits), etat.paliers_donnes
+        retour = repondre(fiche, etat, reponse)
         donnees["etat"] = asdict(etat)
         if retour.observation:
             self._observer(conv.id, donnees["notion"], etat.exercice, retour.observation)
         message = retour.message
+        # Vue structuree du meme tour, pour la fiche (route /repondre) : decidee ici, par le code seul.
+        if not retour.verdict.auto:
+            verdict = "relire"
+        elif retour.verdict.diagnostic == ILLISIBLE:
+            verdict = "illisible"
+        elif retour.verdict.juste:
+            verdict = "juste"
+        elif not retour.termine and etat.paliers_donnes > paliers_avant:
+            verdict = "indice"
+        else:
+            verdict = "faux"
+        dernier: dict[str, Any] = {
+            "verdict": verdict,
+            "message": retour.message,
+            "palier": etat.paliers_donnes,
+            "indice": retour.message if verdict == "indice" else None,
+            "piege": retour.message if len(etat.pieges_dits) > pieges_avant else None,
+            "correction": None,
+            "termine": retour.termine,
+            "a_revoir": [],
+            "suivant": None,
+            "bilan": None,
+        }
         if retour.termine:
             donnees["faits"].append(etat.exercice)
             if etat.reussi:
                 donnees["reussis"].append(etat.exercice)
-            elif retour.prerequis:
-                titres = [n.titre for i in retour.prerequis if (n := self.notions_catalogue.notion(i))]
-                if titres:
-                    message += "\n\nÀ revoir avant de continuer : " + ", ".join(titres) + "."
+                if etat.paliers_donnes or etat.pieges_dits:
+                    donnees.setdefault("avec_aide", []).append(etat.exercice)
+            else:
+                dernier["correction"] = str(exercice_de(fiche, etat.exercice).get("solution") or "").strip() or None
+                if retour.prerequis:
+                    titres = [n.titre for i in retour.prerequis if (n := self.notions_catalogue.notion(i))]
+                    if titres:
+                        dernier["a_revoir"] = titres
+                        message += "\n\nÀ revoir avant de continuer : " + ", ".join(titres) + "."
             suivant = choisir(fiche, set(donnees["faits"]))
             if suivant is None:
                 donnees["fini"] = True
                 self._finaliser(conv.id, donnees)
-                message += "\n\n" + (
-                    MESSAGE_FIN_TOUT_REUSSI if len(donnees["reussis"]) == len(donnees["faits"]) else MESSAGE_FIN_PARTIEL
-                )
+                tout = len(donnees["reussis"]) == len(donnees["faits"])
+                message += "\n\n" + (MESSAGE_FIN_TOUT_REUSSI if tout else MESSAGE_FIN_PARTIEL)
+                avec = len(donnees.get("avec_aide", []))
+                dernier["bilan"] = {
+                    "faits": len(donnees["faits"]),
+                    "reussis": len(donnees["reussis"]),
+                    "avec_indice": avec,
+                    "sans_indice": len(donnees["reussis"]) - avec,
+                    "message": MESSAGE_FIN_TOUT_REUSSI if tout else MESSAGE_FIN_PARTIEL,
+                }
             else:
                 donnees["exercice"] = suivant["id"]
                 donnees["etat"] = asdict(Etat(suivant["id"]))
                 transition = TRANSITION_REUSSI if etat.reussi else TRANSITION_ECHEC
-                message += transition + _rendre_exercice(presenter(suivant))
+                vue = presenter(suivant)
+                dernier["suivant"] = vue
+                message += transition + _rendre_exercice(vue)
+        donnees["dernier"] = dernier
         self._sauver(conv.id, donnees)
         return message
 
@@ -261,6 +331,48 @@ class Brique(Module):
                 raise HTTPException(404, "Aucun exercice sans IA pour cette notion") from err
             except ValueError as err:
                 raise HTTPException(409, str(err)) from err
+
+        @routeur.post("/{conv_id}/repondre")
+        def repondre_structure(conv_id: str, entree: ReponseEntree) -> dict[str, Any]:
+            """Une reponse donnee dans la fiche (boutons, ordre, paires) : corrigee par le code comme dans le
+            chat, par le meme Tuteur.echanger (historique, suivi), puis rendue en donnees. Ni la reponse
+            attendue ni la solution ne partent avant le verdict ; aucun appel au modele de langage."""
+            conv = self.tuteur.stockage.conversation(conv_id)
+            donnees = self._lire(conv_id) if conv is not None else None
+            if conv is None or conv.mode != MODE or donnees is None:
+                raise HTTPException(404, "Pas de série d'exercices en cours ici")
+            if donnees.get("fini"):
+                return {"verdict": "fini", "message": MESSAGE_APRES_FIN, "palier": 0, "indice": None, "piege": None,
+                        "correction": None, "termine": True, "a_revoir": [], "suivant": None, "bilan": None}
+            if self._fiche_de(donnees) is None:
+                raise HTTPException(409, "Fiche de la série introuvable")
+            reponse, texte = lire_reponse_structuree(entree.reponse)
+            self._reponses_structurees[conv_id] = reponse
+            try:
+                self.tuteur.echanger(conv_id, texte)
+            finally:
+                self._reponses_structurees.pop(conv_id, None)
+            apres = self._lire(conv_id) or {}
+            dernier = apres.get("dernier")
+            if not dernier:
+                raise HTTPException(500, "Réponse non corrigée")
+            return dict(dernier)
+
+        @routeur.get("/{conv_id}/etat")
+        def etat_serie(conv_id: str) -> dict[str, Any]:
+            """Reprise d'une serie dans la fiche : l'exercice en cours (sans la reponse) et l'avancee."""
+            conv = self.tuteur.stockage.conversation(conv_id)
+            donnees = self._lire(conv_id) if conv is not None else None
+            if conv is None or conv.mode != MODE or donnees is None:
+                raise HTTPException(404, "Pas de série d'exercices en cours ici")
+            fiche = self._fiche_de(donnees)
+            en_cours = None
+            if fiche is not None and not donnees.get("fini"):
+                en_cours = presenter(exercice_de(fiche, donnees["exercice"]))
+            total = sum(1 for e in (fiche or {}).get("exercices") or [] if e.get("type") in TYPES_AUTO)
+            return {"notion": donnees["notion"], "exercice": en_cours, "faits": len(donnees["faits"]),
+                    "reussis": len(donnees["reussis"]), "total": total, "fini": bool(donnees.get("fini")),
+                    "palier": int((donnees.get("etat") or {}).get("paliers_donnes", 0))}
 
         @routeur.post("/{notion_id}/generer")
         def lancer_generee(notion_id: str, graine: int | None = None) -> dict[str, Any]:

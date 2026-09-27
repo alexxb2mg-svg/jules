@@ -280,3 +280,63 @@ def test_route_generer(tuteur):
         )
         assert client.post(f"/api/eleve/exercices/{NOTION_MATHS}/generer?graine=-1").status_code == 422
         assert client.post(f"/api/eleve/exercices/{NOTION_HISTOIRE}/generer").status_code == 404
+
+
+# --- (j) : reponse donnee dans la fiche (route structuree) -------------------------------------
+
+
+def _repondre(client, conv_id, reponse):
+    r = client.post(f"/api/eleve/exercices/{conv_id}/repondre", json={"reponse": reponse})
+    assert r.status_code == 200, r.text
+    return r.json()
+
+
+def test_route_repondre_verdict_structure_sans_ia(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        lance = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()
+        assert lance["total"] == 4
+        conv_id = lance["conversation"]
+        # le piege : relance dediee, pas de solution
+        v = _repondre(client, conv_id, "oui")
+        assert v["verdict"] in ("faux", "indice") and not v["termine"]
+        assert v["correction"] is None
+        assert "1 n'a qu'un seul diviseur" not in str(v)
+        v = _repondre(client, conv_id, "non")
+        assert v["verdict"] == "juste" and v["termine"]
+        assert v["suivant"]["id"] == "decomposer-360"
+        assert "reponse" not in v["suivant"] and "solution" not in v["suivant"]
+        # la meme reponse est dans l'historique, comme si elle avait ete tapee
+        conv = client.get(f"/api/conversations/{conv_id}").json()
+        assert [m["texte"] for m in conv["messages"] if m["role"] == "eleve"] == ["oui", "non"]
+    assert _nb_appels_principal(tuteur) == 0
+
+
+def test_route_repondre_liste_et_paires(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        conv_id = client.post(f"/api/eleve/exercices/{NOTION_HISTOIRE}/commencer").json()["conversation"]
+        assert _repondre(client, conv_id, "1914")["verdict"] == "juste"
+        assert _repondre(client, conv_id, ["a"])["verdict"] == "juste"
+        v = _repondre(client, conv_id, {"a": "x", "b": "y", "c": "x", "d": "y", "e": "y"})
+        assert v["verdict"] == "juste" and v["suivant"]["type"] == "ordre"
+        v = _repondre(client, conv_id, ["entree", "genocide", "bolcheviks", "armistice"])
+        assert v["verdict"] == "juste"
+        etat = client.get(f"/api/eleve/exercices/{conv_id}/etat").json()
+        assert etat["faits"] == 4 and etat["reussis"] == 4
+
+
+def test_route_repondre_bilan_en_fin_de_serie(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        conv_id = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()["conversation"]
+        for r in ("non", "2^3 x 3^2 x 5", ["b", "d"]):
+            _repondre(client, conv_id, r)
+        v = _repondre(client, conv_id, "7/10")
+        assert v["bilan"] == {"faits": 4, "reussis": 4, "avec_indice": 0, "sans_indice": 4, "message": v["bilan"]["message"]}
+        assert _repondre(client, conv_id, "encore")["verdict"] == "fini"
+
+
+def test_route_repondre_refuse_hors_serie_et_trop_long(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        autre = tuteur.stockage.creer_conversation("aide-devoirs")
+        assert client.post(f"/api/eleve/exercices/{autre.id}/repondre", json={"reponse": "x"}).status_code == 404
+        conv_id = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()["conversation"]
+        assert client.post(f"/api/eleve/exercices/{conv_id}/repondre", json={"reponse": ["x"] * 50}).status_code == 422

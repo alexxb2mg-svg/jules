@@ -57,6 +57,50 @@ export const conversations = {
   },
 }
 
+/* ---- exercices des fiches v2 : corrigés par le code (jules/fiches/correction.py), jamais par l'IA ---- */
+// Formes : jules/fiches/parcours.py presenter() et jules/modules/exercices.py (route /repondre).
+
+export type OptionExercice = { id: string; texte: string }
+export type ExerciceVue = {
+  id: string
+  type: "nombre" | "expression" | "choix" | "texte_court" | "ordre" | "association" | string
+  difficulte: number
+  enonce: string
+  aide_format?: string
+  options?: OptionExercice[]
+  plusieurs?: boolean
+  elements?: OptionExercice[]
+  gauche?: OptionExercice[]
+  droite?: OptionExercice[]
+}
+export type ReponseExercice = string | string[] | Record<string, string>
+export type Bilan = { faits: number; reussis: number; avec_indice: number; sans_indice: number; message: string }
+export type Verdict = {
+  verdict: "juste" | "faux" | "indice" | "illisible" | "relire" | "fini"
+  message: string
+  palier: number
+  indice: string | null
+  piege: string | null
+  correction: string | null
+  termine: boolean
+  a_revoir: string[]
+  suivant: ExerciceVue | null
+  bilan: Bilan | null
+}
+export type NotionExercices = { id: string; titre: string; matiere: string; nb: number; generateur: boolean }
+
+const E = (s: string) => `/api/eleve/exercices/${encodeURIComponent(s)}`
+let notionsExercices: Promise<NotionExercices[]> | null = null
+
+export const exercices = {
+  /** Notions entraînables (fiches v2 servables sans IA) ; une requête par page. */
+  notions: () => (notionsExercices ??= api<{ exercices: NotionExercices[] }>("/api/eleve/exercices/notions")
+    .then((r) => r.exercices).catch((e) => { notionsExercices = null; throw e })),
+  commencer: (notion: string) => api<{ conversation: string; exercice: ExerciceVue; total: number }>(`${E(notion)}/commencer`, { method: "POST" }),
+  generer: (notion: string) => api<{ conversation: string; exercice: ExerciceVue; total: number }>(`${E(notion)}/generer`, { method: "POST" }),
+  repondre: (conv: string, reponse: ReponseExercice) => api<Verdict>(`${E(conv)}/repondre`, json({ reponse })),
+}
+
 /* ---- cours : leçons à blocs, correction par le code ---- */
 
 export type EtatBloc = "a_faire" | "en_cours" | "reussi" | "a_revoir" | "fait"
