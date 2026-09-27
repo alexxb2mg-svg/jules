@@ -61,7 +61,9 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     }
     morceaux.forEach((morceau, i) => {
       if (!morceau) return;
-      if (i % 2) el.appendChild(creer("strong", "cle", morceau));
+      // Une partie de mot (« ba-**NA**-na ») : surlignage sans marge, collee aux lettres voisines.
+      const colle = i % 2 && (/[\p{L}\p{N}-]$/u.test(morceaux[i - 1] || "") || /^[\p{L}\p{N}-]/u.test(morceaux[i + 1] || ""));
+      if (i % 2) el.appendChild(creer("strong", colle ? "cle colle" : "cle", morceau));
       else el.appendChild(document.createTextNode(morceau));
     });
     return el;

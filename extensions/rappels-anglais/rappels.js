@@ -53,7 +53,8 @@ const SONS = {
   "ː": "voyelle longue",
 };
 const motifSons = o.motifDe(Object.keys(SONS));
-const motifTranscription = /(?<![\p{L}\p{N}/])\/[^\/\s]{1,16}\/(?![\p{L}\p{N}/])/gu;
+// Un mot ou quelques mots (« /θæŋk juː/ ») entre deux barres obliques.
+const motifTranscription = /(?<![\p{L}\p{N}/])\/[^\/\s]{1,16}(?: [^\/\s]{1,16}){0,3}\/(?![\p{L}\p{N}/])/gu;
 const SPECIAUX = /[θðʃʒŋɪʊæʌɑɒɔəɜˈː]/u; // au moins un signe phonetique : pas une date « 12/05 »
 
 Symboles.enregistrer({
