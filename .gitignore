@@ -6,6 +6,7 @@ config.local.yaml
 !.env.exemple
 profils/*
 !profils/exemple.yaml
+!profils/test-cumul.yaml
 *.db
 *.sqlite
 *.key

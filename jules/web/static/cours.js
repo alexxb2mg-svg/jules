@@ -21,6 +21,7 @@
     lecon: null,
     progression: null,
     blocEls: [],          // index -> { conteneur, maj(progressionBloc) }
+    outils: [],           // outils montes dans la lecon (OutilsHote.monter), demontes a la sortie
     occupeParcours: false,
     julesOccupe: false,
   };
@@ -151,6 +152,7 @@
     }
     $("lecon-fin").classList.add("cache");
     const zone = $("blocs");
+    demonterOutils();
     zone.innerHTML = "";
     etat.blocEls = [];
     for (const bloc of lecon.blocs) {
@@ -244,7 +246,7 @@
         break;
       }
       case "outil": {
-        corps.appendChild(creer("p", "outil-a-venir", "🛠️ Cet outil arrivera bientôt dans Jules."));
+        corps.appendChild(construireOutil(bloc));
         const actions = creer("div", "bloc-actions");
         const boutonLu = creer("button", "bouton secondaire", "J'ai lu");
         boutonLu.type = "button";
@@ -292,6 +294,25 @@
       synthese: "📝 Ce que tu retiens",
       outil: "🛠️ Outil",
     }[bloc.type] || bloc.type;
+  }
+
+  // --- bloc outil (docs/OUTILS-CONTRAT.md) ------------------------------------
+  // L'outil s'ouvre dans une iframe isolee creee par outils-hote.js, qui ne laisse passer que les
+  // messages venant de CETTE iframe et declares dans la fiche de l'outil.
+  function construireOutil(bloc) {
+    const catalogue = (etat.infos && etat.infos.outils && etat.infos.outils.catalogue) || [];
+    const outil = catalogue.find((o) => o.id === bloc.outil);
+    if (!outil || typeof OutilsHote === "undefined") {
+      return creer("p", "outil-a-venir", "🛠️ Cet outil arrivera bientôt dans Jules.");
+    }
+    const zone = creer("div", "outil-zone");
+    etat.outils.push(OutilsHote.monter(zone, outil, { action: bloc.action, donnees: bloc.donnees }));
+    return zone;
+  }
+
+  function demonterOutils() {
+    for (const o of etat.outils) o.demonter();
+    etat.outils = [];
   }
 
   // --- bloc exercice --------------------------------------------------------
@@ -597,6 +618,7 @@
   // --- retour au parcours -------------------------------------------------------
   function retourAuParcours() {
     etat.session = null; etat.conversation = null; etat.lecon = null; etat.progression = null;
+    demonterOutils();
     $("lecon").classList.add("cache");
     $("lecon-vide").classList.remove("cache");
     $("jules-fil").innerHTML = "";
