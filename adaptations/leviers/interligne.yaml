@@ -1,0 +1,15 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: interligne
+canal: css
+variable_css: --adapt-interligne
+type: nombre
+unite: multiplicateur  # line-height sans unite
+neutre: null
+neutre_signifie: "valeur actuelle de chaque element (texte 1,55 ; bulles 1,45)"
+plancher: valeur actuelle de l'element  # jamais sous la valeur actuelle
+plage: {min: 1.55, max: 2.0}
+combinaison: max
+source:
+  nature: norme
+  reference: "WCAG 2.2 critere 1.4.8 (AAA), https://www.w3.org/TR/WCAG22/#visual-presentation ; usage : guide de style BDA 2018 (1,5 a 2,0)."

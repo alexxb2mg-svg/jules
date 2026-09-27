@@ -4,7 +4,40 @@
 "use strict";
 
 const MS = {
+  // Cache de lecture (docs/spec/NAVIGATION.md, EX-210) : la page et la barre de navigation demandent les memes
+  // listes sans se connaitre ; une seule requete reseau par couple (chemin, parametres) et par chargement de page.
+  // - liste blanche : seuls ces trois chemins, en GET, sont gardes (cle = chemin + parametres) ;
+  // - toute requete qui n'est pas un GET vide le cache (sans `method`, c'est un GET) ;
+  // - une erreur n'est jamais gardee ; une requete en cours est partagee ;
+  // - chaque lecture rend une copie (structuredClone) : personne ne partage le meme objet.
+  CHEMINS_EN_CACHE: Object.freeze([
+    "/api/eleve/fiches_visuelles/notions",
+    "/api/eleve/cours/parcours",
+    "/api/eleve/studio/notions",
+  ]),
+  _cache: new Map(),
+
   async api(chemin, options = {}) {
+    const methode = String(options.method || "GET").toUpperCase();
+    if (methode !== "GET") {
+      MS._cache.clear();
+      return MS._appel(chemin, options);
+    }
+    const url = new URL(chemin, location.href);
+    if (url.origin !== location.origin || !MS.CHEMINS_EN_CACHE.includes(url.pathname)) {
+      return MS._appel(chemin, options);
+    }
+    const cle = url.pathname + url.search;
+    let promesse = MS._cache.get(cle);
+    if (!promesse) {
+      promesse = MS._appel(chemin, options);
+      MS._cache.set(cle, promesse);
+      promesse.catch(() => { if (MS._cache.get(cle) === promesse) MS._cache.delete(cle); });
+    }
+    return structuredClone(await promesse);
+  },
+
+  async _appel(chemin, options) {
     const reponse = await fetch(chemin, { credentials: "same-origin", ...options });
     if (reponse.status === 401) {
       const err = new Error("code requis");
@@ -19,6 +52,21 @@ const MS = {
       throw err;
     }
     return corps;
+  },
+
+  // Adresse d'une liste par matiere : ecrite ici une seule fois, pour que la page et la barre demandent la meme
+  // cle au cache (EX-210).
+  cheminMatiere(base, matiere) {
+    return base + (matiere ? `?matiere=${encodeURIComponent(matiere)}` : "");
+  },
+
+  // Matiere retenue d'une page a l'autre (EX-209) : cle `jules.matiere`, valeur = l'id de matiere seul.
+  CLE_MATIERE: "jules.matiere",
+  matiereRetenue() {
+    try { return localStorage.getItem(MS.CLE_MATIERE) || null; } catch (_) { return null; }
+  },
+  retenirMatiere(id) {
+    try { localStorage.setItem(MS.CLE_MATIERE, String(id)); } catch (_) { /* stockage indisponible : rien */ }
   },
 
   json(corps, methode = "POST") {
@@ -42,6 +90,29 @@ const MS = {
     for (const [cle, variable] of Object.entries(correspondance)) {
       if (couleurs && couleurs[cle]) document.documentElement.style.setProperty(variable, couleurs[cle]);
     }
+  },
+
+  // Leviers de l'eleve (EX-105, adaptations.css), lus dans /api/infos : `leviers` (valeurs brutes des
+  // leviers regles, non neutres) et `leviers_css` (variables --adapt-* derivees par le serveur). Pose
+  // sur <body> les variables et un attribut data-adapt-<levier> par levier regle ; tout est retire
+  // d'abord, donc un second appel remplace le premier. Rien n'est pose quand tout est neutre (EX-102).
+  // Renvoie les valeurs brutes, a transmettre telles quelles aux outils.
+  appliquerLeviers(infos) {
+    const corps = document.body;
+    for (const nom of [...corps.getAttributeNames()]) if (nom.startsWith("data-adapt-")) corps.removeAttribute(nom);
+    for (const nom of [...corps.style]) if (nom.startsWith("--adapt-")) corps.style.removeProperty(nom);
+    const objet = (v) => (v && typeof v === "object" && !Array.isArray(v) ? v : {});
+    const leviers = objet(infos && infos.leviers);
+    for (const [variable, valeur] of Object.entries(objet(infos && infos.leviers_css))) {
+      if (/^--adapt-[a-z-]+$/.test(variable)) corps.style.setProperty(variable, String(valeur));
+    }
+    const retenus = {};
+    for (const [levier, valeur] of Object.entries(leviers)) {
+      if (!/^[a-z][a-z-]*$/.test(levier)) continue;
+      corps.setAttribute(`data-adapt-${levier}`, String(valeur));
+      retenus[levier] = valeur;
+    }
+    return retenus;
   },
 
   sansAccents(texte) {
@@ -105,14 +176,16 @@ const MS = {
     return d.toLocaleString("fr-FR", { weekday: "short", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" });
   },
 
-  // Ecran de code partage : resout quand l'acces est accorde.
+  // Ecran de code partage : resout quand l'acces est accorde, avec l'etat de session lu
+  // (`etat` si l'acces etait deja accorde, sinon `nouvel`, relu apres la saisie du code). La barre de
+  // navigation s'en sert pour l'espace parent (EX-206) sans rappeler /api/session.
   async porte(role, elements) {
     const etat = await MS.api("/api/session");
-    if (etat[role]) return;
+    if (etat[role]) return etat;
     elements.porte.classList.remove("cache");
     elements.contenu.classList.add("cache");
     elements.champ.focus();
-    await new Promise((resoudre) => {
+    return new Promise((resoudre) => {
       elements.formulaire.addEventListener("submit", async (ev) => {
         ev.preventDefault();
         elements.erreur.textContent = "";
@@ -122,7 +195,7 @@ const MS = {
           if (!nouvel[role]) { elements.erreur.textContent = "Ce code n'ouvre pas cette page."; return; }
           elements.porte.classList.add("cache");
           elements.contenu.classList.remove("cache");
-          resoudre();
+          resoudre(nouvel);
         } catch (err) {
           elements.erreur.textContent = err.message === "code requis" ? "Code incorrect" : err.message;
           elements.champ.select();

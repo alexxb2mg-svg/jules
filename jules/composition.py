@@ -68,6 +68,7 @@ def charger_profil(chemin: Path) -> Profil:
     parent = str(brut.pop("parent", "") or "ses parents")
     genre = normaliser_genre(brut.pop("genre", GENRE_DEFAUT))
     amenagements = lire_ids_amenagements(brut.pop("amenagements", None))
+    brut.pop("preferences", None)  # reglages d'affichage du parent (EX-108) : jamais dans le prompt
     details = effacer_ids(brut, amenagements)
     return Profil(prenom=prenom, classe=classe, parent=parent, genre=genre, details=details, amenagements=amenagements)
 
