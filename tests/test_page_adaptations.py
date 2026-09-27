@@ -11,10 +11,12 @@
 
 from __future__ import annotations
 
+import asyncio
 import json
 import re
 import socket
 import subprocess
+import threading
 from pathlib import Path
 
 import pytest
@@ -90,6 +92,110 @@ const releve = () => ({
 })().catch((e) => document.body.setAttribute("data-erreur", String(e && e.message)));
 """
 
+# EX-110 : meme etape d'enregistrement que ESSAI_JS, avec un apercu perime en vol. Le parent coche la lecture
+# automatique (apercu A, retenu par le serveur de test), la decoche (apercu B, retour a l'etat de depart),
+# puis enregistre. Le serveur ne livre A qu'une fois la reponse du PUT envoyee : A arrive toujours apres.
+# Aucune instrumentation du navigateur : l'etat final est lu dans le DOM rendu par --dump-dom.
+ESSAI_EX110_JS = r"""
+"use strict";
+window.addEventListener("error", (e) => { document.body.setAttribute("data-erreur", String(e.message)); });
+const attendre = (test) => new Promise((ok) => {
+  const t = setInterval(() => { if (test()) { clearInterval(t); ok(); } }, 20);
+});
+(async () => {
+  const etape = (nom) => document.body.setAttribute("data-etape", nom);
+  etape("chargement");
+  await attendre(() => document.querySelectorAll("#adaptations-pap li").length > 0);
+  etape("enregistrement");
+  const lecture = document.getElementById("pref-lecture-automatique");
+  lecture.click();  // apercu A : retenu jusqu'a l'envoi de la reponse du PUT
+  lecture.click();  // apercu B : choix de depart, celui qui est enregistre
+  document.getElementById("adaptations-enregistrer").click();
+  await attendre(() => document.getElementById("adaptations-etat").textContent === "Enregistré.");
+  document.body.setAttribute("data-resultat", JSON.stringify({ enregistre: true }));
+})().catch((e) => document.body.setAttribute("data-erreur", String(e && e.message)));
+"""
+CHEMIN_APERCU = "/api/parent/adaptations/apercu"
+CHEMIN_ENREGISTRER = "/api/parent/adaptations"
+
+
+class _RetenueApercu:
+    """Middleware ASGI pur du serveur de test (EX-110). Tant que RETENUE est armee, la reponse du POST
+    d'apercu qui demande la lecture automatique (apercu A) est calculee tout de suite, puis retenue
+    jusqu'a ce que la reponse du PUT d'enregistrement soit entierement envoyee (threading.Event, pas de
+    sleep). Desarmee, elle laisse tout passer sans rien toucher."""
+
+    def __init__(self, app) -> None:
+        self.app = app
+
+    async def __call__(self, scope, receive, send) -> None:
+        if scope["type"] != "http" or not RETENUE.active:
+            await self.app(scope, receive, send)
+            return
+        chemin, methode = scope["path"], scope["method"]
+        if methode == "PUT" and chemin == CHEMIN_ENREGISTRER:
+
+            async def envoyer(message) -> None:
+                await send(message)
+                if message["type"] == "http.response.body" and not message.get("more_body", False):
+                    RETENUE.put_envoye.set()
+
+            await self.app(scope, receive, envoyer)
+            return
+        if methode != "POST" or chemin != CHEMIN_APERCU:
+            await self.app(scope, receive, send)
+            return
+        messages = [await receive()]
+        while messages[-1].get("more_body", False):
+            messages.append(await receive())
+        corps = b"".join(m.get("body", b"") for m in messages)
+        restants = list(messages)
+
+        async def rejouer():
+            return restants.pop(0) if restants else await receive()
+
+        if b'"automatique"' not in corps or not RETENUE.prendre():
+            await self.app(scope, rejouer, send)
+            return
+        tampon: list = []
+
+        async def retenir(message) -> None:
+            tampon.append(message)
+
+        await self.app(scope, rejouer, retenir)  # calculee maintenant, livree apres le PUT
+        RETENUE.libere_apres_put = await asyncio.to_thread(RETENUE.put_envoye.wait, 60)
+        for message in tampon:
+            await send(message)
+        RETENUE.active = False
+
+
+class _Retenue:
+    def __init__(self) -> None:
+        self._verrou = threading.Lock()
+        self.active = False  # armee jusqu'a la livraison de l'apercu retenu
+        self._a_prendre = False
+        self.put_envoye = threading.Event()
+        self.libere_apres_put = False
+
+    def armer(self) -> None:
+        with self._verrou:
+            self.put_envoye.clear()
+            self.libere_apres_put = False
+            self._a_prendre = self.active = True
+
+    def prendre(self) -> bool:
+        with self._verrou:
+            pris, self._a_prendre = self._a_prendre, False
+            return pris
+
+    def desarmer(self) -> None:
+        with self._verrou:
+            self._a_prendre = self.active = False
+            self.put_envoye.set()  # ne jamais laisser une requete retenue apres le deroulement
+
+
+RETENUE = _Retenue()
+
 
 def _port_libre() -> int:
     with socket.socket() as s:
@@ -137,6 +243,16 @@ def serveur(tmp_path_factory):
     def essai_js() -> Response:
         return Response(ESSAI_JS, media_type="text/javascript; charset=utf-8")
 
+    @app.get("/essai-ex110", response_class=HTMLResponse)
+    def essai_ex110() -> HTMLResponse:
+        return HTMLResponse(html.replace("</body>", '<script src="/essai-ex110.js"></script></body>'))
+
+    @app.get("/essai-ex110.js")
+    def essai_ex110_js() -> Response:
+        return Response(ESSAI_EX110_JS, media_type="text/javascript; charset=utf-8")
+
+    app.add_middleware(_RetenueApercu)  # inerte tant que RETENUE n'est pas armee (fixture page_ex110)
+
     port = _port_libre()
     serveur_uv = uvicorn.Server(uvicorn.Config(app, host="127.0.0.1", port=port, log_level="warning"))
     fil = threading.Thread(target=serveur_uv.run, daemon=True)
@@ -160,31 +276,52 @@ def serveur(tmp_path_factory):
 
 @pytest.fixture(scope="module")
 def page(serveur):
+    url, fichier_profil = serveur
+    sortie, diagnostic = _ouvrir(f"{url}/essai-parent")
+    trouve = re.search(r'data-resultat="([^"]*)"', sortie)
+    assert trouve, diagnostic
+    brut = trouve.group(1).replace("&quot;", '"').replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
+    return json.loads(brut), fichier_profil
+
+
+def _ouvrir(adresse: str) -> tuple[str, str]:
+    """DOM final de `adresse` rendu par Chromium headless, et le diagnostic a joindre aux assertions."""
     navigateur = _chromium()
     if not navigateur:
         pytest.skip("Chromium absent (definir JULES_CHROMIUM)")
-    url, fichier_profil = serveur
     # Sans --user-data-dir (profil temporaire du mode headless, comme test_lecture_vocale) : sous Windows,
     # un dossier de profil neuf bloque Chromium plus d'une minute au premier lancement. Acces libre en
     # 127.0.0.1 : aucun cookie de session n'est necessaire.
     options = ["--headless=new", "--no-sandbox", "--disable-gpu"]
     options += ["--virtual-time-budget=15000", "--dump-dom"]
     fini = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, f"{url}/essai-parent"], capture_output=True, text=True, timeout=180, check=False
+        [navigateur, *options, adresse], capture_output=True, text=True, timeout=180, check=False
     )
     sortie = fini.stdout
     erreur = re.search(r'data-erreur="([^"]*)"', sortie)
     assert not erreur, f"erreur JavaScript : {erreur.group(1)}"
-    trouve = re.search(r'data-resultat="([^"]*)"', sortie)
     etape = re.search(r'data-etape="([^"]*)"', sortie)
     etat = re.search(r'id="adaptations-etat"[^>]*>([^<]*)<', sortie)
     diagnostic = (
         f"code {fini.returncode}, etape {etape and etape.group(1)!r}, "
         f"{sortie.count('data-amenagement=')} attributs data-amenagement, etat {etat and etat.group(1)!r}"
     )
-    assert trouve, f"{diagnostic}\n{fini.stderr[-2000:]}"
-    brut = trouve.group(1).replace("&quot;", '"').replace("&lt;", "<").replace("&gt;", ">").replace("&amp;", "&")
-    return json.loads(brut), fichier_profil
+    return sortie, f"{diagnostic}\n{fini.stderr[-2000:]}"
+
+
+@pytest.fixture(scope="module")
+def page_ex110(serveur):
+    """EX-110 : l'apercu A est retenu par le serveur jusqu'a l'envoi de la reponse du PUT. Le profil est
+    remis tel quel ensuite (les tests `page` le relisent)."""
+    url, fichier_profil = serveur
+    avant = fichier_profil.read_bytes()
+    RETENUE.armer()
+    try:
+        sortie, diagnostic = _ouvrir(f"{url}/essai-ex110")
+        return sortie, diagnostic, RETENUE.libere_apres_put
+    finally:
+        RETENUE.desarmer()
+        fichier_profil.write_bytes(avant)
 
 
 # --- navigateur (EX-012) -------------------------------------------------------------------------------
@@ -253,6 +390,19 @@ def test_enregistrement_ne_contient_que_des_identifiants(page):
     assert brut["remarques"] == "Suivi amenagement-test-a depuis la rentrée ; aime les exemples concrets."
     assert r["apres"]["lectureAuto"] is True
     assert CONFLIT_LECTURE_AUTOMATIQUE in [c["id"] for c in r["apres"]["conflits"]]
+
+
+def test_ex110_apercu_perime_ignore_apres_enregistrement(page_ex110):
+    """EX-110 : la reponse d'un apercu anterieur a l'enregistrement, arrivee apres celle du PUT (ordre
+    force par le serveur de test), ne change ni le message « Enregistré. » ni les conflits affiches."""
+    sortie, diagnostic, libere_apres_put = page_ex110
+    assert libere_apres_put, "mise en place : l'apercu retenu n'a pas attendu la reponse du PUT"
+    termine = re.search(r'data-resultat="([^"]*)"', sortie)
+    etat = re.search(r'id="adaptations-etat"[^>]*>([^<]*)<', sortie)
+    assert termine and etat and etat.group(1) == "Enregistré.", diagnostic
+    # Conflits de l'etat enregistre (lecture automatique decochee) : pas celui de l'apercu perime.
+    conflits = re.findall(r'<li class="conflit" data-conflit="([^"]*)"', sortie)
+    assert conflits == [CONFLIT_TAILLE_DENSITE, CONFLIT_SURLIGNAGE_DENSITE], diagnostic
 
 
 # --- API : validation avant resoudre() ------------------------------------------------------------------
