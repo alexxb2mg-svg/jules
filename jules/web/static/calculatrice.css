@@ -1,0 +1,66 @@
+/* Jules - bouton « Calculatrice » a cote de l'entree vers Jules et son panneau (docs/spec/NAVIGATION.md, EX-217).
+   Zone de toucher >= 2.75rem (44 px, WCAG 2.5.5) ; tailles de texte suivant le levier taille-texte (EX-105). */
+
+.bouton-calculatrice {
+  display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto;
+  min-width: 2.75rem; min-height: 2.75rem; padding: 0 0.5rem;
+  background: #FFFFFF; color: var(--p-principale); border: 2px solid var(--bord); border-radius: 0.75rem;
+  font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); line-height: 1; cursor: pointer;
+}
+.bouton-calculatrice:hover { border-color: var(--p-principale); }
+.bouton-calculatrice:focus-visible, .calculatrice-fermer:focus-visible {
+  outline: 3px solid var(--p-principale); outline-offset: 2px;
+}
+.bouton-calculatrice[aria-expanded="true"] { background: var(--p-principale); color: #FFFFFF; border-color: var(--p-principale); }
+
+/* Sur / : rond de la taille du J, dans le pied des bulles de Jules. A partir de 600 px (bulle flottante), le
+   bouton est pose au-dessus du J (colonne etroite en bas a droite) ; sous 600 px, a sa gauche dans la bande de
+   Jules (EX-213, plus bas). */
+.jules-pied { gap: 0.5rem; align-items: center; }
+@media (min-width: 600px) { .jules-pied { flex-direction: column; } }
+.bouton-calculatrice-rond {
+  width: 3.125rem; height: 3.125rem; padding: 0; border-radius: 50%; box-shadow: 0 4px 14px rgba(31, 78, 140, 0.2);
+}
+/* De 600 a 1024 px, la fiche s'etend sous la colonne du J : elle lui laisse une marge a droite, pour que ni le
+   bouton ni le J ne recouvrent un bloc de la fiche au repos (EX-217 e). */
+@media (min-width: 600px) and (max-width: 1024px) {
+  body.avec-calculatrice .fiche-zone { padding-right: 4.5rem; }
+}
+/* La discussion ouverte par le J demarre au-dessus du bouton, pas dessus. */
+@media (min-width: 600px) {
+  body.avec-calculatrice .chat-flottant { bottom: 8.5rem; }
+}
+
+/* Panneau : dans la page, jamais un onglet ou une fenetre. En bas a droite, au-dessus de tout le reste. Hauteur
+   prevue pour la calculatrice entiere sans defilement (36rem), bornee par l'ecran. */
+.calculatrice-panneau {
+  position: fixed; right: 1rem; bottom: 1rem; z-index: 50;
+  display: flex; flex-direction: column; width: min(19rem, calc(100vw - 2rem));
+  height: min(36rem, calc(100vh - 2rem));
+  background: #FFFFFF; border: 1px solid var(--bord); border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.75rem rgba(20, 36, 59, 0.22); overflow: hidden;
+}
+.calculatrice-panneau[hidden] { display: none; }
+/* Sur /, le panneau s'ouvre au-dessus de la colonne bouton + J (le bouton reste cliquable pour refermer). */
+.calculatrice-panneau-rond { bottom: 8.5rem; height: min(36rem, calc(100vh - 9.5rem)); }
+.calculatrice-tete {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.5rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.875rem; border-bottom: 1px solid var(--bord);
+}
+.calculatrice-titre {
+  font-family: var(--police-titre); font-weight: 700; font-size: calc(1rem * var(--adapt-echelle-texte, 1));
+  color: var(--p-principale);
+}
+.calculatrice-fermer {
+  min-width: 2.75rem; min-height: 2.75rem; background: none; border: none; border-radius: 0.75rem;
+  color: var(--texte); font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); line-height: 1; cursor: pointer;
+}
+.calculatrice-fermer:hover { background: var(--p-bulle-bot); }
+.calculatrice-zone { flex: 1 1 auto; min-height: 0; display: flex; }
+.calculatrice-zone .outil-cadre { flex: 1 1 auto; width: 100%; height: 100%; border: 0; display: block; }
+
+/* Telephone : le bouton rejoint la bande de Jules (EX-213). Sur /, le panneau s'ouvre juste au-dessus de la bande,
+   dont la hauteur varie avec la bulle : calculatrice.js pose alors `bottom` et `max-height` mesures a l'ouverture. */
+@media (max-width: 599.98px) {
+  .calculatrice-panneau { right: 0.5rem; width: calc(100vw - 1rem); }
+}

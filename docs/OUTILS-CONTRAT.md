@@ -102,6 +102,10 @@ L'outil et Jules ne communiquent que par `postMessage`, et seulement avec les ac
   sans qu'un outil mal intentionné ou buggé perturbe l'autre.
 - `donnees` est relu champ par champ (jamais transmis tel quel à l'affichage ou au DOM sans
   échappement) : un outil affiche des textes fournis par la leçon, jamais du HTML.
+- Évènement réservé `fermer` (`donnees` vide) : « l'utilisateur demande la fermeture de l'outil »
+  (Échap tapé alors que le focus est dans l'iframe, que la page hôte ne voit pas). Tout outil peut
+  l'émettre, à condition de le déclarer dans ses `evenements` ; la page qui a monté l'outil le ferme
+  (`surEvenement`) et rend le focus au bouton qui l'avait ouvert. Ex. : la calculatrice (EX-217).
 - Chaque outil de référence embarque sa propre petite fonction de validation (voir
   `outils/*/outil.js`, fonction `recu(event)`) : c'est volontairement dupliqué (pas de fichier
   partagé entre outils) pour qu'un outil reste un dossier autonome, lisible et vérifiable seul.
