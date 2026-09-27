@@ -1,4 +1,4 @@
-body { font: 16px/1.4 system-ui, sans-serif; margin: 1rem; color: #1a1a1a; background: #fff; }
+body { font: 1rem/1.4 system-ui, sans-serif; margin: 1rem; color: #1a1a1a; background: #fff; }
 h1 { font-size: 1.1rem; }
 .frise { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
 .frise li { border-left: 4px solid #2b6cb0; padding: 0.4rem 0.6rem; background: #f0f5fb; }
@@ -8,3 +8,15 @@ h1 { font-size: 1.1rem; }
 .frise-exercice li { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
 .frise-exercice button:disabled { opacity: 0.4; cursor: default; }
 #etat { color: #333; font-style: italic; }
+
+/* Leviers d'affichage (EX-105) : poses par outil.js sur <body> (variable --adapt-* et attribut
+   data-adapt-*), inactifs sans l'attribut. */
+body[data-adapt-espacement-lettres], body[data-adapt-espacement-lettres] * { letter-spacing: var(--adapt-espacement-lettres) !important; }
+body[data-adapt-espacement-mots], body[data-adapt-espacement-mots] * { word-spacing: var(--adapt-espacement-mots) !important; }
+body[data-adapt-interligne], body[data-adapt-interligne] * { line-height: var(--adapt-interligne) !important; }
+body[data-adapt-longueur-ligne] :is(p, li, dd, dt, h1) { max-width: var(--adapt-longueur-ligne); }
+body[data-adapt-police] { font-family: var(--adapt-police); }
+body[data-adapt-fond] { background: var(--adapt-fond); }
+/* EX-106 : un mot plus long que la largeur du cadre est coupe au bord au lieu d'en sortir (actif
+   seulement avec les leviers de taille, d'espacement ou de police ; adaptations.css de la page). */
+body:is([data-adapt-taille-texte], [data-adapt-espacement-lettres], [data-adapt-espacement-mots], [data-adapt-police]) * { overflow-wrap: anywhere; }

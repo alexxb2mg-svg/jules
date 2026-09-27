@@ -1,0 +1,9 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+# College : aucun item, affiche sous « Autres aménagements et adaptations ».
+id: lecture-oralisee
+libelles:
+  elementaire: {page: 4, texte: "Proposer à l'élève une lecture oralisée (enseignant ou autre élève) ou une écoute audio des textes supports de la séance"}
+leviers:
+  lecture-vocale: proposee  # jamais automatique : reserve au choix du parent (§4)

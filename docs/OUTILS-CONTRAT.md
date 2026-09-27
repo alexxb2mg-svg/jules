@@ -164,10 +164,29 @@ d'adaptation de l'élève, qu'il reçoit par message.
 
 Ces messages ne passent pas par `actions`/`evenements` de la fiche : ils font partie du contrat
 commun à tous les outils. Chaque outil de référence embarque sa copie du code (`poigneeDeMain`,
-`appliquerAdaptations`, table `LEVIERS`, vide pour l'instant), comme sa fonction `recu`.
+`appliquerAdaptations`, table `LEVIERS`), comme sa fonction `recu`.
 Vérifié par `tests/test_adaptations_poignee.py` dans un vrai navigateur (les trois outils de
 référence, réponse reçue, délai dépassé, réponse tardive, autre source des deux côtés, levier
 inconnu, rechargement de l'iframe).
+
+#### Leviers appliqués par les outils (EX-105)
+
+La page de cours transmet dans `leviers` les valeurs brutes des leviers réglés pour l'élève
+(identifiant du levier → valeur, `docs/spec/ADAPTATIONS-LOT2.md`, §2), telles que `/api/infos` les
+expose sous `leviers` ; rien quand tout est neutre. Chaque outil de référence :
+
+- revalide chaque valeur contre la plage ou la liste fermée du §2 (recopiées dans sa table
+  `LEVIERS`) ; une valeur hors plage ou d'un mauvais type est ignorée comme un levier inconnu ;
+- applique `espacement-lettres`, `espacement-mots`, `interligne`, `longueur-ligne`, `police` et
+  `fond` par une variable `--adapt-*` et un attribut `data-adapt-<levier>` sur son `<body>`, avec
+  les règles correspondantes dans son `outil.css` (inactives sans l'attribut) ;
+- applique `taille-texte` à sa racine (ses tailles sont en `rem`), dans le rapport à la valeur
+  neutre (1,125 rem) ;
+- la calculatrice applique aussi `reperes-rang-chiffres` : les chiffres de son écran sont colorés
+  par rang (unités, dizaines, centaines).
+
+Un nouvel outil n'est pas obligé d'appliquer un levier ; il doit seulement ignorer ceux qu'il ne
+connaît pas. Vérifié par `tests/test_adaptations_leviers_css.py` (styles calculés dans chaque outil).
 
 ## 3. Isolement technique
 

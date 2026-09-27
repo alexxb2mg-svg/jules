@@ -38,19 +38,43 @@
     return String(n).replace(".", ",");
   }
 
-  // --- parcours (gauche) ----------------------------------------------------
-  async function chargerParcours(matiere) {
+  // Consigne d'un bloc (enonce, question) : bouton de lecture selon le levier, jamais lue sans clic
+  // (EX-109).
+  function enonce(html) {
+    const p = creer("p", "bloc-enonce", html);
+    LectureVocale.equiperConsigne(p);
+    return p;
+  }
+
+  // --- parcours (zone centrale, tant qu'aucune lecon n'est ouverte) ------------------------------------
+  // EX-209 : la matiere vient de l'adresse (?matiere=, lien de la barre), sinon de la memoire `jules.matiere`.
+  // Un seul appel parcours ; la page affiche la matiere renvoyee par le serveur et n'ecrase pas la memoire.
+  // Premiere visite (ni adresse ni memoire) : « Choisis une matière », sans les notions de la matiere par defaut.
+  async function chargerParcours(matiere, notionDemandee) {
     etat.occupeParcours = true;
     $("parcours-attente").classList.remove("cache");
     try {
-      const chemin = "/api/eleve/cours/parcours" + (matiere ? `?matiere=${encodeURIComponent(matiere)}` : "");
-      const r = await MS.api(chemin);
+      const r = await MS.api(MS.cheminMatiere("/api/eleve/cours/parcours", matiere));
       etat.matieres = r.matieres || [];
+      if (!matiere) {
+        afficherChoixMatiere();
+        return;
+      }
       etat.matiereChoisie = r.matiere;
-      remplirSelectMatieres();
+      $("choix-matiere").classList.add("cache");
+      $("parcours").classList.remove("cache");
+      const nom = (etat.matieres.find((m) => m.id === r.matiere) || { nom: r.matiere }).nom;
+      $("catalogue-titre").textContent = `Mes leçons : ${nom}`;
       $("parcours-estimation").textContent = r.estimation || "";
       afficherNotions(r.notions || []);
+      // Une notion demandee par l'adresse s'ouvre si elle est une lecon de la matiere ; sinon la liste reste.
+      const n = notionDemandee && (r.notions || []).find((x) => x.id === notionDemandee && x.lecon);
+      if (n) {
+        etat.occupeParcours = false;
+        await ouvrirLecon(n.id);
+      }
     } catch (err) {
+      $("parcours").classList.remove("cache");
       $("parcours-liste").innerHTML = "";
       $("parcours-liste").appendChild(creer("p", "cours-erreur-ligne", MS.echapper(`Impossible de charger ton parcours : ${err.message}`)));
     } finally {
@@ -59,16 +83,32 @@
     }
   }
 
-  function remplirSelectMatieres() {
-    const select = $("select-matiere");
-    select.innerHTML = "";
+  // Premiere visite : la liste des matieres de la reponse, un bouton par matiere (meme action que l'etape 2 de la
+  // barre : matiere retenue, puis ses notions).
+  function afficherChoixMatiere() {
+    $("parcours").classList.add("cache");
+    $("catalogue-titre").textContent = "Mes leçons";
+    const liste = $("choix-matiere-liste");
+    liste.replaceChildren();
     for (const m of etat.matieres) {
-      const opt = document.createElement("option");
-      opt.value = m.id;
-      opt.textContent = m.nom;
-      opt.selected = m.id === etat.matiereChoisie;
-      select.appendChild(opt);
+      const li = document.createElement("li");
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "choix-matiere-bouton";
+      b.dataset.matiere = m.id;
+      b.textContent = m.nom;
+      b.addEventListener("click", () => choisirMatiere(m.id));
+      li.appendChild(b);
+      liste.appendChild(li);
     }
+    $("choix-matiere").classList.remove("cache");
+  }
+
+  async function choisirMatiere(id) {
+    MS.retenirMatiere(id);
+    Navigation.suivreMatiere(id);
+    await chargerParcours(id, null);
+    $("catalogue-titre").focus();
   }
 
   function afficherNotions(notions) {
@@ -124,14 +164,13 @@
       // Rappel au survol du sens des lettres de la notion de la lecon (symboles.js).
       if (typeof Symboles !== "undefined") Symboles.notion(document.body, notionId);
       etat.progression = r.progression;
-      $("lecon-vide").classList.add("cache");
+      $("catalogue").classList.add("cache");
       $("lecon").classList.remove("cache");
       afficherLecon();
       marquerNotionActive();
       await chargerConversation();
-      fermerPanneau("parcours");
     } catch (err) {
-      $("lecon-vide").classList.add("cache");
+      $("catalogue").classList.remove("cache");
       $("lecon").classList.add("cache");
       $("lecon-erreur").textContent = `Impossible d'ouvrir cette leçon : ${err.message}`;
       $("lecon-erreur").classList.remove("cache");
@@ -232,7 +271,7 @@
         break;
       }
       case "exemple": {
-        corps.appendChild(creer("p", "bloc-enonce", MS.markdown(bloc.enonce || "")));
+        corps.appendChild(enonce(MS.markdown(bloc.enonce || "")));
         const ol = creer("ol", "etapes");
         for (const e of bloc.etapes || []) ol.appendChild(creer("li", "", MS.markdown(e)));
         corps.appendChild(ol);
@@ -306,7 +345,7 @@
       return creer("p", "outil-a-venir", "🛠️ Cet outil arrivera bientôt dans Jules.");
     }
     const zone = creer("div", "outil-zone");
-    etat.outils.push(OutilsHote.monter(zone, outil, { action: bloc.action, donnees: bloc.donnees }));
+    etat.outils.push(OutilsHote.monter(zone, outil, { action: bloc.action, donnees: bloc.donnees, leviers: etat.leviers || {} }));
     return zone;
   }
 
@@ -318,7 +357,7 @@
   // --- bloc exercice --------------------------------------------------------
   function construireExercice(bloc) {
     const dom = creer("div");
-    dom.appendChild(creer("p", "bloc-enonce", MS.echapper(bloc.enonce || "")));
+    dom.appendChild(enonce(MS.echapper(bloc.enonce || "")));
 
     const champZone = creer("div", "reponse-champ");
     let lireReponse = () => "";
@@ -444,7 +483,7 @@
   function construireLibre(bloc) {
     const dom = creer("div");
     const consigne = bloc.type === "synthese" ? bloc.consigne : bloc.question;
-    dom.appendChild(creer("p", "bloc-enonce", MS.echapper(consigne || "")));
+    dom.appendChild(enonce(MS.echapper(consigne || "")));
 
     const labelId = `libre-${bloc.index}`;
     const label = creer("label", "cache-visuel", "Ta réponse");
@@ -544,7 +583,7 @@
   }
 
   // --- panneau Jules -----------------------------------------------------------
-  function ajouterBulleJules(role, texte, classe = "") {
+  function ajouterBulleJules(role, texte, classe = "", nouvelle = true) {
     const ligne = creer("div", `ligne ${role === "eleve" ? "eleve" : "bot"} ${classe}`);
     const bulle = creer("div", "bulle");
     bulle.innerHTML = role === "eleve" ? `<p>${MS.echapper(texte).replace(/\n/g, "<br>")}</p>` : MS.markdown(texte);
@@ -555,6 +594,8 @@
     }
     ligne.appendChild(bulle);
     $("jules-fil").appendChild(ligne);
+    // Bouton de lecture sur les bulles de Jules seulement ; lue en mode automatique si nouvelle (EX-109).
+    if (role !== "eleve" && classe !== "attente") LectureVocale.equiperBulle(bulle, { nouvelle });
     $("jules-fil").scrollTop = $("jules-fil").scrollHeight;
     return ligne;
   }
@@ -570,7 +611,7 @@
     if (!etat.conversation) return;
     try {
       const conv = await MS.api(`/api/conversations/${encodeURIComponent(etat.conversation)}`);
-      for (const m of conv.messages) ajouterBulleJules(m.role, m.texte);
+      for (const m of conv.messages) ajouterBulleJules(m.role, m.texte, "", false);
     } catch (err) {
       ajouterBulleJules("bot", `Impossible de charger la conversation : ${err.message}`);
     }
@@ -604,15 +645,14 @@
     }
   }
 
-  // --- panneaux repliables (tablette) ------------------------------------------
-  function ouvrirPanneau(nom) {
-    $(nom).classList.add("ouvert");
-    $(`menu-${nom === "panneau-jules" ? "jules" : "parcours"}`).setAttribute("aria-expanded", "true");
+  // --- panneau de Jules repliable (tablette) -------------------------------------
+  function ouvrirPanneau() {
+    $("panneau-jules").classList.add("ouvert");
+    $("menu-jules").setAttribute("aria-expanded", "true");
   }
-  function fermerPanneau(nom) {
-    const id = nom === "jules" ? "panneau-jules" : "parcours";
-    $(id).classList.remove("ouvert");
-    $(`menu-${nom}`).setAttribute("aria-expanded", "false");
+  function fermerPanneau() {
+    $("panneau-jules").classList.remove("ouvert");
+    $("menu-jules").setAttribute("aria-expanded", "false");
   }
 
   // --- retour au parcours -------------------------------------------------------
@@ -620,34 +660,31 @@
     etat.session = null; etat.conversation = null; etat.lecon = null; etat.progression = null;
     demonterOutils();
     $("lecon").classList.add("cache");
-    $("lecon-vide").classList.remove("cache");
+    $("catalogue").classList.remove("cache");
     $("jules-fil").innerHTML = "";
     $("jules-texte").disabled = true;
     $("jules-envoyer").disabled = true;
     marquerNotionActive();
-    chargerParcours(etat.matiereChoisie);
+    chargerParcours(etat.matiereChoisie, null);
   }
 
   // --- demarrage -----------------------------------------------------------
   async function demarrage() {
-    await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
+    Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
-    document.title = `${etat.infos.persona.nom} - cours`;
+    etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;
     $("jules-nom").textContent = etat.infos.persona.nom;
+    LectureVocale.initialiser();
+    LectureVocale.definirMode(LectureVocale.modeDepuis(etat.infos));
+    LectureVocale.brancherSaisie(document); // chat et reponses aux exercices
 
-    $("select-matiere").addEventListener("change", (ev) => chargerParcours(ev.target.value));
-    $("menu-parcours").addEventListener("click", () => {
-      const ouvert = $("parcours").classList.contains("ouvert");
-      if (ouvert) fermerPanneau("parcours"); else ouvrirPanneau("parcours");
-    });
     $("menu-jules").addEventListener("click", () => {
-      const ouvert = $("panneau-jules").classList.contains("ouvert");
-      if (ouvert) fermerPanneau("jules"); else ouvrirPanneau("panneau-jules");
+      if ($("panneau-jules").classList.contains("ouvert")) fermerPanneau(); else ouvrirPanneau();
     });
-    $("parcours-fermer").addEventListener("click", () => fermerPanneau("parcours"));
-    $("jules-fermer").addEventListener("click", () => fermerPanneau("jules"));
+    $("jules-fermer").addEventListener("click", fermerPanneau);
     $("retour-parcours").addEventListener("click", retourAuParcours);
 
     $("jules-formulaire").addEventListener("submit", envoyerAJules);
@@ -660,7 +697,15 @@
       if (ev.key === "Enter" && !ev.shiftKey && window.matchMedia("(pointer: fine)").matches) envoyerAJules(ev);
     });
 
-    await chargerParcours(null);
+    await chargerParcours(...matiereDeDepart());
+  }
+
+  // ?matiere=&notion= (lien de l'etape 4 de la barre), sinon la matiere retenue ; rien a la premiere visite.
+  function matiereDeDepart() {
+    const p = new URLSearchParams(location.search);
+    const matiere = p.get("matiere");
+    if (matiere) return [matiere, p.get("notion")];
+    return [MS.matiereRetenue(), null];
   }
 
   demarrage().catch((err) => { document.body.innerHTML = `<p class="erreur-page">Erreur : ${MS.echapper(err.message)}</p>`; });

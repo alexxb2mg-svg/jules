@@ -1,0 +1,13 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: taille-texte
+canal: css
+variable_css: --adapt-taille-texte
+type: nombre
+unite: rem
+neutre: 1.125
+plage: {min: 1.125, max: 1.6875}  # 1 a 1,5 fois la valeur neutre
+combinaison: max
+source:
+  nature: norme
+  reference: "WCAG 2.2 critere 1.4.4, https://www.w3.org/TR/WCAG22/#resize-text ; usage : guide de style BDA 2018 (12 a 14 pt)."

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jules - studio</title>
+  <title>Jules - Exercices et supports</title>
   <link rel="icon" href="/static/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/static/icone-192.png">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="/static/symboles.css">
   <link rel="stylesheet" href="/static/studio.css">
+  <link rel="stylesheet" href="/static/navigation.css">
+  <link rel="stylesheet" href="/static/adaptations.css">
 </head>
 <body>
   <div id="porte" class="porte cache">
@@ -27,33 +29,33 @@
 
   <div id="contenu" class="studio-appli">
     <header class="studio-entete">
-      <button type="button" class="bouton-panneau" id="menu-notions" aria-label="Ouvrir mes supports" aria-expanded="false" aria-controls="notions">☰ <span>Mes supports</span></button>
-      <a class="studio-marque" href="/">
+      <span class="studio-marque">
         <img src="/api/persona/avatar" alt="">
         <span id="nom-persona">Jules</span>
-      </a>
+      </span>
       <button type="button" class="bouton-panneau" id="menu-jules" aria-label="Ouvrir les retours de Jules" aria-expanded="false" aria-controls="panneau-jules">💬 <span>Retours</span></button>
     </header>
 
     <div class="studio-corps">
-      <aside id="notions" class="notions" aria-label="Mes supports">
-        <div class="panneau-entete">
-          <strong>Mes supports</strong>
-          <button type="button" class="fermer" id="notions-fermer" aria-label="Fermer">✕</button>
-        </div>
-        <label for="select-matiere">Matière</label>
-        <select id="select-matiere"></select>
-        <div id="notions-liste" class="notions-liste" aria-live="polite"></div>
-        <div id="notions-attente" class="attente-ligne cache" aria-live="polite">Chargement…</div>
-      </aside>
-
       <main class="support-zone">
         <div id="accueil-studio" class="support-vide">
-          <p>🛠️ Choisis une notion puis un support dans « Mes supports » pour commencer, ou crées-en un nouveau.</p>
+          <!-- Tant qu'aucun support n'est ouvert : la liste des notions, ici, dans la zone centrale (EX-209). La
+               matiere se choisit dans la barre ; a la premiere visite, la page propose la liste des matieres. -->
+          <h1 id="catalogue-titre" class="catalogue-titre" tabindex="-1">Exercices et supports</h1>
           <button type="button" class="bouton cache" id="bouton-revision">🗂️ Réviser mes cartes</button>
+          <div id="choix-matiere" class="choix-matiere cache">
+            <p class="choix-matiere-consigne">Choisis une matière</p>
+            <ul id="choix-matiere-liste" class="choix-matiere-liste"></ul>
+          </div>
+          <div id="notions" class="notions cache">
+            <div id="notions-liste" class="notions-liste" aria-live="polite"></div>
+          </div>
+          <p id="liste-dans-barre" class="liste-dans-barre">Les notions de cette matière sont listées dans la barre, à gauche.</p>
+          <div id="notions-attente" class="attente-ligne cache" aria-live="polite">Chargement…</div>
         </div>
 
         <div id="support" class="support cache">
+          <button type="button" class="bouton secondaire bouton-liste" id="retour-liste">← Mes notions</button>
           <div class="support-entete">
             <h1 id="support-titre"></h1>
             <p id="support-meta" class="support-meta"></p>
@@ -133,6 +135,7 @@
   <script src="/static/symboles.js"></script>
   <script src="/rappels.js"></script>
   <script src="/static/commun.js"></script>
+  <script src="/static/navigation.js"></script>
   <script src="/static/studio.js"></script>
 </body>
 </html>

@@ -1,0 +1,14 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+id: supports-aeres-agrandis
+libelles:
+  college: {page: 7, texte: "Proposer des supports écrits aérés et agrandis (exemple : ARIAL14)"}
+  elementaire: {page: 4, texte: "Agrandir les formats des supports écrits (A 3)"}
+# « Texte aere » de Zorzi 2012 : lettres, mots et interligne regles ensemble (valeurs hautes des plages du §2).
+leviers:
+  espacement-lettres: 0.18
+  espacement-mots: 0.5
+  interligne: 2.0
+  taille-texte: 1.6875  # 1,5 x la neutre, haut de la plage du §2
+  longueur-ligne: 80  # WCAG 1.4.8 : 80 caracteres au plus

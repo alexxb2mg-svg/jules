@@ -1,0 +1,9 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+id: limiter-quantite-ecrit
+libelles:
+  college: {page: 7, texte: "Limiter la quantité d'écrit (recours possible aux QCM, exercices à trous, schémas ...)"}
+  elementaire: {page: 5, texte: "Diminuer la quantité d'écrit sur chaque feuille"}
+leviers:
+  densite: un-exercice
