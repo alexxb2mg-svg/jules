@@ -133,7 +133,8 @@ TEXTES = [
     (
         "fractions",
         {"matiere": "mathematiques"},
-        "On lit 7/4 = 1 + 3/4 ; et 12 500 g = 12,5 kg ; 3 € × 3 = 9 € ; 1 h 50 min − 25 min = 1 h 25 min ; 30 ÷ 4 = 7, reste 2.",
+        "On lit 7/4 = 1 + 3/4 ; et 12 500 g = 12,5 kg ; 3 € × 3 = 9 € ; "
+        "1 h 50 min − 25 min = 1 h 25 min ; 30 ÷ 4 = 7, reste 2.",
     ),
     ("cm1_sciences", {"matiere": "sciences-et-technologie"}, "Le pot de 250 g contient 20 cL d'eau à 4 °C."),
 ]
@@ -316,4 +317,5 @@ def test_une_fraction_est_un_seul_nombre_et_un_grand_nombre_ne_se_coupe_pas(anno
         "12\u202f500 g = 12,5 kg",
         "3 € × 3 = 9 €",
         "1 h 50 min − 25 min = 1 h 25 min",
+        "30 ÷ 4 = 7, reste 2",
     ]
