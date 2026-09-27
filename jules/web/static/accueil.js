@@ -2,6 +2,10 @@
 // Jules en bulles preecrites a droite (aucun appel IA sur cette page : voir jules_cadrage_interface.md).
 "use strict";
 
+// Typographie francaise des titres : « Titre : suite », « Pourquoi ? » ; l'espace devant la
+// ponctuation haute devient insecable, le signe ne commence jamais une ligne.
+const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+
 (() => {
   const $ = (id) => document.getElementById(id);
 
@@ -35,7 +39,7 @@
         const bouton = document.createElement("button");
         bouton.type = "button";
         bouton.dataset.id = n.id;
-        bouton.textContent = n.titre;
+        bouton.textContent = typo(n.titre);
         bouton.addEventListener("click", () => ouvrirFiche(n.id));
         zone.appendChild(bouton);
       }
@@ -105,7 +109,7 @@
 
   function afficherFiche(fiche) {
     $("fiche-fil").textContent = `${fiche.nom_matiere} › ${fiche.niveau}`;
-    $("fiche-titre").textContent = fiche.titre;
+    $("fiche-titre").textContent = typo(fiche.titre);
     if (fiche.relecture_a_relire) {
       $("fiche-avertissement").textContent =
         "Fiche expérimentale, pas encore relue par un adulte : sers-t'en comme appui, pas comme vérité absolue.";
@@ -142,7 +146,7 @@
     section.className = "fiche-bloc";
     section.dataset.adresse = `fiche/${bloc.id}`;
     const titre = document.createElement("h2");
-    titre.textContent = bloc.titre || TITRES_TYPE[bloc.type] || bloc.type;
+    titre.textContent = typo(bloc.titre || TITRES_TYPE[bloc.type] || bloc.type);
     section.appendChild(titre);
 
     const constructeur = CONSTRUCTEURS[bloc.type];

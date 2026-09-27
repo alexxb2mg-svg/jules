@@ -249,7 +249,10 @@ const TERME = String.raw`(?:${DUREE}|${NOMBRE}|${UNITE_SEULE}|(?:\d+[ \u00A0\u20
 const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+(?:,?\s+reste\s+\d+)?`, "gu");
 
 Symboles.enregistrer({
-  id: "formules", formule: true, matieres: SCIENCES,
+  // Les calculs ecrits dans le texte ressortent aussi en histoire, geographie, EMC, arts et musique
+  // (« 1522 − 1519 = 3 ans ») ; pas en francais ni en anglais, qui ont leurs propres mises en forme.
+  id: "formules", formule: true,
+  matieres: [...SCIENCES, "histoire", "geographie", "emc", "histoire-des-arts", "arts-plastiques", "education-musicale"],
   mettreEnForme(texte) {
     const zones = [];
     o.parcourir(motifFormule, texte, (mot, i) => {
