@@ -100,6 +100,16 @@ Un piège se déclenche sur une **valeur** précise (`si: {valeur: 1918}`), sur 
 (`si: {contient: [b]}`, exercices `choix`) ou sur un **diagnostic** (`si: {diagnostic: non_irreductible}`).
 Les pièges sont lus dans l'ordre : le premier qui correspond est dit, une seule fois par exercice.
 
+Pour un exercice `ouverte`, la solution rédigée n'existe pas dans le format v2 : le champ `criteres`
+en tient lieu, et c'est le seul contenu envoyé au modèle pour ce type d'exercice (`texte_fiche`,
+`jules/bibliotheques.py`). Pour tous les autres types (`nombre`, `expression`, `choix`, `texte_court`,
+`ordre`, `association`), le contenu est corrigé par le code (`jules/fiches/correction.py`) : le champ
+`solution` de l'exercice n'est jamais transmis au modèle, qui reçoit à la place une consigne
+(« corrigé par le code : tu n'as pas la solution »). C'est une garantie de prompt (ce qui est écrit
+dans le message envoyé au modèle), pas une garantie de code : rien n'empêche techniquement une
+future version de `texte_fiche` de recommencer à inclure une solution. À terme, même les exercices
+`ouverte` ne devraient transmettre que leurs `criteres` de réussite, jamais un corrigé rédigé.
+
 Le lecteur d'expressions n'exécute jamais la réponse de l'élève : il la lit comme un arbre de calcul et
 refuse tout ce qui n'est pas nombre, variable, `+ − × ÷` ou puissance entière, ainsi que les nombres géants.
 
