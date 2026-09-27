@@ -18,7 +18,7 @@ génération sans IA (production ouverte, figure, programme).
 | puissances-notation-scientifique | oui | A | calculer aⁿ×aᵐ (nombre, forme puissance ?), écriture scientifique (nombre forme scientifique), ordre de grandeur (choix) | | à faire | vérifier que `forme: scientifique` lit « 3,2 × 10⁴ » ; sinon C |
 | racine-carree | oui | A | carrés parfaits (nombre), encadrer √n (choix/ordre), équation x² = a (choix des solutions) | | à faire | |
 | calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
-| multiples-diviseurs-division-euclidienne | oui | A | division euclidienne (nombre × 2 : quotient, reste → deux exercices), critères (choix), diviseurs d'un nombre (texte_court liste ?) | | à faire | « liste de diviseurs » = B (brique liste d'entiers) ou choix multiple |
+| multiples-diviseurs-division-euclidienne | oui | A | division (quotient OU reste, en situation au palier 3), criteres (choix multiple), nb_diviseurs (nombre), completer (nombre), multiple_ou_diviseur (choix multiple) | session 2 | PR ouverte | la liste des diviseurs est demandée par son NOMBRE d'éléments (pas de brique liste) |
 | nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** | modèle du pattern |
 | fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | | à faire | réutiliser `couple_premiers_entre_eux`, `decomposer` |
 | problemes-divisibilite | oui | A | engrenages/PPCM (nombre), conjonction de phénomènes (nombre) | | à faire | brique PPCM à ajouter dans tirage/format |
