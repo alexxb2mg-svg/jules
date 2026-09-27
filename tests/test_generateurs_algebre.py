@@ -50,3 +50,16 @@ def test_nombres_signes_et_parentheses():
 def test_valeur_machine_exacte_et_lisible_par_le_correcteur(x):
     # nombre_machine écrirait 7/3 en décimal tronqué : valeur_machine le garde exact
     assert lire_nombre(valeur_machine(x)) == x
+
+
+def test_polynome_ecrit_et_lisible_par_le_correcteur():
+    from jules.fiches.correction import equivalentes, lire_expression
+    from jules.generateurs.briques.algebre import en_machine, polynome_fr, polynome_machine
+
+    assert polynome_fr([-12, -5, 2]) == "2x² − 5x − 12"
+    assert polynome_fr([0, 1, -1]) == "−x² + x"
+    assert polynome_fr([0, 0, 0]) == "0"
+    machine = polynome_machine([-12, -5, 2])
+    assert machine == "2x^2 - 5x - 12"
+    assert equivalentes(lire_expression(machine, ["x"]), lire_expression("(2x + 3)(x - 4)", ["x"]), ["x"])
+    assert en_machine("3(2x − 5)") == "3(2x - 5)"
