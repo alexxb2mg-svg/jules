@@ -367,3 +367,12 @@ def test_un_point_d_interrogation_dans_une_citation_ne_coupe_pas_la_phrase(tmp_p
     brut = copy.deepcopy(fiche_valide())
     brut["blocs"][0]["jules"] = "Tu te demandes « pourquoi ? » et c'est normal. Quoi ? Oui, c'est ainsi."
     lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_citation_compte_dans_la_phrase_qui_la_cite(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = (
+        "Quand tu ne comprends pas, dis « Sorry! I don't understand. Can you repeat, please? » "
+        "sans avoir honte. Tout le monde le fait. C'est comme ça qu'on apprend."
+    )
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)

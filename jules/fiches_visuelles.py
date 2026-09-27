@@ -298,7 +298,15 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
         raise ErreurFicheVisuelle(
             f"{ou} : commentaire 'jules' trop long ({len(lisible)} caracteres, max {LIMITE_JULES})"
         )
-    phrases = [p for p in _FIN_DE_PHRASE.split(lisible) if p.strip()]
+    # Une citation entre guillemets (« Sorry! Can you repeat? ») fait partie de la phrase qui la cite :
+    # sa ponctuation interne ne compte pas. Seule la ponctuation finale de la citation peut clore.
+    sans_citations = re.sub(
+        r"«([^«»]*?)([.!?]*)\s*»", lambda m: "«" + re.sub(r"[.!?]", ",", m.group(1)) + m.group(2) + " »", lisible
+    )
+    sans_citations = re.sub(
+        r"\"([^\"]*?)([.!?]*)\"", lambda m: '"' + re.sub(r"[.!?]", ",", m.group(1)) + m.group(2) + '"', sans_citations
+    )
+    phrases = [p for p in _FIN_DE_PHRASE.split(sans_citations) if p.strip()]
     if not 1 <= len(phrases) <= 3:
         raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' doit tenir en 1 a 3 phrases (trouve {len(phrases)})")
     return texte
