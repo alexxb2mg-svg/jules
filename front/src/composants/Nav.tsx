@@ -1,7 +1,10 @@
-// Barre latérale : entièrement pilotée par config/navigation.ts.
-import { motion } from "framer-motion"
-import { cn } from "@/lib/utils"
-import { NAV, MARQUE, type SectionId } from "@/config/navigation"
+// Barre latérale : shadcn/ui Sidebar (repliable en icônes, tiroir sur mobile, raccourci Ctrl+B),
+// entièrement pilotée par config/navigation.ts.
+import {
+  Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarHeader,
+  SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarSeparator, SidebarRail,
+} from "@/components/ui/sidebar"
+import { NAV, MARQUE, type EntreeNav, type SectionId } from "@/config/navigation"
 
 export function Nav({ actif, onChange, eleve }: {
   actif: SectionId; onChange: (s: SectionId) => void; eleve: { prenom: string; classe: string }
@@ -9,33 +12,51 @@ export function Nav({ actif, onChange, eleve }: {
   const haut = NAV.filter((e) => e.groupe !== "bas")
   const bas = NAV.filter((e) => e.groupe === "bas")
 
-  const Entree = ({ id, nom, Icone, bientot }: (typeof NAV)[number]) => {
-    const estActif = actif === id
-    return (
-      <button key={id} onClick={() => !bientot && onChange(id)} aria-current={estActif ? "page" : undefined}
-        className={cn("relative flex items-center gap-3 rounded-xl px-3 py-2.5 text-left font-medium transition-colors",
-          estActif ? "text-white" : bientot ? "text-gris/70" : "text-encre hover:bg-[#ECEAF6]")}>
-        {estActif && (
-          <motion.span layoutId="nav-actif" className="absolute inset-0 rounded-xl bg-bleu shadow-relief"
-            transition={{ type: "spring", stiffness: 500, damping: 40 }} />
-        )}
-        <Icone size={20} className="relative z-10" />
-        <span className="relative z-10">{nom}</span>
-        {bientot && <span className="relative z-10 ml-auto rounded-md bg-[#E7E4F3] px-1.5 text-[11px] font-semibold text-gris">bientôt</span>}
-      </button>
-    )
-  }
+  const entree = ({ id, nom, Icone, bientot }: EntreeNav) => (
+    <SidebarMenuItem key={id}>
+      <SidebarMenuButton
+        size="lg" tooltip={nom} isActive={actif === id} aria-disabled={bientot}
+        onClick={() => !bientot && onChange(id)}
+        className="h-11 rounded-xl text-[16px] font-medium [&>svg]:size-5 data-[active=true]:bg-bleu data-[active=true]:text-white data-[active=true]:shadow-relief aria-disabled:opacity-55"
+      >
+        <Icone />
+        <span>{nom}</span>
+      </SidebarMenuButton>
+      {bientot && <SidebarMenuBadge className="rounded-md bg-survol text-[11px] text-gris">bientôt</SidebarMenuBadge>}
+    </SidebarMenuItem>
+  )
 
   return (
-    <aside className="flex h-full w-[232px] shrink-0 flex-col gap-1 border-r border-bord bg-nav px-3 py-5">
-      <div className="mb-4 px-3 font-titre text-[26px] font-bold text-bleu">{MARQUE.nom}<span className="text-rouge">{MARQUE.point}</span></div>
-      {haut.map(Entree)}
-      {bas.length > 0 && <div className="my-3 h-px bg-bord" />}
-      {bas.map(Entree)}
-      <div className="mt-auto flex items-center gap-3 px-3 py-2 text-[15px] text-gris">
-        <span className="grid size-8 place-items-center rounded-full bg-bleu font-titre font-bold text-white">{eleve.prenom[0]}</span>
-        <span><b className="block text-encre">{eleve.prenom}</b>{eleve.classe}</span>
-      </div>
-    </aside>
+    <Sidebar collapsible="icon">
+      <SidebarHeader className="px-4 pt-5 pb-3 group-data-[collapsible=icon]:px-2">
+        <span className="font-titre text-[26px] leading-none font-bold text-bleu group-data-[collapsible=icon]:text-center group-data-[collapsible=icon]:text-xl">
+          <span className="group-data-[collapsible=icon]:hidden">{MARQUE.nom}</span>
+          <span className="hidden group-data-[collapsible=icon]:inline">{MARQUE.nom[0]}</span>
+          <span className="text-rouge">{MARQUE.point}</span>
+        </span>
+      </SidebarHeader>
+
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupContent><SidebarMenu className="gap-1">{haut.map(entree)}</SidebarMenu></SidebarGroupContent>
+        </SidebarGroup>
+        {bas.length > 0 && (
+          <>
+            <SidebarSeparator />
+            <SidebarGroup>
+              <SidebarGroupContent><SidebarMenu className="gap-1">{bas.map(entree)}</SidebarMenu></SidebarGroupContent>
+            </SidebarGroup>
+          </>
+        )}
+      </SidebarContent>
+
+      <SidebarFooter className="p-3">
+        <div className="flex items-center gap-3 text-[15px] text-gris group-data-[collapsible=icon]:justify-center">
+          <span className="grid size-8 shrink-0 place-items-center rounded-full bg-bleu font-titre font-bold text-white">{eleve.prenom[0]}</span>
+          <span className="group-data-[collapsible=icon]:hidden"><b className="block text-encre">{eleve.prenom}</b>{eleve.classe}</span>
+        </div>
+      </SidebarFooter>
+      <SidebarRail />
+    </Sidebar>
   )
 }

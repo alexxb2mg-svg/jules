@@ -2,7 +2,8 @@
 import type { EtatChapitre } from "@/config/parcours"
 
 export type Matiere = { id: string; nom: string; couleur: string; chapitres: Chapitre[] }
-export type Chapitre = { id: string; titre: string; etat: EtatChapitre; fiches: number; exercices: number }
+/** notion = id de leçon côté serveur (/api/eleve/cours/lecons/<notion>/ouvrir) quand elle existe. */
+export type Chapitre = { id: string; titre: string; etat: EtatChapitre; fiches: number; exercices: number; notion?: string }
 export type Suggestion = { type: "reprendre" | "consolider"; matiereId: string; chapitreId: string; detail: string }
 
 export const ELEVE = { prenom: "Ellie", classe: "3e" }
@@ -11,12 +12,12 @@ export const MATIERES: Matiere[] = [
   { id: "maths", nom: "Maths", couleur: "bg-maths", chapitres: [
     { id: "m1", titre: "Nombres rationnels et fractions", etat: "acquis", fiches: 3, exercices: 12 },
     { id: "m2", titre: "Calcul littéral : développer, factoriser", etat: "en-cours", fiches: 2, exercices: 9 },
-    { id: "m3", titre: "Équations du premier degré", etat: "fragile", fiches: 2, exercices: 8 },
-    { id: "m4", titre: "Théorème de Pythagore", etat: "acquis", fiches: 1, exercices: 6 },
-    { id: "m5", titre: "Théorème de Thalès", etat: "en-cours", fiches: 1, exercices: 6 },
-    { id: "m6", titre: "Fonctions linéaires et affines", etat: "nouveau", fiches: 2, exercices: 7 },
+    { id: "m3", titre: "Équations du premier degré", etat: "fragile", fiches: 2, exercices: 8, notion: "equations-premier-degre-et-produits" },
+    { id: "m4", titre: "Théorème de Pythagore", etat: "acquis", fiches: 1, exercices: 6, notion: "parallelisme-triangles-pythagore" },
+    { id: "m5", titre: "Théorème de Thalès", etat: "en-cours", fiches: 1, exercices: 6, notion: "thales-triangles-semblables-trigonometrie" },
+    { id: "m6", titre: "Fonctions linéaires et affines", etat: "nouveau", fiches: 2, exercices: 7, notion: "fonctions-lineaires-affines" },
     { id: "m7", titre: "Statistiques : moyenne, médiane, étendue", etat: "nouveau", fiches: 1, exercices: 5 },
-    { id: "m8", titre: "Probabilités", etat: "nouveau", fiches: 1, exercices: 5 },
+    { id: "m8", titre: "Probabilités", etat: "nouveau", fiches: 1, exercices: 5, notion: "probabilites-experiences-simples" },
   ] },
   { id: "francais", nom: "Français", couleur: "bg-francais", chapitres: [
     { id: "f1", titre: "Accord du participe passé", etat: "fragile", fiches: 2, exercices: 6 },
