@@ -16,6 +16,7 @@ from jules.lecons import (
     charger_lecons,
     contient_la_reponse,
     lire_lecon,
+    nombres_en_lettres_vers_chiffres,
     verifier_reponse,
 )
 
@@ -389,6 +390,60 @@ def test_contient_la_reponse_qcm_texte_long():
 def test_contient_la_reponse_faux_pour_non_exercice():
     bloc = Bloc("texte", {"contenu": "10 cm"})
     assert contient_la_reponse("10 cm", bloc) is False
+
+
+# --- nombres_en_lettres_vers_chiffres : conversion, faux amis -----------------
+
+
+@pytest.mark.parametrize(
+    ("texte", "attendu"),
+    [
+        ("douze", "12"),
+        ("cent quarante-quatre", "144"),
+        ("vingt et un", "21"),
+        ("soixante-dix", "70"),
+        ("soixante et onze", "71"),
+        ("quatre-vingts", "80"),
+        ("quatre-vingt-un", "81"),
+        ("quatre-vingt-dix", "90"),
+        ("quatre-vingt-onze", "91"),
+        ("quatre-vingt-douze", "92"),
+        ("deux cent", "200"),
+        ("deux cents", "200"),
+        ("cent un", "101"),
+        ("trois cent quarante-cinq", "345"),
+        ("mille", "1000"),
+    ],
+)
+def test_nombres_en_lettres_vers_chiffres_conversions(texte, attendu):
+    assert nombres_en_lettres_vers_chiffres(texte) == attendu
+
+
+def test_nombres_en_lettres_vers_chiffres_dans_une_phrase():
+    assert (
+        nombres_en_lettres_vers_chiffres("La réponse est cent quarante-quatre (douze fois douze).")
+        == "La réponse est 144 (12 fois 12)."
+    )
+
+
+@pytest.mark.parametrize("texte", ["un exercice", "une question", "un peu"])
+def test_nombres_en_lettres_vers_chiffres_faux_ami_un_article(texte):
+    """« un »/« une » isoles (article) ne sont jamais convertis : residuel documente."""
+    assert nombres_en_lettres_vers_chiffres(texte) == texte
+
+
+def test_contient_la_reponse_detecte_le_nombre_en_lettres():
+    """Renforcement demande par la revue : contient_la_reponse convertit d'abord les lettres en chiffres."""
+    bloc = Bloc("exercice", {"forme": "nombre", "reponse": 144, "tolerance": 0.01})
+    assert contient_la_reponse("La réponse est cent quarante-quatre.", bloc) is True
+    assert contient_la_reponse("La réponse est 144 (12 × 12 = 144).", bloc) is True
+    assert contient_la_reponse("Continue de chercher.", bloc) is False
+
+
+def test_contient_la_reponse_ignore_un_article_isole():
+    """« un exercice » ne doit pas etre lu comme le nombre 1 (faux ami documente)."""
+    bloc = Bloc("exercice", {"forme": "nombre", "reponse": 1, "tolerance": 0.01})
+    assert contient_la_reponse("Regarde un exercice similaire.", bloc) is False
 
 
 # --- charger_lecons : priorite, isolation des erreurs, type de bibliotheque -
