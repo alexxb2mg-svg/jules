@@ -207,6 +207,7 @@ const Navigation = (() => {
     b.setAttribute("aria-expanded", "false");
     if (classe === "barre-matiere") b.append(decor("barre-pastille", ""));
     b.append(creer("span", "barre-libelle", libelle));
+    b.title = libelle;  // EX-212 : texte complet d'un titre affiche sur quelques lignes
     if (nombre !== undefined) b.append(creer("span", "barre-effectif", String(nombre)));
     b.append(decor("barre-chevron", "›"));
     if (courant) b.setAttribute("aria-current", "true");
@@ -220,16 +221,20 @@ const Navigation = (() => {
     const a = creer("a", "barre-entree barre-element");
     a.href = href;
     a.append(creer("span", "barre-libelle", libelle));
+    a.title = libelle;
     if (mention) a.append(creer("span", "barre-mention", mention));
     if (courant) a.setAttribute("aria-current", "true");
     li.appendChild(a);
     return li;
   }
 
-  function lienElement(rubrique, matiere, notion) {
+  // Exercices : une notion sans lecon n'a pas de support possible (studio.creer() la refuse) ; son lien ouvre
+  // /studio sur sa matiere, sans designer de notion (EX-209, spec-nav-fige-2).
+  function lienElement(rubrique, matiere, notion, avecLecon = true) {
     if (rubrique === "fiches") return `/#${encodeURIComponent(notion)}`;
-    const q = `?matiere=${encodeURIComponent(matiere)}&notion=${encodeURIComponent(notion)}`;
-    return PAGE_DE_RUBRIQUE[rubrique] + q;
+    const q = `?matiere=${encodeURIComponent(matiere)}`;
+    if (rubrique === "supports" && !avecLecon) return PAGE_DE_RUBRIQUE[rubrique] + q;
+    return PAGE_DE_RUBRIQUE[rubrique] + q + `&notion=${encodeURIComponent(notion)}`;
   }
 
   function choisirMatiere(rubrique, id) {
@@ -241,6 +246,7 @@ const Navigation = (() => {
 
   function titrePage(texte) {
     const titre = creer("h2", "barre-page-titre", texte);
+    titre.title = texte;
     titre.id = "barre-page-titre";
     titre.tabIndex = -1;
     return titre;
@@ -300,11 +306,16 @@ const Navigation = (() => {
       const courante = PAGE_DE_RUBRIQUE[vue.rubrique] === location.pathname ? etat.notion : null;
       for (const c of res.chapitres) {
         const bloc = creer("li", "barre-groupe");
-        bloc.appendChild(creer("h3", "barre-intertitre", c.titre));
+        // EX-212 : le chapitre en intertitre porte son effectif, comme les chapitres de Mes fiches.
+        const intertitre = creer("h3", "barre-intertitre");
+        intertitre.title = c.titre;
+        intertitre.append(creer("span", "barre-libelle", c.titre), creer("span", "barre-effectif", String(c.notions.length)));
+        bloc.appendChild(intertitre);
         const sous = creer("ul", "barre-liste");
         for (const n of c.notions) {
-          const mention = vue.rubrique === "supports" && !n.lecon ? "pas encore de leçon" : "";
-          sous.appendChild(ligneLien(n.titre, lienElement(vue.rubrique, vue.matiere, n.id), n.id === courante, mention));
+          const sansLecon = vue.rubrique === "supports" && !n.lecon;
+          const lien = lienElement(vue.rubrique, vue.matiere, n.id, !sansLecon);
+          sous.appendChild(ligneLien(n.titre, lien, n.id === courante, sansLecon ? "pas encore de leçon" : ""));
         }
         bloc.appendChild(sous);
         liste.appendChild(bloc);
