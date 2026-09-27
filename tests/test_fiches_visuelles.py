@@ -382,3 +382,10 @@ def test_une_barre_entre_deux_mots_n_est_pas_une_division(tmp_path, notions, bib
     brut = copy.deepcopy(fiche_valide())
     brut["blocs"][0]["jules"] = "Les mots and / but relient ; on dit il / elle selon le cas."
     lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_soustraction_s_ecrit_avec_le_signe_moins(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Le règne dure 1715 - 1643 = 72 ans."
+    with pytest.raises(ErreurFicheVisuelle, match="tiret"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)

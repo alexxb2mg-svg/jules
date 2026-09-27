@@ -234,7 +234,12 @@ def _verifier_variables(brut: Any, nom: str) -> dict[str, str]:
 _BARRE_DE_DIVISION = re.compile(r"(\S+)\s+/\s+(\S+)")
 
 
+_TIRET_EN_SOUSTRACTION = re.compile(r"\d - \d")
+
+
 def _verifier_division(texte: str, champ: str, ou: str) -> None:
+    if _TIRET_EN_SOUSTRACTION.search(texte):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : soustraction ecrite avec un tiret « - », ecrire « − »")
     # « m / V », « 10 / 2 », « (v2 − v1) / t » sont des divisions : un nombre d'un cote, ou deux lettres
     # de formule courtes. « and / but », « il / elle » ou deux vers cites sont des alternatives de mots.
     for gauche, droite in _BARRE_DE_DIVISION.findall(texte):

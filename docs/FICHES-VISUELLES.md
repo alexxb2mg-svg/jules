@@ -25,7 +25,7 @@ Une règle de la charte qui peut être contrôlée par le code l'est (validateur
 - **Cohérence avec la fiche v2** de la même notion : mêmes définitions, même piège principal,
   mêmes notations. La fiche v2 et le référentiel sont les sources de contenu.
 - **Les notations de l'élève**, celles de son cahier : la division s'écrit **÷** (`ρ = m ÷ V`), jamais
-  `/` ; la barre n'existe que dans une unité (m/s, g/cm³). La multiplication s'écrit **×**. Le
+  `/` ; la barre n'existe que dans une unité (m/s, g/cm³). La multiplication s'écrit **×**, la soustraction **−** (signe moins, jamais le tiret « - »). Le
   validateur refuse une barre de division dans le texte et dans les schémas.
 - **Exactitude** au niveau du programme : unités SI, notations officielles, chaque chiffre vérifié
   deux fois, arrondis justes. Aucune source ni URL inventée : seulement celles de la fiche v2 ou du
