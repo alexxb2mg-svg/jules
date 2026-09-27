@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from datetime import date, datetime, timedelta
 
-from jules.modules.epreuve import candidates, lire_resultats
+from jules.modules.epreuve import aide_detectee_dans, candidates, lire_resultats
 from jules.modules.rapport import donnees_du_jour, texte_rapport
 from jules.stockage import Message
 
@@ -157,3 +157,49 @@ def test_une_epreuve_par_jour_au_plus(tuteur):
     module = tuteur.module("epreuve")
     module.commencer()
     assert module.candidates() == []
+
+
+def test_aide_detectee_dans_formulations_explicites():
+    assert aide_detectee_dans(["Noté."]) is False
+    assert aide_detectee_dans(["Noté.", "En fait la réponse est 42."]) is True
+    assert aide_detectee_dans(["Un petit indice : regarde le théorème."]) is True
+    assert aide_detectee_dans(["Bravo pour tes efforts. Épreuve terminée."]) is False
+
+
+def test_epreuve_avec_aide_detectee_n_ecrit_pas_acquis(tuteur):
+    """Si Jules aide pendant l'epreuve (formulation explicite) AVANT le bilan final, le tenu devient
+    en_cours, jamais acquis, et l'evenement 'epreuve' garde une trace (aide_detectee)."""
+    preparer_notions_comprises(tuteur)
+    module = tuteur.module("epreuve")
+    lancee = module.commencer()
+
+    base = tuteur.llm.regle
+    etape = {"n": 0}
+
+    def regle(systeme, tours, modele):
+        if "bilan final d'une épreuve" in systeme:
+            return (
+                '{"resultats": [{"notion": "Mathématiques : Thalès", "tenu": true}, '
+                '{"notion": "Mathématiques : racine carrée", "tenu": false}]}'
+            )
+        if modele == "principal" and "prêt" not in tours[-1].texte:
+            etape["n"] += 1
+            if etape["n"] == 1:
+                return "En fait la réponse est 7. Question suivante."  # aide donnee ici, pas dans le bilan
+            return "Bravo pour tes efforts. Épreuve terminée."
+        return base(systeme, tours, modele)
+
+    tuteur.llm.regle = regle
+    tuteur.echanger(lancee["id"], "prêt")
+    tuteur.attendre_fond()
+    tuteur.echanger(lancee["id"], "Ma réponse : 7")
+    tuteur.attendre_fond()
+    tuteur.echanger(lancee["id"], "Ma réponse : 3")
+    tuteur.attendre_fond()
+
+    resultat = tuteur.stockage.evenements("epreuve")[0]["donnees"]
+    assert resultat["aide_detectee"] is True
+    statuts = {e["donnees"]["notion"]: e["donnees"] for e in tuteur.stockage.evenements("suivi")[:2]}
+    assert statuts["Thalès"]["statut"] == "en_cours"  # tenu=true mais aide detectee : pas acquis
+    assert statuts["Thalès"]["origine"] == "epreuve"
+    assert "Jules a aidé" in statuts["Thalès"]["resume"]
