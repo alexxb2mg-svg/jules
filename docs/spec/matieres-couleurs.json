@@ -1,0 +1,72 @@
+{
+  "_note": "Couleurs par matiere (EX-215). Ecrite par SPEC ; DEV ne la modifie pas. fond = tuile, texte = libelle sur la tuile, accent = pastille, bordure de la tuile active, fond de la fiche selectionnee (texte blanc). Seuils : texte/fond >= 4.5 ; blanc/accent >= 4.5 ; accent/fond et accent/fond de barre (#FBF8F1, papier du style Cahier) >= 3. '_neutre' = matiere absente de la table.",
+  "fond_barre": "#FBF8F1",
+  "chevron": "#7A7562",
+  "matieres": {
+    "mathematiques": {
+      "fond": "#E3ECF8",
+      "texte": "#123A6B",
+      "accent": "#2F66B0"
+    },
+    "francais": {
+      "fond": "#FCE8EC",
+      "texte": "#7A1428",
+      "accent": "#C0304D"
+    },
+    "histoire": {
+      "fond": "#F4EEFB",
+      "texte": "#4B2A77",
+      "accent": "#7A4DB3"
+    },
+    "geographie": {
+      "fond": "#E6F4EA",
+      "texte": "#1D5B30",
+      "accent": "#237239"
+    },
+    "physique-chimie": {
+      "fond": "#E2F4F6",
+      "texte": "#0F5560",
+      "accent": "#18727E"
+    },
+    "svt": {
+      "fond": "#EEF6DF",
+      "texte": "#3F5B12",
+      "accent": "#4A6E14"
+    },
+    "technologie": {
+      "fond": "#FFF1DC",
+      "texte": "#7A4300",
+      "accent": "#8F5200"
+    },
+    "arts-plastiques": {
+      "fond": "#FDEBE3",
+      "texte": "#7A2E0E",
+      "accent": "#C2521F"
+    },
+    "anglais": {
+      "fond": "#E8EAF9",
+      "texte": "#27307A",
+      "accent": "#4A55C2"
+    },
+    "education-musicale": {
+      "fond": "#FBE9F5",
+      "texte": "#6E1A58",
+      "accent": "#B0388F"
+    },
+    "histoire-des-arts": {
+      "fond": "#F6EEE3",
+      "texte": "#5E3B12",
+      "accent": "#9A6A2E"
+    },
+    "emc": {
+      "fond": "#E9EEF2",
+      "texte": "#27394A",
+      "accent": "#4F6B82"
+    },
+    "_neutre": {
+      "fond": "#EEEDF3",
+      "texte": "#1E1446",
+      "accent": "#6B6880"
+    }
+  }
+}

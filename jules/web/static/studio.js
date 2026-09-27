@@ -28,6 +28,7 @@
     support: null,           // support ouvert (Support.public())
     revisionsDisponibles: [],
     revision: null,          // { cartes, index }
+    sequenceNotions: 0,      // numero du dernier chargement de la liste demande (EX-216)
   };
 
   // --- utilitaires -----------------------------------------------------------
@@ -62,9 +63,11 @@
   // Un seul appel ; la page affiche la matiere renvoyee par le serveur et n'ecrase pas la memoire. Premiere visite
   // (ni adresse ni memoire) : « Choisis une matière », sans les notions de la matiere par defaut.
   async function chargerNotions(matiere, notionDemandee) {
+    const numero = ++etat.sequenceNotions;  // EX-216 : deux choix rapproches, seule la derniere reponse s'affiche
     $("notions-attente").classList.remove("cache");
     try {
       const r = await MS.api(MS.cheminMatiere("/api/eleve/studio/notions", matiere));
+      if (numero !== etat.sequenceNotions) return;
       etat.matieres = r.matieres || [];
       if (!matiere) {
         afficherChoixMatiere();
@@ -89,11 +92,12 @@
         bloc.focus({ preventScroll: true });
       }
     } catch (err) {
+      if (numero !== etat.sequenceNotions) return;
       $("notions").classList.remove("cache");
       $("notions-liste").innerHTML = "";
       $("notions-liste").appendChild(creer("p", "studio-erreur-ligne", MS.echapper(`Impossible de charger tes notions : ${err.message}`)));
     } finally {
-      $("notions-attente").classList.add("cache");
+      if (numero === etat.sequenceNotions) $("notions-attente").classList.add("cache");
     }
   }
 
@@ -125,12 +129,24 @@
   }
 
   function retourALaListe() {
+    fermerSupport();
+    $("catalogue-titre").focus();
+  }
+
+  function fermerSupport() {
     etat.support = null;
     $("support").classList.add("cache");
     $("support-erreur").classList.add("cache");
     $("accueil-studio").classList.remove("cache");
     marquerSupportActif();
-    $("catalogue-titre").focus();
+  }
+
+  // EX-216 : matiere choisie dans la barre (rubrique Exercices et supports) : la zone centrale passe sur cette
+  // matiere, sans rechargement ; la liste vient du cache de MS.api (aucun appel de plus). Un support ouvert est
+  // ferme : jamais deux matieres differentes a l'ecran. Le focus reste dans la barre.
+  function suivreLaBarre(id) {
+    if (etat.support) fermerSupport();
+    chargerNotions(id, null);
   }
 
   function afficherNotions(toutes) {
@@ -659,6 +675,7 @@
     const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
     Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
+    Navigation.surChoixMatiere(suivreLaBarre);
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;

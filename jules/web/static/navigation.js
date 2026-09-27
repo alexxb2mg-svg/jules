@@ -16,25 +16,26 @@ const Navigation = (() => {
     {
       titre: "Apprendre",
       entrees: [
-        { libelle: "Mes fiches", sousPages: "fiches", page: "/" },
-        { libelle: "Mes leçons", sousPages: "lecons", page: "/cours" },
+        { libelle: "Mes fiches", sousPages: "fiches", page: "/", icone: "F" },
+        { libelle: "Mes leçons", sousPages: "lecons", page: "/cours", icone: "L" },
       ],
     },
     {
       titre: "M'entraîner",
-      entrees: [{ libelle: "Exercices et supports", sousPages: "supports", page: "/studio" }],
+      entrees: [{ libelle: "Exercices et supports", sousPages: "supports", page: "/studio", icone: "E" }],
     },
     {
       titre: "Discuter",
-      entrees: [{ libelle: "Discuter avec Jules", href: "/discuter", page: "/discuter" }],
+      entrees: [{ libelle: "Discuter avec Jules", href: "/discuter", page: "/discuter", icone: "D" }],
     },
     {
       titre: "Mon espace",
-      entrees: [{ libelle: "Espace parent", href: "/parent", page: "/parent" }],
+      entrees: [{ libelle: "Espace parent", href: "/parent", page: "/parent", icone: "P" }],
     },
   ];
   const ID_BARRE = "barre-jules";
   const ID_BOUTON = "barre-jules-bouton";
+  const ID_REPLIER = "barre-jules-replier";
 
   // La liste de chaque rubrique a sous-pages : les trois chemins du cache de MS.api.
   const SOURCES = {
@@ -53,6 +54,7 @@ const Navigation = (() => {
     courante: null,   // matiere de depart des rubriques : celle de l'adresse, sinon la matiere retenue
     notion: null,     // notion ouverte dans la page (aria-current a l'etape 4)
     sequence: 0,      // la derniere demande d'affichage gagne (reponses arrivees dans le desordre)
+    ecouteurs: [],    // pages qui suivent la matiere choisie dans la barre (EX-216, surChoixMatiere)
   };
 
   function creer(balise, classe, texte) {
@@ -102,6 +104,9 @@ const Navigation = (() => {
 
   function entreeDom(entree, active, session) {
     const ligne = creer("li", "barre-ligne");
+    // Barre repliee (EX-207) : seule l'icone reste visible ; le libelle garde le nom accessible.
+    const icone = creer("span", "barre-icone", entree.icone);
+    icone.setAttribute("aria-hidden", "true");
     const libelle = creer("span", "barre-libelle", entree.libelle);
     let cible;
     if (entree.sousPages) {
@@ -111,12 +116,12 @@ const Navigation = (() => {
       cible.setAttribute("aria-expanded", "false");
       const chevron = creer("span", "barre-chevron", "›");
       chevron.setAttribute("aria-hidden", "true");
-      cible.append(libelle, chevron);
+      cible.append(icone, libelle, chevron);
       cible.addEventListener("click", () => ouvrirRubrique(entree.sousPages));
     } else {
       cible = creer("a", "barre-entree");
       cible.href = entree.href;
-      cible.append(libelle);
+      cible.append(icone, libelle);
     }
     if (entree === active) {
       cible.setAttribute("aria-current", "page");
@@ -207,6 +212,7 @@ const Navigation = (() => {
     b.setAttribute("aria-expanded", "false");
     if (classe === "barre-matiere") b.append(decor("barre-pastille", ""));
     b.append(creer("span", "barre-libelle", libelle));
+    b.title = libelle;  // EX-212 : texte complet d'un titre affiche sur quelques lignes
     if (nombre !== undefined) b.append(creer("span", "barre-effectif", String(nombre)));
     b.append(decor("barre-chevron", "›"));
     if (courant) b.setAttribute("aria-current", "true");
@@ -220,27 +226,53 @@ const Navigation = (() => {
     const a = creer("a", "barre-entree barre-element");
     a.href = href;
     a.append(creer("span", "barre-libelle", libelle));
+    a.title = libelle;
     if (mention) a.append(creer("span", "barre-mention", mention));
     if (courant) a.setAttribute("aria-current", "true");
     li.appendChild(a);
     return li;
   }
 
-  function lienElement(rubrique, matiere, notion) {
+  // Exercices : une notion sans lecon n'a pas de support possible (studio.creer() la refuse) ; son lien ouvre
+  // /studio sur sa matiere, sans designer de notion (EX-209, spec-nav-fige-2).
+  function lienElement(rubrique, matiere, notion, avecLecon = true) {
     if (rubrique === "fiches") return `/#${encodeURIComponent(notion)}`;
-    const q = `?matiere=${encodeURIComponent(matiere)}&notion=${encodeURIComponent(notion)}`;
-    return PAGE_DE_RUBRIQUE[rubrique] + q;
+    const q = `?matiere=${encodeURIComponent(matiere)}`;
+    if (rubrique === "supports" && !avecLecon) return PAGE_DE_RUBRIQUE[rubrique] + q;
+    return PAGE_DE_RUBRIQUE[rubrique] + q + `&notion=${encodeURIComponent(notion)}`;
   }
 
   function choisirMatiere(rubrique, id) {
+    const change = id !== etat.courante;
     etat.courante = id;
     MS.retenirMatiere(id);
     const suite = rubrique === "fiches" ? { etape: 3, rubrique, matiere: id } : { etape: 4, rubrique, matiere: id };
+    // EX-216 : sur /cours et /studio, la zone centrale suit la matiere choisie dans la barre (adresse ?matiere=,
+    // puis la page, qui lit sa liste dans le cache de MS.api) : jamais deux matieres differentes a l'ecran.
+    if (rubrique === rubriqueDeLaPage()) {
+      if (change) etat.notion = null;  // la notion de l'adresse appartenait a l'autre matiere
+      ecrireMatiereAdresse(id);
+      for (const ecouteur of etat.ecouteurs) ecouteur(id);
+    }
     afficher(suite, { utilisateur: true });
+  }
+
+  // Rubrique dont la page courante affiche la liste au centre (/cours : lecons, /studio : supports), sinon null.
+  function rubriqueDeLaPage() {
+    return Object.keys(PAGE_DE_RUBRIQUE).find((r) => PAGE_DE_RUBRIQUE[r] === location.pathname) || null;
+  }
+
+  // ?matiere=<id> sans rechargement (EX-216) ; une notion demandee par l'ancienne adresse ne vaut plus.
+  function ecrireMatiereAdresse(id) {
+    const p = new URLSearchParams(location.search);
+    p.set("matiere", id);
+    p.delete("notion");
+    history.replaceState(history.state, "", location.pathname + "?" + p.toString() + location.hash);
   }
 
   function titrePage(texte) {
     const titre = creer("h2", "barre-page-titre", texte);
+    titre.title = texte;
     titre.id = "barre-page-titre";
     titre.tabIndex = -1;
     return titre;
@@ -300,11 +332,16 @@ const Navigation = (() => {
       const courante = PAGE_DE_RUBRIQUE[vue.rubrique] === location.pathname ? etat.notion : null;
       for (const c of res.chapitres) {
         const bloc = creer("li", "barre-groupe");
-        bloc.appendChild(creer("h3", "barre-intertitre", c.titre));
+        // EX-212 : le chapitre en intertitre porte son effectif, comme les chapitres de Mes fiches.
+        const intertitre = creer("h3", "barre-intertitre");
+        intertitre.title = c.titre;
+        intertitre.append(creer("span", "barre-libelle", c.titre), creer("span", "barre-effectif", String(c.notions.length)));
+        bloc.appendChild(intertitre);
         const sous = creer("ul", "barre-liste");
         for (const n of c.notions) {
-          const mention = vue.rubrique === "supports" && !n.lecon ? "pas encore de leçon" : "";
-          sous.appendChild(ligneLien(n.titre, lienElement(vue.rubrique, vue.matiere, n.id), n.id === courante, mention));
+          const sansLecon = vue.rubrique === "supports" && !n.lecon;
+          const lien = lienElement(vue.rubrique, vue.matiere, n.id, !sansLecon);
+          sous.appendChild(ligneLien(n.titre, lien, n.id === courante, sansLecon ? "pas encore de leçon" : ""));
         }
         bloc.appendChild(sous);
         liste.appendChild(bloc);
@@ -458,16 +495,62 @@ const Navigation = (() => {
     return false;
   }
 
-  // Une page a choisi une matiere (liste « Choisis une matière » de /cours et /studio) : la barre en repart.
+  // Une page a choisi une matiere dans sa zone centrale (liste « Choisis une matière » de /cours et /studio) : la
+  // barre en repart et, symetrie d'EX-216, se place sur cette matiere dans la rubrique de la page (etape 4). La
+  // liste vient du cache de MS.api (meme cle que la page) : aucun appel de plus. Le focus reste dans la page.
   function suivreMatiere(id) {
     etat.courante = id;
+    const rubrique = rubriqueDeLaPage();
+    if (!rubrique || !etat.barre) return;
+    ecrireMatiereAdresse(id);
+    etat.notion = null;
+    afficher({ etape: 4, rubrique, matiere: id }).then(() => { if (etat.vue.etape > 0) ecrireFragment(etat.vue); });
   }
 
-  function fermer(bouton, barre, rendreFocus) {
+  // La page s'abonne au choix d'une matiere dans la barre (rubrique de la page) : elle recharge sa liste.
+  function surChoixMatiere(ecouteur) {
+    etat.ecouteurs.push(ecouteur);
+  }
+
+  // EX-207 : sous 900 px, tiroir ; a partir de 900 px, barre repliable en icones (etat dans localStorage).
+  const CLE_REPLI = "jules.nav.repliee";
+  const TIROIR = "(max-width: 899.98px)";
+
+  function lireRepli() {
+    try {
+      return localStorage.getItem(CLE_REPLI) === "true";
+    } catch (_) {
+      return false; // stockage indisponible : barre depliee
+    }
+  }
+
+  function ecrireRepli(repliee) {
+    try {
+      localStorage.setItem(CLE_REPLI, String(repliee)); // booleen seul : "true" ou "false"
+    } catch (_) {
+      /* stockage indisponible : l'etat ne survit pas au rechargement */
+    }
+  }
+
+  function appliquerRepli(replier, repliee) {
+    document.body.classList.toggle("barre-repliee", repliee);
+    replier.setAttribute("aria-expanded", String(!repliee));
+    replier.firstChild.textContent = repliee ? "»" : "«";
+  }
+
+  function ouvrir(bouton, barre) {
+    barre.classList.add("ouverte");
+    document.body.classList.add("barre-tiroir-ouvert");
+    bouton.setAttribute("aria-expanded", "true");
+  }
+
+  // A la fermeture du tiroir, le focus revient toujours au bouton ☰ (EX-207).
+  function fermer(bouton, barre) {
     if (!barre.classList.contains("ouverte")) return;
     barre.classList.remove("ouverte");
+    document.body.classList.remove("barre-tiroir-ouvert");
     bouton.setAttribute("aria-expanded", "false");
-    if (rendreFocus) bouton.focus();
+    bouton.focus();
   }
 
   // session : objet renvoye par MS.porte ; infos : /api/infos (seuls persona et prenom sont lus, EX-210).
@@ -507,29 +590,69 @@ const Navigation = (() => {
     zone.hidden = true;
     barre.append(menu, zone, creer("p", "barre-pied", prenom));
 
-    document.body.prepend(bouton, barre);
+    // A partir de 900 px : bouton de repli, hors du <nav> (la liste des entrees reste celle de la reference).
+    const replier = creer("button", "barre-replier");
+    replier.id = ID_REPLIER;
+    replier.type = "button";
+    replier.setAttribute("aria-controls", ID_BARRE);
+    replier.setAttribute("aria-label", "Libellés de la barre");
+    const fleche = creer("span", "", "«");
+    fleche.setAttribute("aria-hidden", "true");
+    replier.appendChild(fleche);
+
+    // Voile sous le tiroir ouvert : un clic en dehors ferme le tiroir sans agir sur la page dessous.
+    const voile = creer("div", "barre-voile");
+    voile.setAttribute("aria-hidden", "true");
+
+    document.body.prepend(bouton, replier, barre, voile);
     document.body.classList.add("avec-barre");
     Object.assign(etat, { barre, menu, zone });
+    appliquerRepli(replier, lireRepli());
 
     // EX-211 : titre d'onglet = nom de la persona - libelle de l'entree active.
     if (active) document.title = `${nomPersona} - ${active.libelle}`;
 
-    // Sous 900 px, la barre est un tiroir (le detail du tiroir est EX-207).
     bouton.addEventListener("click", () => {
-      const ouverte = barre.classList.toggle("ouverte");
-      bouton.setAttribute("aria-expanded", String(ouverte));
+      if (barre.classList.contains("ouverte")) fermer(bouton, barre);
+      else ouvrir(bouton, barre);
     });
+    replier.addEventListener("click", () => {
+      const repliee = !document.body.classList.contains("barre-repliee");
+      appliquerRepli(replier, repliee);
+      ecrireRepli(repliee);
+    });
+    // Fermetures du tiroir : Echap, clic en dehors, choix d'une entree feuille (lien). Une rubrique a
+    // sous-pages (<button>) ouvre une petite page : le tiroir reste ouvert.
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape") fermer(bouton, barre, barre.contains(document.activeElement));
+      if (ev.key === "Escape") fermer(bouton, barre);
     });
+    // Decision sur le chemin d'origine du clic (fige au debut de la distribution), pas sur le DOM au moment de
+    // la bulle : un vrai clic laisse afficher() remplacer la petite page (matiere, chapitre, retour) avant que
+    // l'evenement n'arrive ici, et la cible est alors detachee de la barre.
+    document.addEventListener("click", (ev) => {
+      if (!barre.classList.contains("ouverte")) return;
+      const chemin = ev.composedPath();
+      if (chemin.includes(bouton)) return;
+      const lien = chemin.some((n) => n instanceof Element && n.tagName === "A");
+      if (!chemin.includes(barre) || lien) fermer(bouton, barre);
+    });
+    // Passage au-dessus de 900 px tiroir ouvert : il n'y a plus de tiroir, on le referme sans voler le focus.
+    const tiroir = window.matchMedia(TIROIR);
+    const quitterTiroir = () => {
+      if (tiroir.matches || !barre.classList.contains("ouverte")) return;
+      barre.classList.remove("ouverte");
+      document.body.classList.remove("barre-tiroir-ouvert");
+      bouton.setAttribute("aria-expanded", "false");
+    };
+    if (tiroir.addEventListener) tiroir.addEventListener("change", quitterTiroir);
 
     // Point de depart (EX-209). Sur /cours et /studio, ?matiere= (clic explicite) l'emporte sur la memoire et sur
     // la matiere de #nav= ; seule la rubrique de #nav= est alors reprise.
-    const rubriqueDeLaPage = Object.keys(PAGE_DE_RUBRIQUE).find((r) => PAGE_DE_RUBRIQUE[r] === location.pathname);
+    const rubriquePage = rubriqueDeLaPage();
     const parametres = new URLSearchParams(location.search);
-    const matiereAdresse = rubriqueDeLaPage ? parametres.get("matiere") : null;
+    const matiereAdresse = rubriquePage ? parametres.get("matiere") : null;
     etat.courante = matiereAdresse || MS.matiereRetenue();
-    if (rubriqueDeLaPage) etat.notion = parametres.get("notion");
+    if (rubriquePage) etat.notion = parametres.get("notion");
 
     if (location.pathname === "/") {
       addEventListener("hashchange", () => { suivreNotionDeLAccueil(); });
@@ -549,5 +672,5 @@ const Navigation = (() => {
     afficher(vue).then(() => { if (etat.vue.etape > 0) ecrireFragment(etat.vue); });
   }
 
-  return { monter, suivreMatiere, RUBRIQUES };
+  return { monter, suivreMatiere, surChoixMatiere, RUBRIQUES };
 })();

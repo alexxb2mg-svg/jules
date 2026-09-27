@@ -1,0 +1,47 @@
+/* Couleurs par matiere (EX-215, docs/spec/NAVIGATION.md) : recopie a l'identique de
+   docs/spec/matieres-couleurs.json (table tenue par SPEC). Variables seulement, aucun selecteur de
+   composant ; charge avant navigation.css. L'accent n'est jamais une couleur de texte (fond, pastille,
+   bordure seulement) ; tout texte colore par matiere utilise la variable -texte.
+   Verifie par tests/test_matieres_couleurs.py (valeurs, contrastes, usage de l'accent). */
+:root {
+  --matiere-mathematiques-fond: #E3ECF8;
+  --matiere-mathematiques-texte: #123A6B;
+  --matiere-mathematiques-accent: #2F66B0;
+  --matiere-francais-fond: #FCE8EC;
+  --matiere-francais-texte: #7A1428;
+  --matiere-francais-accent: #C0304D;
+  --matiere-histoire-fond: #F4EEFB;
+  --matiere-histoire-texte: #4B2A77;
+  --matiere-histoire-accent: #7A4DB3;
+  --matiere-geographie-fond: #E6F4EA;
+  --matiere-geographie-texte: #1D5B30;
+  --matiere-geographie-accent: #237239;
+  --matiere-physique-chimie-fond: #E2F4F6;
+  --matiere-physique-chimie-texte: #0F5560;
+  --matiere-physique-chimie-accent: #18727E;
+  --matiere-svt-fond: #EEF6DF;
+  --matiere-svt-texte: #3F5B12;
+  --matiere-svt-accent: #4A6E14;
+  --matiere-technologie-fond: #FFF1DC;
+  --matiere-technologie-texte: #7A4300;
+  --matiere-technologie-accent: #8F5200;
+  --matiere-arts-plastiques-fond: #FDEBE3;
+  --matiere-arts-plastiques-texte: #7A2E0E;
+  --matiere-arts-plastiques-accent: #C2521F;
+  --matiere-anglais-fond: #E8EAF9;
+  --matiere-anglais-texte: #27307A;
+  --matiere-anglais-accent: #4A55C2;
+  --matiere-education-musicale-fond: #FBE9F5;
+  --matiere-education-musicale-texte: #6E1A58;
+  --matiere-education-musicale-accent: #B0388F;
+  --matiere-histoire-des-arts-fond: #F6EEE3;
+  --matiere-histoire-des-arts-texte: #5E3B12;
+  --matiere-histoire-des-arts-accent: #9A6A2E;
+  --matiere-emc-fond: #E9EEF2;
+  --matiere-emc-texte: #27394A;
+  --matiere-emc-accent: #4F6B82;
+  --matiere-_neutre-fond: #EEEDF3;
+  --matiere-_neutre-texte: #1E1446;
+  --matiere-_neutre-accent: #6B6880;
+  --matiere-chevron: #7A7562;
+}
