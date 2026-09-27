@@ -20,7 +20,7 @@ génération sans IA (production ouverte, figure, programme).
 | calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
 | multiples-diviseurs-division-euclidienne | oui | A | division euclidienne (nombre × 2 : quotient, reste → deux exercices), critères (choix), diviseurs d'un nombre (texte_court liste ?) | | à faire | « liste de diviseurs » = B (brique liste d'entiers) ou choix multiple |
 | nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** | modèle du pattern |
-| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | | à faire | réutiliser `couple_premiers_entre_eux`, `decomposer` |
+| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | session fractions | **fait** | réutilisé `couple_premiers_entre_eux`, `decomposer` ; tirage filtré (`collision`) sur `pgcd` pour que le PGCD n'apparaisse pas dans le développement de a et b cité par l'indice `etape` |
 | problemes-divisibilite | oui | A | engrenages/PPCM (nombre), conjonction de phénomènes (nombre) | | à faire | brique PPCM à ajouter dans tirage/format |
 
 ## Calcul littéral et équations
