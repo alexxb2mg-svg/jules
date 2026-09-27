@@ -14,7 +14,7 @@ génération sans IA (production ouverte, figure, programme).
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| ecritures-et-comparaison-nombres | oui | A | comparer (choix), ranger (ordre), fraction↔décimal (nombre) | | à faire | |
+| ecritures-et-comparaison-nombres | oui | A | ranger (ordre), fraction_decimal (nombre ; décimal → fraction irréductible au palier 3), encadrer (choix multiple), abscisse (nombre, fraction irréductible) | session 2 | PR ouverte | ordre de grandeur non couvert (raisonnement ouvert) ; indices en « 7 ÷ 8 », jamais « 7/8 » (lu comme la réponse) |
 | puissances-notation-scientifique | oui | A | calculer aⁿ×aᵐ (nombre, forme puissance ?), écriture scientifique (nombre forme scientifique), ordre de grandeur (choix) | | à faire | vérifier que `forme: scientifique` lit « 3,2 × 10⁴ » ; sinon C |
 | racine-carree | oui | A | carrés parfaits (nombre), encadrer √n (choix/ordre), équation x² = a (choix des solutions) | | à faire | |
 | calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
