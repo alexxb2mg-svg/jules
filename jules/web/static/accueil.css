@@ -105,12 +105,17 @@
    "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
 .bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
 .bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
-.bloc-schema .t:not([fill])  { font-family: inherit; font-size: 0.875rem; fill: #1a1a18; }
-.bloc-schema .ts:not([fill]) { font-family: inherit; font-size: 0.75rem; fill: #5f5e5a; }
-.bloc-schema .th:not([fill]) { font-family: inherit; font-size: 0.875rem; fill: #1a1a18; font-weight: 500; }
+.bloc-schema .t { font-family: inherit; font-size: 0.875rem; }
+.bloc-schema .t:not([fill]) { fill: #1a1a18; }
+.bloc-schema .ts { font-family: inherit; font-size: 0.75rem; }
+.bloc-schema .ts:not([fill]) { fill: #5f5e5a; }
+.bloc-schema .th { font-family: inherit; font-size: 0.875rem; font-weight: 500; }
+.bloc-schema .th:not([fill]) { fill: #1a1a18; }
 /* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
-.bloc-schema .tl:not([fill]) { font-family: inherit; font-size: 1.25rem; fill: #1a1a18; font-weight: 500; }
-.bloc-schema .tx:not([fill]) { font-family: inherit; font-size: 1.75rem; fill: #1a1a18; font-weight: 600; }
+.bloc-schema .tl { font-family: inherit; font-size: 1.25rem; font-weight: 500; }
+.bloc-schema .tl:not([fill]) { fill: #1a1a18; }
+.bloc-schema .tx { font-family: inherit; font-size: 1.75rem; font-weight: 600; }
+.bloc-schema .tx:not([fill]) { fill: #1a1a18; }
 /* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
 .bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
 .bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
