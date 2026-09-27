@@ -177,7 +177,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 
 **Le bilan qui souffle une question.** Le bilan du soir dit ce qui a été travaillé et ce qui bloque. Il propose aussi au parent une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice soi-même (« Explique-moi comment tu sais qu'un nombre est premier »). C'est le moyen le moins cher de remettre un adulte dans la boucle ; l'essai y consacre son chapitre VIII.
 
-**Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules propose, quelques jours après (3 jours par défaut), une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours, et le bilan du soir le dit au parent (`jules/modules/epreuve.py`). Ce n'est pas une étude scientifique, mais c'est le bon critère.
+**Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules propose, quelques jours après (3 jours par défaut), une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours, et le bilan du soir le dit au parent (`jules/modules/epreuve.py`). Ce n'est pas une étude scientifique, mais c'est le bon critère. Protocole détaillé (délais, détection d'aide, limites) : `docs/EPREUVE-PROTOCOLE.md`.
 
 ## Ce que Jules ne fait pas encore
 

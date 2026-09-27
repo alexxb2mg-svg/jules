@@ -35,6 +35,7 @@ from jules.lecons import (
     verifier_reponse,
 )
 from jules.modules.base import Module
+from jules.modules.suivi import dernier_statut, evenement_suivi
 from jules.stockage import Conversation, Message
 
 journal = logging.getLogger("jules.cours")
@@ -165,16 +166,14 @@ class Brique(Module):
 
     # --- parcours ------------------------------------------------------------
     def _derniers_statuts(self) -> dict[tuple[str, str], str]:
-        """(matiere, notion) en casefold -> dernier statut connu (le plus recent d'abord)."""
-        statuts: dict[tuple[str, str], str] = {}
-        for ev in self.tuteur.stockage.evenements("suivi", limite=2000):
-            d = ev["donnees"]
-            if not d.get("notion") or not d.get("matiere"):
-                continue
-            cle = (str(d["matiere"]).casefold(), str(d["notion"]).casefold())
-            if cle not in statuts and d.get("statut") in STATUTS_CONNUS:
-                statuts[cle] = d["statut"]
-        return statuts
+        """(matiere, notion) en casefold -> statut retenu (voir jules.modules.suivi.dernier_statut :
+        'acquis' n'est retrograde que par une origine qui reprend directement la notion)."""
+        evenements = self.tuteur.stockage.evenements("suivi", limite=2000)
+        return {
+            cle: ev["donnees"]["statut"]
+            for cle, ev in dernier_statut(evenements).items()
+            if ev["donnees"].get("statut") in STATUTS_CONNUS
+        }
 
     def parcours(self, matiere_id: str | None = None) -> dict[str, Any]:
         cat = self.notions_catalogue
@@ -324,7 +323,14 @@ class Brique(Module):
         )
         self.tuteur.stockage.ajouter_evenement(
             "suivi",
-            {"matiere": nom_matiere, "notion": titre_notion, "statut": statut, "resume": resume, "titre": lecon.titre},
+            evenement_suivi(
+                matiere=nom_matiere,
+                notion=titre_notion,
+                statut=statut,
+                resume=resume,
+                titre=lecon.titre,
+                origine="cours",
+            ),
             etat["conversation"],
         )
 
