@@ -28,7 +28,7 @@ génération sans IA (production ouverte, figure, programme).
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
 | developper-factoriser-reduire | oui | A | développer (expression), réduire (expression), factoriser (expression), identité remarquable (expression) | | à faire | le correcteur compare des expressions équivalentes : vérifier qu'une factorisation attendue n'accepte pas la forme développée (sinon C : critère « forme factorisée ») |
-| equations-premier-degre-et-produits | oui | A | ax+b=c (nombre), ax+b=cx+d (nombre forme fraction), produit nul (choix des solutions), x²=a (choix) | | à faire | solutions multiples = choix, ou B (brique « ensemble de nombres ») |
+| equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | PR ouverte | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
 | problemes-mise-en-equation | oui | A | âge, périmètre, prix (nombre) ; choisir la bonne équation (choix) | | à faire | habillage : personnages ✔, articles ✔ |
 
 ## Statistiques et probabilités
@@ -81,8 +81,9 @@ génération sans IA (production ouverte, figure, programme).
 ## Briques à créer (recensées ci-dessus)
 
 - `tirage.py` : PPCM, série de valeurs entières (n valeurs dans un intervalle, moyenne entière ou non).
-- `format_fr.py` : série « 12 ; 15 ; 9 », expression en x (« 3x − 2 », « −x + 5 »), puissance
+- `format_fr.py` : série « 12 ; 15 ; 9 », puissance
   (« 10⁴ »), écriture scientifique.
+- ~~expression en x~~ : fait dans `algebre.py` (session 2).
 - `habillage.py` : urne (couleurs, effectifs), tarifs (A/B), figures décrites (triangle ABC, longueurs).
 - Correcteur : rien d'identifié pour l'instant (la tolérance d'arrondi `reponse.tolerance` existe déjà).
 
