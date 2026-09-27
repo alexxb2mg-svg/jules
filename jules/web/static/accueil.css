@@ -48,8 +48,8 @@
 .bloc-formule { display: flex; align-items: center; gap: 20px 36px; flex-wrap: wrap; }
 .formule-expression { font-size: calc(2.625rem * var(--adapt-echelle-texte, 1)); font-family: Cambria, Georgia, serif; }
 /* Formule longue (une phrase en mots, courante au CM1) : plus petite, pour tenir sur une ligne. */
-.formule-expression.longue { font-size: 1.75rem; }
-.formule-expression.tres-longue { font-size: 1.375rem; }
+.formule-expression.longue { font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); }
+.formule-expression.tres-longue { font-size: calc(1.375rem * var(--adapt-echelle-texte, 1)); }
 .formule-termes div { margin: 10px 0; padding-left: 14px; border-left: 4px solid; }
 
 /* carte mentale */
@@ -110,9 +110,9 @@
 .bloc-schema .th { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
 .bloc-schema .th:not([fill]) { fill: #1a1a18; }
 /* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
-.bloc-schema .tl { font-family: inherit; font-size: 1.25rem; font-weight: 500; }
+.bloc-schema .tl { font-family: inherit; font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
 .bloc-schema .tl:not([fill]) { fill: #1a1a18; }
-.bloc-schema .tx { font-family: inherit; font-size: 1.75rem; font-weight: 600; }
+.bloc-schema .tx { font-family: inherit; font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); font-weight: 600; }
 .bloc-schema .tx:not([fill]) { fill: #1a1a18; }
 /* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
 .bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
