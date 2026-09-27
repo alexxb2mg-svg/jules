@@ -16,6 +16,7 @@ from jules.briques import classe_brique
 from jules.composition import Profil, assembler, charger_profil
 from jules.config import Config
 from jules.extensions import charger_extensions, modules_des_extensions
+from jules.leviers import charger_leviers, leviers_css, leviers_resolus
 from jules.llm.base import MoteurLLM, Tour
 from jules.modules.base import Module, Tache
 from jules.persona import Persona, charger_persona
@@ -218,8 +219,30 @@ class Tuteur:
     def taches(self) -> list[Tache]:
         return [t for m in self.modules for t in m.taches()]
 
+    # --- adaptations (docs/spec/ADAPTATIONS-LOT2.md) ------------------------
+    def valeurs_leviers(self) -> dict[str, Any]:
+        """Valeur de chaque levier regle pour l'eleve (identifiant -> valeur).
+
+        Point de branchement de la combinaison des amenagements et des preferences du parent
+        (EX-104, EX-108), pas encore livree : aucun levier n'est regle, tout reste neutre.
+        """
+        return {}
+
+    def leviers_et_css(self) -> tuple[dict[str, Any], dict[str, str]]:
+        """`infos.leviers` (valeurs brutes des leviers regles, non neutres) et `infos.leviers_css`
+        (variables CSS derivees de ces valeurs, EX-105). Vides quand tout est neutre."""
+        try:
+            declares = charger_leviers()
+            resolus = leviers_resolus(declares, self.valeurs_leviers())
+            return resolus, leviers_css(declares, resolus)
+        except Exception:
+            # Une declaration de levier cassee ne doit pas empecher l'eleve de travailler : rendu neutre.
+            journal.exception("Leviers illisibles, rendu neutre")
+            return {}, {}
+
     def infos_interface(self) -> dict[str, Any]:
         infos: dict[str, Any] = {"persona": self.persona().publique(), "prenom": self.profil().prenom}
+        infos["leviers"], infos["leviers_css"] = self.leviers_et_css()
         for module in self.modules:
             infos.update(module.infos_interface())
         return infos

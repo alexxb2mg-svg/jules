@@ -3,7 +3,7 @@
 
 .accueil-appli { display: flex; height: 100%; }
 .bouton-panneau {
-  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: 0.875rem;
+  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1));
   color: var(--texte); display: none; align-items: center; gap: 6px; position: fixed; top: 10px; left: 10px; z-index: 25;
 }
 
@@ -12,32 +12,26 @@
   width: 240px; flex-shrink: 0; border-right: 1px solid var(--bord); background: #FAF9FF;
   padding: 18px 12px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto;
 }
-.rail .marque { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.125rem; margin-bottom: 16px; }
+.rail .marque { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); margin-bottom: 16px; }
 .rail .marque img { width: 36px; height: 36px; }
-.rail-lien {
-  display: block; padding: 10px 12px; border-radius: 10px; color: var(--texte); text-decoration: none;
-  margin-bottom: 2px; font-weight: 500;
-}
-.rail-lien:hover { background: var(--p-bulle-bot); }
-.rail-lien.actif { background: var(--p-principale); color: #FFFFFF; }
 .rail-notions { margin-top: 18px; display: flex; flex-direction: column; gap: 2px; }
-.rail-notions h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .06em; color: var(--gris); margin: 14px 4px 6px; }
+.rail-notions h4 { font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); text-transform: uppercase; letter-spacing: .06em; color: var(--gris); margin: 14px 4px 6px; }
 .rail-notions button {
   display: block; width: 100%; text-align: left; background: none; border: none; border-radius: 10px;
-  padding: 9px 12px; color: var(--texte); font: inherit; font-size: 0.9375rem; line-height: 1.35;
+  padding: 9px 12px; color: var(--texte); font: inherit; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); line-height: 1.35;
 }
 .rail-notions button:hover, .rail-notions button.actif { background: var(--p-bulle-bot); }
 .rail-notions button.actif { color: var(--p-principale); font-weight: 600; }
 
 /* --- centre : la fiche --- */
 .fiche-zone { flex: 1; min-width: 0; overflow-y: auto; padding: 32px 48px 160px; }
-.fiche-vide { max-width: 700px; margin: 60px auto; text-align: center; color: var(--gris); font-size: 1.125rem; }
+.fiche-vide { max-width: 700px; margin: 60px auto; text-align: center; color: var(--gris); font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); }
 .fiche { max-width: 880px; margin: 0 auto; }
-.fiche-fil { font-size: 0.9375rem; color: var(--gris); margin: 0; }
-.fiche-titre, #fiche-titre { font-family: var(--police-titre); font-size: 2.25rem; line-height: 1.15; margin: 8px 0 12px; text-wrap: balance; }
-.fiche-avertissement { background: #FFF3E0; border-left: 4px solid #EF6C00; padding: 8px 12px; border-radius: 8px; margin: 0 0 18px; font-size: 0.9375rem; }
+.fiche-fil { font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); color: var(--gris); margin: 0; }
+.fiche-titre, #fiche-titre { font-family: var(--police-titre); font-size: calc(2.25rem * var(--adapt-echelle-texte, 1)); line-height: 1.15; margin: 8px 0 12px; text-wrap: balance; }
+.fiche-avertissement { background: #FFF3E0; border-left: 4px solid #EF6C00; padding: 8px 12px; border-radius: 8px; margin: 0 0 18px; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); }
 .fiche-attendus { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 32px; }
-.fiche-attendu { background: var(--p-bulle-bot); border: 1px solid var(--bord); color: var(--p-principale); border-radius: 18px; padding: 7px 14px; font-size: 0.9375rem; line-height: 1.4; }
+.fiche-attendu { background: var(--p-bulle-bot); border: 1px solid var(--bord); color: var(--p-principale); border-radius: 18px; padding: 7px 14px; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); line-height: 1.4; }
 .fiche-attendu b { margin-right: 4px; }
 
 .fiche-blocs { display: flex; flex-direction: column; gap: 28px; }
@@ -47,15 +41,15 @@
 }
 .fiche-bloc:hover { border-color: #B7C8DE; }
 .fiche-bloc.actif { border-color: var(--p-principale); box-shadow: 0 0 0 3px var(--p-bulle-bot); }
-.fiche-bloc h2 { font-size: 1.375rem; font-weight: 700; color: var(--p-principale); margin: 0 0 18px; }
-.fiche-sources { color: var(--gris); font-size: 0.8125rem; line-height: 1.5; margin-top: 32px; }
+.fiche-bloc h2 { font-size: calc(1.375rem * var(--adapt-echelle-texte, 1)); font-weight: 700; color: var(--p-principale); margin: 0 0 18px; }
+.fiche-sources { color: var(--gris); font-size: calc(0.8125rem * var(--adapt-echelle-texte, 1)); line-height: 1.5; margin-top: 32px; }
 
 /* bloc formule */
 .bloc-formule { display: flex; align-items: center; gap: 20px 36px; flex-wrap: wrap; }
-.formule-expression { font-size: 2.625rem; font-family: Cambria, Georgia, serif; }
+.formule-expression { font-size: calc(2.625rem * var(--adapt-echelle-texte, 1)); font-family: Cambria, Georgia, serif; }
 /* Formule longue (une phrase en mots, courante au CM1) : plus petite, pour tenir sur une ligne. */
-.formule-expression.longue { font-size: 1.75rem; }
-.formule-expression.tres-longue { font-size: 1.375rem; }
+.formule-expression.longue { font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); }
+.formule-expression.tres-longue { font-size: calc(1.375rem * var(--adapt-echelle-texte, 1)); }
 .formule-termes div { margin: 10px 0; padding-left: 14px; border-left: 4px solid; }
 
 /* carte mentale */
@@ -70,7 +64,7 @@
 .curseur-bloc { margin-top: 12px; }
 .curseur-bloc label { display: block; font-weight: 600; margin-bottom: 4px; }
 .curseur-bloc input[type=range] { width: 100%; }
-.lecture-graphe { margin-top: 14px; background: #F6F8FB; border-radius: 10px; padding: 12px 14px; font-size: 1rem; line-height: 1.5; min-height: 1.5em; }
+.lecture-graphe { margin-top: 14px; background: #F6F8FB; border-radius: 10px; padding: 12px 14px; font-size: calc(1rem * var(--adapt-echelle-texte, 1)); line-height: 1.5; min-height: 1.5em; }
 
 /* methode en etapes */
 .methode-etapes { display: flex; flex-direction: column; gap: 12px; padding: 0; margin: 0; list-style: none; }
@@ -101,24 +95,24 @@
 
 /* renfort */
 .renfort-tuiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
-.renfort-tuile { border: 1px dashed #B7C3D3; border-radius: 12px; padding: 18px 12px; text-align: center; color: #4A5566; font-size: 1rem; }
-.renfort-tuile .icone { font-size: 1.5rem; display: block; margin-bottom: 6px; }
+.renfort-tuile { border: 1px dashed #B7C3D3; border-radius: 12px; padding: 18px 12px; text-align: center; color: #4A5566; font-size: calc(1rem * var(--adapt-echelle-texte, 1)); }
+.renfort-tuile .icone { font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); display: block; margin-bottom: 6px; }
 .renfort-tuile small { color: var(--gris); display: block; margin-top: 4px; }
 
 /* schema : SVG nettoye par le code (jules/svg_sur.py), avec les classes du systeme de design
    "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
 .bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
 .bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
-.bloc-schema .t { font-family: inherit; font-size: 0.875rem; }
+.bloc-schema .t { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); }
 .bloc-schema .t:not([fill]) { fill: #1a1a18; }
-.bloc-schema .ts { font-family: inherit; font-size: 0.75rem; }
+.bloc-schema .ts { font-family: inherit; font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); }
 .bloc-schema .ts:not([fill]) { fill: #5f5e5a; }
-.bloc-schema .th { font-family: inherit; font-size: 0.875rem; font-weight: 500; }
+.bloc-schema .th { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
 .bloc-schema .th:not([fill]) { fill: #1a1a18; }
 /* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
-.bloc-schema .tl { font-family: inherit; font-size: 1.25rem; font-weight: 500; }
+.bloc-schema .tl { font-family: inherit; font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
 .bloc-schema .tl:not([fill]) { fill: #1a1a18; }
-.bloc-schema .tx { font-family: inherit; font-size: 1.75rem; font-weight: 600; }
+.bloc-schema .tx { font-family: inherit; font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); font-weight: 600; }
 .bloc-schema .tx:not([fill]) { fill: #1a1a18; }
 /* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
 .bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
@@ -173,7 +167,7 @@
 .bloc-schema .c-red > .ts, .bloc-schema .c-red > text.ts { fill: #A32D2D; }
 .bloc-schema .c-red > .t,  .bloc-schema .c-red > text.t  { fill: #791F1F; }
 
-.jules-comment { font-size: 1rem; line-height: 1.5; color: var(--p-principale); margin-top: 18px; font-style: italic; }
+.jules-comment { font-size: calc(1rem * var(--adapt-echelle-texte, 1)); line-height: 1.5; color: var(--p-principale); margin-top: 18px; font-style: italic; }
 
 /* --- Jules : bulles flottantes en bas a droite --- */
 .jules-bulles {
@@ -184,7 +178,7 @@
 .bulles-pile { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
 .bulle-jules {
   background: rgba(255,255,255,0.97); backdrop-filter: blur(6px); border: 1px solid rgba(31,78,140,0.25);
-  border-radius: 16px 16px 4px 16px; padding: 12px 15px; font-size: 1rem; line-height: 1.5;
+  border-radius: 16px 16px 4px 16px; padding: 12px 15px; font-size: calc(1rem * var(--adapt-echelle-texte, 1)); line-height: 1.5;
   box-shadow: 0 4px 16px rgba(20,36,59,0.12); max-width: 100%;
 }
 .bulle-jules { cursor: pointer; animation: bulle-entree .2s ease-out; }
@@ -194,7 +188,7 @@
 .jules-pied { display: flex; justify-content: flex-end; }
 .avatar-jules {
   width: 50px; height: 50px; border-radius: 50%; background: var(--p-principale); color: #FFFFFF; border: none;
-  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.25rem;
+  display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: calc(1.25rem * var(--adapt-echelle-texte, 1));
   box-shadow: 0 4px 14px rgba(31,78,140,0.35);
 }
 
@@ -208,10 +202,10 @@
 .chat-flottant.ouvert { display: flex; }
 .chat-flottant-tete {
   display: flex; justify-content: space-between; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--bord);
-  font-size: 0.8125rem; color: var(--gris);
+  font-size: calc(0.8125rem * var(--adapt-echelle-texte, 1)); color: var(--gris);
 }
 .chat-flottant-tete strong { color: var(--texte); }
-.chat-flottant-actions .rond { width: 30px; height: 30px; font-size: 0.9375rem; background: none; }
+.chat-flottant-actions .rond { width: 30px; height: 30px; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); background: none; }
 .chat-flottant-corps { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 
 /* --- responsive : tablette < 1024px --- */
@@ -225,7 +219,7 @@
   .rail.ouvert { transform: none; }
   .fiche-zone { padding: 64px 16px 160px; }
   .fiche-bloc { padding: 20px 18px; }
-  .fiche-titre, #fiche-titre { font-size: 1.875rem; }
+  .fiche-titre, #fiche-titre { font-size: calc(1.875rem * var(--adapt-echelle-texte, 1)); }
   .bloc-graphe { grid-template-columns: 1fr; }
   .bloc-piege { grid-template-columns: 1fr; }
   .jules-bulles, .chat-flottant { right: 12px; width: min(320px, calc(100vw - 24px)); }
@@ -241,3 +235,13 @@
 .bloc-schema .c-green > .tl, .bloc-schema .c-green > .tx { fill: #27500A; }
 .bloc-schema .c-amber > .tl, .bloc-schema .c-amber > .tx { fill: #633806; }
 .bloc-schema .c-red > .tl, .bloc-schema .c-red > .tx { fill: #791F1F; }
+
+/* --- barre commune (navigation.css) : le panneau des notions et son bouton se placent a cote d'elle --- */
+@media (min-width: 900px) and (max-width: 1024px) {
+  body.avec-barre .bouton-panneau { left: calc(var(--barre-largeur) + 10px); }
+  body.avec-barre .rail { left: var(--barre-largeur); }
+}
+@media (max-width: 899.98px) {
+  body.avec-barre .bouton-panneau { top: 0.375rem; left: 7.5rem; }
+  body.avec-barre .rail { top: 3.5rem; }
+}

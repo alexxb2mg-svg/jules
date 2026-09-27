@@ -41,7 +41,7 @@ autorisée, une règle de combinaison, un canal (affichage CSS, consigne au mod�
 | `phrases-courtes` | consigne | non | non / oui (≤ 15 mots, départ FALC) | ou | usage (FALC) |
 | `reperes-rang-chiffres` | CSS + outils | non | non / oui (unités, dizaines, centaines) | ou, conflit §4 | usage (PAP, libellé exact) |
 | `surlignage-mots-cles` | consigne + CSS | non | non / oui | ou, conflit §4 | usage (PAP) |
-| `temps-majore` | JS (modes épreuve, contrôle) | 1 | **[en attente collecte]** | max | droit, à re-sourcer |
+| `temps-majore` | — | — | — | — | **reporté au lot 3** (source juridique à reprendre, voir `LOT3-A-TRAITER.md`) ; aucun fichier au lot 2 |
 
 Exclus du lot 2 : **coloration syllabique** (il faut un découpage syllabique fiable du
 français : chantier à part, lot 3) et **dictée** (hors périmètre, lot 1).
@@ -63,7 +63,7 @@ Seuls les items sur lesquels un logiciel peut agir sont repris.
 | Id | Collège (p. 7-8) | Élémentaire | Leviers réglés |
 |---|---|---|---|
 | `supports-aeres-agrandis` | « Proposer des supports écrits aérés et agrandis (exemple : ARIAL14) » p. 7 | « Agrandir les formats des supports écrits (A 3) » p. 4 | espacement-lettres, espacement-mots, interligne, taille-texte, longueur-ligne |
-| `temps-majore` | « Accorder un temps majoré » p. 7 | « Accorder un temps majoré » p. 4 | temps-majore **[en attente collecte]** |
+| `temps-majore` | « Accorder un temps majoré » p. 7 | « Accorder un temps majoré » p. 4 | **reporté au lot 3** : aucun fichier d'aménagement au lot 2 |
 | `limiter-quantite-ecrit` | « Limiter la quantité d'écrit (recours possible aux QCM, exercices à trous, schémas ...) » p. 7 | « Diminuer la quantité d'écrit sur chaque feuille » p. 5 | densite = un exercice |
 | `surligner-mots-cles` | « Surligner les mots-clés ou nouveaux » p. 8 (histoire-géographie) | « Surligner des mots clés /passages importants pour faciliter la lecture de l'élève » p. 4 | surlignage-mots-cles |
 | `lecture-oralisee` | aucun item : « Autres aménagements » | « Proposer à l'élève une lecture oralisée (enseignant ou autre élève) ou une écoute audio des textes supports de la séance » p. 4 | lecture-vocale = proposée |
@@ -90,8 +90,8 @@ Préférences hors PAP (réglées par le parent sans aménagement) : `police`, `
 
 ## 5. Exigences
 
-- **EX-101** — Chaque levier est déclaré une seule fois (fichier sous `adaptations/leviers/`)
-  avec les champs du §2. *Vérification* : test qui charge tous les leviers et contrôle les
+- **EX-101** — Chaque levier du §2, **sauf `temps-majore` (reporté au lot 3)**, est déclaré une
+  seule fois (fichier sous `adaptations/leviers/`, soit 13 fichiers) avec les champs du §2. *Vérification* : test qui charge tous les leviers et contrôle les
   champs, la valeur neutre dans la plage, et une règle de combinaison connue.
 - **EX-102** — Avec tous les leviers à leur valeur neutre, le rendu est identique à
   aujourd'hui. *Vérification* : captures avant/après identiques (méthode d'EX-010).

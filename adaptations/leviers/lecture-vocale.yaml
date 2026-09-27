@@ -1,0 +1,12 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: lecture-vocale
+canal: js
+type: choix
+neutre: absente
+plage: [absente, proposee, automatique]
+combinaison: max  # dans l'ordre de la plage
+automatique_reserve_au_parent: true  # jamais activee par un amenagement (§4)
+source:
+  nature: usage
+  reference: "PAP (circulaire 2015-016), elementaire p. 4 : lecture oralisee ou ecoute audio des textes supports."

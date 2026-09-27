@@ -25,10 +25,13 @@ h1 { font-size: 0.95rem; margin: 0 0 0.2rem; color: #334; font-weight: 600; }
   letter-spacing: 1px;
 }
 
-#pave { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+/* Colonnes du pave : un quart du cadre chacune, sans en sortir (texte agrandi, cadre etroit : EX-106). */
+#pave { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
 
+/* Police des touches : levier police (EX-105), police actuelle en repli. #ecran garde sa police a
+   chasse fixe : exception « code / chiffres », renvoyee au lot 3. */
 #pave button {
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--adapt-police, 'Segoe UI', system-ui, sans-serif);
   font-size: 0.9rem; font-weight: 500;
   padding: 0; min-height: 2.4rem;
   border: none; border-radius: 10px; cursor: pointer;
@@ -136,3 +139,20 @@ h1 { font-size: 0.95rem; margin: 0 0 0.2rem; color: #334; font-weight: 600; }
   background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0) 100%);
   pointer-events: none;
 }
+
+/* Leviers d'affichage (EX-105) : poses par outil.js sur <body> (variable --adapt-* et attribut
+   data-adapt-*), inactifs sans l'attribut. */
+body[data-adapt-espacement-lettres], body[data-adapt-espacement-lettres] * { letter-spacing: var(--adapt-espacement-lettres) !important; }
+body[data-adapt-espacement-mots], body[data-adapt-espacement-mots] * { word-spacing: var(--adapt-espacement-mots) !important; }
+body[data-adapt-interligne], body[data-adapt-interligne] * { line-height: var(--adapt-interligne) !important; }
+body[data-adapt-longueur-ligne] :is(p, li, dd, dt, h1) { max-width: var(--adapt-longueur-ligne); }
+body[data-adapt-police] { font-family: var(--adapt-police); }
+body[data-adapt-fond] { background: var(--adapt-fond); }
+/* EX-106 : un mot plus long que la largeur du cadre est coupe au bord au lieu d'en sortir (actif
+   seulement avec les leviers de taille, d'espacement ou de police ; adaptations.css de la page). */
+body:is([data-adapt-taille-texte], [data-adapt-espacement-lettres], [data-adapt-espacement-mots], [data-adapt-police]) * { overflow-wrap: anywhere; }
+/* Reperes de rang (EX-105) sur l'ecran sombre : contraste >= 4,5:1 contre les deux extremites du
+   degrade (#1e293b : 7,7 / 8,1 / 10,4), teintes distinctes entre elles et du texte #a5f3fc. */
+#ecran .rang-unites { color: #fca5a5; }
+#ecran .rang-dizaines { color: #93c5fd; }
+#ecran .rang-centaines { color: #86efac; }

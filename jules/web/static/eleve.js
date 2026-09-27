@@ -23,7 +23,8 @@
     });
   }
 
-  function ajouterBulle(role, texte, images = [], classe = "") {
+  // `nouvelle` : bulle qui vient d'arriver (lue en mode automatique, EX-109) ; faux pour l'historique.
+  function ajouterBulle(role, texte, images = [], classe = "", nouvelle = true) {
     const ligne = document.createElement("div");
     ligne.className = `ligne ${role === "eleve" ? "eleve" : "bot"} ${classe}`;
     const bulle = document.createElement("div");
@@ -38,6 +39,8 @@
     }
     ligne.appendChild(bulle);
     $("fil").appendChild(ligne);
+    // Bouton de lecture sur les bulles de Jules seulement, une fois la bulle affichee en entier.
+    if (role !== "eleve" && classe !== "attente") LectureVocale.equiperBulle(bulle, { nouvelle });
     $("fil").scrollTop = $("fil").scrollHeight;
     return ligne;
   }
@@ -137,20 +140,6 @@
       grille.appendChild(b);
     }
     fil.appendChild(grille);
-    if (etat.infos.cours) {
-      const lienCours = document.createElement("a");
-      lienCours.className = "bouton secondaire espace-haut";
-      lienCours.href = "/cours";
-      lienCours.textContent = "📘 Suivre un cours";
-      fil.appendChild(lienCours);
-    }
-    if (etat.infos.studio) {
-      const lienStudio = document.createElement("a");
-      lienStudio.className = "bouton secondaire espace-haut";
-      lienStudio.href = "/studio";
-      lienStudio.textContent = "🛠️ Mon studio";
-      fil.appendChild(lienStudio);
-    }
     proposerEpreuve(fil);
     proposerExercices(fil);
     marquerActif(null);
@@ -243,7 +232,7 @@
     $("pastille-mode").classList.remove("cache");
     $("saisie").classList.remove("cache");
     for (const m of conv.messages) {
-      ajouterBulle(m.role, m.texte, m.images.map((n) => `/api/images/${encodeURIComponent(n)}`));
+      ajouterBulle(m.role, m.texte, m.images.map((n) => `/api/images/${encodeURIComponent(n)}`), "", false);
     }
     const dernier = conv.messages[conv.messages.length - 1];
     if (dernier && dernier.role !== "eleve") fermerSiEpreuveFinie(dernier.texte);
@@ -321,12 +310,16 @@
   const fermerCote = () => $("cote").classList.remove("ouvert");
 
   async function demarrage() {
-    await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     MS.signalerFinDeSeance();
     etat.infos = await MS.api("/api/infos");
+    Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
-    document.title = etat.infos.persona.nom;
+    etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;
+    LectureVocale.initialiser();
+    LectureVocale.definirMode(LectureVocale.modeDepuis(etat.infos));
+    LectureVocale.brancherSaisie($("texte"));
     $("nouvelle").addEventListener("click", ecranAccueil);
     $("menu-cote").addEventListener("click", () => $("cote").classList.toggle("ouvert"));
     $("formulaire").addEventListener("submit", envoyer);
