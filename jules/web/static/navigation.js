@@ -592,11 +592,15 @@ const Navigation = (() => {
     document.addEventListener("keydown", (ev) => {
       if (ev.key === "Escape") fermer(bouton, barre);
     });
+    // Decision sur le chemin d'origine du clic (fige au debut de la distribution), pas sur le DOM au moment de
+    // la bulle : un vrai clic laisse afficher() remplacer la petite page (matiere, chapitre, retour) avant que
+    // l'evenement n'arrive ici, et la cible est alors detachee de la barre.
     document.addEventListener("click", (ev) => {
       if (!barre.classList.contains("ouverte")) return;
-      const cible = ev.target;
-      if (bouton.contains(cible)) return;
-      if (!barre.contains(cible) || cible.closest("a")) fermer(bouton, barre);
+      const chemin = ev.composedPath();
+      if (chemin.includes(bouton)) return;
+      const lien = chemin.some((n) => n instanceof Element && n.tagName === "A");
+      if (!chemin.includes(barre) || lien) fermer(bouton, barre);
     });
     // Passage au-dessus de 900 px tiroir ouvert : il n'y a plus de tiroir, on le referme sans voler le focus.
     const tiroir = window.matchMedia(TIROIR);
