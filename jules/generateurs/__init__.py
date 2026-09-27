@@ -22,6 +22,7 @@ from jules.generateurs.mathematiques import (
     fractions_irreductibles,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
+    racine_carree,
 )
 
 Generateur = Callable[..., dict[str, Any]]
@@ -31,6 +32,7 @@ MODULES: dict[str, Any] = {
     for module in (
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
+        racine_carree,
         equations_premier_degre_et_produits,
         calcul_nombres_rationnels,
         fractions_irreductibles,
