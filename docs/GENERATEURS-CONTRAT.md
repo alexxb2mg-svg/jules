@@ -25,11 +25,14 @@ d'un cran. Le générateur promet :
    Le vérificateur découpe les textes en mots : « 1,25 » contient « 25 », « 1 150 € » contient « 150 ».
    Quand une valeur citée par un indice risque de contenir la réponse, on **filtre le tirage** avec
    `collision(...)` (briques/tirage.py), on ne tord pas l'indice.
-6. **De la variété** : sur 60 graines, au moins 30 exercices différents par variante.
+6. **De la variété** : sur 60 graines, au moins 30 exercices différents par variante **et par
+   difficulté** (un palier 1 étroit ressert les mêmes exercices à l'élève qui débute). « Différent » se
+   mesure sur l'énoncé ET la réponse attendue : un exercice `association` ou `ordre` garde souvent une
+   consigne fixe et fait varier ses paires ou ses éléments.
 7. **Trois difficultés** (1, 2, 3), réglées par un dictionnaire de paliers lu avec `palier(...)`.
 
-Le test générique `tests/test_generateurs.py` vérifie tout cela pour **toute notion enregistrée** dans
-`jules/generateurs/__init__.py` (`MODULES`) : 60 graines × 3 difficultés × chaque variante. Une notion
+Le test générique `tests/test_generateurs.py` vérifie tout cela pour **toute notion** de
+`jules/generateurs/<matiere>/` (`MODULES`, rempli par découverte des modules) : 60 graines × 3 difficultés × chaque variante. Une notion
 nouvelle est couverte dès son enregistrement, sans écrire un test. `jules generateurs eprouver` fait
 la même chose sur 300 graines, à la main.
 
@@ -48,7 +51,8 @@ la même chose sur 300 graines, à la main.
    - passe `lieu=f"{NOTION}/<variante>/<résumé du tirage>"` pour des erreurs lisibles.
 4. Le point d'entrée est toujours `generer(graine, difficulte=1, variante=None)` =
    `generer_notion(NOTION, _VARIANTES, ...)`.
-5. Enregistrer le module dans `MODULES` (`jules/generateurs/__init__.py`).
+5. Rien à enregistrer : `MODULES` (`jules/generateurs/__init__.py`) découvre tout module du paquet
+   de matière qui expose `NOTION`. Ne pas modifier `__init__.py` dans une PR de notion.
 6. Lancer `jules generateurs eprouver <notion>` jusqu'à « tous conformes », puis lire une dizaine
    d'exercices avec `jules generateurs apercu <notion> --variante X --difficulte 2 --nombre 3` :
    un exercice conforme peut rester mal écrit, et ça, seul un humain le voit.
@@ -56,6 +60,18 @@ la même chose sur 300 graines, à la main.
 
 Ce qu'on ne fait pas : un type inventé, un `random` global, un flottant dans une réponse, un indice
 réécrit pour contourner une fuite, un `try/except` autour de `exercice_v2`.
+
+## Branches et PR
+
+- **Nouvelle notion = nouvelle branche depuis `origin/main` à jour, jamais empilée** sur une PR ouverte
+  (`git fetch && git worktree add ../jules-gen-<notion> -b generateurs/<notion> origin/main`). Une PR
+  empilée entre en conflit dès que sa base est fusionnée en squash (même contenu, autre commit).
+- Une PR par notion. Elle ne touche que `jules/generateurs/<matiere>/<notion>.py`, ses tests propres
+  et, si besoin, une brique **nouvelle** (fichier ou fonction ajoutés, jamais une fonction existante
+  modifiée tant que d'autres notions sont en cours).
+- **Une PR de notion ne modifie pas `docs/GENERATEURS-COUVERTURE.md`** ni `jules/generateurs/__init__.py`.
+  Les notes de la notion vont dans le corps de la PR ; la table est mise à jour par la session qui
+  relit, dans une PR à part.
 
 ## Où va un correctif
 

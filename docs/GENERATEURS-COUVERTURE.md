@@ -1,9 +1,12 @@
 # Générateurs : couverture des notions de mathématiques 3e
 
-Table de distribution pour les sessions qui écrivent des notions en parallèle. Une session **prend une
-ligne** (met son nom dans « Qui »), suit `docs/GENERATEURS-CONTRAT.md`, et ne touche pas aux briques
-sans l'écrire dans « Notes ». Quand deux lignes ont besoin de la même brique nouvelle, celle qui la
-termine la première la pousse ; l'autre se rebase.
+Table de distribution pour les sessions qui écrivent des notions en parallèle. Une session prend une
+notion en l'annonçant dans le plan des sessions (hors dépôt), suit `docs/GENERATEURS-CONTRAT.md`, part
+d'`origin/main` à jour et ne touche pas aux briques existantes sans le dire dans sa PR.
+
+**Plus de modification de cette table dans une PR de notion.** Les notes d'une notion vont dans le corps
+de sa PR ; la table est mise à jour après fusion, par la session qui relit, dans une PR à part (sinon
+chaque PR de notion entre en conflit avec la précédente sur ce fichier).
 
 Légende « Faisabilité » : **A** = tout se corrige avec les types actuels (nombre, expression, choix,
 ordre, association, texte_court) ; **B** = faisable, mais une brique manque (à écrire, cas 2 du
@@ -14,33 +17,33 @@ génération sans IA (production ouverte, figure, programme).
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| ecritures-et-comparaison-nombres | oui | A | ranger (ordre), fraction_decimal (nombre ; décimal → fraction irréductible au palier 3), encadrer (choix multiple), abscisse (nombre, fraction irréductible) | session 2 | PR ouverte | ordre de grandeur non couvert (raisonnement ouvert) ; indices en « 7 ÷ 8 », jamais « 7/8 » (lu comme la réponse) |
+| ecritures-et-comparaison-nombres | oui | A | ranger (ordre), fraction_decimal (nombre ; décimal → fraction irréductible au palier 3), encadrer (choix multiple), abscisse (nombre, fraction irréductible) | session 2 | **fait** (#52) | ordre de grandeur non couvert (raisonnement ouvert) ; indices en « 7 ÷ 8 », jamais « 7/8 » (lu comme la réponse) ; palier 1 élargi (PR registre) : `abscisse` 2 à 10 parts sur 3 unités, `fraction_decimal` dénominateur 10 et numérateurs jusqu'à 5 × den ; relance `ordre_faux` de `ranger` écrite d'après la liste tirée |
 | puissances-notation-scientifique | oui | A | calculer aⁿ×aᵐ (nombre, forme puissance ?), écriture scientifique (nombre forme scientifique), ordre de grandeur (choix) | | à faire | vérifier que `forme: scientifique` lit « 3,2 × 10⁴ » ; sinon C |
-| racine-carree | oui | A | calculer (√k², √(a + b), √ décimal ou produit), aire_cote, carres_parfaits (choix multiple), encadrer (nombre entier) | session 2 | PR ouverte | x² = a traité dans equations-premier-degre-et-produits ; valeurs bornées aux carrés connus (jusqu'à 144, quelques carrés ronds 400, 900…) |
-| calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
-| multiples-diviseurs-division-euclidienne | oui | A | division (quotient OU reste, en situation au palier 3), criteres (choix multiple), nb_diviseurs (nombre), completer (nombre), multiple_ou_diviseur (choix multiple) | session 2 | PR ouverte | la liste des diviseurs est demandée par son NOMBRE d'éléments (pas de brique liste) |
-| nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** | modèle du pattern |
-| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | session fractions | **fait** | réutilisé `couple_premiers_entre_eux`, `decomposer` ; tirage filtré (`collision`) sur `pgcd` pour que le PGCD n'apparaisse pas dans le développement de a et b cité par l'indice `etape` |
+| racine-carree | oui | A | calculer (√k², √(a + b), √ décimal ou produit), aire_cote, carres_parfaits (choix multiple), encadrer (nombre entier) | session 2 | **fait** (#55) | x² = a traité dans equations-premier-degre-et-produits ; valeurs bornées aux carrés connus (jusqu'à 144, quelques carrés ronds 400, 900…) ; palier 1 élargi (PR registre) : `calculer` jusqu'à 15² et carrés ronds, trois tournures |
+| calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | session rationnels | **fait** (#54) | le correcteur lit « 23/20 » ✔ |
+| multiples-diviseurs-division-euclidienne | oui | A | division (quotient OU reste, en situation au palier 3), criteres (choix multiple), nb_diviseurs (nombre), completer (nombre), multiple_ou_diviseur (choix multiple) | session 2 | **fait** (#56) | la liste des diviseurs est demandée par son NOMBRE d'éléments (pas de brique liste) ; palier 1 élargi (PR registre) : `nb_diviseurs` jusqu'à 72 |
+| nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** (#49) | modèle du pattern ; palier 1 élargi (PR registre) : `decomposer` jusqu'à 200, avec 11 |
+| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | session fractions | **fait** (#53) | réutilisé `couple_premiers_entre_eux`, `decomposer` ; tirage filtré (`collision`) sur `pgcd` pour que le PGCD n'apparaisse pas dans le développement de a et b cité par l'indice `etape` |
 | problemes-divisibilite | oui | A | engrenages/PPCM (nombre), conjonction de phénomènes (nombre) | | à faire | brique PPCM à ajouter dans tirage/format |
 
 ## Calcul littéral et équations
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| developper-factoriser-reduire | oui | A | simple, double, difference ((a+b)(a−b)), factoriser (nombre, x, a²−b², parenthèse commune) | session 2 | PR ouverte | la forme `factorisee` refuse bien la forme développée ✔ ; mais la forme `developpee` n'exige pas la RÉDUCTION (« 6x − 15 + 4x » accepté) : forme `reduite` du correcteur proposée à Alex (C), pas de variante « réduire seule » en attendant ; (a+b)² hors programme 3e : seulement en piège |
-| equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | PR ouverte | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
-| problemes-mise-en-equation | oui | A | nombre_pense, ages, perimetre, tarifs (nombre), choisir_equation (choix multiple, deux écritures justes) | session 2 | PR ouverte | solutions tirées entières et positives (un âge, un nombre de séances ont du sens) ; habillage : personnages ✔ |
+| developper-factoriser-reduire | oui | A | simple, double, difference ((a+b)(a−b)), factoriser (nombre, x, a²−b², parenthèse commune) | session 2 | **fait** (#51) | la forme `factorisee` refuse bien la forme développée ✔ ; mais la forme `developpee` n'exige pas la RÉDUCTION (« 6x − 15 + 4x » accepté) : forme `reduite` du correcteur proposée à Alex (C), pas de variante « réduire seule » en attendant ; (a+b)² hors programme 3e : seulement en piège ; palier 1 élargi (PR registre) : `difference` b ≤ 20 et forme (b − x)(b + x), `double` coefficients 1 et 2 |
+| equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | **fait** (#50) | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
+| problemes-mise-en-equation | oui | A | nombre_pense, ages, perimetre, tarifs (nombre), choisir_equation (choix multiple, deux écritures justes) | session 2 | **fait** (#58) | solutions tirées entières et positives (un âge, un nombre de séances ont du sens) ; habillage : personnages ✔ |
 
 ## Statistiques et probabilités
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| indicateurs-position | oui | A | moyenne (nombre), médiane (nombre), moyenne pondérée (nombre), comparer deux séries (choix) | | à faire | brique « série de valeurs » (tirage + format « 12 ; 15 ; 9 ») à créer |
+| indicateurs-position | oui | A | moyenne (nombre), médiane (nombre), moyenne pondérée (nombre), comparer deux séries (choix) | session 2 | **fait** (#59) | brique `serie.py` créée (serie_fr « 12 ; 7 ; 15 », total, moyenne, médiane, étendue, moyenne pondérée en `Fraction`, arrondi au dixième, contextes) ; effectif, rangs du milieu et chaîne des produits filtrés par `collision()` |
 | effectifs-et-frequences | oui | A | fréquence d'une valeur (nombre %), effectif depuis fréquence (nombre), compléter tableau (association ?) | | à faire | même brique série |
 | histogrammes | oui | D→B | lecture (nombre) possible avec description textuelle des classes ; graphique = D | | plus tard | dépend des fiches visuelles |
 | etendue-serie-statistique | oui | A | étendue (nombre), série la plus dispersée (choix) | | à faire | même brique série |
-| probabilites-experiences-simples | oui | A | dé, urne, roue (nombre forme fraction), événement contraire (nombre), équiprobabilité (choix) | | à faire | habillage « urne : n boules rouges, m bleues » à ajouter |
-| probabilites-deux-epreuves | oui | A | deux tirages avec/sans remise (nombre forme fraction), arbre : compléter (association) | | à faire | |
+| probabilites-experiences-simples | oui | A | dé, urne, roue (nombre forme fraction), événement contraire (nombre), équiprobabilité (choix) | session 2 | **fait** (#60) | aucune brique touchée ; réponses exactes (`valeur_machine`) ; `fraction_irreductible` exigée en difficulté 3 ; couleurs de sac définies dans le module (à réunir en brique `habillage` avec probabilites-deux-epreuves) |
+| probabilites-deux-epreuves | oui | A | deux tirages avec/sans remise (nombre forme fraction), arbre : compléter (association) | session 2 | **fait** (#61) | aucune brique touchée ; `associer` : consigne fixe, paires variables (variété mesurée sur énoncé + réponse) ; les indices d'`associer` ne citent aucune probabilité (le vérificateur ne contrôle pas les fuites d'une association) |
 
 ## Proportionnalité et fonctions
 
@@ -48,7 +51,7 @@ génération sans IA (production ouverte, figure, programme).
 |---|---|---|---|---|---|---|
 | ratio | non | A | partage selon un ratio (nombre), ratio depuis quantités (texte_court « 2:3 » ?) | | à faire | « 2:3 » = C (forme ratio) ou réponse « 2 » puis « 3 » |
 | modelisation-fonction-lineaire | oui | A | coefficient depuis un tableau (nombre), 4e proportionnelle (nombre), est-ce proportionnel (choix) | | à faire | |
-| pourcentages-coefficient-multiplicateur | oui | A | coefficient, appliquer, taux, initial, successives | session 1 | **fait** | épreuve du pattern ; brique `collision` née ici |
+| pourcentages-coefficient-multiplicateur | oui | A | coefficient, appliquer, taux, initial, successives | session 1 | **fait** (#49) | épreuve du pattern ; brique `collision` née ici ; palier 1 élargi (PR registre) : `coefficient` taux 5 à 60 % |
 | proportionnalite-en-geometrie | oui | A | échelle (nombre), agrandissement (nombre) | | à faire | recoupe proportionnalite-configurations-geometriques |
 | vocabulaire-notations-fonctions | oui | A | f(3)=… (nombre), lire une notation (choix) | | à faire | |
 | modes-representation-fonction | oui | A→D | tableau → formule (choix), formule → tableau (nombre) ; graphique = D | | à faire | |
@@ -80,11 +83,11 @@ génération sans IA (production ouverte, figure, programme).
 
 ## Briques à créer (recensées ci-dessus)
 
-- `tirage.py` : PPCM, série de valeurs entières (n valeurs dans un intervalle, moyenne entière ou non).
-- `format_fr.py` : série « 12 ; 15 ; 9 », puissance
-  (« 10⁴ »), écriture scientifique.
+- `tirage.py` : PPCM.
+- ~~série de valeurs~~ : fait dans `serie.py` (tirage, format « 12 ; 15 ; 9 », indicateurs), avec indicateurs-position.
+- `format_fr.py` : puissance (« 10⁴ »), écriture scientifique.
 - ~~expression en x~~ : fait dans `algebre.py` (session 2).
-- `habillage.py` : urne (couleurs, effectifs), tarifs (A/B), figures décrites (triangle ABC, longueurs).
+- `habillage.py` : couleurs de sac (définies dans chacune des deux notions de probabilités : à réunir), tarifs (A/B), figures décrites (triangle ABC, longueurs).
 - Correcteur : rien d'identifié pour l'instant (la tolérance d'arrondi `reponse.tolerance` existe déjà).
 
 ## Ordre conseillé
