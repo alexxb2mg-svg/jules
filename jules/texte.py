@@ -51,7 +51,15 @@ def accorder(texte: str, genre: str) -> str:
         if len(formes) == 3:
             return formes[indice]
         feminin, masculin = formes
-        return (feminin, masculin, f"{feminin} ou {masculin}")[indice]
+        if indice == 0:
+            return feminin
+        if indice == 1:
+            return masculin
+        # neutre : « f ou m », sauf si une des deux formes est vide (terminaison absente comme
+        # ``{{e|}}``) — jointes par « ou » cela donnerait un espace en trop (« motivée ou  pour »).
+        if feminin and masculin:
+            return f"{feminin} ou {masculin}"
+        return feminin or masculin
 
     return _ACCORD.sub(choisir, texte)
 
