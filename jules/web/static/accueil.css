@@ -245,3 +245,22 @@
 .bloc-schema .c-green > .tl, .bloc-schema .c-green > .tx { fill: #27500A; }
 .bloc-schema .c-amber > .tl, .bloc-schema .c-amber > .tx { fill: #633806; }
 .bloc-schema .c-red > .tl, .bloc-schema .c-red > .tx { fill: #791F1F; }
+
+/* --- telephone < 600px : Jules ne masque pas la fiche (EX-213, audit NAV-05) ---
+   La bulle et le bouton J quittent la zone de lecture : ils forment une bande en bas de l'ecran, dans le flux de
+   la page (body en colonne). La zone de la fiche (#contenu) prend la hauteur restante et s'arrete au-dessus de la
+   bande, a tout instant et quelle que soit la hauteur de la bulle : pas de marge fixe a deviner, pas de fermeture
+   temporisee. La bulle est bornee en hauteur (elle defile au-dela) pour laisser l'essentiel de l'ecran a la fiche. */
+@media (max-width: 599.98px) {
+  body { display: flex; flex-direction: column; }
+  .accueil-appli { flex: 1 1 auto; min-height: 0; height: auto; }
+  .fiche-zone { padding-bottom: 1.5rem; }
+  .jules-bulles {
+    position: static; flex: 0 0 auto; width: auto; right: auto; bottom: auto;
+    flex-direction: row; align-items: flex-end; gap: 0.5rem; padding: 0.5rem 0.75rem;
+    background: var(--p-fond); border-top: 1px solid var(--bord); pointer-events: auto;
+  }
+  .bulles-pile { flex: 1 1 auto; min-width: 0; align-items: stretch; max-height: 35vh; overflow-y: auto; }
+  .jules-pied { flex: 0 0 auto; }
+  .avatar-jules { min-width: 2.75rem; min-height: 2.75rem; }
+}
