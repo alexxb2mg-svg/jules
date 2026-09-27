@@ -127,7 +127,7 @@ def test_ex216a_temoin_mutation_une_liste_hors_barre_est_vue(banc_n9, ids_notion
     ajout = (
         '\nMS.api("/api/eleve/fiches_visuelles/notions").then((r) => { const z = document.createElement("div");'
         ' for (const m of r.matieres) for (const n of m.notions) { const b = document.createElement("button");'
-        ' b.dataset.id = n.id; b.textContent = n.titre; z.appendChild(b); }'
+        " b.dataset.id = n.id; b.textContent = n.titre; z.appendChild(b); }"
         ' document.querySelector(".fiche-zone").appendChild(z); });\n'
     )
     etapes = (
