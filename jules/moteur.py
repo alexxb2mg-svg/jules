@@ -32,6 +32,24 @@ MESSAGE_PANNE = (
 INACTIVITE_S = 20 * 60  # apres ce delai sans activite de l'eleve, la seance est finie
 
 
+class ErreurDependance(RuntimeError):
+    """Un module actif a besoin d'un autre module, absent ou desactive."""
+
+
+def _verifier_dependances(modules: list[Module]) -> None:
+    """Chaque `module.dependances` doit etre present parmi les modules actifs (voir contrat,
+    jules/modules/base.py). Appele au demarrage : mieux vaut un message clair ici qu'un
+    RuntimeError brut au premier acces a une @property, au milieu d'une conversation."""
+    actifs = {m.id for m in modules}
+    for module in modules:
+        for requis in module.dependances:
+            if requis not in actifs:
+                raise ErreurDependance(
+                    f"Le module « {module.id} » a besoin du module « {requis} » : active-le dans "
+                    f"config.yaml ou desactive « {module.id} »."
+                )
+
+
 class Tuteur:
     def __init__(self, config: Config, llm: MoteurLLM | None = None) -> None:
         self.config = config
@@ -46,6 +64,7 @@ class Tuteur:
             classe_brique("modules", ref.id)(self, ref.reglages) for ref in config.modules if ref.actif
         ]
         self.modules += modules_des_extensions(self, self.extensions, {m.id for m in self.modules})
+        _verifier_dependances(self.modules)
         self.inactivite_s = INACTIVITE_S
         self._horloge = time.monotonic  # remplacable dans les tests
         self._seance: dict[str, Any] | None = None  # {"conv": id ou None, "dernier": instant} tant qu'une seance court
@@ -142,7 +161,16 @@ class Tuteur:
         return bot
 
     def _lancer_apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> Future[None]:
-        return self._fond.submit(self._apres_echange, conv, eleve, bot)
+        return self.executer_en_fond(self._apres_echange, conv, eleve, bot)
+
+    # methode publique : le seul acces des modules au fond de taches (voir contrat, jules/modules/base.py)
+    def executer_en_fond(self, fn: Any, *args: Any) -> Future[Any]:
+        """Lance `fn(*args)` en tache de fond (thread unique) et renvoie le Future correspondant.
+
+        A utiliser depuis un module plutot que d'appeler directement l'executeur prive."""
+        return self._fond.submit(fn, *args)
+
+    lancer_apres_echange = _lancer_apres_echange
 
     def _apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> None:
         for module in self.modules:
