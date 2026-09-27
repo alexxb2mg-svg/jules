@@ -15,6 +15,7 @@ from collections.abc import Callable
 from typing import Any
 
 from jules.generateurs.mathematiques import (
+    developper_factoriser_reduire,
     equations_premier_degre_et_produits,
     indicateurs_position,
     nombres_premiers_decomposition,
@@ -29,6 +30,7 @@ MODULES: dict[str, Any] = {
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
         equations_premier_degre_et_produits,
+        developper_factoriser_reduire,
         indicateurs_position,
     )
 }

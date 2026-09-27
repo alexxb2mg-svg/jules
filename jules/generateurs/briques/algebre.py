@@ -74,3 +74,30 @@ def affine_fr(a: Fraction | int, b: Fraction | int, variable: str = "x") -> str:
 def facteur_fr(a: Fraction | int, b: Fraction | int, variable: str = "x") -> str:
     """Un facteur d'un produit, entre parenthèses : « (2x − 6) », « (x + 4) »."""
     return f"({affine_fr(a, b, variable)})"
+
+
+def polynome_fr(coefs: list[int] | list[Fraction], variable: str = "x") -> str:
+    """[c0, c1, c2] (constante d'abord) écrit du plus haut degré au plus bas : [−12, −5, 2] -> « 2x² − 5x − 12 »."""
+    morceaux: list[str] = []
+    for degre in range(len(coefs) - 1, -1, -1):
+        c = Fraction(coefs[degre])
+        if c == 0:
+            continue
+        lettre = "" if degre == 0 else variable + ("²" if degre == 2 else "³" if degre == 3 else "")
+        valeur = abs(c)
+        corps = (nombre_signe_fr(valeur) if degre == 0 or valeur != 1 else "") + lettre
+        if not morceaux:
+            morceaux.append(f"{MOINS}{corps}" if c < 0 else corps)
+        else:
+            morceaux.append(f" {MOINS} {corps}" if c < 0 else f" + {corps}")
+    return "".join(morceaux) or "0"
+
+
+def polynome_machine(coefs: list[int] | list[Fraction], variable: str = "x") -> str:
+    """La même expression pour `reponse.valeur` : « 2x^2 - 5x - 12 » (lisible par lire_expression)."""
+    return polynome_fr(coefs, variable).replace(MOINS, "-").replace("²", "^2").replace("³", "^3")
+
+
+def en_machine(texte: str) -> str:
+    """Une expression écrite pour l'élève (« 3(2x − 5) », « x² ») rendue lisible par le correcteur."""
+    return texte.replace(MOINS, "-").replace("²", "^2").replace("³", "^3").replace(" ", "")
