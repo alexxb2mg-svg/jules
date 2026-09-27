@@ -14,20 +14,20 @@ génération sans IA (production ouverte, figure, programme).
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| ecritures-et-comparaison-nombres | oui | A | comparer (choix), ranger (ordre), fraction↔décimal (nombre) | | à faire | |
+| ecritures-et-comparaison-nombres | oui | A | ranger (ordre), fraction_decimal (nombre ; décimal → fraction irréductible au palier 3), encadrer (choix multiple), abscisse (nombre, fraction irréductible) | session 2 | PR ouverte | ordre de grandeur non couvert (raisonnement ouvert) ; indices en « 7 ÷ 8 », jamais « 7/8 » (lu comme la réponse) |
 | puissances-notation-scientifique | oui | A | calculer aⁿ×aᵐ (nombre, forme puissance ?), écriture scientifique (nombre forme scientifique), ordre de grandeur (choix) | | à faire | vérifier que `forme: scientifique` lit « 3,2 × 10⁴ » ; sinon C |
-| racine-carree | oui | A | carrés parfaits (nombre), encadrer √n (choix/ordre), équation x² = a (choix des solutions) | | à faire | |
+| racine-carree | oui | A | calculer (√k², √(a + b), √ décimal ou produit), aire_cote, carres_parfaits (choix multiple), encadrer (nombre entier) | session 2 | PR ouverte | x² = a traité dans equations-premier-degre-et-produits ; valeurs bornées aux carrés connus (jusqu'à 144, quelques carrés ronds 400, 900…) |
 | calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
 | multiples-diviseurs-division-euclidienne | oui | A | division (quotient OU reste, en situation au palier 3), criteres (choix multiple), nb_diviseurs (nombre), completer (nombre), multiple_ou_diviseur (choix multiple) | session 2 | PR ouverte | la liste des diviseurs est demandée par son NOMBRE d'éléments (pas de brique liste) |
 | nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** | modèle du pattern |
-| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | | à faire | réutiliser `couple_premiers_entre_eux`, `decomposer` |
+| fractions-irreductibles | oui | A | simplifier (nombre forme fraction), est-elle irréductible (choix), PGCD (nombre) | session fractions | **fait** | réutilisé `couple_premiers_entre_eux`, `decomposer` ; tirage filtré (`collision`) sur `pgcd` pour que le PGCD n'apparaisse pas dans le développement de a et b cité par l'indice `etape` |
 | problemes-divisibilite | oui | A | engrenages/PPCM (nombre), conjonction de phénomènes (nombre) | | à faire | brique PPCM à ajouter dans tirage/format |
 
 ## Calcul littéral et équations
 
 | Notion | Brevet | Faisabilité | Variantes envisagées | Qui | État | Notes |
 |---|---|---|---|---|---|---|
-| developper-factoriser-reduire | oui | A | développer (expression), réduire (expression), factoriser (expression), identité remarquable (expression) | | à faire | le correcteur compare des expressions équivalentes : vérifier qu'une factorisation attendue n'accepte pas la forme développée (sinon C : critère « forme factorisée ») |
+| developper-factoriser-reduire | oui | A | simple, double, difference ((a+b)(a−b)), factoriser (nombre, x, a²−b², parenthèse commune) | session 2 | PR ouverte | la forme `factorisee` refuse bien la forme développée ✔ ; mais la forme `developpee` n'exige pas la RÉDUCTION (« 6x − 15 + 4x » accepté) : forme `reduite` du correcteur proposée à Alex (C), pas de variante « réduire seule » en attendant ; (a+b)² hors programme 3e : seulement en piège |
 | equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | PR ouverte | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
 | problemes-mise-en-equation | oui | A | âge, périmètre, prix (nombre) ; choisir la bonne équation (choix) | | à faire | habillage : personnages ✔, articles ✔ |
 

@@ -15,10 +15,15 @@ from collections.abc import Callable
 from typing import Any
 
 from jules.generateurs.mathematiques import (
-    multiples_diviseurs_division_euclidienne,
+    calcul_nombres_rationnels,
+    developper_factoriser_reduire,
+    ecritures_et_comparaison_nombres,
     equations_premier_degre_et_produits,
+    fractions_irreductibles,
+    multiples_diviseurs_division_euclidienne,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
+    racine_carree,
 )
 
 Generateur = Callable[..., dict[str, Any]]
@@ -29,7 +34,12 @@ MODULES: dict[str, Any] = {
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
         multiples_diviseurs_division_euclidienne,
+        racine_carree,
         equations_premier_degre_et_produits,
+        calcul_nombres_rationnels,
+        fractions_irreductibles,
+        ecritures_et_comparaison_nombres,
+        developper_factoriser_reduire,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
