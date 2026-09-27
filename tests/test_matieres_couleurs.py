@@ -27,8 +27,9 @@ HEXA = re.compile(r"#[0-9A-Fa-f]{6}")
 # en CSS (`color: var(...)`) comme en JS (`.color = "..."`, `setProperty("color", "...")`).
 # `background-color`, `border-color`, `outline-color`... ne sont pas des couleurs de texte : exclus par
 # le `(?<![\w-])` devant `color`. La valeur s'arrete a `;`, `{`, `}` (fin de declaration ou de regle CSS),
-# sauf a l'interieur d'une interpolation JS `${...}`.
-_VALEUR = r"(?:\$\{[^{}\n]*\}|[^;{}\n])*?"
+# sauf a l'interieur d'une interpolation JS `${...}`. Elle peut s'etendre sur plusieurs lignes : la recherche
+# porte sur le fichier entier, commentaires retires (voir `_accents_en_texte`).
+_VALEUR = r"(?:\$\{[^{}]*\}|[^;{}])*?"
 ACCENT_EN_TEXTE = re.compile(
     r"(?:(?<![\w-])-webkit-text-fill-color|(?<![\w-])color)[\"']?\s*[:=,]\s*"
     + _VALEUR
@@ -37,6 +38,25 @@ ACCENT_EN_TEXTE = re.compile(
     + "-accent",
     re.IGNORECASE,
 )
+
+
+# Commentaires `/* ... */` (CSS et JS) et `// ...` (JS seulement ; pas apres `:` pour epargner `https://`).
+_COMMENTAIRE_BLOC = re.compile(r"/\*.*?\*/", re.DOTALL)
+_COMMENTAIRE_LIGNE = re.compile(r"(?<![:\\])//[^\n]*")
+
+
+def _sans_commentaires(texte: str, js: bool) -> str:
+    """Retire les commentaires en gardant leurs sauts de ligne, pour des numeros de ligne exacts."""
+    propre = _COMMENTAIRE_BLOC.sub(lambda m: "\n" * m.group(0).count("\n") or " ", texte)
+    return _COMMENTAIRE_LIGNE.sub("", propre) if js else propre
+
+
+def _accents_en_texte(texte: str, js: bool = False) -> list[tuple[int, str]]:
+    """(ligne de debut, extrait) de chaque accent employe en couleur de texte, recherche sur le texte entier."""
+    propre = _sans_commentaires(texte, js)
+    return [
+        (propre.count("\n", 0, m.start()) + 1, " ".join(m.group(0).split())) for m in ACCENT_EN_TEXTE.finditer(propre)
+    ]
 
 
 def _table() -> dict:
@@ -172,10 +192,28 @@ def test_css_variables_seulement_dans_un_bloc_root():
         ".x { -webkit-text-fill-color: var(--matiere-svt-accent); }",
         'el.style.color = "var(--matiere-" + id + "-accent)";',
         'el.style.setProperty("color", `var(--matiere-${id}-accent)`);',
+        # declarations coupees sur plusieurs lignes
+        ".zz-test {\n  color:\n    var(--matiere-svt-accent);\n}",
+        ".x {\n  color\n  :\n  var(\n    --matiere-histoire-accent\n  );\n}",
+        ".x { color: /* teinte */\n  var(--matiere-svt-accent); }",
+        'el.style.color =\n  "var(--matiere-" + id +\n  "-accent)";',
+        'el.style.setProperty(\n  "color",\n  `var(--matiere-${\n    id\n  }-accent)`\n);',
     ],
 )
 def test_temoin_negatif_accent_en_texte_detecte(extrait):
-    assert ACCENT_EN_TEXTE.search(extrait)
+    assert _accents_en_texte(extrait, js=extrait.startswith("el."))
+
+
+def test_faute_multiligne_signalee_a_sa_premiere_ligne():
+    texte = (
+        ".a { color: #FFF; }\n"
+        "/* color: var(--matiere-svt-accent) */\n"
+        ".zz {\n"
+        "  color:\n"
+        "    var(--matiere-svt-accent);\n"
+        "}\n"
+    )
+    assert _accents_en_texte(texte) == [(4, "color: var(--matiere-svt-accent")]
 
 
 @pytest.mark.parametrize(
@@ -187,18 +225,23 @@ def test_temoin_negatif_accent_en_texte_detecte(extrait):
         ".x { border-color: var(--matiere-svt-accent); }",
         ".x { color: var(--matiere-svt-texte); }",
         ".x{color:#FFF} .y{background:var(--matiere-svt-accent)}",
+        # sur plusieurs lignes, ou accent cite seulement en commentaire
+        ".x {\n  color: #FFFFFF;\n  background:\n    var(--matiere-svt-accent);\n}",
+        ".x {\n  color: var(--matiere-svt-texte);\n}\n.y {\n  border-color:\n    var(--matiere-svt-accent);\n}",
+        "/* ne jamais ecrire color: var(--matiere-svt-accent) */\n.x { color: #1F1F1F; }",
+        '// el.style.color = "var(--matiere-svt-accent)"\nel.style.background = "var(--matiere-svt-accent)";',
     ],
 )
 def test_usages_permis_de_l_accent_non_signales(extrait):
-    assert not ACCENT_EN_TEXTE.search(extrait)
+    assert not _accents_en_texte(extrait, js=extrait.startswith(("el.", "//")))
 
 
 def test_aucun_accent_en_couleur_de_texte_dans_les_statiques():
     fichiers = sorted([*STATIQUE.glob("*.css"), *STATIQUE.glob("*.js")])
     assert CSS in fichiers
-    fautes = []
-    for f in fichiers:
-        for n, ligne in enumerate(f.read_text(encoding="utf-8").splitlines(), 1):
-            if ACCENT_EN_TEXTE.search(ligne):
-                fautes.append(f"{f.name}:{n}: {ligne.strip()}")
+    fautes = [
+        f"{f.name}:{n}: {extrait}"
+        for f in fichiers
+        for n, extrait in _accents_en_texte(f.read_text(encoding="utf-8"), js=f.suffix == ".js")
+    ]
     assert not fautes, "accent utilise comme couleur de texte (EX-215) :\n" + "\n".join(fautes)
