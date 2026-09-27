@@ -95,6 +95,22 @@ body.avec-barre { padding-left: var(--barre-largeur); }
 .barre-vide, .barre-erreur { margin: 0.5rem 0.375rem; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); color: #6E6A58; }
 .barre-erreur { color: #8A0F22; }
 
+/* EX-212 : petites pages courtes. Un titre long (jusqu'a 140 caracteres, pire cas mesure) ne s'affiche que sur
+   quelques lignes ; le texte complet reste dans le DOM (nom accessible) et dans l'infobulle (attribut title).
+   Chapitres : 2 lignes ; elements (fiches, lecons, notions) et titre de petite page : 3 lignes. */
+.barre-page .barre-libelle {
+  flex: 1 1 auto; min-width: 0; overflow: hidden; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;
+}
+.barre-page .barre-chapitre .barre-libelle, .barre-intertitre .barre-libelle { -webkit-line-clamp: 2; line-clamp: 2; }
+.barre-page-titre {
+  overflow: hidden; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3;
+}
+.barre-element { flex-wrap: wrap; padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.barre-intertitre { display: flex; align-items: baseline; gap: 0.5rem; }
+.barre-intertitre .barre-effectif { flex: none; letter-spacing: 0; }
+
 /* Sous 900 px : tiroir ouvert par le bouton ☰, toujours au meme endroit (en haut a gauche). */
 @media (max-width: 899.98px) {
   body.avec-barre { padding-left: 0; padding-top: 3.5rem; }
