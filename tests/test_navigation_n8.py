@@ -1,6 +1,7 @@
 """Navigation N8 : plus aucune navigation en double (docs/spec/NAVIGATION.md, EX-216).
 
-- (a) sur /, plus de `#rail` ni de `#menu-rail` : la liste des notions est celle de la barre (Mes fiches) ;
+- (a) retrait du `#rail` et de `#menu-rail` de / : couvert par tests/test_navigation_n9.py (carte N9, qui fait foi
+  pour (a)), pas repris ici ;
 - (b) (c) sur /cours et /studio, la barre et la zone centrale affichent toujours la meme matiere, sans rechargement
   et sans appel de plus (cache EX-210), l'adresse passe a `?matiere=<id>` ;
 - (d) les intertitres de chapitre de la barre (etape 4 de Mes lecons et d'Exercices) ne sont pas tronques (ni
@@ -79,90 +80,6 @@ OUVRIR_TIROIR = r"""
     }
   };
 """
-
-
-# --- (a) : / sans rail ni second bouton de menu -----------------------------------------------------------
-
-UN_SEUL_MENU = r"""
-  await S.attendre(() => !S.el("#fiche").classList.contains("cache"), 8000);
-  await S.pause(200);
-  const visible = (e) => {
-    const s = getComputedStyle(e);
-    if (s.display === "none" || s.visibility === "hidden") return false;
-    const r = e.getBoundingClientRect();
-    return r.width > 0 && r.height > 0 && r.right > 0 && r.bottom > 0 && r.left < innerWidth && r.top < innerHeight;
-  };
-  const avecMenu = [...document.body.querySelectorAll("button, a, [role=button]")]
-    .filter((e) => e.textContent.includes("☰"));
-  return {
-    rail: !!document.getElementById("rail"), menuRail: !!document.getElementById("menu-rail"),
-    railNotions: !!document.getElementById("rail-notions"),
-    boutonsMenu: avecMenu.map((e) => e.id), visibles: avecMenu.filter(visible).map((e) => e.id),
-    aside: [...document.querySelectorAll("aside")].map((a) => a.getAttribute("aria-label")),
-    fiche: S.el("#fiche-titre").textContent, api: S.api(), erreurs: S.erreurs(),
-  };
-"""
-
-
-@pytest.mark.parametrize("taille", TAILLES, ids=IDS_TAILLES)
-def test_ex216a_accueil_sans_rail_ni_second_menu(banc, taille):
-    r = jouer(banc, "/", UN_SEUL_MENU, taille=taille, avant=memoire(None))
-    assert (r["rail"], r["menuRail"], r["railNotions"]) == (False, False, False)
-    assert "Notions avec une fiche" not in r["aside"]
-    assert r["boutonsMenu"] == ["barre-jules-bouton"], r  # exactement un ☰ dans le DOM : celui de la barre
-    # visible en tiroir seulement (EX-207 : a partir de 900 px la barre est toujours la, sans bouton)
-    assert r["visibles"] == (["barre-jules-bouton"] if taille[0] < 900 else [])
-    # la page ouvre toujours une fiche (la premiere), avec la meme liste que la barre (un seul appel)
-    assert r["fiche"]
-    assert r["api"].count("/api/eleve/fiches_visuelles/notions") == 1
-    assert r["erreurs"] == []
-
-
-def test_ex216a_accueil_html_sans_rail():
-    texte = (STATIQUE / "accueil.html").read_text(encoding="utf-8")
-    assert 'id="rail"' not in texte and 'id="menu-rail"' not in texte and "rail-notions" not in texte
-    js = (STATIQUE / "accueil.js").read_text(encoding="utf-8")
-    assert '"rail' not in js and '"menu-rail"' not in js
-    css = (STATIQUE / "accueil.css").read_text(encoding="utf-8")
-    assert not re.search(r"\.rail\b|#rail\b|\.bouton-panneau", re.sub(r"/\*.*?\*/", "", css, flags=re.S))
-
-
-def test_ex216a_lien_de_la_barre_ouvre_la_fiche_sans_rail(banc):
-    """Le rail retire, c'est l'etape 4 de Mes fiches qui ouvre une autre fiche (lien /#<id>, sans rechargement)."""
-    r = jouer(
-        banc,
-        "/",
-        r"""
-        await S.attendre(() => !S.el("#fiche").classList.contains("cache"), 8000);
-        const premiere = S.el("#fiche-titre").textContent;
-        rubrique("fiches").click();
-        await S.attendre(() => lirePage().etape >= 2, 5000);
-        if (lirePage().etape === 2) {
-          matiere("mathematiques").click();
-          await S.attendre(() => lirePage().etape >= 3, 5000);
-        }
-        if (lirePage().etape === 3) {
-          // le chapitre qui a le plus de fiches : il en faut une autre que celle deja ouverte
-          const chapitres = [...document.querySelectorAll("#barre-jules [data-chapitre]")];
-          const effectif = (b) => Number(b.querySelector(".barre-effectif").textContent);
-          chapitres.sort((a, b) => effectif(b) - effectif(a))[0].click();
-          await attendreEtape(4);
-        }
-        const liens = [...document.querySelectorAll("#barre-jules a.barre-element")];
-        const cible = liens.find((a) => a.getAttribute("aria-current") !== "true") || liens[0];
-        const href = cible.getAttribute("href");
-        cible.click();
-        await S.attendre(() => location.hash === href.slice(1) && S.el("#fiche-titre").textContent !== "", 5000);
-        await S.pause(300);
-        return { premiere, href, hash: location.hash, titre: S.el("#fiche-titre").textContent,
-                 api: S.api(), nbLiens: liens.length };
-        """,
-        avant=memoire(None),
-    )
-    assert r["nbLiens"] >= 2, r
-    assert r["hash"] == r["href"][1:]
-    assert r["titre"] != r["premiere"]
-    assert r["api"].count("/api/session") == 1  # pas de rechargement
 
 
 # --- (b) : choix dans la barre -> la zone centrale suit ---------------------------------------------------
@@ -250,6 +167,45 @@ def test_ex216b_changer_de_matiere_dans_la_barre_ferme_la_lecon_ouverte(banc, no
     assert r["titre"].endswith(": " + noms[PARCOURS]["noms"]["histoire"])
     assert r["search"] == "?matiere=histoire"  # la notion de l'ancienne matiere ne reste pas dans l'adresse
     assert r["barre"]["titre"] == noms[PARCOURS]["noms"]["histoire"]
+    assert r["erreurs"] == []
+
+
+def test_ex216b_changer_de_matiere_dans_la_barre_ferme_le_support_ouvert(banc, noms):
+    """Pendant studio : support de Mathematiques ouvert, Histoire choisie dans la barre (Exercices et supports) :
+    le support se ferme, le centre liste Histoire. Jamais deux matieres differentes a l'ecran."""
+    r = jouer(
+        banc,
+        "/studio?matiere=mathematiques",
+        r"""
+        await S.attendre(() => document.querySelector("#notions-liste .bouton-nouveau-support"), 8000);
+        document.querySelector("#notions-liste .bouton-nouveau-support").click();
+        await S.attendre(() => !S.el("#choix-type").classList.contains("cache"), 3000);
+        S.el("#choix-type-liste button").click();
+        await S.attendre(() => !S.el("#support").classList.contains("cache")
+          && S.el("#support-titre").textContent, 8000);
+        const supportOuvert = !S.el("#support").classList.contains("cache");
+        rubrique("supports").click();
+        await attendreEtape(4);
+        retour().click();
+        await attendreEtape(2);
+        matiere("histoire").click();
+        await attendreEtape(4);
+        await S.attendre(() => S.el("#catalogue-titre").textContent.includes("Histoire"), 5000);
+        await S.pause(200);
+        return { supportOuvert, supportCache: S.el("#support").classList.contains("cache"),
+                 accueilVisible: !S.el("#accueil-studio").classList.contains("cache"),
+                 actifs: document.querySelectorAll(".support-ligne.active").length,
+                 titre: S.el("#catalogue-titre").textContent, search: location.search, barre: lirePage(),
+                 erreurs: S.erreurs() };
+        """,
+        avant=memoire(None),
+    )
+    assert r["supportOuvert"] is True, r
+    assert r["supportCache"] is True and r["accueilVisible"] is True, r
+    assert r["actifs"] == 0
+    assert r["titre"].endswith(": " + noms[STUDIO]["noms"]["histoire"])
+    assert r["search"] == "?matiere=histoire"
+    assert r["barre"]["titre"] == noms[STUDIO]["noms"]["histoire"]
     assert r["erreurs"] == []
 
 
