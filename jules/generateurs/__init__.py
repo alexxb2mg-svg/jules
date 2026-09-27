@@ -16,6 +16,7 @@ from typing import Any
 
 from jules.generateurs.mathematiques import (
     multiples_diviseurs_division_euclidienne,
+    equations_premier_degre_et_produits,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
 )
@@ -28,6 +29,7 @@ MODULES: dict[str, Any] = {
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
         multiples_diviseurs_division_euclidienne,
+        equations_premier_degre_et_produits,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
