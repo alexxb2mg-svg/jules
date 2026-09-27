@@ -7,7 +7,7 @@
 "use strict";
 
 (() => {
-const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie"];
+const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie", "sciences-et-technologie"];
 const DICOS = {
   // Unites. Celles d'une seule lettre (m, s, g, N...) ne sont reconnues qu'apres un nombre
   // (« 98 N ») ou apres « en » (« en m ») : jamais le « m » d'une formule ni un mot.

@@ -1,0 +1,8 @@
+id: rappels-musique
+titre: "Rappels au survol : nuances, figures de notes et signes musicaux"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  rappels: [nuances, signes-musicaux]
+permissions: {}

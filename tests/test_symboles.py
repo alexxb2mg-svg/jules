@@ -52,7 +52,8 @@ def test_le_coeur_ne_connait_aucune_regle_de_matiere():
 def test_les_extensions_de_rappels_actives():
     extensions = charger_extensions(RACINE / "extensions", ACTIVES)
     code = code_des_rappels(extensions)
-    for identifiant in ("rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais"):
+    rappels = ("rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais", "rappels-musique")
+    for identifiant in rappels:
         assert f"// --- extension {identifiant} ---" in code
     elements = re.findall(r"\b([A-Z][a-z]?): \"", code.split("elements: {")[1].split("},")[0])
     assert len(elements) == len(set(elements)) == 118
@@ -124,6 +125,12 @@ TEXTES = [
         "L'IHM de l'OST envoie 4 Mo à 20 Mbit/s ; le DNS donne l'adresse IP. Au début : x = x + 1.",
     ),
     ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
+    (
+        "musique",
+        {"matiere": "education-musicale"},
+        "On commence p puis cresc. jusqu'à ff ; la ♩ dure un temps, voir p. 12 du cahier.",
+    ),
+    ("cm1_sciences", {"matiere": "sciences-et-technologie"}, "Le pot de 250 g contient 20 cL d'eau à 4 °C."),
 ]
 
 
@@ -284,3 +291,15 @@ def test_technologie_sigles_et_unites_numeriques(annotations):
         assert any(b.startswith(debut) for b in bulles), debut
     assert not any(b.startswith("Au :") for b in bulles)
     assert annotations["techno"]["formules"] == ["x = x + 1"]
+
+
+def test_musique_nuances_et_figures_de_notes(annotations):
+    bulles = _bulles(annotations, "musique")
+    assert "p : piano : doucement" in bulles and "ff : fortissimo : très fort" in bulles
+    assert "cresc. : crescendo : de plus en plus fort" in bulles and "♩ : noire : dure 1 temps" in bulles
+    assert bulles.count("p : piano : doucement") == 1  # « p. 12 » est une page, pas une nuance
+
+
+def test_sciences_du_cm1_ont_les_unites(annotations):
+    bulles = _bulles(annotations, "cm1_sciences")
+    assert "g : grammes" in bulles and any(b.startswith("cL") for b in bulles)

@@ -106,7 +106,25 @@ def _modele(racines: Racines, notions: list[Notion]) -> tuple[str, str, list[tup
         texte = chemin.read_text(encoding="utf-8")
         return "\nvariables:" in texte and "**" in texte
 
-    candidats.sort(key=lambda c: (c.parent.name not in matieres, not complete(c), c.stem != MODELE_PAR_DEFAUT, str(c)))
+    # Meme niveau avant tout : le ton et la langue d'une fiche de CM1 ne sont pas ceux d'une fiche de 3e.
+    niveaux_du_dossier: dict[Path, set[str]] = {}
+    for dossier in _bibliotheques(racines, "fiches-visuelles"):
+        niveaux_du_dossier[dossier] = set(lire_identite(dossier).niveaux)
+    voulus = {n.niveau for n in notions}
+
+    def meme_niveau(chemin: Path) -> bool:
+        dossier = chemin.parent.parent.parent
+        return bool(niveaux_du_dossier.get(dossier, set()) & voulus)
+
+    candidats.sort(
+        key=lambda c: (
+            not meme_niveau(c),
+            c.parent.name not in matieres,
+            not complete(c),
+            c.stem != MODELE_PAR_DEFAUT,
+            str(c),
+        )
+    )
     for chemin in candidats:
         if chemin.stem in demandees:
             continue
