@@ -16,7 +16,10 @@ from typing import Any
 
 from jules.generateurs.mathematiques import (
     calcul_nombres_rationnels,
+    developper_factoriser_reduire,
+    ecritures_et_comparaison_nombres,
     equations_premier_degre_et_produits,
+    fractions_irreductibles,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
 )
@@ -30,6 +33,9 @@ MODULES: dict[str, Any] = {
         pourcentages_coefficient_multiplicateur,
         equations_premier_degre_et_produits,
         calcul_nombres_rationnels,
+        fractions_irreductibles,
+        ecritures_et_comparaison_nombres,
+        developper_factoriser_reduire,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
