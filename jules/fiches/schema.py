@@ -263,6 +263,9 @@ def _equilibrer(morceau: str) -> str:
 
 
 def _fuite(ex: dict[str, Any], texte: str) -> bool:
+    # Voir aussi : lecons.contient_la_reponse, modules/studio._est_recopie,
+    # generateurs/mathematiques/calcul_nombres_rationnels._fuite_texte ; duplication voulue (chaque
+    # brique reste autonome), reporter tout correctif dans les autres.
     cle = f" {cle_texte(texte)} "
     if any(forme and f" {forme} " in cle for forme in _formes_de_la_reponse(ex)):
         return True

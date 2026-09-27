@@ -281,7 +281,12 @@ def _ignorer_occurrence_nombre(texte: str, debut: int, fin: int) -> bool:
 
 
 def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
-    """Vrai si `texte` donne la reponse attendue d'un exercice (garde-fou avant d'afficher Jules)."""
+    """Vrai si `texte` donne la reponse attendue d'un exercice (garde-fou avant d'afficher Jules).
+
+    Voir aussi : fiches/schema._fuite, modules/studio._est_recopie,
+    generateurs/mathematiques/calcul_nombres_rationnels._fuite_texte ; duplication voulue (chaque
+    brique reste autonome), reporter tout correctif dans les autres.
+    """
     if bloc.type != "exercice":
         return False
     d = bloc.donnees
