@@ -2,6 +2,10 @@
 // Jules en bulles preecrites a droite (aucun appel IA sur cette page : voir jules_cadrage_interface.md).
 "use strict";
 
+// Typographie francaise des titres : « Titre : suite », « Pourquoi ? » ; l'espace devant la
+// ponctuation haute devient insecable, le signe ne commence jamais une ligne.
+const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+
 (() => {
   const $ = (id) => document.getElementById(id);
 
@@ -35,7 +39,7 @@
         const bouton = document.createElement("button");
         bouton.type = "button";
         bouton.dataset.id = n.id;
-        bouton.textContent = n.titre;
+        bouton.textContent = typo(n.titre);
         bouton.addEventListener("click", () => ouvrirFiche(n.id));
         zone.appendChild(bouton);
       }
@@ -45,9 +49,21 @@
   // Texte d'une fiche ou les notions cles sont marquees **ainsi** (controle cote serveur : peu nombreuses,
   // courtes). Jamais d'innerHTML : noeuds texte et <strong> crees un par un.
   function ecrireRiche(el, texte) {
-    String(texte || "").split(/\*\*(.+?)\*\*/).forEach((morceau, i) => {
+    const morceaux = String(texte || "").split(/\*\*(.+?)\*\*/);
+    // « l'**époque** » : l'article elide rejoint la notion cle, sinon le surligneur laisse un blanc
+    // apres l'apostrophe.
+    for (let i = 1; i < morceaux.length; i += 2) {
+      const elision = morceaux[i - 1].match(/(^|[^\p{L}])(\p{L}{1,3}['’])$/u);
+      if (elision) {
+        morceaux[i - 1] = morceaux[i - 1].slice(0, morceaux[i - 1].length - elision[2].length);
+        morceaux[i] = elision[2] + morceaux[i];
+      }
+    }
+    morceaux.forEach((morceau, i) => {
       if (!morceau) return;
-      if (i % 2) el.appendChild(creer("strong", "cle", morceau));
+      // Une partie de mot (« ba-**NA**-na ») : surlignage sans marge, collee aux lettres voisines.
+      const colle = i % 2 && (/[\p{L}\p{N}-]$/u.test(morceaux[i - 1] || "") || /^[\p{L}\p{N}-]/u.test(morceaux[i + 1] || ""));
+      if (i % 2) el.appendChild(creer("strong", colle ? "cle colle" : "cle", morceau));
       else el.appendChild(document.createTextNode(morceau));
     });
     return el;
@@ -105,7 +121,7 @@
 
   function afficherFiche(fiche) {
     $("fiche-fil").textContent = `${fiche.nom_matiere} › ${fiche.niveau}`;
-    $("fiche-titre").textContent = fiche.titre;
+    $("fiche-titre").textContent = typo(fiche.titre);
     if (fiche.relecture_a_relire) {
       $("fiche-avertissement").textContent =
         "Fiche expérimentale, pas encore relue par un adulte : sers-t'en comme appui, pas comme vérité absolue.";
@@ -132,8 +148,8 @@
       if (bloc.type === "attendus") continue;
       zoneBlocs.appendChild(construireBloc(bloc));
     }
-    const sources = (fiche.sources || []).map((s) => s.titre).join(" · ");
-    $("fiche-sources").textContent = sources ? `Sources : ${sources} (${fiche.licence})` : "";
+    const sources = (fiche.sources || []).map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ");
+    $("fiche-sources").textContent = sources ? `Sources : ${sources} — fiche sous licence ${fiche.licence}` : "";
   }
 
   // --- construction des 8 types de blocs -------------------------------------
@@ -142,7 +158,7 @@
     section.className = "fiche-bloc";
     section.dataset.adresse = `fiche/${bloc.id}`;
     const titre = document.createElement("h2");
-    titre.textContent = bloc.titre || TITRES_TYPE[bloc.type] || bloc.type;
+    titre.textContent = typo(bloc.titre || TITRES_TYPE[bloc.type] || bloc.type);
     section.appendChild(titre);
 
     const constructeur = CONSTRUCTEURS[bloc.type];
@@ -173,6 +189,9 @@
     formule(bloc) {
       const div = creer("div", "bloc-formule");
       const expr = creer("div", "formule-expression");
+      const longueur = String(bloc.expression || "").replace(/[\[\]]/g, "").length;
+      if (longueur > 50) expr.classList.add("tres-longue");
+      else if (longueur > 32) expr.classList.add("longue");
       // "[a]" dans l'expression = terme colore (couleur declaree dans termes) ; le reste en texte brut.
       const termesDecl = bloc.termes || {};
       for (const morceau of String(bloc.expression || "").split(/(\[[^\]]+\])/)) {
@@ -189,7 +208,8 @@
       }
       div.appendChild(expr);
       const termes = creer("div", "formule-termes");
-      for (const [nom, info] of Object.entries(bloc.termes || {})) {
+      const termesListe = (bloc.ordre || Object.keys(bloc.termes || {})).map((nom) => [nom, (bloc.termes || {})[nom]]);
+      for (const [nom, info] of termesListe.filter(([, i]) => i)) {
         const ligne = document.createElement("div");
         ligne.style.borderColor = couleurCss(info.couleur);
         const b = document.createElement("b");
@@ -221,7 +241,9 @@
         const max = Math.max(8, Math.floor(largeur / (taille * 0.58)));
         const sortie = [];
         let courante = "";
-        for (const mot of String(texte || "").split(/\s+/).filter(Boolean)) {
+        // Un nombre (« 12 500 ») et la ponctuation haute (« ? », « : ») ne sont jamais separes du mot voisin.
+        const insecable = String(texte || "").replace(/(\d) (?=\d{3}(?!\d))/g, "$1\u202F").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+        for (const mot of insecable.split(/[ \t\n]+/).filter(Boolean)) {
           if (courante && (courante + " " + mot).length > max) { sortie.push(courante); courante = mot; }
           else courante = courante ? courante + " " + mot : mot;
         }

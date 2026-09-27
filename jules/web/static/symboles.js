@@ -76,7 +76,11 @@ const Symboles = (() => {
   const sansAccent = (s) => s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
   const avant = (texte, i) => { while (i >= 0 && texte[i] === " ") i--; return i >= 0 ? texte[i] : ""; };
   const apres = (texte, j) => { while (j < texte.length && texte[j] === " ") j++; return j < texte.length ? texte[j] : ""; };
-  const isole = (texte, debut, fin) => !(debut > 0 && COLLE.test(texte[debut - 1])) && !(fin < texte.length && COLLE.test(texte[fin]));
+  // Une lettre seule dans « porte-t-il » n'est pas isolee : le trait d'union la colle au mot.
+  const isole = (texte, debut, fin) => {
+    const colle = (c) => COLLE.test(c) || (fin - debut === 1 && c === "-");
+    return !(debut > 0 && colle(texte[debut - 1])) && !(fin < texte.length && colle(texte[fin]));
+  };
   const motAvant = (texte, i) => texte.slice(0, i).trimEnd().split(/\s+/).pop() || "";
   // « watts (W) » : le mot devant une lettre entre parentheses dit ce qu'elle est.
   function motDevantParenthese(texte, debut, fin) {
@@ -237,11 +241,23 @@ const Symboles = (() => {
     return morceaux;
   }
 
+  // « 12 500 » : l'espace entre les classes de chiffres devient insecable (espace fine, comme en
+  // typographie francaise), pour que le nombre ne soit jamais coupe en fin de ligne.
+  const ESPACE_DE_CLASSE = /(\d) (?=\d{3}(?!\d))/g;
+  // « Pourquoi ? » : l'espace devant ? ! : ; » est insecable, le signe ne commence jamais une ligne.
+  const PONCTUATION_HAUTE = / ([?!:;»])/g;
+
   function annoterTexte(noeud) {
     const parent = noeud.parentNode;
     if (!parent) return;
-    const texte = noeud.nodeValue;
     const ctx = contexteDe(parent);
+    // Seulement dans un contenu de cours (zone avec une matiere : fiche, lecon) ; le texte de
+    // l'interface des autres pages n'est pas retouche.
+    if (ctx.matiere) {
+      const insecable = noeud.nodeValue.replace(ESPACE_DE_CLASSE, "$1\u202F").replace(PONCTUATION_HAUTE, "\u202F$1").replace(/« /g, "«\u202F");
+      if (insecable !== noeud.nodeValue) noeud.nodeValue = insecable;
+    }
+    const texte = noeud.nodeValue;
     // 1. Mises en forme (formules du texte en gras...) ; leur contenu est annote ensuite.
     if (!(parent.closest && parent.closest(ZONE_FORME))) {
       const zones = appliquer(formes, "mettreEnForme", texte, ctx, 5);

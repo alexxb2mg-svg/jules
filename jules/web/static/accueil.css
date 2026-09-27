@@ -53,6 +53,9 @@
 /* bloc formule */
 .bloc-formule { display: flex; align-items: center; gap: 20px 36px; flex-wrap: wrap; }
 .formule-expression { font-size: 2.625rem; font-family: Cambria, Georgia, serif; }
+/* Formule longue (une phrase en mots, courante au CM1) : plus petite, pour tenir sur une ligne. */
+.formule-expression.longue { font-size: 1.75rem; }
+.formule-expression.tres-longue { font-size: 1.375rem; }
 .formule-termes div { margin: 10px 0; padding-left: 14px; border-left: 4px solid; }
 
 /* carte mentale */
@@ -90,6 +93,7 @@
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 .exemple-conclusion .cle { font-weight: 800; }
+.cle.colle { padding-left: 0; padding-right: 0; border-radius: 0; }
 
 /* exemple */
 .bloc-exemple p { margin: 12px 0; }
@@ -105,9 +109,17 @@
    "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
 .bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
 .bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
-.bloc-schema .t  { font-family: inherit; font-size: 0.875rem; fill: #1a1a18; }
-.bloc-schema .ts { font-family: inherit; font-size: 0.75rem; fill: #5f5e5a; }
-.bloc-schema .th { font-family: inherit; font-size: 0.875rem; fill: #1a1a18; font-weight: 500; }
+.bloc-schema .t { font-family: inherit; font-size: 0.875rem; }
+.bloc-schema .t:not([fill]) { fill: #1a1a18; }
+.bloc-schema .ts { font-family: inherit; font-size: 0.75rem; }
+.bloc-schema .ts:not([fill]) { fill: #5f5e5a; }
+.bloc-schema .th { font-family: inherit; font-size: 0.875rem; font-weight: 500; }
+.bloc-schema .th:not([fill]) { fill: #1a1a18; }
+/* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
+.bloc-schema .tl { font-family: inherit; font-size: 1.25rem; font-weight: 500; }
+.bloc-schema .tl:not([fill]) { fill: #1a1a18; }
+.bloc-schema .tx { font-family: inherit; font-size: 1.75rem; font-weight: 600; }
+.bloc-schema .tx:not([fill]) { fill: #1a1a18; }
 /* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
 .bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
 .bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
@@ -218,3 +230,14 @@
   .bloc-piege { grid-template-columns: 1fr; }
   .jules-bulles, .chat-flottant { right: 12px; width: min(320px, calc(100vw - 24px)); }
 }
+
+/* Gros textes dans un groupe de couleur */
+.bloc-schema .c-purple > .tl, .bloc-schema .c-purple > .tx { fill: #3C3489; }
+.bloc-schema .c-teal > .tl, .bloc-schema .c-teal > .tx { fill: #085041; }
+.bloc-schema .c-coral > .tl, .bloc-schema .c-coral > .tx { fill: #712B13; }
+.bloc-schema .c-pink > .tl, .bloc-schema .c-pink > .tx { fill: #72243E; }
+.bloc-schema .c-gray > .tl, .bloc-schema .c-gray > .tx { fill: #444441; }
+.bloc-schema .c-blue > .tl, .bloc-schema .c-blue > .tx { fill: #0C447C; }
+.bloc-schema .c-green > .tl, .bloc-schema .c-green > .tx { fill: #27500A; }
+.bloc-schema .c-amber > .tl, .bloc-schema .c-amber > .tx { fill: #633806; }
+.bloc-schema .c-red > .tl, .bloc-schema .c-red > .tx { fill: #791F1F; }

@@ -25,15 +25,57 @@ Une règle de la charte qui peut être contrôlée par le code l'est (validateur
 - **Cohérence avec la fiche v2** de la même notion : mêmes définitions, même piège principal,
   mêmes notations. La fiche v2 et le référentiel sont les sources de contenu.
 - **Les notations de l'élève**, celles de son cahier : la division s'écrit **÷** (`ρ = m ÷ V`), jamais
-  `/` ; la barre n'existe que dans une unité (m/s, g/cm³). La multiplication s'écrit **×**. Le
+  `/` ; la barre n'existe que dans une unité (m/s, g/cm³). La multiplication s'écrit **×**, la soustraction **−** (signe moins, jamais le tiret « - »). Le
   validateur refuse une barre de division dans le texte et dans les schémas.
 - **Exactitude** au niveau du programme : unités SI, notations officielles, chaque chiffre vérifié
   deux fois, arrondis justes. Aucune source ni URL inventée : seulement celles de la fiche v2 ou du
   référentiel.
 
+### Jamais générique
+
+Une fiche générique (la même carte « définition → exemple → méthode » quelle que soit la notion) est
+refusée à la relecture. Chaque bloc doit porter **la notion elle-même** :
+
+- **Le schéma montre la chose**, pas des boîtes de mots : l'angle dessiné avec son sommet et
+  l'équerre posée dessus, la droite graduée avec les dixièmes, la phrase découpée en groupes
+  colorés, la carte avec les fleuves, la portée avec les notes. Si on peut effacer les mots et que
+  le dessin explique encore quelque chose, c'est un bon schéma.
+- **La carte dit quelque chose** : chaque nœud porte une idée de la notion (« aigu : plus fermé
+  qu'un angle droit »), jamais une rubrique vide (« Définition », « Exemple », « À retenir »).
+- **Les exemples sont précis et vivants** : des vrais nombres, des prénoms, des objets et des
+  situations de la vie de l'élève (la cour, la cantine, le goûter, le sport, le trajet), et le
+  raisonnement complet jusqu'à la réponse.
+- **Le piège est le vrai piège** de la notion, celui que fait un élève de ce niveau (la fiche v2
+  le donne), avec un exemple chiffré ou écrit qui le montre.
+- **La bulle de Jules apporte un plus** : une astuce de mémoire, une image (« l'angle droit, c'est
+  le coin d'une feuille »), un lien avec ce que l'élève connaît. Jamais une reformulation du bloc.
+
+## 1 bis. Le niveau de l'élève
+
+La fiche parle à l'élève de **son** niveau (champ `niveau` du référentiel, rappelé dans le paquet).
+
+**Cycle 3 (CM1, CM2, 6e : 9 à 11 ans)**
+
+- Phrases courtes (une idée par phrase, 15 mots environ), mots de la classe ; tout mot nouveau
+  est expliqué la première fois qu'il apparaît, avec un exemple.
+- Pas de lettres dans les formules sauf si le programme les utilise : on écrit la relation en mots
+  (« longueur × largeur = aire du rectangle ») et on montre le calcul avec de vrais nombres.
+- Les nombres s'écrivent comme en classe : espace entre les classes (12 500), virgule décimale
+  (3,5), unités en entier la première fois (« 3 centimètres (cm) »).
+- Plus de dessin, moins de texte : un schéma au moins dans chaque fiche, deux si la notion s'y
+  prête ; la méthode en 3 ou 4 étapes, dites comme on les ferait avec le doigt sur le cahier.
+- Tutoiement, ton chaleureux et encourageant, jamais infantilisant.
+- Rester dans le programme du niveau : ce qui est hors programme (les limites du référentiel)
+  n'apparaît pas, même en complément.
+
+**Cycle 4 (5e, 4e, 3e : 12 à 15 ans)**
+
+- Les notations du collège (lettres, formules), le vocabulaire disciplinaire exact, des
+  exemples qui vont jusqu'au bout du calcul.
+
 ## 2. La structure
 
-Dans cet ordre, 5 à 8 blocs :
+Dans cet ordre, 5 à 10 blocs (souvent 8 ou 9 : deux schémas et deux exemples sont bienvenus) :
 
 | bloc | quand | rôle |
 |---|---|---|
@@ -79,6 +121,15 @@ Dans cet ordre, 5 à 8 blocs :
 - « Pas à l'échelle » écrit quand c'est le cas.
 - Du code (programme, pseudo-code) dans un schéma : `class="t code"` (ou `ts code`), police à
   chasse fixe ; l'attribut `font-family` n'a pas d'effet, les classes l'emportent.
+- Tailles de texte : `.ts` (12 px, légendes), `.t` et `.th` (14 px), `.tl` (20 px) et `.tx` (28 px)
+  pour ce qui doit se lire de loin : chiffres d'une opération posée, fractions, étiquettes des
+  schémas de cycle 3. Au CM1, on préfère `.t`, `.tl` et `.tx`.
+- Couleur d'un texte : par son groupe `c-*`, ou par un attribut `fill` explicite (il l'emporte sur
+  la couleur de la classe). L'attribut `style` est refusé.
+- Une fraction dans un schéma s'écrit avec une vraie barre : numérateur au-dessus, `<line>`
+  horizontale, dénominateur en dessous (jamais « 3/4 » en ligne pour des élèves de cycle 3).
+- Dans le texte, une fraction s'écrit d'un seul tenant (« 3/4 », sans espace autour de la barre) ;
+  elle compte comme un seul nombre, et « 7/4 = 1 + 3/4 » ressort en gras tout entière.
 
 ## 5. La boucle de contrôle (obligatoire)
 

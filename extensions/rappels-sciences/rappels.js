@@ -7,7 +7,7 @@
 "use strict";
 
 (() => {
-const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie"];
+const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie", "sciences-et-technologie"];
 const DICOS = {
   // Unites. Celles d'une seule lettre (m, s, g, N...) ne sont reconnues qu'apres un nombre
   // (« 98 N ») ou apres « en » (« en m ») : jamais le « m » d'une formule ni un mot.
@@ -54,6 +54,7 @@ const DICOS = {
     "kHz": "kilohertz : 1 000 hertz",
     "MHz": "mégahertz : un million de hertz",
     "°C": "degrés Celsius",
+    "€": "euros",
     "K": "kelvins (unité de température)",
     "Pa": "pascals (unité de pression)",
     "hPa": "hectopascals : 100 pascals",
@@ -237,13 +238,21 @@ Symboles.enregistrer({
 // Des termes courts relies par des operateurs, avec au moins un « = », « → » ou « ≈ ». Termes :
 // nombre (avec son unite), unite seule (km/h → m/s), lettre(s) de grandeur, espece chimique.
 const UNITES = o.alternatives(Object.keys(DICOS.unites));
-const NOMBRE = String.raw`−?\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
+// Un nombre : classes de 3 chiffres separees par une espace (normale ou insecable), decimale apres la
+// virgule ou fraction « 3/4 » ecrite d'un seul tenant, unite eventuelle.
+const NOMBRE = String.raw`−?\d+(?:[ \u00A0\u202F]\d{3})*(?:,\d+|/\d+)?(?:[ \u00A0\u202F]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
 const UNITE_SEULE = String.raw`(?:${o.alternatives(Object.keys(DICOS.unites).filter((u) => u.length > 1))})(?![\p{L}\p{N}])`;
-const TERME = String.raw`(?:${NOMBRE}|${UNITE_SEULE}|(?:\d+[  ])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
-const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
+// Une duree ecrite comme en classe : « 1 h 50 min », « 2 min 30 s ».
+const DUREE = String.raw`\d+[ \u00A0\u202F]?(?:h(?:[ \u00A0\u202F]?\d+(?:[ \u00A0\u202F]?min)?)?|min(?:[ \u00A0\u202F]?\d+[ \u00A0\u202F]?s)?)(?![\p{L}\p{N}])`;
+const TERME = String.raw`(?:${DUREE}|${NOMBRE}|${UNITE_SEULE}|(?:\d+[ \u00A0\u202F])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
+// « 30 ÷ 4 = 7, reste 2 » : le reste fait partie de la division euclidienne.
+const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+(?:,?\s+reste\s+\d+)?`, "gu");
 
 Symboles.enregistrer({
-  id: "formules", formule: true, matieres: SCIENCES,
+  // Les calculs ecrits dans le texte ressortent aussi en histoire, geographie, EMC, arts et musique
+  // (« 1522 − 1519 = 3 ans ») ; pas en francais ni en anglais, qui ont leurs propres mises en forme.
+  id: "formules", formule: true,
+  matieres: [...SCIENCES, "histoire", "geographie", "emc", "histoire-des-arts", "arts-plastiques", "education-musicale"],
   mettreEnForme(texte) {
     const zones = [];
     o.parcourir(motifFormule, texte, (mot, i) => {

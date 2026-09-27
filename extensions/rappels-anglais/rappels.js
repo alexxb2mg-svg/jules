@@ -53,7 +53,8 @@ const SONS = {
   "ː": "voyelle longue",
 };
 const motifSons = o.motifDe(Object.keys(SONS));
-const motifTranscription = /(?<![\p{L}\p{N}/])\/[^\/\s]{1,16}\/(?![\p{L}\p{N}/])/gu;
+// Un mot ou quelques mots (« /θæŋk juː/ ») entre deux barres obliques.
+const motifTranscription = /(?<![\p{L}\p{N}/])\/[^\/\s]{1,16}(?: [^\/\s]{1,16}){0,3}\/(?![\p{L}\p{N}/])/gu;
 const SPECIAUX = /[θðʃʒŋɪʊæʌɑɒɔəɜˈː]/u; // au moins un signe phonetique : pas une date « 12/05 »
 
 Symboles.enregistrer({
@@ -119,6 +120,23 @@ Symboles.enregistrer({
       if (GRAMMAIRE.test(mot)) zones.push({ debut: i, fin: i + mot.length, classe: "formule-texte" });
     });
     return zones;
+  },
+});
+// Monnaies et heures anglaises : « £1 », « $5 », « 4 pm », « 9 am » (am seul est un mot : I am).
+const MONNAIES = { "£": "livre sterling (monnaie du Royaume-Uni)", "$": "dollar (monnaie des États-Unis)" };
+Symboles.enregistrer({
+  id: "monnaies-et-heures", matieres: ANGLAIS, rang: 2,
+  trouver(texte) {
+    const trouves = [];
+    for (const m of texte.matchAll(/[£$](?=\d)/g)) {
+      trouves.push({ debut: m.index, fin: m.index + 1, sens: `${m[0]} : ${MONNAIES[m[0]]}`, classe: "abreviation" });
+    }
+    for (const m of texte.matchAll(/(?<=\d[ \u00A0\u202F]?)(am|pm|a\.m\.|p\.m\.)(?![\p{L}])/gu)) {
+      const matin = m[0].startsWith("a");
+      const sens = matin ? "du matin (de minuit à midi)" : "de l'après-midi ou du soir (de midi à minuit)";
+      trouves.push({ debut: m.index, fin: m.index + m[0].length, sens: `${m[0]} : ${sens}`, classe: "abreviation" });
+    }
+    return trouves;
   },
 });
 })();
