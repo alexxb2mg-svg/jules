@@ -20,6 +20,7 @@ from jules.generateurs.mathematiques import (
     ecritures_et_comparaison_nombres,
     equations_premier_degre_et_produits,
     fractions_irreductibles,
+    indicateurs_position,
     multiples_diviseurs_division_euclidienne,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
@@ -42,6 +43,7 @@ MODULES: dict[str, Any] = {
         fractions_irreductibles,
         ecritures_et_comparaison_nombres,
         developper_factoriser_reduire,
+        indicateurs_position,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
