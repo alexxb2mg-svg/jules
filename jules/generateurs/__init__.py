@@ -23,6 +23,7 @@ from jules.generateurs.mathematiques import (
     multiples_diviseurs_division_euclidienne,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
+    problemes_mise_en_equation,
     racine_carree,
 )
 
@@ -36,6 +37,7 @@ MODULES: dict[str, Any] = {
         multiples_diviseurs_division_euclidienne,
         racine_carree,
         equations_premier_degre_et_produits,
+        problemes_mise_en_equation,
         calcul_nombres_rationnels,
         fractions_irreductibles,
         ecritures_et_comparaison_nombres,

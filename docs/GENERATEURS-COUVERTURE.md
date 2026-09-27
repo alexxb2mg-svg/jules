@@ -29,7 +29,7 @@ génération sans IA (production ouverte, figure, programme).
 |---|---|---|---|---|---|---|
 | developper-factoriser-reduire | oui | A | simple, double, difference ((a+b)(a−b)), factoriser (nombre, x, a²−b², parenthèse commune) | session 2 | PR ouverte | la forme `factorisee` refuse bien la forme développée ✔ ; mais la forme `developpee` n'exige pas la RÉDUCTION (« 6x − 15 + 4x » accepté) : forme `reduite` du correcteur proposée à Alex (C), pas de variante « réduire seule » en attendant ; (a+b)² hors programme 3e : seulement en piège |
 | equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | PR ouverte | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
-| problemes-mise-en-equation | oui | A | âge, périmètre, prix (nombre) ; choisir la bonne équation (choix) | | à faire | habillage : personnages ✔, articles ✔ |
+| problemes-mise-en-equation | oui | A | nombre_pense, ages, perimetre, tarifs (nombre), choisir_equation (choix multiple, deux écritures justes) | session 2 | PR ouverte | solutions tirées entières et positives (un âge, un nombre de séances ont du sens) ; habillage : personnages ✔ |
 
 ## Statistiques et probabilités
 
