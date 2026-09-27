@@ -23,6 +23,7 @@
     blocEls: [],          // index -> { conteneur, maj(progressionBloc) }
     outils: [],           // outils montes dans la lecon (OutilsHote.monter), demontes a la sortie
     occupeParcours: false,
+    sequenceParcours: 0,  // numero du dernier chargement du parcours demande (EX-216)
     julesOccupe: false,
   };
 
@@ -51,10 +52,12 @@
   // Un seul appel parcours ; la page affiche la matiere renvoyee par le serveur et n'ecrase pas la memoire.
   // Premiere visite (ni adresse ni memoire) : « Choisis une matière », sans les notions de la matiere par defaut.
   async function chargerParcours(matiere, notionDemandee) {
+    const numero = ++etat.sequenceParcours;  // EX-216 : deux choix rapproches, seule la derniere reponse s'affiche
     etat.occupeParcours = true;
     $("parcours-attente").classList.remove("cache");
     try {
       const r = await MS.api(MS.cheminMatiere("/api/eleve/cours/parcours", matiere));
+      if (numero !== etat.sequenceParcours) return;
       etat.matieres = r.matieres || [];
       if (!matiere) {
         afficherChoixMatiere();
@@ -74,12 +77,15 @@
         await ouvrirLecon(n.id);
       }
     } catch (err) {
+      if (numero !== etat.sequenceParcours) return;
       $("parcours").classList.remove("cache");
       $("parcours-liste").innerHTML = "";
       $("parcours-liste").appendChild(creer("p", "cours-erreur-ligne", MS.echapper(`Impossible de charger ton parcours : ${err.message}`)));
     } finally {
-      etat.occupeParcours = false;
-      $("parcours-attente").classList.add("cache");
+      if (numero === etat.sequenceParcours) {
+        etat.occupeParcours = false;
+        $("parcours-attente").classList.add("cache");
+      }
     }
   }
 
@@ -109,6 +115,17 @@
     Navigation.suivreMatiere(id);
     await chargerParcours(id, null);
     $("catalogue-titre").focus();
+  }
+
+  // EX-216 : matiere choisie dans la barre (rubrique Mes lecons) : la zone centrale passe sur cette matiere, sans
+  // rechargement ; la liste vient du cache de MS.api (aucun appel de plus). Une lecon ouverte d'une autre matiere
+  // est fermee : jamais deux matieres differentes a l'ecran. Le focus reste dans la barre.
+  function suivreLaBarre(id) {
+    if (etat.lecon) {
+      fermerLecon();
+      $("catalogue").classList.remove("cache");
+    }
+    chargerParcours(id, null);
   }
 
   function afficherNotions(notions) {
@@ -656,15 +673,19 @@
   }
 
   // --- retour au parcours -------------------------------------------------------
-  function retourAuParcours() {
+  function fermerLecon() {
     etat.session = null; etat.conversation = null; etat.lecon = null; etat.progression = null;
     demonterOutils();
     $("lecon").classList.add("cache");
-    $("catalogue").classList.remove("cache");
     $("jules-fil").innerHTML = "";
     $("jules-texte").disabled = true;
     $("jules-envoyer").disabled = true;
     marquerNotionActive();
+  }
+
+  function retourAuParcours() {
+    fermerLecon();
+    $("catalogue").classList.remove("cache");
     chargerParcours(etat.matiereChoisie, null);
   }
 
@@ -673,6 +694,7 @@
     const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
     Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
+    Navigation.surChoixMatiere(suivreLaBarre);
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;
