@@ -1,0 +1,60 @@
+notion: territoire-union-europeenne
+titre: "Les caractéristiques du territoire de l'Union européenne"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « États membres de l'Union européenne »"
+    url: "https://fr.wikipedia.org/w/index.php?title=%C3%89tats_membres_de_l%27Union_europ%C3%A9enne&oldid=239310027"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Union européenne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631"
+    licence: CC-BY-SA-3.0
+abreviations:
+  UE: "Union européenne"
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: territoire-ue, titre: "Territoire de l'UE", sous_titre: "27 membres après le Brexit", principal: true}
+      - {id: schengen, titre: "Espace Schengen", sous_titre: "libre circulation"}
+      - {id: france-centrale, titre: "Position centrale de la France", sous_titre: "carrefour européen"}
+      - {id: transfrontalier, titre: "Coopération transfrontalière", sous_titre: "ex. Rhin supérieur"}
+      - {id: rup, titre: "Régions ultrapériphériques", sous_titre: "territoires éloignés dans l'UE"}
+    liens:
+      - {de: territoire-ue, vers: schengen, libelle: "organise"}
+      - {de: territoire-ue, vers: france-centrale, libelle: "situe"}
+      - {de: france-centrale, vers: transfrontalier, libelle: "favorise"}
+      - {de: territoire-ue, vers: rup, libelle: "intègre"}
+    jules: "La France occupe une position centrale dans l'UE, ce qui facilite les échanges et les coopérations transfrontalières."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer le territoire de l'**UE** : 27 membres, plus de 443 millions d'habitants."
+      - "Repérer la position de la France : centrale, au carrefour de plusieurs grands ensembles européens."
+      - "Identifier un exemple de coopération **transfrontalière**, comme le Rhin supérieur."
+      - "Ne pas oublier les **régions ultrapériphériques**, territoires européens éloignés du continent."
+    jules: "La position centrale de la France explique pourquoi elle multiplie les régions transfrontalières avec ses voisins."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que le territoire de l'UE se limite au seul continent européen."
+    pourquoi_faux: "L'UE intègre aussi des **régions ultrapériphériques**, comme les territoires ultra-marins français."
+    bonne_idee: "Toujours mentionner que le territoire de l'UE dépasse le seul continent grâce à ces régions éloignées."
+    jules: "Les régions ultrapériphériques montrent que le territoire de l'UE ne se limite pas à un seul continent."
+
+  - id: exemple
+    type: exemple
+    situation: "La région du **Rhin supérieur** relie la France, l'Allemagne et la Suisse dans une coopération transfrontalière."
+    conclusion: "Cet exemple illustre le potentiel de l'UE pour la France : coopération économique et circulation facilitée par **Schengen**."
+    jules: "Une région transfrontalière est un excellent exemple concret à citer pour un développement construit."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "territoire de l'Union européenne", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Cette place de la France en Europe prépare directement la fiche sur la France et l'Europe dans le monde."

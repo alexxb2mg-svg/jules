@@ -1,0 +1,58 @@
+notion: amenagement-du-territoire
+titre: "L'aménagement du territoire, réponse des pouvoirs publics aux inégalités territoriales"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Aménagement du territoire en France »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Am%C3%A9nagement_du_territoire_en_France&oldid=233193019"
+    licence: CC-BY-SA-4.0
+abreviations:
+  UE: "Union européenne"
+  LGV: "ligne à grande vitesse"
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: amenagement, titre: "Aménagement du territoire", sous_titre: "réduire les inégalités territoriales", principal: true}
+      - {id: etat, titre: "État", sous_titre: "acteur national"}
+      - {id: collectivites, titre: "Collectivités territoriales", sous_titre: "décentralisation"}
+      - {id: ue-acteur, titre: "Union européenne", sous_titre: "politique régionale"}
+      - {id: outils, titre: "Outils", sous_titre: "LGV, aides, services publics"}
+    liens:
+      - {de: amenagement, vers: etat, libelle: "agit par"}
+      - {de: amenagement, vers: collectivites, libelle: "agit par"}
+      - {de: amenagement, vers: ue-acteur, libelle: "agit par"}
+      - {de: amenagement, vers: outils, libelle: "utilise"}
+    jules: "L'aménagement du territoire mobilise toujours plusieurs acteurs à des échelles différentes, de l'État à l'Union européenne."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer l'**inégalité territoriale** à corriger : accès à l'emploi, aux transports, aux services publics."
+      - "Identifier le ou les acteurs impliqués : **État**, **collectivités territoriales**, **UE**."
+      - "Citer un outil concret utilisé : **LGV**, aide aux entreprises, maintien d'un service public rural."
+      - "Relier l'aménagement à son objectif : réduire les écarts entre territoires favorisés et fragiles."
+    jules: "Toujours nommer l'acteur ET l'outil : une réponse complète associe qui agit et comment il agit."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que seul l'État s'occupe de l'aménagement du territoire en France."
+    pourquoi_faux: "Depuis la **décentralisation**, les collectivités territoriales et aussi l'Union européenne agissent activement."
+    bonne_idee: "Citer systématiquement les trois échelles d'acteurs : nationale (État), locale (collectivités) et européenne (UE)."
+    jules: "La décentralisation a transféré de nombreuses compétences d'aménagement aux régions et aux départements."
+
+  - id: exemple
+    type: exemple
+    situation: "Une **LGV** est construite pour relier une région isolée aux grandes métropoles françaises."
+    conclusion: "C'est un outil d'aménagement qui vise à réduire l'éloignement et à rapprocher les territoires du reste du pays."
+    jules: "Les infrastructures de transport sont l'un des outils les plus visibles de l'aménagement du territoire."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "aménagement du territoire", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Le croquis de l'organisation du territoire au brevet reprend souvent ces mêmes acteurs et outils."

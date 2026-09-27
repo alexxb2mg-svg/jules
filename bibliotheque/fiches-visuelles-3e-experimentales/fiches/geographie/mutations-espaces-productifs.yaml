@@ -1,0 +1,60 @@
+notion: mutations-espaces-productifs
+titre: "Les mutations des espaces productifs français"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Agriculture »"
+    url: "https://fr.vikidia.org/w/index.php?title=Agriculture&oldid=2331506"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Tourisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818"
+    licence: CC-BY-SA-3.0
+abreviations:
+  UE: "Union européenne"
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: espace-productif, titre: "Espace productif", sous_titre: "territoire organisé pour produire", principal: true}
+      - {id: agriculture, titre: "Agriculture", sous_titre: "1re de l'UE"}
+      - {id: industrie, titre: "Industrie", sous_titre: "mondialisation, délocalisations"}
+      - {id: tourisme, titre: "Tourisme", sous_titre: "plus de 100 millions d'arrivées par an"}
+      - {id: poles-competitivite, titre: "Pôles de compétitivité", sous_titre: "regroupements d'entreprises et de recherche"}
+    liens:
+      - {de: espace-productif, vers: agriculture, libelle: "type"}
+      - {de: espace-productif, vers: industrie, libelle: "type"}
+      - {de: espace-productif, vers: tourisme, libelle: "type"}
+      - {de: industrie, vers: poles-competitivite, libelle: "s'organise en"}
+    jules: "Un espace productif rassemble toujours des activités et des acteurs qui produisent des biens ou des services vendus ensuite."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier le type d'espace productif : agricole, industriel, touristique ou d'affaires."
+      - "Repérer les acteurs qui l'organisent (entreprises, agriculteurs, collectivités, État)."
+      - "Chercher les liens avec la **mondialisation** : exportations, investissements étrangers, concurrence."
+      - "Noter les évolutions récentes : **délocalisations**, modernisation, nouveaux marchés."
+    jules: "Chaque espace productif se lit à travers trois questions : qui produit, quoi, et pour quel marché."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que l'agriculture française emploie encore une large part de la population active."
+    pourquoi_faux: "L'agriculture ne représente qu'environ 1,5 % de la population active, malgré une production très importante."
+    bonne_idee: "Distinguer la part dans l'**emploi** (faible) de la part dans la **production** (élevée grâce à la mécanisation)."
+    jules: "Peu d'agriculteurs mais beaucoup de production : c'est le résultat de décennies de modernisation agricole."
+
+  - id: exemple
+    type: exemple
+    situation: "La France est le premier pays agricole de l'**UE** avec environ **18 %** de la production agricole européenne."
+    conclusion: "Cette place s'explique par la diversité des terroirs et les aides de la **PAC**, tout en employant très peu d'actifs."
+    jules: "Le contraste entre forte production et faible emploi est la clé pour comprendre les mutations agricoles."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "espaces productifs et mondialisation", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Compare ensuite avec les espaces de faible densité : certains espaces productifs agricoles s'y trouvent aussi."

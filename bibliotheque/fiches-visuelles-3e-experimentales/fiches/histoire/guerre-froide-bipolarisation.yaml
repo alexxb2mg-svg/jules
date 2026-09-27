@@ -1,0 +1,93 @@
+notion: guerre-froide-bipolarisation
+titre: "La guerre froide et la bipolarisation du monde"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Guerre froide »"
+    url: "https://fr.vikidia.org/w/index.php?title=Guerre_froide&oldid=2570032"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Organisation des Nations unies »"
+    url: "https://fr.vikidia.org/w/index.php?title=Organisation_des_Nations_unies&oldid=2570800"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  URSS: "Union des républiques socialistes soviétiques"
+  OTAN: "Organisation du traité de l'Atlantique nord"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: guerre-froide, titre: "Guerre froide", sous_titre: "1947-1991", principal: true}
+      - {id: bloc-ouest, titre: "Bloc de l'Ouest", sous_titre: "USA, capitalisme, OTAN"}
+      - {id: bloc-est, titre: "Bloc de l'Est", sous_titre: "URSS, communisme, pacte de Varsovie"}
+      - {id: rideau-fer, titre: "Rideau de fer", sous_titre: "mur de Berlin, 1961"}
+      - {id: non-alignes, titre: "Non-alignés", sous_titre: "conférence de Bandung, 1955"}
+    liens:
+      - {de: guerre-froide, vers: bloc-ouest, libelle: "camp 1"}
+      - {de: guerre-froide, vers: bloc-est, libelle: "camp 2"}
+      - {de: bloc-ouest, vers: rideau-fer, libelle: "frontière avec l'Est"}
+      - {de: guerre-froide, vers: non-alignes, libelle: "refusent de choisir"}
+    jules: "Deux blocs, une frontière symbolique (le **rideau de fer**) et des pays qui refusent de choisir : les **non-alignés**."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Retenir les deux dates encadrant la guerre froide : **1947** et **1991**."
+      - "Nommer les deux camps et leurs modèles : capitalisme (USA) contre communisme (**URSS**)."
+      - "Rappeler que c'est une guerre idéologique, sans affrontement militaire direct entre les deux grands."
+    jules: "Toujours associer un camp à son modèle économique et à son organisation militaire (OTAN ou pacte de Varsovie)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que la guerre froide est une guerre avec des combats directs entre USA et URSS."
+    pourquoi_faux: "Le mot « froide » signifie justement qu'il n'y a **pas d'affrontement militaire direct** entre les deux superpuissances."
+    bonne_idee: "Décrire la guerre froide comme une rivalité idéologique, culturelle et par pays interposés."
+    jules: "Les deux grands s'affrontent par la propagande et par des conflits locaux, jamais frontalement."
+
+  - id: exemple
+    type: exemple
+    situation: "En 1961, Berlin est coupée en deux par un mur construit par le bloc de l'Est."
+    calcul: "Ce mur matérialise le **rideau de fer** qui traverse toute l'Europe depuis 1946."
+    conclusion: "Le **mur de Berlin** devient le symbole le plus fort de la coupure du monde en deux blocs."
+    jules: "Un seul objet (le mur) résume toute la logique de la bipolarisation : deux camps séparés par une frontière fermée."
+
+  - id: schema
+    type: schema
+    titre: "Le monde coupé en deux blocs"
+    svg: |
+      <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <g class="node c-blue">
+          <rect x="50" y="40" width="250" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="175" y="58" text-anchor="middle" dominant-baseline="central">Bloc de l'Ouest</text>
+          <text class="ts" x="175" y="76" text-anchor="middle" dominant-baseline="central">USA, capitalisme, OTAN</text>
+        </g>
+        <g class="node c-red">
+          <rect x="380" y="40" width="250" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="505" y="58" text-anchor="middle" dominant-baseline="central">Bloc de l'Est</text>
+          <text class="ts" x="505" y="76" text-anchor="middle" dominant-baseline="central">URSS, communisme, Varsovie</text>
+        </g>
+        <line x1="300" y1="68" x2="380" y2="68" class="arr" stroke="#888780" marker-end="url(#arrow)"/>
+        <text class="ts" x="340" y="58" text-anchor="middle">rideau de fer</text>
+        <g class="node c-gray">
+          <rect x="215" y="140" width="250" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="340" y="158" text-anchor="middle" dominant-baseline="central">Mur de Berlin — 1961</text>
+          <text class="ts" x="340" y="176" text-anchor="middle" dominant-baseline="central">symbole de la coupure</text>
+        </g>
+        <line x1="175" y1="96" x2="280" y2="140" class="leader" stroke="#888780" marker-end="url(#arrow)"/>
+        <line x1="505" y1="96" x2="400" y2="140" class="leader" stroke="#888780" marker-end="url(#arrow)"/>
+      </svg>
+    jules: "Le mur de Berlin illustre concrètement la ligne de séparation entre les deux blocs de la guerre froide."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Revois ensuite la conférence de Bandung (1955) pour comprendre le rôle des non-alignés."
