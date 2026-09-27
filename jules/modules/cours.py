@@ -88,6 +88,7 @@ class TentativeEntree(BaseModel):
 class Brique(Module):
     id = "cours"
     titre = "Leçon en cours"
+    dependances = ("notions",)
 
     def __init__(self, tuteur: Any, reglages: dict[str, Any]) -> None:
         super().__init__(tuteur, reglages)
@@ -252,7 +253,7 @@ class Brique(Module):
         bot2 = self.tuteur.stockage.ajouter_message(conv_id, Message(role="bot", texte=nouvelle))
         conv.messages.append(bot2)
         eleve_msg = conv.messages[-3]
-        self.tuteur._lancer_apres_echange(conv, eleve_msg, bot2)
+        self.tuteur.lancer_apres_echange(conv, eleve_msg, bot2)
         return nouvelle
 
     def _noter_correction(self, conv_id: str, message_eleve: str, note: str) -> None:
@@ -266,7 +267,7 @@ class Brique(Module):
         suivi = self.tuteur.module("suivi")
         if conv is not None and suivi is not None:
             # seul le suivi : ni Jules ni la vigilance n'ont a relire un nombre corrige par le code
-            self.tuteur._fond.submit(suivi.apres_echange, conv, eleve, bot)
+            self.tuteur.executer_en_fond(suivi.apres_echange, conv, eleve, bot)
 
     def _relire(self, conv_id: str, message_eleve: str) -> str:
         return self.tuteur.echanger(conv_id, message_eleve).texte

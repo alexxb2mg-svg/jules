@@ -69,6 +69,7 @@ def _rendre_exercice(vue: dict[str, Any]) -> str:
 class Brique(Module):
     id = "exercices"
     titre = "Exercices sans IA en cours"
+    dependances = ("notions",)
 
     def __init__(self, tuteur: Any, reglages: dict[str, Any]) -> None:
         super().__init__(tuteur, reglages)
