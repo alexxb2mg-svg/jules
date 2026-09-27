@@ -1,0 +1,11 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: consignes-decoupees
+canal: [consigne, js]
+type: booleen
+neutre: false
+plage: [false, true]
+combinaison: ou
+source:
+  nature: usage
+  reference: "PAP (circulaire 2015-016), maternelle p. 2 : decomposer les consignes et informations complexes."

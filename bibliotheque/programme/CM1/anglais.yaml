@@ -20,7 +20,7 @@ perimetre: >
   régionales enseignées au cours moyen (LV1 comme LV2, quelle que soit la langue) : il ne mentionne
   jamais l'anglais ni aucune autre langue par son nom, et ne donne aucun repère linguistique
   spécifique à une langue (pas de vocabulaire anglais, pas de grammaire anglaise). Ce fichier est
-  nommé anglais.yaml uniquement par convention de la bibliothèque (Ellie apprend l'anglais et le
+  nommé anglais.yaml uniquement par convention de la bibliothèque (l'élève apprend l'anglais et le
   référentiel de 3e utilise déjà ce nom de fichier), mais son contenu ne retient QUE ce que dit ce
   texte générique ; aucun exemple propre à l'anglais n'y a été ajouté puisque le texte source n'en
   fournit aucun. Le programme distingue explicitement, pour chacune des six activités langagières

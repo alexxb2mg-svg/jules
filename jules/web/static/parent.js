@@ -111,10 +111,121 @@
     });
   }
 
+  // Amenagements du PAP, preferences hors PAP et conflits (docs/spec/ADAPTATIONS-LOT2.md, EX-108).
+  // Tout texte vient du serveur et passe par textContent. Les conflits sont montres, jamais tranches.
+  const Adaptations = {
+    lireChoix() {
+      const coches = [...document.querySelectorAll("#form-adaptations input[data-amenagement]")]
+        .filter((c) => c.checked).map((c) => c.dataset.amenagement);
+      const preferences = { police: $("pref-police").value, fond: $("pref-fond").value };
+      if ($("pref-lecture-automatique").checked) preferences["lecture-vocale"] = "automatique";
+      return { amenagements: coches, preferences };
+    },
+
+    ligne(a) {
+      const li = document.createElement("li");
+      li.dataset.amenagement = a.id;
+      const label = document.createElement("label");
+      const case_ = document.createElement("input");
+      case_.type = "checkbox";
+      case_.dataset.amenagement = a.id;
+      case_.checked = a.coche;
+      case_.addEventListener("change", () => Adaptations.apercu());
+      label.appendChild(case_);
+      const texte = document.createElement("span");
+      texte.className = "adaptation-libelle";
+      if (a.rubrique_autres) {
+        const ref = a.reference;
+        texte.textContent = ref ? `${ref.texte} (libellé ${ref.nom_niveau}, p. ${ref.page})` : a.id;
+        const mention = document.createElement("em");
+        mention.className = "adaptation-mention";
+        mention.textContent = ` : ${a.mention}`;
+        texte.appendChild(mention);
+      } else {
+        texte.textContent = `${a.texte} (p. ${a.page})`;
+      }
+      label.appendChild(texte);
+      li.appendChild(label);
+      return li;
+    },
+
+    remplirSelect(select, pref) {
+      select.textContent = "";
+      for (const c of pref.choix) {
+        const option = document.createElement("option");
+        option.value = c.valeur;
+        option.textContent = c.libelle;
+        select.appendChild(option);
+      }
+      select.value = pref.valeur;
+    },
+
+    afficherConflits(conflits) {
+      const zone = $("adaptations-conflits");
+      zone.textContent = "";
+      zone.dataset.nombre = String(conflits.length);
+      if (!conflits.length) return;
+      const titre = document.createElement("p");
+      titre.textContent = "À savoir : ces réglages s'appliquent tous, mais leur combinaison a un effet à surveiller.";
+      zone.appendChild(titre);
+      const liste = document.createElement("ul");
+      for (const c of conflits) {
+        const li = document.createElement("li");
+        li.className = "conflit";
+        li.dataset.conflit = c.id;
+        li.textContent = c.message;
+        liste.appendChild(li);
+      }
+      zone.appendChild(liste);
+    },
+
+    afficher(etat) {
+      $("adaptations-niveau").textContent = etat.nom_niveau + (etat.niveau_reconnu ? "" : " (classe non reconnue)");
+      const pap = $("adaptations-pap"), autres = $("adaptations-autres");
+      pap.textContent = ""; autres.textContent = "";
+      for (const a of etat.amenagements) (a.rubrique_autres ? autres : pap).appendChild(Adaptations.ligne(a));
+      const r = etat.rubrique_autres;
+      $("adaptations-autres-titre").textContent = r.page ? `${r.titre} (p. ${r.page})` : r.titre;
+      $("adaptations-autres-groupe").classList.toggle("cache", !autres.children.length);
+      Adaptations.remplirSelect($("pref-police"), etat.preferences.police);
+      Adaptations.remplirSelect($("pref-fond"), etat.preferences.fond);
+      $("pref-lecture-automatique").checked = etat.lecture_automatique;
+      Adaptations.afficherConflits(etat.conflits);
+    },
+
+    async apercu() {
+      try {
+        const etat = await MS.api("/api/parent/adaptations/apercu", MS.json(Adaptations.lireChoix()));
+        Adaptations.afficherConflits(etat.conflits);
+        $("adaptations-etat").textContent = "Modifications non enregistrées.";
+      } catch (err) { $("adaptations-etat").textContent = `Erreur : ${err.message}`; }
+    },
+
+    async charger() {
+      Adaptations.afficher(await MS.api("/api/parent/adaptations"));
+    },
+
+    preparer() {
+      for (const id of ["pref-police", "pref-fond", "pref-lecture-automatique"]) {
+        $(id).addEventListener("change", () => Adaptations.apercu());
+      }
+      $("form-adaptations").addEventListener("submit", async (ev) => {
+        ev.preventDefault();
+        $("adaptations-etat").textContent = "Enregistrement…";
+        try {
+          const etat = await MS.api("/api/parent/adaptations", MS.json(Adaptations.lireChoix(), "PUT"));
+          Adaptations.afficher(etat);
+          $("adaptations-etat").textContent = "Enregistré.";
+        } catch (err) { $("adaptations-etat").textContent = `Erreur : ${err.message}`; }
+      });
+    },
+  };
+
   async function demarrage() {
     await MS.porte("parent", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     const infos = await MS.api("/api/infos");
     MS.appliquerCouleurs(infos.persona.couleurs);
+    document.title = `${infos.persona.nom} - Espace parent`;
     modules = await MS.api("/api/parent/modules");
     $("jour").value = aujourdhui();
     $("jour").addEventListener("change", () => { chargerRapport(); chargerConversations(); });
@@ -134,7 +245,8 @@
       } catch (err) { $("etat-envoi").textContent = `Erreur : ${err.message}`; }
     });
     preparerEffacement();
-    await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations()]);
+    Adaptations.preparer();
+    await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations(), Adaptations.charger()]);
     chargerRapport();
   }
 

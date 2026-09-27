@@ -11,29 +11,40 @@
   display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-bottom: 1px solid var(--bord);
   background: var(--p-fond);
 }
-.cours-marque { flex: 1; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.125rem; color: var(--texte); text-decoration: none; justify-content: center; }
+.cours-marque { flex: 1; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); color: var(--texte); text-decoration: none; justify-content: center; }
 .cours-marque img { width: 36px; height: 36px; }
 .bouton-panneau {
-  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: 0.875rem;
+  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1));
   color: var(--texte); display: none; align-items: center; gap: 6px;
 }
 .bouton-panneau:hover, .bouton-panneau:focus-visible { border-color: var(--p-principale); }
 
 .cours-corps { flex: 1; display: flex; min-height: 0; }
 
-/* --- parcours (gauche) --- */
-.parcours {
-  width: 300px; flex-shrink: 0; border-right: 1px solid var(--bord); background: #FAF9FF;
-  padding: 16px; display: flex; flex-direction: column; gap: 10px; overflow-y: auto;
+/* --- liste des notions : dans la zone centrale, tant qu'aucune lecon n'est ouverte (EX-209) --- */
+.catalogue { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.catalogue-titre { margin: 0; font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); }
+.catalogue-titre:focus { outline: none; }
+.choix-matiere-consigne { margin: 0 0 8px; font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); font-weight: 600; }
+.choix-matiere-liste {
+  list-style: none; margin: 0; padding: 0; display: grid; gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
 }
-.parcours .panneau-entete { display: none; }
-.panneau-jules .panneau-entete .fermer { display: none; }
-.parcours label { font-weight: 600; font-size: 0.875rem; }
-.parcours select {
-  font: inherit; padding: 8px 10px; border: 2px solid var(--bord); border-radius: 10px; background: #FFFFFF;
+.choix-matiere-bouton {
+  width: 100%; min-height: 2.75rem; text-align: left; background: #FFFFFF; border: 2px solid var(--bord);
+  border-radius: 12px; padding: 8px 12px; color: var(--texte); font: inherit; cursor: pointer;
+}
+.choix-matiere-bouton:hover, .choix-matiere-bouton:focus-visible { border-color: var(--p-principale); }
+/* Quand la barre montre deja les notions de cette matiere (navigation.js, data-barre-notions), la page ne les
+   repete pas a cote : une seule liste de notions a l'ecran. Sous 900 px la barre est un tiroir ferme : la page
+   garde sa liste. */
+.liste-dans-barre { display: none; color: var(--gris); margin: 0; }
+@media (min-width: 900.02px) {
+  body[data-barre-notions="lecons"] #parcours { display: none; }
+  body[data-barre-notions="lecons"] .liste-dans-barre { display: block; }
 }
 .parcours-liste { display: flex; flex-direction: column; gap: 14px; }
-.chapitre-titre { font-weight: 700; font-size: 0.875rem; color: var(--gris); text-transform: uppercase; margin: 4px 0 2px; }
+.chapitre-titre { font-weight: 700; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); color: var(--gris); text-transform: uppercase; margin: 4px 0 2px; }
 .notion-ligne {
   display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; background: none; border: none;
   border-radius: 10px; padding: 8px; color: var(--texte); font: inherit;
@@ -42,9 +53,9 @@
 .notion-ligne.active { background: var(--p-bulle-bot); outline: 2px solid var(--p-principale); }
 .notion-ligne:disabled { color: var(--gris); cursor: default; }
 .notion-ligne .nom { flex: 1; }
-.notion-ligne .sans-lecon { display: block; font-size: 0.75rem; color: var(--gris); }
+.notion-ligne .sans-lecon { display: block; font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); color: var(--gris); }
 .pastille-etat {
-  display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; padding: 2px 9px; border-radius: 999px;
+  display: inline-flex; align-items: center; gap: 5px; font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); padding: 2px 9px; border-radius: 999px;
   border: 1px solid transparent; flex-shrink: 0; white-space: nowrap;
 }
 .pastille-etat::before { content: ""; width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
@@ -61,15 +72,15 @@
 
 /* --- centre : la lecon --- */
 .lecon-zone { flex: 1; min-width: 0; overflow-y: auto; padding: 20px 24px 40px; }
-.lecon-vide { max-width: 700px; margin: 60px auto; text-align: center; color: var(--gris); font-size: 1.125rem; }
+.panneau-jules .panneau-entete .fermer { display: none; }
 .lecon { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
-.lecon-entete h1 { margin: 0; font-size: 1.5rem; }
-.lecon-meta { margin: 2px 0 0; color: var(--gris); font-size: 0.875rem; }
+.lecon-entete h1 { margin: 0; font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); }
+.lecon-meta { margin: 2px 0 0; color: var(--gris); font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); }
 
 .progression { display: flex; align-items: center; gap: 10px; }
 .progression-barre { flex: 1; height: 10px; background: var(--p-bulle-bot); border-radius: 999px; overflow: hidden; }
 .progression-remplie { height: 100%; background: var(--p-principale); border-radius: 999px; transition: width .25s; width: 0%; }
-.progression-texte { font-size: 0.8125rem; color: var(--gris); white-space: nowrap; }
+.progression-texte { font-size: calc(0.8125rem * var(--adapt-echelle-texte, 1)); color: var(--gris); white-space: nowrap; }
 
 .blocs { display: flex; flex-direction: column; gap: 16px; }
 .bloc {
@@ -80,8 +91,8 @@
 .bloc.reussi { border-color: #2E9E5B; }
 .bloc.a_revoir { border-color: #C62828; }
 .bloc-entete { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-.bloc-entete strong { flex: 1; font-size: 0.9375rem; }
-.bloc-etat { font-size: 0.75rem; color: var(--gris); padding: 2px 9px; border-radius: 999px; background: #F1F0F7; }
+.bloc-entete strong { flex: 1; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); }
+.bloc-etat { font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); color: var(--gris); padding: 2px 9px; border-radius: 999px; background: #F1F0F7; }
 .bloc-etat.reussi { background: #E8F3EC; color: #1E6B3C; }
 .bloc-etat.a_revoir { background: #FDECEC; color: #A31515; }
 .bloc-etat.fait { background: #E4F0FC; color: #12508F; }
@@ -110,7 +121,7 @@
 .bloc-actions .bouton:disabled, .bloc-actions button:disabled { opacity: 0.5; cursor: not-allowed; }
 
 .indices-vus { list-style: none; margin: 4px 0 10px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
-.indices-vus li { background: #FFF9E8; border-left: 4px solid #EFAF00; border-radius: 8px; padding: 6px 10px; font-size: 0.875rem; }
+.indices-vus li { background: #FFF9E8; border-left: 4px solid #EFAF00; border-radius: 8px; padding: 6px 10px; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); }
 
 .retour-tentative { margin-top: 10px; padding: 10px 12px; border-radius: 10px; font-weight: 600; }
 .retour-tentative.juste { background: #E8F3EC; color: #1E6B3C; }
@@ -125,7 +136,7 @@
 .outil-cadre { display: block; width: 100%; min-height: 26rem; border: 1px solid #E3E0F0; border-radius: 10px; background: #FFFFFF; }
 
 .lecon-fin { text-align: center; border: 2px dashed var(--p-principale); border-radius: 16px; padding: 20px; }
-.lecon-fin p { font-size: 1.125rem; margin: 0 0 12px; }
+.lecon-fin p { font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); margin: 0 0 12px; }
 
 /* --- droite : Jules --- */
 .panneau-jules {
@@ -144,20 +155,32 @@
 .jules-saisie textarea:focus { outline: none; border-color: var(--p-principale); }
 
 .attente-ligne { color: var(--gris); font-style: italic; padding: 8px 4px; }
-.cours-erreur-ligne { color: #C62828; font-size: 0.875rem; margin: 6px 0; }
+.cours-erreur-ligne { color: #C62828; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); margin: 6px 0; }
+
+/* --- 900 a 1280 px : la barre laterale (navigation.css, 15.5rem) prend la place ; Jules passe en tiroir a droite,
+   pour que la lecon garde sa largeur d'avant la barre (au moins 380 px a 1000 px). --- */
+@media (min-width: 900.02px) and (max-width: 1279.98px) {
+  #menu-jules { display: inline-flex; }
+  .panneau-jules {
+    position: fixed; top: 0; bottom: 0; right: 0; width: 86%; max-width: 340px; z-index: 30;
+    transform: translateX(100%); visibility: hidden; transition: transform .2s, visibility .2s;
+  }
+  .panneau-jules.ouvert {
+    transform: none; visibility: visible; box-shadow: 0 0 40px rgba(0,0,0,0.25); transition: transform .2s, visibility 0s;
+  }
+  .panneau-jules .panneau-entete .fermer { display: inline-flex; }
+}
 
 /* --- responsive : tablette < 900px --- */
 @media (max-width: 900px) {
   .bouton-panneau { display: inline-flex; }
-  .parcours, .panneau-jules {
+  .panneau-jules {
     position: fixed; top: 0; bottom: 0; width: 86%; max-width: 340px; z-index: 30;
     box-shadow: 0 0 40px rgba(0,0,0,0.25); transition: transform .2s;
   }
-  .parcours { left: 0; transform: translateX(-100%); }
-  .parcours.ouvert { transform: none; }
   .panneau-jules { right: 0; transform: translateX(100%); }
   .panneau-jules.ouvert { transform: none; }
-  .parcours .panneau-entete, .panneau-jules .panneau-entete { display: flex; }
+  .panneau-jules .panneau-entete { display: flex; }
   .panneau-jules .panneau-entete .fermer { display: inline-flex; }
   .lecon-zone { padding: 16px; }
 }

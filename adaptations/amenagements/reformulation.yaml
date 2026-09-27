@@ -1,0 +1,9 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+# College : aucun item, affiche sous « Autres aménagements et adaptations ».
+id: reformulation
+libelles:
+  elementaire: {page: 4, texte: "Aider à la compréhension par une explicitation ou une reformulation de la part de l'enseignant"}
+leviers:
+  phrases-courtes: true

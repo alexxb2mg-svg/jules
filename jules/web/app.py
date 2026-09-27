@@ -17,7 +17,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
 
-from jules import dossier
+from jules import dossier, page_adaptations
 from jules.acces import COOKIE, DUREE_S, Acces
 from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
@@ -263,6 +263,7 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         return tuteur.stockage.evenements(type_, jour=jour, limite=200)
 
     app.include_router(routes_dossier(tuteur), prefix="/api/parent", dependencies=[parent])
+    app.include_router(routes_adaptations(tuteur), prefix="/api/parent", dependencies=[parent])
 
     @app.get("/api/parent/modules")
     def modules(_: str = parent) -> list[dict[str, Any]]:
@@ -304,6 +305,44 @@ def routes_dossier(tuteur: Tuteur) -> APIRouter:
         if entree.confirmation.strip().upper() != dossier.MOT_DE_CONFIRMATION:
             raise HTTPException(400, f"Tape {dossier.MOT_DE_CONFIRMATION} pour confirmer")
         return {"ok": True, "efface": dossier.effacer_tout(tuteur)}
+
+    return routeur
+
+
+class ChoixAdaptations(BaseModel):
+    # Types laisses ouverts : la validation (liste fermee, message au parent) est celle de
+    # jules/page_adaptations.py, pour que rien d'inattendu n'arrive jusqu'a resoudre() (EX-104).
+    amenagements: Any = Field(default_factory=list)
+    preferences: Any = Field(default_factory=dict)
+
+
+def routes_adaptations(tuteur: Tuteur) -> APIRouter:
+    """Amenagements du PAP et preferences hors PAP, cotes parent (docs/spec/ADAPTATIONS-LOT2.md, EX-108)."""
+    routeur = APIRouter()
+
+    def choix(entree: ChoixAdaptations) -> page_adaptations.Choix:
+        try:
+            return page_adaptations.choix_depuis_entree(entree.amenagements, entree.preferences)
+        except page_adaptations.ChoixInvalide as err:
+            raise HTTPException(400, str(err)) from err
+
+    @routeur.get("/adaptations")
+    def lire_adaptations() -> dict[str, Any]:
+        return page_adaptations.etat(tuteur.config.fichier_profil)
+
+    @routeur.post("/adaptations/apercu")
+    def apercu_adaptations(entree: ChoixAdaptations) -> dict[str, Any]:
+        """Conflits du choix en cours, avant enregistrement (rien n'est ecrit)."""
+        return page_adaptations.etat(tuteur.config.fichier_profil, choix(entree))
+
+    @routeur.put("/adaptations")
+    def enregistrer_adaptations(entree: ChoixAdaptations) -> dict[str, Any]:
+        valide = choix(entree)
+        try:
+            page_adaptations.enregistrer(tuteur.config.fichier_profil, valide)
+        except page_adaptations.ChoixInvalide as err:
+            raise HTTPException(409, str(err)) from err
+        return page_adaptations.etat(tuteur.config.fichier_profil)
 
     return routeur
 
