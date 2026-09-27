@@ -16,6 +16,7 @@ from typing import Any
 
 from jules.generateurs.mathematiques import (
     equations_premier_degre_et_produits,
+    indicateurs_position,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
 )
@@ -28,6 +29,7 @@ MODULES: dict[str, Any] = {
         nombres_premiers_decomposition,
         pourcentages_coefficient_multiplicateur,
         equations_premier_degre_et_produits,
+        indicateurs_position,
     )
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
