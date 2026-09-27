@@ -21,6 +21,7 @@ Reglages (config.yaml) :
 from __future__ import annotations
 
 import logging
+import random
 from dataclasses import asdict
 from typing import Any
 
@@ -31,6 +32,7 @@ from jules.bibliotheques import dossier_bibliotheque
 from jules.fiches.correction import TYPES_AUTO
 from jules.fiches.parcours import Etat, choisir, presenter, repondre
 from jules.fiches.schema import est_v2, servable_sans_ia
+from jules.generateurs import GENERATEURS, serie_generee
 from jules.modules.base import Module
 from jules.stockage import Conversation, Message
 
@@ -39,6 +41,7 @@ journal = logging.getLogger("jules.exercices")
 ESPACE = "exercices"
 MODE = "exercice"
 REPONSE_MAX = 300  # au-dela, la reponse est coupee avant meme d'etre lue par le correcteur
+GRAINE_MAX = 10**9
 
 TRANSITION_REUSSI = "\n\nOn continue.\n\n"
 TRANSITION_ECHEC = "\n\nOn passe au suivant.\n\n"
@@ -160,6 +163,19 @@ class Brique(Module):
         fiche = self.fiches.get(notion_id)
         if fiche is None:
             raise KeyError(notion_id)
+        return self._ouvrir(notion_id, fiche, {})
+
+    def commencer_generee(self, notion_id: str, graine: int | None = None) -> dict[str, Any]:
+        """Une serie d'exercices fabriques par le generateur de la notion : autres nombres a chaque serie."""
+        if notion_id not in GENERATEURS:
+            raise KeyError(notion_id)
+        if graine is None:
+            graine = random.randrange(GRAINE_MAX)  # noqa: S311 - pas de cryptographie, juste une serie differente
+        connue = self.fiches.get(notion_id) or {}
+        fiche = serie_generee(notion_id, graine, prerequis=list(connue.get("prerequis") or []))
+        return self._ouvrir(notion_id, fiche, {"graine": graine, "fiche": fiche})
+
+    def _ouvrir(self, notion_id: str, fiche: dict[str, Any], extra: dict[str, Any]) -> dict[str, Any]:
         premier = choisir(fiche)
         if premier is None:
             raise ValueError(f"Aucun exercice corrigé sans IA pour {notion_id!r}")
@@ -175,11 +191,16 @@ class Brique(Module):
             "faits": [],
             "reussis": [],
             "fini": False,
+            **extra,
         }
         self._sauver(conv.id, donnees)
         vue = presenter(premier)
         stockage.ajouter_message(conv.id, Message(role="bot", texte=_rendre_exercice(vue)))
         return {"conversation": conv.id, "exercice": vue}
+
+    def _fiche_de(self, donnees: dict[str, Any]) -> dict[str, Any] | None:
+        """La serie generee rangee avec la conversation, sinon la fiche figee de la notion."""
+        return donnees.get("fiche") or self.fiches.get(donnees["notion"])
 
     # --- contrat de module : reponse decidee par le code, jamais par le modele ---------------------
     def repondre_a_la_place(self, conv: Conversation, eleve: Message) -> str | None:
@@ -190,7 +211,7 @@ class Brique(Module):
             return None
         if donnees.get("fini"):
             return MESSAGE_APRES_FIN
-        fiche = self.fiches.get(donnees["notion"])
+        fiche = self._fiche_de(donnees)
         if fiche is None:
             journal.error("Fiche %s introuvable pour la conversation %s", donnees["notion"], conv.id)
             return None
@@ -241,17 +262,35 @@ class Brique(Module):
             except ValueError as err:
                 raise HTTPException(409, str(err)) from err
 
+        @routeur.post("/{notion_id}/generer")
+        def lancer_generee(notion_id: str, graine: int | None = None) -> dict[str, Any]:
+            if graine is not None and not 0 <= graine < GRAINE_MAX:
+                raise HTTPException(422, "graine hors limites")
+            try:
+                return self.commencer_generee(notion_id, graine)
+            except KeyError as err:
+                raise HTTPException(404, "Pas de générateur d'exercices pour cette notion") from err
+
         return routeur
 
     # --- interface ---------------------------------------------------------------------------------
     def _notions_disponibles(self) -> list[dict[str, Any]]:
         resultat = []
-        for notion_id, fiche in self.fiches.items():
+        for notion_id in sorted(set(self.fiches) | set(GENERATEURS)):
             notion = self.notions_catalogue.notion(notion_id)
             if notion is None:
                 continue
-            nb = sum(1 for e in fiche.get("exercices") or [] if e.get("type") in TYPES_AUTO)
-            resultat.append({"id": notion_id, "titre": notion.titre, "matiere": notion.nom_matiere, "nb": nb})
+            fiche = self.fiches.get(notion_id)
+            nb = sum(1 for e in (fiche or {}).get("exercices") or [] if e.get("type") in TYPES_AUTO)
+            resultat.append(
+                {
+                    "id": notion_id,
+                    "titre": notion.titre,
+                    "matiere": notion.nom_matiere,
+                    "nb": nb,
+                    "generateur": notion_id in GENERATEURS,
+                }
+            )
         return resultat
 
     def infos_interface(self) -> dict[str, Any]:

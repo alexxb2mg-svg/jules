@@ -8,6 +8,7 @@
   jules fiches verifier      controle les fiches v2 (contrat, index) ; `jules fiches signer DOSSIER` les scelle
   jules chantier ...         appel a contributions : etat des fiches a generer, paquets de generation
                              (fiches visuelles : `jules chantier visuel` puis `jules chantier apercu`)
+  jules generateurs ...      generateurs d'exercices : liste, `apercu NOTION`, `eprouver [NOTION]`
 
 Sans installation : `python lancer.py <commande>` depuis le dossier du projet.
 """
@@ -208,6 +209,10 @@ def main(args: list[str] | None = None) -> None:
         from jules.chantier import main as chantier
 
         chantier(args[1:], racines_bibliotheques())
+    elif args[0] == "generateurs":
+        from jules.generateurs.commande import main as generateurs
+
+        generateurs(args[1:])
     else:
         print(__doc__)
 

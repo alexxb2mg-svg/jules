@@ -195,12 +195,21 @@
       b.textContent = `${n.titre} (${n.nb})`;
       b.addEventListener("click", () => commencerExercice(n.id));
       encart.appendChild(b);
+      if (n.generateur) {
+        const g = document.createElement("button");
+        g.className = "bouton secondaire";
+        g.textContent = `${n.titre} : nouveaux nombres`;
+        g.title = "Une série avec d'autres nombres à chaque fois";
+        g.addEventListener("click", () => commencerExercice(n.id, true));
+        encart.appendChild(g);
+      }
     }
     fil.appendChild(encart);
   }
 
-  async function commencerExercice(notionId) {
-    const r = await MS.api(`/api/eleve/exercices/${encodeURIComponent(notionId)}/commencer`, { method: "POST" });
+  async function commencerExercice(notionId, generee) {
+    const action = generee ? "generer" : "commencer";
+    const r = await MS.api(`/api/eleve/exercices/${encodeURIComponent(notionId)}/${action}`, { method: "POST" });
     await ouvrir(r.conversation);
   }
 
