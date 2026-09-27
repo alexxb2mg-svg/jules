@@ -14,12 +14,17 @@ from __future__ import annotations
 from collections.abc import Callable
 from typing import Any
 
-from jules.generateurs.mathematiques import nombres_premiers_decomposition, pourcentages_coefficient_multiplicateur
+from jules.generateurs.mathematiques import (
+    fractions_irreductibles,
+    nombres_premiers_decomposition,
+    pourcentages_coefficient_multiplicateur,
+)
 
 Generateur = Callable[..., dict[str, Any]]
 
 MODULES: dict[str, Any] = {
-    module.NOTION: module for module in (nombres_premiers_decomposition, pourcentages_coefficient_multiplicateur)
+    module.NOTION: module
+    for module in (fractions_irreductibles, nombres_premiers_decomposition, pourcentages_coefficient_multiplicateur)
 }
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
 
