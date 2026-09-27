@@ -118,7 +118,7 @@ TEXTES = [
         {"matiere": "anglais"},
         "Le son /θ/ de think ; think se lit /θɪŋk/. Présent en -ing : sujet + BE + V-ing. "
         "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg. Le -ed se dit /t/, /d/ ou /ɪd/. "
-        "Merci : /θæŋk juː/.",
+        "Merci : /θæŋk juː/. I am 9 ; it costs £1 ; come at 4 pm.",
     ),
     (
         "techno",
@@ -329,3 +329,10 @@ def test_un_calcul_ecrit_en_histoire_passe_en_gras(annotations):
 
 def test_une_transcription_de_plusieurs_mots_a_sa_bulle(annotations):
     assert any(b.startswith("/θæŋk juː/ : prononciation") for b in _bulles(annotations, "anglais"))
+
+
+def test_monnaies_et_heures_anglaises(annotations):
+    bulles = _bulles(annotations, "anglais")
+    assert any(b.startswith("£ : livre sterling") for b in bulles)
+    assert any(b.startswith("pm : de l'après-midi") for b in bulles)
+    assert not any(b.startswith("am :") for b in bulles)  # « I am » n'est pas une heure
