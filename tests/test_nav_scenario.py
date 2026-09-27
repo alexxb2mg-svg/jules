@@ -49,7 +49,11 @@ def banc(tmp_path_factory):
 # --- test temoin : la page / telle qu'elle est ----------------------------------------------------
 
 TEMOIN = """
-  await S.attendre(() => document.title === "Jules - Mes fiches" && document.getElementById("barre-jules-bouton"));
+  // Fin du demarrage de / = premiere fiche affichee. Le titre et la barre sont poses des /api/infos, AVANT le
+  // chargement des notions puis l'ouverture de la fiche (accueil.js, demarrage) : attendre seulement le titre
+  // laissait le test lire S.api() avant l'appel /notions/<id> (course, echec intermittent sous Linux).
+  await S.attendre(() => document.title === "Jules - Mes fiches" && document.getElementById("barre-jules-bouton")
+    && !document.getElementById("fiche").classList.contains("cache"));
   const avant = { aria: S.aria("#barre-jules-bouton"), titre: S.titre() };
   S.focus("#barre-jules button");
   const actif = S.actif();

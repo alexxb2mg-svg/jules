@@ -35,10 +35,12 @@ RACINE = Path(__file__).resolve().parents[1]
 STATIQUE = RACINE / "jules" / "web" / "static"
 HOTE_JS = (STATIQUE / "outils-hote.js").read_text(encoding="utf-8")
 
-# Les tests navigateur a temps virtuel (--virtual-time-budget) bloquent Chromium jusqu'au delai
-# maximal en CI Linux (4 tests : celui-ci et trois dans test_adaptations_poignee.py). Ils sont
-# ignores la seulement ; en revue locale ils restent obligatoires (EX-012). JULES_CHROMIUM_OBLIGATOIRE
-# force leur execution partout. Reparation sous Linux : lot 3.
+# Tests navigateur a temps virtuel (--virtual-time-budget). Le blocage observe en CI Linux venait de
+# /usr/bin/chromium du runner (snapshot), qui ne rend rien en --dump-dom avec un --user-data-dir
+# (t_e211682a). La CI Linux installe desormais chrome-headless-shell et exporte
+# JULES_CHROMIUM_OBLIGATOIRE=1 : ces tests y tournent donc, le skipif ci-dessous ne s'applique plus en CI.
+# Il ne reste actif que sous Linux avec CI definie et sans JULES_CHROMIUM_OBLIGATOIRE (ex. autre
+# environnement d'integration). En revue locale ils restent obligatoires (EX-012).
 RAISON_TEMPS_VIRTUEL = "temps virtuel bloque Chromium en CI Linux, vérifié en revue locale (EX-012), réparation lot 3"
 temps_virtuel_hors_ci_linux = pytest.mark.skipif(
     sys.platform.startswith("linux")
