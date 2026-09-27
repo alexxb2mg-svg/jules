@@ -115,7 +115,7 @@ body.avec-barre { padding-left: var(--barre-largeur); }
 .barre-icone {
   display: none; flex: none; align-items: center; justify-content: center; width: 2rem; height: 2rem;
   border-radius: 50%; background: #F3EEE1; color: var(--p-principale);
-  font-family: var(--police-titre); font-weight: 700; font-size: 0.9375rem;
+  font-family: var(--police-titre); font-weight: 700; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1));
 }
 
 /* A partir de 900 px : bouton de repli en haut de la barre, a droite de la marque. */
@@ -123,7 +123,7 @@ body.avec-barre { padding-left: var(--barre-largeur); }
   position: fixed; top: 0.75rem; left: calc(var(--barre-largeur) - 3.25rem); z-index: 41;
   display: inline-flex; align-items: center; justify-content: center; min-width: 2.75rem; min-height: 2.75rem;
   background: none; color: #6E6A58; border: 1px solid transparent; border-radius: 0.75rem;
-  font-size: 1.25rem; line-height: 1; cursor: pointer;
+  font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); line-height: 1; cursor: pointer;
 }
 .barre-replier:hover { background: #F3EEE1; border-color: #E9E2D0; }
 
@@ -164,6 +164,11 @@ body.avec-barre { padding-left: var(--barre-largeur); }
   body.barre-tiroir-ouvert .barre-voile {
     display: block; position: fixed; inset: 0; z-index: 39; background: rgba(20, 36, 59, 0.3);
   }
+}
+
+/* /discuter sous 760 px : le panneau Discussions (fixe) commence sous la bande du bouton ☰, pas dessous. */
+@media (max-width: 760px) {
+  body.avec-barre .cote { top: 3.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) { .barre-jules, .barre-jules.ouverte { transition: none; } }
