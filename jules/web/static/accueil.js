@@ -1,5 +1,6 @@
-// Jules - page d'accueil « Mes fiches » : rail a gauche (notions), fiche visuelle au centre,
-// Jules en bulles preecrites a droite (aucun appel IA sur cette page : voir jules_cadrage_interface.md).
+// Jules - page d'accueil « Mes fiches » : fiche visuelle au centre, Jules en bulles preecrites a droite (aucun
+// appel IA sur cette page : voir jules_cadrage_interface.md). La liste des notions est dans la barre commune
+// (navigation.js, etape 4 de Mes fiches) : plus de rail propre a la page (EX-216).
 "use strict";
 
 // Typographie francaise des titres : « Titre : suite », « Pourquoi ? » ; l'espace devant la
@@ -17,32 +18,17 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     bulles: [],
   };
 
-  // --- rail : liste des notions qui ont une fiche visuelle ------------------
+  // --- notions qui ont une fiche visuelle : pour le fragment #<id> et la premiere fiche -----------
+  // Meme chemin que la barre (cache de MS.api, EX-210) : aucun appel en plus. Rien n'est affiche ici.
   async function chargerNotions() {
-    const zone = $("rail-notions");
-    zone.innerHTML = "";
-    let matieres = [];
+    etat.notions = [];
     try {
       const r = await MS.api("/api/eleve/fiches_visuelles/notions");
-      matieres = r.matieres || [];
+      for (const m of r.matieres || []) etat.notions.push(...(m.notions || []));
     } catch (err) {
-      zone.appendChild(creer("p", "avertissement", `Impossible de charger tes fiches : ${err.message}`));
-      return;
-    }
-    etat.notions = [];
-    for (const m of matieres) {
-      const titre = document.createElement("h4");
-      titre.textContent = m.nom;
-      zone.appendChild(titre);
-      for (const n of m.notions) {
-        etat.notions.push(n);
-        const bouton = document.createElement("button");
-        bouton.type = "button";
-        bouton.dataset.id = n.id;
-        bouton.textContent = typo(n.titre);
-        bouton.addEventListener("click", () => ouvrirFiche(n.id));
-        zone.appendChild(bouton);
-      }
+      $("fiche-vide").classList.add("cache");
+      $("fiche-erreur").textContent = `Impossible de charger tes fiches : ${err.message}`;
+      $("fiche-erreur").classList.remove("cache");
     }
   }
 
@@ -80,24 +66,16 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     return el;
   }
 
-  function marquerNotionActive() {
-    for (const b of $("rail-notions").querySelectorAll("button")) {
-      b.classList.toggle("actif", etat.notionActive && b.dataset.id === etat.notionActive);
-    }
-  }
-
   // --- ouverture d'une fiche -------------------------------------------------
   async function ouvrirFiche(notionId) {
     $("fiche-vide").classList.add("cache");
     $("fiche").classList.add("cache");
     $("fiche-erreur").classList.add("cache");
     $("fiche-attente").classList.remove("cache");
-    fermerRail();
     try {
       const fiche = await MS.api(`/api/eleve/fiches_visuelles/notions/${encodeURIComponent(notionId)}`);
       etat.fiche = fiche;
       etat.notionActive = notionId;
-      marquerNotionActive();
       // Rappels au survol propres a la notion (lettres, abreviations : symboles.js), fiche et bulles.
       if (typeof Symboles !== "undefined") {
         const rappels = { matiere: fiche.matiere, variables: fiche.variables, abreviations: fiche.abreviations };
@@ -568,11 +546,6 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
   }
 
 
-  function fermerRail() {
-    $("rail").classList.remove("ouvert");
-    $("menu-rail").classList.remove("cache");
-  }
-
   function basculerChat(ouvrir) {
     const c = $("chat-flottant");
     const o = ouvrir === undefined ? !c.classList.contains("ouvert") : ouvrir;
@@ -585,11 +558,6 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
-    $("nom-persona").textContent = etat.infos.persona.nom;
-    $("menu-rail").addEventListener("click", () => {
-      $("rail").classList.toggle("ouvert");
-      $("menu-rail").classList.toggle("cache", $("rail").classList.contains("ouvert"));
-    });
     MS.signalerFinDeSeance();
     $("avatar-jules").addEventListener("click", () => basculerChat());
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));

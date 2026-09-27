@@ -45,21 +45,21 @@ def banc(tmp_path_factory):
 # --- test temoin : la page / telle qu'elle est ----------------------------------------------------
 
 TEMOIN = """
-  await S.attendre(() => document.title === "Jules - Mes fiches" && document.querySelector("#rail-notions button"));
-  const avant = { aria: S.aria("#menu-rail"), titre: S.titre() };
-  S.focus("#rail-notions button");
+  await S.attendre(() => document.title === "Jules - Mes fiches" && document.getElementById("barre-jules-bouton"));
+  const avant = { aria: S.aria("#barre-jules-bouton"), titre: S.titre() };
+  S.focus("#barre-jules button");
   const actif = S.actif();
-  S.clic("#menu-rail");
-  const railOuvert = S.el("#rail").classList.contains("ouvert");
+  S.clic("#avatar-jules");
+  const chatOuvert = S.el("#chat-flottant").classList.contains("ouvert");
   S.echap();
   localStorage.setItem("essai-banc", "1");
   return {
     titre: avant.titre,
     aria: avant.aria,
     actif: actif,
-    railOuvert: railOuvert,
-    style: S.style("#rail", ["display"]),
-    rect: S.rect("#rail"),
+    chatOuvert: chatOuvert,
+    style: S.style("#chat-flottant", ["display"]),
+    rect: S.rect("#chat-flottant"),
     stockage: S.stockage(),
     api: S.api(),
     appels: S.appels(),
@@ -68,12 +68,14 @@ TEMOIN = """
 """
 
 
+# Carte N9 (EX-216) : le #rail de / est retire ; le temoin vise desormais le bouton ☰ de la barre, un bouton
+# de rubrique de la barre et le bouton J (meme couverture du banc : aria, focus, clic, Echap, style, rect).
 def test_nav_scenario_temoin_sur_la_page_d_accueil(banc):
     r = banc.jouer("/", TEMOIN, taille=(1280, 800))
     assert r["titre"] == "Jules - Mes fiches"
-    assert r["aria"] == {"aria-label": "Ouvrir la liste des notions", "aria-expanded": "false", "aria-controls": "rail"}
-    assert r["actif"]["balise"] == "button" and r["actif"]["texte"]  # focus() sur un bouton de notion du rail
-    assert r["railOuvert"] is True  # element.click() declenche bien l'ecouteur de la page
+    assert r["aria"]["aria-controls"] == "barre-jules" and r["aria"]["aria-expanded"] == "false", r["aria"]
+    assert r["actif"]["balise"] == "button" and r["actif"]["texte"]  # focus() sur un bouton de la barre
+    assert r["chatOuvert"] is True  # element.click() declenche bien l'ecouteur de la page
     assert r["style"]["display"] not in ("", None)
     assert r["rect"]["largeur"] > 0 and r["rect"]["hauteur"] > 0
     assert r["stockage"] == {"essai-banc": "1"}
@@ -118,15 +120,19 @@ def test_nav_scenario_session_simulee_ferme_la_porte(banc):
 
 
 def test_nav_scenario_jeu_de_notions_genere_par_le_test(banc):
+    # Carte N9 (EX-216) : plus de #rail sur / ; le jeu simule se lit dans la barre (etape 4 de la matiere de la
+    # notion du fragment), seule liste de notions de la page.
     etapes = """
-      await S.attendre(() => document.querySelectorAll("#rail-notions button").length === 12);
+      await S.attendre(() => document.querySelectorAll("#barre-jules a.barre-element").length === 4);
       return {
-        matieres: [...document.querySelectorAll("#rail-notions h4")].map((h) => h.textContent),
-        boutons: document.querySelectorAll("#rail-notions button").length,
+        titre: S.el("#barre-page-titre").textContent,
+        liens: [...document.querySelectorAll("#barre-jules a.barre-element")].map((a) => a.getAttribute("href")),
+        api: S.api(),
       };
     """
-    r = banc.jouer("/", etapes, simulees={"/api/eleve/fiches_visuelles/notions": _notions_generees(3, 4)})
-    assert r == {"matieres": ["Matiere 0", "Matiere 1", "Matiere 2"], "boutons": 12}
+    r = banc.jouer("/#m2-n3", etapes, simulees={"/api/eleve/fiches_visuelles/notions": _notions_generees(3, 4)})
+    assert r["liens"] == ["/#m2-n0", "/#m2-n1", "/#m2-n2", "/#m2-n3"], r
+    assert "/api/eleve/fiches_visuelles/notions/m2-n3" in r["api"], r
 
 
 def test_nav_scenario_avant_s_execute_avant_la_page(banc):

@@ -1,27 +1,8 @@
-/* Jules - accueil « Mes fiches » : rail etroit a gauche, fiche visuelle au centre, Jules a droite.
+/* Jules - accueil « Mes fiches » : fiche visuelle au centre, Jules a droite. La liste des notions est dans la
+   barre commune (navigation.css) : plus de rail propre a la page (EX-216).
    Variables et classes communes : voir style.css. */
 
 .accueil-appli { display: flex; height: 100%; }
-.bouton-panneau {
-  background: none; border: 2px solid var(--bord); border-radius: 12px; padding: 6px 12px; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1));
-  color: var(--texte); display: none; align-items: center; gap: 6px; position: fixed; top: 10px; left: 10px; z-index: 25;
-}
-
-/* --- rail de gauche --- */
-.rail {
-  width: 240px; flex-shrink: 0; border-right: 1px solid var(--bord); background: #FAF9FF;
-  padding: 18px 12px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto;
-}
-.rail .marque { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: calc(1.125rem * var(--adapt-echelle-texte, 1)); margin-bottom: 16px; }
-.rail .marque img { width: 36px; height: 36px; }
-.rail-notions { margin-top: 18px; display: flex; flex-direction: column; gap: 2px; }
-.rail-notions h4 { font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); text-transform: uppercase; letter-spacing: .06em; color: var(--gris); margin: 14px 4px 6px; }
-.rail-notions button {
-  display: block; width: 100%; text-align: left; background: none; border: none; border-radius: 10px;
-  padding: 9px 12px; color: var(--texte); font: inherit; font-size: calc(0.9375rem * var(--adapt-echelle-texte, 1)); line-height: 1.35;
-}
-.rail-notions button:hover, .rail-notions button.actif { background: var(--p-bulle-bot); }
-.rail-notions button.actif { color: var(--p-principale); font-weight: 600; }
 
 /* --- centre : la fiche --- */
 .fiche-zone { flex: 1; min-width: 0; overflow-y: auto; padding: 32px 48px 160px; }
@@ -210,13 +191,6 @@
 
 /* --- responsive : tablette < 1024px --- */
 @media (max-width: 1024px) {
-  .bouton-panneau { display: inline-flex; }
-  .bouton-panneau.cache { display: none; }
-  .rail {
-    position: fixed; top: 0; bottom: 0; left: 0; width: 86%; max-width: 300px; z-index: 20; transform: translateX(-100%);
-    transition: transform .2s; box-shadow: 0 0 40px rgba(0,0,0,0.25);
-  }
-  .rail.ouvert { transform: none; }
   .fiche-zone { padding: 64px 16px 160px; }
   .fiche-bloc { padding: 20px 18px; }
   .fiche-titre, #fiche-titre { font-size: calc(1.875rem * var(--adapt-echelle-texte, 1)); }
@@ -253,14 +227,4 @@
   .bulles-pile { flex: 1 1 auto; min-width: 0; align-items: stretch; max-height: 35vh; overflow-y: auto; }
   .jules-pied { flex: 0 0 auto; }
   .avatar-jules { min-width: 2.75rem; min-height: 2.75rem; }
-}
-
-/* --- barre commune (navigation.css) : le panneau des notions et son bouton se placent a cote d'elle --- */
-@media (min-width: 900px) and (max-width: 1024px) {
-  body.avec-barre .bouton-panneau { left: calc(var(--barre-largeur) + 10px); }
-  body.avec-barre .rail { left: var(--barre-largeur); }
-}
-@media (max-width: 899.98px) {
-  body.avec-barre .bouton-panneau { top: 0.375rem; left: 7.5rem; }
-  body.avec-barre .rail { top: 3.5rem; }
 }
