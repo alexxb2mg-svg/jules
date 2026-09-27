@@ -16,25 +16,26 @@ const Navigation = (() => {
     {
       titre: "Apprendre",
       entrees: [
-        { libelle: "Mes fiches", sousPages: "fiches", page: "/" },
-        { libelle: "Mes leçons", sousPages: "lecons", page: "/cours" },
+        { libelle: "Mes fiches", sousPages: "fiches", page: "/", icone: "F" },
+        { libelle: "Mes leçons", sousPages: "lecons", page: "/cours", icone: "L" },
       ],
     },
     {
       titre: "M'entraîner",
-      entrees: [{ libelle: "Exercices et supports", sousPages: "supports", page: "/studio" }],
+      entrees: [{ libelle: "Exercices et supports", sousPages: "supports", page: "/studio", icone: "E" }],
     },
     {
       titre: "Discuter",
-      entrees: [{ libelle: "Discuter avec Jules", href: "/discuter", page: "/discuter" }],
+      entrees: [{ libelle: "Discuter avec Jules", href: "/discuter", page: "/discuter", icone: "D" }],
     },
     {
       titre: "Mon espace",
-      entrees: [{ libelle: "Espace parent", href: "/parent", page: "/parent" }],
+      entrees: [{ libelle: "Espace parent", href: "/parent", page: "/parent", icone: "P" }],
     },
   ];
   const ID_BARRE = "barre-jules";
   const ID_BOUTON = "barre-jules-bouton";
+  const ID_REPLIER = "barre-jules-replier";
 
   // La liste de chaque rubrique a sous-pages : les trois chemins du cache de MS.api.
   const SOURCES = {
@@ -102,6 +103,9 @@ const Navigation = (() => {
 
   function entreeDom(entree, active, session) {
     const ligne = creer("li", "barre-ligne");
+    // Barre repliee (EX-207) : seule l'icone reste visible ; le libelle garde le nom accessible.
+    const icone = creer("span", "barre-icone", entree.icone);
+    icone.setAttribute("aria-hidden", "true");
     const libelle = creer("span", "barre-libelle", entree.libelle);
     let cible;
     if (entree.sousPages) {
@@ -111,12 +115,12 @@ const Navigation = (() => {
       cible.setAttribute("aria-expanded", "false");
       const chevron = creer("span", "barre-chevron", "›");
       chevron.setAttribute("aria-hidden", "true");
-      cible.append(libelle, chevron);
+      cible.append(icone, libelle, chevron);
       cible.addEventListener("click", () => ouvrirRubrique(entree.sousPages));
     } else {
       cible = creer("a", "barre-entree");
       cible.href = entree.href;
-      cible.append(libelle);
+      cible.append(icone, libelle);
     }
     if (entree === active) {
       cible.setAttribute("aria-current", "page");
@@ -474,11 +478,45 @@ const Navigation = (() => {
     etat.courante = id;
   }
 
-  function fermer(bouton, barre, rendreFocus) {
+  // EX-207 : sous 900 px, tiroir ; a partir de 900 px, barre repliable en icones (etat dans localStorage).
+  const CLE_REPLI = "jules.nav.repliee";
+  const TIROIR = "(max-width: 899.98px)";
+
+  function lireRepli() {
+    try {
+      return localStorage.getItem(CLE_REPLI) === "true";
+    } catch (_) {
+      return false; // stockage indisponible : barre depliee
+    }
+  }
+
+  function ecrireRepli(repliee) {
+    try {
+      localStorage.setItem(CLE_REPLI, String(repliee)); // booleen seul : "true" ou "false"
+    } catch (_) {
+      /* stockage indisponible : l'etat ne survit pas au rechargement */
+    }
+  }
+
+  function appliquerRepli(replier, repliee) {
+    document.body.classList.toggle("barre-repliee", repliee);
+    replier.setAttribute("aria-expanded", String(!repliee));
+    replier.firstChild.textContent = repliee ? "»" : "«";
+  }
+
+  function ouvrir(bouton, barre) {
+    barre.classList.add("ouverte");
+    document.body.classList.add("barre-tiroir-ouvert");
+    bouton.setAttribute("aria-expanded", "true");
+  }
+
+  // A la fermeture du tiroir, le focus revient toujours au bouton ☰ (EX-207).
+  function fermer(bouton, barre) {
     if (!barre.classList.contains("ouverte")) return;
     barre.classList.remove("ouverte");
+    document.body.classList.remove("barre-tiroir-ouvert");
     bouton.setAttribute("aria-expanded", "false");
-    if (rendreFocus) bouton.focus();
+    bouton.focus();
   }
 
   // session : objet renvoye par MS.porte ; infos : /api/infos (seuls persona et prenom sont lus, EX-210).
@@ -518,21 +556,57 @@ const Navigation = (() => {
     zone.hidden = true;
     barre.append(menu, zone, creer("p", "barre-pied", prenom));
 
-    document.body.prepend(bouton, barre);
+    // A partir de 900 px : bouton de repli, hors du <nav> (la liste des entrees reste celle de la reference).
+    const replier = creer("button", "barre-replier");
+    replier.id = ID_REPLIER;
+    replier.type = "button";
+    replier.setAttribute("aria-controls", ID_BARRE);
+    replier.setAttribute("aria-label", "Libellés de la barre");
+    const fleche = creer("span", "", "«");
+    fleche.setAttribute("aria-hidden", "true");
+    replier.appendChild(fleche);
+
+    // Voile sous le tiroir ouvert : un clic en dehors ferme le tiroir sans agir sur la page dessous.
+    const voile = creer("div", "barre-voile");
+    voile.setAttribute("aria-hidden", "true");
+
+    document.body.prepend(bouton, replier, barre, voile);
     document.body.classList.add("avec-barre");
     Object.assign(etat, { barre, menu, zone });
+    appliquerRepli(replier, lireRepli());
 
     // EX-211 : titre d'onglet = nom de la persona - libelle de l'entree active.
     if (active) document.title = `${nomPersona} - ${active.libelle}`;
 
-    // Sous 900 px, la barre est un tiroir (le detail du tiroir est EX-207).
     bouton.addEventListener("click", () => {
-      const ouverte = barre.classList.toggle("ouverte");
-      bouton.setAttribute("aria-expanded", String(ouverte));
+      if (barre.classList.contains("ouverte")) fermer(bouton, barre);
+      else ouvrir(bouton, barre);
     });
+    replier.addEventListener("click", () => {
+      const repliee = !document.body.classList.contains("barre-repliee");
+      appliquerRepli(replier, repliee);
+      ecrireRepli(repliee);
+    });
+    // Fermetures du tiroir : Echap, clic en dehors, choix d'une entree feuille (lien). Une rubrique a
+    // sous-pages (<button>) ouvre une petite page : le tiroir reste ouvert.
     document.addEventListener("keydown", (ev) => {
-      if (ev.key === "Escape") fermer(bouton, barre, barre.contains(document.activeElement));
+      if (ev.key === "Escape") fermer(bouton, barre);
     });
+    document.addEventListener("click", (ev) => {
+      if (!barre.classList.contains("ouverte")) return;
+      const cible = ev.target;
+      if (bouton.contains(cible)) return;
+      if (!barre.contains(cible) || cible.closest("a")) fermer(bouton, barre);
+    });
+    // Passage au-dessus de 900 px tiroir ouvert : il n'y a plus de tiroir, on le referme sans voler le focus.
+    const tiroir = window.matchMedia(TIROIR);
+    const quitterTiroir = () => {
+      if (tiroir.matches || !barre.classList.contains("ouverte")) return;
+      barre.classList.remove("ouverte");
+      document.body.classList.remove("barre-tiroir-ouvert");
+      bouton.setAttribute("aria-expanded", "false");
+    };
+    if (tiroir.addEventListener) tiroir.addEventListener("change", quitterTiroir);
 
     // Point de depart (EX-209). Sur /cours et /studio, ?matiere= (clic explicite) l'emporte sur la memoire et sur
     // la matiere de #nav= ; seule la rubrique de #nav= est alors reprise.
