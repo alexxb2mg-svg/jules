@@ -16,7 +16,7 @@ génération sans IA (production ouverte, figure, programme).
 |---|---|---|---|---|---|---|
 | ecritures-et-comparaison-nombres | oui | A | comparer (choix), ranger (ordre), fraction↔décimal (nombre) | | à faire | |
 | puissances-notation-scientifique | oui | A | calculer aⁿ×aᵐ (nombre, forme puissance ?), écriture scientifique (nombre forme scientifique), ordre de grandeur (choix) | | à faire | vérifier que `forme: scientifique` lit « 3,2 × 10⁴ » ; sinon C |
-| racine-carree | oui | A | carrés parfaits (nombre), encadrer √n (choix/ordre), équation x² = a (choix des solutions) | | à faire | |
+| racine-carree | oui | A | calculer (√k², √(a + b), √ décimal ou produit), aire_cote, carres_parfaits (choix multiple), encadrer (nombre entier) | session 2 | PR ouverte | x² = a traité dans equations-premier-degre-et-produits ; valeurs bornées aux carrés connus (jusqu'à 144, quelques carrés ronds 400, 900…) |
 | calcul-nombres-rationnels | oui | A | somme/produit de fractions (nombre forme fraction), priorités (nombre), relatifs (nombre) | | à faire | le correcteur lit « 23/20 » ✔ |
 | multiples-diviseurs-division-euclidienne | oui | A | division euclidienne (nombre × 2 : quotient, reste → deux exercices), critères (choix), diviseurs d'un nombre (texte_court liste ?) | | à faire | « liste de diviseurs » = B (brique liste d'entiers) ou choix multiple |
 | nombres-premiers-decomposition | oui | A | decomposer, reconnaitre, sachets, fraction | session 1 | **fait** | modèle du pattern |
