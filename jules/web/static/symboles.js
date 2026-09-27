@@ -250,10 +250,14 @@ const Symboles = (() => {
   function annoterTexte(noeud) {
     const parent = noeud.parentNode;
     if (!parent) return;
-    const insecable = noeud.nodeValue.replace(ESPACE_DE_CLASSE, "$1\u202F").replace(PONCTUATION_HAUTE, "\u202F$1").replace(/« /g, "«\u202F");
-    if (insecable !== noeud.nodeValue) noeud.nodeValue = insecable;
-    const texte = noeud.nodeValue;
     const ctx = contexteDe(parent);
+    // Seulement dans un contenu de cours (zone avec une matiere : fiche, lecon) ; le texte de
+    // l'interface des autres pages n'est pas retouche.
+    if (ctx.matiere) {
+      const insecable = noeud.nodeValue.replace(ESPACE_DE_CLASSE, "$1\u202F").replace(PONCTUATION_HAUTE, "\u202F$1").replace(/« /g, "«\u202F");
+      if (insecable !== noeud.nodeValue) noeud.nodeValue = insecable;
+    }
+    const texte = noeud.nodeValue;
     // 1. Mises en forme (formules du texte en gras...) ; leur contenu est annote ensuite.
     if (!(parent.closest && parent.closest(ZONE_FORME))) {
       const zones = appliquer(formes, "mettreEnForme", texte, ctx, 5);
