@@ -311,10 +311,12 @@ def _ouvrir(adresse: str) -> tuple[str, str]:
 
 @pytest.fixture(scope="module")
 def page_ex110(serveur):
-    """EX-110 : l'apercu A est retenu par le serveur jusqu'a l'envoi de la reponse du PUT. Le profil est
-    remis tel quel ensuite (les tests `page` le relisent)."""
+    """EX-110 : l'apercu A est retenu par le serveur jusqu'a l'envoi de la reponse du PUT. Le profil part de
+    celui du depot (lecture automatique decochee), quel que soit l'ordre des tests : l'essai `page` enregistre
+    la lecture automatique dans le profil partage du module. Il est remis tel quel ensuite."""
     url, fichier_profil = serveur
     avant = fichier_profil.read_bytes()
+    fichier_profil.write_bytes((RACINE / "profils" / f"{PROFIL}.yaml").read_bytes())
     RETENUE.armer()
     try:
         sortie, diagnostic = _ouvrir(f"{url}/essai-ex110")
