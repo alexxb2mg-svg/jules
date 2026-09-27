@@ -21,7 +21,7 @@ function depuisAdresse(): Lancement | null {
 }
 
 export default function App() {
-  const [section, setSection] = useState<SectionId>("accueil")
+  const [section, setSection] = useState<SectionId>(() => (window.location.hash.startsWith("#/entrainer") ? "exercices" : "accueil"))
   const [lance, setLanceEtat] = useState<Lancement | null>(depuisAdresse)
   const setLance = (l: Lancement | null) => {
     setLanceEtat(l)
