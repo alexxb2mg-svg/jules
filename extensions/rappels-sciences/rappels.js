@@ -245,7 +245,8 @@ const UNITE_SEULE = String.raw`(?:${o.alternatives(Object.keys(DICOS.unites).fil
 // Une duree ecrite comme en classe : « 1 h 50 min », « 2 min 30 s ».
 const DUREE = String.raw`\d+[ \u00A0\u202F]?(?:h(?:[ \u00A0\u202F]?\d+(?:[ \u00A0\u202F]?min)?)?|min(?:[ \u00A0\u202F]?\d+[ \u00A0\u202F]?s)?)(?![\p{L}\p{N}])`;
 const TERME = String.raw`(?:${DUREE}|${NOMBRE}|${UNITE_SEULE}|(?:\d+[ \u00A0\u202F])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
-const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
+// « 30 ÷ 4 = 7, reste 2 » : le reste fait partie de la division euclidienne.
+const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+(?:,?\s+reste\s+\d+)?`, "gu");
 
 Symboles.enregistrer({
   id: "formules", formule: true, matieres: SCIENCES,
