@@ -43,6 +43,8 @@ TENTATIVES_AVANT_CORRECTION = 3
 BLOCS_MIN = 3
 BLOCS_MAX = 20
 TOLERANCE_DEFAUT = 1e-9
+# Question neutre renvoyee quand une reponse de Jules a fui la solution deux fois de suite (cours, notions).
+QUESTION_DE_REPLI = "Qu'est-ce qui te fait penser ça ? Reprends l'énoncé étape par étape."
 
 
 class ErreurLecon(ValueError):
@@ -200,6 +202,97 @@ _NOMBRE = re.compile(r"-?\d+(?:[.,]\d+)?")
 # nombre, sinon « x = −3 » passe le garde-fou (mesure : evaluation/eleves).
 _MOINS = str.maketrans({"\u2212": "-", "\u2013": "-", "\u2012": "-", "\ufe63": "-", "\uff0d": "-"})
 
+# --- nombres ecrits en lettres (0 a 999, "mille" optionnel) --------------------------
+
+
+def _construire_nombres_en_lettres() -> dict[str, int]:
+    """Construit {mot(s) normalises: valeur} pour 2 a 999, plus 1000 ("mille"). 1 ("un") est deliberement
+
+    absent : seul, ecrit isolement, c'est le plus souvent un article ('un exercice'), pas un chiffre.
+    """
+    unites = {
+        1: "un",
+        2: "deux",
+        3: "trois",
+        4: "quatre",
+        5: "cinq",
+        6: "six",
+        7: "sept",
+        8: "huit",
+        9: "neuf",
+        10: "dix",
+        11: "onze",
+        12: "douze",
+        13: "treize",
+        14: "quatorze",
+        15: "quinze",
+        16: "seize",
+    }
+    mots: dict[int, str] = dict(unites)
+    mots[17], mots[18], mots[19] = "dix-sept", "dix-huit", "dix-neuf"
+    dix_a_dixneuf = {**unites, 17: "dix-sept", 18: "dix-huit", 19: "dix-neuf"}  # pour 70-79, 90-99
+    dizaines = {20: "vingt", 30: "trente", 40: "quarante", 50: "cinquante", 60: "soixante"}
+    for base, mot in dizaines.items():
+        mots[base] = mot
+        mots[base + 1] = f"{mot} et un"
+        for u in range(2, 10):
+            mots[base + u] = f"{mot}-{unites[u]}"
+    mots[70] = "soixante-dix"
+    mots[71] = "soixante et onze"
+    for u in range(2, 10):
+        mots[70 + u] = f"soixante-{dix_a_dixneuf[10 + u]}"
+    mots[80] = "quatre-vingts"
+    for u in range(1, 10):
+        mots[80 + u] = f"quatre-vingt-{unites[u]}"
+    mots[90] = "quatre-vingt-dix"
+    mots[91] = "quatre-vingt-onze"
+    for u in range(2, 10):
+        mots[90 + u] = f"quatre-vingt-{dix_a_dixneuf[10 + u]}"
+    un_a_99 = dict(mots)
+    variantes: dict[str, int] = {}  # accords alternatifs ("deux cents" pluriel) : meme valeur, mot different
+    for c in range(1, 10):
+        prefixe = "cent" if c == 1 else f"{unites[c]} cent"
+        mots[c * 100] = prefixe  # « cent », « deux cent » (accord au singulier avant un autre nombre)
+        if c > 1:
+            variantes[f"{prefixe}s"] = c * 100  # « deux cents » (accord au pluriel, rien derriere)
+        for reste in range(1, 100):
+            if reste in un_a_99:
+                mots[c * 100 + reste] = f"{prefixe} {un_a_99[reste]}"
+    mots[1000] = "mille"
+    dictionnaire = {mot: valeur for valeur, mot in mots.items()} | variantes
+    del dictionnaire["un"]  # "un" seul n'est jamais converti par ce garde-fou (faux ami : article indefini)
+    return dictionnaire
+
+
+_NOMBRES_EN_LETTRES = _construire_nombres_en_lettres()
+# Le plus long d'abord (mot compte), pour que « quatre-vingt-dix » l'emporte sur « quatre-vingt ». Bornes de
+# mot (\b) des deux cotes pour ne pas matcher un fragment ("dix" dans "dixieme", "cent" dans "centre").
+_MOTIF_NOMBRES_LETTRES = re.compile(
+    r"\b(?:"
+    + "|".join(re.escape(m) for m in sorted(_NOMBRES_EN_LETTRES, key=lambda m: (-len(m.split()), -len(m))))
+    + r")\b",
+    re.IGNORECASE,
+)
+
+
+def nombres_en_lettres_vers_chiffres(texte: str) -> str:
+    """Convertit les nombres ecrits en toutes lettres, de 2 a 999 (« mille » comme multiplicateur simple :
+
+    « deux mille » -> « 2 mille » n'est PAS recompose, seul « mille » isole -> « 1000 »), en chiffres. Sert
+    au garde-fou de sortie pour reperer « cent quarante-quatre » (`contient_la_reponse` ne cherchait que
+    des chiffres). Usage interne a la detection : le texte renvoye n'est pas destine a l'affichage.
+
+    Residuel documente, volontairement non couvert :
+      - « un »/« une » isoles ne sont jamais convertis (faux ami frequent : « un exercice », « une question ») ;
+        seuls les nombres composes ou les formes non ambigues (« vingt et un », « cent un ») le sont ;
+      - les nombres composes uniquement d'un multiplicateur de mille ("deux mille", "trois mille cinq") ;
+      - les fractions et ordinaux ecrits en lettres (« un tiers », « le douzieme ») ;
+      - « Le premier chiffre est 1. Puis 44 » (deux fragments separes, pas un nombre en lettres) et « la
+        reponse b » (choix qcm par lettre) restent hors de portee de ce convertisseur, documente dans
+        `contient_la_reponse`.
+    """
+    return _MOTIF_NOMBRES_LETTRES.sub(lambda m: str(_NOMBRES_EN_LETTRES[normaliser(m.group(0))]), texte)
+
 
 def _nombre(valeur: object) -> float | None:
     if isinstance(valeur, bool):
@@ -283,6 +376,17 @@ def _ignorer_occurrence_nombre(texte: str, debut: int, fin: int) -> bool:
 def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
     """Vrai si `texte` donne la reponse attendue d'un exercice (garde-fou avant d'afficher Jules).
 
+    Pour la forme 'nombre', les nombres ecrits en toutes lettres (« cent quarante-quatre ») sont d'abord
+    convertis en chiffres (`nombres_en_lettres_vers_chiffres`) avant la recherche habituelle. Residuel
+    documente (fuites qui passent encore le garde-fou, jamais donnees sciemment par Jules dans son prompt
+    mais possibles si le modele derape) :
+      - un nombre ecrit en chiffres mais fragmente sur plusieurs phrases (« Le premier chiffre est 1. Puis
+        44. ») n'est jamais recompose en 144 ;
+      - une reponse qcm donnee par sa lettre seule (« la reponse b ») sans reprendre le texte du choix ;
+      - « un »/« une » isoles ecrits en toutes lettres (faux ami : article, voir
+        `nombres_en_lettres_vers_chiffres`) ;
+      - les nombres en lettres au-dela de 999 (hors « mille » isole) et les fractions/ordinaux en lettres.
+
     Voir aussi : fiches/schema._fuite, modules/studio._est_recopie,
     generateurs/mathematiques/calcul_nombres_rationnels._fuite_texte ; duplication voulue (chaque
     brique reste autonome), reporter tout correctif dans les autres.
@@ -296,7 +400,7 @@ def contient_la_reponse(texte: str, bloc: Bloc) -> bool:
         if attendu is None:
             return False
         tolerance = float(d.get("tolerance") or TOLERANCE_DEFAUT)
-        texte = texte.translate(_MOINS)
+        texte = nombres_en_lettres_vers_chiffres(texte).translate(_MOINS)
         for trouve in _NOMBRE.finditer(texte):
             if _ignorer_occurrence_nombre(texte, trouve.start(), trouve.end()):
                 continue

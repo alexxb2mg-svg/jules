@@ -37,6 +37,7 @@ modules:
         - fiches-3e-experimentales     # fiches de test, contenus libres, NON certifiees
         - fiches-cm1-experimentales    # fiches de test CM1, ressources officielles eduscol, NON certifiees
       detection: true  # reconnait la notion dans le texte ou la photo de l'exercice
+      filtre_sortie: true  # garde-fou de sortie sur les exercices fermes de la fiche courante
   - id: fiches_visuelles   # « Mes fiches » : fiches visuelles affichees sans appel IA (voir jules/fiches_visuelles.py)
     reglages:
       bibliotheques:
