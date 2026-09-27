@@ -24,6 +24,7 @@ from jules.generateurs.mathematiques import (
     multiples_diviseurs_division_euclidienne,
     nombres_premiers_decomposition,
     pourcentages_coefficient_multiplicateur,
+    probabilites_experiences_simples,
     problemes_mise_en_equation,
     racine_carree,
 )
@@ -43,6 +44,7 @@ MODULES: dict[str, Any] = {
         fractions_irreductibles,
         ecritures_et_comparaison_nombres,
         developper_factoriser_reduire,
+        probabilites_experiences_simples,
         indicateurs_position,
     )
 }
