@@ -95,6 +95,8 @@ python -m pytest --cov
 
 Tout doit passer : la CI de GitHub lance les mêmes contrôles sous Linux, Windows et macOS, plus une analyse de sécurité (CodeQL) et un audit des dépendances.
 
+Les tests marqués `lent` (quelques secondes chacun, module inactif en prod) sont exclus de la suite par défaut pour garder les refactors rapides à tester ; ils tournent quand même en CI. Pour les lancer en local : `python -m pytest -m lent`.
+
 ### Écrire un module
 
 Une classe `Brique(Module)` dans `jules/modules/<id>.py`, déclarée dans `config.yaml`. Elle peut :

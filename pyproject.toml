@@ -87,7 +87,10 @@ ignore_missing_imports = false
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-q -p no:cacheprovider"
+addopts = "-q -p no:cacheprovider -m \"not lent\""
+markers = [
+  "lent: test de plusieurs secondes (voir CONTRIBUTING.md) ; exclu de la suite par defaut, execute en CI.",
+]
 
 [tool.coverage.run]
 source = ["jules"]
