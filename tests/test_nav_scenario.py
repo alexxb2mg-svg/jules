@@ -6,6 +6,10 @@ Test temoin sur les pages actuelles, API simulee, et comportement sans Chromium
 
 from __future__ import annotations
 
+import os
+import subprocess
+import sys
+import time
 from pathlib import Path
 
 import pytest
@@ -164,3 +168,73 @@ def test_nav_scenario_sans_chromium_saute_sinon(monkeypatch):
     monkeypatch.delenv(nav_scenario.VARIABLE_OBLIGATOIRE, raising=False)
     with pytest.raises(pytest.skip.Exception, match="Chromium absent"):
         nav_scenario.navigateur()
+
+
+NAVIGATEUR_BLOQUE = """
+import subprocess, sys, time
+enfant = subprocess.Popen([sys.executable, "-c", "import time; time.sleep(600)"])
+open(sys.argv[1], "w").write(str(enfant.pid))
+time.sleep(600)
+"""
+
+
+def _vivant(pid: int) -> bool:
+    """Le processus `pid` tourne-t-il encore (un zombie compte comme mort) ?"""
+    if sys.platform == "win32":
+        import ctypes
+
+        noyau = ctypes.windll.kernel32
+        poignee = noyau.OpenProcess(0x00100000 | 0x1000, False, pid)  # SYNCHRONIZE | QUERY_LIMITED_INFORMATION
+        if not poignee:
+            return False
+        try:
+            return bool(noyau.WaitForSingleObject(poignee, 0) == 0x102)  # WAIT_TIMEOUT : toujours en vie
+        finally:
+            noyau.CloseHandle(poignee)
+    etat = Path(f"/proc/{pid}/stat")
+    if etat.exists():
+        return etat.read_text().rsplit(")", 1)[1].split()[0] != "Z"
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    return True
+
+
+def test_nav_scenario_page_qui_ne_repond_jamais_echoue_dans_le_delai_et_ferme_tout(tmp_path):
+    """CI-3 : un « navigateur » qui ne rend jamais rien (et lance un enfant, comme le zygote de Chromium)
+    est arrete au bout du delai, lui ET son enfant, au lieu de bloquer le job jusqu'a l'annulation."""
+    script, fichier_pid = tmp_path / "bloque.py", tmp_path / "enfant.pid"
+    script.write_text(NAVIGATEUR_BLOQUE, encoding="utf-8")
+    debut = time.monotonic()
+    with pytest.raises(subprocess.TimeoutExpired):
+        nav_scenario.executer_navigateur([sys.executable, str(script), str(fichier_pid)], 3)
+    assert time.monotonic() - debut < 20
+    enfant = int(fichier_pid.read_text())
+    limite = time.monotonic() + 10
+    while _vivant(enfant) and time.monotonic() < limite:
+        time.sleep(0.1)
+    assert not _vivant(enfant), "l'enfant du navigateur survit a l'echec : processus orphelin"
+
+
+def test_nav_scenario_navigateur_bloque_echoue_vite_et_une_fois(monkeypatch, tmp_path):
+    """Un navigateur qui ne rend rien (cas de /usr/bin/chromium en CI Linux) : le premier scenario echoue au
+    bout du delai borne avec un message lisible, les suivants echouent sans relancer le navigateur."""
+    appels = []
+    reel = nav_scenario.executer_navigateur
+
+    def bloque(commande, delai):
+        appels.append(delai)
+        return reel([sys.executable, "-c", "import time; time.sleep(600)"], 2)
+
+    monkeypatch.setattr(nav_scenario, "executer_navigateur", bloque)
+    b = nav_scenario.Banc(
+        nav_scenario.EnveloppeTest(lambda *a: None), "http://127.0.0.1:1", "chromium-bloque", tmp_path
+    )
+    debut = time.monotonic()
+    with pytest.raises(ErreurScenario, match=r"n'a rien rendu en 53 s sur /cours .*chrome-headless-shell"):
+        b.jouer("/cours", "return 1;", budget_ms=8000)
+    with pytest.raises(ErreurScenario, match="scenario non joue sur /studio"):
+        b.jouer("/studio", "return 1;")
+    assert appels == [nav_scenario.DELAI_FIXE_S + 8]
+    assert time.monotonic() - debut < 20

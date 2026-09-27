@@ -28,12 +28,15 @@ Dans les etapes (corps d'une fonction `async (S) => { ... }` qui renvoie une val
 
 from __future__ import annotations
 
+import contextlib
 import html
 import json
 import os
 import re
+import signal
 import socket
 import subprocess
+import sys
 import threading
 import time
 from collections.abc import Callable, Iterator
@@ -49,6 +52,9 @@ VARIABLE_OBLIGATOIRE = "JULES_CHROMIUM_OBLIGATOIRE"
 CHEMIN_SCENARIO = "/_test/scenario-nav.js"
 BALISE_SCENARIO = f'<script src="{CHEMIN_SCENARIO}"></script>'
 RESULTAT = re.compile(r'<pre id="resultat-scenario"[^>]*>(.*?)</pre>', re.S)
+# Delai reel d'un scenario = DELAI_FIXE_S + budget virtuel. Un scenario rendu prend 1 a 10 s ; au-dela, le
+# navigateur est bloque et le test echoue avec un message lisible (au lieu de 120 s par test).
+DELAI_FIXE_S = 45
 
 BIBLIOTHEQUE_JS = r""""use strict";
 // Banc de scenario (tests/nav_scenario.py) : injecte seulement en test, avant les scripts de la page.
@@ -177,6 +183,54 @@ class ErreurScenario(AssertionError):
     """Le scenario n'a pas abouti : exception JS, attente depassee ou resultat absent du DOM."""
 
 
+def _tuer_groupe(pid: int) -> None:
+    """POSIX : tue tout le groupe de processus cree par `start_new_session=True` (zygote, rendu, GPU)."""
+    if sys.platform != "win32":
+        with contextlib.suppress(ProcessLookupError):
+            os.killpg(pid, signal.SIGKILL)
+
+
+def _tuer_arbre(processus: subprocess.Popen[str]) -> None:
+    """Tue le navigateur ET ses enfants : `Popen.kill` seul laisse des orphelins."""
+    if sys.platform == "win32":
+        taskkill = Path(os.environ.get("SYSTEMROOT", "C:/Windows")) / "System32" / "taskkill.exe"
+        subprocess.run(  # noqa: S603 - pid de notre propre enfant, executable systeme en chemin complet
+            [str(taskkill), "/PID", str(processus.pid), "/T", "/F"], capture_output=True, check=False
+        )
+    _tuer_groupe(processus.pid)
+    processus.kill()
+
+
+def executer_navigateur(commande: list[str], delai: float) -> subprocess.CompletedProcess[str]:
+    """Lance le navigateur dans son propre groupe de processus, avec un delai maximal. Sur depassement (ou
+    toute autre exception, y compris Ctrl-C), tout l'arbre est tue avant de relancer l'exception."""
+    groupe: dict[str, Any] = {}
+    if sys.platform == "win32":
+        groupe["creationflags"] = subprocess.CREATE_NEW_PROCESS_GROUP
+    else:
+        groupe["start_new_session"] = True
+    processus = subprocess.Popen(  # noqa: S603 - navigateur local, arguments fixes
+        commande,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+        **groupe,
+    )
+    try:
+        sortie, erreurs = processus.communicate(timeout=delai)
+    except BaseException:
+        _tuer_arbre(processus)
+        # Borne aussi la vidange : un petit-enfant rescape qui tiendrait encore le tube ne doit pas bloquer.
+        with contextlib.suppress(subprocess.TimeoutExpired):
+            processus.communicate(timeout=10)
+        raise
+    # --dump-dom termine le processus principal ; un enfant encore vivant dans le groupe serait un orphelin.
+    _tuer_groupe(processus.pid)
+    return subprocess.CompletedProcess(commande, processus.returncode, sortie, erreurs)
+
+
 def navigateur() -> str:
     """Chemin de Chromium ; sinon `skip`, ou echec si JULES_CHROMIUM_OBLIGATOIRE=1 (un test ignore compte
     comme un echec, spec section 6)."""
@@ -279,6 +333,7 @@ class Banc:
         self.profils = profils
         self._n = 0
         self.derniere_sortie = ""
+        self.bloque = ""  # raison du premier blocage du navigateur ; les scenarios suivants echouent sans attendre
 
     def jouer(
         self,
@@ -318,15 +373,20 @@ class Banc:
             f"--virtual-time-budget={budget_ms}",
             "--dump-dom",
         ]
-        execution = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-            [self.chromium, *options, self.url + chemin],
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
-            errors="replace",
-            timeout=120,
-            check=False,
-        )
+        if self.bloque:
+            # Un navigateur qui ne rend pas la page ne la rendra pas mieux au scenario suivant : on echoue
+            # tout de suite au lieu d'attendre le delai a chaque test (sinon le job CI finit annule).
+            raise ErreurScenario(f"scenario non joue sur {chemin} : {self.bloque}")
+        delai = DELAI_FIXE_S + budget_ms / 1000
+        try:
+            execution = executer_navigateur([self.chromium, *options, self.url + chemin], delai)
+        except subprocess.TimeoutExpired:
+            self.bloque = (
+                f"{self.chromium} n'a rien rendu en {delai:.0f} s sur {chemin} (budget virtuel {budget_ms} ms) ; "
+                "sous Linux, /usr/bin/chromium (snapshot) reste bloque en --dump-dom : "
+                "definir JULES_CHROMIUM vers chrome-headless-shell"
+            )
+            raise ErreurScenario(self.bloque) from None
         self.derniere_sortie = execution.stdout
         trouve = RESULTAT.search(execution.stdout)
         if not trouve:

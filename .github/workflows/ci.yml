@@ -36,6 +36,19 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Dependances du projet
         run: python -m pip install -e ".[dev]"
+      - name: Chrome Headless Shell (Linux, binaire officiel, empreinte verifiee)
+        # /usr/bin/chromium du runner (snapshot) ne rend rien en --dump-dom : chaque test navigateur attend
+        # son delai puis echoue (t_e211682a). Chrome for Testing respecte aussi --window-size.
+        if: runner.os == 'Linux'
+        env:
+          VERSION: 154.0.8037.57
+          SHA256: 5a6979d0ab7cf952ea575d35164e7bdce4872b2ced8f8a215c8f8e8eda00ee09
+        run: |
+          curl -sSfL -o chs.zip "https://storage.googleapis.com/chrome-for-testing-public/${VERSION}/linux64/chrome-headless-shell-linux64.zip"
+          echo "${SHA256}  chs.zip" | sha256sum -c -
+          unzip -q chs.zip -d "${RUNNER_TEMP}"
+          rm chs.zip
+          echo "JULES_CHROMIUM=${RUNNER_TEMP}/chrome-headless-shell-linux64/chrome-headless-shell" >> "$GITHUB_ENV"
       - name: Ruff (lint)
         run: ruff check --output-format=github .
       - name: Ruff (format)
