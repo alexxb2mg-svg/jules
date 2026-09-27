@@ -49,6 +49,8 @@ jobs:
           unzip -q chs.zip -d "${RUNNER_TEMP}"
           rm chs.zip
           echo "JULES_CHROMIUM=${RUNNER_TEMP}/chrome-headless-shell-linux64/chrome-headless-shell" >> "$GITHUB_ENV"
+          # Navigateur fourni : un test navigateur ignore serait une regression silencieuse, il doit echouer.
+          echo "JULES_CHROMIUM_OBLIGATOIRE=1" >> "$GITHUB_ENV"
       - name: Ruff (lint)
         run: ruff check --output-format=github .
       - name: Ruff (format)
