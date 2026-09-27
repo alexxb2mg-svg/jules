@@ -54,7 +54,11 @@ et `niveaux` sont informatifs (choix de l'outil dans une leçon).
 fiche absente ou illisible, `id` différent du nom du dossier, `entree` absente ou hors du
 dossier, `actions`/`evenements` mal formés, **permission non explicitement validée**
 (`PERMISSIONS_CONNUES`, vide pour l'instant — voir §4), licence manquante, et tout motif
-interdit détecté dans le code de l'outil (voir §4, premier filtre automatique).
+interdit détecté dans le code de l'outil (voir §4, premier filtre automatique). Ce filtre de
+motifs est une aide à la relecture humaine, pas une barrière technique : il est contournable (par
+exemple `self["fetch"]` échappe à la détection littérale de `fetch(`) ; la vraie barrière est la
+sandbox de l'iframe (`allow-scripts` sans `allow-same-origin`) et la CSP qui bloque tout accès
+réseau (`connect-src 'none'`), décrites au §3.
 
 `charger_outils(racine, dossiers_extensions) -> dict[str, Outil]` charge tous les dossiers de
 `outils/`, puis ceux des outils fournis par les extensions actives (`docs/EXTENSIONS.md` ; les

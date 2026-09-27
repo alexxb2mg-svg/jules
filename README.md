@@ -8,7 +8,7 @@
 
 Jules aide un enfant à apprendre comme le ferait un bon répétiteur : il demande ce qui a déjà été essayé, découpe le problème en petites marches et laisse l'élève trouver. Il note ce qui semble bloquer et envoie chaque soir un court bilan au parent. Si l'enfant parle de harcèlement ou de mal-être, le parent est prévenu tout de suite.
 
-Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : au départ il est vide, puis il charge ce dont l'élève a besoin (le programme de sa classe, les outils de ses matières, les adaptations qui l'aident à lire ou à se concentrer) et s'enrichit ensuite de ses cours et de ses devoirs. Le même Jules peut accompagner un élève de CM1 en conjugaison et un lycéen en physique.
+Jules n'est lié à aucun niveau ni à aucune matière. C'est un **harnais** : il charge le programme, les outils et les adaptations de l'élève, et s'enrichit ensuite de ses cours et de ses devoirs. Les consignes de base (pédagogie, format, sécurité, persona) sont toujours là, quel que soit l'élève. Le même Jules peut accompagner un élève de CM1 en conjugaison et un lycéen en physique.
 
 Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants, développeurs. Voir [CONTRIBUTING.md](CONTRIBUTING.md).
 
@@ -51,6 +51,7 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 
 - **S'il fait progresser.** Jules n'a été essayé que dans une famille, sans mesure. Un tuteur bien réglé évite surtout que l'IA fasse le travail à la place de l'enfant ; les progrès mesurés dans les études viennent quand un adulte s'en mêle. Une épreuve sans aide, quelques jours après, vérifie déjà ce qui reste chez un élève ; ce n'est pas une étude. Un banc d'essai d'élèves simulés existe (`evaluation/eleves/`, 9 profils, plus de 35 scénarios) pour repérer des pièges de conversation ; il ne remplace pas une mesure sur de vrais élèves.
 - **Tenir la règle avec un petit modèle installé sur l'ordinateur** (voir plus bas).
+- **Garantir « jamais la réponse » par le code plutôt que par le prompt.** Cette garantie ne couvre aujourd'hui que les leçons (module `cours`) et les exercices sans IA (module `exercices`) ; un chantier en cours doit l'étendre aux exercices fermés de la fiche de la notion en cours. Partout ailleurs (aide aux devoirs, quiz, fiche de révision...), elle repose sur le prompt, donc sur le modèle choisi.
 
 ## Installation
 
@@ -85,6 +86,8 @@ Sans installation par pip, `python lancer.py <commande>` fait la même chose que
 
 Tout service compatible avec le format OpenAI (LM Studio, vLLM, OpenRouter...) fonctionne aussi : voir `config.local.exemple.yaml`.
 
+Avec un petit modèle local, Jules peut donner la réponse quand l'élève insiste (mesuré, voir ci-dessous) : c'est au moment de choisir le moteur qu'il faut le savoir. Avec un moteur en ligne, les messages et les photos envoyés par l'enfant partent chez ce fournisseur (Mistral, Anthropic, OpenAI, Albert selon le choix).
+
 > **À savoir :** les petits modèles locaux respectent moins bien la règle « ne jamais donner la réponse ». Lors de nos essais, un modèle de 8 milliards de paramètres a fini par céder quand l'élève insistait. Pour un usage quotidien, un moteur en ligne reste plus fiable. Améliorer ce point avec les modèles locaux fait partie des chantiers ouverts.
 
 La clé API se colle dans le fichier `.env`, créé par l'assistant. Elle n'est jamais écrite ailleurs ni affichée. Avec un service payant, fixez un plafond de dépense mensuel dans sa console.
@@ -96,6 +99,8 @@ La clé API se colle dans le fichier `.env`, créé par l'assistant. Elle n'est 
 1. Définir les deux codes d'accès : `jules code eleve`, puis `jules code parent`.
 2. Dans `config.local.yaml`, mettre `serveur: {hote: 0.0.0.0}`.
 3. Sur la tablette, reliée au même wifi, ouvrir `http://<adresse-de-l-ordinateur>:8795/`.
+
+Sous Windows, le premier démarrage sur `0.0.0.0` déclenche une popup du pare-feu : acceptez l'accès pour les réseaux privés. Pour trouver l'adresse de l'ordinateur : `ipconfig` dans une invite de commandes Windows (ligne « Adresse IPv4 ») ; `ifconfig`, ou les réglages réseau, sur Mac.
 
 Jules refuse de démarrer sur le réseau tant que les deux codes ne sont pas définis. Ne l'exposez jamais sur Internet.
 
@@ -140,8 +145,23 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
 | Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (CM1, 5e, 4e, 3e) |
 | Outils | `extensions/<id>/` + `jules/outils.py` | Frise, calculatrice, lexique... des extensions servies dans un espace isolé (iframe sandbox) | en place (3 outils de référence, pas encore ouverts depuis une leçon) |
-| Extensions | `extensions/<id>/extension.yaml` | Format qui accroche du contenu interactif à une leçon (points `bloc_consulte`, `fin_de_seance`) ; voir [docs/EXTENSIONS.md](docs/EXTENSIONS.md) | en place, 10 extensions d'exemple |
+| Extensions | `extensions/<id>/extension.yaml` | Format qui accroche du contenu interactif à une leçon (points `bloc_consulte`, `fin_de_seance`) ; voir [docs/EXTENSIONS.md](docs/EXTENSIONS.md) | en place, 13 extensions activées dans `config.yaml` (15 dossiers dans `extensions/`, dont deux exemples non activés) |
 | Adaptations | `adaptations/` | Besoins particuliers (troubles dys, attention...) : affichage et consignes adaptés | emplacement réservé |
+| Harnais | `jules/moteur.py` (classe `Tuteur`) + `jules/composition.py` | assemble persona, consignes, bibliothèques et modules en un prompt ; `jules/web/app.py` sert les pages | en place |
+
+| Dossier | En un mot |
+|---|---|
+| `jules/` | le code du tuteur |
+| `jules/modules/` | les briques activables (suivi, vigilance, cours, studio...) |
+| `jules/web/` | les pages servies (élève, parent) |
+| `consignes/` | ce que le modèle doit suivre |
+| `persona/` | la personnalité de Jules |
+| `profils/` | ce que Jules sait de l'élève |
+| `bibliotheque/` | le programme et les fiches |
+| `extensions/` | les outils par matière |
+| `adaptations/` | les besoins particuliers (à venir) |
+| `docs/` | la documentation |
+| `tests/` | les vérifications automatiques |
 
 Les textes s'accordent selon le genre indiqué dans le profil (fille, garçon ou neutre) : `{{elle|il|iel}}` dans un fichier de consignes donne la bonne forme. Les variables `{prenom}`, `{classe}` et `{parent}` viennent aussi du profil.
 
@@ -177,4 +197,5 @@ Bibliothèques pour d'autres niveaux (primaire, collège, lycée), fiches de cou
 
 ## Licence
 
-Code : [MIT](LICENSE). Essai : [CC BY-NC-ND 4.0](docs/essai/LICENCE.md). Le nom rend hommage à Jules Ferry et à l'école gratuite pour tous.
+Code : [MIT](LICENSE). Essai : [CC BY-NC-ND 4.0](docs/essai/LICENCE.md). Détail par type de
+contenu (bibliothèques, logo, avatar) : [LICENCES.md](LICENCES.md). Le nom rend hommage à Jules Ferry et à l'école gratuite pour tous.
