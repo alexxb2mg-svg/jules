@@ -130,6 +130,7 @@ TEXTES = [
         {"matiere": "education-musicale"},
         "On commence p puis cresc. jusqu'à ff ; la ♩ dure un temps, voir p. 12 du cahier.",
     ),
+    ("fractions", {"matiere": "mathematiques"}, "On lit 7/4 = 1 + 3/4 ; et 12 500 g = 12,5 kg."),
     ("cm1_sciences", {"matiere": "sciences-et-technologie"}, "Le pot de 250 g contient 20 cL d'eau à 4 °C."),
 ]
 
@@ -303,3 +304,7 @@ def test_musique_nuances_et_figures_de_notes(annotations):
 def test_sciences_du_cm1_ont_les_unites(annotations):
     bulles = _bulles(annotations, "cm1_sciences")
     assert "g : grammes" in bulles and any(b.startswith("cL") for b in bulles)
+
+
+def test_une_fraction_est_un_seul_nombre_et_un_grand_nombre_ne_se_coupe_pas(annotations):
+    assert annotations["fractions"]["formules"] == ["7/4 = 1 + 3/4", "12\u202f500 g = 12,5 kg"]

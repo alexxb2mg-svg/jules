@@ -121,6 +121,15 @@ Dans cet ordre, 5 à 8 blocs :
 - « Pas à l'échelle » écrit quand c'est le cas.
 - Du code (programme, pseudo-code) dans un schéma : `class="t code"` (ou `ts code`), police à
   chasse fixe ; l'attribut `font-family` n'a pas d'effet, les classes l'emportent.
+- Tailles de texte : `.ts` (12 px, légendes), `.t` et `.th` (14 px), `.tl` (20 px) et `.tx` (28 px)
+  pour ce qui doit se lire de loin : chiffres d'une opération posée, fractions, étiquettes des
+  schémas de cycle 3. Au CM1, on préfère `.t`, `.tl` et `.tx`.
+- Couleur d'un texte : par son groupe `c-*`, ou par un attribut `fill` explicite (il l'emporte sur
+  la couleur de la classe). L'attribut `style` est refusé.
+- Une fraction dans un schéma s'écrit avec une vraie barre : numérateur au-dessus, `<line>`
+  horizontale, dénominateur en dessous (jamais « 3/4 » en ligne pour des élèves de cycle 3).
+- Dans le texte, une fraction s'écrit d'un seul tenant (« 3/4 », sans espace autour de la barre) ;
+  elle compte comme un seul nombre, et « 7/4 = 1 + 3/4 » ressort en gras tout entière.
 
 ## 5. La boucle de contrôle (obligatoire)
 

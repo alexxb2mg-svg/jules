@@ -132,8 +132,8 @@
       if (bloc.type === "attendus") continue;
       zoneBlocs.appendChild(construireBloc(bloc));
     }
-    const sources = (fiche.sources || []).map((s) => s.titre).join(" · ");
-    $("fiche-sources").textContent = sources ? `Sources : ${sources} (${fiche.licence})` : "";
+    const sources = (fiche.sources || []).map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ");
+    $("fiche-sources").textContent = sources ? `Sources : ${sources} — fiche sous licence ${fiche.licence}` : "";
   }
 
   // --- construction des 8 types de blocs -------------------------------------

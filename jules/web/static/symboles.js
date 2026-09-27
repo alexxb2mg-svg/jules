@@ -237,9 +237,15 @@ const Symboles = (() => {
     return morceaux;
   }
 
+  // « 12 500 » : l'espace entre les classes de chiffres devient insecable (espace fine, comme en
+  // typographie francaise), pour que le nombre ne soit jamais coupe en fin de ligne.
+  const ESPACE_DE_CLASSE = /(\d) (?=\d{3}(?!\d))/g;
+
   function annoterTexte(noeud) {
     const parent = noeud.parentNode;
     if (!parent) return;
+    if (ESPACE_DE_CLASSE.test(noeud.nodeValue)) noeud.nodeValue = noeud.nodeValue.replace(ESPACE_DE_CLASSE, "$1\u202F");
+    ESPACE_DE_CLASSE.lastIndex = 0;
     const texte = noeud.nodeValue;
     const ctx = contexteDe(parent);
     // 1. Mises en forme (formules du texte en gras...) ; leur contenu est annote ensuite.
