@@ -1,5 +1,6 @@
 // Client HTTP du serveur Jules (FastAPI). Seul point d'accès réseau du front : tout passe par ici.
 // Les formes reprennent exactement les réponses de jules/web/app.py et jules/modules/cours.py.
+import type { Fiche, IndexFiches } from "@/modules/fiches/types"
 
 async function api<T>(chemin: string, init?: RequestInit): Promise<T> {
   const r = await fetch(chemin, { credentials: "same-origin", ...init })
@@ -13,6 +14,33 @@ async function api<T>(chemin: string, init?: RequestInit): Promise<T> {
 const json = (corps: unknown): RequestInit => ({
   method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps),
 })
+
+/* ---- session, infos de l'interface (persona, leviers dys) ---- */
+
+export type EtatSession = { role: string | null; eleve: boolean; parent: boolean }
+export type Infos = {
+  prenom: string
+  persona: { id: string; nom: string; accueil: string; couleurs: Record<string, string>; avatar: boolean }
+  leviers: Record<string, unknown>
+  leviers_css: Record<string, string>
+}
+
+export const session = {
+  etat: () => api<EtatSession>("/api/session"),
+  ouvrir: (code: string) => api<{ role: string }>("/api/session", json({ code })),
+}
+export const infos = () => api<Infos>("/api/infos")
+
+/* ---- fiches visuelles (aucun appel IA) ---- */
+
+let indexEnCours: Promise<IndexFiches> | null = null
+export const fiches = {
+  /** Index matières → notions ; une seule requête pour toute la session de la page. */
+  index: () => (indexEnCours ??= api<IndexFiches>("/api/eleve/fiches_visuelles/notions").catch((e) => { indexEnCours = null; throw e })),
+  lire: (notion: string) => api<Fiche>(`/api/eleve/fiches_visuelles/notions/${encodeURIComponent(notion)}`),
+  /** Point d'accroche « bloc_consulte » des extensions : rien n'est attendu en retour. */
+  blocConsulte: (adresse: string, notion: string) => { api("/api/seance/bloc_consulte", json({ adresse, notion })).catch(() => {}) },
+}
 
 /* ---- conversations (chat avec Jules) ---- */
 

@@ -1,30 +1,37 @@
-// Registre des écrans : une section de la nav → un composant. Les écrans non faits affichent un gabarit.
-import type { SectionId } from "@/config/navigation"
-import type { Lancement } from "@/composants/Parcours"
-import { Accueil } from "@/ecrans/Accueil"
-import { SessionFlash, PAQUET_EQUATIONS } from "@/modules/flashcards"
+// Registre des écrans : un type de route (routes.ts) → un composant. Ajouter un écran = une route + une entrée ici.
+import type { Infos } from "@/api/jules"
+import type { Route } from "@/routes"
+import { Bibliotheque } from "@/modules/fiches/Bibliotheque"
+import { FicheVisuelle } from "@/modules/fiches/FicheVisuelle"
+import { Lecons } from "@/ecrans/Lecons"
+import { EcranPartage } from "@/ecrans/EcranPartage"
 
-export type PropsEcran = { onLancer: (l: Lancement) => void }
+export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
+type Ecran = (p: PropsEcran) => React.JSX.Element | null
 
-function AVenir({ nom }: { nom: string }) {
-  return <div className="grid h-full place-items-center text-gris">Maquette « {nom} » à venir</div>
-}
-
-function Entrainer() {
-  return (
-    <div className="mx-auto max-w-[760px] px-10 py-10">
-      <p className="mb-2 text-[13px] font-semibold uppercase tracking-wide text-gris">Cartes de révision · Maths</p>
-      <SessionFlash paquet={PAQUET_EQUATIONS} />
+export const ECRANS: Record<Route["ecran"], Ecran> = {
+  fiches: ({ route, aller }) => route.ecran !== "fiches" ? null : (
+    <div className="h-full overflow-y-auto">
+      <Bibliotheque matiere={route.matiere}
+        onMatiere={(m) => aller({ ecran: "fiches", matiere: m })}
+        onOuvrir={(n) => aller({ ecran: "fiche", notion: n })} />
     </div>
-  )
-}
-
-export const ECRANS: Record<SectionId, (p: PropsEcran) => React.JSX.Element> = {
-  accueil: Accueil,
-  devoir: () => <AVenir nom="Mes devoirs" />,
-  reviser: () => <AVenir nom="Réviser" />,
-  exercices: Entrainer,
-  brevet: () => <AVenir nom="Brevet" />,
-  discuter: () => <AVenir nom="Parler à Jules" />,
-  parent: () => <AVenir nom="Espace parent" />,
+  ),
+  fiche: ({ route, aller }) => route.ecran !== "fiche" ? null : (
+    <FicheVisuelle notion={route.notion} retour="Mes fiches"
+      onRetour={() => history.length > 1 ? history.back() : aller({ ecran: "fiches", matiere: null })}
+      onOuvrirLecon={(n) => aller({ ecran: "lecon", notion: n })} />
+  ),
+  lecons: ({ route, aller }) => route.ecran !== "lecons" ? null : (
+    <div className="h-full overflow-y-auto">
+      <Lecons matiere={route.matiere}
+        onMatiere={(m) => aller({ ecran: "lecons", matiere: m })}
+        onLecon={(n) => aller({ ecran: "lecon", notion: n })}
+        onFiche={(n) => aller({ ecran: "fiche", notion: n })} />
+    </div>
+  ),
+  lecon: ({ route, aller }) => route.ecran !== "lecon" ? null : (
+    <EcranPartage notion={route.notion} fil="Mes leçons"
+      onRetour={() => history.length > 1 ? history.back() : aller({ ecran: "lecons", matiere: null })} />
+  ),
 }

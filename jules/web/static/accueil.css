@@ -61,14 +61,6 @@
 .piege-non { background: #FFF4F2; border: 1px solid #F5C6BD; }
 .piege-oui { background: #F1FAF3; border: 1px solid #BFE3C7; }
 
-/* notions cles marquees **ainsi** dans le texte : gras + leger coup de surligneur */
-.cle {
-  font-weight: 700; color: inherit; padding: .05em .22em; border-radius: .3em;
-  background: rgba(255, 214, 102, .45);
-  -webkit-box-decoration-break: clone; box-decoration-break: clone;
-}
-.exemple-conclusion .cle { font-weight: 800; }
-.cle.colle { padding-left: 0; padding-right: 0; border-radius: 0; }
 
 /* exemple */
 .bloc-exemple p { margin: 12px 0; }
@@ -80,73 +72,6 @@
 .renfort-tuile .icone { font-size: calc(1.5rem * var(--adapt-echelle-texte, 1)); display: block; margin-bottom: 6px; }
 .renfort-tuile small { color: var(--gris); display: block; margin-top: 4px; }
 
-/* schema : SVG nettoye par le code (jules/svg_sur.py), avec les classes du systeme de design
-   "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
-.bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
-.bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
-.bloc-schema .t { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); }
-.bloc-schema .t:not([fill]) { fill: #1a1a18; }
-.bloc-schema .ts { font-family: inherit; font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); }
-.bloc-schema .ts:not([fill]) { fill: #5f5e5a; }
-.bloc-schema .th { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
-.bloc-schema .th:not([fill]) { fill: #1a1a18; }
-/* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
-.bloc-schema .tl { font-family: inherit; font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
-.bloc-schema .tl:not([fill]) { fill: #1a1a18; }
-.bloc-schema .tx { font-family: inherit; font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); font-weight: 600; }
-.bloc-schema .tx:not([fill]) { fill: #1a1a18; }
-/* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
-.bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
-.bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
-.bloc-schema .arr { stroke: #5f5e5a; stroke-width: 1.5px; fill: none; }
-.bloc-schema .leader { stroke: #88877f; stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
-.bloc-schema .node { cursor: pointer; transition: opacity .15s; }
-.bloc-schema .node:hover { opacity: .82; }
-
-.bloc-schema .c-purple > rect, .bloc-schema .c-purple > circle, .bloc-schema .c-purple > ellipse { fill: #EEEDFE; stroke: #534AB7; }
-.bloc-schema .c-purple > .th, .bloc-schema .c-purple > text.th { fill: #3C3489; }
-.bloc-schema .c-purple > .ts, .bloc-schema .c-purple > text.ts { fill: #534AB7; }
-.bloc-schema .c-purple > .t,  .bloc-schema .c-purple > text.t  { fill: #3C3489; }
-
-.bloc-schema .c-teal > rect, .bloc-schema .c-teal > circle, .bloc-schema .c-teal > ellipse { fill: #E1F5EE; stroke: #0F6E56; }
-.bloc-schema .c-teal > .th, .bloc-schema .c-teal > text.th { fill: #085041; }
-.bloc-schema .c-teal > .ts, .bloc-schema .c-teal > text.ts { fill: #0F6E56; }
-.bloc-schema .c-teal > .t,  .bloc-schema .c-teal > text.t  { fill: #085041; }
-
-.bloc-schema .c-coral > rect, .bloc-schema .c-coral > circle, .bloc-schema .c-coral > ellipse { fill: #FAECE7; stroke: #993C1D; }
-.bloc-schema .c-coral > .th, .bloc-schema .c-coral > text.th { fill: #712B13; }
-.bloc-schema .c-coral > .ts, .bloc-schema .c-coral > text.ts { fill: #993C1D; }
-.bloc-schema .c-coral > .t,  .bloc-schema .c-coral > text.t  { fill: #712B13; }
-
-.bloc-schema .c-pink > rect, .bloc-schema .c-pink > circle, .bloc-schema .c-pink > ellipse { fill: #FBEAF0; stroke: #993556; }
-.bloc-schema .c-pink > .th, .bloc-schema .c-pink > text.th { fill: #72243E; }
-.bloc-schema .c-pink > .ts, .bloc-schema .c-pink > text.ts { fill: #993556; }
-.bloc-schema .c-pink > .t,  .bloc-schema .c-pink > text.t  { fill: #72243E; }
-
-.bloc-schema .c-gray > rect, .bloc-schema .c-gray > circle, .bloc-schema .c-gray > ellipse { fill: #F1EFE8; stroke: #5F5E5A; }
-.bloc-schema .c-gray > .th, .bloc-schema .c-gray > text.th { fill: #444441; }
-.bloc-schema .c-gray > .ts, .bloc-schema .c-gray > text.ts { fill: #5F5E5A; }
-.bloc-schema .c-gray > .t,  .bloc-schema .c-gray > text.t  { fill: #444441; }
-
-.bloc-schema .c-blue > rect, .bloc-schema .c-blue > circle, .bloc-schema .c-blue > ellipse { fill: #E6F1FB; stroke: #185FA5; }
-.bloc-schema .c-blue > .th, .bloc-schema .c-blue > text.th { fill: #0C447C; }
-.bloc-schema .c-blue > .ts, .bloc-schema .c-blue > text.ts { fill: #185FA5; }
-.bloc-schema .c-blue > .t,  .bloc-schema .c-blue > text.t  { fill: #0C447C; }
-
-.bloc-schema .c-green > rect, .bloc-schema .c-green > circle, .bloc-schema .c-green > ellipse { fill: #EAF3DE; stroke: #3B6D11; }
-.bloc-schema .c-green > .th, .bloc-schema .c-green > text.th { fill: #27500A; }
-.bloc-schema .c-green > .ts, .bloc-schema .c-green > text.ts { fill: #3B6D11; }
-.bloc-schema .c-green > .t,  .bloc-schema .c-green > text.t  { fill: #27500A; }
-
-.bloc-schema .c-amber > rect, .bloc-schema .c-amber > circle, .bloc-schema .c-amber > ellipse { fill: #FAEEDA; stroke: #854F0B; }
-.bloc-schema .c-amber > .th, .bloc-schema .c-amber > text.th { fill: #633806; }
-.bloc-schema .c-amber > .ts, .bloc-schema .c-amber > text.ts { fill: #854F0B; }
-.bloc-schema .c-amber > .t,  .bloc-schema .c-amber > text.t  { fill: #633806; }
-
-.bloc-schema .c-red > rect, .bloc-schema .c-red > circle, .bloc-schema .c-red > ellipse { fill: #FCEBEB; stroke: #A32D2D; }
-.bloc-schema .c-red > .th, .bloc-schema .c-red > text.th { fill: #791F1F; }
-.bloc-schema .c-red > .ts, .bloc-schema .c-red > text.ts { fill: #A32D2D; }
-.bloc-schema .c-red > .t,  .bloc-schema .c-red > text.t  { fill: #791F1F; }
 
 .jules-comment { font-size: calc(1rem * var(--adapt-echelle-texte, 1)); line-height: 1.5; color: var(--p-principale); margin-top: 18px; font-style: italic; }
 
@@ -217,14 +142,3 @@
   .jules-pied { flex: 0 0 auto; }
   .avatar-jules { min-width: 2.75rem; min-height: 2.75rem; }
 }
-
-/* Gros textes dans un groupe de couleur */
-.bloc-schema .c-purple > .tl, .bloc-schema .c-purple > .tx { fill: #3C3489; }
-.bloc-schema .c-teal > .tl, .bloc-schema .c-teal > .tx { fill: #085041; }
-.bloc-schema .c-coral > .tl, .bloc-schema .c-coral > .tx { fill: #712B13; }
-.bloc-schema .c-pink > .tl, .bloc-schema .c-pink > .tx { fill: #72243E; }
-.bloc-schema .c-gray > .tl, .bloc-schema .c-gray > .tx { fill: #444441; }
-.bloc-schema .c-blue > .tl, .bloc-schema .c-blue > .tx { fill: #0C447C; }
-.bloc-schema .c-green > .tl, .bloc-schema .c-green > .tx { fill: #27500A; }
-.bloc-schema .c-amber > .tl, .bloc-schema .c-amber > .tx { fill: #633806; }
-.bloc-schema .c-red > .tl, .bloc-schema .c-red > .tx { fill: #791F1F; }

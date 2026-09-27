@@ -1,28 +1,40 @@
 // Registre des sections de Jules : la nav, le routage et les écrans en découlent.
-// Ajouter une section = ajouter une entrée ici + un écran dans ecrans/registre.tsx.
+// Rubriques et libellés = tests/navigation-reference.json (référence SPEC, EX-202). Ne pas les renommer ici
+// sans changer la référence. Ajouter une section = une entrée ici + un écran dans ecrans/registre.tsx.
 import type { LucideIcon } from "lucide-react"
-import { BookOpen, Home, MessageCircle, PenLine, ClipboardCheck, Users, Layers } from "lucide-react"
+import { BookOpen, GraduationCap, Dumbbell, MessageCircle, Users } from "lucide-react"
 
-export type SectionId = "accueil" | "devoir" | "reviser" | "exercices" | "brevet" | "discuter" | "parent"
+export type SectionId = "fiches" | "lecons" | "supports" | "discuter" | "parent"
 
 export type EntreeNav = {
   id: SectionId
   nom: string
   Icone: LucideIcon
-  /** Affiché grisé avec une étiquette, non cliquable. */
-  bientot?: boolean
-  /** "bas" = groupe secondaire après le séparateur (espace parent). */
-  groupe?: "haut" | "bas"
+  /** Écran pas encore porté dans la nouvelle interface : lien vers la page existante du serveur. */
+  pageExistante?: string
 }
 
-export const NAV: EntreeNav[] = [
-  { id: "accueil", nom: "Accueil", Icone: Home },
-  { id: "devoir", nom: "Mes devoirs", Icone: PenLine },
-  { id: "reviser", nom: "Réviser", Icone: BookOpen },
-  { id: "exercices", nom: "M'entraîner", Icone: Layers },
-  { id: "brevet", nom: "Brevet", Icone: ClipboardCheck, bientot: true },
-  { id: "discuter", nom: "Parler à Jules", Icone: MessageCircle },
-  { id: "parent", nom: "Espace parent", Icone: Users, groupe: "bas" },
+export type Rubrique = { titre: string; entrees: EntreeNav[] }
+
+export const NAV_ARIA = "Sections de Jules"
+
+export const RUBRIQUES: Rubrique[] = [
+  { titre: "Apprendre", entrees: [
+    { id: "fiches", nom: "Mes fiches", Icone: BookOpen },
+    { id: "lecons", nom: "Mes leçons", Icone: GraduationCap },
+  ] },
+  { titre: "M'entraîner", entrees: [
+    { id: "supports", nom: "Exercices et supports", Icone: Dumbbell, pageExistante: "/studio" },
+  ] },
+  { titre: "Discuter", entrees: [
+    { id: "discuter", nom: "Discuter avec Jules", Icone: MessageCircle, pageExistante: "/discuter" },
+  ] },
+  { titre: "Mon espace", entrees: [
+    { id: "parent", nom: "Espace parent", Icone: Users, pageExistante: "/parent" },
+  ] },
 ]
+
+export const SECTIONS = RUBRIQUES.flatMap((r) => r.entrees)
+export const SECTION_ACCUEIL: SectionId = "fiches"
 
 export const MARQUE = { nom: "Jules", point: "." }
