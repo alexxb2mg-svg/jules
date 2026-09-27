@@ -80,6 +80,9 @@ TIROIR = r"""
     };
   };
   const ouvrir = async () => { S.clic(bouton); await S.pause(50); return etat(); };
+  // Polices en font-display: swap : sans cette attente, le bouton peut etre mesure avec la police de secours
+  // (Work Sans, 92 px au lieu de 88,7 px avec Outfit) selon la charge de la machine.
+  await document.fonts.ready;
   const b = bouton.getBoundingClientRect();
   const r = {
     controls: bouton.getAttribute("aria-controls"), idBarre: barre.id, boutonVisible: getComputedStyle(bouton).display,
