@@ -80,7 +80,7 @@ const Calculatrice = (() => {
 
     function ouvrir() {
       if (monte) return;
-      monte = OutilsHote.monter(zone, outil, { leviers: options.leviers || {} });
+      monte = OutilsHote.monter(zone, outil, { leviers: options.leviers || {}, surEvenement });
       placer();
       panneau.hidden = false;
       bouton.setAttribute("aria-expanded", "true");
@@ -94,6 +94,12 @@ const Calculatrice = (() => {
       panneau.hidden = true;
       bouton.setAttribute("aria-expanded", "false");
       bouton.focus();
+    }
+
+    // Evenement reserve « fermer » (docs/OUTILS-CONTRAT.md, §2) : Echap tape alors que le focus est dans l'iframe.
+    // Deja filtre par OutilsHote (source = cette iframe, evenement declare dans la fiche).
+    function surEvenement(evenement) {
+      if (evenement === "fermer") refermer();
     }
 
     bouton.addEventListener("click", () => (monte ? refermer() : ouvrir()));
