@@ -4,7 +4,7 @@
 (function () {
   var app = document.getElementById("app");
   var ACTIONS = ["afficher"];
-  var EVENEMENTS = ["calcul_effectue"];
+  var EVENEMENTS = ["calcul_effectue", "fermer"];
 
   function envoyer(evenement, donnees) {
     if (EVENEMENTS.indexOf(evenement) === -1) return;
@@ -338,6 +338,12 @@
   }
 
   window.addEventListener("message", recu);
+  // Echap dans l'outil (le focus y est des qu'on a touche une touche) : la page hote ne voit pas ce clavier
+  // (origine opaque), l'outil lui demande donc la fermeture par l'evenement reserve « fermer »
+  // (docs/OUTILS-CONTRAT.md, §2). Aucune autre touche n'est relayee.
+  document.addEventListener("keydown", function (ev) {
+    if (ev.key === "Escape") envoyer("fermer", {});
+  });
   construire();
   poigneeDeMain();
 })();
