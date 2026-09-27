@@ -12,6 +12,10 @@ import yaml
 RACINE = Path(__file__).resolve().parents[1]
 
 
+class ErreurConfig(RuntimeError):
+    """Configuration illisible ou incomplete : message pense pour un sys.exit, sans traceback."""
+
+
 @dataclass
 class RefBrique:
     """Reference a une brique : son id (= nom du fichier), active ou non, ses reglages."""
@@ -133,13 +137,42 @@ def charger_env(fichier: Path) -> list[str]:
     return charges
 
 
+def _charger_yaml(chemin: Path) -> dict[str, Any]:
+    """Lit un fichier YAML et transforme une erreur de syntaxe en message clair (sans traceback)."""
+    try:
+        return yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    except yaml.YAMLError as err:
+        marque = getattr(err, "problem_mark", None)
+        if marque is not None:
+            raise ErreurConfig(
+                f"{chemin.name} a une erreur d'indentation vers la ligne {marque.line + 1} "
+                "(2 espaces, jamais de tabulation)."
+            ) from err
+        raise ErreurConfig(f"{chemin.name} a une erreur d'indentation (2 espaces, jamais de tabulation).") from err
+
+
+def verifier_profil(config: Config) -> None:
+    """Le profil declare (config.profil) doit exister dans profils/, sinon message clair et pistes."""
+    if config.fichier_profil.is_file():
+        return
+    dossier = config.fichier_profil.parent
+    disponibles = sorted(p.stem for p in dossier.glob("*.yaml")) if dossier.is_dir() else []
+    liste = ", ".join(disponibles) if disponibles else "aucun"
+    raise ErreurConfig(
+        f"Profil « {config.profil} » introuvable dans profils/ : profils disponibles : {liste}. "
+        "Lance `jules installer` ou corrige profil dans config.local.yaml."
+    )
+
+
 def charger_config(chemin: Path | None = None) -> Config:
     """config.yaml (partage, sans donnee perso) + config.local.yaml s'il existe (propre a la famille,
     jamais publie : profil de l'enfant, codes d'acces, reglages locaux)."""
     chemin = chemin or RACINE / "config.yaml"
     charger_env(chemin.with_name(".env"))
-    brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+    brut = _charger_yaml(chemin)
     local = chemin.with_name("config.local.yaml")
     if local.is_file():
-        brut = fusionner(brut, yaml.safe_load(local.read_text(encoding="utf-8")) or {})
-    return depuis_dict(brut, chemin.resolve().parent)
+        brut = fusionner(brut, _charger_yaml(local))
+    config = depuis_dict(brut, chemin.resolve().parent)
+    verifier_profil(config)
+    return config
