@@ -87,6 +87,8 @@ def _somme(rng: random.Random, difficulte: int) -> dict[str, Any]:
         a, b, c, d, addition = t
         m = math.lcm(b, d)
         f1, f2 = Fraction(a, b), Fraction(c, d)
+        if math.gcd(a, b) != 1 or math.gcd(c, d) != 1:  # un énoncé ne cite que des fractions irréductibles
+            return False
         resultat = f1 + f2 if addition else f1 - f2
         if resultat == 0:  # une différence nulle n'apprend rien de nouveau ici
             return False
@@ -192,10 +194,10 @@ def _produit(rng: random.Random, difficulte: int) -> dict[str, Any]:
     def acceptable(t: tuple[int, int, int, int, bool]) -> bool:
         a, b, c, d, est_produit = t
         f1, f2 = Fraction(a, b), Fraction(c, d)
+        if math.gcd(a, b) != 1 or math.gcd(c, d) != 1:  # un énoncé ne cite que des fractions irréductibles
+            return False
         resultat = f1 * f2 if est_produit else f1 / f2
         if resultat == 1:
-            return False
-        if f1 == 1 or f2 == 1:  # une fraction qui vaut 1 (a=b ou c=d) cite littéralement la fraction restante
             return False
         m = math.lcm(b, d)
         # les indices citent a, b, c, d et les produits a×c, b×d (ou a×d, b×c pour un quotient) : aucun
