@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import os
 import re
+import subprocess
 from pathlib import Path
 
 import pytest
@@ -42,6 +43,8 @@ DOSSIERS_EX008 = ("profils", "adaptations", "consignes", "tests")
 EXTENSIONS_DONNEES = {".yaml", ".yml", ".json", ".md"}  # README.md exclus (documentation du perimetre)
 # Jeux de donnees qui testent justement le filtrage de ces termes : liste nominative fixee par la spec.
 EXEMPTIONS_EX008 = {"tests/cas/modele_eleve/lecons_filtre.yaml"}
+# EX-008b (prenoms reels) porte sur tout le depot publie ; exemptions nommees seulement (aucune a ce jour).
+EXEMPTIONS_EX008B: set[str] = set()
 PROFILS_FICTIFS = {"exemple.yaml", "test-cumul.yaml"}
 VARIABLE_SURCOUCHE = "JULES_SURCOUCHE"  # racine d'une installation privee (profils/<prenom>.yaml)
 
@@ -221,6 +224,42 @@ def prenoms_reels() -> tuple[set[str], list[str]]:
     return prenoms, lus
 
 
+def fichiers_ex008b() -> list[Path]:
+    """Tout ce que git publierait (suivis + nouveaux non ignores), quels que soient dossier et extension.
+
+    Le prenom d'un eleve reel n'a sa place nulle part dans le depot public : ni dans le code Python des
+    tests, ni dans le contenu pedagogique (bibliotheque/), contrairement aux noms de troubles (partie a).
+    Seules les exemptions nommees d'EXEMPTIONS_EX008B sont retirees.
+    """
+    try:
+        sortie = subprocess.run(
+            ["git", "ls-files", "--cached", "--others", "--exclude-standard"],  # noqa: S607
+            cwd=RACINE,
+            capture_output=True,
+            text=True,
+            check=True,
+        ).stdout
+        chemins = [RACINE / ligne for ligne in sortie.splitlines() if ligne]
+    except (OSError, subprocess.CalledProcessError):
+        chemins = [p for p in RACINE.rglob("*") if ".git" not in p.parts]
+    return [p for p in chemins if p.is_file() and p.relative_to(RACINE).as_posix() not in EXEMPTIONS_EX008B]
+
+
+def test_ex008_b_perimetre():
+    fichiers = {p.relative_to(RACINE).as_posix() for p in fichiers_ex008b()}
+    # au-dela des quatre dossiers de la partie (a) : code des tests, contenu pedagogique, code, docs
+    for attendu in (
+        "tests/test_lecture_vocale_eleve.py",
+        "bibliotheque/programme/CM1/anglais.yaml",
+        "jules/web/static/eleve.js",
+        "docs/spec/ADAPTATIONS.md",
+        "profils/test-cumul.yaml",
+    ):
+        assert attendu in fichiers, attendu
+    for exemption in EXEMPTIONS_EX008B:
+        assert (RACINE / exemption).is_file(), f"exemption qui ne pointe plus sur rien : {exemption}"
+
+
 def test_ex008_b_aucun_prenom_reel():
     prenoms, lus = prenoms_reels()
     if not prenoms:
@@ -231,7 +270,7 @@ def test_ex008_b_aucun_prenom_reel():
     motifs = {p: re.compile(rf"(?<![a-z0-9]){re.escape(normaliser(p))}(?![a-z0-9])") for p in prenoms}
     fautifs = [
         f"{f.relative_to(RACINE).as_posix()} ({len(lus)} profil(s) prive(s) lu(s))"
-        for f in fichiers_ex008()
+        for f in fichiers_ex008b()
         if any(m.search(normaliser(f.read_text(encoding="utf-8", errors="replace"))) for m in motifs.values())
     ]  # le prenom n'est pas recopie dans le message : il ne doit pas finir dans un journal de CI
     assert not fautifs, f"prenom d'un eleve reel dans : {fautifs}"

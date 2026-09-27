@@ -34,10 +34,30 @@
 
   var ecran;
   var indicateurMode;
+  var reperesRang = false; // levier reperes-rang-chiffres (voir LEVIERS plus bas)
+  var RANGS = ["rang-unites", "rang-dizaines", "rang-centaines"];
 
   function rafraichir() {
-    ecran.textContent = etatCalcul.affichage;
     if (indicateurMode) indicateurMode.textContent = etatCalcul.degres ? "DEG" : "RAD";
+    var texte = etatCalcul.affichage;
+    if (!reperesRang || !/^-?\d+(,\d*)?$/.test(texte)) {
+      ecran.textContent = texte;
+      return;
+    }
+    // Chiffres de la partie entiere colores par rang, en partant de la virgule (ou de la fin).
+    ecran.textContent = "";
+    var finEntier = texte.indexOf(",") === -1 ? texte.length : texte.indexOf(",");
+    for (var i = 0; i < texte.length; i++) {
+      var rang = finEntier - 1 - i;
+      if (i < finEntier && rang < RANGS.length && /\d/.test(texte[i])) {
+        var chiffre = document.createElement("span");
+        chiffre.className = RANGS[rang];
+        chiffre.textContent = texte[i];
+        ecran.appendChild(chiffre);
+      } else {
+        ecran.appendChild(document.createTextNode(texte[i]));
+      }
+    }
   }
 
   function nombreAffiche() {
@@ -222,7 +242,59 @@
   // appliques. Sans reponse de la page apres DELAI_ADAPTATIONS ms, l'outil s'affiche avec les
   // valeurs neutres et le signale ; une reponse tardive valide est quand meme appliquee.
   // Code volontairement duplique dans chaque outil (un outil reste un dossier autonome).
-  var LEVIERS = {}; // levier connu -> function (valeur) ; aucun pour l'instant, le reste est ignore
+  // Leviers d'affichage (docs/spec/ADAPTATIONS-LOT2.md, §2, EX-105). Les valeurs viennent de la page,
+  // mais l'outil les revalide contre les plages et listes fermees du §2 (recopiees ici, comme la
+  // poignee de main) : une valeur hors plage ou d'un mauvais type est ignoree, comme un levier inconnu.
+  // Les regles CSS correspondantes sont dans outil.css (actives seulement avec l'attribut data-adapt-*).
+  var corps = document.body;
+  function poser(levier, variable, valeurCss) {
+    corps.style.setProperty(variable, valeurCss);
+    corps.setAttribute("data-adapt-" + levier, "1");
+  }
+  function nombre(levier, min, max, appliquer) {
+    return function (valeur) {
+      if (typeof valeur !== "number" || !isFinite(valeur) || valeur < min || valeur > max) return;
+      appliquer(valeur);
+      corps.setAttribute("data-adapt-" + levier, String(valeur));
+    };
+  }
+  function choix(levier, variable, table) {
+    return function (valeur) {
+      if (typeof valeur !== "string" || !Object.prototype.hasOwnProperty.call(table, valeur)) return;
+      poser(levier, variable, table[valeur]);
+    };
+  }
+  var LEVIERS = { // levier connu -> function (valeur) ; les autres sont ignores
+    "espacement-lettres": nombre("espacement-lettres", 0, 0.18, function (v) {
+      corps.style.setProperty("--adapt-espacement-lettres", v + "em");
+    }),
+    "espacement-mots": nombre("espacement-mots", 0, 0.5, function (v) {
+      corps.style.setProperty("--adapt-espacement-mots", v + "em");
+    }),
+    "interligne": nombre("interligne", 1.55, 2, function (v) {
+      corps.style.setProperty("--adapt-interligne", String(v));
+    }),
+    "longueur-ligne": nombre("longueur-ligne", 1e-9, 80, function (v) {
+      corps.style.setProperty("--adapt-longueur-ligne", v + "ch");
+    }),
+    // L'outil est un document a part : la taille se regle a sa racine (tailles en rem), dans le
+    // rapport a la valeur neutre de la page (1,125rem).
+    "taille-texte": nombre("taille-texte", 1.125, 1.6875, function (v) {
+      document.documentElement.style.fontSize = Math.round(v / 1.125 * 1e6) / 1e4 + "%";
+    }),
+    "police": choix("police", "--adapt-police", {
+      arial: "Arial, \"Liberation Sans\", sans-serif",
+      verdana: "Verdana, \"DejaVu Sans\", sans-serif"
+    }),
+    "fond": choix("fond", "--adapt-fond", { creme: "#FBF5E6", "bleu-pale": "#EEF4FB" }),
+    // Libelle PAP : « colonne des unites en rouge, des dizaines en bleu et des centaines en vert ».
+    "reperes-rang-chiffres": function (valeur) {
+      if (valeur !== true) return;
+      reperesRang = true;
+      corps.setAttribute("data-adapt-reperes-rang-chiffres", "1");
+      rafraichir();
+    }
+  };
   var DELAI_ADAPTATIONS = 500;
   var attenteAdaptations = null;
 

@@ -16,7 +16,7 @@
   position: absolute; top: 0; left: 0; z-index: 60; pointer-events: none;
   width: max-content; max-width: min(300px, calc(100vw - 16px));
   background: #14243B; color: #FFFFFF; border-radius: 9px; padding: 7px 12px;
-  font: 500 0.9375rem/1.35 var(--police-texte, "Segoe UI", Roboto, Arial, sans-serif);
+  font: 500 calc(0.9375rem * var(--adapt-echelle-texte, 1))/1.35 var(--police-texte, "Segoe UI", Roboto, Arial, sans-serif);
   font-style: normal; letter-spacing: normal; text-transform: none; text-align: left;
   box-shadow: 0 6px 18px rgba(20, 36, 59, .25);
   opacity: 0; visibility: hidden; transition: opacity .12s, visibility .12s;

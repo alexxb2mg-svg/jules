@@ -1,11 +1,22 @@
 # Profil FICTIF publie pour les tests (docs/spec/ADAPTATIONS.md, EX-004 et EX-005) : plusieurs
 # amenagements cumules, dont un inconnu. Aucun prenom reel, aucun terme de la liste interdite (EX-008).
 # Les identifiants reapparaissent volontairement dans des champs libres : ils doivent en etre retires.
+# Lot 2 (docs/spec/ADAPTATIONS-LOT2.md, EX-104) : cinq amenagements de adaptations/amenagements/ ajoutes
+# apres les deux du lot 1 (qui doivent rester en tete). `reformulation` n'y est pas (le mot figure dans
+# les consignes communes, ce qui fausserait le test EX-004), ni `reperes-couleur-calcul` (reste neutre).
 prenom: Alix
 genre: neutre
 parent: ses parents
 classe: "4e"
-amenagements: [amenagement-test-a, amenagement-test-b, amenagement-inexistant]
+amenagements:
+  - amenagement-test-a
+  - amenagement-test-b
+  - amenagement-inexistant
+  - supports-aeres-agrandis
+  - limiter-quantite-ecrit
+  - surligner-mots-cles
+  - lecture-oralisee
+  - consignes-decomposees
 centres_interet: [astronomie, amenagement-test-a]
 points_a_travailler: [amenagement-test-b]
 remarques: "Suivi amenagement-test-a depuis la rentrée ; aime les exemples concrets."

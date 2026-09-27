@@ -1,0 +1,14 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: longueur-ligne
+canal: css
+variable_css: --adapt-longueur-ligne
+type: nombre
+unite: ch
+neutre: null
+neutre_signifie: "aucune limite (pas de max-width ajoute)"
+plage: {max: 80}  # aucune borne basse sourcee : a fixer avec un professionnel
+combinaison: min
+source:
+  nature: norme
+  reference: "WCAG 2.2 critere 1.4.8 (AAA), 80 caracteres au plus, https://www.w3.org/TR/WCAG22/#visual-presentation"

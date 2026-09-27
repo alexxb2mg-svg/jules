@@ -1,0 +1,13 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: espacement-mots
+canal: css
+variable_css: --adapt-espacement-mots
+type: nombre
+unite: em
+neutre: 0
+plage: {min: 0, max: 0.5}  # 3 espaces au lieu d'une, soit +2 espaces d'environ 0,25em
+combinaison: max
+source:
+  nature: etude
+  reference: "Zorzi et al. 2012, PNAS 109(28):11455-11459, DOI 10.1073/pnas.1205566109."
