@@ -573,6 +573,11 @@ def test_ex210d_second_get_session_apres_la_porte_part_vers_le_reseau(banc_codes
     assert [a["methode"] for a in appels if a["chemin"] == "/api/session"] == ["GET", "POST", "GET"]
 
 
+def _typo(texte: str) -> str:
+    """Meme regle que MS.typo (commun.js) : la barre affiche les titres avec espace fine insecable devant ? ! : ; »."""
+    return re.sub(r" ([?!:;\u00bb])", "\u202f\\1", texte).replace("\u00ab ", "\u00ab\u202f")
+
+
 def test_ex210e_une_erreur_n_est_pas_gardee(banc, donnees):
     r = jouer(
         banc,
@@ -589,7 +594,7 @@ def test_ex210e_une_erreur_n_est_pas_gardee(banc, donnees):
     )
     assert "Impossible de charger" in r["erreurPage"]
     assert _parcours(r["requetes"]) == [PARCOURS + "?matiere=mathematiques"] * 2
-    attendues = [n["titre"] for n in donnees["par_matiere"]["mathematiques"]["notions"] if n["lecon"]]
+    attendues = [_typo(n["titre"]) for n in donnees["par_matiere"]["mathematiques"]["notions"] if n["lecon"]]
     assert [e["texte"] for e in r["barre"]["elements"]] == attendues
 
 
