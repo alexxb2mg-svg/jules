@@ -49,7 +49,17 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
   // Texte d'une fiche ou les notions cles sont marquees **ainsi** (controle cote serveur : peu nombreuses,
   // courtes). Jamais d'innerHTML : noeuds texte et <strong> crees un par un.
   function ecrireRiche(el, texte) {
-    String(texte || "").split(/\*\*(.+?)\*\*/).forEach((morceau, i) => {
+    const morceaux = String(texte || "").split(/\*\*(.+?)\*\*/);
+    // « l'**époque** » : l'article elide rejoint la notion cle, sinon le surligneur laisse un blanc
+    // apres l'apostrophe.
+    for (let i = 1; i < morceaux.length; i += 2) {
+      const elision = morceaux[i - 1].match(/(^|[^\p{L}])(\p{L}{1,3}['’])$/u);
+      if (elision) {
+        morceaux[i - 1] = morceaux[i - 1].slice(0, morceaux[i - 1].length - elision[2].length);
+        morceaux[i] = elision[2] + morceaux[i];
+      }
+    }
+    morceaux.forEach((morceau, i) => {
       if (!morceau) return;
       if (i % 2) el.appendChild(creer("strong", "cle", morceau));
       else el.appendChild(document.createTextNode(morceau));
