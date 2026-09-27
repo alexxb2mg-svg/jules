@@ -130,6 +130,15 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     def page_studio() -> HTMLResponse:
         return HTMLResponse((STATIQUE / "studio.html").read_text(encoding="utf-8"))
 
+    @app.get("/app", response_class=HTMLResponse)
+    def page_app() -> HTMLResponse:
+        """Nouvelle interface (front/, build Vite dans static/app) : a cote des pages existantes, sans
+        les remplacer. Le build n'est pas versionne : `npm run build` dans front/ le produit."""
+        index = STATIQUE / "app" / "index.html"
+        if not index.is_file():
+            return HTMLResponse("Nouvelle interface non construite : lancer `npm run build` dans front/.", status_code=404)
+        return HTMLResponse(index.read_text(encoding="utf-8"))
+
     @app.get("/gabarits.js")
     def gabarits() -> Response:
         """Code des figures fournies par les extensions actives (voir jules/extensions.py) : public
