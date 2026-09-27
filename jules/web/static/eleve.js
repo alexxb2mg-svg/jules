@@ -316,6 +316,8 @@
     Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
+    // EX-217 : calculatrice dans l'en-tete de la page de Jules (absente si l'outil n'est pas au catalogue).
+    Calculatrice.monter(etat.infos, { voisin: $("pastille-mode"), place: "apres", leviers: etat.leviers });
     $("nom-persona").textContent = etat.infos.persona.nom;
     LectureVocale.initialiser();
     LectureVocale.definirMode(LectureVocale.modeDepuis(etat.infos));
