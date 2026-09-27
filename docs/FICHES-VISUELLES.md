@@ -75,7 +75,7 @@ La fiche parle à l'élève de **son** niveau (champ `niveau` du référentiel, 
 
 ## 2. La structure
 
-Dans cet ordre, 5 à 8 blocs :
+Dans cet ordre, 5 à 10 blocs (souvent 8 ou 9 : deux schémas et deux exemples sont bienvenus) :
 
 | bloc | quand | rôle |
 |---|---|---|
