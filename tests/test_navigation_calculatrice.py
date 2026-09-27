@@ -23,6 +23,7 @@ renvoie le releve a la page par postMessage. La page (scenario) n'accepte ce rel
 from __future__ import annotations
 
 import shutil
+import time
 from pathlib import Path
 from typing import Any
 
@@ -33,8 +34,9 @@ from jules.config import depuis_dict
 from jules.llm.factice import Brique as Factice
 from jules.moteur import Tuteur
 from jules.web.app import creer_app
+from tests.cdp import ErreurCdp, Page, navigateur_cdp
 from tests.conftest import regle_par_defaut
-from tests.nav_scenario import banc_navigation
+from tests.nav_scenario import banc_navigation, navigateur
 from tests.test_navigation import ATTENDRE_BARRE, CHEMINS_AVANT
 
 RACINE = Path(__file__).resolve().parents[1]
@@ -147,6 +149,10 @@ SCENARIO = (
   r.suivant = b.nextElementSibling ? "#" + b.nextElementSibling.id : null;
   r.precedent = b.previousElementSibling ? "#" + b.previousElementSibling.id : null;
   r.parent = b.parentElement.className;
+  r.dansEntete = !!b.closest("header");
+  const pj = document.querySelector("#panneau-jules");
+  r.panneauJulesDroite = pj && pj.getBoundingClientRect().width > 0 ? pj.getBoundingClientRect().right : null;
+  r.rem = parseFloat(getComputedStyle(document.documentElement).fontSize);
   r.bouton = boite(b);
   r.visible = getComputedStyle(b).display !== "none" && getComputedStyle(b).visibility !== "hidden";
   r.boutonDansFenetre = dansFenetre(b.getBoundingClientRect());
@@ -320,6 +326,19 @@ def test_ex217a_bouton_a_cote_de_jules(releves, cas):
     verifier_element(releves[cas], cas[0])
 
 
+def verifier_grand_ecran(r: dict[str, Any]) -> None:
+    # /cours et /studio en grand ecran : #menu-jules est masque, le panneau lateral de Jules est l'entree vers
+    # Jules (decision SPEC, point 4) ; le bouton reste dans l'en-tete, bord droit a moins de 2 rem du sien.
+    assert r["dansEntete"], r
+    assert r["panneauJulesDroite"] is not None, r
+    assert abs(r["bouton"]["right"] - r["panneauJulesDroite"]) < 2 * r["rem"], (r["bouton"], r["panneauJulesDroite"])
+
+
+@pytest.mark.parametrize("page", ("/cours", "/studio"))
+def test_ex217a_grand_ecran_a_cote_du_panneau_jules(releves, page):
+    verifier_grand_ecran(releves[(page, BUREAU)])
+
+
 def test_ex217a_taille_suit_l_echelle_du_texte(banc):
     r = banc.jouer("/cours", ECHELLE, budget_ms=10000)
     assert r["apres"] == pytest.approx(2 * r["avant"]), r
@@ -472,7 +491,7 @@ def test_mutation_sans_aria_label_fait_echouer_ex217a(banc):
 
 def test_mutation_window_open_fait_echouer_ex217b(banc):
     mutant = _mutant(
-        "      monte = OutilsHote.monter(zone, outil, { leviers: options.leviers || {} });\n",
+        "      monte = OutilsHote.monter(zone, outil, { leviers: options.leviers || {}, surEvenement });\n",
         '      window.open("/api/eleve/outils/calculatrice/", "_blank");\n      monte = { demonter() {} };\n',
     )
     r = _jouer(banc, "/cours", remplaces={"/static/calculatrice.js": mutant})
@@ -489,3 +508,120 @@ def test_mutation_bouton_sans_catalogue_fait_echouer_ex217d(banc_sans_outils):
     r = _jouer(banc_sans_outils, "/cours", remplaces={"/static/calculatrice.js": mutant})
     with pytest.raises(AssertionError):
         assert r["present"] is False and r["nbBoutons"] == 0, r
+
+
+def test_mutation_bouton_loin_du_panneau_fait_echouer_grand_ecran(banc):
+    # Bouton pose en tete de l'en-tete (a gauche) au lieu d'a cote de #menu-jules : le test du point 4 echoue.
+    mutant = _mutant(
+        '    voisin.parentNode.insertBefore(bouton, options.place === "apres" ? voisin.nextSibling : voisin);\n',
+        "    voisin.parentNode.insertBefore(bouton, voisin.parentNode.firstChild);\n",
+    )
+    r = _jouer(banc, "/cours", remplaces={"/static/calculatrice.js": mutant})
+    with pytest.raises(AssertionError):
+        verifier_grand_ecran(r)
+
+
+# --- (c) Echap avec le focus DANS l'iframe : vraie souris et vrai clavier (CDP) ------------------------------
+#
+# `S.echap()` et `element.click()` ne couvrent pas ce cas : un clic de script ne met pas le focus dans l'iframe,
+# et un keydown de script sur la page hote n'est pas ce que recoit l'outil. Ici le navigateur est pilote par le
+# protocole de debogage (tests/cdp.py) : clic souris reel sur le bouton puis sur la touche « 7 » de l'outil (le
+# focus entre dans l'iframe sandboxee), puis touche Echap reelle. L'outil emet l'evenement reserve « fermer »
+# (docs/OUTILS-CONTRAT.md, §2), que la page accepte via OutilsHote (source + evenement declare).
+
+CENTRE = (
+    "(() => { const r = document.querySelector(%s).getBoundingClientRect();"
+    " return [r.x + r.width / 2, r.y + r.height / 2]; })()"
+)
+COIN_CADRE = """(() => {
+  const f = document.querySelector("#calculatrice-panneau iframe"), r = f.getBoundingClientRect();
+  return [r.x + f.clientLeft, r.y + f.clientTop];
+})()"""
+ETAT_PAGE = """(() => {
+  const b = document.querySelector("#bouton-calculatrice"), p = document.querySelector("#calculatrice-panneau");
+  const a = document.activeElement;
+  return { iframes: document.querySelectorAll("iframe").length, expanded: b.getAttribute("aria-expanded"),
+           panneauCache: p.hidden, focus: a === b, actif: a ? a.tagName.toLowerCase() : null };
+})()"""
+PRET_OUTIL = "!document.body.hidden && document.querySelectorAll('#pave button').length > 0"
+TOUCHE_7 = """(() => {
+  const t = Array.prototype.find.call(document.querySelectorAll("#pave button"), (b) => b.textContent === "7");
+  const r = t.getBoundingClientRect();
+  return [r.x + r.width / 2, r.y + r.height / 2];
+})()"""
+
+
+def _contexte_iframe(page: Page) -> tuple[str | None, int | None]:
+    """(session, contexte) du document de l'iframe de l'outil : session propre si elle est hors processus."""
+    arbre = page.commande("Page.getFrameTree")["frameTree"]
+    enfants = arbre.get("childFrames", [])
+    assert len(enfants) == 1, arbre
+    cadre = enfants[0]["frame"]["id"]
+    if page.sessions_iframes():
+        return page.sessions_iframes()[-1], None
+    contextes = [c for c in page.contextes() if c.get("auxData", {}).get("frameId") == cadre]
+    assert contextes, "contexte de l'iframe introuvable"
+    return None, int(contextes[-1]["id"])
+
+
+def _echap_depuis_l_iframe(banc, dossier: Path, chemin: str, taille, remplaces: dict[str, str] | None = None):
+    banc.enveloppe.script = ""  # pas de scenario S ici : tout passe par CDP
+    banc.enveloppe.simulees, banc.enveloppe.pannes = {}, {}
+    banc.enveloppe.remplaces = dict(remplaces or {})
+    r: dict[str, Any] = {}
+    with navigateur_cdp(navigateur(), dossier, taille) as page:
+        page.commande("Page.navigate", url=banc.url + (f"/#{NOTION}" if chemin == "/" else chemin))
+        page.attendre("!!document.querySelector('#bouton-calculatrice')")
+        page.cliquer(*page.evaluer(CENTRE % '"#bouton-calculatrice"'))
+        page.attendre("!!document.querySelector('#calculatrice-panneau iframe')")
+        page.attendre("!!document.querySelector('#calculatrice-panneau iframe').contentWindow")
+        limite = time.monotonic() + 8
+        while True:  # l'outil s'affiche apres la poignee de main (EX-001 a 003)
+            try:
+                session, contexte = _contexte_iframe(page)
+                if page.evaluer(PRET_OUTIL, session=session, contexte=contexte):
+                    break
+            except (ErreurCdp, AssertionError):
+                pass
+            if time.monotonic() > limite:
+                raise ErreurCdp("outil calculatrice non affiche")
+            time.sleep(0.05)
+        x, y = page.evaluer(TOUCHE_7, session=session, contexte=contexte)
+        cadre = page.evaluer(COIN_CADRE)
+        page.cliquer(cadre[0] + x, cadre[1] + y)
+        time.sleep(0.2)
+        ecran = "document.getElementById('ecran').textContent"
+        r["ecranApresClic"] = page.evaluer(ecran, session=session, contexte=contexte)
+        r["focusDansIframe"] = page.evaluer("document.hasFocus()", session=session, contexte=contexte)
+        r["avant"] = page.evaluer(ETAT_PAGE)
+        page.touche("Escape", "Escape", 27)
+        limite = time.monotonic() + 3
+        while page.evaluer(ETAT_PAGE)["iframes"] and time.monotonic() < limite:
+            time.sleep(0.05)
+        r["apres"] = page.evaluer(ETAT_PAGE)
+    return r
+
+
+def verifier_echap_iframe(r: dict[str, Any]) -> None:
+    # Preconditions : le focus est reellement dans l'iframe (un vrai clic sur une touche de l'outil).
+    assert r["ecranApresClic"] == "7" and r["focusDansIframe"] is True, r
+    assert r["avant"]["actif"] == "iframe" and r["avant"]["iframes"] == 1 and r["avant"]["expanded"] == "true", r
+    assert r["apres"] == {"iframes": 0, "expanded": "false", "panneauCache": True, "focus": True, "actif": "button"}, r
+
+
+@pytest.mark.parametrize(
+    "cas", [("/", BUREAU), ("/cours", BUREAU), ("/studio", BUREAU), ("/discuter", BUREAU), ("/", TELEPHONE)], ids=_id
+)
+def test_ex217c_echap_avec_le_focus_dans_l_iframe(banc, tmp_path, cas):
+    verifier_echap_iframe(_echap_depuis_l_iframe(banc, tmp_path / "cdp", *cas))
+
+
+def test_mutation_outil_sans_fermer_fait_echouer_ex217c_iframe(banc, tmp_path):
+    source = OUTIL_JS.read_text(encoding="utf-8")
+    ancre = '    if (ev.key === "Escape") envoyer("fermer", {});\n'
+    assert source.count(ancre) == 1
+    mutant = source.replace(ancre, "")
+    r = _echap_depuis_l_iframe(banc, tmp_path / "cdp", "/cours", BUREAU, remplaces={CHEMIN_OUTIL_JS: mutant})
+    assert r["ecranApresClic"] == "7" and r["avant"]["actif"] == "iframe", r  # la mutation joue sur le bon cas
+    with pytest.raises(AssertionError):
+        verifier_echap_iframe(r)
