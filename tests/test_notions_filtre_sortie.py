@@ -91,6 +91,26 @@ def _preparer(tuteur, mode: str = "aide-devoirs"):
 # --- le detecteur ecarte une fuite de la reponse fermee, en mode aide-devoirs --------------------
 
 
+def test_pas_de_filtre_quand_l_eleve_a_deja_ecrit_la_reponse(tuteur):
+    """Une reponse trouvee par l'eleve n'est plus un secret : Jules doit pouvoir la confirmer."""
+    _module, conv_id = _preparer(tuteur)
+    base = tuteur.llm.regle
+    appels = {"n": 0}
+
+    def regle(systeme, tours, modele):
+        if "Notion travaillée" in systeme:
+            appels["n"] += 1
+            return "Oui, 144, c'est ça. Tu vois pourquoi 12 × 12 fait 144 ?"
+        return base(systeme, tours, modele)
+
+    tuteur.llm.regle = regle
+    bot = tuteur.echanger(conv_id, "je trouve 144, c'est bon ?")
+    tuteur.llm.regle = base
+
+    assert appels["n"] == 1  # aucune relance
+    assert "144" in bot.texte
+
+
 def test_filtre_ecarte_une_fuite_de_la_reponse_nombre_et_relance_une_fois(tuteur):
     _module, conv_id = _preparer(tuteur)
     base = tuteur.llm.regle

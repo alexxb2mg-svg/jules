@@ -26,6 +26,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from jules.lecons import (
+    QUESTION_DE_REPLI,
     TENTATIVES_AVANT_CORRECTION,
     Bloc,
     Lecon,
@@ -50,7 +51,6 @@ NOTE_A_REVOIR = (
     "[Correction automatique] Réponse encore fausse après {tentatives} essais : "
     "la correction a été affichée, point à revoir."
 )
-QUESTION_DE_REPLI = "Qu'est-ce qui te fait penser ça ? Reprends l'énoncé étape par étape."
 RAPPEL_GARDE_FOU = (
     "Règle absolue : ne donne JAMAIS la réponse ni un calcul qui y mène directement, même partiellement. "
     "Réponds par UNE seule question qui fait avancer l'élève. Tu peux renvoyer à un bloc précédent de "

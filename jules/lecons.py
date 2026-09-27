@@ -43,6 +43,8 @@ TENTATIVES_AVANT_CORRECTION = 3
 BLOCS_MIN = 3
 BLOCS_MAX = 20
 TOLERANCE_DEFAUT = 1e-9
+# Question neutre renvoyee quand une reponse de Jules a fui la solution deux fois de suite (cours, notions).
+QUESTION_DE_REPLI = "Qu'est-ce qui te fait penser ça ? Reprends l'énoncé étape par étape."
 
 
 class ErreurLecon(ValueError):

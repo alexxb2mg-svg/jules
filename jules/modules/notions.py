@@ -51,11 +51,10 @@ from jules.bibliotheques import (
     texte_direction,
     texte_fiche,
 )
+from jules.lecons import QUESTION_DE_REPLI, contient_la_reponse
 from jules.lecons import Bloc as BlocLecon
-from jules.lecons import contient_la_reponse
 from jules.llm.base import TEXTE_PHOTO_SEULE, Tour
 from jules.modules.base import Module, extraire_json
-from jules.modules.cours import QUESTION_DE_REPLI
 from jules.stockage import Conversation, Message
 
 journal = logging.getLogger("jules.notions")
@@ -341,6 +340,9 @@ class Brique(Module):
         if not notion_id:
             return texte
         blocs = self._blocs_fermes_de_la_fiche(notion_id)
+        # Ce que l'eleve a deja ecrit lui-meme n'est plus un secret : Jules doit pouvoir confirmer « oui, 144 ».
+        deja_dit = " ".join(m.texte for m in conv.messages if m.role == "eleve")
+        blocs = [b for b in blocs if not contient_la_reponse(deja_dit, b)]
         fuite = next((b for b in blocs if contient_la_reponse(texte, b)), None)
         if fuite is None:
             return texte
