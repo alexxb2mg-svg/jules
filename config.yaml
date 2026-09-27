@@ -42,6 +42,7 @@ modules:
       bibliotheques:
         - fiches-visuelles-3e-experimentales   # experimentale, relecture Alex en cours
         - fiches-visuelles-3e                  # depot jules-bibliotheques (bibliotheques_externes) : absente = ignoree
+        - fiches-visuelles-cm1                 # idem, CM1
   - id: cours          # interface de lecon guidee, notion par notion (etape 2)
     reglages:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
@@ -112,3 +113,5 @@ extensions:
   - rappels-sciences          # bulles de rappel au survol (fournit.rappels) : unites, chimie, formules
   - rappels-histoire          # siecles, dates, sigles d'histoire-geographie et d'EMC
   - rappels-francais          # abreviations de grammaire
+  - rappels-anglais           # phonetique, abreviations de grammaire, niveaux du CECRL
+  - rappels-musique           # nuances, figures de notes, signes de la portee

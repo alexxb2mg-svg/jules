@@ -231,12 +231,21 @@ def _verifier_variables(brut: Any, nom: str) -> dict[str, str]:
 
 # Division : l'eleve de college ecrit « ÷ » ; la barre « / » n'est permise que dans une unite collee
 # (m/s, g/cm³). Une barre entouree d'espaces (« m / V ») est refusee partout, schemas compris.
-_BARRE_DE_DIVISION = re.compile(r"\S\s+/\s+\S")
+_BARRE_DE_DIVISION = re.compile(r"(\S+)\s+/\s+(\S+)")
+
+
+_TIRET_EN_SOUSTRACTION = re.compile(r"\d - \d")
 
 
 def _verifier_division(texte: str, champ: str, ou: str) -> None:
-    if _BARRE_DE_DIVISION.search(texte):
-        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
+    if _TIRET_EN_SOUSTRACTION.search(texte):
+        raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : soustraction ecrite avec un tiret « - », ecrire « − »")
+    # « m / V », « 10 / 2 », « (v2 − v1) / t » sont des divisions : un nombre d'un cote, ou deux lettres
+    # de formule courtes. « and / but », « il / elle » ou deux vers cites sont des alternatives de mots.
+    for gauche, droite in _BARRE_DE_DIVISION.findall(texte):
+        g, d = gauche.strip("()[]«»\"'.,;:"), droite.strip("()[]«»\"'.,;:")
+        if re.search(r"\d", g + d) or (len(g) <= 2 and len(d) <= 2):
+            raise ErreurFicheVisuelle(f"{ou} : champ {champ!r} : division ecrite « / », ecrire « ÷ » (m ÷ V)")
 
 
 # Abreviation propre a la notion (ua, URSS, av. J.-C.) : rappelee au survol partout ou elle apparait.
@@ -278,6 +287,16 @@ def _texte(
     return v
 
 
+# Fin de phrase : un point (ou ! ?), un guillemet fermant eventuel, puis la fin du texte ou un mot qui ne
+# commence pas par une minuscule. Ne coupent rien : « 172.16.1.1 », « 3.5 », une abreviation courante
+# (« av. J.-C. », « env. », « ex. », « cf. »), un « ? » dans une citation suivie de la phrase
+# (« tu te demandes « pourquoi ? » et c'est normal »).
+_FIN_DE_PHRASE = re.compile(
+    r"(?<!\bav)(?<!\bapr)(?<!J\.-C)(?<!\benv)(?<!\bex)(?<!\bcf)[.!?]+(?:\s*»)?"
+    r"(?=\s*$|\s+[^\sa-zàâäçéèêëîïôöùûüÿœ»])"
+)
+
+
 def _verifier_jules(valeur: Any, ou: str) -> str:
     texte = str(valeur or "").strip()
     if not texte:
@@ -288,7 +307,15 @@ def _verifier_jules(valeur: Any, ou: str) -> str:
         raise ErreurFicheVisuelle(
             f"{ou} : commentaire 'jules' trop long ({len(lisible)} caracteres, max {LIMITE_JULES})"
         )
-    phrases = [p for p in re.split(r"[.!?]+", lisible) if p.strip()]
+    # Une citation entre guillemets (« Sorry! Can you repeat? ») fait partie de la phrase qui la cite :
+    # sa ponctuation interne ne compte pas. Seule la ponctuation finale de la citation peut clore.
+    sans_citations = re.sub(
+        r"«([^«»]*?)([.!?]*)\s*»", lambda m: "«" + re.sub(r"[.!?]", ",", m.group(1)) + m.group(2) + " »", lisible
+    )
+    sans_citations = re.sub(
+        r"\"([^\"]*?)([.!?]*)\"", lambda m: '"' + re.sub(r"[.!?]", ",", m.group(1)) + m.group(2) + '"', sans_citations
+    )
+    phrases = [p for p in _FIN_DE_PHRASE.split(sans_citations) if p.strip()]
     if not 1 <= len(phrases) <= 3:
         raise ErreurFicheVisuelle(f"{ou} : commentaire 'jules' doit tenir en 1 a 3 phrases (trouve {len(phrases)})")
     return texte
@@ -379,7 +406,8 @@ def _verifier_formule(d: dict[str, Any], ou: str) -> dict[str, Any]:
                 info.get("legende"), "legende", f"{ou}, terme {lettre}", limite=LIMITE_LEGENDE, riche=True
             ),
         }
-    return {"expression": expression, "termes": termes}
+    # L'ordre ecrit dans la fiche : un objet JavaScript range d'abord les cles numeriques (« 4 », « 1 »).
+    return {"expression": expression, "termes": termes, "ordre": list(termes)}
 
 
 def _verifier_carte(d: dict[str, Any], ou: str) -> dict[str, Any]:

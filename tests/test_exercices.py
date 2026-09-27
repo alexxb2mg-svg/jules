@@ -191,7 +191,10 @@ def test_routes_notions_et_commencer(tuteur):
         r = client.get("/api/eleve/exercices/notions")
         assert r.status_code == 200
         ids = {n["id"] for n in r.json()["exercices"]}
-        assert ids == {NOTION_MATHS, NOTION_HISTOIRE}
+        # les fiches du dossier de test, plus toute notion qui a un générateur (servie sans fiche)
+        from jules.generateurs import GENERATEURS
+
+        assert ids == {NOTION_MATHS, NOTION_HISTOIRE} | set(GENERATEURS)
         entree_maths = next(n for n in r.json()["exercices"] if n["id"] == NOTION_MATHS)
         assert entree_maths["matiere"] == "Mathématiques"
         assert entree_maths["nb"] == 4  # 4 exercices auto sur 5 (le dernier est 'ouverte')
@@ -230,3 +233,50 @@ def test_message_apres_fin_reste_sans_ia(tuteur):
     texte = _echanger(tuteur, conv_id, "merci")
     assert _nb_appels_principal(tuteur) == avant
     assert "terminée" in texte.casefold()
+
+
+# --- (j) : series generees (jules/generateurs), servies par le meme parcours, sans IA ------------
+
+
+def test_serie_generee_sans_ia_et_differente_a_chaque_fois(tuteur):
+    module = tuteur.module("exercices")
+    lancee = module.commencer_generee(NOTION_MATHS, graine=42)
+    conv_id = lancee["conversation"]
+    donnees = tuteur.stockage.lire_etat("exercices", conv_id)
+    assert donnees["graine"] == 42 and donnees["fiche"]["generee"] is True
+    premier = donnees["fiche"]["exercices"][0]
+    assert lancee["exercice"]["id"] == premier["id"] and premier["difficulte"] == 1
+    assert premier["reponse"]["forme"] == "produit_premiers"
+
+    # une reponse fausse recoit une relance ou un indice, pas la solution ; la bonne reponse est jugee juste
+    texte = _echanger(tuteur, conv_id, "4 × 3")
+    assert "juste" not in texte.casefold() and premier["solution"] not in texte
+    n = premier["reponse"]["valeur"]
+    from jules.fiches.correction import decomposer, ecrire_produit
+
+    texte = _echanger(tuteur, conv_id, ecrire_produit(decomposer(n)))
+    assert "juste" in texte.casefold()
+    assert _nb_appels_principal(tuteur) == 0
+
+    # meme graine = meme serie ; graine differente = autres nombres
+    encore = module.commencer_generee(NOTION_MATHS, graine=42)
+    assert encore["exercice"]["enonce"] == lancee["exercice"]["enonce"]
+    autre = module.commencer_generee(NOTION_MATHS, graine=43)
+    assert autre["exercice"]["enonce"] != lancee["exercice"]["enonce"]
+
+
+def test_route_generer(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        entree = next(
+            n for n in client.get("/api/eleve/exercices/notions").json()["exercices"] if n["id"] == NOTION_MATHS
+        )
+        assert entree["generateur"] is True
+        r = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/generer")
+        assert r.status_code == 200 and r.json()["exercice"]["difficulte"] == 1
+        assert (
+            client.post(f"/api/eleve/exercices/{NOTION_MATHS}/generer?graine=7")
+            .json()["exercice"]["id"]
+            .startswith("decomposer-")
+        )
+        assert client.post(f"/api/eleve/exercices/{NOTION_MATHS}/generer?graine=-1").status_code == 422
+        assert client.post(f"/api/eleve/exercices/{NOTION_HISTOIRE}/generer").status_code == 404

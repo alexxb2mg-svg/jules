@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jules - cours</title>
+  <title>Jules - Mes leçons</title>
   <link rel="icon" href="/static/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/static/icone-192.png">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="/static/symboles.css">
   <link rel="stylesheet" href="/static/cours.css">
+  <link rel="stylesheet" href="/static/matieres-couleurs.css">
+  <link rel="stylesheet" href="/static/navigation.css">
+  <link rel="stylesheet" href="/static/adaptations.css">
 </head>
 <body>
   <div id="porte" class="porte cache">
@@ -27,32 +30,30 @@
 
   <div id="contenu" class="cours-appli">
     <header class="cours-entete">
-      <button type="button" class="bouton-panneau" id="menu-parcours" aria-label="Ouvrir ton parcours" aria-expanded="false" aria-controls="parcours">☰ <span>Parcours</span></button>
-      <a class="cours-marque" href="/">
+      <span class="cours-marque">
         <img src="/api/persona/avatar" alt="">
         <span id="nom-persona">Jules</span>
-      </a>
+      </span>
       <button type="button" class="bouton-panneau" id="menu-jules" aria-label="Ouvrir Jules" aria-expanded="false" aria-controls="panneau-jules">💬 <span>Jules</span></button>
     </header>
 
     <div class="cours-corps">
-      <aside id="parcours" class="parcours" aria-label="Ton parcours">
-        <div class="panneau-entete">
-          <strong>Mon parcours</strong>
-          <button type="button" class="fermer" id="parcours-fermer" aria-label="Fermer le parcours">✕</button>
-        </div>
-        <label for="select-matiere">Matière</label>
-        <select id="select-matiere"></select>
-        <p id="parcours-estimation" class="avertissement"></p>
-        <div id="parcours-liste" class="parcours-liste" aria-live="polite"></div>
-        <div id="parcours-attente" class="attente-ligne cache" aria-live="polite">Chargement…</div>
-      </aside>
-
       <main class="lecon-zone">
-        <div id="lecon-vide" class="lecon-vide">
-          <p>👈 Choisis une matière puis une notion dans ton parcours pour commencer une leçon.</p>
-        </div>
-
+        <!-- Tant qu'aucune lecon n'est ouverte : la liste des notions, ici, dans la zone centrale (EX-209). La
+             matiere se choisit dans la barre ; a la premiere visite, la page propose la liste des matieres. -->
+        <section id="catalogue" class="catalogue" aria-labelledby="catalogue-titre">
+          <h1 id="catalogue-titre" class="catalogue-titre" tabindex="-1">Mes leçons</h1>
+          <div id="choix-matiere" class="choix-matiere cache">
+            <p class="choix-matiere-consigne">Choisis une matière</p>
+            <ul id="choix-matiere-liste" class="choix-matiere-liste"></ul>
+          </div>
+          <div id="parcours" class="parcours cache">
+            <p id="parcours-estimation" class="avertissement"></p>
+            <div id="parcours-liste" class="parcours-liste" aria-live="polite"></div>
+          </div>
+          <p id="liste-dans-barre" class="liste-dans-barre">Les leçons de cette matière sont listées dans la barre, à gauche.</p>
+          <div id="parcours-attente" class="attente-ligne cache" aria-live="polite">Chargement…</div>
+        </section>
         <div id="lecon" class="lecon cache">
           <div class="lecon-entete">
             <h1 id="lecon-titre"></h1>
@@ -95,6 +96,9 @@
   <script src="/static/symboles.js"></script>
   <script src="/rappels.js"></script>
   <script src="/static/commun.js"></script>
+  <script src="/static/navigation.js"></script>
+  <script src="/static/outils-hote.js"></script>
+  <script src="/static/lecture-vocale.js"></script>
   <script src="/static/cours.js"></script>
 </body>
 </html>

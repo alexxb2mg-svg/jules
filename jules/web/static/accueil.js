@@ -1,6 +1,11 @@
-// Jules - page d'accueil « Mes fiches » : rail a gauche (notions), fiche visuelle au centre,
-// Jules en bulles preecrites a droite (aucun appel IA sur cette page : voir jules_cadrage_interface.md).
+// Jules - page d'accueil « Mes fiches » : fiche visuelle au centre, Jules en bulles preecrites a droite (aucun
+// appel IA sur cette page : voir jules_cadrage_interface.md). La liste des notions est dans la barre commune
+// (navigation.js, etape 4 de Mes fiches) : plus de rail propre a la page (EX-216).
 "use strict";
+
+// Typographie francaise des titres : « Titre : suite », « Pourquoi ? » ; l'espace devant la
+// ponctuation haute devient insecable, le signe ne commence jamais une ligne.
+const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
 
 (() => {
   const $ = (id) => document.getElementById(id);
@@ -13,41 +18,38 @@
     bulles: [],
   };
 
-  // --- rail : liste des notions qui ont une fiche visuelle ------------------
+  // --- notions qui ont une fiche visuelle : pour le fragment #<id> et la premiere fiche -----------
+  // Meme chemin que la barre (cache de MS.api, EX-210) : aucun appel en plus. Rien n'est affiche ici.
   async function chargerNotions() {
-    const zone = $("rail-notions");
-    zone.innerHTML = "";
-    let matieres = [];
+    etat.notions = [];
     try {
       const r = await MS.api("/api/eleve/fiches_visuelles/notions");
-      matieres = r.matieres || [];
+      for (const m of r.matieres || []) etat.notions.push(...(m.notions || []));
     } catch (err) {
-      zone.appendChild(creer("p", "avertissement", `Impossible de charger tes fiches : ${err.message}`));
-      return;
-    }
-    etat.notions = [];
-    for (const m of matieres) {
-      const titre = document.createElement("h4");
-      titre.textContent = m.nom;
-      zone.appendChild(titre);
-      for (const n of m.notions) {
-        etat.notions.push(n);
-        const bouton = document.createElement("button");
-        bouton.type = "button";
-        bouton.dataset.id = n.id;
-        bouton.textContent = n.titre;
-        bouton.addEventListener("click", () => ouvrirFiche(n.id));
-        zone.appendChild(bouton);
-      }
+      $("fiche-vide").classList.add("cache");
+      $("fiche-erreur").textContent = `Impossible de charger tes fiches : ${err.message}`;
+      $("fiche-erreur").classList.remove("cache");
     }
   }
 
   // Texte d'une fiche ou les notions cles sont marquees **ainsi** (controle cote serveur : peu nombreuses,
   // courtes). Jamais d'innerHTML : noeuds texte et <strong> crees un par un.
   function ecrireRiche(el, texte) {
-    String(texte || "").split(/\*\*(.+?)\*\*/).forEach((morceau, i) => {
+    const morceaux = String(texte || "").split(/\*\*(.+?)\*\*/);
+    // « l'**époque** » : l'article elide rejoint la notion cle, sinon le surligneur laisse un blanc
+    // apres l'apostrophe.
+    for (let i = 1; i < morceaux.length; i += 2) {
+      const elision = morceaux[i - 1].match(/(^|[^\p{L}])(\p{L}{1,3}['’])$/u);
+      if (elision) {
+        morceaux[i - 1] = morceaux[i - 1].slice(0, morceaux[i - 1].length - elision[2].length);
+        morceaux[i] = elision[2] + morceaux[i];
+      }
+    }
+    morceaux.forEach((morceau, i) => {
       if (!morceau) return;
-      if (i % 2) el.appendChild(creer("strong", "cle", morceau));
+      // Une partie de mot (« ba-**NA**-na ») : surlignage sans marge, collee aux lettres voisines.
+      const colle = i % 2 && (/[\p{L}\p{N}-]$/u.test(morceaux[i - 1] || "") || /^[\p{L}\p{N}-]/u.test(morceaux[i + 1] || ""));
+      if (i % 2) el.appendChild(creer("strong", colle ? "cle colle" : "cle", morceau));
       else el.appendChild(document.createTextNode(morceau));
     });
     return el;
@@ -64,24 +66,16 @@
     return el;
   }
 
-  function marquerNotionActive() {
-    for (const b of $("rail-notions").querySelectorAll("button")) {
-      b.classList.toggle("actif", etat.notionActive && b.dataset.id === etat.notionActive);
-    }
-  }
-
   // --- ouverture d'une fiche -------------------------------------------------
   async function ouvrirFiche(notionId) {
     $("fiche-vide").classList.add("cache");
     $("fiche").classList.add("cache");
     $("fiche-erreur").classList.add("cache");
     $("fiche-attente").classList.remove("cache");
-    fermerRail();
     try {
       const fiche = await MS.api(`/api/eleve/fiches_visuelles/notions/${encodeURIComponent(notionId)}`);
       etat.fiche = fiche;
       etat.notionActive = notionId;
-      marquerNotionActive();
       // Rappels au survol propres a la notion (lettres, abreviations : symboles.js), fiche et bulles.
       if (typeof Symboles !== "undefined") {
         const rappels = { matiere: fiche.matiere, variables: fiche.variables, abreviations: fiche.abreviations };
@@ -105,7 +99,7 @@
 
   function afficherFiche(fiche) {
     $("fiche-fil").textContent = `${fiche.nom_matiere} › ${fiche.niveau}`;
-    $("fiche-titre").textContent = fiche.titre;
+    $("fiche-titre").textContent = typo(fiche.titre);
     if (fiche.relecture_a_relire) {
       $("fiche-avertissement").textContent =
         "Fiche expérimentale, pas encore relue par un adulte : sers-t'en comme appui, pas comme vérité absolue.";
@@ -132,8 +126,8 @@
       if (bloc.type === "attendus") continue;
       zoneBlocs.appendChild(construireBloc(bloc));
     }
-    const sources = (fiche.sources || []).map((s) => s.titre).join(" · ");
-    $("fiche-sources").textContent = sources ? `Sources : ${sources} (${fiche.licence})` : "";
+    const sources = (fiche.sources || []).map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ");
+    $("fiche-sources").textContent = sources ? `Sources : ${sources} — fiche sous licence ${fiche.licence}` : "";
   }
 
   // --- construction des 8 types de blocs -------------------------------------
@@ -142,7 +136,7 @@
     section.className = "fiche-bloc";
     section.dataset.adresse = `fiche/${bloc.id}`;
     const titre = document.createElement("h2");
-    titre.textContent = bloc.titre || TITRES_TYPE[bloc.type] || bloc.type;
+    titre.textContent = typo(bloc.titre || TITRES_TYPE[bloc.type] || bloc.type);
     section.appendChild(titre);
 
     const constructeur = CONSTRUCTEURS[bloc.type];
@@ -173,6 +167,9 @@
     formule(bloc) {
       const div = creer("div", "bloc-formule");
       const expr = creer("div", "formule-expression");
+      const longueur = String(bloc.expression || "").replace(/[\[\]]/g, "").length;
+      if (longueur > 50) expr.classList.add("tres-longue");
+      else if (longueur > 32) expr.classList.add("longue");
       // "[a]" dans l'expression = terme colore (couleur declaree dans termes) ; le reste en texte brut.
       const termesDecl = bloc.termes || {};
       for (const morceau of String(bloc.expression || "").split(/(\[[^\]]+\])/)) {
@@ -189,7 +186,8 @@
       }
       div.appendChild(expr);
       const termes = creer("div", "formule-termes");
-      for (const [nom, info] of Object.entries(bloc.termes || {})) {
+      const termesListe = (bloc.ordre || Object.keys(bloc.termes || {})).map((nom) => [nom, (bloc.termes || {})[nom]]);
+      for (const [nom, info] of termesListe.filter(([, i]) => i)) {
         const ligne = document.createElement("div");
         ligne.style.borderColor = couleurCss(info.couleur);
         const b = document.createElement("b");
@@ -221,7 +219,9 @@
         const max = Math.max(8, Math.floor(largeur / (taille * 0.58)));
         const sortie = [];
         let courante = "";
-        for (const mot of String(texte || "").split(/\s+/).filter(Boolean)) {
+        // Un nombre (« 12 500 ») et la ponctuation haute (« ? », « : ») ne sont jamais separes du mot voisin.
+        const insecable = String(texte || "").replace(/(\d) (?=\d{3}(?!\d))/g, "$1\u202F").replace(/ ([?!:;»])/g, "\u202F$1").replace(/« /g, "«\u202F");
+        for (const mot of insecable.split(/[ \t\n]+/).filter(Boolean)) {
           if (courante && (courante + " " + mot).length > max) { sortie.push(courante); courante = mot; }
           else courante = courante ? courante + " " + mot : mot;
         }
@@ -255,7 +255,13 @@
         noeuds.filter((n) => n.principal).forEach((n) => positions.set(n.id, { x: 430, y: 4 + hPrincipal / 2 }));
         secondaires.forEach((n, i) => positions.set(n.id, { x: pas * i + pas / 2, y: yBas }));
       }
-      svg.setAttribute("viewBox", `0 0 860 ${Math.ceil(hauteurTotale)}`);
+      // Un lien entre deux notions du meme rang passerait sous les boites (et son libelle avec) :
+      // il fait un coude, sous la ligne (disposition en eventail) ou a droite de la colonne.
+      const principaux = new Set(noeuds.filter((n) => n.principal).map((n) => n.id));
+      const lateraux = (bloc.liens || []).filter((l) => !principaux.has(l.de) && !principaux.has(l.vers) && positions.has(l.de) && positions.has(l.vers));
+      const largeurTotale = enColonne && lateraux.length ? 1000 : 860;
+      if (!enColonne && lateraux.length) hauteurTotale += 22 + 26 * lateraux.length;
+      svg.setAttribute("viewBox", `0 0 ${largeurTotale} ${Math.ceil(hauteurTotale)}`);
       const boite = (n) => {
         const pos = positions.get(n.id), h = n.principal ? contenu.get(n.id).hauteur : hMax, w = largeur(n);
         return { gauche: pos.x - w / 2, droite: pos.x + w / 2, haut: pos.y - h / 2, bas: pos.y + h / 2 };
@@ -264,6 +270,25 @@
         const a = noeuds.find((n) => n.id === lien.de), b = noeuds.find((n) => n.id === lien.vers);
         if (!a || !b || !positions.has(a.id) || !positions.has(b.id)) continue;
         const pa = positions.get(a.id), pb = positions.get(b.id), ba = boite(a), bb = boite(b);
+        const libelle = (x, y, ancre = "middle") => {
+          if (!lien.libelle) return;
+          const texte = g("text", { x, y, "font-size": T_LIEN, fill: "#4A5566", "text-anchor": ancre, "paint-order": "stroke", stroke: "#FFFFFF", "stroke-width": 5 });
+          texte.textContent = lien.libelle;
+          svg.appendChild(texte);
+        };
+        const rang = lateraux.indexOf(lien);
+        if (rang >= 0) {  // coude entre deux notions du meme rang
+          if (enColonne) {
+            const x = ba.droite + 24 + 14 * rang;
+            svg.appendChild(g("polyline", { points: `${ba.droite},${pa.y} ${x},${pa.y} ${x},${pb.y} ${bb.droite},${pb.y}`, fill: "none", stroke: "#8A94A3", "stroke-width": 2 }));
+            libelle(x + 6, (pa.y + pb.y) / 2 + 4, "start");
+          } else {
+            const y = Math.max(ba.bas, bb.bas) + 14 + 26 * rang;
+            svg.appendChild(g("polyline", { points: `${pa.x},${ba.bas} ${pa.x},${y} ${pb.x},${y} ${pb.x},${bb.bas}`, fill: "none", stroke: "#8A94A3", "stroke-width": 2 }));
+            libelle((pa.x + pb.x) / 2, y + 16);
+          }
+          continue;
+        }
         let x1, y1, x2, y2;
         if (enColonne) {  // du bord droit de l'un au bord gauche de l'autre
           [x1, y1, x2, y2] = pa.x < pb.x ? [ba.droite, pa.y, bb.gauche, pb.y] : [ba.gauche, pa.y, bb.droite, pb.y];
@@ -521,11 +546,6 @@
   }
 
 
-  function fermerRail() {
-    $("rail").classList.remove("ouvert");
-    $("menu-rail").classList.remove("cache");
-  }
-
   function basculerChat(ouvrir) {
     const c = $("chat-flottant");
     const o = ouvrir === undefined ? !c.classList.contains("ouvert") : ouvrir;
@@ -533,23 +553,28 @@
   }
 
   async function demarrage() {
-    await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
+    Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
-    document.title = etat.infos.persona.nom + " - Mes fiches";
-    $("nom-persona").textContent = etat.infos.persona.nom;
-    $("menu-rail").addEventListener("click", () => {
-      $("rail").classList.toggle("ouvert");
-      $("menu-rail").classList.toggle("cache", $("rail").classList.contains("ouvert"));
-    });
+    etat.leviers = MS.appliquerLeviers(etat.infos);
     MS.signalerFinDeSeance();
     $("avatar-jules").addEventListener("click", () => basculerChat());
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));
     ajouterBulle("Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir.");
     await chargerNotions();
-    // Lien direct vers une fiche : /#<identifiant de la notion> ; sinon la premiere de la liste.
-    const demandee = decodeURIComponent(location.hash.slice(1));
-    const aOuvrir = etat.notions.find((n) => n.id === demandee) || etat.notions[0];
+    // Lien direct vers une fiche : /#<identifiant de la notion> ; sinon la premiere de la liste. Un lien de la
+    // barre (/#<id>) ne recharge pas la page : la fiche suit aussi les changements de fragment (EX-209).
+    const notionDuFragment = () => {
+      let demandee = "";
+      try { demandee = decodeURIComponent(location.hash.slice(1)); } catch (_) { demandee = ""; }
+      return etat.notions.find((n) => n.id === demandee);
+    };
+    addEventListener("hashchange", () => {
+      const n = notionDuFragment();
+      if (n && n.id !== etat.notionActive) ouvrirFiche(n.id);
+    });
+    const aOuvrir = notionDuFragment() || etat.notions[0];
     if (aOuvrir) ouvrirFiche(aOuvrir.id);
   }
 

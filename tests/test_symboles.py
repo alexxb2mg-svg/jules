@@ -52,7 +52,8 @@ def test_le_coeur_ne_connait_aucune_regle_de_matiere():
 def test_les_extensions_de_rappels_actives():
     extensions = charger_extensions(RACINE / "extensions", ACTIVES)
     code = code_des_rappels(extensions)
-    for identifiant in ("rappels-sciences", "rappels-histoire", "rappels-francais"):
+    rappels = ("rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais", "rappels-musique")
+    for identifiant in rappels:
         assert f"// --- extension {identifiant} ---" in code
     elements = re.findall(r"\b([A-Z][a-z]?): \"", code.split("elements: {")[1].split("},")[0])
     assert len(elements) == len(set(elements)) == 118
@@ -96,6 +97,7 @@ TEXTES = [
     ("parentheses", PHYSIQUE, "La puissance en watts (W), la tension en volts (V) ; l'azote (N). Source : BO n° 31."),
     ("equation", PHYSIQUE, "Combustion : C + O₂ → CO₂, et on convertit km/h → m/s."),
     ("mg", PHYSIQUE, "Le poids : P = mg, soit 2 mg de poudre."),
+    ("negatif", PHYSIQUE, "Variation : (190 − 250) ÷ 250 × 100 = −60 ÷ 250 × 100 = −24."),
     ("unite_en", PHYSIQUE, "La distance en m, la masse en g."),
     ("phrase", PHYSIQUE, "Vérifie que m est en kg et que la vitesse est en m/s : il y a une erreur, il a oublié g."),
     (
@@ -111,6 +113,32 @@ TEXTES = [
         "Dans « il mange une pomme », le GN « une pomme » est COD ; adj. qualificatif.",
     ),
     ("sans_matiere", {}, "Sans notion : 10 kg de CO₂ au XIXe siècle."),
+    (
+        "anglais",
+        {"matiere": "anglais"},
+        "Le son /θ/ de think ; think se lit /θɪŋk/. Présent en -ing : sujet + BE + V-ing. "
+        "Niveau A2 puis B1 ; ask sb sth. Le 12/05 ; 10 kg. Le -ed se dit /t/, /d/ ou /ɪd/. "
+        "Merci : /θæŋk juː/. I am 9 ; it costs £1 ; come at 4 pm.",
+    ),
+    (
+        "techno",
+        {"matiere": "technologie"},
+        "L'IHM de l'OST envoie 4 Mo à 20 Mbit/s ; le DNS donne l'adresse IP. Au début : x = x + 1.",
+    ),
+    ("svt", {"matiere": "svt"}, "L'ADN du VIH ; 10 g de glucose C₆H₁₂O₆ ; il faut une IST au XIXe siècle."),
+    (
+        "musique",
+        {"matiere": "education-musicale"},
+        "On commence p puis cresc. jusqu'à ff ; la ♩ dure un temps, voir p. 12 du cahier.",
+    ),
+    (
+        "fractions",
+        {"matiere": "mathematiques"},
+        "On lit 7/4 = 1 + 3/4 ; et 12 500 g = 12,5 kg ; 3 € × 3 = 9 € ; "
+        "1 h 50 min − 25 min = 1 h 25 min ; 30 ÷ 4 = 7, reste 2.",
+    ),
+    ("histoire_calcul", {"matiere": "histoire"}, "Magellan part en 1519 : 1522 − 1519 = 3 ans de voyage."),
+    ("cm1_sciences", {"matiere": "sciences-et-technologie"}, "Le pot de 250 g contient 20 cL d'eau à 4 °C."),
 ]
 
 
@@ -241,3 +269,70 @@ def test_sans_matiere_toutes_les_regles(annotations):
     bulles = _bulles(annotations, "sans_matiere")
     assert "kg : kilogrammes" in bulles and any(b.startswith("CO₂ :") for b in bulles)
     assert "XIXe : le 19e siècle : de 1801 à 1900" in bulles
+
+
+def test_svt_sigles_et_chimie_sans_histoire(annotations):
+    bulles = _bulles(annotations, "svt")
+    assert any(b.startswith("ADN : acide désoxyribonucléique") for b in bulles)
+    assert any(b.startswith("VIH :") for b in bulles) and any(b.startswith("IST :") for b in bulles)
+    assert any(b.startswith("C₆H₁₂O₆ : glucose : 6 atomes de carbone") for b in bulles) and "g : grammes" in bulles
+    assert not any(b.startswith("XIXe") for b in bulles)  # les siecles sont une regle d'histoire
+
+
+def test_formule_avec_un_nombre_negatif(annotations):
+    assert annotations["negatif"]["formules"] == ["(190 − 250) ÷ 250 × 100 = −60 ÷ 250 × 100 = −24"]
+
+
+def test_anglais_phonetique_structures_et_niveaux(annotations):
+    bulles = _bulles(annotations, "anglais")
+    assert "/θ/ : th sourd, comme dans think (langue entre les dents, sans voix)" in bulles
+    assert any(b.startswith("/θɪŋk/ : prononciation") and "θ = th sourd" in b for b in bulles)
+    assert annotations["anglais"]["formules"] == ["sujet + BE + V-ing"]
+    assert any(b.startswith("A2 : niveau A2 du CECRL") for b in bulles) and "sb : somebody : quelqu'un" in bulles
+    assert not any(b.startswith("kg") or b.startswith("/05") for b in bulles)  # ni unites ni dates en anglais
+    assert {"/t/", "/d/", "/ɪd/"} <= {b.split(" : ")[0] for b in bulles}
+
+
+def test_technologie_sigles_et_unites_numeriques(annotations):
+    bulles = _bulles(annotations, "techno")
+    for debut in ("IHM :", "OST :", "Mo : mégaoctets", "Mbit/s : mégabits", "DNS :", "IP :"):
+        assert any(b.startswith(debut) for b in bulles), debut
+    assert not any(b.startswith("Au :") for b in bulles)
+    assert annotations["techno"]["formules"] == ["x = x + 1"]
+
+
+def test_musique_nuances_et_figures_de_notes(annotations):
+    bulles = _bulles(annotations, "musique")
+    assert "p : piano : doucement" in bulles and "ff : fortissimo : très fort" in bulles
+    assert "cresc. : crescendo : de plus en plus fort" in bulles and "♩ : noire : dure 1 temps" in bulles
+    assert bulles.count("p : piano : doucement") == 1  # « p. 12 » est une page, pas une nuance
+
+
+def test_sciences_du_cm1_ont_les_unites(annotations):
+    bulles = _bulles(annotations, "cm1_sciences")
+    assert "g : grammes" in bulles and any(b.startswith("cL") for b in bulles)
+
+
+def test_une_fraction_est_un_seul_nombre_et_un_grand_nombre_ne_se_coupe_pas(annotations):
+    assert annotations["fractions"]["formules"] == [
+        "7/4 = 1 + 3/4",
+        "12\u202f500 g = 12,5 kg",
+        "3 € × 3 = 9 €",
+        "1 h 50 min − 25 min = 1 h 25 min",
+        "30 ÷ 4 = 7, reste 2",
+    ]
+
+
+def test_un_calcul_ecrit_en_histoire_passe_en_gras(annotations):
+    assert annotations["histoire_calcul"]["formules"] == ["1522 − 1519 = 3"]
+
+
+def test_une_transcription_de_plusieurs_mots_a_sa_bulle(annotations):
+    assert any(b.startswith("/θæŋk juː/ : prononciation") for b in _bulles(annotations, "anglais"))
+
+
+def test_monnaies_et_heures_anglaises(annotations):
+    bulles = _bulles(annotations, "anglais")
+    assert any(b.startswith("£ : livre sterling") for b in bulles)
+    assert any(b.startswith("pm : de l'après-midi") for b in bulles)
+    assert not any(b.startswith("am :") for b in bulles)  # « I am » n'est pas une heure

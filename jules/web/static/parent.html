@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jules - espace parent</title>
+  <title>Jules - Espace parent</title>
   <link rel="icon" href="/static/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/static/icone-192.png">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -28,7 +28,7 @@
       <img src="/api/persona/avatar" alt="">
       <h1>Espace parent</h1>
       <input type="date" id="jour">
-      <a class="bouton secondaire" href="/">Page élève</a>
+      <a class="bouton secondaire" id="retour-eleve" href="/">Retour à l'espace élève</a>
     </header>
 
     <section class="carte" id="carte-alertes">
@@ -61,6 +61,42 @@
       <div id="conversations" class="muet">Chargement…</div>
     </section>
 
+    <section class="carte" id="carte-adaptations">
+      <h2>Aménagements</h2>
+      <p class="muet">Cochez les aménagements du plan d'accompagnement de l'élève sur lesquels Jules peut agir. Libellés du modèle officiel, niveau <span id="adaptations-niveau">…</span>.</p>
+      <form id="form-adaptations">
+        <fieldset class="adaptations-groupe">
+          <legend>Aménagements du PAP</legend>
+          <ul class="liste-adaptations" id="adaptations-pap"></ul>
+        </fieldset>
+        <fieldset class="adaptations-groupe" id="adaptations-autres-groupe">
+          <legend id="adaptations-autres-titre">Autres aménagements et adaptations</legend>
+          <ul class="liste-adaptations" id="adaptations-autres"></ul>
+        </fieldset>
+        <fieldset class="adaptations-groupe">
+          <legend>Préférences d'affichage (hors PAP)</legend>
+          <div class="rangee">
+            <label for="pref-police">Police</label>
+            <select id="pref-police"></select>
+            <label for="pref-fond">Fond</label>
+            <select id="pref-fond"></select>
+          </div>
+          <label class="espace-haut"><input type="checkbox" id="pref-lecture-automatique"> Lecture automatique : chaque réponse de Jules est lue à voix haute</label>
+        </fieldset>
+        <div id="adaptations-conflits" class="adaptations-conflits" role="status" aria-live="polite"></div>
+        <div class="rangee espace-haut">
+          <button class="bouton" type="submit" id="adaptations-enregistrer">Enregistrer</button>
+          <span id="adaptations-etat" class="muet"></span>
+        </div>
+      </form>
+    </section>
+
+    <section class="carte" id="carte-lecture-vocale">
+      <h2>Lecture vocale</h2>
+      <p id="lecture-vocale-etat" class="muet">Vérification des voix…</p>
+      <p class="muet">Seules les voix installées sur l'appareil sont utilisées : le texte lu ne part jamais sur Internet. Ce constat vaut pour l'appareil qui affiche cette page ; ouvrez-la sur celui de l'élève pour savoir ce qu'il en est chez lui.</p>
+    </section>
+
     <section class="carte" id="carte-dossier">
       <h2>Le dossier de l'élève</h2>
       <p class="muet">Tout ce que Jules garde reste sur cet ordinateur : conversations, photos, notions travaillées, signaux, bilans envoyés et vos notes. Vous pouvez le récupérer ou l'effacer quand vous voulez.</p>
@@ -84,6 +120,7 @@
   <script src="/static/symboles.js"></script>
   <script src="/rappels.js"></script>
   <script src="/static/commun.js"></script>
+  <script src="/static/lecture-vocale.js"></script>
   <script src="/static/parent.js"></script>
 </body>
 </html>

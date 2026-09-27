@@ -7,7 +7,7 @@
 "use strict";
 
 (() => {
-const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie"];
+const SCIENCES = ["physique-chimie", "svt", "mathematiques", "technologie", "sciences-et-technologie"];
 const DICOS = {
   // Unites. Celles d'une seule lettre (m, s, g, N...) ne sont reconnues qu'apres un nombre
   // (« 98 N ») ou apres « en » (« en m ») : jamais le « m » d'une formule ni un mot.
@@ -54,6 +54,7 @@ const DICOS = {
     "kHz": "kilohertz : 1 000 hertz",
     "MHz": "mégahertz : un million de hertz",
     "°C": "degrés Celsius",
+    "€": "euros",
     "K": "kelvins (unité de température)",
     "Pa": "pascals (unité de pression)",
     "hPa": "hectopascals : 100 pascals",
@@ -68,6 +69,17 @@ const DICOS = {
     "kg/L": "kilogrammes par litre",
     "kg/m³": "kilogrammes par mètre cube",
     "N/kg": "newtons par kilogramme",
+    "o": "octets (8 bits : de quoi coder un caractère)",
+    "Ko": "kilooctets : environ 1 000 octets",
+    "ko": "kilooctets : environ 1 000 octets",
+    "Mo": "mégaoctets : environ un million d'octets",
+    "Go": "gigaoctets : environ un milliard d'octets",
+    "To": "téraoctets : environ mille milliards d'octets",
+    "bit/s": "bits par seconde : débit d'une connexion",
+    "Mbit/s": "mégabits par seconde : un million de bits par seconde",
+    "Gbit/s": "gigabits par seconde : un milliard de bits par seconde",
+    "tr/min": "tours par minute : vitesse de rotation",
+    "mAh": "milliampères-heures : capacité d'une batterie",
     "ua": "unité astronomique : environ 150 millions de km (distance Terre-Soleil)",
     "al": "année-lumière : environ 9 500 milliards de km",
   },
@@ -226,19 +238,76 @@ Symboles.enregistrer({
 // Des termes courts relies par des operateurs, avec au moins un « = », « → » ou « ≈ ». Termes :
 // nombre (avec son unite), unite seule (km/h → m/s), lettre(s) de grandeur, espece chimique.
 const UNITES = o.alternatives(Object.keys(DICOS.unites));
-const NOMBRE = String.raw`\d+(?:[  ]\d{3})*(?:,\d+)?(?:[  ]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
+// Un nombre : classes de 3 chiffres separees par une espace (normale ou insecable), decimale apres la
+// virgule ou fraction « 3/4 » ecrite d'un seul tenant, unite eventuelle.
+const NOMBRE = String.raw`−?\d+(?:[ \u00A0\u202F]\d{3})*(?:,\d+|/\d+)?(?:[ \u00A0\u202F]?(?:${UNITES})(?![\p{L}\p{N}]))?`;
 const UNITE_SEULE = String.raw`(?:${o.alternatives(Object.keys(DICOS.unites).filter((u) => u.length > 1))})(?![\p{L}\p{N}])`;
-const TERME = String.raw`(?:${NOMBRE}|${UNITE_SEULE}|(?:\d+[  ])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
-const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+`, "gu");
+// Une duree ecrite comme en classe : « 1 h 50 min », « 2 min 30 s ».
+const DUREE = String.raw`\d+[ \u00A0\u202F]?(?:h(?:[ \u00A0\u202F]?\d+(?:[ \u00A0\u202F]?min)?)?|min(?:[ \u00A0\u202F]?\d+[ \u00A0\u202F]?s)?)(?![\p{L}\p{N}])`;
+const TERME = String.raw`(?:${DUREE}|${NOMBRE}|${UNITE_SEULE}|(?:\d+[ \u00A0\u202F])?(?:[A-Z][a-z]?[₀-₉]*)+[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻]*(?![\p{L}\p{N}])|[½¼¾]|[\p{L}][\p{L}0-9₀-₉]{0,2}[²³]?(?![\p{L}\p{N}])|\([^()\n]{1,30}\))`;
+// « 30 ÷ 4 = 7, reste 2 » : le reste fait partie de la division euclidienne.
+const motifFormule = new RegExp(String.raw`(?<![\p{L}\p{N}])${TERME}(?:\s*[=×÷+−→≈≤≥<>]\s*${TERME})+(?:,?\s+reste\s+\d+)?`, "gu");
 
 Symboles.enregistrer({
-  id: "formules", formule: true, matieres: SCIENCES,
+  // Les calculs ecrits dans le texte ressortent aussi en histoire, geographie, EMC, arts et musique
+  // (« 1522 − 1519 = 3 ans ») ; pas en francais ni en anglais, qui ont leurs propres mises en forme.
+  id: "formules", formule: true,
+  matieres: [...SCIENCES, "histoire", "geographie", "emc", "histoire-des-arts", "arts-plastiques", "education-musicale"],
   mettreEnForme(texte) {
     const zones = [];
     o.parcourir(motifFormule, texte, (mot, i) => {
       if (/[=→≈≤≥<>]/.test(mot)) zones.push({ debut: i, fin: i + mot.length, classe: "formule-texte" });
     });
     return zones;
+  },
+});
+
+// --- sigles de SVT (donnees seules) ------------------------------------------------------------
+Symboles.dictionnaire({
+  id: "sigles-svt", matieres: ["svt"],
+  entrees: {
+    ADN: "acide désoxyribonucléique : la molécule qui porte l'information génétique",
+    ARN: "acide ribonucléique : copie d'une partie de l'ADN, utilisée par la cellule",
+    VIH: "virus de l'immunodéficience humaine, responsable du sida",
+    sida: "syndrome d'immunodéficience acquise, causé par le VIH",
+    IST: "infection sexuellement transmissible",
+    OGM: "organisme génétiquement modifié",
+    PMA: "procréation médicalement assistée",
+    FIV: "fécondation in vitro (en laboratoire)",
+    GIEC: "Groupe d'experts intergouvernemental sur l'évolution du climat",
+    FSH: "hormone de l'hypophyse qui stimule les ovaires ou les testicules",
+    LH: "hormone de l'hypophyse qui déclenche l'ovulation ; stimule aussi les testicules",
+    IRM: "imagerie par résonance magnétique : image de l'intérieur du corps",
+  },
+});
+
+// --- sigles de technologie (donnees seules) -----------------------------------------------------
+Symboles.dictionnaire({
+  id: "sigles-techno", matieres: ["technologie"],
+  entrees: {
+    OST: "objet ou système technique",
+    IHM: "interface homme-machine : ce qui permet à l'utilisateur de commander et de lire l'état (bouton, écran...)",
+    CAO: "conception assistée par ordinateur : modéliser un objet en 3D sur un logiciel",
+    DAO: "dessin assisté par ordinateur",
+    FAO: "fabrication assistée par ordinateur : la machine fabrique à partir du modèle numérique",
+    ACV: "analyse du cycle de vie : impacts d'un objet de la fabrication au recyclage",
+    IoT: "Internet of Things : objets connectés",
+    LAN: "réseau local (Local Area Network) : ordinateurs d'une même maison ou d'un même collège",
+    WAN: "réseau étendu (Wide Area Network), comme Internet",
+    IP: "adresse IP : le numéro qui identifie un appareil sur un réseau",
+    DNS: "annuaire d'Internet : traduit un nom de site en adresse IP",
+    HTTP: "protocole des pages web",
+    HTTPS: "protocole des pages web, chiffré (sécurisé)",
+    URL: "adresse d'une page web",
+    "Wi-Fi": "réseau sans fil",
+    USB: "prise et protocole de connexion d'appareils",
+    CPU: "processeur : la partie qui exécute les instructions",
+    RAM: "mémoire vive : rapide, effacée à l'extinction",
+    SSD: "disque de stockage sans pièce mobile",
+    LED: "diode électroluminescente : lampe qui consomme peu",
+    CNC: "machine à commande numérique : elle usine une pièce à partir d'un fichier",
+    PLA: "plastique d'origine végétale, courant en impression 3D",
+    RGPD: "Règlement général sur la protection des données (Union européenne)",
   },
 });
 })();

@@ -271,6 +271,57 @@ def test_le_filtre_refuse_les_doublons() -> None:
     assert carnet.motif_refus(b, [Lecon(**{**a.vers_dict(), "statut": "retiree"})]) is None
 
 
+# --- carnet : liste de la spec (EX-013) ---------------------------------------------
+# Lue ici sans passer par le carnet, pour ne pas tester le code avec lui-meme. Les termes ne sont jamais
+# ecrits en clair dans ce fichier : ils viennent de la liste de la spec.
+TERMES_SPEC = [
+    ligne.strip()
+    for ligne in (Path(__file__).resolve().parents[1] / "docs" / "spec" / "termes-interdits.txt")
+    .read_text(encoding="utf-8")
+    .splitlines()
+    if ligne.strip() and not ligne.strip().startswith("#")
+]
+
+
+def _variantes(ligne: str) -> list[str]:
+    """Le terme tel quel, en majuscules, avec apostrophe typographique, espaces multiples, et pour un
+    radical (pas « mot: ») colle a une fin de mot."""
+    terme = ligne.removeprefix("mot:")
+    formes = [terme, terme.upper(), terme.replace("'", "\u2019"), terme.replace(" ", "   ")]
+    if not ligne.startswith("mot:"):
+        formes.append(terme + "iques")
+    return formes
+
+
+def test_ex013_la_liste_de_la_spec_est_lue() -> None:
+    assert len(TERMES_SPEC) >= 30  # garde-fou : fichier present et non vide
+
+
+@pytest.mark.parametrize("ligne", TERMES_SPEC)
+def test_ex013_chaque_terme_de_la_spec_est_refuse(ligne: str) -> None:
+    for forme in _variantes(ligne):
+        assert carnet.motif_refus(_lecon(f"En calcul, {forme} : refaire la figure."), []) is not None, forme
+
+
+def test_ex013_mot_entier_et_termes_propres_conserves() -> None:
+    # « mot: » en mot entier : un mot qui contient le sigle ou le terme n'est pas refuse pour autant
+    for texte in ("Sur la valeur absolue, faire expliquer l'absurdité d'un résultat négatif.",
+                  "En musique, faire rejouer le passage en sourdine avant de valider."):  # fmt: skip
+        assert carnet.motif_refus(_lecon(texte), []) is None, texte
+    # termes propres au carnet, absents de la spec : toujours refuses (on ajoute, on ne remplace pas)
+    assert "jugement" in (carnet.motif_refus(_lecon("Elle est paresseuse en rédaction."), []) or "")
+    assert carnet.motif_refus(_lecon("Probable haut potentiel : s'ennuie vite."), []) is not None
+
+
+def test_ex013_liste_illisible_refuse_par_prudence(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    carnet.termes_spec.cache_clear()
+    monkeypatch.setattr(carnet, "FICHIER_TERMES_SPEC", tmp_path / "absent.txt")
+    try:
+        assert "illisible" in (carnet.motif_refus(_lecon(FILTRE["acceptees"][0]), []) or "")
+    finally:
+        carnet.termes_spec.cache_clear()
+
+
 # --- politique : textes et reglages (§6.3) ---------------------------------------------
 def test_politique_couvre_chaque_etat_sans_chiffre() -> None:
     import re

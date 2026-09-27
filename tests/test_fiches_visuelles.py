@@ -218,6 +218,14 @@ def test_commentaire_jules_trop_long_refuse(tmp_path, notions, biblio):
         lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
 
 
+def test_un_point_dans_un_mot_ne_termine_pas_une_phrase(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = (
+        "La box a l'adresse 172.16.1.1 sur le réseau. Rome existait déjà au Ier siècle av. J.-C. et bien après."
+    )
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
 def test_commentaire_jules_trop_de_phrases_refuse(tmp_path, notions, biblio):
     brut = copy.deepcopy(fiche_valide())
     brut["blocs"][0]["jules"] = "Un. Deux. Trois. Quatre."
@@ -353,3 +361,31 @@ def test_bibliotheque_absente_est_ignoree_sans_lever(notions):
     """Une bibliotheque de fiches visuelles introuvable : Jules demarre sans elle, sans lever."""
     fiches = charger_fiches_visuelles(BIBLIOTHEQUES, ["bibliotheque-qui-n-existe-pas"], notions, GABARITS)
     assert fiches == {}
+
+
+def test_un_point_d_interrogation_dans_une_citation_ne_coupe_pas_la_phrase(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Tu te demandes « pourquoi ? » et c'est normal. Quoi ? Oui, c'est ainsi."
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_citation_compte_dans_la_phrase_qui_la_cite(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = (
+        "Quand tu ne comprends pas, dis « Sorry! I don't understand. Can you repeat, please? » "
+        "sans avoir honte. Tout le monde le fait. C'est comme ça qu'on apprend."
+    )
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_barre_entre_deux_mots_n_est_pas_une_division(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Les mots and / but relient ; on dit il / elle selon le cas."
+    lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+def test_une_soustraction_s_ecrit_avec_le_signe_moins(tmp_path, notions, biblio):
+    brut = copy.deepcopy(fiche_valide())
+    brut["blocs"][0]["jules"] = "Le règne dure 1715 - 1643 = 72 ans."
+    with pytest.raises(ErreurFicheVisuelle, match="tiret"):
+        lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)

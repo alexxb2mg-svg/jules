@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jules</title>
+  <title>Jules - Discuter avec Jules</title>
   <link rel="icon" href="/static/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/static/icone-192.png">
   <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
@@ -11,6 +11,9 @@
   <meta name="theme-color" content="#1F4E8C">
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="/static/symboles.css">
+  <link rel="stylesheet" href="/static/matieres-couleurs.css">
+  <link rel="stylesheet" href="/static/navigation.css">
+  <link rel="stylesheet" href="/static/adaptations.css">
 </head>
 <body>
   <div id="porte" class="porte cache">
@@ -27,14 +30,13 @@
   <div id="contenu" class="appli">
     <aside id="cote" class="cote">
       <div class="marque"><img id="av-marque" src="/api/persona/avatar" alt=""><span id="nom-persona">Jules</span></div>
-      <a class="bouton secondaire" href="/">📘 Mes fiches</a>
       <button id="nouvelle" class="bouton">+ Nouvelle discussion</button>
       <div id="historique" class="historique"></div>
     </aside>
 
     <main class="centre">
       <div class="entete">
-        <button class="menu-cote" id="menu-cote" aria-label="Menu">☰</button>
+        <button type="button" class="menu-cote" id="menu-cote">Discussions</button>
         <div class="titre" id="titre">Nouvelle discussion</div>
         <button type="button" class="pastille-notion cache" id="pastille-notion" title="La notion travaillée">📚 Choisir une notion</button>
         <span class="pastille-mode cache" id="pastille-mode"></span>
@@ -70,6 +72,8 @@
   <script src="/static/symboles.js"></script>
   <script src="/rappels.js"></script>
   <script src="/static/commun.js"></script>
+  <script src="/static/navigation.js"></script>
+  <script src="/static/lecture-vocale.js"></script>
   <script src="/static/eleve.js"></script>
 </body>
 </html>

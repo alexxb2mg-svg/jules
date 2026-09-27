@@ -1,0 +1,57 @@
+/* Jules - leviers d'affichage (docs/spec/ADAPTATIONS-LOT2.md, §2, EX-105).
+   MS.appliquerLeviers (commun.js) pose sur <body> les variables --adapt-* et un attribut
+   data-adapt-<levier> par levier regle. Chaque regle ci-dessous ne s'active qu'avec son attribut :
+   tant que tous les leviers sont neutres, aucune ne s'applique et le rendu reste celui d'avant (EX-102).
+   taille-texte agit par --adapt-echelle-texte, lue par toutes les tailles de police (calc) des feuilles
+   de style de Jules. A charger apres les autres feuilles de la page. */
+
+/* espacements : sur tous les elements, y compris ceux qui fixent leur propre espacement (titres). */
+body[data-adapt-espacement-lettres], body[data-adapt-espacement-lettres] * {
+  letter-spacing: var(--adapt-espacement-lettres) !important;
+}
+body[data-adapt-espacement-mots], body[data-adapt-espacement-mots] * {
+  word-spacing: var(--adapt-espacement-mots) !important;
+}
+/* ... sauf dans les schemas SVG des fiches (carte, frise, figure : accueil.js). Leur texte est place
+   a des coordonnees calculees pour sa largeur naturelle, dans un dessin qui s'agrandit en entier
+   (viewBox) : l'espacement elargirait chaque libelle sans deplacer ses voisins, et deux libelles de
+   la carte des notions se chevaucheraient (EX-106). La taille du texte ne les touche pas non plus. */
+body[data-adapt-espacement-lettres] svg *, body[data-adapt-espacement-mots] svg * {
+  letter-spacing: normal !important; word-spacing: normal !important;
+}
+
+/* interligne : la plage (1,55 a 2,0) n'est jamais sous l'interligne actuel d'un element (1,15 a 1,55). */
+body[data-adapt-interligne], body[data-adapt-interligne] * {
+  line-height: var(--adapt-interligne) !important;
+}
+
+/* EX-106 (robustesse) : un texte agrandi, espace ou dans une police plus large ne deborde jamais de sa
+   boite. Un mot plus long que sa ligne (« anticonstitutionnellement », « Enseignement » dans une
+   colonne etroite) est coupe au bord plutot que de sortir de l'ecran ou de passer sous son voisin.
+   « anywhere » (et non « break-word ») : la coupure compte aussi dans la largeur minimale des boutons,
+   cases de grille et elements flexibles, sinon ils s'elargissent au mot entier. Les textes en
+   white-space: nowrap (pastilles, formules) ne sont pas touches. Leviers neutres : aucun attribut,
+   la regle ne s'applique pas (EX-102). */
+body:is([data-adapt-taille-texte], [data-adapt-espacement-lettres], [data-adapt-espacement-mots], [data-adapt-police]) * {
+  overflow-wrap: anywhere;
+}
+
+/* longueur de ligne : blocs de texte courant, en caracteres. */
+body[data-adapt-longueur-ligne] :is(p, li, dd, dt, blockquote, h1, h2, h3, h4, pre) {
+  max-width: var(--adapt-longueur-ligne);
+}
+
+/* police : remplace la police du texte (les titres gardent la leur). */
+body[data-adapt-police] { --police-texte: var(--adapt-police); }
+
+/* fond : couleur de fond de la page (contraste verifie pour chaque couleur de la liste fermee). */
+body[data-adapt-fond] { --p-fond: var(--adapt-fond); background: var(--adapt-fond); }
+
+/* mots cles : le gras des bulles de Jules prend le surligneur des fiches (.cle, accueil.css). */
+body[data-adapt-surlignage-mots-cles] :is(.bulle, .bulle-jules) strong {
+  padding: .05em .22em; border-radius: .3em; background: rgba(255, 214, 102, .45);
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+
+/* reperes-rang-chiffres : applique par les outils (calculatrice) ; aucun calcul pose en colonnes dans
+   les pages pour l'instant, donc aucune regle ici. */

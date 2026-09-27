@@ -37,4 +37,4 @@ repos:
         name: aucun fichier prive (profil reel, config locale, .env, donnees)
         language: fail
         entry: "Fichier prive : il ne doit jamais etre publie. Retire-le avec git rm --cached."
-        files: '^(config\.local\.yaml|\.env|donnees/.*|profils/(?!exemple\.yaml$).*)$'
+        files: '^(config\.local\.yaml|\.env|donnees/.*|profils/(?!(?:exemple|test-cumul)\.yaml$).*)$'
