@@ -1,0 +1,17 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: fond
+canal: css
+variable_css: --adapt-fond
+type: choix
+neutre: blanc
+plage: [blanc, creme, bleu-pale]
+couleurs:
+  blanc: "#FFFFFF"
+  creme: "#FBF5E6"
+  bleu-pale: "#EEF4FB"
+contraste_minimum: 4.5  # texte et texte gris du theme, sur chaque fond
+combinaison: arbitrage-parent
+source:
+  nature: norme
+  reference: "WCAG 2.2 critere 1.4.3 (AA), https://www.w3.org/TR/WCAG22/#contrast-minimum ; le fond colore est une preference, sans preuve d'effet (Uccula et al. 2014, DOI 10.3389/fpsyg.2014.00833)."

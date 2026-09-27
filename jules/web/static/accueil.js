@@ -580,10 +580,11 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
   }
 
   async function demarrage() {
-    await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
+    Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
-    document.title = etat.infos.persona.nom + " - Mes fiches";
+    etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;
     $("menu-rail").addEventListener("click", () => {
       $("rail").classList.toggle("ouvert");
@@ -594,9 +595,18 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));
     ajouterBulle("Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir.");
     await chargerNotions();
-    // Lien direct vers une fiche : /#<identifiant de la notion> ; sinon la premiere de la liste.
-    const demandee = decodeURIComponent(location.hash.slice(1));
-    const aOuvrir = etat.notions.find((n) => n.id === demandee) || etat.notions[0];
+    // Lien direct vers une fiche : /#<identifiant de la notion> ; sinon la premiere de la liste. Un lien de la
+    // barre (/#<id>) ne recharge pas la page : la fiche suit aussi les changements de fragment (EX-209).
+    const notionDuFragment = () => {
+      let demandee = "";
+      try { demandee = decodeURIComponent(location.hash.slice(1)); } catch (_) { demandee = ""; }
+      return etat.notions.find((n) => n.id === demandee);
+    };
+    addEventListener("hashchange", () => {
+      const n = notionDuFragment();
+      if (n && n.id !== etat.notionActive) ouvrirFiche(n.id);
+    });
+    const aOuvrir = notionDuFragment() || etat.notions[0];
     if (aOuvrir) ouvrirFiche(aOuvrir.id);
   }
 

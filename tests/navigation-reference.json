@@ -1,0 +1,89 @@
+{
+  "_note": "Reference de la barre laterale, etape 1 (EX-202). Ecrite par SPEC ; DEV ne la modifie pas. Comparaison exacte (accents et casse compris) apres retrait des emojis et normalisation des espaces. 'sous_pages' = rubrique ouverte en petites pages (<button aria-expanded>, chevron) ; sinon 'href' = lien direct. 'page' = chemin qui rend l'entree active (EX-203).",
+  "nav_aria_label": "Sections de Jules",
+  "rubriques": [
+    {
+      "titre": "Apprendre",
+      "entrees": [
+        {
+          "libelle": "Mes fiches",
+          "sous_pages": "fiches",
+          "page": "/",
+          "etapes": [
+            "matieres",
+            "chapitres",
+            "elements"
+          ]
+        },
+        {
+          "libelle": "Mes leçons",
+          "sous_pages": "lecons",
+          "page": "/cours",
+          "etapes": [
+            "matieres",
+            "elements"
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "M'entraîner",
+      "entrees": [
+        {
+          "libelle": "Exercices et supports",
+          "sous_pages": "supports",
+          "page": "/studio",
+          "etapes": [
+            "matieres",
+            "elements"
+          ]
+        }
+      ]
+    },
+    {
+      "titre": "Discuter",
+      "entrees": [
+        {
+          "libelle": "Discuter avec Jules",
+          "href": "/discuter",
+          "page": "/discuter"
+        }
+      ]
+    },
+    {
+      "titre": "Mon espace",
+      "entrees": [
+        {
+          "libelle": "Espace parent",
+          "href": "/parent",
+          "page": "/parent"
+        }
+      ]
+    }
+  ],
+  "exemptions_ex205": [
+    "chat-flottant-lien",
+    "retour-eleve"
+  ],
+  "cles_localstorage": [
+    "jules.nav.repliee",
+    "jules.matiere"
+  ],
+  "libelles_retour": {
+    "matieres": "← Menu",
+    "chapitres": "← Matières",
+    "elements_apres_chapitres": "← Chapitres",
+    "elements_sans_chapitres": "← Matières"
+  },
+  "fragment_nav": "#nav=<rubrique>/<matiere>[/<chapitre>]",
+  "liens_elements": {
+    "fiches": "/#<notion>",
+    "lecons": "/cours?matiere=<matiere>&notion=<notion>",
+    "supports": "/studio?matiere=<matiere>&notion=<notion>"
+  },
+  "cache_liste_blanche": [
+    "/api/eleve/fiches_visuelles/notions",
+    "/api/eleve/cours/parcours",
+    "/api/eleve/studio/notions"
+  ]
+}

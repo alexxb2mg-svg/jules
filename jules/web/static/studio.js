@@ -47,29 +47,49 @@
     $("support-erreur").classList.remove("cache");
   }
 
-  // --- panneaux repliables (tablette) ------------------------------------------
-  function ouvrirPanneau(nom) {
-    const id = nom === "jules" ? "panneau-jules" : "notions";
-    $(id).classList.add("ouvert");
-    $(`menu-${nom}`).setAttribute("aria-expanded", "true");
+  // --- panneau des retours de Jules repliable (tablette) ------------------------
+  function ouvrirPanneau() {
+    $("panneau-jules").classList.add("ouvert");
+    $("menu-jules").setAttribute("aria-expanded", "true");
   }
-  function fermerPanneau(nom) {
-    const id = nom === "jules" ? "panneau-jules" : "notions";
-    $(id).classList.remove("ouvert");
-    $(`menu-${nom}`).setAttribute("aria-expanded", "false");
+  function fermerPanneau() {
+    $("panneau-jules").classList.remove("ouvert");
+    $("menu-jules").setAttribute("aria-expanded", "false");
   }
 
-  // --- mes supports (gauche) --------------------------------------------------
-  async function chargerNotions(matiere) {
+  // --- mes supports (zone centrale, tant qu'aucun support n'est ouvert) ---------------------------------
+  // EX-209 : la matiere vient de l'adresse (?matiere=, lien de la barre), sinon de la memoire `jules.matiere`.
+  // Un seul appel ; la page affiche la matiere renvoyee par le serveur et n'ecrase pas la memoire. Premiere visite
+  // (ni adresse ni memoire) : « Choisis une matière », sans les notions de la matiere par defaut.
+  async function chargerNotions(matiere, notionDemandee) {
     $("notions-attente").classList.remove("cache");
     try {
-      const chemin = "/api/eleve/studio/notions" + (matiere ? `?matiere=${encodeURIComponent(matiere)}` : "");
-      const r = await MS.api(chemin);
+      const r = await MS.api(MS.cheminMatiere("/api/eleve/studio/notions", matiere));
       etat.matieres = r.matieres || [];
+      if (!matiere) {
+        afficherChoixMatiere();
+        return;
+      }
       etat.matiereChoisie = r.matiere;
-      remplirSelectMatieres();
+      $("choix-matiere").classList.add("cache");
+      $("notions").classList.remove("cache");
+      const nom = (etat.matieres.find((m) => m.id === r.matiere) || { nom: r.matiere }).nom;
+      $("catalogue-titre").textContent = `Exercices et supports : ${nom}`;
       afficherNotions(r.notions || []);
+      // Une notion demandee par l'adresse est mise en vue si elle appartient a la matiere ; sinon la liste reste.
+      const bloc = notionDemandee && [...$("notions-liste").querySelectorAll(".notion-bloc")]
+        .find((b) => b.dataset.id === notionDemandee);
+      // Une notion du studio n'a pas de vue propre : « l'ouvrir », c'est la designer dans la liste (aria-current),
+      // la faire venir a l'ecran et lui donner le focus ; aucun support n'est ouvert d'office.
+      if (bloc) {
+        bloc.classList.add("demandee");
+        bloc.setAttribute("aria-current", "true");
+        bloc.tabIndex = -1;
+        bloc.scrollIntoView({ block: "nearest" });
+        bloc.focus({ preventScroll: true });
+      }
     } catch (err) {
+      $("notions").classList.remove("cache");
       $("notions-liste").innerHTML = "";
       $("notions-liste").appendChild(creer("p", "studio-erreur-ligne", MS.echapper(`Impossible de charger tes notions : ${err.message}`)));
     } finally {
@@ -77,16 +97,40 @@
     }
   }
 
-  function remplirSelectMatieres() {
-    const select = $("select-matiere");
-    select.innerHTML = "";
+  // Premiere visite : la liste des matieres de la reponse, un bouton par matiere.
+  function afficherChoixMatiere() {
+    $("notions").classList.add("cache");
+    $("catalogue-titre").textContent = "Exercices et supports";
+    const liste = $("choix-matiere-liste");
+    liste.replaceChildren();
     for (const m of etat.matieres) {
-      const opt = document.createElement("option");
-      opt.value = m.id;
-      opt.textContent = m.nom;
-      opt.selected = m.id === etat.matiereChoisie;
-      select.appendChild(opt);
+      const li = document.createElement("li");
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "choix-matiere-bouton";
+      b.dataset.matiere = m.id;
+      b.textContent = m.nom;
+      b.addEventListener("click", () => choisirMatiere(m.id));
+      li.appendChild(b);
+      liste.appendChild(li);
     }
+    $("choix-matiere").classList.remove("cache");
+  }
+
+  async function choisirMatiere(id) {
+    MS.retenirMatiere(id);
+    Navigation.suivreMatiere(id);
+    await chargerNotions(id, null);
+    $("catalogue-titre").focus();
+  }
+
+  function retourALaListe() {
+    etat.support = null;
+    $("support").classList.add("cache");
+    $("support-erreur").classList.add("cache");
+    $("accueil-studio").classList.remove("cache");
+    marquerSupportActif();
+    $("catalogue-titre").focus();
   }
 
   function afficherNotions(toutes) {
@@ -118,6 +162,7 @@
 
   function construireNotionBloc(n) {
     const bloc = creer("div", "notion-bloc");
+    bloc.dataset.id = n.id;
     const pastille = `<span class="pastille-etat ${MS.echapper(n.etat)}">${MS.echapper(LIBELLES_ETAT[n.etat] || n.etat)}</span>`;
     bloc.appendChild(creer("div", "notion-ligne-titre", `<span class="nom">${MS.echapper(n.titre)}</span>${pastille}`));
     if (!n.lecon) {
@@ -172,7 +217,6 @@
       $("retours-fil").innerHTML = "";
       afficherSupport();
       chargerNotions(etat.matiereChoisie);
-      fermerPanneau("notions");
     } catch (err) {
       afficherErreurSupport(`Impossible de créer ce support : ${err.message}`);
     }
@@ -184,7 +228,6 @@
       etat.support = r.support;
       $("retours-fil").innerHTML = "";
       afficherSupport();
-      fermerPanneau("notions");
     } catch (err) {
       afficherErreurSupport(`Impossible d'ouvrir ce support : ${err.message}`);
     }
@@ -613,24 +656,19 @@
 
   // --- demarrage -----------------------------------------------------------
   async function demarrage() {
-    await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
+    const session = await MS.porte("eleve", { porte: $("porte"), contenu: $("contenu"), formulaire: $("porte-form"), champ: $("porte-code"), erreur: $("porte-erreur") });
     etat.infos = await MS.api("/api/infos");
+    Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
-    document.title = `${etat.infos.persona.nom} - studio`;
+    etat.leviers = MS.appliquerLeviers(etat.infos);
     $("nom-persona").textContent = etat.infos.persona.nom;
     $("jules-nom").textContent = etat.infos.persona.nom;
 
-    $("select-matiere").addEventListener("change", (ev) => chargerNotions(ev.target.value));
-    $("menu-notions").addEventListener("click", () => {
-      const ouvert = $("notions").classList.contains("ouvert");
-      if (ouvert) fermerPanneau("notions"); else ouvrirPanneau("notions");
-    });
     $("menu-jules").addEventListener("click", () => {
-      const ouvert = $("panneau-jules").classList.contains("ouvert");
-      if (ouvert) fermerPanneau("jules"); else ouvrirPanneau("jules");
+      if ($("panneau-jules").classList.contains("ouvert")) fermerPanneau(); else ouvrirPanneau();
     });
-    $("notions-fermer").addEventListener("click", () => fermerPanneau("notions"));
-    $("jules-fermer").addEventListener("click", () => fermerPanneau("jules"));
+    $("jules-fermer").addEventListener("click", fermerPanneau);
+    $("retour-liste").addEventListener("click", retourALaListe);
 
     $("choix-type-fermer").addEventListener("click", fermerChoixType);
     $("choix-type").addEventListener("click", (ev) => { if (ev.target === $("choix-type")) fermerChoixType(); });
@@ -654,8 +692,16 @@
     $("ecran-revision").addEventListener("click", (ev) => { if (ev.target === $("ecran-revision")) fermerRevision(); });
     document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") { fermerChoixType(); fermerConfirmation(); } });
 
-    await chargerNotions(null);
+    await chargerNotions(...matiereDeDepart());
     await chargerRevisionsDisponibles();
+  }
+
+  // ?matiere=&notion= (lien de l'etape 4 de la barre), sinon la matiere retenue ; rien a la premiere visite.
+  function matiereDeDepart() {
+    const p = new URLSearchParams(location.search);
+    const matiere = p.get("matiere");
+    if (matiere) return [matiere, p.get("notion")];
+    return [MS.matiereRetenue(), null];
   }
 
   demarrage().catch((err) => { document.body.innerHTML = `<p class="erreur-page">Erreur : ${MS.echapper(err.message)}</p>`; });

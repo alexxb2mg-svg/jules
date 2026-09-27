@@ -1,0 +1,9 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+# College : aucun item, affiche sous « Autres aménagements et adaptations ».
+id: reperes-couleur-calcul
+libelles:
+  elementaire: {page: 5, texte: "Présenter les calculs en colonnes avec des repères de couleur (ex : colonne des unités en rouge, des dizaines en bleu et des centaines en vert)"}
+leviers:
+  reperes-rang-chiffres: true

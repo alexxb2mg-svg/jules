@@ -120,7 +120,52 @@
   // appliques. Sans reponse de la page apres DELAI_ADAPTATIONS ms, l'outil s'affiche avec les
   // valeurs neutres et le signale ; une reponse tardive valide est quand meme appliquee.
   // Code volontairement duplique dans chaque outil (un outil reste un dossier autonome).
-  var LEVIERS = {}; // levier connu -> function (valeur) ; aucun pour l'instant, le reste est ignore
+  // Leviers d'affichage (docs/spec/ADAPTATIONS-LOT2.md, §2, EX-105). Les valeurs viennent de la page,
+  // mais l'outil les revalide contre les plages et listes fermees du §2 (recopiees ici, comme la
+  // poignee de main) : une valeur hors plage ou d'un mauvais type est ignoree, comme un levier inconnu.
+  // Les regles CSS correspondantes sont dans outil.css (actives seulement avec l'attribut data-adapt-*).
+  var corps = document.body;
+  function poser(levier, variable, valeurCss) {
+    corps.style.setProperty(variable, valeurCss);
+    corps.setAttribute("data-adapt-" + levier, "1");
+  }
+  function nombre(levier, min, max, appliquer) {
+    return function (valeur) {
+      if (typeof valeur !== "number" || !isFinite(valeur) || valeur < min || valeur > max) return;
+      appliquer(valeur);
+      corps.setAttribute("data-adapt-" + levier, String(valeur));
+    };
+  }
+  function choix(levier, variable, table) {
+    return function (valeur) {
+      if (typeof valeur !== "string" || !Object.prototype.hasOwnProperty.call(table, valeur)) return;
+      poser(levier, variable, table[valeur]);
+    };
+  }
+  var LEVIERS = { // levier connu -> function (valeur) ; les autres sont ignores
+    "espacement-lettres": nombre("espacement-lettres", 0, 0.18, function (v) {
+      corps.style.setProperty("--adapt-espacement-lettres", v + "em");
+    }),
+    "espacement-mots": nombre("espacement-mots", 0, 0.5, function (v) {
+      corps.style.setProperty("--adapt-espacement-mots", v + "em");
+    }),
+    "interligne": nombre("interligne", 1.55, 2, function (v) {
+      corps.style.setProperty("--adapt-interligne", String(v));
+    }),
+    "longueur-ligne": nombre("longueur-ligne", 1e-9, 80, function (v) {
+      corps.style.setProperty("--adapt-longueur-ligne", v + "ch");
+    }),
+    // L'outil est un document a part : la taille se regle a sa racine (tailles en rem), dans le
+    // rapport a la valeur neutre de la page (1,125rem).
+    "taille-texte": nombre("taille-texte", 1.125, 1.6875, function (v) {
+      document.documentElement.style.fontSize = Math.round(v / 1.125 * 1e6) / 1e4 + "%";
+    }),
+    "police": choix("police", "--adapt-police", {
+      arial: "Arial, \"Liberation Sans\", sans-serif",
+      verdana: "Verdana, \"DejaVu Sans\", sans-serif"
+    }),
+    "fond": choix("fond", "--adapt-fond", { creme: "#FBF5E6", "bleu-pale": "#EEF4FB" })
+  };
   var DELAI_ADAPTATIONS = 500;
   var attenteAdaptations = null;
 

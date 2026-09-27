@@ -1,0 +1,9 @@
+# Amenagement (docs/spec/ADAPTATIONS-LOT2.md, §3, EX-103). Libelles recopies de docs/spec/pap-libelles.txt
+# (texte affiche du PDF officiel du PAP, jamais tronque). Valeurs de leviers : depart source, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/amenagements.py.
+id: surligner-mots-cles
+libelles:
+  college: {page: 8, texte: "Surligner les mots-clés ou nouveaux"}
+  elementaire: {page: 4, texte: "Surligner des mots clés /passages importants pour faciliter la lecture de l'élève"}
+leviers:
+  surlignage-mots-cles: true

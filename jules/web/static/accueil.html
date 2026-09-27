@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="/static/style.css">
   <link rel="stylesheet" href="/static/symboles.css">
   <link rel="stylesheet" href="/static/accueil.css">
+  <link rel="stylesheet" href="/static/navigation.css">
+  <link rel="stylesheet" href="/static/adaptations.css">
 </head>
 <body>
   <div id="porte" class="porte cache">
@@ -26,16 +28,12 @@
   </div>
 
   <div id="contenu" class="accueil-appli">
-    <button type="button" class="bouton-panneau" id="menu-rail" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="rail">☰ <span>Menu</span></button>
+    <button type="button" class="bouton-panneau" id="menu-rail" aria-label="Ouvrir la liste des notions" aria-expanded="false" aria-controls="rail">☰ <span>Notions</span></button>
 
-    <nav id="rail" class="rail" aria-label="Sections de Jules">
+    <aside id="rail" class="rail" aria-label="Notions avec une fiche">
       <div class="marque"><img id="av-marque" src="/api/persona/avatar" alt=""><span id="nom-persona">Jules</span></div>
-      <a href="/" class="rail-lien actif">📘 Mes fiches</a>
-      <a href="/discuter" class="rail-lien">💬 Discuter avec Jules</a>
-      <a href="/studio" class="rail-lien">🛠️ M'entraîner</a>
-      <a href="/parent" class="rail-lien">📈 Mon suivi</a>
       <div id="rail-notions" class="rail-notions" aria-live="polite"></div>
-    </nav>
+    </aside>
 
     <main class="fiche-zone">
       <div id="fiche-vide" class="fiche-vide">
@@ -67,7 +65,6 @@
     <div class="chat-flottant-tete">
       <span><strong id="chat-flottant-nom">Jules</strong><span id="chat-flottant-notion"></span></span>
       <span class="chat-flottant-actions">
-        <button type="button" class="rond" id="chat-flottant-reglages" title="Paramètres (à venir)">⚙</button>
         <button type="button" class="rond" id="chat-flottant-reduire" title="Réduire">—</button>
       </span>
     </div>
@@ -80,6 +77,7 @@
   <script src="/static/symboles.js"></script>
   <script src="/rappels.js"></script>
   <script src="/static/commun.js"></script>
+  <script src="/static/navigation.js"></script>
   <script src="/gabarits.js"></script>
   <script src="/static/accueil.js"></script>
 </body>

@@ -1,0 +1,16 @@
+# Levier d'adaptation (docs/spec/ADAPTATIONS-LOT2.md, §2). Valeur de depart sourcee, a relire par un
+# professionnel avant tout reglage pour un eleve. Format : jules/leviers.py.
+id: police
+canal: css
+variable_css: --adapt-police
+type: choix
+neutre: defaut
+plage: [defaut, arial, verdana]  # liste fermee de polices sans empattement ordinaires (EX-107)
+familles:
+  defaut: var(--police-texte)
+  arial: Arial, "Liberation Sans", sans-serif
+  verdana: Verdana, "DejaVu Sans", sans-serif
+combinaison: arbitrage-parent
+source:
+  nature: etude
+  reference: "Pas de benefice mesure des polices presentees comme adaptees : Wery et Diliberto 2017, DOI 10.1007/s11881-016-0127-1 ; Kuster et al. 2018, DOI 10.1007/s11881-017-0154-6 ; Marinus et al. 2016 (le gain tient a l'espacement ; DOI dans docs/spec/collecte-adaptations.md)."
