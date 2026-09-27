@@ -1,0 +1,81 @@
+notion: deuxieme-guerre-mondiale-genocides
+titre: "Violence de masse et anéantissement pendant la Seconde Guerre mondiale"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Seconde Guerre mondiale »"
+    url: "https://fr.vikidia.org/w/index.php?title=Seconde_Guerre_mondiale&oldid=2564386"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Shoah »"
+    url: "https://fr.vikidia.org/w/index.php?title=Shoah&oldid=2561077"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Génocide arménien »"
+    url: "https://fr.vikidia.org/w/index.php?title=G%C3%A9nocide_arm%C3%A9nien&oldid=2569180"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  "2GM": "Seconde Guerre mondiale (1939-1945)"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: seconde-guerre, titre: "Seconde Guerre mondiale", sous_titre: "1er sept. 1939 - 2 sept. 1945", principal: true}
+      - {id: shoah, titre: "Shoah", sous_titre: "génocide des Juifs, 6 millions"}
+      - {id: samudaripen, titre: "Samudaripen", sous_titre: "génocide des Tziganes"}
+    liens:
+      - {de: seconde-guerre, vers: shoah, libelle: "anéantissement des Juifs"}
+      - {de: seconde-guerre, vers: samudaripen, libelle: "anéantissement des Tziganes"}
+    jules: "Deux **génocides** distincts pendant cette guerre : la Shoah et le Samudaripen, à ne pas confondre."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer précisément la guerre entre le 1er septembre 1939 et le 2 septembre 1945."
+      - "Distinguer la **Shoah** (Juifs) et le **Samudaripen** (Tziganes), deux génocides différents."
+      - "Employer le mot **génocide**, jamais « massacre », pour ces exterminations planifiées."
+      - "Relier ces génocides au régime nazi étudié dans le chapitre précédent."
+    jules: "Ne mélange jamais les deux guerres mondiales : celle-ci va de 1939 à 1945, pas de 1914 à 1918."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre la Première et la Seconde Guerre mondiale, ou leurs dates respectives."
+    pourquoi_faux: "1914-1918 est la première guerre, 1939-1945 la seconde : ce sont deux conflits distincts."
+    bonne_idee: "Toujours vérifier la date citée dans le sujet avant de répondre : 1939-1945 pour celle-ci."
+    jules: "Un chiffre de date mal noté peut faire perdre des points même si le reste est juste."
+
+  - id: exemple
+    type: exemple
+    situation: "On demande de nommer le génocide qui vise les Juifs pendant la Seconde Guerre mondiale."
+    conclusion: "Il s'agit de la **Shoah**, l'anéantissement d'environ 6 millions de Juifs dans des camps d'extermination."
+    jules: "N'oublie pas de citer aussi le Samudaripen si la question porte sur toutes les minorités persécutées."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🗓️", titre: "Frise chronologique", description: "outil à venir"}
+    jules: "Reprends la frise pour ne plus confondre les dates des deux guerres mondiales."
+
+  - id: schema
+    type: schema
+    titre: "Deux génocides pendant la Seconde Guerre mondiale"
+    svg: |-
+      <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+        <text x="340" y="28" class="th" text-anchor="middle">1939 - 1945 : guerre d'anéantissement</text>
+        <line x1="60" y1="90" x2="620" y2="90" class="arr c-gray"/>
+        <circle cx="100" cy="90" r="8" class="node c-blue"/>
+        <text x="100" y="72" class="t" text-anchor="middle">1939</text>
+        <text x="100" y="112" class="ts" text-anchor="middle">Début du conflit</text>
+        <circle cx="580" cy="90" r="8" class="node c-green"/>
+        <text x="580" y="72" class="t" text-anchor="middle">1945</text>
+        <text x="580" y="112" class="ts" text-anchor="middle">Capitulation du Japon</text>
+        <rect x="60" y="150" width="260" height="55" class="box c-amber"/>
+        <text x="190" y="172" class="t" text-anchor="middle">Shoah</text>
+        <text x="190" y="192" class="ts" text-anchor="middle">Génocide des Juifs, 6 millions</text>
+        <rect x="360" y="150" width="260" height="55" class="box c-pink"/>
+        <text x="490" y="172" class="t" text-anchor="middle">Samudaripen</text>
+        <text x="490" y="192" class="ts" text-anchor="middle">Génocide des Tziganes</text>
+      </svg>
+    jules: "Les deux génocides ont lieu pendant la même guerre, entre 1939 et 1945, sous le régime nazi."
