@@ -29,7 +29,7 @@ génération sans IA (production ouverte, figure, programme).
 |---|---|---|---|---|---|---|
 | developper-factoriser-reduire | oui | A | développer (expression), réduire (expression), factoriser (expression), identité remarquable (expression) | | à faire | le correcteur compare des expressions équivalentes : vérifier qu'une factorisation attendue n'accepte pas la forme développée (sinon C : critère « forme factorisée ») |
 | equations-premier-degre-et-produits | oui | A | premier_degre, deux_membres (nombre, fraction exacte au palier 3), produit_nul, carre (choix) | session 2 | PR ouverte | brique `algebre.py` créée (affine_fr, facteur_fr, nombre_signe_fr, valeur_machine : « 7/3 » exact, pas de décimal tronqué) ; solutions multiples en choix |
-| problemes-mise-en-equation | oui | A | âge, périmètre, prix (nombre) ; choisir la bonne équation (choix) | | à faire | habillage : personnages ✔, articles ✔ |
+| problemes-mise-en-equation | oui | A | nombre_pense, ages, perimetre, tarifs (nombre), choisir_equation (choix multiple, deux écritures justes) | session 2 | PR ouverte | solutions tirées entières et positives (un âge, un nombre de séances ont du sens) ; habillage : personnages ✔ |
 
 ## Statistiques et probabilités
 
