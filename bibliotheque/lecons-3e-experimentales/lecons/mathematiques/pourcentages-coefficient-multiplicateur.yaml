@@ -1,0 +1,139 @@
+notion: pourcentages-coefficient-multiplicateur
+titre: "Pourcentages d'évolution et coefficient multiplicateur"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Traduire un pourcentage de hausse ou de baisse en coefficient multiplicateur."
+      - "Calculer une valeur d'arrivée à partir d'une valeur de départ et d'un pourcentage d'évolution."
+      - "Retrouver une valeur de départ, et enchaîner deux évolutions successives."
+
+  - type: texte
+    titre: "Le coefficient multiplicateur"
+    contenu: >-
+      Augmenter une quantité de t % revient à la multiplier par 1 + t/100. Diminuer une
+      quantité de t % revient à la multiplier par 1 − t/100. Ce nombre s'appelle le
+      **coefficient multiplicateur**. Exemples : une hausse de 20 % correspond à × 1,2 ;
+      une baisse de 20 % correspond à × 0,8.
+
+  - type: texte
+    titre: "Lire un coefficient"
+    contenu: >-
+      Un coefficient plus grand que 1 traduit une hausse ; un coefficient plus petit que
+      1 traduit une baisse. Par exemple, × 1,07 est une hausse de 7 %, et × 0,93 est une
+      baisse de 7 %. Pour retrouver le pourcentage, on compare le coefficient à 1 et on
+      lit l'écart en centièmes.
+
+  - type: texte
+    titre: "Retrouver la valeur de départ"
+    contenu: >-
+      La règle de base : valeur d'arrivée = valeur de départ × coefficient. Pour
+      retrouver la valeur de départ à partir de la valeur d'arrivée, on fait l'opération
+      inverse d'une multiplication : valeur de départ = valeur d'arrivée ÷ coefficient.
+      Attention, on ne soustrait jamais un pourcentage directement à un prix.
+
+  - type: texte
+    titre: "Évolutions successives"
+    contenu: >-
+      Deux évolutions successives se traduisent par le **produit** de leurs coefficients,
+      et non par leur somme. Par exemple, une hausse de 20 % suivie d'une baisse de 20 %
+      ne redonne pas le prix de départ, car la seconde évolution porte sur le prix déjà
+      modifié par la première.
+
+  - type: exemple
+    enonce: "Un téléphone coûte 300 €. Son prix baisse de 12 %. Quel est son nouveau prix ?"
+    etapes:
+      - "Une baisse de 12 % correspond au coefficient 1 − 12/100 = 0,88."
+      - "Nouveau prix = prix de départ × coefficient, soit 300 × 0,88."
+      - "300 × 0,88 = 264. Le nouveau prix est 264 €."
+
+  - type: exercice
+    enonce: "Par quel nombre décimal faut-il multiplier un prix pour l'augmenter de 12 % ?"
+    forme: nombre
+    reponse: 1.12
+    tolerance: 0.01
+    indices:
+      - "Après une hausse, le coefficient est-il plus grand ou plus petit que 1 ?"
+      - "Pour une hausse de t %, le coefficient est 1 + t/100. Une hausse de 10 % donne 1,10 : fais pareil pour 12 %."
+    explication: "Hausse de 12 % : coefficient = 1 + 12/100 = 1,12."
+
+  - type: exercice
+    enonce: "Un livre coûte 18 €. Il est soldé à − 25 %. Quel est son prix soldé, en euros ?"
+    forme: nombre
+    reponse: 13.5
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Quel coefficient correspond à une baisse de 25 % ?"
+      - "Le coefficient est 0,75. Multiplie le prix de départ par ce coefficient : 18 × 0,75."
+    explication: "Baisse de 25 % : coefficient 1 − 25/100 = 0,75. Prix soldé = 18 × 0,75 = 13,5 €."
+
+  - type: exercice
+    enonce: "Quelle évolution correspond au coefficient multiplicateur × 1,04 ?"
+    forme: qcm
+    choix:
+      - "Une hausse de 4 %"
+      - "Une baisse de 4 %"
+      - "Une hausse de 40 %"
+      - "Une baisse de 96 %"
+    reponse: 0
+    indices:
+      - "Le coefficient 1,04 est-il plus grand ou plus petit que 1 ?"
+      - "Calcule l'écart entre 1,04 et 1 : cet écart, écrit en centièmes, te donne le pourcentage."
+    explication: "1,04 > 1, donc c'est une hausse. 1,04 − 1 = 0,04, soit 4/100 : une hausse de 4 %."
+
+  - type: exercice
+    enonce: "Après une hausse de 20 %, un abonnement coûte 90 €. Quel était son prix avant la hausse, en euros ?"
+    forme: nombre
+    reponse: 75
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Par quel coefficient a-t-on multiplié l'ancien prix pour obtenir 90 € ?"
+      - "Ancien prix × 1,2 = 90. Écris cette équation, puis fais l'opération inverse d'une multiplication pour résoudre."
+    explication: "Ancien prix × 1,2 = 90, donc ancien prix = 90 ÷ 1,2 = 75 €. Vérification : 75 × 1,2 = 90."
+
+  - type: exercice
+    enonce: >-
+      Le prix d'un article augmente de 10 %, puis baisse de 10 %. Le prix final est-il égal
+      au prix de départ ? Réponds par « oui » ou par « non ».
+    forme: reponse_courte
+    reponse: "non"
+    reponses_acceptees:
+      - "non"
+    indices:
+      - "Les deux 10 % portent-ils sur le même prix, ou sur des prix différents ?"
+      - "Écris les deux coefficients multiplicateurs (1,1 et 0,9), multiplie-les, et compare le résultat à 1."
+    explication: >-
+      Coefficient global : 1,1 × 0,9 = 0,99. Le prix final est multiplié par 0,99 : il est
+      légèrement inférieur au prix de départ, donc ce n'est pas la même valeur (baisse de 1 %).
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi dit-on que deux évolutions successives se multiplient, et ne s'additionnent pas ?
+      Explique avec un exemple chiffré de ton choix.
+    indices:
+      - "Pense à ce que devient le prix après la première évolution : c'est sur cette nouvelle valeur que porte la seconde."
+      - "Choisis deux pourcentages simples et calcule les deux étapes séparément pour voir ce qui se passe."
+    criteres:
+      - "L'élève explique que la seconde évolution s'applique à la valeur déjà modifiée par la première, pas à la valeur de départ."
+      - "L'élève illustre avec un exemple chiffré cohérent, en utilisant deux coefficients qui se multiplient."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu calcules un
+      coefficient multiplicateur à partir d'un pourcentage de hausse ou de baisse, et
+      comment tu l'utilises pour trouver une valeur d'arrivée ou une valeur de départ.

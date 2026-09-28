@@ -1,0 +1,137 @@
+notion: constitution-ve-republique
+titre: "La Constitution, norme juridique fondamentale"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Constitution française de 1958 »"
+    url: "https://fr.vikidia.org/w/index.php?title=Constitution_fran%C3%A7aise_de_1958&oldid=2431778"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Question prioritaire de constitutionnalité »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Question_prioritaire_de_constitutionnalit%C3%A9&oldid=231451312"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Conseil constitutionnel (France) »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Conseil_constitutionnel_%28France%29&oldid=239301277"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir que la Constitution garantit les droits et libertés et organise la séparation des pouvoirs."
+      - "Expliquer à quoi sert la question prioritaire de constitutionnalité (QPC)."
+      - "Situer dans le temps les grandes évolutions de la Constitution depuis 1958."
+
+  - type: texte
+    titre: "La « loi des lois »"
+    contenu: >-
+      La **Constitution** est le texte juridique le plus important d'un pays : c'est la « **loi des lois** »,
+      que toutes les autres lois doivent respecter. En France, la Constitution de la **Ve République** est
+      adoptée par référendum le **28 septembre 1958**. Son article premier dit : « La France est une République
+      indivisible, laïque, démocratique et sociale. »
+
+  - type: texte
+    titre: "Séparation des pouvoirs et textes liés"
+    contenu: >-
+      La Constitution garantit les **droits et libertés** et organise la **séparation des pouvoirs** :
+      **exécutif** (président et gouvernement), **législatif** (Parlement) et **judiciaire** (les juges). Elle
+      permet aussi au Parlement de **contrôler l'action du gouvernement**. Elle fait référence à d'autres textes
+      à valeur constitutionnelle : la **Déclaration des droits de l'homme et du citoyen** de 1789, le
+      **préambule de la Constitution de 1946**, et la **Charte de l'environnement** de 2004.
+
+  - type: texte
+    titre: "La question prioritaire de constitutionnalité (QPC)"
+    contenu: >-
+      Depuis la révision de **2008**, la **QPC** permet à toute personne partie à un procès de contester une loi
+      **déjà en vigueur** qui porterait atteinte à ses droits et libertés. Le juge transmet la question, via la
+      Cour de cassation ou le Conseil d'État, puis le **Conseil constitutionnel** tranche et peut abroger la
+      loi. Les juges, **indépendants** du pouvoir politique, participent ainsi à la garantie des droits.
+
+  - type: texte
+    titre: "Une Constitution qui évolue"
+    contenu: >-
+      La Constitution a changé plusieurs fois depuis 1958 : élection du président au **suffrage universel
+      direct** en 1962, **parité** femmes-hommes en politique en 1999, **quinquennat** présidentiel en 2000,
+      **décentralisation** en 2003, puis la **réforme de 2008** qui crée la QPC.
+
+  - type: exemple
+    enonce: "Explique en deux phrases ce qu'est la QPC et à quoi elle sert."
+    etapes:
+      - "La QPC, créée en 2008, permet à un citoyen, au cours d'un procès, de demander au Conseil constitutionnel de vérifier qu'une loi déjà appliquée respecte la Constitution."
+      - "Elle garantit ainsi le respect des droits et libertés, même pour une loi déjà en vigueur depuis longtemps."
+
+  - type: exercice
+    enonce: "En quelle année la Constitution de la Ve République est-elle adoptée par référendum ?"
+    forme: nombre
+    reponse: 1958
+    tolerance: 0
+    indices:
+      - "Cette Constitution succède à celle de la IVe République, jugée instable, à la fin des années 1950."
+      - "Le référendum a lieu le 28 septembre de cette année-là."
+    explication: "La Constitution de la Ve République est adoptée par référendum le 28 septembre 1958."
+
+  - type: exercice
+    enonce: "Qu'est-ce que la question prioritaire de constitutionnalité (QPC) ?"
+    forme: qcm
+    choix:
+      - "Une procédure qui permet de vérifier qu'une loi déjà en vigueur respecte la Constitution"
+      - "Un vote par lequel les citoyens répondent oui ou non à une question"
+      - "Une procédure qui empêche une loi d'être promulguée si elle est contestée"
+    reponse: 0
+    indices:
+      - "La QPC intervient pendant un procès, à propos d'une loi qui est déjà appliquée depuis un certain temps."
+      - "Elle ne bloque pas une loi avant sa promulgation : elle contrôle une loi déjà en vigueur."
+    explication: "La QPC est une procédure créée en 2008 qui permet, au cours d'un procès, de vérifier qu'une loi déjà en vigueur ne porte pas atteinte aux droits et libertés garantis par la Constitution."
+
+  - type: exercice
+    enonce: "Quel sigle de trois lettres désigne la procédure de contrôle d'une loi déjà en vigueur, créée en 2008 ?"
+    forme: reponse_courte
+    reponse: "QPC"
+    reponses_acceptees: ["QPC", "qpc"]
+    indices:
+      - "C'est une abréviation : trois lettres, une par mot."
+      - "Complète les initiales de « question prioritaire de constitutionnalité »."
+    explication: "Le sigle est QPC, pour question prioritaire de constitutionnalité."
+
+  - type: exercice
+    enonce: >-
+      Parmi ces trois pouvoirs organisés par la Constitution, lequel est chargé d'appliquer les lois (le
+      président de la République et le gouvernement) ?
+    forme: qcm
+    choix:
+      - "Le pouvoir exécutif"
+      - "Le pouvoir législatif"
+      - "Le pouvoir judiciaire"
+    reponse: 0
+    indices:
+      - "Ce pouvoir regroupe le président de la République et le gouvernement."
+      - "Le pouvoir législatif vote les lois (le Parlement), le pouvoir judiciaire juge (les juges)."
+    explication: "Le pouvoir exécutif, qui applique les lois, regroupe le président de la République et le gouvernement. La Constitution organise aussi le pouvoir législatif (Parlement) et le pouvoir judiciaire (les juges)."
+
+  - type: exercice
+    enonce: >-
+      Voici quatre révisions de la Constitution avec leur année : suffrage universel direct (1962), parité
+      femmes-hommes (1999), quinquennat (2000), création de la QPC (2008). Combien d'années séparent la
+      première révision de cette liste (1962) de la création de la QPC (2008) ?
+    forme: nombre
+    reponse: 46
+    tolerance: 0
+    indices:
+      - "Il faut soustraire l'année la plus ancienne de l'année la plus récente."
+      - "Pose l'opération : 2008 − 1962."
+    explication: "2008 − 1962 = 46 ans séparent la réforme du suffrage universel direct de la création de la QPC."
+
+  - type: question_ouverte
+    question: >-
+      Explique avec tes mots pourquoi la séparation des pouvoirs (exécutif, législatif, judiciaire) protège les
+      citoyens.
+    indices:
+      - "Que se passerait-il si un seul organe avait tous les pouvoirs à la fois ?"
+      - "Pense au rôle du Parlement, qui contrôle l'action du gouvernement."
+    criteres:
+      - "L'élève cite les trois pouvoirs et explique qu'ils sont exercés par des organes différents qui se contrôlent mutuellement."
+      - "L'élève relie cette séparation à une protection contre les abus de pouvoir, sans juste réciter la définition."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce que garantit la Constitution et à quoi sert
+      la QPC.

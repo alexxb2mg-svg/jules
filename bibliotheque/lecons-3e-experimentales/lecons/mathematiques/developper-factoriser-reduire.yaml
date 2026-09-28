@@ -1,0 +1,139 @@
+notion: developper-factoriser-reduire
+titre: "Développer, factoriser, réduire une expression"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Développer une expression avec la simple ou la double distributivité."
+      - "Factoriser une expression en cherchant un facteur commun, ou avec l'égalité a² − b²."
+      - "Réduire une expression en regroupant les termes de même nature."
+
+  - type: texte
+    titre: "Développer, réduire"
+    contenu: >-
+      **Développer**, c'est transformer un produit en somme, avec la distributivité.
+      Simple distributivité : k(a + b) = ka + kb. Double distributivité :
+      (a + b)(c + d) = ac + ad + bc + bd (quatre produits à écrire, puis à additionner).
+      **Réduire**, c'est ensuite regrouper les termes de même nature : les x² ensemble,
+      les x ensemble, les nombres seuls ensemble.
+
+  - type: texte
+    titre: "Factoriser, l'opération inverse"
+    contenu: >-
+      **Factoriser**, c'est transformer une somme en produit : c'est l'inverse de
+      développer. Pour factoriser, on cherche un facteur commun à tous les termes :
+      ka + kb = k(a + b). Ce facteur commun peut être un nombre, la lettre x, ou même
+      une parenthèse entière qui apparaît dans plusieurs termes.
+
+  - type: texte
+    titre: "L'égalité a² − b²"
+    contenu: >-
+      Une égalité est à connaître par cœur : (a + b)(a − b) = a² − b². Lue de gauche à
+      droite, elle **développe** un produit de deux parenthèses. Lue de droite à
+      gauche, elle **factorise** une différence de deux carrés. Exemple : x² − 25
+      = x² − 5² = (x − 5)(x + 5).
+
+  - type: texte
+    titre: "Attention aux erreurs"
+    contenu: >-
+      Erreur fréquente : oublier de multiplier le deuxième terme d'une parenthèse
+      (3(2x − 5) n'est pas 6x − 5, il faut aussi multiplier le −5). Erreur fréquente :
+      se tromper de signe (3 × (−4) = −12, pas +12). Dans une double distributivité,
+      il faut écrire les quatre produits, pas seulement deux. On vérifie un résultat
+      en le redéveloppant, ou en remplaçant x par un nombre simple des deux côtés.
+
+  - type: exemple
+    enonce: "Développer et réduire (x + 2)(3x − 1)."
+    etapes:
+      - "On multiplie x par chaque terme de la seconde parenthèse : x × 3x = 3x², x × (−1) = −x."
+      - "On multiplie 2 par chaque terme de la seconde parenthèse : 2 × 3x = 6x, 2 × (−1) = −2."
+      - "On additionne les quatre produits, puis on réduit : 3x² − x + 6x − 2 = 3x² + 5x − 2."
+
+  - type: exercice
+    enonce: "On développe B = 4(3x − 2) + 5x pour l'écrire sous la forme ax + b. Quelle est la valeur de a ?"
+    forme: nombre
+    reponse: 17
+    tolerance: 0.01
+    indices:
+      - "Le 4 devant la parenthèse multiplie-t-il un seul terme, ou les deux termes de la parenthèse ?"
+      - "Distribue le 4 sur 3x et sur −2, puis ajoute le 5x. Additionne seulement les termes qui contiennent x."
+    explication: "B = 4 × 3x + 4 × (−2) + 5x = 12x − 8 + 5x = 17x − 8. La valeur de a est donc 17."
+
+  - type: exercice
+    enonce: "Quelle est la forme développée et réduite de (x − 3)(x + 4) ?"
+    forme: qcm
+    choix:
+      - "x² + x − 12"
+      - "x² − x − 12"
+      - "x² + 7x − 12"
+      - "x² − 12"
+    reponse: 0
+    indices:
+      - "Combien de produits dois-tu écrire avant de réduire ? Pense à la double distributivité."
+      - "Multiplie x par x, x par 4, −3 par x, −3 par 4, puis additionne les termes en x entre eux."
+    explication: "(x − 3)(x + 4) = x × x + x × 4 − 3 × x − 3 × 4 = x² + 4x − 3x − 12 = x² + x − 12."
+
+  - type: exercice
+    enonce: "Factorise C = x² − 81."
+    forme: reponse_courte
+    reponse: "(x - 9)(x + 9)"
+    reponses_acceptees:
+      - "(x - 9)(x + 9)"
+      - "(x + 9)(x - 9)"
+      - "(x − 9)(x + 9)"
+      - "(x + 9)(x − 9)"
+    indices:
+      - "81 est le carré de quel nombre ?"
+      - "C est une différence de deux carrés. Utilise l'égalité a² − b² = (a − b)(a + b), avec a = x."
+    explication: "C = x² − 81 = x² − 9² = (x − 9)(x + 9)."
+
+  - type: exercice
+    enonce: >-
+      On factorise D = (x + 5)(2x + 3) + (x + 5)(x − 1) en mettant (x + 5) en facteur commun.
+      Une fois le second facteur réduit, il s'écrit sous la forme ax + b. Quelle est la valeur de a ?
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "Le facteur commun (x + 5) est déjà donné. Que reste-t-il à additionner ?"
+      - "Additionne les deux parenthèses restantes en regroupant à part les termes en x et les nombres."
+    explication: "D = (x + 5)[(2x + 3) + (x − 1)] = (x + 5)(3x + 2). Le second facteur réduit est 3x + 2, donc a = 3."
+
+  - type: exercice
+    enonce: "Calcule 102 × 98 sans calculatrice, en utilisant l'égalité a² − b² avec 102 = 100 + 2 et 98 = 100 − 2."
+    forme: nombre
+    reponse: 9996
+    tolerance: 0.01
+    indices:
+      - "Écris 102 × 98 comme (100 + 2)(100 − 2)."
+      - "Utilise a² − b² avec a = 100 et b = 2 : calcule d'abord 100² et 2² séparément, avant de les soustraire."
+    explication: "102 × 98 = (100 + 2)(100 − 2) = 100² − 2² = 10 000 − 4 = 9 996."
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi peut-on dire que développer et factoriser sont deux opérations inverses l'une de
+      l'autre ? Choisis une expression simple et montre-le avec cet exemple.
+    indices:
+      - "Repense à ce que fait développer (produit vers somme) et ce que fait factoriser (somme vers produit)."
+      - "Choisis une expression comme 2(x + 3), développe-la, puis regarde comment retrouver la forme de départ."
+    criteres:
+      - "L'élève explique que développer transforme un produit en somme, et que factoriser fait l'inverse."
+      - "L'élève illustre avec un exemple correct où le produit et la somme correspondent bien."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu reconnais qu'il faut
+      développer, factoriser, ou seulement réduire une expression. Donne un petit exemple de chaque cas.

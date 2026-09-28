@@ -1,0 +1,116 @@
+notion: territoire-union-europeenne
+titre: "Le territoire de l'Union européenne"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Union européenne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « États membres de l'Union européenne »"
+    url: "https://fr.wikipedia.org/w/index.php?title=%C3%89tats_membres_de_l%27Union_europ%C3%A9enne&oldid=239310027"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir que l'Union européenne compte 27 États membres depuis le Brexit (2020)."
+      - "Situer la France dans l'espace européen : ses voisins, sa position centrale."
+      - "Expliquer ce qu'apporte une région transfrontalière, avec un exemple précis."
+
+  - type: texte
+    titre: "27 États membres, un territoire vaste"
+    contenu: >-
+      Depuis le **Brexit** (sortie du Royaume-Uni en 2020), l'**Union européenne** compte **27 États membres**.
+      Ces pays ont des tailles et des poids économiques très différents. L'UE couvre environ **4,2 millions de
+      km²** pour plus de **443 millions d'habitants**.
+
+  - type: texte
+    titre: "La France, un pays central en Europe"
+    contenu: >-
+      La France occupe une **position centrale** dans cette géographie européenne : c'est un grand pays par sa
+      superficie et sa population, et elle partage des **frontières terrestres** avec plusieurs autres États
+      membres (comme l'Allemagne, la Belgique, l'Espagne, l'Italie, la Suisse ou le Luxembourg). Certains
+      territoires ultramarins français, appelés **régions ultrapériphériques**, font aussi partie intégrante de
+      l'UE, malgré leur éloignement (par exemple La Réunion).
+
+  - type: texte
+    titre: "Ce que l'UE apporte à la France"
+    contenu: >-
+      L'Union européenne représente un potentiel important : un **marché commun** sans droits de douane, la
+      **libre circulation** des personnes dans l'**espace Schengen** (pour la plupart des membres), des
+      **coopérations transfrontalières** (par exemple entre la France, l'Allemagne et la Suisse dans le **Rhin
+      supérieur**), et des financements européens pour l'aménagement du territoire. Attention : Union
+      européenne, espace Schengen et zone euro sont **trois ensembles différents**, qui ne regroupent pas
+      exactement les mêmes pays.
+
+  - type: exemple
+    enonce: >-
+      Explique en deux phrases pourquoi le nombre d'États membres de l'UE est passé de 28 à 27.
+    etapes:
+      - "Avant 2020, l'Union européenne comptait 28 États membres, dont le Royaume-Uni."
+      - "En 2020, le Royaume-Uni a quitté l'UE (le Brexit), ce qui a fait passer le nombre d'États membres à 27."
+
+  - type: exercice
+    enonce: "Combien l'Union européenne compte-t-elle d'États membres depuis le Brexit de 2020 ?"
+    forme: nombre
+    reponse: 27
+    tolerance: 0
+    indices:
+      - "Le Royaume-Uni a quitté l'Union européenne en 2020, ce qui a fait baisser ce nombre."
+      - "L'Union comptait 28 membres avant le départ du Royaume-Uni : enlève un pays."
+    explication: "L'Union européenne compte 27 États membres depuis le départ du Royaume-Uni (le Brexit) en 2020."
+
+  - type: exercice
+    enonce: "Lequel de ces pays partage une frontière terrestre avec la France ?"
+    forme: qcm
+    choix:
+      - "L'Allemagne"
+      - "Le Portugal"
+      - "La Pologne"
+    reponse: 0
+    indices:
+      - "Pense aux pays voisins à l'est de la France."
+      - "Le Portugal est séparé de la France par l'Espagne ; la Pologne est plus loin en Europe."
+    explication: "L'Allemagne partage une frontière terrestre avec la France (on peut aussi citer la Belgique, l'Espagne, l'Italie, la Suisse ou le Luxembourg)."
+
+  - type: exercice
+    enonce: >-
+      Quel terme désigne un territoire ultramarin d'un État membre qui fait partie intégrante de l'Union
+      européenne malgré son éloignement, comme La Réunion ?
+    forme: reponse_courte
+    reponse: "région ultrapériphérique"
+    reponses_acceptees: ["région ultrapériphérique", "region ultraperipherique", "une région ultrapériphérique", "régions ultrapériphériques"]
+    indices:
+      - "Le mot commence comme « périphérie », avec un préfixe qui renforce l'idée d'éloignement."
+      - "Le terme est composé de deux mots : « région » et « ultrapériphérique »."
+    explication: "Une région ultrapériphérique est un territoire ultramarin d'un État membre qui fait partie intégrante de l'Union européenne malgré son éloignement, comme La Réunion."
+
+  - type: exercice
+    enonce: "Quelle est la différence entre l'Union européenne et l'espace Schengen ?"
+    forme: qcm
+    choix:
+      - "Ce sont deux ensembles différents, qui ne regroupent pas exactement les mêmes pays"
+      - "Ce sont deux noms différents pour exactement le même groupe de pays"
+      - "L'espace Schengen regroupe uniquement des pays hors d'Europe"
+    reponse: 0
+    indices:
+      - "Tous les membres de l'UE ne font pas forcément partie de l'espace Schengen, et inversement."
+      - "L'UE est une union politique et économique ; l'espace Schengen concerne la libre circulation des personnes."
+    explication: "L'Union européenne est une union politique et économique de 27 États ; l'espace Schengen est un espace de libre circulation des personnes sans contrôle aux frontières intérieures, qui n'inclut pas exactement les mêmes pays."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une région transfrontalière française (par exemple le Rhin supérieur) et explique en quelques
+      phrases un avantage concret que l'appartenance à l'UE lui apporte.
+    indices:
+      - "Quel avantage la libre circulation apporte-t-elle aux habitants d'une région frontalière ?"
+      - "Pense aux déplacements pour le travail ou aux échanges économiques entre les deux côtés de la frontière."
+    criteres:
+      - "L'élève choisit une région transfrontalière précise (Rhin supérieur, région Nord avec la Belgique...)."
+      - "L'élève explique un avantage concret lié à la libre circulation (emploi, transports) et le relie à l'espace Schengen ou à la coopération européenne."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la position de la France dans l'Union
+      européenne et un avantage que l'UE lui apporte.

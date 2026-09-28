@@ -1,0 +1,129 @@
+notion: puissances-notation-scientifique
+titre: "Puissances et notation scientifique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer une puissance d'exposant positif ou négatif."
+      - "Multiplier et diviser des puissances de 10 en utilisant les exposants."
+      - "Écrire un nombre en notation scientifique et l'utiliser dans un problème."
+
+  - type: texte
+    titre: "Puissance d'un nombre"
+    contenu: >-
+      Pour un nombre **a** et un entier **n** positif, **aⁿ** signifie a multiplié par
+      lui-même **n** fois : aⁿ = a × a × … × a (n facteurs).
+      Par exemple 2³ = 2 × 2 × 2 = 8. Attention à ne pas confondre 2³ et 2 × 3 : ce n'est pas
+      la même chose.
+
+  - type: texte
+    titre: "Exposant négatif : un inverse, pas un nombre négatif"
+    contenu: >-
+      Une puissance d'exposant négatif est un **inverse** : **a⁻ⁿ = 1/aⁿ**.
+      Par exemple 10⁻³ = 1/1 000 = 0,001. Un exposant négatif ne rend **jamais** le nombre
+      négatif : 10⁻³ est un petit nombre positif, pas −1 000.
+
+  - type: texte
+    titre: "Multiplier et diviser des puissances de 10"
+    contenu: >-
+      Pour multiplier deux puissances de 10, on **additionne** les exposants :
+      10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ. Pour diviser, on **soustrait** les exposants :
+      10ᵐ ÷ 10ⁿ = 10ᵐ⁻ⁿ. Il faut faire attention au signe des exposants dans le calcul.
+
+  - type: texte
+    titre: "La notation scientifique"
+    contenu: >-
+      La notation scientifique d'un nombre positif s'écrit **a × 10ⁿ**, avec **a** supérieur
+      ou égal à 1 et strictement inférieur à 10, et n un nombre entier (positif ou négatif).
+      Exemple : 45 000 = 4,5 × 10⁴ et 0,0032 = 3,2 × 10⁻³. Elle sert à écrire et comparer
+      des nombres très grands ou très petits.
+
+  - type: exemple
+    enonce: "Calcule (2 × 10⁵) × (3 × 10⁻²) et donne le résultat en notation scientifique."
+    etapes:
+      - "On multiplie les nombres entre eux : 2 × 3 = 6."
+      - "On additionne les exposants de 10 : 5 + (−2) = 3."
+      - "On obtient 6 × 10³. Comme 6 est bien entre 1 et 10, c'est déjà la notation scientifique."
+
+  - type: exercice
+    enonce: "Donne l'écriture décimale de 10⁻²."
+    forme: nombre
+    reponse: 0.01
+    tolerance: 0.0001
+    indices:
+      - "10⁻ⁿ est l'inverse de 10ⁿ : c'est 1 divisé par 10ⁿ."
+      - "10² = 100. Divise 1 par 100 : où se place la virgule ?"
+    explication: "10⁻² = 1/10² = 1 ÷ 100 = 0,01."
+
+  - type: exercice
+    enonce: "On écrit 10⁴ × 10⁻⁶ sous la forme 10ⁿ. Quelle est la valeur de n ?"
+    forme: nombre
+    reponse: -2
+    tolerance: 0.01
+    indices:
+      - "Quand on multiplie deux puissances de 10, que fait-on avec les exposants ?"
+      - "10ᵐ × 10ⁿ = 10ᵐ⁺ⁿ : il faut calculer 4 + (−6)."
+    explication: "10⁴ × 10⁻⁶ = 10⁴⁺⁽⁻⁶⁾ = 10⁻², donc n = −2."
+
+  - type: exercice
+    enonce: "Quel nombre parmi ces quatre est écrit en notation scientifique ?"
+    forme: qcm
+    choix: ["25 × 10³", "2,5 × 10³", "0,25 × 10⁴", "0,025 × 10⁵"]
+    reponse: 1
+    indices:
+      - "Dans la notation scientifique, le nombre devant la puissance de 10 doit être entre 1 (inclus) et 10 (exclu)."
+      - "Regarde chaque nombre devant la puissance de 10 : 25, 2,5, 0,25 et 0,025. Lequel est entre 1 et 10 ?"
+    explication: "2,5 est bien entre 1 et 10, donc 2,5 × 10³ est en notation scientifique. Les trois autres ont un nombre trop grand ou trop petit devant la puissance de 10."
+
+  - type: exercice
+    enonce: "On écrit 0,00048 en notation scientifique, sous la forme a × 10ⁿ. Quel est l'exposant n ?"
+    forme: nombre
+    reponse: -4
+    tolerance: 0.01
+    indices:
+      - "Où faut-il placer la virgule pour que le nombre a soit entre 1 et 10 ?"
+      - "Place la virgule juste après le premier chiffre non nul (le 4), puis compte de combien de rangs elle se déplace."
+      - "Le nombre de départ est plus petit que 1 : l'exposant est-il positif ou négatif ?"
+    explication: "0,00048 = 4,8 × 0,0001 = 4,8 × 10⁻⁴. La virgule a bougé de 4 rangs vers la droite, donc n = −4."
+
+  - type: exercice
+    enonce: >-
+      Une bactérie mesure environ 2 × 10⁻⁶ m. Un cheveu mesure environ 8 × 10⁻⁵ m.
+      Combien de fois la longueur du cheveu est-elle plus grande que celle de la bactérie ?
+    forme: nombre
+    reponse: 40
+    tolerance: 0.5
+    indices:
+      - "Pour comparer deux longueurs par un nombre de fois, quelle opération fais-tu : une addition ou une division ?"
+      - "Divise les nombres devant les puissances de 10 entre eux, puis divise les puissances de 10 entre elles en soustrayant les exposants."
+      - "8 ÷ 2 = 4 et 10⁻⁵ ÷ 10⁻⁶ = 10⁻⁵⁻⁽⁻⁶⁾ = 10¹. Multiplie maintenant ces deux résultats."
+    explication: "(8 × 10⁻⁵) ÷ (2 × 10⁻⁶) = (8 ÷ 2) × 10⁻⁵⁻⁽⁻⁶⁾ = 4 × 10¹ = 40. Le cheveu est environ 40 fois plus long que la bactérie."
+
+  - type: question_ouverte
+    question: >-
+      Manon affirme que 3⁻² est un nombre négatif, à cause du signe moins dans l'exposant.
+      Explique-lui pourquoi elle se trompe, et donne l'écriture fractionnaire puis décimale de 3⁻².
+    indices:
+      - "Que signifie un exposant négatif : un nombre négatif, ou autre chose ?"
+      - "Utilise la règle a⁻ⁿ = 1/aⁿ, puis calcule 3²."
+    criteres:
+      - "L'élève explique qu'un exposant négatif désigne un inverse (3⁻² = 1/3²), pas un nombre négatif."
+      - "L'élève donne 3⁻² = 1/9 ≈ 0,111 et remarque que ce nombre est positif, compris entre 0 et 1."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce que veut dire un exposant
+      négatif, et comment tu reconnais un nombre écrit en notation scientifique.
