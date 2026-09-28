@@ -30,7 +30,7 @@ export const RUBRIQUES: Rubrique[] = [
     { id: "discuter", nom: "Discuter avec Jules", Icone: MessageCircle, pageExistante: "/discuter" },
   ] },
   { titre: "Mon espace", entrees: [
-    { id: "parent", nom: "Espace parent", Icone: Users, pageExistante: "/parent" },
+    { id: "parent", nom: "Espace parent", Icone: Users },
     { id: "pronote", nom: "Pronote", Icone: ClipboardList },
   ] },
 ]
