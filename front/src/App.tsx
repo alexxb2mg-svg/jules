@@ -11,6 +11,7 @@ import { sectionDe, useRoute, type Route } from "@/routes"
 import { ECRANS } from "@/ecrans/registre"
 import type { SectionId } from "@/config/navigation"
 import { RappelARanger } from "@/modules/sources/pieces"
+import { BoutonRetour } from "@/composants/BoutonRetour"
 import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
 
 /** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
@@ -48,6 +49,7 @@ export default function App() {
             </motion.div>
           </AnimatePresence>
           {route.ecran !== "perso" && <RappelARanger onOuvrir={(id) => aller({ ecran: "perso", id })} />}
+          <BoutonRetour />
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>

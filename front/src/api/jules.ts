@@ -173,6 +173,13 @@ export type Parcours = { matieres: { id: string; nom: string }[]; matiere: strin
 
 const S = (id: string) => `/api/eleve/cours/sessions/${encodeURIComponent(id)}`
 
+/* ---- retours : bugs, dysfonctionnements, suggestions (jules/modules/retours.py) ---- */
+export type TypeRetour = "bug" | "dysfonctionnement" | "suggestion" | "amelioration"
+export const retours = {
+  deposer: (r: { type: TypeRetour; texte: string; adresse: string; titre_page: string; ecran: string }) =>
+    api<{ id: string; ok: boolean }>("/api/eleve/retours/deposer", json(r)),
+}
+
 export type BilanNotions = {
   groupes: { etat: string; titre: string; notions: { notion: string; titre: string; matiere: string; nom_matiere: string; savoir_faire: string[]; lecon: boolean }[] }[]
   a_explorer: number
