@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import APIRouter, Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
@@ -133,30 +133,28 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     eleve = Depends(exiger("eleve"))
     parent = Depends(exiger("parent"))
 
-    # --- pages -----------------------------------------------------------
-    @app.get("/", response_class=HTMLResponse)
-    def page_accueil() -> HTMLResponse:
-        """« Mes fiches » : nouvel ecran d'accueil de l'eleve (fiches visuelles)."""
-        return HTMLResponse((STATIQUE / "accueil.html").read_text(encoding="utf-8"))
+    # --- pages : tout redirige vers la nouvelle interface React (/app#/…) ---
+    @app.get("/")
+    def page_accueil() -> RedirectResponse:
+        return RedirectResponse("/app#/fiches", status_code=302)
 
-    @app.get("/discuter", response_class=HTMLResponse)
-    def page_eleve() -> HTMLResponse:
-        """L'ancien chat, deplace de / vers /discuter (« Discuter avec Jules »)."""
-        return HTMLResponse((STATIQUE / "eleve.html").read_text(encoding="utf-8"))
+    @app.get("/discuter")
+    def page_eleve() -> RedirectResponse:
+        return RedirectResponse("/app#/discuter", status_code=302)
 
-    @app.get("/parent", response_class=HTMLResponse)
-    def page_parent(request: Request) -> HTMLResponse:
-        if distante(request):  # l'administration ne s'ouvre que sur l'ordinateur ou tourne Jules
+    @app.get("/parent", response_model=None)
+    def page_parent(request: Request) -> RedirectResponse | HTMLResponse:
+        if distante(request):
             return HTMLResponse(PAGE_ADMIN_LOCALE, status_code=403)
-        return HTMLResponse((STATIQUE / "parent.html").read_text(encoding="utf-8"))
+        return RedirectResponse("/app#/parent", status_code=302)
 
-    @app.get("/cours", response_class=HTMLResponse)
-    def page_cours() -> HTMLResponse:
-        return HTMLResponse((STATIQUE / "cours.html").read_text(encoding="utf-8"))
+    @app.get("/cours")
+    def page_cours() -> RedirectResponse:
+        return RedirectResponse("/app#/lecons", status_code=302)
 
-    @app.get("/studio", response_class=HTMLResponse)
-    def page_studio() -> HTMLResponse:
-        return HTMLResponse((STATIQUE / "studio.html").read_text(encoding="utf-8"))
+    @app.get("/studio")
+    def page_studio() -> RedirectResponse:
+        return RedirectResponse("/app#/supports", status_code=302)
 
     @app.get("/app", response_class=HTMLResponse)
     def page_app() -> HTMLResponse:
