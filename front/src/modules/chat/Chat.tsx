@@ -81,7 +81,9 @@ export function Chat() {
 
   // Scroller en bas à chaque nouveau message
   useEffect(() => {
-    if (filRef.current) filRef.current.scrollTop = filRef.current.scrollHeight
+    requestAnimationFrame(() => {
+      if (filRef.current) filRef.current.scrollTop = filRef.current.scrollHeight
+    })
   }, [messages, occupe])
 
   // Auto-resize du textarea
