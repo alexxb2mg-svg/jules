@@ -30,4 +30,4 @@ def test_lecteur_sur_et_types_de_base():
 
 
 def test_lecteur_c_utilise_quand_disponible():
-    assert yaml_rapide.RAPIDE == hasattr(yaml, "CSafeLoader")
+    assert hasattr(yaml, "CSafeLoader") == yaml_rapide.RAPIDE
