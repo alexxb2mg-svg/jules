@@ -15,6 +15,7 @@ import { FichesPersoDeLaNotion } from "@/modules/sources/FichesPersoDeLaNotion"
 import { noterOuverture } from "@/modules/sources/etat"
 import { choisirMatiere } from "@/modules/accueil/etat"
 import { Bilan } from "@/modules/accueil/Bilan"
+import { Pronote } from "@/modules/pronote/Pronote"
 
 export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
 type Ecran = (p: PropsEcran) => React.JSX.Element | null
@@ -85,4 +86,5 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
       <EcranDossier id={route.id} onRetour={() => aller({ ecran: "fiches", matiere: null })} onOuvrir={(id) => aller({ ecran: "perso", id })} />
     </div>
   ),
+  pronote: () => <Pronote />,
 }

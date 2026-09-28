@@ -20,6 +20,7 @@ from jules.acces import COOKIE, DUREE_S, Acces, requete_distante
 from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
 from jules.web.limite import LimiteEssais
+from jules.web.pronote_routes import routes_pronote
 
 STATIQUE = Path(__file__).parent / "static"
 EXTENSIONS = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
@@ -81,6 +82,18 @@ PAGE_ADMIN_LOCALE = (
     "<p style=\"font-family:sans-serif;margin:3rem\">L'espace d'administration ne s'ouvre que sur "
     "l'ordinateur où tourne Jules.</p></html>"
 )
+
+
+def _charger_config_brute(racine: Path) -> dict[str, Any]:
+    """Relit config.yaml + config.local.yaml comme dict brut (pour les sections non portées par Config)."""
+    import yaml
+    base = racine / "config.yaml"
+    brut = yaml.safe_load(base.read_text(encoding="utf-8")) or {}
+    local = racine / "config.local.yaml"
+    if local.is_file():
+        surcharge = yaml.safe_load(local.read_text(encoding="utf-8")) or {}
+        brut.update(surcharge)
+    return brut
 
 
 def creer_app(tuteur: Tuteur) -> FastAPI:
@@ -153,6 +166,14 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         if not index.is_file():
             return HTMLResponse("Nouvelle interface non construite : lancer `npm run build` dans front/.", status_code=404)
         return HTMLResponse(index.read_text(encoding="utf-8"))
+
+    # --- Routeur API Pronote (optionnel, si section pronote: dans config.local.yaml) ---
+    _config_brute = _charger_config_brute(tuteur.config.racine)
+    _routeur_pronote = routes_pronote(_config_brute)
+    if _routeur_pronote is not None:
+        enveloppe_pronote = APIRouter(dependencies=[parent])
+        enveloppe_pronote.include_router(_routeur_pronote)
+        app.include_router(enveloppe_pronote, prefix="/api/pronote")
 
     @app.get("/gabarits.js")
     def gabarits() -> Response:

@@ -2,9 +2,9 @@
 // Rubriques et libellés = tests/navigation-reference.json (référence SPEC, EX-202). Ne pas les renommer ici
 // sans changer la référence. Ajouter une section = une entrée ici + un écran dans ecrans/registre.tsx.
 import type { LucideIcon } from "lucide-react"
-import { BookOpen, GraduationCap, Dumbbell, MessageCircle, Users } from "lucide-react"
+import { BookOpen, GraduationCap, Dumbbell, MessageCircle, Users, ClipboardList } from "lucide-react"
 
-export type SectionId = "fiches" | "lecons" | "supports" | "discuter" | "parent"
+export type SectionId = "fiches" | "lecons" | "supports" | "discuter" | "parent" | "pronote"
 
 export type EntreeNav = {
   id: SectionId
@@ -31,6 +31,7 @@ export const RUBRIQUES: Rubrique[] = [
   ] },
   { titre: "Mon espace", entrees: [
     { id: "parent", nom: "Espace parent", Icone: Users, pageExistante: "/parent" },
+    { id: "pronote", nom: "Pronote", Icone: ClipboardList },
   ] },
 ]
 

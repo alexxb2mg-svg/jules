@@ -17,7 +17,7 @@ import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
 /** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
 const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
   s === "fiches" ? { ecran: "fiches", matiere: m } : s === "lecons" ? { ecran: "lecons", matiere: m }
-    : s === "supports" ? { ecran: "supports", matiere: m } : null
+    : s === "supports" ? { ecran: "supports", matiere: m } : s === "pronote" ? { ecran: "pronote" } : null
 
 /** Matière portée par la route (écrans par matière) : elle devient la matière courante. */
 const matiereDe = (r: Route): string | null | undefined =>
