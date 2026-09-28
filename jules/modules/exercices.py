@@ -38,6 +38,7 @@ from jules.generateurs import GENERATEURS, serie_generee
 from jules.modules.base import Module
 from jules.modules.suivi import evenement_suivi
 from jules.stockage import Conversation, Message
+from jules.yaml_rapide import charger as charger_yaml
 
 journal = logging.getLogger("jules.exercices")
 
@@ -134,7 +135,7 @@ class Brique(Module):
                 continue
             for chemin in sorted(dossier.rglob("*.yaml")):
                 try:
-                    fiche = yaml.safe_load(chemin.read_text(encoding="utf-8"))
+                    fiche = charger_yaml(chemin.read_text(encoding="utf-8"))
                 except (OSError, yaml.YAMLError) as err:
                     journal.error("Fiche %s illisible : %s", chemin, err)
                     continue

@@ -41,6 +41,7 @@ from jules.bibliotheques import (
     lire_identite,
 )
 from jules.svg_sur import ErreurSvg, nettoyer_svg
+from jules.yaml_rapide import charger as charger_yaml
 
 # --- constantes du format --------------------------------------------------------
 
@@ -604,7 +605,7 @@ def lire_fiche_visuelle(
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurFicheVisuelle(f"{nom} : fichier trop gros")
     try:
-        brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+        brut = charger_yaml(chemin.read_text(encoding="utf-8")) or {}
     except yaml.YAMLError as err:
         raise ErreurFicheVisuelle(f"{nom} : YAML illisible ({err})") from err
     if not isinstance(brut, dict):
