@@ -2,19 +2,20 @@
 // (choix du type). Données : GET /api/eleve/studio/notions (docs/STUDIO-CONTRAT.md §3 et §6).
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { ArrowRight, Info, Layers, Plus, Trophy, X } from "lucide-react"
+import { ArrowRight, BookOpen, Info, Layers, Plus, Trophy, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { studio, type CatalogueStudio, type NotionStudio, type TypeSupport } from "@/api/jules"
 import { iconeMatiere, ORDRE_MATIERES } from "@/config/matieres"
 import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { ORDRE_TYPES, STATUTS, TYPES } from "./config"
 
-export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan }: {
+export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFiche }: {
   matiere: string | null
   onMatiere: (id: string) => void
   onOuvrir: (support: string, matiere: string) => void
   onBilan: () => void
   onReviser: () => void
+  onFiche?: (notion: string) => void
 }) {
   const [cat, setCat] = useState<CatalogueStudio | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
@@ -68,7 +69,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan }: {
         </div>
       </div>
 
-      <div role="tablist" aria-label="Matières" className="-mx-1 mt-6 mb-7 flex gap-2 overflow-x-auto px-1 pt-1 pb-3 [mask-image:linear-gradient(to_right,black_calc(100%-48px),transparent)] [scrollbar-width:none]">
+      <div role="tablist" aria-label="Matières" className="-mx-1 mt-6 mb-7 flex flex-wrap gap-2 px-1 pt-1 pb-3">
         {matieres.map((m) => {
           const Icone = iconeMatiere(m.id), on = m.id === courante
           return (
@@ -94,6 +95,12 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan }: {
                     className="flex flex-col rounded-3xl border border-bord bg-white p-5 shadow-relief">
                     <span className="text-[0.82rem] font-semibold text-(--m-texte)">{n.chapitre}</span>
                     <h2 className="mt-1 mb-3 text-[1.1rem] leading-snug font-bold text-encre">{n.titre}</h2>
+                    {onFiche && (
+                      <button onClick={() => onFiche(n.id)}
+                        className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-(--m-fond) px-3 py-1.5 text-[0.85rem] font-semibold text-(--m-texte) hover:bg-(--m-accent) hover:text-white transition-colors">
+                        <BookOpen size={14} /> Voir la fiche
+                      </button>
+                    )}
                     <ul className="m-0 mb-3 flex list-none flex-col gap-1.5 p-0">
                       {n.supports.map((s) => {
                         const d = TYPES[s.type], st = STATUTS[s.statut]

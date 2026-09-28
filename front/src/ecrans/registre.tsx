@@ -60,7 +60,8 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
         onMatiere={(m) => aller({ ecran: "supports", matiere: m })}
         onOuvrir={(id, m) => aller({ ecran: "support", matiere: m, id })}
         onReviser={() => aller({ ecran: "revision" })}
-        onBilan={() => aller({ ecran: "bilan" })} />
+        onBilan={() => aller({ ecran: "bilan" })}
+        onFiche={(n) => aller({ ecran: "fiche", notion: n })} />
     </div>
   ),
   bilan: ({ aller }) => <Bilan onRetour={() => aller({ ecran: "supports", matiere: null })} onFiche={(n) => aller({ ecran: "fiche", notion: n })} />,

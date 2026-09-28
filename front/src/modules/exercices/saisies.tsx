@@ -115,8 +115,8 @@ function Association({ exercice, bloque, onRepondre }: PropsSaisie) {
     <div className="flex flex-col gap-3">
       <div className="flex flex-col gap-2">
         {gauche.map((g) => (
-          <div key={g.id} className="flex flex-col gap-2 rounded-2xl border-2 border-bord bg-white px-4 py-3 sm:flex-row sm:items-center">
-            <span className="flex-1 text-[0.98rem] leading-snug"><Riche texte={g.texte} /></span>
+          <div key={g.id} className="flex flex-col gap-2 rounded-2xl border-2 border-bord bg-white px-4 py-3">
+            <span className="text-[0.98rem] leading-snug font-medium"><Riche texte={g.texte} /></span>
             <div className="flex shrink-0 flex-wrap gap-1.5" role="radiogroup" aria-label={g.texte}>
               {droite.map((d) => {
                 const on = paires[g.id] === d.id
