@@ -172,10 +172,12 @@ def _port(profil: Path, delai: float = 20.0) -> int:
     fichier = profil / "DevToolsActivePort"
     limite = time.monotonic() + delai
     while time.monotonic() < limite:
-        if fichier.is_file():
-            lignes = fichier.read_text(encoding="utf-8").split()
-            if lignes:
-                return int(lignes[0])
+        try:
+            lignes = fichier.read_text(encoding="utf-8").split() if fichier.is_file() else []
+        except PermissionError:  # Windows : Chrome ecrit le fichier au meme instant, on reessaie
+            lignes = []
+        if lignes:
+            return int(lignes[0])
         time.sleep(0.05)
     raise ErreurCdp("le navigateur n'a pas publie son port de debogage")
 

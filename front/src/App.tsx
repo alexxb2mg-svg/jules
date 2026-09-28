@@ -12,6 +12,7 @@ import { ECRANS } from "@/ecrans/registre"
 import type { SectionId } from "@/config/navigation"
 import { RappelARanger } from "@/modules/sources/pieces"
 import { BoutonRetour } from "@/composants/BoutonRetour"
+import { Calculatrice } from "@/composants/Calculatrice"
 import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
 
 /** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
@@ -28,6 +29,7 @@ export default function App() {
   const [infos, setInfos] = useState<Infos | null>(null)
   // À distance (tunnel), l'espace d'administration n'existe pas : son lien disparaît de la barre.
   const [admin, setAdmin] = useState(true)
+  const [calcOuverte, setCalcOuverte] = useState(false)  // le panneau calculatrice pousse le contenu (grand écran)
   useEffect(() => {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
     session.etat().then((s) => setAdmin(s.parent)).catch(() => setAdmin(false))
@@ -45,13 +47,14 @@ export default function App() {
         <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
           <SidebarTrigger className="absolute top-3 left-3 z-40 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />
           <AnimatePresence mode="wait">
-            <motion.div key={cle} className="h-full"
+            <motion.div key={cle} className={`h-full transition-[padding] duration-200 ${calcOuverte ? "md:pr-[21rem]" : ""}`}
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 32 }}>
               <Ecran route={route} aller={aller} infos={infos} />
             </motion.div>
           </AnimatePresence>
           {route.ecran !== "perso" && <RappelARanger onOuvrir={(id) => aller({ ecran: "perso", id })} />}
+          <Calculatrice infos={infos} onOuvert={setCalcOuverte} />
           <BoutonRetour testeurs={infos?.retours?.testeurs} />
         </SidebarInset>
       </SidebarProvider>

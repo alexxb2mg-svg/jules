@@ -85,10 +85,11 @@ PAGE_ADMIN_LOCALE = (
 
 
 def _charger_config_brute(racine: Path) -> dict[str, Any]:
-    """Relit config.yaml + config.local.yaml comme dict brut (pour les sections non portées par Config)."""
+    """Relit config.yaml + config.local.yaml comme dict brut (pour les sections non portées par Config).
+    Les deux sont facultatifs : une config construite en mémoire (depuis_dict, tests) n'a pas de fichier."""
     import yaml
     base = racine / "config.yaml"
-    brut = yaml.safe_load(base.read_text(encoding="utf-8")) or {}
+    brut = (yaml.safe_load(base.read_text(encoding="utf-8")) or {}) if base.is_file() else {}
     local = racine / "config.local.yaml"
     if local.is_file():
         surcharge = yaml.safe_load(local.read_text(encoding="utf-8")) or {}
@@ -162,14 +163,17 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         les remplacer. Le build n'est pas versionne : `npm run build` dans front/ le produit."""
         index = STATIQUE / "app" / "index.html"
         if not index.is_file():
-            return HTMLResponse("Nouvelle interface non construite : lancer `npm run build` dans front/.", status_code=404)
+            message = "Nouvelle interface non construite : lancer `npm run build` dans front/."
+            return HTMLResponse(message, status_code=404)
         return HTMLResponse(index.read_text(encoding="utf-8"))
 
     # --- Routeur API Pronote (optionnel, si section pronote: dans config.local.yaml) ---
     _config_brute = _charger_config_brute(tuteur.config.racine)
     _routeur_pronote = routes_pronote(_config_brute)
     if _routeur_pronote is not None:
-        enveloppe_pronote = APIRouter(dependencies=[parent])
+        # Espace de l'eleve (edt, devoirs, notes de l'eleve) : le code eleve suffit, y compris a distance (tunnel).
+        # Les identifiants Pronote restent cote serveur, jamais renvoyes.
+        enveloppe_pronote = APIRouter(dependencies=[eleve])
         enveloppe_pronote.include_router(_routeur_pronote)
         app.include_router(enveloppe_pronote, prefix="/api/pronote")
 
@@ -325,6 +329,14 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
             app.include_router(enveloppe, prefix=prefixe)
 
     return app
+
+    # Fichiers statiques sans cookie (iframe a origine opaque, docs/OUTILS-CONTRAT.md),
+    # montes apres les routes gardees :
+    # /api/eleve/outils/<id>/<fichier> repond sans session ; le catalogue et l'entree restent gardes.
+    for module in tuteur.modules:
+        statiques = module.routes_statiques()
+        if statiques is not None:
+            app.include_router(statiques, prefix=f"/api/eleve/{module.id}")
 
 
 def routes_dossier(tuteur: Tuteur) -> APIRouter:

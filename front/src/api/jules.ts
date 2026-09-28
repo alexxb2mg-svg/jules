@@ -25,6 +25,8 @@ export type Infos = {
   leviers_css: Record<string, string>
   /** Module 'retours' : testeurs déclarés dans le profil (qui peut signer un retour). */
   retours?: { types: string[]; testeurs: string[] }
+  /** Module 'outils' : catalogue des outils isolés disponibles (calculatrice…). */
+  outils?: { catalogue: { id: string; titre?: string; evenements?: string[] }[] }
 }
 
 export const session = {

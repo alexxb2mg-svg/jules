@@ -94,3 +94,16 @@ def test_module_outils_actif_dans_config_yaml_publiee(tuteur):
     with TestClient(creer_app(tuteur)) as client:
         infos = client.get("/api/infos").json()
     assert {o["id"] for o in infos["outils"]["catalogue"]} == {"frise-chronologique", "calculatrice", "lexique"}
+
+def test_fichiers_de_l_outil_servis_sans_cookie_mais_pas_le_reste(client_outils):
+    """Une iframe sandbox sans allow-same-origin n'envoie pas le cookie de session : son outil.js et son outil.css
+    doivent donc se charger sans cookie (sinon l'outil reste vide). Le catalogue et l'entree restent derriere le
+    cookie ; le manifeste et les sorties de dossier restent refuses."""
+    client_outils.delete("/api/session")
+    base = "/api/eleve/outils/calculatrice"
+    assert client_outils.get(f"{base}/outil.js").status_code == 200
+    assert client_outils.get(f"{base}/outil.css").status_code == 200
+    assert client_outils.get(f"{base}/").status_code == 401
+    assert client_outils.get("/api/eleve/outils/catalogue").status_code == 401
+    assert client_outils.get(f"{base}/outil.yaml").status_code == 404
+    assert client_outils.get(f"{base}/..%2f..%2fconfig.yaml").status_code == 404
