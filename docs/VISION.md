@@ -124,9 +124,9 @@ tout le contenu est préécrit, relu, et rendu par du code déterministe (cadrag
 Jules ») ; ouvrir la petite fenêtre de chat depuis une fiche y renvoie avec la notion de la fiche
 déjà choisie.
 
-Cinq fiches expérimentales de mathématiques 3e existent dans
-`bibliotheque/fiches-visuelles-3e-experimentales/` (fonctions linéaires et affines, Thalès et
-triangles semblables, théorème de Pythagore, équations, probabilités), marquées `a_relire`.
+23 fiches expérimentales de 3e existent dans `bibliotheque/fiches-visuelles-3e-experimentales/`,
+marquées `a_relire` : 5 de mathématiques (fonctions linéaires et affines, Thalès et triangles
+semblables, théorème de Pythagore, équations, probabilités), 11 d'histoire et 7 de géographie.
 
 **Reste à faire sur cet axe** : les autres matières et niveaux, plus de gabarits de figures, et
 brancher plus finement la fenêtre de chat flottante à la conversation en cours si l'élève y est
@@ -195,7 +195,7 @@ Les principes :
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, quatre niveaux migrés (CM1, 5e, 4e, 3e) ; reste le chargement selon l'âge et les autres niveaux |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, 19 leçons expérimentales `a_relire`, 8 matières) ; reste le bloc `outil` |
-| 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`) ; 405 fiches expérimentales `a_relire` dans jules-bibliotheques (3e : 247, 12 matières ; CM1 : 158, 10 matières), 5 exemples ici ; reste la relecture et les autres niveaux |
+| 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`) ; 405 fiches expérimentales `a_relire` dans jules-bibliotheques (3e : 247, 12 matières ; CM1 : 158, 10 matières), 23 exemples ici (mathématiques, histoire, géographie) ; reste la relecture et les autres niveaux |
 | 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | en partie fait : contrat (`docs/OUTILS-CONTRAT.md`), isolement (iframe sandbox), trois outils de référence livrés comme extensions, bloc `outil` monté dans la leçon, calculatrice à côté de Jules ; reste des leçons qui utilisent le bloc `outil` et le protocole de validation communautaire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | fait (`jules/modules/studio.py`, `jules/studio.py`, `jules/revisions.py`, page `/studio`, `docs/STUDIO-CONTRAT.md`) |
 | 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |
