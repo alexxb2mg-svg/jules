@@ -109,6 +109,11 @@ def donnees(client) -> dict[str, Any]:
     return faits
 
 
+def fiches_de(donnees: dict[str, Any], matiere: str) -> list[dict[str, Any]]:
+    """Notions a fiche visuelle d'une matiere, prises par identifiant (l'ordre des matieres suit l'alphabet)."""
+    return next(m for m in donnees["fiches_reponse"]["matieres"] if m["id"] == matiere)["notions"]
+
+
 def memoire(matiere: str | None) -> str:
     """Script `avant` : localStorage vide, puis `jules.matiere` si une matiere est donnee."""
     ecrire = f"localStorage.setItem('jules.matiere', {json.dumps(matiere)});" if matiere else ""
@@ -323,7 +328,7 @@ def test_ex209f_notion_d_une_autre_matiere_laisse_la_liste(banc):
 
 
 def test_ex209g_nav_dans_l_adresse_restaure_le_chapitre(banc, donnees):
-    notions = donnees["fiches_reponse"]["matieres"][0]["notions"]
+    notions = fiches_de(donnees, "mathematiques")
     chapitre = notions[-1]["chapitre"]
     fragment = "nav=fiches/mathematiques/" + urllib.parse.quote(chapitre, safe="")
     r = jouer(
@@ -353,7 +358,7 @@ def test_ex209g_nav_mal_forme_etape_1_sans_erreur(banc, fragment):
 
 
 def test_ex209h_retour_rend_le_focus_au_chapitre_ouvert(banc, donnees):
-    chapitres = sorted({n["chapitre"] for n in donnees["fiches_reponse"]["matieres"][0]["notions"]})
+    chapitres = sorted({n["chapitre"] for n in fiches_de(donnees, "mathematiques")})
     r = jouer(
         banc,
         "/cours",
