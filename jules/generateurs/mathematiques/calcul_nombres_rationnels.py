@@ -55,6 +55,9 @@ def _fuite_texte(reponse_num: int, reponse_den: int, *textes: str) -> bool:
     fractions (« 5/4 = ... et .../4 ») peut ainsi faire fuir la réponse par la seule adjacence de deux
     nombres qui n'ont rien à voir entre eux. On reproduit ici la même normalisation pour filtrer le
     tirage, plutôt que de réécrire l'indice.
+
+    Voir aussi : lecons.contient_la_reponse, fiches/schema._fuite, modules/studio._est_recopie ;
+    duplication voulue (chaque brique reste autonome), reporter tout correctif dans les autres.
     """
     from jules.fiches.schema import cle_texte
 

@@ -36,6 +36,7 @@ from jules.fiches.parcours import exercice as exercice_de
 from jules.fiches.schema import est_v2, servable_sans_ia
 from jules.generateurs import GENERATEURS, serie_generee
 from jules.modules.base import Module
+from jules.modules.suivi import evenement_suivi
 from jules.stockage import Conversation, Message
 
 journal = logging.getLogger("jules.exercices")
@@ -95,6 +96,7 @@ def _rendre_exercice(vue: dict[str, Any]) -> str:
 class Brique(Module):
     id = "exercices"
     titre = "Exercices sans IA en cours"
+    dependances = ("notions",)
 
     def __init__(self, tuteur: Any, reglages: dict[str, Any]) -> None:
         super().__init__(tuteur, reglages)
@@ -183,7 +185,14 @@ class Brique(Module):
         )
         self.tuteur.stockage.ajouter_evenement(
             "suivi",
-            {"matiere": nom_matiere, "notion": titre_notion, "statut": statut, "resume": resume, "titre": titre_notion},
+            evenement_suivi(
+                matiere=nom_matiere,
+                notion=titre_notion,
+                statut=statut,
+                resume=resume,
+                titre=titre_notion,
+                origine="exercices",
+            ),
             conv_id,
         )
 

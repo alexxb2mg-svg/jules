@@ -76,7 +76,9 @@ class Modele:
 
 @pytest.fixture
 def brut_config_sources(brut_config: dict) -> dict:
-    brut_config["modules"] = [*brut_config["modules"], {"id": "sources", "reglages": {"generations_par_jour": 3}}]
+    # sources est active dans config.yaml : on remplace son reglage (quota de test), sinon on l'ajoute
+    autres = [m for m in brut_config["modules"] if not (isinstance(m, dict) and m.get("id") == "sources")]
+    brut_config["modules"] = [*autres, {"id": "sources", "reglages": {"generations_par_jour": 3}}]
     return brut_config
 
 

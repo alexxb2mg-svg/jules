@@ -7,6 +7,7 @@ actions:
   - afficher
 evenements:
   - calcul_effectue
+  - fermer
 permissions: []
 auteurs: ["jules-outils-s2"]
 licence: MIT

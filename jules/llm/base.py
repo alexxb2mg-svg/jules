@@ -56,7 +56,12 @@ def cle_api(reglages: dict[str, Any], obligatoire: bool = True) -> str:
     nom = str(reglages.get("cle_env") or "")
     valeur = os.environ.get(nom, "") if nom else ""
     if obligatoire and not valeur:
-        raise ErreurLLM(f"Cle API absente : definir la variable {nom or '(llm.cle_env non renseigne)'} dans .env")
+        cible = nom or "(llm.cle_env non renseigne dans config.yaml)"
+        raise ErreurLLM(
+            f"Cle API absente : la variable {cible} n'est pas definie. Colle ta cle dans le fichier "
+            ".env a la racine du projet, sur une ligne ANTHROPIC_API_KEY=... (ou le nom indique par "
+            "llm.cle_env), puis relance."
+        )
     return valeur
 
 

@@ -6,8 +6,6 @@ Les routes des modules sont montees automatiquement sous /api/modules/<id> (acce
 from __future__ import annotations
 
 import re
-import time
-from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any
 
@@ -21,6 +19,7 @@ from jules import dossier, page_adaptations
 from jules.acces import COOKIE, DUREE_S, Acces
 from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
+from jules.web.limite import LimiteEssais
 
 STATIQUE = Path(__file__).parent / "static"
 EXTENSIONS = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
@@ -28,6 +27,7 @@ IMAGE_MAX_OCTETS = 8 * 1024 * 1024
 IMAGES_PAR_MESSAGE = 3
 TEXTE_MAX = 6000
 ESSAIS_MAX = 8  # tentatives de code par tranche de 10 min et par adresse
+ESSAIS_MAX_GLOBAL = 30  # meme fenetre, toutes IP confondues (LAN familial avec plusieurs appareils)
 ADRESSE_BLOC = re.compile(r"[a-z_]+(?:/[\w.-]+){1,3}")  # type de bloc, puis un a trois identifiants
 ENTETES_SECURITE = {
     # Aucun script, style ou image venant d'ailleurs ; pas d'affichage dans un cadre d'un autre site.
@@ -79,7 +79,7 @@ class NouvelleConversation(BaseModel):
 def creer_app(tuteur: Tuteur) -> FastAPI:
     app = FastAPI(title="Jules", docs_url=None, redoc_url=None, openapi_url=None)
     acces = Acces(tuteur.config.acces, tuteur.config.donnees / "secret.key")
-    essais: dict[str, deque[float]] = defaultdict(deque)
+    essais = LimiteEssais(ESSAIS_MAX, ESSAIS_MAX_GLOBAL)
     app.state.tuteur = tuteur
     app.state.acces = acces
 
@@ -157,14 +157,11 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     @app.post("/api/session")
     def ouvrir(entree: CodeEntree, request: Request, response: Response) -> dict[str, str]:
         adresse = request.client.host if request.client else "?"
-        fenetre = essais[adresse]
-        while fenetre and fenetre[0] < time.time() - 600:
-            fenetre.popleft()
-        if len(fenetre) >= ESSAIS_MAX:
+        if not essais.autorise(adresse):
             raise HTTPException(429, "Trop d'essais, attends 10 minutes")
         role = acces.verifier_code(entree.code)
         if role is None:
-            fenetre.append(time.time())
+            essais.enregistrer_echec(adresse)
             raise HTTPException(401, "Code incorrect")
         response.set_cookie(COOKIE, acces.jeton(role), max_age=DUREE_S, httponly=True, samesite="strict")
         return {"role": role}

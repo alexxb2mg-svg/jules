@@ -20,12 +20,15 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "notions",
         "fiches_visuelles",
         "cours",
+        "outils",
         "studio",
         "exercices",
         "memoire",
         "suivi",
         "vigilance",
         "epreuve",
+        "sources",
+        "retours",
         "rapport",
     ]
     assert [type(n).__module__ for n in tuteur.notifieurs] == ["jules.notifieurs.fichier"]
@@ -216,6 +219,22 @@ def test_rapport_dernier_statut_gagne():
     ]
     d = donnees_du_jour([], suivis, [])
     assert d["notions"]["Maths : Thalès"]["statut"] == "compris"
+
+
+def test_rapport_rappelle_que_compris_est_une_estimation():
+    """Le parent voit un rappel : seul 'acquis' vient d'une epreuve sans aide (constat de revue,
+    'compris' peut donner une fausse impression de certitude)."""
+    suivis = [{"donnees": {"matiere": "Maths", "notion": "Thalès", "statut": "compris", "resume": ""}}]
+    d = donnees_du_jour([{"conversation": "a", "role": "eleve", "horodatage": "2026-09-24T18:00:00"}], suivis, [])
+    texte = texte_rapport("Camille", "2026-09-24", d)
+    assert "estimé par l'IA" in texte
+    assert "Seul « acquis » vient d'une épreuve sans aide." in texte
+
+
+def test_rapport_sans_notion_pas_de_rappel_estimation():
+    d = donnees_du_jour([{"conversation": "a", "role": "eleve", "horodatage": "2026-09-24T18:00:00"}], [], [])
+    texte = texte_rapport("Camille", "2026-09-24", d)
+    assert "estimé par l'IA" not in texte
 
 
 def test_bilan_notions_fenetre():

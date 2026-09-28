@@ -120,6 +120,7 @@ class ReponseCarteEntree(BaseModel):
 class Brique(Module):
     id = "studio"
     titre = "Studio de révision"
+    dependances = ("cours",)
 
     # --- module dont on depend --------------------------------------------
     @property

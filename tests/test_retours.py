@@ -16,8 +16,8 @@ from tests.conftest import regle_par_defaut
 
 @pytest.fixture
 def tuteur(projet: Path, brut_config: dict):
-    if not any(m.get("id") == "retours" for m in brut_config["modules"] if isinstance(m, dict)):
-        brut_config["modules"] = [*brut_config["modules"], {"id": "retours", "reglages": {"par_jour": 3}}]
+    autres = [m for m in brut_config["modules"] if not (isinstance(m, dict) and m.get("id") == "retours")]
+    brut_config["modules"] = [*autres, {"id": "retours", "reglages": {"par_jour": 3}}]
     llm = Factice()
     llm.regle = regle_par_defaut
     t = Tuteur(depuis_dict(brut_config, projet), llm=llm)
