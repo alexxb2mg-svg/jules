@@ -203,7 +203,10 @@ def _vivant(pid: int) -> bool:
             noyau.CloseHandle(poignee)
     etat = Path(f"/proc/{pid}/stat")
     if etat.exists():
-        return etat.read_text().rsplit(")", 1)[1].split()[0] != "Z"
+        try:
+            return etat.read_text().rsplit(")", 1)[1].split()[0] != "Z"
+        except (ProcessLookupError, FileNotFoundError):
+            return False  # le processus a disparu entre exists() et read_text() (course vue en CI)
     try:
         os.kill(pid, 0)
     except ProcessLookupError:

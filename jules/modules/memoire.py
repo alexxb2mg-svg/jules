@@ -16,6 +16,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from jules.modules.base import Module
+from jules.modules.suivi import dernier_statut
 from jules.stockage import Conversation
 
 ESPACE = "memoire"
@@ -27,17 +28,17 @@ class NoteEntree(BaseModel):
 
 
 def bilan_notions(evenements: list[dict[str, Any]], jours: int, aujourdhui: date) -> dict[str, list[str]]:
-    """Derniere situation connue de chaque notion sur la periode (evenements du plus recent au plus ancien)."""
+    """Derniere situation retenue de chaque notion sur la periode (voir jules.modules.suivi.dernier_statut :
+    'acquis' n'est retrograde que par une origine qui reprend directement la notion, jamais par
+    l'analyse en tache de fond)."""
     limite = (aujourdhui - timedelta(days=jours)).isoformat()
     vus: dict[str, str] = {}
-    for ev in evenements:
+    for _cle, ev in dernier_statut(evenements).items():
         if ev["horodatage"][:10] < limite:
             continue
         d = ev["donnees"]
-        if d.get("statut") == "hors_scolaire" or not d.get("notion"):
-            continue
-        cle = f"{d.get('matiere', 'Autre')} : {d['notion']}"
-        vus.setdefault(cle, d["statut"])
+        libelle = f"{d.get('matiere', 'Autre')} : {d['notion']}"
+        vus[libelle] = d["statut"]
     return {
         "bloque": [n for n, s in vus.items() if s == "bloque"],
         "compris": [n for n, s in vus.items() if s == "compris"],

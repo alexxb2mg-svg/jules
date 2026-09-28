@@ -558,6 +558,9 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
     Navigation.monter(session, etat.infos);  // barre commune ; elle fixe aussi le titre d'onglet (EX-211)
     MS.appliquerCouleurs(etat.infos.persona.couleurs);
     etat.leviers = MS.appliquerLeviers(etat.infos);
+    // EX-217 : calculatrice a cote du rond J (au-dessus de lui a partir de 600 px, a sa gauche dans la bande de
+    // Jules sur telephone) ; absente si l'outil n'est pas au catalogue.
+    Calculatrice.monter(etat.infos, { voisin: $("avatar-jules"), place: "avant", variante: "rond", bande: $("jules-bulles"), leviers: etat.leviers });
     MS.signalerFinDeSeance();
     $("avatar-jules").addEventListener("click", () => basculerChat());
     $("chat-flottant-reduire").addEventListener("click", () => basculerChat(false));

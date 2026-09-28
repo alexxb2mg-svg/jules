@@ -14,6 +14,12 @@ Un module = jules/modules/<id>.py avec une classe `Brique(Module)`. Il peut :
     (points d'accroche des extensions, voir docs/EXTENSIONS.md : ils ne donnent que ce que leur nom
     promet et ne declenchent jamais d'appel IA par eux-memes)
 Tout est optionnel : un module n'implemente que ce dont il a besoin.
+
+Dependances : un module qui a besoin qu'un autre module soit actif (ex. 'cours' a besoin de
+'notions') le declare dans `dependances` (tuple d'ids). Le moteur (jules/moteur.py, Tuteur.__init__)
+verifie que chaque dependance est bien parmi les modules actifs, sinon il refuse de demarrer avec un
+message clair. Cette verification est une securite au demarrage : elle ne remplace pas les controles
+existants dans le code du module (RuntimeError sur les @property qui exigent le module manquant).
 """
 
 from __future__ import annotations
@@ -41,6 +47,7 @@ class Tache:
 class Module:
     id = "module"
     titre = ""  # titre de la section ajoutee au prompt
+    dependances: tuple[str, ...] = ()  # ids d'autres modules qui doivent etre actifs (voir docstring)
 
     def __init__(self, tuteur: Tuteur, reglages: dict[str, Any]) -> None:
         self.tuteur = tuteur
