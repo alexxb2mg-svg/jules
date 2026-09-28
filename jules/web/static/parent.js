@@ -59,7 +59,8 @@
     for (const r of liste) {
       const li = document.createElement("li");
       const quand = MS.echapper(MS.heure(r.cree_le));
-      li.innerHTML = `<span><b>${MS.echapper(TYPES_RETOUR[r.type] || r.type)}</b>${r.traite ? " <span class=\"muet\">(traité)</span>" : ""} : `
+      const qui = r.auteur ? ` <span class="muet">— ${MS.echapper(r.auteur)}</span>` : "";
+      li.innerHTML = `<span><b>${MS.echapper(TYPES_RETOUR[r.type] || r.type)}</b>${qui}${r.traite ? " <span class=\"muet\">(traité)</span>" : ""} : `
         + `${MS.echapper(r.texte).replace(/\n/g, "<br>")}<br><span class="muet">${quand} · `
         + `<a href="${MS.echapper(r.adresse)}" target="_blank" rel="noopener">${MS.echapper(r.adresse)}</a>`
         + `${r.ecran ? ` · écran ${MS.echapper(r.ecran)}` : ""}</span></span>`;

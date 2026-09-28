@@ -44,6 +44,8 @@ class Profil:
     genre: str = GENRE_DEFAUT
     details: dict[str, Any] = field(default_factory=dict)
     amenagements: list[str] = field(default_factory=list)  # identifiants : jamais dans le prompt
+    # Qui peut signer un retour (bouton « Un souci, une idée ? ») : prenoms, jamais dans le prompt.
+    testeurs: list[str] = field(default_factory=list)
 
     def variables(self) -> dict[str, str]:
         return {"prenom": self.prenom, "classe": self.classe, "parent": self.parent}
@@ -69,8 +71,12 @@ def charger_profil(chemin: Path) -> Profil:
     genre = normaliser_genre(brut.pop("genre", GENRE_DEFAUT))
     amenagements = lire_ids_amenagements(brut.pop("amenagements", None))
     brut.pop("preferences", None)  # reglages d'affichage du parent (EX-108) : jamais dans le prompt
+    testeurs = [str(t).strip()[:40] for t in brut.pop("testeurs", None) or [] if str(t).strip()][:10]
     details = effacer_ids(brut, amenagements)
-    return Profil(prenom=prenom, classe=classe, parent=parent, genre=genre, details=details, amenagements=amenagements)
+    return Profil(
+        prenom=prenom, classe=classe, parent=parent, genre=genre, details=details, amenagements=amenagements,
+        testeurs=testeurs,
+    )  # fmt: skip
 
 
 def lire_ids_amenagements(valeur: Any) -> list[str]:

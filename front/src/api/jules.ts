@@ -23,6 +23,8 @@ export type Infos = {
   persona: { id: string; nom: string; accueil: string; couleurs: Record<string, string>; avatar: boolean }
   leviers: Record<string, unknown>
   leviers_css: Record<string, string>
+  /** Module 'retours' : testeurs déclarés dans le profil (qui peut signer un retour). */
+  retours?: { types: string[]; testeurs: string[] }
 }
 
 export const session = {
@@ -176,7 +178,7 @@ const S = (id: string) => `/api/eleve/cours/sessions/${encodeURIComponent(id)}`
 /* ---- retours : bugs, dysfonctionnements, suggestions (jules/modules/retours.py) ---- */
 export type TypeRetour = "bug" | "dysfonctionnement" | "suggestion" | "amelioration"
 export const retours = {
-  deposer: (r: { type: TypeRetour; texte: string; adresse: string; titre_page: string; ecran: string }) =>
+  deposer: (r: { type: TypeRetour; texte: string; adresse: string; titre_page: string; ecran: string; auteur?: string }) =>
     api<{ id: string; ok: boolean }>("/api/eleve/retours/deposer", json(r)),
 }
 

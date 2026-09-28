@@ -19,6 +19,7 @@ export const TEXTES_RETOUR = {
     amelioration: "Qu'est-ce qui pourrait être plus clair, plus simple, plus joli ?",
   } as Record<TypeRetour, string>,
   envoyer: "Envoyer",
+  qui: "Qui écrit ?",
   merci: "Merci ! C'est noté.",
   fermer: "Fermer",
 }
@@ -30,7 +31,8 @@ export const TYPES_RETOUR: { id: TypeRetour; nom: string; Icone: typeof Bug; cla
   { id: "amelioration", nom: "Amélioration", Icone: Sparkles, classe: "border-[#D8C7FA] bg-perso-clair text-perso" },
 ]
 
-export function BoutonRetour() {
+/** `testeurs` : prénoms déclarés dans le profil (profil de test) ; vide = l'élève, pas de question. */
+export function BoutonRetour({ testeurs = [] }: { testeurs?: string[] }) {
   const [ouvert, setOuvert] = useState(false)
   return (
     <>
@@ -39,16 +41,22 @@ export function BoutonRetour() {
         className="absolute bottom-4 left-4 z-40 grid size-10 place-items-center rounded-full border border-bord bg-white/90 text-gris opacity-70 shadow-relief backdrop-blur transition-[opacity,color] hover:text-encre hover:opacity-100 focus-visible:opacity-100">
         <MessageSquareWarning size={18} />
       </motion.button>
-      <AnimatePresence>{ouvert && <FenetreRetour onFermer={() => setOuvert(false)} />}</AnimatePresence>
+      <AnimatePresence>{ouvert && <FenetreRetour testeurs={testeurs} onFermer={() => setOuvert(false)} />}</AnimatePresence>
     </>
   )
 }
 
-function FenetreRetour({ onFermer }: { onFermer: () => void }) {
+const CLE_AUTEUR = "jules.retour-auteur"
+
+function FenetreRetour({ testeurs, onFermer }: { testeurs: string[]; onFermer: () => void }) {
   // L'adresse est prise à l'ouverture : c'est la page que l'élève regardait.
   const [adresse] = useState(() => window.location.pathname + window.location.hash)
   const [type, setType] = useState<TypeRetour>("bug")
   const [texte, setTexte] = useState("")
+  // Le dernier auteur choisi est retenu sur l'appareil (chacun teste en général sur le sien).
+  const [auteur, setAuteur] = useState<string>(() => {
+    try { const a = localStorage.getItem(CLE_AUTEUR) ?? ""; return testeurs.includes(a) ? a : "" } catch { return "" }
+  })
   const [envoi, setEnvoi] = useState(false)
   const [erreur, setErreur] = useState<string | null>(null)
   const [fait, setFait] = useState(false)
@@ -58,10 +66,11 @@ function FenetreRetour({ onFermer }: { onFermer: () => void }) {
   useEffect(() => { if (fait) { const t = setTimeout(onFermer, 1400); return () => clearTimeout(t) } }, [fait, onFermer])
 
   const envoyer = async () => {
-    if (texte.trim().length < 3 || envoi) return
+    if (texte.trim().length < 3 || envoi || (testeurs.length > 0 && !auteur)) return
     setEnvoi(true); setErreur(null)
     try {
-      await retours.deposer({ type, texte: texte.trim(), adresse, titre_page: document.title, ecran: `${innerWidth}x${innerHeight}` })
+      await retours.deposer({ type, texte: texte.trim(), adresse, titre_page: document.title, ecran: `${innerWidth}x${innerHeight}`, auteur: auteur || undefined })
+      try { if (auteur) localStorage.setItem(CLE_AUTEUR, auteur) } catch { /* stockage indisponible */ }
       setFait(true)
     } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
@@ -85,6 +94,18 @@ function FenetreRetour({ onFermer }: { onFermer: () => void }) {
               <button onClick={onFermer} aria-label={TEXTES_RETOUR.fermer} className="grid size-8 place-items-center rounded-full text-gris hover:bg-nav"><X size={17} /></button>
             </div>
             <p className="mt-0 mb-4 text-[0.92rem] text-gris">{TEXTES_RETOUR.aide}</p>
+            {testeurs.length > 0 && (
+              <div role="radiogroup" aria-label={TEXTES_RETOUR.qui} className="mb-3 flex flex-wrap items-center gap-2">
+                <span className="text-[0.9rem] font-semibold text-encre">{TEXTES_RETOUR.qui}</span>
+                {testeurs.map((t) => (
+                  <button key={t} role="radio" aria-checked={auteur === t} onClick={() => setAuteur(t)}
+                    className={cn("rounded-full border-2 px-3.5 py-1 text-[0.9rem] font-semibold transition-colors",
+                      auteur === t ? "border-bleu bg-bleu text-white" : "border-bord bg-white text-encre hover:border-bleu/40")}>
+                    {t}
+                  </button>
+                ))}
+              </div>
+            )}
             <div role="radiogroup" aria-label="Type" className="mb-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
               {TYPES_RETOUR.map((t) => (
                 <button key={t.id} role="radio" aria-checked={type === t.id} onClick={() => setType(t.id)}
@@ -101,7 +122,7 @@ function FenetreRetour({ onFermer }: { onFermer: () => void }) {
             <p className="mt-2 mb-0 truncate text-[0.8rem] text-gris" title={adresse}>{TEXTES_RETOUR.page} : <code className="rounded bg-nav px-1.5 py-0.5">{adresse}</code></p>
             {erreur && <p role="alert" className="mt-2 mb-0 text-[0.9rem] text-rouge">{erreur}</p>}
             <div className="mt-4 flex justify-end">
-              <motion.button whileTap={{ scale: 0.96 }} onClick={envoyer} disabled={texte.trim().length < 3 || envoi}
+              <motion.button whileTap={{ scale: 0.96 }} onClick={envoyer} disabled={texte.trim().length < 3 || envoi || (testeurs.length > 0 && !auteur)}
                 className="rounded-full bg-bleu px-5 py-2.5 font-semibold text-white shadow-relief disabled:opacity-40">
                 {TEXTES_RETOUR.envoyer}
               </motion.button>

@@ -37,6 +37,7 @@ class RetourEntree(BaseModel):
     adresse: str = Field(default="", max_length=ADRESSE_MAX)
     titre_page: str = Field(default="", max_length=200)
     ecran: str = Field(default="", max_length=40)
+    auteur: str = Field(default="", max_length=40)
 
 
 class EtatEntree(BaseModel):
@@ -72,8 +73,16 @@ class Brique(Module):
         du_jour = sum(1 for r in liste if r["cree_le"][:10] == maintenant.date().isoformat())
         if du_jour >= int(self.reglages.get("par_jour", 30)):
             raise PermissionError("Beaucoup de retours aujourd'hui : on en reparle demain.")
+        # Auteur : un des testeurs declares dans le profil (profils/<id>.yaml, `testeurs:`), sinon l'eleve.
+        testeurs = self.tuteur.profil().testeurs
+        auteur = entree.auteur.strip()
+        if auteur and auteur not in testeurs:
+            raise ValueError("Auteur inconnu.")
+        if testeurs and not auteur:
+            raise ValueError("Dis-nous qui écrit.")
         retour = {
             "id": uuid.uuid4().hex[:10],
+            "auteur": auteur or self.tuteur.profil().prenom,
             "type": entree.type,
             "texte": texte,
             "adresse": _nettoyer_adresse(entree.adresse),
@@ -106,10 +115,14 @@ class Brique(Module):
         routeur = APIRouter()
 
         @routeur.get("/liste")
-        def lister(type: str | None = None, traite: bool | None = None) -> list[dict[str, Any]]:
+        def lister(
+            type: str | None = None, traite: bool | None = None, auteur: str | None = None
+        ) -> list[dict[str, Any]]:
             return [
                 r for r in self.liste()
-                if (type is None or r["type"] == type) and (traite is None or r["traite"] == traite)
+                if (type is None or r["type"] == type)
+                and (traite is None or r["traite"] == traite)
+                and (auteur is None or r.get("auteur") == auteur)
             ]  # fmt: skip
 
         @routeur.patch("/{retour_id}")
@@ -134,4 +147,4 @@ class Brique(Module):
         return routeur
 
     def infos_interface(self) -> dict[str, Any]:
-        return {"retours": {"types": list(TYPES)}}
+        return {"retours": {"types": list(TYPES), "testeurs": self.tuteur.profil().testeurs}}

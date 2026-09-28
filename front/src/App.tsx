@@ -49,7 +49,7 @@ export default function App() {
             </motion.div>
           </AnimatePresence>
           {route.ecran !== "perso" && <RappelARanger onOuvrir={(id) => aller({ ecran: "perso", id })} />}
-          <BoutonRetour />
+          <BoutonRetour testeurs={infos?.retours?.testeurs} />
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>
