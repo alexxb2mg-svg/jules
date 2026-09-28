@@ -17,6 +17,7 @@ import { choisirMatiere } from "@/modules/accueil/etat"
 import { Bilan } from "@/modules/accueil/Bilan"
 import { Pronote } from "@/modules/pronote/Pronote"
 import { Parent } from "@/modules/parent/Parent"
+import { Chat } from "@/modules/chat/Chat"
 
 export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
 type Ecran = (p: PropsEcran) => React.JSX.Element | null
@@ -88,5 +89,6 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
     </div>
   ),
   pronote: () => <Pronote />,
+  discuter: () => <Chat />,
   parent: () => <Parent />,
 }

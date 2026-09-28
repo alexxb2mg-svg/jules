@@ -24,6 +24,7 @@ export type Route =
   | { ecran: "perso"; id: string }
   | { ecran: "dossier"; id: string }
   | { ecran: "bilan" }
+  | { ecran: "discuter" }
   | { ecran: "pronote" }
   | { ecran: "parent" }
 
@@ -37,6 +38,7 @@ export function lireRoute(hash = window.location.hash): Route {
   if ((m = hash.match(new RegExp(`^#/supports(?:/${ID})?/?$`)))) return { ecran: "supports", matiere: m[1] || null }
   if (/^#\/revision\/?$/.test(hash)) return { ecran: "revision" }
   if (/^#\/ajouter\/?$/.test(hash)) return { ecran: "ajouter" }
+  if (/^#\/discuter\/?$/.test(hash)) return { ecran: "discuter" }
   if (/^#\/bilan\/?$/.test(hash)) return { ecran: "bilan" }
   if (/^#\/pronote\/?$/.test(hash)) return { ecran: "pronote" }
   if (/^#\/parent\/?$/.test(hash)) return { ecran: "parent" }
@@ -60,6 +62,7 @@ export function ecrireRoute(r: Route): string {
     case "perso": return `#/perso/${r.id}`
     case "dossier": return `#/dossier/${r.id}`
     case "bilan": return "#/bilan"
+    case "discuter": return "#/discuter"
     case "pronote": return "#/pronote"
     case "parent": return "#/parent"
   }
@@ -69,7 +72,7 @@ export function ecrireRoute(r: Route): string {
 export const sectionDe = (r: Route): SectionId =>
   r.ecran === "fiche" || r.ecran === "fiches" || r.ecran === "ajouter" || r.ecran === "perso" || r.ecran === "dossier" ? "fiches"
     : r.ecran === "supports" || r.ecran === "support" || r.ecran === "revision" || r.ecran === "bilan" ? "supports"
-    : r.ecran === "pronote" ? "pronote" : r.ecran === "parent" ? "parent" : "lecons"
+    : r.ecran === "discuter" ? "discuter" : r.ecran === "pronote" ? "pronote" : r.ecran === "parent" ? "parent" : "lecons"
 
 export function useRoute(): [Route, (r: Route) => void] {
   const [route, setRoute] = useState<Route>(() => lireRoute())

@@ -11,8 +11,8 @@ async function api<T>(chemin: string, init?: RequestInit): Promise<T> {
   }
   return r.json() as Promise<T>
 }
-const json = (corps: unknown): RequestInit => ({
-  method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps),
+const json = (corps: unknown, method = "POST"): RequestInit => ({
+  method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps),
 })
 
 /* ---- session, infos de l'interface (persona, leviers dys) ---- */
@@ -48,15 +48,38 @@ export const fiches = {
 
 export type MessageJules = { role: "eleve" | "jules" | string; texte: string; horodatage?: string; images?: string[] }
 export type Conversation = { id: string; mode: string; titre?: string; messages: MessageJules[] }
+export type ConversationResume = { id: string; titre: string; mode: string; nb: number; debut: string; dernier: string }
+export type ModeChat = { id: string; nom: string; icone: string; description: string; cache?: boolean }
+export type InfosChat = Infos & {
+  modes?: ModeChat[]
+  notions?: { matieres: { nom: string; notions: { id: string; titre: string; chapitre: string; fiche?: boolean }[] }[]; bibliotheques: { titre: string; avertissement?: string }[] }
+  epreuve?: boolean
+  exercices?: { id: string; titre: string; nb: number; generateur?: boolean }[]
+}
 
 export const conversations = {
+  lister: () => api<ConversationResume[]>("/api/conversations"),
   lire: (id: string) => api<Conversation>(`/api/conversations/${encodeURIComponent(id)}`),
   creer: (mode?: string) => api<{ id: string; mode: string }>("/api/conversations", json({ mode })),
-  envoyer: (id: string, texte: string) => {
+  envoyer: (id: string, texte: string, photos?: Blob[]) => {
     const f = new FormData()
     f.append("texte", texte)
+    if (photos) photos.forEach((b, i) => f.append("photos", b, `photo${i}.jpg`))
     return api<{ reponse: string; horodatage: string }>(`/api/conversations/${encodeURIComponent(id)}/messages`, { method: "POST", body: f })
   },
+}
+
+export const infosChat = () => api<InfosChat>("/api/infos")
+
+export const epreuve = {
+  proposition: () => api<{ notions: { notion: string }[] }>("/api/eleve/epreuve/proposition"),
+  commencer: () => api<{ id: string; mode: string; titre: string; presentation: string }>("/api/eleve/epreuve/commencer", { method: "POST" }),
+}
+
+export const notionsTravaillees = {
+  lire: (convId: string) => api<{ notion: { id: string; titre: string; matiere: string; origine?: string } | null }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`),
+  choisir: (convId: string, notionId: string) => api<{ notion: { id: string; titre: string; matiere: string } }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`, json({ notion: notionId }, "PUT")),
+  retirer: (convId: string) => api<void>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`, { method: "DELETE" }),
 }
 
 /* ---- exercices des fiches v2 : corrigés par le code (jules/fiches/correction.py), jamais par l'IA ---- */
