@@ -1,0 +1,56 @@
+notion: dynamiques-espaces-faible-densite
+titre: "La diversité des dynamiques des espaces de faible densité"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Montagne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Montagne&oldid=2563354"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Aménagement du territoire en France »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Am%C3%A9nagement_du_territoire_en_France&oldid=233193019"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: faible-densite, titre: "Espace de faible densité", sous_titre: "rural, montagne, littoral peu urbanisé", principal: true}
+      - {id: diagonale-du-vide, titre: "Diagonale du vide", sous_titre: "axe du nord-est au sud-ouest"}
+      - {id: neoruraux, titre: "Néoruraux", sous_titre: "nouveaux habitants venus des villes"}
+      - {id: montagne, titre: "Montagne", sous_titre: "élevage, tourisme, hydroélectricité"}
+    liens:
+      - {de: faible-densite, vers: diagonale-du-vide, libelle: "concentre"}
+      - {de: faible-densite, vers: neoruraux, libelle: "attire"}
+      - {de: faible-densite, vers: montagne, libelle: "inclut"}
+    jules: "Un espace de faible densité n'est pas forcément en déclin : certains attirent de nouveaux habitants et de nouvelles activités."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Vérifier la localisation : espace rural, zone de montagne ou secteur touristique peu urbanisé."
+      - "Chercher les ressources productives : agriculture, élevage, tourisme, énergie."
+      - "Repérer si la population augmente (arrivée de **néoruraux**) ou diminue."
+      - "Ne pas généraliser : chaque espace de faible densité a sa propre dynamique."
+    jules: "La diversité est le mot-clé : certains espaces ruraux se dépeuplent, d'autres se repeuplent grâce au télétravail ou au tourisme."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que tous les espaces ruraux français sont en déclin et abandonnés."
+    pourquoi_faux: "Beaucoup d'espaces de faible densité gagnent des habitants, notamment près des littoraux ou des montagnes touristiques."
+    bonne_idee: "Distinguer les zones qui se vident, comme la **diagonale du vide**, de celles qui accueillent de nouveaux habitants."
+    jules: "Le déclin n'est pas la règle générale : c'est une diversité de situations qu'il faut illustrer par des exemples précis."
+
+  - id: exemple
+    type: exemple
+    situation: "Dans les Alpes, la **montagne** combine élevage, tourisme d'hiver et production **hydroélectrique**."
+    conclusion: "Cette combinaison d'activités montre qu'un espace de faible densité peut être dynamique et attractif."
+    jules: "Une montagne bien équipée en stations de ski attire touristes et emplois, contrairement à l'image d'un espace délaissé."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "espaces de faible densité", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Ces espaces sont directement concernés par les politiques d'aménagement du territoire vues dans la fiche suivante."

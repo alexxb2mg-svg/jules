@@ -1,0 +1,63 @@
+notion: geographie-aires-urbaines
+titre: "La géographie des aires urbaines en France"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Aire urbaine »"
+    url: "https://fr.vikidia.org/w/index.php?title=Aire_urbaine&oldid=2384584"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Aménagement du territoire en France »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Am%C3%A9nagement_du_territoire_en_France&oldid=233193019"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « France d'outre-mer »"
+    url: "https://fr.wikipedia.org/w/index.php?title=France_d%27outre-mer&oldid=237706622"
+    licence: CC-BY-SA-4.0
+abreviations:
+  PAC: "politique agricole commune"
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: aire-urbaine, titre: "Aire d'attraction d'une ville", sous_titre: "pôle + couronne", principal: true}
+      - {id: pole, titre: "Pôle", sous_titre: "ville-centre + communes denses"}
+      - {id: couronne, titre: "Couronne", sous_titre: "15 % des actifs travaillent dans le pôle"}
+      - {id: periurbanisation, titre: "Périurbanisation", sous_titre: "extension de l'habitat"}
+      - {id: metropolisation, titre: "Métropolisation", sous_titre: "concentration dans les grandes villes"}
+    liens:
+      - {de: aire-urbaine, vers: pole, libelle: "comprend"}
+      - {de: aire-urbaine, vers: couronne, libelle: "comprend"}
+      - {de: couronne, vers: periurbanisation, libelle: "produit"}
+      - {de: pole, vers: metropolisation, libelle: "renforce"}
+    jules: "Une aire d'attraction, c'est toujours un **pôle** au centre plus une **couronne** attirée par lui grâce au travail."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Repérer le **pôle** : la ville-centre et les communes voisines très denses en population."
+      - "Identifier la **couronne** : les communes où au moins 15 % des actifs vont travailler dans le pôle."
+      - "Additionner pôle et couronne pour obtenir l'aire d'attraction complète de la ville."
+      - "Relier ce découpage aux mobilités **pendulaires** : les trajets quotidiens domicile-travail."
+    jules: "Le critère des 15 % d'actifs est ce qui distingue la couronne d'une simple commune rurale isolée."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre l'aire d'attraction d'une ville avec la seule ville-centre."
+    pourquoi_faux: "L'aire d'attraction inclut aussi toutes les communes de la couronne liées au pôle par le travail."
+    bonne_idee: "Toujours vérifier si la commune citée appartient au **pôle** (dense) ou à la **couronne** (moins dense, actifs pendulaires)."
+    jules: "Une commune peut sembler rurale et pourtant appartenir à une aire urbaine si ses habitants travaillent en ville."
+
+  - id: exemple
+    type: exemple
+    situation: "L'aire d'attraction de Paris regroupe environ **13 millions d'habitants**, bien plus que la seule ville de Paris."
+    conclusion: "93 % de la population française vit dans une aire d'attraction d'une ville, preuve d'une **urbanisation** très forte du territoire."
+    jules: "Retiens ce chiffre : 93 % des Français vivent sous l'influence d'une ville, même en habitant loin du centre."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "aires urbaines et France mondialisée", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Relie ensuite cette notion aux mutations des espaces productifs : les deux vont souvent ensemble sur une carte de la France."

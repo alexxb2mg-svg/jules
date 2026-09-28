@@ -46,7 +46,7 @@ def test_controler_donne_le_motif_des_fiches_ecartees(tmp_path):
     brut["titre"] = "Pente : a = Δy / Δx"
     chemin.write_text(yaml.safe_dump(brut, allow_unicode=True), encoding="utf-8")
     fiches, ecartees = controler([BIBLIOTHEQUES], copie)
-    assert len(fiches) == 4
+    assert len(fiches) == 22
     assert len(ecartees) == 1 and "fonctions-lineaires-affines.yaml" in ecartees[0] and "÷" in ecartees[0]
 
 

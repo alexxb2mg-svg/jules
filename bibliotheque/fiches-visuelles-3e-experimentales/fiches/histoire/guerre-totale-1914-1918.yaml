@@ -1,0 +1,91 @@
+notion: guerre-totale-1914-1918
+titre: "La Première Guerre mondiale, une guerre totale"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Première Guerre mondiale »"
+    url: "https://fr.vikidia.org/w/index.php?title=Premi%C3%A8re_Guerre_mondiale&oldid=2569759"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Génocide arménien »"
+    url: "https://fr.vikidia.org/w/index.php?title=G%C3%A9nocide_arm%C3%A9nien&oldid=2569180"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Révolution russe »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9volution_russe&oldid=2396185"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  "1GM": "Première Guerre mondiale (1914-1918)"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: guerre-totale, titre: "Guerre totale", sous_titre: "28 juillet 1914 – 11 nov. 1918", principal: true}
+      - {id: triple-entente, titre: "Triple-Entente", sous_titre: "France, Royaume-Uni, Empire russe"}
+      - {id: empires-centraux, titre: "Empires centraux", sous_titre: "Allemagne, Autriche-Hongrie"}
+      - {id: genocide-armeniens, titre: "Génocide des Arméniens", sous_titre: "1915-1916, Empire ottoman"}
+      - {id: revolution-bolchevique, titre: "Révolution bolchevique", sous_titre: "Russie, 1917"}
+    liens:
+      - {de: guerre-totale, vers: triple-entente, libelle: "un des deux camps"}
+      - {de: guerre-totale, vers: empires-centraux, libelle: "l'autre camp"}
+      - {de: guerre-totale, vers: genocide-armeniens, libelle: "violence extrême"}
+      - {de: guerre-totale, vers: revolution-bolchevique, libelle: "conséquence en Russie"}
+    jules: "Une **guerre totale** mobilise civils et militaires, et fragilise durablement les régimes en place."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer précisément la guerre entre le 28 juillet 1914 et l'armistice du 11 novembre 1918."
+      - "Distinguer les deux camps : **Triple-Entente** contre **Empires centraux**."
+      - "Expliquer la **guerre totale** : civils et militaires sont tous les deux mobilisés."
+      - "Relier le **génocide des Arméniens** (1915-1916) et la **révolution bolchevique** (1917) à la guerre."
+    jules: "Repère toujours les deux camps avant de parler des événements qui suivent."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Parler d'un simple « massacre » des Arméniens plutôt que d'un **génocide**."
+    pourquoi_faux: "Un génocide est une extermination planifiée d'un groupe entier, pas une violence isolée."
+    bonne_idee: "Utiliser le mot **génocide**, planifié par le gouvernement ottoman entre 1915 et 1916."
+    jules: "Le vocabulaire précis compte beaucoup à l'examen : génocide n'est pas un synonyme de massacre."
+
+  - id: exemple
+    type: exemple
+    situation: "On demande de citer une violence extrême subie par des civils pendant la Première Guerre mondiale."
+    conclusion: "Le **génocide des Arméniens**, commis par le gouvernement ottoman entre 1915 et 1916, est l'exemple attendu."
+    jules: "Cite toujours l'auteur (le gouvernement ottoman) et la période exacte de ce génocide."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🗓️", titre: "Frise chronologique", description: "outil à venir"}
+    jules: "Reprends la frise pour bien ordonner 1914, 1915-1916, 1917 et 1918."
+
+  - id: schema
+    type: schema
+    titre: "Chronologie de la guerre totale"
+    svg: |-
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="340" y="28" class="th" text-anchor="middle">1914 – 1918 : une guerre totale</text>
+        <line x1="60" y1="130" x2="620" y2="130" class="arr c-gray"/>
+        <circle cx="100" cy="130" r="8" class="node c-blue"/>
+        <text x="100" y="112" class="t" text-anchor="middle">1914</text>
+        <text x="100" y="162" class="ts" text-anchor="middle">Début du conflit</text>
+        <circle cx="260" cy="130" r="8" class="node c-red"/>
+        <text x="260" y="112" class="t" text-anchor="middle">1915-1916</text>
+        <text x="260" y="162" class="ts" text-anchor="middle">Génocide des Arméniens</text>
+        <circle cx="420" cy="130" r="8" class="node c-purple"/>
+        <text x="420" y="112" class="t" text-anchor="middle">1917</text>
+        <text x="420" y="162" class="ts" text-anchor="middle">Révolution bolchevique</text>
+        <circle cx="580" cy="130" r="8" class="node c-green"/>
+        <text x="580" y="112" class="t" text-anchor="middle">1918</text>
+        <text x="580" y="162" class="ts" text-anchor="middle">Armistice (11 nov.)</text>
+        <rect x="40" y="195" width="280" height="50" class="box c-teal"/>
+        <text x="180" y="216" class="ts" text-anchor="middle">Triple-Entente</text>
+        <text x="180" y="234" class="ts" text-anchor="middle">France, Royaume-Uni, Empire russe</text>
+        <rect x="360" y="195" width="280" height="50" class="box c-coral"/>
+        <text x="500" y="216" class="ts" text-anchor="middle">Empires centraux</text>
+        <text x="500" y="234" class="ts" text-anchor="middle">Allemagne, Autriche-Hongrie</text>
+      </svg>
+    jules: "Suis la ligne du temps de gauche à droite : elle range dans l'ordre les quatre repères à connaître."

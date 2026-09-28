@@ -1,0 +1,89 @@
+notion: conflits-monde-contemporain
+titre: "Conflits et coopérations dans le monde contemporain"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Accord de Paris sur le climat »"
+    url: "https://fr.vikidia.org/w/index.php?title=Accord_de_Paris_sur_le_climat&oldid=2410603"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Organisation des Nations unies »"
+    url: "https://fr.vikidia.org/w/index.php?title=Organisation_des_Nations_unies&oldid=2570800"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  COP: "Conférence des parties (sommet climatique de l'ONU)"
+  ONU: "Organisation des Nations unies"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: monde-contemporain, titre: "Monde contemporain", sous_titre: "après la guerre froide", principal: true}
+      - {id: multipolaire, titre: "Monde multipolaire", sous_titre: "plusieurs puissances"}
+      - {id: guerre-ukraine, titre: "Guerre en Ukraine", sous_titre: "2022, conflit et sanctions"}
+      - {id: cop21, titre: "COP21", sous_titre: "2015, accord de Paris"}
+    liens:
+      - {de: monde-contemporain, vers: multipolaire, libelle: "organisation actuelle"}
+      - {de: multipolaire, vers: guerre-ukraine, libelle: "exemple de conflit"}
+      - {de: multipolaire, vers: cop21, libelle: "exemple de coopération"}
+    jules: "Le monde d'aujourd'hui n'a plus deux blocs mais plusieurs puissances : conflits (Ukraine) et coopérations (climat) coexistent."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Choisir un exemple de conflit récent et donner ses **enjeux locaux** (territoire, population) et **internationaux** (sanctions, alliances)."
+      - "Choisir un exemple de coopération internationale, comme l'**accord de Paris** de 2015."
+      - "Montrer que le monde contemporain est **multipolaire** : plusieurs puissances comptent, pas seulement deux blocs."
+    jules: "Toujours relier un exemple précis (Ukraine ou COP21) à l'idée générale de monde multipolaire."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que le monde d'après la guerre froide reste organisé autour de deux blocs opposés."
+    pourquoi_faux: "Depuis 1991, le monde est devenu **multipolaire** : plusieurs puissances (USA, Chine, Russie, Union européenne...) comptent en même temps."
+    bonne_idee: "Décrire le monde actuel avec plusieurs pôles de puissance, pas deux camps figés comme pendant la guerre froide."
+    jules: "La fin de la guerre froide (1991) ne signifie pas la fin des tensions, mais un changement de logique : plus de pôles de puissance."
+
+  - id: exemple
+    type: exemple
+    situation: "En 2022, la Russie envahit l'Ukraine."
+    calcul: "Ce conflit a des enjeux locaux (territoire, population ukrainienne) et internationaux : les pays occidentaux imposent des **sanctions économiques** à la Russie."
+    conclusion: "Ce conflit montre que des tensions locales peuvent avoir des conséquences sur toute la scène internationale."
+    jules: "Un même conflit se lit à deux échelles : locale (le territoire) et internationale (les sanctions, les alliances)."
+
+  - id: schema
+    type: schema
+    titre: "Conflit et coopération dans un monde multipolaire"
+    svg: |
+      <svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <g class="node c-gray">
+          <rect x="215" y="30" width="250" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="340" y="48" text-anchor="middle" dominant-baseline="central">Monde multipolaire</text>
+          <text class="ts" x="340" y="66" text-anchor="middle" dominant-baseline="central">depuis 1991</text>
+        </g>
+        <line x1="280" y1="86" x2="180" y2="130" class="leader" stroke="#888780" marker-end="url(#arrow)"/>
+        <line x1="400" y1="86" x2="500" y2="130" class="leader" stroke="#888780" marker-end="url(#arrow)"/>
+        <g class="node c-red">
+          <rect x="50" y="130" width="260" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="180" y="148" text-anchor="middle" dominant-baseline="central">Guerre en Ukraine — 2022</text>
+          <text class="ts" x="180" y="166" text-anchor="middle" dominant-baseline="central">conflit, sanctions économiques</text>
+        </g>
+        <g class="node c-green">
+          <rect x="370" y="130" width="260" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="500" y="148" text-anchor="middle" dominant-baseline="central">COP21 — 2015</text>
+          <text class="ts" x="500" y="166" text-anchor="middle" dominant-baseline="central">accord de Paris sur le climat</text>
+        </g>
+      </svg>
+    jules: "Le rouge montre un exemple de conflit, le vert un exemple de coopération : les deux existent dans le même monde multipolaire."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Cherche ensuite un autre exemple récent de conflit ou de coopération internationale pour t'entraîner."

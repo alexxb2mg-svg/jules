@@ -1,0 +1,59 @@
+notion: refondation-republicaine-liberation
+titre: "La refondation républicaine à la Libération"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Droit de vote des femmes »"
+    url: "https://fr.vikidia.org/w/index.php?title=Droit_de_vote_des_femmes&oldid=2397958"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Conseil national de la Résistance »"
+    url: "https://fr.vikidia.org/w/index.php?title=Conseil_national_de_la_R%C3%A9sistance&oldid=2179810"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  CNR: "Conseil national de la Résistance"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: liberation, titre: "Libération de 1944", sous_titre: "fin de Vichy", principal: true}
+      - {id: vote-femmes, titre: "Vote des femmes", sous_titre: "ordonnance du 21 avril 1944"}
+      - {id: programme-cnr, titre: "Programme du CNR", sous_titre: "réformes sociales"}
+      - {id: front-populaire, titre: "Front populaire", sous_titre: "1936, héritage social"}
+    liens:
+      - {de: liberation, vers: vote-femmes, libelle: "restaure la démocratie"}
+      - {de: liberation, vers: programme-cnr, libelle: "applique un programme"}
+      - {de: programme-cnr, vers: front-populaire, libelle: "prolonge"}
+    jules: "La **refondation républicaine** avance sur deux fronts en même temps : politique (le vote) et social (le CNR)."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer la **Libération** en 1944 : restauration de la République après Vichy."
+      - "Retenir la date précise du droit de vote des femmes : **21 avril 1944** (ordonnance)."
+      - "Noter que le premier vote féminin a lieu en 1945, pas en 1944."
+      - "Relier le **programme du CNR** au Front populaire de 1936 : une continuité sociale."
+      - "Citer une réforme concrète du CNR : **Sécurité sociale** ou nationalisations."
+    jules: "Le CNR ne part pas de rien : il **prolonge** les acquis sociaux du Front populaire de 1936."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre 1944 (le droit de vote est accordé) et 1945 (les femmes votent pour la première fois)."
+    pourquoi_faux: "Un texte de loi et son application effective n'ont pas toujours la même date."
+    bonne_idee: "L'**ordonnance** date de 1944, le **premier vote** a lieu en 1945 : deux dates à distinguer."
+    jules: "Ce piège de dates revient souvent : imagine une frise pour bien séparer les deux étapes."
+
+  - id: exemple
+    type: exemple
+    situation: "Un élève doit expliquer en quoi la Libération est une refondation démocratique et sociale."
+    conclusion: "Il faut citer le retour de la légalité républicaine en 1944, le **droit de vote** des femmes, et une réforme du CNR comme la **Sécurité sociale**."
+    jules: "Un bon développement combine toujours le politique (le vote) et le social (le CNR)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Entraîne-toi à situer 1936, 1944 et 1945 sur une même frise chronologique."

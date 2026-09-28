@@ -1,0 +1,62 @@
+notion: naissance-ve-republique
+titre: "La naissance de la Ve République"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Cinquième République »"
+    url: "https://fr.vikidia.org/w/index.php?title=Cinqui%C3%A8me_R%C3%A9publique&oldid=2454737"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Constitution française de 1958 »"
+    url: "https://fr.vikidia.org/w/index.php?title=Constitution_fran%C3%A7aise_de_1958&oldid=2431778"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Charles de Gaulle »"
+    url: "https://fr.vikidia.org/w/index.php?title=Charles_de_Gaulle&oldid=2568232"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: crise-1958, titre: "Crise de 1958", sous_titre: "guerre d'Algérie", principal: true}
+      - {id: de-gaulle, titre: "De Gaulle", sous_titre: "revient au pouvoir"}
+      - {id: constitution, titre: "Constitution de 1958", sous_titre: "approuvée à plus de 80% de oui"}
+      - {id: executif-fort, titre: "Exécutif renforcé", sous_titre: "président central"}
+      - {id: suffrage-1962, titre: "Réforme de 1962", sous_titre: "suffrage universel direct"}
+    liens:
+      - {de: crise-1958, vers: de-gaulle, libelle: "fait appel à"}
+      - {de: de-gaulle, vers: constitution, libelle: "fait rédiger"}
+      - {de: constitution, vers: executif-fort, libelle: "instaure"}
+      - {de: executif-fort, vers: suffrage-1962, libelle: "renforcé par"}
+    jules: "La **Ve République** naît d'une crise, mais elle change durablement le fonctionnement des institutions."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Retenir la date **1958** et le contexte : la crise de la guerre d'Algérie."
+      - "Savoir que la **Constitution** est approuvée par référendum le 28 septembre 1958."
+      - "Comprendre que la Ve République **renforce l'exécutif** face au Parlement."
+      - "Retenir 1962 : le président est élu au **suffrage universel direct**."
+      - "Ne pas confondre la IVe République (instable) et la Ve (exécutif fort)."
+    jules: "Le contraste avec la **IVe République** est la clé pour comprendre pourquoi 1958 change tout."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que la Ve République commence directement avec l'élection du président au suffrage universel direct."
+    pourquoi_faux: "La Constitution de 1958 précède la réforme du **suffrage universel direct**, qui date de 1962."
+    bonne_idee: "1958 = nouvelle Constitution et exécutif renforcé ; 1962 = élection du président par tous les citoyens."
+    jules: "Deux réformes, deux dates : ne les fusionne pas en un seul événement."
+
+  - id: exemple
+    type: exemple
+    situation: "Un élève doit expliquer pourquoi De Gaulle revient au pouvoir en 1958."
+    conclusion: "La **crise de la guerre d'Algérie** fragilise la IVe République, incapable de gouverner : De Gaulle est rappelé pour fonder de nouvelles institutions."
+    jules: "Toujours relier le contexte (la crise) à la conséquence institutionnelle (la nouvelle Constitution)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Compare les pouvoirs du président avant et après 1958 pour bien mesurer le changement."

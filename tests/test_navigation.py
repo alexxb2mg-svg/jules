@@ -595,7 +595,8 @@ def test_ex210_pied_de_barre_prenom_seul(barres, page):
 # Mesure sur la base 4bac7fc + N1 (avant cette carte), meme banc, meme jeu de donnees, 27/09/2026.
 CHEMINS_AVANT = {
     "/": ["/api/session", "/api/infos", "/api/eleve/fiches_visuelles/notions",
-          "/api/eleve/fiches_visuelles/notions/equations-premier-degre-et-produits"],
+          # premiere fiche de la premiere matiere : geographie depuis les fiches histoire-geo (#71)
+          "/api/eleve/fiches_visuelles/notions/geographie-aires-urbaines"],
     "/cours": ["/api/session", "/api/infos", "/api/eleve/cours/parcours"],
     "/studio": ["/api/session", "/api/infos", "/api/eleve/studio/notions", "/api/eleve/studio/revisions"],
     "/discuter": ["/api/session", "/api/infos", "/api/eleve/epreuve/proposition", "/api/conversations"],

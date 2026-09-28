@@ -1,0 +1,59 @@
+notion: territoires-ultramarins-francais
+titre: "La problématique spécifique des territoires ultra-marins français"
+matiere: geographie
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « France d'outre-mer »"
+    url: "https://fr.wikipedia.org/w/index.php?title=France_d%27outre-mer&oldid=237706622"
+    licence: CC-BY-SA-4.0
+abreviations:
+  DROM: "département et région d'outre-mer"
+  COM: "collectivité d'outre-mer"
+  ZEE: "zone économique exclusive"
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: outre-mer, titre: "Territoires ultra-marins", sous_titre: "13 territoires hors métropole", principal: true}
+      - {id: drom, titre: "DROM", sous_titre: "art. 73 : Guadeloupe, Martinique, Guyane, Réunion, Mayotte"}
+      - {id: com, titre: "COM", sous_titre: "statut différent, plus d'autonomie"}
+      - {id: contraintes, titre: "Contraintes", sous_titre: "éloignement, insularité, risques naturels"}
+      - {id: atouts, titre: "Atouts", sous_titre: "ZEE, biodiversité"}
+    liens:
+      - {de: outre-mer, vers: drom, libelle: "comprend"}
+      - {de: outre-mer, vers: com, libelle: "comprend"}
+      - {de: outre-mer, vers: contraintes, libelle: "affrontent"}
+      - {de: outre-mer, vers: atouts, libelle: "offrent"}
+    jules: "Retiens la différence de statut : les DROM appliquent les lois françaises, les COM ont un statut plus autonome."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Identifier le statut du territoire : **DROM** (article 73 de la Constitution) ou **COM**."
+      - "Repérer les contraintes : éloignement de la métropole, insularité, exposition aux risques naturels."
+      - "Repérer les atouts : ressources de la **ZEE**, richesse de la biodiversité, position stratégique."
+      - "Relier ces éléments à l'aménagement spécifique nécessaire pour ces territoires."
+    jules: "Un territoire ultra-marin combine toujours des contraintes fortes et des atouts spécifiques à valoriser."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que tous les territoires ultra-marins ont exactement le même statut administratif."
+    pourquoi_faux: "Les DROM et les COM ont des statuts différents, avec des niveaux d'autonomie variables."
+    bonne_idee: "Toujours vérifier si le territoire cité est un **DROM** ou une **COM** avant de généraliser."
+    jules: "Cette diversité de statuts explique pourquoi les politiques d'aménagement ne sont pas identiques partout."
+
+  - id: exemple
+    type: exemple
+    situation: "Les territoires ultra-marins représentent seulement **17,9 %** du territoire mais **4,1 %** de la population française."
+    conclusion: "Cette faible densité s'explique par l'éloignement et l'insularité, malgré des atouts maritimes considérables via la **ZEE**."
+    jules: "Ces chiffres montrent un territoire vaste mais peu peuplé, avec un immense potentiel maritime grâce à la ZEE."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "📖", titre: "Leçon complète", description: "territoires ultra-marins français", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Ces territoires sont un exemple concret des inégalités que l'aménagement du territoire cherche à réduire."
