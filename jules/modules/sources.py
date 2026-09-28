@@ -196,6 +196,24 @@ class Brique(Module):
                 journal.error("Fiche personnelle %s non servie : %s", fiche_id, err)
                 raise HTTPException(409, "Cette fiche est abîmée : supprime-la et refais-la.") from err
 
+        @routeur.get("/fiches/{fiche_id}/source")
+        def source_route(fiche_id: str) -> dict[str, Any]:
+            """Le document d'origine, pour la « version lisible » (idee H de la veille UI) : le texte tel
+            qu'il a ete lu (PDF texte, texte colle) et les images (photos, pages scannees). Rien n'est
+            regenere ni reecrit : c'est le document de l'eleve, mis en page par l'interface."""
+            try:
+                entree = self.bibliotheque.entree(fiche_id)
+            except KeyError as err:
+                raise introuvable() from err
+            resume = entree.get("source") or {}
+            texte = self.tuteur.stockage.lire_etat(src.ESPACE, f"texte:{resume.get('id')}", "") or ""
+            images = [
+                f"/api/images/{n}"
+                for n in resume.get("fichiers") or []
+                if not str(n).lower().endswith(".pdf") and self.tuteur.stockage.chemin_image(n) is not None
+            ]
+            return {"type": resume.get("type"), "titre": resume.get("titre"), "texte": texte, "images": images}
+
         @routeur.post("/fiches/{fiche_id}/ranger")
         def ranger_route(fiche_id: str, entree: Rangement) -> dict[str, Any]:
             try:

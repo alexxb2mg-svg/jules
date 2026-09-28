@@ -139,3 +139,12 @@
 /* Énoncés d'exercice : symboles.js y repère parfois une partie d'équation seulement (« 4x − 17 = 15 » :
    le « − » typographique n'est pas dans sa ZONE_FORMULE). Le rappel au survol reste, sans la demi-mise en gras. */
 [data-bloc="entrainement"] .formule-texte { font-weight: inherit; }
+
+/* J : bloc cité par Jules (lien dans sa réponse) : contour + fond teinté 2,5 s, sans mouvement si refusé.
+   outline (et non box-shadow) : visible même quand un parent coupe ce qui dépasse. */
+.jules-cite { border-radius: 22px; outline: 4px solid var(--j-bleu); outline-offset: 6px; animation: jules-cite 2.6s ease-out forwards; }
+@keyframes jules-cite {
+  0%, 55% { outline-color: var(--j-bleu); background-color: color-mix(in srgb, var(--j-bleu) 7%, transparent); }
+  100% { outline-color: transparent; background-color: transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .jules-cite { animation: none; } }

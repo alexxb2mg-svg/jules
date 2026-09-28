@@ -94,7 +94,8 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize="36" minSize="26" maxSize="55">
           <PanneauJules conversationId={session.conversation} sousTitre="Il voit la leçon que tu fais" aides={AIDES}
-            suggestions={suggestionsDe(lecon)} rafraichir={relire} />
+            suggestions={suggestionsDe(lecon)} rafraichir={relire}
+            ancres={lecon.blocs.flatMap((b) => (b.type === "texte" && b.titre ? [{ titre: b.titre, cible: `bloc-${b.index}` }] : []))} />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>

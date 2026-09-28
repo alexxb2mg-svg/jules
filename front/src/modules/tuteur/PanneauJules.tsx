@@ -16,6 +16,8 @@ import { motion } from "framer-motion"
 import { conversations, type MessageJules } from "@/api/jules"
 
 export type AideRapide = { libelle: string; message: string }
+/** J : parties du contenu affiché que Jules peut citer (titre exact → id du bloc à illuminer). */
+export type Ancre = { titre: string; cible: string }
 
 /** Notes techniques écrites par le module cours dans la conversation : utiles au modèle, pas à l'élève. */
 const NOTE_INTERNE = /^\[Correction automatique\]/
@@ -28,12 +30,14 @@ const convertir = (m: MessageJules, i: number): ThreadMessageLike => ({
   content: [{ type: "text", text: nettoyer(m.texte) }],
 })
 
-export function PanneauJules({ conversationId, sousTitre, aides = [], suggestions = [], rafraichir = 0 }: {
+export function PanneauJules({ conversationId, sousTitre, aides = [], suggestions = [], ancres = [], rafraichir = 0 }: {
   conversationId: string
   sousTitre?: string
   aides?: AideRapide[]
   /** Questions proposées tant que la conversation est vide (tirées du contenu affiché, jamais générées). */
   suggestions?: AideRapide[]
+  /** Titres de parties : quand la réponse de Jules en cite un, il devient un lien vers le bloc. */
+  ancres?: Ancre[]
   /** Incrémenter pour relire la conversation (ex. après une réponse corrigée côté exercice). */
   rafraichir?: number
 }) {
@@ -59,10 +63,11 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
     }
   }, [conversationId])
 
+  const lier = useCallback((t: string) => lierCitations(t, ancres), [ancres])
   const runtime = useExternalStoreRuntime({
     messages,
     isRunning: enCours,
-    convertMessage: convertir,
+    convertMessage: (m: MessageJules, i: number) => (m.role === "eleve" ? convertir(m, i) : convertir({ ...m, texte: lier(m.texte) }, i)),
     onNew: async (m: AppendMessage) => {
       const texte = m.content.map((p) => (p.type === "text" ? p.text : "")).join("").trim()
       if (texte) await envoyer(texte)
@@ -139,8 +144,43 @@ function MessageEleve() {
   )
 }
 
+/** Remplace, dans une réponse de Jules, la première mention de chaque titre de partie par un lien #cible:<id>
+ *  (sans toucher aux formules ni aux liens déjà présents). Le lien illumine le bloc au lieu de naviguer. */
+function lierCitations(texte: string, ancres: Ancre[]): string {
+  let t = texte
+  for (const a of [...ancres].sort((x, y) => y.titre.length - x.titre.length)) {
+    if (a.titre.length < 6) continue
+    const echappe = a.titre.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const motif = new RegExp(`(^|[^\\[$\\w])(${echappe})(?![\\w\\]])`, "i")
+    t = t.replace(motif, (_m, avant: string, titre: string) => `${avant}[${titre}](#cible:${a.cible})`)
+  }
+  return t
+}
+
+/** Clic sur une citation : défile jusqu'au bloc et le fait briller un instant. */
+function allerALaCitation(cible: string) {
+  const el = document.getElementById(cible)
+  if (!el) return
+  el.scrollIntoView({ behavior: "smooth", block: "center" })
+  el.classList.remove("jules-cite"); void el.offsetWidth; el.classList.add("jules-cite")
+  setTimeout(() => el.classList.remove("jules-cite"), 2700)
+}
+
+function Lien({ href, children, ...reste }: React.AnchorHTMLAttributes<HTMLAnchorElement>) {
+  if (href?.startsWith("#cible:")) {
+    const cible = href.slice(7)
+    return (
+      <a href={`#${cible}`} role="button" onClick={(e) => { e.preventDefault(); allerALaCitation(cible) }} title="Voir ce passage"
+        className="rounded bg-white/70 px-0.5 font-semibold text-bleu underline decoration-bleu/40 decoration-2 underline-offset-2 [box-decoration-break:clone] hover:decoration-bleu">
+        {children}
+      </a>
+    )
+  }
+  return <a href={href} {...reste} target="_blank" rel="noreferrer">{children}</a>
+}
+
 function Markdown() {
-  return <MarkdownTextPrimitive remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]}
+  return <MarkdownTextPrimitive remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]} components={{ a: Lien }}
     className="prose-jules [&_p]:my-1 [&_strong]:font-semibold [&_ul]:my-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5" />
 }
 

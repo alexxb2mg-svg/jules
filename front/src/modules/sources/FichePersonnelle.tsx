@@ -8,6 +8,7 @@ import { sources, type EtapeSource, type FichePerso, type ModeRangement } from "
 import { FicheVisuelle } from "@/modules/fiches/FicheVisuelle"
 import { PASTILLE_PERSO, TEXTES, stylePerso } from "@/config/sources"
 import { noterOuverture, oublierRecente, poserGarde, rechargerPerso, useBibliothequePerso } from "./etat"
+import { BoutonDocument } from "./DocumentLisible"
 
 export function FichePersonnelle({ id, onRetour, onOuvrirLecon, onRegeneree }: {
   id: string
@@ -88,6 +89,7 @@ export function FichePersonnelle({ id, onRetour, onOuvrirLecon, onRegeneree }: {
                   <Inbox size={15} /> {TEXTES.questionGarder}
                 </button>
               )}
+              <BoutonDocument id={id} />
               <button onClick={regenerer} disabled={!!refaire && refaire.endsWith("…")}
                 className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief disabled:opacity-60">
                 <RefreshCw size={15} className={cn(refaire?.endsWith("…") && "animate-spin")} /> {TEXTES.refaire}

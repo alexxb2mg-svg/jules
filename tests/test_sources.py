@@ -358,3 +358,19 @@ def pdf_de_test(texte: bool) -> bytes:
 
 def test_constantes_du_contrat():
     assert (src.PHOTOS_MAX, src.PDF_PAGES_MAX, src.ESSAIS_GENERATION) == (5, 20, 2)
+
+
+# --- idee H (veille UI) : le document d'origine, pour la « version lisible » ------------------------
+
+
+def test_source_d_origine_texte_et_photos(client):
+    entree = fin(deposer(client, texte=COURS, matiere="histoire"))
+    src_ = client.get(f"/api/eleve/sources/fiches/{entree['id']}/source").json()
+    assert src_["type"] == "texte"
+    assert COURS.strip()[:200] in src_["texte"]
+    assert src_["images"] == []
+    photos = fin(deposer(client, files=[("photos", ("a.png", PNG, "image/png"))]))
+    src_ = client.get(f"/api/eleve/sources/fiches/{photos['id']}/source").json()
+    assert src_["type"] == "photos" and len(src_["images"]) == 1
+    assert client.get(src_["images"][0]).status_code == 200
+    assert client.get("/api/eleve/sources/fiches/inconnue/source").status_code == 404

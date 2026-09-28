@@ -243,6 +243,8 @@ export const sources = {
   regenerer: (id: string, surEtape: (e: EtapeSource) => void) => flux(`${F(id)}/regenerer`, { method: "POST" }, surEtape),
   bibliotheque: () => api<BibliothequePerso>(`${SRC}/fiches`),
   lire: (id: string) => api<FichePerso>(F(id)),
+  /** Le document d'origine (texte lu, images) pour la version lisible (idée H). */
+  source: (id: string) => api<{ type: string; titre: string; texte: string; images: string[] }>(`${F(id)}/source`),
   ranger: (id: string, mode: ModeRangement, dossier?: string) => api<EntreePerso>(`${F(id)}/ranger`, json({ mode, dossier })),
   renommer: (id: string, titre: string) => api<EntreePerso>(F(id), envoi("PATCH", { titre })),
   supprimer: (id: string) => api<{ ok: boolean }>(F(id), envoi("DELETE")),
