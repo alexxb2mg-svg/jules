@@ -14,10 +14,11 @@ import { TEXTES } from "@/config/sources"
 import { NON_CLASSE, useBibliothequePerso, useFiltre, useRecentes } from "@/modules/sources/etat"
 import { FiltreFiches, voitNatives, voitPerso } from "@/modules/sources/pieces"
 import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
+import { SelecteurMatiere } from "@/modules/accueil/SelecteurMatiere"
 import type { Route } from "@/routes"
 
-export function Nav({ actif, onChange, prenom, route, aller }: {
-  actif: SectionId; onChange: (s: SectionId) => void; prenom: string; route: Route; aller: (r: Route) => void
+export function Nav({ actif, onChange, onMatiere, prenom, route, aller }: {
+  actif: SectionId; onChange: (s: SectionId) => void; onMatiere: (m: string | null) => void; prenom: string; route: Route; aller: (r: Route) => void
 }) {
   const entree = ({ id, nom, Icone, pageExistante }: EntreeNav) => (
     <SidebarMenuItem key={id}>
@@ -44,6 +45,7 @@ export function Nav({ actif, onChange, prenom, route, aller }: {
           <span className="hidden group-data-[collapsible=icon]:inline">{MARQUE.nom[0]}</span>
           <span className="text-rouge">{MARQUE.point}</span>
         </span>
+        <div className="mt-3"><SelecteurMatiere onChoix={onMatiere} /></div>
       </SidebarHeader>
 
       <SidebarContent>

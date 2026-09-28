@@ -11,12 +11,16 @@ import { sectionDe, useRoute, type Route } from "@/routes"
 import { ECRANS } from "@/ecrans/registre"
 import type { SectionId } from "@/config/navigation"
 import { RappelARanger } from "@/modules/sources/pieces"
+import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
 
-const ROUTE_DE_SECTION: Partial<Record<SectionId, Route>> = {
-  fiches: { ecran: "fiches", matiere: null },
-  lecons: { ecran: "lecons", matiere: null },
-  supports: { ecran: "supports", matiere: null },
-}
+/** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
+const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
+  s === "fiches" ? { ecran: "fiches", matiere: m } : s === "lecons" ? { ecran: "lecons", matiere: m }
+    : s === "supports" ? { ecran: "supports", matiere: m } : null
+
+/** Matière portée par la route (écrans par matière) : elle devient la matière courante. */
+const matiereDe = (r: Route): string | null | undefined =>
+  r.ecran === "fiches" || r.ecran === "lecons" || r.ecran === "supports" ? r.matiere : r.ecran === "support" ? r.matiere : undefined
 
 export default function App() {
   const [route, aller] = useRoute()
@@ -24,6 +28,7 @@ export default function App() {
   useEffect(() => {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
   }, [])
+  useEffect(() => { const m = matiereDe(route); if (m) choisirMatiere(m) }, [route])
   const Ecran = ECRANS[route.ecran]
   const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}`
     : route.ecran === "support" || route.ecran === "perso" || route.ecran === "dossier" ? `${route.ecran}-${route.id}` : route.ecran
@@ -31,7 +36,8 @@ export default function App() {
   return (
     <TooltipProvider delayDuration={300}>
       <SidebarProvider className="h-full min-h-0">
-        <Nav actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = ROUTE_DE_SECTION[s]; if (r) aller(r) }} />
+        <Nav actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = routeDeSection(s); if (r) aller(r) }}
+          onMatiere={(m) => { const r = routeDeSection(sectionDe(route), m); if (r) aller(r) }} />
         <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
           <SidebarTrigger className="absolute top-3 left-3 z-40 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />
           <AnimatePresence mode="wait">

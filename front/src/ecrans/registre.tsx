@@ -13,6 +13,7 @@ import { FichePersonnelle } from "@/modules/sources/FichePersonnelle"
 import { EcranDossier } from "@/modules/sources/pieces"
 import { FichesPersoDeLaNotion } from "@/modules/sources/FichesPersoDeLaNotion"
 import { noterOuverture } from "@/modules/sources/etat"
+import { choisirMatiere } from "@/modules/accueil/etat"
 
 export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
 type Ecran = (p: PropsEcran) => React.JSX.Element | null
@@ -33,7 +34,8 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
     <FicheVisuelle notion={route.notion} retour="Mes fiches"
       onRetour={() => history.length > 1 ? history.back() : aller({ ecran: "fiches", matiere: null })}
       onOuvrirLecon={(n) => aller({ ecran: "lecon", notion: n })}
-      onChargee={(f) => noterOuverture({ genre: "native", id: route.notion, titre: f.titre, matiere: f.matiere })}
+      onChargee={(f) => { noterOuverture({ genre: "native", id: route.notion, titre: f.titre, matiere: f.matiere }); choisirMatiere(f.matiere) }}
+      onCartes={(m) => aller({ ecran: "supports", matiere: m })}
       suite={<FichesPersoDeLaNotion notion={route.notion} onOuvrir={(id) => aller({ ecran: "perso", id })} />} />
   ),
   lecons: ({ route, aller }) => route.ecran !== "lecons" ? null : (

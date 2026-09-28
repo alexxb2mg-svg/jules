@@ -11,6 +11,8 @@ import { BlocVisuel, RENDUS, TYPES, type ContexteRendu } from "./blocs"
 import { BulleJules, useBulleJules } from "./Jules"
 import { contexteSymboles } from "./ponts"
 import { typo, Riche } from "./texte"
+import { Chemin } from "@/modules/accueil/Chemin"
+import { marquerEtape } from "@/modules/accueil/etat"
 
 /** Variables CSS de la matière (table SPEC, /static/matieres-couleurs.css) reprises sous --m-*. */
 export const styleMatiere = (matiere: string) => ({
@@ -31,7 +33,7 @@ export type Habillage = {
   accueil: string
 }
 
-export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger, habillage, suite, onChargee }: {
+export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger, habillage, suite, onChargee, onCartes }: {
   notion: string
   onRetour: () => void
   retour: string
@@ -42,6 +44,8 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
   /** Contenu ajouté après les blocs (ex. « Mes fiches sur cette notion »). */
   suite?: React.ReactNode
   onChargee?: (f: Fiche) => void
+  /** E : ouvre les cartes mémoire de la notion (studio). Absent : pas de chemin (fiche personnelle). */
+  onCartes?: (matiere: string) => void
 }) {
   const [fiche, setFiche] = useState<Fiche | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
@@ -99,6 +103,14 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
 
   const { scrollYProgress } = useScroll({ container: zone })
   const progression = useSpring(scrollYProgress, { stiffness: 200, damping: 30 })
+  // E : la fiche compte comme lue quand l'élève est allée jusqu'au bout.
+  useEffect(() => scrollYProgress.on("change", (v) => { if (v > 0.92 && native && fiche) marquerEtape(notion, "fiche") }), [scrollYProgress, native, fiche, notion])
+  const allerA = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" })
+  const chemin = native && fiche && onCartes ? (horizontal: boolean) => (
+    <Chemin notion={notion} matiere={fiche.matiere} avecLecon={avecLecon} avecExercices={!!entrainement} horizontal={horizontal}
+      onFiche={() => allerA(`bloc-${blocs[0]?.id}`)} onLecon={() => onOuvrirLecon(notion)}
+      onExercices={() => allerA("bloc-entrainement")} onCartes={() => onCartes(fiche.matiere)} />
+  ) : null
 
   if (erreur) return <div className="grid h-full place-items-center p-8 text-center text-gris">Impossible d'ouvrir cette fiche ({erreur}).</div>
 
@@ -139,6 +151,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
                   )}
                   {habillage?.actions}
                 </div>
+                {chemin && <div className="mt-4 lg:hidden">{chemin(true)}</div>}
                 <motion.ul initial={false} animate={{ height: attendusOuverts ? "auto" : 0, opacity: attendusOuverts ? 1 : 0 }}
                   className="m-0 grid list-none gap-2 overflow-hidden p-0 md:grid-cols-2">
                   {attendus.map((a, i) => (
@@ -171,6 +184,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
               </p>
             </article>
             <aside className="sticky top-6 hidden flex-col gap-6 self-start lg:flex">
+              {chemin?.(false)}
               <Sommaire blocs={blocs} actif={actif} zone={zone} entrainement={!!entrainement} />
               <div ref={bulleColonne}>
                 <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={lienDiscuter} />

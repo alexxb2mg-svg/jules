@@ -9,6 +9,7 @@ import { cours, type Session, type Progression } from "@/api/jules"
 import { BlocLecon } from "@/modules/lecon/BlocsLecon"
 import { PanneauJules, type AideRapide } from "@/modules/tuteur/PanneauJules"
 import { SUGGESTIONS } from "@/config/veille"
+import { marquerEtape } from "@/modules/accueil/etat"
 import type { Lecon } from "@/api/jules"
 
 /** B : suggestions tirées de la leçon affichée (objectifs, titres des parties), jamais générées. */
@@ -43,6 +44,7 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
   if (erreur) return <div className="grid h-full place-items-center text-gris">Impossible d'ouvrir la leçon ({erreur}).</div>
   if (!session || !progression) return <div className="grid h-full place-items-center text-gris">Chargement de la leçon…</div>
 
+  if (progression.termine) marquerEtape(notion, "lecon")
   const { lecon } = session
   const faits = progression.blocs.filter((b) => b.etat !== "a_faire" && b.etat !== "en_cours").length
   const pct = Math.round((faits / progression.blocs.length) * 100)

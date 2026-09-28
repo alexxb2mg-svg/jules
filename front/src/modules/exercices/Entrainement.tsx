@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { exercices, type Bilan, type ExerciceVue, type ReponseExercice, type Verdict } from "@/api/jules"
 import { Riche } from "@/modules/fiches/texte"
 import { SAISIES } from "./saisies"
+import { marquerEtape } from "@/modules/accueil/etat"
 
 /** Libellés de l'écran (un seul endroit). Les messages de correction, eux, viennent du serveur. */
 const TEXTES = {
@@ -72,6 +73,7 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
       setVerdict(v)
       if (!v.termine) setPalier(v.palier)
       if (v.termine && v.verdict !== "fini") setSerie((s) => s && { ...s, resultats: [...s.resultats, v.verdict === "juste"] })
+      if (v.bilan) marquerEtape(notion, "exercices")
     } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
 
