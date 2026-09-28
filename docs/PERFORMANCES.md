@@ -1,5 +1,10 @@
 # Performances de Jules : où part le temps, et quoi faire
 
+> **Statut : chantier mis de côté le 28/09/2026, à la demande d'Alex (« à garder pour plus tard »).**
+> - Fait : §1, lecteur YAML en C (commits 8da5f5f, 4baaca5). Sur la branche `ui/refonte-2026-09-27`,
+>   **pas encore déployé sur l'instance 8799**.
+> - À reprendre, rien n'est décidé : cache disque des fiches (§1), pistes (a) à (c) du chat (§2).
+
 Mesures du 28/09/2026 sur le PC d'Alex (Windows, Python 3.14). Scripts de mesure : `profil_demarrage.py`,
 `compare_yaml.py`, `mesure_llm.py` (dans le dossier de travail de l'assistant ; à verser dans `outils/perf/`
 si on les garde).
