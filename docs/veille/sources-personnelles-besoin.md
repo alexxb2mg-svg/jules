@@ -5,7 +5,7 @@ Note de cadrage, pas encore un contrat. À confronter à l'étude DinoBot avant 
 ## Deux familles de sources
 
 1. **Natives** : notre collecte documentaire. Elle alimente la restitution native (252 fiches visuelles, leçons, fiches v2).
-2. **Personnelles** : apportées par l'élève. Exemple : Ellie photographie son exercice, son cours, son chapitre, comme dans DinoBot (lui-même inspiré de NotebookLM).
+2. **Personnelles** : apportées par l'élève. Exemple : l'élève photographie son exercice, son cours, son chapitre, comme dans DinoBot (lui-même inspiré de NotebookLM).
 
 ## Ce que l'outil fait d'une source personnelle
 
@@ -18,7 +18,7 @@ Note de cadrage, pas encore un contrat. À confronter à l'étude DinoBot avant 
 ## Décisions d'Alex (28/09/2026, après l'étude DinoBot)
 
 1. **Entrées** : photo, PDF **et** texte collé.
-2. **Validation** : pas de validation formelle, ni par Ellie ni par le parent. Mais **avant de quitter**
+2. **Validation** : pas de validation formelle, ni par l'élève ni par le parent. Mais **avant de quitter**
    l'écran de la fiche générée, une question lui demande **si on la garde**. Si oui, elle la range :
    - soit **dans la notion suggérée** par le LLM ;
    - soit **dans un dossier personnalisé** (qu'elle crée ou choisit).

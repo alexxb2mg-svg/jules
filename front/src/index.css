@@ -25,6 +25,9 @@
   --j-vert: #1E8E5A;
   --j-orange: #E07B00;
   --j-fond: #FFFFFF;
+  /* fiches personnelles (docs/SOURCES-CONTRAT.md §8) : distinctes de toutes les couleurs de matière */
+  --j-perso: #7A3FE0;
+  --j-perso-clair: #F2EBFF;
   --radius: 0.875rem;
 
   /* rôles shadcn/ui */
@@ -72,6 +75,8 @@
   --color-survol: var(--j-survol);
   --color-vert: var(--j-vert);
   --color-orange: var(--j-orange);
+  --color-perso: var(--j-perso);
+  --color-perso-clair: var(--j-perso-clair);
 
   /* couleurs des matières */
   --color-maths: #1F4E8C;

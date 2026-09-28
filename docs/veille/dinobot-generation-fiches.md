@@ -1,6 +1,6 @@
 # DinoBot : génération de fiches (étude du 28/09/2026)
 
-Visite sur le compte d'Ellie (formule d'essai Étudiant+), dans la matière physique-chimie. Deux fiches générées :
+Visite sur le compte de l'élève (formule d'essai Étudiant+), dans la matière physique-chimie. Deux fiches générées :
 - une depuis leur base (chapitre « Les ions », 3 parties) ;
 - une depuis un fichier (PDF de notre fiche « Guerre totale 1914-1918 »).
 
@@ -28,7 +28,7 @@ Captures : `…/cache/scratch/dino/`. Même parcours pour « Cours illustré »,
   - Depuis un fichier, **aucune détection de matière ni de notion** : notre PDF d'histoire, envoyé alors que la matière choisie était la physique-chimie, a donné une fiche d'histoire sans aucun signalement.
 - **Un format générique, sans schéma.** Du texte rédigé, sans visuel : pas de frise, de schéma, de tableau à compléter ni d'encadré typé. Le visuel de la source est perdu : notre fiche visuelle devient du texte.
 - **Des ajouts sans le dire.** La fiche tirée du PDF développe au-delà de la source (causes détaillées, phases année par année) sans distinguer ce qui vient du document de ce que le modèle ajoute.
-- **Le chat reste à côté du document**, avec toujours le même accueil (« Bonjour Ellie, que souhaites-tu savoir ? »).
+- **Le chat reste à côté du document**, avec toujours le même accueil (« Bonjour <prénom>, que souhaites-tu savoir ? »).
 - Les **flashcards ne sont pas branchées sur une révision espacée** : il n'y a pas de bouton « je savais / je ne savais pas ».
 
 ## Face à Jules et à ce que veut Alex

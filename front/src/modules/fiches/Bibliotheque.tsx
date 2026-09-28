@@ -2,25 +2,44 @@
 // Données : GET /api/eleve/fiches_visuelles/notions (index seul, sans IA). Recherche locale sur les titres.
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, LayoutGroup, motion } from "framer-motion"
-import { ArrowRight, Search, Sparkles, X } from "lucide-react"
+import { ArrowRight, Plus, Search, Sparkles, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { fiches } from "@/api/jules"
 import type { IndexFiches, MatiereIndex, NotionIndex } from "./types"
 import { iconeMatiere, ORDRE_MATIERES } from "@/config/matieres"
 import { styleMatiere } from "./FicheVisuelle"
+import type { EntreePerso } from "@/api/jules"
+import { TEXTES } from "@/config/sources"
+import { useBibliothequePerso, useFiltre } from "@/modules/sources/etat"
+import { FiltreFiches, SectionDossiers, TuilePerso, voitNatives, voitPerso } from "@/modules/sources/pieces"
 
 /** Comparaison sans accents ni casse, pour la recherche. */
 const plat = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase()
 
-export function Bibliotheque({ matiere, onMatiere, onOuvrir }: {
+export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAjouter, onDossier }: {
   matiere: string | null
   onMatiere: (id: string | null) => void
   onOuvrir: (notion: string) => void
+  onOuvrirPerso: (id: string) => void
+  onAjouter: () => void
+  onDossier: (id: string) => void
 }) {
   const [index, setIndex] = useState<IndexFiches | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
   const [recherche, setRecherche] = useState("")
   useEffect(() => { fiches.index().then(setIndex).catch((e) => setErreur(e.message)) }, [])
+  const [filtre] = useFiltre()
+  const perso = useBibliothequePerso()
+  // Fiches perso rangées dans une matière (notion ou matière reconnue), par matière ; à ranger : dans « Mes dossiers ».
+  const persoParMatiere = useMemo(() => {
+    const par = new Map<string, EntreePerso[]>()
+    for (const f of perso?.fiches ?? []) {
+      // Sans notion : Non classé ou dossier seulement. À ranger : section « Mes dossiers ».
+      if (f.etat !== "rangee" || !f.matiere || !f.notion) continue
+      par.set(f.matiere, [...(par.get(f.matiere) ?? []), f])
+    }
+    return par
+  }, [perso])
 
   const matieres = useMemo(() => {
     const liste = [...(index?.matieres || [])]
@@ -34,11 +53,16 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir }: {
     const q = plat(recherche.trim())
     if (q.length < 2) return null
     const mots = q.split(/\s+/)
-    return matieres.flatMap((m) => m.notions.filter((n) => {
+    const natives = !voitNatives(filtre) ? [] : matieres.flatMap((m) => m.notions.filter((n) => {
       const texte = plat(`${n.titre} ${n.chapitre} ${m.nom}`)
       return mots.every((w) => texte.includes(w))
     }).map((n) => ({ m, n }))).slice(0, 40)
-  }, [recherche, matieres])
+    const persos = !voitPerso(filtre) ? [] : (perso?.fiches ?? []).filter((f) => {
+      const texte = plat(`${f.titre} ${f.titre_notion ?? ""} ${f.nom_matiere ?? ""} ${f.source.titre}`)
+      return mots.every((w) => texte.includes(w))
+    })
+    return { natives, persos }
+  }, [recherche, matieres, filtre, perso])
 
   if (erreur) return <div className="grid h-full place-items-center p-8 text-gris">La bibliothèque ne répond pas ({erreur}).</div>
 
@@ -63,36 +87,51 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir }: {
             </motion.div>
           </AnimatePresence>
         </div>
+        <div className="flex w-full flex-col items-stretch gap-3 sm:w-auto sm:items-end">
+        <div className="flex flex-wrap items-center gap-2 sm:justify-end">
+          <FiltreFiches />
+          <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onAjouter}
+            className="inline-flex items-center gap-1.5 rounded-2xl bg-perso px-4 py-2 font-semibold text-white shadow-relief">
+            <Plus size={18} /> {TEXTES.ajouter}
+          </motion.button>
+        </div>
         <label className="relative flex w-full items-center sm:w-[340px]">
           <Search size={18} className="pointer-events-none absolute left-4 text-gris" />
           <input value={recherche} onChange={(e) => setRecherche(e.target.value)} placeholder="Chercher une notion…" aria-label="Chercher une notion"
             className="h-12 w-full rounded-2xl border border-bord bg-white pr-10 pl-11 text-[1rem] shadow-relief outline-none transition-shadow focus:border-bleu focus:ring-4 focus:ring-bleu-clair" />
           {recherche && <button onClick={() => setRecherche("")} aria-label="Effacer" className="absolute right-3 rounded-full p-1 text-gris hover:bg-survol"><X size={16} /></button>}
         </label>
+        </div>
       </div>
 
       <AnimatePresence mode="wait" initial={false}>
         {trouvees ? (
           <motion.div key="recherche" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-            <p className="mt-0 mb-3 text-gris">{trouvees.length ? `${trouvees.length} fiche${trouvees.length > 1 ? "s" : ""} trouvée${trouvees.length > 1 ? "s" : ""}` : "Aucune fiche ne correspond."}</p>
+            {(() => { const n = trouvees.natives.length + trouvees.persos.length; return <p className="mt-0 mb-3 text-gris">{n ? `${n} fiche${n > 1 ? "s" : ""} trouvée${n > 1 ? "s" : ""}` : "Aucune fiche ne correspond."}</p> })()}
             <div className="grid gap-3 md:grid-cols-2">
-              {trouvees.map(({ m, n }, i) => <TuileNotion key={n.id} n={n} m={m} i={i} onOuvrir={onOuvrir} avecMatiere />)}
+              {trouvees.persos.map((f, i) => <TuilePerso key={f.id} f={f} i={i} onOuvrir={onOuvrirPerso} avecLieu />)}
+              {trouvees.natives.map(({ m, n }, i) => <TuileNotion key={n.id} n={n} m={m} i={i} onOuvrir={onOuvrir} avecMatiere />)}
             </div>
           </motion.div>
         ) : choisie ? (
           <motion.div key={`m-${choisie.id}`} initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }}
             transition={{ type: "spring", stiffness: 260, damping: 30 }}>
-            <Chapitres m={choisie} onOuvrir={onOuvrir} />
+            <Chapitres m={choisie} onOuvrir={onOuvrir} natives={voitNatives(filtre)}
+              perso={voitPerso(filtre) ? persoParMatiere.get(choisie.id) ?? [] : []} onOuvrirPerso={onOuvrirPerso} />
           </motion.div>
         ) : (
           <motion.div key="grille" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0, x: -20 }}>
             <LayoutGroup>
               <div className="grid grid-cols-[repeat(auto-fill,minmax(230px,1fr))] gap-4">
                 {index
-                  ? matieres.map((m, i) => <TuileMatiere key={m.id} m={m} i={i} onClick={() => onMatiere(m.id)} />)
+                  ? matieres.filter((m) => voitNatives(filtre) || persoParMatiere.has(m.id)).map((m, i) => (
+                    <TuileMatiere key={m.id} m={m} i={i} onClick={() => onMatiere(m.id)}
+                      natives={voitNatives(filtre)} nbPerso={voitPerso(filtre) ? persoParMatiere.get(m.id)?.length ?? 0 : 0} />))
                   : Array.from({ length: 12 }, (_, i) => <div key={i} className="h-[150px] animate-pulse rounded-3xl bg-nav" />)}
               </div>
             </LayoutGroup>
+            {filtre === "perso" && perso && perso.fiches.length === 0 && <p className="mt-6 text-gris">{TEXTES.aucunePerso}</p>}
+            {voitPerso(filtre) && <SectionDossiers onDossier={onDossier} onOuvrir={onOuvrirPerso} />}
           </motion.div>
         )}
       </AnimatePresence>
@@ -100,7 +139,7 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir }: {
   )
 }
 
-function TuileMatiere({ m, i, onClick }: { m: MatiereIndex; i: number; onClick: () => void }) {
+function TuileMatiere({ m, i, onClick, natives, nbPerso }: { m: MatiereIndex; i: number; onClick: () => void; natives: boolean; nbPerso: number }) {
   const Icone = iconeMatiere(m.id)
   const chapitres = new Set(m.notions.map((n) => n.chapitre)).size
   return (
@@ -116,7 +155,8 @@ function TuileMatiere({ m, i, onClick }: { m: MatiereIndex; i: number; onClick: 
       <span className="relative">
         <b className="block text-[1.1rem] leading-tight text-encre">{m.nom.replace(/ \(.*\)$/, "")}</b>
         <span className="mt-1 flex items-center gap-1 text-[0.9rem] text-gris">
-          {m.notions.length} fiches · {chapitres} chapitre{chapitres > 1 ? "s" : ""}
+          {natives ? <>{m.notions.length} fiches · {chapitres} chapitre{chapitres > 1 ? "s" : ""}</> : null}
+          {nbPerso > 0 && <span className="rounded-full bg-perso-clair px-2 py-px text-[0.8rem] font-semibold text-perso">{natives ? "+" : ""}{nbPerso} perso</span>}
           <ArrowRight size={15} className="ml-auto text-(--m-texte) opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
         </span>
       </span>
@@ -124,15 +164,17 @@ function TuileMatiere({ m, i, onClick }: { m: MatiereIndex; i: number; onClick: 
   )
 }
 
-function Chapitres({ m, onOuvrir }: { m: MatiereIndex; onOuvrir: (notion: string) => void }) {
+function Chapitres({ m, onOuvrir, natives, perso, onOuvrirPerso }: {
+  m: MatiereIndex; onOuvrir: (notion: string) => void; natives: boolean; perso: EntreePerso[]; onOuvrirPerso: (id: string) => void
+}) {
+  // Les fiches perso rejoignent le chapitre de leur notion, juste après la fiche native (docs/SOURCES-CONTRAT.md §8).
   const chapitres = useMemo(() => {
-    const ordre: string[] = [], par = new Map<string, NotionIndex[]>()
-    for (const n of m.notions) {
-      if (!par.has(n.chapitre)) { par.set(n.chapitre, []); ordre.push(n.chapitre) }
-      par.get(n.chapitre)!.push(n)
-    }
-    return ordre.map((c) => ({ titre: c, notions: par.get(c)! }))
-  }, [m])
+    const ordre: string[] = [], par = new Map<string, NotionIndex[]>(), persoPar = new Map<string, EntreePerso[]>()
+    const ajouterChapitre = (c: string) => { if (!par.has(c)) { par.set(c, []); persoPar.set(c, []); ordre.push(c) } }
+    for (const n of m.notions) { ajouterChapitre(n.chapitre); if (natives) par.get(n.chapitre)!.push(n) }
+    for (const f of perso) { const c = f.chapitre ?? TEXTES.nonClasse; ajouterChapitre(c); persoPar.get(c)!.push(f) }
+    return ordre.map((c) => ({ titre: c, notions: par.get(c)!, perso: persoPar.get(c)! })).filter((c) => c.notions.length + c.perso.length > 0)
+  }, [m, natives, perso])
   let k = 0
   return (
     <div className="flex flex-col gap-8" style={styleMatiere(m.id)}>
@@ -143,7 +185,11 @@ function Chapitres({ m, onOuvrir }: { m: MatiereIndex; onOuvrir: (notion: string
             {c.titre}
           </h2>
           <div className="grid gap-3 md:grid-cols-2">
-            {c.notions.map((n) => <TuileNotion key={n.id} n={n} m={m} i={k++} onOuvrir={onOuvrir} />)}
+            {c.notions.flatMap((n) => [
+              <TuileNotion key={n.id} n={n} m={m} i={k++} onOuvrir={onOuvrir} />,
+              ...c.perso.filter((f) => f.notion === n.id).map((f) => <TuilePerso key={f.id} f={f} i={k++} onOuvrir={onOuvrirPerso} />),
+            ])}
+            {c.perso.filter((f) => !c.notions.some((n) => n.id === f.notion)).map((f) => <TuilePerso key={f.id} f={f} i={k++} onOuvrir={onOuvrirPerso} avecLieu />)}
           </div>
         </section>
       ))}

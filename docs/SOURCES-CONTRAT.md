@@ -1,6 +1,13 @@
 # Les sources personnelles : contrat de travail
 
-**Statut : projet, à relire par Alex. Aucun code avant sa validation.**
+> **Implémenté le 28/09/2026** (branche `ui/refonte-2026-09-27`) :
+> - moteur `jules/sources.py`, module `jules/modules/sources.py`, tests `tests/test_sources.py` ;
+> - validateur `valider_fiche(..., origine="personnelle")` ;
+> - front `front/src/modules/sources/*` et `config/sources.ts`.
+>
+> Le module est activé dans `config.local.yaml` (serveur de test 8795), pas encore dans `config.yaml`.
+
+**Statut : validé par Alex le 28/09/2026 (« oui à tout » : Q0 à Q8, première option à chaque fois).**
 
 Ce document fixe comment une source apportée par l'élève (photo, PDF, texte) devient une fiche
 rangée dans sa bibliothèque personnelle. Il est écrit **avant** le code. En cas de doute, il fait
@@ -209,7 +216,7 @@ deuxième prompt.
 ## 9. API élève (module `sources`)
 
 ```
-POST   /api/eleve/sources                     multipart : photos[] | pdf | texte, matiere? -> {source, fiche?} ou erreur
+POST   /api/eleve/sources/deposer             multipart : photos[] | pdf | texte, matiere? -> {source, fiche?} ou erreur
 GET    /api/eleve/sources/fiches              ?filtre=toutes|natives|perso -> index (notion, dossier, etat)
 GET    /api/eleve/sources/fiches/<id>         fiche publique (même forme que /fiches_visuelles/notions/<id>)
 POST   /api/eleve/sources/fiches/<id>/ranger  {mode: notion|dossier|non_classe, dossier?} ; ne pas garder = DELETE
@@ -219,8 +226,13 @@ GET/POST/PATCH/DELETE /api/eleve/sources/dossiers
 GET    /api/eleve/sources/a_ranger            fiches en attente de réponse (question au démarrage)
 ```
 
-La génération est **synchrone** pour une première version, avec des étapes renvoyées en flux :
-**Q7 : ou une tâche de fond interrogée par le front ?**
+PATCH  /api/eleve/sources/fiches/<id>         {titre}
+GET    /api/parent/sources/fiches             liste parent (lecture seule + suppression)
+DELETE /api/parent/sources/fiches/<id>
+
+La génération est **synchrone** (Q7) : la réponse de `deposer` est un flux NDJSON d'étapes
+(`notion` → `ecriture` avec la suggestion → `verification` → `fin` avec la fiche, ou `erreur`).
+Le front affiche ces étapes réelles, jamais une progression simulée.
 
 ## 10. Coût, parent, confidentialité
 
@@ -262,18 +274,18 @@ La génération est **synchrone** pour une première version, avec des étapes r
   - `Bibliotheque.tsx` et `Nav.tsx` : filtre et couleur, **via la config**.
 - Tests : `tests/test_sources.py` (nouveau), plus la non-régression du validateur.
 
-## Questions pour Alex
+## Réponses d'Alex (28/09/2026)
 
-- **Q0** : la ligne du §0 (restitution du document, pas production de l'élève) te convient-elle ?
-- **Q1** : photos, confirmer 5 au plus par source ?
-- **Q2** : un PDF scanné (sans texte), on convertit ses pages en images pour le modèle (il faut
-  une bibliothèque de rendu PDF, `pypdfium2`, licence Apache/BSD), ou on le refuse en demandant
-  des photos ?
-- **Q3** : les photos d'iPhone (HEIC), on les convertit (il faut `pillow-heif`) ou on demande un
-  JPEG ?
-- **Q4** : le marquage « ajouté par Jules » dans la bulle suffit-il, ou faut-il un champ ?
-- **Q5** : ranger dans un dossier, garder aussi la notion suggérée (la fiche apparaît aux deux
-  endroits) ?
-- **Q6** : fiches à ranger jamais supprimées d'office, ou au bout de 7 jours ?
-- **Q7** : génération synchrone avec étapes en flux, ou tâche de fond ?
-- **Q8** : quota de 10 générations par jour, ça te va ?
+- **Q0** : oui. Une fiche personnelle est une restitution du document, pas la production de l'élève.
+- **Q1** : 5 photos au plus par source.
+- **Q2** : un PDF sans texte (scanné) est converti en images de pages (`pypdfium2`), 20 pages au plus.
+- **Q3** : les photos HEIC sont converties en JPEG (`pillow-heif`).
+- **Q4** : la mention dans la bulle `jules:` suffit (« Exemple ajouté par Jules »). Pas de champ en plus.
+- **Q5** : une fiche rangée dans un dossier garde sa notion suggérée ; elle apparaît aux deux endroits.
+- **Q6** : les fiches à ranger ne sont jamais supprimées d'office.
+- **Q7** : génération synchrone, étapes renvoyées en flux.
+- **Q8** : quota de 10 générations par jour, réglable (`sources.generations_par_jour`).
+
+Dépendances : `pypdfium2` (Apache-2.0/BSD-3) et `pillow-heif` (BSD-3), plus `Pillow` qu'elle tire
+(MIT-CMU), déclarées dans l'extra `sources` de `pyproject.toml`. Sans elles, le module se replie :
+PDF à texte seulement, pas de HEIC, avec un message clair.

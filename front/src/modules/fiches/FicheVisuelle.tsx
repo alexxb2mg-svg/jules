@@ -21,11 +21,27 @@ export const styleMatiere = (matiere: string) => ({
 
 const ACCUEIL_JULES = "Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir."
 
-export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
+/** Habillage d'une fiche qui n'est pas une fiche native (fiche personnelle, docs/SOURCES-CONTRAT.md §8) :
+ *  mêmes blocs, même rendu ; seuls la couleur, l'en-tête, les actions et la mention des sources changent. */
+export type Habillage = {
+  style: React.CSSProperties
+  surtitre: React.ReactNode
+  actions?: React.ReactNode
+  mention: string
+  accueil: string
+}
+
+export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger, habillage, suite, onChargee }: {
   notion: string
   onRetour: () => void
   retour: string
   onOuvrirLecon: (notion: string) => void
+  /** Fiche d'une autre origine que la bibliothèque native (par défaut : GET /api/eleve/fiches_visuelles/notions/<id>). */
+  charger?: (id: string) => Promise<Fiche>
+  habillage?: Habillage
+  /** Contenu ajouté après les blocs (ex. « Mes fiches sur cette notion »). */
+  suite?: React.ReactNode
+  onChargee?: (f: Fiche) => void
 }) {
   const [fiche, setFiche] = useState<Fiche | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
@@ -37,21 +53,24 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
   const article = useRef<HTMLElement>(null)
   const bulleZone = useRef<HTMLDivElement>(null)
   const bulleColonne = useRef<HTMLDivElement>(null)
-  const bulle = useBulleJules(ACCUEIL_JULES)
+  const bulle = useBulleJules(habillage?.accueil ?? ACCUEIL_JULES)
+  const native = !charger
 
   useEffect(() => {
     let annule = false
     setFiche(null); setErreur(null); setActif(null); setAvecLecon(false); setEntrainement(null)
-    // Série d'exercices de la fiche v2 de la notion, si elle est servable sans IA.
-    exercices.notions().then((l) => !annule && setEntrainement(l.find((n) => n.id === notion) ?? null)).catch(() => {})
-    fiches.lire(notion).then((f) => {
+    // Série d'exercices de la fiche v2 de la notion, si elle est servable sans IA (fiches natives).
+    if (native) exercices.notions().then((l) => !annule && setEntrainement(l.find((n) => n.id === notion) ?? null)).catch(() => {})
+    ;(charger ?? fiches.lire)(notion).then((f) => {
       if (annule) return
       setFiche(f)
+      onChargee?.(f)
       zone.current?.scrollTo({ top: 0 })
       // La tuile « Exercices corrigés » d'un renfort ouvre la leçon seulement si elle existe vraiment.
-      cours.parcours(f.matiere).then((p) => !annule && setAvecLecon(p.notions.some((n) => n.id === notion && n.lecon))).catch(() => {})
+      if (native) cours.parcours(f.matiere).then((p) => !annule && setAvecLecon(p.notions.some((n) => n.id === notion && n.lecon))).catch(() => {})
     }).catch((e) => !annule && setErreur(e.message))
     return () => { annule = true }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- recharger seulement quand la fiche change
   }, [notion])
 
   // Bulles de rappel au survol (symboles.js) : matière, lettres des formules et abréviations de la fiche.
@@ -66,13 +85,15 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
   const activer = useCallback((bloc: BlocFiche, adresse: string) => {
     setActif(bloc.id)
     if (bloc.jules) bulle.dire(bloc.jules)
-    fiches.blocConsulte(adresse, notion)
-  }, [bulle, notion])
+    if (native) fiches.blocConsulte(adresse, notion)
+  }, [bulle, notion, native])
 
   const ctx: ContexteRendu = useMemo(() => ({
     ouvrirOutil: (lien: LienRenfort) => (lien.outil === "lecon" && avecLecon ? () => onOuvrirLecon(notion) : null),
   }), [avecLecon, notion, onOuvrirLecon])
 
+  const notionReelle = native ? notion : fiche?.notion
+  const lienDiscuter = notionReelle ? `/discuter?notion=${encodeURIComponent(notionReelle)}` : "/discuter"
   const blocs = (fiche?.blocs || []).filter((b) => b.type !== "attendus" && RENDUS[b.type])
   const attendus = (fiche?.blocs.find((b) => b.type === "attendus") as BlocAttendus | undefined)?.attendus || []
 
@@ -82,7 +103,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
   if (erreur) return <div className="grid h-full place-items-center p-8 text-center text-gris">Impossible d'ouvrir cette fiche ({erreur}).</div>
 
   return (
-    <div className="relative flex h-full flex-col" style={fiche ? styleMatiere(fiche.matiere) : undefined}>
+    <div className="relative flex h-full flex-col" style={habillage?.style ?? (fiche ? styleMatiere(fiche.matiere) : undefined)}>
       <motion.div aria-hidden className="absolute inset-x-0 top-0 z-20 h-1 origin-left bg-(--m-accent)" style={{ scaleX: progression }} />
       <div ref={zone} className="flex-1 overflow-y-auto">
         {/* En-tête : bandeau aux couleurs de la matière */}
@@ -95,7 +116,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
             </button>
             {fiche ? (
               <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
-                <p className="m-0 text-[0.95rem] font-semibold tracking-wide text-(--m-texte)">{fiche.nom_matiere} · {fiche.niveau}</p>
+                <p className="m-0 text-[0.95rem] font-semibold tracking-wide text-(--m-texte)">{habillage?.surtitre ?? `${fiche.nom_matiere} · ${fiche.niveau}`}</p>
                 <h1 className="mt-1 mb-0 max-w-[900px] text-[2.1rem] leading-tight font-bold text-balance text-encre md:text-[2.5rem]">{typo(fiche.titre)}</h1>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   {attendus.length > 0 && (
@@ -116,6 +137,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
                       <BookOpen size={15} /> Faire la leçon avec Jules
                     </button>
                   )}
+                  {habillage?.actions}
                 </div>
                 <motion.ul initial={false} animate={{ height: attendusOuverts ? "auto" : 0, opacity: attendusOuverts ? 1 : 0 }}
                   className="m-0 grid list-none gap-2 overflow-hidden p-0 md:grid-cols-2">
@@ -143,14 +165,15 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
                 <BlocVisuel key={`${notion}-${b.id}`} bloc={b} index={i} actif={actif === b.id} ctx={ctx} onActiver={activer} />
               ))}
               {entrainement && <Entrainement key={notion} notion={notion} nb={entrainement.nb} generateur={entrainement.generateur} />}
+              {suite}
               <p data-sans-symboles className="m-0 text-[0.8rem] leading-relaxed text-gris">
-                Sources : {fiche.sources.map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ")} — fiche sous licence {fiche.licence}
+                {habillage?.mention ?? `Sources : ${fiche.sources.map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ")} — fiche sous licence ${fiche.licence}`}
               </p>
             </article>
             <aside className="sticky top-6 hidden flex-col gap-6 self-start lg:flex">
               <Sommaire blocs={blocs} actif={actif} zone={zone} entrainement={!!entrainement} />
               <div ref={bulleColonne}>
-                <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={`/discuter?notion=${encodeURIComponent(notion)}`} />
+                <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={lienDiscuter} />
               </div>
             </aside>
           </div>
@@ -160,7 +183,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon }: {
       {/* Jules : bulle préécrite en bas à droite */}
       {/* Petit écran : Jules flotte en bas ; grand écran : il est dans la colonne de droite, sous le sommaire. */}
       <div ref={bulleZone} className="pointer-events-none absolute right-4 bottom-4 z-30 w-[min(360px,calc(100%-2rem))] [&>*]:pointer-events-auto md:right-8 md:bottom-6 lg:hidden">
-        <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={`/discuter?notion=${encodeURIComponent(notion)}`} />
+        <BulleJules texte={bulle.texte} cle={bulle.cle} fermer={bulle.fermer} lienDiscuter={lienDiscuter} />
       </div>
     </div>
   )

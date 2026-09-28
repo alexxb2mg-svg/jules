@@ -10,6 +10,7 @@ import { appliquerLeviers } from "@/modules/fiches/ponts"
 import { sectionDe, useRoute, type Route } from "@/routes"
 import { ECRANS } from "@/ecrans/registre"
 import type { SectionId } from "@/config/navigation"
+import { RappelARanger } from "@/modules/sources/pieces"
 
 const ROUTE_DE_SECTION: Partial<Record<SectionId, Route>> = {
   fiches: { ecran: "fiches", matiere: null },
@@ -24,12 +25,13 @@ export default function App() {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
   }, [])
   const Ecran = ECRANS[route.ecran]
-  const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}` : route.ecran === "support" ? `support-${route.id}` : route.ecran
+  const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}`
+    : route.ecran === "support" || route.ecran === "perso" || route.ecran === "dossier" ? `${route.ecran}-${route.id}` : route.ecran
 
   return (
     <TooltipProvider delayDuration={300}>
       <SidebarProvider className="h-full min-h-0">
-        <Nav actif={sectionDe(route)} prenom={infos?.prenom || ""} onChange={(s) => { const r = ROUTE_DE_SECTION[s]; if (r) aller(r) }} />
+        <Nav actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = ROUTE_DE_SECTION[s]; if (r) aller(r) }} />
         <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
           <SidebarTrigger className="absolute top-3 left-3 z-40 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />
           <AnimatePresence mode="wait">
@@ -39,6 +41,7 @@ export default function App() {
               <Ecran route={route} aller={aller} infos={infos} />
             </motion.div>
           </AnimatePresence>
+          {route.ecran !== "perso" && <RappelARanger onOuvrir={(id) => aller({ ecran: "perso", id })} />}
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>

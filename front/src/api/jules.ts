@@ -177,3 +177,73 @@ export const cours = {
   indice: (id: string, bloc: number) => api<{ indice: string | null; restants: number; progression: Progression }>(`${S(id)}/blocs/${bloc}/indice`, { method: "POST" }),
   fait: (id: string, bloc: number) => api<{ progression: Progression }>(`${S(id)}/blocs/${bloc}/fait`, { method: "POST" }),
 }
+
+/* ---- sources personnelles (docs/SOURCES-CONTRAT.md, jules/modules/sources.py) ---- */
+
+export type SuggestionSource = { notion: string | null; titre_notion: string | null; matiere: string | null; raison: string; avertissement: string }
+export type EtatFichePerso = "a_ranger" | "rangee"
+export type EntreePerso = {
+  id: string; titre: string; notion: string | null; matiere: string | null; dossier: string | null
+  etat: EtatFichePerso; suggestion: SuggestionSource; cree_le: string
+  source: { id: string; type: "photos" | "pdf" | "texte"; titre: string; fichiers: string[] }
+  titre_notion?: string | null; chapitre?: string | null; nom_matiere?: string | null
+}
+export type DossierPerso = { id: string; nom: string }
+export type BibliothequePerso = { fiches: EntreePerso[]; dossiers: DossierPerso[]; quota: { par_jour: number; utilisees: number } }
+export type FichePerso = Fiche & {
+  id: string; origine: "personnelle"
+  rangement: Pick<EntreePerso, "etat" | "notion" | "dossier" | "suggestion" | "cree_le">
+  source: EntreePerso["source"]
+}
+export type EtapeSource =
+  | { etape: "notion" } | { etape: "ecriture"; suggestion: SuggestionSource } | { etape: "verification" }
+  | { etape: "fin"; fiche: EntreePerso } | { etape: "erreur"; message: string }
+export type ModeRangement = "notion" | "dossier" | "non_classe"
+
+const SRC = "/api/eleve/sources"
+const F = (id: string) => `${SRC}/fiches/${encodeURIComponent(id)}`
+const envoi = (method: string, corps?: unknown): RequestInit =>
+  corps === undefined ? { method } : { method, headers: { "Content-Type": "application/json" }, body: JSON.stringify(corps) }
+
+/** Étapes réelles de la génération (NDJSON), transmises au fil de l'eau. */
+async function flux(chemin: string, init: RequestInit, surEtape: (e: EtapeSource) => void): Promise<EtapeSource> {
+  const r = await fetch(chemin, { credentials: "same-origin", ...init })
+  if (!r.ok || !r.body) {
+    let detail = `${r.status}`
+    try { detail = (await r.json()).detail ?? detail } catch { /* corps non JSON */ }
+    throw new Error(detail)
+  }
+  const lecteur = r.body.pipeThrough(new TextDecoderStream()).getReader()
+  let reste = "", derniere: EtapeSource = { etape: "erreur", message: "La génération s'est interrompue." }
+  for (;;) {
+    const { value, done } = await lecteur.read()
+    if (done) break
+    reste += value
+    const lignes = reste.split("\n")
+    reste = lignes.pop() ?? ""
+    for (const l of lignes) if (l.trim()) { derniere = JSON.parse(l); surEtape(derniere) }
+  }
+  if (reste.trim()) { derniere = JSON.parse(reste); surEtape(derniere) }
+  return derniere
+}
+
+export const sources = {
+  deposer: (entree: { photos?: File[]; pdf?: File; texte?: string; matiere?: string }, surEtape: (e: EtapeSource) => void) => {
+    const corps = new FormData()
+    for (const p of entree.photos ?? []) corps.append("photos", p)
+    if (entree.pdf) corps.append("pdf", entree.pdf)
+    if (entree.texte) corps.append("texte", entree.texte)
+    if (entree.matiere) corps.append("matiere", entree.matiere)
+    return flux(`${SRC}/deposer`, { method: "POST", body: corps }, surEtape)
+  },
+  regenerer: (id: string, surEtape: (e: EtapeSource) => void) => flux(`${F(id)}/regenerer`, { method: "POST" }, surEtape),
+  bibliotheque: () => api<BibliothequePerso>(`${SRC}/fiches`),
+  lire: (id: string) => api<FichePerso>(F(id)),
+  ranger: (id: string, mode: ModeRangement, dossier?: string) => api<EntreePerso>(`${F(id)}/ranger`, json({ mode, dossier })),
+  renommer: (id: string, titre: string) => api<EntreePerso>(F(id), envoi("PATCH", { titre })),
+  supprimer: (id: string) => api<{ ok: boolean }>(F(id), envoi("DELETE")),
+  aRanger: () => api<EntreePerso[]>(`${SRC}/a_ranger`),
+  creerDossier: (nom: string) => api<DossierPerso>(`${SRC}/dossiers`, json({ nom })),
+  renommerDossier: (id: string, nom: string) => api<DossierPerso>(`${SRC}/dossiers/${encodeURIComponent(id)}`, envoi("PATCH", { nom })),
+  supprimerDossier: (id: string) => api<{ deplacees: number }>(`${SRC}/dossiers/${encodeURIComponent(id)}`, envoi("DELETE")),
+}
