@@ -12,17 +12,20 @@ import type { EntreePerso } from "@/api/jules"
 import { TEXTES } from "@/config/sources"
 import { useBibliothequePerso, useFiltre } from "@/modules/sources/etat"
 import { FiltreFiches, SectionDossiers, TuilePerso, voitNatives, voitPerso } from "@/modules/sources/pieces"
+import { LegendeOrigine, Reprise } from "@/modules/accueil/Reprise"
+import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
 
 /** Comparaison sans accents ni casse, pour la recherche. */
 const plat = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase()
 
-export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAjouter, onDossier }: {
+export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAjouter, onDossier, onReviser }: {
   matiere: string | null
   onMatiere: (id: string | null) => void
   onOuvrir: (notion: string) => void
   onOuvrirPerso: (id: string) => void
   onAjouter: () => void
   onDossier: (id: string) => void
+  onReviser: () => void
 }) {
   const [index, setIndex] = useState<IndexFiches | null>(null)
   const [erreur, setErreur] = useState<string | null>(null)
@@ -82,6 +85,7 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
                 <>
                   <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">Mes fiches</h1>
                   <p className="mt-1 mb-0 text-gris">{index ? `${total} fiches visuelles pour toute la 3e, rangées par matière.` : "Chargement de la bibliothèque…"}</p>
+                  {(perso?.fiches.length ?? 0) > 0 && <LegendeOrigine />}
                 </>
               )}
             </motion.div>
@@ -93,6 +97,7 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
           <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onAjouter}
             className="inline-flex items-center gap-1.5 rounded-2xl bg-perso px-4 py-2 font-semibold text-white shadow-relief">
             <Plus size={18} /> {TEXTES.ajouter}
+            {estNouveau("fiches:ajouter") && <span className="rounded-full bg-white/25 px-1.5 py-px text-[0.68rem] font-bold tracking-wide uppercase">{LIBELLE_NOUVEAU}</span>}
           </motion.button>
         </div>
         <label className="relative flex w-full items-center sm:w-[340px]">
@@ -103,6 +108,8 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
         </label>
         </div>
       </div>
+
+      {!choisie && !trouvees && <Reprise onFiche={onOuvrir} onPerso={onOuvrirPerso} onReviser={onReviser} />}
 
       <AnimatePresence mode="wait" initial={false}>
         {trouvees ? (
@@ -154,9 +161,9 @@ function TuileMatiere({ m, i, onClick, natives, nbPerso }: { m: MatiereIndex; i:
       </span>
       <span className="relative">
         <b className="block text-[1.1rem] leading-tight text-encre">{m.nom.replace(/ \(.*\)$/, "")}</b>
-        <span className="mt-1 flex items-center gap-1 text-[0.9rem] text-gris">
-          {natives ? <>{m.notions.length} fiches · {chapitres} chapitre{chapitres > 1 ? "s" : ""}</> : null}
-          {nbPerso > 0 && <span className="rounded-full bg-perso-clair px-2 py-px text-[0.8rem] font-semibold text-perso">{natives ? "+" : ""}{nbPerso} perso</span>}
+        <span className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[0.9rem] text-gris">
+          {natives ? <span>{m.notions.length} fiches · {chapitres} chapitre{chapitres > 1 ? "s" : ""}</span> : null}
+          {nbPerso > 0 && <span className="rounded-full bg-perso-clair px-2 py-px text-[0.8rem] font-semibold whitespace-nowrap text-perso">{natives ? "+" : ""}{nbPerso} perso</span>}
           <ArrowRight size={15} className="ml-auto text-(--m-texte) opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
         </span>
       </span>

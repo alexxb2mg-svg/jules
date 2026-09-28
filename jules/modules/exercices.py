@@ -31,7 +31,7 @@ from pydantic import BaseModel
 
 from jules.bibliotheques import dossier_bibliotheque
 from jules.fiches.correction import ILLISIBLE, TYPES_AUTO
-from jules.fiches.parcours import Etat, choisir, presenter, repondre
+from jules.fiches.parcours import Etat, choisir, indice_demande, presenter, repondre
 from jules.fiches.parcours import exercice as exercice_de
 from jules.fiches.schema import est_v2, servable_sans_ia
 from jules.generateurs import GENERATEURS, serie_generee
@@ -50,6 +50,8 @@ TRANSITION_ECHEC = "\n\nOn passe au suivant.\n\n"
 MESSAGE_FIN_TOUT_REUSSI = "Bravo, tu as trouvé tous les exercices de cette série !"
 MESSAGE_FIN_PARTIEL = "C'est fini pour cette série : ce qui n'a pas tenu, on le retravaillera."
 MESSAGE_APRES_FIN = "Cette série d'exercices est terminée. Lance-en une nouvelle depuis l'écran d'accueil."
+DEMANDE_INDICE = "Je voudrais un indice."
+PLUS_D_INDICE = "Tu as déjà tous mes indices : essaie une réponse, même incomplète, je te dirai ce qui va."
 
 
 ELEMENTS_MAX = 20  # une liste ou des paires plus longues ne viennent pas d'un exercice de fiche
@@ -272,6 +274,11 @@ class Brique(Module):
             "indice": retour.message if verdict == "indice" else None,
             "piege": retour.message if len(etat.pieges_dits) > pieges_avant else None,
             "correction": None,
+            # « Pourquoi ? » apres une reponse juste : la solution redigee de la fiche (plus un secret une
+            # fois l'exercice reussi). Jamais avant le verdict.
+            "pourquoi": (str(exercice_de(fiche, etat.exercice).get("solution") or "").strip() or None)
+            if verdict == "juste"
+            else None,
             "termine": retour.termine,
             "a_revoir": [],
             "suivant": None,
@@ -343,7 +350,8 @@ class Brique(Module):
                 raise HTTPException(404, "Pas de série d'exercices en cours ici")
             if donnees.get("fini"):
                 return {"verdict": "fini", "message": MESSAGE_APRES_FIN, "palier": 0, "indice": None, "piege": None,
-                        "correction": None, "termine": True, "a_revoir": [], "suivant": None, "bilan": None}
+                        "correction": None, "pourquoi": None, "termine": True, "a_revoir": [], "suivant": None,
+                        "bilan": None}
             if self._fiche_de(donnees) is None:
                 raise HTTPException(409, "Fiche de la série introuvable")
             reponse, texte = lire_reponse_structuree(entree.reponse)
@@ -357,6 +365,27 @@ class Brique(Module):
             if not dernier:
                 raise HTTPException(500, "Réponse non corrigée")
             return dict(dernier)
+
+        @routeur.post("/{conv_id}/indice")
+        def demander_indice(conv_id: str) -> dict[str, Any]:
+            """Coup de pouce demande avant de repondre (idee D, docs/veille/synthese-ui-dinobot-marche.md) :
+            le palier suivant de l'echelle de la fiche, decide par le code, sans IA. Ecrit dans la
+            conversation (Jules voit la meme chose que l'eleve) et compte comme une aide dans le bilan."""
+            conv = self.tuteur.stockage.conversation(conv_id)
+            donnees = self._lire(conv_id) if conv is not None else None
+            if conv is None or conv.mode != MODE or donnees is None or donnees.get("fini"):
+                raise HTTPException(404, "Pas d'exercice en cours ici")
+            fiche = self._fiche_de(donnees)
+            if fiche is None:
+                raise HTTPException(409, "Fiche de la série introuvable")
+            etat = Etat(**donnees["etat"])
+            texte = indice_demande(fiche, etat)
+            donnees["etat"] = asdict(etat)
+            self._sauver(conv_id, donnees)
+            stockage = self.tuteur.stockage
+            stockage.ajouter_message(conv_id, Message("eleve", DEMANDE_INDICE))
+            stockage.ajouter_message(conv_id, Message("bot", texte or PLUS_D_INDICE))
+            return {"indice": texte, "palier": etat.paliers_donnes, "message": texte or PLUS_D_INDICE}
 
         @routeur.get("/{conv_id}/etat")
         def etat_serie(conv_id: str) -> dict[str, Any]:

@@ -11,7 +11,8 @@ import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import "katex/dist/katex.min.css"
-import { ArrowUp } from "lucide-react"
+import { ArrowUp, MessageCircleQuestion } from "lucide-react"
+import { motion } from "framer-motion"
 import { conversations, type MessageJules } from "@/api/jules"
 
 export type AideRapide = { libelle: string; message: string }
@@ -27,10 +28,12 @@ const convertir = (m: MessageJules, i: number): ThreadMessageLike => ({
   content: [{ type: "text", text: nettoyer(m.texte) }],
 })
 
-export function PanneauJules({ conversationId, sousTitre, aides = [], rafraichir = 0 }: {
+export function PanneauJules({ conversationId, sousTitre, aides = [], suggestions = [], rafraichir = 0 }: {
   conversationId: string
   sousTitre?: string
   aides?: AideRapide[]
+  /** Questions proposées tant que la conversation est vide (tirées du contenu affiché, jamais générées). */
+  suggestions?: AideRapide[]
   /** Incrémenter pour relire la conversation (ex. après une réponse corrigée côté exercice). */
   rafraichir?: number
 }) {
@@ -80,8 +83,20 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], rafraichir
         <ThreadPrimitive.Root className="flex min-h-0 flex-1 flex-col">
           <ThreadPrimitive.Viewport className="flex flex-1 flex-col gap-3 overflow-y-auto px-4 py-4">
             <ThreadPrimitive.Empty>
-              <div className="m-auto max-w-[280px] text-center text-[15px] text-gris">
-                Je suis là si tu bloques. Je ne te donne pas la réponse, mais je t'aide à la trouver.
+              <div className="m-auto flex max-w-[320px] flex-col items-center gap-4 text-center text-[15px] text-gris">
+                <p className="m-0">Je suis là si tu bloques. Je ne te donne pas la réponse, mais je t'aide à la trouver.</p>
+                {suggestions.length > 0 && (
+                  <div className="flex w-full flex-col gap-2">
+                    {suggestions.map((s, i) => (
+                      <ThreadPrimitive.Suggestion key={s.libelle} prompt={s.message} send asChild>
+                        <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 * i }}
+                          className="flex items-center gap-2 rounded-2xl border border-bord bg-white px-3.5 py-2.5 text-left text-[14px] font-medium text-encre shadow-relief transition-colors hover:border-bleu hover:text-bleu">
+                          <MessageCircleQuestion size={16} className="shrink-0 text-bleu" /> <span className="line-clamp-2">{s.libelle}</span>
+                        </motion.button>
+                      </ThreadPrimitive.Suggestion>
+                    ))}
+                  </div>
+                )}
               </div>
             </ThreadPrimitive.Empty>
             <ThreadPrimitive.Messages components={{ UserMessage: MessageEleve, AssistantMessage: MessageJulesBulle }} />

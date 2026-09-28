@@ -25,7 +25,8 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
         onOuvrir={(n) => aller({ ecran: "fiche", notion: n })}
         onOuvrirPerso={(id) => aller({ ecran: "perso", id })}
         onAjouter={() => aller({ ecran: "ajouter" })}
-        onDossier={(id) => aller({ ecran: "dossier", id })} />
+        onDossier={(id) => aller({ ecran: "dossier", id })}
+        onReviser={() => aller({ ecran: "revision" })} />
     </div>
   ),
   fiche: ({ route, aller }) => route.ecran !== "fiche" ? null : (

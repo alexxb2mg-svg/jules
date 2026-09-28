@@ -2,7 +2,7 @@
 // Chaque réponse passe par Tuteur.echanger (même historique et même suivi que dans le chat), sans IA.
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { ArrowRight, CircleCheck, CircleX, Dumbbell, Lightbulb, RotateCcw, Shuffle, Sparkles, TriangleAlert } from "lucide-react"
+import { ArrowRight, ChevronDown, CircleCheck, CircleX, Dumbbell, HelpCircle, Lightbulb, RotateCcw, Shuffle, Sparkles, TriangleAlert } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { exercices, type Bilan, type ExerciceVue, type ReponseExercice, type Verdict } from "@/api/jules"
 import { Riche } from "@/modules/fiches/texte"
@@ -23,7 +23,14 @@ const TEXTES = {
   sansAide: (n: number) => `${n} sans indice`,
   avecAide: (n: number) => `${n} avec un coup de pouce`,
   typeInconnu: "Cet exercice ne peut pas encore s'afficher ici : réponds-y dans Discuter avec Jules.",
+  demanderIndice: "Un indice",
+  indiceN: (n: number) => `Indice ${n} sur 3`,
+  plusDIndice: "Plus d'indice",
+  pourquoi: "Pourquoi ?",
 }
+
+/** Nombre de paliers de l'échelle d'indices (jules/fiches/schema.py PALIERS). */
+const PALIERS = 3
 
 const DIFFICULTE = ["", "Facile", "Moyen", "Costaud"]
 
@@ -44,12 +51,16 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
   const [verdict, setVerdict] = useState<Verdict | null>(null)
   const [envoi, setEnvoi] = useState(false)
   const [erreur, setErreur] = useState<string | null>(null)
+  // Coups de pouce demandés sur l'exercice en cours (idée D) : affichés au-dessus de la saisie.
+  const [indices, setIndices] = useState<{ texte: string; palier: number }[]>([])
+  const [palier, setPalier] = useState(0)
 
   const lancer = async (genere: boolean) => {
     setErreur(null); setVerdict(null); setEnvoi(true)
     try {
       const r = await (genere ? exercices.generer(notion) : exercices.commencer(notion))
       setSerie({ conv: r.conversation, exercice: r.exercice, numero: 1, total: r.total, resultats: [] })
+      setIndices([]); setPalier(0)
     } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
 
@@ -59,6 +70,7 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
     try {
       const v = await exercices.repondre(serie.conv, reponse)
       setVerdict(v)
+      if (!v.termine) setPalier(v.palier)
       if (v.termine && v.verdict !== "fini") setSerie((s) => s && { ...s, resultats: [...s.resultats, v.verdict === "juste"] })
     } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
@@ -66,7 +78,17 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
   const suivant = () => {
     if (!serie || !verdict?.suivant) return
     setSerie({ ...serie, exercice: verdict.suivant, numero: serie.numero + 1 })
-    setVerdict(null)
+    setVerdict(null); setIndices([]); setPalier(0)
+  }
+
+  const demanderIndice = async () => {
+    if (!serie || envoi) return
+    setEnvoi(true); setErreur(null)
+    try {
+      const r = await exercices.indice(serie.conv)
+      setPalier(r.palier)
+      if (r.indice) setIndices((l) => [...l, { texte: r.indice!, palier: r.palier }])
+    } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
 
   const bilan = verdict?.bilan
@@ -123,12 +145,30 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
               </p>
               <p className="m-0 text-[1.1rem] leading-relaxed font-medium whitespace-pre-line text-encre"><Riche texte={serie.exercice.enonce} /></p>
 
+              <AnimatePresence initial={false}>
+                {indices.map((ind) => (
+                  <motion.div key={ind.palier} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }}
+                    className={cn("flex items-start gap-2.5 rounded-2xl border-2 px-4 py-3", RETOURS.indice.classe)} role="status">
+                    <Lightbulb size={20} className="mt-0.5 shrink-0" />
+                    <span><b className="block text-[0.8rem] tracking-wide">{TEXTES.indiceN(ind.palier)}</b><Riche texte={ind.texte} /></span>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+
               {(() => {
                 const Saisie = SAISIES[serie.exercice.type]
                 if (!Saisie) return <p className="m-0 text-gris">{TEXTES.typeInconnu}</p>
                 // key = l'exercice seul : après une erreur, l'élève garde ses choix (paires, ordre, cases) et corrige.
                 return exerciceTermine ? null : <Saisie key={serie.exercice.id} exercice={serie.exercice} bloque={envoi} onRepondre={repondre} />
               })()}
+
+              {!exerciceTermine && (
+                <motion.button whileTap={{ scale: 0.96 }} onClick={demanderIndice} disabled={envoi || palier >= PALIERS}
+                  className="inline-flex items-center gap-1.5 self-end rounded-full border-2 border-[#F3D9A6] bg-[#FFF8EC] px-3.5 py-1.5 text-[0.9rem] font-semibold text-[#7A4B00] transition-opacity disabled:opacity-45">
+                  <Lightbulb size={16} /> {palier >= PALIERS ? TEXTES.plusDIndice : TEXTES.demanderIndice}
+                  <span className="text-[0.78rem] font-normal opacity-80">{Math.min(palier, PALIERS)}/{PALIERS}</span>
+                </motion.button>
+              )}
 
               <AnimatePresence>
                 {verdict && <Retour key={`${verdict.verdict}-${verdict.palier}-${verdict.message.length}`} verdict={verdict} />}
@@ -168,10 +208,33 @@ function Retour({ verdict }: { verdict: Verdict }) {
           <p className="m-0 text-[0.95rem] leading-relaxed whitespace-pre-line"><Riche texte={verdict.correction} /></p>
         </div>
       )}
+      {verdict.pourquoi && <Pourquoi texte={verdict.pourquoi} />}
       {verdict.a_revoir.length > 0 && (
         <p className="m-0 ml-7 text-[0.9rem]">{TEXTES.aRevoir} <b>{verdict.a_revoir.join(", ")}</b></p>
       )}
     </motion.div>
+  )
+}
+
+/** « Pourquoi ? » après une réponse juste (idée K) : la solution de la fiche, dépliée à la demande. */
+function Pourquoi({ texte }: { texte: string }) {
+  const [ouvert, setOuvert] = useState(false)
+  return (
+    <div className="ml-7">
+      <button onClick={() => setOuvert((o) => !o)} aria-expanded={ouvert}
+        className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[0.9rem] font-semibold underline-offset-2 hover:underline">
+        <HelpCircle size={15} /> {TEXTES.pourquoi}
+        <ChevronDown size={15} className={cn("transition-transform", ouvert && "rotate-180")} />
+      </button>
+      <AnimatePresence initial={false}>
+        {ouvert && (
+          <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}
+            className="m-0 mt-1 overflow-hidden rounded-xl bg-white/70 px-3 py-2 text-[0.95rem] leading-relaxed whitespace-pre-line text-encre">
+            <Riche texte={texte} />
+          </motion.p>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 

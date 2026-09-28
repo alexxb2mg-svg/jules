@@ -340,3 +340,42 @@ def test_route_repondre_refuse_hors_serie_et_trop_long(tuteur):
         assert client.post(f"/api/eleve/exercices/{autre.id}/repondre", json={"reponse": "x"}).status_code == 404
         conv_id = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()["conversation"]
         assert client.post(f"/api/eleve/exercices/{conv_id}/repondre", json={"reponse": ["x"] * 50}).status_code == 422
+
+
+# --- idees D et K (docs/veille/synthese-ui-dinobot-marche.md) : indice demande, « Pourquoi ? » -----------
+
+
+def test_indice_demande_avant_de_repondre_sans_ia_et_sans_solution(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        lance = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()
+        conv_id = lance["conversation"]
+        paliers = []
+        for _ in range(3):
+            r = client.post(f"/api/eleve/exercices/{conv_id}/indice")
+            assert r.status_code == 200
+            assert r.json()["indice"]
+            paliers.append(r.json()["palier"])
+        assert paliers == [1, 2, 3]
+        # echelle epuisee : rien de plus, et surtout pas la solution
+        r = client.post(f"/api/eleve/exercices/{conv_id}/indice").json()
+        assert r["indice"] is None and r["palier"] == 3
+        assert "1 n'a qu'un seul diviseur" not in str(r)
+        # visible dans la conversation, comme dans le chat
+        textes = [m["texte"] for m in client.get(f"/api/conversations/{conv_id}").json()["messages"]]
+        assert textes.count("Je voudrais un indice.") == 4
+        # l'aide compte dans le bilan : la bonne reponse reste juste, mais « avec indice »
+        assert _repondre(client, conv_id, "non")["verdict"] == "juste"
+        for r in ("2^3 x 3^2 x 5", ["b", "d"]):
+            _repondre(client, conv_id, r)
+        assert _repondre(client, conv_id, "7/10")["bilan"]["avec_indice"] == 1
+        assert client.post("/api/eleve/exercices/inconnue/indice").status_code == 404
+    assert _nb_appels_principal(tuteur) == 0
+
+
+def test_pourquoi_seulement_apres_une_reponse_juste(tuteur):
+    with TestClient(creer_app(tuteur)) as client:
+        conv_id = client.post(f"/api/eleve/exercices/{NOTION_MATHS}/commencer").json()["conversation"]
+        faux = _repondre(client, conv_id, "oui")
+        assert faux["pourquoi"] is None
+        juste = _repondre(client, conv_id, "non")
+        assert juste["verdict"] == "juste" and juste["pourquoi"]

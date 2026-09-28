@@ -13,6 +13,7 @@ import { iconeMatiere } from "@/config/matieres"
 import { TEXTES } from "@/config/sources"
 import { NON_CLASSE, useBibliothequePerso, useFiltre, useRecentes } from "@/modules/sources/etat"
 import { FiltreFiches, voitNatives, voitPerso } from "@/modules/sources/pieces"
+import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
 import type { Route } from "@/routes"
 
 export function Nav({ actif, onChange, prenom, route, aller }: {
@@ -116,6 +117,7 @@ function SousFiches({ route, aller }: { route: Route; aller: (r: Route) => void 
             <SidebarMenuSubButton isActive={route.ecran === "ajouter"} onClick={() => aller({ ecran: "ajouter" })}
               className={cn(lien, "cursor-pointer font-semibold text-perso [&>svg]:text-perso data-[active=true]:bg-perso-clair")}>
               <Plus /><span>{TEXTES.ajouter}</span>
+              {estNouveau("fiches:ajouter") && aRanger === 0 && <span title={LIBELLE_NOUVEAU} aria-label={LIBELLE_NOUVEAU} className="ml-auto size-2 shrink-0 rounded-full bg-perso ring-2 ring-perso-clair" />}
               {aRanger > 0 && <span className="ml-auto rounded-full bg-perso px-1.5 text-[11px] font-bold text-white" title={TEXTES.aRanger}>{aRanger}</span>}
             </SidebarMenuSubButton>
           </SidebarMenuSubItem>

@@ -82,6 +82,8 @@ export type Verdict = {
   indice: string | null
   piege: string | null
   correction: string | null
+  /** Après une réponse juste seulement : la solution rédigée de la fiche (« Pourquoi ? »). */
+  pourquoi?: string | null
   termine: boolean
   a_revoir: string[]
   suivant: ExerciceVue | null
@@ -99,6 +101,8 @@ export const exercices = {
   commencer: (notion: string) => api<{ conversation: string; exercice: ExerciceVue; total: number }>(`${E(notion)}/commencer`, { method: "POST" }),
   generer: (notion: string) => api<{ conversation: string; exercice: ExerciceVue; total: number }>(`${E(notion)}/generer`, { method: "POST" }),
   repondre: (conv: string, reponse: ReponseExercice) => api<Verdict>(`${E(conv)}/repondre`, json({ reponse })),
+  /** Coup de pouce demandé avant de répondre : palier suivant de l'échelle, décidé par le serveur. */
+  indice: (conv: string) => api<{ indice: string | null; palier: number; message: string }>(`${E(conv)}/indice`, { method: "POST" }),
 }
 
 /* ---- studio : l'élève fabrique ses supports, Jules relit (docs/STUDIO-CONTRAT.md §3) ---- */

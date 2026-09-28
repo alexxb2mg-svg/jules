@@ -6,6 +6,7 @@ import { ChevronLeft, PartyPopper, RotateCw } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { studio, type CarteDue, type ReponseCarte } from "@/api/jules"
 import { REPONSES_CARTE } from "./config"
+import { REVOIR_RATEES } from "@/config/veille"
 
 export function Revision({ onRetour }: { onRetour: () => void }) {
   const [cartes, setCartes] = useState<CarteDue[] | null>(null)
@@ -14,6 +15,9 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
   const [envoi, setEnvoi] = useState(false)
   const [erreur, setErreur] = useState<string | null>(null)
   const [bilan, setBilan] = useState<Record<ReponseCarte, number>>({ facile: 0, difficile: 0, rate: 0 })
+  // F : cartes ratées de la révision du jour, et tour d'entraînement qui les repasse sans rien enregistrer.
+  const [ratees, setRatees] = useState<CarteDue[]>([])
+  const [entrainement, setEntrainement] = useState(false)
 
   useEffect(() => { studio.revisions().then((r) => setCartes(r.cartes)).catch((e) => setErreur(e.message)) }, [])
 
@@ -27,10 +31,12 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
   }
   const repondre = async (reponse: ReponseCarte) => {
     if (!carte || envoi) return
+    if (entrainement) { setVerso(null); setI((x) => x + 1); return } // hors calendrier : aucun envoi
     setEnvoi(true); setErreur(null)
     try {
       await studio.repondreCarte(carte.support, carte.carte_id, reponse)
       setBilan((b) => ({ ...b, [reponse]: b[reponse] + 1 }))
+      if (reponse === "rate") setRatees((r) => [...r, carte])
       setVerso(null); setI((x) => x + 1)
     } catch (e) { setErreur((e as Error).message) } finally { setEnvoi(false) }
   }
@@ -46,6 +52,7 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
 
   const total = cartes?.length ?? 0
   const fini = cartes !== null && i >= total
+  const revoirRatees = () => { setCartes(ratees); setI(0); setVerso(null); setEntrainement(true) }
 
   return (
     <div className="flex h-full flex-col bg-[radial-gradient(ellipse_at_top,var(--j-bleu-clair),transparent_60%)]">
@@ -73,7 +80,7 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
             <motion.div key={`${carte.support}-${carte.carte_id}`} className="flex w-full max-w-[560px] flex-col items-center gap-6"
               initial={{ opacity: 0, x: 60, rotate: 3 }} animate={{ opacity: 1, x: 0, rotate: 0 }} exit={{ opacity: 0, x: -80, rotate: -4 }}
               transition={{ type: "spring", stiffness: 260, damping: 26 }}>
-              <p className="m-0 text-[0.9rem] font-semibold text-gris">{carte.notion}</p>
+              <p className="m-0 text-[0.9rem] font-semibold text-gris">{carte.notion}{entrainement && <span className="ml-2 rounded-full bg-[#FDF1F0] px-2 py-0.5 text-[#8A1F17]">entraînement</span>}</p>
               <button onClick={retourner} aria-label={verso === null ? "Retourner la carte" : "Carte retournée"}
                 className="w-full [perspective:1200px]">
                 <motion.div animate={{ rotateY: verso === null ? 0 : 180 }} transition={{ type: "spring", stiffness: 200, damping: 22 }}
@@ -101,10 +108,21 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
             <motion.div key="fin" initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex flex-col items-center gap-3 text-center">
               <motion.span initial={{ rotate: -30, scale: 0 }} animate={{ rotate: 0, scale: 1 }} transition={{ type: "spring", stiffness: 240, damping: 12 }}
                 className="grid size-20 place-items-center rounded-full bg-bleu text-white"><PartyPopper size={38} /></motion.span>
-              <p className="m-0 text-[1.8rem] font-bold text-encre">Révision du jour terminée</p>
-              <p className="m-0 text-gris">{bilan.facile} facile{bilan.facile > 1 ? "s" : ""} · {bilan.difficile} difficile{bilan.difficile > 1 ? "s" : ""} · {bilan.rate} raté{bilan.rate > 1 ? "s" : ""}</p>
-              <p className="m-0 max-w-[420px] text-[0.95rem] text-gris">Les cartes ratées reviennent demain, les autres plus tard : c'est l'espacement qui fait tenir la mémoire.</p>
-              <button onClick={onRetour} className="mt-2 rounded-full bg-bleu px-5 py-2.5 font-semibold text-white shadow-relief">Retour au studio</button>
+              <p className="m-0 text-[1.8rem] font-bold text-encre">{entrainement ? REVOIR_RATEES.fin : "Révision du jour terminée"}</p>
+              {!entrainement && <>
+                <p className="m-0 text-gris">{bilan.facile} facile{bilan.facile > 1 ? "s" : ""} · {bilan.difficile} difficile{bilan.difficile > 1 ? "s" : ""} · {bilan.rate} raté{bilan.rate > 1 ? "s" : ""}</p>
+                <p className="m-0 max-w-[420px] text-[0.95rem] text-gris">Les cartes ratées reviennent demain, les autres plus tard : c'est l'espacement qui fait tenir la mémoire.</p>
+              </>}
+              <div className="mt-2 flex flex-wrap justify-center gap-2">
+                {ratees.length > 0 && (
+                  <motion.button whileTap={{ scale: 0.96 }} onClick={revoirRatees}
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-[#F2B8B5] bg-[#FDF1F0] px-5 py-2.5 font-semibold text-[#8A1F17]">
+                    <RotateCw size={16} /> {REVOIR_RATEES.bouton(ratees.length)}
+                  </motion.button>
+                )}
+                <button onClick={onRetour} className="rounded-full bg-bleu px-5 py-2.5 font-semibold text-white shadow-relief">Retour au studio</button>
+              </div>
+              {ratees.length > 0 && <p className="m-0 text-[0.85rem] text-gris">{REVOIR_RATEES.explication}</p>}
             </motion.div>
           )}
         </AnimatePresence>

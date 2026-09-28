@@ -8,6 +8,15 @@ import { Progress } from "@/components/ui/progress"
 import { cours, type Session, type Progression } from "@/api/jules"
 import { BlocLecon } from "@/modules/lecon/BlocsLecon"
 import { PanneauJules, type AideRapide } from "@/modules/tuteur/PanneauJules"
+import { SUGGESTIONS } from "@/config/veille"
+import type { Lecon } from "@/api/jules"
+
+/** B : suggestions tirées de la leçon affichée (objectifs, titres des parties), jamais générées. */
+function suggestionsDe(lecon: Lecon): AideRapide[] {
+  const objectifs = lecon.blocs.flatMap((b) => (b.type === "objectifs" ? b.items : []))
+  const parties = lecon.blocs.flatMap((b) => (b.type === "texte" && b.titre ? [b.titre] : []))
+  return [...objectifs.slice(0, 2).map(SUGGESTIONS.objectif), ...parties.slice(0, 2).map(SUGGESTIONS.partie)].slice(0, SUGGESTIONS.max)
+}
 
 const AIDES: AideRapide[] = [
   { libelle: "Je bloque", message: "Je bloque sur l'exercice, tu peux m'aider à démarrer sans me donner la réponse ?" },
@@ -82,7 +91,8 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
         </ResizablePanel>
         <ResizableHandle withHandle />
         <ResizablePanel defaultSize="36" minSize="26" maxSize="55">
-          <PanneauJules conversationId={session.conversation} sousTitre="Il voit la leçon que tu fais" aides={AIDES} rafraichir={relire} />
+          <PanneauJules conversationId={session.conversation} sousTitre="Il voit la leçon que tu fais" aides={AIDES}
+            suggestions={suggestionsDe(lecon)} rafraichir={relire} />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
