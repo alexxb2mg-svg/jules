@@ -205,6 +205,46 @@ class Brique(Module):
             "estimation": ESTIMATION_TEXTE,
         }
 
+    # --- bilan (idee L de docs/veille/synthese-ui-dinobot-marche.md) --------------
+    # Un bilan en verbes, points forts d'abord : pour chaque notion deja travaillee, les attendus OFFICIELS
+    # du referentiel (phrases a l'infinitif : « Savoir… », « Comprendre… »), regroupes par etat estime.
+    # Rien n'est genere : l'etat vient du suivi (meme source que le parcours), le texte du referentiel.
+    GROUPES_BILAN = (
+        ("acquis", "Tu sais le faire, même sans aide"),
+        ("compris", "Tu as réussi"),
+        ("en_cours", "En cours"),
+        ("bloque", "À retravailler"),
+    )
+
+    def bilan(self, matiere_id: str | None = None) -> dict[str, Any]:
+        statuts = self._derniers_statuts()
+        cat = self.notions_catalogue
+        groupes: dict[str, list[dict[str, Any]]] = {cle: [] for cle, _ in self.GROUPES_BILAN}
+        a_explorer = 0
+        for mid, nom_matiere, notions in cat.matieres():
+            if matiere_id and mid != matiere_id:
+                continue
+            for n in notions:
+                etat = statuts.get((nom_matiere.casefold(), n.titre.casefold()))
+                if etat not in groupes:
+                    a_explorer += 1
+                    continue
+                groupes[etat].append(
+                    {
+                        "notion": n.id,
+                        "titre": n.titre,
+                        "matiere": mid,
+                        "nom_matiere": nom_matiere,
+                        "savoir_faire": [str(a) for a in (n.attendus or [])][:3],
+                        "lecon": n.id in self.lecons,
+                    }
+                )
+        return {
+            "groupes": [{"etat": cle, "titre": titre, "notions": groupes[cle]} for cle, titre in self.GROUPES_BILAN],
+            "a_explorer": a_explorer,
+            "estimation": ESTIMATION_TEXTE,
+        }
+
     # --- ouverture / reprise ---------------------------------------------------
     def ouvrir(self, notion_id: str) -> dict[str, Any]:
         lecon = self.lecons.get(notion_id)
@@ -438,6 +478,10 @@ class Brique(Module):
         @routeur.get("/parcours")
         def parcours_route(matiere: str | None = None) -> dict[str, Any]:
             return self.parcours(matiere)
+
+        @routeur.get("/bilan")
+        def bilan_route(matiere: str | None = None) -> dict[str, Any]:
+            return self.bilan(matiere)
 
         @routeur.post("/lecons/{notion_id}/ouvrir")
         def ouvrir_route(notion_id: str) -> dict[str, Any]:

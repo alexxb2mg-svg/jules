@@ -20,7 +20,7 @@ const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
 
 /** Matière portée par la route (écrans par matière) : elle devient la matière courante. */
 const matiereDe = (r: Route): string | null | undefined =>
-  r.ecran === "fiches" || r.ecran === "lecons" || r.ecran === "supports" ? r.matiere : r.ecran === "support" ? r.matiere : undefined
+  r.ecran === "fiches" || r.ecran === "lecons" || r.ecran === "supports" || r.ecran === "support" ? r.matiere : undefined
 
 export default function App() {
   const [route, aller] = useRoute()

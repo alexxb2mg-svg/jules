@@ -14,6 +14,7 @@ import { EcranDossier } from "@/modules/sources/pieces"
 import { FichesPersoDeLaNotion } from "@/modules/sources/FichesPersoDeLaNotion"
 import { noterOuverture } from "@/modules/sources/etat"
 import { choisirMatiere } from "@/modules/accueil/etat"
+import { Bilan } from "@/modules/accueil/Bilan"
 
 export type PropsEcran = { route: Route; aller: (r: Route) => void; infos: Infos | null }
 type Ecran = (p: PropsEcran) => React.JSX.Element | null
@@ -55,9 +56,11 @@ export const ECRANS: Record<Route["ecran"], Ecran> = {
       <Studio matiere={route.matiere}
         onMatiere={(m) => aller({ ecran: "supports", matiere: m })}
         onOuvrir={(id, m) => aller({ ecran: "support", matiere: m, id })}
-        onReviser={() => aller({ ecran: "revision" })} />
+        onReviser={() => aller({ ecran: "revision" })}
+        onBilan={() => aller({ ecran: "bilan" })} />
     </div>
   ),
+  bilan: ({ aller }) => <Bilan onRetour={() => aller({ ecran: "supports", matiere: null })} onFiche={(n) => aller({ ecran: "fiche", notion: n })} />,
   support: ({ route, aller }) => route.ecran !== "support" ? null : (
     <EditeurSupport id={route.id} matiere={route.matiere}
       onRetour={() => aller({ ecran: "supports", matiere: route.matiere })}

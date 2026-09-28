@@ -502,3 +502,26 @@ def test_api_parcours_ouvrir_session_tentative_indice_fait(client_protege):
 
     fait = client.post(f"/api/eleve/cours/sessions/{session}/blocs/{B_OBJECTIFS}/fait").json()
     assert fait["progression"]["blocs"][B_OBJECTIFS]["etat"] == "fait"
+
+
+# --- bilan en verbes (idee L de la veille UI) ----------------------------------------------------
+
+
+def test_bilan_points_forts_d_abord_et_attendus_du_referentiel(tuteur):
+    module = tuteur.module("cours")
+    assert all(not g["notions"] for g in module.bilan()["groupes"])
+    tuteur.stockage.ajouter_evenement(
+        "suivi", {"matiere": NOM_MATIERE, "notion": TITRE_NOTION, "statut": "compris", "resume": ""}
+    )
+    bilan = module.bilan()
+    assert [g["etat"] for g in bilan["groupes"]] == ["acquis", "compris", "en_cours", "bloque"]
+    reussi = bilan["groupes"][1]["notions"]
+    assert [n["notion"] for n in reussi] == [NOTION]
+    attendus = tuteur.module("notions").catalogue.notion(NOTION).attendus or []
+    assert reussi[0]["savoir_faire"] == [str(a) for a in attendus][:3]
+    assert bilan["a_explorer"] >= 1 and "IA" in bilan["estimation"]
+    # filtre par matiere, et route
+    assert module.bilan("matiere-inconnue")["groupes"][1]["notions"] == []
+    with TestClient(creer_app(tuteur)) as client:
+        r = client.get("/api/eleve/cours/bilan")
+        assert r.status_code == 200 and r.json()["groupes"][1]["notions"][0]["notion"] == NOTION

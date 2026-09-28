@@ -173,7 +173,14 @@ export type Parcours = { matieres: { id: string; nom: string }[]; matiere: strin
 
 const S = (id: string) => `/api/eleve/cours/sessions/${encodeURIComponent(id)}`
 
+export type BilanNotions = {
+  groupes: { etat: string; titre: string; notions: { notion: string; titre: string; matiere: string; nom_matiere: string; savoir_faire: string[]; lecon: boolean }[] }[]
+  a_explorer: number
+  estimation: string
+}
+
 export const cours = {
+  bilan: (matiere?: string) => api<BilanNotions>(`/api/eleve/cours/bilan${matiere ? `?matiere=${encodeURIComponent(matiere)}` : ""}`),
   parcours: (matiere?: string) => api<Parcours>(`/api/eleve/cours/parcours${matiere ? `?matiere=${encodeURIComponent(matiere)}` : ""}`),
   ouvrir: (notion: string) => api<Session>(`/api/eleve/cours/lecons/${encodeURIComponent(notion)}/ouvrir`, { method: "POST" }),
   session: (id: string) => api<Session>(S(id)),

@@ -2,17 +2,18 @@
 // (choix du type). Données : GET /api/eleve/studio/notions (docs/STUDIO-CONTRAT.md §3 et §6).
 import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { ArrowRight, Info, Layers, Plus, X } from "lucide-react"
+import { ArrowRight, Info, Layers, Plus, Trophy, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { studio, type CatalogueStudio, type NotionStudio, type TypeSupport } from "@/api/jules"
 import { iconeMatiere, ORDRE_MATIERES } from "@/config/matieres"
 import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { ORDRE_TYPES, STATUTS, TYPES } from "./config"
 
-export function Studio({ matiere, onMatiere, onOuvrir, onReviser }: {
+export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan }: {
   matiere: string | null
   onMatiere: (id: string) => void
   onOuvrir: (support: string, matiere: string) => void
+  onBilan: () => void
   onReviser: () => void
 }) {
   const [cat, setCat] = useState<CatalogueStudio | null>(null)
@@ -52,6 +53,11 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser }: {
           <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">Exercices et supports</h1>
           <p className="mt-1 mb-0 text-gris">Fabrique tes propres supports : fiche, carte mentale, quiz, cartes mémoire. Jules relit, il n'écrit jamais à ta place.</p>
         </div>
+        <div className="flex flex-wrap items-center gap-2">
+        <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onBilan}
+          className="inline-flex items-center gap-2 rounded-2xl border-2 border-bord bg-white px-4 py-2.5 font-semibold text-encre shadow-relief">
+          <Trophy size={18} className="text-[#1E7B34]" /> Mon bilan
+        </motion.button>
         {aReviser > 0 && (
           <motion.button initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onReviser}
             className="relative inline-flex items-center gap-2.5 rounded-2xl bg-encre px-5 py-3 font-semibold text-white shadow-relief-haut">
@@ -59,6 +65,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser }: {
             <span className="grid min-w-7 place-items-center rounded-full bg-white px-1.5 py-0.5 text-[0.85rem] font-bold text-encre">{aReviser}</span>
           </motion.button>
         )}
+        </div>
       </div>
 
       <div role="tablist" aria-label="Matières" className="-mx-1 mt-6 mb-7 flex gap-2 overflow-x-auto px-1 pt-1 pb-3 [mask-image:linear-gradient(to_right,black_calc(100%-48px),transparent)] [scrollbar-width:none]">
