@@ -17,7 +17,9 @@ import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
 import { SelecteurMatiere } from "@/modules/accueil/SelecteurMatiere"
 import type { Route } from "@/routes"
 
-export function Nav({ actif, onChange, onMatiere, prenom, route, aller }: {
+export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, aller }: {
+  /** Faux à distance : l'espace parent (administration) n'y est pas proposé. */
+  admin?: boolean
   actif: SectionId; onChange: (s: SectionId) => void; onMatiere: (m: string | null) => void; prenom: string; route: Route; aller: (r: Route) => void
 }) {
   const entree = ({ id, nom, Icone, pageExistante }: EntreeNav) => (
@@ -49,7 +51,7 @@ export function Nav({ actif, onChange, onMatiere, prenom, route, aller }: {
       </SidebarHeader>
 
       <SidebarContent>
-        {RUBRIQUES.map((r) => (
+        {RUBRIQUES.map((r) => ({ ...r, entrees: r.entrees.filter((e) => admin || e.id !== "parent") })).filter((r) => r.entrees.length > 0).map((r) => (
           <SidebarGroup key={r.titre} className="py-1">
             <SidebarGroupLabel className="text-[12px] font-semibold tracking-wide text-gris uppercase">{r.titre}</SidebarGroupLabel>
             <SidebarGroupContent><SidebarMenu className="gap-1">{r.entrees.map(entree)}</SidebarMenu></SidebarGroupContent>

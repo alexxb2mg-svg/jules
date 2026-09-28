@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Nav } from "@/composants/Nav"
-import { infos as lireInfos, type Infos } from "@/api/jules"
+import { infos as lireInfos, session, type Infos } from "@/api/jules"
 import { appliquerLeviers } from "@/modules/fiches/ponts"
 import { sectionDe, useRoute, type Route } from "@/routes"
 import { ECRANS } from "@/ecrans/registre"
@@ -26,8 +26,11 @@ const matiereDe = (r: Route): string | null | undefined =>
 export default function App() {
   const [route, aller] = useRoute()
   const [infos, setInfos] = useState<Infos | null>(null)
+  // À distance (tunnel), l'espace d'administration n'existe pas : son lien disparaît de la barre.
+  const [admin, setAdmin] = useState(true)
   useEffect(() => {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
+    session.etat().then((s) => setAdmin(s.parent)).catch(() => setAdmin(false))
   }, [])
   useEffect(() => { const m = matiereDe(route); if (m) choisirMatiere(m) }, [route])
   const Ecran = ECRANS[route.ecran]
@@ -37,7 +40,7 @@ export default function App() {
   return (
     <TooltipProvider delayDuration={300}>
       <SidebarProvider className="h-full min-h-0">
-        <Nav actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = routeDeSection(s); if (r) aller(r) }}
+        <Nav admin={admin} actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = routeDeSection(s); if (r) aller(r) }}
           onMatiere={(m) => { const r = routeDeSection(sectionDe(route), m); if (r) aller(r) }} />
         <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
           <SidebarTrigger className="absolute top-3 left-3 z-40 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />

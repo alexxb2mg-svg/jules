@@ -16,7 +16,7 @@ from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
 
 from jules import dossier, page_adaptations
-from jules.acces import COOKIE, DUREE_S, Acces
+from jules.acces import COOKIE, DUREE_S, Acces, requete_distante
 from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
 from jules.web.limite import LimiteEssais
@@ -76,6 +76,13 @@ class NouvelleConversation(BaseModel):
     mode: str | None = None
 
 
+PAGE_ADMIN_LOCALE = (
+    "<!doctype html><html lang=\"fr\"><meta charset=\"utf-8\"><title>Jules</title>"
+    "<p style=\"font-family:sans-serif;margin:3rem\">L'espace d'administration ne s'ouvre que sur "
+    "l'ordinateur où tourne Jules.</p></html>"
+)
+
+
 def creer_app(tuteur: Tuteur) -> FastAPI:
     app = FastAPI(title="Jules", docs_url=None, redoc_url=None, openapi_url=None)
     acces = Acces(tuteur.config.acces, tuteur.config.donnees / "secret.key")
@@ -95,10 +102,16 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     def role_de(request: Request) -> str | None:
         return acces.lire_jeton(request.cookies.get(COOKIE))
 
+    def distante(request: Request) -> bool:
+        return requete_distante(request.headers, request.client.host if request.client else None)
+
     def exiger(role_requis: str):
         def verifier(request: Request) -> str:
             role = role_de(request)
-            if not acces.autorise(role, role_requis):
+            loin = distante(request)
+            if not acces.autorise(role, role_requis, distant=loin):
+                if loin and role_requis == "parent":
+                    raise HTTPException(403, "Réservé à l'administrateur, sur son ordinateur")
                 raise HTTPException(401, "Code requis")
             return role or role_requis
 
@@ -119,7 +132,9 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         return HTMLResponse((STATIQUE / "eleve.html").read_text(encoding="utf-8"))
 
     @app.get("/parent", response_class=HTMLResponse)
-    def page_parent() -> HTMLResponse:
+    def page_parent(request: Request) -> HTMLResponse:
+        if distante(request):  # l'administration ne s'ouvre que sur l'ordinateur ou tourne Jules
+            return HTMLResponse(PAGE_ADMIN_LOCALE, status_code=403)
         return HTMLResponse((STATIQUE / "parent.html").read_text(encoding="utf-8"))
 
     @app.get("/cours", response_class=HTMLResponse)
@@ -163,6 +178,8 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         if role is None:
             essais.enregistrer_echec(adresse)
             raise HTTPException(401, "Code incorrect")
+        if distante(request):
+            role = "eleve"  # a distance, meme le code parent n'ouvre que l'espace eleve
         response.set_cookie(COOKIE, acces.jeton(role), max_age=DUREE_S, httponly=True, samesite="strict")
         return {"role": role}
 
@@ -174,10 +191,12 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     @app.get("/api/session")
     def etat_session(request: Request) -> dict[str, Any]:
         role = role_de(request)
+        loin = distante(request)
         return {
             "role": role,
-            "eleve": acces.autorise(role, "eleve"),
-            "parent": acces.autorise(role, "parent"),
+            "eleve": acces.autorise(role, "eleve", distant=loin),
+            "parent": acces.autorise(role, "parent", distant=loin),
+            "distant": loin,
         }
 
     # --- eleve -----------------------------------------------------------

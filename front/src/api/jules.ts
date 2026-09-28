@@ -17,7 +17,7 @@ const json = (corps: unknown): RequestInit => ({
 
 /* ---- session, infos de l'interface (persona, leviers dys) ---- */
 
-export type EtatSession = { role: string | null; eleve: boolean; parent: boolean }
+export type EtatSession = { role: string | null; eleve: boolean; parent: boolean; distant?: boolean }
 export type Infos = {
   prenom: string
   persona: { id: string; nom: string; accueil: string; couleurs: Record<string, string>; avatar: boolean }
