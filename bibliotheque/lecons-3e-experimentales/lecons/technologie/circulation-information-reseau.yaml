@@ -45,7 +45,7 @@ blocs:
 - type: texte
   titre: L'adresse IP
   contenu: |-
-    Chaque appareil a une **adresse IP**, par exemple 192.168.1.12.
+    Chaque appareil a une **adresse IP**, par exemple 172.16.1.12.
 
     - Elle est faite de **quatre nombres**, chacun de **0 à 255**.
     - Le début identifie le **réseau**, la fin identifie l'**appareil**.
@@ -66,12 +66,12 @@ blocs:
     **Débit** : données transmises par seconde, en bits par seconde.
     **Durée = taille en bits ÷ débit.** 1 octet = 8 bits.
 - type: exemple
-  enonce: Dans une salle, trois ordinateurs ont les adresses 192.168.10.2, 192.168.10.3 et 192.168.10.4.
+  enonce: Dans une salle, trois ordinateurs ont les adresses 172.16.10.2, 172.16.10.3 et 172.16.10.4.
     Quelle adresse fixe peut-on donner à une imprimante pour l'ajouter à ce réseau ?
   etapes:
-  - 'Les trois premiers nombres (192.168.10) identifient le réseau : on les garde.'
+  - 'Les trois premiers nombres (172.16.10) identifient le réseau : on les garde.'
   - Il faut un numéro d'appareil libre, entre 1 et 254.
-  - 'Par exemple : 192.168.10.50.'
+  - 'Par exemple : 172.16.10.50.'
 - type: exercice
   enonce: Quel appareil relie des réseaux différents et choisit le chemin des paquets ?
   forme: qcm
@@ -102,23 +102,23 @@ blocs:
   explication: 'Ce sont des paquets : chacun porte l''adresse IP du destinataire et peut suivre son propre
     chemin.'
 - type: exercice
-  enonce: Dans la salle de technologie, les ordinateurs ont les adresses IP 192.168.1.10, 192.168.1.11
-    et 192.168.1.12. Les trois premiers nombres identifient le réseau. Quelle adresse IP fixe peux-tu
+  enonce: Dans la salle de technologie, les ordinateurs ont les adresses IP 172.16.1.10, 172.16.1.11
+    et 172.16.1.12. Les trois premiers nombres identifient le réseau. Quelle adresse IP fixe peux-tu
     donner à une station météo connectée pour qu'elle rejoigne ce réseau local ?
   forme: qcm
   choix:
-  - 192.168.1.11
-  - 192.168.1.25
-  - 192.168.2.25
-  - 192.168.1.300
+  - 172.16.1.11
+  - 172.16.1.25
+  - 172.16.2.25
+  - 172.16.1.300
   reponse: 1
   indices:
   - Quelle partie de l'adresse doit être la même pour tous les appareils de ce réseau ?
   - 'Vérifie trois choses : même partie réseau, numéro d''appareil pas déjà pris, chaque nombre entre
     0 et 255.'
-  - La partie réseau est 192.168.1. Élimine d'abord les adresses qui ne commencent pas ainsi.
-  explication: '192.168.1.25 : même partie réseau (192.168.1), numéro libre et compris entre 1 et 254.
-    192.168.1.11 est déjà pris, 192.168.2.25 est sur un autre réseau, 300 dépasse 255.'
+  - La partie réseau est 172.16.1. Élimine d'abord les adresses qui ne commencent pas ainsi.
+  explication: '172.16.1.25 : même partie réseau (172.16.1), numéro libre et compris entre 1 et 254.
+    172.16.1.11 est déjà pris, 172.16.2.25 est sur un autre réseau, 300 dépasse 255.'
 - type: exercice
   enonce: Dans un réseau local, tous les appareils sont reliés par un câble à un même commutateur placé
     au centre. Quel nom donne-t-on à cette topologie ?
