@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import io
+from pathlib import Path
 
 import pytest
 from fastapi.testclient import TestClient
@@ -174,7 +175,10 @@ def test_icones_servies_sans_code(client_protege):
     manifeste = client_protege.get("/static/manifest.webmanifest").json()
     assert manifeste["short_name"] == "Jules"
     assert {i["sizes"] for i in manifeste["icons"]} == {"192x192", "512x512"}
-    page = client_protege.get("/").text
+    # L'interface servie (/app, ou mene toute ancienne adresse) : c'est elle que le telephone
+    # ajoute a l'ecran d'accueil.
+    source = Path(__file__).resolve().parents[1] / "front" / "index.html"
+    page = source.read_text(encoding="utf-8")
     assert 'rel="manifest"' in page
     assert 'rel="apple-touch-icon"' in page
 
@@ -188,22 +192,16 @@ def test_avatar_de_la_persona_est_un_png_carre(client_protege):
     assert largeur == hauteur >= 256
 
 
-def test_page_cours_renvoie_la_page(client_protege):
-    """La page eleve de cours (lot D) doit repondre 200 et servir du HTML."""
-    r = client_protege.get("/cours")
-    assert r.status_code == 200
-    assert "text/html" in r.headers["content-type"]
-    assert "cours.js" in r.text
-    assert "cours.css" in r.text
+def test_page_cours_mene_aux_lecons(client_protege):
+    """L'ancienne adresse des cours mene aux lecons de l'interface React."""
+    r = client_protege.get("/cours", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/app#/lecons"
 
 
-def test_page_studio_renvoie_la_page(client_protege):
-    """La page eleve du studio doit etre servie par l'application, comme /cours."""
-    r = client_protege.get("/studio")
-    assert r.status_code == 200
-    assert "text/html" in r.headers["content-type"]
-    assert "studio.js" in r.text
-    assert "studio.css" in r.text
+def test_page_studio_mene_aux_supports(client_protege):
+    """L'ancienne adresse du studio mene aux exercices et supports de l'interface React."""
+    r = client_protege.get("/studio", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/app#/supports"
 
 
 def test_cours_html_couvert_par_verification_style_script():

@@ -26,6 +26,25 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+import pytest
+
+from jules.chantier_visuel import _chromium
+
+VARIABLE_OBLIGATOIRE = "JULES_CHROMIUM_OBLIGATOIRE"
+
+
+def navigateur() -> str:
+    """Chemin de Chromium ; sinon `skip`, ou echec si JULES_CHROMIUM_OBLIGATOIRE=1 (un test ignore compte
+    comme un echec)."""
+    chemin = _chromium()
+    if chemin:
+        return chemin
+    message = "Chromium absent (definir JULES_CHROMIUM)"
+    if os.environ.get(VARIABLE_OBLIGATOIRE) == "1":
+        pytest.fail(f"{message} et {VARIABLE_OBLIGATOIRE}=1 : le test ne peut pas etre ignore", pytrace=False)
+    pytest.skip(message)
+    raise AssertionError("inatteignable")  # pytest.skip leve toujours ; pour mypy et ruff
+
 
 class ErreurCdp(AssertionError):
     """Le navigateur n'a pas repondu comme attendu (demarrage, commande en erreur, delai depasse)."""
@@ -222,5 +241,23 @@ def navigateur_cdp(chromium: str, profil: Path, taille: tuple[int, int]) -> Iter
     finally:
         if ws is not None:
             ws.fermer()
+        _arreter(processus)
+
+
+def _arreter(processus: subprocess.Popen[bytes]) -> None:
+    """Ferme Chromium et ses processus fils. Sous Windows, `kill` ne vise que le lanceur : les fils (rendu,
+    GPU, iframe hors processus) gardent parfois le lanceur en vie ; `taskkill /T` ferme tout l'arbre."""
+    if os.name == "nt":
+        subprocess.run(  # noqa: S603 - outil systeme, PID de notre propre processus
+            ["taskkill", "/F", "/T", "/PID", str(processus.pid)],  # noqa: S607
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+        )
+    else:
         processus.kill()
+    try:
         processus.wait(timeout=20)
+    except subprocess.TimeoutExpired:
+        processus.kill()
+        processus.wait(timeout=10)

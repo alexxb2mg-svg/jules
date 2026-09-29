@@ -24,9 +24,8 @@ from jules.config import depuis_dict
 from jules.llm.factice import Brique as Factice
 from jules.moteur import Tuteur
 from jules.web.app import creer_app
-from tests.cdp import ErreurCdp, navigateur_cdp
+from tests.cdp import ErreurCdp, navigateur, navigateur_cdp
 from tests.conftest import regle_par_defaut
-from tests.test_navigation_calculatrice import navigateur
 
 CODE = "1234"
 INTERFACE = Path(__file__).resolve().parents[1] / "jules" / "web" / "static" / "app" / "index.html"
@@ -93,7 +92,11 @@ def _candidats(page) -> list[tuple[str | None, int | None]]:
     """Ou peut se trouver le document de l'outil : une session d'iframe hors processus (Chrome en cree une selon son
     isolation de sites), ou un contexte d'execution dans la page. On les essaie tous : lequel existe varie d'un lancement."""
     sessions = [(ss, None) for ss in page.sessions_iframes()]
-    contextes = [(None, int(c["id"])) for c in page.contextes() if c.get("auxData", {}).get("type") != "default"]
+    # Le contexte de l'outil est le contexte par defaut de SON cadre : on ecarte ceux du cadre principal (page), pas
+    # tous les contextes « default » (Chrome marque aussi ainsi celui de l'iframe).
+    tous = page.contextes()
+    principal = page.commande("Page.getFrameTree")["frameTree"]["frame"]["id"]
+    contextes = [(None, int(c["id"])) for c in tous if c.get("auxData", {}).get("frameId") != principal]
     return sessions + contextes
 
 

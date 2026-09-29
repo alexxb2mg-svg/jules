@@ -41,11 +41,14 @@ def test_app_sert_le_build_avec_les_entetes_de_securite(projet, brut_config, mon
         tuteur.fermer()
 
 
-def test_la_page_d_accueil_existante_reste_en_place(projet, brut_config, monkeypatch):
+def test_les_anciennes_pages_redirigent_vers_l_interface(projet, brut_config, monkeypatch):
+    """Depuis la bascule sur l'interface React, chaque ancienne adresse (favoris, ecran d'accueil du telephone)
+    mene a l'ecran correspondant de /app, sans jamais servir l'ancienne page."""
     tuteur, client = _client(projet, brut_config, monkeypatch)
     try:
-        r = client.get("/")
-        assert r.status_code == 200
-        assert r.text == (module_app.STATIQUE / "accueil.html").read_text(encoding="utf-8")
+        for ancienne, cible in [("/", "/app#/fiches"), ("/discuter", "/app#/discuter"), ("/cours", "/app#/lecons"),
+                                ("/studio", "/app#/supports"), ("/parent", "/app#/parent")]:
+            r = client.get(ancienne, follow_redirects=False)
+            assert r.status_code == 302 and r.headers["location"] == cible, ancienne
     finally:
         tuteur.fermer()

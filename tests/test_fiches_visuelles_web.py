@@ -84,18 +84,14 @@ def test_routes_fiches_visuelles_protegees_par_code(projet, brut_config):
     tuteur.fermer()
 
 
-def test_page_accueil_sert_mes_fiches(client_fiches):
-    r = client_fiches.get("/")
-    assert r.status_code == 200
-    assert "text/html" in r.headers["content-type"]
-    assert "accueil.js" in r.text
-    assert "Mes fiches" in r.text
+def test_page_accueil_mene_a_mes_fiches(client_fiches):
+    r = client_fiches.get("/", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/app#/fiches"
 
 
-def test_page_discuter_sert_l_ancien_chat(client_fiches):
-    r = client_fiches.get("/discuter")
-    assert r.status_code == 200
-    assert "eleve.js" in r.text
+def test_page_discuter_mene_a_la_discussion(client_fiches):
+    r = client_fiches.get("/discuter", follow_redirects=False)
+    assert r.status_code == 302 and r.headers["location"] == "/app#/discuter"
 
 
 def test_gabarits_javascript_servis(client_fiches):
