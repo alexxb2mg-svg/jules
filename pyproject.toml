@@ -32,6 +32,11 @@ sources = [
   "pypdfium2>=4.30",
   "pillow-heif>=0.18",
 ]
+# Pronote (emploi du temps, devoirs, notes de l'eleve) : optionnel, active par la section pronote: de la config.
+pronote = [
+  "pronotepy>=2.15",
+  "cryptography>=43",
+]
 dev = [
   "pytest>=8",
   "pytest-cov>=5",
@@ -89,6 +94,11 @@ warn_unused_ignores = true
 warn_redundant_casts = true
 check_untyped_defs = true
 ignore_missing_imports = false
+
+[[tool.mypy.overrides]]
+# Dependances optionnelles (extras sources et pronote), importees seulement si installees.
+module = ["pronotepy", "pronotepy.*", "cryptography", "cryptography.*", "pillow_heif", "PIL", "PIL.*", "pypdfium2"]
+ignore_missing_imports = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -8,11 +8,12 @@ from __future__ import annotations
 
 import datetime
 import logging
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from fastapi import APIRouter, HTTPException, Query
 
-from jules.pronote import PronoteClient, from_config
+if TYPE_CHECKING:
+    from jules.pronote import PronoteClient
 
 log = logging.getLogger("jules.pronote.routes")
 
@@ -20,8 +21,16 @@ log = logging.getLogger("jules.pronote.routes")
 def routes_pronote(config_brute: dict[str, Any]) -> APIRouter | None:
     """Crée le routeur Pronote si la section `pronote:` existe dans la config.
 
-    Retourne None si pas de config Pronote.
+    Retourne None si pas de config Pronote, ou si pronotepy est absent (extra `pronote`) :
+    le reste de Jules fonctionne sans.
     """
+    if not config_brute.get("pronote"):
+        return None
+    try:
+        from jules.pronote import from_config
+    except ImportError:
+        log.warning("Section pronote: presente mais pronotepy absent (extra pronote du projet)")
+        return None
     client = from_config(config_brute)
     if client is None:
         return None
