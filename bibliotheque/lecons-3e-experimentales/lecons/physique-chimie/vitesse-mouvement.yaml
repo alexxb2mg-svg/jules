@@ -1,0 +1,146 @@
+notion: vitesse-mouvement
+titre: "Vitesse, mouvements rectilignes et circulaires, relativité du mouvement"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire un mouvement : référentiel, trajectoire, évolution de la vitesse."
+      - "Utiliser v = d ÷ t dans un mouvement uniforme, en convertissant les unités."
+      - "Comprendre la relativité du mouvement et lire une chronophotographie."
+
+  - type: texte
+    titre: "Le référentiel et la relativité du mouvement"
+    contenu: |-
+      Un mouvement se décrit toujours **par rapport à un objet de référence** : le **référentiel**.
+      Un même objet peut être immobile dans un référentiel et en mouvement dans un autre.
+      C'est la **relativité du mouvement**.
+      Exemple : un passager assis dans un train est immobile par rapport au wagon, mais en mouvement par rapport au quai.
+
+  - type: texte
+    titre: "Trajectoire et vitesse"
+    contenu: |-
+      La **trajectoire** est l'ensemble des positions successives : rectiligne (droite), circulaire (cercle) ou curviligne (courbe).
+      La vitesse a une **direction**, un **sens** et une **valeur**.
+      Selon l'évolution de la vitesse, le mouvement est :
+      - **uniforme** : la vitesse est constante ;
+      - **accéléré** : la vitesse augmente ;
+      - **ralenti** : la vitesse diminue.
+
+  - type: texte
+    titre: "Calculer une vitesse"
+    contenu: |-
+      Dans un mouvement uniforme : **v = d ÷ t** (d : distance, t : durée).
+      On en déduit **d = v × t** et **t = d ÷ v**.
+      Les unités vont ensemble : m et s donnent des m/s ; km et h donnent des km/h.
+      km/h → m/s : on **divise par 3,6**. m/s → km/h : on **multiplie par 3,6**.
+      Durées : 1 h = 60 min = 3 600 s ; 0,25 h = 15 min.
+
+  - type: texte
+    titre: "La chronophotographie"
+    contenu: |-
+      On note la position d'un objet à intervalles de temps égaux. On compare les écarts entre points :
+      - points alignés, écarts égaux : rectiligne **uniforme** ;
+      - points alignés, écarts qui augmentent : rectiligne **accéléré** ;
+      - points alignés, écarts qui diminuent : rectiligne **ralenti** ;
+      - points sur un cercle, écarts égaux : circulaire **uniforme**.
+
+  - type: exemple
+    enonce: "Un coureur roule à vitesse constante et parcourt 900 m en 5 min. Calcule sa vitesse en m/s."
+    etapes:
+      - "Les unités doivent aller ensemble : on convertit la durée. 5 min = 5 × 60 = 300 s."
+      - "On écrit la relation : v = d ÷ t."
+      - "v = 900 ÷ 300 = 3 m/s."
+
+  - type: exercice
+    enonce: "Un passager est assis dans un train qui roule. Il est immobile par rapport à quoi ?"
+    forme: qcm
+    choix:
+      - "Par rapport au quai de la gare"
+      - "Par rapport au wagon"
+      - "Par rapport à aucun objet"
+    reponse: 1
+    indices:
+      - "Un mouvement se décrit toujours par rapport à un objet de référence."
+      - "Le passager ne change pas de place à l'intérieur du train."
+    explication: "Le passager est immobile par rapport au wagon, mais en mouvement par rapport au quai."
+
+  - type: exercice
+    enonce: >-
+      Sur une chronophotographie, les positions d'une balle sont alignées et les écarts entre deux
+      points consécutifs augmentent de plus en plus. Que peut-on dire de ce mouvement ?
+    forme: qcm
+    choix:
+      - "Rectiligne uniforme"
+      - "Rectiligne accéléré"
+      - "Rectiligne ralenti"
+      - "Circulaire uniforme"
+    reponse: 1
+    indices:
+      - "Les points sont alignés : la trajectoire est une droite."
+      - "Les intervalles de temps sont égaux. Si les écarts augmentent, que fait la vitesse ?"
+    explication: "Points alignés : trajectoire rectiligne. Écarts qui augmentent pour des durées égales : la vitesse augmente, le mouvement est accéléré."
+
+  - type: exercice
+    enonce: "Une voiture roule à 108 km/h. Convertis cette vitesse en m/s."
+    forme: nombre
+    reponse: 30
+    tolerance: 0.01
+    unite: "m/s"
+    indices:
+      - "Pour passer des km/h aux m/s, on divise ou on multiplie par 3,6 ?"
+      - "On divise par 3,6."
+    explication: "108 ÷ 3,6 = 30 m/s."
+
+  - type: exercice
+    enonce: "Un train roule à vitesse constante de 80 km/h. Combien d'heures met-il pour parcourir 240 km ?"
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    unite: "h"
+    indices:
+      - "Tu cherches une durée. Quelle relation utiliser ?"
+      - "t = d ÷ v, avec des km et des km/h."
+    explication: "t = d ÷ v = 240 ÷ 80 = 3 h."
+
+  - type: exercice
+    enonce: "Un scooter roule à vitesse constante de 45 km/h pendant 20 min. Quelle distance parcourt-il, en km ?"
+    forme: nombre
+    reponse: 15
+    tolerance: 0.01
+    unite: "km"
+    indices:
+      - "La vitesse est en km/h : la durée doit être en heures."
+      - "20 min = 1/3 h, car 60 ÷ 20 = 3."
+      - "d = v × t : calcule 45 × 1/3, c'est-à-dire 45 ÷ 3."
+    explication: "20 min = 1/3 h. d = v × t = 45 × 1/3 = 15 km."
+
+  - type: question_ouverte
+    question: >-
+      Un cycliste roule sur une route droite. Décris son mouvement dans deux référentiels
+      différents (la route, puis un autre cycliste qui roule à côté de lui à la même vitesse),
+      et explique ce que cela montre.
+    indices:
+      - "Par rapport à la route, le cycliste change-t-il de position ?"
+      - "Par rapport à l'autre cycliste qui va à la même vitesse, change-t-il de position ?"
+    criteres:
+      - "L'élève dit que le cycliste est en mouvement par rapport à la route."
+      - "L'élève dit qu'il est immobile par rapport à l'autre cycliste."
+      - "L'élève conclut que le mouvement dépend du référentiel choisi (relativité du mouvement)."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases comment tu calcules une vitesse (relation et unités), et
+      comment tu reconnais un mouvement uniforme sur une chronophotographie.

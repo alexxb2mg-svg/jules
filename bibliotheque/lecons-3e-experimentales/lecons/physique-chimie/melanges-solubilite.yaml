@@ -1,0 +1,159 @@
+notion: melanges-solubilite
+titre: "Mélanges, solubilité, miscibilité, composition de l'air"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Classer des mélanges (homogène ou hétérogène) et dire si deux liquides sont miscibles."
+      - "Décrire une dissolution et estimer une solubilité dans l'eau, en g/L."
+      - "Donner la composition de l'air."
+
+  - type: texte
+    titre: "Mélanges homogènes et hétérogènes"
+    contenu: |-
+      Un **mélange** contient plusieurs espèces chimiques.
+      - **Homogène** : on ne distingue pas les constituants à l'œil nu (eau sucrée, eau et alcool, air).
+      - **Hétérogène** : on les distingue (eau boueuse, eau et huile, eau et sable).
+
+      Deux liquides **miscibles** forment un mélange homogène (eau et alcool).
+      Deux liquides **non miscibles** forment deux couches (eau et huile).
+      Le liquide le moins dense est au-dessus : l'huile (0,92 g/cm³) flotte sur l'eau (1 g/cm³).
+
+  - type: texte
+    titre: "La dissolution"
+    contenu: |-
+      Un **soluté** (sel, sucre) se disperse dans un **solvant** (souvent l'eau). On obtient une **solution**.
+      - Une solution est un mélange **homogène**.
+      - Le soluté n'a pas disparu : sa masse compte.
+      - **Masse de la solution = masse du solvant + masse du soluté dissous.**
+      - Le sucre ne « fond » pas : il se **dissout**.
+
+  - type: texte
+    titre: "La solubilité"
+    contenu: |-
+      La **solubilité** est la masse **maximale** de soluté qu'on peut dissoudre dans **un litre** de solvant, à une température donnée. Elle s'exprime en **g/L**.
+      - Au-delà, la solution est **saturée** : il reste du solide au fond.
+      - Elle dépend du soluté, du solvant et de la température.
+
+      Pour l'estimer :
+      1. Prendre un volume d'eau connu (éprouvette graduée).
+      2. Ajouter le soluté par petites quantités pesées, en agitant, jusqu'à ce qu'il ne se dissolve plus.
+      3. Noter la masse totale dissoute, puis la ramener à 1 litre.
+
+  - type: texte
+    titre: "La composition de l'air"
+    contenu: |-
+      L'air est un mélange **homogène** de gaz. En volume :
+
+      | Gaz | Part |
+      |---|---|
+      | diazote N₂ | environ 78 % |
+      | dioxygène O₂ | environ 21 % |
+      | autres gaz (argon, dioxyde de carbone, vapeur d'eau…) | environ 1 % |
+
+      Le gaz majoritaire est le **diazote**, pas le dioxygène.
+
+  - type: exemple
+    enonce: "On dissout au maximum 40 g de sucre dans 20 mL d'eau à 20 °C. Estimer la solubilité du sucre dans l'eau à cette température."
+    etapes:
+      - "La solubilité s'exprime en g/L : il faut convertir le volume en litres."
+      - "20 mL = 0,020 L."
+      - "Solubilité = 40 ÷ 0,020 = 2 000 g/L."
+      - "À 20 °C, on peut dissoudre environ 2 000 g de sucre dans un litre d'eau."
+
+  - type: exercice
+    enonce: "On dissout du sel dans de l'eau. Comment appelle-t-on l'eau, le liquide dans lequel on dissout le sel ? Réponds par un seul mot."
+    forme: reponse_courte
+    reponse: "solvant"
+    reponses_acceptees:
+      - "le solvant"
+      - "un solvant"
+      - "solvants"
+    indices:
+      - "Le sel est ce qui est dissous. Et le liquide qui dissout ?"
+      - "Le mot commence par « sol » et ne désigne pas le sel."
+    explication: "L'eau est le solvant : elle dissout le sel, qui est le soluté. Le mélange obtenu (eau salée) est la solution."
+
+  - type: exercice
+    enonce: "On verse 15 g de sel dans 200 g d'eau et on agite jusqu'à ce que tout le sel soit dissous. Quelle est la masse de l'eau salée obtenue, en grammes ?"
+    forme: nombre
+    reponse: 215
+    tolerance: 0.5
+    unite: "g"
+    indices:
+      - "Le sel dissous a-t-il disparu ? Sa masse compte-t-elle encore ?"
+      - "Masse de la solution = masse du solvant + masse du soluté dissous."
+    explication: "Le sel est toujours là : 200 + 15 = 215 g."
+
+  - type: exercice
+    enonce: "Quel gaz représente environ 78 % du volume de l'air ?"
+    forme: qcm
+    choix:
+      - "le dioxygène (O₂)"
+      - "le diazote (N₂)"
+      - "le dioxyde de carbone (CO₂)"
+      - "la vapeur d'eau (H₂O)"
+    reponse: 1
+    indices:
+      - "Le gaz majoritaire de l'air n'est pas celui qu'on respire pour vivre."
+      - "Le dioxygène représente environ 21 %. Un autre gaz est bien plus abondant."
+    explication: "Le diazote (N₂) représente environ 78 % de l'air, le dioxygène environ 21 %, et les autres gaz environ 1 %."
+
+  - type: exercice
+    enonce: >-
+      On ajoute du sel, petit à petit et en agitant, dans 50 mL d'eau à 20 °C. On arrive à dissoudre
+      18 g de sel ; au-delà, le sel ne se dissout plus. Estime la solubilité du sel dans l'eau à
+      20 °C, en g/L.
+    forme: nombre
+    reponse: 360
+    tolerance: 1
+    unite: "g/L"
+    indices:
+      - "La solubilité est une masse dissoute pour un litre de solvant. Dans quelle unité faut-il mettre le volume d'eau ?"
+      - "Convertis 50 mL en litres, puis divise la masse dissoute par ce volume."
+      - "Un litre contient 20 fois 50 mL. Que devient la masse dissoute pour 20 fois plus d'eau ?"
+    explication: "50 mL = 0,05 L. Solubilité = 18 ÷ 0,05 = 360 g/L (un litre, c'est 20 fois 50 mL, et 18 × 20 = 360)."
+
+  - type: exercice
+    enonce: >-
+      La solubilité du sel dans l'eau à 20 °C est d'environ 360 g/L. Quelle masse maximale de sel
+      peut-on dissoudre dans 250 mL d'eau à cette température ? Donne le résultat en grammes.
+    forme: nombre
+    reponse: 90
+    tolerance: 0.5
+    unite: "g"
+    indices:
+      - "360 g/L veut dire : 360 g au maximum dans un litre. Ici, l'eau est-elle en plus grande ou en plus petite quantité ?"
+      - "Convertis 250 mL en litres, puis multiplie la solubilité par ce volume."
+      - "250 mL, c'est un quart de litre."
+    explication: "250 mL = 0,25 L. Masse = 360 × 0,25 = 90 g."
+
+  - type: question_ouverte
+    question: >-
+      Propose un protocole pour estimer la solubilité du sucre dans l'eau à la température de la
+      classe. Décris le matériel, les étapes et le calcul final.
+    indices:
+      - "Quel matériel pour mesurer un volume d'eau, et quel matériel pour peser le sucre ?"
+      - "Comment sais-tu que tu as atteint le maximum de sucre dissous ?"
+    criteres:
+      - "L'élève prend un volume d'eau connu (éprouvette graduée ou bécher) et une balance."
+      - "L'élève ajoute le sucre par petites quantités pesées, en agitant, jusqu'à ce qu'il ne se dissolve plus."
+      - "L'élève ramène la masse dissoute à un litre d'eau (g/L) pour donner la solubilité."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est une solubilité, comment tu
+      l'estimes, et la différence entre un mélange homogène et un mélange hétérogène.

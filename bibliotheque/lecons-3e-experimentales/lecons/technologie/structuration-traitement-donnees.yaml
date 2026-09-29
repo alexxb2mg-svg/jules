@@ -1,0 +1,169 @@
+notion: structuration-traitement-donnees
+titre: "Structuration et traitement des données : types, formats, tableur"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire des objets sous forme de table : objets, descripteurs, types et formats."
+      - "Lire un nombre en binaire, l'écrire, et calculer une taille en octets."
+      - "Choisir le bon traitement dans un tableur : calcul, filtre ou tri."
+
+  - type: texte
+    titre: "Une table de données"
+    contenu: >-
+      Pour décrire des objets avec des données, on les range dans une **table**.
+
+      - Chaque **ligne** décrit un objet.
+
+      - Chaque **colonne** est un **descripteur** (masse, couleur, prix...).
+
+      - Les objets décrits par les mêmes descripteurs forment une **collection**.
+
+      Chaque descripteur a un **type** (entier, décimal, texte, booléen, date) et un **format**
+      (unité, forme d'écriture). Exemple : lampes connectées. Objet = une lampe. Descripteurs :
+      nombre de LED (entier), puissance en W (décimal), pièce (texte), allumée (booléen).
+
+  - type: texte
+    titre: "Bit, octet, booléen, ASCII étendu"
+    contenu: >-
+      Tout est codé en **binaire**. Un **bit** vaut 0 ou 1. Un **octet** est un groupe de 8 bits.
+
+      En **ASCII étendu**, un caractère (lettre, chiffre, signe) occupe 1 octet, soit 8 bits.
+      Un texte de 250 caractères occupe donc 250 octets.
+
+      Un **booléen** n'a que deux valeurs (vrai ou faux) : un seul bit suffit.
+
+  - type: texte
+    titre: "Nombres entiers en binaire et tailles"
+    contenu: >-
+      Un entier s'écrit en binaire avec les puissances de 2. De droite à gauche, les rangs valent
+      1, 2, 4, 8, 16...
+
+      Pour **lire** 1101 : on additionne les rangs sous les 1, soit 8 + 4 + 1 = 13.
+
+      Pour **écrire** 10 : on cherche les puissances de 2 qui le composent, 8 + 2, donc 1010.
+
+      Pour une taille en ko, on suit la convention de l'énoncé : 1 ko = 1 000 octets, ou bien
+      1 ko = 1 024 octets.
+
+  - type: texte
+    titre: "Le tableur : calcul, filtre, tri"
+    contenu: >-
+      Un tableur traite les données d'une table.
+
+      - **Calcul** : somme, moyenne, minimum, maximum d'une colonne.
+
+      - **Filtre** : n'affiche que les lignes qui respectent une condition (les autres sont
+      cachées, pas effacées).
+
+      - **Tri** : range toutes les lignes dans un ordre (croissant ou décroissant) selon une
+      colonne.
+
+      Exemple : filtrer les heures où une serre dépasse 30 °C, ou calculer sa température moyenne.
+
+  - type: exemple
+    enonce: "Un texte de 250 caractères est codé en ASCII étendu. Quelle est sa taille en octets, puis en bits ?"
+    etapes:
+      - "En ASCII étendu, 1 caractère = 1 octet, donc le texte pèse 250 octets."
+      - "1 octet = 8 bits, donc on multiplie : 250 × 8."
+      - "250 × 8 = 2 000 bits."
+
+  - type: exercice
+    enonce: >-
+      Dans une table de données sur des vélos, les colonnes s'appellent « masse », « couleur » et
+      « prix ». Comment appelle-t-on chaque colonne ?
+    forme: reponse_courte
+    reponse: "descripteur"
+    reponses_acceptees:
+      - "descripteur"
+      - "un descripteur"
+      - "le descripteur"
+      - "descripteurs"
+      - "les descripteurs"
+    indices:
+      - "Une colonne décrit une caractéristique de chaque objet."
+      - "Le mot commence par « descr »."
+    explication: "Chaque colonne est un descripteur. Chaque ligne, elle, décrit un objet."
+
+  - type: exercice
+    enonce: "Un capteur envoie le nombre écrit en binaire 1011. Quelle est sa valeur en écriture décimale ?"
+    forme: nombre
+    reponse: 11
+    tolerance: 0.01
+    indices:
+      - "Écris sous chaque chiffre son rang, en partant de la droite : 1, 2, 4, 8."
+      - "Additionne seulement les rangs qui sont sous un 1."
+    explication: "1011 : rangs 8, 4, 2, 1. Les 1 sont sous 8, 2 et 1. Donc 8 + 2 + 1 = 11."
+
+  - type: exercice
+    enonce: "Le mot « ROBOT » est écrit en ASCII étendu, un caractère par octet. Combien de bits occupe ce mot ?"
+    forme: nombre
+    reponse: 40
+    tolerance: 0.01
+    unite: "bits"
+    indices:
+      - "Compte d'abord les caractères, pour trouver le nombre d'octets."
+      - "Chaque octet contient 8 bits."
+    explication: "ROBOT a 5 caractères, donc 5 octets. 5 × 8 = 40 bits."
+
+  - type: exercice
+    enonce: >-
+      Une table de tableur contient les relevés de température d'une serre (une ligne par
+      heure). On veut n'afficher que les heures où la température dépasse 30 °C, sans effacer
+      les autres lignes. Quel traitement utiliser ?
+    forme: qcm
+    choix:
+      - "Un tri"
+      - "Un filtre"
+      - "Un calcul de moyenne"
+    reponse: 1
+    indices:
+      - "On veut cacher certaines lignes, pas les ranger dans un autre ordre."
+      - "Quel traitement n'affiche que les lignes qui respectent une condition ?"
+    explication: "C'est un filtre : il n'affiche que les lignes qui respectent la condition, les autres sont cachées. Un tri change l'ordre des lignes."
+
+  - type: exercice
+    enonce: >-
+      Document fictif. Un journal enregistre des mesures : chaque ligne contient 20 caractères
+      en ASCII étendu, et il y a 500 lignes. Quelle est la taille du journal en ko ?
+      (1 ko = 1 000 octets)
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: "ko"
+    indices:
+      - "Calcule d'abord la taille en octets : 1 caractère = 1 octet."
+      - "Multiplie le nombre de caractères par ligne par le nombre de lignes."
+      - "Convertis ensuite les octets en ko avec la convention de l'énoncé."
+    explication: "20 × 500 = 10 000 octets. Avec 1 ko = 1 000 octets : 10 000 ÷ 1 000 = 10 ko."
+
+  - type: question_ouverte
+    question: >-
+      Document fictif. Une table de tableur contient, pour chaque heure d'une journée, l'heure,
+      la température d'une serre, et « fenêtre ouverte » (oui ou non). Donne deux descripteurs
+      avec leur type, et explique quel traitement tu utilises pour trouver la température la
+      plus haute.
+    indices:
+      - "Une colonne = un descripteur. Choisis le type qui convient : entier, décimal, texte, booléen ou date."
+      - "Pour la température la plus haute, on peut faire un calcul ou un tri sur la colonne."
+    criteres:
+      - "L'élève nomme deux descripteurs de la table (par exemple heure, température, fenêtre ouverte) et leur donne un type cohérent (température : nombre décimal ; fenêtre ouverte : booléen)."
+      - "L'élève propose un traitement adapté (maximum de la colonne, ou tri décroissant sur la température) et l'explique."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots, en deux ou trois phrases : explique ce que sont un objet, un
+      descripteur et un type dans une table, puis la différence entre un filtre et un tri.

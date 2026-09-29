@@ -1,0 +1,171 @@
+notion: appareils-reproducteurs-puberte
+titre: "Appareils reproducteurs, puberté et contrôle hormonal"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer les organes reproducteurs du garçon et de la fille et dire ce que chacun produit."
+      - "Distinguer la production continue (testicules) et la production cyclique (ovaires)."
+      - "Expliquer le rôle des hormones et de l'hypophyse, et relier la pilule à son principe de fonctionnement."
+
+  - type: texte
+    titre: "La puberté et les organes reproducteurs"
+    contenu: >-
+      La **puberté** est la période où le corps se transforme. Elle commence souvent entre 10 et 16 ans,
+      mais l'âge varie beaucoup d'une personne à l'autre. Les appareils reproducteurs deviennent alors
+      **fonctionnels**. Des **caractères sexuels secondaires** apparaissent : pilosité, développement
+      des seins, mue de la voix.
+
+
+      **Chez le garçon** : testicules (dans les bourses), spermiductes, glandes annexes, pénis (avec l'urètre).
+
+
+      **Chez la fille** : ovaires, trompes, utérus, vagin.
+
+  - type: texte
+    titre: "Production continue et production cyclique"
+    contenu: >-
+      **Garçon** : à partir de la puberté, les testicules produisent, en **continu** et toute la vie,
+      des **spermatozoïdes** et une hormone, la **testostérone**. Les spermatozoïdes passent par les
+      spermiductes. Des glandes annexes ajoutent un liquide : cela forme le sperme, qui sort par l'urètre.
+
+
+      **Fille** : de la puberté jusqu'à la ménopause, les ovaires fonctionnent par **cycles**. Un cycle
+      dure environ 28 jours (cette durée varie). En général, un seul ovule est libéré par cycle, vers le
+      milieu : c'est l'**ovulation**.
+
+
+      Les ovaires produisent aussi des hormones (œstrogènes, progestérone). Elles font épaissir la
+      muqueuse de l'utérus. Sans fécondation, cette muqueuse est éliminée : ce sont les **règles**.
+      Elles marquent le début d'un nouveau cycle. La fécondation a lieu dans une trompe.
+
+  - type: texte
+    titre: "Le contrôle hormonal"
+    contenu: >-
+      Une **hormone** est une molécule produite par une glande. Elle est transportée par le sang et
+      agit sur des organes cibles.
+
+
+      L'**hypophyse** est une petite glande sous le cerveau. Elle produit des hormones qui commandent
+      l'activité des testicules et des ovaires. Quand cette commande démarre, la puberté commence.
+
+  - type: texte
+    titre: "Maîtrise de la reproduction"
+    contenu: >-
+      Connaître ces mécanismes aide à comprendre la **contraception**.
+
+
+      - La **pilule** contient des hormones qui empêchent l'ovulation.
+
+      - Le **préservatif** empêche les spermatozoïdes d'atteindre l'ovule. Il protège aussi des
+      infections sexuellement transmissibles.
+
+
+      Au brevet, on te demande de situer les organes, de distinguer production continue et cyclique,
+      d'exploiter une expérience sur les hormones et de relier un moyen de contraception à son principe.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi une fillette n'a-t-elle pas de règles avant la puberté ?
+    etapes:
+      - "Les règles font partie du cycle : elles arrivent quand la muqueuse de l'utérus est éliminée sans fécondation."
+      - "Le cycle dépend du fonctionnement des ovaires, qui deviennent fonctionnels à la puberté."
+      - "Avant la puberté, la commande de l'hypophyse n'a pas encore démarré : il n'y a pas de cycle, donc pas de règles."
+
+  - type: exercice
+    enonce: "Quelle hormone est produite en continu par les testicules à partir de la puberté ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "testostérone"
+    reponses_acceptees: ["la testostérone", "testosterone", "la testosterone"]
+    indices:
+      - "Cette hormone est produite en même temps que les spermatozoïdes."
+      - "Son nom ressemble au mot « testicule »."
+    explication: "C'est la testostérone. Les testicules la produisent en continu à partir de la puberté."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : chez une jeune fille, des règles commencent le 5 avril. Les règles suivantes
+      commencent le 3 mai. Le premier jour des règles est le jour 1 du cycle. Le mois d'avril compte
+      30 jours. Combien de jours dure ce cycle ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 28
+    tolerance: 0.01
+    unite: "jours"
+    indices:
+      - "Le cycle commence le premier jour des règles et se termine la veille des règles suivantes."
+      - "Compte les jours entre le 5 avril et le 3 mai. Attention, avril a 30 jours."
+      - "Du 5 au 30 avril, il y a 26 jours (le 5 et le 30 comptent). Ajoute ensuite les jours de mai qui font partie du cycle."
+    explication: "Du 5 au 30 avril inclus : 26 jours. Du 1er au 2 mai : 2 jours. Le 3 mai est le jour 1 du cycle suivant, on ne le compte pas. 26 + 2 = 28 jours."
+
+  - type: exercice
+    enonce: "Quelle phrase décrit le mieux le fonctionnement des ovaires et des testicules à partir de la puberté ?"
+    forme: qcm
+    choix:
+      - "Les testicules fonctionnent en continu ; les ovaires fonctionnent par cycles."
+      - "Les ovaires fonctionnent en continu ; les testicules fonctionnent par cycles."
+      - "Les deux fonctionnent par cycles, avec les mêmes dates."
+      - "Les deux ne fonctionnent qu'une seule fois dans la vie."
+    reponse: 0
+    indices:
+      - "Relis le texte sur la production continue et la production cyclique."
+      - "Les spermatozoïdes sont produits tout le temps. Un ovule est libéré à une date précise du cycle."
+    explication: "Les testicules produisent des spermatozoïdes en continu. Les ovaires libèrent en général un ovule par cycle."
+
+  - type: exercice
+    enonce: "Quel est le principe de fonctionnement d'une pilule contraceptive ?"
+    forme: qcm
+    choix:
+      - "Elle contient des hormones qui empêchent l'ovulation."
+      - "Elle empêche les spermatozoïdes de sortir par l'urètre."
+      - "Elle fait démarrer la puberté."
+      - "Elle détruit la muqueuse de l'utérus pour toujours."
+    reponse: 0
+    indices:
+      - "Pense à l'organe qui libère l'ovule."
+      - "Les hormones de la pilule agissent sur le fonctionnement des ovaires."
+    explication: "La pilule contient des hormones qui empêchent l'ovulation : aucun ovule n'est libéré, donc il ne peut pas être fécondé."
+
+  - type: exercice
+    enonce: >-
+      Document fictif, sur une ratte adulte. Expérience 1 : on retire l'hypophyse, les ovaires cessent
+      de fonctionner. Expérience 2 : on injecte dans le sang des extraits d'hypophyse, les ovaires
+      refonctionnent. Expérience 3 : on greffe l'hypophyse ailleurs dans le corps, sans nerf vers les
+      ovaires, les ovaires fonctionnent normalement. Quelle conclusion est correcte ?
+    forme: qcm
+    choix:
+      - "L'hypophyse commande les ovaires par des hormones transportées par le sang."
+      - "L'hypophyse commande les ovaires par des nerfs."
+      - "Les ovaires fonctionnent sans avoir besoin de l'hypophyse."
+      - "Les extraits d'hypophyse sont inutiles."
+    reponse: 0
+    indices:
+      - "Expériences 1 et 2 : que se passe-t-il quand l'hypophyse manque, puis quand on injecte ses extraits ?"
+      - "Expérience 3 : il n'y a pas de nerf entre l'hypophyse et les ovaires. Par où passe donc le message ?"
+    explication: "Sans hypophyse, les ovaires s'arrêtent : elle est nécessaire. Ses extraits suffisent à les relancer. Greffée sans nerf, elle agit encore : le message passe par le sang. Ce sont des hormones."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre la production de cellules reproductrices chez le garçon et chez la
+      fille après la puberté. Cite les organes concernés.
+    indices:
+      - "Pense à « en continu » et à « par cycles »."
+      - "Nomme l'organe, puis dis ce qu'il produit."
+    criteres:
+      - "L'élève dit que les testicules produisent des spermatozoïdes en continu à partir de la puberté."
+      - "L'élève dit que les ovaires fonctionnent par cycles et libèrent en général un ovule par cycle (ovulation)."
+      - "L'élève cite les organes (testicules, ovaires) et fait la différence continu / cyclique."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce que fait l'hypophyse à la puberté
+      et comment la pilule agit sur le fonctionnement des ovaires.

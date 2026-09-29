@@ -1,0 +1,123 @@
+notion: nutrition-cellules-animales
+titre: "Nutriments, dioxygène et systèmes de transport chez l'animal"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire de quoi les cellules d'un animal ont besoin et ce qu'elles rejettent."
+      - "Expliquer le rôle du sang, du cœur et des vaisseaux dans le transport."
+      - "Suivre le trajet d'un nutriment et du dioxygène jusqu'à une cellule."
+
+  - type: texte
+    titre: "Ce dont les cellules ont besoin"
+    contenu: >-
+      Toutes les cellules d'un animal ont besoin de **nutriments** (glucose, acides aminés...) et de **dioxygène**.
+      Elles les utilisent pour produire de l'énergie (c'est la respiration cellulaire) et pour se construire.
+      Elles rejettent du dioxyde de carbone et d'autres déchets, comme l'**urée**.
+      Les cellules ne sont en contact ni avec l'air ni avec les aliments.
+
+  - type: texte
+    titre: "Le système de transport"
+    contenu: >-
+      Le système de transport est formé du **sang**, du **cœur** et des **vaisseaux sanguins**.
+      Les nutriments viennent de la digestion : ils passent dans le sang dans l'intestin grêle
+      (les villosités). Le dioxygène passe dans le sang dans les alvéoles pulmonaires.
+      Les artères partent du cœur, les veines y reviennent, les capillaires sont au contact des cellules.
+      C'est dans les capillaires que se font les échanges. Le cœur est la pompe qui met le sang en mouvement.
+      Le plasma transporte les nutriments, les globules rouges transportent le dioxygène.
+
+  - type: texte
+    titre: "Les déchets et l'organisation de l'organisme"
+    contenu: >-
+      Le sang emporte les déchets : le dioxyde de carbone vers les poumons,
+      l'urée vers les reins, qui la rejettent dans l'urine.
+      L'organisme est organisé en niveaux emboîtés : cellules → tissus → organes → appareils → organisme.
+      C'est la cellule qui utilise les nutriments et le dioxygène.
+      Le tube digestif héberge des micro-organismes : le **microbiote intestinal**.
+      Certains aident à digérer des substances que nous ne digérons pas seuls, comme les fibres.
+
+  - type: exemple
+    enonce: >-
+      Explique comment le dioxygène de l'air arrive jusqu'à une cellule d'un muscle de la jambe.
+    etapes:
+      - "L'air arrive dans les poumons. Le dioxygène passe dans le sang au niveau des alvéoles pulmonaires."
+      - "Les globules rouges transportent le dioxygène. Le cœur met le sang en mouvement dans les vaisseaux."
+      - "Le sang arrive dans les capillaires du muscle. Le dioxygène passe dans la cellule musculaire."
+      - "La cellule l'utilise avec des nutriments pour produire de l'énergie. Elle rejette du dioxyde de carbone, que le sang emporte vers les poumons."
+
+  - type: exercice
+    enonce: "Comment s'appellent les vaisseaux très fins, au contact des cellules, où se font les échanges avec le sang ?"
+    forme: reponse_courte
+    reponse: "les capillaires"
+    reponses_acceptees: ["capillaire", "capillaires", "les capillaires", "un capillaire", "capillaire sanguin", "capillaires sanguins", "les capillaires sanguins"]
+    indices:
+      - "Ce ne sont ni des artères ni des veines."
+      - "Le mot commence par « capil » et rappelle le mot cheveu."
+    explication: "Ce sont les capillaires sanguins : très fins, ils sont au contact des cellules, et c'est là que se font les échanges."
+
+  - type: exercice
+    enonce: "Où les nutriments issus de la digestion passent-ils dans le sang ?"
+    forme: qcm
+    choix:
+      - "Dans les alvéoles des poumons"
+      - "Dans l'intestin grêle, au niveau des villosités"
+      - "Dans les reins"
+    reponse: 1
+    indices:
+      - "Les nutriments viennent de la digestion des aliments."
+      - "Quel organe de l'appareil digestif porte des villosités ?"
+    explication: "Les nutriments passent dans le sang dans l'intestin grêle, dont la paroi porte des villosités. Les alvéoles servent au dioxygène, les reins à l'urée."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : le sang qui arrive à un muscle contient 20 unités de dioxygène.
+      Le sang qui en sort en contient 14. Combien d'unités de dioxygène le muscle a-t-il prélevées ?
+    forme: nombre
+    reponse: 6
+    tolerance: 0
+    indices:
+      - "Compare le sang à l'entrée du muscle et à sa sortie."
+      - "Ce qui diminue a été prélevé par les cellules."
+    explication: "20 − 14 = 6. Le sang perd 6 unités de dioxygène dans le muscle : les cellules musculaires les ont prélevées."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : dans un organe, le sang qui entre contient beaucoup de dioxygène et peu de
+      dioxyde de carbone. Le sang qui sort contient moins de dioxygène et plus de dioxyde de carbone.
+      Que peut-on conclure ?
+    forme: qcm
+    choix:
+      - "Les cellules de l'organe utilisent le dioxygène et rejettent du dioxyde de carbone"
+      - "Les cellules de l'organe fabriquent du dioxygène"
+      - "Le cœur fabrique le dioxyde de carbone"
+    reponse: 0
+    indices:
+      - "Ce qui diminue dans le sang a été prélevé. Ce qui augmente a été rejeté."
+      - "Le cœur ne fabrique rien : il met le sang en mouvement."
+    explication: "Le dioxygène diminue : les cellules l'ont prélevé. Le dioxyde de carbone augmente : les cellules l'ont rejeté. C'est la conséquence de la respiration cellulaire."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi une cellule du muscle de la jambe, qui n'est en contact ni avec l'air
+      ni avec les aliments, peut pourtant recevoir du dioxygène et du glucose.
+    indices:
+      - "Quel système relie tous les organes ?"
+      - "Où le dioxygène et les nutriments entrent-ils dans le sang ?"
+    criteres:
+      - "L'élève dit que le dioxygène entre dans le sang dans les poumons et les nutriments dans l'intestin grêle."
+      - "L'élève cite le rôle du sang, du cœur et des vaisseaux (jusqu'aux capillaires) pour amener ces substances jusqu'à la cellule."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases : ce dont une cellule a besoin, ce qu'elle rejette, et comment le sang
+      relie la cellule aux organes qui apportent ou éliminent ces substances.

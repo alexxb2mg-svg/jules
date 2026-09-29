@@ -1,0 +1,134 @@
+notion: mecanismes-nerveux-cellulaire
+titre: "Neurones, synapses et comportements qui agissent sur le système nerveux"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire le neurone et le passage du message nerveux d'un neurone à l'autre (synapse)."
+      - "Expliquer comment l'entraînement et le sommeil agissent sur les connexions entre neurones."
+      - "Relier l'alcool, les drogues et le dopage à leurs effets sur le système nerveux."
+
+  - type: texte
+    titre: "Le neurone et la synapse"
+    contenu: >-
+      Le système nerveux est formé de milliards de cellules nerveuses : les **neurones**.
+      Un neurone a un **corps cellulaire** (avec le noyau), des prolongements courts qui reçoivent
+      les messages, et un long prolongement : l'**axone**. L'axone conduit le message nerveux.
+      Le long d'un neurone, le message nerveux est **électrique**.
+
+  - type: texte
+    titre: "Le passage du message à la synapse"
+    contenu: >-
+      Deux neurones ne se touchent pas. La zone de contact entre eux s'appelle une **synapse**.
+      À la synapse, le message électrique arrive au bout de l'axone.
+      Il provoque la libération d'une substance chimique : le **neurotransmetteur**.
+      Le neurotransmetteur traverse le petit espace entre les deux cellules.
+      Il se fixe sur des **récepteurs** du neurone suivant. Un nouveau message électrique apparaît.
+
+  - type: texte
+    titre: "Entraînement et sommeil"
+    contenu: >-
+      Les connexions entre neurones se modifient toute la vie. C'est la **plasticité cérébrale**.
+      L'entraînement renforce les connexions utilisées : répéter un geste le rend plus précis et plus rapide.
+      Le sommeil est indispensable à la récupération et à la mémorisation.
+      Les adolescents ont besoin de beaucoup de sommeil (environ 8 à 10 heures).
+      Un manque de sommeil diminue l'attention et la mémoire.
+
+  - type: texte
+    titre: "Alcool, drogues et dopage"
+    contenu: >-
+      L'alcool et les drogues perturbent le fonctionnement des synapses.
+      Le **temps de réaction** augmente, la vigilance diminue, et une dépendance peut s'installer.
+      Le **dopage** est l'usage de produits interdits pour améliorer ses performances.
+      Certains agissent sur le système nerveux et masquent la fatigue, qui est un signal d'alerte.
+      Ils sont dangereux pour la santé, et le dopage triche : il est interdit en sport.
+
+  - type: exemple
+    enonce: >-
+      Une élève joue du piano tous les jours. Au bout de quelques mois, elle joue un morceau
+      plus vite et sans erreur. Explique ce qui a changé dans son système nerveux.
+    etapes:
+      - "Chaque jour, elle répète le même geste : les mêmes neurones sont utilisés ensemble."
+      - "Les connexions entre ces neurones utilisés se renforcent : c'est la plasticité cérébrale."
+      - "Le geste devient plus précis et plus rapide. Conclusion : l'entraînement modifie les connexions entre neurones, et cela se poursuit toute la vie."
+
+  - type: exercice
+    enonce: "Comment s'appelle la zone de contact entre deux neurones, où le message passe de l'un à l'autre ?"
+    forme: reponse_courte
+    reponse: "la synapse"
+    reponses_acceptees: ["synapse", "la synapse", "une synapse", "synapses", "les synapses"]
+    indices:
+      - "Les deux neurones ne se touchent pas vraiment : il y a un petit espace entre eux."
+      - "C'est là que le neurotransmetteur est libéré."
+      - "Le mot commence par « syn »."
+    explication: "C'est la synapse : le message y est transmis par une substance chimique, le neurotransmetteur."
+
+  - type: exercice
+    enonce: "À la synapse, sous quelle forme le message nerveux traverse-t-il l'espace entre deux neurones ?"
+    forme: qcm
+    choix:
+      - "Sous forme d'un message électrique qui saute d'un neurone à l'autre"
+      - "Sous forme d'une substance chimique, le neurotransmetteur"
+      - "Sous forme d'un liquide qui sort du noyau"
+    reponse: 1
+    indices:
+      - "Le message change de nature entre les deux neurones."
+      - "Relis le texte sur le passage du message à la synapse : qu'est-ce qui est libéré ?"
+    explication: "Le message électrique arrive au bout de l'axone et provoque la libération d'un neurotransmetteur. Cette substance chimique traverse l'espace et se fixe sur les récepteurs du neurone suivant."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : au test de la règle, le temps de réaction moyen d'une classe est de
+      200 millisecondes après une nuit de 9 heures, et de 250 millisecondes après une nuit de
+      5 heures. De quel pourcentage le temps de réaction a-t-il augmenté ? Écris seulement le
+      nombre, sans le signe %.
+    forme: nombre
+    reponse: 25
+    tolerance: 0.01
+    indices:
+      - "Commence par calculer de combien de millisecondes le temps a augmenté."
+      - "Un pourcentage d'augmentation se calcule par rapport à la valeur de départ."
+      - "Augmentation ÷ valeur de départ × 100."
+    explication: "Augmentation : 250 − 200 = 50 millisecondes. Pourcentage : 50 ÷ 200 × 100 = 25. Le manque de sommeil ralentit le fonctionnement du système nerveux."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : pendant une course, un cycliste prend un produit stimulant qui agit sur son
+      système nerveux. Son cœur bat très vite et sa température monte, mais il ne ressent aucune
+      fatigue. Au sommet du col, il s'effondre. Pourquoi ce produit est-il dangereux ?
+    forme: qcm
+    choix:
+      - "Il masque la fatigue, signal d'alerte : le cycliste dépasse les limites de son corps sans le sentir"
+      - "Il rend le sommeil inutile pour toute la vie"
+      - "Il n'a aucun effet sur le corps, seulement sur le moral"
+    reponse: 0
+    indices:
+      - "À quoi sert normalement la sensation de fatigue pendant un effort ?"
+      - "Que se passe-t-il si un produit efface ce signal ?"
+    explication: "La fatigue est un signal d'alerte du système nerveux. Le produit la masque : le cycliste continue au-delà de ses limites, ce qui met sa santé en danger (cœur très rapide, température élevée, effondrement)."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi une personne qui a bu de l'alcool réagit plus lentement à un obstacle.
+      Utilise les mots synapse et temps de réaction.
+    indices:
+      - "Où l'alcool agit-il dans le système nerveux ?"
+      - "Quel est l'effet sur le temps de réaction ?"
+    criteres:
+      - "L'élève dit que l'alcool perturbe le fonctionnement des synapses (transmission du message d'un neurone à l'autre)."
+      - "L'élève relie cela à un temps de réaction plus long, donc à un risque d'accident."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases : comment le message nerveux passe d'un neurone à l'autre, et un
+      comportement (sommeil, entraînement, alcool ou dopage) avec son effet sur le système nerveux.

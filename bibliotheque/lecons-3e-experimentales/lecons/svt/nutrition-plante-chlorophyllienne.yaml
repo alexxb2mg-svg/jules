@@ -1,0 +1,125 @@
+notion: nutrition-plante-chlorophyllienne
+titre: "Besoins et transport de matière chez une plante chlorophyllienne"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lister les besoins d'une plante et où elle les prélève."
+      - "Distinguer sève brute et sève élaborée, et leur trajet."
+      - "Repérer les lieux de production et de stockage de la matière."
+
+  - type: texte
+    titre: "La photosynthèse et les besoins de la plante"
+    contenu: >-
+      Les cellules chlorophylliennes (surtout dans les feuilles) fabriquent de la matière organique,
+      comme des sucres : c'est la **photosynthèse**.
+      Il leur faut du dioxyde de carbone, de l'eau et de l'énergie lumineuse. Elles rejettent du dioxygène.
+      La plante a aussi besoin de sels minéraux.
+      Bilan : eau + dioxyde de carbone → sucres + dioxygène, grâce à la lumière captée par la chlorophylle.
+
+  - type: texte
+    titre: "Où la plante prélève ce qu'il lui faut"
+    contenu: >-
+      L'eau et les sels minéraux sont prélevés dans le sol par les **poils absorbants** des racines.
+      Le dioxyde de carbone est prélevé dans l'air : il entre dans les feuilles par les **stomates**.
+      Par les stomates, le dioxygène sort et de la vapeur d'eau s'échappe.
+      La lumière n'est pas une matière : c'est une source d'énergie.
+      L'essentiel de la matière d'une plante vient du dioxyde de carbone de l'air et de l'eau, pas de la terre.
+
+  - type: texte
+    titre: "Le transport et le stockage"
+    contenu: >-
+      La **sève brute** (eau et sels minéraux) monte des racines vers les feuilles dans des vaisseaux.
+      La **sève élaborée** (eau et sucres fabriqués) circule dans d'autres vaisseaux.
+      Elle apporte les sucres à tous les organes, même ceux qui ne sont pas verts (racines, fleurs, fruits).
+      Une partie de la matière est mise en réserve, souvent sous forme d'**amidon** :
+      dans les tubercules, les graines, les fruits.
+      L'eau iodée colore l'amidon en bleu-noir.
+
+  - type: exemple
+    enonce: >-
+      Une betterave stocke du sucre dans sa racine, sous terre. D'où vient ce sucre ?
+    etapes:
+      - "Les feuilles, à la lumière, fabriquent des sucres par photosynthèse."
+      - "La sève élaborée transporte ces sucres jusqu'à la racine."
+      - "La racine stocke le sucre. Elle ne le fabrique pas : c'est un lieu de stockage, les feuilles sont le lieu de production."
+
+  - type: exercice
+    enonce: "Comment s'appelle le petit orifice de la feuille par où le dioxyde de carbone entre dans la plante ?"
+    forme: reponse_courte
+    reponse: "les stomates"
+    reponses_acceptees: ["stomate", "stomates", "les stomates", "un stomate", "le stomate"]
+    indices:
+      - "Ce n'est pas un organe de la racine : c'est un orifice de la feuille."
+      - "Le mot commence par « sto »."
+    explication: "Ce sont les stomates : de petits orifices de la feuille, par où entrent le dioxyde de carbone et sortent le dioxygène et la vapeur d'eau."
+
+  - type: exercice
+    enonce: "Quelle sève monte des racines vers les feuilles ?"
+    forme: qcm
+    choix:
+      - "La sève brute, faite d'eau et de sels minéraux"
+      - "La sève élaborée, faite d'eau et de sucres"
+      - "Les deux sèves circulent dans les mêmes vaisseaux, dans le même sens"
+    reponse: 0
+    indices:
+      - "Une sève monte des racines, l'autre distribue les sucres fabriqués."
+      - "Que trouve-t-on dans le sol, que les racines prélèvent ?"
+    explication: "La sève brute (eau et sels minéraux, prélevés par les racines) monte vers les feuilles. La sève élaborée, elle, distribue les sucres à tous les organes, dans d'autres vaisseaux."
+
+  - type: exercice
+    enonce: >-
+      Document (expérience imaginée, données fictives) : on plante un jeune arbre de 3 kg dans un pot
+      contenant 50 kg de terre sèche. On l'arrose seulement avec de l'eau. Quelques années plus tard,
+      l'arbre pèse 10 kg et la terre sèche pèse 49,9 kg. De combien de kilogrammes la masse de l'arbre
+      a-t-elle augmenté ?
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    unite: "kg"
+    indices:
+      - "On cherche ce que l'arbre a gagné, pas ce qu'il pèse à la fin."
+      - "Masse gagnée = masse finale − masse de départ."
+    explication: "10 − 3 = 7 kg. La terre n'a perdu que 0,1 kg (50 − 49,9) : la matière de l'arbre vient surtout du dioxyde de carbone de l'air et de l'eau."
+
+  - type: exercice
+    enonce: >-
+      Document (expérience décrite) : on recouvre une partie d'une feuille avec un papier opaque et la plante
+      reste éclairée une journée. On plonge ensuite la feuille dans de l'eau iodée. La partie éclairée devient
+      bleu-noir, la partie cachée reste jaune-orangé. Que montre cette expérience ?
+    forme: qcm
+    choix:
+      - "La feuille fabrique de l'amidon à la lumière : la lumière est nécessaire à la photosynthèse"
+      - "La feuille fabrique de l'amidon dans l'obscurité"
+      - "L'eau iodée fabrique l'amidon"
+    reponse: 0
+    indices:
+      - "Le bleu-noir indique la présence d'amidon."
+      - "Quelle est la seule différence entre les deux parties de la feuille ?"
+    explication: "Seule la partie éclairée contient de l'amidon. La partie cachée sert de témoin : la seule chose qui change est la lumière. La feuille a besoin de lumière pour fabriquer de la matière organique."
+
+  - type: question_ouverte
+    question: >-
+      Une pomme de terre est riche en amidon et pousse sous terre, à l'obscurité. Explique d'où vient
+      cet amidon.
+    indices:
+      - "Où se trouvent les feuilles, et que font-elles à la lumière ?"
+      - "Comment les sucres arrivent-ils jusqu'au tubercule ?"
+    criteres:
+      - "L'élève dit que les feuilles fabriquent des sucres à la lumière (photosynthèse)."
+      - "L'élève dit que la sève élaborée les transporte jusqu'au tubercule, où ils sont stockés sous forme d'amidon."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases : ce que la plante prélève dans le sol, ce qu'elle prélève dans l'air,
+      et comment les sucres fabriqués par les feuilles arrivent aux autres organes.

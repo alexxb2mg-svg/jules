@@ -1,0 +1,170 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: circulation-information-reseau
+titre: La circulation de l'information dans un réseau informatique
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  licence: etalab-2.0
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027
+    — épreuve de sciences — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Nommer les composants d'un réseau local et leur rôle, et reconnaître une topologie en étoile.
+  - Choisir une adresse IP fixe valide pour ajouter un objet connecté.
+  - Décrire le trajet des paquets sur Internet, justifier le routage et calculer une durée de transfert.
+- type: texte
+  titre: Le réseau local
+  contenu: |-
+    Un **réseau local** relie des appareils proches : une salle, une maison, un collège.
+
+    - **Terminaux** : ordinateurs, tablettes, smartphones, objets connectés. Chacun a une **carte réseau**.
+    - **Liaisons** : câbles (filaires) ou Wi-Fi (sans fil).
+    - **Commutateur** : relie les appareils d'un même réseau local et envoie chaque message au bon appareil.
+
+    La façon dont les éléments sont reliés s'appelle la **topologie**. Tous reliés à un même commutateur : topologie **en étoile**.
+- type: texte
+  titre: Routeur, serveur, Internet
+  contenu: |-
+    - Le **routeur** relie des réseaux différents et choisit le chemin des messages. Une box joue le rôle de routeur entre la maison et Internet.
+    - Le **serveur** fournit un service (pages web, fichiers) aux appareils qui le demandent.
+    - **Internet** est le réseau mondial qui relie des millions de réseaux grâce aux routeurs.
+    - Le **Web** n'est qu'un service parmi d'autres qui utilisent Internet (messagerie, jeux en ligne).
+- type: texte
+  titre: L'adresse IP
+  contenu: |-
+    Chaque appareil a une **adresse IP**, par exemple 192.168.1.12.
+
+    - Elle est faite de **quatre nombres**, chacun de **0 à 255**.
+    - Le début identifie le **réseau**, la fin identifie l'**appareil**.
+    - Deux appareils d'un même réseau n'ont jamais la même adresse.
+
+    Pour ajouter un objet connecté avec une adresse fixe : on garde la partie réseau et on choisit un numéro d'appareil libre, entre 1 et 254.
+- type: texte
+  titre: Paquets, routage et débit
+  contenu: |-
+    Une information est **découpée en paquets**. Chaque paquet porte l'adresse IP du destinataire.
+
+    Chaque routeur lit cette adresse et consulte sa **table de routage**, qui indique vers quel routeur voisin l'envoyer.
+
+    Les paquets d'un même fichier peuvent suivre des chemins différents. Le destinataire les rassemble.
+
+    Un **protocole de routage** commun est nécessaire : les routeurs, de fabricants et de pays différents, doivent se comprendre.
+
+    **Débit** : données transmises par seconde, en bits par seconde.
+    **Durée = taille en bits ÷ débit.** 1 octet = 8 bits.
+- type: exemple
+  enonce: Dans une salle, trois ordinateurs ont les adresses 192.168.10.2, 192.168.10.3 et 192.168.10.4.
+    Quelle adresse fixe peut-on donner à une imprimante pour l'ajouter à ce réseau ?
+  etapes:
+  - 'Les trois premiers nombres (192.168.10) identifient le réseau : on les garde.'
+  - Il faut un numéro d'appareil libre, entre 1 et 254.
+  - 'Par exemple : 192.168.10.50.'
+- type: exercice
+  enonce: Quel appareil relie des réseaux différents et choisit le chemin des paquets ?
+  forme: qcm
+  choix:
+  - Le commutateur
+  - Le routeur
+  - Le serveur
+  reponse: 1
+  indices:
+  - Un des trois reste dans le réseau local, un fournit des pages ou des fichiers.
+  - Celui qu'on cherche fait le lien entre plusieurs réseaux.
+  explication: C'est le routeur. Le commutateur relie les appareils d'un même réseau local. Le serveur
+    fournit un service.
+- type: exercice
+  enonce: Pour circuler sur Internet, une information est découpée en petits morceaux qui portent chacun
+    l'adresse du destinataire. Comment s'appellent ces morceaux ?
+  forme: reponse_courte
+  reponse: paquets
+  reponses_acceptees:
+  - paquets
+  - paquet
+  - les paquets
+  - paquets de données
+  - paquet de données
+  indices:
+  - 'Pense au courrier : on envoie des lettres et aussi des ... ?'
+  - Le mot commence par « pa » et désigne aussi un colis qu'on envoie par la poste.
+  explication: 'Ce sont des paquets : chacun porte l''adresse IP du destinataire et peut suivre son propre
+    chemin.'
+- type: exercice
+  enonce: Dans la salle de technologie, les ordinateurs ont les adresses IP 192.168.1.10, 192.168.1.11
+    et 192.168.1.12. Les trois premiers nombres identifient le réseau. Quelle adresse IP fixe peux-tu
+    donner à une station météo connectée pour qu'elle rejoigne ce réseau local ?
+  forme: qcm
+  choix:
+  - 192.168.1.11
+  - 192.168.1.25
+  - 192.168.2.25
+  - 192.168.1.300
+  reponse: 1
+  indices:
+  - Quelle partie de l'adresse doit être la même pour tous les appareils de ce réseau ?
+  - 'Vérifie trois choses : même partie réseau, numéro d''appareil pas déjà pris, chaque nombre entre
+    0 et 255.'
+  - La partie réseau est 192.168.1. Élimine d'abord les adresses qui ne commencent pas ainsi.
+  explication: '192.168.1.25 : même partie réseau (192.168.1), numéro libre et compris entre 1 et 254.
+    192.168.1.11 est déjà pris, 192.168.2.25 est sur un autre réseau, 300 dépasse 255.'
+- type: exercice
+  enonce: Dans un réseau local, tous les appareils sont reliés par un câble à un même commutateur placé
+    au centre. Quel nom donne-t-on à cette topologie ?
+  forme: reponse_courte
+  reponse: étoile
+  reponses_acceptees:
+  - étoile
+  - etoile
+  - en étoile
+  - en etoile
+  - topologie en étoile
+  - topologie étoile
+  indices:
+  - Dessine le commutateur au milieu et les câbles autour de lui. À quoi ressemble ton dessin ?
+  - La topologie décrit la forme des liaisons. Ici, toutes les liaisons partent du même point central.
+  explication: 'Tous les appareils sont reliés à un point central : c''est une topologie en étoile.'
+- type: exercice
+  enonce: 'La connexion du collège a un débit de 25 Mbit/s. On télécharge une vidéo de 50 Mo. Convention
+    de cet énoncé : 1 octet = 8 bits, 1 Mo = 1 000 000 octets et 1 Mbit = 1 000 000 bits. Quelle est la
+    durée minimale du téléchargement, en secondes ?'
+  forme: nombre
+  reponse: 16
+  tolerance: 0.01
+  unite: s
+  indices:
+  - Le débit est en bits par seconde. La taille de la vidéo est-elle dans la même unité ?
+  - Convertis la taille de la vidéo en Mbit, puis divise par le débit.
+  - 50 Mo = 50 × 8 Mbit = 400 Mbit. Il reste à diviser par le débit.
+  explication: 50 Mo = 50 × 8 = 400 Mbit. Durée = 400 ÷ 25 = 16 s.
+- type: question_ouverte
+  question: Dans une petite salle, un commutateur suffit pour que les ordinateurs communiquent. Explique
+    pourquoi, sur Internet, il faut des routeurs avec des tables de routage et un protocole de routage
+    commun.
+  indices:
+  - Combien de réseaux Internet relie-t-il, par rapport à ta salle ?
+  - Explique ce que fait un routeur quand il reçoit un paquet, puis pourquoi tous les routeurs doivent
+    suivre les mêmes règles.
+  - 'Commence ainsi : « Un paquet porte l''adresse IP de son destinataire. Quand un routeur le reçoit...
+    »'
+  criteres:
+  - L'élève dit qu'Internet relie un très grand nombre de réseaux différents, avec beaucoup de chemins
+    possibles.
+  - L'élève explique que chaque routeur lit l'adresse IP de destination du paquet et utilise sa table
+    de routage pour choisir où l'envoyer.
+  - 'L''élève justifie le protocole commun : tous les routeurs, de fabricants et de pays différents, doivent
+    se comprendre.'
+- type: synthese
+  consigne: 'Avec tes mots : dis à quoi servent le commutateur et le routeur, ce que contient une adresse
+    IP, et comment un paquet voyage jusqu''à son destinataire.'

@@ -1,0 +1,164 @@
+notion: programmation-ost
+titre: "Programmer un objet technique : algorithme, sous-programmes, test et mise au point"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Modifier un algorithme pour un nouveau besoin, puis le traduire en programme."
+      - "Expliquer l'intérêt des sous-programmes, des paramètres et des commentaires."
+      - "Décrire la mise au point d'un programme sur un objet réel."
+
+  - type: texte
+    titre: "De l'algorithme au programme"
+    contenu: |-
+      Programmer un objet réel (robot, barrière, serre), c'est passer d'un **algorithme** à un **programme** qui commande de vrais capteurs et actionneurs.
+
+      **Traduire** : chaque étape de l'algorithme devient un ou plusieurs blocs (ou lignes de code), dans le même ordre.
+
+      **Modifier** : pour un nouveau besoin, on change d'abord l'algorithme (une condition, un paramètre, une action), puis le programme.
+
+  - type: texte
+    titre: "Un programme bien structuré"
+    contenu: |-
+      Un programme bien structuré est plus facile à lire et à corriger.
+
+      - Il est **organisé** : réglages de départ, puis partie qui se répète.
+      - Il est **modulaire** : les actions utilisées plusieurs fois sont rangées dans des **sous-programmes** (ou fonctions) avec un nom clair, par exemple avancer(vitesse).
+      - Il est **commenté** : de courtes phrases expliquent chaque partie. La carte ne les exécute pas.
+
+  - type: texte
+    titre: "Sous-programme et paramètre"
+    contenu: |-
+      On écrit un sous-programme **une seule fois**. On l'**appelle** autant de fois que nécessaire.
+
+      La valeur entre parenthèses est un **paramètre**. Exemple : avancer(60) et avancer(30) utilisent le même sous-programme, avec deux vitesses différentes.
+
+      Le programme principal reste court et lisible.
+
+      L'interaction humain-machine passe par des boutons, un écran, un buzzer : le programme réagit aux actions de l'utilisateur.
+
+  - type: texte
+    titre: "La mise au point"
+    contenu: |-
+      La **mise au point**, c'est une suite de tests et de corrections.
+
+      1. On **téléverse** le programme dans la carte.
+      2. On **teste** sur l'objet réel.
+      3. On **compare** au comportement attendu.
+      4. On **corrige**, puis on teste de nouveau.
+
+      Si l'objet ne réagit pas comme prévu, on cherche la cause : mauvais branchement, mauvais seuil, condition inversée.
+
+      On corrige **une seule chose à la fois**.
+
+  - type: exemple
+    enonce: >-
+      Une barrière de parking lève son bras quand on appuie sur un bouton, attend, puis le baisse. Comment
+      organiser le programme ?
+    etapes:
+      - "On écrit l'algorithme en français : quand le bouton est appuyé, lever la barrière, attendre, baisser la barrière."
+      - "Les actions lever() et baisser() deviennent des sous-programmes, écrits une fois chacun."
+      - "Le programme principal appelle lever(), attend, puis appelle baisser(). Un commentaire explique chaque partie."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'action d'envoyer le programme de l'ordinateur vers la carte de l'objet ?"
+    forme: reponse_courte
+    reponse: "téléverser"
+    reponses_acceptees:
+      - "téléverser"
+      - "televerser"
+      - "téléversement"
+      - "televersement"
+      - "le téléversement"
+    indices:
+      - "Il s'agit d'envoyer un fichier vers la carte."
+      - "Le mot commence par « télé » et se termine par « verser »."
+    explication: "On téléverse le programme dans la carte, avant de tester l'objet réel."
+
+  - type: exercice
+    enonce: "Pourquoi écrit-on des commentaires dans un programme ?"
+    forme: qcm
+    choix:
+      - "Pour que la carte exécute des instructions en plus."
+      - "Pour expliquer le rôle de chaque partie à celui qui relit le programme."
+      - "Pour rendre le programme plus rapide."
+    reponse: 1
+    indices:
+      - "La carte ignore les commentaires."
+      - "À qui s'adresse une phrase que la carte ne lit pas ?"
+    explication: "Les commentaires sont ignorés par la carte. Ils expliquent le programme aux personnes qui le lisent ou le corrigent."
+
+  - type: exercice
+    enonce: >-
+      Le sous-programme avancer(v) fait tourner les moteurs du robot à la vitesse v (en %). Programme
+      principal : vitesse ← 40 ; avancer(vitesse) ; vitesse ← vitesse × 2 ; avancer(vitesse − 30).
+      Quelle valeur est envoyée à avancer lors du deuxième appel ?
+    forme: nombre
+    reponse: 50
+    tolerance: 0.01
+    indices:
+      - "Note la valeur de la variable vitesse après chaque affectation."
+      - "Avant le deuxième appel, vitesse a été multipliée. Puis on retire un nombre à cette valeur."
+    explication: "vitesse ← 40 × 2 = 80. Le deuxième appel reçoit 80 − 30 = 50."
+
+  - type: exercice
+    enonce: >-
+      Tu as téléversé le programme du robot et testé. Le robot ne réagit pas comme prévu. Que fais-tu ?
+    forme: qcm
+    choix:
+      - "Je change plusieurs choses à la fois pour aller plus vite."
+      - "Je cherche la cause de l'écart, je corrige une seule chose, puis je teste de nouveau."
+      - "Je considère que le programme est terminé."
+    reponse: 1
+    indices:
+      - "Quand on corrige plusieurs choses à la fois, on ne sait plus laquelle a réglé le problème."
+      - "La mise au point se termine seulement quand l'objet réel fonctionne comme prévu."
+    explication: "On cherche la cause (branchement, seuil, condition inversée), on corrige une seule chose, puis on teste de nouveau."
+
+  - type: exercice
+    enonce: |-
+      Un parking affiche le nombre de places libres.
+      Au démarrage : places ← 10.
+      Quand une voiture entre : places ← places − 1 ; si places < 0 alors places ← 0.
+      Quand une voiture sort : places ← places + 1 ; si places > 10 alors places ← 10.
+      Les événements arrivent dans cet ordre : entre, entre, entre, sort, entre, entre.
+      Quelle valeur est affichée à la fin ?
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    indices:
+      - "Fais un tableau avec une ligne par événement."
+      - "Après chaque événement, vérifie aussi la limite (pas moins que la borne basse, pas plus que la borne haute)."
+      - "Après les trois premières entrées, il reste 7 places. Continue avec la sortie, puis les deux dernières entrées."
+    explication: "10 → 9 → 8 → 7 (trois entrées) → 8 (une sortie) → 7 → 6 (deux entrées). Aucune limite n'est atteinte. Résultat : 6."
+
+  - type: question_ouverte
+    question: >-
+      On veut ajouter un bouton d'arrêt d'urgence à la barrière de parking : un appui doit arrêter le
+      bras. Explique comment tu modifies l'algorithme, puis le programme, et comment tu vérifies que ça
+      marche.
+    indices:
+      - "Que faut-il ajouter dans l'algorithme : un événement, une action ?"
+      - "Existe-t-il déjà un sous-programme que tu peux réutiliser ? Comment vérifie-t-on sur l'objet réel ?"
+    criteres:
+      - "L'élève modifie d'abord l'algorithme en français (nouvel événement : appui sur le bouton d'arrêt, action : arrêter le bras)."
+      - "L'élève traduit dans le programme, avec un sous-programme ou un bloc dédié et un commentaire."
+      - "L'élève décrit un test sur l'objet réel : téléverser, tester pendant que le bras bouge, comparer au comportement attendu, corriger si besoin."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, pourquoi on range les actions répétées dans des sous-programmes, et les étapes
+      de la mise au point d'un programme.

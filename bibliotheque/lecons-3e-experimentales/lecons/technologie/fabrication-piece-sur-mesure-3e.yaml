@@ -1,0 +1,146 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0. Relecture bienvenue.
+notion: fabrication-piece-sur-mesure-3e
+titre: "Fabriquer une pièce sur mesure pour réparer un objet"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décider s'il faut une pièce de bibliothèque ou une pièce sur mesure."
+      - "Choisir un moyen de production adapté à la forme de la pièce."
+      - "Prévoir un jeu dans une cote et contrôler la pièce avant le montage."
+
+  - type: texte
+    titre: "Pièce de bibliothèque ou pièce sur mesure ?"
+    contenu: |-
+      Quand une pièce est cassée ou perdue, deux solutions :
+      - utiliser une pièce d'une **bibliothèque de composants** (réelle ou virtuelle : une vis normalisée, un modèle 3D déjà dessiné) ;
+      - fabriquer une **pièce sur mesure**.
+      Si une pièce standard convient, on ne la refait pas.
+
+  - type: texte
+    titre: "Les étapes de fabrication"
+    contenu: |-
+      Pour une pièce sur mesure :
+      1. mesurer la pièce d'origine (pied à coulisse) ;
+      2. la modéliser en 3D ;
+      3. préparer la fabrication (exporter le fichier, régler la machine) ;
+      4. fabriquer, en respectant les règles de sécurité ;
+      5. finir la pièce, la contrôler, puis la monter.
+
+  - type: texte
+    titre: "Choisir le moyen de production"
+    contenu: |-
+      - **Impression 3D** (fabrication additive) : couche par couche, pour les pièces en volume, même complexes. Le **trancheur** découpe le modèle en couches.
+      - **Découpe laser** : un faisceau découpe ou grave une plaque (bois, carton, acrylique). Pour les pièces planes.
+      - **Centre d'usinage** : une fraise enlève de la matière dans un bloc.
+      Le choix tient aussi compte du matériau et des efforts subis.
+
+  - type: texte
+    titre: "Le jeu et le contrôle"
+    contenu: |-
+      Une pièce qui s'emboîte ou tourne sur une autre a besoin d'un **jeu** : un petit écart de dimensions prévu.
+      Exemple : un axe de 8,0 mm dans un trou de 8,3 mm a 0,3 mm de jeu sur le diamètre.
+      - Sans jeu : la pièce ne se monte pas ou frotte trop.
+      - Trop de jeu : elle bouge.
+      Avant le montage, on vérifie les dimensions et le fonctionnement. Si elle ne convient pas, on corrige le modèle 3D et on la refait.
+
+  - type: exemple
+    enonce: >-
+      Le bouton en plastique d'une machine à laver est cassé. Aucune pièce de bibliothèque ne convient.
+      Quel moyen de production choisir, et quelles sont les premières étapes ?
+    etapes:
+      - "Le bouton est une pièce en volume : on choisit l'impression 3D."
+      - "On mesure le bouton d'origine (ou la tige sur laquelle il se monte) avec un pied à coulisse."
+      - "On modélise le bouton en 3D en prévoyant un jeu, puis on prépare l'impression avec le trancheur."
+
+  - type: exercice
+    enonce: "Une pièce plane doit être découpée dans une plaque d'acrylique. Quel moyen de production est le mieux adapté ?"
+    forme: qcm
+    choix:
+      - "La découpe laser"
+      - "Le centre d'usinage avec un bloc"
+      - "Aucun : il faut toujours une pièce de bibliothèque"
+    reponse: 0
+    indices:
+      - "Regarde la forme de la pièce : plane ou en volume ?"
+      - "Un faisceau très concentré peut découper une plaque."
+    explication: "La découpe laser convient aux pièces planes découpées dans une plaque, comme l'acrylique."
+
+  - type: exercice
+    enonce: "Quel instrument utilise-t-on pour mesurer précisément les dimensions d'une pièce d'origine ? Réponds en quelques mots."
+    forme: reponse_courte
+    reponse: "pied à coulisse"
+    reponses_acceptees: ["pied à coulisse", "un pied à coulisse", "le pied à coulisse", "pied a coulisse", "un pied a coulisse", "pied à coulisse numérique"]
+    indices:
+      - "C'est un instrument à deux becs qui glissent le long d'une règle graduée."
+      - "Il permet de mesurer au dixième de millimètre."
+    explication: "On utilise un pied à coulisse : il mesure les dimensions au dixième de millimètre."
+
+  - type: exercice
+    enonce: >-
+      Un axe mesure 10,0 mm de diamètre. On veut un jeu de 0,4 mm sur le diamètre. Quel diamètre
+      (en mm) doit avoir le trou à modéliser ?
+    forme: nombre
+    reponse: 10.4
+    tolerance: 0.01
+    unite: "mm"
+    indices:
+      - "Le jeu est un écart en plus : le trou est plus grand que l'axe."
+      - "Ajoute le jeu au diamètre de l'axe."
+    explication: "Trou = axe + jeu = 10,0 + 0,4 = 10,4 mm."
+
+  - type: exercice
+    enonce: "On mesure un trou de 8,3 mm de diamètre et un axe de 7,9 mm. Quel est le jeu sur le diamètre, en mm ?"
+    forme: nombre
+    reponse: 0.4
+    tolerance: 0.01
+    unite: "mm"
+    indices:
+      - "Le jeu est l'écart entre le diamètre du trou et celui de l'axe."
+      - "Fais une soustraction : le plus grand moins le plus petit."
+    explication: "Jeu = 8,3 − 7,9 = 0,4 mm."
+
+  - type: exercice
+    enonce: >-
+      Une pièce imprimée en 3D ne rentre pas dans son logement. Le trou de la pièce d'origine mesure
+      12,0 mm et l'axe imprimé mesure aussi 12,0 mm. Que faire ?
+    forme: qcm
+    choix:
+      - "Forcer le montage avec un marteau."
+      - "Corriger le modèle 3D en ajoutant un jeu, puis refaire la pièce."
+      - "Monter quand même : le jeu n'a pas d'importance."
+    reponse: 1
+    indices:
+      - "Compare les deux diamètres : que remarques-tu ?"
+      - "Une pièce sans jeu ne se monte pas ou frotte trop. Que faut-il changer dans le modèle ?"
+    explication: "Les deux diamètres sont égaux : il n'y a aucun jeu. On corrige le modèle 3D pour prévoir un jeu, puis on refait la pièce."
+
+  - type: question_ouverte
+    question: >-
+      Tu viens de fabriquer une pièce pour réparer un objet. Décris ce que tu fais avant de la monter
+      définitivement, et ce que tu fais si elle ne convient pas.
+    indices:
+      - "Pense à ce que tu contrôles avec un instrument de mesure."
+      - "Pense aussi à vérifier que l'objet fonctionne."
+    criteres:
+      - "L'élève dit qu'il vérifie les dimensions (pied à coulisse) et le fonctionnement avant le montage."
+      - "L'élève dit que, si la pièce ne convient pas, on corrige le modèle 3D et on la refait."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu choisis entre une pièce de
+      bibliothèque et une pièce sur mesure, et pourquoi il faut prévoir un jeu.
