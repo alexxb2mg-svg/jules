@@ -1,0 +1,145 @@
+notion: constituants-phrase-complexe
+titre: "La phrase complexe : juxtaposition, coordination, subordination"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer une phrase simple d'une phrase complexe en comptant les verbes."
+      - "Reconnaître la juxtaposition, la coordination et la subordination."
+      - "Identifier les principaux types de propositions subordonnées : conjonctive, interrogative indirecte, relative, infinitive, participiale."
+
+  - type: texte
+    titre: "Phrase simple, phrase complexe"
+    contenu: |-
+      Une **proposition** est un groupe de mots organisé autour d'un verbe.
+
+      - **Phrase simple** : une seule proposition, un seul verbe. Le chat dort.
+      - **Phrase complexe** : plusieurs propositions, donc plusieurs verbes. Le chat dort quand il fait chaud.
+
+      Pour compter les propositions, on **compte les verbes conjugués** (pas les virgules).
+
+  - type: texte
+    titre: "Trois façons de relier les propositions"
+    contenu: |-
+      | Relation | Comment | Exemple |
+      |---|---|---|
+      | **Juxtaposition** | ponctuation seule (virgule, point-virgule, deux-points) | Il pleut, je reste à la maison. |
+      | **Coordination** | conjonction de coordination (mais, ou, et, donc, or, ni, car) | Il pleut donc je reste à la maison. |
+      | **Subordination** | mot subordonnant (que, quand, si, parce que, pronom relatif) | Je reste parce qu'il pleut. |
+
+      En coordination et en juxtaposition, les propositions sont indépendantes.
+      En subordination, la **subordonnée** dépend de la **principale** : elle ne peut pas former une phrase seule.
+
+  - type: texte
+    titre: "Les propositions subordonnées"
+    contenu: |-
+      | Type | Repère | Exemple |
+      |---|---|---|
+      | Conjonctive complétive | introduite par « que », complète un verbe | Je sais **que tu as raison**. |
+      | Conjonctive circonstancielle | quand, parce que, si, bien que... : rôle de complément circonstanciel | Je reste **parce qu'il pleut**. |
+      | Relative | pronom relatif (qui, que, dont, où), complète un nom | Le livre **que j'ai lu** est passionnant. |
+      | Interrogative indirecte | rapporte une question | Je me demande **s'il viendra**. |
+      | Infinitive | verbe à l'infinitif avec son sujet | Je vois **les enfants jouer**. |
+      | Participiale | verbe à un participe avec son sujet | **Le soir tombé**, nous sommes rentrés. |
+
+  - type: exemple
+    enonce: "Analyse : « Je crois que Nina viendra, mais elle n'a pas répondu. »"
+    etapes:
+      - "Il y a trois verbes conjugués : je crois, Nina viendra, elle n'a pas répondu. Donc 3 propositions."
+      - "« que Nina viendra » dépend de « Je crois » : c'est une subordonnée conjonctive complétive introduite par « que »."
+      - "« mais elle n'a pas répondu » est reliée par « mais », une conjonction de coordination : c'est une coordination."
+      - "La phrase est donc complexe : elle mélange subordination et coordination."
+
+  - type: exercice
+    enonce: "Combien de propositions y a-t-il dans « Mon frère joue au foot et ma sœur regarde la télévision. » ?"
+    forme: nombre
+    reponse: 2
+    tolerance: 0.01
+    indices:
+      - "Compte les verbes conjugués."
+      - "Le mot « et » relie des propositions. Chacune a son verbe."
+    explication: "Les deux verbes conjugués sont « joue » et « regarde » : il y a 2 propositions, reliées par « et » (coordination)."
+
+  - type: exercice
+    enonce: "Comment sont reliées les deux propositions de « Nous avons marché longtemps ; nous étions épuisés. » ?"
+    forme: qcm
+    choix:
+      - "Par juxtaposition"
+      - "Par coordination"
+      - "Par subordination"
+    reponse: 0
+    indices:
+      - "Y a-t-il un mot de liaison entre les deux propositions ?"
+      - "Ici, seule la ponctuation relie les deux propositions."
+    explication: "Il n'y a aucun mot de liaison, seulement un point-virgule : c'est une juxtaposition."
+
+  - type: exercice
+    enonce: "Dans « Je me demande s'il a compris. », quel est le type de la proposition subordonnée « s'il a compris » ?"
+    forme: reponse_courte
+    reponse: "interrogative indirecte"
+    reponses_acceptees:
+      - "une interrogative indirecte"
+      - "l'interrogative indirecte"
+      - "subordonnée interrogative indirecte"
+      - "proposition subordonnée interrogative indirecte"
+    indices:
+      - "Cette subordonnée rapporte une question, sans point d'interrogation."
+      - "La question de départ était « A-t-il compris ? ». Elle est devenue une subordonnée."
+    explication: "« s'il a compris » rapporte une question après « je me demande » : c'est une proposition subordonnée interrogative indirecte."
+
+  - type: exercice
+    enonce: "Quelle phrase contient une proposition subordonnée infinitive ?"
+    forme: qcm
+    choix:
+      - "Je pense que tu as raison."
+      - "Je vois les élèves sortir."
+      - "Le film que j'ai vu est long."
+      - "Je me demande s'il pleut."
+    reponse: 1
+    indices:
+      - "L'infinitive a un verbe à l'infinitif, avec son propre sujet."
+      - "Cherche une phrase sans mot subordonnant (que, si, pronom relatif) mais avec un infinitif dont quelqu'un est le sujet."
+    explication: "Dans « Je vois les élèves sortir », « les élèves sortir » est une infinitive : « sortir » est à l'infinitif et « les élèves » est son sujet. Les autres phrases ont une complétive, une relative et une interrogative indirecte."
+
+  - type: exercice
+    enonce: "Dans « Je pense que le livre que tu m'as prêté te plaira. », combien y a-t-il de propositions subordonnées ?"
+    forme: nombre
+    reponse: 2
+    tolerance: 0.01
+    indices:
+      - "Compte les verbes conjugués : le nombre de propositions. Une seule est la principale."
+      - "Une subordonnée (introduite par « que ») est à l'intérieur d'une autre subordonnée."
+    explication: "Verbes : pense, plaira, as prêté = 3 propositions. La principale est « Je pense ». Les deux autres sont subordonnées : la complétive « que le livre ... te plaira » et la relative « que tu m'as prêté ». Il y a donc 2 subordonnées."
+
+  - type: question_ouverte
+    question: >-
+      Explique en quelques phrases la différence entre la coordination et la subordination.
+      Donne un exemple de chaque.
+    indices:
+      - "Pense à l'indépendance des propositions : peut-on isoler chacune ?"
+      - "Cite une conjonction de coordination (mais, et, donc...) et un mot subordonnant (que, quand, parce que...)."
+    criteres:
+      - "L'élève explique que dans la coordination les propositions restent indépendantes."
+      - "L'élève explique que la subordonnée dépend de la principale et ne peut pas former une phrase seule."
+      - "L'élève donne un exemple correct de chaque relation, avec le mot de liaison."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment tu comptes les propositions
+      d'une phrase, et comment tu reconnais une juxtaposition, une coordination et une subordination.

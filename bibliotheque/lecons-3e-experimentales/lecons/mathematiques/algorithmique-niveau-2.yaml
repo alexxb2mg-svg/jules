@@ -1,0 +1,149 @@
+notion: algorithmique-niveau-2
+titre: "Événement, séquence et variable dans un programme"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir l'événement qui déclenche un script."
+      - "Suivre la valeur d'une variable avec un tableau de suivi."
+      - "Écrire ou compléter un script avec une condition « si … alors … sinon », une boucle et une variable."
+
+  - type: texte
+    titre: "L'événement et la séquence"
+    contenu: |
+      - Un script démarre en réponse à un **événement** : « quand le drapeau vert est cliqué », « quand la touche espace est pressée », « quand ce lutin est cliqué », « quand je reçois un message ».
+      - Le bloc d'événement est toujours **en haut** du script.
+      - Un programme peut avoir plusieurs scripts, chacun avec son événement.
+      - Les blocs d'une **séquence** s'exécutent de haut en bas, un par un.
+      - L'ordre compte : « ajouter 4 puis multiplier par 3 » ne donne pas la même chose que « multiplier par 3 puis ajouter 4 ».
+
+  - type: texte
+    titre: "La variable"
+    contenu: |
+      Une **variable** est une case mémoire. Elle a un nom et une valeur.
+
+      | Bloc | Effet |
+      |---|---|
+      | mettre score à 0 | **remplace** la valeur par 0 |
+      | ajouter 1 à score | **augmente** la valeur de 1 |
+      | demander … et attendre | range ce que l'utilisateur tape dans la variable « réponse » |
+
+      On **initialise** une variable au début du script : on lui donne sa valeur de départ.
+
+  - type: texte
+    titre: "Condition, boucle et tableau de suivi"
+    contenu: |
+      - « **si … alors … sinon** » teste une condition. Elle est vraie ou fausse.
+      - On suit **un seul** chemin : les blocs du « alors » ou ceux du « sinon ».
+      - Dans une boucle « répéter n fois », une condition est testée **à chaque passage**.
+      - Une variable peut servir à un calcul, à une construction (la longueur d'un côté) ou à un déplacement.
+      - Pour savoir ce que vaut une variable à la fin, on fait un **tableau de suivi** : une colonne par variable, une ligne par passage.
+
+  - type: exemple
+    enonce: >-
+      Script : « mettre x à 3 ; répéter 4 fois : ajouter 2 à x ». Que vaut x à la fin ?
+    etapes:
+      - "On initialise : x vaut 3 au départ."
+      - "On fait un tableau de suivi avec une ligne par passage dans la boucle."
+      - "Passage 1 : x = 3 + 2 = 5. Passage 2 : x = 5 + 2 = 7."
+      - "Passage 3 : x = 7 + 2 = 9. Passage 4 : x = 9 + 2 = 11."
+      - "La boucle a fait exactement 4 passages. À la fin, x vaut 11."
+
+  - type: exercice
+    enonce: >-
+      Script : « mettre p à 6 ; ajouter 4 à p ». Que vaut la variable p à la fin ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    indices:
+      - "Quelle est la valeur de p au départ ?"
+      - "« ajouter 4 à p » augmente la valeur de p de 4. Ce n'est pas la même chose que « mettre p à 4 »."
+      - "Il faut calculer 6 + 4."
+    explication: "Au départ, p vaut 6. Le bloc « ajouter 4 à p » donne 6 + 4 = 10."
+
+  - type: exercice
+    enonce: >-
+      On veut qu'un lutin change de couleur chaque fois qu'on clique dessus avec la souris. Quel bloc
+      faut-il placer en haut du script ?
+    forme: qcm
+    choix:
+      - "quand ce lutin est cliqué"
+      - "quand le drapeau vert est cliqué"
+      - "quand la touche espace est pressée"
+      - "répéter 10 fois"
+    reponse: 0
+    indices:
+      - "Le bloc du haut est un événement : quelle action de l'utilisateur veut-on détecter ?"
+      - "On veut détecter un clic sur le lutin lui-même, pas sur le drapeau ni sur le clavier."
+    explication: "L'événement qui correspond à un clic sur le lutin est « quand ce lutin est cliqué ». « Répéter 10 fois » n'est pas un événement."
+
+  - type: exercice
+    enonce: >-
+      Script : « demander Quel âge as-tu ? et attendre ; si réponse < 12 alors mettre prix à 4, sinon
+      mettre prix à 8 ». Léa tape 15. Que vaut la variable prix à la fin ?
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    indices:
+      - "Que contient la variable « réponse » ?"
+      - "Teste la condition avec cette valeur : la comparaison est-elle vraie ou fausse ?"
+      - "On ne suit qu'un seul chemin. Si la condition est fausse, quels blocs sont exécutés ?"
+    explication: "réponse vaut 15. La condition « 15 < 12 » est fausse : on suit le « sinon », donc prix vaut 8."
+
+  - type: exercice
+    enonce: >-
+      Le stylo est posé. Script : « mettre c à 10 ; répéter 3 fois : avancer de c, tourner à droite de
+      90 degrés, ajouter 5 à c ». Quelle longueur totale, en pas, le lutin trace-t-il ?
+    forme: nombre
+    reponse: 45
+    tolerance: 0.01
+    unite: pas
+    indices:
+      - "La variable c change à chaque passage. Fais un tableau avec une ligne par passage."
+      - "Passage 1 : le lutin avance de la valeur de c au départ. Puis c augmente de 5."
+      - "Note la valeur de c à chaque passage, puis additionne les trois longueurs."
+    explication: "Passage 1 : c = 10, il avance de 10. Passage 2 : c = 15, il avance de 15. Passage 3 : c = 20, il avance de 20. Total : 10 + 15 + 20 = 45 pas."
+
+  - type: exercice
+    enonce: >-
+      Script : « mettre s à 0 ; mettre n à 0 ; répéter 5 fois : ajouter 1 à n, puis si n > 2 alors
+      ajouter n à s, sinon ajouter 1 à s ». Que vaut la variable s à la fin ?
+    forme: nombre
+    reponse: 14
+    tolerance: 0.01
+    indices:
+      - "Fais un tableau de suivi avec 5 lignes et les colonnes n et s."
+      - "À chaque passage, n augmente de 1 d'abord. Ensuite seulement, on teste « n > 2 » avec la nouvelle valeur de n."
+      - "Passages 1 et 2 : n vaut 1 puis 2, la condition est fausse. Que fait-on pour s ? Continue pour les passages 3, 4 et 5."
+    explication: "Passage 1 : n = 1, faux, s = 1. Passage 2 : n = 2, faux, s = 2. Passage 3 : n = 3, vrai, s = 2 + 3 = 5. Passage 4 : n = 4, s = 5 + 4 = 9. Passage 5 : n = 5, s = 9 + 5 = 14."
+
+  - type: question_ouverte
+    question: >-
+      Écris un script qui, au clic sur le drapeau vert, demande un nombre à l'utilisateur, puis dit
+      « pair » si ce nombre est pair et « impair » sinon. Explique où est la variable dans ton script.
+    indices:
+      - "Quel événement lance le script ? Quel bloc pose la question ?"
+      - "Le nombre tapé est rangé dans la variable « réponse »."
+      - "Il faut un « si … alors … sinon » avec un test comme « réponse est pair »."
+    criteres:
+      - "Le script commence par un événement (drapeau vert), puis « demander … et attendre »."
+      - "Le script contient un « si … alors … sinon » dont la condition teste la parité de la réponse."
+      - "L'élève dit que le nombre tapé est rangé dans la variable « réponse »."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, écris en trois ou quatre phrases : à quoi sert une variable, la différence entre
+      « mettre … à » et « ajouter … à », et comment tu suis sa valeur dans une boucle.

@@ -1,0 +1,140 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: accord-verbe-cas-complexes
+titre: "L'accord du verbe : pronoms collectifs et distributifs"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver le vrai sujet du verbe quand c'est un pronom."
+      - "Distinguer un pronom collectif (verbe au pluriel) d'un pronom distributif (verbe au singulier)."
+      - "Accorder correctement le verbe et justifier cet accord."
+
+  - type: texte
+    titre: "Les pronoms collectifs : verbe au pluriel"
+    contenu: >-
+      Un pronom **collectif** désigne un ensemble : **la plupart, beaucoup, peu, plusieurs, certains**.
+      Le verbe se met au **pluriel**.
+      « La plupart des élèves **ont** compris. »
+      « Beaucoup **sont** venus. »
+      « Plusieurs **ont** refusé. »
+
+  - type: texte
+    titre: "Les pronoms distributifs : verbe au singulier"
+    contenu: >-
+      Un pronom **distributif** désigne les éléments un par un : **chacun, aucun, nul, personne, tout le monde**.
+      Le verbe reste au **singulier**, même si un complément pluriel suit.
+      « Chacun des élèves **a** son cahier. »
+      « Aucun de ces livres n'**est** intéressant. »
+      « Personne n'**a** vu le film. »
+      « Tout le monde **est** là. »
+
+  - type: texte
+    titre: "Trouver le bon sujet et vérifier"
+    contenu: >-
+      Le sujet du verbe est le **pronom**, pas le nom qui suit.
+      Dans « Chacun des candidats a une chance », le sujet est « chacun », pas « les candidats ».
+      Pour trouver le sujet, pose la question « Qui est-ce qui ... ? ».
+      Pour vérifier : remplace le sujet par « il » (singulier) ou « ils » (pluriel).
+      Attention : « personne » pronom est singulier (« Personne n'est venu »). Le nom « personne » peut être au pluriel (« Les personnes sont venues »).
+      Accorde aussi le participe passé (« ils sont arrivés »).
+
+  - type: exemple
+    enonce: >-
+      Choisis les bons accords : « Certains des joueurs (être) fatigués, mais nul ne (abandonner). »
+    etapes:
+      - "Premier verbe : le sujet est « certains ». C'est un pronom collectif."
+      - "Un collectif veut le pluriel : « certains sont fatigués » (on peut dire « ils sont »)."
+      - "Second verbe : le sujet est « nul ». C'est un pronom distributif."
+      - "Un distributif veut le singulier : « nul ne abandonne » devient « nul n'abandonne » (on peut dire « il abandonne »)."
+      - "Phrase finale : « Certains des joueurs sont fatigués, mais nul n'abandonne. »"
+
+  - type: exercice
+    enonce: "Quelle phrase est correctement accordée ?"
+    forme: qcm
+    choix:
+      - "Chacun des élèves a son cahier."
+      - "Chacun des élèves ont son cahier."
+      - "Chacun des élèves avez son cahier."
+    reponse: 0
+    indices:
+      - "« Chacun » désigne les élèves un par un. Est-ce un pronom collectif ou distributif ?"
+      - "Un pronom distributif veut le verbe au singulier."
+    explication: "« Chacun » est distributif : le verbe est au singulier, même si « des élèves » est pluriel. Le sujet est « chacun »."
+
+  - type: exercice
+    enonce: "Complète avec le verbe « avoir » au présent : « La plupart des élèves ... compris. » Écris seulement le verbe."
+    forme: reponse_courte
+    reponse: "ont"
+    reponses_acceptees: ["ont compris"]
+    indices:
+      - "« La plupart » est-il un pronom collectif ou distributif ?"
+      - "Un collectif veut le verbe au pluriel."
+      - "Le sujet peut être remplacé par « ils ». Conjugue « avoir » avec « ils »."
+    explication: "« La plupart » est collectif, le verbe est au pluriel : « La plupart des élèves ont compris »."
+
+  - type: exercice
+    enonce: "Complète avec le verbe « être » au présent : « Aucun de ces livres n'... intéressant. » Écris seulement le verbe."
+    forme: reponse_courte
+    reponse: "est"
+    reponses_acceptees: ["n'est", "est intéressant"]
+    indices:
+      - "Le sujet, ce sont les livres ? Non : cherche le petit mot au tout début de la phrase."
+      - "« Aucun » fait partie des pronoms distributifs : le verbe reste au singulier."
+      - "Remplace le sujet par « il ». Conjugue alors le verbe « être » avec « il »."
+    explication: "« Aucun » est distributif : le verbe est au singulier. On écrit « Aucun de ces livres n'est intéressant »."
+
+  - type: exercice
+    enonce: "Dans « Personne n'a vu le film. », pourquoi le verbe est-il au singulier ?"
+    forme: qcm
+    choix:
+      - "Parce que « personne » est un pronom distributif, toujours singulier."
+      - "Parce que « le film » est au singulier."
+      - "Parce que la phrase est à la forme négative."
+    reponse: 0
+    indices:
+      - "Cherche le sujet du verbe avec « Qui est-ce qui n'a pas vu le film ? »."
+      - "« Le film » est le COD, pas le sujet. Le sujet est un pronom."
+    explication: "Le sujet est « personne », un pronom distributif comme « chacun » ou « aucun » : verbe au singulier. La négation ne change pas l'accord."
+
+  - type: exercice
+    enonce: "Quelle phrase est entièrement correcte ?"
+    forme: qcm
+    choix:
+      - "Tout le monde est venu, mais peu de gens sont restés."
+      - "Tout le monde sont venus, mais peu de gens sont restés."
+      - "Tout le monde est venu, mais peu de gens est resté."
+      - "Tout le monde sont venus, mais peu de gens est resté."
+    reponse: 0
+    indices:
+      - "Il y a deux sujets : « tout le monde » et « peu de gens ». Traite-les l'un après l'autre."
+      - "« Tout le monde » est distributif. « Peu de gens » est collectif."
+      - "Élimine d'abord les phrases où le premier verbe est faux, puis regarde le second."
+    explication: "« Tout le monde » est distributif : « est venu ». « Peu de gens » est collectif : « sont restés ». Une seule phrase est juste des deux côtés."
+
+  - type: question_ouverte
+    question: >-
+      Écris une phrase avec « la plupart » et une phrase avec « chacun » suivi d'un complément pluriel.
+      Puis explique l'accord du verbe dans chaque phrase.
+    indices:
+      - "Trouve d'abord le sujet du verbe dans chaque phrase."
+      - "Demande-toi si ce sujet est collectif ou distributif."
+    criteres:
+      - "La phrase avec « la plupart » a un verbe au pluriel (par exemple : la plupart des élèves ont réussi)."
+      - "La phrase avec « chacun » a un verbe au singulier, même avec un complément pluriel."
+      - "L'élève justifie : le sujet est le pronom, pas le complément ; « la plupart » est collectif, « chacun » est distributif."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : explique quel pronom demande un verbe au pluriel,
+      quel pronom demande un verbe au singulier, et comment tu vérifies ton accord.

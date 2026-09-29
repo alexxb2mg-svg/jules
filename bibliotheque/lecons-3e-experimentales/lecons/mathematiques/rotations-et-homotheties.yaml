@@ -1,0 +1,157 @@
+notion: rotations-et-homotheties
+titre: "Rotations et homothéties"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire l'effet d'une rotation et d'une homothétie sur une figure."
+      - "Reconnaître des rotations dans une rosace, une frise ou un pavage."
+      - "Calculer une longueur, un angle ou une aire, et justifier avec les propriétés."
+
+  - type: texte
+    titre: "La rotation"
+    contenu: >-
+      Une rotation a un **centre O**, un **angle** et un **sens** (des aiguilles d'une montre, ou contraire).
+
+
+      Le point A' image de A vérifie **OA' = OA**.
+
+
+      Elle **conserve** les longueurs, les angles, les aires, le parallélisme : la figure tourne sans se déformer.
+
+      Un demi-tour (180°) est la **symétrie centrale**.
+
+  - type: texte
+    titre: "L'homothétie"
+    contenu: >-
+      Une homothétie a un **centre O** et un **rapport k** (non nul).
+
+
+      - k > 0 : l'image est du même côté de O, avec OA' = k × OA.
+
+      - k < 0 : l'image est de l'autre côté de O, avec OA' = (−k) × OA.
+
+      - Les **longueurs** sont multipliées par |k| (le rapport sans son signe).
+
+      - Les **aires** sont multipliées par **k²**.
+
+      - Les angles et le parallélisme sont conservés.
+
+  - type: texte
+    titre: "Rosaces, frises, raisonnement"
+    contenu: >-
+      Une **rosace** de n motifs identiques autour d'un centre : angle de rotation **360° ÷ n**.
+      Une frise se construit par translations ou symétries.
+      Des motifs de plus en plus grands à partir d'un même point font penser à une homothétie.
+
+
+      Pour **justifier**, cite la propriété : « la rotation conserve les longueurs »,
+      « l'homothétie conserve les angles ».
+
+  - type: exemple
+    enonce: >-
+      Par l'homothétie de centre O et de rapport 0,5, le segment [AB] a pour image [A'B'].
+      AB = 10 cm et le triangle OAB a une aire de 8 cm². Calcule A'B' et l'aire de OA'B'.
+    etapes:
+      - "Le rapport est 0,5 : c'est une réduction. Les longueurs sont multipliées par 0,5."
+      - "A'B' = 0,5 × 10 = 5 cm."
+      - "Les aires sont multipliées par 0,5² = 0,25."
+      - "Aire de OA'B' = 0,25 × 8 = 2 cm²."
+
+  - type: exercice
+    enonce: "Comment s'appelle la rotation d'un demi-tour (180°) autour d'un point ? Réponds par deux mots."
+    forme: reponse_courte
+    reponse: "symétrie centrale"
+    reponses_acceptees: ["symetrie centrale", "la symétrie centrale", "une symétrie centrale", "symétrie de centre"]
+    indices:
+      - "Pense à un demi-tour : la figure se retrouve « à l'envers », de l'autre côté du centre."
+      - "Le mot commence par « sym » et l'autre mot désigne le point autour duquel on tourne."
+    explication: "Une rotation de 180° est une symétrie centrale."
+
+  - type: exercice
+    enonce: "On applique à une figure l'homothétie de centre O et de rapport −1/2. Comment est la figure image ?"
+    forme: qcm
+    choix:
+      - "deux fois plus grande, du même côté de O"
+      - "deux fois plus grande, de l'autre côté de O"
+      - "deux fois plus petite, du même côté de O"
+      - "deux fois plus petite, de l'autre côté de O"
+    reponse: 3
+    indices:
+      - "Le signe du rapport dit de quel côté de O se trouve l'image."
+      - "Le rapport sans son signe dit si on agrandit ou si on réduit."
+    explication: "Rapport négatif : l'image est de l'autre côté de O. Sans le signe, 1/2 est entre 0 et 1 : c'est une réduction, deux fois plus petite."
+
+  - type: exercice
+    enonce: >-
+      Une rosace est formée de 8 pétales identiques, régulièrement répartis autour d'un centre O.
+      Quel est l'angle, en degrés, de la rotation de centre O qui envoie un pétale sur son voisin ?
+    forme: nombre
+    reponse: 45
+    tolerance: 0.01
+    unite: degrés
+    indices:
+      - "Combien de degrés fait un tour complet ?"
+      - "Les pétales se partagent le tour complet en parts égales."
+    explication: "Un tour fait 360°. Avec 8 pétales : 360 ÷ 8 = 45°."
+
+  - type: exercice
+    enonce: >-
+      Par l'homothétie de centre O et de rapport −4, le point A a pour image A'. On sait que OA = 2,5 cm.
+      Quelle est la distance OA', en cm ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Une distance peut-elle être négative ?"
+      - "On utilise le rapport sans son signe. Le signe dit seulement de quel côté de O se trouve A'."
+      - "Multiplie 2,5 par le rapport sans son signe."
+    explication: "OA' = |−4| × OA = 4 × 2,5 = 10 cm, avec A' de l'autre côté de O."
+
+  - type: exercice
+    enonce: >-
+      Le triangle A'B'C' est l'image du triangle ABC par une homothétie de rapport 1,5.
+      Le triangle ABC a un périmètre de 20 cm et une aire de 16 cm².
+      Quelle est l'aire de A'B'C', en cm² ?
+    forme: nombre
+    reponse: 36
+    tolerance: 0.01
+    unite: cm²
+    indices:
+      - "Le périmètre est un piège : la question demande une aire."
+      - "Les aires sont multipliées par le rapport au carré. Calcule 1,5²."
+      - "1,5² = 2,25. Multiplie l'aire de ABC par ce nombre."
+    explication: "k² = 1,5² = 2,25. Aire de A'B'C' = 2,25 × 16 = 36 cm²."
+
+  - type: question_ouverte
+    question: >-
+      Le triangle ABC est rectangle en A, avec AB = 6 cm et AC = 8 cm. Le triangle A'B'C' est son image
+      par une rotation de centre O et d'angle 90°. Quelle est la nature de A'B'C' ?
+      Quel est son périmètre ? Justifie avec les propriétés de la rotation.
+    indices:
+      - "Une rotation déforme-t-elle la figure ?"
+      - "Cite ce que la rotation conserve : les angles et les longueurs."
+      - "Calcule d'abord BC avec le théorème de Pythagore."
+    criteres:
+      - "L'élève dit que la rotation conserve les angles, donc A'B'C' est rectangle en A'."
+      - "L'élève dit que la rotation conserve les longueurs et calcule BC = 10 cm par Pythagore."
+      - "L'élève trouve un périmètre de 24 cm (6 + 8 + 10)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, la différence entre une rotation et une homothétie :
+      ce qui change et ce qui ne change pas pour les longueurs, les angles et les aires.

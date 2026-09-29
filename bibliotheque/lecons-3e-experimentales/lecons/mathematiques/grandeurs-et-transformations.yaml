@@ -1,0 +1,149 @@
+notion: grandeurs-et-transformations
+titre: "Calculer des grandeurs avec les transformations"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir quelles grandeurs conservent les symétries, les translations et les rotations."
+      - "Calculer longueur, aire et volume après une homothétie de rapport k."
+      - "Retrouver le rapport d'une homothétie à partir d'une aire ou d'un volume."
+
+  - type: texte
+    titre: "Symétries, translations, rotations"
+    contenu: |
+      Ces transformations **conservent** les longueurs.
+
+      - L'image d'une figure est superposable à la figure de départ.
+      - Elles conservent aussi les angles, les périmètres, les **aires** et les **volumes**.
+      - Elles conservent le parallélisme et l'alignement.
+
+      Un triangle d'aire 12 cm² garde une aire de 12 cm² après une rotation.
+
+  - type: texte
+    titre: "L'homothétie de rapport k"
+    contenu: |
+      Une homothétie de rapport **k** change les tailles, mais conserve les **angles**.
+
+      | Grandeur | Multipliée par |
+      |---|---|
+      | Longueur, périmètre | **\|k\|** |
+      | Aire | **k²** |
+      | Volume | **\|k\|³** |
+
+      \|k\| est la valeur de k sans le signe : une longueur est toujours positive.
+
+  - type: texte
+    titre: "Agrandir, réduire, retrouver k"
+    contenu: |
+      - \|k\| > 1 : c'est un **agrandissement**.
+      - 0 < \|k\| < 1 : c'est une **réduction**.
+      - k négatif : l'image est de l'autre côté du centre, mais les longueurs sont multipliées par \|k\|.
+      - Une homothétie de rapport 2 : longueurs × 2, aires × 4, volumes × 8.
+      - Pour retrouver k : on divise la grandeur de l'image par celle de départ, puis on prend la racine carrée (aire) ou cubique (volume).
+      - On écrit toujours l'unité du résultat : cm, cm² ou cm³.
+
+  - type: exemple
+    enonce: >-
+      Un rectangle mesure 2 cm sur 3 cm. On lui applique une homothétie de rapport 3.
+      Quels sont le périmètre et l'aire du rectangle image ?
+    etapes:
+      - "Départ : périmètre = 2 × (2 + 3) = 10 cm ; aire = 2 × 3 = 6 cm²."
+      - "Le périmètre est multiplié par 3 : 10 × 3 = 30 cm."
+      - "L'aire est multipliée par 3² = 9 : 6 × 9 = 54 cm²."
+      - "Vérification : les côtés deviennent 6 cm et 9 cm, et 6 × 9 = 54 cm²."
+
+  - type: exercice
+    enonce: "Un triangle a une aire de 18 cm². On construit son image par une symétrie centrale. Quelle est l'aire du triangle image, en cm² ?"
+    forme: nombre
+    reponse: 18
+    tolerance: 0.01
+    unite: "cm²"
+    indices:
+      - "Une symétrie centrale conserve-t-elle les longueurs ?"
+      - "Si les longueurs sont conservées, que devient l'aire ?"
+    explication: "La symétrie centrale conserve les longueurs et les aires. L'image a la même aire : 18 cm²."
+
+  - type: exercice
+    enonce: >-
+      Un segment [AB] mesure 2,5 cm. On construit son image [A'B'] par l'homothétie de rapport −3.
+      Quelle est la longueur A'B', en cm ?
+    forme: nombre
+    reponse: 7.5
+    tolerance: 0.01
+    unite: "cm"
+    indices:
+      - "Une longueur est toujours positive. Quel coefficient sert pour les longueurs quand k est négatif ?"
+      - "Les longueurs sont multipliées par |k|, la valeur de k sans le signe."
+      - "Calcule 2,5 × (le coefficient sans le signe)."
+    explication: "|−3| = 3, donc A'B' = 2,5 × 3 = 7,5 cm. Le signe moins change le côté du centre, pas la longueur."
+
+  - type: exercice
+    enonce: "Une figure a une aire de 48 cm². On lui applique une homothétie de rapport 0,5. Quelle est l'aire de l'image, en cm² ?"
+    forme: nombre
+    reponse: 12
+    tolerance: 0.01
+    unite: "cm²"
+    indices:
+      - "Pour une aire, on ne multiplie pas par k mais par un autre coefficient. Lequel ?"
+      - "Coefficient des aires : k² = 0,5 × 0,5."
+      - "Multiplie 48 par 0,25."
+    explication: "Le coefficient des aires est k² = 0,5² = 0,25. Aire de l'image = 48 × 0,25 = 12 cm². C'est une réduction : l'aire diminue."
+
+  - type: exercice
+    enonce: "Parmi ces transformations, laquelle ne conserve pas les aires ?"
+    forme: qcm
+    choix:
+      - "Une rotation de 90°"
+      - "Une translation"
+      - "Une symétrie axiale"
+      - "Une homothétie de rapport 3"
+    reponse: 3
+    indices:
+      - "Quelles transformations conservent les longueurs ?"
+      - "Une homothétie de rapport différent de 1 et de −1 change les tailles."
+    explication: "La rotation, la translation et la symétrie axiale conservent les longueurs et les aires. L'homothétie de rapport 3 multiplie les aires par 9."
+
+  - type: exercice
+    enonce: >-
+      Une homothétie de rapport positif transforme une pyramide en une pyramide plus grande.
+      La base de la pyramide de départ a une aire de 6 cm² et la base de l'image a une aire de 54 cm².
+      Le volume de la pyramide de départ est 20 cm³. Quel est le volume de la pyramide image, en cm³ ?
+    forme: nombre
+    reponse: 540
+    tolerance: 0.01
+    unite: "cm³"
+    indices:
+      - "Cherche d'abord le rapport k. Les aires sont multipliées par k²."
+      - "k² = aire de l'image ÷ aire de départ. Puis prends la racine carrée pour avoir k."
+      - "Le rapport est un nombre entier. Les volumes sont multipliés par k³ : calcule k × k × k, puis multiplie par le volume de départ."
+    explication: "k² = 54 ÷ 6 = 9, donc k = 3 (rapport positif). Les volumes sont multipliés par 3³ = 27 : 20 × 27 = 540 cm³."
+
+  - type: question_ouverte
+    question: >-
+      Ali dit : « Si je double les longueurs d'un carré, son aire double aussi. »
+      A-t-il raison ? Explique avec un carré de côté 3 cm.
+    indices:
+      - "Calcule l'aire d'un carré de côté 3 cm, puis celle d'un carré dont le côté est doublé."
+      - "Compare les deux aires : par combien a-t-on multiplié ?"
+    criteres:
+      - "L'élève calcule l'aire de départ (9 cm²) et l'aire du carré de côté 6 cm (36 cm²)."
+      - "L'élève conclut qu'Ali a tort : l'aire est multipliée par 4 (soit 2²), pas par 2."
+      - "L'élève relie ce résultat à la règle : pour une homothétie de rapport k, l'aire est multipliée par k²."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases ce que les symétries, translations et rotations conservent,
+      et par quel coefficient une homothétie de rapport k multiplie les longueurs, les aires et les volumes.
