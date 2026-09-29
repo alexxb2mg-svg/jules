@@ -1,0 +1,140 @@
+notion: changements-climatiques
+titre: "Les changements climatiques passés et actuels"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: CC-BY-SA-4.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer que le climat a toujours changé, pour des causes naturelles, grâce à des indices."
+      - "Expliquer le mécanisme de l'effet de serre et son renforcement par les activités humaines."
+      - "Relier le réchauffement climatique actuel à ses conséquences sur les êtres vivants."
+
+  - type: texte
+    titre: "Des climats passés, connus par des indices"
+    contenu: >-
+      Le climat de la Terre a toujours changé, au cours des temps géologiques, pour des causes
+      naturelles (variations de l'orbite de la Terre autour du Soleil, activité volcanique,
+      déplacement des continents...). Au cours du dernier million d'années, des périodes
+      glaciaires, plus froides, ont alterné avec des périodes plus chaudes. On connaît ces climats
+      passés grâce à des indices : pollens et fossiles d'êtres vivants, traces laissées par les
+      glaciers, glaces anciennes.
+
+  - type: texte
+    titre: "L'effet de serre, un phénomène naturel"
+    contenu: >-
+      Le Soleil chauffe la surface de la Terre, qui renvoie de la chaleur vers l'espace. Certains
+      gaz de l'atmosphère (vapeur d'eau, dioxyde de carbone, méthane) retiennent une partie de
+      cette chaleur près du sol : c'est l'**effet de serre**. Sans lui, la Terre serait glaciale
+      (environ −18 °C en moyenne au lieu d'environ 15 °C). L'effet de serre est donc un phénomène
+      naturel et indispensable à la vie sur Terre.
+
+  - type: texte
+    titre: "Le réchauffement climatique actuel"
+    contenu: >-
+      Depuis le XIXe siècle et la révolution industrielle, les activités humaines rejettent de plus
+      en plus de gaz à effet de serre : combustion du charbon, du pétrole et du gaz (dioxyde de
+      carbone), déforestation, élevage et rizières (méthane). L'effet de serre est renforcé, et la
+      température moyenne de la Terre augmente rapidement : c'est le **réchauffement climatique
+      actuel**, beaucoup plus rapide que la plupart des changements naturels passés.
+      À ne pas confondre avec le trou dans la couche d'ozone, qui filtre les ultraviolets et n'est
+      pas la cause du réchauffement.
+
+  - type: texte
+    titre: "Les conséquences sur la planète et les êtres vivants"
+    contenu: >-
+      Le réchauffement fait fondre les glaciers et les calottes glaciaires, et fait monter le
+      niveau des mers (fonte des glaces posées sur les continents, dilatation de l'eau qui se
+      réchauffe). Les événements extrêmes (canicules, sécheresses) sont plus fréquents. La
+      répartition des êtres vivants change : beaucoup d'espèces se déplacent vers les pôles ou en
+      altitude ; celles qui ne peuvent ni se déplacer ni s'adapter risquent de disparaître.
+
+  - type: exemple
+    enonce: >-
+      Dans une carotte de glace extraite en Antarctique, des chercheurs mesurent la quantité de
+      dioxyde de carbone piégée dans de minuscules bulles d'air à différentes profondeurs, qui
+      correspondent à différentes époques. Comment ce document permet-il d'étudier le climat du
+      passé ?
+    etapes:
+      - "Chaque couche de glace piège de l'air de l'époque où elle s'est formée : plus une couche est profonde, plus elle est ancienne."
+      - "En mesurant le dioxyde de carbone dans chaque couche, on reconstitue l'évolution de sa quantité dans l'atmosphère au fil du temps."
+      - "Comme le dioxyde de carbone est un gaz à effet de serre, on peut relier ses variations passées à des variations de température : c'est un indice indirect du climat ancien, comme les pollens ou les traces de glaciers."
+
+  - type: exercice
+    enonce: "Le trou dans la couche d'ozone est-il la cause du réchauffement climatique actuel ?"
+    forme: qcm
+    choix:
+      - "Non, la couche d'ozone filtre les ultraviolets, ce n'est pas elle qui retient la chaleur"
+      - "Oui, c'est la même chose que l'effet de serre"
+      - "Oui, mais seulement en été"
+    reponse: 0
+    indices:
+      - "Quel est le rôle de la couche d'ozone ? Et quel est celui des gaz à effet de serre ?"
+      - "Ce sont deux phénomènes différents, souvent confondus."
+    explication: "La couche d'ozone filtre les rayons ultraviolets du Soleil ; elle n'est pas la cause du réchauffement climatique. Ce sont les gaz à effet de serre (dioxyde de carbone, méthane...) qui retiennent la chaleur près du sol."
+
+  - type: exercice
+    enonce: "Quel gaz, rejeté quand on brûle du charbon, du pétrole ou du gaz naturel, est le principal gaz à effet de serre émis par les activités humaines ?"
+    forme: reponse_courte
+    reponse: "le dioxyde de carbone"
+    reponses_acceptees: ["dioxyde de carbone", "le dioxyde de carbone", "co2", "co₂", "gaz carbonique", "le gaz carbonique"]
+    indices:
+      - "Quand un combustible brûle, le carbone qu'il contient se combine au dioxygène de l'air. Quel gaz se forme ?"
+      - "C'est le gaz que tu rejettes aussi en respirant, et que les plantes absorbent à la lumière."
+      - "Son nom commence par « dioxyde de », et sa formule chimique contient un C et deux O."
+    explication: "Le dioxyde de carbone (CO2) est produit par la combustion du charbon, du pétrole et du gaz : c'est le principal gaz à effet de serre rejeté par les activités humaines."
+
+  - type: exercice
+    enonce: >-
+      Dans un document, la teneur de l'air en dioxyde de carbone passe de 280 ppm (parties par
+      million) vers 1850 à 420 ppm aujourd'hui. De combien de pour cent a-t-elle augmenté par
+      rapport à 1850 ?
+    forme: nombre
+    reponse: 50
+    tolerance: 1
+    unite: "%"
+    indices:
+      - "Commence par calculer de combien de ppm la teneur a augmenté."
+      - "Un pourcentage d'augmentation se calcule ainsi : augmentation ÷ valeur de départ × 100."
+      - "L'augmentation est de 420 − 280 ppm. Divise-la par la valeur de 1850, puis multiplie par 100."
+    explication: "420 − 280 = 140 ppm d'augmentation. 140 ÷ 280 = 0,5, et 0,5 × 100 = 50. La teneur en CO2 a augmenté de 50 % par rapport à 1850."
+
+  - type: question_ouverte
+    question: >-
+      Document : en 50 ans, la limite la plus haute où pousse une espèce de plante de montagne
+      est montée d'environ 100 mètres, pendant que la température moyenne de la région augmentait.
+      Plus on monte en montagne, plus il fait froid. Explique pourquoi cette plante « monte »
+      quand la température augmente, et ce que risquent les espèces déjà situées tout en haut.
+    indices:
+      - "S'il fait plus chaud en bas de la montagne, où la plante peut-elle retrouver la fraîcheur dont elle a besoin ?"
+      - "Une espèce peut se déplacer tant qu'il reste de la place au-dessus d'elle. Que se passe-t-il pour celle qui est déjà tout en haut ?"
+      - "Décris d'abord le lien : température qui monte → la plante recherche le froid en altitude."
+    criteres:
+      - "L'élève relie la hausse de température au déplacement de la plante vers des altitudes plus fraîches."
+      - "L'élève explique que les espèces déjà au sommet ne peuvent plus monter et risquent de disparaître."
+
+  - type: question_ouverte
+    question: >-
+      Un camarade affirme : « Le climat n'avait jamais changé avant que les humains n'existent,
+      c'est donc forcément nous les seuls responsables de tous les changements climatiques,
+      passés et présents. » Que lui réponds-tu, avec tes propres mots ?
+    indices:
+      - "Pense aux périodes glaciaires : à quelle époque ont-elles eu lieu ?"
+      - "Le réchauffement actuel a-t-il les mêmes causes que les changements climatiques passés ?"
+    criteres:
+      - "L'élève rappelle que le climat a changé bien avant l'être humain, pour des causes naturelles (orbite, volcanisme, continents)."
+      - "L'élève distingue ces changements naturels passés du réchauffement climatique actuel, dû aux activités humaines."
+      - "L'élève peut mentionner que le réchauffement actuel est plus rapide que les changements naturels passés."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment les activités humaines
+      renforcent l'effet de serre, et une conséquence de ce réchauffement sur les êtres vivants.
