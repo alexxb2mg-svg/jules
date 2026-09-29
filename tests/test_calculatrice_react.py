@@ -32,7 +32,9 @@ INTERFACE = Path(__file__).resolve().parents[1] / "jules" / "web" / "static" / "
 
 BOUTON = "document.querySelector('button[aria-label=Calculatrice]')"
 PANNEAU = "document.querySelector('[data-slot=popover-content],[data-slot=sheet-content]')"
-CENTRE_BOUTON = f"(() => {{ const r = {BOUTON}.getBoundingClientRect(); return [r.x + r.width / 2, r.y + r.height / 2]; }})()"
+CENTRE_BOUTON = (
+    f"(() => {{ const r = {BOUTON}.getBoundingClientRect(); return [r.x + r.width / 2, r.y + r.height / 2]; }})()"
+)
 RECOUVERTS = f"""(() => {{
   const c = {PANNEAU}.getBoundingClientRect();
   const hors = (e) => !e.closest('[data-slot=popover-content],[data-slot=sheet-content]') && !e.closest('[aria-label=Calculatrice]')
@@ -42,8 +44,10 @@ RECOUVERTS = f"""(() => {{
     .filter((e) => {{ const b = e.getBoundingClientRect();
       return b.width > 0 && b.height > 0 && b.right > c.left + 1 && b.left < c.right && b.bottom > c.top && b.top < c.bottom; }}).length;
 }})()"""
-TOUCHES = ("JSON.stringify({n: document.querySelectorAll('#pave button').length, "
-           "min: Math.min(...[...document.querySelectorAll('#pave button')].map((b) => b.getBoundingClientRect().height))})")
+TOUCHES = (
+    "JSON.stringify({n: document.querySelectorAll('#pave button').length, "
+    "min: Math.min(...[...document.querySelectorAll('#pave button')].map((b) => b.getBoundingClientRect().height))})"
+)
 
 
 @pytest.fixture
@@ -103,7 +107,9 @@ def _candidats(page) -> list[tuple[str | None, int | None]]:
 def _pret_outil(page) -> tuple[str | None, int | None]:
     limite = time.monotonic() + 15
     while time.monotonic() < limite:
-        page.evaluer("1")  # le pilote ne recoit les evenements de Chrome (sessions, contextes) qu'en envoyant une commande
+        page.evaluer(
+            "1"
+        )  # le pilote ne recoit les evenements de Chrome (sessions, contextes) qu'en envoyant une commande
         for session, contexte in _candidats(page):
             try:
                 if page.evaluer(CLAVIER, session=session, contexte=contexte):
@@ -125,7 +131,9 @@ def test_calculatrice_react(serveur, tmp_path_factory, taille, nom):
         touches = json.loads(page.evaluer(TOUCHES, session=session, contexte=contexte))
         assert touches["n"] == 32  # le clavier est bien la, pas un panneau vide
         assert touches["min"] >= 44  # cible tactile
-        assert page.evaluer(f"{PANNEAU}.querySelector('iframe').sandbox + ''") == "allow-scripts"  # jamais allow-same-origin
+        assert (
+            page.evaluer(f"{PANNEAU}.querySelector('iframe').sandbox + ''") == "allow-scripts"
+        )  # jamais allow-same-origin
         if nom == "bureau":  # panneau flottant : la page pousse son contenu (animation) puis rien n'est recouvert
             page.attendre(f"({RECOUVERTS}) === 0", delai=5)
         page.touche("Escape", "Escape", 27)

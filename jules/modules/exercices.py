@@ -359,9 +359,19 @@ class Brique(Module):
             if conv is None or conv.mode != MODE or donnees is None:
                 raise HTTPException(404, "Pas de série d'exercices en cours ici")
             if donnees.get("fini"):
-                return {"verdict": "fini", "message": MESSAGE_APRES_FIN, "palier": 0, "indice": None, "piege": None,
-                        "correction": None, "pourquoi": None, "termine": True, "a_revoir": [], "suivant": None,
-                        "bilan": None}
+                return {
+                    "verdict": "fini",
+                    "message": MESSAGE_APRES_FIN,
+                    "palier": 0,
+                    "indice": None,
+                    "piege": None,
+                    "correction": None,
+                    "pourquoi": None,
+                    "termine": True,
+                    "a_revoir": [],
+                    "suivant": None,
+                    "bilan": None,
+                }
             if self._fiche_de(donnees) is None:
                 raise HTTPException(409, "Fiche de la série introuvable")
             reponse, texte = lire_reponse_structuree(entree.reponse)
@@ -409,9 +419,15 @@ class Brique(Module):
             if fiche is not None and not donnees.get("fini"):
                 en_cours = presenter(exercice_de(fiche, donnees["exercice"]))
             total = sum(1 for e in (fiche or {}).get("exercices") or [] if e.get("type") in TYPES_AUTO)
-            return {"notion": donnees["notion"], "exercice": en_cours, "faits": len(donnees["faits"]),
-                    "reussis": len(donnees["reussis"]), "total": total, "fini": bool(donnees.get("fini")),
-                    "palier": int((donnees.get("etat") or {}).get("paliers_donnes", 0))}
+            return {
+                "notion": donnees["notion"],
+                "exercice": en_cours,
+                "faits": len(donnees["faits"]),
+                "reussis": len(donnees["reussis"]),
+                "total": total,
+                "fini": bool(donnees.get("fini")),
+                "palier": int((donnees.get("etat") or {}).get("paliers_donnes", 0)),
+            }
 
         @routeur.post("/{notion_id}/generer")
         def lancer_generee(notion_id: str, graine: int | None = None) -> dict[str, Any]:

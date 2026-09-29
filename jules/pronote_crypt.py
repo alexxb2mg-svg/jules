@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Chiffrement réversible des identifiants Pronote avec la clé locale secret.key.
 
 Utilise Fernet (AES-128-CBC + HMAC-SHA256) de la bibliothèque `cryptography`.
@@ -20,8 +19,8 @@ import base64
 from pathlib import Path
 
 from cryptography.fernet import Fernet
-from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.hkdf import HKDF
 
 
 def _fernet(cle_path: Path) -> Fernet:
@@ -48,6 +47,7 @@ def dechiffrer(token: str, cle_path: Path) -> str:
 
 if __name__ == "__main__":
     import sys
+
     from jules.config import charger_config
 
     config = charger_config()

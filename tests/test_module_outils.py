@@ -95,6 +95,7 @@ def test_module_outils_actif_dans_config_yaml_publiee(tuteur):
         infos = client.get("/api/infos").json()
     assert {o["id"] for o in infos["outils"]["catalogue"]} == {"frise-chronologique", "calculatrice", "lexique"}
 
+
 def test_fichiers_de_l_outil_servis_sans_cookie_mais_pas_le_reste(client_outils):
     """Une iframe sandbox sans allow-same-origin n'envoie pas le cookie de session : son outil.js et son outil.css
     doivent donc se charger sans cookie (sinon l'outil reste vide). Le catalogue et l'entree restent derriere le

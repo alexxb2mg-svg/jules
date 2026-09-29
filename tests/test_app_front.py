@@ -1,4 +1,5 @@
 """Route /app : la nouvelle interface (front/) est servie a cote des pages existantes, sans les remplacer."""
+
 from __future__ import annotations
 
 from fastapi.testclient import TestClient
@@ -46,8 +47,13 @@ def test_les_anciennes_pages_redirigent_vers_l_interface(projet, brut_config, mo
     mene a l'ecran correspondant de /app, sans jamais servir l'ancienne page."""
     tuteur, client = _client(projet, brut_config, monkeypatch)
     try:
-        for ancienne, cible in [("/", "/app#/fiches"), ("/discuter", "/app#/discuter"), ("/cours", "/app#/lecons"),
-                                ("/studio", "/app#/supports"), ("/parent", "/app#/parent")]:
+        for ancienne, cible in [
+            ("/", "/app#/fiches"),
+            ("/discuter", "/app#/discuter"),
+            ("/cours", "/app#/lecons"),
+            ("/studio", "/app#/supports"),
+            ("/parent", "/app#/parent"),
+        ]:
             r = client.get(ancienne, follow_redirects=False)
             assert r.status_code == 302 and r.headers["location"] == cible, ancienne
     finally:

@@ -330,7 +330,13 @@ def test_route_repondre_bilan_en_fin_de_serie(tuteur):
         for r in ("non", "2^3 x 3^2 x 5", ["b", "d"]):
             _repondre(client, conv_id, r)
         v = _repondre(client, conv_id, "7/10")
-        assert v["bilan"] == {"faits": 4, "reussis": 4, "avec_indice": 0, "sans_indice": 4, "message": v["bilan"]["message"]}
+        assert v["bilan"] == {
+            "faits": 4,
+            "reussis": 4,
+            "avec_indice": 0,
+            "sans_indice": 4,
+            "message": v["bilan"]["message"],
+        }
         assert _repondre(client, conv_id, "encore")["verdict"] == "fini"
 
 

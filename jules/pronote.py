@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """Pont Pronote : récupère EDT, devoirs, contenu de cours et notes via pronotepy.
 
 Toute information personnelle (identifiants, URL, noms) est lue depuis
@@ -38,17 +37,17 @@ def _ser_dt(d: datetime.datetime | datetime.date | None) -> str | None:
     return d.isoformat() if d else None
 
 
-def _lesson_dict(l: pronotepy.Lesson) -> dict[str, Any]:
+def _lesson_dict(lecon: pronotepy.Lesson) -> dict[str, Any]:
     return {
-        "id": str(l.id) if hasattr(l, "id") else None,
-        "subject": l.subject.name if l.subject else None,
-        "teacher": l.teacher_name if hasattr(l, "teacher_name") else None,
-        "room": l.classroom if hasattr(l, "classroom") else None,
-        "start": _ser_dt(l.start),
-        "end": _ser_dt(l.end),
-        "canceled": l.canceled if hasattr(l, "canceled") else False,
-        "status": l.status if hasattr(l, "status") else None,
-        "memo": l.memo if hasattr(l, "memo") else None,
+        "id": str(lecon.id) if hasattr(lecon, "id") else None,
+        "subject": lecon.subject.name if lecon.subject else None,
+        "teacher": lecon.teacher_name if hasattr(lecon, "teacher_name") else None,
+        "room": lecon.classroom if hasattr(lecon, "classroom") else None,
+        "start": _ser_dt(lecon.start),
+        "end": _ser_dt(lecon.end),
+        "canceled": lecon.canceled if hasattr(lecon, "canceled") else False,
+        "status": lecon.status if hasattr(lecon, "status") else None,
+        "memo": lecon.memo if hasattr(lecon, "memo") else None,
     }
 
 
@@ -108,6 +107,7 @@ class PronoteClient:
             # Si une URL CAS personnalisée est fournie, on surcharge l'URL par défaut
             if self.ent_url:
                 from functools import partial as _partial
+
                 base_func = ent_func.func if hasattr(ent_func, "func") else ent_func
                 ent_func = _partial(base_func, url=self.ent_url)
 
@@ -173,7 +173,7 @@ class PronoteClient:
             d = date + datetime.timedelta(weeks=w)
             try:
                 raw = self._client.lessons(d)
-                lessons.extend(_lesson_dict(l) for l in raw)
+                lessons.extend(_lesson_dict(lecon) for lecon in raw)
             except Exception:
                 log.exception("Erreur récupération EDT semaine %s", d)
         return lessons
@@ -243,6 +243,7 @@ def _dechiffrer_si_enc(valeur: str, donnees: Path | None) -> str:
         log.error("Identifiant chiffré mais secret.key introuvable : %s", cle_path)
         return ""
     from jules.pronote_crypt import dechiffrer
+
     return dechiffrer(valeur[4:], cle_path)
 
 

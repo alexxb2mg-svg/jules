@@ -650,4 +650,9 @@ def test_rattacher_refuse_hors_carte_mentale_et_route(tuteur):
     with TestClient(creer_app(tuteur)) as client:
         r = client.post(f"/api/eleve/studio/supports/{carte.id}/rattacher", json={"index": 1, "parent": a})
         assert r.status_code == 200 and r.json()["support"]["contenu"]["noeuds"][1]["parent"] == a
-        assert client.post(f"/api/eleve/studio/supports/{carte.id}/rattacher", json={"index": 1, "parent": "zz"}).status_code == 400
+        assert (
+            client.post(
+                f"/api/eleve/studio/supports/{carte.id}/rattacher", json={"index": 1, "parent": "zz"}
+            ).status_code
+            == 400
+        )

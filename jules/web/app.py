@@ -79,7 +79,7 @@ class NouvelleConversation(BaseModel):
 
 
 PAGE_ADMIN_LOCALE = (
-    "<!doctype html><html lang=\"fr\"><meta charset=\"utf-8\"><title>Jules</title>"
+    '<!doctype html><html lang="fr"><meta charset="utf-8"><title>Jules</title>'
     "<p style=\"font-family:sans-serif;margin:3rem\">L'espace d'administration ne s'ouvre que sur "
     "l'ordinateur où tourne Jules.</p></html>"
 )
@@ -89,6 +89,7 @@ def _charger_config_brute(racine: Path) -> dict[str, Any]:
     """Relit config.yaml + config.local.yaml comme dict brut (pour les sections non portées par Config).
     Les deux sont facultatifs : une config construite en mémoire (depuis_dict, tests) n'a pas de fichier."""
     import yaml
+
     base = racine / "config.yaml"
     brut = (yaml.safe_load(base.read_text(encoding="utf-8")) or {}) if base.is_file() else {}
     local = racine / "config.local.yaml"
