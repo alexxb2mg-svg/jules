@@ -1,0 +1,133 @@
+notion: constitution-atome-noyau
+titre: "La constitution de l'atome et de son noyau"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire les constituants de l'atome (noyau, électrons) et du noyau (protons, neutrons)."
+      - "Calculer le nombre de neutrons ou d'électrons d'un atome à partir de son numéro atomique et de son nombre de nucléons."
+      - "Expliquer pourquoi un atome est électriquement neutre."
+
+  - type: texte
+    titre: "Deux parties : le noyau et les électrons"
+    contenu: >-
+      Un atome est formé d'un **noyau**, au centre, chargé **positivement**, et d'**électrons**,
+      chargés **négativement**, qui se déplacent autour de lui. Entre le noyau et les électrons, il
+      y a surtout du vide : on dit que la matière a une **structure lacunaire**. Le noyau est
+      environ 100 000 fois plus petit que l'atome entier, mais il contient presque toute sa masse
+      (un électron est environ 2 000 fois plus léger qu'un nucléon).
+
+  - type: texte
+    titre: "Le noyau : protons et neutrons"
+    contenu: >-
+      Le noyau contient des **nucléons**, de deux sortes : les **protons**, chargés positivement, et
+      les **neutrons**, qui n'ont pas de charge électrique. Le nombre de protons s'appelle le
+      **numéro atomique**, noté **Z** : il caractérise l'élément chimique (un atome avec 6 protons
+      est toujours du carbone). Le nombre de neutrons se calcule ainsi : **nombre de neutrons =
+      nombre de nucléons − nombre de protons**.
+
+  - type: texte
+    titre: "Un atome électriquement neutre"
+    contenu: >-
+      Un atome est **électriquement neutre** : il contient **autant d'électrons que de protons**,
+      et les charges positives des protons compensent exactement les charges négatives des
+      électrons. C'est pour cette raison que le nombre d'électrons d'un atome est toujours égal à
+      son numéro atomique Z.
+
+  - type: exemple
+    enonce: >-
+      Le noyau d'un atome d'aluminium contient 13 protons et 27 nucléons. Combien a-t-il de
+      neutrons ? Combien l'atome a-t-il d'électrons ?
+    etapes:
+      - "Les nucléons regroupent les protons et les neutrons : nombre de neutrons = nombre de nucléons − nombre de protons."
+      - "Nombre de neutrons = 27 − 13 = 14."
+      - "L'atome est électriquement neutre : il a autant d'électrons que de protons, donc 13 électrons."
+
+  - type: exercice
+    enonce: "Le noyau d'un atome de carbone contient 6 protons et 12 nucléons au total. Combien a-t-il de neutrons ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 6
+    tolerance: 0
+    indices:
+      - "Les nucléons regroupent les protons et les neutrons réunis."
+      - "Nombre de neutrons = nombre de nucléons − nombre de protons. Pose la soustraction."
+    explication: "Nombre de neutrons = nombre de nucléons − nombre de protons = 12 − 6 = 6."
+
+  - type: exercice
+    enonce: "Comment s'appelle le nombre de protons d'un atome, qui caractérise son élément chimique ? Réponds en deux mots."
+    forme: reponse_courte
+    reponse: "numéro atomique"
+    reponses_acceptees:
+      - "numéro atomique"
+      - "le numéro atomique"
+      - "numero atomique"
+      - "nombre atomique"
+    indices:
+      - "Ce nombre est noté par la lettre Z."
+      - "Deux atomes du même élément chimique ont toujours ce même nombre de protons."
+    explication: "Ce nombre s'appelle le numéro atomique, noté Z : c'est le nombre de protons du noyau, et il est propre à chaque élément chimique."
+
+  - type: exercice
+    enonce: "Un atome est électriquement neutre. Que peux-tu en déduire sur ses particules ?"
+    forme: qcm
+    choix:
+      - "Il a autant d'électrons que de protons."
+      - "Il n'a pas de neutrons dans son noyau."
+      - "Il n'a ni protons ni électrons."
+    reponse: 0
+    indices:
+      - "Repense à la charge de chaque particule : proton, électron, neutron."
+      - "Pour que les charges positives et négatives se compensent, il faut le même nombre de deux particules précises."
+    explication: "Un atome neutre a autant d'électrons (charge négative) que de protons (charge positive) : les charges se compensent exactement. Les neutrons n'ont pas de charge et n'entrent pas dans cet équilibre."
+
+  - type: exercice
+    enonce: "Un atome d'azote a pour numéro atomique Z = 7 et son noyau contient 14 nucléons. Combien cet atome a-t-il d'électrons ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 7
+    tolerance: 0
+    indices:
+      - "Le numéro atomique Z donne directement le nombre d'une des trois particules de l'atome."
+      - "Un atome neutre a autant d'électrons que de protons, et Z est le nombre de protons."
+    explication: "Le numéro atomique Z = 7 donne le nombre de protons. L'atome étant neutre, il a autant d'électrons que de protons : 7 électrons."
+
+  - type: exercice
+    enonce: >-
+      On agrandit un noyau d'atome jusqu'à lui donner un diamètre de 2 cm. Sachant que le noyau est
+      environ 100 000 fois plus petit que l'atome entier, quel serait alors le diamètre de l'atome
+      agrandi, en mètres ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 2000
+    tolerance: 5
+    unite: m
+    indices:
+      - "Calcule d'abord le diamètre de l'atome en centimètres, en multipliant par 100 000."
+      - "2 cm × 100 000 = 200 000 cm. Il reste à convertir ce résultat en mètres."
+      - "1 m = 100 cm. Pour passer des cm aux m, on divise par 100."
+    explication: "2 cm × 100 000 = 200 000 cm, soit 200 000 / 100 = 2 000 m. Le noyau agrandi tiendrait dans une bille de 2 cm, au centre d'un atome de 2 km : l'atome est surtout fait de vide."
+
+  - type: question_ouverte
+    question: >-
+      Un atome de carbone a 6 protons. Explique pourquoi cet atome est électriquement neutre, alors
+      qu'il contient des particules chargées.
+    indices:
+      - "Quelles particules de l'atome portent une charge, et laquelle n'en a pas ?"
+      - "Compare le nombre de charges positives et le nombre de charges négatives dans cet atome."
+    criteres:
+      - "L'élève rappelle la charge de chaque particule : protons positifs, électrons négatifs, neutrons sans charge."
+      - "L'élève indique que l'atome de carbone a autant d'électrons que de protons, soit 6 électrons."
+      - "L'élève conclut que les 6 charges positives compensent exactement les 6 charges négatives, donc la charge totale est nulle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qui compose un atome (noyau et
+      électrons), ce qui compose son noyau, et pourquoi un atome est électriquement neutre.

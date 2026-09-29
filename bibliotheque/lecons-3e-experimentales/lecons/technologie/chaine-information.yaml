@@ -1,0 +1,146 @@
+notion: chaine-information
+titre: "La chaîne d'information : capteurs, microcontrôleur, interface homme-machine"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître les trois fonctions de la chaîne d'information : acquérir, traiter, communiquer."
+      - "Associer un composant (capteur, microcontrôleur, afficheur) à sa fonction dans la chaîne d'information."
+      - "Distinguer une information logique d'une information analogique, et convertir une mesure de capteur en donnée exploitable."
+
+  - type: texte
+    titre: "Les trois fonctions de la chaîne d'information"
+    contenu: >-
+      La chaîne d'information est la partie d'un objet technique qui prend des informations, décide,
+      puis donne des ordres. Elle a trois fonctions : **acquérir** une information (rôle des
+      **capteurs** : température, présence, distance, luminosité, et des boutons) ; **traiter**
+      l'information reçue en suivant un programme (rôle du **microcontrôleur**, une carte
+      programmable) ; **communiquer** le résultat, vers l'utilisateur, vers un autre appareil, ou
+      vers la chaîne d'énergie. L'**interface homme-machine (IHM)** regroupe ce qui permet à
+      l'utilisateur de dialoguer avec l'objet : boutons, écran, afficheur, voyants.
+
+  - type: texte
+    titre: "Capteur, actionneur : ne pas confondre"
+    contenu: >-
+      Un **capteur** ne produit aucune action : il transforme une grandeur physique (température,
+      lumière, distance) en signal électrique, pour la chaîne d'information. Un **actionneur**
+      (moteur, lampe, pompe) agit sur le monde extérieur : il appartient à la **chaîne d'énergie**,
+      pas à la chaîne d'information. Le microcontrôleur relie les deux chaînes : il reçoit les
+      informations des capteurs, décide, puis envoie un ordre qui déclenche un actionneur.
+
+  - type: texte
+    titre: "Information logique ou analogique"
+    contenu: >-
+      Une information peut être **logique** : elle ne prend que deux états, 0 ou 1 (un bouton
+      appuyé ou non, une porte fermée ou non). Elle peut aussi être **analogique** : une valeur qui
+      varie de façon continue, comme une température ou une distance. Le microcontrôleur transforme
+      une grandeur analogique (une tension) en un nombre qu'il peut utiliser dans son programme :
+      c'est une donnée exploitable.
+
+  - type: exemple
+    enonce: >-
+      Décrire la chaîne d'information d'un distributeur automatique de gel hydroalcoolique, qui
+      détecte une main proche et déclenche une pompe pendant deux secondes.
+    etapes:
+      - "Acquérir : un capteur de distance infrarouge mesure la distance entre une main et l'appareil."
+      - "Traiter : le microcontrôleur vérifie que la distance mesurée est inférieure à un seuil (par exemple 10 cm), puis décide de déclencher la pompe pendant deux secondes."
+      - "Communiquer : il envoie l'ordre au moteur de la pompe (qui appartient à la chaîne d'énergie) et allume un voyant bleu pour indiquer que l'appareil fonctionne."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le circuit programmable qui traite les informations et donne les ordres, dans un objet technique ?"
+    forme: reponse_courte
+    reponse: "microcontrôleur"
+    reponses_acceptees:
+      - "microcontrôleur"
+      - "micro-contrôleur"
+      - "microcontroleur"
+      - "carte programmable"
+      - "le microcontrôleur"
+    indices:
+      - "Ce composant exécute un programme : quel est son nom ?"
+      - "C'est le composant qui réalise la fonction traiter dans la chaîne d'information."
+    explication: "C'est le microcontrôleur (une carte programmable) : il traite les informations reçues et décide des ordres à donner."
+
+  - type: exercice
+    enonce: >-
+      Un vélo électrique a un capteur de vitesse sur la roue, un moteur d'assistance, et un écran
+      qui affiche la vitesse. Quelle est la fonction du capteur de vitesse ?
+    forme: qcm
+    choix:
+      - "Acquérir"
+      - "Traiter"
+      - "Communiquer"
+    reponse: 0
+    indices:
+      - "Un capteur prend-il une information, ou en donne-t-il une à l'utilisateur ?"
+      - "Repense à la définition d'un capteur : il mesure une grandeur physique, il ne décide rien."
+    explication: "Le capteur de vitesse mesure une grandeur (la vitesse de la roue) : il acquiert une information. C'est le microcontrôleur qui traite cette information, et l'écran qui la communique."
+
+  - type: exercice
+    enonce: >-
+      Le bouton d'appel d'un ascenseur ne peut être que dans deux états : appuyé ou non appuyé.
+      L'information qu'il fournit est-elle logique ou analogique ?
+    forme: reponse_courte
+    reponse: "logique"
+    reponses_acceptees:
+      - "logique"
+      - "une information logique"
+      - "signal logique"
+    indices:
+      - "Compte le nombre d'états possibles pour ce bouton."
+      - "Une information qui ne prend que deux valeurs (0 ou 1) porte un nom particulier."
+    explication: "Le bouton n'a que deux états possibles (appuyé ou non appuyé) : c'est une information logique, contrairement à une mesure qui varie de façon continue."
+
+  - type: exercice
+    enonce: >-
+      Le capteur de distance d'un parking automatique fournit une tension de 5 mV par centimètre.
+      Le microcontrôleur mesure une tension de 0,75 V. Quelle distance, en cm, cela représente-t-il ?
+    forme: nombre
+    reponse: 150
+    tolerance: 1
+    unite: "cm"
+    indices:
+      - "Convertis d'abord la tension mesurée en millivolts (1 V = 1 000 mV)."
+      - "Cherche ensuite combien de fois 5 mV sont contenus dans cette tension."
+    explication: "0,75 V = 750 mV. 750 ÷ 5 = 150. La distance mesurée est de 150 cm."
+
+  - type: exercice
+    enonce: >-
+      Un arrosage automatique de jardin a : un capteur d'humidité du sol, un microcontrôleur, une
+      électrovanne qui laisse couler l'eau, et un voyant rouge qui s'allume si le réservoir est
+      vide. Quels composants font partie de la chaîne d'information ?
+    forme: qcm
+    choix:
+      - "Le capteur d'humidité et le microcontrôleur seulement"
+      - "Le capteur d'humidité, le microcontrôleur et le voyant rouge"
+      - "Le capteur d'humidité, le microcontrôleur, l'électrovanne et le voyant rouge"
+    reponse: 1
+    indices:
+      - "L'électrovanne agit sur l'eau : produit-elle une action, ou traite-t-elle une information ?"
+      - "Repasse en revue chaque composant : acquiert-il, traite-t-il ou communique-t-il une information, ou agit-il sur le monde extérieur ?"
+    explication: "Le capteur d'humidité acquiert, le microcontrôleur traite, le voyant rouge communique : ces trois composants font partie de la chaîne d'information. L'électrovanne agit sur l'eau : c'est un actionneur de la chaîne d'énergie."
+
+  - type: question_ouverte
+    question: >-
+      Un thermostat de radiateur mesure la température de la pièce et allume ou éteint le radiateur
+      selon un seuil réglé par l'utilisateur. Décris sa chaîne d'information en nommant les trois
+      fonctions et un composant pour chacune.
+    indices:
+      - "Quel composant mesure la température ? Quel composant décide ? Comment l'ordre part-il vers le radiateur ?"
+      - "Pense aussi à ce que l'utilisateur voit ou règle sur le thermostat."
+    criteres:
+      - "L'élève nomme les trois fonctions (acquérir, traiter, communiquer) et associe un composant à chacune."
+      - "L'élève distingue le radiateur, qui agit et appartient à la chaîne d'énergie, de l'ordre envoyé pour le déclencher, qui appartient à la chaîne d'information."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois fonctions de la chaîne
+      d'information et un exemple de composant pour chacune. Ajoute la différence entre une
+      information logique et une information analogique.

@@ -222,12 +222,23 @@
       Adaptations.afficherConflits(etat.conflits);
     },
 
+    // Generation de la derniere action du parent (apercu ou enregistrement), EX-110. Chaque action l'incremente
+    // avant d'emettre sa requete ; une reponse d'apercu (ou son erreur) dont la generation n'est plus la derniere
+    // est perimee et ignoree en silence, quel que soit l'ordre d'arrivee des reponses.
+    generation: 0,
+
     async apercu() {
+      const gen = ++Adaptations.generation;
       try {
         const etat = await MS.api("/api/parent/adaptations/apercu", MS.json(Adaptations.lireChoix()));
+        if (gen !== Adaptations.generation) return;
+        if (!etat) throw new Error("réponse vide");
         Adaptations.afficherConflits(etat.conflits);
         $("adaptations-etat").textContent = "Modifications non enregistrées.";
-      } catch (err) { $("adaptations-etat").textContent = `Erreur : ${err.message}`; }
+      } catch (err) {
+        if (gen !== Adaptations.generation) return;
+        $("adaptations-etat").textContent = `Erreur : ${err.message}`;
+      }
     },
 
     async charger() {
@@ -240,6 +251,7 @@
       }
       $("form-adaptations").addEventListener("submit", async (ev) => {
         ev.preventDefault();
+        Adaptations.generation++;  // tout apercu encore en vol est desormais perime (EX-110)
         $("adaptations-etat").textContent = "Enregistrement…";
         try {
           const etat = await MS.api("/api/parent/adaptations", MS.json(Adaptations.lireChoix(), "PUT"));

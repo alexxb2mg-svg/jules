@@ -150,6 +150,8 @@ def test_sans_extension_de_figures_aucune_fiche_a_graphe_acceptee(projet, brut_c
     try:
         assert client.get("/gabarits.js").text == ""
         fiches = tuteur.module("fiches_visuelles").fiches
+        assert fiches, "les fiches sans graphe doivent rester servies"
+        assert all(b.type != "graphe" for f in fiches.values() for b in f.blocs)
         figures = {"equation-solutions", "droite-affine", "triangle-rectangle", "probabilites-frequences",
                    "triangle-thales"}
         utilisees = {b.gabarit for f in fiches.values() for b in f.blocs if getattr(b, "gabarit", None)}
