@@ -57,7 +57,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
 
   return (
     <div className="mx-auto max-w-[980px] px-5 pt-16 pb-16 md:px-10 md:pt-8" style={stylePerso}>
-      <button onClick={onRetour} className="mb-4 inline-flex items-center gap-1 rounded-full px-1 text-[0.95rem] font-semibold text-gris hover:text-bleu">
+      <button onClick={onRetour} className="mb-4 -ml-1 inline-flex items-center gap-1 rounded-full px-1 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu">
         <ChevronLeft size={16} /> Mes fiches
       </button>
       <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{TEXTES.titreAjout}</h1>

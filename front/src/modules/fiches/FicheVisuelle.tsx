@@ -139,8 +139,8 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
                   )}
                   {entrainement && (
                     <button onClick={() => document.getElementById("bloc-entrainement")?.scrollIntoView({ behavior: "smooth", block: "start" })}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief">
-                      <Dumbbell size={15} /> M'entraîner
+                      className={cn("items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief", chemin ? "hidden lg:inline-flex" : "inline-flex")}>
+                                            <Dumbbell size={15} /> M'entraîner
                     </button>
                   )}
                   {avecLecon && (

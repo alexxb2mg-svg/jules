@@ -116,7 +116,7 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
             <div className="flex flex-wrap gap-1.5 px-3 pb-2">
               {aides.map((a) => (
                 <ThreadPrimitive.Suggestion key={a.libelle} prompt={a.message} send
-                  className="rounded-full border border-bord bg-white px-3 py-1 text-[13px] font-medium transition-colors hover:border-bleu hover:text-bleu">
+                  className="rounded-full border border-bord bg-white px-3.5 py-2 text-[14px] font-medium transition-colors hover:border-bleu hover:text-bleu">
                   {a.libelle}
                 </ThreadPrimitive.Suggestion>
               ))}

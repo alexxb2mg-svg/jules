@@ -45,7 +45,7 @@ function Cadre({ Icone, etiquette, teinte = "bleu", etat, children }: {
 function Objectifs({ bloc }: { bloc: Extract<Bloc, { type: "objectifs" }> }) {
   return (
     <Cadre Icone={Target} etiquette="Ce que tu vas savoir faire">
-      <ul className="space-y-1.5">{bloc.items.map((it) => <li key={it} className="flex gap-2"><Check size={18} className="mt-0.5 shrink-0 text-vert" />{it}</li>)}</ul>
+      <ul className="space-y-1.5">{bloc.items.map((it) => <li key={it} className="flex gap-2"><Check size={18} className="mt-0.5 shrink-0 text-vert" /><span className="min-w-0">{it}</span></li>)}</ul>
     </Cadre>
   )
 }

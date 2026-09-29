@@ -2,7 +2,7 @@
 // Sidebar interne (historique), zone de chat avec bulles, saisie avec photos et auto-resize.
 // L'envoi n'est PAS streaming : POST → JSON {reponse}. Bulle d'attente pendant le fetch.
 import { useCallback, useEffect, useRef, useState } from "react"
-import { Menu, Plus, Send, Camera, X } from "lucide-react"
+import { History, Plus, Send, Camera, X } from "lucide-react"
 import {
   conversations, infosChat, epreuve as apiEpreuve,
   type Conversation, type ConversationResume, type InfosChat, type MessageJules,
@@ -241,10 +241,10 @@ export function Chat() {
         md:relative md:translate-x-0
         ${sidebarOuverte ? "translate-x-0" : "-translate-x-full"}
       `}>
-        <div className="flex items-center justify-between border-b border-bord px-4 py-3">
+        <div className="flex min-h-[68px] items-center justify-between border-b border-bord py-3 pr-4 pl-16 md:pl-4">
           <h2 className="text-sm font-semibold">Historique</h2>
-          <button onClick={ecranAccueil} title="Nouvelle discussion"
-            className="rounded-lg p-1.5 transition hover:bg-bleu-clair/40">
+          <button onClick={ecranAccueil} title="Nouvelle discussion" aria-label="Nouvelle discussion"
+            className="grid size-10 place-items-center rounded-lg transition hover:bg-bleu-clair/40">
             <Plus className="size-4" />
           </button>
         </div>
@@ -268,10 +268,10 @@ export function Chat() {
       {/* Zone principale */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* En-tête */}
-        <header className="flex items-center gap-3 border-b border-bord px-4 py-3">
-          <button onClick={() => setSidebarOuverte(!sidebarOuverte)}
-            className="rounded-lg p-1.5 transition hover:bg-bleu-clair/40 md:hidden">
-            <Menu className="size-5" />
+        <header className="flex min-h-[68px] items-center gap-2 border-b border-bord py-3 pr-16 pl-12 md:px-4 md:pr-20">
+          <button onClick={() => setSidebarOuverte(!sidebarOuverte)} aria-label="Historique des discussions"
+            className="grid size-10 place-items-center rounded-lg transition hover:bg-bleu-clair/40 md:hidden">
+            <History className="size-5" />
           </button>
           <h1 className="flex-1 truncate text-[15px] font-semibold">{titre}</h1>
         </header>

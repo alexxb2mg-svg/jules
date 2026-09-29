@@ -57,7 +57,7 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
   return (
     <div className="flex h-full flex-col bg-[radial-gradient(ellipse_at_top,var(--j-bleu-clair),transparent_60%)]">
       <header className="flex items-center gap-3 px-5 pt-4 pl-16 md:px-10">
-        <button onClick={onRetour} className="inline-flex items-center gap-1 rounded-full px-2 py-1 text-[0.9rem] font-semibold text-bleu hover:bg-white">
+        <button onClick={onRetour} className="inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.9rem] font-semibold text-bleu hover:bg-white">
           <ChevronLeft size={16} /> Exercices et supports
         </button>
         {total > 0 && !fini && (

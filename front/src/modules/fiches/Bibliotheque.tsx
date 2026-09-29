@@ -78,7 +78,7 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
             <motion.div key={choisie?.id || "tout"} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} transition={{ duration: 0.2 }}>
               {choisie ? (
                 <>
-                  <button onClick={() => onMatiere(null)} className="mb-1 text-[0.95rem] font-semibold text-gris hover:text-bleu">Mes fiches ›</button>
+                  <button onClick={() => onMatiere(null)} className="-ml-2 mb-1 rounded-lg px-2 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu">Mes fiches ›</button>
                   <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{choisie.nom}</h1>
                 </>
               ) : (

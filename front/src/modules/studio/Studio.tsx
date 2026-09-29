@@ -69,7 +69,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
         </div>
       </div>
 
-      <div role="tablist" aria-label="Matières" className="-mx-1 mt-6 mb-7 flex flex-wrap gap-2 px-1 pt-1 pb-3">
+      <div role="tablist" aria-label="Matières" className="-mx-5 mt-6 mb-7 flex gap-2 overflow-x-auto px-5 pt-1 pb-3 [scrollbar-width:none] md:mx-[-0.25rem] md:flex-wrap md:overflow-visible md:px-1">
         {matieres.map((m) => {
           const Icone = iconeMatiere(m.id), on = m.id === courante
           return (

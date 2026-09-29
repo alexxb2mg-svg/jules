@@ -35,7 +35,7 @@ export function Bilan({ onRetour, onFiche }: { onRetour: () => void; onFiche: (n
   return (
     <div className="h-full overflow-y-auto">
       <div className="mx-auto max-w-[980px] px-5 pt-16 pb-16 md:px-10 md:pt-8">
-        <button onClick={onRetour} className="mb-3 inline-flex items-center gap-1 rounded-full px-2 py-1 text-[0.9rem] font-semibold text-bleu hover:bg-nav">
+        <button onClick={onRetour} className="mb-3 inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.9rem] font-semibold text-bleu hover:bg-nav">
           <ChevronLeft size={16} /> {TEXTES_BILAN.retour}
         </button>
         <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{TEXTES_BILAN.titre}</h1>

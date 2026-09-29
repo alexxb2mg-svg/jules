@@ -43,13 +43,13 @@ function Formule({ bloc }: { bloc: BlocFormule }) {
   return (
     <div className="flex flex-wrap items-center gap-x-10 gap-y-5">
       <div data-formule className={cn("formule-expression font-serif leading-tight text-encre",
-        longueur > 50 ? "text-[1.375rem]" : longueur > 32 ? "text-[1.75rem]" : "text-[2.625rem]")}>
+        longueur > 50 ? "text-[1.375rem]" : longueur > 32 ? "text-[1.5rem] md:text-[1.75rem]" : "text-[1.875rem] md:text-[2.625rem]")}>
         {String(bloc.expression || "").split(/(\[[^\]]+\])/).map((m, i) => {
           const t = m.match(/^\[([^\]]+)\]$/)
           return t ? <b key={i} style={{ color: couleurCss(bloc.termes?.[t[1]]?.couleur) }}>{t[1]}</b> : m
         })}
       </div>
-      <div className="flex min-w-[240px] flex-1 flex-col gap-2.5">
+      <div className="flex min-w-[min(240px,100%)] flex-1 flex-col gap-2.5">
         {termes.map(([nom, info], i) => (
           <motion.div key={nom} {...apparition} transition={{ delay: 0.08 * i }}
             className="rounded-r-xl border-l-4 bg-[#F8F9FC] py-2 pr-3 pl-3.5" style={{ borderColor: couleurCss(info!.couleur) }}>

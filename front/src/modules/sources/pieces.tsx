@@ -118,7 +118,7 @@ export function EcranDossier({ id, onRetour, onOuvrir }: { id: string; onRetour:
   }
   return (
     <div className="mx-auto max-w-[1180px] px-5 pt-16 pb-16 md:px-10 md:pt-8" style={stylePerso}>
-      <button onClick={onRetour} className="mb-1 inline-flex items-center gap-1 text-[0.95rem] font-semibold text-gris hover:text-bleu"><ChevronLeft size={16} /> Mes fiches</button>
+      <button onClick={onRetour} className="mb-1 inline-flex items-center gap-1 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu"><ChevronLeft size={16} /> Mes fiches</button>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
         <h1 className="m-0 flex items-center gap-3 text-[2.2rem] leading-tight font-bold text-encre">
           <span className="grid size-12 place-items-center rounded-2xl bg-(--m-fond) text-(--m-texte)">{id === NON_CLASSE ? <Inbox size={24} /> : <Folder size={24} />}</span>

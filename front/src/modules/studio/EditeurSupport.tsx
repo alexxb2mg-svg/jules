@@ -105,7 +105,7 @@ export function EditeurSupport({ id, matiere, onRetour, onSupprime }: {
       {/* Trame */}
       <div className="min-h-0 flex-1 overflow-y-auto">
         <header className="sticky top-0 z-20 border-b border-bord bg-[#FBFBFE]/85 px-5 pt-4 pb-3 pl-16 backdrop-blur md:px-10">
-          <button onClick={onRetour} className="mb-2 inline-flex items-center gap-1 rounded-full px-2 py-1 text-[0.88rem] font-semibold text-(--m-texte) hover:bg-(--m-fond)">
+          <button onClick={onRetour} className="mb-2 inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.88rem] font-semibold text-(--m-texte) hover:bg-(--m-fond)">
             <ChevronLeft size={16} /> Exercices et supports
           </button>
           <div className="flex flex-wrap items-center gap-3">

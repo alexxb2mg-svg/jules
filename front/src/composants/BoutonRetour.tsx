@@ -38,7 +38,7 @@ export function BoutonRetour({ testeurs = [] }: { testeurs?: string[] }) {
     <>
       <motion.button onClick={() => setOuvert(true)} whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.94 }}
         aria-label={TEXTES_RETOUR.bouton} title={TEXTES_RETOUR.bouton}
-        className="absolute bottom-4 left-4 z-40 grid size-10 place-items-center rounded-full border border-bord bg-white/90 text-gris opacity-70 shadow-relief backdrop-blur transition-[opacity,color] hover:text-encre hover:opacity-100 focus-visible:opacity-100">
+        className="absolute bottom-16 left-4 z-40 grid size-10 place-items-center rounded-full border border-bord bg-white/90 text-gris opacity-70 shadow-relief backdrop-blur transition-[opacity,color] hover:text-encre hover:opacity-100 focus-visible:opacity-100 sm:bottom-4">
         <MessageSquareWarning size={18} />
       </motion.button>
       <AnimatePresence>{ouvert && <FenetreRetour testeurs={testeurs} onFermer={() => setOuvert(false)} />}</AnimatePresence>
