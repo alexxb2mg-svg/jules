@@ -285,7 +285,7 @@ def generer_fiche(
     tours = [Tour("user", source.texte or "(Le document est dans les photos jointes.)", source.images)]
     motif = ""
     for _essai in range(ESSAIS_GENERATION):
-        reponse = llm.repondre(systeme, tours, "principal")
+        reponse = llm.repondre(systeme, tours, "redaction")
         try:
             brut = lire_reponse_yaml(reponse)
             fiche = lire_fiche_personnelle(brut, notions, matieres, niveau, source.resume(), gabarits)

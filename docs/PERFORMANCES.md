@@ -5,9 +5,10 @@
 >   **pas encore déployé sur l'instance 8799**.
 > - À reprendre, rien n'est décidé : cache disque des fiches (§1), pistes (a) à (c) du chat (§2).
 
-Mesures du 28/09/2026 sur le PC d'Alex (Windows, Python 3.14). Scripts de mesure : `profil_demarrage.py`,
-`compare_yaml.py`, `mesure_llm.py` (dans le dossier de travail de l'assistant ; à verser dans `outils/perf/`
-si on les garde).
+Mesures du 28/09/2026 sur le PC d'Alex (Windows, Python 3.14). Script de mesure du chat et de la génération : `outils/perf/mesure_llm.py`
+(`uv run python outils/perf/mesure_llm.py claude-haiku-4-5,claude-sonnet-5-5 2 resultats.json`).
+Les scripts du démarrage (`profil_demarrage.py`, `compare_yaml.py`) sont restés dans le dossier de travail
+de l'assistant.
 
 ## Règle
 
@@ -54,24 +55,34 @@ nous-mêmes (libyaml est mûr, testé, déjà là).
 
 ## 2. Une réponse de Jules dans le chat : l'essentiel est l'IA, pas notre code
 
-Chemin de production (`claude_cli`, modèle haiku), mesuré sur 3 appels :
+Chemin de production (`claude_cli`). Mesuré le 28/09/2026 avec `outils/perf/mesure_llm.py`, mêmes prompts,
+PC d'Alex, médianes sur 5 appels (3 pour l'échange complet). Jules tourne désormais entièrement en
+Sonnet 5.5 (`claude-sonnet-5-5`) ; Haiku 4.5 ne sert plus que de point de comparaison.
 
-| Cas | Médiane |
-|---|---|
-| Appel minimal (lancer le CLI + réponse d'un mot) | 4,2 s |
-| Prompt système réaliste + question d'élève | 8,7 s |
+| Cas | Haiku 4.5 | Sonnet 5.5 | Écart |
+|---|---|---|---|
+| Appel minimal (lancer le CLI + réponse d'un mot) | 4,5 s | 3,1 s | -32 % |
+| Prompt système réaliste (11 000 caractères) + question d'élève | 8,0 s | 5,4 s | -32 % |
+| Premier message d'une conversation, de bout en bout (détection de notion + réponse) | 15,9 s | 9,8 s | -39 % |
+| Traitements de fond qui suivent la réponse (suivi, vigilance, modèle élève) | 18,1 s (pic 43,5 s) | 9,1 s (pic 9,9 s) | -50 % |
+| Génération d'une fiche perso à partir d'un cours (parcours complet) | 193 s | 38 s | -80 % |
 
-- **~4 s par appel sont du lancement** : chaque message démarre un nouveau processus `claude` (Node).
+Sonnet 5.5 est plus rapide que Haiku sur tous les cas, et pas seulement sur le lancement du CLI. Sur la
+génération de fiche, Haiku a en plus échoué 1 fois sur 2 au contrôle (il a inventé un identifiant de notion
+inexistant : `theoreme-pythagore`), contre 2 réussites sur 2 pour Sonnet 5.5. Échantillon petit (2 générations,
+1 seul cours), à lire comme un ordre de grandeur.
+
+- **~3 s par appel sont du lancement** (4,5 s sous Haiku) : chaque message démarre un nouveau processus `claude` (Node).
 - Quand la notion n'est pas encore connue, un **2ᵉ appel** (détection de notion, modèle « rapide ») est fait
-  **avant** la réponse (`notions.avant_echange`) : +4 à 5 s sur les premiers messages d'une conversation.
+  **avant** la réponse (`notions.avant_echange`) : +3 à 4 s sur les premiers messages d'une conversation.
 - Notre propre code (assemblage du prompt, base, modules) : quelques millisecondes.
 
 Pistes, **à trancher par Alex** (aucune n'est du C/C++) :
-- (a) **Détection de notion en parallèle** de la réponse (au lieu d'avant) : −4 à 5 s sur les premiers
+- (a) **Détection de notion en parallèle** de la réponse (au lieu d'avant) : −3 à 4 s sur les premiers
   messages. Contrepartie : la toute première réponse n'a pas encore les infos de la notion dans son prompt.
 - (b) **Réponse affichée au fil de l'eau** (streaming, `--output-format stream-json` déjà utilisé) : même
-  durée totale, mais le premier mot arrive en ~2 s au lieu de ~9 s.
-- (c) **API directe au lieu du CLI** (backend `anthropic` déjà présent dans `jules/llm/`) : supprime les ~4 s
+  durée totale, mais le premier mot arrive en ~2 s au lieu de ~5 s.
+- (c) **API directe au lieu du CLI** (backend `anthropic` déjà présent dans `jules/llm/`) : supprime les ~3 s
   de lancement par appel. Contrepartie : une clé API et une facturation à l'usage au lieu de l'abonnement.
 
 ## 3. Ce qui ne vaut PAS une réécriture en C/C++
@@ -82,8 +93,8 @@ Pistes, **à trancher par Alex** (aucune n'est du C/C++) :
 | Générateurs d'exercices | ~ms | inutile |
 | Pages et API (hors premier chargement) | 10 à 100 ms | inutile |
 | Nettoyage SVG | ~0,7 s au démarrage seulement | réglé par le cache disque |
-| Génération de fiche perso (sources) | ~85 s | 99 % = l'IA ; le C n'y changerait rien |
-| Réponse du chat | 4 à 9 s | 99 % = lancement du CLI + l'IA ; voir §2 |
+| Génération de fiche perso (sources) | ~38 s (Sonnet 5.5) | 99 % = l'IA ; le C n'y changerait rien |
+| Réponse du chat | 3 à 6 s (Sonnet 5.5) | 99 % = lancement du CLI + l'IA ; voir §2 |
 
 ## 4. Si un jour il faut du natif
 

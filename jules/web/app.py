@@ -14,6 +14,7 @@ from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
+from starlette.middleware.gzip import GZipMiddleware
 
 from jules import dossier, page_adaptations
 from jules.acces import COOKIE, DUREE_S, Acces, requete_distante
@@ -99,6 +100,7 @@ def _charger_config_brute(racine: Path) -> dict[str, Any]:
 
 def creer_app(tuteur: Tuteur) -> FastAPI:
     app = FastAPI(title="Jules", docs_url=None, redoc_url=None, openapi_url=None)
+    app.add_middleware(GZipMiddleware, minimum_size=500)
     acces = Acces(tuteur.config.acces, tuteur.config.donnees / "secret.key")
     essais = LimiteEssais(ESSAIS_MAX, ESSAIS_MAX_GLOBAL)
     app.state.tuteur = tuteur
@@ -328,8 +330,6 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
             enveloppe.include_router(routeur)
             app.include_router(enveloppe, prefix=prefixe)
 
-    return app
-
     # Fichiers statiques sans cookie (iframe a origine opaque, docs/OUTILS-CONTRAT.md),
     # montes apres les routes gardees :
     # /api/eleve/outils/<id>/<fichier> repond sans session ; le catalogue et l'entree restent gardes.
@@ -337,6 +337,8 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         statiques = module.routes_statiques()
         if statiques is not None:
             app.include_router(statiques, prefix=f"/api/eleve/{module.id}")
+
+    return app
 
 
 def routes_dossier(tuteur: Tuteur) -> APIRouter:

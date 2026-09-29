@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 """Routes API Pronote pour l'application Jules.
 
-Monte sous /api/pronote — protégé par l'accès parent.
+Monte sous /api/pronote — protégé par l'accès élève (code élève, y compris à distance).
 Aucune donnée personnelle dans ce fichier (publiable sur GitHub).
 """
 
