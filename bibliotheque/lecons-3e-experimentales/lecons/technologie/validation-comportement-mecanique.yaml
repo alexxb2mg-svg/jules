@@ -1,0 +1,173 @@
+notion: validation-comportement-mecanique
+titre: "Valider la tenue mécanique d'un matériau : simulation et test"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître la flexion et la torsion."
+      - "Comparer une contrainte maximale à la limite élastique et calculer une marge."
+      - "Proposer un protocole de test et connaître les indices de réparabilité et énergétique."
+
+  - type: texte
+    titre: "Tenue mécanique : flexion et torsion"
+    contenu: >-
+      Une pièce doit résister aux efforts sans casser ni trop se déformer : c'est sa **tenue
+      mécanique**.
+
+      Deux modes de sollicitation :
+
+      - la **flexion** : la pièce se courbe sous une charge (planche d'étagère, plongeoir) ;
+
+      - la **torsion** : la pièce se tord quand on tourne ses extrémités en sens contraire
+      (tige de tournevis, clé dans une serrure).
+
+  - type: texte
+    titre: "Valider par simulation"
+    contenu: >-
+      Sur ordinateur, à partir du modèle 3D, du matériau et des efforts, le logiciel calcule les
+      déformations et la **contrainte maximale** dans la pièce.
+
+      On la compare à la **limite élastique** du matériau : au-delà, la déformation devient
+      définitive.
+
+      **Marge = limite élastique − contrainte maximale.**
+
+      Si la contrainte reste sous la limite, avec la marge demandée par le cahier des charges,
+      la solution est validée.
+
+  - type: texte
+    titre: "Valider par un protocole de test"
+    contenu: >-
+      On fabrique un prototype et on applique des **charges croissantes**. On mesure la
+      déformation à chaque charge, par exemple la **flèche** (l'enfoncement au milieu d'une pièce
+      en flexion). On note les résultats dans un tableau et on compare au cahier des charges.
+
+      On change **une seule chose à la fois** entre deux essais.
+
+      La simulation est un modèle : on la confirme par un essai sur un prototype.
+
+  - type: texte
+    titre: "Indice de réparabilité et indice énergétique"
+    contenu: >-
+      L'**indice de réparabilité** est une note sur 10 affichée sur certains produits. Elle dit si
+      l'objet est facile à réparer (démontage, pièces détachées, documentation).
+
+      L'**indice énergétique** renseigne sur la consommation d'énergie de l'objet quand on
+      l'utilise.
+
+      Ces indices aident à choisir un objet, mais ne remplacent pas un test de résistance.
+
+  - type: exemple
+    enonce: >-
+      Document fictif. Une simulation donne une contrainte maximale de 22 MPa dans un support en
+      PLA. La limite élastique du PLA est de 50 MPa. Le cahier des charges demande une marge d'au
+      moins 10 MPa. Le support est-il validé ?
+    etapes:
+      - "Marge = limite élastique − contrainte maximale."
+      - "Marge = 50 − 22 = 28 MPa."
+      - "28 MPa est supérieur à 10 MPa : la tenue mécanique du support est validée."
+
+  - type: exercice
+    enonce: >-
+      Une tige métallique fixée à un mur porte une lampe à son extrémité. La tige se courbe vers
+      le bas. De quel mode de sollicitation s'agit-il ?
+    forme: qcm
+    choix:
+      - "La flexion"
+      - "La torsion"
+      - "La simulation"
+    reponse: 0
+    indices:
+      - "La tige se courbe ou se tord ?"
+      - "La simulation est une méthode de calcul, pas un mode de sollicitation."
+    explication: "La charge fait courber la tige : c'est de la flexion. La torsion ferait tourner les extrémités en sens contraire."
+
+  - type: exercice
+    enonce: >-
+      Document fictif. Simulation d'une charnière imprimée : contrainte maximale 31 MPa. Limite
+      élastique de l'ABS : 40 MPa. Quelle est la marge de l'ABS, en MPa ?
+    forme: nombre
+    reponse: 9
+    tolerance: 0.01
+    unite: "MPa"
+    indices:
+      - "La marge est un écart entre deux valeurs : faut-il additionner ou soustraire ?"
+      - "Marge = limite élastique − contrainte maximale."
+    explication: "Marge = 40 − 31 = 9 MPa."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on le calcul fait sur ordinateur, à partir du modèle 3D d'une pièce, pour
+      prévoir sa déformation sans la fabriquer ?
+    forme: reponse_courte
+    reponse: "simulation"
+    reponses_acceptees:
+      - "simulation"
+      - "une simulation"
+      - "la simulation"
+      - "simulation numérique"
+    indices:
+      - "On teste la pièce « pour de faux », sans rien fabriquer."
+      - "Le mot est de la même famille que le verbe « simuler »."
+    explication: "C'est une simulation : le logiciel calcule la déformation et la contrainte maximale à partir du modèle 3D."
+
+  - type: exercice
+    enonce: >-
+      Document fictif. Essai de flexion d'une petite étagère imprimée en 3D. Masse posée au
+      milieu et flèche mesurée : 0,5 kg donne 1,2 mm ; 1 kg donne 2,4 mm ; 1,5 kg donne 3,6 mm ;
+      2 kg donne 4,8 mm. Le cahier des charges impose une flèche d'au plus 4 mm. Parmi les
+      masses testées, quelle est la plus grande qui respecte le cahier des charges, en kg ?
+    forme: nombre
+    reponse: 1.5
+    tolerance: 0.01
+    unite: "kg"
+    indices:
+      - "Pour chaque masse testée, la flèche mesurée est-elle au plus de 4 mm ?"
+      - "Regarde la masse la plus lourde dont la flèche dépasse 4 mm, puis la masse testée juste avant."
+    explication: "Les flèches de 1,2 mm, 2,4 mm et 3,6 mm restent sous 4 mm ; 4,8 mm dépasse. La plus grande masse qui convient est 1,5 kg."
+
+  - type: exercice
+    enonce: >-
+      Document fictif. La contrainte maximale est de 38 MPa pour tous les matériaux. Limites
+      élastiques : PLA 50 MPa, ABS 40 MPa, polypropylène 30 MPa. Le cahier des charges exige une
+      marge d'au moins 5 MPa. Quel matériau valide la tenue mécanique ?
+    forme: qcm
+    choix:
+      - "Le PLA"
+      - "L'ABS"
+      - "Le polypropylène"
+    reponse: 0
+    indices:
+      - "Calcule la marge de chaque matériau : limite élastique − contrainte maximale."
+      - "Compare chaque marge à 5 MPa. Un résultat négatif veut dire que la limite est dépassée."
+    explication: "PLA : 50 − 38 = 12 MPa, au moins 5 : validé. ABS : 40 − 38 = 2 MPa, moins de 5 : refusé. Polypropylène : 30 − 38 = −8 MPa, limite dépassée : refusé."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois vérifier qu'une tablette en contreplaqué, posée sur deux appuis, supporte 5 kg en
+      son milieu en s'enfonçant de moins de 3 mm. Rédige un protocole de test.
+    indices:
+      - "Quelle grandeur vas-tu mesurer, et avec quel instrument ?"
+      - "Un protocole précise : le montage, le matériel, les étapes de mesure, et comment on conclut."
+    criteres:
+      - "L'élève décrit le montage (tablette sur deux appuis, charge placée au milieu) et le matériel (masses, règle ou comparateur pour mesurer l'enfoncement)."
+      - "L'élève prévoit des charges croissantes jusqu'à 5 kg, avec une mesure de la flèche à chaque charge, notée dans un tableau."
+      - "L'élève indique le critère de validation (flèche à 5 kg inférieure à 3 mm) et ce qu'on conclut dans chaque cas."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots, en deux ou trois phrases : explique comment on valide la tenue
+      mécanique d'un matériau par simulation, puis par un test sur un prototype.

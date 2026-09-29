@@ -1,0 +1,162 @@
+notion: explication-globale-immunite
+titre: Explication globale des réactions immunitaires
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de
+    la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve
+    de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - 'Décrire dans l''ordre les acteurs d''une réponse immunitaire : phagocytes, lymphocytes B et T, anticorps.'
+  - Expliquer la mémoire immunitaire et comparer un premier et un second contact avec un microbe.
+  - Expliquer comment un vaccin protège, et ne pas le confondre avec un antibiotique.
+- type: texte
+  titre: Barrières et réaction rapide
+  contenu: 'Première ligne de défense : la peau, les muqueuses, les larmes et la salive.
+
+    Si un microbe pathogène passe, le système immunitaire réagit. Ses acteurs sont des **globules blancs**.
+
+
+    **Réaction rapide** : en quelques heures, une **réaction inflammatoire** apparaît (rougeur, chaleur, gonflement,
+    douleur).
+
+    Des **phagocytes** arrivent, englobent les microbes et les digèrent : c''est la **phagocytose**.
+
+    Cette réaction n''est pas spécifique : elle agit contre beaucoup de microbes. Elle suffit souvent.'
+- type: texte
+  titre: Réaction lente et spécifique
+  contenu: '**Réaction plus lente** (quelques jours) : des **lymphocytes** reconnaissent un **antigène**.
+
+    Un antigène est une molécule propre à un microbe.
+
+
+    - Les lymphocytes se multiplient (les ganglions peuvent gonfler).
+
+    - Les **lymphocytes B** produisent des **anticorps**. Un anticorps se fixe seulement sur son antigène : il neutralise
+    le microbe et facilite sa phagocytose.
+
+    - Les **lymphocytes T** détruisent les cellules du corps infectées par un virus.'
+- type: texte
+  titre: Mémoire et vaccination
+  contenu: 'Après l''infection, des **lymphocytes mémoire** restent dans l''organisme.
+
+    Au nouveau contact avec le même microbe, la réponse est **plus rapide** et **plus forte**, souvent avant la
+    maladie.
+
+
+    Le **vaccin** contient un microbe tué ou affaibli, ou seulement certaines de ses molécules.
+
+    Il déclenche une réponse et crée des lymphocytes mémoire, **sans provoquer la maladie**.
+
+
+    Attention : un **antibiotique** est un médicament qui tue des bactéries. Il est inutile contre un virus.
+
+    Sur une courbe d''anticorps, compare le délai d''apparition et la quantité maximale au 1er et au 2e contact.'
+- type: exemple
+  enonce: Une écharde fait entrer des bactéries dans le doigt. Le lendemain, la zone est rouge, chaude et gonflée.
+    Que se passe-t-il ?
+  etapes:
+  - 'Rouge, chaud, gonflé : c''est une réaction inflammatoire, la réaction rapide du système immunitaire.'
+  - Des phagocytes arrivent sur place et éliminent les bactéries par phagocytose.
+  - Si cela ne suffit pas, des lymphocytes spécifiques de ces bactéries interviennent quelques jours plus tard.
+- type: exercice
+  enonce: Quels globules blancs englobent et digèrent les microbes lors de la phagocytose ?
+  forme: qcm
+  choix:
+  - Les phagocytes
+  - Les anticorps
+  - Les antibiotiques
+  - Les lymphocytes T
+  reponse: 0
+  indices:
+  - Le mot « phagocytose » contient l'idée d'englober.
+  - Cherche un globule blanc, pas une molécule ni un médicament.
+  explication: Ce sont les phagocytes qui font la phagocytose. Les anticorps sont des molécules, les antibiotiques
+    sont des médicaments, et les lymphocytes T détruisent les cellules infectées par un virus.
+- type: exercice
+  enonce: Comment appelle-t-on la molécule propre à un microbe, reconnue de façon spécifique par les lymphocytes
+    et par les anticorps ? Réponds par un mot.
+  forme: reponse_courte
+  reponse: antigène
+  reponses_acceptees:
+  - antigène
+  - antigènes
+  - l'antigène
+  - un antigène
+  - antigene
+  indices:
+  - 'Ce n''est pas l''anticorps : c''est ce que l''anticorps reconnaît.'
+  - Le mot commence par « anti » et se termine par « gène ».
+  explication: C'est l'antigène. Un anticorps se fixe uniquement sur son antigène.
+- type: exercice
+  enonce: Une personne a une infection due à une bactérie. Quel est le rôle d'un vaccin ?
+  forme: qcm
+  choix:
+  - Tuer les bactéries d'une maladie déjà déclarée
+  - Préparer l'organisme à l'avance en créant une mémoire immunitaire
+  - Remplacer les globules blancs
+  - Détruire les virus déjà présents dans le sang
+  reponse: 1
+  indices:
+  - Le vaccin agit avant l'infection ou avant la maladie, pas comme un médicament.
+  - Pense aux lymphocytes mémoire.
+  - Un vaccin ne provoque pas la maladie.
+  explication: Le vaccin contient un microbe tué ou affaibli, ou certaines de ses molécules. Il déclenche une réponse
+    et la formation de lymphocytes mémoire, sans provoquer la maladie. Il prépare l'organisme à l'avance ; il ne
+    soigne pas une maladie déjà déclarée.
+- type: exercice
+  enonce: 'Document (fictif, en unités arbitraires) : après un premier contact avec un microbe, la quantité maximale
+    d''anticorps dans le sang est de 10 unités. Après un second contact avec le même microbe, elle est de 80 unités.
+    Combien de fois la quantité maximale d''anticorps est-elle plus grande au second contact ? Écris seulement le
+    nombre.'
+  forme: nombre
+  reponse: 8
+  tolerance: 0.01
+  unite: fois
+  indices:
+  - « Combien de fois plus grand » se calcule avec une division.
+  - Divise la quantité du second contact par celle du premier contact.
+  explication: '80 ÷ 10 = 8. La quantité maximale d''anticorps est 8 fois plus grande au second contact : c''est
+    l''effet de la mémoire immunitaire.'
+- type: exercice
+  enonce: 'Document (fictif) : lors d''un premier contact avec un microbe, les anticorps apparaissent après plusieurs
+    jours et en petite quantité. Lors d''un second contact avec le même microbe, ils apparaissent bien plus vite
+    et en grande quantité. Quelle conclusion est correcte ?'
+  forme: qcm
+  choix:
+  - Les anticorps sont produits par les phagocytes.
+  - Le premier contact a laissé une mémoire immunitaire, grâce aux lymphocytes mémoire.
+  - Le second contact provoque forcément la maladie.
+  - Les anticorps agissent contre tous les microbes.
+  reponse: 1
+  indices:
+  - Compare le délai d'apparition et la quantité au premier et au second contact.
+  - Une réponse plus rapide et plus forte montre que l'organisme « se souvient ».
+  explication: 'Au second contact, la réponse est plus rapide et plus forte : des lymphocytes mémoire ont été formés
+    lors du premier contact. Les anticorps sont produits par les lymphocytes B et sont spécifiques d''un seul antigène.'
+- type: question_ouverte
+  question: 'Explique comment un vaccin protège une personne contre une maladie. Utilise les mots : antigène, lymphocytes
+    mémoire, anticorps.'
+  indices:
+  - Que contient un vaccin ? Est-ce que la personne tombe malade ?
+  - Que se passe-t-il quand la personne rencontre le vrai microbe plus tard ?
+  criteres:
+  - L'élève dit que le vaccin contient un microbe tué ou affaibli, ou certaines de ses molécules (antigènes), sans
+    provoquer la maladie.
+  - L'élève explique que des lymphocytes mémoire se forment.
+  - 'L''élève explique que, lors d''un contact avec le vrai microbe, la réponse est plus rapide et plus forte (anticorps)
+    : la personne est protégée.'
+- type: synthese
+  consigne: 'En quelques phrases, décris dans l''ordre ce que fait l''organisme quand un microbe pathogène passe
+    la peau : réaction rapide, réaction lente, puis mémoire.'

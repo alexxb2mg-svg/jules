@@ -1,0 +1,155 @@
+notion: chaines-daccord
+titre: "Les chaînes d'accord dans le groupe nominal"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer le nom noyau d'un groupe nominal et accorder tous les mots de la chaîne avec lui."
+      - "Accorder correctement un adjectif qui se rapporte à plusieurs noms, et les mots tout, chaque, leur."
+      - "Accorder le participe passé avec être et avec avoir (cas simples), et l'adjectif ou le participe en apposition."
+
+  - type: texte
+    titre: "La chaîne d'accord"
+    contenu: |-
+      Un **groupe nominal** est un nom avec les mots qui l'accompagnent.
+
+      Le nom principal s'appelle le **nom noyau**. Tous les autres mots s'accordent avec lui en **genre** (masculin / féminin) et en **nombre** (singulier / pluriel). C'est la **chaîne d'accord**.
+
+      | déterminant | adjectif | nom noyau | adjectif |
+      |---|---|---|---|
+      | ces | grandes | maisons | blanches |
+
+      Méthode : trouve d'abord le nom noyau, puis vérifie chaque mot un par un.
+
+  - type: texte
+    titre: "Plusieurs noms, plusieurs adjectifs, une relative"
+    contenu: |-
+      Un adjectif qui se rapporte à **plusieurs noms** se met au **pluriel**.
+      - Noms de même genre : l'adjectif prend ce genre. Une jupe et une veste **neuves**.
+      - Noms de genres différents : l'adjectif est au **masculin pluriel**. Une jupe et un pull **neufs**.
+
+      Dans un groupe nominal complexe, cherche à quel nom se rapporte chaque mot :
+      « Les élèves **que j'ai vus**, **fatigués**, étaient partis. »
+      - « vus » s'accorde avec « les élèves » (le COD « que » est placé avant).
+      - « fatigués » s'accorde avec « les élèves ».
+
+  - type: texte
+    titre: "Tout, chaque, leur"
+    contenu: |-
+      - **Chaque** est invariable, et le nom qui suit est au singulier : chaque élève.
+      - **Tout** déterminant s'accorde avec le nom : tout le monde, toute la classe, tous les élèves, toutes les filles.
+      - **Tout** adverbe, devant un adjectif, est invariable : ils sont tout contents. Mais devant un adjectif féminin qui commence par une consonne, il s'accorde : elle est toute contente.
+      - **Leur** déterminant s'accorde en nombre avec le nom : leur chien, leurs chiens.
+      - **Leur** pronom est invariable : je leur parle.
+
+  - type: texte
+    titre: "Participe passé et apposition"
+    contenu: |-
+      - Avec **être**, le participe passé s'accorde avec le **sujet** : Elles sont **parties**.
+      - Avec **avoir**, il s'accorde avec le **COD s'il est placé avant le verbe** : Les pommes qu'il a **mangées**. Sinon, il reste invariable : Il a **mangé** des pommes.
+      - Le COD peut être le pronom relatif « que » : il faut chercher le nom qu'il remplace.
+      - Un adjectif ou un participe **en apposition** (séparé par une virgule) s'accorde comme un adjectif avec le nom qu'il qualifie : **Fatiguée**, elle s'assit.
+
+      Au brevet, on justifie : « Je m'accorde avec ... parce que ... ».
+
+  - type: exemple
+    enonce: "Accorde : « Un stylo et une gomme (bleu) sont dans la trousse que ma tante m'a (offrir). »"
+    etapes:
+      - "Premier mot : « bleu » se rapporte à deux noms, un stylo (masculin) et une gomme (féminin)."
+      - "Les genres sont différents : masculin pluriel. On écrit « bleus »."
+      - "Deuxième mot : « offrir » avec avoir. Le COD est « que », mis pour « la trousse »."
+      - "Ce COD est placé avant le verbe : le participe s'accorde au féminin singulier. On écrit « offerte »."
+      - "Phrase finale : « Un stylo et une gomme bleus sont dans la trousse que ma tante m'a offerte. »"
+
+  - type: exercice
+    enonce: "Quel groupe nominal est bien accordé ?"
+    forme: qcm
+    choix:
+      - "ces grandes maisons blanches"
+      - "ces grand maisons blanche"
+      - "ces grandes maison blanches"
+      - "ce grandes maisons blanches"
+    reponse: 0
+    indices:
+      - "Le nom noyau est « maisons ». Quel est son genre, et son nombre ?"
+      - "Chaque mot du groupe doit être féminin pluriel, sauf si un mot est invariable."
+    explication: "Le nom noyau est « maisons » (féminin pluriel). Ces mots s'accordent avec lui : ces, grandes, blanches."
+
+  - type: exercice
+    enonce: "Accorde l'adjectif : « Un cahier et une trousse (neuf) sont sur la table. »"
+    forme: reponse_courte
+    reponse: "neufs"
+    reponses_acceptees: ["Neufs"]
+    indices:
+      - "L'adjectif se rapporte à deux noms. Y a-t-il un masculin et un féminin ?"
+      - "Quand les genres sont différents, on choisit un genre par défaut, et le pluriel."
+    explication: "Cahier est masculin et trousse est féminin : l'adjectif se met au masculin pluriel, « neufs »."
+
+  - type: exercice
+    enonce: "Accorde le participe passé : « Les fleurs qu'elle a (cueillir) sont belles. »"
+    forme: reponse_courte
+    reponse: "cueillies"
+    reponses_acceptees: ["Cueillies"]
+    indices:
+      - "Le verbe est conjugué avec l'auxiliaire avoir. Où est le COD : avant ou après le verbe ?"
+      - "Le COD est « que ». Quel nom remplace-t-il, et quel est son genre et son nombre ?"
+    explication: "« que » remplace « les fleurs » (féminin pluriel) et il est placé avant le verbe : le participe s'accorde, « cueillies »."
+
+  - type: exercice
+    enonce: "Dans « Les voisins nous ont montré leurs jardins et je leur ai dit merci », que peut-on dire des deux mots « leurs » et « leur » ?"
+    forme: qcm
+    choix:
+      - "« leurs » est un déterminant qui s'accorde ; « leur » est un pronom invariable"
+      - "Les deux s'écrivent toujours avec un s"
+      - "Les deux sont invariables"
+      - "« leur » prend un s parce qu'il y a plusieurs voisins"
+    reponse: 0
+    indices:
+      - "Un des deux mots accompagne le nom « jardins » ; l'autre remplace « aux voisins » avant le verbe dire."
+      - "Le pronom ne s'accorde jamais. Le déterminant s'accorde avec le nom qui suit."
+    explication: "« leurs jardins » : déterminant, il s'accorde avec « jardins » (pluriel). « je leur ai dit » : pronom, invariable."
+
+  - type: exercice
+    enonce: >-
+      Combien d'erreurs d'accord y a-t-il dans cette phrase ?
+      « Tout les élèves que la directrice a convoqué, fatigué par la chaleur, sont partis. »
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "Vérifie un à un : le mot « tout », le participe « convoqué » et le mot « fatigué »."
+      - "Cherche le nom avec lequel chacun s'accorde : c'est « élèves » (masculin pluriel). « sont partis » est déjà correct."
+    explication: "Il faut écrire « Tous les élèves que la directrice a convoqués, fatigués par la chaleur, sont partis. » : tous (déterminant), convoqués (COD « que » placé avant), fatigués (apposition). Il y a donc 3 erreurs."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi on écrit « les lettres qu'il a écrites » mais « il a écrit des lettres ».
+      Utilise les mots COD, participe passé et verbe.
+    indices:
+      - "Dans chaque phrase, cherche où est le COD."
+      - "Que dit la règle du participe passé avec avoir quand le COD est avant le verbe ? Et quand il est après ?"
+    criteres:
+      - "L'élève repère le COD dans les deux phrases (« que », mis pour les lettres, et « des lettres »)."
+      - "L'élève explique que le COD placé avant le verbe fait accorder le participe passé (écrites)."
+      - "L'élève explique que le COD placé après le verbe laisse le participe invariable (écrit)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment tu vérifies les accords dans
+      un groupe nominal, et comment tu accordes un participe passé avec avoir.

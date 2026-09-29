@@ -1,0 +1,168 @@
+notion: devenir-aliments-tube-digestif
+titre: "Le devenir des aliments dans le tube digestif"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Suivre un aliment dans le tube digestif, organe par organe."
+      - "Distinguer aliment et nutriment, et expliquer digestion et absorption."
+      - "Expliquer pourquoi l'intestin grêle est adapté à l'absorption."
+
+  - type: texte
+    titre: "Le trajet des aliments"
+    contenu: >-
+      Le **tube digestif** est le trajet des aliments :
+
+      bouche → œsophage → estomac → intestin grêle → gros intestin → anus.
+
+
+      Des **glandes annexes** déversent leurs sucs dans ce tube : glandes salivaires, foie, pancréas.
+      Les aliments ne passent **pas** dans ces glandes.
+
+  - type: texte
+    titre: "La digestion : des aliments aux nutriments"
+    contenu: >-
+      La **digestion** transforme les aliments en **nutriments**. Elle est mécanique et chimique.
+
+
+      - **Mécanique** : mastication par les dents, brassage par les muscles de l'estomac.
+
+      - **Chimique** : les sucs digestifs contiennent des **enzymes**. Elles découpent les grosses
+      molécules (amidon, protéines, lipides) en petites molécules.
+
+
+      Les nutriments sont de petites molécules : glucose (issu de l'amidon), acides aminés (issus des
+      protéines), acides gras et glycérol (issus des lipides).
+
+  - type: texte
+    titre: "L'absorption dans l'intestin grêle"
+    contenu: >-
+      Les nutriments traversent la paroi de l'intestin grêle et passent dans le sang : c'est
+      l'**absorption**.
+
+
+      L'intestin grêle est adapté à cette fonction :
+
+      - sa paroi est très repliée, avec des **villosités** : la surface d'échange est très grande ;
+
+      - sa paroi est fine ;
+
+      - elle est très riche en vaisseaux sanguins.
+
+
+      L'eau, les sels minéraux et les vitamines sont absorbés sans être digérés.
+
+  - type: texte
+    titre: "Ce qui n'est pas absorbé, et l'alimentation"
+    contenu: >-
+      Ce qui n'est pas digéré, surtout les fibres, passe dans le **gros intestin**. Une partie de l'eau
+      y est réabsorbée. Le reste est rejeté sous forme d'excréments. Le sang apporte ensuite les
+      nutriments à toutes les cellules.
+
+
+      Les aliments apportent : glucides (énergie), protéines (construction), lipides (énergie et
+      réserves), eau, sels minéraux, vitamines, fibres. Une alimentation variée et adaptée à l'âge et à
+      l'activité physique couvre les besoins. Trop ou trop peu peut nuire à la santé.
+
+  - type: exemple
+    enonce: >-
+      Que devient une protéine contenue dans un aliment riche en protéines, entre la bouche et le sang ?
+    etapes:
+      - "L'aliment est mâché (action mécanique) puis avance dans le tube digestif."
+      - "Les enzymes des sucs digestifs découpent les protéines en petites molécules : les acides aminés."
+      - "Les acides aminés sont des nutriments : ils traversent la paroi de l'intestin grêle et passent dans le sang (absorption)."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le passage des nutriments de l'intestin grêle vers le sang ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "absorption"
+    reponses_acceptees: ["l'absorption", "labsorption", "absorption intestinale"]
+    indices:
+      - "Relis le texte sur l'intestin grêle."
+      - "Ce mot commence par « ab » et désigne le fait de faire entrer des nutriments dans le sang."
+    explication: "C'est l'absorption : les nutriments traversent la paroi de l'intestin grêle et passent dans le sang."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : on mesure le glucose dans le sang qui sort de l'intestin grêle. Avant le repas,
+      il y en a 0,9 g par litre. Une heure après un repas riche en amidon, il y en a 1,4 g par litre.
+      De combien de grammes par litre la quantité a-t-elle augmenté ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 0.5
+    tolerance: 0.01
+    unite: "g/L"
+    indices:
+      - "Pour savoir de combien une quantité a augmenté, on compare la valeur finale et la valeur de départ."
+      - "Fais une soustraction : valeur après le repas moins valeur avant le repas."
+    explication: "1,4 − 0,9 = 0,5. Le glucose a augmenté de 0,5 g par litre : il vient de l'amidon digéré, puis absorbé."
+
+  - type: exercice
+    enonce: "Parmi ces choix, lequel est un nutriment issu de la digestion des protéines ?"
+    forme: qcm
+    choix:
+      - "Les acides aminés"
+      - "Le glucose"
+      - "Les fibres"
+      - "L'amidon"
+    reponse: 0
+    indices:
+      - "Relis la liste des nutriments et de leur origine."
+      - "Le glucose vient de l'amidon. Les fibres ne sont pas digérées."
+    explication: "Les protéines sont découpées en acides aminés. Le glucose vient de l'amidon ; les fibres ne sont pas digérées ; l'amidon est une grosse molécule."
+
+  - type: exercice
+    enonce: "Que deviennent les fibres, qui ne sont pas digérées par nos enzymes ?"
+    forme: qcm
+    choix:
+      - "Elles passent dans le gros intestin puis sont rejetées."
+      - "Elles sont absorbées dans l'estomac."
+      - "Elles sont transformées en glucose dans le foie."
+      - "Elles passent dans le sang par l'intestin grêle."
+    reponse: 0
+    indices:
+      - "Ce qui n'est pas digéré n'est pas absorbé."
+      - "Regarde la fin du trajet : quel organe suit l'intestin grêle ?"
+    explication: "Les fibres ne sont pas digérées. Elles passent dans le gros intestin, où une partie de l'eau est réabsorbée, puis sont rejetées."
+
+  - type: exercice
+    enonce: >-
+      Document décrit : deux intestins grêles sont comparés. L'intestin A a une paroi lisse. L'intestin B
+      a une paroi très repliée, avec des villosités, et très riche en vaisseaux sanguins. Que peut-on
+      conclure sur l'absorption ?
+    forme: qcm
+    choix:
+      - "L'intestin B absorbe mieux : sa grande surface d'échange et ses vaisseaux sanguins favorisent le passage des nutriments dans le sang."
+      - "L'intestin A absorbe mieux, car une paroi lisse laisse passer plus de nutriments."
+      - "Les deux absorbent pareil, car la surface n'a pas d'importance."
+      - "L'intestin B ne peut rien absorber, car les villosités bloquent les nutriments."
+    reponse: 0
+    indices:
+      - "Que change une paroi repliée à la surface d'échange avec le sang ?"
+      - "Les nutriments passent dans le sang : pourquoi des vaisseaux sanguins nombreux aident-ils ?"
+    explication: "Les villosités agrandissent la surface d'échange et les nombreux vaisseaux sanguins emportent les nutriments. L'intestin B est mieux adapté à l'absorption."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre un aliment et un nutriment. Prends l'exemple de l'amidon du pain.
+    indices:
+      - "L'aliment, c'est ce que l'on mange. Et le nutriment ?"
+      - "Que devient l'amidon après la digestion ?"
+    criteres:
+      - "L'élève dit qu'un aliment est ce que l'on mange et qu'un nutriment est une petite molécule qui peut passer dans le sang."
+      - "L'élève explique que l'amidon (grosse molécule) est découpé par des enzymes en glucose (nutriment)."
+      - "L'élève précise que le nutriment passe dans le sang par l'absorption, dans l'intestin grêle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, le trajet d'un aliment jusqu'au sang :
+      ce qui se passe avec la digestion, puis avec l'absorption.

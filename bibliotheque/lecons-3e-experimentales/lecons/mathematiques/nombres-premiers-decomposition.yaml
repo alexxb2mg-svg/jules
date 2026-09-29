@@ -1,0 +1,164 @@
+notion: nombres-premiers-decomposition
+titre: Nombres premiers et décomposition en facteurs premiers
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître un nombre premier et justifier qu'un nombre n'est pas premier.
+  - Décomposer un entier en produit de facteurs premiers.
+  - Utiliser la décomposition pour répondre à un problème (carré parfait, facteur cherché).
+- type: texte
+  titre: Qu'est-ce qu'un nombre premier ?
+  contenu: 'Un **nombre premier** est un entier qui a **exactement deux diviseurs** : 1 et lui-même.
+
+
+    Les nombres premiers inférieurs à 50 :
+
+
+    2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47.
+
+
+    - **1** n''est pas premier : il n''a qu''un seul diviseur.
+
+    - **2** est le seul nombre premier pair.'
+- type: texte
+  titre: Savoir si un nombre est premier
+  contenu: 'On teste la divisibilité par les nombres premiers 2, 3, 5, 7... tant que leur **carré ne dépasse
+    pas** le nombre.
+
+
+    Si aucun ne divise le nombre, il est premier.
+
+
+    Exemple : 89 n''est divisible ni par 2, ni par 3, ni par 5, ni par 7. Et 11 × 11 = 121 dépasse 89.
+    Donc 89 est premier.
+
+
+    Attention : un nombre impair n''est pas forcément premier. 91 = 7 × 13.'
+- type: texte
+  titre: Décomposer en facteurs premiers
+  contenu: 'Tout entier supérieur ou égal à 2 est premier, ou s''écrit comme un **produit de nombres premiers**.
+    Cette écriture est **unique** (à l''ordre près).
+
+
+    Méthode : on divise par 2 tant que c''est possible, puis par 3, puis par 5, par 7... jusqu''à obtenir
+    1.
+
+
+    Exemple : 60 = 2 × 30 = 2 × 2 × 15 = 2 × 2 × 3 × 5 = **2² × 3 × 5**.
+
+
+    Vérifie à la fin : tous les facteurs sont premiers, et le produit redonne le nombre.'
+- type: texte
+  titre: Outils et utilité
+  contenu: 'Un arbre de facteurs, un tableur ou un programme font la même chose : un programme répète
+    « tant que le nombre se divise par d, diviser ; sinon passer au nombre premier suivant ».
+
+
+    À quoi ça sert ?
+
+    - simplifier des fractions ;
+
+    - trouver les diviseurs d''un nombre ;
+
+    - reconnaître un carré parfait : tous les exposants sont pairs (36 = 2² × 3²).
+
+
+    Au brevet, on écrit chaque division et on conclut.'
+- type: exemple
+  enonce: Décompose 150 en produit de facteurs premiers.
+  etapes:
+  - '150 est pair : 150 = 2 × 75.'
+  - '75 n''est pas pair. La somme de ses chiffres est 12, divisible par 3 : 75 = 3 × 25.'
+  - 25 = 5 × 5. Donc 150 = 2 × 3 × 5 × 5 = 2 × 3 × 5².
+  - 'Vérification : 2 × 3 × 25 = 150, et 2, 3, 5 sont premiers.'
+- type: exercice
+  enonce: Lequel de ces nombres est premier ?
+  forme: qcm
+  choix:
+  - '9'
+  - '15'
+  - '17'
+  - '21'
+  reponse: 2
+  indices:
+  - 'Un nombre premier n''a que deux diviseurs : 1 et lui-même.'
+  - Cherche pour chaque nombre un diviseur autre que 1 et lui-même.
+  explication: '9 = 3 × 3, 15 = 3 × 5 et 21 = 3 × 7 ne sont pas premiers. 17 n''est divisible que par
+    1 et 17 : il est premier.'
+- type: exercice
+  enonce: Le nombre 91 est-il premier ? Réponds par oui ou par non.
+  forme: reponse_courte
+  reponse: non
+  reponses_acceptees:
+  - Non
+  - non, il n'est pas premier
+  indices:
+  - Teste la divisibilité par 2, 3, 5, puis 7. Le carré de 11 dépasse 91, donc tu peux t'arrêter après
+    7.
+  - 'Calcule 91 ÷ 7 : la division tombe-t-elle juste ?'
+  explication: '91 = 7 × 13. Il a un diviseur autre que 1 et lui-même : il n''est pas premier.'
+- type: exercice
+  enonce: Décompose 132 en facteurs premiers. Quel est le plus grand facteur premier de cette décomposition
+    ?
+  forme: nombre
+  reponse: 11
+  tolerance: 0.01
+  indices:
+  - Divise 132 par 2 tant que c'est possible.
+  - 132 = 2 × 66. Continue avec 66, puis avec le quotient suivant.
+  - Arrête-toi quand tous les facteurs sont premiers, puis choisis le plus grand.
+  explication: 132 = 2 × 66 = 2 × 2 × 33 = 2 × 2 × 3 × 11 = 2² × 3 × 11. Le plus grand facteur premier
+    est 11.
+- type: exercice
+  enonce: On sait que 504 = 2ᵃ × 3² × 7, où a est un nombre entier. Calcule a.
+  forme: nombre
+  reponse: 3
+  tolerance: 0.01
+  indices:
+  - Divise 504 par 2 tant que le résultat est pair.
+  - 504 ÷ 2 = 252, puis 252 ÷ 2 = 126. Continue, et compte les divisions par 2.
+  explication: '504 = 2 × 252 = 2 × 2 × 126 = 2 × 2 × 2 × 63, et 63 est impair (63 = 3² × 7). Il y a trois
+    facteurs 2 : a = 3.'
+- type: exercice
+  enonce: Quel est le plus petit entier strictement positif par lequel on doit multiplier 90 pour obtenir
+    un carré parfait (le carré d'un entier) ?
+  forme: nombre
+  reponse: 10
+  tolerance: 0.01
+  indices:
+  - Décompose 90 en facteurs premiers.
+  - Un carré parfait a tous ses exposants pairs. Regarde quels exposants de 90 sont impairs.
+  - Il faut compléter les facteurs premiers dont l'exposant est impair pour le rendre pair.
+  explication: 90 = 2 × 3² × 5. Les exposants de 2 et de 5 sont impairs (égaux à 1). Il faut multiplier
+    par 2 × 5 = 10. On obtient 900 = 2² × 3² × 5² = 30².
+- type: question_ouverte
+  question: 51 est impair. Pourtant Léa dit qu'il n'est pas premier. Explique comment elle peut le prouver,
+    et pourquoi « impair » ne veut pas dire « premier ».
+  indices:
+  - Quel critère de divisibilité peux-tu utiliser pour 51 ? Que vaut la somme de ses chiffres ?
+  - Un nombre premier n'a que deux diviseurs. Combien 51 en a-t-il ?
+  criteres:
+  - 'L''élève trouve un diviseur autre que 1 et 51 : 3, par le critère (5 + 1 = 6) ou en écrivant 51 =
+    3 × 17.'
+  - L'élève conclut que 51 a plus de deux diviseurs, donc n'est pas premier.
+  - 'L''élève dit qu''être impair ne suffit pas : il donne un autre nombre impair non premier (par exemple
+    9, 15 ou 91).'
+- type: synthese
+  consigne: Écris avec tes mots, en deux ou trois phrases, ce qu'est un nombre premier, et comment tu
+    décomposes un nombre en facteurs premiers.

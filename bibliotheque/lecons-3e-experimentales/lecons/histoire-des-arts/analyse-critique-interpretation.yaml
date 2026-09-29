@@ -1,0 +1,157 @@
+notion: analyse-critique-interpretation
+titre: "Analyser une œuvre et proposer une interprétation"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer description, analyse et interprétation."
+      - "Proposer un sens pour une œuvre en s'appuyant sur des détails et sur le contexte."
+      - "Donner un avis personnel justifié, pas seulement « j'aime »."
+
+  - type: texte
+    titre: "Quatre étapes, toujours dans le même ordre"
+    contenu: |-
+      Pour analyser une œuvre, on suit quatre étapes :
+      1. **Présenter** : titre, artiste, date, technique, lieu de conservation, contexte.
+      2. **Décrire** : dire ce que l'on voit, sans donner de sens. On peut le vérifier en regardant l'œuvre.
+      3. **Analyser** : expliquer comment l'artiste a construit l'œuvre et quels effets ses choix produisent.
+      4. **Interpréter** : proposer un sens, en répondant à « pourquoi ? ».
+
+  - type: texte
+    titre: "Analyser et interpréter"
+    contenu: |-
+      Exemples d'analyse :
+      - une diagonale donne du mouvement ;
+      - une pyramide met en valeur le sommet ;
+      - des couleurs sombres créent une atmosphère tragique.
+
+      Pour **interpréter**, on s'appuie sur le **contexte** (les événements de l'époque) et sur les **symboles**.
+      Une interprétation se justifie toujours par des éléments observés.
+
+  - type: texte
+    titre: "Symbole, allégorie, vanité"
+    contenu: |-
+      - Un **symbole** est un objet qui représente une idée : la colombe pour la paix, la balance pour la justice.
+      - Une **allégorie** est une idée abstraite représentée par un personnage : la Liberté sous les traits d'une femme.
+      - Dans une nature morte, un crâne rappelle que la vie est fragile : c'est une **vanité**.
+
+  - type: texte
+    titre: "L'avis personnel"
+    contenu: |-
+      Une analyse critique donne aussi un **avis personnel**, mais argumenté.
+      « J'aime » ou « je n'aime pas » ne suffit pas : il faut dire pourquoi, avec des éléments précis de l'œuvre.
+
+      Au brevet, on attend : distinguer description, analyse et interprétation, appuyer chaque idée sur un détail
+      de l'œuvre et sur son contexte, et donner un avis justifié.
+
+  - type: exemple
+    enonce: >-
+      Propose une interprétation de La Liberté guidant le peuple (Delacroix, 1830) en t'appuyant sur deux
+      éléments de l'œuvre.
+    etapes:
+      - "Le contexte : le tableau évoque les Trois Glorieuses, la révolution de juillet 1830 à Paris."
+      - "Premier élément : la femme au centre n'est pas une vraie combattante. C'est une allégorie de la Liberté, reconnaissable à son bonnet phrygien, symbole de liberté depuis la Révolution française."
+      - "Deuxième élément : elle brandit le drapeau tricolore au sommet d'une composition en pyramide, ce qui la met en valeur."
+      - "Interprétation : Delacroix montre un peuple uni, de toutes les classes sociales, qui se bat pour la liberté."
+
+  - type: exercice
+    enonce: >-
+      Voici une phrase : « Sur le tableau, on voit une femme qui tient un drapeau. » Est-ce une description,
+      une analyse ou une interprétation ?
+    forme: qcm
+    choix:
+      - "Une description"
+      - "Une analyse"
+      - "Une interprétation"
+    reponse: 0
+    indices:
+      - "Se demande : la phrase dit-elle ce que l'on voit, ou ce que cela signifie ?"
+      - "Une description se vérifie en regardant l'œuvre, sans donner de sens."
+    explication: "La phrase dit seulement ce que l'on voit, et on peut le vérifier sur l'œuvre. C'est une description."
+
+  - type: exercice
+    enonce: "Comment s'appelle une idée abstraite représentée par un personnage, comme la Liberté représentée par une femme ?"
+    forme: reponse_courte
+    reponse: "allégorie"
+    reponses_acceptees:
+      - "allégorie"
+      - "allegorie"
+      - "une allégorie"
+      - "une allegorie"
+      - "l'allégorie"
+      - "l'allegorie"
+    indices:
+      - "C'est un mot de vocabulaire de la leçon, qui n'est pas « symbole »."
+      - "Le mot commence par la lettre A."
+    explication: "Une idée abstraite (la liberté, la justice) représentée par un personnage s'appelle une allégorie."
+
+  - type: exercice
+    enonce: "Dans un tableau, une colombe blanche est peinte. Quelle idée représente-t-elle habituellement ?"
+    forme: qcm
+    choix:
+      - "La guerre"
+      - "La paix"
+      - "La justice"
+    reponse: 1
+    indices:
+      - "La colombe est un exemple donné dans la leçon pour la notion de symbole."
+      - "La balance représente la justice. À quelle autre idée la colombe est-elle liée ?"
+    explication: "La colombe est un symbole de la paix. La balance, elle, est un symbole de la justice."
+
+  - type: exercice
+    enonce: >-
+      Une élève écrit à propos de Guernica (Picasso, 1937) : « Le noir et le blanc et les corps déformés
+      dénoncent le bombardement d'une ville pendant la guerre d'Espagne. » Quelle étape cette phrase
+      correspond-elle ?
+    forme: qcm
+    choix:
+      - "La présentation de l'œuvre"
+      - "La description"
+      - "L'interprétation"
+    reponse: 2
+    indices:
+      - "La phrase dit-elle seulement ce que l'on voit, ou donne-t-elle un sens à l'œuvre ?"
+      - "Le verbe « dénoncent » indique un sens, un message. Relis la définition de l'interprétation."
+    explication: "La phrase donne le sens de l'œuvre (elle dénonce un bombardement) en s'appuyant sur des éléments observés et sur le contexte. C'est une interprétation."
+
+  - type: exercice
+    enonce: >-
+      Pour donner un avis personnel sur une œuvre, quelle phrase est la meilleure au brevet ?
+    forme: qcm
+    choix:
+      - "J'aime ce tableau, il est beau."
+      - "Je n'aime pas ce tableau, il est trop sombre pour moi."
+      - "J'aime ce tableau parce que la diagonale donne du mouvement à la scène et que les couleurs sombres créent une atmosphère tragique."
+    reponse: 2
+    indices:
+      - "Un avis personnel doit être argumenté : il dit pourquoi."
+      - "Cherche la phrase qui s'appuie sur des choix précis de l'artiste et sur leurs effets."
+    explication: "La dernière phrase donne un avis et le justifie avec deux éléments précis de l'œuvre et leurs effets. Les autres restent vagues ou n'expliquent pas."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre que tu connais. Écris une phrase de description, puis une phrase d'interprétation qui
+      s'appuie sur un détail de cette œuvre et sur son contexte. Explique en une phrase pourquoi ce ne sont
+      pas la même chose.
+    indices:
+      - "La description dit ce que l'on voit. L'interprétation dit ce que cela signifie."
+      - "Pour l'interprétation, relie un détail de l'œuvre à ce qui se passe à l'époque."
+    criteres:
+      - "L'élève écrit une description qui reste factuelle (ce que l'on voit, sans donner de sens)."
+      - "L'élève propose une interprétation appuyée sur un élément observé et sur le contexte."
+      - "L'élève explique la différence : la description se vérifie, l'interprétation propose un sens."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre décrire, analyser et
+      interpréter une œuvre, et comment tu justifies ton avis personnel.

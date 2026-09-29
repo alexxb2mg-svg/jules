@@ -1,0 +1,132 @@
+notion: relations-parente-classification
+titre: "Parenté entre êtres vivants et classification, y compris Homo sapiens"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Classer des êtres vivants d'après leurs caractères partagés."
+      - "Expliquer la parenté par l'ancêtre commun."
+      - "Placer Homo sapiens dans la classification."
+
+  - type: texte
+    titre: "Classer avec les caractères partagés"
+    contenu: >-
+      Pour classer les êtres vivants, on regarde les **caractères** qu'ils possèdent en commun
+      (squelette, membres, poils, plumes...).
+      On ne classe ni selon ce qui leur manque, ni selon leur milieu de vie, ni selon ce qu'ils mangent.
+      Les groupes sont **emboîtés**, comme des poupées russes.
+      Chaque groupe est défini par un caractère partagé par tous ses membres.
+
+  - type: texte
+    titre: "Les grands groupes"
+    contenu: >-
+      - Les **Vertébrés** ont un squelette interne avec une colonne vertébrale.
+      - Parmi eux, les **Tétrapodes** ont en plus quatre membres.
+      - Parmi eux, les **Mammifères** ont en plus des poils et des mamelles.
+      - Parmi eux, les **Primates** ont en plus un pouce opposable et des ongles plats.
+      Les **Oiseaux** sont aussi des Tétrapodes : ils ont des plumes.
+
+  - type: texte
+    titre: "Parenté, ancêtre commun et évolution"
+    contenu: >-
+      Plus deux espèces partagent de caractères, plus elles sont **proches parentes**.
+      Ces caractères ont été hérités d'un **ancêtre commun**.
+      Deux espèces proches ont un ancêtre commun récent. Deux espèces éloignées ont un ancêtre commun plus ancien.
+      On représente ces relations par un **arbre de parenté** : chaque embranchement correspond à un ancêtre commun.
+
+  - type: texte
+    titre: "Homo sapiens"
+    contenu: >-
+      Homo sapiens (l'être humain) est un Vertébré, un Tétrapode, un Mammifère et un Primate.
+      Ses plus proches parents actuels sont le chimpanzé et le bonobo.
+      L'être humain ne descend pas du chimpanzé : ils ont un ancêtre commun,
+      qui vivait il y a plusieurs millions d'années.
+      Depuis, chacun a évolué de son côté.
+
+  - type: exemple
+    enonce: >-
+      Le pigeon a des plumes, une colonne vertébrale et quatre membres (deux pattes et deux ailes).
+      Dans quels groupes le classe-t-on ?
+    etapes:
+      - "Il a une colonne vertébrale : c'est un Vertébré."
+      - "Il a quatre membres : c'est un Tétrapode."
+      - "Il a des plumes : c'est un Oiseau. Il n'a ni poils ni mamelles : ce n'est pas un Mammifère."
+      - "On classe avec ce que l'animal possède, pas avec son milieu de vie."
+
+  - type: exercice
+    enonce: "Pour ranger des animaux dans un même groupe, sur quoi se fonde-t-on ?"
+    forme: qcm
+    choix:
+      - "Sur les caractères qu'ils possèdent en commun"
+      - "Sur le milieu où ils vivent"
+      - "Sur ce qu'ils mangent"
+    reponse: 0
+    indices:
+      - "La baleine vit dans l'eau comme la truite, mais elle a des mamelles."
+      - "Un groupe se définit par ce que tous ses membres possèdent."
+    explication: "On classe d'après les caractères possédés en commun, car ils sont hérités d'un ancêtre commun. Le milieu de vie ou le régime alimentaire ne disent rien de la parenté."
+
+  - type: exercice
+    enonce: "L'être humain et le chimpanzé descendent tous les deux d'une même espèce disparue. Comment appelle-t-on cette espèce par rapport à eux ?"
+    forme: reponse_courte
+    reponse: "un ancêtre commun"
+    reponses_acceptees: ["ancêtre commun", "un ancêtre commun", "l'ancêtre commun", "ancetre commun", "un ancetre commun", "le dernier ancêtre commun", "dernier ancêtre commun"]
+    indices:
+      - "Pense à tes cousins : vous avez des grands-parents en commun."
+      - "Le premier mot commence par « an » et désigne celui dont on descend."
+    explication: "C'est leur ancêtre commun : une espèce disparue, qui vivait il y a plusieurs millions d'années, dont descendent à la fois l'être humain et le chimpanzé."
+
+  - type: exercice
+    enonce: >-
+      Document (tableau décrit en texte, fictif) : caractère 1, colonne vertébrale (saumon, grenouille,
+      chat, humain) ; caractère 2, quatre membres (grenouille, chat, humain) ; caractère 3, poils et
+      mamelles (chat, humain). Combien de ces caractères l'humain et le chat ont-ils en commun ?
+      Écris seulement le nombre.
+    forme: nombre
+    reponse: 3
+    tolerance: 0
+    indices:
+      - "Pour chaque caractère, regarde si l'humain ET le chat sont dans la liste."
+      - "Coche les caractères où les deux apparaissent, puis compte les coches."
+    explication: "L'humain et le chat figurent dans les trois listes : colonne vertébrale, quatre membres, poils et mamelles. Ils partagent 3 caractères."
+
+  - type: exercice
+    enonce: >-
+      Même document. L'humain partage 1 caractère avec le saumon, 2 avec la grenouille et 3 avec le chat.
+      Lequel de ces animaux est le plus proche parent de l'humain ?
+    forme: qcm
+    choix:
+      - "Le saumon"
+      - "La grenouille"
+      - "Le chat"
+    reponse: 2
+    indices:
+      - "Plus deux espèces partagent de caractères, plus elles sont proches parentes."
+      - "Cherche le plus grand des trois nombres."
+    explication: "Le chat partage le plus de caractères avec l'humain (3, contre 2 et 1). Il a donc l'ancêtre commun le plus récent avec l'humain : c'est le plus proche parent."
+
+  - type: question_ouverte
+    question: >-
+      Un élève affirme : « L'homme descend du chimpanzé, puisqu'ils se ressemblent beaucoup. »
+      Corrige cette affirmation en utilisant les mots caractères partagés et ancêtre commun.
+    indices:
+      - "Tes cousins te ressemblent, mais tu ne descends pas d'eux."
+      - "D'où viennent les caractères que l'humain et le chimpanzé partagent ?"
+    criteres:
+      - "L'élève dit que l'humain et le chimpanzé partagent beaucoup de caractères, donc qu'ils sont proches parents."
+      - "L'élève explique que ces caractères sont hérités d'un ancêtre commun, et que l'humain ne descend pas du chimpanzé : chacun a évolué de son côté."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases : comment on classe les êtres vivants, ce qu'est un ancêtre commun,
+      et dans quels groupes on place Homo sapiens.

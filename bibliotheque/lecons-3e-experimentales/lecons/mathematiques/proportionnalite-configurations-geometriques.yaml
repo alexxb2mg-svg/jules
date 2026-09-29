@@ -1,0 +1,158 @@
+notion: proportionnalite-configurations-geometriques
+titre: "Agrandissement, réduction, triangles semblables"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer une longueur avec un rapport d'agrandissement ou de réduction, ou avec une échelle."
+      - "Reconnaître des triangles semblables et utiliser la proportionnalité de leurs côtés."
+      - "Savoir comment les longueurs et les aires changent quand on agrandit ou réduit."
+
+  - type: texte
+    titre: "Agrandissement, réduction, échelle"
+    contenu: >-
+      Quand on agrandit ou réduit une figure avec un rapport **k**, toutes les longueurs
+      sont **multipliées par k**. Les angles ne changent pas.
+
+
+      - k > 1 : **agrandissement**. 0 < k < 1 : **réduction**.
+
+      - Calcul de k : **k = longueur de l'image ÷ longueur de départ**.
+
+      - Une échelle 1/200 signifie : 1 cm sur le plan pour 200 cm en vrai.
+      On convertit toujours dans la même unité.
+
+  - type: texte
+    titre: "Triangles semblables, parallèles, ombres"
+    contenu: >-
+      Deux triangles sont **semblables** si leurs angles sont égaux deux à deux.
+      Leurs côtés correspondants sont alors **proportionnels**.
+      Un seul angle égal ne suffit pas. Une même aire non plus.
+
+
+      Dans ABC, avec M sur [AB], N sur [AC] et (MN) parallèle à (BC) :
+      **AM/AB = AN/AC = MN/BC**. Le triangle AMN est une réduction de ABC.
+
+
+      Au même moment, un objet et son ombre forment des triangles semblables :
+      on trouve une hauteur avec une ombre.
+
+  - type: texte
+    titre: "Les aires et l'homothétie"
+    contenu: >-
+      Si les longueurs sont multipliées par **k**, les aires sont multipliées par **k²**.
+
+
+      Une homothétie de rapport k agrandit ou réduit aussi les longueurs d'un facteur k
+      (au signe près). Elle donne une figure de même forme.
+
+
+      Erreur classique : on **multiplie** par le même nombre, on n'ajoute pas la même longueur.
+
+  - type: exemple
+    enonce: >-
+      Une maquette de voilier est à l'échelle 1/40. Le mât de la maquette mesure 45 cm.
+      Quelle est la hauteur réelle du mât, en mètres ?
+    etapes:
+      - "1 cm sur la maquette représente 40 cm en vrai."
+      - "Hauteur réelle : 45 × 40 = 1 800 cm."
+      - "Conversion : 1 800 cm = 18 m."
+      - "Vérification : le vrai mât est plus grand que la maquette, c'est cohérent."
+
+  - type: exercice
+    enonce: "Sur une carte à l'échelle 1/50 000, deux villes sont distantes de 6 cm. Quelle est la distance réelle, en km ?"
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    unite: km
+    indices:
+      - "Que représente 1 cm sur cette carte, en vrai ?"
+      - "Multiplie 6 par 50 000 : tu obtiens des centimètres."
+      - "Convertis : 100 000 cm font 1 km."
+    explication: "6 × 50 000 = 300 000 cm = 3 000 m = 3 km."
+
+  - type: exercice
+    enonce: >-
+      Le triangle ABC a des côtés de 4 cm, 6 cm et 8 cm. Le triangle DEF lui est semblable et son
+      plus grand côté mesure 20 cm. Combien mesure son plus petit côté, en cm ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Quels côtés se correspondent ? Le plus grand avec le plus grand."
+      - "Calcule le rapport k : plus grand côté de DEF ÷ plus grand côté de ABC."
+      - "Multiplie le plus petit côté de ABC par ce rapport."
+    explication: "k = 20 ÷ 8 = 2,5. Le plus petit côté de DEF mesure 4 × 2,5 = 10 cm."
+
+  - type: exercice
+    enonce: "Un rectangle est agrandi avec un rapport 3. Par combien son aire est-elle multipliée ?"
+    forme: qcm
+    choix:
+      - "par 3"
+      - "par 6"
+      - "par 9"
+      - "par 27"
+    reponse: 2
+    indices:
+      - "La longueur et la largeur sont toutes les deux multipliées par 3."
+      - "L'aire est un produit de deux longueurs."
+    explication: "Longueur et largeur sont multipliées par 3, donc l'aire est multipliée par 3 × 3 = 9 (c'est k²)."
+
+  - type: exercice
+    enonce: >-
+      Au même moment, un bâton vertical de 2 m a une ombre de 1,6 m. Une tour a une ombre de 24 m.
+      Les rayons du soleil sont parallèles : les triangles sont semblables. Quelle est la hauteur de la tour, en m ?
+    forme: nombre
+    reponse: 30
+    tolerance: 0.01
+    unite: m
+    indices:
+      - "Par combien faut-il multiplier l'ombre du bâton pour obtenir l'ombre de la tour ?"
+      - "Calcule le rapport k : ombre de la tour ÷ ombre du bâton."
+      - "Multiplie la hauteur du bâton par ce rapport."
+    explication: "k = 24 ÷ 1,6 = 15. Hauteur de la tour : 2 × 15 = 30 m."
+
+  - type: exercice
+    enonce: >-
+      Dans le triangle ABC, M est sur [AB], N est sur [AC] et (MN) est parallèle à (BC).
+      On donne AM = 6 cm, AB = 9 cm et BC = 12 cm. L'aire du triangle ABC est 54 cm².
+      Calcule l'aire du triangle AMN, en cm².
+    forme: nombre
+    reponse: 24
+    tolerance: 0.01
+    unite: cm²
+    indices:
+      - "AMN est une réduction de ABC. Quel est le rapport k ? Il utilise AM et AB."
+      - "k = 6 ÷ 9. Les aires sont multipliées par k², pas par k."
+      - "Simplifie k, mets-le au carré, puis multiplie l'aire de ABC par ce nombre."
+    explication: "k = 6/9 = 2/3. k² = 4/9. Aire de AMN = 54 × 4/9 = 24 cm²."
+
+  - type: question_ouverte
+    question: >-
+      Deux triangles ont chacun un angle de 40°. Peut-on dire qu'ils sont semblables ? Explique.
+      Puis dis ce qu'il faudrait vérifier pour être sûr.
+    indices:
+      - "Deux triangles semblables ont la même forme. Un seul angle suffit-il à fixer la forme ?"
+      - "Pense aux angles deux à deux, ou aux côtés proportionnels."
+    criteres:
+      - "L'élève répond que non : un seul angle égal ne suffit pas."
+      - "L'élève dit qu'il faut deux angles égaux (donc les trois) ou des côtés correspondants proportionnels."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, comment on passe d'une longueur d'une figure à celle de son agrandissement,
+      et ce qui arrive aux aires.

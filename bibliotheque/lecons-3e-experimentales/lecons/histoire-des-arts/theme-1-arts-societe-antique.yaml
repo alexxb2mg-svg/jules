@@ -1,0 +1,183 @@
+notion: theme-1-arts-societe-antique
+titre: "Arts et société à l'époque antique et au haut Moyen Âge"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître et situer quelques œuvres grecques, romaines et du haut Moyen Âge."
+      - "Décrire l'architecture antique avec le bon vocabulaire (ordres, fronton, frise)."
+      - "Expliquer à quoi servait une œuvre et comparer la ville antique et la ville médiévale."
+
+  - type: texte
+    titre: "L'architecture grecque : le Parthénon"
+    contenu: >-
+      Dans l'Antiquité, l'art sert la cité, les dieux et le pouvoir.
+
+
+      En Grèce, le temple est la maison d'un dieu. Le **Parthénon** est sur l'**Acropole** d'Athènes.
+      Il est construit au Ve siècle avant J.-C. (447-432 av. J.-C.) et dédié à la déesse **Athéna**.
+
+
+      Les colonnes suivent trois **ordres** :
+
+
+      | Ordre | Chapiteau |
+
+      |---|---|
+
+      | **Dorique** | simple, sans base (le Parthénon) |
+
+      | **Ionique** | volutes, en spirale |
+
+      | **Corinthien** | feuilles d'acanthe |
+
+
+      Les frontons et les frises sculptés illustrent des **mythes fondateurs** : ils racontent l'origine
+      des dieux et de la cité, comme la naissance d'Athéna.
+
+  - type: texte
+    titre: "La personne humaine, de la Grèce à Rome"
+    contenu: >-
+      Les sculpteurs grecs cherchent un corps humain **idéal**, équilibré et en mouvement.
+
+
+      Exemple : le **Discobole** de Myron (vers 450 av. J.-C.), connu par des copies romaines en marbre.
+
+
+      Les Romains aiment aussi le **portrait réaliste** : les bustes d'empereurs montrent un visage précis
+      pour affirmer le pouvoir.
+
+
+      Rome reprend les modèles grecs et construit pour la vie de la cité :
+
+
+      - amphithéâtres pour les spectacles (le **Colisée**, inauguré en 80 après J.-C.) ;
+
+      - aqueducs (le **pont du Gard**, Ier siècle après J.-C.) ;
+
+      - thermes et forums (les places publiques) ;
+
+      - **mosaïques** : des images faites de petits cubes colorés.
+
+  - type: texte
+    titre: "Le haut Moyen Âge et la ville"
+    contenu: >-
+      Au haut Moyen Âge, l'art devient surtout chrétien.
+
+
+      À Ravenne (Italie), l'église Saint-Vital (VIe siècle) est décorée de mosaïques à fond d'or. Elles montrent
+      l'empereur byzantin **Justinien** et l'impératrice Théodora, vus de face et immobiles : elles unissent
+      pouvoir et religion.
+
+
+      | | Ville antique | Ville médiévale |
+
+      |---|---|---|
+
+      | **Organisation** | autour du forum, rues droites | derrière des remparts |
+
+      | **Lieux importants** | forum, thermes, spectacles | l'église, cœur de la ville |
+
+  - type: exemple
+    enonce: >-
+      Présente le Discobole de Myron : époque, matériau connu, forme et fonction possible.
+    etapes:
+      - "Situer : le Discobole est une œuvre grecque de l'Antiquité, vers 450 av. J.-C., du sculpteur Myron."
+      - "Matériau : nous le connaissons par des copies romaines en marbre."
+      - "Forme : il montre un corps idéal, équilibré et en mouvement."
+      - "Sens : les Grecs cherchent à représenter un corps humain parfait."
+
+  - type: exercice
+    enonce: "Les colonnes du Parthénon n'ont pas de base et leur chapiteau est très simple. À quel ordre appartiennent-elles ?"
+    forme: qcm
+    choix:
+      - "L'ordre dorique"
+      - "L'ordre ionique"
+      - "L'ordre corinthien"
+    reponse: 0
+    indices:
+      - "Parmi les trois ordres, un seul a un chapiteau sans décor."
+      - "Les volutes appartiennent à un ordre, les feuilles d'acanthe à un autre."
+    explication: "Le Parthénon est d'ordre dorique : pas de base, chapiteau simple. L'ordre ionique a des volutes, l'ordre corinthien des feuilles d'acanthe."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une image faite de petits cubes de pierre, de verre ou de terre cuite colorés, collés les uns à côté des autres ?"
+    forme: reponse_courte
+    reponse: "mosaïque"
+    reponses_acceptees:
+      - "mosaïque"
+      - "mosaique"
+      - "une mosaïque"
+      - "la mosaïque"
+      - "mosaïques"
+      - "des mosaïques"
+    indices:
+      - "Pense aux sols des villas romaines et aux murs dorés des églises de Ravenne."
+      - "Le mot commence par « mos- »."
+    explication: "C'est une mosaïque, très utilisée par les Romains et dans les églises byzantines."
+
+  - type: exercice
+    enonce: "En quelle année après J.-C. le Colisée de Rome est-il inauguré ?"
+    forme: nombre
+    reponse: 80
+    tolerance: 0
+    indices:
+      - "Le Colisée est romain, il date du Ier siècle après J.-C."
+      - "Il est inauguré dans la deuxième moitié du Ier siècle : l'année est un nombre à deux chiffres, qui finit par zéro."
+    explication: "Le Colisée, un amphithéâtre romain, est inauguré en 80 après J.-C. Il est donc bien plus récent que le Parthénon, construit au Ve siècle avant J.-C."
+
+  - type: exercice
+    enonce: "À quoi servait le Colisée de Rome ?"
+    forme: qcm
+    choix:
+      - "Offrir des spectacles au peuple, comme des combats de gladiateurs"
+      - "Honorer la déesse Athéna"
+      - "Conduire l'eau jusqu'à la ville"
+      - "Faire entrer la lumière dans une église"
+    reponse: 0
+    indices:
+      - "Le Colisée est un amphithéâtre."
+      - "Élimine les fonctions d'autres monuments : le temple grec, l'aqueduc."
+    explication: "Le Colisée est un amphithéâtre : il accueillait des spectacles, comme des combats de gladiateurs. Le temple honore un dieu, l'aqueduc conduit l'eau."
+
+  - type: exercice
+    enonce: >-
+      Dans l'église Saint-Vital de Ravenne (VIe siècle), une mosaïque à fond d'or montre l'empereur Justinien
+      au centre, de face et immobile. Que veut montrer cette image ?
+    forme: qcm
+    choix:
+      - "L'empereur unit le pouvoir politique et la religion chrétienne."
+      - "L'empereur est un simple soldat parmi les autres."
+      - "L'empereur honore une déesse grecque."
+      - "L'empereur invite le peuple à un spectacle de gladiateurs."
+    reponse: 0
+    indices:
+      - "Regarde où est placé l'empereur : au centre, de face, sur un fond d'or."
+      - "L'image est dans une église : quelle religion domine au haut Moyen Âge ?"
+    explication: "La mosaïque de Ravenne est dans une église chrétienne de l'Empire byzantin. Elle montre l'empereur au centre, comme un chef qui unit pouvoir et religion."
+
+  - type: question_ouverte
+    question: >-
+      Compare le Parthénon et le Colisée : civilisation, époque et fonction de chaque monument.
+    indices:
+      - "Le Parthénon est grec, le Colisée est romain. Qui est le plus ancien ?"
+      - "Un monument est le temple d'une déesse, l'autre sert aux spectacles."
+    criteres:
+      - "L'élève situe chaque monument (Grèce antique et Ve siècle av. J.-C. pour le Parthénon ; Rome et Ier siècle apr. J.-C. pour le Colisée)."
+      - "L'élève donne la fonction du Parthénon (temple d'Athéna) et celle du Colisée (spectacles)."
+      - "L'élève fait la différence entre avant et après J.-C."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, comment on reconnaît un temple grec, ce que Rome construit pour la vie de la
+      cité, et un changement entre la ville antique et la ville médiévale.

@@ -1,0 +1,134 @@
+notion: theme-6-belle-epoque-annees-folles
+titre: 'De la Belle Époque aux « années folles » : l''ère des avant-gardes (1870-1930)'
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître un tableau impressionniste, expressionniste ou cubiste et donner son trait principal.
+  - Situer la naissance du cinéma (1895) et citer d'autres nouveautés (photographie, phonographe).
+  - Expliquer le primitivisme et citer un exemple de spectacle ou de musique nouveaux des années 1920.
+- type: texte
+  titre: Paysages du réel, paysages intérieurs
+  contenu: |-
+    De 1870 à 1930, les artistes rompent avec les règles de l'Académie : ce sont les **avant-gardes**.
+    - Impressionnisme : peindre en plein air, par petites touches, pour saisir la lumière d'un instant. Claude Monet, Impression, soleil levant (1872) ; exposition en 1874.
+    - Paysages intérieurs : exprimer ses émotions. Van Gogh, La Nuit étoilée (1889) ; Munch, Le Cri (1893), précurseur de l'expressionnisme.
+    - Art nouveau (vers 1890-1910) : lignes courbes, motifs de plantes. Hector Guimard, entrées du métro de Paris (1900).
+- type: texte
+  titre: Un nouveau rapport au réel
+  contenu: |-
+    De nouvelles techniques changent notre façon de voir et d'entendre.
+    - La photographie se répand.
+    - Le 28 décembre 1895, à Paris, les frères Lumière organisent une des premières projections publiques et payantes du cinématographe.
+    - Georges Méliès invente des effets spéciaux avec Le Voyage dans la Lune (1902).
+    - Le phonographe permet d'enregistrer la musique et de l'écouter chez soi.
+- type: texte
+  titre: 'La recherche des racines : primitivisme, cubisme, Dada, surréalisme'
+  contenu: |-
+    Des artistes s'inspirent d'arts venus d'ailleurs (masques d'Afrique, arts d'Océanie) : c'est le **primitivisme**.
+    - Picasso : Les Demoiselles d'Avignon (1907). Avec Braque, il invente le **cubisme** : formes géométriques, plusieurs angles à la fois.
+    - Dada (1916) se moque de l'art et de la société. En 1917, Marcel Duchamp propose un urinoir signé, Fontaine.
+    - André Breton publie le Manifeste du surréalisme en 1924 : rêves et inconscient.
+- type: texte
+  titre: Métropoles et spectacles nouveaux
+  contenu: |-
+    Paris est la capitale des spectacles.
+    - 1913 : Le Sacre du printemps de Stravinsky, dansé par les Ballets russes, fait scandale.
+    - Années 1920, les « années folles » : le jazz, venu des États-Unis, triomphe.
+    - Joséphine Baker devient une vedette du music-hall.
+- type: exemple
+  enonce: 'La Nuit étoilée (1889) de Van Gogh : explique en quelques phrases à quelle idée du cours elle se rattache.'
+  etapes:
+  - Le tableau date de 1889 et son auteur est Vincent van Gogh.
+  - 'Le peintre n''imite pas seulement le paysage : il exprime ses émotions. C''est un paysage intérieur.'
+  - Ce n'est pas le même trait que l'impressionnisme, qui cherche la lumière d'un instant.
+- type: exercice
+  enonce: Quelle musique née aux États-Unis, très rythmée et pleine d'improvisation, triomphe à Paris dans les années 1920 ?
+  forme: reponse_courte
+  reponse: jazz
+  reponses_acceptees:
+  - jazz
+  - le jazz
+  - Jazz
+  indices:
+  - Joséphine Baker en est l'une des grandes figures sur scène à Paris.
+  - C'est une musique jouée par des orchestres, avec des solos improvisés.
+  - Le mot compte quatre lettres et commence par « j ».
+  explication: Le jazz, venu des États-Unis, triomphe à Paris dans les années 1920.
+- type: exercice
+  enonce: Le 28 décembre 1895, à Paris, les frères Lumière organisent une séance publique et payante. Qu'est-ce qui est présenté ?
+  forme: qcm
+  choix:
+  - Un concert de jazz enregistré
+  - Une exposition de tableaux impressionnistes
+  - Des films projetés grâce au cinématographe
+  - Une émission de télévision
+  reponse: 2
+  indices:
+  - Les spectateurs voient, sur un écran, des images qui bougent. De quel art s'agit-il ?
+  - Élimine ce qui n'existe pas encore en 1895, puis ce qui n'a rien à voir avec des images projetées.
+  explication: 'Les frères Lumière projettent des films avec le cinématographe : c''est l''une des premières projections publiques payantes. C''est la naissance du cinéma.'
+- type: exercice
+  enonce: Quel mouvement, inventé par Picasso et Braque vers 1907-1908, décompose les objets en formes géométriques vues sous plusieurs angles à la fois ?
+  forme: reponse_courte
+  reponse: cubisme
+  reponses_acceptees:
+  - cubisme
+  - le cubisme
+  - cubiste
+  - Cubisme
+  indices:
+  - Le nom du mouvement vient d'une forme géométrique à six faces carrées.
+  - Cette forme s'appelle un cube. Transforme ce mot en nom de mouvement.
+  - Ce n'est ni l'impressionnisme (la lumière) ni le surréalisme (les rêves).
+  explication: 'Le cubisme : Picasso et Braque décomposent les objets en formes géométriques et les montrent sous plusieurs angles à la fois.'
+- type: exercice
+  enonce: Dans Les Demoiselles d'Avignon (1907), Picasso peint des visages comme des masques, aux traits simplifiés. Quel mot du cours désigne l'intérêt des artistes pour les arts d'Afrique et d'Océanie ?
+  forme: qcm
+  choix:
+  - L'impressionnisme
+  - L'Art nouveau
+  - Le surréalisme
+  - Le primitivisme
+  reponse: 3
+  indices:
+  - Ce mot désigne un intérêt pour des arts venus d'ailleurs, jugés alors « primitifs ».
+  - Élimine les mouvements qui parlent de lumière, de plantes ou de rêves.
+  explication: Le primitivisme est l'intérêt des artistes européens pour des arts venus d'ailleurs, comme les masques d'Afrique ou d'Océanie. Les Demoiselles d'Avignon (1907) en sont un exemple.
+- type: exercice
+  enonce: Quel ordre est correct, du plus ancien au plus récent ?
+  forme: qcm
+  choix:
+  - Monet, Impression, soleil levant (1872) ; projection des frères Lumière (1895) ; Les Demoiselles d'Avignon (1907) ; Manifeste du surréalisme (1924)
+  - Projection des frères Lumière ; Monet ; Manifeste du surréalisme ; Les Demoiselles d'Avignon
+  - Les Demoiselles d'Avignon ; Monet ; Manifeste du surréalisme ; projection des frères Lumière
+  - Manifeste du surréalisme ; Les Demoiselles d'Avignon ; projection des frères Lumière ; Monet
+  reponse: 0
+  indices:
+  - 'Donne une décennie à chaque événement : années 1870, 1890, 1900, 1920.'
+  - 'Le surréalisme date des années 1920 : où faut-il le placer ?'
+  - Monet peint son tableau au début des années 1870, et le cinéma naît en 1895.
+  explication: Impression, soleil levant (1872), projection des Lumière (1895), Les Demoiselles d'Avignon (1907), Manifeste du surréalisme (1924).
+- type: question_ouverte
+  question: Explique en quelques phrases la différence entre l'impressionnisme et le cubisme. Donne un tableau et un peintre pour chacun.
+  indices:
+  - 'Impressionnisme : pense à la lumière, aux petites touches, à l''instant.'
+  - 'Cubisme : pense aux formes géométriques et aux plusieurs angles de vue.'
+  criteres:
+  - L'élève explique l'impressionnisme (lumière d'un instant, petites touches, exemple Monet).
+  - L'élève explique le cubisme (formes géométriques, plusieurs angles, exemple Picasso ou Braque).
+  - L'élève met clairement les deux mouvements en contraste.
+- type: synthese
+  consigne: Écris, en deux ou trois phrases, trois nouveautés de la Belle Époque et des années folles (une technique, un mouvement artistique, un spectacle) avec leur date ou leur décennie.

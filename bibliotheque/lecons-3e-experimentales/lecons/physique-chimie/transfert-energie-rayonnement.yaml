@@ -1,0 +1,140 @@
+notion: transfert-energie-rayonnement
+titre: "Transfert d'énergie par rayonnement, effet de serre"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Associer l'émission et l'absorption d'un rayonnement à un transfert d'énergie."
+      - "Dire en quelle forme l'énergie reçue est convertie."
+      - "Expliquer l'effet de serre avec l'absorption du rayonnement terrestre par les gaz à effet de serre."
+
+  - type: texte
+    titre: "Émettre et absorber un rayonnement"
+    contenu: |-
+      Un **rayonnement** (lumière visible, infrarouge, ultraviolet…) transporte de l'énergie.
+      Il n'a pas besoin de matière : il traverse le vide entre le Soleil et la Terre.
+      - **Émettre** : l'objet cède de l'énergie.
+      - **Absorber** : l'objet reçoit de l'énergie.
+      Le Soleil émet surtout de la lumière visible. Un corps tiède, comme le sol, émet un rayonnement **infrarouge**, invisible pour nos yeux.
+
+  - type: texte
+    titre: "Que devient l'énergie absorbée ?"
+    contenu: |-
+      L'énergie reçue est convertie :
+      - en énergie **thermique** : l'objet s'échauffe (une voiture au soleil) ;
+      - en énergie **électrique** : un panneau photovoltaïque ;
+      - en énergie **chimique** : la photosynthèse d'une plante.
+      Émettre ou absorber un rayonnement, c'est transférer de l'énergie sans contact et sans matière entre les deux.
+
+  - type: texte
+    titre: "L'effet de serre, étape par étape"
+    contenu: |-
+      1. Le Soleil émet un rayonnement, surtout visible. Le sol l'absorbe et s'échauffe.
+      2. Le sol chaud émet un rayonnement infrarouge vers l'atmosphère.
+      3. Les **gaz à effet de serre** (vapeur d'eau, CO₂, méthane CH₄, N₂O) en absorbent une partie.
+      4. Ils réémettent de l'énergie dans toutes les directions, dont vers le sol, qui se réchauffe davantage.
+      Le diazote N₂ et le dioxygène O₂ ne sont pas des gaz à effet de serre.
+
+  - type: texte
+    titre: "Un effet naturel, renforcé par les humains"
+    contenu: |-
+      L'effet de serre est **naturel et utile** : sans lui, la température moyenne de la Terre serait d'environ −18 °C, au lieu d'environ +15 °C.
+      Les combustions de charbon, de pétrole et de gaz ajoutent du CO₂ dans l'air.
+      L'effet de serre se renforce et la température moyenne augmente : c'est le réchauffement climatique.
+
+  - type: exemple
+    enonce: "Une plante verte reçoit la lumière du Soleil. Qui émet, qui absorbe, et en quelle forme l'énergie est-elle convertie ?"
+    etapes:
+      - "Le Soleil émet un rayonnement : il cède de l'énergie."
+      - "La plante absorbe ce rayonnement : elle reçoit de l'énergie."
+      - "Grâce à la photosynthèse, cette énergie est convertie en énergie chimique."
+
+  - type: exercice
+    enonce: "Le sol tiède émet un rayonnement invisible pour nos yeux. Comment s'appelle ce rayonnement ?"
+    forme: reponse_courte
+    reponse: "infrarouge"
+    reponses_acceptees: ["infrarouge", "infrarouges", "l'infrarouge", "les infrarouges", "rayonnement infrarouge", "un rayonnement infrarouge", "IR"]
+    indices:
+      - "Ce n'est pas de la lumière visible."
+      - "Le nom commence par « infra »."
+    explication: "Un corps tiède, comme le sol, émet un rayonnement infrarouge, invisible pour nos yeux."
+
+  - type: exercice
+    enonce: "Parmi ces gaz, lequel est un gaz à effet de serre ?"
+    forme: qcm
+    choix:
+      - "Le dioxygène (O₂)"
+      - "Le diazote (N₂)"
+      - "Le dioxyde de carbone (CO₂)"
+    reponse: 2
+    indices:
+      - "Ce gaz est ajouté dans l'air par les combustions de charbon, de pétrole et de gaz."
+      - "O₂ et N₂ forment presque tout l'air, mais ils n'absorbent pas le rayonnement infrarouge."
+    explication: "Le CO₂ est un gaz à effet de serre. Le O₂ et le N₂ n'en sont pas."
+
+  - type: exercice
+    enonce: "Un panneau photovoltaïque absorbe la lumière du Soleil. En quelle forme d'énergie cette énergie est-elle convertie ?"
+    forme: qcm
+    choix:
+      - "En énergie chimique"
+      - "En énergie électrique"
+      - "En énergie nucléaire"
+    reponse: 1
+    indices:
+      - "Un panneau photovoltaïque sert à produire du courant."
+      - "Relis la liste des conversions : thermique, électrique ou chimique."
+    explication: "Le panneau photovoltaïque convertit l'énergie reçue en énergie électrique."
+
+  - type: exercice
+    enonce: >-
+      Sans effet de serre, la température moyenne de la Terre serait d'environ −18 °C. Avec l'effet
+      de serre naturel, elle est d'environ +15 °C. De combien de degrés l'effet de serre
+      réchauffe-t-il la Terre ?
+    forme: nombre
+    reponse: 33
+    tolerance: 0.01
+    unite: "°C"
+    indices:
+      - "On cherche l'écart entre deux températures."
+      - "Attention : −18 est négatif. Pour passer de −18 à 0, il faut monter de 18 degrés."
+    explication: "15 − (−18) = 15 + 18 = 33. L'effet de serre naturel réchauffe la Terre d'environ 33 °C."
+
+  - type: exercice
+    enonce: "Quelle phrase explique le mieux le renforcement de l'effet de serre par les activités humaines ?"
+    forme: qcm
+    choix:
+      - "Les combustions ajoutent du CO₂, qui absorbe davantage de rayonnement infrarouge émis par la Terre."
+      - "Les combustions ajoutent du CO₂, qui absorbe la lumière visible du Soleil avant qu'elle atteigne le sol."
+      - "Les combustions retirent du dioxygène, donc il fait plus chaud."
+    reponse: 0
+    indices:
+      - "Quel rayonnement les gaz à effet de serre absorbent-ils surtout ?"
+      - "C'est le rayonnement émis par le sol chaud, pas celui qui vient du Soleil."
+    explication: "Plus de CO₂ dans l'air : plus de rayonnement infrarouge émis par la Terre est absorbé, plus d'énergie revient vers le sol, et la température moyenne augmente."
+
+  - type: question_ouverte
+    question: >-
+      Explique l'effet de serre en suivant l'énergie : du Soleil jusqu'au sol, puis du sol
+      jusqu'aux gaz de l'atmosphère, puis le retour vers le sol.
+    indices:
+      - "Commence par : qui émet, qui absorbe ?"
+      - "Pense au rayonnement que le sol chaud émet à son tour."
+    criteres:
+      - "L'élève dit que le sol absorbe le rayonnement du Soleil et s'échauffe."
+      - "L'élève dit que le sol émet un rayonnement infrarouge, en partie absorbé par les gaz à effet de serre."
+      - "L'élève dit qu'une partie de l'énergie est réémise vers le sol, qui se réchauffe davantage."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases la différence entre émettre et absorber un rayonnement, et
+      pourquoi le CO₂ ajouté par les humains renforce l'effet de serre.

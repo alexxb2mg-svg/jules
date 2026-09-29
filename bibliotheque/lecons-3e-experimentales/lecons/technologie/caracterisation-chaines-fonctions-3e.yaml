@@ -1,0 +1,183 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: caracterisation-chaines-fonctions-3e
+titre: Décrire un objet technique par ses deux chaînes, et suivre ses données
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Ranger les composants d'un objet dans les fonctions de la chaîne d'information et de la chaîne d'énergie.
+  - Expliquer ce que veut dire numériser une donnée, et convertir des octets en bits.
+  - Décrire le trajet d'une donnée numérisée sur Internet, en paquets.
+- type: texte
+  titre: Les deux chaînes, par leurs fonctions
+  contenu: |-
+    Pour décrire un objet technique, on décrit **deux chaînes**.
+
+    **Chaîne d'information** (3 fonctions) :
+    - **acquérir** : capteurs, boutons ;
+    - **traiter** : microcontrôleur et son programme ;
+    - **communiquer** : afficheur, voyant, ordre envoyé, liaison sans fil.
+
+    **Chaîne d'énergie** (4 fonctions) :
+    - **alimenter** : batterie, réseau électrique ;
+    - **distribuer** : relais, variateur ;
+    - **convertir** : moteur, lampe ;
+    - **transmettre** : engrenages, courroie, pignon et crémaillère.
+- type: texte
+  titre: Le lien entre les deux chaînes
+  contenu: |-
+    La chaîne d'information **envoie ses ordres** au distributeur de la chaîne d'énergie.
+
+    Des capteurs **surveillent** ce que fait l'objet (fin de course, vitesse).
+
+    Un moteur reçoit un ordre du programme. Mais il reste un **convertisseur** : il est dans la chaîne d'énergie.
+
+    Ce modèle sert à **ajouter une fonctionnalité** (un capteur et quelques lignes de programme).
+    Il sert aussi à **réparer** : on cherche quel bloc ne remplit plus sa fonction.
+- type: texte
+  titre: Numériser une donnée
+  contenu: |-
+    **Numériser**, c'est transformer une information en **nombres écrits en binaire** : des 0 et des 1 (les **bits**).
+
+    **8 bits = 1 octet.**
+
+    - Un son est mesuré très souvent : chaque mesure devient un nombre.
+    - Une image est découpée en petits points, les **pixels** : la couleur de chacun est codée par des nombres.
+    - Une mesure de capteur devient un nombre grâce au microcontrôleur.
+
+    Ensuite, les données sont **stockées** dans une mémoire et **mises en forme** dans un format de fichier :
+
+    | Donnée | Format |
+    |---|---|
+    | Image | JPEG |
+    | Son | MP3 |
+    | Vidéo | MP4 |
+    | Tableau | fichier de tableur |
+- type: texte
+  titre: Le trajet d'une donnée sur Internet
+  contenu: |-
+    Les données sont **transmises** par câble ou sans fil (Wi-Fi, Bluetooth).
+
+    Sur Internet :
+    - le fichier est **découpé en paquets** ;
+    - chaque paquet porte l'**adresse IP** de l'expéditeur et celle du destinataire ;
+    - des **routeurs** dirigent les paquets de réseau en réseau ;
+    - les paquets peuvent prendre des chemins différents ;
+    - l'appareil destinataire les **remet dans l'ordre**.
+
+    Le **débit** (en bits par seconde) dit combien de données passent chaque seconde.
+- type: exemple
+  enonce: Caractériser un robot aspirateur connecté et dire comment la carte du logement arrive sur le
+    smartphone.
+  etapes:
+  - 'Chaîne d''information : acquérir (capteurs de distance, contact du pare-chocs, capteur de vide),
+    traiter (microcontrôleur), communiquer (ordres aux moteurs, bip, module Wi-Fi).'
+  - 'Chaîne d''énergie : alimenter (batterie), distribuer (circuit de commande des moteurs), convertir
+    (moteurs des roues et de la brosse), transmettre (engrenages vers les roues).'
+  - La carte du logement est numérisée, stockée en mémoire, envoyée par Wi-Fi à la box.
+  - Elle est ensuite découpée en paquets qui traversent Internet jusqu'au smartphone.
+- type: exercice
+  enonce: Quelle fonction appartient à la chaîne d'énergie ?
+  forme: qcm
+  choix:
+  - Acquérir
+  - Traiter
+  - Convertir
+  - Communiquer
+  reponse: 2
+  indices:
+  - 'La chaîne d''information a trois fonctions : acquérir, traiter, communiquer. Élimine-les.'
+  - Une fonction de la chaîne d'énergie agit sur l'énergie, par exemple en changeant sa forme (un moteur
+    le fait).
+  explication: 'Convertir est dans la chaîne d''énergie : le moteur change la forme de l''énergie. Acquérir,
+    traiter et communiquer sont les trois fonctions de la chaîne d''information.'
+- type: exercice
+  enonce: Comment appelle-t-on la transformation d'un son, d'une image ou d'une mesure en une suite de
+    0 et de 1 qu'un appareil peut stocker ?
+  forme: reponse_courte
+  reponse: la numérisation
+  reponses_acceptees:
+  - numérisation
+  - numerisation
+  - la numérisation
+  - numériser
+  - numeriser
+  - codage binaire
+  - codage numérique
+  indices:
+  - Après cette transformation, l'information n'est plus qu'une suite de nombres.
+  - Quand on passe une photo papier au scanner, on fait cette action. Cherche son nom.
+  explication: 'C''est la numérisation : l''information est transformée en nombres binaires (des 0 et
+    des 1).'
+- type: exercice
+  enonce: Un petit fichier texte fait 250 octets. Combien de bits contient-il ?
+  forme: nombre
+  reponse: 2000
+  tolerance: 0
+  unite: bits
+  indices:
+  - Combien de bits y a-t-il dans un seul octet ?
+  - Multiplie le nombre d'octets par le nombre de bits d'un octet.
+  - Un octet contient 8 bits, donc 2 octets contiennent 16 bits. Continue avec 250 octets.
+  explication: 250 × 8 = 2 000 bits. Il y a plus de bits que d'octets, donc on multiplie.
+- type: exercice
+  enonce: Le moteur d'un portail automatique est commandé par le programme d'une carte. Dans quelle chaîne
+    le range-t-on, et dans quelle fonction ?
+  forme: qcm
+  choix:
+  - Chaîne d'information, fonction traiter
+  - Chaîne d'information, fonction communiquer
+  - Chaîne d'énergie, fonction convertir
+  - Chaîne d'énergie, fonction transmettre
+  reponse: 2
+  indices:
+  - Le moteur reçoit un ordre du programme, mais que fait-il de l'énergie qu'il reçoit ?
+  - 'Un moteur change la forme de l''énergie : il reçoit de l''énergie électrique et fournit un mouvement.'
+  explication: 'Le moteur reçoit un ordre, mais c''est un convertisseur : il est dans la chaîne d''énergie,
+    fonction convertir. Transmettre est le rôle des engrenages ou de la courroie.'
+- type: exercice
+  enonce: Une station météo connectée envoie un fichier de 6 000 octets. Le réseau le découpe en paquets
+    qui contiennent chacun 1 500 octets de données. Combien de paquets faut-il ?
+  forme: nombre
+  reponse: 4
+  tolerance: 0
+  unite: paquets
+  indices:
+  - Quelle opération permet de savoir combien de fois 1 500 octets tiennent dans 6 000 octets ?
+  - Divise la taille du fichier par la taille des données d'un paquet.
+  - Un paquet transporte 1 500 octets, deux paquets en transportent 3 000. Continue d'ajouter des paquets
+    jusqu'à atteindre 6 000 octets.
+  explication: 6 000 ÷ 1 500 = 4, donc 4 paquets. Chaque paquet porte aussi les adresses IP de l'expéditeur
+    et du destinataire.
+- type: question_ouverte
+  question: 'Un store banne connecté se replie tout seul quand un anémomètre mesure un vent trop fort,
+    et prévient l''utilisateur sur son smartphone. Il comprend : le réseau électrique, un anémomètre (capteur
+    de vitesse du vent), un microcontrôleur, un relais, un moteur, un réducteur à engrenages et un module
+    Wi-Fi. Caractérise ses deux chaînes en fonctions et explique comment l''alerte arrive sur le smartphone.'
+  indices:
+  - 'Fais deux listes : la chaîne d''information (acquérir, traiter, communiquer) et la chaîne d''énergie
+    (alimenter, distribuer, convertir, transmettre).'
+  - L'anémomètre acquiert la vitesse du vent et le réseau électrique alimente le store. Place maintenant
+    le microcontrôleur et le relais.
+  - 'Pour l''alerte, suis le message : numérisé, envoyé, découpé, dirigé, reconstitué.'
+  criteres:
+  - 'Chaque composant est dans la bonne fonction : anémomètre (acquérir), microcontrôleur (traiter), module
+    Wi-Fi (communiquer), réseau électrique (alimenter), relais (distribuer), moteur (convertir), réducteur
+    (transmettre).'
+  - 'L''élève montre le lien entre les chaînes : le microcontrôleur compare la vitesse du vent à un seuil
+    et envoie l''ordre au relais.'
+  - 'L''élève décrit le trajet de l''alerte : message numérisé, envoyé par Wi-Fi, découpé en paquets avec
+    des adresses IP et acheminé par Internet jusqu''au smartphone.'
+- type: synthese
+  consigne: 'Avec tes mots, en trois ou quatre phrases : cite les fonctions des deux chaînes, dis ce que
+    veut dire numériser, et explique comment un fichier voyage sur Internet.'

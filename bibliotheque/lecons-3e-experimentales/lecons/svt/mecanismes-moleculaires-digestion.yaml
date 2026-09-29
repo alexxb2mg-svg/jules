@@ -1,0 +1,161 @@
+notion: mecanismes-moleculaires-digestion
+titre: 'Mécanismes moléculaires de la digestion : enzymes et tests'
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de
+    la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve
+    de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Expliquer pourquoi les grosses molécules des aliments doivent être découpées, et par quoi.
+  - Décrire la spécificité des enzymes et l'effet de la température.
+  - Interpréter une expérience de digestion avec un tube témoin et les tests à l'eau iodée et à la liqueur de Fehling.
+- type: texte
+  titre: Découper les grosses molécules
+  contenu: 'Les aliments contiennent de grosses molécules : l''**amidon** (un glucide), les **protéines**, les **lipides**.
+
+    Elles sont trop grosses pour traverser la paroi de l''intestin et passer dans le sang.
+
+
+    Il faut les découper en **petites molécules** : les **nutriments**.
+
+    C''est la **digestion chimique**. Elle est faite par des **enzymes digestives**, contenues dans les sucs digestifs
+    (salive, suc gastrique, suc pancréatique, suc intestinal).
+
+    Une enzyme est une molécule (une protéine) : ce n''est pas un être vivant.'
+- type: texte
+  titre: Une enzyme, une seule tâche
+  contenu: 'Chaque enzyme est **spécifique** : elle n''agit que sur un seul type de molécule.
+
+    - L''**amylase** découpe l''amidon.
+
+    - Les **protéases** découpent les protéines en acides aminés.
+
+    - Les **lipases** découpent les lipides en acides gras et glycérol.
+
+
+    Les fibres (cellulose) ne sont pas découpées par nos enzymes.'
+- type: texte
+  titre: L'effet de la température
+  contenu: 'Une enzyme agit vite à la température du corps, 37 °C.
+
+    Au froid, elle agit très lentement.
+
+    Une forte chaleur (100 °C) la **détruit** : elle ne fonctionne plus, même si on refroidit ensuite.
+
+
+    L''enzyme n''est pas consommée : elle peut découper de nombreuses molécules l''une après l''autre.'
+- type: texte
+  titre: Les tests et le tube témoin
+  contenu: 'Deux tests suivent la digestion de l''amidon :
+
+    - l''**eau iodée** devient **bleu-noir** avec de l''amidon (sinon elle reste jaune-orangé) ;
+
+    - la **liqueur de Fehling**, chauffée, donne un **précipité rouge brique** avec certains sucres comme le glucose.
+
+
+    Dans une expérience, le **tube témoin** est sans enzyme. On ne change qu''un seul facteur à la fois.
+
+    Pour conclure : compare chaque tube au témoin.'
+- type: exemple
+  enonce: On place de l'amidon avec de la salive à 37 °C. Au bout de 20 minutes, l'eau iodée ne devient plus bleu-noir
+    et la liqueur de Fehling chauffée donne un précipité rouge brique. Que s'est-il passé ?
+  etapes:
+  - 'L''eau iodée ne devient plus bleu-noir : l''amidon a disparu.'
+  - 'La liqueur de Fehling donne un précipité rouge brique : un sucre plus petit est apparu.'
+  - 'L''amylase de la salive a découpé l''amidon en petites molécules de sucre : c''est une digestion chimique.'
+- type: exercice
+  enonce: On ajoute de l'eau iodée à de l'amidon. Quelle couleur obtient-on ?
+  forme: qcm
+  choix:
+  - Bleu-noir
+  - Rouge brique
+  - Jaune-orangé
+  - Incolore
+  reponse: 0
+  indices:
+  - L'eau iodée sert à détecter l'amidon.
+  - Sans amidon, elle reste jaune-orangé. Avec de l'amidon, la couleur devient très foncée.
+  explication: L'eau iodée devient bleu-noir en présence d'amidon. Le rouge brique est la couleur du test à la liqueur
+    de Fehling.
+- type: exercice
+  enonce: Quelle enzyme digestive découpe les lipides (les graisses) ? Réponds par un mot.
+  forme: reponse_courte
+  reponse: lipase
+  reponses_acceptees:
+  - lipase
+  - lipases
+  - la lipase
+  - les lipases
+  - une lipase
+  indices:
+  - Le nom d'une enzyme rappelle souvent la molécule qu'elle découpe.
+  - Le mot commence par « lip » et se termine par « ase ».
+  explication: 'C''est la lipase : elle découpe les lipides en acides gras et glycérol.'
+- type: exercice
+  enonce: 'Document (fictif) : on mesure le temps nécessaire pour que l''amylase fasse disparaître tout l''amidon
+    d''un tube. À 20 °C, il faut 30 minutes. À 37 °C, il faut 6 minutes. Combien de fois l''amylase est-elle plus
+    rapide à 37 °C qu''à 20 °C ? Écris seulement le nombre.'
+  forme: nombre
+  reponse: 5
+  tolerance: 0.01
+  unite: fois
+  indices:
+  - Plus le temps est court, plus l'enzyme est rapide.
+  - Pour savoir « combien de fois », divise la durée la plus longue par la durée la plus courte.
+  explication: 30 ÷ 6 = 5. L'amylase est 5 fois plus rapide à 37 °C, la température du corps, qu'à 20 °C.
+- type: exercice
+  enonce: 'Document (fictif) : deux tubes contiennent de l''amidon et de l''amylase, à 37 °C. Le tube A est chauffé
+    à 100 °C avant l''expérience, le tube B non. Après 30 minutes, l''eau iodée devient bleu-noir dans le tube A
+    mais reste jaune-orangé dans le tube B. Quelle est la bonne explication ?'
+  forme: qcm
+  choix:
+  - 'La chaleur a détruit l''amylase du tube A : elle n''a plus découpé l''amidon.'
+  - La chaleur a rendu l'amylase plus efficace dans le tube A.
+  - L'amylase du tube B est un être vivant qui a mangé l'amidon.
+  - L'amidon a disparu du tube A tout seul.
+  reponse: 0
+  indices:
+  - 'Que signifie le bleu-noir : y a-t-il encore de l''amidon ?'
+  - Une forte chaleur a un effet sur les enzymes. Lequel ?
+  explication: 'Dans le tube A, l''amidon est toujours là (bleu-noir) : l''amylase chauffée à 100 °C est détruite
+    et ne fonctionne plus. Dans le tube B, l''amidon a été découpé. Une enzyme est une molécule, pas un être vivant.'
+- type: exercice
+  enonce: Dans une expérience de digestion, pourquoi prépare-t-on un tube témoin sans enzyme ?
+  forme: qcm
+  choix:
+  - Pour montrer que le changement observé vient de l'enzyme, en comparant avec le témoin
+  - Pour avoir plus de liquide dans l'expérience
+  - Pour que l'enzyme soit consommée plus vite
+  - Pour changer plusieurs facteurs à la fois
+  reponse: 0
+  indices:
+  - Le témoin est identique aux autres tubes, sauf pour un facteur.
+  - On compare chaque tube au témoin pour savoir ce qui a changé.
+  explication: 'Le tube témoin, sans enzyme, sert de comparaison : s''il ne change pas alors que le tube avec enzyme
+    change, c''est bien l''enzyme qui agit. On ne change qu''un seul facteur à la fois.'
+- type: question_ouverte
+  question: 'Un élève affirme : « Digérer, c''est seulement mâcher et écraser les aliments. » Explique pourquoi
+    il a tort, en utilisant les mots : enzyme, molécules, amidon.'
+  indices:
+  - Même finement broyé, un aliment contient-il toujours de grosses molécules ?
+  - Qu'est-ce qui découpe l'amidon en petites molécules ?
+  criteres:
+  - 'L''élève explique que broyer ne change pas les molécules : l''amidon reste une grosse molécule, trop grosse
+    pour passer dans le sang.'
+  - L'élève explique que les enzymes digestives (l'amylase) découpent l'amidon en petites molécules.
+  - L'élève conclut que la digestion est aussi chimique, pas seulement mécanique.
+- type: synthese
+  consigne: En quelques phrases, explique le rôle des enzymes digestives, ce que veut dire « spécifique », et l'effet
+    de la température (37 °C et 100 °C).

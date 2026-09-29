@@ -1,0 +1,164 @@
+notion: acide-base-combustion-corrosion
+titre: "pH, réactions acide-base, combustions, corrosion, gaz à effet de serre"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Classer une solution (acide, neutre, basique) grâce à son pH, et relier ce caractère aux ions H⁺ et HO⁻."
+      - "Identifier les produits d'une combustion et les conditions de la corrosion du fer."
+      - "Identifier les gaz à effet de serre produits par des transformations chimiques."
+
+  - type: texte
+    titre: "Le pH et les ions"
+    contenu: |-
+      Le **pH** se mesure avec du papier pH ou un pH-mètre. Il va de 0 à 14.
+
+      | pH | Caractère | Exemple |
+      |---|---|---|
+      | inférieur à 7 | acide | jus de citron, vinaigre |
+      | égal à 7 | neutre | eau pure |
+      | supérieur à 7 | basique | eau savonneuse, déboucheur |
+
+      Plus le pH est petit, plus la solution est acide. Plus il est grand, plus elle est basique.
+
+  - type: texte
+    titre: "Acide, basique et ions"
+    contenu: |-
+      - Solution **acide** : plus d'ions hydrogène **H⁺** que d'ions hydroxyde **HO⁻**.
+      - Solution **basique** : plus d'ions **HO⁻** que d'ions **H⁺**.
+      - Solution **neutre** : autant des deux.
+
+      Si on **dilue** un acide avec de l'eau, son pH augmente et se rapproche de 7, sans le dépasser.
+
+      Si on **mélange** un acide et une base, les ions H⁺ et HO⁻ réagissent pour former de l'eau : c'est une réaction acide-base. Le pH se rapproche de 7.
+
+      Sécurité : lunettes et gants pour les acides et les bases concentrés.
+
+  - type: texte
+    titre: "Combustion et corrosion"
+    contenu: |-
+      Une **combustion** est une transformation entre un **combustible** (bois, méthane, essence) et un **comburant**, le dioxygène.
+
+      - C + O₂ → CO₂
+      - CH₄ + 2 O₂ → CO₂ + 2 H₂O
+
+      Une combustion complète produit du **dioxyde de carbone** (et de l'eau si le combustible contient de l'hydrogène). Si elle est incomplète (manque de dioxygène), elle peut produire du monoxyde de carbone CO, un gaz toxique.
+
+      La **corrosion** : le fer rouille en présence de **dioxygène et d'eau**. Le sel accélère la rouille. On protège le fer par une peinture ou une couche de zinc.
+
+  - type: texte
+    titre: "Gaz à effet de serre"
+    contenu: |-
+      Des transformations chimiques produisent des **gaz à effet de serre** :
+
+      - le **dioxyde de carbone** : combustions du bois, du charbon, du pétrole, du gaz ;
+      - le **méthane** : élevage, décomposition de déchets ;
+      - le **protoxyde d'azote** N₂O : engrais azotés.
+
+      Ces gaz renforcent l'effet de serre et contribuent au réchauffement climatique.
+
+  - type: exemple
+    enonce: >-
+      On verse une solution acide de pH 2 dans une solution basique. Après mélange, on mesure
+      un pH de 6. Que s'est-il passé au niveau des ions ?
+    etapes:
+      - "Au départ, la solution acide contient surtout des ions H⁺ (pH inférieur à 7)."
+      - "Elle est mélangée à une solution basique, qui contient surtout des ions HO⁻."
+      - "Les ions H⁺ et HO⁻ réagissent pour former de l'eau : c'est une réaction acide-base."
+      - "Le mélange devient moins acide : son pH se rapproche de 7."
+
+  - type: exercice
+    enonce: "Une solution a un pH de 9. Quel est son caractère ?"
+    forme: qcm
+    choix:
+      - "Acide"
+      - "Neutre"
+      - "Basique"
+    reponse: 2
+    indices:
+      - "Compare 9 à la valeur 7."
+      - "Un pH supérieur à 7 correspond à un seul des trois caractères."
+    explication: "9 est supérieur à 7 : la solution est basique."
+
+  - type: exercice
+    enonce: "Une solution contient plus d'ions H⁺ que d'ions HO⁻. Quel est son caractère ?"
+    forme: qcm
+    choix:
+      - "Basique"
+      - "Acide"
+      - "Neutre"
+    reponse: 1
+    indices:
+      - "Relis le tableau de la partie « Acide, basique et ions »."
+      - "Ce sont les ions H⁺ qui dominent : à quel caractère est-ce associé ?"
+    explication: "Plus d'ions H⁺ que d'ions HO⁻ : la solution est acide, donc son pH est inférieur à 7."
+
+  - type: exercice
+    enonce: >-
+      On écrit la combustion du méthane : CH₄ + ? O₂ → CO₂ + 2 H₂O. Quel nombre doit remplacer
+      le point d'interrogation ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 2
+    tolerance: 0
+    indices:
+      - "Compte les atomes d'oxygène (O) à droite de la flèche."
+      - "Additionne les atomes d'oxygène de CO₂ et ceux des molécules d'eau H₂O."
+      - "Il y a 4 atomes d'oxygène à droite. Chaque molécule O₂ apporte un petit nombre d'atomes O : combien de molécules faut-il pour arriver à 4 ?"
+    explication: "À droite : 2 atomes O dans CO₂ et 2 dans 2 H₂O, soit 4. Une molécule O₂ contient 2 atomes O, donc il faut 2 O₂ pour avoir 4 atomes O."
+
+  - type: exercice
+    enonce: "Quel gaz à effet de serre produit la combustion complète du carbone ? Écris son nom."
+    forme: reponse_courte
+    reponse: "dioxyde de carbone"
+    reponses_acceptees: ["dioxyde de carbone", "le dioxyde de carbone", "CO2", "CO₂", "gaz carbonique", "le gaz carbonique"]
+    indices:
+      - "Relis l'équation C + O₂ → ... dans la partie « Combustion et corrosion »."
+      - "Le nom commence par « di » et contient le mot « carbone »."
+    explication: "C + O₂ → CO₂ : la combustion complète du carbone produit du dioxyde de carbone, un gaz à effet de serre."
+
+  - type: exercice
+    enonce: >-
+      Une solution acide a un pH de 4. On la dilue beaucoup avec de l'eau. Quelle valeur de pH
+      est possible pour la solution obtenue ?
+    forme: qcm
+    choix:
+      - "2"
+      - "5,5"
+      - "8,5"
+      - "11"
+    reponse: 1
+    indices:
+      - "Quand on dilue un acide, il devient moins acide : le pH change dans quel sens ?"
+      - "Le pH se rapproche de 7 sans le dépasser."
+      - "La bonne valeur est plus grande que 4 et plus petite que 7."
+    explication: "En diluant, le pH augmente et se rapproche de 7 sans le dépasser. Seule 5,5 est entre 4 et 7."
+
+  - type: question_ouverte
+    question: >-
+      Un clou en fer laissé dehors sous la pluie se couvre de rouille. Explique quelles
+      conditions sont nécessaires à la corrosion du fer, et comment on peut protéger un objet
+      en fer.
+    indices:
+      - "Quels deux éléments sont présents dehors, en plus du fer ?"
+      - "Pour protéger, il faut empêcher le fer d'être au contact de ces deux éléments."
+    criteres:
+      - "L'élève dit que le fer rouille en présence de dioxygène et d'eau (les deux sont nécessaires)."
+      - "L'élève propose une protection (peinture, couche de zinc)."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, explique comment on reconnaît une solution acide, neutre ou basique grâce
+      au pH, puis cite un gaz à effet de serre produit par une transformation chimique.

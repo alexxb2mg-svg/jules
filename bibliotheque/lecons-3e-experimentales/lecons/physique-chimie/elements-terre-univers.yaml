@@ -1,0 +1,163 @@
+notion: elements-terre-univers
+titre: "Ressources terrestres en éléments chimiques"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer l'origine des éléments chimiques : le Big Bang, puis les étoiles."
+      - "Comparer les éléments les plus abondants dans l'Univers et dans la croûte terrestre."
+      - "Justifier pourquoi il faut économiser et recycler certaines ressources."
+
+  - type: texte
+    titre: "Une matière de même nature partout"
+    contenu: |-
+      Sur Terre, dans le Soleil et dans les étoiles lointaines, on retrouve **les mêmes éléments chimiques**.
+
+      Ces éléments obéissent **partout aux mêmes lois**.
+
+      On le sait en **analysant la lumière des étoiles**.
+
+  - type: texte
+    titre: "L'origine de la matière"
+    contenu: |-
+      L'histoire des éléments se raconte en étapes :
+
+      1. Juste après le **Big Bang** (il y a environ 13,8 milliards d'années), seuls les éléments **les plus légers** se forment : surtout l'**hydrogène** et l'**hélium**.
+      2. Les éléments **plus lourds** (carbone, oxygène, silicium, fer…) sont fabriqués **plus tard, au cœur des étoiles**, par fusion de noyaux plus légers.
+      3. À la fin de leur vie, les étoiles **dispersent** ces éléments dans l'espace.
+      4. De nouvelles étoiles et des planètes se forment à partir de ce nuage enrichi. Le Soleil et la Terre se forment ainsi il y a environ 4,6 milliards d'années.
+
+      Les atomes de notre corps ont donc été fabriqués dans des étoiles.
+
+  - type: texte
+    titre: "Ce qui est abondant, et où"
+    contenu: |-
+      | Où ? | Éléments qui dominent |
+      |---|---|
+      | Dans l'Univers | hydrogène (environ 74 % de la masse des atomes) et hélium (environ 24 %) |
+      | Dans la croûte terrestre | oxygène (environ 46 % en masse) et silicium (environ 28 %), puis aluminium et fer |
+      | Dans le noyau de la Terre | surtout du fer |
+
+      Dans l'Univers, tous les autres éléments réunis ne font que 2 % environ.
+
+      Sur Terre, l'hélium est très rare : ce gaz très léger s'échappe dans l'espace. L'hydrogène s'y trouve surtout combiné, par exemple dans l'eau.
+
+  - type: texte
+    titre: "Des ressources limitées"
+    contenu: |-
+      Les ressources terrestres en éléments sont **limitées** et **inégalement réparties**.
+
+      Les **terres rares** sont utilisées dans les aimants d'éoliennes, les téléphones et les écrans. On les extrait en petites quantités, souvent avec une forte pollution.
+
+      Une fois dispersés, les atomes sont très difficiles à récupérer. Il faut donc **économiser** et **recycler**.
+
+  - type: exemple
+    enonce: >-
+      L'hélium est très abondant dans l'Univers. Pourquoi est-il pourtant très rare sur Terre ?
+    etapes:
+      - "L'hélium fait partie des éléments les plus légers : il s'est formé juste après le Big Bang et domine dans l'Univers."
+      - "Sur Terre, c'est un gaz très léger : il s'échappe dans l'espace."
+      - "Il en reste très peu dans la Terre, alors que l'Univers en contient beaucoup : abondant dans l'Univers ne veut pas dire abondant sur Terre."
+
+  - type: exercice
+    enonce: "Quels éléments se forment juste après le Big Bang ?"
+    forme: qcm
+    choix:
+      - "Surtout l'hydrogène et l'hélium"
+      - "Le carbone et le fer"
+      - "L'oxygène et le silicium"
+    reponse: 0
+    indices:
+      - "Juste après le Big Bang, il ne se forme que des éléments très légers."
+      - "Le carbone, l'oxygène, le silicium et le fer sont des éléments lourds."
+    explication: "Juste après le Big Bang, seuls les éléments les plus légers se forment : surtout l'hydrogène et l'hélium. Les éléments lourds viennent plus tard."
+
+  - type: exercice
+    enonce: "Où les éléments lourds (carbone, oxygène, fer…) sont-ils fabriqués ? Réponds en un mot ou deux."
+    forme: reponse_courte
+    reponse: "étoiles"
+    reponses_acceptees:
+      - "les étoiles"
+      - "dans les étoiles"
+      - "au cœur des étoiles"
+      - "au coeur des étoiles"
+      - "étoile"
+      - "une étoile"
+      - "etoiles"
+      - "les etoiles"
+      - "dans les etoiles"
+    indices:
+      - "Ces éléments ne se sont pas formés au moment du Big Bang. Où se passent des fusions de noyaux ?"
+      - "Ce sont des astres très chauds et très lumineux. Le Soleil en est un exemple."
+    explication: "Les éléments lourds sont fabriqués au cœur des étoiles, par fusion de noyaux plus légers."
+
+  - type: exercice
+    enonce: >-
+      Dans la croûte terrestre, l'oxygène représente environ 46 % de la masse et le silicium environ
+      28 %. Quelle part reste, en %, pour tous les autres éléments réunis ?
+    forme: nombre
+    reponse: 26
+    tolerance: 0.01
+    unite: "%"
+    indices:
+      - "Le tout fait 100 %. Il faut retrancher les parts connues."
+      - "Retranche d'abord la part de l'oxygène, puis celle du silicium."
+    explication: "100 − 46 − 28 = 26. Il reste environ 26 % pour les autres éléments (aluminium, fer…)."
+
+  - type: exercice
+    enonce: "Quel élément est le plus abondant, en masse, dans la croûte terrestre ?"
+    forme: qcm
+    choix:
+      - "L'hydrogène"
+      - "L'hélium"
+      - "L'oxygène"
+      - "Le fer"
+    reponse: 2
+    indices:
+      - "Ne confonds pas l'Univers et la croûte terrestre : ce ne sont pas les mêmes éléments qui dominent."
+      - "L'hydrogène domine dans l'Univers. Dans la croûte, regarde le tableau de la leçon."
+    explication: "Dans la croûte terrestre, l'oxygène domine (environ 46 % en masse), puis le silicium. L'hydrogène domine dans l'Univers, pas dans la croûte."
+
+  - type: exercice
+    enonce: >-
+      Le Big Bang a eu lieu il y a environ 13,8 milliards d'années. La Terre s'est formée il y a
+      environ 4,6 milliards d'années. Combien de milliards d'années se sont écoulées entre les
+      deux ?
+    forme: nombre
+    reponse: 9.2
+    tolerance: 0.01
+    unite: "milliards d'années"
+    indices:
+      - "Pour trouver le temps écoulé entre deux dates éloignées dans le passé, on fait une soustraction."
+      - "Retranche la date la plus proche de nous à la date la plus ancienne. Attention à la virgule."
+    explication: "13,8 − 4,6 = 9,2. Il s'est écoulé environ 9,2 milliards d'années. Pendant ce temps, les étoiles ont fabriqué les éléments lourds."
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi dit-on que les atomes de notre corps ont été fabriqués dans des étoiles ?
+      Explique avec tes mots les étapes.
+    indices:
+      - "Pense à ce qui est formé juste après le Big Bang, puis à ce qui est formé plus tard."
+      - "Que deviennent les éléments fabriqués quand une étoile arrive à la fin de sa vie ?"
+    criteres:
+      - "L'élève dit que juste après le Big Bang, seuls l'hydrogène et l'hélium (éléments légers) se forment."
+      - "L'élève dit que les éléments plus lourds sont fabriqués au cœur des étoiles."
+      - "L'élève dit que les étoiles dispersent ces éléments à la fin de leur vie, et que le Soleil et la Terre se forment à partir de ce nuage."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, pourquoi il faut économiser et
+      recycler certains éléments, comme les terres rares.

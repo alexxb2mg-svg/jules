@@ -1,0 +1,152 @@
+notion: mutations-espaces-productifs
+titre: "Les mutations des espaces productifs français"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Agriculture »"
+    url: "https://fr.vikidia.org/w/index.php?title=Agriculture&oldid=2331506"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Tourisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme du cycle 4 (annexe 3), Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer les espaces productifs industriels, agricoles, touristiques et d'affaires."
+      - "Décrire une mutation pour chaque type d'espace."
+      - "Relier ces mutations à la mondialisation et à l'urbanisation."
+
+  - type: texte
+    titre: "Qu'est-ce qu'un espace productif ?"
+    contenu: >-
+      Un **espace productif** est un territoire organisé pour produire des richesses :
+      des biens industriels, des produits agricoles ou des services (tourisme, affaires).
+      Ces espaces changent beaucoup.
+      C'est ce qu'on appelle des **mutations**.
+      Elles sont liées à la **mondialisation** (les échanges dans le monde entier),
+      à l'**urbanisation** et aux innovations.
+
+  - type: texte
+    titre: "L'agriculture et l'industrie"
+    contenu: >-
+      **Agriculture.** La France est le premier producteur agricole de l'Union européenne
+      (céréales, vin, lait, viande).
+      Elle emploie environ 1,5 % de la population active, car les exploitations se sont modernisées et agrandies.
+      La **PAC**, politique de l'Union européenne, soutient les agriculteurs.
+      Les défis : concurrence internationale, prix, réchauffement climatique,
+      demande de produits de qualité (labels, agriculture biologique, circuits courts).
+      **Industrie.** Elle emploie moins qu'autrefois mais reste importante :
+      aéronautique (Toulouse), automobile, luxe, agroalimentaire, pharmacie, énergie.
+      Les usines des anciennes régions industrielles (Nord, Lorraine) ont fermé.
+      Des entreprises **délocalisent** vers des pays où les coûts sont plus bas.
+      Des activités innovantes se regroupent en **pôles de compétitivité** et **technopôles**
+      (Sophia Antipolis, Grenoble).
+      Les zones industrialo-portuaires (Le Havre, Marseille-Fos, Dunkerque) profitent du commerce mondial.
+
+  - type: texte
+    titre: "Le tourisme et les espaces d'affaires"
+    contenu: >-
+      **Tourisme.** La France est le pays le plus visité au monde :
+      plus de 100 millions d'arrivées internationales par an.
+      Il crée des emplois, souvent **saisonniers**, et des revenus.
+      Les territoires d'accueil : littoraux, montagnes (stations de ski), grandes villes (Paris), sites culturels.
+      Il pose aussi des problèmes : pression sur les milieux naturels, prix des logements, saisonnalité.
+      **Affaires.** La majeure partie des emplois est dans le **secteur tertiaire** (les services),
+      surtout dans les grandes villes.
+      Elles rassemblent les quartiers d'affaires (La Défense) et les sièges d'entreprises.
+      Les entreprises françaises exportent et s'installent à l'étranger.
+      Les espaces productifs se transforment donc sans cesse.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi les grands ports comme Le Havre, Marseille-Fos et Dunkerque sont-ils des espaces productifs
+      liés à la mondialisation ?
+    etapes:
+      - "Ce sont des zones industrialo-portuaires : un port et des industries au même endroit."
+      - "Elles profitent du commerce mondial : les marchandises y arrivent et en repartent par bateau."
+      - "Leur activité dépend donc des échanges entre pays : c'est le lien avec la mondialisation."
+
+  - type: exercice
+    enonce: "Environ quelle part de la population active française travaille dans l'agriculture, en pourcentage ?"
+    forme: nombre
+    reponse: 1.5
+    tolerance: 0.5
+    unite: "%"
+    indices:
+      - "C'est un chiffre bien inférieur à 10 %."
+      - "Les exploitations se sont modernisées et agrandies, donc il faut peu d'agriculteurs."
+    explication: "Environ 1,5 % de la population active travaille dans l'agriculture, mais la France reste le premier producteur agricole de l'Union européenne."
+
+  - type: exercice
+    enonce: "Quels sont les trois grands types d'espaces productifs étudiés en 3e ?"
+    forme: qcm
+    choix:
+      - "Urbain, rural, montagnard"
+      - "Industriel, agricole, touristique (avec les espaces d'affaires)"
+      - "National, régional, local"
+    reponse: 1
+    indices:
+      - "Un espace productif se définit par l'activité qui s'y fait."
+      - "Les autres propositions parlent de paysages ou d'échelles."
+    explication: "Le programme distingue les espaces industriels, agricoles et touristiques (avec les espaces d'affaires). Les autres réponses sont des types de paysages ou des échelles."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne le transfert d'une activité de production vers un autre pays,
+      souvent pour réduire les coûts ?
+    forme: reponse_courte
+    reponse: "délocalisation"
+    reponses_acceptees: ["délocalisation", "la délocalisation", "delocalisation", "la delocalisation", "délocalisations", "délocaliser"]
+    indices:
+      - "C'est un effet fréquent de la mondialisation sur l'industrie."
+      - "Le mot commence par « dé- » et contient « local »."
+    explication: "La délocalisation est le transfert d'une activité de production vers un autre pays, souvent pour réduire les coûts."
+
+  - type: exercice
+    enonce: "Quelle affirmation sur le tourisme en France est exacte ?"
+    forme: qcm
+    choix:
+      - "Il ne crée que des emplois à temps plein toute l'année."
+      - "Il ne concerne que les grandes villes."
+      - "La France est le pays le plus visité au monde, avec plus de 100 millions d'arrivées internationales par an."
+    reponse: 2
+    indices:
+      - "Le tourisme crée souvent des emplois saisonniers."
+      - "Il touche aussi les littoraux et les montagnes."
+    explication: "La France est le pays le plus visité au monde. Le tourisme crée souvent des emplois saisonniers et concerne les littoraux, les montagnes et les grandes villes."
+
+  - type: exercice
+    enonce: "Quel exemple illustre bien une mutation de l'industrie française ?"
+    forme: qcm
+    choix:
+      - "Des usines qui reviennent dans tous les villages"
+      - "Des usines qui ferment dans le Nord et la Lorraine, pendant que des pôles de compétitivité réunissent entreprises et chercheurs"
+      - "La disparition de tous les emplois industriels en 1970"
+      - "Une industrie qui ne subit aucune concurrence"
+    reponse: 1
+    indices:
+      - "Une mutation est un changement. Cherche la proposition où l'on voit un changement réel."
+      - "L'industrie subit la concurrence mondiale et n'est pas répartie partout."
+    explication: "Des régions anciennement industrielles ont vu leurs usines fermer, et des activités innovantes se regroupent dans des pôles de compétitivité. Les autres phrases sont fausses."
+
+  - type: question_ouverte
+    question: >-
+      Montre que le tourisme est un espace productif à part entière en France.
+      Donne un chiffre, un type d'emploi et un type de territoire d'accueil.
+    indices:
+      - "Pense au nombre d'arrivées internationales chaque année."
+      - "Quels emplois existent seulement une partie de l'année ? Où accueille-t-on les touristes ?"
+    criteres:
+      - "L'élève donne un chiffre sur la fréquentation (plus de 100 millions d'arrivées internationales par an)."
+      - "L'élève explique que le tourisme crée des emplois, souvent saisonniers."
+      - "L'élève cite un type de territoire d'accueil (littoraux, montagnes, grandes villes)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, une mutation de l'agriculture,
+      une mutation de l'industrie et le rôle de la mondialisation.

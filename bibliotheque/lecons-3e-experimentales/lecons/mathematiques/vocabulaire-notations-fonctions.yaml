@@ -1,0 +1,139 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: vocabulaire-notations-fonctions
+titre: "Vocabulaire et notations des fonctions"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser les mots fonction, variable, image et antécédent."
+      - "Lire et écrire les notations f(x) et x ↦ f(x)."
+      - "Calculer une image, puis trouver un antécédent avec une équation."
+
+  - type: texte
+    titre: "Une fonction et sa variable"
+    contenu: >-
+      Une **fonction** associe à chaque nombre **x** un seul nombre, noté **f(x)**.
+      On lit « f de x ». Les lettres f, g, h servent à nommer les fonctions.
+      La lettre **x** s'appelle la **variable** : c'est le nombre de départ, et elle peut changer de valeur.
+      Attention : f(x) ne veut pas dire « f fois x ».
+
+  - type: texte
+    titre: "Deux écritures pour la même fonction"
+    contenu: >-
+      On peut écrire **f(x) = 3x − 1**.
+      On peut aussi écrire **f : x ↦ 3x − 1**.
+      La flèche ↦ se lit « associe » : « f est la fonction qui à x associe 3x − 1 ».
+      Pour calculer f(2), on remplace x par 2 : f(2) = 3 × 2 − 1 = 5.
+      Si le nombre est négatif, on met des parenthèses : f(−4) = 3 × (−4) − 1 = −13.
+
+  - type: texte
+    titre: "Image et antécédent"
+    contenu: >-
+      L'égalité **f(2) = 5** se lit de deux façons.
+      **5 est l'image de 2** par f.
+      **2 est un antécédent de 5** par f.
+      Dans f(a) = b : a est au départ (antécédent), b est à l'arrivée (image).
+      Un nombre a **une seule image**. Il peut avoir **plusieurs antécédents, un seul, ou aucun**.
+      Pour trouver un antécédent de 11 par f, on résout l'équation 3x − 1 = 11. On trouve x = 4.
+
+  - type: exemple
+    enonce: >-
+      On donne p : x ↦ 4x − 3. Calculer l'image de 5. Puis trouver un antécédent de 9.
+      Écrire une phrase pour chaque résultat.
+    etapes:
+      - "Image de 5 : on remplace x par 5. p(5) = 4 × 5 − 3 = 20 − 3 = 17."
+      - "Phrase : « L'image de 5 par p est 17 » et « 5 est un antécédent de 17 par p »."
+      - "Antécédent de 9 : on résout p(x) = 9, donc 4x − 3 = 9."
+      - "4x = 12, donc x = 3. Vérification : p(3) = 4 × 3 − 3 = 9."
+      - "Phrase : « 3 est un antécédent de 9 par p » et « l'image de 3 par p est 9 »."
+
+  - type: exercice
+    enonce: "On sait que f(4) = 7. Dans la phrase « 7 est ... de 4 par la fonction f », quel mot manque ?"
+    forme: qcm
+    choix:
+      - "l'image"
+      - "un antécédent"
+      - "la variable"
+    reponse: 0
+    indices:
+      - "Dans f(4) = 7, quel nombre est au départ ? Quel nombre est à l'arrivée ?"
+      - "Le nombre d'arrivée porte un nom précis. Le nombre de départ s'appelle un antécédent."
+    explication: "On part de 4 et on obtient 7. Donc 7 est l'image de 4, et 4 est un antécédent de 7."
+
+  - type: exercice
+    enonce: "On donne la fonction f : x ↦ 5 − 2x. Calcule l'image de 4 par f."
+    forme: nombre
+    reponse: -3
+    tolerance: 0.01
+    indices:
+      - "Que faut-il remplacer dans 5 − 2x pour trouver l'image de 4 ?"
+      - "Remplace x par 4. La multiplication passe avant la soustraction."
+      - "Calcule d'abord 2 × 4, puis enlève ce résultat à 5."
+    explication: "f(4) = 5 − 2 × 4 = 5 − 8 = −3. L'image de 4 par f est −3."
+
+  - type: exercice
+    enonce: "On donne f(x) = 2x + 5. Calcule l'antécédent de 17 par f."
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    indices:
+      - "17 est un nombre d'arrivée. On cherche le nombre de départ."
+      - "Écris l'équation f(x) = 17, c'est-à-dire 2x + 5 = 17."
+      - "Enlève 5 aux deux côtés, puis divise par 2."
+    explication: "2x + 5 = 17 donne 2x = 12, donc x = 6. Vérification : f(6) = 2 × 6 + 5 = 17."
+
+  - type: exercice
+    enonce: "On sait que g(−2) = 5. Quelle phrase est vraie ?"
+    forme: qcm
+    choix:
+      - "5 est l'image de −2 par g."
+      - "−2 est l'image de 5 par g."
+      - "5 est un antécédent de −2 par g."
+      - "−2 n'a pas d'image par g."
+    reponse: 0
+    indices:
+      - "Dans g(−2) = 5, quel nombre est entre les parenthèses ? C'est le nombre de départ."
+      - "Le nombre de départ est un antécédent. Le nombre d'arrivée est l'image."
+    explication: "On part de −2 et on obtient 5. Donc 5 est l'image de −2 par g. Les autres phrases inversent les rôles ou sont fausses."
+
+  - type: exercice
+    enonce: "On donne h(x) = 2x² − 5x. Calcule l'image de −3 par h."
+    forme: nombre
+    reponse: 33
+    tolerance: 0.01
+    indices:
+      - "Remplace chaque x par (−3), en gardant les parenthèses."
+      - "Le carré ne porte que sur x. Calcule d'abord (−3)², puis multiplie par 2."
+      - "Pour le terme −5x, calcule −5 × (−3). Deux signes moins donnent un plus."
+    explication: "h(−3) = 2 × (−3)² − 5 × (−3) = 2 × 9 + 15 = 18 + 15 = 33."
+
+  - type: question_ouverte
+    question: >-
+      On donne f(x) = x + 5. Explique la différence entre « l'image de 2 par f »
+      et « un antécédent de 2 par f ». Calcule les deux.
+    indices:
+      - "Dans chaque cas, le nombre 2 est-il au départ ou à l'arrivée ?"
+      - "Pour l'image, tu calcules f(2). Pour un antécédent, tu cherches x tel que f(x) = 2."
+    criteres:
+      - "L'élève explique que l'image de 2 s'obtient en appliquant f à 2 : f(2) = 7."
+      - "L'élève explique qu'un antécédent de 2 est un nombre x tel que f(x) = 2, et trouve −3."
+      - "L'élève distingue bien le nombre de départ et le nombre d'arrivée."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : dis ce que veulent dire « image » et « antécédent »
+      dans l'égalité f(a) = b, et comment tu trouves un antécédent.

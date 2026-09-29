@@ -1,0 +1,154 @@
+notion: actions-et-forces
+titre: "Actions de contact et à distance, force"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Identifier des actions de contact et à distance, avec l'acteur et le receveur."
+      - "Associer les actions à des interactions."
+      - "Décrire une force par son point d'application, sa direction, son sens et sa valeur."
+
+  - type: texte
+    titre: "Les actions mécaniques"
+    contenu: |-
+      Une **action mécanique** est exercée par un objet (l'**acteur**) sur un autre objet (le **receveur**). Elle peut mettre l'objet en mouvement, modifier son mouvement ou le déformer.
+
+      - **Action de contact** : l'acteur touche le receveur (une main qui pousse, une corde qui tire, le sol qui soutient).
+      - **Action à distance** : l'acteur agit sans toucher (l'attraction de la Terre, un aimant qui attire un clou).
+
+  - type: texte
+    titre: "Les interactions"
+    contenu: |-
+      Les actions vont **par deux** : si A agit sur B, alors B agit aussi sur A. C'est une **interaction**.
+
+      On la représente par un **diagramme objets-interactions** :
+
+      - une bulle pour chaque objet ;
+      - un trait plein pour un contact ;
+      - un trait en pointillés pour une action à distance.
+
+      Un objet immobile (un mur, une table) peut agir : il agit sur ce qui le touche.
+
+  - type: texte
+    titre: "La force et ses quatre caractéristiques"
+    contenu: |-
+      On modélise une action mécanique par une **force**, représentée par une **flèche**. Elle a quatre caractéristiques :
+
+      - le **point d'application** : là où l'action s'exerce (pour une action à distance, le centre de gravité de l'objet) ;
+      - la **direction** : la droite qui porte la flèche (verticale, horizontale…) ;
+      - le **sens** : vers le haut, vers la droite… ;
+      - la **valeur** : en **newtons (N)**, mesurée avec un **dynamomètre**.
+
+  - type: texte
+    titre: "L'échelle de la flèche"
+    contenu: |-
+      La longueur de la flèche est **proportionnelle** à la valeur de la force.
+
+      Exemple : avec une échelle de 1 cm pour 5 N, une force de 15 N se représente par une flèche de 15 ÷ 5 = 3 cm.
+
+      Ne mesure jamais une force en kilogrammes : le kilogramme est l'unité de la masse.
+
+  - type: exemple
+    enonce: >-
+      Un seau est suspendu à une corde accrochée à une branche. Quelles actions s'exercent
+      sur le seau ?
+    etapes:
+      - "Le receveur est le seau. On cherche tous les objets qui agissent sur lui."
+      - "La corde tire le seau vers le haut : elle le touche, c'est une action de contact."
+      - "La Terre attire le seau : elle ne le touche pas, c'est une action à distance. Elle est facile à oublier."
+      - "En retour, le seau agit aussi sur la corde et sur la Terre : ce sont des interactions."
+
+  - type: exercice
+    enonce: "La Terre attire une pomme qui tombe de l'arbre. Quel type d'action est-ce ?"
+    forme: qcm
+    choix:
+      - "Une action de contact"
+      - "Une action à distance"
+    reponse: 1
+    indices:
+      - "La Terre touche-t-elle la pomme pendant sa chute ?"
+      - "Quand l'acteur agit sans toucher le receveur, comment s'appelle l'action ?"
+    explication: "La Terre agit sans toucher la pomme : c'est une action à distance."
+
+  - type: exercice
+    enonce: "Quel est le nom de l'unité de la valeur d'une force ? Écris le mot en entier."
+    forme: reponse_courte
+    reponse: "newton"
+    reponses_acceptees: ["newton", "newtons", "un newton", "le newton"]
+    indices:
+      - "Cette unité porte le nom d'un savant, célèbre pour ses travaux sur la gravitation."
+      - "Regarde la graduation d'un dynamomètre : quelle unité y est écrite ?"
+    explication: "L'unité de force est le newton, de symbole N."
+
+  - type: exercice
+    enonce: >-
+      Sur un schéma, l'échelle est de 1 cm pour 5 N. La flèche qui représente une force mesure
+      3,2 cm. Quelle est la valeur de cette force, en newtons ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 16
+    tolerance: 0.01
+    unite: "N"
+    indices:
+      - "Chaque centimètre de flèche représente la même valeur de force."
+      - "Valeur de la force = longueur de la flèche × valeur d'un centimètre."
+    explication: "3,2 × 5 = 16. La force vaut 16 N."
+
+  - type: exercice
+    enonce: >-
+      Le poids d'un objet est représenté par une flèche verticale, dirigée vers le bas. Que
+      signifie « vers le bas » pour cette force ?
+    forme: qcm
+    choix:
+      - "C'est la direction de la force"
+      - "C'est le sens de la force"
+      - "C'est la valeur de la force"
+      - "C'est le point d'application de la force"
+    reponse: 1
+    indices:
+      - "La direction est une droite. Quel mot de l'énoncé décrit cette droite ?"
+      - "Le sens dit de quel côté la flèche pointe."
+    explication: "« Verticale » est la direction (une droite). « Vers le bas » est le sens (de quel côté la flèche pointe)."
+
+  - type: exercice
+    enonce: >-
+      Un livre est posé sur une table. Quelles sont les actions qui s'exercent sur le livre ?
+    forme: qcm
+    choix:
+      - "Seulement la table, qui soutient le livre (contact)"
+      - "La Terre qui attire le livre (à distance) et la table qui le soutient (contact)"
+      - "Seulement la Terre, qui attire le livre (à distance)"
+    reponse: 1
+    indices:
+      - "Le livre est le receveur. Fais la liste de tous les objets qui agissent sur lui."
+      - "Il y a une action qu'on ne voit pas, parce que rien ne touche le livre de ce côté-là."
+      - "La Terre agit sur le livre même s'il est immobile."
+    explication: "La table soutient le livre (contact) et la Terre l'attire (à distance). Les deux actions s'exercent en même temps."
+
+  - type: question_ouverte
+    question: >-
+      Une personne pousse un mur avec ses mains. Explique pourquoi on dit qu'il y a une
+      interaction, et précise s'il s'agit d'une action de contact ou à distance.
+    indices:
+      - "Si A agit sur B, que fait B ?"
+      - "La main touche-t-elle le mur ?"
+    criteres:
+      - "L'élève dit que la personne agit sur le mur et que le mur agit aussi sur la personne (actions réciproques)."
+      - "L'élève identifie une action de contact, car la main touche le mur."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, explique la différence entre une action de contact et une action à distance,
+      et cite les quatre caractéristiques d'une force.

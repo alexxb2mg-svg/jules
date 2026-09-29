@@ -1,0 +1,143 @@
+notion: ecritures-et-comparaison-nombres
+titre: "Écritures, comparaison et rangement des nombres rationnels"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Passer d'une écriture à une autre : fraction, écriture décimale, notation scientifique."
+      - "Comparer, ranger et encadrer des nombres, et les repérer sur une droite graduée."
+      - "Donner un ordre de grandeur pour contrôler un résultat."
+
+  - type: texte
+    titre: "Plusieurs écritures pour un même nombre"
+    contenu: |
+      Un même nombre peut s'écrire de plusieurs façons : 3/4 = 0,75 = 7,5 × 10⁻¹.
+
+      - Fraction vers écriture décimale : on **divise** le numérateur par le dénominateur. 7/8 = 7 ÷ 8 = 0,875.
+      - La barre de fraction n'est **pas** une virgule : 7/8 n'est pas 7,8.
+      - **Notation scientifique** : a × 10ⁿ, avec a entre 1 et 10 (10 exclu) et n entier relatif.
+      - 45 000 000 = 4,5 × 10⁷ et 0,0072 = 7,2 × 10⁻³.
+
+  - type: texte
+    titre: "Comparer, ranger, encadrer"
+    contenu: |
+      - Pour comparer, on écrit tous les nombres **de la même façon** (souvent en écriture décimale).
+      - On compare la partie entière, puis les dixièmes, les centièmes, etc. Ainsi 1,6 < 1,65.
+      - Un nombre négatif est plus petit qu'un nombre positif.
+      - Entre deux négatifs, le plus petit est celui qui est le **plus loin de zéro** : −1,5 < −1,4.
+      - **Encadrer** un nombre, c'est donner un nombre plus petit et un nombre plus grand : 3 < 17/5 < 4.
+
+  - type: texte
+    titre: "Droite graduée et ordre de grandeur"
+    contenu: |
+      - Sur une droite graduée, chaque point a une **abscisse**. Plus il est à droite, plus l'abscisse est grande.
+      - Pour placer a/b : on partage l'unité en b parts égales et on compte a parts depuis 0.
+      - Si le nombre est négatif, on compte vers la **gauche**.
+      - Un **ordre de grandeur** est une valeur simple proche d'un nombre.
+      - Il sert à vérifier qu'un résultat est vraisemblable.
+
+  - type: exemple
+    enonce: "Range dans l'ordre croissant : 3/5 ; 0,58 ; −0,7 ; 5/9."
+    etapes:
+      - "On écrit tout en écriture décimale : 3/5 = 0,6 et 5/9 ≈ 0,556."
+      - "Le seul nombre négatif est −0,7 : c'est le plus petit."
+      - "Parmi les positifs : 0,556 < 0,58 < 0,6, en comparant les centièmes puis les millièmes."
+      - "Ordre croissant : −0,7 < 5/9 < 0,58 < 3/5."
+
+  - type: exercice
+    enonce: "Donne l'écriture décimale de la fraction 3/8."
+    forme: nombre
+    reponse: 0.375
+    tolerance: 0.0001
+    indices:
+      - "Que signifie la barre de fraction ? Quelle opération cache-t-elle ?"
+      - "Une fraction est un quotient : divise le numérateur par le dénominateur."
+      - "Pose la division de 3 par 8. Après la virgule, écris 30 dixièmes et cherche combien de fois 8 y entre."
+    explication: "3/8 = 3 ÷ 8 = 0,375. Vérification : 0,375 × 8 = 3."
+
+  - type: exercice
+    enonce: "Parmi ces nombres, lequel est le plus petit ? −0,3 ; −1/2 ; −0,25 ; 0,1."
+    forme: qcm
+    choix:
+      - "−0,3"
+      - "−1/2"
+      - "−0,25"
+      - "0,1"
+    reponse: 1
+    indices:
+      - "Quel nombre est positif ? Peut-il être le plus petit ?"
+      - "Écris −1/2 en écriture décimale."
+      - "Parmi les nombres négatifs, le plus petit est le plus loin de zéro."
+    explication: "−1/2 = −0,5. Parmi −0,5 ; −0,3 ; −0,25, le plus loin de zéro est −0,5. Donc −1/2 est le plus petit. 0,1 est positif : c'est le plus grand."
+
+  - type: exercice
+    enonce: >-
+      Sur une droite graduée, l'unité (de 0 à 1) est partagée en 4 parts égales. Le point B est à
+      droite de 0, à 7 graduations de 0. Quelle est l'abscisse de B, en écriture décimale ?
+    forme: nombre
+    reponse: 1.75
+    tolerance: 0.001
+    indices:
+      - "Combien vaut une graduation ? L'unité est partagée en 4 parts égales."
+      - "Une graduation vaut 1/4. B est à 7 graduations de 0 : l'abscisse est une fraction de dénominateur 4."
+      - "Écris la fraction, puis divise le numérateur par le dénominateur."
+    explication: "Une graduation vaut 1/4. B est à 7 graduations de 0 : son abscisse est 7/4 = 7 ÷ 4 = 1,75."
+
+  - type: exercice
+    enonce: >-
+      Encadre −17/5 entre deux entiers consécutifs. Quel est le plus petit de ces deux entiers ?
+    forme: nombre
+    reponse: -4
+    tolerance: 0.01
+    indices:
+      - "Donne d'abord l'écriture décimale de 17/5, puis mets le signe moins."
+      - "Attention : pour un nombre négatif, l'entier « plus petit » est plus loin de zéro."
+      - "17 ÷ 5 se situe entre 3 et 4. Donc −17/5 se situe entre deux entiers négatifs. Lequel est le plus à gauche sur la droite graduée ?"
+    explication: "17 ÷ 5 = 3,4, donc −17/5 = −3,4. On a −4 < −3,4 < −3. Le plus petit des deux entiers est −4."
+
+  - type: exercice
+    enonce: >-
+      La Terre est à environ 1,5 × 10⁸ km du Soleil. La lumière parcourt environ 3 × 10⁵ km par
+      seconde. Estime, en secondes, le temps que met la lumière du Soleil pour arriver sur Terre.
+      (Divise la distance par la vitesse.)
+    forme: nombre
+    reponse: 500
+    tolerance: 0.01
+    unite: s
+    indices:
+      - "Il faut calculer (1,5 × 10⁸) ÷ (3 × 10⁵). Traite séparément les nombres et les puissances de 10."
+      - "1,5 ÷ 3 donne un nombre décimal. Pour les puissances : 10⁸ ÷ 10⁵ = 10 avec un exposant à trouver."
+      - "Multiplie les deux résultats, puis écris le nombre en écriture décimale."
+    explication: "1,5 ÷ 3 = 0,5 et 10⁸ ÷ 10⁵ = 10³. Donc 0,5 × 10³ = 500 secondes, soit un peu plus de 8 minutes."
+
+  - type: question_ouverte
+    question: >-
+      Explique comment tu ranges dans l'ordre croissant les nombres 5/7 ; 0,7 et 3/4. Donne le
+      rangement.
+    indices:
+      - "Ces nombres sont écrits de façons différentes. Que peux-tu faire pour les comparer facilement ?"
+      - "Écris 5/7 et 3/4 en écriture décimale, avec au moins trois chiffres après la virgule."
+      - "Compare ensuite chiffre par chiffre : dixièmes, centièmes, millièmes."
+    criteres:
+      - "L'élève écrit les nombres de la même façon, par exemple en écriture décimale : 5/7 ≈ 0,714 et 3/4 = 0,75."
+      - "L'élève compare les chiffres dans l'ordre (dixièmes, centièmes, millièmes)."
+      - "L'élève donne le bon rangement : 0,7 < 5/7 < 3/4."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, écris en trois ou quatre phrases : comment tu compares deux nombres écrits
+      différemment, comment tu ranges des nombres négatifs, et comment tu écris un nombre en
+      notation scientifique.

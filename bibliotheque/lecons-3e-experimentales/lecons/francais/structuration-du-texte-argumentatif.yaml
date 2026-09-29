@@ -1,0 +1,178 @@
+notion: structuration-du-texte-argumentatif
+titre: "Structurer un texte argumentatif"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer convaincre, persuader et délibérer, et connaître les mots-clés de l'argumentation."
+      - "Repérer des procédés qui soutiennent une argumentation : organisation, exemples, modalisation."
+      - "Structurer un paragraphe argumenté cohérent, avec un exemple précis et des connecteurs."
+
+  - type: texte
+    titre: "Les fonctions de l'argumentation"
+    contenu: |-
+      **Argumenter**, c'est défendre une opinion avec des arguments et des exemples, pour amener quelqu'un à la partager.
+
+      | Fonction | Ce qu'on fait |
+      |---|---|
+      | **Convaincre** | On s'adresse à la **raison** : arguments logiques, faits, exemples vérifiables. |
+      | **Persuader** | On s'adresse aux **émotions** : images fortes, mots qui touchent. |
+      | **Délibérer** | On **pèse le pour et le contre** avant de choisir. |
+
+      Un bon texte mêle souvent convaincre et persuader.
+
+  - type: texte
+    titre: "Les mots-clés et les procédés"
+    contenu: |-
+      - La **thèse** : l'opinion défendue.
+      - L'**argument** : la raison qui soutient la thèse.
+      - L'**exemple** : un fait précis qui illustre l'argument.
+      - La **thèse adverse** : l'opinion contraire, qu'on peut **réfuter**.
+      - La **concession** : « certes... mais... ».
+
+      **La modalisation** nuance ce qu'on affirme : *sans doute*, *il semble que*, *certainement*, *peut-être*. Elle montre le degré de certitude.
+
+      Les exemples doivent être **précis, vrais et adaptés** à l'argument.
+
+  - type: texte
+    titre: "Le paragraphe et le texte"
+    contenu: |-
+      **Un paragraphe argumenté :**
+
+      1. J'annonce l'**idée** (l'argument).
+      2. Je l'**explique**.
+      3. Je l'**illustre** avec un exemple précis.
+      4. Je fais une **transition** vers la suite.
+
+      **Un texte entier :** une **introduction** (sujet et thèse), des paragraphes (un argument par paragraphe), une **conclusion** qui répond à la question.
+
+      Un paragraphe d'**analyse littéraire** suit la même logique : une idée, une citation courte, l'explication de l'effet produit.
+
+  - type: texte
+    titre: "Les connecteurs logiques"
+    contenu: |-
+      Ils montrent le lien entre les idées.
+
+      | Lien | Exemples |
+      |---|---|
+      | Ordre | d'abord, ensuite, enfin |
+      | Opposition | mais, cependant, pourtant |
+      | Conséquence | donc, ainsi, par conséquent |
+      | Cause | car, en effet |
+
+      **Erreurs fréquentes :** un argument sans exemple, un exemple vague (« comme tout le monde le sait »), des idées sans connecteurs.
+
+  - type: exemple
+    enonce: >-
+      Écris un exemple précis pour illustrer cet argument : « Lire développe l'imagination. »
+    etapes:
+      - "Je cherche un fait concret, pas une phrase vague comme « tout le monde le sait »."
+      - "Exemple : quand on lit un roman d'aventures, on imagine les lieux et les personnages sans aucune image sous les yeux."
+      - "Je relie à l'argument avec un connecteur : « En effet, dans un roman d'aventures, le lecteur imagine lui-même les lieux et les personnages. »"
+
+  - type: exercice
+    enonce: >-
+      Dans « À mon avis, il faut protéger les forêts », quel élément d'un texte argumentatif
+      reconnais-tu ?
+    forme: qcm
+    choix:
+      - "Une thèse : l'opinion défendue"
+      - "Un exemple précis"
+      - "Une transition"
+      - "Une conclusion chiffrée"
+    reponse: 0
+    indices:
+      - "Cette phrase dit ce que l'auteur pense, sans encore donner de raison."
+      - "L'opinion défendue dans tout le texte porte un nom précis."
+    explication: "La phrase exprime l'opinion que l'auteur va défendre : c'est la thèse. Les arguments viendront ensuite, avec des exemples."
+
+  - type: exercice
+    enonce: "Quel verbe désigne le fait de peser le pour et le contre avant de prendre une décision ?"
+    forme: reponse_courte
+    reponse: "délibérer"
+    reponses_acceptees: ["deliberer", "délibérer.", "il faut délibérer"]
+    indices:
+      - "C'est la troisième fonction de l'argumentation, avec convaincre et persuader."
+      - "Le verbe commence par « déli- » et se termine par « -érer »."
+    explication: "Délibérer, c'est peser le pour et le contre avant de choisir."
+
+  - type: exercice
+    enonce: >-
+      Une phrase dit : « Imagine la joie d'un enfant qui découvre enfin sa passion : refuser cela
+      serait cruel. » Cette phrase cherche-t-elle surtout à convaincre ou à persuader ?
+    forme: qcm
+    choix:
+      - "À convaincre, par un raisonnement logique et des faits vérifiables"
+      - "À persuader, en touchant les émotions"
+      - "Ni à convaincre ni à persuader"
+      - "À délibérer sur le pour et le contre"
+    reponse: 1
+    indices:
+      - "Regarde les mots : « joie », « cruel ». Parlent-ils à la raison ou aux sentiments ?"
+      - "Y a-t-il un fait vérifiable dans cette phrase ?"
+    explication: "Les mots « joie » et « cruel » touchent les émotions, et la phrase ne donne aucun fait vérifiable. Elle cherche donc surtout à persuader."
+
+  - type: exercice
+    enonce: "Complète : « Le vélo est pratique. ..., il coûte cher à l'achat. » Quel connecteur exprime l'opposition ?"
+    forme: qcm
+    choix:
+      - "Cependant"
+      - "Ainsi"
+      - "D'abord"
+      - "En effet"
+    reponse: 0
+    indices:
+      - "La deuxième phrase apporte une idée qui va contre la première."
+      - "Cherche le connecteur qui marque un contraste, comme « mais » ou « pourtant »."
+    explication: "« Cependant » introduit une opposition : le vélo est pratique, mais il coûte cher. « Ainsi » marque la conséquence, « d'abord » l'ordre, « en effet » la cause."
+
+  - type: exercice
+    enonce: >-
+      Thèse : « Le sport à l'école est utile. » Quel paragraphe est le mieux structuré ?
+    forme: qcm
+    choix:
+      - "Le sport est utile. Tout le monde le sait. C'est important."
+      - "D'abord, le sport apprend à coopérer. En effet, dans un match de basket, chaque joueur doit passer le ballon à ses coéquipiers. Ainsi, les élèves apprennent à jouer ensemble."
+      - "Le sport est utile. Le sport est très utile. Il est vraiment utile."
+      - "Je n'aime pas courir. Cependant il pleut souvent."
+    reponse: 1
+    indices:
+      - "Un bon paragraphe suit l'ordre : idée, explication, exemple précis, transition ou conclusion."
+      - "Cherche celui qui donne un exemple concret et des connecteurs, sans répéter la même idée."
+      - "Un exemple vague (« tout le monde le sait ») ne compte pas comme un exemple précis."
+    explication: "Le deuxième paragraphe annonce une idée, la relie à un exemple précis (le match de basket) et utilise des connecteurs (d'abord, en effet, ainsi). Les autres répètent la même idée, ou donnent un exemple vague, ou sortent du sujet."
+
+  - type: question_ouverte
+    question: >-
+      Rédige un paragraphe argumenté (6 à 10 lignes) pour défendre cette thèse : « Le sport à
+      l'école est utile à tous les élèves. » Utilise un argument, un exemple précis et au moins
+      deux connecteurs logiques.
+    indices:
+      - "Quelle raison peux-tu donner pour dire que le sport est utile ?"
+      - "Suis l'ordre : idée, explication, exemple, transition ou conclusion."
+      - "Tu peux commencer ainsi : « D'abord, le sport à l'école apprend à... »."
+    criteres:
+      - "L'élève énonce une idée claire qui soutient la thèse."
+      - "L'élève illustre cette idée avec un exemple précis et concret."
+      - "L'élève emploie au moins deux connecteurs logiques bien choisis et enchaîne les phrases de façon cohérente."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre convaincre et
+      persuader, et l'ordre des éléments d'un paragraphe argumenté.

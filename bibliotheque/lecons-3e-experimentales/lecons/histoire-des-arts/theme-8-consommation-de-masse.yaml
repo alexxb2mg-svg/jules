@@ -1,0 +1,164 @@
+notion: theme-8-consommation-de-masse
+titre: "Les arts à l'ère de la consommation de masse (de 1945 à nos jours)"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Citer des mouvements et des artistes depuis 1945 : pop art, nouveaux réalistes, abstraction."
+      - "Décrire un bâtiment (architecte, année, matériaux, fonction) et donner un exemple d'art engagé pour le climat."
+      - "Expliquer ce que veut dire « métissage artistique » avec un exemple."
+
+  - type: texte
+    titre: "Un monde de consommation, des artistes qui réagissent"
+    contenu: >-
+      Depuis 1945, les sociétés occidentales entrent dans l'ère de la **consommation de masse** :
+      publicité, supermarchés, télévision, voitures, objets fabriqués en série. Les artistes
+      réagissent à ce monde nouveau. Ils peuvent **représenter** la réalité (réalismes, pop art)
+      ou **s'en détacher** (abstraction). L'art n'est plus seulement dans les musées : il est
+      dans la rue, sur les places, dans les objets de tous les jours et sur les écrans.
+
+  - type: texte
+    titre: "Réalismes et abstractions"
+    contenu: |-
+      - **Jackson Pollock** (États-Unis) : il fait couler la peinture sur des toiles posées au sol. C'est l'*action painting*, un art abstrait.
+      - **Yves Klein** : il peint des **monochromes** d'un bleu intense (un tableau, une seule couleur).
+      - **Les nouveaux réalistes** (France, 1960) : ils utilisent de vrais objets. **César** compresse des voitures, **Arman** accumule des objets du quotidien.
+      - **Le pop art** (né au Royaume-Uni au milieu des années 1950, puis développé aux États-Unis) : il reprend les images de la publicité, de la bande dessinée et des vedettes. **Andy Warhol** peint les *Campbell's Soup Cans* (1962), 32 toiles de boîtes de soupe. **Roy Lichtenstein** agrandit des cases de bande dessinée.
+
+  - type: texte
+    titre: "Architecture et design"
+    contenu: |-
+      - **Cité radieuse** (Marseille, 1947-1952), de **Le Corbusier** : grand immeuble en béton sur pilotis, avec des appartements, une rue commerçante intérieure et un toit-terrasse. Une « ville verticale ».
+      - **Centre Pompidou** (Paris, inauguré en 1977), de **Renzo Piano et Richard Rogers** : il montre ses tuyaux colorés à l'extérieur.
+      - **Musée Guggenheim de Bilbao** (1997), de **Frank Gehry** : formes courbes, murs couverts de titane.
+      - **Design** : des objets en plastique colorés, fabriqués en série.
+
+  - type: texte
+    titre: "Art et environnement, art et mondialisation"
+    contenu: |-
+      - **Christo et Jeanne-Claude** emballent le Pont-Neuf à Paris en 1985. Une œuvre éphémère reste une œuvre : on la garde par des photos et des films.
+      - **Ice Watch** (2015) d'**Olafur Eliasson**, pendant la COP21 à Paris : des blocs de glace du Groenland fondent sur une place, pour alerter sur le réchauffement climatique.
+      - **Mondialisation** : les échanges s'ouvrent et les cultures se mêlent. Le **hip-hop**, né à New York dans les années 1970, se diffuse dans le monde entier.
+      - **Métissage artistique** : des artistes mêlent les traditions de leur pays et des formes contemporaines.
+
+  - type: exemple
+    enonce: >-
+      Explique en trois phrases ce que les nouveaux réalistes changent dans l'art, avec
+      l'exemple de César.
+    etapes:
+      - "Situer : les nouveaux réalistes sont des artistes français des années 1960."
+      - "Décrire : au lieu de peindre des voitures, César utilise de vraies voitures qu'il compresse."
+      - "Expliquer : il fait entrer les objets de la société de consommation dans l'art, sans les imiter."
+      - "Phrases finales : « Les nouveaux réalistes, en France dans les années 1960, utilisent de vrais objets. César compresse des voitures. Il montre ainsi le monde de la consommation tel qu'il est. »"
+
+  - type: exercice
+    enonce: >-
+      Quel mouvement artistique, dont Andy Warhol est la figure la plus connue, reprend les images
+      de la publicité, de la bande dessinée et des vedettes ?
+    forme: reponse_courte
+    reponse: "pop art"
+    reponses_acceptees:
+      - "le pop art"
+      - "pop-art"
+      - "popart"
+      - "Pop Art"
+    indices:
+      - "Le nom de ce mouvement est anglais."
+      - "Il est formé de deux mots courts : l'abréviation de « populaire » et le mot « art »."
+    explication: "C'est le pop art : il reprend les images de la société de consommation (publicité, bande dessinée, vedettes)."
+
+  - type: exercice
+    enonce: >-
+      En 1962, Andy Warhol expose 32 toiles presque identiques, chacune représentant une boîte de
+      soupe Campbell, un produit vendu dans tous les supermarchés américains. Que fait-il surtout ?
+    forme: qcm
+    choix:
+      - "Il fait entrer un objet banal de la consommation de masse dans l'art"
+      - "Il réalise une publicité commandée par la marque"
+      - "Il dénonce un bombardement"
+      - "Il glorifie un régime politique"
+    reponse: 0
+    indices:
+      - "Une boîte de soupe est-elle un sujet habituel pour un tableau de musée ?"
+      - "Élimine les fonctions qui ne correspondent pas à un produit de supermarché peint en série."
+    explication: "Warhol choisit un produit que tout le monde connaît. Il l'expose comme une œuvre, 32 fois presque identique, comme des objets en série. Il interroge la place de la publicité et des objets dans la société."
+
+  - type: exercice
+    enonce: >-
+      Dans quelle grande ville des États-Unis, sur la côte Est, naît le mouvement hip-hop dans
+      les années 1970 ?
+    forme: reponse_courte
+    reponse: "New York"
+    reponses_acceptees:
+      - "new york"
+      - "à New York"
+      - "a New York"
+      - "New-York"
+    indices:
+      - "C'est une ville très peuplée, connue pour ses gratte-ciel et sa statue de la Liberté."
+      - "Le hip-hop naît dans des quartiers populaires d'une grande ville de la côte Est."
+    explication: "Le hip-hop naît à New York dans les années 1970, puis se diffuse dans le monde entier : c'est un exemple de mondialisation culturelle."
+
+  - type: exercice
+    enonce: >-
+      En décembre 2015, pendant la conférence sur le climat de Paris (COP21), Olafur Eliasson
+      installe sur une place de Paris de gros blocs de glace venus du Groenland, qui fondent peu à
+      peu devant les passants. Quelle est la fonction principale de cette œuvre, Ice Watch ?
+    forme: qcm
+    choix:
+      - "Alerter sur le réchauffement climatique et la fonte des glaces"
+      - "Vendre de la glace aux passants"
+      - "Célébrer la puissance d'un chef d'État"
+      - "Décorer la place pour les fêtes de fin d'année"
+    reponse: 0
+    indices:
+      - "Pourquoi l'artiste a-t-il choisi le moment de la conférence sur le climat ?"
+      - "Demande-toi ce que le spectateur voit se passer jour après jour et à quoi cela lui fait penser."
+    explication: "Ice Watch alerte sur le réchauffement climatique : en voyant fondre de vrais blocs de glace du Groenland, les passants prennent conscience de la fonte des glaces."
+
+  - type: exercice
+    enonce: >-
+      Le Centre Pompidou à Paris, inauguré en 1977, montre ses tuyaux colorés à l'extérieur.
+      Qui en sont les architectes ?
+    forme: qcm
+    choix:
+      - "Le Corbusier"
+      - "Renzo Piano et Richard Rogers"
+      - "Frank Gehry"
+      - "Christo et Jeanne-Claude"
+    reponse: 1
+    indices:
+      - "Le Corbusier a construit la Cité radieuse, et Frank Gehry le musée de Bilbao. Ce sont d'autres bâtiments."
+      - "Christo et Jeanne-Claude sont un couple d'artistes qui emballent des monuments. Ils ne construisent pas de bâtiment."
+    explication: "Le Centre Pompidou est l'œuvre de Renzo Piano et Richard Rogers. La Cité radieuse est de Le Corbusier, le musée de Bilbao de Frank Gehry."
+
+  - type: question_ouverte
+    question: >-
+      La Cité radieuse, construite à Marseille par Le Corbusier de 1947 à 1952, est un très grand
+      immeuble en béton brut, posé sur des pilotis. Elle compte plus de 300 appartements, une rue
+      intérieure avec des commerces, et un toit-terrasse avec une école maternelle et un gymnase.
+      Décris ce bâtiment et explique en quoi il propose une nouvelle façon de vivre, en le reliant
+      à son époque.
+    indices:
+      - "Pourquoi construire, juste après 1945, un seul immeuble qui loge des centaines de familles ?"
+      - "Décris le bâtiment de bas en haut (pilotis, appartements, rue intérieure, toit), puis explique son projet, puis situe-le."
+    criteres:
+      - "L'élève décrit le bâtiment avec des mots précis (béton brut, pilotis, toit-terrasse, rue intérieure)."
+      - "L'élève explique le projet : réunir logement, commerces et services dans un seul bâtiment, une « ville verticale »."
+      - "L'élève relie l'œuvre à son contexte : la reconstruction et le manque de logements après la Seconde Guerre mondiale, la vie moderne."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots et en deux ou trois phrases, cite un mouvement artistique depuis 1945
+      avec son artiste, et explique ce que cela montre de la société de consommation. Ajoute un
+      exemple d'art engagé pour le climat ou de métissage artistique.

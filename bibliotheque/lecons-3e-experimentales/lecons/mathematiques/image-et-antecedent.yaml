@@ -1,0 +1,149 @@
+notion: image-et-antecedent
+titre: "Image et antécédent par une fonction"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer l'image d'un nombre par une fonction (expression, tableau, graphique)."
+      - "Trouver un ou plusieurs antécédents à partir d'un tableau ou d'un graphique."
+      - "Trouver un antécédent par le calcul, en résolvant une équation du premier degré."
+
+  - type: texte
+    titre: "Image et antécédent"
+    contenu: |-
+      Une fonction f associe à un nombre x un nombre f(x).
+
+      - Si **f(a) = b**, alors **b est l'image de a**.
+      - Et **a est un antécédent de b**.
+      - Exemple : f(2) = 5. Donc 5 est l'image de 2, et 2 est un antécédent de 5.
+
+      Bien retenir :
+      - Un nombre a **une seule image**.
+      - Un nombre peut avoir **plusieurs antécédents**, un seul, ou aucun.
+      - Exemple avec f(x) = x² : 9 a deux antécédents (3 et −3). Et −1 n'en a aucun.
+
+  - type: texte
+    titre: "Lire une image ou un antécédent"
+    contenu: |-
+      | Mode | Pour une image de a | Pour les antécédents de b |
+      |---|---|---|
+      | Expression | Remplacer x par a et calculer | Résoudre f(x) = b |
+      | Tableau | Chercher a dans la ligne des x, lire en dessous | Chercher b dans la ligne des images, lire au-dessus |
+      | Graphique | Partir de a sur l'axe horizontal, monter ou descendre jusqu'à la courbe, lire l'ordonnée | Partir de b sur l'axe vertical, tracer l'horizontale, lire les abscisses de **tous** les points de la courbe |
+
+      - Si a est négatif, mets des **parenthèses** en remplaçant x.
+      - Un antécédent de 0 est un point où la courbe coupe l'axe horizontal.
+
+  - type: texte
+    titre: "Trouver un antécédent par le calcul"
+    contenu: |-
+      Pour trouver l'antécédent de b, on **résout l'équation f(x) = b**.
+
+      1. On écrit l'équation.
+      2. On isole le terme en x.
+      3. On divise par le nombre devant x.
+      4. On vérifie : l'image du résultat doit redonner b.
+
+      Un point A(a ; b) est sur la courbe de f si et seulement si **f(a) = b**.
+
+  - type: exemple
+    enonce: >-
+      On donne g(x) = −4x + 1. Calcule l'image de 3, puis l'antécédent de 9.
+    etapes:
+      - "Image de 3 : on remplace x par 3. g(3) = −4 × 3 + 1 = −12 + 1 = −11."
+      - "Antécédent de 9 : on résout −4x + 1 = 9."
+      - "−4x = 9 − 1, donc −4x = 8."
+      - "x = 8 ÷ (−4) = −2."
+      - "Vérification : g(−2) = −4 × (−2) + 1 = 8 + 1 = 9. C'est bon."
+
+  - type: exercice
+    enonce: "Soit f(x) = 3x − 5. Calcule l'image de 4 par f."
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    indices:
+      - "Pour une image, on remplace x par la valeur donnée."
+      - "Écris f(4) = 3 × 4 − 5. Fais la multiplication d'abord."
+    explication: "f(4) = 3 × 4 − 5 = 12 − 5 = 7."
+
+  - type: exercice
+    enonce: >-
+      On donne un tableau de valeurs de la fonction h.
+      Valeurs de x : −2 ; 0 ; 1 ; 3 ; 5.
+      Valeurs de h(x) : 4 ; 5 ; 1 ; 5 ; −2.
+      Quels sont les antécédents de 5 par h ?
+    forme: qcm
+    choix:
+      - "5 et −2"
+      - "0 et 3"
+      - "0 seulement"
+      - "1 et 4"
+    reponse: 1
+    indices:
+      - "Un antécédent est un nombre de la ligne des x. Cherche 5 dans la ligne des images."
+      - "Regarde les deux colonnes où h(x) vaut 5. Il y en a plusieurs."
+    explication: "h(0) = 5 et h(3) = 5. Donc 5 a deux antécédents : 0 et 3."
+
+  - type: exercice
+    enonce: "Soit f(x) = 3x − 5. Calcule l'antécédent de 16 par f."
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    indices:
+      - "Un antécédent de 16 est un nombre x tel que f(x) = 16."
+      - "Résous l'équation 3x − 5 = 16 : commence par ajouter 5 aux deux membres."
+      - "Tu obtiens 3x = 21. Il reste à diviser par le nombre devant x."
+    explication: "3x − 5 = 16 donne 3x = 21, donc x = 21 ÷ 3 = 7. Vérification : f(7) = 21 − 5 = 16."
+
+  - type: exercice
+    enonce: >-
+      Soit p(x) = 3x − 2. Le point B(5 ; 12) est-il sur la courbe de p ? Réponds par oui ou par non.
+    forme: reponse_courte
+    reponse: "non"
+    reponses_acceptees: ["non", "non il n'est pas sur la courbe", "il n'est pas sur la courbe"]
+    indices:
+      - "B(5 ; 12) est sur la courbe si p(5) est égal à l'ordonnée de B."
+      - "Calcule p(5) avec l'expression, puis compare avec l'ordonnée de B."
+    explication: "p(5) = 3 × 5 − 2 = 13. L'ordonnée de B est 12, pas 13. Donc B n'est pas sur la courbe."
+
+  - type: exercice
+    enonce: >-
+      Soit h(x) = 4x − 7. Quel nombre a pour image −19 par h ?
+    forme: nombre
+    reponse: -3
+    tolerance: 0.01
+    indices:
+      - "On cherche l'antécédent de −19 : le nombre x tel que h(x) = −19."
+      - "Écris l'équation 4x − 7 = −19. Attention aux signes quand tu changes de membre."
+      - "Tu dois trouver 4x = −12. Puis divise par le nombre devant x."
+    explication: "4x − 7 = −19 donne 4x = −19 + 7 = −12, donc x = −12 ÷ 4 = −3. Vérification : h(−3) = 4 × (−3) − 7 = −12 − 7 = −19."
+
+  - type: question_ouverte
+    question: >-
+      Pour la fonction f(x) = x², Inès dit : « Le nombre 9 a un seul antécédent, c'est 3. » A-t-elle raison ?
+      Explique.
+    indices:
+      - "Un antécédent de 9 est un nombre dont le carré vaut 9."
+      - "Teste aussi un nombre négatif. Que vaut (−3)² ?"
+    criteres:
+      - "L'élève montre que 3 est un antécédent (3² = 9)."
+      - "L'élève trouve que −3 est aussi un antécédent ((−3)² = 9), donc 9 a deux antécédents."
+      - "L'élève conclut qu'Inès a tort."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots : quelle est la différence entre l'image et l'antécédent d'un nombre ?
+      Que fais-tu pour trouver chacun avec une expression ?

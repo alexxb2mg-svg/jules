@@ -1,0 +1,159 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: choix-materiaux-energie-assemblage
+titre: Choisir un matériau, une source d'énergie et un assemblage
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  licence: etalab-2.0
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Choisir un matériau en comparant ses propriétés aux critères du cahier des charges.
+  - Choisir une source d'énergie et calculer l'énergie consommée avec E = P × t.
+  - Choisir entre un assemblage démontable et non démontable, et vérifier la compatibilité des constituants.
+- type: texte
+  titre: Choisir un matériau
+  contenu: |-
+    Tout choix se justifie par le **cahier des charges**.
+
+    On compare les propriétés du matériau aux critères :
+    - solidité, masse, transparence ;
+    - résistance à l'eau et à la corrosion (rouille) ;
+    - facilité de mise en forme au collège ;
+    - coût ;
+    - impact sur l'environnement (matière recyclable, recyclée ou renouvelable).
+- type: texte
+  titre: Exemples de matériaux
+  contenu: |-
+    | Matériau | À retenir |
+    |---|---|
+    | PMMA | transparent, ne rouille pas |
+    | Aluminium | léger, ne rouille pas |
+    | Acier | solide, mais rouille s'il n'est pas protégé |
+    | Bois | se travaille facilement, se renouvelle |
+
+    On élimine ce qui ne respecte pas un critère obligatoire. Puis on départage avec le coût et l'impact sur l'environnement.
+- type: texte
+  titre: Choisir une source d'énergie
+  contenu: |-
+    On vérifie les conditions d'utilisation : l'objet est-il près d'une prise ? doit-il être déplacé ? doit-il fonctionner la nuit ?
+
+    - **Secteur** : objet fixe près d'une prise.
+    - **Piles ou batterie** : objet mobile. Une batterie rechargeable fait moins de déchets que des piles jetables.
+    - **Panneau solaire** : produit de l'énergie le jour. Pour la nuit, il faut la stocker dans une **batterie**.
+
+    Énergie consommée : **E = P × t**. P en watts (W), t en heures (h), E en wattheures (Wh).
+    La source doit pouvoir fournir au moins cette énergie.
+- type: texte
+  titre: Assembler les constituants
+  contenu: |-
+    - **Démontable** (vis et écrou, clips, emboîtement) : quand il faudra ouvrir, réparer ou recycler l'objet.
+    - **Non démontable** (collage, rivet, soudure) : quand les pièces ne doivent jamais être séparées.
+
+    Les constituants (capteur, carte, moteur, batterie...) doivent être **compatibles** :
+    - même tension d'alimentation ;
+    - bonnes connexions ;
+    - assez de place dans le boîtier.
+
+    Ensuite, on assemble le prototype et on le **teste**.
+- type: exemple
+  enonce: Un ventilateur de bureau de 3 W fonctionne 4 h par jour. Quelle énergie consomme-t-il par jour
+    ?
+  etapes:
+  - On utilise la formule E = P × t.
+  - P = 3 W et t = 4 h.
+  - E = 3 × 4 = 12 Wh par jour.
+- type: exercice
+  enonce: La lampe à LED d'une borne d'éclairage a une puissance de 2 W. Elle reste allumée 5 h chaque
+    nuit. Quelle énergie consomme-t-elle en une nuit, en wattheures ?
+  forme: nombre
+  reponse: 10
+  tolerance: 0.01
+  unite: Wh
+  indices:
+  - Pour trouver l'énergie, on utilise la puissance et la durée.
+  - E = P × t. On multiplie, on n'additionne pas.
+  - 'P = 2 W et t = 5 h : remplace dans E = P × t.'
+  explication: E = P × t = 2 W × 5 h = 10 Wh par nuit.
+- type: exercice
+  enonce: Une borne d'éclairage doit s'allumer la nuit. Aucun câble ne peut être relié au réseau électrique.
+    Quelle source d'énergie choisir ?
+  forme: qcm
+  choix:
+  - Un panneau solaire et une batterie rechargeable
+  - Un panneau solaire seul
+  - Un branchement sur une prise du collège
+  - Des piles jetables
+  reponse: 0
+  indices:
+  - 'Regarde les contraintes : la nuit, et pas de câble vers le réseau.'
+  - Le panneau solaire produit l'énergie le jour. Que faut-il pour s'en servir la nuit ?
+  explication: Le panneau solaire produit l'énergie le jour, la batterie la stocke pour éclairer la nuit.
+    Le secteur est interdit, et des piles jetables créeraient des déchets à chaque changement.
+- type: exercice
+  enonce: Le boîtier d'un objet connecté devra être ouvert de temps en temps pour changer la batterie.
+    Quel assemblage choisir ?
+  forme: qcm
+  choix:
+  - Vis et écrou
+  - Collage
+  - Soudure
+  reponse: 0
+  indices:
+  - Il faudra ouvrir et refermer le boîtier plusieurs fois sans l'abîmer.
+  - Pour chaque assemblage, demande-toi si on peut le défaire sans abîmer les pièces.
+  explication: 'Il faut un assemblage démontable : vis et écrou. Le collage et la soudure sont non démontables
+    : il faudrait les détruire pour ouvrir.'
+- type: exercice
+  enonce: 'Matériaux disponibles : PMMA, aluminium, acier non traité, PLA. Lequel est le seul transparent,
+    pour faire le capot d''une lampe ?'
+  forme: reponse_courte
+  reponse: PMMA
+  reponses_acceptees:
+  - PMMA
+  - le PMMA
+  - pmma
+  indices:
+  - Un matériau transparent laisse passer la lumière.
+  - Parmi les quatre, trois sont opaques. Le transparent est un plastique dont le nom s'écrit avec des
+    majuscules.
+  explication: 'C''est le PMMA : il est transparent et ne rouille pas. L''aluminium est opaque, l''acier
+    non traité rouille dehors.'
+- type: exercice
+  enonce: Une batterie peut fournir 12 Wh. Elle alimente seule une lampe de 3 W, allumée en continu. Pendant
+    combien d'heures la lampe peut-elle fonctionner ?
+  forme: nombre
+  reponse: 4
+  tolerance: 0.01
+  unite: h
+  indices:
+  - On connaît l'énergie E et la puissance P. On cherche la durée t.
+  - Avec E = P × t, on trouve t en divisant E par P.
+  - Divise 12 Wh par 3 W. Ensuite, vérifie en refaisant P × t.
+  explication: 't = E ÷ P = 12 ÷ 3 = 4 h. Vérification : 3 W × 4 h = 12 Wh.'
+- type: question_ouverte
+  question: Ta classe construit un petit robot mobile. Il faudra pouvoir l'ouvrir pour le réparer. Choisis
+    une source d'énergie et un type d'assemblage, et justifie chaque choix avec les critères du cahier
+    des charges.
+  indices:
+  - 'Le robot bouge : est-il toujours près d''une prise ?'
+  - 'Pense à ce qu''on doit pouvoir faire sur le robot plus tard : l''ouvrir, réparer.'
+  - 'Écris : « Je choisis ..., car ... ».'
+  criteres:
+  - L'élève choisit une source adaptée à un objet mobile (piles ou batterie, de préférence rechargeable)
+    et le justifie (pas de prise, moins de déchets).
+  - L'élève choisit un assemblage démontable (vis et écrou, clips) et le justifie par la réparation.
+  - L'élève relie chaque choix à un critère, sans choisir sans raison.
+- type: synthese
+  consigne: 'Avec tes mots : dis comment on justifie un choix de matériau, de source d''énergie et d''assemblage,
+    et écris la formule qui donne l''énergie consommée.'

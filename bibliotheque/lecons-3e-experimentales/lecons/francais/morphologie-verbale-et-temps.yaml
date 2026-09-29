@@ -1,0 +1,163 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: morphologie-verbale-et-temps
+titre: "Le verbe : radical, terminaison, temps et modes"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décomposer un verbe en radical et terminaison, et y lire le temps et la personne."
+      - "Identifier les temps et les modes, et nommer un temps composé grâce à son auxiliaire."
+      - "Former des temps de l'indicatif, le subjonctif présent et l'impératif présent."
+
+  - type: texte
+    titre: "Radical et terminaison"
+    contenu: |-
+      Un verbe conjugué se décompose en deux parties :
+
+      - le **radical** porte le sens ;
+      - la **terminaison** porte le temps et la personne.
+
+      Exemple : dans « nous chantions », **chant-** est le radical, **-i-** est la marque de l'imparfait, **-ons** est la marque de la personne (nous).
+
+  - type: texte
+    titre: "Les modes"
+    contenu: |-
+      | Mode | Il exprime | Exemple |
+      |---|---|---|
+      | Indicatif | des faits réels | je chante |
+      | Conditionnel | un fait imaginé ou qui dépend d'une condition | je chanterais |
+      | Impératif | un ordre ou un conseil, sans sujet | chante, chantons, chantez |
+      | Subjonctif | un souhait, un doute, une obligation | il faut que je chante |
+
+  - type: texte
+    titre: "Les temps simples"
+    contenu: |-
+      Un temps simple s'écrit en un seul mot.
+
+      - **Imparfait** : radical + -ais, -ais, -ait, -ions, -iez, -aient.
+      - **Futur simple** : infinitif (ou radical du futur) + -ai, -as, -a, -ons, -ez, -ont. Exemple : je chanterai.
+      - **Passé simple** : il chanta, ils chantèrent ; il finit, ils finirent.
+      - **Conditionnel présent** : radical du futur + terminaisons de l'imparfait. Exemple : je chanterais.
+
+  - type: texte
+    titre: "Les temps composés"
+    contenu: |-
+      Un temps composé = **auxiliaire** (avoir ou être) conjugué + **participe passé**.
+
+      Le temps de l'auxiliaire donne son nom au temps composé :
+
+      | Temps composé | Temps de l'auxiliaire | Exemple |
+      |---|---|---|
+      | Passé composé | présent | j'ai chanté, il est parti |
+      | Plus-que-parfait | imparfait | j'avais chanté |
+      | Futur antérieur | futur simple | j'aurai chanté |
+
+  - type: texte
+    titre: "Subjonctif et impératif"
+    contenu: |-
+      **Subjonctif présent** : que je chante, que tu chantes, qu'il chante, que nous chantions, que vous chantiez, qu'ils chantent.
+
+      **Subjonctif passé** : auxiliaire au subjonctif présent + participe passé (que j'aie chanté, que je sois parti).
+
+      **Impératif présent** : au 1er groupe, la 2e personne du singulier perd son « s » (chante). On garde le « s » devant *en* et *y* (« manges-en »).
+
+  - type: exemple
+    enonce: "Décompose « aurez fini » et donne le nom exact de ce temps composé."
+    etapes:
+      - "Il y a deux mots : un auxiliaire et un participe passé. C'est donc un temps composé."
+      - "« aurez » est l'auxiliaire avoir au futur simple (2e personne du pluriel)."
+      - "« fini » est le participe passé du verbe finir."
+      - "L'auxiliaire est au futur simple : c'est le futur antérieur."
+
+  - type: exercice
+    enonce: "Dans « Nous avions terminé le repas », l'auxiliaire « avions » est à l'imparfait. Quel est le temps du verbe « avions terminé » ?"
+    forme: qcm
+    choix:
+      - "Le passé composé"
+      - "Le plus-que-parfait"
+      - "Le futur antérieur"
+    reponse: 1
+    indices:
+      - "Le temps composé prend le nom du temps de l'auxiliaire."
+      - "Regarde le tableau des temps composés : quel temps a un auxiliaire à l'imparfait ?"
+    explication: "Auxiliaire à l'imparfait + participe passé = plus-que-parfait. Le passé composé utilise l'auxiliaire au présent, le futur antérieur l'auxiliaire au futur simple."
+
+  - type: exercice
+    enonce: "Conjugue « chanter » au futur simple de l'indicatif, à la 1re personne du singulier (avec le pronom)."
+    forme: reponse_courte
+    reponse: "je chanterai"
+    reponses_acceptees: ["chanterai", "Je chanterai"]
+    indices:
+      - "Le futur simple se forme avec l'infinitif du verbe."
+      - "Ajoute la terminaison de la 1re personne du singulier : -ai, -as, -a, -ons, -ez, -ont."
+    explication: "Futur simple : infinitif chanter + terminaison -ai = je chanterai. Attention : je chanterais est le conditionnel présent."
+
+  - type: exercice
+    enonce: "Complète : « Il faut que tu ... vite ce travail. » (verbe finir, subjonctif présent)"
+    forme: qcm
+    choix:
+      - "finis"
+      - "finisses"
+      - "finiras"
+    reponse: 1
+    indices:
+      - "Après « il faut que », on emploie le subjonctif."
+      - "Au subjonctif présent, la terminaison de « tu » est -es. Le radical est finiss-."
+    explication: "Que tu finisses : radical finiss- + terminaison -es. « finis » est de l'indicatif présent, « finiras » est un futur."
+
+  - type: exercice
+    enonce: >-
+      Combien de verbes sont à un temps composé dans « Quand il est arrivé, nous avions déjà mangé
+      et nous partirons bientôt. » ?
+    forme: nombre
+    reponse: 2
+    tolerance: 0
+    indices:
+      - "Un temps composé, c'est un auxiliaire suivi d'un participe passé."
+      - "Repère les verbes un par un. Regarde si le dernier verbe s'écrit en un seul mot."
+    explication: "« est arrivé » (passé composé) et « avions mangé » (plus-que-parfait) sont composés. « partirons » est un futur simple, en un seul mot. Total : 2."
+
+  - type: exercice
+    enonce: >-
+      Associe chaque phrase à son mode. Phrase A : « Viens ici ! ». Phrase B : « Il faudrait que tu
+      viennes. » Phrase C : « Je viendrais si j'avais le temps. » Quel choix associe correctement A, B et C ?
+    forme: qcm
+    choix:
+      - "A : subjonctif ; B : impératif ; C : conditionnel"
+      - "A : impératif ; B : subjonctif ; C : conditionnel"
+      - "A : conditionnel ; B : impératif ; C : subjonctif"
+    reponse: 1
+    indices:
+      - "L'impératif n'a pas de sujet exprimé. Le subjonctif suit souvent « que »."
+      - "Le conditionnel exprime une condition, avec « si »."
+    explication: "« Viens ici ! » est à l'impératif (pas de sujet). « Il faudrait que tu viennes » est au subjonctif (après « que »). « Je viendrais si j'avais le temps » est au conditionnel."
+
+  - type: question_ouverte
+    question: >-
+      Avec le verbe « partir », écris trois phrases : une au plus-que-parfait, une au futur
+      antérieur, une au subjonctif passé (après « il faut que » ou « je regrette que »). Souligne
+      l'auxiliaire dans chaque phrase.
+    indices:
+      - "Pour chaque temps composé, cherche d'abord le temps de l'auxiliaire. Partir se conjugue avec être."
+      - "Le participe passé « parti » s'accorde avec le sujet."
+    criteres:
+      - "Chaque phrase emploie le bon temps, formé avec l'auxiliaire être au bon temps (imparfait, futur simple, subjonctif présent)."
+      - "Le participe passé « parti » est accordé avec le sujet."
+      - "Les phrases sont correctes et l'auxiliaire est souligné."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu trouves le nom d'un
+      temps composé, puis comment tu sépares le radical et la terminaison d'un verbe. Donne un
+      exemple.

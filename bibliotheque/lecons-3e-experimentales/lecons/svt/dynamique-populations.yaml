@@ -1,0 +1,157 @@
+notion: dynamique-populations
+titre: "La dynamique des populations"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir population, effectif et dynamique d'une population."
+      - "Calculer l'effectif final avec naissances, morts, arrivées et départs."
+      - "Relier une variation d'effectif à un paramètre du milieu (nourriture, prédateurs, climat...)."
+
+  - type: texte
+    titre: "Population, effectif, dynamique"
+    contenu: >-
+      Une **population** est l'ensemble des individus d'une même espèce qui vivent dans un même milieu,
+      au même moment.
+
+
+      Son **effectif** est le nombre d'individus.
+
+
+      La **dynamique** d'une population est la façon dont son effectif change au cours du temps.
+
+  - type: texte
+    titre: "Comment l'effectif change"
+    contenu: >-
+      L'effectif **augmente** avec les naissances et les arrivées (immigration).
+
+      Il **diminue** avec les morts et les départs (émigration).
+
+
+      **Effectif final = effectif initial + naissances + arrivées − morts − départs.**
+
+  - type: texte
+    titre: "Les paramètres qui influencent l'effectif"
+    contenu: >-
+      Beaucoup de paramètres agissent sur les naissances et les morts :
+
+      - la **nourriture** : peu de nourriture, moins de naissances et plus de morts ;
+
+      - les **prédateurs**, les maladies, les parasites, la concurrence pour la place ;
+
+      - le **climat** : température, sécheresse, hiver rude ;
+
+      - les **activités humaines** : chasse, pêche, destruction d'un milieu, protection d'une espèce.
+
+  - type: texte
+    titre: "Proies, prédateurs et réchauffement"
+    contenu: >-
+      Les effectifs des proies et de leurs prédateurs sont liés. Quand les proies sont nombreuses, les
+      prédateurs se nourrissent mieux et leur effectif monte, avec un retard. Alors les proies diminuent.
+      Puis les prédateurs manquent de nourriture et diminuent à leur tour.
+
+
+      L'augmentation de la température globale de la Terre peut modifier la reproduction de certaines
+      espèces. Chez les tortues marines, le sexe des petits dépend de la température du sable où les
+      œufs se développent : un sable plus chaud donne davantage de femelles. Si les mâles deviennent trop
+      rares, moins d'œufs sont fécondés et la population risque de diminuer.
+
+  - type: exemple
+    enonce: >-
+      Une population de 350 grenouilles compte, en un an, 100 naissances, 60 morts, 10 arrivées et 20
+      départs. Quel est son effectif à la fin de l'année ?
+    etapes:
+      - "Ce qui ajoute des individus : 100 naissances + 10 arrivées = 110."
+      - "Ce qui retire des individus : 60 morts + 20 départs = 80."
+      - "Effectif final = 350 + 110 − 80 = 380. L'effectif a augmenté."
+
+  - type: exercice
+    enonce: >-
+      Une population de 200 truites compte, en un an, 40 naissances et 30 morts. Il n'y a ni arrivée
+      ni départ. Quel est son effectif à la fin de l'année ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 210
+    tolerance: 0.01
+    indices:
+      - "Les naissances ajoutent des individus, les morts en retirent."
+      - "Effectif final = effectif initial + naissances − morts, ici."
+    explication: "200 + 40 − 30 = 210. L'effectif a augmenté de 10 truites."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on un animal qui capture et mange d'autres animaux ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "prédateur"
+    reponses_acceptees: ["un prédateur", "le prédateur", "predateur", "un predateur", "prédateurs"]
+    indices:
+      - "Ses victimes s'appellent des proies."
+      - "Le mot commence par « pré » et finit par « teur »."
+    explication: "C'est un prédateur. Les animaux qu'il capture sont ses proies."
+
+  - type: exercice
+    enonce: >-
+      Chez les tortues marines, quel est l'effet d'un sable plus chaud, là où les œufs se développent ?
+    forme: qcm
+    choix:
+      - "Il donne davantage de femelles."
+      - "Il donne davantage de mâles."
+      - "Il n'a aucun effet sur les petits."
+      - "Il empêche tous les œufs de se former."
+    reponse: 0
+    indices:
+      - "Relis le texte sur le réchauffement et la reproduction."
+      - "Chez ces tortues, la température du sable détermine le sexe des petits."
+    explication: "Un sable plus chaud donne davantage de femelles. Si les mâles deviennent trop rares, moins d'œufs sont fécondés."
+
+  - type: exercice
+    enonce: >-
+      Une population de 480 individus compte, sur une période, 150 naissances, 30 arrivées, 90 morts et
+      60 départs. Quel est son effectif à la fin ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 510
+    tolerance: 0.01
+    indices:
+      - "Additionne d'abord ce qui ajoute des individus, puis ce qui en retire."
+      - "Effectif final = effectif initial + naissances + arrivées − morts − départs."
+      - "Ajoute : 150 + 30. Retire : 90 + 60. Puis combine avec l'effectif de départ."
+    explication: "Ajouts : 150 + 30 = 180. Retraits : 90 + 60 = 150. 480 + 180 − 150 = 510."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : sur une île, l'effectif des lièvres (proies) monte fortement. Quelque temps
+      plus tard, l'effectif des renards (prédateurs) monte à son tour. Ensuite, l'effectif des lièvres
+      baisse. Enfin, celui des renards baisse aussi. Quelle explication est correcte ?
+    forme: qcm
+    choix:
+      - "Quand les lièvres sont nombreux, les renards se nourrissent mieux et deviennent plus nombreux, avec un retard ; puis les lièvres diminuent, et les renards manquent de nourriture."
+      - "Les renards font disparaître tous les lièvres, puis disparaissent sans raison."
+      - "Les deux effectifs varient sans aucun lien entre eux."
+      - "Les renards augmentent avant les lièvres, car ils n'ont pas besoin de nourriture."
+    reponse: 0
+    indices:
+      - "Regarde qui augmente en premier, puis qui augmente ensuite avec un retard."
+      - "Que mangent les renards ? Que se passe-t-il quand il n'y a plus assez de cette nourriture ?"
+    explication: "Les deux effectifs sont liés : les proies nombreuses favorisent les prédateurs, avec un retard. Puis les proies diminuent et les prédateurs manquent de nourriture. Les prédateurs ne font pas disparaître les proies."
+
+  - type: question_ouverte
+    question: >-
+      Une population d'animaux voit son effectif baisser pendant plusieurs années. Cite deux paramètres du
+      milieu qui peuvent l'expliquer, et dis comment chacun agit.
+    indices:
+      - "Pense à la nourriture, aux prédateurs, au climat, aux activités humaines."
+      - "Pour chaque paramètre, dis s'il fait baisser les naissances ou monter les morts."
+    criteres:
+      - "L'élève cite deux paramètres du milieu valables (nourriture, prédateurs, maladies, climat, activités humaines...)."
+      - "L'élève explique pour chacun son effet sur les naissances, les morts, les arrivées ou les départs."
+      - "L'élève relie clairement ces effets à la baisse de l'effectif."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce qu'est la dynamique d'une population et
+      la formule de l'effectif final. Ajoute un paramètre du milieu qui peut la modifier.

@@ -1,0 +1,146 @@
+notion: modelisation-fonction-lineaire
+titre: "Modéliser une proportionnalité par une fonction linéaire"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves du brevet à compter de la session 2027, note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître une situation de proportionnalité et trouver son coefficient."
+      - "Écrire la fonction linéaire f(x) = ax en précisant ce que représentent x et f(x)."
+      - "Calculer une image et un antécédent, et ne pas confondre avec une fonction affine."
+
+  - type: texte
+    titre: "Fonction linéaire et proportionnalité"
+    contenu: |-
+      Une situation de proportionnalité se modélise par une **fonction linéaire** : **f(x) = ax**.
+
+      - Le nombre a est le **coefficient de proportionnalité**.
+      - Pour le trouver : **a = f(x) ÷ x** (avec x différent de 0).
+      - Exemple : des pommes à 2,50 € le kilo. Le prix de x kg est **p(x) = 2,5x**.
+      - Pour reconnaître : si x double, f(x) double aussi. Et 0 donne 0.
+      - Dans un tableau de proportionnalité, tous les quotients f(x) ÷ x sont égaux.
+
+  - type: texte
+    titre: "Image, antécédent, droite"
+    contenu: |-
+      Avec p(x) = 2,5x :
+
+      - **Image** de 6 : p(6) = 2,5 × 6 = 15 €.
+      - **Antécédent** de 20 : on résout 2,5x = 20, donc x = 20 ÷ 2,5 = 8 kg.
+      - Pour un antécédent, on **divise** par a.
+
+      La représentation graphique est une **droite qui passe par l'origine** du repère, car f(0) = 0.
+
+  - type: texte
+    titre: "Attention aux pièges"
+    contenu: |-
+      - Une **partie fixe** (abonnement, prise en charge d'un taxi) : ce n'est plus de la proportionnalité. La fonction est **affine**, pas linéaire.
+      - Une aire comme x² n'est pas proportionnelle à x.
+      - On **multiplie**, on n'additionne pas : si 5 donne 12, alors 10 donne 24.
+      - Au brevet, on écrit toujours ce que représentent **x** et **f(x)**, avec les unités.
+
+  - type: exemple
+    enonce: >-
+      Un train roule à vitesse constante : 80 km par heure. Écris la distance d(t) parcourue en t heures.
+      Calcule la distance en 3 heures, puis le temps pour parcourir 200 km.
+    etapes:
+      - "La distance est proportionnelle au temps. Le coefficient est 80 (km par heure)."
+      - "d(t) = 80t, avec t en heures et d(t) en km."
+      - "Distance en 3 h : d(3) = 80 × 3 = 240 km."
+      - "Temps pour 200 km : on résout 80t = 200, donc t = 200 ÷ 80 = 2,5."
+      - "Phrase : il faut 2,5 heures (2 h 30 min) pour parcourir 200 km."
+
+  - type: exercice
+    enonce: >-
+      4 kg de cerises coûtent 18 €. Le prix est proportionnel à la masse. Quel est le prix d'un kilo ?
+    forme: nombre
+    reponse: 4.5
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Le coefficient de proportionnalité est le prix d'un seul kilo."
+      - "a = f(x) ÷ x : divise le prix par la masse."
+    explication: "a = 18 ÷ 4 = 4,5. Un kilo de cerises coûte 4,50 €. La fonction est p(x) = 4,5x."
+
+  - type: exercice
+    enonce: "Le prix des cerises est p(x) = 4,5x (x en kg, p(x) en €). Quel est le prix de 6 kg ?"
+    forme: nombre
+    reponse: 27
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Calculer un prix pour une masse donnée, c'est chercher une image."
+      - "Remplace x par la masse dans 4,5x."
+    explication: "p(6) = 4,5 × 6 = 27. Le prix est 27 €."
+
+  - type: exercice
+    enonce: "Laquelle de ces situations se modélise par une fonction linéaire ?"
+    forme: qcm
+    choix:
+      - "Un taxi : 4 € de prise en charge puis 1,50 € par kilomètre"
+      - "Un abonnement : 20 € par an puis 5 € par séance"
+      - "Du ruban vendu 2 € le mètre : prix pour x mètres"
+      - "L'aire d'un carré de côté x"
+    reponse: 2
+    indices:
+      - "Une fonction linéaire s'écrit ax : elle n'a pas de partie fixe."
+      - "Cherche la situation où le prix est proportionnel à la quantité, et où 0 donne 0."
+    explication: "Le ruban : le prix est 2x, proportionnel à la longueur. Le taxi et l'abonnement ont une partie fixe (affine). L'aire d'un carré est x², pas proportionnelle à x."
+
+  - type: exercice
+    enonce: >-
+      Voici un tableau. Valeurs de x : 2 ; 4 ; 6. Valeurs de y : 5 ; 9 ; 13.
+      Est-ce un tableau de proportionnalité ? Réponds par oui ou par non.
+    forme: reponse_courte
+    reponse: "non"
+    reponses_acceptees: ["non", "non ce n'est pas un tableau de proportionnalité", "ce n'est pas proportionnel"]
+    indices:
+      - "Dans un tableau de proportionnalité, tous les quotients y ÷ x sont égaux."
+      - "Calcule y ÷ x pour la première colonne, puis pour la deuxième. Sont-ils égaux ?"
+    explication: "5 ÷ 2 = 2,5 mais 9 ÷ 4 = 2,25. Les quotients sont différents : ce n'est pas un tableau de proportionnalité."
+
+  - type: exercice
+    enonce: >-
+      Un cycliste roule à vitesse constante : il parcourt 45 km en 1,5 heure. La distance en t heures
+      est d(t) = at. Au bout de combien d'heures aura-t-il parcouru 105 km ?
+    forme: nombre
+    reponse: 3.5
+    tolerance: 0.01
+    unite: h
+    indices:
+      - "Commence par calculer le coefficient a : distance ÷ durée."
+      - "Écris la fonction d(t) = at avec ta valeur de a. Puis 105 est le résultat : c'est un antécédent."
+      - "Résous l'équation at = 105 en divisant 105 par a."
+    explication: "a = 45 ÷ 1,5 = 30, donc d(t) = 30t. On résout 30t = 105, donc t = 105 ÷ 30 = 3,5 heures (3 h 30 min)."
+
+  - type: question_ouverte
+    question: >-
+      Un taxi facture 4 € de prise en charge, puis 1,50 € par kilomètre. Pourquoi ne peut-on pas
+      modéliser cette situation par une fonction linéaire ? Quel type de fonction convient ?
+    indices:
+      - "Que paie-t-on pour 0 kilomètre ?"
+      - "Une fonction linéaire f(x) = ax donne 0 pour x = 0."
+    criteres:
+      - "L'élève dit qu'à 0 km on paie déjà 4 € (partie fixe), alors qu'une fonction linéaire donnerait 0."
+      - "L'élève dit que le prix n'est pas proportionnel aux kilomètres."
+      - "L'élève propose une fonction affine, de la forme 1,5x + 4."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots : comment reconnais-tu une situation de proportionnalité, comment trouves-tu le
+      coefficient a, et que fais-tu pour un antécédent ?

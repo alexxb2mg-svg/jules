@@ -1,0 +1,174 @@
+notion: nommer-oeuvres-majeures
+titre: "Nommer des œuvres majeures et les situer"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer quelques œuvres majeures avec leur artiste et leur date."
+      - "Rattacher une œuvre à une époque et à une aire de production."
+      - "Dire le matériau, la forme, le sens et la fonction d'une œuvre."
+
+  - type: texte
+    titre: "La carte d'identité d'une œuvre"
+    contenu: >-
+      En fin de 3e, tu dois savoir **nommer** des œuvres majeures et les **situer**.
+
+
+      Pour chaque œuvre, retiens sa **carte d'identité** :
+
+
+      - le **titre** ;
+
+      - l'**artiste** ;
+
+      - la **date** ;
+
+      - le **lieu de conservation** (où on peut la voir).
+
+
+      Tu la rattaches aussi à une **époque** (Antiquité, Moyen Âge, Renaissance…) et à une
+      **aire de production** : le pays, la région ou la civilisation où elle a été créée.
+
+  - type: texte
+    titre: "Les quatre éléments constitutifs"
+    contenu: >-
+      Pour décrire une œuvre, cherche ses quatre éléments constitutifs :
+
+
+      | Élément | Question à te poser |
+
+      |---|---|
+
+      | **Matériau** | Dans quelle matière est-elle faite (marbre, huile sur toile, laine…) ? |
+
+      | **Forme** | Comment est-elle composée (composition, couleurs, style) ? |
+
+      | **Sens** | Que représente-t-elle ? Quel est son message ? |
+
+      | **Fonction** | À quoi servait-elle (décorer, raconter, célébrer un pouvoir, dénoncer) ? |
+
+  - type: texte
+    titre: "Des repères dans l'ordre du temps"
+    contenu: >-
+      Voici des repères à connaître :
+
+
+      - **Vénus de Milo** : statue grecque en marbre, époque hellénistique (vers le IIe siècle avant J.-C.), musée du Louvre.
+
+      - **Tapisserie de Bayeux** : broderie de la fin du XIe siècle, qui raconte la conquête de l'Angleterre en 1066.
+
+      - **La Joconde**, de Léonard de Vinci : huile sur bois, début du XVIe siècle, Renaissance italienne, musée du Louvre.
+
+      - **La Liberté guidant le peuple**, de Delacroix : 1830, romantisme, musée du Louvre.
+
+      - **Impression, soleil levant**, de Monet : 1872, a donné son nom à l'impressionnisme.
+
+      - **Guernica**, de Picasso : 1937, dénonce un bombardement pendant la guerre d'Espagne, musée Reina Sofía à Madrid.
+
+      - **Marilyn Diptych**, de Warhol : 1962, pop art américain, Tate à Londres.
+
+
+      Astuce : associe chaque œuvre à une époque et à un mot-clé (marbre, broderie, portrait, révolution, lumière, guerre, pop art).
+
+  - type: exemple
+    enonce: >-
+      Présente Le Radeau de la Méduse, de Théodore Géricault, avec ses éléments constitutifs.
+    etapes:
+      - "Carte d'identité : Le Radeau de la Méduse, de Théodore Géricault, peint en 1818-1819, conservé au musée du Louvre."
+      - "Époque : le XIXe siècle, avant La Liberté guidant le peuple (1830)."
+      - "Matériau : de la peinture à l'huile sur toile."
+      - "Sens : le tableau montre des naufragés sur un radeau."
+
+  - type: exercice
+    enonce: "Qui a peint La Joconde ?"
+    forme: qcm
+    choix:
+      - "Léonard de Vinci"
+      - "Eugène Delacroix"
+      - "Pablo Picasso"
+      - "Claude Monet"
+    reponse: 0
+    indices:
+      - "La Joconde est une œuvre de la Renaissance italienne."
+      - "Parmi ces artistes, un seul a vécu à cette époque : les autres sont des XIXe et XXe siècles."
+    explication: "La Joconde est de Léonard de Vinci. Elle est peinte au début du XVIe siècle, pendant la Renaissance italienne, et conservée au musée du Louvre."
+
+  - type: exercice
+    enonce: "Marilyn Diptych, d'Andy Warhol (1962), se rattache à un mouvement artistique américain. Quel est son nom ?"
+    forme: reponse_courte
+    reponse: "pop art"
+    reponses_acceptees:
+      - "pop art"
+      - "pop-art"
+      - "le pop art"
+      - "le pop-art"
+      - "Pop Art"
+    indices:
+      - "Warhol s'inspire de la publicité et de la culture populaire."
+      - "Le nom de ce mouvement est formé de deux mots. Le premier est un diminutif anglais de « populaire »."
+    explication: "C'est le pop art, un mouvement né dans les années 1950-1960 qui s'inspire de la publicité et de la culture populaire."
+
+  - type: exercice
+    enonce: "En quelle année Pablo Picasso peint-il Guernica ?"
+    forme: nombre
+    reponse: 1937
+    tolerance: 0
+    indices:
+      - "Le tableau réagit au bombardement d'une ville pendant la guerre d'Espagne."
+      - "La guerre d'Espagne commence en 1936 et se termine en 1939. Le tableau est peint l'année qui suit son début."
+    explication: "Picasso peint Guernica en 1937, après le bombardement de la ville basque, pour dénoncer cette violence."
+
+  - type: exercice
+    enonce: "Sur quel support La Joconde est-elle peinte à l'huile ?"
+    forme: qcm
+    choix:
+      - "Un panneau de bois"
+      - "Une toile de lin"
+      - "Un mur enduit de plâtre frais"
+      - "Une feuille de papier"
+    reponse: 0
+    indices:
+      - "Au début du XVIe siècle, les petits tableaux étaient souvent peints sur un support rigide."
+      - "Ce support vient d'un arbre."
+    explication: "La Joconde est peinte à l'huile sur un panneau de bois, au début du XVIe siècle. C'est son matériau."
+
+  - type: exercice
+    enonce: "Quelle présentation de La Liberté guidant le peuple est complète et exacte ?"
+    forme: qcm
+    choix:
+      - "Peinture romantique d'Eugène Delacroix, 1830, qui évoque la révolution de juillet 1830, musée du Louvre."
+      - "Peinture de Léonard de Vinci, début du XVIe siècle, Renaissance italienne, musée du Louvre."
+      - "Peinture de Pablo Picasso, 1937, qui dénonce un bombardement, musée Reina Sofía à Madrid."
+      - "Peinture de Claude Monet, 1872, qui a donné son nom à l'impressionnisme."
+    reponse: 0
+    indices:
+      - "Regarde le titre : une Liberté guide un peuple. Quel événement du XIXe siècle cela évoque-t-il ?"
+      - "Élimine les propositions qui parlent de la Renaissance, d'un bombardement ou d'un mouvement qui vient du nom d'une autre œuvre."
+    explication: "La Liberté guidant le peuple est de Delacroix (1830), une peinture romantique qui évoque la révolution de juillet 1830. Elle est au musée du Louvre. Les autres propositions décrivent La Joconde, Guernica et Impression, soleil levant."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre majeure étudiée cette année. Présente-la en quelques phrases : sa carte
+      d'identité, son époque et son aire de production, puis ses éléments constitutifs.
+    indices:
+      - "Quelle œuvre connais-tu le mieux ?"
+      - "Écris une phrase par élément : matériau, forme, sens, fonction."
+    criteres:
+      - "L'élève donne une carte d'identité exacte (titre, artiste, date ou période, lieu de conservation)."
+      - "L'élève situe l'œuvre dans une époque et une aire de production."
+      - "L'élève dégage au moins trois éléments constitutifs parmi le matériau, la forme, le sens et la fonction."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, ce que contient la carte d'identité d'une œuvre et quels sont les quatre
+      éléments constitutifs qu'on cherche pour la décrire.

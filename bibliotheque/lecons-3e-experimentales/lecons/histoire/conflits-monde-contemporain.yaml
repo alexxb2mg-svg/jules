@@ -1,0 +1,146 @@
+notion: conflits-monde-contemporain
+titre: "Rivalités et conflits dans le monde contemporain"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Guerre froide »"
+    url: "https://fr.vikidia.org/w/index.php?title=Guerre_froide&oldid=2570032"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Accord de Paris sur le climat »"
+    url: "https://fr.vikidia.org/w/index.php?title=Accord_de_Paris_sur_le_climat&oldid=2410603"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer que les rivalités et les conflits continuent après la fin de la guerre froide."
+      - "Décrire un cas de conflit avec ses dates, ses enjeux locaux et ses conséquences mondiales."
+      - "Montrer, avec la COP21, le niveau mondial de l'action politique et le rôle des différents acteurs."
+
+  - type: texte
+    titre: "Après la guerre froide, les conflits continuent"
+    contenu: >-
+      Entre 1989 et 1991, la guerre froide prend fin : le mur de Berlin tombe en 1989, l'URSS
+      disparaît en 1991. Le monde n'est plus organisé autour de deux blocs. Pourtant, les
+      rivalités et les conflits continuent. Leurs causes sont locales (territoires, ressources,
+      religion, pouvoir). Mais leurs conséquences peuvent être mondiales.
+
+  - type: texte
+    titre: "Un cas d'étude : la guerre russo-ukrainienne"
+    contenu: >-
+      La Russie **annexe** la Crimée en 2014, puis lance une invasion de l'Ukraine en février
+      2022. Enjeux locaux : le territoire et la souveraineté de l'Ukraine. Enjeux
+      internationaux : aide militaire et humanitaire à l'Ukraine, sanctions économiques contre la
+      Russie, accueil de réfugiés, hausse des prix de l'énergie et des céréales. Les États,
+      l'ONU, l'Union européenne et l'OTAN sont concernés. Un conflit local a donc des
+      répercussions à l'échelle globale.
+
+  - type: texte
+    titre: "Le climat : une action à l'échelle mondiale"
+    contenu: >-
+      Certains défis, comme le changement climatique, se traitent à l'échelle mondiale. Des
+      conférences réunissent presque chaque année les États, sous l'égide de l'ONU : les **COP**.
+      En 1992, le Sommet de la Terre à Rio traite d'environnement et de développement. La
+      **COP21**, à Paris, adopte l'**accord de Paris** le 12 décembre 2015. Il vise à limiter le
+      réchauffement bien en dessous de 2 °C par rapport à l'époque préindustrielle, si possible
+      1,5 °C. Chaque pays annonce ses propres engagements.
+
+  - type: texte
+    titre: "Les acteurs de la coopération internationale"
+    contenu: |-
+      Plusieurs acteurs agissent ensemble :
+      - les **États** (la France, la Chine, les États-Unis...) ;
+      - les **organisations internationales** (l'ONU, l'Union européenne) ;
+      - les **ONG**, associations indépendantes des États (Croix-Rouge, associations de protection de l'environnement) ;
+      - des entreprises et des collectivités locales.
+      Au brevet : cite un cas précis avec ses dates, puis montre le niveau mondial de l'action.
+
+  - type: exemple
+    enonce: >-
+      Montre, avec la guerre en Ukraine, qu'un conflit local a des conséquences mondiales.
+    etapes:
+      - "Enjeu local : la Russie annexe la Crimée en 2014, puis envahit l'Ukraine en février 2022. Le territoire et la souveraineté de l'Ukraine sont en jeu."
+      - "Conséquences pour d'autres pays : aide militaire et humanitaire à l'Ukraine, accueil de réfugiés."
+      - "Conséquences économiques : sanctions contre la Russie, hausse des prix de l'énergie et des céréales."
+      - "Conclusion : un conflit local touche les États, l'ONU, l'Union européenne et l'OTAN. Il a des effets à l'échelle mondiale."
+
+  - type: exercice
+    enonce: "En quelle année le mur de Berlin tombe-t-il ?"
+    forme: nombre
+    reponse: 1989
+    tolerance: 0
+    indices:
+      - "Cet événement marque le début de la fin de la guerre froide."
+      - "L'URSS disparaît deux ans plus tard."
+    explication: "Le mur de Berlin tombe en 1989. L'URSS disparaît en 1991 : c'est la fin de la guerre froide."
+
+  - type: exercice
+    enonce: "En quelle année est adopté l'accord de Paris sur le climat, lors de la COP21 ?"
+    forme: nombre
+    reponse: 2015
+    tolerance: 0
+    indices:
+      - "La COP21 a lieu à Paris, en décembre."
+      - "C'est plus de vingt ans après le Sommet de la Terre de Rio (1992)."
+    explication: "L'accord de Paris est adopté le 12 décembre 2015."
+
+  - type: exercice
+    enonce: "En 1992, le Sommet de la Terre sur l'environnement et le développement se tient dans une grande ville du Brésil. Laquelle ?"
+    forme: reponse_courte
+    reponse: "Rio de Janeiro"
+    reponses_acceptees:
+      - "Rio"
+      - "rio de janeiro"
+      - "à Rio de Janeiro"
+      - "à Rio"
+    indices:
+      - "C'est une ville célèbre du bord de mer, au Brésil."
+      - "Cette ville est célèbre pour son carnaval."
+    explication: "Le Sommet de la Terre de 1992 a lieu à Rio de Janeiro, au Brésil."
+
+  - type: exercice
+    enonce: "Une association indépendante des États, comme la Croix-Rouge, qui agit pour une cause : de quel type d'acteur s'agit-il ?"
+    forme: qcm
+    choix:
+      - "Une ONG"
+      - "Un État"
+      - "Une entreprise d'énergie"
+      - "L'ONU"
+    reponse: 0
+    indices:
+      - "« Indépendante des États » : ce n'est ni un État ni l'ONU, qui réunit des pays."
+      - "Le sigle veut dire « organisation non gouvernementale »."
+    explication: "Une ONG est une association indépendante des États qui agit pour une cause (Croix-Rouge, protection de l'environnement)."
+
+  - type: exercice
+    enonce: "Pourquoi un conflit local peut-il avoir des conséquences mondiales ?"
+    forme: qcm
+    choix:
+      - "Il peut entraîner des sanctions économiques et perturber les prix de l'énergie et des céréales"
+      - "Il reste toujours limité au territoire concerné"
+      - "Il met automatiquement fin à toute coopération internationale"
+    reponse: 0
+    indices:
+      - "Pense à la guerre en Ukraine : qui d'autre que l'Ukraine et la Russie est touché ?"
+      - "Regarde les conséquences sur l'économie : sanctions, énergie, céréales."
+    explication: "Les sanctions et la hausse des prix touchent de nombreux pays. Un conflit local a donc des répercussions mondiales."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre comment la coopération internationale tente de répondre au
+      défi du changement climatique. Appuie-toi sur la COP21.
+    indices:
+      - "Commence par donner la date et le lieu de la COP21, et son objectif."
+      - "Cite au moins deux types d'acteurs : États, ONU, ONG..."
+    criteres:
+      - "L'élève cite la COP21 à Paris et l'accord adopté en décembre 2015."
+      - "L'élève donne l'objectif : limiter le réchauffement bien en dessous de 2 °C, si possible 1,5 °C."
+      - "L'élève nomme au moins deux types d'acteurs (États, ONU, ONG)."
+      - "L'élève conclut sur le niveau mondial de l'action politique."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, pourquoi la fin de la guerre froide n'a
+      pas mis fin aux conflits, et donne un exemple de coopération internationale face à un défi
+      mondial.
