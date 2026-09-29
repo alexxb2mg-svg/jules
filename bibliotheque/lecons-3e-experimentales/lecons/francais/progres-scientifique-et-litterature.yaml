@@ -1,0 +1,167 @@
+notion: progres-scientifique-et-litterature
+titre: "Progrès scientifique, figure du savant et anticipation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer comment un texte présente le progrès scientifique : exalté, interrogé ou rejeté."
+      - "Reconnaître la figure du savant : bienfaiteur, inquiétant ou dépassé par sa création."
+      - "Distinguer utopie et dystopie, et relier un récit d'anticipation à une peur ou à un espoir."
+
+  - type: texte
+    titre: "Le progrès : admiré ou redouté"
+    contenu: |-
+      Au XIXe siècle, la science et les techniques progressent très vite : machine à vapeur, chemin de fer, électricité, médecine.
+
+      Les écrivains s'interrogent. Le progrès peut être :
+
+      - **exalté** et presque mythifié : la science va rendre les hommes heureux ;
+      - **interrogé** : on voit ses avantages et ses risques ;
+      - **objet de répulsion ou de désillusion** : on s'en méfie, on est déçu.
+
+      Tous les écrivains du XIXe siècle n'admirent donc pas le progrès.
+
+  - type: texte
+    titre: "La figure du savant"
+    contenu: |-
+      La littérature met souvent en scène un **savant**.
+
+      | Figure | Exemple |
+      |---|---|
+      | **Bienfaiteur**, créateur génial | Le capitaine Nemo, savant explorateur, dans *Vingt mille lieues sous les mers* (Jules Verne, 1870) |
+      | **Dépassé** par sa création | *Frankenstein* (Mary Shelley, 1818) : le savant crée un être vivant, puis il lui échappe |
+      | **Inquiétant**, malfaisant | *L'étrange cas du docteur Jekyll et de M. Hyde* (Stevenson, 1886) : une expérience fait naître un double dangereux |
+
+      Le savant n'est donc **pas toujours** présenté comme bienfaisant.
+
+  - type: texte
+    titre: "Anticipation, utopie, dystopie"
+    contenu: |-
+      L'art ne fait pas que raconter la science : il **pense, imagine, et parfois anticipe** le progrès. Jules Verne imagine des voyages et des machines avant qu'ils existent. C'est le **récit d'anticipation**. La **science-fiction** en est un prolongement.
+
+      - **Utopie** : une société **idéale**, parfaite (mot venu d'*Utopia*, Thomas More, 1516).
+      - **Dystopie** : une société où **tout a mal tourné** (contrôle, perte de liberté, technologie qui opprime). Exemples : *1984* (Orwell, 1949), *Fahrenheit 451* (Bradbury, 1953).
+
+  - type: texte
+    titre: "Ce que ces récits expriment, et le brevet"
+    contenu: |-
+      Ces récits expriment les **espoirs** et les **angoisses** de l'humanité face au progrès, y compris pour l'**environnement**.
+
+      **Méthode au brevet :**
+
+      1. Repère la **vision du progrès** : exalté, interrogé, rejeté.
+      2. Identifie la **figure du savant**, s'il y en a une.
+      3. Décide : **utopie** ou **dystopie** ?
+      4. Relie le texte à une **peur** ou à un **espoir** précis.
+      5. Appuie-toi sur un **exemple** : titre, auteur, extrait.
+
+  - type: exemple
+    enonce: >-
+      Lis cette phrase écrite pour la leçon : « Grâce à la machine à vapeur, les hommes seront enfin
+      libérés de la fatigue et vivront tous heureux. » Quelle vision du progrès montre-t-elle ?
+    etapes:
+      - "Je repère les mots forts : « enfin libérés », « tous heureux ». Ils sont très positifs."
+      - "Je vois que la phrase ne parle d'aucun risque : le progrès est présenté comme la solution à tout."
+      - "Je conclus : le progrès est exalté, admiré sans réserve. Ce n'est ni une vision nuancée, ni un rejet."
+
+  - type: exercice
+    enonce: "Qu'est-ce qu'une utopie ?"
+    forme: qcm
+    choix:
+      - "Un récit qui imagine une société idéale et parfaite"
+      - "Un récit où le progrès a tourné au cauchemar"
+      - "Un poème sur la nature"
+      - "Un récit qui raconte la vie d'aujourd'hui"
+    reponse: 0
+    indices:
+      - "Ce mot vient d'*Utopia*, le titre du livre de Thomas More."
+      - "L'utopie est le contraire de la dystopie, où tout a mal tourné."
+    explication: "Une utopie imagine une société idéale, parfaite. La dystopie, au contraire, imagine une société où le progrès a tourné au cauchemar."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on un récit qui imagine un futur possible, souvent grâce à la science,
+      comme les voyages et les machines imaginés par Jules Verne ? Il s'appelle un récit d'...
+    forme: reponse_courte
+    reponse: "anticipation"
+    reponses_acceptees: ["récit d'anticipation", "recit d'anticipation", "l'anticipation", "un récit d'anticipation"]
+    indices:
+      - "Ces récits imaginent l'avenir avant qu'il arrive."
+      - "Le mot commence par « anti- » et se termine par « -tion »."
+    explication: "Le récit d'anticipation imagine un futur possible. La science-fiction en est un prolongement."
+
+  - type: exercice
+    enonce: "Dans *Frankenstein* (Mary Shelley, 1818), le savant crée un être vivant, puis cet être lui échappe. Quelle figure du savant est illustrée ?"
+    forme: qcm
+    choix:
+      - "Le savant bienfaiteur, qui aide toujours l'humanité"
+      - "Le savant dépassé par sa création"
+      - "Le savant qui ne fait aucune expérience"
+      - "Le savant qui exalte le progrès sans risque"
+    reponse: 1
+    indices:
+      - "Regarde ce qui arrive au savant après sa création."
+      - "Il ne contrôle plus ce qu'il a fait."
+    explication: "La création échappe à son créateur : c'est la figure du savant dépassé par ce qu'il a créé."
+
+  - type: exercice
+    enonce: "Quel auteur a écrit *1984*, publié en 1949 ? (Nom de famille.)"
+    forme: reponse_courte
+    reponse: "Orwell"
+    reponses_acceptees: ["orwell", "George Orwell", "george orwell"]
+    indices:
+      - "*1984* est une dystopie : une société où la liberté disparaît."
+      - "L'auteur est un écrivain britannique. Son nom de famille commence par O."
+    explication: "*1984* (1949) est de George Orwell. C'est une dystopie."
+
+  - type: exercice
+    enonce: >-
+      Lis ce passage écrit pour l'exercice : « Dans la ville de demain, chaque habitant porte un
+      bracelet qui enregistre tous ses déplacements. Personne ne peut plus se cacher ni choisir
+      seul où aller. » Que peut-on dire de ce récit ?
+    forme: qcm
+    choix:
+      - "C'est une utopie : elle exalte un monde parfait."
+      - "C'est une dystopie : elle exprime la peur de perdre sa liberté face à une technologie qui surveille."
+      - "C'est un poème en prose sur la nature."
+      - "Ce n'est pas un récit d'anticipation, car il parle d'un futur."
+    reponse: 1
+    indices:
+      - "Ce monde est-il présenté comme parfait, ou comme inquiétant ?"
+      - "Que perdent les habitants quand ils sont surveillés ?"
+      - "Relis la définition : une société où tout a mal tourné (contrôle, perte de liberté)."
+    explication: "La technologie surveille tout le monde et enlève le choix : la société a mal tourné. C'est une dystopie, qui exprime la peur de perdre sa liberté. Elle imagine un futur, donc elle relève bien de l'anticipation."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un récit d'anticipation, une utopie ou une dystopie étudiée en classe. Explique quelle
+      inquiétude ou quel espoir humain il exprime.
+    indices:
+      - "Ce récit imagine-t-il un futur meilleur ou un futur inquiétant ?"
+      - "Nomme le récit, dis ce qu'il imagine, puis relie cela à une peur ou à un espoir réel (liberté, environnement, technologie...)."
+      - "Tu peux commencer ainsi : « Ce récit imagine un futur où... »."
+    criteres:
+      - "L'élève cite un récit ou un auteur précis, relevant de l'anticipation, de l'utopie ou de la dystopie."
+      - "L'élève explique ce que ce récit imagine pour le futur (société idéale, cauchemar technologique...)."
+      - "L'élève relie ce récit à une inquiétude ou à un espoir réel de l'humanité (liberté, environnement, technologie...)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une utopie et
+      une dystopie, et pourquoi le savant n'est pas toujours présenté comme un bienfaiteur.

@@ -1,0 +1,164 @@
+notion: formes-energie
+titre: "Les formes d'énergie et leurs conversions"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les formes d'énergie et les reconnaître dans une situation."
+      - "Décrire une chaîne énergétique : réservoir, convertisseur, formes obtenues."
+      - "Repérer les dispositifs dont le fonctionnement émet du dioxyde de carbone."
+
+  - type: texte
+    titre: "Les formes d'énergie"
+    contenu: |-
+      L'énergie se mesure en **joules (J)**. Elle existe sous plusieurs formes.
+
+      | Forme | À retenir |
+      |---|---|
+      | cinétique | objet en mouvement : Ec = ½ × m × v² |
+      | potentielle de position | dépend de la position, par exemple la hauteur au-dessus du sol |
+      | thermique | liée à la température d'un corps |
+      | électrique | transportée par le courant électrique |
+      | chimique | stockée dans les combustibles, les aliments, les piles |
+      | nucléaire | stockée dans les noyaux des atomes (uranium) |
+      | lumineuse | transportée par la lumière |
+
+  - type: texte
+    titre: "Convertisseur et chaîne énergétique"
+    contenu: |-
+      Un **convertisseur** transforme une forme d'énergie en une ou plusieurs autres.
+
+      On le représente par une **chaîne énergétique** : réservoir → convertisseur → formes d'énergie obtenues.
+
+      | Convertisseur | Conversion |
+      |---|---|
+      | panneau photovoltaïque | lumineuse → électrique |
+      | éolienne | cinétique → électrique |
+      | moteur électrique | électrique → cinétique |
+      | lampe | électrique → lumineuse et thermique |
+
+      Un convertisseur **ne crée pas** d'énergie : il la **transforme**.
+
+      Une partie de l'énergie finit souvent en énergie thermique, souvent perdue : la lampe et le moteur chauffent.
+
+  - type: texte
+    titre: "Objet qui tombe et barrage"
+    contenu: |-
+      Quand un objet tombe :
+      - son énergie **potentielle diminue** (il perd de la hauteur) ;
+      - son énergie **cinétique augmente** (il gagne de la vitesse).
+
+      Dans un barrage :
+      1. l'eau du lac a de l'énergie potentielle ;
+      2. elle fait tourner une turbine (énergie cinétique) ;
+      3. la turbine entraîne un alternateur, qui produit de l'énergie électrique.
+
+  - type: texte
+    titre: "Les dispositifs qui émettent du dioxyde de carbone"
+    contenu: |-
+      Les dispositifs qui **brûlent un combustible** (charbon, pétrole, gaz, bois, essence) convertissent de l'énergie **chimique** en énergie **thermique**.
+
+      Leur fonctionnement **émet du dioxyde de carbone (CO₂)**, un gaz à effet de serre.
+
+      Une éolienne ou un panneau solaire n'en émet pas en fonctionnant. Le Soleil est la source d'énergie lumineuse de la Terre.
+
+  - type: exemple
+    enonce: "Quelle est la chaîne énergétique d'une lampe de poche ?"
+    etapes:
+      - "Le réservoir est la pile : elle contient de l'énergie chimique."
+      - "La pile fournit de l'énergie électrique à la lampe, qui est le convertisseur."
+      - "La lampe convertit l'énergie électrique en énergie lumineuse (utile) et en énergie thermique (perdue : la lampe chauffe)."
+
+  - type: exercice
+    enonce: "Quelle forme d'énergie possède un objet parce qu'il est en mouvement ?"
+    forme: qcm
+    choix:
+      - "L'énergie cinétique"
+      - "L'énergie potentielle de position"
+      - "L'énergie chimique"
+      - "L'énergie nucléaire"
+    reponse: 0
+    indices:
+      - "Regarde le tableau des formes d'énergie de la leçon."
+      - "Pense au mot « mouvement » dans la définition."
+    explication: "L'énergie cinétique est celle d'un objet en mouvement. L'énergie potentielle dépend de la position (la hauteur)."
+
+  - type: exercice
+    enonce: "Un moteur électrique fait tourner un ventilateur. Quelle forme d'énergie utile est produite ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "cinétique"
+    reponses_acceptees:
+      - "cinetique"
+      - "énergie cinétique"
+      - "energie cinetique"
+      - "l'énergie cinétique"
+      - "l'energie cinetique"
+    indices:
+      - "Le ventilateur tourne : c'est un mouvement."
+      - "Regarde la ligne « moteur électrique » du tableau des convertisseurs."
+    explication: "Un moteur électrique convertit l'énergie électrique en énergie cinétique (le ventilateur tourne). Une partie est aussi convertie en énergie thermique : le moteur chauffe."
+
+  - type: exercice
+    enonce: "Un objet de masse 2 kg se déplace à la vitesse de 6 m/s. Calcule son énergie cinétique, en joules."
+    forme: nombre
+    reponse: 36
+    tolerance: 0.01
+    unite: "J"
+    indices:
+      - "Utilise Ec = ½ × m × v². Calcule d'abord v × v."
+      - "Multiplie v² par la masse, puis prends la moitié."
+    explication: "v² = 6 × 6 = 36. Ec = ½ × 2 × 36 = 1 × 36 = 36 J."
+
+  - type: exercice
+    enonce: "Lequel de ces dispositifs émet du dioxyde de carbone pendant son fonctionnement ?"
+    forme: qcm
+    choix:
+      - "Une chaudière qui brûle du gaz"
+      - "Une éolienne"
+      - "Un panneau photovoltaïque"
+    reponse: 0
+    indices:
+      - "Le dioxyde de carbone est émis quand on brûle un combustible."
+      - "Une éolienne utilise le vent et un panneau solaire utilise la lumière : il n'y a pas de combustion."
+    explication: "Une chaudière à gaz brûle un combustible : elle convertit de l'énergie chimique en énergie thermique et émet du CO₂. L'éolienne et le panneau solaire n'en émettent pas en fonctionnant."
+
+  - type: exercice
+    enonce: "Dans un barrage, quel est le bon ordre des formes d'énergie, de l'eau du lac jusqu'au courant produit ?"
+    forme: qcm
+    choix:
+      - "potentielle → cinétique → électrique"
+      - "électrique → cinétique → potentielle"
+      - "chimique → thermique → électrique"
+      - "cinétique → potentielle → électrique"
+    reponse: 0
+    indices:
+      - "L'eau du lac est en hauteur : quelle forme d'énergie dépend de la hauteur ?"
+      - "L'eau tombe et fait tourner une turbine (mouvement) qui entraîne un alternateur."
+    explication: "L'eau du lac a de l'énergie potentielle. Elle fait tourner la turbine (énergie cinétique), qui entraîne l'alternateur : énergie électrique."
+
+  - type: question_ouverte
+    question: >-
+      Décris la chaîne énergétique d'une éolienne. Nomme le réservoir ou l'énergie reçue, le convertisseur
+      et la forme d'énergie obtenue. Dis aussi si elle émet du CO₂ en fonctionnant.
+    indices:
+      - "Qu'est-ce qui fait tourner les pales d'une éolienne ?"
+      - "Regarde la ligne « éolienne » du tableau des convertisseurs."
+    criteres:
+      - "L'élève dit que le vent apporte de l'énergie cinétique aux pales de l'éolienne."
+      - "L'élève dit que l'éolienne est le convertisseur et qu'elle produit de l'énergie électrique."
+      - "L'élève dit qu'une éolienne n'émet pas de CO₂ en fonctionnant, car il n'y a pas de combustion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est une chaîne énergétique et
+      pourquoi un convertisseur ne crée pas d'énergie.

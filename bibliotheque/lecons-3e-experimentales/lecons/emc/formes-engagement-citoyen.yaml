@@ -1,0 +1,160 @@
+notion: formes-engagement-citoyen
+titre: "Les formes de l'engagement citoyen"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Délégué de classe »"
+    url: "https://fr.vikidia.org/w/index.php?title=D%C3%A9l%C3%A9gu%C3%A9_de_classe&oldid=2280639"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Syndicat »"
+    url: "https://fr.vikidia.org/w/index.php?title=Syndicat&oldid=2458649"
+    licence: CC-BY-SA-3.0
+  - titre: "Wikipédia, « Service national universel »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Service_national_universel&oldid=239118473"
+    licence: CC-BY-SA-4.0
+  - titre: "Définition des épreuves du DNB à compter de la session 2027, sous-épreuve EMC, note de service du 11-9-2026 (BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Connaître les formes traditionnelles de l'engagement et donner un exemple de chacune."
+      - "Expliquer la liberté de manifester et ses limites."
+      - "Présenter le service national universel (SNU)."
+
+  - type: texte
+    titre: "Les formes traditionnelles d'engagement"
+    contenu: |-
+      **S'engager**, c'est agir volontairement pour une cause ou pour la collectivité.
+
+      | Forme | En quoi ça consiste |
+      |---|---|
+      | **Politique** | adhérer à un parti, faire campagne, exercer un mandat d'élu (conseiller municipal, maire, député...) |
+      | **Syndicale** | adhérer à un syndicat pour défendre les droits et les intérêts des salariés |
+      | **Associative ou humanitaire** | être bénévole dans une association (sport, culture, solidarité, aide humanitaire) |
+      | **Démocratie scolaire** | être délégué de classe, siéger au conseil de vie collégienne ou au conseil d'administration |
+
+      Un syndicat défend des salariés. Un parti cherche à exercer le pouvoir : ce n'est pas la même chose.
+
+  - type: texte
+    titre: "Servir dans les institutions"
+    contenu: |-
+      L'engagement peut aussi être un **service dans les institutions** : l'armée, la police, la justice, l'éducation.
+
+      Ces métiers servent l'**intérêt général** et l'État.
+
+  - type: texte
+    titre: "La liberté de manifester"
+    contenu: |-
+      La **liberté de manifester** permet aux citoyens d'**exprimer leurs opinions** et de **faire pression** sur les gouvernements. Elle découle de la liberté d'expression.
+
+      Mais elle a des règles :
+      - une manifestation sur la voie publique doit être **déclarée à l'avance** ;
+      - elle peut être **interdite** si l'ordre public est menacé.
+
+      La grève est un autre moyen d'action collectif des salariés.
+
+  - type: texte
+    titre: "Le service national universel (SNU)"
+    contenu: |-
+      Le **SNU** est un dispositif national de **découverte des formes et des domaines d'engagement**.
+
+      - Il s'adresse aux jeunes.
+      - Il a été mis en place à partir de 2019.
+      - Il **ne remplace pas** l'ancien service militaire, qui était obligatoire et a été suspendu.
+
+      Point commun de toutes les formes d'engagement : elles sont **volontaires** et participent à la vie collective. S'engager n'est pas obligatoire, mais cela fait vivre la démocratie entre les élections.
+
+  - type: exemple
+    enonce: "Trois situations : Inès est élue au conseil d'administration de son collège. Marc fait un mandat de conseiller municipal. Anna est bénévole dans une association d'aide humanitaire. Quelle forme d'engagement pour chacun ?"
+    etapes:
+      - "Inès siège au conseil d'administration de son établissement : c'est la démocratie scolaire."
+      - "Marc exerce un mandat d'élu : c'est un engagement politique."
+      - "Anna donne son temps dans une association humanitaire : c'est un engagement associatif ou humanitaire."
+      - "Trois formes différentes, mais toutes volontaires et au service de la collectivité."
+
+  - type: exercice
+    enonce: "À partir de quelle année le service national universel (SNU) est-il mis en place ?"
+    forme: nombre
+    reponse: 2019
+    tolerance: 0
+    indices:
+      - "C'est au début des années 2020, ou juste avant."
+      - "Cette année vient avant 2020."
+    explication: "Le SNU a été mis en place à partir de 2019."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'activité que l'on fait librement, au service des autres, sans être payé ?"
+    forme: reponse_courte
+    reponse: "le bénévolat"
+    reponses_acceptees:
+      - "bénévolat"
+      - "benevolat"
+      - "le benevolat"
+      - "être bénévole"
+      - "bénévole"
+      - "le bénévole"
+    indices:
+      - "On dit d'une personne qui donne son temps sans salaire qu'elle est ..."
+      - "Le mot commence par « béné- »."
+    explication: "C'est le bénévolat : une activité libre et non payée au service des autres."
+
+  - type: exercice
+    enonce: "Que permet la liberté de manifester ?"
+    forme: qcm
+    choix:
+      - "Exprimer publiquement ses opinions et faire pression sur les pouvoirs publics, dans le cadre de la loi"
+      - "Manifester partout et à tout moment sans aucune règle"
+      - "Remplacer le vote dans les élections"
+    reponse: 0
+    indices:
+      - "Une liberté s'exerce toujours dans le cadre de la loi."
+      - "Manifester complète le vote, sans le remplacer."
+    explication: "La liberté de manifester permet d'exprimer ses opinions et de faire pression, dans le cadre de la loi : déclaration préalable, interdiction possible si l'ordre public est menacé."
+
+  - type: exercice
+    enonce: "Quelle est la différence entre un syndicat et un parti politique ?"
+    forme: qcm
+    choix:
+      - "Le syndicat défend les droits et les intérêts des salariés ; le parti cherche à exercer le pouvoir"
+      - "Il n'y a aucune différence"
+      - "Le syndicat cherche à exercer le pouvoir ; le parti défend les salariés"
+    reponse: 0
+    indices:
+      - "Pense à ce que chacun cherche à obtenir : défendre des salariés, ou gouverner."
+      - "Le mot « syndical » renvoie au monde du travail."
+    explication: "Un syndicat défend les droits et les intérêts des salariés. Un parti politique cherche à exercer le pouvoir."
+
+  - type: exercice
+    enonce: "Quelles affirmations sur le SNU sont exactes ? Choisis la bonne réponse."
+    forme: qcm
+    choix:
+      - "C'est un dispositif de découverte de l'engagement, mis en place à partir de 2019, qui ne remplace pas l'ancien service militaire"
+      - "C'est l'ancien service militaire obligatoire, qui a repris"
+      - "Il ne concerne que les jeunes qui veulent devenir militaires"
+    reponse: 0
+    indices:
+      - "Le SNU fait découvrir plusieurs domaines d'engagement, pas seulement l'armée."
+      - "L'ancien service militaire obligatoire a été suspendu : le SNU est un autre dispositif."
+    explication: "Le SNU est un dispositif national de découverte des formes et domaines d'engagement. Il ne remplace pas l'ancien service militaire et ne concerne pas que les futurs militaires."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre que l'engagement citoyen peut prendre plusieurs formes, avec au
+      moins deux exemples précis. Commence par une phrase d'introduction et termine par une phrase de
+      conclusion.
+    indices:
+      - "Choisis deux formes différentes, par exemple une liée à l'école et une liée à une association."
+      - "Pour chaque exemple, explique en quoi c'est volontaire et utile à la collectivité."
+    criteres:
+      - "L'élève présente au moins deux formes d'engagement distinctes, avec un exemple précis pour chacune."
+      - "L'élève explique en quoi chacune est une participation volontaire à la vie collective."
+      - "L'élève conclut sur la diversité des engagements possibles."
+      - "L'élève a une phrase d'introduction et une phrase de conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens : les formes
+      d'engagement, ce que permet la liberté de manifester, et ce qu'est le SNU.

@@ -1,0 +1,142 @@
+notion: place-france-europe-monde
+titre: "La place et l'influence de la France et de l'Europe dans le monde"
+duree_minutes: 28
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Organisation internationale de la francophonie »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Organisation_internationale_de_la_francophonie&oldid=238754197"
+    licence: CC-BY-SA-4.0
+  - titre: "Vikidia, « Organisation des Nations unies »"
+    url: "https://fr.vikidia.org/w/index.php?title=Organisation_des_Nations_unies&oldid=2570800"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme du cycle 4 (annexe 3), Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer l'influence géopolitique, culturelle et économique de la France."
+      - "Illustrer chaque influence par un exemple précis."
+      - "Expliquer le rôle de l'Europe et la nuance à apporter."
+
+  - type: texte
+    titre: "L'influence géopolitique"
+    contenu: >-
+      La France a de l'**influence** dans le monde : elle peut faire adopter ses idées ou ses décisions.
+      On l'étudie sous trois angles : géopolitique, culturel et économique.
+      Au brevet, chaque affirmation doit s'appuyer sur un exemple précis.
+      **Géopolitique.** La France est membre permanent du Conseil de sécurité de l'ONU,
+      avec les États-Unis, la Russie, la Chine et le Royaume-Uni.
+      Elle a un **droit de veto** : elle peut bloquer une décision.
+      Elle possède l'arme nucléaire, siège au G7 et au G20.
+      Son réseau diplomatique est l'un des plus étendus du monde.
+      Ses territoires d'outre-mer lui donnent l'un des plus vastes espaces maritimes du monde.
+
+  - type: texte
+    titre: "L'influence culturelle et économique"
+    contenu: >-
+      **Culturelle.** La **francophonie** désigne l'ensemble des personnes et des pays qui parlent français :
+      plus de 300 millions de locuteurs.
+      L'**OIF** (Organisation internationale de la Francophonie), née en 1970, réunit environ 90 États et gouvernements.
+      La France est aussi le pays le plus visité au monde.
+      Son rayonnement passe par la langue, les lycées français à l'étranger,
+      la gastronomie, la mode, le cinéma et le patrimoine.
+      **Économique.** La France fait partie des dix premières puissances économiques du monde.
+      Elle a de grands groupes mondiaux (aéronautique, luxe, agroalimentaire) et une agriculture puissante.
+      Elle lance des satellites depuis la Guyane, à la base de Kourou.
+
+  - type: texte
+    titre: "L'Europe et la nuance"
+    contenu: >-
+      En 1957, la France est l'un des six pays fondateurs de la Communauté économique européenne,
+      ancêtre de l'**Union européenne** (UE).
+      L'UE forme un marché de près de 450 millions de consommateurs.
+      Elle a une monnaie commune, l'euro, utilisée par une grande partie des États membres.
+      Elle pèse dans les négociations commerciales et défend ses normes (environnement, protection des données).
+      La France en est l'un des moteurs, avec l'Allemagne.
+      **Nuance.** Cette influence est concurrencée par les États-Unis, la Chine et d'autres puissances montantes.
+      La France et l'Europe n'ont plus le rôle dominant d'autrefois.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi les territoires d'outre-mer et la base de Kourou sont-ils des atouts pour la France ?
+    etapes:
+      - "Les territoires d'outre-mer donnent à la France l'un des plus vastes espaces maritimes du monde."
+      - "Ils lui donnent aussi des points d'appui sur plusieurs océans : c'est un atout géopolitique."
+      - "Depuis la Guyane, la base de Kourou lance des satellites : c'est un atout économique et technologique."
+
+  - type: exercice
+    enonce: "En quelle année l'Organisation internationale de la Francophonie (OIF) est-elle créée ?"
+    forme: nombre
+    reponse: 1970
+    tolerance: 0
+    indices:
+      - "C'est pendant la guerre froide, après les indépendances africaines des années 1960."
+      - "L'année est entre 1960 et 1980."
+    explication: "L'OIF est née en 1970. Elle réunit environ 90 États et gouvernements."
+
+  - type: exercice
+    enonce: "Que permet le siège de membre permanent du Conseil de sécurité de l'ONU ?"
+    forme: qcm
+    choix:
+      - "Être le seul pays représenté au Conseil de sécurité"
+      - "Financer seul le budget de l'ONU"
+      - "Bloquer une décision grâce au droit de veto"
+    reponse: 2
+    indices:
+      - "La France partage ce siège avec quatre autres pays."
+      - "Un membre permanent a un pouvoir particulier sur les décisions."
+    explication: "Le membre permanent a un droit de veto : il peut bloquer une décision du Conseil de sécurité. Les cinq membres permanents sont la France, les États-Unis, la Russie, la Chine et le Royaume-Uni."
+
+  - type: exercice
+    enonce: "Quel mot désigne l'ensemble des personnes et des pays qui parlent français ?"
+    forme: reponse_courte
+    reponse: "francophonie"
+    reponses_acceptees: ["francophonie", "la francophonie", "Francophonie", "la Francophonie"]
+    indices:
+      - "Ce n'est pas le nom de l'organisation créée en 1970, mais le mot plus général."
+      - "Le mot commence par « franco- » et finit par « -phonie », comme dans « téléphonie »."
+    explication: "La francophonie est l'ensemble des personnes et des pays qui utilisent le français. L'OIF est l'organisation qui les réunit."
+
+  - type: exercice
+    enonce: "En quelle année la France et cinq autres pays fondent-ils la Communauté économique européenne (traité de Rome) ?"
+    forme: nombre
+    reponse: 1957
+    tolerance: 0
+    indices:
+      - "C'est une douzaine d'années après la fin de la Seconde Guerre mondiale, qui s'est terminée en 1945."
+      - "Ne confonds pas avec la CECA (charbon et acier), qui date de 1951 : elle est plus ancienne."
+    explication: "La Communauté économique européenne est fondée en 1957 par six pays, dont la France. Elle est l'ancêtre de l'Union européenne."
+
+  - type: exercice
+    enonce: "Quelle phrase de conclusion est la plus juste pour un devoir sur l'influence de la France et de l'Europe ?"
+    forme: qcm
+    choix:
+      - "La France et l'Europe dominent seules le monde."
+      - "L'influence de la France est uniquement culturelle."
+      - "La France et l'Europe ont une influence géopolitique, culturelle et économique, mais elle est concurrencée par les États-Unis, la Chine et d'autres puissances."
+      - "L'Europe n'a aucune influence dans les négociations commerciales."
+    reponse: 2
+    indices:
+      - "Une bonne conclusion contient une nuance."
+      - "Élimine les phrases qui disent « seules », « uniquement » ou « aucune »."
+    explication: "L'influence de la France et de l'Europe a trois dimensions, mais elle est concurrencée. Les autres phrases sont trop absolues."
+
+  - type: question_ouverte
+    question: >-
+      Montre que l'influence de la France repose sur plusieurs dimensions.
+      Choisis deux dimensions et donne un exemple précis pour chacune.
+    indices:
+      - "Les trois dimensions sont : géopolitique, culturelle, économique."
+      - "Exemples : droit de veto à l'ONU, OIF et francophonie, base de Kourou, appartenance au G7."
+    criteres:
+      - "L'élève traite au moins deux dimensions (géopolitique, culturelle, économique)."
+      - "L'élève illustre chaque dimension par un exemple précis (siège à l'ONU et veto, OIF, G7, Kourou, grands groupes...)."
+      - "L'élève ajoute une nuance ou parle de l'Europe (UE, concurrence des États-Unis et de la Chine)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, trois formes d'influence de la France
+      dans le monde et le rôle de l'Union européenne.
