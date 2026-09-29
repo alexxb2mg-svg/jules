@@ -1,0 +1,150 @@
+notion: validation-performances-ost
+titre: "Valider les performances d'un objet technique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer ce que veut dire valider un objet technique."
+      - "Écrire un protocole de test : grandeur mesurée, appareil, conditions, nombre d'essais."
+      - "Comparer des mesures au cahier des charges (au minimum ou au maximum) et conclure."
+
+  - type: texte
+    titre: "Valider, c'est vérifier par des essais"
+    contenu: |-
+      Valider un objet technique, c'est vérifier par des essais qu'il se comporte comme prévu.
+
+      Le **cahier des charges** fixe les exigences. Pour chaque fonction, il donne :
+      - un **critère** : ce que l'on mesure (exemple : le temps d'ouverture d'une barrière) ;
+      - un **niveau** : la valeur à respecter (exemple : 5 s au maximum).
+
+      Des **normes** peuvent aussi imposer des exigences : sécurité, bruit, consommation.
+
+  - type: texte
+    titre: "Le protocole de test"
+    contenu: |-
+      Un **protocole de test** décrit l'essai avec précision, pour qu'on puisse le refaire. Il indique :
+      - la **grandeur mesurée** et son unité (durée en s, vitesse en m/s, température en °C, bruit en dB) ;
+      - l'**appareil de mesure** (chronomètre, mètre, thermomètre, sonomètre) ;
+      - les **conditions** de l'essai (même piste, batterie chargée, même charge) ;
+      - le **nombre d'essais** : plusieurs mesures, puis une moyenne ;
+      - la comparaison au niveau du cahier des charges, puis la conclusion.
+
+  - type: texte
+    titre: "Calculer, comparer, conclure"
+    contenu: |-
+      Une grandeur se calcule parfois à partir de mesures :
+      - **vitesse = distance ÷ durée** ;
+      - **moyenne = somme des mesures ÷ nombre de mesures**.
+
+      Attention au sens de l'exigence :
+      - « au maximum » : la mesure doit être **inférieure ou égale** au niveau (temps, bruit, coût) ;
+      - « au minimum » : la mesure doit être **supérieure ou égale** au niveau (autonomie, vitesse).
+
+      Les valeurs comparées doivent avoir la **même unité**.
+
+  - type: texte
+    titre: "Si l'exigence n'est pas respectée"
+    contenu: |-
+      On modifie la solution (réglage, programme, composant).
+      Puis on refait le test, **dans les mêmes conditions**.
+
+      Au brevet, on attend : proposer un protocole complet, calculer une moyenne ou une vitesse,
+      comparer aux exigences d'un tableau d'essais et conclure.
+
+  - type: exemple
+    enonce: >-
+      Le cahier des charges d'un aspirateur dit : « le bruit est de 70 dB au maximum ». On mesure trois
+      fois avec un sonomètre, dans la même pièce : 66 dB, 68 dB et 67 dB. L'exigence est-elle validée ?
+    etapes:
+      - "Lire le niveau : 70 dB, et c'est un maximum. Il faut donc une mesure inférieure ou égale à 70 dB."
+      - "Calculer la moyenne : (66 + 68 + 67) ÷ 3 = 201 ÷ 3 = 67 dB."
+      - "Comparer : 67 dB est inférieur à 70 dB, et chaque mesure l'est aussi."
+      - "Conclure : l'exigence de bruit est validée."
+
+  - type: exercice
+    enonce: >-
+      Une barrière de parking doit s'ouvrir en 5 s au maximum. Pour valider cette exigence, quelle grandeur
+      doit-on mesurer ?
+    forme: qcm
+    choix:
+      - "Une durée, en secondes, avec un chronomètre"
+      - "Une température, en °C, avec un thermomètre"
+      - "Un niveau de bruit, en dB, avec un sonomètre"
+    reponse: 0
+    indices:
+      - "Relis l'exigence : elle parle de temps d'ouverture."
+      - "Quelle unité correspond à un temps ?"
+    explication: "L'exigence porte sur le temps d'ouverture. On mesure donc une durée, en secondes, avec un chronomètre."
+
+  - type: exercice
+    enonce: >-
+      On teste la barrière de parking. Trois mesures, dans les mêmes conditions : 3,2 s ; 3,6 s ; 4,0 s.
+      Calcule la moyenne de ces trois mesures, en secondes.
+    forme: nombre
+    reponse: 3.6
+    tolerance: 0.01
+    unite: "s"
+    indices:
+      - "La moyenne se calcule avec la somme des mesures et leur nombre."
+      - "Additionne les trois mesures, puis divise par 3."
+    explication: "Somme : 3,2 + 3,6 + 4,0 = 10,8. Moyenne : 10,8 ÷ 3 = 3,6 s. La moyenne de 3,6 s est inférieure à 5 s : la barrière respecte l'exigence."
+
+  - type: exercice
+    enonce: >-
+      Le cahier des charges d'un casque audio dit : « autonomie de 8 h au minimum ». Un test donne une
+      autonomie moyenne de 7 h. Que peut-on conclure ?
+    forme: qcm
+    choix:
+      - "L'exigence est validée, car 7 est proche de 8."
+      - "L'exigence n'est pas validée, car 7 h est inférieur au minimum de 8 h."
+      - "L'exigence est validée, car 7 est inférieur à 8."
+    reponse: 1
+    indices:
+      - "« Au minimum » veut dire que la mesure doit être supérieure ou égale au niveau."
+      - "Compare 7 h et 8 h : la mesure atteint-elle le minimum demandé ?"
+    explication: "Avec « au minimum », il faut une mesure supérieure ou égale à 8 h. 7 h est inférieur à 8 h : l'exigence n'est pas validée. Il faut modifier la solution (par exemple la batterie) puis refaire le test."
+
+  - type: exercice
+    enonce: >-
+      Un petit robot doit avoir une vitesse de 0,5 m/s au minimum. Pendant l'essai, il parcourt 240 cm en
+      4 s. Calcule sa vitesse en m/s (pense à convertir les centimètres en mètres).
+    forme: nombre
+    reponse: 0.6
+    tolerance: 0.01
+    unite: "m/s"
+    indices:
+      - "Vitesse = distance ÷ durée, et la distance doit être en mètres pour obtenir des m/s."
+      - "Convertis d'abord : 240 cm, combien de mètres ? Puis divise par la durée."
+      - "Tu dois calculer 2,4 divisé par 4."
+    explication: "240 cm = 2,4 m. Vitesse = 2,4 ÷ 4 = 0,6 m/s. 0,6 est supérieur à 0,5 : l'exigence « au minimum » est validée."
+
+  - type: question_ouverte
+    question: >-
+      Un volet roulant doit se fermer en moins de 20 s. Propose un protocole de test pour vérifier cette
+      exigence. Précise la grandeur mesurée, l'appareil, les conditions, le nombre d'essais et comment tu
+      conclus.
+    indices:
+      - "Repars de la liste : grandeur, appareil, conditions, nombre d'essais, comparaison."
+      - "Pense à faire plusieurs mesures dans les mêmes conditions, puis une moyenne."
+    criteres:
+      - "L'élève nomme la grandeur mesurée (la durée de fermeture, en secondes) et un appareil adapté (chronomètre)."
+      - "L'élève prévoit plusieurs essais dans les mêmes conditions, puis une moyenne."
+      - "L'élève compare le résultat au niveau du cahier des charges en respectant le sens de l'exigence et conclut (validée ou non)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'un protocole de test doit contenir
+      et comment tu décides si une exigence du cahier des charges est validée.
