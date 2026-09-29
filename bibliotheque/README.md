@@ -5,14 +5,14 @@ Quand l'élève choisit une notion (bouton « Choisir une notion ») ou quand Ju
 
 > **État actuel : expérimental.** Les bibliothèques publiées ici servent à tester le mécanisme. Aucune n'est validée par l'Éducation nationale ni par un enseignant. Le jour où des bibliothèques certifiées, ou les contenus d'un enseignant, seront disponibles, elles se brancheront au même endroit, sans toucher au code.
 
-## Les quatre types
+## Les cinq types
 
 | Type | Rôle | Exemple ici |
 |---|---|---|
 | `referentiel` | La liste des notions (un identifiant par notion). Tout le reste s'y rattache. Un seul à la fois. | `programme/` : référentiel **expérimental** du programme officiel, CM1 (158 notions), 5e, 4e et 3e, non relu |
 | `fiches` | Des repères par notion : essentiel du cours, méthode, erreurs fréquentes, exemple, exercices avec indices. | `fiches-3e-experimentales/` : les 252 notions de 3e, 12 matières (à relire) ; `fiches-cm1-experimentales/` : les 158 notions de CM1, 10 matières, ressources officielles éduscol uniquement (données d'expérimentation, à relire) |
-| `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 3 leçons (mathématiques, français, histoire), à relire |
-| `fiches-visuelles` | Une fiche visuelle par notion, affichée telle quelle sur `/` (« Mes fiches »), sans aucun appel au modèle d'IA : 8 types de blocs (attendus, formule, carte, graphe interactif, methode, piege, exemple, renfort), commentés par des phrases `jules:` préécrites. Voir `jules/fiches_visuelles.py` et `bibliotheque/SCHEMA-FICHE-VISUELLE.md`. | `fiches-visuelles-3e-experimentales/` : 5 fiches de mathématiques, à relire |
+| `lecons` | Un parcours guidé en blocs sur une notion (objectifs, texte, exemple, exercices, question ouverte, synthèse), suivi bloc par bloc dans l'interface de cours (`/cours`), avec Jules à côté qui guide sans donner la réponse. | `lecons-3e-experimentales/` : 19 leçons (8 matières : emc, français, géographie, histoire, mathématiques, physique-chimie, svt, technologie), à relire |
+| `fiches-visuelles` | Une fiche visuelle par notion, affichée telle quelle sur `/` (« Mes fiches »), sans aucun appel au modèle d'IA : 8 types de blocs (attendus, formule, carte, graphe interactif, methode, piege, exemple, renfort), commentés par des phrases `jules:` préécrites. Voir `jules/fiches_visuelles.py` et `bibliotheque/SCHEMA-FICHE-VISUELLE.md`. | `fiches-visuelles-3e-experimentales/` : 23 fiches (5 de mathématiques, 11 d'histoire, 7 de géographie), exemples du format, à relire. Les fiches complètes (3e : 247, CM1 : 158) sont dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) |
 | `direction` | La direction pédagogique d'un enseignant : approche, rédaction attendue, vocabulaire, ce qu'il faut éviter. | `exemple-direction-enseignant/` : enseignant fictif |
 
 Chaque bibliothèque déclare aussi un **statut**, que Jules transmet au modèle et que l'élève voit dans le sélecteur :
@@ -46,8 +46,9 @@ modules:
 - **Niveau** : seules les notions du niveau de l'élève sont chargées (déduit de `classe` dans son profil : « CM1 », « cours moyen première année », « 3e », « 3ème », « troisième »...).
 - Une bibliothèque illisible est signalée dans le journal et ignorée : Jules continue sans elle.
 - **Dépôts externes** : `bibliotheques_externes: ["../jules-bibliotheques"]` dans `config.local.yaml` ajoute
-  des dossiers où chercher une bibliothèque, après `bibliotheque/`. C'est là que vivent les fiches v2 de la
-  communauté ([docs/CHANTIER.md](../docs/CHANTIER.md)).
+  des dossiers où chercher une bibliothèque, après `bibliotheque/`. C'est là que vivent les fiches v2 et les
+  fiches visuelles de la communauté ([docs/CHANTIER.md](../docs/CHANTIER.md)) : 410 fiches v2 (3e, CM1) et
+  405 fiches visuelles (3e, CM1), toutes vérifiées par le code, aucune encore relue par un enseignant.
 
 ## Format
 
@@ -56,7 +57,7 @@ modules:
 ```yaml
 id: fiches-3e-experimentales   # = nom du dossier (minuscules, chiffres, tirets)
 titre: "Fiches 3e expérimentales"
-type: fiches                   # referentiel | fiches | direction
+type: fiches                   # referentiel | fiches | lecons | fiches-visuelles | direction
 statut: experimentale          # experimentale | exemple | enseignant | certifiee
 licence: CC-BY-SA-4.0          # identifiant SPDX de la licence du contenu
 pays: FR
@@ -121,7 +122,9 @@ Une fiche dont la `notion` n'existe pas dans le référentiel est ignorée (et s
 Une fiche qui commence par `format: 2` suit un contrat plus strict, fait pour que Jules la serve sans IA :
 exercices typés et corrigés par le code, échelle de trois indices, pièges, prérequis, empreinte de
 vérification. Le contrat est dans [docs/FICHES-V2.md](../docs/FICHES-V2.md) ; `jules fiches verifier` le
-contrôle. Deux fiches de démonstration : `fiches-v2-demonstration/`.
+contrôle. Deux fiches de démonstration : `fiches-v2-demonstration/`. Pour 13 notions de mathématiques 3e,
+des **générateurs** fabriquent en plus des exercices v2 aux nombres tirés à chaque série
+([docs/GENERATEURS-CONTRAT.md](../docs/GENERATEURS-CONTRAT.md)).
 
 ### Direction d'un enseignant
 

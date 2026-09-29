@@ -1,0 +1,147 @@
+notion: decolonisation-nouveaux-etats
+titre: "L'effondrement des empires coloniaux et la construction de nouveaux États"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Décolonisation »"
+    url: "https://fr.vikidia.org/w/index.php?title=D%C3%A9colonisation&oldid=1258479"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer la décolonisation dans le temps et expliquer pourquoi elle a lieu après 1945."
+      - "Distinguer une décolonisation négociée d'une décolonisation violente."
+      - "Connaître un exemple précis de décolonisation (l'Algérie) avec ses dates."
+
+  - type: texte
+    titre: "Qu'est-ce que la décolonisation ?"
+    contenu: >-
+      La **décolonisation** est le processus par lequel les territoires
+      colonisés par des puissances européennes accèdent à l'**indépendance**.
+      Elle a lieu rapidement après la Seconde Guerre mondiale : les pays
+      d'**Asie** sont décolonisés entre 1945 et 1955, puis les pays
+      d'**Afrique** entre 1955 et 1975.
+
+  - type: texte
+    titre: "Pourquoi la décolonisation a-t-elle lieu après 1945 ?"
+    contenu: >-
+      Plusieurs facteurs l'expliquent. La défaite rapide de puissances
+      coloniales comme la France en 1940 brise le mythe de leur
+      invincibilité. En 1941, les Alliés promettent, dans la **Charte de
+      l'Atlantique**, le droit des peuples à choisir leur gouvernement. Dans
+      les colonies, les **mouvements nationalistes** (qui veulent
+      l'indépendance de leur pays) se renforcent.
+
+  - type: texte
+    titre: "Deux façons d'accéder à l'indépendance"
+    contenu: >-
+      La décolonisation est parfois **négociée et pacifique** : l'Inde et
+      le Pakistan obtiennent leur indépendance du Royaume-Uni en 1947, les
+      colonies françaises d'Afrique subsaharienne en 1960. Elle est parfois
+      **violente** : la guerre d'Indochine (1946-1954) et la guerre
+      d'Algérie (1954-1962) opposent la France à des mouvements
+      indépendantistes, comme le **FLN** (Front de libération nationale) en
+      Algérie, jusqu'aux **accords d'Évian** qui donnent l'indépendance à
+      l'Algérie en 1962.
+
+  - type: exemple
+    enonce: >-
+      Donne un exemple de décolonisation négociée et un exemple de
+      décolonisation violente, avec une date pour chacun.
+    etapes:
+      - "Choisir un exemple négocié : l'indépendance de l'Inde et du Pakistan en 1947, obtenue par la négociation avec le Royaume-Uni."
+      - "Choisir un exemple violent : la guerre d'Algérie (1954-1962), qui oppose la France au FLN indépendantiste."
+      - "Conclure : l'Algérie obtient son indépendance en 1962, après les accords d'Évian, contrairement à l'Inde où il n'y a pas eu de guerre."
+
+  - type: exercice
+    enonce: "En quelle année l'Algérie obtient-elle son indépendance, après les accords d'Évian ?"
+    forme: nombre
+    reponse: 1962
+    tolerance: 0
+    indices:
+      - "La guerre d'Algérie commence en 1954 et dure huit ans."
+      - "Les accords d'Évian sont signés au début de cette année-là et mettent fin à la guerre."
+    explication: "L'Algérie obtient son indépendance en 1962, après les accords d'Évian qui mettent fin à la guerre."
+
+  - type: exercice
+    enonce: "Quel mouvement indépendantiste mène la guerre contre la France en Algérie de 1954 à 1962 ?"
+    forme: qcm
+    choix:
+      - "Le FLN (Front de libération nationale)"
+      - "Le Conseil national de la Résistance"
+      - "Le Front populaire"
+    reponse: 0
+    indices:
+      - "Ce mouvement porte un sigle de trois lettres, différent du CNR étudié pour la Résistance française."
+      - "Le sigle cherché commence par un F comme « Front », mais ce n'est pas le Front populaire des années 1930."
+    explication: "Le FLN (Front de libération nationale) mène la guerre d'indépendance algérienne contre la France de 1954 à 1962."
+
+  - type: exercice
+    enonce: "Quel continent est décolonisé en premier après la Seconde Guerre mondiale, entre 1945 et 1955 ?"
+    forme: reponse_courte
+    reponse: "l'Asie"
+    reponses_acceptees:
+      - "l'Asie"
+      - "Asie"
+    indices:
+      - "L'Inde et le Pakistan, décolonisés dès 1947, se trouvent sur ce continent."
+      - "Ce continent est décolonisé environ dix ans avant l'Afrique."
+    explication: "L'Asie est décolonisée en premier, entre 1945 et 1955 (l'Afrique l'est ensuite, entre 1955 et 1975)."
+
+  - type: exercice
+    enonce: >-
+      Range ces quatre événements du plus ancien au plus récent : la Charte
+      de l'Atlantique, l'indépendance de l'Inde et du Pakistan, le début de
+      la guerre d'Algérie, les accords d'Évian.
+    forme: qcm
+    choix:
+      - "Charte de l'Atlantique (1941) → indépendance de l'Inde et du Pakistan (1947) → début de la guerre d'Algérie (1954) → accords d'Évian (1962)"
+      - "Indépendance de l'Inde et du Pakistan (1947) → Charte de l'Atlantique (1941) → accords d'Évian (1962) → début de la guerre d'Algérie (1954)"
+      - "Début de la guerre d'Algérie (1954) → Charte de l'Atlantique (1941) → indépendance de l'Inde et du Pakistan (1947) → accords d'Évian (1962)"
+    reponse: 0
+    indices:
+      - "La Charte de l'Atlantique est signée pendant la Seconde Guerre mondiale, avant toutes les indépendances citées."
+      - "La guerre d'Algérie commence en 1954 et se termine par les accords d'Évian en 1962 : ces deux dates viennent après 1947."
+    explication: >-
+      L'ordre correct est : Charte de l'Atlantique (1941), indépendance de
+      l'Inde et du Pakistan (1947), début de la guerre d'Algérie (1954),
+      accords d'Évian (1962).
+
+  - type: exercice
+    enonce: >-
+      La guerre d'Indochine et la guerre d'Algérie opposent toutes les deux
+      la France à un mouvement indépendantiste, mais à des dates
+      différentes. Quelle affirmation est exacte ?
+    forme: qcm
+    choix:
+      - "La guerre d'Indochine (1946-1954) a lieu avant la guerre d'Algérie (1954-1962)"
+      - "La guerre d'Algérie a lieu avant la guerre d'Indochine"
+      - "Les deux guerres ont lieu exactement aux mêmes dates"
+    reponse: 0
+    indices:
+      - "Une des deux guerres se termine juste avant que l'autre ne commence, en 1954."
+      - "La guerre d'Algérie commence l'année même où la guerre d'Indochine se termine."
+    explication: >-
+      La guerre d'Indochine (1946-1954) se termine l'année même où commence
+      la guerre d'Algérie (1954-1962) : ce sont deux conflits distincts, à
+      des dates qui se suivent mais ne se recouvrent pas.
+
+  - type: question_ouverte
+    question: >-
+      Choisis un exemple de décolonisation (l'Algérie, l'Inde, ou un autre
+      exemple que tu connais) et explique en quelques phrases comment ce
+      pays est devenu indépendant.
+    indices:
+      - "Précise si cette indépendance a été négociée ou obtenue après une guerre."
+      - "Donne au moins une date et le nom d'un acteur (un pays, un mouvement indépendantiste)."
+    criteres:
+      - "L'élève choisit un exemple précis et le situe dans le temps."
+      - "L'élève explique la modalité d'accès à l'indépendance (négociée ou violente) avec au moins un acteur nommé."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, pourquoi la
+      décolonisation a lieu surtout après 1945, et donne un exemple de
+      décolonisation négociée et un exemple de décolonisation violente.

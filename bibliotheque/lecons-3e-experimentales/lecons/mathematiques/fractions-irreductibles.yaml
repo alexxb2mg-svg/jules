@@ -1,0 +1,137 @@
+notion: fractions-irreductibles
+titre: "Fractions irréductibles"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Simplifier une fraction en divisant en haut et en bas par un même nombre."
+      - "Reconnaître une fraction irréductible."
+      - "Rendre irréductible une fraction avec de grands nombres, en utilisant les facteurs premiers."
+
+  - type: texte
+    titre: "Simplifier une fraction"
+    contenu: |
+      On ne change pas la valeur d'une fraction si on **divise** son numérateur et son dénominateur par un **même nombre** non nul.
+
+      18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4
+
+      C'est **simplifier** la fraction. On divise, on ne barre jamais des chiffres, et on ne soustrait pas.
+
+  - type: texte
+    titre: "Fraction irréductible"
+    contenu: |
+      Une fraction est **irréductible** quand son numérateur et son dénominateur n'ont que **1** comme diviseur commun.
+
+      - On ne peut alors plus la simplifier.
+      - 3/4 et 17/19 sont irréductibles.
+      - 9/12 ne l'est pas : 9 et 12 sont dans la table de 3.
+      - Un résultat entier est aussi une fraction : 12/4 = 3.
+      - Le signe moins se met devant la fraction : −6/9 = −2/3.
+
+  - type: texte
+    titre: "Deux méthodes"
+    contenu: |
+      **Méthode 1.** On simplifie plusieurs fois, avec les critères de divisibilité (par 2, 3, 5, 9, 10), jusqu'à ne plus pouvoir.
+
+      **Méthode 2.** On décompose en facteurs premiers, puis on enlève les facteurs communs : on obtient la fraction irréductible en une seule étape.
+
+      Au brevet, on lit souvent : « donner le résultat sous la forme d'une fraction irréductible ».
+
+  - type: exemple
+    enonce: "Rends irréductible la fraction 45/75."
+    etapes:
+      - "Décomposition : 45 = 3 × 3 × 5 et 75 = 3 × 5 × 5."
+      - "Facteurs communs : 3 × 5 = 15."
+      - "On divise en haut et en bas par 15 : 45 ÷ 15 = 3 et 75 ÷ 15 = 5."
+      - "Donc 45/75 = 3/5. Et 3 et 5 n'ont que 1 comme diviseur commun : la fraction est irréductible."
+
+  - type: exercice
+    enonce: "Écris la fraction 18/24 sous forme irréductible. Réponds sous la forme a/b."
+    forme: reponse_courte
+    reponse: "3/4"
+    reponses_acceptees: ["3 / 4", "3/4 ", "3sur4"]
+    indices:
+      - "18 et 24 sont-ils dans une même table de multiplication ?"
+      - "Divise le numérateur et le dénominateur par un même diviseur commun, puis recommence si c'est possible."
+      - "Si tu divises par 2, tu obtiens 9/12. Peux-tu encore simplifier ?"
+    explication: "18 et 24 sont divisibles par 6 : 18/24 = (18 ÷ 6)/(24 ÷ 6) = 3/4. Et 3 et 4 n'ont que 1 comme diviseur commun."
+
+  - type: exercice
+    enonce: "Laquelle de ces fractions est déjà irréductible ?"
+    forme: qcm
+    choix:
+      - "14/21"
+      - "15/28"
+      - "12/18"
+      - "20/35"
+    reponse: 1
+    indices:
+      - "Une fraction est irréductible si son numérateur et son dénominateur n'ont aucun diviseur commun autre que 1."
+      - "Pour chaque fraction, cherche un diviseur commun. Par exemple 14 et 21 sont dans la table de 7."
+    explication: "14/21 se simplifie par 7, 12/18 par 6 et 20/35 par 5. Pour 15/28 : 15 = 3 × 5 et 28 = 2 × 2 × 7, aucun facteur commun. Elle est irréductible."
+
+  - type: exercice
+    enonce: "Écris la fraction 210/294 sous forme irréductible, sous la forme a/b."
+    forme: reponse_courte
+    reponse: "5/7"
+    reponses_acceptees: ["5 / 7"]
+    indices:
+      - "Avec de grands nombres, décompose le numérateur et le dénominateur en facteurs premiers."
+      - "Décompose 210 : il commence par 2 × 3 ×... Fais de même avec 294, puis enlève les facteurs communs."
+      - "294 = 2 × 3 × 7 × 7. Quels facteurs sont dans les deux décompositions ? Que reste-t-il en haut, et en bas ?"
+    explication: "210 = 2 × 3 × 5 × 7 et 294 = 2 × 3 × 7 × 7. On enlève 2 × 3 × 7 = 42. Il reste 5 en haut et 7 en bas : 210/294 = 5/7."
+
+  - type: exercice
+    enonce: >-
+      Un sac contient 24 billes rouges, 16 billes bleues et 20 billes vertes. On tire une bille au hasard.
+      La probabilité d'obtenir une bille rouge est (nombre de billes rouges) / (nombre total de billes).
+      Donne-la sous la forme d'une fraction irréductible a/b.
+    forme: reponse_courte
+    reponse: "2/5"
+    reponses_acceptees: ["2 / 5"]
+    indices:
+      - "Commence par calculer le nombre total de billes."
+      - "Écris la fraction avec le nombre de billes rouges en haut et le total en bas, puis simplifie."
+      - "24 et le total sont tous les deux dans la table de 12."
+    explication: "Total : 24 + 16 + 20 = 60. Probabilité = 24/60. On divise par 12 : 24/60 = 2/5."
+
+  - type: exercice
+    enonce: "Calcule (5/6) × (9/20) et donne le résultat sous la forme d'une fraction irréductible a/b."
+    forme: reponse_courte
+    reponse: "3/8"
+    reponses_acceptees: ["3 / 8"]
+    indices:
+      - "Pour multiplier deux fractions, on multiplie les numérateurs entre eux et les dénominateurs entre eux."
+      - "Tu obtiens une fraction avec de plus grands nombres. Simplifie-la ensuite."
+      - "Le numérateur est 45. Le dénominateur est un nombre de la table de 15, comme 45. Divise en haut et en bas par 15."
+    explication: "(5 × 9)/(6 × 20) = 45/120. Avec 45 = 3 × 3 × 5 et 120 = 2 × 2 × 2 × 3 × 5, on enlève 3 × 5 = 15 : 45/120 = 3/8."
+
+  - type: question_ouverte
+    question: >-
+      Tom dit : « 10/15 = 5/10, car j'enlève 5 en haut et en bas. » A-t-il raison ?
+      Explique, puis donne la bonne simplification de 10/15.
+    indices:
+      - "Simplifier, est-ce enlever un nombre ou diviser par un nombre ?"
+      - "Calcule 5/10 : est-ce que cela vaut la même chose que 10/15 ?"
+    criteres:
+      - "L'élève dit que Tom a tort : on simplifie en divisant le numérateur et le dénominateur par un même nombre, pas en soustrayant."
+      - "L'élève montre que 5/10 = 1/2, qui n'est pas égal à 10/15."
+      - "L'élève donne la bonne simplification : 10/15 = 2/3 (division par 5)."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases ce qu'est une fraction irréductible, et comment tu t'y prends
+      pour rendre irréductible une fraction avec de grands nombres.

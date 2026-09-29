@@ -1,0 +1,144 @@
+notion: deuxieme-guerre-mondiale-genocides
+titre: "La Seconde Guerre mondiale, une guerre d'anéantissement"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Seconde Guerre mondiale »"
+    url: "https://fr.vikidia.org/w/index.php?title=Seconde_Guerre_mondiale&oldid=2564386"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Shoah »"
+    url: "https://fr.vikidia.org/w/index.php?title=Shoah&oldid=2561077"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Nazisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Nazisme&oldid=2575168"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer la Seconde Guerre mondiale dans le temps (1939-1945)."
+      - "Expliquer ce qu'est un génocide et citer les deux génocides du programme."
+      - "Distinguer un camp de concentration d'un camp d'extermination."
+
+  - type: texte
+    titre: "Une guerre mondiale"
+    contenu: >-
+      La Seconde Guerre mondiale commence le **1er septembre 1939**, quand
+      l'Allemagne nazie envahit la Pologne. Elle se termine le **2 septembre
+      1945**, avec la capitulation du Japon. Elle oppose les **Alliés**
+      (Royaume-Uni, URSS à partir de 1941, États-Unis à partir de fin 1941,
+      France) à l'**Axe** (Allemagne, Italie, Japon).
+
+  - type: texte
+    titre: "Une guerre d'anéantissement"
+    contenu: >-
+      Au-delà des combats entre armées, ce conflit est marqué par une
+      **violence de masse** contre des populations civiles. Les nazis
+      appliquent une idéologie raciste et antisémite, portée par Hitler et
+      mise en œuvre par des responsables comme Heinrich Himmler : ils
+      organisent la destruction totale de groupes entiers de personnes.
+      C'est ce qu'on appelle l'**anéantissement**.
+
+  - type: texte
+    titre: "La Shoah, le génocide des Juifs"
+    contenu: >-
+      La **Shoah** (mot hébreu pour « catastrophe ») est le génocide des
+      Juifs d'Europe par les nazis : environ **six millions** de Juifs sont
+      exterminés par la faim, les fusillades de masse ou les chambres à gaz
+      des **camps d'extermination**, des camps construits pour tuer en
+      masse.
+
+  - type: texte
+    titre: "Le génocide des Tziganes et d'autres persécutions"
+    contenu: >-
+      Les **Tziganes** (Roms) sont eux aussi visés par un génocide, appelé
+      le **Samudaripen**. D'autres groupes sont persécutés et assassinés :
+      opposants politiques, personnes handicapées, homosexuels. Il ne faut
+      pas confondre un camp d'extermination (construit pour tuer) et un
+      **camp de concentration** (travail forcé, conditions meurtrières,
+      mais pas construit spécifiquement pour tuer).
+
+  - type: exemple
+    enonce: >-
+      Explique en deux phrases pourquoi la Seconde Guerre mondiale est
+      qualifiée de « guerre d'anéantissement ».
+    etapes:
+      - "Situer l'idée : au-delà des batailles militaires, les nazis mettent en œuvre une extermination planifiée de populations civiles."
+      - "Donner l'exemple principal : les Juifs (Shoah) et les Tziganes (Samudaripen) sont visés par des génocides, avec des camps construits pour tuer en masse."
+      - "Conclure : cette violence contre des civils, organisée selon une idéologie raciste, dépasse largement les combats entre soldats."
+
+  - type: exercice
+    enonce: "En quelle année commence la Seconde Guerre mondiale, avec l'invasion de la Pologne par l'Allemagne ?"
+    forme: nombre
+    reponse: 1939
+    tolerance: 0
+    indices:
+      - "Cette guerre commence quelques années après l'arrivée d'Hitler au pouvoir en Allemagne, en 1933."
+      - "L'Allemagne envahit la Pologne le 1er septembre de cette année-là."
+    explication: "La Seconde Guerre mondiale commence le 1er septembre 1939, quand l'Allemagne nazie envahit la Pologne."
+
+  - type: exercice
+    enonce: "Quel groupe humain est exterminé par les nazis pendant la Shoah ?"
+    forme: qcm
+    choix:
+      - "Les Juifs d'Europe"
+      - "Les catholiques français"
+      - "Les habitants du Royaume-Uni"
+    reponse: 0
+    indices:
+      - "Ce mot hébreu désigne le génocide d'un peuple précis par les nazis."
+      - "La Shoah vise un peuple perçu comme inférieur par l'idéologie raciste et antisémite du nazisme."
+    explication: "La Shoah est le génocide des Juifs d'Europe : environ six millions d'entre eux sont exterminés par les nazis."
+
+  - type: exercice
+    enonce: "En plus des Juifs, quel autre peuple est visé par un génocide pendant la Seconde Guerre mondiale ?"
+    forme: reponse_courte
+    reponse: "les Tziganes"
+    reponses_acceptees:
+      - "les Tziganes"
+      - "Tziganes"
+      - "les Roms"
+      - "Roms"
+    indices:
+      - "Ce peuple nomade est aussi persécuté par les nazis à cause de son mode de vie et de son origine."
+      - "Le nom de ce génocide est le Samudaripen : relis ta leçon pour retrouver le nom du peuple visé."
+    explication: "Les Tziganes (Roms) sont eux aussi visés par un génocide, le Samudaripen."
+
+  - type: exercice
+    enonce: >-
+      Quelle est la différence entre un camp de concentration et un camp
+      d'extermination ?
+    forme: qcm
+    choix:
+      - "Un camp d'extermination est construit spécifiquement pour tuer massivement les déportés, alors qu'un camp de concentration sert au travail forcé, dans des conditions meurtrières"
+      - "Ce sont deux noms différents pour exactement le même type de camp"
+      - "Un camp de concentration est réservé aux prisonniers de guerre militaires, sans lien avec les génocides"
+    reponse: 0
+    indices:
+      - "Pense à l'objectif de chaque type de camp : est-il construit pour faire travailler, ou pour tuer ?"
+      - "Un camp d'extermination sert un but précis : la mort en masse des déportés qui y arrivent."
+    explication: >-
+      Un camp de concentration sert au travail forcé, dans des conditions
+      meurtrières, mais n'est pas construit dans le but précis de tuer. Un
+      camp d'extermination, lui, est construit spécifiquement pour tuer
+      massivement les déportés, comme dans le cadre de la Shoah.
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi les historiens emploient-ils le mot « génocide » plutôt que
+      « massacre » pour parler de la Shoah et du Samudaripen ? Explique avec
+      tes mots.
+    indices:
+      - "Un massacre peut être ponctuel, sans plan préparé à l'avance."
+      - "Pense à ce qui est organisé, systématique, et à qui est visé : un groupe entier, en tant que tel."
+    criteres:
+      - "L'élève explique qu'un génocide est une destruction volontaire et organisée d'un groupe humain en tant que tel."
+      - "L'élève distingue cette idée d'un massacre isolé, sans réciter juste une définition apprise par cœur."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qui fait
+      de la Seconde Guerre mondiale une « guerre d'anéantissement », en
+      citant les deux génocides du programme et la différence entre les deux
+      types de camps.

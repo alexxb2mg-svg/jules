@@ -1,0 +1,148 @@
+notion: propagation-son-frequence
+titre: "Propagation du son, vitesse et fréquence"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire dans quels milieux un son se propage, et pourquoi pas dans le vide."
+      - "Relier la distance parcourue par un son à la durée, avec d = v × t (y compris pour un écho)."
+      - "Classer un son selon sa fréquence : infrason, son audible ou ultrason."
+
+  - type: texte
+    titre: "Conditions de propagation"
+    contenu: |-
+      Un son est produit par un objet qui **vibre**. La vibration se propage de proche en proche dans un **milieu matériel** : un gaz (l'air), un liquide (l'eau) ou un solide (l'acier).
+      - Le son ne se propage **pas dans le vide** : il n'y a rien pour transmettre la vibration.
+      - La lumière, elle, se propage dans le vide.
+
+  - type: texte
+    titre: "Vitesse du son, distance et durée"
+    contenu: |-
+      La vitesse du son dépend du milieu :
+      - air : environ 340 m/s ;
+      - eau : environ 1 500 m/s ;
+      - acier : plus de 5 000 m/s.
+
+      Le son est bien plus lent que la lumière : on voit l'éclair avant d'entendre le tonnerre.
+      **d = v × t** (d en m, v en m/s, t en s). Aussi **t = d ÷ v** et **v = d ÷ t**.
+
+  - type: texte
+    titre: "L'écho et le sonar"
+    contenu: |-
+      Pour un écho ou un sonar, le son va jusqu'à l'obstacle **puis revient**.
+      - La distance parcourue est un **aller-retour**.
+      - Distance à l'obstacle = **v × t ÷ 2**.
+
+  - type: texte
+    titre: "La fréquence"
+    contenu: |-
+      La **fréquence** f est le nombre de vibrations par seconde. Elle se mesure en **hertz (Hz)**.
+      - Grande fréquence : son **aigu**. Petite fréquence : son **grave**.
+      - Sons audibles : de 20 Hz à 20 000 Hz environ.
+      - En dessous de 20 Hz : **infrasons**. Au-dessus de 20 000 Hz : **ultrasons**.
+      - Nous n'entendons ni les infrasons ni les ultrasons.
+
+  - type: exemple
+    enonce: >-
+      Un enfant crie face à une falaise et entend l'écho 2 s plus tard. À quelle distance est la
+      falaise ? (vitesse du son dans l'air : 340 m/s)
+    etapes:
+      - "Le son fait un aller-retour : d = v × t = 340 × 2 = 680 m en tout."
+      - "La falaise n'est qu'à la moitié de ce trajet."
+      - "680 ÷ 2 = 340 m."
+
+  - type: exercice
+    enonce: "Dans lequel de ces milieux un son ne peut-il PAS se propager ?"
+    forme: qcm
+    choix:
+      - "l'air"
+      - "l'eau"
+      - "le vide"
+      - "l'acier"
+    reponse: 2
+    indices:
+      - "De quoi le son a-t-il besoin pour se propager ?"
+      - "Le son est une vibration qui passe de proche en proche. Dans quel milieu n'y a-t-il aucune matière pour vibrer ?"
+    explication: "Le son a besoin d'un milieu matériel. Il se propage dans l'air, l'eau et l'acier, mais pas dans le vide."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on les sons de fréquence supérieure à 20 000 Hz, que l'oreille humaine n'entend pas ?"
+    forme: reponse_courte
+    reponse: "ultrasons"
+    reponses_acceptees:
+      - "ultrason"
+      - "les ultrasons"
+      - "des ultrasons"
+      - "un ultrason"
+    indices:
+      - "Ces sons sont trop aigus pour nous. Comment les appelle-t-on ?"
+      - "Les sons trop graves s'appellent les infrasons. Quel préfixe veut dire « au-delà » ?"
+    explication: "Ce sont les ultrasons : leur fréquence dépasse 20 000 Hz."
+
+  - type: exercice
+    enonce: >-
+      Pendant un orage, tu entends le tonnerre 3 s après avoir vu l'éclair. La vitesse du son dans
+      l'air est de 340 m/s. À quelle distance, en mètres, l'éclair a-t-il eu lieu ?
+    forme: nombre
+    reponse: 1020
+    tolerance: 1
+    unite: "m"
+    indices:
+      - "La lumière de l'éclair arrive presque instantanément. Seul le son met du temps : quelle relation relie distance, vitesse et durée ?"
+      - "Utilise d = v × t avec v en m/s et t en s : le résultat est en mètres."
+      - "Remplace v par la vitesse du son dans l'air et t par la durée entre l'éclair et le tonnerre."
+    explication: "d = v × t = 340 × 3 = 1 020 m : l'éclair a eu lieu à environ 1 km."
+
+  - type: exercice
+    enonce: "Un son a une fréquence de 10 Hz. De quel type de son s'agit-il ?"
+    forme: qcm
+    choix:
+      - "un infrason"
+      - "un son audible"
+      - "un ultrason"
+    reponse: 0
+    indices:
+      - "Compare 10 Hz aux deux limites de l'oreille humaine : 20 Hz et 20 000 Hz."
+      - "Est-ce que 10 est plus petit que 20, ou plus grand que 20 000 ?"
+    explication: "10 Hz est inférieur à 20 Hz : c'est un infrason. L'oreille humaine ne l'entend pas."
+
+  - type: exercice
+    enonce: >-
+      Le sonar d'un bateau envoie un son vers le fond de la mer. L'écho revient 0,4 s plus tard. La
+      vitesse du son dans l'eau est de 1 500 m/s. Calcule la profondeur de l'eau, en mètres.
+    forme: nombre
+    reponse: 300
+    tolerance: 1
+    unite: "m"
+    indices:
+      - "Pendant ces 0,4 s, quel chemin le son a-t-il parcouru ? Seulement l'aller ?"
+      - "Calcule la distance totale parcourue avec d = v × t, puis pense que le son a fait un aller-retour."
+      - "Distance totale : 1 500 × 0,4. La profondeur n'est qu'une partie de ce trajet."
+    explication: "Trajet total : d = v × t = 1 500 × 0,4 = 600 m. C'est un aller-retour, donc la profondeur vaut 600 ÷ 2 = 300 m."
+
+  - type: question_ouverte
+    question: >-
+      Un réveil qui sonne est placé sous une cloche en verre. On retire l'air de la cloche avec une
+      pompe : on entend de moins en moins le réveil, alors qu'on le voit toujours. Explique pourquoi.
+    indices:
+      - "Qu'est-ce qui change dans la cloche quand on pompe ?"
+      - "Compare ce dont le son et la lumière ont besoin pour se propager."
+    criteres:
+      - "L'élève dit que le son a besoin d'un milieu matériel (ici l'air) pour se propager, et qu'il ne se propage pas dans le vide."
+      - "L'élève dit que la lumière, elle, se propage dans le vide : c'est pourquoi on voit toujours le réveil."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce dont un son a besoin pour se
+      propager, comment tu calcules une distance avec la vitesse du son, et ce que la fréquence
+      indique.

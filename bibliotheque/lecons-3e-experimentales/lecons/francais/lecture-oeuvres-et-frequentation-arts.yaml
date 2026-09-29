@@ -1,0 +1,169 @@
+notion: lecture-oeuvres-et-frequentation-arts
+titre: "Lire des œuvres et fréquenter des œuvres d'art"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer lecture intégrale, lecture cursive et groupement de textes, et connaître les minimums de l'année."
+      - "Situer une œuvre dans son époque, en lien avec le programme d'histoire."
+      - "Relier une œuvre littéraire à une œuvre d'un autre art et expliquer ce qu'elles ont en commun."
+
+  - type: texte
+    titre: "Trois façons de lire"
+    contenu: >-
+      | Type | Ce que c'est | Minimum dans l'année |
+
+      |---|---|---|
+
+      | **Lecture intégrale** | une œuvre complète du patrimoine, étudiée en détail en classe | au moins trois |
+
+      | **Lecture cursive** | une lecture plus libre, souvent choisie par l'élève (littérature jeunesse notamment) | au moins trois |
+
+      | **Groupement de textes** | plusieurs extraits d'œuvres différentes autour d'un même thème | au moins trois |
+
+
+      Le **patrimoine**, ce sont les œuvres importantes héritées du passé, que l'on transmet.
+
+  - type: texte
+    titre: "Des époques différentes, en lien avec l'histoire"
+    contenu: >-
+      Les textes lus appartiennent à **différentes époques**, en lien avec le programme d'histoire.
+
+
+      Lire un texte du XIXe siècle éclaire l'histoire du XIXe siècle, et l'inverse. On voit aussi comment la
+      littérature évolue dans le temps.
+
+
+      Pense à toujours **situer l'œuvre dans son époque**.
+
+  - type: texte
+    titre: "Relier la littérature et les autres arts"
+    contenu: >-
+      On relie la **production littéraire** et la **production artistique** : peinture, sculpture, musique,
+      cinéma, architecture.
+
+
+      1. Lire l'œuvre et comprendre son sujet.
+
+      2. Chercher une œuvre d'un autre art sur un sujet proche.
+
+      3. Comparer ce que chaque œuvre dit du même sujet, avec ses propres moyens.
+
+
+      On peut visiter un musée, aller à un spectacle ou voir un film en lien avec une œuvre.
+
+
+      Le **carnet de lecture** aide à garder des traces : titre, auteur, résumé, citations, avis personnel.
+
+  - type: exemple
+    enonce: >-
+      Une élève lit un poème du XIXe siècle. Comment peut-elle le situer dans son époque et le relier à un
+      autre art ?
+    etapes:
+      - "Elle note l'époque : le XIXe siècle."
+      - "Elle cherche dans son cours d'histoire un événement ou une période du XIXe siècle, pour éclairer le poème."
+      - "Elle cherche une peinture de la même époque, sur un sujet proche du poème."
+      - "Elle compare : que dit chaque œuvre du sujet, avec ses moyens (les mots, les couleurs) ?"
+      - "Elle note tout cela dans son carnet de lecture."
+
+  - type: exercice
+    enonce: >-
+      Léa choisit elle-même un roman de littérature jeunesse et le lit chez elle. Il n'est pas étudié en
+      détail en classe. De quel type de lecture s'agit-il ?
+    forme: qcm
+    choix:
+      - "Une lecture cursive"
+      - "Une lecture intégrale"
+      - "Un groupement de textes"
+    reponse: 0
+    indices:
+      - "Cette lecture est libre et personnelle."
+      - "Ce n'est pas un ensemble d'extraits : c'est un livre lu en entier."
+    explication: "C'est une lecture cursive : une lecture plus libre, souvent choisie par l'élève, moins approfondie en classe."
+
+  - type: exercice
+    enonce: "Selon les attendus officiels, combien de groupements de textes au minimum faut-il lire dans l'année en 3e ? Réponds par un nombre."
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "Relis le tableau de la première partie de la leçon."
+      - "Le minimum est le même pour chacun des types de lecture du tableau."
+    explication: "Les attendus demandent au moins trois groupements de textes, comme au moins trois lectures intégrales et trois lectures cursives."
+
+  - type: exercice
+    enonce: >-
+      Un professeur étudie en classe, scène après scène, une pièce de théâtre du patrimoine lue en entier.
+      De quel type de lecture s'agit-il ?
+    forme: qcm
+    choix:
+      - "Une lecture cursive"
+      - "Une lecture intégrale"
+      - "Un groupement de textes"
+    reponse: 1
+    indices:
+      - "L'œuvre est lue en entier, du début à la fin."
+      - "Elle est étudiée en détail avec toute la classe."
+    explication: "C'est une lecture intégrale : une œuvre complète du patrimoine, étudiée en détail en classe."
+
+  - type: exercice
+    enonce: "Comment s'appelle le cahier où l'on note ses lectures : résumé, citations, avis personnel ? Réponds par trois mots."
+    forme: reponse_courte
+    reponse: "carnet de lecture"
+    reponses_acceptees:
+      - "un carnet de lecture"
+      - "le carnet de lecture"
+      - "journal de lecture"
+      - "un journal de lecture"
+    indices:
+      - "Ce cahier sert à garder des traces de ce que tu lis."
+      - "Le premier mot désigne un petit cahier. Le dernier mot est ce que tu fais avec un livre."
+    explication: "C'est le carnet de lecture. On y note le titre, l'auteur, un résumé, des citations et son avis."
+
+  - type: exercice
+    enonce: >-
+      Une classe lit un roman sur la Première Guerre mondiale et regarde un tableau de la même époque, qui
+      montre des soldats dans des tranchées. Quel lien entre les deux œuvres est le mieux expliqué ?
+    forme: qcm
+    choix:
+      - "Les deux œuvres cherchent à faire ressentir la dureté de la guerre, chacune avec ses moyens : les mots et les couleurs."
+      - "Les deux œuvres n'ont aucun point commun, car l'une est un livre et l'autre un tableau."
+      - "Les deux œuvres sont liées parce qu'elles ont le même nombre de pages."
+    reponse: 0
+    indices:
+      - "Cherche un point commun de sujet, d'époque ou de sentiment."
+      - "Deux œuvres d'arts différents peuvent parler du même sujet avec des moyens différents."
+    explication: "Le roman et le tableau traitent le même sujet et la même époque. Chacun exprime la dureté de la guerre avec ses propres moyens : les mots et les couleurs."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre littéraire étudiée en classe et une œuvre d'un autre art (peinture, musique,
+      cinéma) qui lui est liée. Explique ce qu'elles ont en commun.
+    indices:
+      - "Nomme d'abord l'œuvre littéraire, puis l'autre œuvre."
+      - "Cherche un point commun : le thème, l'époque ou le sentiment exprimé."
+    criteres:
+      - "L'élève cite une œuvre littéraire précise étudiée en classe."
+      - "L'élève cite une œuvre d'un autre art (tableau, musique, film) en lien avec le même sujet ou la même époque."
+      - "L'élève explique un point commun entre les deux œuvres (même thème, même époque, même sentiment exprimé)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre lecture intégrale et lecture
+      cursive, et comment tu relies un livre à une œuvre d'un autre art.

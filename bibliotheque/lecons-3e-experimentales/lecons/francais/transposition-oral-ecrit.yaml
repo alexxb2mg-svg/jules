@@ -1,0 +1,196 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant). Relecture bienvenue.
+notion: transposition-oral-ecrit
+titre: Passer de l'oral à l'écrit et rapporter des paroles
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027
+    — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4
+    du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Transposer un énoncé de l'oral à l'écrit, et de l'écrit à l'oral.
+  - Reconnaître et écrire le discours direct, le discours indirect et le discours indirect libre.
+  - Adapter son niveau de langue à l'oral scolaire.
+- type: texte
+  titre: 'Oral et écrit : ce qui change'
+  contenu: '**À l''oral** : on a le ton, les gestes, le contexte.
+
+    On fait des phrases incomplètes (« Viens ! »), des répétitions, des hésitations (« euh »), des mots
+    familiers.
+
+
+    **À l''écrit** : le lecteur n''a que le texte.
+
+    On attend des phrases complètes, une ponctuation soignée, des mots précis.
+
+
+    **Transposer**, c''est passer de l''un à l''autre :
+
+
+    - de l''oral à l''écrit : compléter les phrases, supprimer hésitations et répétitions, remplacer les
+    mots familiers ;
+
+    - de l''écrit à l''oral : raccourcir, rendre le texte facile à suivre, le dire avec le ton.'
+- type: texte
+  titre: Trois façons de rapporter des paroles
+  contenu: '| Type | Marques | Exemple |
+
+    |---|---|---|
+
+    | Discours direct | guillemets, deux-points, verbe introducteur | Il a dit : « Je pars demain. » |
+
+    | Discours indirect | pas de guillemets, subordonnée (que, si) | Il a dit qu''il partait le lendemain.
+    |
+
+    | Discours indirect libre | ni guillemets, ni verbe introducteur, ni subordonnée | Il regardait la
+    pluie. Quelle journée gâchée ! |
+
+
+    Dans le discours indirect libre, les paroles ou les pensées du personnage se mêlent au récit et gardent
+    son style (exclamations, questions).'
+- type: texte
+  titre: 'Du direct à l''indirect : ce qui change'
+  contenu: 'Quand le verbe introducteur est au passé, on change :
+
+
+    - **les pronoms et possessifs** : je → il, mon → son ;
+
+    - **les temps** : présent → imparfait, futur → conditionnel, passé composé → plus-que-parfait ;
+
+    - **les repères** : demain → le lendemain, hier → la veille, aujourd''hui → ce jour-là, ici → là ;
+
+    - **la forme de la phrase** : une question devient une subordonnée (il demandait si…), un ordre devient
+    « de » + infinitif (il m''a dit de partir).
+
+
+    On supprime les guillemets et le deux-points.'
+- type: texte
+  titre: Le niveau de langue à l'oral scolaire
+  contenu: 'À l''oral scolaire (exposé, débat), on emploie un niveau de langue **plus soutenu** qu''entre
+    amis.
+
+
+    - vocabulaire précis ;
+
+    - phrases construites.
+
+
+    Exemple : « je considère que » plutôt que « moi je trouve que c''est nul ».'
+- type: exemple
+  enonce: 'Transforme en discours indirect : Clara annonça : « J''ai fini hier. »'
+  etapes:
+  - 'On supprime les guillemets et le deux-points. On ajoute « que » après le verbe introducteur : Clara
+    annonça qu''…'
+  - 'Le pronom « je » devient « elle ». Le passé composé « ai fini » devient un plus-que-parfait : « avait
+    fini ».'
+  - Le repère « hier » devient « la veille ».
+  - 'Résultat : Clara annonça qu''elle avait fini la veille.'
+- type: exercice
+  enonce: Quelle phrase est au discours indirect libre ?
+  forme: qcm
+  choix:
+  - 'Léa dit : « Je suis en retard. »'
+  - Léa dit qu'elle était en retard.
+  - Léa regarda sa montre. Déjà huit heures ! Quel retard !
+  - Léa, dis-moi si tu es en retard.
+  reponse: 2
+  indices:
+  - Le discours indirect libre n'a ni guillemets, ni verbe introducteur, ni subordonnée.
+  - Élimine la phrase avec des guillemets et celle avec « qu' ».
+  - Cherche la phrase où la pensée du personnage se mêle au récit, avec un style exclamatif.
+  explication: Dans la 3e phrase, la pensée de Léa (« Déjà huit heures ! Quel retard ! ») se mêle au récit
+    sans guillemets ni verbe introducteur. La 1re phrase est au discours direct, la 2e au discours indirect.
+- type: exercice
+  enonce: 'Complète au discours indirect : « Léa a dit : « Je partirai demain. » » devient « Léa a dit
+    qu''elle partirait ___. » (écris le repère de temps)'
+  forme: reponse_courte
+  reponse: le lendemain
+  reponses_acceptees:
+  - le lendemain
+  - lendemain
+  - le jour suivant
+  indices:
+  - Quand on rapporte des paroles au passé, « demain » ne convient plus.
+  - 'C''est un repère de temps qui commence par un article : « le… ».'
+  - Le mot cherché signifie « le jour d'après » et commence par « lende- ».
+  explication: « demain » devient « le lendemain » quand le verbe introducteur est au passé.
+- type: exercice
+  enonce: 'Complète : « Il a dit : « Je suis fatigué. » » devient « Il a dit qu''il ___ fatigué. » (écris
+    seulement le verbe conjugué)'
+  forme: reponse_courte
+  reponse: était
+  reponses_acceptees:
+  - était
+  - etait
+  indices:
+  - 'Le verbe introducteur « a dit » est au passé : le temps du verbe rapporté change.'
+  - Le présent devient un autre temps du passé, celui de la description.
+  - Le verbe être à l'imparfait, 3e personne du singulier.
+  explication: Le présent « suis » devient l'imparfait « était ».
+- type: exercice
+  enonce: 'Un élève dit à l''oral : « Euh, ben, le truc, il est trop nul, ce film. » Quelle transposition
+    à l''écrit convient le mieux ?'
+  forme: qcm
+  choix:
+  - Euh, ben, le truc, il est trop nul, ce film.
+  - Ce film est vraiment mauvais.
+  - Le truc est nul.
+  - Film trop nul euh.
+  reponse: 1
+  indices:
+  - À l'écrit, on supprime les hésitations (« euh », « ben »).
+  - On remplace aussi le vocabulaire familier (« truc », « trop nul »).
+  - Il faut une phrase complète, au vocabulaire courant ou soutenu.
+  explication: La phrase « Ce film est vraiment mauvais. » est complète, sans hésitations, et son vocabulaire
+    est courant. Les autres gardent l'oral ou sont trop pauvres.
+- type: exercice
+  enonce: 'Quelle phrase transpose correctement au discours indirect : Léa a dit à Tom : « Je t''appellerai
+    demain. » ?'
+  forme: qcm
+  choix:
+  - Léa a dit à Tom qu'elle l'appellerait le lendemain.
+  - Léa a dit à Tom qu'elle t'appellera demain.
+  - 'Léa a dit à Tom : qu''elle l''appellerait le lendemain.'
+  - Léa a dit à Tom que je l'appellerais demain.
+  reponse: 0
+  indices:
+  - 'Vérifie quatre choses : les pronoms, le temps du verbe, le repère « demain » et la ponctuation.'
+  - Le futur devient un conditionnel. Le pronom « je » devient « elle », et « t' » devient « l' ».
+  - Au discours indirect, on n'écrit pas le deux-points.
+  explication: Le futur « appellerai » devient le conditionnel « appellerait », « je » devient « elle
+    », « t' » devient « l' », « demain » devient « le lendemain », et il n'y a plus de deux-points.
+- type: question_ouverte
+  question: 'Écris un court passage de récit (trois à cinq phrases) dans lequel tu insères : une réplique
+    au discours direct, une réplique au discours indirect, et une pensée du personnage au discours indirect
+    libre.'
+  indices:
+  - Choisis deux personnages et une situation simple.
+  - 'Pour le discours direct : guillemets, deux-points et verbe introducteur.'
+  - 'Pour le discours indirect libre : pas de guillemets ni de verbe introducteur, mais garde le style
+    du personnage.'
+  criteres:
+  - Le discours direct est correct (guillemets, deux-points, verbe introducteur).
+  - Le discours indirect est correct (subordonnée avec « que » ou « si », pronoms et temps adaptés, pas
+    de guillemets).
+  - Le discours indirect libre est reconnaissable (ni guillemets, ni verbe introducteur, style du personnage).
+  - Les trois passages sont insérés dans un récit cohérent.
+- type: synthese
+  consigne: 'Écris en trois phrases : la différence entre discours direct, indirect et indirect libre,
+    et deux choses qui changent quand on passe du direct à l''indirect.'

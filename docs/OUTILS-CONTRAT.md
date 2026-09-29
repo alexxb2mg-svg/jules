@@ -54,7 +54,11 @@ et `niveaux` sont informatifs (choix de l'outil dans une leçon).
 fiche absente ou illisible, `id` différent du nom du dossier, `entree` absente ou hors du
 dossier, `actions`/`evenements` mal formés, **permission non explicitement validée**
 (`PERMISSIONS_CONNUES`, vide pour l'instant — voir §4), licence manquante, et tout motif
-interdit détecté dans le code de l'outil (voir §4, premier filtre automatique).
+interdit détecté dans le code de l'outil (voir §4, premier filtre automatique). Ce filtre de
+motifs est une aide à la relecture humaine, pas une barrière technique : il est contournable (par
+exemple `self["fetch"]` échappe à la détection littérale de `fetch(`) ; la vraie barrière est la
+sandbox de l'iframe (`allow-scripts` sans `allow-same-origin`) et la CSP qui bloque tout accès
+réseau (`connect-src 'none'`), décrites au §3.
 
 `charger_outils(racine, dossiers_extensions) -> dict[str, Outil]` charge tous les dossiers de
 `outils/`, puis ceux des outils fournis par les extensions actives (`docs/EXTENSIONS.md` ; les
@@ -98,6 +102,10 @@ L'outil et Jules ne communiquent que par `postMessage`, et seulement avec les ac
   sans qu'un outil mal intentionné ou buggé perturbe l'autre.
 - `donnees` est relu champ par champ (jamais transmis tel quel à l'affichage ou au DOM sans
   échappement) : un outil affiche des textes fournis par la leçon, jamais du HTML.
+- Évènement réservé `fermer` (`donnees` vide) : « l'utilisateur demande la fermeture de l'outil »
+  (Échap tapé alors que le focus est dans l'iframe, que la page hôte ne voit pas). Tout outil peut
+  l'émettre, à condition de le déclarer dans ses `evenements` ; la page qui a monté l'outil le ferme
+  (`surEvenement`) et rend le focus au bouton qui l'avait ouvert. Ex. : la calculatrice (EX-217).
 - Chaque outil de référence embarque sa propre petite fonction de validation (voir
   `outils/*/outil.js`, fonction `recu(event)`) : c'est volontairement dupliqué (pas de fichier
   partagé entre outils) pour qu'un outil reste un dossier autonome, lisible et vérifiable seul.

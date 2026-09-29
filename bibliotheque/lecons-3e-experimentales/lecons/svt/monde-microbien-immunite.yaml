@@ -1,0 +1,148 @@
+notion: monde-microbien-immunite
+titre: "Le monde microbien et les réactions immunitaires"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: CC-BY-SA-4.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un micro-organisme utile (microbiote) d'un micro-organisme pathogène."
+      - "Expliquer comment on prévient une infection et comment on la soigne."
+      - "Expliquer pourquoi certaines bactéries deviennent résistantes aux antibiotiques."
+
+  - type: texte
+    titre: "Le microbiote : des microbes utiles"
+    contenu: >-
+      Des micro-organismes (bactéries, virus, champignons microscopiques) sont partout : dans
+      l'air, l'eau, le sol, sur la peau et dans notre intestin. Notre organisme héberge un très
+      grand nombre de bactéries, surtout dans l'intestin : c'est le **microbiote**. La plupart de
+      ces micro-organismes ne sont pas dangereux, et beaucoup sont même utiles : ils aident à
+      digérer certaines fibres, produisent des vitamines, et occupent la place face aux microbes
+      **pathogènes** (ceux qui provoquent une maladie).
+
+  - type: texte
+    titre: "Contamination et infection"
+    contenu: >-
+      Seuls certains micro-organismes sont pathogènes. La **contamination** est leur entrée dans
+      l'organisme (par une plaie, les voies respiratoires, un aliment...). L'**infection** est leur
+      multiplication dans l'organisme une fois entrés. La peau et les muqueuses forment une
+      première barrière contre les microbes ; si elle est franchie, le système immunitaire réagit
+      pour se défendre.
+
+  - type: texte
+    titre: "Prévenir : hygiène, antiseptiques, vaccination"
+    contenu: >-
+      Pour limiter la contamination, on utilise des mesures d'**hygiène** (lavage des mains,
+      cuisson des aliments) et des **antiseptiques**, des produits appliqués sur la peau ou une
+      plaie qui tuent les microbes à l'extérieur du corps. La **vaccination** prépare le système
+      immunitaire à reconnaître un microbe précis, sans provoquer la maladie : si le vrai microbe
+      se présente plus tard, l'organisme se défend plus vite.
+
+  - type: texte
+    titre: "Soigner : les antibiotiques et leurs limites"
+    contenu: >-
+      Pour soigner une infection **bactérienne**, les **antibiotiques** tuent les bactéries ou
+      bloquent leur multiplication dans l'organisme. Ils sont sans effet sur les virus (grippe,
+      rhume...). Les bactéries évoluent : par hasard, certaines portent une mutation qui les rend
+      résistantes à un antibiotique. Quand on utilise cet antibiotique, les bactéries sensibles
+      meurent et les résistantes survivent et se multiplient. C'est pourquoi un antibiotique ne se
+      prend que sur prescription médicale, et pendant toute la durée prescrite.
+
+  - type: exemple
+    enonce: >-
+      Léa se coupe légèrement le doigt en jardinant. Elle nettoie la plaie à l'eau et au savon,
+      puis applique un antiseptique. Le lendemain, elle a de la fièvre et son médecin lui
+      diagnostique une angine due à une bactérie ; il lui prescrit un antibiotique, à prendre
+      pendant 6 jours même si elle se sent mieux avant. Expliquer chaque étape.
+    etapes:
+      - "Le lavage et l'antiseptique servent à prévenir une infection : ils limitent la contamination en tuant les microbes présents sur la peau, à l'entrée de la plaie."
+      - "L'angine bactérienne est une infection déjà installée : une bactérie s'est multipliée dans la gorge de Léa. Le médecin prescrit alors un antibiotique, efficace contre les bactéries."
+      - "Léa doit prendre l'antibiotique pendant toute la durée prescrite, même si elle se sent mieux : arrêter trop tôt laisserait survivre des bactéries plus résistantes, qui pourraient ensuite se multiplier."
+
+  - type: exercice
+    enonce: "Un médecin refuse de prescrire un antibiotique à un patient enrhumé. Pourquoi, selon toi ?"
+    forme: qcm
+    choix:
+      - "Parce que le rhume est dû à un virus, et les antibiotiques n'agissent pas sur les virus"
+      - "Parce que les antibiotiques sont trop chers"
+      - "Parce que le rhume n'est pas une maladie"
+    reponse: 0
+    indices:
+      - "Un antibiotique agit sur un seul type de micro-organisme. Lequel ?"
+      - "Relis la différence entre bactérie et virus dans le cours."
+    explication: "Le rhume est causé par un virus. Les antibiotiques tuent les bactéries ou bloquent leur multiplication, mais sont sans effet sur les virus : les prescrire pour un rhume ne soignerait rien, et favoriserait en plus la résistance des bactéries."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'ensemble des micro-organismes qui vivent normalement dans notre intestin, sans nous rendre malades ?"
+    forme: reponse_courte
+    reponse: "le microbiote"
+    reponses_acceptees: ["microbiote", "le microbiote", "microbiote intestinal", "le microbiote intestinal", "flore intestinale", "la flore intestinale"]
+    indices:
+      - "Ce mot ressemble à « microbe », mais il désigne une communauté utile qui vit en nous."
+      - "Le mot est formé de « micro » et d'un mot qui désigne l'ensemble des êtres vivants d'un milieu, comme dans « biotope »."
+    explication: "C'est le microbiote (intestinal) : des milliards de micro-organismes, surtout des bactéries, qui vivent normalement dans l'intestin et sont souvent utiles."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : après une contamination, une bactérie se divise en deux toutes les 30
+      minutes, et chaque nouvelle bactérie fait de même. En partant d'une seule bactérie, combien
+      y en a-t-il au bout d'une heure et demie ?
+    forme: nombre
+    reponse: 8
+    tolerance: 0
+    indices:
+      - "Combien de divisions successives ont lieu en une heure et demie, si chacune dure 30 minutes ?"
+      - "À chaque division, le nombre de bactéries double. Fais un petit tableau : temps, nombre de bactéries."
+      - "Au bout de 30 minutes : 2 bactéries. Au bout de 60 minutes : 4 bactéries. Et au bout de 90 minutes ?"
+    explication: "Une heure et demie, ce sont 3 périodes de 30 minutes, donc 3 divisions : 1 → 2 → 4 → 8. Il y a 8 bactéries au bout d'une heure et demie : c'est l'infection, la multiplication rapide des bactéries."
+
+  - type: question_ouverte
+    question: "Un antiseptique et un antibiotique agissent-ils au même endroit ? Explique la différence en une phrase."
+    indices:
+      - "L'un des deux produits s'applique directement sur une plaie ou la peau ; l'autre se prend en médicament."
+      - "Relis les définitions du cours : où agit chacun des deux ?"
+    criteres:
+      - "L'élève dit que l'antiseptique s'applique à l'extérieur du corps (peau, plaie) pour tuer les microbes."
+      - "L'élève dit que l'antibiotique est un médicament qui agit à l'intérieur de l'organisme, contre les bactéries."
+
+  - type: question_ouverte
+    question: >-
+      Un patient prend un antibiotique pendant seulement 2 jours au lieu des 7 jours prescrits,
+      car il se sent mieux. Quelques semaines plus tard, il retombe malade avec des bactéries
+      résistantes à ce même antibiotique. Explique, étape par étape, comment ces bactéries
+      résistantes ont pu apparaître et se multiplier.
+    indices:
+      - "La résistance existe-t-elle avant ou après l'utilisation de l'antibiotique ?"
+      - "Pense à un tri : l'antibiotique élimine certaines bactéries, mais pas toutes. Lesquelles restent ?"
+      - "Premier fait : par hasard, quelques bactéries portaient déjà une mutation de résistance, avant même le traitement."
+    criteres:
+      - "L'élève explique que, par hasard, certaines bactéries portaient déjà une mutation de résistance avant le traitement."
+      - "L'élève explique que l'antibiotique tue les bactéries sensibles mais pas les résistantes (tri)."
+      - "L'élève explique que les bactéries résistantes survivent puis se multiplient : la population devient résistante."
+      - "Un traitement arrêté trop tôt est cité comme facteur qui aide les résistantes (bonus, non exigé)."
+
+  - type: question_ouverte
+    question: >-
+      Un camarade affirme : « Tous les microbes sont dangereux, il faudrait tous les éliminer. »
+      Que lui réponds-tu, avec tes propres mots, en t'appuyant sur ce que tu sais du microbiote ?
+    indices:
+      - "Le microbiote est fait de micro-organismes qui vivent en nous en permanence : sont-ils tous nuisibles ?"
+      - "Pense à ce que fait le microbiote au quotidien (digestion, place occupée face aux microbes pathogènes)."
+    criteres:
+      - "L'élève distingue microbiote (utile, non pathogène) et micro-organismes pathogènes."
+      - "L'élève donne au moins un rôle utile du microbiote (aide à la digestion, occupe la place face aux pathogènes, production de vitamines)."
+      - "L'élève conclut que seuls certains microbes sont dangereux, pas tous."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre prévenir une
+      contamination et soigner une infection bactérienne, et pourquoi il ne faut jamais arrêter un
+      antibiotique avant la fin du traitement prescrit.

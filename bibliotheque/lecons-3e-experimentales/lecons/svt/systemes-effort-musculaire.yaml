@@ -1,0 +1,166 @@
+notion: systemes-effort-musculaire
+titre: "L'effort musculaire : systèmes nerveux, respiratoire et cardiovasculaire"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer pourquoi les muscles ont besoin de plus de dioxygène et de nutriments pendant un effort."
+      - "Décrire le rôle des systèmes nerveux, respiratoire et cardiovasculaire, et calculer un écart ou un débit."
+      - "Comparer des mesures (repos, effort, récupération) en parlant des capacités et des limites de l'organisme."
+
+  - type: texte
+    titre: "Ce dont les muscles ont besoin"
+    contenu: |-
+      Pour se contracter, les cellules des muscles **consomment** du dioxygène et des nutriments (dont le glucose).
+
+      - Elles produisent de l'énergie et de la chaleur.
+      - Elles rejettent du **dioxyde de carbone**.
+
+      Pendant un effort, les muscles ont besoin de **beaucoup plus** de dioxygène et de nutriments.
+      Plusieurs systèmes s'adaptent ensemble.
+
+  - type: texte
+    titre: "Système respiratoire et système cardiovasculaire"
+    contenu: |-
+      **Système respiratoire** :
+
+      - la fréquence respiratoire augmente (on respire plus vite) ;
+      - le volume d'air à chaque mouvement augmente (on respire plus profondément) ;
+      - le **débit ventilatoire** augmente : **débit = fréquence × volume à chaque mouvement**.
+
+      **Système cardiovasculaire** (cœur, vaisseaux, sang) :
+
+      - la fréquence cardiaque augmente ;
+      - le cœur envoie plus de sang à chaque battement ;
+      - une plus grande part du sang va vers les muscles qui travaillent.
+
+  - type: texte
+    titre: "Système nerveux, capacités et limites"
+    contenu: |-
+      Le **système nerveux** :
+
+      - commande la contraction des muscles (message nerveux moteur) ;
+      - ajuste, sans qu'on y pense, les rythmes du cœur et de la respiration aux besoins de l'organisme.
+
+      L'organisme a des **capacités** et des **limites**. Les fréquences ne peuvent pas augmenter sans fin : au-delà, c'est l'épuisement.
+
+      L'entraînement améliore les capacités : cœur plus lent au repos, moins haut à l'effort, retour plus rapide au repos.
+
+  - type: texte
+    titre: "Après l'effort et au brevet"
+    contenu: |-
+      Après l'effort, les rythmes redescendent progressivement vers leurs valeurs de repos : c'est la **récupération**.
+
+      Au brevet, on te donne des mesures (repos, effort, récupération). Tu dois :
+
+      - calculer un écart (valeur à l'effort **moins** valeur au repos) ;
+      - expliquer par les besoins des muscles ;
+      - citer le rôle de chaque système.
+
+  - type: exemple
+    enonce: "Document (fictif) : au repos, Emma a une fréquence respiratoire de 14 mouvements par minute. Après quelques minutes de vélo, elle est de 32. Décris et explique ce changement."
+    etapes:
+      - "Je calcule l'écart : 32 − 14 = 18 mouvements par minute de plus."
+      - "La fréquence respiratoire augmente pendant l'effort."
+      - "Les muscles consomment plus de dioxygène et rejettent plus de dioxyde de carbone."
+      - "Respirer plus vite fait entrer plus de dioxygène et sortir plus de dioxyde de carbone."
+
+  - type: exercice
+    enonce: "Document (fictif) : au repos, la fréquence cardiaque de Louise est de 60 battements par minute. Juste après une course, elle est de 130 battements par minute. De combien de battements par minute a-t-elle augmenté ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 70
+    tolerance: 0.01
+    unite: "battements par minute"
+    indices:
+      - "Cherches-tu un total ou un écart entre deux valeurs ?"
+      - "Pour une augmentation, on part de la valeur d'arrivée et on enlève la valeur de départ."
+      - "Pose la soustraction : valeur après la course moins valeur au repos."
+    explication: "130 − 60 = 70 battements par minute de plus."
+
+  - type: exercice
+    enonce: "Document (fictif) : pendant un match, Karim fait 25 mouvements respiratoires par minute et fait entrer 1,5 litre d'air à chaque mouvement. Combien de litres d'air entrent dans ses poumons en une minute ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 37.5
+    tolerance: 0.01
+    unite: "litres par minute"
+    indices:
+      - "Le débit ventilatoire est un volume d'air par minute."
+      - "Débit = fréquence × volume à chaque mouvement."
+      - "Multiplie le nombre de mouvements par minute par le volume d'un mouvement."
+    explication: "25 × 1,5 = 37,5 litres d'air par minute."
+
+  - type: exercice
+    enonce: "Pourquoi respire-t-on plus vite pendant un effort ?"
+    forme: qcm
+    choix:
+      - "Pour apporter plus de dioxygène au sang, et rejeter plus de dioxyde de carbone"
+      - "Parce que les muscles fabriquent du dioxygène pendant l'effort"
+      - "Parce que les muscles n'utilisent pas de dioxygène au repos"
+      - "Pour que le cœur batte moins vite"
+    reponse: 0
+    indices:
+      - "Que consomment les muscles pour se contracter, et que rejettent-ils ?"
+      - "Le système respiratoire fait entrer le dioxygène dans le sang et rejette le dioxyde de carbone."
+      - "Les muscles consomment du dioxygène, même au repos : ils ne le fabriquent pas."
+    explication: "Les muscles consomment plus de dioxygène et rejettent plus de dioxyde de carbone. Respirer plus vite permet d'en faire entrer et sortir davantage."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le retour progressif des rythmes du cœur et de la respiration à leurs valeurs de repos, après l'effort ?"
+    forme: reponse_courte
+    reponse: "la récupération"
+    reponses_acceptees: ["récupération", "la récupération", "recuperation", "la recuperation"]
+    indices:
+      - "Ce mot décrit ce qui se passe quand on arrête de courir."
+      - "Les rythmes redescendent peu à peu."
+      - "C'est un nom qui commence par « récu »."
+    explication: "C'est la récupération. Un cœur entraîné revient plus vite à sa valeur de repos."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : au repos, le cœur de Sofia bat 75 fois par minute et envoie 60 mL de
+      sang à chaque battement. Pendant une course, il bat 140 fois par minute et envoie 90 mL
+      de sang à chaque battement. De combien de millilitres le volume de sang envoyé par
+      minute a-t-il augmenté ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 8100
+    tolerance: 0.01
+    unite: "mL par minute"
+    indices:
+      - "Il faut d'abord un volume de sang par minute dans chaque situation."
+      - "Volume par minute = battements par minute × volume par battement. Calcule-le pour le repos, puis pour la course."
+      - "Ensuite, soustrais le plus petit volume au plus grand."
+    explication: "Repos : 75 × 60 = 4 500 mL par minute. Course : 140 × 90 = 12 600 mL par minute. Augmentation : 12 600 − 4 500 = 8 100 mL par minute."
+
+  - type: question_ouverte
+    question: >-
+      Document (fictif) : fréquence cardiaque de deux élèves du même âge. Camille, qui s'entraîne
+      souvent : 58 au repos, 145 pendant la course, 70 trois minutes après. Hugo, qui ne fait
+      pas de sport : 78 au repos, 175 pendant la course, 125 trois minutes après. Explique
+      pourquoi la fréquence cardiaque augmente pendant la course. Compare ensuite les deux
+      élèves en parlant des capacités et des limites de l'organisme.
+    indices:
+      - "De quoi les muscles ont-ils davantage besoin pendant la course ?"
+      - "Compare les deux élèves ligne par ligne : repos, course, puis trois minutes après."
+      - "Qui a le cœur le plus lent au repos ? Qui revient le plus vite vers sa valeur de repos ?"
+    criteres:
+      - "L'élève explique l'augmentation par le besoin accru des muscles en dioxygène et en nutriments, que le sang apporte."
+      - "L'élève compare avec les valeurs : Camille a un cœur plus lent au repos, monte moins haut et récupère plus vite."
+      - "L'élève conclut que l'entraînement améliore les capacités de l'organisme et qu'Hugo s'approche davantage des limites de son cœur."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases le rôle de chaque système (nerveux, respiratoire, cardiovasculaire)
+      pendant un effort, puis explique ce que veut dire « récupération ».

@@ -59,6 +59,8 @@ jobs:
         run: mypy
       - name: Tests et couverture
         run: python -m pytest -rs --cov --cov-report=term-missing
+      - name: Tests lents (exclus de la suite par defaut, voir pyproject.toml)
+        run: python -m pytest -rs -m lent
       - name: La commande s'installe et demarre
         run: jules verifier
 

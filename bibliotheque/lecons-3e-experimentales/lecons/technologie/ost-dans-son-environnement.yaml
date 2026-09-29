@@ -1,0 +1,167 @@
+notion: ost-dans-son-environnement
+titre: "L'objet technique dans son environnement : interacteurs, ergonomie, expérience utilisateur"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lister les interacteurs extérieurs d'un objet technique."
+      - "Expliquer un choix de conception par une exigence (ergonomie, sécurité, développement durable)."
+      - "Décrire l'expérience de l'utilisateur et comparer une mesure au cahier des charges."
+
+  - type: texte
+    titre: "Les interacteurs"
+    contenu: |-
+      Un objet technique n'est jamais seul. Il est en relation avec des éléments **extérieurs** : les **interacteurs**.
+
+      - les usagers : celui qui l'utilise, les personnes autour ;
+      - l'environnement physique : air, pluie, chaleur, poussière, sol ;
+      - les sources d'énergie : réseau électrique, soleil ;
+      - les données qu'il reçoit ou envoie, et les autres objets.
+
+      Les pièces à l'intérieur (moteur, carte électronique) ne sont **pas** des interacteurs extérieurs.
+
+      On les place sur un schéma, l'objet au centre : le **diagramme des interacteurs** (la « pieuvre »).
+
+  - type: texte
+    titre: "Les choix de conception"
+    contenu: |-
+      Les concepteurs font des choix pour répondre à ces interactions.
+
+      | Exigence | Idée |
+      |---|---|
+      | Ergonomie | Adapter l'objet à l'utilisateur : confortable, facile, efficace (forme des poignées, taille des boutons) |
+      | Sécurité | Protéger l'utilisateur et les autres (arrêt d'urgence, protections) |
+      | Développement durable | Consommer moins, durer, se réparer, se recycler |
+      | Qualité et fiabilité | Bien fonctionner longtemps, sans panne |
+
+  - type: texte
+    titre: "L'expérience utilisateur et sa représentation"
+    contenu: |-
+      L'**expérience utilisateur**, c'est tout ce que vit l'utilisateur quand il se sert de l'objet : facilité, temps passé, erreurs, plaisir.
+
+      On la décrit avec un mode de représentation adapté :
+
+      - un **croquis** : la forme, la position des commandes ;
+      - un **schéma** : les éléments et leurs liens ;
+      - un **graphique** : des mesures, des temps ;
+      - un **algorithme** : la suite des actions de l'utilisateur ;
+      - une **modélisation numérique**.
+
+  - type: texte
+    titre: "Contraintes et exigences"
+    contenu: |-
+      Les contraintes viennent :
+
+      - du **cahier des charges** : il liste les fonctions de l'objet et les contraintes, avec des critères et des niveaux à atteindre ;
+      - des **normes** : des règles techniques communes (dimensions, sécurité), et de la loi ;
+      - des **labels et certifications** : des signes qui attestent une qualité, une performance ou une exigence.
+
+      Le **marquage CE** : le fabricant déclare respecter les exigences européennes, notamment de sécurité. Ce n'est pas un label écologique.
+
+  - type: exemple
+    enonce: >-
+      Cite quatre interacteurs d'une bouilloire électrique et un choix de conception lié à l'un d'eux.
+    etapes:
+      - "Interacteurs extérieurs : l'utilisateur, l'eau, le réseau électrique (la prise), le plan de travail."
+      - "Le thermostat et la résistance sont dans la bouilloire : ce sont des pièces, pas des interacteurs."
+      - "Choix de conception : un arrêt automatique quand l'eau bout. Il répond à une exigence de sécurité pour l'utilisateur."
+
+  - type: exercice
+    enonce: "Une trottinette électrique roule dehors. Lequel de ces éléments est un interacteur extérieur ?"
+    forme: qcm
+    choix:
+      - "Le moteur de la roue"
+      - "La batterie"
+      - "La pluie"
+      - "La carte électronique"
+    reponse: 2
+    indices:
+      - "Un interacteur ne fait pas partie de l'objet."
+      - "Trois de ces éléments sont dans la trottinette. Un seul est dans son environnement."
+    explication: "La pluie est dans l'environnement de la trottinette. Le moteur, la batterie et la carte électronique sont des pièces de l'objet."
+
+  - type: exercice
+    enonce: >-
+      Comment s'appelle le document qui liste les fonctions d'un objet et les contraintes à respecter,
+      avec des critères et des niveaux à atteindre ?
+    forme: reponse_courte
+    reponse: "cahier des charges"
+    reponses_acceptees:
+      - "cahier des charges"
+      - "le cahier des charges"
+      - "un cahier des charges"
+      - "cahier des charges fonctionnel"
+    indices:
+      - "Ce document est écrit avant de concevoir l'objet."
+      - "Son nom compte trois mots. Le premier désigne un petit livre où l'on écrit."
+    explication: "C'est le cahier des charges. Il sert à concevoir l'objet, puis à vérifier qu'il répond aux attentes."
+
+  - type: exercice
+    enonce: "Que signifie le marquage CE sur un produit ?"
+    forme: qcm
+    choix:
+      - "C'est un label qui garantit que le produit est écologique."
+      - "Le fabricant déclare que le produit respecte les exigences européennes."
+      - "C'est la norme qui fixe les dimensions du produit."
+    reponse: 1
+    indices:
+      - "Le marquage CE n'est pas un label écologique."
+      - "Qui fait la déclaration : le fabricant ou une norme ?"
+    explication: "Avec le marquage CE, le fabricant déclare que son produit respecte les exigences européennes, notamment de sécurité."
+
+  - type: exercice
+    enonce: >-
+      Pour évaluer l'expérience utilisateur d'une application, on chronomètre cinq personnes qui envoient
+      un message. Temps mesurés : 8 s, 12 s, 10 s, 14 s et 6 s. Calcule le temps moyen, en secondes.
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: s
+    indices:
+      - "Pour une moyenne, on additionne les mesures, puis on divise."
+      - "Divise la somme par le nombre de personnes chronométrées."
+    explication: "Somme : 8 + 12 + 10 + 14 + 6 = 50 s. Moyenne : 50 ÷ 5 = 10 s."
+
+  - type: exercice
+    enonce: >-
+      Autre essai : le temps moyen mesuré est de 20 s. Le cahier des charges exige un temps moyen de
+      25 s au plus. Que peut-on conclure ?
+    forme: qcm
+    choix:
+      - "L'exigence du cahier des charges est respectée."
+      - "L'exigence du cahier des charges n'est pas respectée."
+      - "On ne peut rien conclure, il faut refaire l'essai."
+    reponse: 0
+    indices:
+      - "Compare la mesure à la limite du cahier des charges."
+      - "« Au plus 25 s » veut dire : 25 s ou moins. 20 s est-il dans cette limite ?"
+    explication: "20 s est inférieur à 25 s : le temps mesuré respecte l'exigence du cahier des charges."
+
+  - type: question_ouverte
+    question: >-
+      Voici une lampe de bureau : un bras articulé, un pied lourd, un bouton tactile qui règle
+      l'intensité, une ampoule LED qui chauffe peu, un câble branché sur une prise. Cite trois
+      interacteurs extérieurs de cette lampe, puis explique deux choix de conception en disant à quelle
+      exigence ils répondent.
+    indices:
+      - "Qu'est-ce qui entoure la lampe quand quelqu'un travaille avec ?"
+      - "Pour deux caractéristiques de la lampe, demande-toi : à quoi ça sert pour l'utilisateur ?"
+    criteres:
+      - "L'élève cite trois interacteurs extérieurs corrects (l'utilisateur, la table, la prise ou le réseau électrique, l'air ambiant) sans y mettre de pièce de la lampe."
+      - "L'élève relie au moins deux choix de conception à une exigence juste (bras articulé pour l'ergonomie, pied lourd ou LED qui chauffe peu pour la sécurité)."
+      - "L'élève justifie chaque choix par son effet sur l'utilisateur ou l'environnement."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, la différence entre un interacteur et une pièce de l'objet, et ce que
+      contient un cahier des charges.

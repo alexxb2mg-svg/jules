@@ -1,0 +1,89 @@
+notion: etapes-construction-europeenne
+titre: "Les étapes de la construction européenne"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Union européenne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  CECA: "Communauté européenne du charbon et de l'acier"
+  CEE: "Communauté économique européenne"
+  UE: "Union européenne"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: construction-europeenne, titre: "Construction européenne", sous_titre: "de 1951 à aujourd'hui", principal: true}
+      - {id: ceca, titre: "CECA", sous_titre: "1951, 6 pays"}
+      - {id: cee, titre: "CEE", sous_titre: "traités de Rome, 1957"}
+      - {id: ue, titre: "UE", sous_titre: "Maastricht, 1992"}
+      - {id: euro-brexit, titre: "Euro et Brexit", sous_titre: "2002, puis 2020"}
+    liens:
+      - {de: construction-europeenne, vers: ceca, libelle: "1re étape"}
+      - {de: ceca, vers: cee, libelle: "élargissement"}
+      - {de: cee, vers: ue, libelle: "union politique"}
+      - {de: ue, vers: euro-brexit, libelle: "monnaie et retrait"}
+    jules: "Chaque étape élargit la coopération : d'abord le charbon et l'acier, puis un vrai **marché commun**, puis une union politique."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Retenir trois dates-étapes : **1951** (CECA), **1957** (CEE), **1992** (Maastricht, UE)."
+      - "Montrer que la coopération commence par l'économie avant d'aller vers le politique."
+      - "Relier ce projet à son objectif premier : garantir la **paix** entre pays européens après la guerre."
+    jules: "L'ordre des sigles suit l'ordre chronologique : CECA, puis CEE, puis UE."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Croire que l'Union européenne a toujours compté le même nombre de pays."
+    pourquoi_faux: "L'UE est passée de **6 pays fondateurs** (CECA, 1951) à **27 membres**, avec des élargissements successifs et un retrait (Brexit, 2020)."
+    bonne_idee: "Préciser toujours un nombre de pays associé à une date : 6 en 1951, 27 aujourd'hui."
+    jules: "Le nombre de pays membres change à chaque étape : ne jamais donner un seul chiffre pour toute l'histoire de l'UE."
+
+  - id: exemple
+    type: exemple
+    situation: "En 1992, les pays de la CEE signent le traité de Maastricht."
+    calcul: "Ce traité transforme la **CEE**, une union surtout économique, en **Union européenne**, avec une dimension politique."
+    conclusion: "L'UE adopte ensuite une monnaie commune, l'**euro**, en 2002."
+    jules: "Maastricht (1992) est le tournant qui fait passer l'Europe d'un projet économique à un projet politique."
+
+  - id: schema
+    type: schema
+    titre: "Trois étapes de la construction européenne"
+    svg: |
+      <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+        <g class="node c-purple">
+          <rect x="40" y="70" width="170" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="125" y="88" text-anchor="middle" dominant-baseline="central">CECA — 1951</text>
+          <text class="ts" x="125" y="106" text-anchor="middle" dominant-baseline="central">6 pays fondateurs</text>
+        </g>
+        <line x1="210" y1="98" x2="255" y2="98" class="arr" stroke="#888780" marker-end="url(#arrow)"/>
+        <g class="node c-teal">
+          <rect x="255" y="70" width="170" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="340" y="88" text-anchor="middle" dominant-baseline="central">CEE — 1957</text>
+          <text class="ts" x="340" y="106" text-anchor="middle" dominant-baseline="central">traités de Rome</text>
+        </g>
+        <line x1="425" y1="98" x2="470" y2="98" class="arr" stroke="#888780" marker-end="url(#arrow)"/>
+        <g class="node c-coral">
+          <rect x="470" y="70" width="170" height="56" rx="8" stroke-width="0.5"/>
+          <text class="th" x="555" y="88" text-anchor="middle" dominant-baseline="central">UE — 1992</text>
+          <text class="ts" x="555" y="106" text-anchor="middle" dominant-baseline="central">traité de Maastricht</text>
+        </g>
+      </svg>
+    jules: "Retiens l'ordre des trois sigles avec leurs dates : CECA (1951), CEE (1957), UE (1992)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Revois ensuite l'histoire du Brexit (2020) pour comprendre qu'un pays peut aussi quitter l'UE."

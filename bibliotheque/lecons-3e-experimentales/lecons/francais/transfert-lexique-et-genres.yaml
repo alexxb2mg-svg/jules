@@ -1,0 +1,203 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant). Relecture bienvenue.
+notion: transfert-lexique-et-genres
+titre: 'Réutiliser ses lectures pour écrire : lexique, tournures et genres'
+duree_minutes: 25
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027
+    — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4
+    du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître les principaux genres littéraires et leurs caractéristiques.
+  - Réemployer dans son texte un mot ou une tournure découverts en lecture, sans copier.
+  - Relire son texte avec une distance critique, puis le réécrire.
+- type: texte
+  titre: Les principaux genres littéraires
+  contenu: 'Un **genre littéraire** est une catégorie de textes qui ont une même forme.
+
+
+    | Genre | Caractéristiques |
+
+    |---|---|
+
+    | Le roman | long récit en prose, avec une intrigue, des personnages et un narrateur |
+
+    | La nouvelle | récit court, peu de personnages, souvent une **chute** (fin surprenante) |
+
+    | Le conte et la fable | récits courts ; la fable est en général suivie d''une morale |
+
+    | Le théâtre | texte écrit pour être joué : répliques, **didascalies**, actes et scènes |
+
+    | La poésie | jeu sur les sons, le rythme, les images ; en vers ou en prose |
+
+    | L''autobiographie | l''auteur raconte sa propre vie : auteur, narrateur et personnage sont la même
+    personne |
+
+    | Les textes argumentatifs | essai, lettre ouverte, discours : ils défendent une idée |'
+- type: texte
+  titre: Les outils pour analyser un texte
+  contenu: 'Pour comprendre comment un texte fonctionne, on repère :
+
+
+    - **qui parle** : le narrateur, le point de vue ;
+
+    - **le temps de base** du texte ;
+
+    - **les champs lexicaux** : les mots d''un même thème ;
+
+    - **les figures de style** : comparaison, métaphore ;
+
+    - **le registre** : comique, tragique, lyrique… ;
+
+    - **les connecteurs**.
+
+
+    Ces repères t''aident à voir ce que tu pourras réutiliser.'
+- type: texte
+  titre: Transférer dans son écrit
+  contenu: '**Transférer**, c''est réemployer dans son texte un mot, une tournure ou un procédé vus en
+    lecture.
+
+
+    On garde la **construction**, mais on change le sujet, les mots ou le contexte.
+
+
+    Exemple : « la peur lui nouait l''estomac » peut devenir « l''émotion lui serrait la gorge ».
+
+
+    **Copier une phrase entière n''est pas un transfert.**
+
+
+    Avant d''utiliser un mot nouveau, vérifie son sens exact.'
+- type: texte
+  titre: Prendre de la distance critique
+  contenu: 'Après avoir écrit, relis ton texte **comme un lecteur** :
+
+
+    - Le genre est-il respecté ?
+
+    - Les mots sont-ils précis ?
+
+    - L''effet cherché est-il produit ?
+
+
+    Note ce qui marche et ce qui manque, puis **réécris**.
+
+
+    Corriger l''orthographe ne suffit pas : c''est seulement une partie de la relecture.'
+- type: exemple
+  enonce: 'Un élève a lu dans un roman : « Le vent s''engouffrait dans la ruelle déserte. » Il écrit ensuite
+    : « Le silence s''engouffrait dans la salle vide. » Qu''a-t-il fait ?'
+  etapes:
+  - 'Il a repéré une tournure dans sa lecture : « s''engouffrer dans ».'
+  - 'Il a gardé la construction de la phrase, mais il a changé le sujet et le lieu : le silence, la salle
+    vide.'
+  - 'Ce n''est pas une copie, car la phrase n''est pas identique. C''est un transfert : il a réemployé
+    la tournure dans un contexte différent.'
+- type: exercice
+  enonce: Un texte est écrit de telle façon que l'auteur, le narrateur et le personnage principal sont
+    la même personne, qui raconte sa propre vie. De quel genre s'agit-il ?
+  forme: qcm
+  choix:
+  - L'autobiographie
+  - La fable
+  - La nouvelle
+  - Le théâtre
+  reponse: 0
+  indices:
+  - 'Relis le tableau des genres : quel genre raconte la vie de l''auteur ?'
+  - 'Le mot commence par « auto- » : c''est soi-même.'
+  explication: 'C''est une autobiographie : l''auteur raconte sa propre vie, et il est en même temps narrateur
+    et personnage.'
+- type: exercice
+  enonce: Comment appelle-t-on la fin surprenante d'une nouvelle ? (un mot)
+  forme: reponse_courte
+  reponse: chute
+  reponses_acceptees:
+  - chute
+  - la chute
+  - une chute
+  indices:
+  - C'est un mot du vocabulaire du tableau des genres, à la ligne de la nouvelle.
+  - Ce mot évoque quelque chose qui tombe à la fin.
+  - Ce nom est féminin et il a cinq lettres.
+  explication: La fin surprenante d'une nouvelle s'appelle la chute.
+- type: exercice
+  enonce: Comment appelle-t-on, dans un texte de théâtre, les indications de jeu ou de décor données aux
+    acteurs ? (un mot)
+  forme: reponse_courte
+  reponse: didascalies
+  reponses_acceptees:
+  - didascalies
+  - didascalie
+  - les didascalies
+  - une didascalie
+  indices:
+  - 'Un texte de théâtre contient deux sortes de texte : ce que disent les personnages, et autre chose.'
+  - 'Cet autre texte n''est pas dit à voix haute : il guide les acteurs (« il ouvre la fenêtre »).'
+  - Le mot commence par « dida- ».
+  explication: 'Ce sont les didascalies : des indications de mise en scène écrites dans le texte de théâtre.'
+- type: exercice
+  enonce: Un élève a lu « la peur lui nouait l'estomac ». Quelle phrase est un vrai transfert de cette
+    tournure ?
+  forme: qcm
+  choix:
+  - La peur lui nouait l'estomac.
+  - La honte lui nouait la gorge.
+  - Il avait peur.
+  - Nouait la peur estomac lui.
+  reponse: 1
+  indices:
+  - Un transfert garde la construction mais change les mots.
+  - Élimine la phrase identique (copie) et la phrase qui n'a plus la même construction.
+  - Élimine aussi la phrase dont l'ordre des mots n'a pas de sens.
+  explication: « La honte lui nouait la gorge » garde la construction « X lui nouait Y » avec d'autres
+    mots. La première phrase est une copie, la troisième change de construction, la dernière est incorrecte.
+- type: exercice
+  enonce: Après avoir écrit un récit, un élève veut prendre de la distance critique. Que fait-il ?
+  forme: qcm
+  choix:
+  - Il corrige seulement l'orthographe.
+  - 'Il relit comme un lecteur : genre respecté ? mots précis ? effet produit ? Puis il réécrit.'
+  - Il recopie un passage d'un auteur pour être sûr.
+  - Il compte le nombre de lignes.
+  reponse: 1
+  indices:
+  - La distance critique, c'est se mettre à la place d'un lecteur extérieur.
+  - Corriger l'orthographe est utile, mais ce n'est pas suffisant.
+  - Cherche la réponse qui pose des questions sur le genre, les mots et l'effet.
+  explication: 'La distance critique consiste à juger son texte comme un lecteur : genre, précision des
+    mots, effet produit. Puis on réécrit ce qui ne convient pas.'
+- type: question_ouverte
+  question: 'Tu dois écrire une nouvelle. Explique comment tu peux utiliser une lecture pour enrichir
+    ton texte : que réutilises-tu, comment évites-tu de copier, et comment vérifies-tu ensuite ton texte
+    ?'
+  indices:
+  - Pense à un mot ou à une tournure d'un texte lu.
+  - Que peux-tu garder de la phrase, et que dois-tu changer ?
+  - Après l'écriture, quelles questions te poses-tu en relisant ?
+  criteres:
+  - L'élève dit qu'il réemploie un mot ou une tournure découverts en lecture.
+  - L'élève explique qu'il change les mots ou le contexte au lieu de copier la phrase.
+  - L'élève mentionne la relecture avec distance critique (genre respecté, mots précis, effet) et la réécriture.
+  - L'élève cite une caractéristique de la nouvelle (récit court, chute).
+- type: synthese
+  consigne: 'Écris en trois phrases : ce qu''est un transfert, en quoi il est différent d''une copie,
+    et ce que veut dire « prendre de la distance critique ».'

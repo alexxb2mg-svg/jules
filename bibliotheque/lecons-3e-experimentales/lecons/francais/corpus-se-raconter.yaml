@@ -1,0 +1,159 @@
+notion: corpus-se-raconter
+titre: "Corpus de référence : récit de soi et autoportrait"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer les formes du récit de soi : autobiographie, mémoires, roman autobiographique, essai, journal intime, correspondance."
+      - "Comprendre ce qu'est un corpus, une lecture intégrale et un autoportrait dans d'autres arts."
+      - "Comparer deux œuvres en donnant un point commun et une différence."
+
+  - type: texte
+    titre: "Ce que demande le programme"
+    contenu: |-
+      En 3e, le questionnement s'appelle « **Se raconter, se représenter** ».
+      Un **corpus** est un ensemble de textes, ou de textes et d'images, étudiés ensemble.
+      Deux façons de l'étudier :
+      - la **lecture intégrale** : un livre entier (autobiographie ou roman autobiographique) ;
+      - un **groupement d'extraits** d'époques et de genres différents.
+
+  - type: texte
+    titre: "Les formes à connaître"
+    contenu: |-
+      | Forme | En bref | Exemple |
+      |---|---|---|
+      | Autobiographie | l'auteur raconte sa propre vie ; auteur, narrateur et personnage sont la même personne | *Les Confessions*, Rousseau |
+      | Mémoires | l'auteur raconte surtout les événements publics qu'il a vécus | *Mémoires d'outre-tombe*, Chateaubriand |
+      | Roman autobiographique | fiction inspirée de la vie de l'auteur, personnage souvent sous un autre nom | *Le Premier Homme*, Camus |
+      | Essai | réflexion personnelle où l'auteur se dépeint aussi | *Essais*, Montaigne |
+      | Journal intime | notes datées, écrites au jour le jour | *Journal*, Anne Frank |
+      | Correspondance | lettres adressées à quelqu'un | lettres de Madame de Sévigné |
+
+  - type: texte
+    titre: "L'autoportrait dans d'autres arts"
+    contenu: |-
+      Le corpus peut aussi contenir des autoportraits : peinture (Rembrandt, Van Gogh), photographie, images animées.
+      L'artiste se représente lui-même.
+      Pour une image, observe :
+      - le **regard** ;
+      - la **posture** ;
+      - les **objets** ;
+      - le **cadre** choisi.
+
+  - type: texte
+    titre: "Comparer les œuvres"
+    contenu: |-
+      Ce qui est **commun** : dire « je » et chercher une vérité sur soi.
+      Ce qui **change** : l'époque, la forme, la sincérité, la mise en scène.
+      Un texte qui dit « je » n'est pas forcément entièrement vrai : l'auteur fait des choix.
+      Au brevet : situe une forme, distingue-la d'une autre, compare deux textes ou un texte et une image.
+
+  - type: exemple
+    enonce: >-
+      Compare les *Mémoires d'outre-tombe* de Chateaubriand et les lettres de Madame de Sévigné.
+    etapes:
+      - "Formes : les *Mémoires d'outre-tombe* sont des mémoires (XIXe siècle). Les lettres de Madame de Sévigné sont une correspondance (XVIIe siècle)."
+      - "Point commun : dans les deux cas, quelqu'un parle de sa propre vie, en disant « je »."
+      - "Différence 1 : les mémoires racontent surtout des événements publics vécus par l'auteur."
+      - "Différence 2 : une lettre est adressée à quelqu'un. On sait donc qui écoute."
+
+  - type: exercice
+    enonce: "Le *Journal* d'Anne Frank est un exemple de quelle forme d'écriture de soi ?"
+    forme: qcm
+    choix:
+      - "Un journal intime"
+      - "Un roman autobiographique"
+      - "Des mémoires"
+      - "Un essai"
+    reponse: 0
+    indices:
+      - "Ce texte est écrit au jour le jour."
+      - "Regarde le tableau : quelle forme note des choses datées ?"
+    explication: "Le *Journal* d'Anne Frank est un journal intime : des notes écrites au jour le jour."
+
+  - type: exercice
+    enonce: "Quel mot désigne un ensemble de textes ou d'images réunis pour être étudiés ensemble ? (un mot)"
+    forme: reponse_courte
+    reponse: "corpus"
+    reponses_acceptees: ["un corpus", "le corpus", "Corpus"]
+    indices:
+      - "Le titre de cette leçon commence par ce mot."
+      - "C'est un mot latin qu'on emploie tel quel en français. Il se termine par « -us »."
+    explication: "Un corpus est un ensemble de textes ou d'images réunis pour être étudiés ensemble."
+
+  - type: exercice
+    enonce: >-
+      Montaigne écrit ses *Essais* au XVIe siècle. Rousseau écrit *Les Confessions* au XVIIIe siècle.
+      Combien de siècles séparent ces deux œuvres ?
+    forme: nombre
+    reponse: 2
+    tolerance: 0.01
+    unite: "siècles"
+    indices:
+      - "Écris chaque siècle avec un nombre : seize et dix-huit."
+      - "Fais la soustraction : le plus grand moins le plus petit."
+    explication: "XVIIIe = 18 et XVIe = 16. 18 − 16 = 2. Deux siècles séparent ces œuvres."
+
+  - type: exercice
+    enonce: "Quelle est la différence entre une autobiographie et un roman autobiographique ?"
+    forme: qcm
+    choix:
+      - "L'autobiographie raconte la vie de l'auteur ; le roman autobiographique est une fiction inspirée de sa vie, où le personnage porte souvent un autre nom"
+      - "Il n'y a aucune différence"
+      - "Le roman autobiographique est écrit au jour le jour, avec des dates"
+      - "L'autobiographie est toujours une fiction totale"
+    reponse: 0
+    indices:
+      - "Un roman reste une fiction, même s'il s'inspire de la vie de l'auteur."
+      - "Dans une autobiographie, auteur, narrateur et personnage sont la même personne."
+    explication: "Une autobiographie raconte la vie de l'auteur. Un roman autobiographique s'en inspire mais reste une fiction, avec souvent un personnage qui porte un autre nom (comme dans *Le Premier Homme* de Camus)."
+
+  - type: exercice
+    enonce: >-
+      Un élève dit : « Ce texte parle de la vie de l'auteur et dit « je », donc tout est vrai et sans
+      aucun choix. » Que peut-on lui répondre ?
+    forme: qcm
+    choix:
+      - "Un texte qui dit « je » n'est pas forcément entièrement vrai : l'auteur choisit ce qu'il montre, il y a une mise en scène"
+      - "Il a raison : un texte à la première personne dit toujours toute la vérité"
+      - "Il a raison, sauf pour les journaux intimes"
+      - "Cela n'a aucun rapport avec le récit de soi"
+    reponse: 0
+    indices:
+      - "Relis la partie « Comparer les œuvres » : que dit-elle sur le « je » ?"
+      - "Un auteur peut choisir de dire certaines choses et d'en cacher d'autres."
+    explication: "Dire « je » ne garantit pas une vérité complète. L'auteur fait des choix : il y a toujours une part de mise en scène."
+
+  - type: question_ouverte
+    question: >-
+      Compare deux œuvres de ce cours (deux textes, ou un texte et un autoportrait peint).
+      Donne au moins un point commun et une différence, avec un exemple précis.
+    indices:
+      - "Nomme les deux œuvres et leur forme (mémoires, journal, autoportrait...)."
+      - "Pose-toi deux questions : qu'ont-elles de commun ? En quoi diffèrent-elles ?"
+    criteres:
+      - "L'élève nomme deux œuvres et leur forme."
+      - "L'élève donne au moins un point commun (par exemple dire « je », chercher une vérité sur soi)."
+      - "L'élève donne au moins une différence (époque, forme, mise en scène...)."
+      - "L'élève appuie sa comparaison sur un exemple précis."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, les formes du récit de soi que tu connais
+      et comment tu compares deux œuvres.

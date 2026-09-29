@@ -15,12 +15,27 @@ Reglages (config.yaml) :
   bibliotheques: [programme, fiches-3e-experimentales]   # ordre = priorite
   detection: true            # detection automatique sur texte et photo
   essais_detection: 2        # nombre de messages de l'eleve examines avant d'abandonner
+  filtre_sortie: true        # garde-fou de sortie sur les exercices fermes de la fiche courante (voir
+                              # filtrer_reponse ci-dessous) ; false pour le couper si besoin
+
+Garde-fou de sortie (filtrer_reponse) :
+  Si la conversation a une notion et que le mode y donne droit (pas dans MODES_SANS_NOTION), toute
+  reponse de Jules qui contient la bonne reponse d'un exercice FERME (auto-corrige par le code : voir
+  `bibliotheques.exercice_corrige_par_le_code`, le meme critere que celui utilise par `texte_fiche` pour
+  remplacer la solution par « corrigé par le code ») de la fiche courante est ecartee. Le detecteur est
+  celui de `jules.lecons.contient_la_reponse` (pas de nouveau detecteur : les exercices de la fiche v2
+  sont traduits vers le `Bloc` de lecons.py). Couvre les exercices 'nombre', 'texte_court' (-> forme
+  'reponse_courte') et 'choix' a une seule bonne reponse (-> forme 'qcm'). Non couvert par construction :
+  les exercices 'expression', 'ordre', 'association' d'une fiche v2 (aucune forme equivalente dans
+  lecons.py) et les fiches v1 (le modele reste leur seul correcteur, la solution leur reste visible dans
+  le prompt, cf. `texte_fiche`).
 """
 
 from __future__ import annotations
 
 import logging
 import re
+from collections.abc import Callable
 from typing import Any
 
 from fastapi import APIRouter, HTTPException
@@ -32,9 +47,12 @@ from jules.bibliotheques import (
     Notion,
     candidats_notes,
     charger_catalogue,
+    exercice_corrige_par_le_code,
     texte_direction,
     texte_fiche,
 )
+from jules.lecons import QUESTION_DE_REPLI, contient_la_reponse
+from jules.lecons import Bloc as BlocLecon
 from jules.llm.base import TEXTE_PHOTO_SEULE, Tour
 from jules.modules.base import Module, extraire_json
 from jules.stockage import Conversation, Message
@@ -95,6 +113,7 @@ class Brique(Module):
         self.ids = [str(i) for i in reglages.get("bibliotheques") or ["programme"]]
         self.detection = bool(reglages.get("detection", True))
         self.essais = int(reglages.get("essais_detection", 2))
+        self.filtre_sortie = bool(reglages.get("filtre_sortie", True))
         self._catalogue: Catalogue | None = None
 
     # --- catalogue ---------------------------------------------------------
@@ -265,6 +284,71 @@ class Brique(Module):
             "certifiee": " (certifiée)",
             "enseignant": " (de l'enseignant)",
         }.get(statut, "")
+
+    # --- garde-fou de sortie (exercices fermes de la fiche courante) --------------
+    @staticmethod
+    def _bloc_ferme(exercice: dict[str, Any]) -> BlocLecon | None:
+        """Traduit un exercice de fiche (v2 ferme) en `Bloc` de lecons.py, ou None si non couvert.
+
+        Reutilise `contient_la_reponse` : pas de sixieme detecteur. Une fiche v1 (`type` absent, `reponse`
+        pas un dict) n'est jamais couverte : le modele en reste le seul correcteur (cf. `texte_fiche`).
+        """
+        if not exercice_corrige_par_le_code(exercice):
+            return None
+        type_ = exercice.get("type")
+        rep = exercice.get("reponse")
+        if type_ == "nombre" and isinstance(rep, dict):
+            donnees: dict[str, Any] = {"forme": "nombre", "reponse": rep.get("valeur")}
+            if rep.get("tolerance") is not None:
+                donnees["tolerance"] = rep["tolerance"]
+            return BlocLecon("exercice", donnees)
+        if type_ == "texte_court" and isinstance(rep, dict):
+            acceptees = rep.get("acceptees") or []
+            if not acceptees:
+                return None
+            return BlocLecon(
+                "exercice",
+                {"forme": "reponse_courte", "reponse": acceptees[0], "reponses_acceptees": acceptees[1:]},
+            )
+        if type_ == "choix" and isinstance(rep, dict):
+            options = [o for o in (rep.get("options") or []) if isinstance(o, dict)]
+            bonnes = rep.get("bonnes") or []
+            if len(bonnes) != 1:  # a choix multiples : pas de forme 'qcm' equivalente, on n'y touche pas
+                return None
+            choix = [str(o.get("texte")) for o in options]
+            bonne = next((o for o in options if o.get("id") == bonnes[0]), None)
+            if bonne is None:
+                return None
+            return BlocLecon("exercice", {"forme": "qcm", "choix": choix, "reponse": str(bonne.get("texte"))})
+        return None  # 'expression', 'ordre', 'association' : pas de forme equivalente dans lecons.py
+
+    def _blocs_fermes_de_la_fiche(self, notion_id: str) -> list[BlocLecon]:
+        fiche, _ = self.catalogue.fiche(notion_id)
+        exercices = fiche.get("exercices") or []
+        blocs = (self._bloc_ferme(ex) for ex in exercices if isinstance(ex, dict))
+        return [b for b in blocs if b is not None]
+
+    def filtrer_reponse(self, conv: Conversation, texte: str, relancer: Callable[[], str]) -> str:
+        """Ecarte une reponse de Jules qui contiendrait la bonne reponse d'un exercice ferme de la fiche
+        de la notion courante (voir la docstring du module). Une relance est tentee une fois ; si elle
+        fuit encore, une question de repli neutre est renvoyee.
+        """
+        if not self.filtre_sortie or conv.mode in MODES_SANS_NOTION:
+            return texte
+        etat = self.etat(conv.id)
+        notion_id = etat.get("notion", "")
+        if not notion_id:
+            return texte
+        blocs = self._blocs_fermes_de_la_fiche(notion_id)
+        # Ce que l'eleve a deja ecrit lui-meme n'est plus un secret : Jules doit pouvoir confirmer « oui, 144 ».
+        deja_dit = " ".join(m.texte for m in conv.messages if m.role == "eleve")
+        blocs = [b for b in blocs if not contient_la_reponse(deja_dit, b)]
+        fuite = next((b for b in blocs if contient_la_reponse(texte, b)), None)
+        if fuite is None:
+            return texte
+        journal.warning("Reponse de Jules ecartee (contenait la reponse d'un exercice ferme) : %s", texte[:200])
+        nouvelle = relancer()
+        return QUESTION_DE_REPLI if any(contient_la_reponse(nouvelle, b) for b in blocs) else nouvelle
 
     # --- routes eleve ---------------------------------------------------------------
     def routes_eleve(self) -> APIRouter:

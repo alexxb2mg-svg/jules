@@ -1,0 +1,160 @@
+notion: comparer-oeuvres-filiations
+titre: "Comparer des œuvres : filiations et parentés"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comparer deux œuvres avec des points communs et des différences."
+      - "Faire la différence entre une filiation et une parenté."
+      - "Justifier le lien avec des éléments précis des deux œuvres."
+
+  - type: texte
+    titre: "Comparer, ce n'est pas décrire deux fois"
+    contenu: |-
+      Comparer deux œuvres, c'est chercher leurs **points communs** et leurs **différences**.
+      Puis on explique le lien qui les unit, avec des arguments tirés de l'observation.
+
+      Ce n'est pas décrire l'une, puis l'autre : il faut les **mettre face à face**,
+      sur des critères précis (sujet, composition, couleurs, message).
+
+  - type: texte
+    titre: "La filiation"
+    contenu: |-
+      Une **filiation** relie deux œuvres d'**époques différentes** : l'œuvre récente reprend, cite ou transforme l'œuvre ancienne.
+
+      Exemple : Olympia de Manet (1863, musée d'Orsay) reprend la pose de la Vénus d'Urbin de Titien
+      (1538, galerie des Offices à Florence) : une femme nue allongée sur un lit, qui regarde le spectateur.
+      Mais Manet remplace la déesse par une femme de son temps, et le petit chien endormi par un chat noir.
+
+  - type: texte
+    titre: "Le détournement"
+    contenu: |-
+      Une reprise peut être un **détournement** : l'artiste transforme l'œuvre pour s'en moquer ou la critiquer.
+
+      Exemple : en 1919, Marcel Duchamp ajoute une moustache et une barbiche à une reproduction
+      de La Joconde (L.H.O.O.Q.).
+
+  - type: texte
+    titre: "La parenté"
+    contenu: |-
+      Une **parenté** relie deux œuvres de **natures différentes** (une peinture et une musique, un film et une affiche),
+      créées à la **même époque**, qui partagent un thème ou une manière de faire.
+
+      Exemple : le ballet Le Sacre du printemps de Stravinsky (1913) et Les Demoiselles d'Avignon de Picasso (1907)
+      rompent tous deux avec les règles de beauté traditionnelles.
+
+      Au brevet : on nomme le lien, on cite un point commun et une différence, avec des éléments précis des deux œuvres.
+
+  - type: exemple
+    enonce: >-
+      Compare Tres de mayo de Goya (1814) et Massacre en Corée de Picasso (1951). Quel est le lien entre
+      les deux œuvres ?
+    etapes:
+      - "Présenter : Goya peint Tres de mayo en 1814. Picasso peint Massacre en Corée en 1951. Ce sont deux tableaux."
+      - "Point commun : dans les deux œuvres, un groupe de soldats fait face à des victimes sans défense (Picasso reprend la composition de Goya)."
+      - "Nommer le lien : les époques sont différentes (1814 et 1951) et l'œuvre récente reprend la plus ancienne. C'est une filiation."
+      - "Conclure : Picasso garde la composition de Goya pour dire quelque chose de nouveau, à propos de son époque."
+
+  - type: exercice
+    enonce: >-
+      Une œuvre récente reprend, cite ou transforme une œuvre plus ancienne, d'une autre époque. Comment
+      appelle-t-on ce lien ?
+    forme: qcm
+    choix:
+      - "Une filiation"
+      - "Une parenté"
+      - "Une œuvre contemporaine"
+    reponse: 0
+    indices:
+      - "Les deux œuvres sont d'époques différentes."
+      - "Pense au mot qui rappelle un lien entre un parent et son enfant, à travers le temps."
+    explication: "Quand deux œuvres sont d'époques différentes et que la plus récente reprend l'ancienne, c'est une filiation."
+
+  - type: exercice
+    enonce: >-
+      En 1919, Marcel Duchamp ajoute une moustache et une barbiche à une reproduction de La Joconde.
+      Quel mot désigne une reprise d'une œuvre connue, transformée pour s'en moquer ou la critiquer ?
+    forme: reponse_courte
+    reponse: "détournement"
+    reponses_acceptees:
+      - "détournement"
+      - "detournement"
+      - "un détournement"
+      - "un detournement"
+      - "le détournement"
+      - "le detournement"
+    indices:
+      - "La reprise change le sens de l'œuvre, souvent avec humour ou critique."
+      - "C'est le mot qui évoque le fait de tourner l'œuvre dans une autre direction."
+    explication: "Reprendre une œuvre connue et la transformer pour s'en moquer, c'est un détournement."
+
+  - type: exercice
+    enonce: >-
+      Le Sacre du printemps de Stravinsky (1913) est un ballet. Les Demoiselles d'Avignon de Picasso (1907)
+      est un tableau. Tous deux rompent avec les règles de beauté traditionnelles. Quel est le lien entre
+      ces deux œuvres ?
+    forme: qcm
+    choix:
+      - "Une filiation, car les deux œuvres sont d'époques très différentes."
+      - "Une parenté, car ce sont des œuvres de natures différentes de la même époque."
+      - "Aucun lien, car un ballet et un tableau ne se comparent pas."
+    reponse: 1
+    indices:
+      - "Regarde la nature de chaque œuvre (ballet, tableau) et leurs dates."
+      - "Œuvres de natures différentes, créées à la même époque : quel mot de la leçon les décrit ?"
+    explication: "Un ballet et un tableau sont de natures différentes, et ils datent de la même époque (1913 et 1907). Ils partagent une manière de faire : c'est une parenté."
+
+  - type: exercice
+    enonce: >-
+      Le tableau Vénus d'Urbin de Titien date de 1538, et Olympia de Manet de 1863. Combien d'années
+      séparent ces deux œuvres ?
+    forme: nombre
+    reponse: 325
+    tolerance: 0.01
+    unite: "ans"
+    indices:
+      - "Pour trouver un écart entre deux dates, on fait une soustraction."
+      - "Soustrais la date la plus ancienne à la date la plus récente."
+    explication: "1863 − 1538 = 325. Il y a 325 ans entre les deux tableaux : les époques sont différentes, c'est bien une filiation."
+
+  - type: exercice
+    enonce: >-
+      Parmi ces phrases sur Olympia de Manet et la Vénus d'Urbin de Titien, laquelle est une vraie
+      comparaison, au niveau du brevet ?
+    forme: qcm
+    choix:
+      - "La Vénus d'Urbin est belle. Olympia aussi."
+      - "La Vénus d'Urbin date de 1538. Olympia date de 1863."
+      - "Dans les deux tableaux, une femme nue allongée regarde le spectateur, mais Manet remplace la déesse par une femme de son temps : c'est une filiation."
+    reponse: 2
+    indices:
+      - "Une vraie comparaison met les deux œuvres face à face, avec un point commun et une différence."
+      - "Cherche aussi la phrase qui nomme le lien (filiation ou parenté)."
+    explication: "La troisième phrase donne un point commun, une différence, et nomme le lien. Les autres n'ont pas de critère précis ou ne comparent rien."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi L.H.O.O.Q. de Marcel Duchamp (1919) est un détournement de La Joconde. Que
+      garde-t-il de l'œuvre de départ, et que change-t-il ?
+    indices:
+      - "Pense à ce que Duchamp ajoute sur la reproduction de La Joconde."
+      - "Un détournement transforme une œuvre connue pour s'en moquer ou la critiquer."
+    criteres:
+      - "L'élève dit que Duchamp reprend une œuvre connue (une reproduction de La Joconde)."
+      - "L'élève cite la transformation : une moustache et une barbiche ajoutées."
+      - "L'élève explique l'intention : se moquer ou critiquer, donc c'est un détournement."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une filiation et une
+      parenté, et ce que tu dois donner pour justifier une comparaison.

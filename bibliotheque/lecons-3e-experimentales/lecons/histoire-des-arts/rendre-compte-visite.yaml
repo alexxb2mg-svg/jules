@@ -1,0 +1,160 @@
+notion: rendre-compte-visite
+titre: "Rendre compte d'une visite ou d'un métier du patrimoine"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un lieu de conservation et un lieu de diffusion."
+      - "Nommer quelques métiers du patrimoine et leur rôle."
+      - "Rédiger un compte rendu de visite organisé, avec un avis justifié."
+
+  - type: texte
+    titre: "Conservation, diffusion, patrimoine"
+    contenu: >-
+      Le programme demande de rendre compte de la visite d'un lieu, ou de la rencontre avec un métier du patrimoine.
+
+
+      Le **patrimoine**, ce sont les biens hérités du passé que l'on protège pour les transmettre :
+      œuvres, monuments, objets, documents.
+
+
+      | Type de lieu | Rôle | Exemples |
+
+      |---|---|---|
+
+      | **Conservation** | garder et protéger | musée, archives, bibliothèque, monument, site archéologique |
+
+      | **Diffusion** | présenter au public | théâtre, salle de concert, opéra, cinéma |
+
+  - type: texte
+    titre: "Les métiers du patrimoine"
+    contenu: >-
+      Voici cinq métiers à connaître :
+
+
+      - Le **conservateur** étudie et gère les collections d'un musée, choisit les œuvres à acquérir et prépare les expositions.
+
+      - Le **restaurateur** soigne les œuvres abîmées sans les transformer.
+
+      - Le **guide-conférencier** (ou médiateur) fait découvrir un lieu au public.
+
+      - L'**archéologue** fouille le sol pour retrouver les traces du passé.
+
+      - Le **régisseur** organise le transport et le rangement des œuvres.
+
+  - type: texte
+    titre: "Le plan d'un compte rendu de visite"
+    contenu: >-
+      Un compte rendu suit un plan simple en trois temps :
+
+
+      1. **Présenter** le lieu : nom, ville, date, type de lieu, avec qui.
+
+      2. **Rendre compte** du contenu : une ou deux œuvres décrites avec précision, ou ce que tu as appris sur le métier rencontré.
+
+      3. **Conclure** par un avis personnel argumenté.
+
+
+      Écris au passé (« nous avons visité… »). Justifie ton avis par un détail précis, pas par « c'était bien ».
+      Mieux vaut décrire une œuvre en détail que les citer toutes.
+
+  - type: exemple
+    enonce: >-
+      Ta classe a rencontré une restauratrice dans un musée. Rédige le début du compte rendu.
+    etapes:
+      - "Présenter : « Le 5 avril, ma classe a rencontré une restauratrice au musée de notre ville, un lieu de conservation. »"
+      - "Contenu : « Elle nous a expliqué son métier : soigner les œuvres abîmées sans les transformer. »"
+      - "Avis justifié : « J'ai trouvé cette rencontre intéressante, car j'ai compris qu'il faut beaucoup de patience pour réparer une œuvre. »"
+
+  - type: exercice
+    enonce: "Un cinéma est-il un lieu de conservation ou un lieu de diffusion ?"
+    forme: qcm
+    choix:
+      - "Un lieu de diffusion"
+      - "Un lieu de conservation"
+    reponse: 0
+    indices:
+      - "Un lieu de diffusion présente des œuvres au public."
+      - "Dans un cinéma, on garde des œuvres ou on les présente à des spectateurs ?"
+    explication: "Un cinéma présente des films au public : c'est un lieu de diffusion. Un musée, des archives ou une bibliothèque sont des lieux de conservation."
+
+  - type: exercice
+    enonce: "Comment s'appelle le professionnel qui soigne les œuvres abîmées sans les transformer ?"
+    forme: reponse_courte
+    reponse: "restaurateur"
+    reponses_acceptees:
+      - "restaurateur"
+      - "le restaurateur"
+      - "restauratrice"
+      - "la restauratrice"
+      - "un restaurateur"
+      - "une restauratrice"
+    indices:
+      - "Ce métier consiste à réparer une œuvre pour qu'elle reste en bon état."
+      - "Le mot commence par « resta- »."
+    explication: "C'est le restaurateur (ou la restauratrice) : il soigne les œuvres abîmées sans les transformer."
+
+  - type: exercice
+    enonce: "Un bon compte rendu de visite suit un plan en combien de temps ? (présenter le lieu, rendre compte du contenu, conclure)"
+    forme: nombre
+    reponse: 3
+    tolerance: 0
+    indices:
+      - "Compte les actions écrites entre parenthèses."
+      - "Chaque action est un temps du plan."
+    explication: "Le plan a trois temps : présenter le lieu, rendre compte du contenu, conclure par un avis argumenté."
+
+  - type: exercice
+    enonce: "Quel professionnel étudie et gère les collections d'un musée, et prépare les expositions ?"
+    forme: qcm
+    choix:
+      - "Le conservateur"
+      - "Le restaurateur"
+      - "L'archéologue"
+      - "Le guide-conférencier"
+    reponse: 0
+    indices:
+      - "Le mot « collection » est dans la question : quel métier s'en occupe ?"
+      - "Ce n'est pas celui qui soigne les œuvres abîmées, ni celui qui fouille le sol."
+    explication: "Le conservateur étudie et gère les collections, choisit les œuvres à acquérir et prépare les expositions. Le restaurateur soigne les œuvres, l'archéologue fouille, le guide-conférencier fait découvrir le lieu au public."
+
+  - type: exercice
+    enonce: "Quel début de compte rendu est le mieux construit ?"
+    forme: qcm
+    choix:
+      - "« Le 12 mars, ma classe a visité le musée des Beaux-Arts de notre ville, un lieu de conservation. »"
+      - "« Nous avons pris le bus, puis nous avons mangé notre pique-nique. »"
+      - "« C'était bien. »"
+      - "« Le musée est grand, il y avait des tableaux. »"
+    reponse: 0
+    indices:
+      - "Un bon début présente le lieu : nom, ville, date, type de lieu."
+      - "Élimine les phrases qui racontent seulement le trajet, ou qui donnent un avis sans détail."
+    explication: "La première phrase donne la date, le nom du lieu, la ville et son type (conservation). Les autres racontent la journée ou donnent un avis sans précision."
+
+  - type: question_ouverte
+    question: >-
+      Rédige un court compte rendu d'une visite (musée, monument, théâtre, cinéma…) ou d'une rencontre
+      avec un métier du patrimoine. Suis les trois temps du plan.
+    indices:
+      - "Commence par le nom du lieu, la ville, la date et le type de lieu."
+      - "Décris une seule œuvre en détail, plutôt que de tout citer."
+    criteres:
+      - "L'élève présente le lieu (nom, ville, date, type de lieu) ou le métier rencontré."
+      - "L'élève décrit précisément une ou deux œuvres, ou explique ce qu'il a appris sur le métier."
+      - "L'élève conclut par un avis personnel justifié par un détail précis."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, la différence entre un lieu de conservation et un lieu de diffusion,
+      et les trois temps d'un compte rendu de visite.

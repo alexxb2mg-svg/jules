@@ -1,0 +1,160 @@
+notion: territoires-ultramarins-francais
+titre: "Les territoires ultramarins français : une problématique spécifique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « France d'outre-mer »"
+    url: "https://fr.wikipedia.org/w/index.php?title=France_d%27outre-mer&oldid=237706622"
+    licence: CC-BY-SA-4.0
+  - titre: "Programme du cycle 4 (annexe 3), partie Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer les territoires ultramarins français et distinguer leurs statuts (DROM, collectivités d'outre-mer)."
+      - "Expliquer les contraintes et les atouts de l'aménagement de ces territoires."
+      - "Étudier un territoire à plusieurs échelles, à partir d'un exemple concret."
+
+  - type: texte
+    titre: "Où sont-ils ? Quels statuts ?"
+    contenu: |-
+      Les territoires ultramarins forment l'**outre-mer** : ce sont des territoires français situés **hors d'Europe**.
+
+      Ils se trouvent dans l'océan Atlantique (Caraïbes), l'océan Indien, l'océan Pacifique, en Amérique du Sud (Guyane) et en Antarctique.
+
+      Ils représentent environ **4 %** de la population française.
+
+      | Statut | Territoires (exemples) |
+      |---|---|
+      | **DROM** : départements et régions d'outre-mer (article 73) | Guadeloupe, Martinique, Guyane, La Réunion, Mayotte |
+      | **Collectivités d'outre-mer** (article 74), plus autonomes | Polynésie française, Saint-Pierre-et-Miquelon, Wallis-et-Futuna |
+      | Statut à part | Nouvelle-Calédonie |
+      | **TAAF** : Terres australes et antarctiques françaises | territoires quasi inhabités |
+
+      Les DROM sont **cinq**. Mayotte est département depuis 2011.
+
+  - type: texte
+    titre: "Des contraintes pour l'aménagement"
+    contenu: |-
+      Aménager ces territoires pose des problèmes particuliers :
+      - **L'éloignement** de la métropole. La Réunion est à plus de 9 000 km. Les transports et les importations coûtent cher.
+      - **L'insularité** : beaucoup de territoires sont des îles. Le marché est étroit et les échanges sont plus chers.
+      - **Les risques naturels** : cyclones, séismes, éruptions volcaniques (Piton de la Fournaise à La Réunion, Soufrière en Guadeloupe).
+      - **Des difficultés sociales** : chômage plus élevé qu'en métropole, pauvreté, prix élevés. Mayotte est le département le plus pauvre de France.
+
+  - type: texte
+    titre: "Des atouts, et la Guyane"
+    contenu: |-
+      L'outre-mer donne à la France la **deuxième zone économique exclusive (ZEE) du monde**, après les États-Unis. La ZEE est l'espace maritime, jusqu'à 200 milles marins des côtes, dont l'État exploite les ressources.
+
+      Autres atouts : pêche, ressources, biodiversité, présence militaire et scientifique. La base spatiale de Kourou (Guyane) lance des fusées européennes.
+
+      **Attention** : la Guyane n'est **pas une île**. C'est un territoire continental, en grande partie couvert par la forêt amazonienne. Sa frontière avec le Brésil est la plus longue frontière terrestre de la France.
+
+  - type: texte
+    titre: "Étudier un territoire à plusieurs échelles"
+    contenu: |-
+      Pour étudier un territoire, on change d'échelle :
+      1. **Échelle mondiale** : où est-il dans le monde ?
+      2. **Échelle régionale** : dans quelle région (Caraïbes, océan Indien...) ?
+      3. **Échelle locale** : l'île ou le territoire lui-même.
+
+      Puis on présente ses **contraintes** et ses **atouts**. On conclut : chaque territoire demande un aménagement **adapté à sa situation**.
+
+  - type: exemple
+    enonce: "Présente La Réunion : où se trouve-t-elle, quel est son statut, quelles sont ses contraintes ?"
+    etapes:
+      - "Échelle mondiale et régionale : La Réunion est une île de l'océan Indien."
+      - "Statut : c'est un DROM. Le droit français s'y applique presque comme en métropole (article 73)."
+      - "Contrainte 1 : l'éloignement. La Réunion est à plus de 9 000 km de la métropole, donc les transports coûtent cher."
+      - "Contrainte 2 : les risques naturels. Le Piton de la Fournaise est un volcan actif, et les cyclones sont possibles."
+      - "Conclusion : l'aménagement de La Réunion doit tenir compte de son éloignement et de ses risques naturels."
+
+  - type: exercice
+    enonce: "Combien y a-t-il de départements et régions d'outre-mer (DROM) ?"
+    forme: nombre
+    reponse: 5
+    tolerance: 0
+    indices:
+      - "Ils portent des noms bien connus : Guadeloupe, Martinique, Guyane, La Réunion, et un plus récent."
+      - "Compte-les : deux aux Antilles, un en Amérique du Sud, deux dans l'océan Indien. Additionne."
+    explication: "Il y a 5 DROM : Guadeloupe, Martinique, Guyane, La Réunion et Mayotte (département depuis 2011)."
+
+  - type: exercice
+    enonce: "Quel mot désigne le fait, pour un territoire, d'être une île ? Cela l'isole et rend les échanges plus chers."
+    forme: reponse_courte
+    reponse: "l'insularité"
+    reponses_acceptees:
+      - "insularité"
+      - "insularite"
+      - "l'insularite"
+      - "linsularité"
+    indices:
+      - "Ce mot vient du mot « île »."
+      - "Il commence par « insul- », comme « insulaire »."
+    explication: "C'est l'insularité : le fait d'être une île, ce qui isole le territoire et augmente le coût des échanges."
+
+  - type: exercice
+    enonce: "Quel est le statut de la Polynésie française ?"
+    forme: qcm
+    choix:
+      - "Un DROM, régi par l'article 73"
+      - "Une collectivité d'outre-mer, plus autonome (article 74)"
+      - "Un territoire de l'Union européenne situé en Amérique du Sud"
+    reponse: 1
+    indices:
+      - "La Polynésie française n'est pas dans la liste des cinq DROM."
+      - "Elle est dans l'océan Pacifique et elle a plus d'autonomie qu'un DROM."
+    explication: "La Polynésie française est une collectivité d'outre-mer (article 74). Elle est plus autonome qu'un DROM."
+
+  - type: exercice
+    enonce: "Grâce à l'outre-mer, quel rang la France occupe-t-elle dans le monde pour la taille de sa zone économique exclusive (ZEE) ?"
+    forme: qcm
+    choix:
+      - "La première du monde"
+      - "La deuxième du monde, après les États-Unis"
+      - "La cinquantième du monde"
+    reponse: 1
+    indices:
+      - "La ZEE est un espace maritime. L'outre-mer l'agrandit beaucoup."
+      - "Un seul pays a une ZEE plus grande que celle de la France."
+    explication: "La France a la deuxième ZEE du monde, après les États-Unis. C'est un atout : pêche, ressources, biodiversité."
+
+  - type: exercice
+    enonce: >-
+      Un élève écrit : « Tous les territoires ultramarins sont des îles. » Quel territoire montre
+      que c'est faux ?
+    forme: qcm
+    choix:
+      - "La Guadeloupe"
+      - "La Martinique"
+      - "La Guyane"
+      - "La Réunion"
+    reponse: 2
+    indices:
+      - "Un seul de ces territoires est situé en Amérique du Sud, sur un continent."
+      - "Il est en grande partie couvert par la forêt amazonienne."
+    explication: "La Guyane est un territoire continental, en Amérique du Sud. Les trois autres sont des îles."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : présente deux difficultés spécifiques de l'aménagement d'un territoire
+      ultramarin de ton choix (autre que La Réunion si tu peux). Commence par une phrase d'introduction
+      et termine par une phrase de conclusion.
+    indices:
+      - "Choisis un territoire précis et dis dans quel océan ou quelle région il se trouve."
+      - "Pense à la distance avec la métropole, puis aux risques naturels."
+    criteres:
+      - "L'élève choisit un territoire ultramarin précis et le situe."
+      - "L'élève présente une première difficulté (par exemple l'éloignement et le coût des transports)."
+      - "L'élève présente une seconde difficulté (par exemple les risques naturels comme les cyclones ou les volcans)."
+      - "L'élève a une phrase d'introduction et une phrase de conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens : ce qu'est
+      l'outre-mer, la différence entre DROM et collectivité d'outre-mer, et une contrainte et un
+      atout de ces territoires.

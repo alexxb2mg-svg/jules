@@ -1,0 +1,163 @@
+notion: expose-et-avis-argumente
+titre: "Compte rendu, exposé et avis personnel argumenté"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un compte rendu, un exposé et un avis personnel argumenté."
+      - "Préparer un exposé : plan, fiches de mots-clés, documents supports lisibles."
+      - "Donner un avis argumenté : opinion, raison, exemple précis, vocabulaire précis."
+
+  - type: texte
+    titre: "Compte rendu et exposé"
+    contenu: >-
+      Le **compte rendu** résume ce qu'on a lu, vu ou appris. Il reste fidèle au document et clair pour
+      quelqu'un qui ne le connaît pas. On ne mêle pas ses opinions aux faits.
+
+
+      Plan : présenter le document (titre, auteur, sujet), puis les idées principales dans l'ordre, puis
+      une brève conclusion.
+
+
+      L'**exposé** développe un sujet devant un public. Il se prépare : plusieurs sources fiables, un
+      plan (introduction, deux ou trois parties, conclusion), des mots-clés sur des fiches.
+
+  - type: texte
+    titre: "Parler devant l'auditoire, avec des documents supports"
+    contenu: >-
+      - On **ne lit pas** un texte entièrement écrit : on parle avec ses fiches.
+
+      - On regarde l'**auditoire**, d'une voix claire, sans aller trop vite.
+
+      - Le **document support** (diaporama, affiche, schéma, images) aide à suivre. Il est sobre, avec peu de
+      texte et des titres clairs.
+
+      - Il complète la parole, il ne la remplace pas. On cite ses sources.
+
+  - type: texte
+    titre: "L'avis personnel argumenté"
+    contenu: >-
+      Un avis sans justification n'est qu'une préférence. Pour argumenter :
+
+
+      1. Donne ton avis : « Je pense que… »
+
+      2. Explique pourquoi : « car », « parce que ».
+
+      3. Donne un exemple précis : une scène, une citation.
+
+      4. Choisis un vocabulaire précis (émouvant, captivant, prévisible, maladroit) plutôt que « bien » ou
+      « nul ».
+
+
+      Au brevet, l'oral évalue la clarté, la précision du vocabulaire et la capacité à défendre son point
+      de vue.
+
+  - type: exemple
+    enonce: >-
+      Un élève dit seulement : « C'était bien, ce musée. » Améliore cet avis pour qu'il devienne un avis
+      argumenté.
+    etapes:
+      - "Je repère le problème : « bien » est un mot vague et il n'y a aucune raison."
+      - "Je remplace « bien » par un mot précis, par exemple « passionnant »."
+      - "J'ajoute une raison avec « parce que »."
+      - "J'ajoute un exemple précis pris dans la visite."
+      - "Résultat : « Cette visite était passionnante parce que le guide expliquait chaque objet, par exemple l'outil qu'il nous a fait toucher. »"
+
+  - type: exercice
+    enonce: "Parmi ces phrases sur une bande dessinée, laquelle est un véritable avis argumenté ?"
+    forme: qcm
+    choix:
+      - "Cette bande dessinée est nulle."
+      - "J'ai aimé cette bande dessinée parce que les dessins montrent les émotions des personnages, par exemple dans la scène de la dispute."
+      - "Cette bande dessinée est en couleurs."
+      - "Je ne sais pas quoi en penser."
+    reponse: 1
+    indices:
+      - "Un avis argumenté donne une opinion et explique pourquoi."
+      - "Cherche la phrase qui contient une raison et un exemple précis."
+    explication: "La deuxième phrase donne une opinion (« j'ai aimé »), une raison (« parce que… ») et un exemple précis (la scène de la dispute)."
+
+  - type: exercice
+    enonce: "Dans « Ce film m'a ému parce que le héros n'abandonne jamais », comment s'appelle la raison qui suit « parce que » ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "argument"
+    reponses_acceptees:
+      - "un argument"
+      - "l'argument"
+    indices:
+      - "Cette partie de la phrase justifie l'opinion donnée au début."
+      - "C'est un nom masculin qui commence par la lettre a."
+    explication: "La raison qui suit « parce que » est un argument : elle appuie l'opinion « ce film m'a ému »."
+
+  - type: exercice
+    enonce: "Une élève présente à la classe un livre qu'elle a lu. Elle fait un compte rendu. Quelle phrase a sa place dans ce compte rendu ?"
+    forme: qcm
+    choix:
+      - "Le roman raconte l'histoire d'une famille qui déménage dans une île."
+      - "Ce roman est le meilleur que j'aie jamais lu."
+      - "Les livres d'aventure sont toujours mieux que les autres."
+    reponse: 0
+    indices:
+      - "Un compte rendu résume fidèlement ce que dit le document."
+      - "Une phrase donne un fait sur l'histoire. Les deux autres donnent une opinion."
+    explication: "Un compte rendu reste fidèle au contenu et ne mêle pas les opinions aux faits. Seule la première phrase résume l'histoire."
+
+  - type: exercice
+    enonce: "Pour un exposé, quelle diapositive aide le mieux l'auditoire ?"
+    forme: qcm
+    choix:
+      - "Tout le discours recopié en phrases, sans titre"
+      - "Un titre clair, trois mots-clés et une image liée au sujet"
+      - "Vingt lignes de texte sur la diapositive"
+    reponse: 1
+    indices:
+      - "Un document support aide à suivre, il ne remplace pas la parole."
+      - "Cherche la diapositive sobre, avec peu de texte et un titre lisible."
+    explication: "Le document support est sobre : peu de texte, un titre clair et une image utile. Si tout est écrit, l'auditoire lit au lieu d'écouter."
+
+  - type: exercice
+    enonce: "Un élève doit donner son avis sur un roman à l'oral du brevet. Quelle réponse est la meilleure ?"
+    forme: qcm
+    choix:
+      - "Ce roman est bien, je l'ai aimé."
+      - "Ce roman est captivant, car l'intrigue est pleine de surprises : par exemple, au moment où le héros découvre la lettre, tout change."
+      - "Ce roman raconte l'histoire d'un garçon et de sa lettre."
+    reponse: 1
+    indices:
+      - "Vérifie chaque réponse : opinion ? raison ? exemple précis ? mot précis ?"
+      - "Une réponse a un mot vague, une autre ne donne aucun avis. Une seule réunit tous les éléments."
+    explication: "La deuxième réponse a une opinion, un mot précis (« captivant »), une raison (« car… ») et un exemple précis. Les autres sont vagues ou ne donnent pas d'avis."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois présenter à la classe un livre que tu as lu. Rédige l'introduction de ton compte rendu
+      (titre, auteur, sujet), puis un avis personnel argumenté en trois phrases, avec un exemple précis.
+    indices:
+      - "Commence par présenter le livre. Garde ton avis pour la suite."
+      - "Pour l'avis : ce que tu penses, pourquoi, puis un exemple tiré du livre."
+    criteres:
+      - "L'introduction présente le titre, l'auteur et le sujet du livre de façon claire et fidèle."
+      - "L'avis donne au moins un argument précis appuyé sur un exemple tiré du livre."
+      - "Le vocabulaire est précis (pas seulement « bien » ou « nul ») et le résumé reste distinct de l'opinion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre un compte rendu et un avis
+      argumenté, et un conseil pour bien présenter un exposé.

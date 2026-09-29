@@ -1,0 +1,123 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: constituants-phrase-simple
+titre: "Les constituants de la phrase simple"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver le sujet du verbe, même quand il est éloigné du verbe."
+      - "Distinguer le COD, le COI et le complément circonstanciel."
+      - "Reconnaître le type d'une phrase (déclaratif, interrogatif, impératif) et sa forme (impersonnelle, entre autres)."
+
+  - type: texte
+    titre: "Le sujet, le verbe, les compléments"
+    contenu: >-
+      Une phrase simple contient un seul verbe conjugué. Elle s'organise autour de **constituants**
+      : le **sujet** (qui fait l'action ou dont on parle), le **verbe**, et des **compléments**.
+      Le sujet peut être éloigné du verbe, séparé par un groupe de mots intercalé : « Le chat de
+      ma voisine, qui dort tout le temps, ronronne. » Le sujet reste « le chat », malgré la
+      distance.
+
+  - type: texte
+    titre: "COD, COI, complément circonstanciel"
+    contenu: >-
+      Le **complément d'objet direct (COD)** suit le verbe sans préposition : « Il mange une
+      pomme. » Le **complément d'objet indirect (COI)** est introduit par une préposition : « Il
+      pense à ses vacances. » Le **complément circonstanciel** (de lieu, de temps, de manière...)
+      peut se déplacer ou se supprimer sans rendre la phrase incorrecte.
+
+  - type: texte
+    titre: "Type et forme de la phrase"
+    contenu: >-
+      Une phrase a un **type** (déclaratif, interrogatif, impératif) et une **forme** (négative,
+      passive, exclamative, impersonnelle). Type et forme se combinent dans une même phrase. À la
+      forme **impersonnelle**, le sujet « il » ne désigne personne de précis : « Il pleut. » ne
+      dit pas qui pleut, contrairement à « Il mange une pomme. » où « il » remplace une personne
+      réelle.
+
+  - type: exemple
+    enonce: "Dans la phrase « Le vieux chien de mon grand-père, fatigué par la promenade, dort », quel est le sujet du verbe « dort » ?"
+    etapes:
+      - "On pose la question « qu'est-ce qui dort ? » pour trouver le sujet."
+      - "Le groupe intercalé entre virgules, « fatigué par la promenade », n'est pas le sujet : c'est une précision sur le chien."
+      - "Le sujet est « le vieux chien de mon grand-père » : malgré la distance, c'est bien lui qui dort."
+
+  - type: exercice
+    enonce: "Dans la phrase « Elle pense à ses vacances. », quelle est la fonction de « à ses vacances » ?"
+    forme: qcm
+    choix:
+      - "Complément d'objet indirect (COI)"
+      - "Complément d'objet direct (COD)"
+      - "Sujet"
+    reponse: 0
+    indices:
+      - "Regarde bien : y a-t-il un mot entre le verbe et le complément ?"
+      - "Le COD suit directement le verbe, le COI est introduit par une préposition comme « à » ou « de »."
+    explication: "« à ses vacances » est complément d'objet indirect (COI) : il est introduit par la préposition « à », placée entre le verbe et le complément."
+
+  - type: exercice
+    enonce: "Dans la phrase « Le chat de ma voisine, qui dort tout le temps, ronronne. », quel est le sujet du verbe « ronronne » ? Réponds par le groupe nominal minimal."
+    forme: reponse_courte
+    reponse: "le chat"
+    reponses_acceptees: ["le chat", "le chat de ma voisine"]
+    indices:
+      - "Pose la question « qu'est-ce qui ronronne ? » pour trouver le sujet."
+      - "Ignore le groupe intercalé entre virgules (« qui dort tout le temps ») : il n'est pas le sujet."
+    explication: "Le sujet du verbe « ronronne » est « le chat » (ou « le chat de ma voisine ») : malgré la proposition intercalée « qui dort tout le temps », c'est bien le chat qui ronronne."
+
+  - type: exercice
+    enonce: "Parmi ces trois phrases, laquelle est de type impératif ? « Ferme la porte. » / « Quelle heure est-il ? » / « Il fait beau aujourd'hui. »"
+    forme: qcm
+    choix:
+      - "Ferme la porte."
+      - "Quelle heure est-il ?"
+      - "Il fait beau aujourd'hui."
+    reponse: 0
+    indices:
+      - "Regarde la ponctuation finale et la construction du verbe dans chaque phrase."
+      - "Un ordre, sans sujet exprimé, est de type impératif."
+    explication: "« Ferme la porte. » est de type impératif : c'est un ordre, sans sujet exprimé. « Quelle heure est-il ? » est de type interrogatif, « Il fait beau aujourd'hui. » est de type déclaratif."
+
+  - type: exercice
+    enonce: "Dans laquelle de ces phrases le sujet « il » est-il impersonnel, c'est-à-dire qu'il ne désigne personne de précis ? « Il pleut depuis ce matin. » / « Il mange une pomme. » / « Il est parti tôt. »"
+    forme: qcm
+    choix:
+      - "Il pleut depuis ce matin."
+      - "Il mange une pomme."
+      - "Il est parti tôt."
+    reponse: 0
+    indices:
+      - "Demande-toi, pour chaque phrase, si « il » remplace une personne précise dont on parlait avant."
+      - "Un verbe qui décrit la météo (pleuvoir, neiger...) s'emploie souvent à la forme impersonnelle."
+    explication: "Dans « Il pleut depuis ce matin. », « il » ne désigne personne : c'est la forme impersonnelle. Dans les deux autres phrases, « il » remplace une personne précise (un garçon, un homme dont on parlait)."
+
+  - type: question_ouverte
+    question: >-
+      Explique avec tes mots pourquoi le « il » de « Il pleut. » n'est pas un vrai sujet qui fait
+      l'action, contrairement au « il » de « Il mange une pomme. »
+    indices:
+      - "Cherche qui, dans chaque phrase, fait réellement l'action du verbe."
+      - "Peux-tu remplacer « il » par un nom précis dans « Il pleut. » ? Et dans « Il mange une pomme. » ?"
+    criteres:
+      - "L'élève dit que « il » dans « Il pleut. » ne représente personne de précis, contrairement au « il » de « Il mange une pomme. »"
+      - "L'élève relie cette différence à la forme impersonnelle de la phrase."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu retrouves le sujet, le
+      COD et le COI dans une phrase, puis donne un exemple de ton invention (différent de ceux de
+      cette leçon) avec un sujet éloigné du verbe.

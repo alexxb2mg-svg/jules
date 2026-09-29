@@ -21,6 +21,8 @@ from fastapi import APIRouter
 
 from jules.llm.base import Tour
 from jules.modules.base import Module, Tache, extraire_json
+from jules.modules.cours import ESTIMATION_TEXTE
+from jules.modules.suivi import dernier_statut
 from jules.texte import remplir
 
 journal = logging.getLogger("jules.rapport")
@@ -76,10 +78,8 @@ def donnees_du_jour(
     epreuves: list[dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
     notions: dict[str, dict[str, str]] = {}
-    for ev in reversed(suivis):  # du plus ancien au plus recent : le dernier statut gagne
+    for _cle, ev in dernier_statut(suivis).items():
         d = ev["donnees"]
-        if d.get("statut") == "hors_scolaire" or not d.get("notion"):
-            continue
         notions[f"{d['matiere']} : {d['notion']}"] = {"statut": d["statut"], "resume": d.get("resume", "")}
     matieres = sorted({cle.split(" : ")[0] for cle in notions})
     return {
@@ -141,6 +141,8 @@ def texte_rapport(
         lignes.append(ligne + ".")
     for alerte in d["alertes"]:
         lignes.append(f"Signal ({alerte['niveau']}) : {alerte['motif']}")
+    if d["notions"]:
+        lignes.append(f"{ESTIMATION_TEXTE} Seul « acquis » vient d'une épreuve sans aide.")
     if synthese:
         lignes += ["", synthese]
     if questions:

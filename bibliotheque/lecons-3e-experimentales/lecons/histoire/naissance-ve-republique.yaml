@@ -1,0 +1,115 @@
+notion: naissance-ve-republique
+titre: "La naissance de la Ve République"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Cinquième République »"
+    url: "https://fr.vikidia.org/w/index.php?title=Cinqui%C3%A8me_R%C3%A9publique&oldid=2454737"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Charles de Gaulle »"
+    url: "https://fr.vikidia.org/w/index.php?title=Charles_de_Gaulle&oldid=2568232"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Constitution française de 1958 »"
+    url: "https://fr.vikidia.org/w/index.php?title=Constitution_fran%C3%A7aise_de_1958&oldid=2431778"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir que la Ve République naît en 1958, après une crise liée à la guerre d'Algérie."
+      - "Expliquer que la Ve République renforce le pouvoir exécutif par rapport aux républiques précédentes."
+      - "Situer dans l'ordre les grandes dates : 1958 (Constitution), 1962 (suffrage universel direct)."
+
+  - type: texte
+    titre: "Le retour de De Gaulle en 1958"
+    contenu: >-
+      En 1958, la **IVe République** traverse une grave crise à cause de la guerre d'Algérie. En mai 1958, un
+      soulèvement éclate à **Alger**. Le général **de Gaulle**, qui s'était retiré de la politique en 1946,
+      revient alors au pouvoir. Il obtient les pleins pouvoirs pour écrire une **nouvelle Constitution**.
+
+  - type: texte
+    titre: "Une nouvelle Constitution, un exécutif renforcé"
+    contenu: >-
+      Cette Constitution est approuvée par **référendum le 28 septembre 1958** (plus de 80 % de « oui »). Elle
+      entre en vigueur le **4 octobre 1958** : c'est la naissance de la **Ve République**. Elle donne beaucoup
+      plus de pouvoir au **président de la République** et au gouvernement (le pouvoir exécutif), alors que sous
+      les IIIe et IVe Républiques, c'était surtout le Parlement qui décidait. De Gaulle devient le premier
+      président de la Ve République.
+
+  - type: texte
+    titre: "1962 : un président élu par tous les citoyens"
+    contenu: >-
+      En **1962**, une réforme change la façon d'élire le président : il est désormais élu au **suffrage
+      universel direct**, c'est-à-dire directement par tous les citoyens (avant, un collège de grands électeurs
+      votait à sa place). Cela renforce encore la légitimité du président. Les élections législatives se font
+      au **scrutin majoritaire**, ce qui donne en général une majorité stable à l'Assemblée nationale.
+
+  - type: exemple
+    enonce: >-
+      Explique en deux phrases ce qui change entre la IVe et la Ve République concernant le pouvoir exécutif.
+    etapes:
+      - "Sous la IVe République, le Parlement dominait : les gouvernements changeaient souvent, c'était instable."
+      - "La Ve République, née en 1958, renforce nettement le président et le gouvernement face au Parlement, ce qui rend l'exécutif plus stable et plus fort."
+
+  - type: exercice
+    enonce: "En quelle année la Constitution de la Ve République est-elle adoptée par référendum ?"
+    forme: nombre
+    reponse: 1958
+    tolerance: 0
+    indices:
+      - "C'est l'année du retour au pouvoir du général de Gaulle, après le soulèvement d'Alger."
+      - "L'élection du président au suffrage universel direct arrive quatre ans plus tard : recule de quatre ans."
+    explication: "La Constitution de la Ve République est adoptée par référendum le 28 septembre 1958."
+
+  - type: exercice
+    enonce: "Dans quelle ville a lieu, en mai 1958, le soulèvement qui provoque le retour au pouvoir du général de Gaulle ?"
+    forme: reponse_courte
+    reponse: "Alger"
+    reponses_acceptees: ["Alger", "alger", "à Alger"]
+    indices:
+      - "Cette ville se trouve en Algérie, alors département français."
+      - "C'est la principale ville d'Algérie ; son nom commence par « Al- »."
+    explication: "Le soulèvement de mai 1958 a lieu à Alger, en Algérie, alors département français."
+
+  - type: exercice
+    enonce: "Que change la réforme de 1962 pour l'élection du président de la République ?"
+    forme: qcm
+    choix:
+      - "Le président est désormais élu au suffrage universel direct par tous les citoyens"
+      - "Le président n'est plus élu, il est nommé par l'Assemblée nationale"
+      - "Le président perd tous ses pouvoirs au profit du Parlement"
+    reponse: 0
+    indices:
+      - "Cette réforme change qui élit le président."
+      - "Avant 1962, un collège de grands électeurs élisait le président, pas directement les citoyens."
+    explication: "À partir de 1962, le président est élu au suffrage universel direct par l'ensemble des citoyens, ce qui renforce sa légitimité."
+
+  - type: exercice
+    enonce: "La Ve République renforce-t-elle le pouvoir exécutif (président et gouvernement) ou le pouvoir législatif (Parlement), par rapport à la IVe République ?"
+    forme: qcm
+    choix:
+      - "Le pouvoir exécutif (président et gouvernement)"
+      - "Le pouvoir législatif (Parlement)"
+      - "Elle ne change rien à l'équilibre des pouvoirs"
+    reponse: 0
+    indices:
+      - "Sous la IVe République, les gouvernements changeaient très souvent car le Parlement dominait."
+      - "La Constitution de 1958 veut justement corriger cette instabilité."
+    explication: "La Ve République renforce nettement le pouvoir exécutif (président de la République et gouvernement) par rapport au Parlement, contrairement aux IIIe et IVe Républiques."
+
+  - type: question_ouverte
+    question: >-
+      Pourquoi peut-on dire que 1958 marque une rupture importante dans l'histoire politique française ?
+      Explique avec tes mots.
+    indices:
+      - "Pense à ce qui change pour le président et le gouvernement par rapport à avant."
+      - "Pense aussi à la crise qui a provoqué ce changement."
+    criteres:
+      - "L'élève relie la crise algérienne de 1958 au retour de De Gaulle et à la nouvelle Constitution."
+      - "L'élève explique que la Ve République renforce le pouvoir exécutif par rapport à la IVe République, sans juste réciter une phrase toute faite."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment naît la Ve République en 1958 et ce qui
+      change pour le président de la République avec la réforme de 1962.

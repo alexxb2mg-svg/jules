@@ -1,0 +1,170 @@
+notion: applications-biotechnologiques
+titre: "Applications biotechnologiques : culture de cellules, clonage, OGM"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer la technique utilisée : culture de cellules, clonage ou OGM."
+      - "Expliquer un protocole simple de clonage ou d'obtention d'un OGM."
+      - "Donner un avantage et une limite de ces techniques, sans confondre clone et OGM."
+
+  - type: texte
+    titre: "Les biotechnologies et la culture de cellules"
+    contenu: >-
+      Les **biotechnologies** utilisent des êtres vivants ou des cellules pour produire quelque chose
+      d'utile à l'être humain : médicaments, aliments, plantes, recherche.
+
+
+      **Culture de cellules** : des cellules sont placées dans un milieu nutritif stérile, à bonne
+      température. Elles se multiplient par division cellulaire. Les cellules obtenues ont le même
+      patrimoine génétique que la cellule de départ : elles forment une **lignée de cellules**.
+
+
+      On cultive ainsi des levures, des bactéries, des cellules de peau.
+
+  - type: texte
+    titre: "Le clonage"
+    contenu: >-
+      Le **clonage** consiste à obtenir des individus génétiquement identiques à un individu de départ.
+      Ce sont ses **clones**.
+
+
+      - Chez les plantes, c'est facile : bouturage, culture d'un petit fragment en laboratoire.
+
+      - Chez les animaux, on transfère le **noyau** d'une cellule d'un individu dans un ovule dont on
+      a retiré le noyau. C'est ainsi qu'est née la brebis Dolly, en 1996.
+
+
+      Le noyau porte l'information génétique : le clone ressemble à l'individu qui a donné le noyau.
+
+  - type: texte
+    titre: "Les OGM et la sélection génétique"
+    contenu: >-
+      Un **OGM** (organisme génétiquement modifié) est un organisme dans lequel on a introduit un
+      **gène venant d'une autre espèce**. L'organisme fabrique alors la protéine de ce gène.
+
+
+      - Des bactéries qui ont reçu le gène humain de l'insuline fabriquent de l'insuline. Elle sert à
+      soigner des personnes diabétiques.
+
+      - Certaines plantes OGM, comme un maïs, fabriquent une substance toxique pour des chenilles.
+
+
+      Depuis très longtemps, l'être humain sélectionne aussi les plantes et les animaux qu'il croise.
+      Un OGM va plus vite : on introduit directement un gène choisi. C'est une autre forme de sélection
+      génétique par l'être humain.
+
+  - type: texte
+    titre: "Ne pas confondre, et garder un regard critique"
+    contenu: >-
+      Un **OGM n'est pas un clone**. Il a reçu un gène d'une autre espèce. Un clone a exactement le
+      même patrimoine génétique que le donneur du noyau, sans gène ajouté.
+
+
+      Ces techniques soulèvent des débats : risques pour l'environnement, questions éthiques.
+      Elles sont encadrées par la loi.
+
+
+      Au brevet, on attend que tu repères la technique, que tu expliques un protocole simple et que
+      tu donnes un avantage et une limite ou un risque.
+
+  - type: exemple
+    enonce: >-
+      Pour soigner des personnes brûlées, un laboratoire cultive des cellules de peau. De quelle technique
+      s'agit-il, et que peut-on dire du patrimoine génétique des cellules obtenues ?
+    etapes:
+      - "Des cellules sont placées dans un milieu nutritif stérile et se multiplient : c'est une culture de cellules."
+      - "Les cellules se multiplient par division cellulaire, à partir de la cellule de départ."
+      - "Elles ont donc le même patrimoine génétique que la cellule de départ : elles forment une lignée de cellules."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on un individu génétiquement identique à celui dont il est issu ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "clone"
+    reponses_acceptees: ["un clone", "le clone", "clones", "les clones"]
+    indices:
+      - "Relis le texte sur le clonage."
+      - "Dolly est un exemple d'un tel individu."
+    explication: "Un clone est un individu (ou une cellule) génétiquement identique à celui dont il est issu."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : on place 2 000 cellules de levure dans un milieu nutritif. Leur nombre double
+      chaque jour. Combien y a-t-il de cellules au bout de 3 jours ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 16000
+    tolerance: 0.01
+    indices:
+      - "Chaque jour, on prend le nombre de la veille et on le multiplie par deux."
+      - "Fais le calcul jour par jour : trois fois de suite."
+      - "Après le jour 1, il y a 4 000 cellules. Continue avec le jour 2, puis le jour 3."
+    explication: "2 000 → 4 000 (jour 1) → 8 000 (jour 2) → 16 000 (jour 3). Il y a 16 000 cellules au bout de 3 jours."
+
+  - type: exercice
+    enonce: "Parmi ces situations, laquelle est un OGM ?"
+    forme: qcm
+    choix:
+      - "Une bactérie qui a reçu le gène humain de l'insuline et fabrique de l'insuline."
+      - "Une plante obtenue par bouturage à partir d'une autre plante."
+      - "Des cellules de peau qui se multiplient dans un milieu nutritif."
+      - "Des vaches choisies pendant des générations pour leur production de lait."
+    reponse: 0
+    indices:
+      - "Un OGM a reçu un gène venant d'une autre espèce."
+      - "Dans quelle situation un gène d'une autre espèce est-il introduit ?"
+    explication: "La bactérie a reçu un gène humain : c'est un OGM. Le bouturage donne un clone, la culture donne une lignée de cellules, et le choix des vaches est une sélection par croisements."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : on retire le noyau d'un ovule de la chèvre B. On y introduit le noyau d'une
+      cellule de la chèvre A. L'embryon obtenu est placé dans l'utérus de la chèvre C, qui le porte
+      jusqu'à la naissance. Le chevreau est génétiquement identique à quelle chèvre ?
+    forme: qcm
+    choix:
+      - "À la chèvre A, qui a donné le noyau."
+      - "À la chèvre B, qui a donné l'ovule."
+      - "À la chèvre C, qui a porté le petit."
+    reponse: 0
+    indices:
+      - "Quelle information porte le noyau ?"
+      - "Que reste-t-il de la chèvre B dans l'ovule, une fois le noyau retiré ?"
+    explication: "Le noyau porte l'information génétique. Le chevreau est donc le clone de la chèvre A. B a donné un ovule sans noyau, C a seulement porté l'embryon."
+
+  - type: exercice
+    enonce: >-
+      Un maïs génétiquement modifié fabrique une substance toxique pour des chenilles qui l'attaquent.
+      Quelle affirmation est correcte ?
+    forme: qcm
+    choix:
+      - "C'est un OGM : on lui a introduit un gène, et il fabrique la protéine correspondante. Cela peut protéger la plante, mais ces techniques soulèvent aussi des débats."
+      - "C'est un clone : il a exactement le même patrimoine génétique qu'un autre maïs, sans gène ajouté."
+      - "C'est une culture de cellules : il se multiplie dans un milieu nutritif stérile en laboratoire."
+      - "Ce n'est pas un OGM, car un OGM est forcément un animal."
+    reponse: 0
+    indices:
+      - "Repère le gène introduit et ce que fabrique la plante modifiée."
+      - "Un clone n'a aucun gène ajouté. Et un OGM peut être une plante, une bactérie..."
+    explication: "La plante a reçu un gène : c'est un OGM. Elle fabrique la substance correspondante. L'avantage est de se défendre contre des chenilles ; la limite est que ces techniques soulèvent des débats (risques pour l'environnement, questions éthiques)."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre un clone et un OGM. Donne un exemple de chaque.
+    indices:
+      - "Regarde si un gène a été ajouté ou non."
+      - "Pense à Dolly et à la bactérie qui fabrique de l'insuline."
+    criteres:
+      - "L'élève dit qu'un clone a exactement le même patrimoine génétique que le donneur du noyau, sans gène ajouté."
+      - "L'élève dit qu'un OGM a reçu un gène venant d'une autre espèce."
+      - "L'élève donne un exemple correct de chaque (par exemple Dolly ; bactérie avec le gène humain de l'insuline)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en trois phrases, ce que sont la culture de cellules, le clonage et un OGM.
+      Ajoute un avantage ou une limite de ces techniques.

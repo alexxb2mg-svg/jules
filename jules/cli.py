@@ -17,6 +17,8 @@ from __future__ import annotations
 
 import getpass
 import logging
+import logging.handlers
+import socket
 import sys
 from pathlib import Path
 from typing import Any
@@ -24,8 +26,8 @@ from typing import Any
 import yaml
 
 from jules.acces import LONGUEUR_MIN, ROLES, code_evident, empreinte, verifier_exposition
-from jules.config import RACINE, charger_config
-from jules.moteur import Tuteur
+from jules.config import RACINE, ErreurConfig, charger_config
+from jules.moteur import ErreurDependance, Tuteur
 from jules.stockage import Conversation
 
 FICHIER_CONFIG = RACINE / "config.yaml"
@@ -37,12 +39,33 @@ ENTETE_LOCAL = (
 
 
 def journaliser(dossier: Path) -> None:
+    """Ecrit les logs dans donnees/jules.log, avec rotation (2 Mo x 3 fichiers de secours) pour ne
+    jamais remplir le disque, et sur la console (StreamHandler)."""
     dossier.mkdir(parents=True, exist_ok=True)
+    rotatif = logging.handlers.RotatingFileHandler(
+        dossier / "jules.log", maxBytes=2 * 1024 * 1024, backupCount=3, encoding="utf-8"
+    )
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s %(levelname)s %(name)s : %(message)s",
-        handlers=[logging.FileHandler(dossier / "jules.log", encoding="utf-8"), logging.StreamHandler()],
+        handlers=[rotatif, logging.StreamHandler()],
+        force=True,
     )
+
+
+def _port_libre(hote: str, port: int) -> bool:
+    """Tente de reserver le port pour verifier qu'il est libre, puis le relache aussitot."""
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as essai:
+        essai.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        try:
+            essai.bind((hote, port))
+        except OSError:
+            return False
+        return True
+
+
+def _message_port_pris(port: int) -> str:
+    return f"Le port {port} est déjà pris : change serveur.port dans config.local.yaml, ou ferme l'autre Jules."
 
 
 def servir() -> None:
@@ -54,12 +77,18 @@ def servir() -> None:
     config = charger_config(FICHIER_CONFIG)
     verifier_exposition(config.hote, config.acces)
     journaliser(config.donnees)
+    if not _port_libre(config.hote, config.port):
+        sys.exit(_message_port_pris(config.port))
     tuteur = Tuteur(config)
     planificateur = Planificateur(tuteur.taches(), tuteur.stockage, veilles=[tuteur.verifier_inactivite])
     planificateur.demarrer()
+    # le port a ete verifie libre juste au-dessus (bind reussi puis relache) : l'adresse annoncee ici
+    # fonctionne, sauf ultra-rare course avec un autre programme entre-temps (uvicorn le signalerait).
     print(f"Jules : http://{config.hote}:{config.port}/  (parent : /parent)")
     try:
         uvicorn.run(creer_app(tuteur), host=config.hote, port=config.port, log_level="warning")
+    except OSError:
+        sys.exit(_message_port_pris(config.port))
     finally:
         planificateur.arreter()
         tuteur.fermer()
@@ -174,7 +203,7 @@ def racines_bibliotheques() -> list[Path]:
     """`bibliotheque/` du projet, puis les depots externes de config(.local).yaml s'il se lit."""
     try:
         return charger_config(FICHIER_CONFIG).dossiers_bibliotheques
-    except (OSError, KeyError, yaml.YAMLError):
+    except (OSError, KeyError, ErreurConfig, yaml.YAMLError):
         return [RACINE / "bibliotheque"]
 
 
@@ -189,6 +218,13 @@ def console_utf8() -> None:
 def main(args: list[str] | None = None) -> None:
     console_utf8()
     args = sys.argv[1:] if args is None else args
+    try:
+        _executer(args)
+    except (ErreurConfig, ErreurDependance) as err:
+        sys.exit(str(err))
+
+
+def _executer(args: list[str]) -> None:
     if not args or args[0] == "serveur":
         servir()
     elif args[0] == "installer":

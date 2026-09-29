@@ -26,6 +26,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
 from jules.lecons import (
+    QUESTION_DE_REPLI,
     TENTATIVES_AVANT_CORRECTION,
     Bloc,
     Lecon,
@@ -34,6 +35,7 @@ from jules.lecons import (
     verifier_reponse,
 )
 from jules.modules.base import Module
+from jules.modules.suivi import dernier_statut, evenement_suivi
 from jules.stockage import Conversation, Message
 
 journal = logging.getLogger("jules.cours")
@@ -50,7 +52,6 @@ NOTE_A_REVOIR = (
     "[Correction automatique] Réponse encore fausse après {tentatives} essais : "
     "la correction a été affichée, point à revoir."
 )
-QUESTION_DE_REPLI = "Qu'est-ce qui te fait penser ça ? Reprends l'énoncé étape par étape."
 RAPPEL_GARDE_FOU = (
     "Règle absolue : ne donne JAMAIS la réponse ni un calcul qui y mène directement, même partiellement. "
     "Réponds par UNE seule question qui fait avancer l'élève. Tu peux renvoyer à un bloc précédent de "
@@ -88,6 +89,7 @@ class TentativeEntree(BaseModel):
 class Brique(Module):
     id = "cours"
     titre = "Leçon en cours"
+    dependances = ("notions",)
 
     def __init__(self, tuteur: Any, reglages: dict[str, Any]) -> None:
         super().__init__(tuteur, reglages)
@@ -164,16 +166,14 @@ class Brique(Module):
 
     # --- parcours ------------------------------------------------------------
     def _derniers_statuts(self) -> dict[tuple[str, str], str]:
-        """(matiere, notion) en casefold -> dernier statut connu (le plus recent d'abord)."""
-        statuts: dict[tuple[str, str], str] = {}
-        for ev in self.tuteur.stockage.evenements("suivi", limite=2000):
-            d = ev["donnees"]
-            if not d.get("notion") or not d.get("matiere"):
-                continue
-            cle = (str(d["matiere"]).casefold(), str(d["notion"]).casefold())
-            if cle not in statuts and d.get("statut") in STATUTS_CONNUS:
-                statuts[cle] = d["statut"]
-        return statuts
+        """(matiere, notion) en casefold -> statut retenu (voir jules.modules.suivi.dernier_statut :
+        'acquis' n'est retrograde que par une origine qui reprend directement la notion)."""
+        evenements = self.tuteur.stockage.evenements("suivi", limite=2000)
+        return {
+            cle: ev["donnees"]["statut"]
+            for cle, ev in dernier_statut(evenements).items()
+            if ev["donnees"].get("statut") in STATUTS_CONNUS
+        }
 
     def parcours(self, matiere_id: str | None = None) -> dict[str, Any]:
         cat = self.notions_catalogue
@@ -252,7 +252,7 @@ class Brique(Module):
         bot2 = self.tuteur.stockage.ajouter_message(conv_id, Message(role="bot", texte=nouvelle))
         conv.messages.append(bot2)
         eleve_msg = conv.messages[-3]
-        self.tuteur._lancer_apres_echange(conv, eleve_msg, bot2)
+        self.tuteur.lancer_apres_echange(conv, eleve_msg, bot2)
         return nouvelle
 
     def _noter_correction(self, conv_id: str, message_eleve: str, note: str) -> None:
@@ -266,7 +266,7 @@ class Brique(Module):
         suivi = self.tuteur.module("suivi")
         if conv is not None and suivi is not None:
             # seul le suivi : ni Jules ni la vigilance n'ont a relire un nombre corrige par le code
-            self.tuteur._fond.submit(suivi.apres_echange, conv, eleve, bot)
+            self.tuteur.executer_en_fond(suivi.apres_echange, conv, eleve, bot)
 
     def _relire(self, conv_id: str, message_eleve: str) -> str:
         return self.tuteur.echanger(conv_id, message_eleve).texte
@@ -323,7 +323,14 @@ class Brique(Module):
         )
         self.tuteur.stockage.ajouter_evenement(
             "suivi",
-            {"matiere": nom_matiere, "notion": titre_notion, "statut": statut, "resume": resume, "titre": lecon.titre},
+            evenement_suivi(
+                matiere=nom_matiere,
+                notion=titre_notion,
+                statut=statut,
+                resume=resume,
+                titre=lecon.titre,
+                origine="cours",
+            ),
             etat["conversation"],
         )
 

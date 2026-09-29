@@ -1,0 +1,149 @@
+notion: construire-expose
+titre: "Construire un exposé d'histoire des arts"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir des œuvres liées entre elles et formuler une problématique."
+      - "Construire un plan : introduction, développement, conclusion."
+      - "Préparer la prise de parole : notes courtes, transitions, questions du jury."
+
+  - type: texte
+    titre: "Les œuvres et la problématique"
+    contenu: |-
+      Un exposé dure quelques minutes. Il porte sur un petit ensemble d'œuvres, le **corpus** (deux ou trois œuvres),
+      ou sur une question artistique. C'est la compétence mobilisée à l'oral de soutenance du DNB.
+
+      Les œuvres doivent avoir un lien clair : même thème, même artiste, même époque, ou filiation.
+      Mieux vaut peu d'œuvres bien analysées que beaucoup d'œuvres survolées.
+
+  - type: texte
+    titre: "La problématique"
+    contenu: |-
+      Tout exposé part d'une **problématique** : une question à laquelle l'exposé cherche à répondre.
+
+      Exemple : « Comment les artistes ont-ils dénoncé la violence de la guerre ? »
+
+      Un simple titre (« Guernica ») n'est **pas** une problématique.
+
+  - type: texte
+    titre: "Le plan"
+    contenu: |-
+      Le plan a trois parties :
+      - **Introduction** : présente le sujet, pose la problématique, annonce le plan.
+      - **Développement** (deux ou trois parties) : analyse les œuvres pour répondre à la question.
+      - **Conclusion** : répond à la problématique, puis propose une **ouverture** (une autre œuvre ou une autre question).
+
+      Entre les parties, on utilise des **transitions** courtes : « Après avoir vu…, nous allons voir… ».
+
+  - type: texte
+    titre: "Présenter et parler"
+    contenu: |-
+      Chaque œuvre est présentée avec sa carte d'identité (titre, artiste, date, technique, lieu de conservation),
+      puis analysée avec le vocabulaire de la description et de l'analyse.
+
+      À l'oral :
+      - on parle à partir de notes courtes (mots-clés, pas un texte rédigé) ;
+      - on regarde le jury, on parle assez fort et lentement ;
+      - on se prépare à répondre à des questions sur ses choix.
+
+  - type: exemple
+    enonce: >-
+      Propose une introduction pour un exposé sur Tres de mayo de Goya et Guernica de Picasso.
+    etapes:
+      - "Le sujet : des peintres ont montré les horreurs de la guerre. On présente les deux œuvres avec leur carte d'identité : Tres de mayo, peint par Francisco de Goya en 1814 (musée du Prado, Madrid) ; Guernica, peint par Pablo Picasso en 1937 (musée Reina Sofía, Madrid)."
+      - "La problématique : comment ces deux peintres dénoncent-ils la violence faite aux civils ?"
+      - "Le plan : d'abord le tableau de Goya, puis celui de Picasso, avant de les comparer."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases est une problématique pour un exposé ?"
+    forme: qcm
+    choix:
+      - "Les portraits au XVIIe siècle"
+      - "Comment un portrait peut-il montrer le pouvoir d'une personne ?"
+      - "Un tableau de portrait"
+    reponse: 1
+    indices:
+      - "Une problématique est une question à laquelle l'exposé répond."
+      - "Cherche la phrase qui commence par un mot interrogatif et se termine par un point d'interrogation."
+    explication: "Seule la deuxième phrase est une vraie question. Les deux autres sont des titres ou des thèmes."
+
+  - type: exercice
+    enonce: "Comment s'appelle l'ensemble des œuvres étudiées dans un exposé ?"
+    forme: reponse_courte
+    reponse: "corpus"
+    reponses_acceptees:
+      - "corpus"
+      - "un corpus"
+      - "le corpus"
+    indices:
+      - "C'est un mot du vocabulaire de la leçon, qui désigne un petit ensemble d'œuvres."
+      - "Le mot se termine par « -us »."
+    explication: "Le corpus est l'ensemble des œuvres étudiées dans l'exposé, en général deux ou trois."
+
+  - type: exercice
+    enonce: "Que doit faire la conclusion d'un exposé ?"
+    forme: qcm
+    choix:
+      - "Présenter la problématique et annoncer le plan."
+      - "Répondre à la problématique, puis proposer une ouverture."
+      - "Décrire une dernière œuvre avec sa carte d'identité."
+    reponse: 1
+    indices:
+      - "Pense à la question posée au début de l'exposé."
+      - "La conclusion répond à cette question, puis regarde plus loin."
+    explication: "La conclusion répond à la problématique, puis propose une ouverture vers une autre œuvre ou une autre question. Présenter la problématique et le plan, c'est le rôle de l'introduction."
+
+  - type: exercice
+    enonce: "Comment s'appelle une phrase courte qui relie deux parties de l'exposé pour que le jury suive le fil ?"
+    forme: reponse_courte
+    reponse: "transition"
+    reponses_acceptees:
+      - "transition"
+      - "une transition"
+      - "la transition"
+    indices:
+      - "Elle sert à passer d'une partie à la suivante, par exemple « Après avoir vu…, nous allons voir… »."
+      - "Le mot commence par la lettre T."
+    explication: "Cette phrase courte s'appelle une transition."
+
+  - type: exercice
+    enonce: >-
+      Une élève prépare son oral. Quelle préparation est la meilleure pour l'exposé ?
+    forme: qcm
+    choix:
+      - "Écrire tout le texte et le lire sans regarder le jury."
+      - "Écrire des notes en mots-clés, s'entraîner à voix haute et regarder le jury."
+      - "Apprendre le nom de beaucoup d'œuvres pour en présenter le plus possible."
+    reponse: 1
+    indices:
+      - "À l'oral, on parle à partir de notes courtes, pas d'un texte rédigé."
+      - "Le jury doit être regardé, et il vaut mieux peu d'œuvres bien analysées."
+    explication: "Des notes en mots-clés, un entraînement à voix haute et le regard vers le jury donnent un oral posé. Lire un texte entier est une erreur fréquente, et beaucoup d'œuvres survolées valent moins que peu d'œuvres bien analysées."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi « La Liberté guidant le peuple » n'est pas une problématique. Puis propose une
+      problématique pour un exposé sur deux œuvres de ton choix.
+    indices:
+      - "Une problématique est une question à laquelle l'exposé répond."
+      - "Choisis deux œuvres avec un lien clair (même thème, même époque…), puis pose une question à leur sujet."
+    criteres:
+      - "L'élève explique qu'un titre d'œuvre est un simple sujet, pas une question."
+      - "L'élève propose une problématique sous forme de question."
+      - "La problématique s'appuie sur un lien clair entre les deux œuvres choisies."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois parties d'un exposé et ce que tu
+      mets dans chacune.

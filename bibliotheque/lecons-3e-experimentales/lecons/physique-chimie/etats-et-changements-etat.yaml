@@ -1,0 +1,180 @@
+notion: etats-et-changements-etat
+titre: "États de la matière et changements d'état d'un corps pur"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Caractériser les trois états de la matière et nommer les changements d'état."
+      - "Lire une courbe de température avec un palier et décrire les molécules avant et après."
+      - "Dire ce qui se conserve (la masse) et ce qui change (le volume) lors d'un changement d'état."
+
+  - type: texte
+    titre: "Les trois états de la matière"
+    contenu: |-
+      | État | Forme | Volume |
+      |---|---|---|
+      | Solide | propre | propre |
+      | Liquide | celle du récipient | propre |
+      | Gaz | aucune, il occupe tout l'espace | aucun, on peut le comprimer |
+
+      Au repos, la surface libre d'un liquide est **plane et horizontale**.
+
+  - type: texte
+    titre: "Les six changements d'état"
+    contenu: |-
+      | Changement | De → vers |
+      |---|---|
+      | fusion | solide → liquide |
+      | solidification | liquide → solide |
+      | vaporisation | liquide → gaz |
+      | liquéfaction | gaz → liquide |
+      | sublimation | solide → gaz (sans passer par le liquide) |
+      | condensation | gaz → solide |
+
+      La vaporisation peut se faire de deux façons :
+      - **évaporation** : lente, seulement à la surface ;
+      - **ébullition** : avec des bulles dans tout le liquide.
+
+      Une dissolution (du sucre dans l'eau) n'est **pas** un changement d'état.
+
+  - type: texte
+    titre: "Au niveau des molécules"
+    contenu: |-
+      La matière est faite de particules (des molécules pour l'eau).
+
+      | État | Les molécules |
+      |---|---|
+      | Solide | serrées et ordonnées |
+      | Liquide | serrées, désordonnées, elles glissent les unes sur les autres |
+      | Gaz | éloignées, désordonnées, très agitées |
+
+      Lors d'un changement d'état, **les molécules ne changent pas**. Seules leur disposition et leur agitation changent.
+
+  - type: texte
+    titre: "Ce qui se conserve, ce qui change, le palier"
+    contenu: |-
+      Lors d'un changement d'état :
+      - la **masse se conserve** : le nombre de molécules ne change pas ;
+      - le **volume change** (la glace occupe environ 9 % de volume de plus que l'eau liquide) ;
+      - pour un **corps pur**, la **température reste constante** pendant tout le changement d'état : c'est un **palier**.
+
+      Pour l'eau pure, à la pression atmosphérique normale : fusion à 0 °C, ébullition à 100 °C.
+
+      Un mélange n'a pas de palier net.
+
+  - type: texte
+    titre: "Étudier un changement d'état"
+    contenu: |-
+      Le protocole :
+      1. Chauffer (ou refroidir) l'échantillon.
+      2. Relever la température à intervalles réguliers, avec un thermomètre et un chronomètre.
+      3. Tracer la courbe de la température en fonction du temps.
+      4. Chercher un palier (une partie horizontale).
+
+      Palier : c'est un corps pur, et la température du palier est sa température de changement d'état.
+
+  - type: exemple
+    enonce: >-
+      Un glaçon de 40 g fond complètement dans un verre fermé. Quel est le changement d'état, la
+      masse de l'eau obtenue, et ce que deviennent les molécules ?
+    etapes:
+      - "Départ : solide (glace). Arrivée : liquide. Le passage solide vers liquide s'appelle la fusion."
+      - "La masse se conserve : le nombre de molécules ne change pas. L'eau obtenue a la même masse que le glaçon, 40 g."
+      - "Les molécules restent les mêmes. Elles passent de serrées et ordonnées à serrées et désordonnées : elles glissent les unes sur les autres."
+
+  - type: exercice
+    enonce: "Comment s'appelle le passage de l'état liquide à l'état gazeux ?"
+    forme: qcm
+    choix:
+      - "La vaporisation"
+      - "La fusion"
+      - "La solidification"
+      - "La liquéfaction"
+    reponse: 0
+    indices:
+      - "Regarde le tableau des six changements d'état. Cherche la ligne « liquide → gaz »."
+      - "Le changement inverse (gaz vers liquide) s'appelle la liquéfaction."
+    explication: "Liquide vers gaz : c'est la vaporisation. La fusion est solide vers liquide, la solidification est liquide vers solide, et la liquéfaction est gaz vers liquide."
+
+  - type: exercice
+    enonce: "Sur une courbe de température, comment s'appelle la partie horizontale, où la température ne change pas ?"
+    forme: reponse_courte
+    reponse: "palier"
+    reponses_acceptees:
+      - "un palier"
+      - "le palier"
+      - "Palier"
+    indices:
+      - "Pendant un changement d'état d'un corps pur, la température reste constante."
+      - "Le mot rappelle la partie plate entre deux volées de marches, dans un escalier."
+    explication: "La partie horizontale s'appelle un palier. Elle montre que la température reste constante pendant le changement d'état d'un corps pur."
+
+  - type: exercice
+    enonce: >-
+      On place 250 g d'eau liquide dans un récipient fermé, puis on la met au congélateur. Elle gèle
+      complètement. Quelle est la masse de glace obtenue, en grammes ?
+    forme: nombre
+    reponse: 250
+    tolerance: 0.01
+    unite: "g"
+    indices:
+      - "Quelle grandeur se conserve lors d'un changement d'état : la masse ou le volume ?"
+      - "Le nombre de molécules ne change pas, et rien n'entre ni ne sort du récipient."
+    explication: "La masse se conserve lors d'un changement d'état, car le nombre de molécules ne change pas. La glace pèse donc 250 g, comme l'eau liquide. C'est le volume qui change."
+
+  - type: exercice
+    enonce: "Du sucre disparaît dans un thé chaud. Quelle affirmation est correcte ?"
+    forme: qcm
+    choix:
+      - "C'est une dissolution, pas un changement d'état"
+      - "C'est une fusion du sucre"
+      - "C'est une vaporisation du sucre"
+      - "C'est une liquéfaction du sucre"
+    reponse: 0
+    indices:
+      - "Un changement d'état ne change pas la nature du corps : un solide seul devient liquide seul."
+      - "Ici, le sucre est mélangé à l'eau du thé."
+    explication: "Le sucre se mélange à l'eau du thé : c'est une dissolution. Ce n'est pas un changement d'état, donc ce n'est pas une fusion."
+
+  - type: exercice
+    enonce: >-
+      On chauffe de l'eau pure. On relève la température toutes les minutes : 22 °C, 47 °C, 71 °C,
+      93 °C, 100 °C, 100 °C, 100 °C, 100 °C. Quelle est la température du palier, en °C ?
+    forme: nombre
+    reponse: 100
+    tolerance: 0.01
+    unite: "°C"
+    indices:
+      - "Cherche les mesures qui se répètent : c'est là que la température ne change plus."
+      - "Le palier correspond à un changement d'état de l'eau pure. Lequel se produit quand on chauffe l'eau liquide ?"
+    explication: "Les quatre dernières mesures sont identiques : c'est le palier. L'eau pure est en ébullition (vaporisation), à 100 °C. Le palier montre que l'eau est un corps pur."
+
+  - type: question_ouverte
+    question: >-
+      Décris les molécules d'eau avant et après la vaporisation (liquide → gaz). Que se passe-t-il
+      pour leur disposition ? Les molécules ont-elles changé ?
+    indices:
+      - "Compare la distance entre les molécules dans le liquide et dans le gaz."
+      - "Pense à ce qui change (disposition, agitation) et à ce qui ne change pas."
+    criteres:
+      - "L'élève dit que dans le liquide, les molécules sont serrées mais désordonnées."
+      - "L'élève dit que dans le gaz, les molécules sont éloignées, désordonnées et très agitées."
+      - "L'élève dit que les molécules elles-mêmes ne changent pas : seules leur disposition et leur agitation changent."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qui se passe pendant un
+      changement d'état d'un corps pur : la température, la masse et le volume.

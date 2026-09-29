@@ -74,7 +74,7 @@ Une règle de fond s'applique aux outils comme au reste : **un outil ne fait pas
 
 ## 3. Une interface de cours, pas de chat
 
-**Construite (étape 2).** L'élève ne parle plus à une fenêtre de conversation pour suivre une leçon : il suit une **leçon en blocs**, avec Jules à côté. Voir la [maquette](maquette-cours.png), qui reste la cible visuelle (outils de matière et studio non encore branchés).
+**Construite (étape 2).** L'élève ne parle plus à une fenêtre de conversation pour suivre une leçon : il suit une **leçon en blocs**, avec Jules à côté. Voir la [capture de la nouvelle interface](interface-lecon.png) (en cours d'intégration) ; la [maquette de départ](maquette-cours.png) reste la cible pour les outils ouverts au milieu d'une leçon.
 
 - **Au centre, le cours** : les blocs `objectifs`, `texte`, `exemple`, `exercice` (nombre, réponse courte, QCM), `question_ouverte` et `synthese` s'enchaînent avec une barre de progression. Le bloc `outil` est prévu au format (étape 3) mais affiché comme « à venir ».
 - **À côté, Jules** : il voit la leçon, le bloc en cours, la réponse attendue et les tentatives déjà faites, mais ne les révèle jamais. Il ne parle de lui-même qu'après une tentative de l'élève, toujours par une question, jamais par la réponse ; un garde-fou serveur (`contient_la_reponse`) rejoue l'échange si Jules se trompe. Après plusieurs tentatives fausses, l'explication s'affiche sans qu'il ait à la répéter.
@@ -124,9 +124,9 @@ tout le contenu est préécrit, relu, et rendu par du code déterministe (cadrag
 Jules ») ; ouvrir la petite fenêtre de chat depuis une fiche y renvoie avec la notion de la fiche
 déjà choisie.
 
-Cinq fiches expérimentales de mathématiques 3e existent dans
-`bibliotheque/fiches-visuelles-3e-experimentales/` (fonctions linéaires et affines, Thalès et
-triangles semblables, théorème de Pythagore, équations, probabilités), marquées `a_relire`.
+23 fiches expérimentales de 3e existent dans `bibliotheque/fiches-visuelles-3e-experimentales/`,
+marquées `a_relire` : 5 de mathématiques (fonctions linéaires et affines, Thalès et triangles
+semblables, théorème de Pythagore, équations, probabilités), 11 d'histoire et 7 de géographie.
 
 **Reste à faire sur cet axe** : les autres matières et niveaux, plus de gabarits de figures, et
 brancher plus finement la fenêtre de chat flottante à la conversation en cours si l'élève y est
@@ -160,13 +160,13 @@ Par défaut, Jules n'installe que des outils du catalogue validé. Installer un 
 
 ## 5. Une interface qui s'adapte à l'élève
 
-**Emplacement réservé : ce pan du projet sera conçu plus tard.**
+**Socle construit (lots 1 et 2), valeurs à relire par des professionnels.** Le parent coche dans l'espace parent les aménagements du PAP de l'enfant (7, libellés du modèle officiel, `adaptations/amenagements/`) et ses préférences d'affichage ; Jules les traduit en 13 leviers (`adaptations/leviers/` : police, fond, interligne, espacements, taille du texte, longueur de ligne, surlignage des mots clés, repères de rang des chiffres, phrases courtes, consignes découpées, lecture vocale...) appliqués aux pages de l'élève et transmis aux outils. Les conflits entre aménagements sont montrés au parent, jamais tranchés en silence ; aucun nom de trouble n'est enregistré ni envoyé au modèle. Tant que rien n'est coché, l'affichage est celui d'avant. Spécifications : `docs/spec/ADAPTATIONS.md`, `docs/spec/ADAPTATIONS-LOT2.md` ; ce qui reste : `docs/spec/LOT3-A-TRAITER.md`.
 
-Le profil de l'élève pourra indiquer des besoins particuliers. Ils changeront à la fois **l'affichage** et **la façon dont Jules s'exprime**. Chaque besoin sera une brique à part, une **adaptation**, rangée dans le dossier [`adaptations/`](../adaptations/).
+Le profil de l'élève indique des besoins particuliers. Ils changent à la fois **l'affichage** et **la façon dont Jules s'exprime**. Chaque besoin est une brique à part, rangée dans le dossier [`adaptations/`](../adaptations/).
 
-Les troubles dys en sont le cœur : dyslexie, dysorthographie, dyscalculie, dyspraxie, dysgraphie, dysphasie... Chacun a ses particularités et ses besoins, parfois opposés d'un trouble à l'autre, et un même élève peut en cumuler plusieurs. Le champ s'étend aussi aux troubles de l'attention, à la déficience visuelle ou auditive, etc. C'est un chantier à part entière, qui se construira avec des orthophonistes, des ergothérapeutes, des enseignants spécialisés et des familles concernées.
+Les troubles dys en sont le cœur : dyslexie, dysorthographie, dyscalculie, dyspraxie, dysgraphie, dysphasie... Chacun a ses particularités et ses besoins, parfois opposés d'un trouble à l'autre, et un même élève peut en cumuler plusieurs. Le champ s'étend aussi aux troubles de l'attention, à la déficience visuelle ou auditive, etc. C'est un chantier à part entière, qui continue avec des orthophonistes, des ergothérapeutes, des enseignants spécialisés et des familles concernées.
 
-Ce qui est déjà posé, pour que l'architecture laisse la place :
+Les principes :
 
 - une adaptation par besoin, et plusieurs adaptations peuvent se combiner chez un même élève ;
 - une adaptation agit sur toute l'interface, y compris sur les outils des matières : c'est une condition pour qu'un outil soit validé (section 4) ;
@@ -177,7 +177,7 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 
 **Le bilan qui souffle une question.** Le bilan du soir dit ce qui a été travaillé et ce qui bloque. Il propose aussi au parent une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice soi-même (« Explique-moi comment tu sais qu'un nombre est premier »). C'est le moyen le moins cher de remettre un adulte dans la boucle ; l'essai y consacre son chapitre VIII.
 
-**Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules propose, quelques jours après (3 jours par défaut), une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours, et le bilan du soir le dit au parent (`jules/modules/epreuve.py`). Ce n'est pas une étude scientifique, mais c'est le bon critère.
+**Ce qui reste sans aide.** Le suivi mesure ce qui se passe pendant qu'on utilise Jules, pas ce que l'élève a appris. Pour s'en approcher, Jules propose, quelques jours après (3 jours par défaut), une courte épreuve sans aide sur les notions marquées comprises : ce qui tient est acquis, ce qui ne tient pas repasse en cours, et le bilan du soir le dit au parent (`jules/modules/epreuve.py`). Ce n'est pas une étude scientifique, mais c'est le bon critère. Protocole détaillé (délais, détection d'aide, limites) : `docs/EPREUVE-PROTOCOLE.md`.
 
 ## Ce que Jules ne fait pas encore
 
@@ -195,13 +195,13 @@ Ce qui est déjà posé, pour que l'architecture laisse la place :
 | 0 bis | Bilan du soir avec une ou deux questions pour le parent ; effacement complet et export du dossier par le parent | fait |
 | 1 | Bibliothèques : fiche d'identité, chargement selon le niveau et l'âge, programme 3e migré | en partie fait : fiche d'identité, chargement selon le niveau, quatre niveaux migrés (CM1, 5e, 4e, 3e) ; reste le chargement selon l'âge et les autres niveaux |
 | 2 | Interface de cours : leçons en blocs, Jules à côté du cours | fait (module `cours`, page `/cours`, 19 leçons expérimentales `a_relire`, 8 matières) ; reste le bloc `outil` |
-| 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`, cinq fiches expérimentales `a_relire` en mathématiques 3e) ; reste les autres matières et niveaux |
-| 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | en partie fait : contrat (`docs/OUTILS-CONTRAT.md`), isolement (iframe sandbox), trois outils de référence livrés comme extensions ; reste l'ouverture du bloc `outil` depuis une leçon et le protocole de validation communautaire |
+| 2 bis | Fiches visuelles : écran d'accueil « Mes fiches », 8 types de blocs, rendu sans appel IA | fait (module `fiches_visuelles`, page `/`) ; 405 fiches expérimentales `a_relire` dans jules-bibliotheques (3e : 247, 12 matières ; CM1 : 158, 10 matières), 23 exemples ici (mathématiques, histoire, géographie) ; reste la relecture et les autres niveaux |
+| 3 | Outils : contrat, isolement, protocole de validation, trois outils de référence (frise, calculatrice, lexique) | en partie fait : contrat (`docs/OUTILS-CONTRAT.md`), isolement (iframe sandbox), trois outils de référence livrés comme extensions, bloc `outil` monté dans la leçon, calculatrice à côté de Jules ; reste des leçons qui utilisent le bloc `outil` et le protocole de validation communautaire |
 | 4 | Studio : l'élève fabrique carte mentale, fiche, quiz, cartes mémoire avec répétition espacée ; Jules relit | fait (`jules/modules/studio.py`, `jules/studio.py`, `jules/revisions.py`, page `/studio`, `docs/STUDIO-CONTRAT.md`) |
 | 4 bis | Épreuve sans aide quelques jours après, sur les notions marquées comprises | fait (conversation et interface de cours : les deux alimentent le même suivi) |
-| 4 ter | Exercices sans IA, corrigés par le code (fiches v2) | en cours : contrat (`docs/FICHES-V2.md`), module `exercices`, deux fiches de démonstration ; reste la conversion des 252 fiches v1 |
+| 4 ter | Exercices sans IA, corrigés par le code (fiches v2) | fait pour la 3e et le CM1 : contrat (`docs/FICHES-V2.md`), module `exercices`, 410 fiches v2 vérifiées dans jules-bibliotheques, générateurs pour 13 notions de mathématiques 3e (`docs/GENERATEURS-CONTRAT.md`) ; reste la 5e, la 4e et la relecture |
 | 5 | Catalogue communautaire de bibliothèques et d'outils | en cours : contrat d'extension (`docs/EXTENSIONS.md`, `jules/extensions.py`), 10 extensions d'exemple ; reste le catalogue et l'installation par empreinte |
-| à part | Adaptations (troubles dys, attention...) : chantier à part entière, à ouvrir avec des professionnels. D'ici là, chaque étape leur laisse la place. | emplacement réservé |
+| à part | Adaptations (troubles dys, attention...) : chantier à part entière, avec des professionnels | socle fait (lots 1 et 2 : outils isolés, lecture vocale locale, 13 leviers, 7 aménagements du PAP, page parent) ; reste la relecture des valeurs par des professionnels et le lot 3 (`docs/spec/LOT3-A-TRAITER.md`) |
 
 ## Questions ouvertes
 

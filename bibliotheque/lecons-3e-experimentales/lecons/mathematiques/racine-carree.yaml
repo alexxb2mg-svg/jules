@@ -1,0 +1,129 @@
+notion: racine-carree
+titre: "La racine carrée"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer la racine carrée d'un carré parfait, sans calculatrice."
+      - "Encadrer la racine carrée d'un nombre entre deux entiers consécutifs."
+      - "Utiliser la racine carrée dans un problème (aire d'un carré, théorème de Pythagore)."
+
+  - type: texte
+    titre: "Qu'est-ce qu'une racine carrée ?"
+    contenu: >-
+      La racine carrée d'un nombre positif **a** est le nombre positif qui, multiplié par
+      lui-même, donne **a**. On la note **√a**. Ainsi √a × √a = a.
+      Exemple : √49 = 7, car 7 × 7 = 49, et 7 est positif.
+      Attention : (−7) × (−7) fait aussi 49, mais une racine carrée est toujours positive.
+      √49 n'est pas −7.
+
+  - type: texte
+    titre: "Les carrés parfaits à connaître"
+    contenu: >-
+      Un **carré parfait** est le carré d'un nombre entier, comme 36 = 6².
+      Il faut connaître les carrés parfaits de 1 à 144 : 1, 4, 9, 16, 25, 36, 49, 64, 81, 100,
+      121, 144. Ce sont les carrés des entiers de 1 à 12.
+      Si un nombre est dans cette liste, sa racine carrée est un entier.
+
+  - type: texte
+    titre: "Quand le nombre n'est pas un carré parfait"
+    contenu: >-
+      Si **a** n'est pas un carré parfait, √a n'est pas un nombre entier.
+      On peut encadrer √a entre deux entiers consécutifs, en cherchant les carrés parfaits
+      voisins de a. Exemple : 25 < 30 < 36, donc 5 < √30 < 6.
+      Une racine carrée d'un nombre négatif n'existe pas.
+
+  - type: texte
+    titre: "Utiliser une racine carrée dans un problème"
+    contenu: >-
+      La racine carrée sert souvent à retrouver une longueur à partir d'une aire, ou à finir
+      un calcul avec le théorème de Pythagore. On calcule d'abord le carré de la longueur
+      cherchée, puis on prend la racine carrée du résultat à la toute fin.
+      On peut toujours vérifier en élevant le résultat au carré.
+
+  - type: exemple
+    enonce: "Un carré a une aire de 169 cm². Quelle est la longueur de son côté ?"
+    etapes:
+      - "L'aire d'un carré se calcule ainsi : aire = côté × côté."
+      - "On cherche donc un nombre positif qui, multiplié par lui-même, donne 169."
+      - "13 × 13 = 169, et 13 est positif, donc le côté mesure √169 = 13 cm."
+
+  - type: exercice
+    enonce: "Calcule √36."
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    indices:
+      - "Cherche un nombre positif qui, multiplié par lui-même, donne 36."
+      - "Récite la liste des carrés parfaits : est-ce que 36 y est ?"
+    explication: "6 × 6 = 36 et 6 est positif, donc √36 = 6."
+
+  - type: exercice
+    enonce: "Un carré a une aire de 100 cm². Quelle est la longueur de son côté, en cm ?"
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "L'aire d'un carré, c'est côté × côté. Quel nombre positif, multiplié par lui-même, donne 100 ?"
+      - "100 fait partie de la liste des carrés parfaits que tu connais. Lequel des entiers de 1 à 12 est concerné ?"
+    explication: "Aire = côté × côté, donc côté = √100 = 10 cm, car 10 × 10 = 100."
+
+  - type: exercice
+    enonce: "Lequel de ces quatre nombres est un carré parfait ?"
+    forme: qcm
+    choix: ["48", "64", "90", "110"]
+    reponse: 1
+    indices:
+      - "Un carré parfait est le carré d'un entier. Connais-tu les carrés des entiers de 1 à 12 ?"
+      - "8 × 8 fait combien ? Regarde si ce résultat est parmi les quatre choix."
+    explication: "64 = 8 × 8 est un carré parfait. 48, 90 et 110 ne sont le carré d'aucun entier."
+
+  - type: exercice
+    enonce: "√70 est compris entre deux nombres entiers consécutifs. Quel est le plus grand des deux ?"
+    forme: nombre
+    reponse: 9
+    tolerance: 0.01
+    indices:
+      - "70 est-il un carré parfait ? Cherche les carrés parfaits juste avant et juste après 70."
+      - "8 × 8 = 64, c'est plus petit que 70. Essaie l'entier suivant pour trouver le carré parfait juste au-dessus."
+    explication: "64 < 70 < 81, donc 8 < √70 < 9. Le plus grand des deux entiers consécutifs est 9."
+
+  - type: exercice
+    enonce: "Un rectangle mesure 6 m de large et 8 m de long. Calcule la longueur de sa diagonale, en m."
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: m
+    indices:
+      - "La diagonale partage le rectangle en deux triangles rectangles. Quel théorème relie les côtés d'un triangle rectangle ?"
+      - "Le théorème de Pythagore donne le carré de la diagonale : calcule d'abord 6² + 8², puis prends la racine carrée à la fin."
+      - "6² = 36 et 8² = 64. Additionne ces deux nombres avant de chercher la racine carrée du résultat."
+    explication: "D'après Pythagore, diagonale² = 6² + 8² = 36 + 64 = 100, donc diagonale = √100 = 10 m, car 10 × 10 = 100."
+
+  - type: question_ouverte
+    question: "Léo affirme que √(16 + 9) est égal à √16 + √9. A-t-il raison ? Explique avec un calcul."
+    indices:
+      - "Calcule d'abord chaque côté de l'égalité séparément."
+      - "À gauche, additionne d'abord ce qu'il y a sous la racine. À droite, calcule chaque racine avant d'additionner."
+    criteres:
+      - "L'élève calcule √(16+9) = √25 = 5 et √16 + √9 = 4 + 3 = 7."
+      - "L'élève conclut que Léo a tort car 5 est différent de 7 : la racine carrée d'une somme n'est pas la somme des racines carrées."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est une racine carrée,
+      et comment tu fais quand le nombre n'est pas un carré parfait.

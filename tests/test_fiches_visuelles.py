@@ -146,7 +146,8 @@ def test_les_cinq_fiches_publiees_sont_valides(notions, biblio, notion_id):
 
 def test_charger_fiches_visuelles_les_cinq(notions):
     fiches = charger_fiches_visuelles(BIBLIOTHEQUES, [BIBLIO_ID], notions, GABARITS)
-    assert set(fiches) == set(NOTIONS_ATTENDUES)
+    assert set(NOTIONS_ATTENDUES) <= set(fiches)
+    assert len(fiches) == 23
 
 
 # --- cas invalides refuses ----------------------------------------------------------

@@ -1,0 +1,154 @@
+notion: histogrammes
+titre: "Lire, interpréter et construire un histogramme"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Ranger des valeurs dans des classes de même amplitude, sans se tromper sur les bornes."
+      - "Lire un histogramme et calculer un effectif total, un effectif « moins de » ou « au moins », une fréquence."
+      - "Construire un histogramme : rectangles accolés, de même largeur, de hauteur égale à l'effectif."
+
+  - type: texte
+    titre: "Les classes"
+    contenu: |-
+      Quand il y a beaucoup de valeurs différentes, on les **regroupe en classes**.
+
+      - Une classe est un intervalle. Exemple : **[150 ; 160[**.
+      - Elle contient les valeurs t telles que 150 ≤ t < 160.
+      - La borne 150 est **dedans**. La borne 160 est **dehors** : elle va dans [160 ; 170[.
+      - L'**amplitude** d'une classe = borne haute − borne basse. Ici : 160 − 150 = 10.
+      - Dans cette leçon, toutes les classes ont la même amplitude.
+
+  - type: texte
+    titre: "Effectif, effectif total, fréquence"
+    contenu: |-
+      - L'**effectif** d'une classe est le nombre de valeurs qu'elle contient.
+      - L'**effectif total** est la somme de tous les effectifs.
+      - La **fréquence** d'une classe = effectif de la classe ÷ effectif total.
+      - On peut l'écrire en pourcentage.
+
+      | Mot | Ce que c'est |
+      |---|---|
+      | Effectif | Un nombre de valeurs |
+      | Fréquence | Une part du total (÷ effectif total) |
+
+  - type: texte
+    titre: "Lire et construire un histogramme"
+    contenu: |-
+      Un **histogramme** a un rectangle par classe.
+
+      - Les rectangles sont **collés** (sans espace) et ont **la même largeur**.
+      - Comme les classes ont la même amplitude, la **hauteur** est proportionnelle à l'effectif.
+      - Pour lire : on lit la hauteur de chaque rectangle.
+      - Pour « moins de » ou « au moins » : on additionne les classes concernées, sans en oublier.
+      - Attention : on ne connaît pas les valeurs exactes, seulement combien il y en a par classe.
+      - Un diagramme en bâtons a des bâtons séparés, pour des valeurs isolées. Ce n'est pas un histogramme.
+
+      Pour construire : on range chaque valeur dans sa classe, on compte, puis on trace. On ajoute un titre et le nom des axes.
+
+  - type: exemple
+    enonce: >-
+      Temps de trajet (en minutes) de 8 personnes : 4 ; 12 ; 7 ; 18 ; 3 ; 14 ; 9 ; 11.
+      Range-les dans les classes [0 ; 5[, [5 ; 10[, [10 ; 15[ et [15 ; 20[, puis donne la fréquence de la classe [10 ; 15[.
+    etapes:
+      - "[0 ; 5[ : les valeurs 4 et 3. Effectif 2."
+      - "[5 ; 10[ : les valeurs 7 et 9. Effectif 2."
+      - "[10 ; 15[ : les valeurs 12, 14 et 11. Effectif 3."
+      - "[15 ; 20[ : la valeur 18. Effectif 1."
+      - "Effectif total : 2 + 2 + 3 + 1 = 8. On vérifie : il y a bien 8 personnes."
+      - "Fréquence de [10 ; 15[ : 3 ÷ 8 = 0,375, soit 37,5 %."
+      - "Pour tracer : quatre rectangles collés, de même largeur, de hauteurs 2, 2, 3 et 1."
+
+  - type: exercice
+    enonce: "La classe [20 ; 30[ est-elle celle qui contient la valeur 30 ?"
+    forme: qcm
+    choix:
+      - "Oui, 30 est dans [20 ; 30["
+      - "Non, 30 est dans [30 ; 40["
+      - "30 n'est dans aucune classe"
+    reponse: 1
+    indices:
+      - "Regarde le crochet à droite de la classe [20 ; 30[. Est-il tourné vers l'intérieur ou vers l'extérieur ?"
+      - "La borne haute d'une classe est exclue : la valeur va dans la classe suivante."
+    explication: "La classe [20 ; 30[ contient les valeurs de 20 (inclus) à 30 (exclu). La valeur 30 va dans la classe suivante, [30 ; 40[."
+
+  - type: exercice
+    enonce: >-
+      Un histogramme a quatre classes de même amplitude : [0 ; 10[, [10 ; 20[, [20 ; 30[ et [30 ; 40[.
+      Les hauteurs des rectangles sont 4, 7, 6 et 3. Quel est l'effectif total ?
+    forme: nombre
+    reponse: 20
+    tolerance: 0.01
+    indices:
+      - "La hauteur d'un rectangle donne l'effectif de sa classe."
+      - "L'effectif total est la somme des effectifs de toutes les classes."
+    explication: "4 + 7 + 6 + 3 = 20. L'effectif total est 20."
+
+  - type: exercice
+    enonce: >-
+      Même histogramme (classes [0 ; 10[, [10 ; 20[, [20 ; 30[, [30 ; 40[ ; hauteurs 4, 7, 6 et 3).
+      Combien de valeurs sont strictement inférieures à 30 ?
+    forme: nombre
+    reponse: 17
+    tolerance: 0.01
+    indices:
+      - "Strictement inférieur à 30 : quelles classes sont entièrement en dessous de 30 ?"
+      - "Ce sont les trois premières classes. Additionne leurs effectifs, sans oublier la première."
+    explication: "Les classes [0 ; 10[, [10 ; 20[ et [20 ; 30[ sont en dessous de 30. 4 + 7 + 6 = 17 valeurs."
+
+  - type: exercice
+    enonce: >-
+      Même histogramme (effectif total 20 ; la classe [10 ; 20[ a pour hauteur 7).
+      Quelle est la fréquence de la classe [10 ; 20[, en pourcentage ?
+    forme: nombre
+    reponse: 35
+    tolerance: 0.01
+    unite: "%"
+    indices:
+      - "Fréquence = effectif de la classe ÷ effectif total."
+      - "Divise la hauteur du rectangle par l'effectif total, puis passe en pourcentage (× 100)."
+      - "Un résultat comme 0,4 se traduit par 40 %."
+    explication: "7 ÷ 20 = 0,35, soit 35 %."
+
+  - type: exercice
+    enonce: >-
+      Voici les tailles (en cm) de 12 personnes : 152 ; 158 ; 160 ; 163 ; 149 ; 170 ; 175 ; 160 ; 166 ; 180 ; 155 ; 160.
+      On les range dans les classes [140 ; 150[, [150 ; 160[, [160 ; 170[, [170 ; 180[ et [180 ; 190[.
+      Combien de personnes mesurent au moins 160 cm ?
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    indices:
+      - "« Au moins 160 » : on garde les classes qui commencent à 160 ou plus tard."
+      - "Attention aux valeurs égales à une borne : 170 va dans [170 ; 180[, et 180 dans [180 ; 190[."
+      - "Compte les valeurs de chacune des trois dernières classes, puis additionne."
+    explication: "[160 ; 170[ : 160, 163, 160, 166, 160, soit 5. [170 ; 180[ : 170 et 175, soit 2. [180 ; 190[ : 180, soit 1. Total : 5 + 2 + 1 = 8 personnes."
+
+  - type: question_ouverte
+    question: >-
+      Sur un histogramme, un rectangle a pour hauteur 6 et pour classe [10 ; 20[. Léa dit : « Il y a
+      donc 6 personnes qui ont exactement 15 ans. » Que réponds-tu ?
+    indices:
+      - "Que représente la hauteur d'un rectangle ?"
+      - "Une classe [10 ; 20[ contient beaucoup de valeurs possibles. Connaît-on chaque valeur ?"
+    criteres:
+      - "L'élève dit que la hauteur donne l'effectif de la classe : 6 valeurs comprises dans [10 ; 20[."
+      - "L'élève explique qu'on ne connaît pas les valeurs exactes dans une classe, donc on ne peut pas dire « exactement 15 »."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : comment range-t-on une valeur dans une classe
+      (attention à la borne), et comment lit-on un effectif dans un histogramme ?
