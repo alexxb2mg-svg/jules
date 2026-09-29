@@ -1,0 +1,150 @@
+notion: calcul-nombres-rationnels
+titre: "Calculer avec les nombres rationnels"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer avec des nombres relatifs et des fractions en respectant les priorités."
+      - "Donner un résultat sous forme de fraction irréductible et résoudre un problème."
+      - "Contrôler un résultat avec un ordre de grandeur."
+
+  - type: texte
+    titre: "Priorités et signes"
+    contenu: |
+      Les **nombres rationnels** sont les nombres qu'on peut écrire sous forme de fraction : entiers relatifs, décimaux, fractions.
+
+      **Priorités** : d'abord les parenthèses, puis × et ÷, puis + et −, de gauche à droite.
+      Exemple : 5 + 2 × 3 = 5 + 6 = 11.
+
+      **Règle des signes** pour × et ÷ :
+      - même signe : résultat **positif**, (−2) × (−3) = 6 ;
+      - signes contraires : résultat **négatif**, (−2) × 3 = −6.
+
+  - type: texte
+    titre: "Calculer avec des fractions"
+    contenu: |
+      | Opération | Méthode |
+      |---|---|
+      | Addition, soustraction | même dénominateur, puis on calcule avec les numérateurs |
+      | Multiplication | numérateur × numérateur, dénominateur × dénominateur |
+      | Division | on multiplie par l'**inverse** de la deuxième fraction |
+
+      - 1/2 + 1/3 = 3/6 + 2/6 = 5/6. Le dénominateur ne change pas.
+      - 3/4 ÷ 9/8 = 3/4 × 8/9 = 2/3.
+      - Une fraction **d'une quantité** : on multiplie. Les 2/3 de 30, c'est 2/3 × 30 = 20.
+      - À la fin, on simplifie pour avoir une fraction **irréductible**.
+
+  - type: texte
+    titre: "Problèmes et ordre de grandeur"
+    contenu: |
+      **Problème** :
+      - lire l'énoncé ;
+      - chercher une fraction de la bonne quantité (le total, ou le reste) ;
+      - calculer, puis écrire une phrase de réponse.
+
+      **Ordre de grandeur** : on remplace les nombres par des valeurs simples proches et on calcule de tête.
+      Exemple : 19,8 × 0,52 est proche de 20 × 0,5 = 10.
+      Si le résultat est très loin de cet ordre de grandeur, il y a une erreur.
+
+  - type: exemple
+    enonce: >-
+      Calcule B = 3/5 − 1/2 × 4/5 et donne le résultat sous forme de fraction irréductible.
+    etapes:
+      - "La multiplication est prioritaire sur la soustraction : on la calcule d'abord."
+      - "1/2 × 4/5 = 4/10, qui se simplifie en 2/5."
+      - "Puis B = 3/5 − 2/5. Les deux fractions ont le même dénominateur."
+      - "B = 1/5. Cette fraction est déjà irréductible."
+
+  - type: exercice
+    enonce: "Calcule (−6) × (−2) − 5."
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    indices:
+      - "Quelle opération est prioritaire : la multiplication ou la soustraction ?"
+      - "Quel est le signe d'un produit de deux nombres négatifs ?"
+      - "Le produit vaut 12. Il reste à calculer ce nombre moins 5."
+    explication: "(−6) × (−2) = 12, car deux nombres négatifs donnent un produit positif. Puis 12 − 5 = 7."
+
+  - type: exercice
+    enonce: >-
+      Calcule 3/4 − 1/6. Donne le résultat sous forme de fraction irréductible, écrite a/b.
+    forme: reponse_courte
+    reponse: "7/12"
+    reponses_acceptees: ["7 / 12", "7÷12"]
+    indices:
+      - "Les deux fractions ont-elles le même dénominateur ?"
+      - "Cherche un multiple commun à 4 et à 6. Écris chaque fraction avec ce dénominateur."
+      - "Le plus petit dénominateur commun est 12 : 3/4 = 9/12. Écris de même 1/6, puis soustrais les numérateurs."
+    explication: "3/4 = 9/12 et 1/6 = 2/12. Donc 3/4 − 1/6 = 9/12 − 2/12 = 7/12. Cette fraction est irréductible."
+
+  - type: exercice
+    enonce: "Sans calculatrice, choisis l'ordre de grandeur du produit 3,9 × 19,6."
+    forme: qcm
+    choix:
+      - "8"
+      - "80"
+      - "800"
+      - "8 000"
+    reponse: 1
+    indices:
+      - "Par quels nombres simples peux-tu remplacer 3,9 et 19,6 ?"
+      - "3,9 est proche de 4, et 19,6 est proche de 20."
+    explication: "3,9 × 19,6 est proche de 4 × 20 = 80. L'ordre de grandeur est 80. (Le résultat exact est 76,44.)"
+
+  - type: exercice
+    enonce: >-
+      Calcule 5/6 ÷ 10/9. Donne le résultat sous forme de fraction irréductible, écrite a/b.
+    forme: reponse_courte
+    reponse: "3/4"
+    reponses_acceptees: ["3 / 4"]
+    indices:
+      - "Diviser par une fraction, à quoi cela revient-il ?"
+      - "Remplace la division par une multiplication par l'inverse de 10/9. Multiplie, puis simplifie."
+      - "5/6 ÷ 10/9 = 5/6 × 9/10. Calcule le produit, puis cherche un diviseur commun."
+    explication: "5/6 ÷ 10/9 = 5/6 × 9/10 = 45/60. On divise en haut et en bas par 15 : 45/60 = 3/4."
+
+  - type: exercice
+    enonce: >-
+      Un ruban mesure 90 m. On en utilise 1/3 pour une affiche. Puis on utilise 1/4 de ce qui reste pour
+      une banderole. Combien de mètres de ruban reste-t-il à la fin ?
+    forme: nombre
+    reponse: 45
+    tolerance: 0.01
+    unite: m
+    indices:
+      - "Calcule d'abord la longueur utilisée pour l'affiche, puis ce qui reste."
+      - "La banderole prend 1/4 de ce qui reste, pas 1/4 des 90 m."
+      - "Affiche : 1/3 de 90. Reste. Banderole : 1/4 de ce reste. Puis soustrais encore."
+    explication: "Affiche : 1/3 × 90 = 30 m, il reste 60 m. Banderole : 1/4 × 60 = 15 m. Il reste 60 − 15 = 45 m."
+
+  - type: question_ouverte
+    question: >-
+      Tom calcule 2/3 + 1/4 et trouve 3/7. Sans refaire tout le calcul, explique pourquoi son résultat
+      ne peut pas être juste. Donne ensuite le bon résultat.
+    indices:
+      - "Compare 2/3 avec 3/7. Une somme peut-elle être plus petite que l'un des nombres qu'on additionne ?"
+      - "Pense à ce qu'il a fait des numérateurs et des dénominateurs."
+      - "Pour additionner, mets 2/3 et 1/4 avec un même dénominateur."
+    criteres:
+      - "L'élève remarque que 3/7 est plus petit que 2/3 (environ 0,43 contre 0,67) alors qu'on ajoute un nombre positif : c'est impossible."
+      - "L'élève dit que Tom a additionné les numérateurs et les dénominateurs au lieu d'utiliser un dénominateur commun."
+      - "L'élève trouve le bon résultat : 2/3 + 1/4 = 8/12 + 3/12 = 11/12."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, écris en trois ou quatre phrases : la règle pour diviser par une fraction, la
+      règle des signes pour un produit, et comment tu contrôles un résultat avec un ordre de grandeur.

@@ -143,12 +143,16 @@ def test_sixieme_figure_ajoutee_par_extension_sans_toucher_l_accueil(projet, bru
 
 
 def test_sans_extension_de_figures_aucune_fiche_a_graphe_acceptee(projet, brut_config):
-    """Preuve que le coeur ne connait plus les gabarits par leur nom : sans extension, les 5 fiches
-    (qui ont toutes une figure) sont ecartees, et /gabarits.js est vide."""
+    """Preuve que le coeur ne connait plus les gabarits par leur nom : sans extension, les fiches a
+    graphe (les 5 de mathematiques) sont ecartees, celles sans figure (histoire, geographie) restent,
+    et /gabarits.js est vide."""
     tuteur, client = client_pour(projet, brut_config, [])
     try:
         assert client.get("/gabarits.js").text == ""
-        assert tuteur.module("fiches_visuelles").fiches == {}
+        restantes = tuteur.module("fiches_visuelles").fiches
+        assert restantes, "les fiches sans graphe doivent rester servies"
+        assert all(b.type != "graphe" for f in restantes.values() for b in f.blocs)
+        assert {f.matiere for f in restantes.values()}.isdisjoint({"mathematiques"})
         assert client.get("/api/eleve/outils/catalogue").json() == []
     finally:
         tuteur.fermer()

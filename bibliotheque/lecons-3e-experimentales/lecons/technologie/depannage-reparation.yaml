@@ -1,0 +1,156 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: depannage-reparation
+titre: Dépanner et réparer un objet technique
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  licence: etalab-2.0
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027
+    — épreuve de sciences — BO spécial n° 4 du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - 'Suivre une démarche de dépannage : hypothèses, tests, réparation, vérification.'
+  - Définir fiabilité, durabilité et indice de réparabilité.
+  - Choisir un moyen de fabrication pour une pièce de rechange et citer des règles de sécurité de l'atelier.
+- type: texte
+  titre: La démarche de dépannage
+  contenu: |-
+    Quand un objet ne fonctionne plus correctement, on suit **six étapes** :
+    1. constater et décrire le dysfonctionnement ;
+    2. formuler des **hypothèses** sur les causes ;
+    3. **tester** les hypothèses une par une ;
+    4. identifier l'élément défectueux ;
+    5. réparer ou remplacer ;
+    6. **vérifier** que l'objet fonctionne à nouveau.
+
+    On teste d'abord les hypothèses les plus simples et les plus probables (alimentation, câble, pile). Chaque test permet de garder ou d'écarter une hypothèse.
+- type: texte
+  titre: Dépannage, réparation, fiabilité
+  contenu: |-
+    - **Dépannage** : remettre l'objet en état de marche rapidement (changer une pile).
+    - **Réparation** : remplacer ou remettre en état un élément défectueux, parfois avec une pièce fabriquée.
+    - **Fiabilité** : aptitude à fonctionner sans panne pendant une durée donnée. Un taux de panne en % = objets en panne ÷ objets vendus × 100.
+    - **Durabilité** : capacité à durer longtemps, en pouvant être entretenu et réparé.
+    - **Indice de réparabilité** : note sur 10 affichée en France sur certains appareils. Plus elle est haute, plus l'appareil se répare facilement.
+- type: texte
+  titre: Fabriquer une pièce et rester en sécurité
+  contenu: |-
+    Pour réparer, on peut fabriquer une pièce avec les moyens du collège :
+    - **impression 3D** : ajout de matière couche par couche ;
+    - **découpe laser** : découpe de plaques ;
+    - **centre d'usinage** : enlèvement de matière avec un outil.
+
+    Règles de sécurité à l'atelier :
+    - débrancher un appareil avant de l'ouvrir ;
+    - porter les protections demandées ;
+    - ne jamais laisser une machine sans surveillance ;
+    - respecter les consignes de chaque machine.
+- type: exemple
+  enonce: Une télécommande ne fait plus réagir la télévision. Propose trois hypothèses et un test pour
+    la première.
+  etapes:
+  - 'Hypothèses : piles usées, émetteur infrarouge défectueux, bouton abîmé.'
+  - 'On commence par la plus simple : les piles.'
+  - 'Test : remplacer les piles par des piles neuves et réessayer.'
+  - Si cela fonctionne, la cause était les piles. Sinon, on passe à l'hypothèse suivante.
+- type: exercice
+  enonce: Quelle est la première étape de la démarche de dépannage ?
+  forme: qcm
+  choix:
+  - Constater et décrire le dysfonctionnement
+  - Remplacer une pièce
+  - Vérifier que l'objet fonctionne
+  reponse: 0
+  indices:
+  - Peut-on réparer avant de savoir ce qui ne marche pas ?
+  - Tout commence par l'observation du problème.
+  explication: On commence par constater et décrire le dysfonctionnement. Ensuite viennent les hypothèses,
+    les tests, la réparation, puis la vérification.
+- type: exercice
+  enonce: Comment appelle-t-on la capacité d'un objet à durer longtemps, en pouvant être entretenu et
+    réparé ?
+  forme: reponse_courte
+  reponse: durabilité
+  reponses_acceptees:
+  - durabilité
+  - la durabilité
+  - durabilite
+  - la durabilite
+  indices:
+  - Ce mot est proche du verbe « durer ». C'est une qualité de l'objet, pas une note.
+  - Ne confonds pas avec la fiabilité, qui parle de fonctionner sans panne pendant une durée donnée.
+  - Cherche un nom formé sur le verbe « durer » et qui finit par « -ité ».
+  explication: C'est la durabilité. La fiabilité, elle, est l'aptitude à fonctionner sans panne pendant
+    une durée donnée.
+- type: exercice
+  enonce: 'Un ventilateur USB ne tourne plus. Observations : le câble USB fonctionne sur un autre appareil
+    ; le voyant s''allume ; on entend un léger bourdonnement, mais les pales restent immobiles. Quelle
+    hypothèse est écartée par les observations ?'
+  forme: qcm
+  choix:
+  - Le câble USB est défectueux
+  - Le moteur est défectueux
+  - Les pales sont bloquées
+  reponse: 0
+  indices:
+  - Pour chaque hypothèse, cherche une observation qui la contredit.
+  - Le câble a été essayé sur un autre appareil. Que montre ce test ?
+  explication: 'Le câble fonctionne sur un autre appareil : l''hypothèse sur le câble est écartée. Le
+    bourdonnement sans rotation fait penser à un moteur défectueux ou à des pales bloquées, à tester ensuite.'
+- type: exercice
+  enonce: Laquelle de ces règles faut-il respecter dans l'atelier de fabrication du collège ?
+  forme: qcm
+  choix:
+  - Laisser la découpe laser fonctionner seule pendant la récréation
+  - Débrancher un appareil du secteur avant de l'ouvrir
+  - Ouvrir le capot de la découpe laser pendant la découpe pour mieux voir
+  reponse: 1
+  indices:
+  - Pour chaque règle, imagine ce qui pourrait arriver si on la respectait mal.
+  - Une règle de sécurité protège des chocs électriques, des projections, du feu et des brûlures.
+  explication: On débranche un appareil avant de l'ouvrir (risque électrique). On ne laisse jamais une
+    découpe laser sans surveillance, et on n'ouvre pas son capot pendant la découpe.
+- type: exercice
+  enonce: Un fabricant a vendu 200 bouilloires. Pendant les 2 ans de garantie, 12 sont tombées en panne.
+    Quel pourcentage des bouilloires vendues est tombé en panne ?
+  forme: nombre
+  reponse: 6
+  tolerance: 0.01
+  unite: '%'
+  indices:
+  - Quelle fraction des bouilloires est tombée en panne ?
+  - Pourcentage = nombre en panne ÷ nombre vendu × 100.
+  - Écris la fraction 12/200, puis multiplie-la par 100.
+  explication: 12 ÷ 200 = 0,06 ; 0,06 × 100 = 6 %.
+- type: question_ouverte
+  question: 'Une lampe de chevet branchée sur une prise ne s''allume plus. Rédige un protocole pour trouver
+    l''origine de la panne : donne au moins trois hypothèses et, pour chacune, le test qui permet de la
+    vérifier.'
+  indices:
+  - Qu'est-ce qui doit fonctionner pour que la lampe s'allume ?
+  - Suis le chemin de l'énergie, de la prise jusqu'à l'ampoule, et imagine une panne possible à chaque
+    étape.
+  - 'Première hypothèse, la plus simple : la prise ne fournit pas de courant. Quel test fais-tu ?'
+  criteres:
+  - L'élève propose au moins trois hypothèses plausibles (prise sans courant, ampoule grillée, câble ou
+    interrupteur défectueux).
+  - L'élève associe à chaque hypothèse un test concret, réalisé une hypothèse à la fois, de la plus simple
+    à la plus complexe.
+  - L'élève respecte la sécurité (lampe débranchée avant tout démontage) et prévoit de vérifier le fonctionnement
+    après la réparation.
+- type: synthese
+  consigne: 'Avec tes mots : écris les étapes d''un dépannage, la différence entre fiabilité et durabilité,
+    et deux règles de sécurité de l''atelier.'

@@ -1,0 +1,139 @@
+notion: theme-7-liberte-propagande
+titre: Les arts entre liberté et propagande (1910-1945)
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Expliquer ce qu'est l'art abstrait et citer un peintre abstrait.
+  - Distinguer une œuvre de propagande d'une œuvre de dénonciation.
+  - Nommer une femme artiste et expliquer l'idée de « Fée électricité ».
+- type: texte
+  titre: La naissance de l'abstraction
+  contenu: |-
+    Vers 1910-1915, des peintres cessent de représenter des objets reconnaissables.
+    Ils travaillent avec les formes, les lignes et les couleurs pour elles-mêmes : c'est l'**art abstrait**.
+    - Vassily Kandinsky : l'un des pionniers.
+    - Kasimir Malevitch : Carré noir sur fond blanc (1915).
+    - Piet Mondrian : lignes noires et rectangles de couleurs primaires (années 1920).
+- type: texte
+  titre: 'Art et pouvoir : la propagande'
+  contenu: |-
+    Les régimes totalitaires utilisent l'art pour la **propagande**.
+    - En URSS, le réalisme socialiste impose des images héroïques d'ouvriers et de paysans : L'Ouvrier et la Kolkhozienne de Vera Moukhina (1937).
+    - Dans l'Allemagne nazie, le pouvoir utilise le cinéma et les grands rassemblements filmés.
+    - Il persécute l'art moderne : en 1937, à Munich, il organise une exposition sur l'« art dégénéré ».
+- type: texte
+  titre: Contester ou dénoncer
+  contenu: |-
+    D'autres artistes dénoncent la guerre et les dictatures.
+    - Otto Dix : triptyque La Guerre (1929-1932), les horreurs des tranchées.
+    - Pablo Picasso : Guernica (1937), après le bombardement de cette ville basque pendant la guerre d'Espagne.
+    - Charlie Chaplin : le film Le Dictateur (1940), qui ridiculise Hitler.
+    Question à toujours poser : qui a commandé l'œuvre, et pour dire quoi ?
+- type: texte
+  titre: Femmes artistes et « Fée électricité »
+  contenu: |-
+    Des femmes s'imposent comme créatrices :
+    - Sonia Delaunay (peinture, tissus, mode) ;
+    - Frida Kahlo au Mexique (autoportraits) ;
+    - Vera Moukhina, sculptrice soviétique.
+    L'électricité transforme la ville et inspire les artistes. Pour l'Exposition internationale de Paris en 1937, Raoul Dufy peint La Fée Électricité, qui raconte l'histoire de l'électricité et de ses inventeurs.
+- type: exemple
+  enonce: Explique la différence entre une œuvre de propagande et une œuvre de dénonciation, avec Otto Dix, La Guerre (1929-1932).
+  etapes:
+  - Dix peint librement les horreurs des tranchées. Il ne travaille pas pour un pouvoir.
+  - 'Son but : montrer la violence de la guerre pour la condamner. C''est une dénonciation.'
+  - 'Une œuvre de propagande, au contraire, sert un pouvoir : L''Ouvrier et la Kolkhozienne glorifie l''URSS.'
+- type: exercice
+  enonce: Comment appelle-t-on un art qui ne représente aucun objet reconnaissable, mais seulement des formes, des lignes et des couleurs, comme celui de Kandinsky ou de Malevitch ?
+  forme: reponse_courte
+  reponse: art abstrait
+  reponses_acceptees:
+  - art abstrait
+  - l'art abstrait
+  - abstrait
+  - abstraction
+  - l'abstraction
+  - peinture abstraite
+  - art non figuratif
+  indices:
+  - C'est le contraire d'un art figuratif, qui représente des personnages ou des objets.
+  - 'Le mot vient du latin et veut dire « détaché » : l''art se détache de la réalité visible.'
+  - Le mot commence par « abs- ».
+  explication: 'L''art abstrait : il ne représente pas d''objets reconnaissables. Kandinsky, Malevitch et Mondrian en sont des pionniers.'
+- type: exercice
+  enonce: Quel événement Pablo Picasso dénonce-t-il dans Guernica, peint en 1937 ?
+  forme: qcm
+  choix:
+  - La révolution russe
+  - Le bombardement d'une ville basque pendant la guerre d'Espagne
+  - La bataille de Verdun
+  - La bombe atomique sur Hiroshima
+  reponse: 1
+  indices:
+  - Guernica est le nom d'une ville. Dans quel pays se trouve-t-elle ?
+  - 'Vérifie les dates : quels événements proposés ont eu lieu avant 1937 ? Lequel concerne l''Espagne, le pays de Picasso ?'
+  explication: Guernica dénonce le bombardement de la ville basque de Guernica, en avril 1937, pendant la guerre d'Espagne.
+- type: exercice
+  enonce: Quelle artiste mexicaine, célèbre pour ses autoportraits, s'impose comme créatrice dans la première moitié du XXe siècle ?
+  forme: reponse_courte
+  reponse: Frida Kahlo
+  reponses_acceptees:
+  - Frida Kahlo
+  - Kahlo
+  - frida kahlo
+  indices:
+  - Elle a souvent peint son propre visage.
+  - Cherche dans le cours la femme artiste liée au Mexique.
+  - Son prénom commence par « Fri- » et son nom de famille par « Kah- ».
+  explication: Frida Kahlo, artiste mexicaine, est connue pour ses autoportraits.
+- type: exercice
+  enonce: Pour l'Exposition internationale de Paris en 1937, quel peintre réalise l'immense décor intitulé La Fée Électricité ?
+  forme: qcm
+  choix:
+  - Vassily Kandinsky
+  - Vera Moukhina
+  - Raoul Dufy
+  - Otto Dix
+  reponse: 2
+  indices:
+  - Cette œuvre raconte l'histoire de l'électricité et de ses inventeurs, dans un style coloré et joyeux.
+  - Élimine les artistes connus pour la guerre, pour l'abstraction et pour la sculpture.
+  explication: Raoul Dufy peint La Fée Électricité en 1937. Otto Dix peint la guerre, Kandinsky est un pionnier de l'abstraction et Vera Moukhina est sculptrice.
+- type: exercice
+  enonce: En 1937, la statue géante L'Ouvrier et la Kolkhozienne de Vera Moukhina montre un ouvrier et une paysanne brandissant un marteau et une faucille, symboles de l'URSS. Quelle est sa fonction principale ?
+  forme: qcm
+  choix:
+  - Dénoncer la violence d'un bombardement
+  - Ridiculiser un dictateur par la satire
+  - Célébrer l'électricité et le progrès
+  - 'Glorifier le régime soviétique : c''est de la propagande'
+  reponse: 3
+  indices:
+  - 'Demande-toi qui veut cette œuvre : un artiste libre ou un État ?'
+  - Le marteau et la faucille sont les symboles de l'URSS. Que veut montrer un État avec eux ?
+  - Les images héroïques d'ouvriers et de paysans relèvent du réalisme socialiste.
+  explication: 'La statue montre de façon héroïque des travailleurs sous les symboles de l''URSS : elle glorifie le régime, c''est de la propagande. Guernica dénonce, Le Dictateur ridiculise, La Fée Électricité célèbre le progrès.'
+- type: question_ouverte
+  question: Compare Guernica de Picasso (1937) et L'Ouvrier et la Kolkhozienne de Vera Moukhina (1937). Explique en quelques phrases qui parle à qui, et pour dire quoi.
+  indices:
+  - 'Guernica : demande-toi si le peintre critique ou glorifie un pouvoir.'
+  - 'La statue de Moukhina : pour quel pays et pour quel message est-elle faite ?'
+  criteres:
+  - L'élève explique que Guernica dénonce la violence d'un bombardement (guerre d'Espagne, 1937).
+  - L'élève explique que la statue de Moukhina glorifie l'URSS (propagande).
+  - L'élève distingue clairement dénonciation et propagande en une phrase de conclusion.
+- type: synthese
+  consigne: Écris, en deux ou trois phrases, ce qu'est l'art abstrait, la différence entre propagande et dénonciation, et le nom d'une femme artiste de cette période.

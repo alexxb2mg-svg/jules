@@ -1,0 +1,60 @@
+notion: transformations-societe-francaise
+titre: "Les transformations de la société française"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Immigration »"
+    url: "https://fr.vikidia.org/w/index.php?title=Immigration&oldid=2185441"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Chômage »"
+    url: "https://fr.vikidia.org/w/index.php?title=Ch%C3%B4mage&oldid=2281796"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  IVG: "Interruption volontaire de grossesse"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: trente-glorieuses, titre: "Trente Glorieuses", sous_titre: "1945-1975, croissance", principal: true}
+      - {id: femmes, titre: "Place des femmes", sous_titre: "vote 1944, IVG 1975"}
+      - {id: immigration, titre: "Immigration", sous_titre: "main-d'œuvre 1950-1960"}
+      - {id: mai-68, titre: "Mai 1968", sous_titre: "contestation sociale"}
+      - {id: chomage, titre: "Chômage", sous_titre: "après les Trente Glorieuses"}
+    liens:
+      - {de: trente-glorieuses, vers: immigration, libelle: "attire une main-d'œuvre"}
+      - {de: trente-glorieuses, vers: mai-68, libelle: "malgré la croissance, contestée"}
+      - {de: femmes, vers: mai-68, libelle: "revendications portées"}
+      - {de: trente-glorieuses, vers: chomage, libelle: "suivies par"}
+    jules: "Les **Trente Glorieuses** sont la période de référence : tout se compare à avant/après cette croissance."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Distinguer les grandes transformations : femmes, immigration, mai 1968, chômage."
+      - "Situer les repères chronologiques : 1944 (vote), 1968 (contestation), 1975 (loi Veil)."
+      - "Relier chaque transformation à une loi ou un fait précis (ex : **loi Veil** pour l'IVG)."
+      - "Comprendre que le **chômage** apparaît après la fin des Trente Glorieuses vers 1975."
+    jules: "Chaque transformation a une date-clé : apprends-les par paires (thème → date)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que la société française ne change pas pendant les Trente Glorieuses, période de forte croissance."
+    pourquoi_faux: "La croissance économique n'empêche pas des tensions sociales fortes, comme **mai 1968**."
+    bonne_idee: "Croissance économique et transformations sociales profondes vont de pair, parfois avec des conflits."
+    jules: "Ne réduis pas les Trente Glorieuses à un simple chiffre de croissance : la société bouge aussi."
+
+  - id: exemple
+    type: exemple
+    situation: "Un élève doit citer une loi qui a transformé la place des femmes dans la société française."
+    conclusion: "La **loi Veil** de 1975 autorise l'**IVG**, complétant le droit de vote obtenu en 1944."
+    jules: "Deux dates à retenir pour les femmes : 1944 (vote) et 1975 (loi Veil sur l'IVG)."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "❓", titre: "Quiz", description: "outil à venir"}
+    jules: "Fais une frise avec ces quatre transformations pour visualiser leur enchaînement dans le temps."

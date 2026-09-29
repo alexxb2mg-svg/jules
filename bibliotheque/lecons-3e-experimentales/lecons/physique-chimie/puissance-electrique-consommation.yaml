@@ -1,0 +1,135 @@
+notion: puissance-electrique-consommation
+titre: "Puissance électrique et consommation d'énergie"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer la puissance électrique d'un appareil avec P = U × I."
+      - "Calculer l'énergie électrique consommée avec E = P × t, dans la bonne unité."
+      - "Convertir entre watts et kilowatts, et entre secondes et heures, pour choisir joules ou kilowattheures."
+
+  - type: texte
+    titre: "La puissance électrique"
+    contenu: >-
+      Un appareil électrique reçoit une **puissance électrique P**. Elle dépend de la **tension U**
+      à ses bornes et de l'**intensité I** du courant qui le traverse : **P = U × I**. P se mesure en
+      **watts (W)**, U en **volts (V)**, I en **ampères (A)**. La puissance nominale, écrite sur
+      l'appareil, est sa puissance quand il fonctionne normalement.
+
+  - type: texte
+    titre: "L'énergie électrique consommée"
+    contenu: >-
+      Plus un appareil fonctionne longtemps, plus il consomme d'énergie. L'**énergie électrique E**
+      consommée dépend de la puissance et de la durée : **E = P × t**. Deux couples d'unités
+      possibles : P en watts (W) et t en secondes (s) donnent E en **joules (J)** ; P en kilowatts
+      (kW) et t en heures (h) donnent E en **kilowattheures (kWh)**.
+
+  - type: texte
+    titre: "Convertir avant de calculer"
+    contenu: >-
+      1 kW = 1 000 W, donc pour passer des W aux kW on **divise par 1 000**. 1 h = 3 600 s, et 1 min
+      = 1/60 h. Il faut convertir P et t dans les **mêmes unités d'un même système** (W et s, ou kW
+      et h) avant de multiplier, sinon le résultat est faux. La facture d'électricité compte
+      l'énergie en kWh.
+
+  - type: exemple
+    enonce: >-
+      Un chauffe-eau de 2 000 W fonctionne pendant 3 heures. Calculer l'énergie consommée, en
+      kilowattheures puis en joules.
+    etapes:
+      - "En kWh : P = 2 000 W = 2 kW et t = 3 h (déjà en heures), donc E = P × t = 2 × 3 = 6 kWh."
+      - "En joules : on garde P en watts et on convertit t en secondes : t = 3 × 3 600 = 10 800 s."
+      - "E = P × t = 2 000 × 10 800 = 21 600 000 J. On retrouve bien la même énergie : 6 kWh = 6 × 3 600 000 = 21 600 000 J."
+
+  - type: exercice
+    enonce: "Une lampe est branchée sous une tension de 220 V et traversée par un courant de 2 A. Calcule sa puissance en watts. Écris seulement le nombre."
+    forme: nombre
+    reponse: 440
+    tolerance: 0.5
+    unite: W
+    indices:
+      - "Quelle relation relie la puissance, la tension et l'intensité ?"
+      - "P = U × I : remplace U et I par les valeurs de l'énoncé, puis multiplie."
+    explication: "P = U × I = 220 × 2 = 440 W."
+
+  - type: exercice
+    enonce: "Sur la facture d'électricité, dans quelle unité est comptée l'énergie consommée par le foyer ? Réponds par un seul mot."
+    forme: reponse_courte
+    reponse: "kilowattheure"
+    reponses_acceptees:
+      - "kilowattheure"
+      - "kilowattheures"
+      - "le kilowattheure"
+      - "kwh"
+    indices:
+      - "Ce n'est pas le watt (qui mesure une puissance) : c'est l'unité d'une énergie."
+      - "Le nom de cette unité vient de « kilowatt » et « heure » réunis en un mot."
+    explication: "L'énergie facturée est comptée en kilowattheures (kWh) : c'est l'énergie que consomme un appareil de 1 kW pendant 1 heure."
+
+  - type: exercice
+    enonce: >-
+      Un radiateur de 1 000 W fonctionne pendant 2 h. Une lampe de 60 W reste allumée pendant 10 h.
+      Lequel des deux consomme le plus d'énergie sur cette durée ?
+    forme: qcm
+    choix:
+      - "Le radiateur"
+      - "La lampe"
+      - "Ils consomment exactement la même énergie"
+    reponse: 0
+    indices:
+      - "Calcule l'énergie de chaque appareil avec E = P × t, dans la même unité pour les deux."
+      - "Radiateur : E = 1 000 × 2. Lampe : E = 60 × 10. Compare les deux résultats en Wh."
+    explication: "Radiateur : E = 1 000 × 2 = 2 000 Wh = 2 kWh. Lampe : E = 60 × 10 = 600 Wh = 0,6 kWh. Le radiateur consomme plus, malgré une durée plus courte, car sa puissance est beaucoup plus grande."
+
+  - type: exercice
+    enonce: "Un four de 1 800 W fonctionne pendant 20 minutes. Calcule l'énergie consommée en kilowattheures (kWh). Écris seulement le nombre."
+    forme: nombre
+    reponse: 0.6
+    tolerance: 0.02
+    unite: kWh
+    indices:
+      - "Pour obtenir des kWh, dans quelles unités faut-il écrire la puissance et la durée ?"
+      - "Convertis la puissance en kW (divise par 1 000) et la durée en heures (20 min = 20/60 h)."
+      - "P = 1,8 kW et t = 1/3 h. Il reste à multiplier P par t."
+    explication: "P = 1 800 W = 1,8 kW et t = 20 min = 20/60 h = 1/3 h, donc E = P × t = 1,8 × 1/3 = 0,6 kWh."
+
+  - type: exercice
+    enonce: "Un appareil consomme 900 000 J en 5 minutes de fonctionnement. Calcule sa puissance en watts. Écris seulement le nombre."
+    forme: nombre
+    reponse: 3000
+    tolerance: 10
+    unite: W
+    indices:
+      - "On connaît l'énergie et la durée, pas la puissance : quelle relation contient les trois grandeurs ?"
+      - "E = P × t. Pour retrouver P, il faut diviser E par t, pas multiplier."
+      - "Convertis d'abord la durée en secondes (5 min = 5 × 60 s), puis calcule P = E / t."
+    explication: "t = 5 min = 300 s. Comme E = P × t, on a P = E / t = 900 000 / 300 = 3 000 W."
+
+  - type: question_ouverte
+    question: >-
+      Un appareil très puissant qui fonctionne peu de temps peut-il consommer moins d'énergie qu'un
+      appareil peu puissant qui fonctionne longtemps ? Explique ta réponse avec un exemple chiffré,
+      différent de ceux de la leçon.
+    indices:
+      - "Repense à l'exercice du radiateur et de la lampe : la puissance seule ne suffit pas."
+      - "Choisis deux appareils, une puissance et une durée pour chacun, puis calcule E = P × t pour les deux."
+    criteres:
+      - "L'élève choisit deux appareils avec des puissances et des durées différentes, et calcule leur énergie avec E = P × t."
+      - "L'élève montre par le calcul qu'un appareil moins puissant mais utilisé plus longtemps peut consommer plus qu'un appareil puissant utilisé brièvement."
+      - "L'élève conclut que la puissance et la durée comptent toutes les deux dans la consommation d'énergie."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre la puissance
+      électrique et l'énergie électrique consommée, et dans quelles unités tu peux exprimer
+      l'énergie selon les unités de départ.

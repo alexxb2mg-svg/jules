@@ -1,0 +1,173 @@
+notion: formes-actives-passives-impersonnelle
+titre: "Formes active, passive et phrase impersonnelle"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître une phrase active, passive ou impersonnelle."
+      - "Transformer une phrase active en phrase passive, en gardant le temps."
+      - "Dire l'effet produit par le passif et par la phrase impersonnelle."
+
+  - type: texte
+    titre: "Forme active et forme passive"
+    contenu: >-
+      **Active** : le sujet fait l'action. « Le vent a cassé la branche. »
+
+
+      **Passive** : le sujet subit l'action. « La branche a été cassée par le vent. »
+
+
+      Le passif = verbe **être** (au même temps que le verbe actif) + **participe passé**, accordé avec le
+      sujet.
+
+  - type: texte
+    titre: "Passer de l'actif au passif"
+    contenu: >-
+      1. Le **COD** de la phrase active devient le **sujet**.
+
+      2. Le verbe devient **être + participe passé** (même temps, accord avec le nouveau sujet).
+
+      3. L'ancien sujet devient **complément d'agent**, introduit par « par » (parfois « de »).
+
+
+      Seuls les verbes qui ont un COD ont un passif. Le complément d'agent peut être supprimé : « La branche a
+      été cassée. »
+
+
+      Le temps se lit sur l'auxiliaire : « sera cassée » (futur), « était cassée » (imparfait).
+
+  - type: texte
+    titre: "Ce que dit le passif"
+    contenu: >-
+      Le passif met en valeur **ce qui subit** l'action. Il permet aussi de **ne pas dire qui agit** :
+
+
+      - l'agent est inconnu : « Le magasin a été cambriolé » ;
+
+      - il est sans importance, ou on veut le cacher.
+
+
+      On l'emploie souvent dans les articles, les textes administratifs ou scientifiques.
+
+  - type: texte
+    titre: "La phrase impersonnelle"
+    contenu: >-
+      Le sujet est le pronom neutre **il**, qui ne remplace personne.
+
+
+      - Verbes toujours impersonnels : il pleut, il neige, il faut.
+
+      - Verbes personnels employés ainsi : il manque deux élèves, il y a, il est interdit de.
+
+
+      Le vrai sujet, le **sujet réel**, est placé après le verbe. Le verbe s'accorde avec « il » : on écrit
+      « il manque deux élèves », pas « ils manquent ».
+
+
+      Effets : elle évoque un phénomène naturel (il pleut) ou une nécessité (il faut). Elle présente un fait
+      sans dire qui agit, et elle met en valeur le sujet réel en fin de phrase.
+
+  - type: exemple
+    enonce: "Transforme à la voix passive : « Le jury félicitera les candidats. »"
+    etapes:
+      - "Je repère le sujet (« le jury ») et le COD (« les candidats »)."
+      - "Le COD devient le sujet : « les candidats »."
+      - "Le verbe « félicitera » est au futur : j'écris « seront félicités » (être au futur + participe passé accordé au pluriel)."
+      - "L'ancien sujet devient complément d'agent : « par le jury »."
+      - "Résultat : « Les candidats seront félicités par le jury. »"
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases est à la forme passive ?"
+    forme: qcm
+    choix:
+      - "La maison est construite par un architecte."
+      - "Un architecte construit la maison."
+      - "Nous construisons une maison."
+    reponse: 0
+    indices:
+      - "Cherche la phrase où le sujet ne fait pas l'action, mais la subit."
+      - "Repère l'auxiliaire être suivi d'un participe passé, avec un complément introduit par « par »."
+    explication: "Dans « La maison est construite par un architecte », le sujet « la maison » subit l'action. C'est la forme passive."
+
+  - type: exercice
+    enonce: "Dans « Le voleur a été arrêté par la police », quel est le complément d'agent ? Réponds par le groupe complet."
+    forme: reponse_courte
+    reponse: "la police"
+    reponses_acceptees:
+      - "par la police"
+      - "police"
+    indices:
+      - "Le complément d'agent dit qui fait vraiment l'action."
+      - "Il est introduit par un petit mot, « par » ou « de », placé après le participe."
+    explication: "Le complément d'agent est « par la police » : c'est elle qui fait l'action. Le sujet grammatical, « le voleur », subit l'action."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases est impersonnelle ?"
+    forme: qcm
+    choix:
+      - "Il manque plusieurs pages à ce livre."
+      - "Il lit plusieurs pages de ce livre."
+      - "Il est parti hier soir."
+    reponse: 0
+    indices:
+      - "Demande-toi si « il » remplace une personne précise."
+      - "Dans une phrase impersonnelle, on ne peut pas remplacer « il » par un prénom sans perdre le sens."
+    explication: "Dans « Il manque plusieurs pages », « il » ne désigne personne. Le vrai sujet, « plusieurs pages », est après le verbe. Dans les deux autres phrases, « il » désigne une personne."
+
+  - type: exercice
+    enonce: "Complète avec le participe passé de « ouvrir » : « Les fenêtres ont été ... par le vent. »"
+    forme: reponse_courte
+    reponse: "ouvertes"
+    reponses_acceptees:
+      - "ouvertes"
+    indices:
+      - "Avec quel mot le participe passé s'accorde-t-il dans une phrase passive ?"
+      - "Le sujet est « les fenêtres » : quel est son genre et son nombre ?"
+    explication: "Le participe passé s'accorde avec le sujet. « Les fenêtres » est féminin pluriel : on écrit « ouvertes »."
+
+  - type: exercice
+    enonce: "Quelle est la transformation passive correcte de « Le maire a inauguré la bibliothèque. » ?"
+    forme: qcm
+    choix:
+      - "La bibliothèque a été inaugurée par le maire."
+      - "La bibliothèque est inaugurée par le maire."
+      - "La bibliothèque a été inauguré par le maire."
+      - "Le maire a été inauguré par la bibliothèque."
+    reponse: 0
+    indices:
+      - "Le temps ne change pas : le verbe actif est au passé composé. Que devient l'auxiliaire être ?"
+      - "Le participe passé s'accorde avec le nouveau sujet, « la bibliothèque »."
+    explication: "Le COD devient sujet, le verbe reste au passé composé (« a été ») et le participe s'accorde au féminin (« inaugurée »). L'ancien sujet devient complément d'agent : « par le maire »."
+
+  - type: question_ouverte
+    question: >-
+      Explique en une ou deux phrases pourquoi un journaliste pourrait écrire « La vitrine a été brisée »
+      plutôt que « Des inconnus ont brisé la vitrine ».
+    indices:
+      - "Que sait-on, dans cette phrase, des personnes qui ont brisé la vitrine ?"
+      - "Compare ce que chaque phrase met en avant : la vitrine ou les auteurs."
+    criteres:
+      - "L'élève explique que la forme passive met en valeur la vitrine (ce qui subit l'action) plutôt que les auteurs."
+      - "L'élève relie cela au fait que l'agent est inconnu ou moins important, et que le complément d'agent peut être supprimé."
+      - "La réponse est rédigée en une ou deux phrases correctes, avec un vocabulaire précis (sujet, complément d'agent, forme passive)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment on passe d'une phrase active à une phrase
+      passive, et à quoi sert la phrase impersonnelle.

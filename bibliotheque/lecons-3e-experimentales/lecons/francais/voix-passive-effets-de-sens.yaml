@@ -1,0 +1,120 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: voix-passive-effets-de-sens
+titre: "Construire le passif et comprendre ses effets de sens"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Transformer une phrase active en phrase passive, et l'inverse."
+      - "Identifier le complément d'agent et dire ce qu'il indique."
+      - "Expliquer pourquoi on choisit le passif plutôt que l'actif dans une phrase donnée."
+
+  - type: texte
+    titre: "Voix active, voix passive"
+    contenu: >-
+      À la voix **active**, le sujet fait l'action : « Le chat mange la souris. » À la voix
+      **passive**, le sujet subit l'action : « La souris est mangée par le chat. » Le **complément
+      d'agent**, introduit par « par » (parfois « de »), indique qui fait réellement l'action.
+
+  - type: texte
+    titre: "Comment transformer une phrase active en passive"
+    contenu: >-
+      1. Le COD de la phrase active devient le sujet de la phrase passive.
+
+      2. Le verbe devient « être » (au même temps que le verbe actif) + le participe passé du
+      verbe, accordé avec le nouveau sujet.
+
+      3. L'ancien sujet devient complément d'agent, introduit par « par ».
+
+      Seul un verbe qui a un COD (verbe transitif direct) peut être mis au passif : « dormir »,
+      par exemple, n'a jamais de COD, donc il n'a pas de forme passive.
+
+  - type: texte
+    titre: "Les effets de sens du passif"
+    contenu: >-
+      Le passif met en valeur celui qui **subit** l'action, en le plaçant en position de sujet, au
+      début de la phrase. Il permet aussi de **ne pas nommer** l'auteur de l'action, quand on
+      l'ignore ou qu'on ne veut pas le préciser (on peut même supprimer le complément d'agent).
+
+  - type: exemple
+    enonce: "Transforme à la voix passive : « Les ouvriers construisent ce pont. »"
+    etapes:
+      - "Le COD de la phrase active est « ce pont » : il devient le sujet de la phrase passive."
+      - "Le verbe « construisent » (présent) devient « est construit » (être au présent + participe passé)."
+      - "L'ancien sujet « les ouvriers » devient complément d'agent, introduit par « par »."
+      - "Résultat : « Ce pont est construit par les ouvriers. »"
+
+  - type: exercice
+    enonce: "Quelle phrase est la transformation passive correcte de « Le vent a renversé l'arbre. » ?"
+    forme: qcm
+    choix:
+      - "L'arbre a été renversé par le vent."
+      - "L'arbre renverse le vent."
+      - "Le vent est renversé par l'arbre."
+    reponse: 0
+    indices:
+      - "Cherche d'abord le COD de la phrase active : que renverse le vent ?"
+      - "Le COD devient le sujet de la phrase passive, et l'ancien sujet devient complément d'agent."
+    explication: "Le COD « l'arbre » devient sujet, le verbe « a renversé » devient « a été renversé », et « le vent » (ancien sujet) devient complément d'agent : « L'arbre a été renversé par le vent. »"
+
+  - type: exercice
+    enonce: "Dans « Le gâteau a été mangé par les enfants. », quel groupe de mots est le complément d'agent ?"
+    forme: reponse_courte
+    reponse: "les enfants"
+    reponses_acceptees: ["par les enfants", "les enfants"]
+    indices:
+      - "Le complément d'agent indique qui fait réellement l'action : qui a mangé le gâteau ?"
+      - "Il est introduit par la préposition « par »."
+    explication: "Le complément d'agent est « les enfants » (ou « par les enfants ») : ce sont eux qui font l'action de manger."
+
+  - type: exercice
+    enonce: "Pourquoi peut-on préférer écrire « La ville a été détruite. » plutôt que « Des soldats ont détruit la ville. » ?"
+    forme: qcm
+    choix:
+      - "Pour mettre en valeur la ville et ne pas préciser qui a fait l'action"
+      - "Parce que la phrase active serait incorrecte"
+      - "Parce que le passif est toujours une phrase plus courte"
+    reponse: 0
+    indices:
+      - "Compare ce que chaque phrase met en avant : l'auteur de l'action, ou celui qui la subit ?"
+      - "Dans la phrase passive, « la ville » est en position de sujet : elle est mise en valeur."
+    explication: "Le passif met en valeur « la ville » (ce qui est subi) et permet de ne pas préciser qui a fait l'action, si on l'ignore ou si ce n'est pas important. La phrase active reste correcte, et le passif n'est pas toujours plus court."
+
+  - type: exercice
+    enonce: "Parmi « dormir », « écrire » et « manger », quel verbe ne peut PAS être mis à la voix passive ?"
+    forme: reponse_courte
+    reponse: "dormir"
+    reponses_acceptees: ["dormir", "le verbe dormir"]
+    indices:
+      - "Seul un verbe qui peut avoir un COD peut être mis au passif."
+      - "Essaie de construire un COD pour chaque verbe : « écrire une lettre », « manger un gâteau »... et pour le troisième ?"
+    explication: "« dormir » ne peut pas être mis au passif car il n'a jamais de COD (on ne dit jamais « dormir quelque chose ») : seul un verbe transitif direct peut être passivé. « écrire » (écrire une lettre) et « manger » (manger un gâteau) ont un COD possible."
+
+  - type: question_ouverte
+    question: >-
+      Un journaliste écrit « Le suspect a été arrêté ce matin. » plutôt que « La police a arrêté
+      le suspect ce matin. ». Explique avec tes mots ce que change ce choix, et pourquoi un
+      journaliste peut faire ce choix quand il ne connaît pas encore certains détails.
+    indices:
+      - "Pense à ce que met en avant chaque phrase : l'auteur de l'arrestation, ou la personne arrêtée ?"
+      - "Le complément d'agent peut être supprimé au passif : que se passe-t-il alors pour l'information sur qui agit ?"
+    criteres:
+      - "L'élève dit que le passif met en valeur le suspect (celui qui subit l'action) plutôt que la police."
+      - "L'élève relie ce choix à la possibilité de ne pas préciser ou de ne pas encore connaître l'auteur de l'action."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois étapes pour transformer
+      une phrase active en phrase passive, puis donne un exemple de ton invention (différent de
+      ceux de cette leçon).

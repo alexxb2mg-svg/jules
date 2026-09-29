@@ -1,0 +1,157 @@
+notion: masse-volumique
+titre: "La masse volumique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser la relation ρ = m / V (et m = ρ × V, V = m / ρ) avec les bonnes unités."
+      - "Décrire comment mesurer une masse volumique, puis identifier une matière avec un tableau."
+      - "Dire si un objet flotte ou coule, et ce que fait la température sur la masse volumique."
+
+  - type: texte
+    titre: "Définition et relations"
+    contenu: |-
+      La **masse volumique** ρ (lettre grecque « rhô ») est la masse d'un volume unité de matière.
+      - **ρ = m / V**
+      - **m = ρ × V**
+      - **V = m / ρ**
+
+      m et V sont **proportionnels** : ρ est le coefficient de proportionnalité.
+
+  - type: texte
+    titre: "Les unités"
+    contenu: |-
+      - Unités de ρ : g/cm³ (ou g/mL), kg/L, kg/m³.
+      - 1 mL = 1 cm³.
+      - 1 L = 1 000 mL = 1 dm³.
+      - 1 m³ = 1 000 L.
+      - 1 g/cm³ = 1 000 kg/m³.
+      - Eau liquide : ρ = 1 g/cm³ (environ).
+
+      Attention : g avec cm³, kg avec m³. Convertis avant de calculer.
+
+  - type: texte
+    titre: "Mesurer et identifier une matière"
+    contenu: |-
+      Pour mesurer ρ :
+      1. La masse : on utilise une **balance**.
+      2. Le volume d'un liquide : on lit une **éprouvette graduée** (le bas du ménisque).
+      3. Le volume d'un solide irrégulier : **déplacement d'eau**, V = niveau final − niveau initial.
+      4. On calcule ρ = m / V.
+
+      Pour identifier : on compare à un tableau et on choisit la valeur la plus proche.
+      Tableau (g/cm³) : eau 1 ; huile 0,92 ; aluminium 2,7 ; fer 7,87 ; cuivre 8,96 ; plomb 11,3 ; or 19,3.
+
+  - type: texte
+    titre: "Flotter, coule, température, densité"
+    contenu: |-
+      - Un objet plein **flotte** si sa ρ est **plus petite** que celle du liquide. Il **coule** si elle est plus grande.
+      - Deux liquides **non miscibles** se superposent : le moins dense est **au-dessus**.
+      - Quand on chauffe, en général, le volume **augmente**, la masse ne change pas : ρ **diminue**.
+      - La **densité** est le rapport de ρ à celle de l'eau. Elle n'a **pas d'unité**.
+
+  - type: exemple
+    enonce: "Un bloc de 30 cm³ a une masse de 237 g. Calculer sa masse volumique et dire de quelle matière il s'agit."
+    etapes:
+      - "On écrit la relation : ρ = m / V."
+      - "Les unités sont cohérentes (g et cm³), donc le résultat sera en g/cm³."
+      - "ρ = 237 / 30 = 7,9 g/cm³."
+      - "On compare au tableau : c'est proche du fer (7,87 g/cm³)."
+
+  - type: exercice
+    enonce: "Un petit bloc de métal a une masse de 54 g et un volume de 20 cm³. Calcule sa masse volumique, en g/cm³."
+    forme: nombre
+    reponse: 2.7
+    tolerance: 0.01
+    unite: "g/cm³"
+    indices:
+      - "Quelle relation relie la masse volumique, la masse et le volume ?"
+      - "ρ = m / V. Les unités (g et cm³) sont déjà cohérentes."
+      - "Divise 54 par 20."
+    explication: "ρ = m / V = 54 ÷ 20 = 2,7 g/cm³. C'est la masse volumique de l'aluminium."
+
+  - type: exercice
+    enonce: "On chauffe de l'huile dans une casserole. Son volume augmente légèrement, mais sa masse ne change pas. Que devient sa masse volumique ?"
+    forme: qcm
+    choix:
+      - "Elle augmente."
+      - "Elle diminue."
+      - "Elle ne change pas."
+    reponse: 1
+    indices:
+      - "Écris ρ = m / V. Qu'est-ce qui reste constant, qu'est-ce qui augmente ?"
+      - "Si on divise une même masse par un volume de plus en plus grand, le résultat devient-il plus grand ou plus petit ?"
+    explication: "ρ = m / V. La masse m est constante et le volume V augmente : ρ diminue. En général, chauffer une matière diminue sa masse volumique."
+
+  - type: exercice
+    enonce: "Une bouteille contient 250 mL d'huile. La masse volumique de l'huile est 0,92 g/mL. Quelle est la masse de cette huile, en grammes ?"
+    forme: nombre
+    reponse: 230
+    tolerance: 0.5
+    unite: "g"
+    indices:
+      - "On connaît ρ et V. On cherche m : quelle relation utiliser ?"
+      - "m = ρ × V, avec ρ en g/mL et V en mL : la masse sort en grammes."
+      - "Multiplie 0,92 par 250."
+    explication: "m = ρ × V = 0,92 × 250 = 230 g."
+
+  - type: exercice
+    enonce: >-
+      Un objet métallique a une masse de 89,6 g. On le plonge dans une éprouvette graduée : le niveau
+      de l'eau passe de 50,0 mL à 60,0 mL. Tableau (en g/cm³) : aluminium 2,70 ; fer 7,87 ; cuivre
+      8,96 ; plomb 11,3 ; or 19,3. De quel métal s'agit-il ?
+    forme: qcm
+    choix:
+      - "aluminium"
+      - "fer"
+      - "cuivre"
+      - "plomb"
+      - "or"
+    reponse: 2
+    indices:
+      - "Le volume de l'objet n'est pas le niveau final : c'est la différence entre le niveau final et le niveau initial."
+      - "Convertis le volume en cm³ (1 mL = 1 cm³), puis calcule ρ = m / V."
+      - "Compare la valeur obtenue aux valeurs du tableau : choisis la plus proche."
+    explication: "V = 60,0 − 50,0 = 10,0 mL = 10,0 cm³. ρ = 89,6 ÷ 10,0 = 8,96 g/cm³ : c'est le cuivre."
+
+  - type: exercice
+    enonce: "La masse volumique de l'éthanol est 0,79 g/mL. Quel volume occupent 500 g d'éthanol ? Donne le résultat en mL, arrondi à l'unité."
+    forme: nombre
+    reponse: 633
+    tolerance: 1
+    unite: "mL"
+    indices:
+      - "On connaît ρ et m. On cherche V : quelle relation utiliser ?"
+      - "V = m / ρ, avec m en g et ρ en g/mL : le volume sort en mL."
+      - "Divise 500 par 0,79 et arrondis à l'unité."
+    explication: "V = m / ρ = 500 ÷ 0,79 ≈ 632,9 mL, soit 633 mL arrondi à l'unité."
+
+  - type: question_ouverte
+    question: >-
+      Propose un protocole pour déterminer la masse volumique d'un petit caillou de forme irrégulière.
+      Indique le matériel, les mesures et le calcul.
+    indices:
+      - "Deux grandeurs à mesurer : la masse et le volume. Avec quel appareil chacune ?"
+      - "Le caillou est irrégulier : pense à la méthode du déplacement d'eau."
+    criteres:
+      - "L'élève mesure la masse du caillou avec une balance."
+      - "L'élève mesure le volume par déplacement d'eau dans une éprouvette graduée (niveau final − niveau initial)."
+      - "L'élève calcule ρ = m / V et donne une unité cohérente (par exemple g/cm³)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est la masse volumique, comment
+      tu la calcules avec les bonnes unités, et comment elle aide à identifier une matière.

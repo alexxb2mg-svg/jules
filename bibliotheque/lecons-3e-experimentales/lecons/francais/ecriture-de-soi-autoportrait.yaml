@@ -1,0 +1,157 @@
+notion: ecriture-de-soi-autoportrait
+titre: "Formes de l'écriture de soi et de l'autoportrait"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer les formes de l'écriture de soi : autobiographie, mémoires, journal intime, correspondance, autoportrait, essai."
+      - "Expliquer pourquoi un auteur se raconte ou se représente."
+      - "Montrer qu'un récit de soi est à la fois un effort de vérité et une construction."
+
+  - type: texte
+    titre: "Les formes à connaître"
+    contenu: |-
+      | Forme | En bref |
+      |---|---|
+      | Autobiographie | la vie de l'auteur, écrite par lui-même après coup, à la 1re personne |
+      | Mémoires | surtout les événements publics dont l'auteur a été témoin ou acteur |
+      | Journal intime | notes jour après jour, sans savoir la suite |
+      | Correspondance | ensemble de lettres où l'on se confie |
+      | Autoportrait | portrait de soi, en mots ou en image (peinture, dessin) |
+      | Essai | réflexion qui peut devenir une réflexion sur soi |
+
+  - type: texte
+    titre: "Qui parle ? Le pacte autobiographique"
+    contenu: |-
+      Dans l'autobiographie, l'**auteur**, le **narrateur** et le **personnage principal** sont la même personne.
+      On appelle parfois **pacte autobiographique** l'engagement de l'auteur à dire la vérité sur sa vie.
+      Différence à retenir : **autobiographie** = la vie de l'auteur ; **biographie** = la vie d'un autre, racontée par quelqu'un d'autre.
+
+  - type: texte
+    titre: "Des repères"
+    contenu: |-
+      | Époque | Œuvre |
+      |---|---|
+      | XVIe siècle | Montaigne, *Les Essais* : il se peint lui-même et réfléchit sur l'homme |
+      | XVIIIe siècle | Rousseau, *Les Confessions*, publiées après sa mort (1782 et 1789) |
+      | XIXe siècle | Chateaubriand, *Mémoires d'outre-tombe*, publiées après sa mort |
+      | XXe siècle | Sartre, *Les Mots* (1964), sur son enfance ; *Journal* d'Anne Frank |
+
+  - type: texte
+    titre: "Pourquoi se raconter ? Vérité et composition"
+    contenu: |-
+      On se raconte pour :
+      - se comprendre ;
+      - se justifier ;
+      - garder une trace ;
+      - transmettre une expérience.
+      Se raconter est un **effort de vérité**. Mais on ne peut pas tout dire : l'auteur choisit, organise, embellit parfois, et écrit après les faits, avec du recul.
+      Un récit de soi est donc aussi une **construction**.
+
+  - type: exemple
+    enonce: >-
+      Explique en trois étapes pourquoi *Les Mots* de Sartre (1964) sont un récit de soi.
+    etapes:
+      - "Qui parle ? Sartre raconte sa propre enfance : l'auteur et la personne dont on parle sont les mêmes."
+      - "Quand ? Le texte est écrit après coup, avec du recul, et non au jour le jour comme un journal intime."
+      - "Vérité et construction : Sartre cherche à se comprendre, mais il choisit ce qu'il raconte et comment il l'organise."
+
+  - type: exercice
+    enonce: "Quelle est la différence entre une autobiographie et une biographie ?"
+    forme: qcm
+    choix:
+      - "L'autobiographie raconte la vie de son auteur ; la biographie raconte la vie d'un autre"
+      - "L'autobiographie raconte la vie d'un autre ; la biographie raconte la vie de son auteur"
+      - "Il n'y a aucune différence"
+      - "L'autobiographie est un poème ; la biographie est un roman"
+    reponse: 0
+    indices:
+      - "Le préfixe « auto- » veut dire « soi-même »."
+      - "Dans une biographie, c'est quelqu'un d'autre qui écrit."
+    explication: "Une autobiographie est écrite par la personne dont elle raconte la vie. Une biographie raconte la vie d'un autre."
+
+  - type: exercice
+    enonce: "Les *Confessions* de Rousseau ont été publiées en 1782 puis en 1789. Combien d'années y a-t-il entre les deux publications ?"
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    unite: "ans"
+    indices:
+      - "Pour un écart entre deux dates, on fait une soustraction."
+      - "Année la plus récente moins année la plus ancienne : 1789 − 1782."
+    explication: "1789 − 1782 = 7. Il y a 7 ans entre les deux publications."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'engagement de l'auteur à dire la vérité sur sa vie ? (deux mots)"
+    forme: reponse_courte
+    reponse: "pacte autobiographique"
+    reponses_acceptees: ["le pacte autobiographique", "un pacte autobiographique", "Pacte autobiographique"]
+    indices:
+      - "C'est un engagement pris par l'auteur, à propos de son récit."
+      - "Il y a deux mots : le premier désigne un accord, le second dit que le texte raconte sa propre vie."
+    explication: "On parle de pacte autobiographique : l'auteur s'engage à dire la vérité sur sa vie."
+
+  - type: exercice
+    enonce: "Laquelle de ces raisons ne fait pas partie des raisons de se raconter vues dans le cours ?"
+    forme: qcm
+    choix:
+      - "Se comprendre"
+      - "Garder une trace"
+      - "Transmettre une expérience"
+      - "Résumer un cours d'histoire"
+    reponse: 3
+    indices:
+      - "Relis la liste : les raisons parlent de soi, de sa vie, de ce qu'on veut laisser."
+      - "Trois réponses parlent de la personne qui écrit. Une seule parle d'un cours."
+    explication: "On se raconte pour se comprendre, se justifier, garder une trace ou transmettre une expérience. Résumer un cours d'histoire n'est pas une raison de se raconter."
+
+  - type: exercice
+    enonce: >-
+      Un texte commence par « Lundi soir » et contient la phrase : « Je ne sais pas ce qui va se
+      passer demain. » Quelle forme d'écriture de soi est la plus probable ?
+    forme: qcm
+    choix:
+      - "Un journal intime"
+      - "Des mémoires écrites avec du recul"
+      - "Une biographie"
+      - "Un essai sans aucun « je »"
+    reponse: 0
+    indices:
+      - "Cherche les indices : un moment précis et « je ne sais pas la suite »."
+      - "Qui écrit sans connaître la suite : quelqu'un qui écrit au jour le jour, ou quelqu'un qui écrit après coup ?"
+    explication: "Le texte est écrit au jour le jour, sans connaître la suite : c'est la marque du journal intime. Les mémoires sont écrites après les faits, avec du recul."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre d'écriture de soi vue dans ce cours (par exemple *Les Confessions* ou le
+      *Journal* d'Anne Frank). Explique pourquoi son auteur se raconte, et montre que le texte est à
+      la fois un effort de vérité et une construction.
+    indices:
+      - "Commence par nommer la forme du texte et dire qui parle."
+      - "Donne une raison de se raconter, puis explique ce que l'auteur choisit de dire ou de mettre en valeur."
+    criteres:
+      - "L'élève nomme l'œuvre et sa forme (autobiographie, journal intime...)."
+      - "L'élève donne au moins une raison de se raconter (se comprendre, se justifier, garder une trace, transmettre)."
+      - "L'élève explique l'effort de vérité (dire la vérité sur soi)."
+      - "L'élève explique la construction (choix, organisation, recul, mise en scène)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre une autobiographie et un
+      journal intime, et pourquoi un récit de soi est une construction.

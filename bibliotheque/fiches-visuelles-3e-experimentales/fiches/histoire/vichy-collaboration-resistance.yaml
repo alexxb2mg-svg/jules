@@ -1,0 +1,84 @@
+notion: vichy-collaboration-resistance
+titre: "La France défaite et occupée : Vichy, collaboration, Résistance"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Régime de Vichy »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9gime_de_Vichy&oldid=2154610"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Résistance française »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9sistance_fran%C3%A7aise&oldid=2464574"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Charles de Gaulle »"
+    url: "https://fr.vikidia.org/w/index.php?title=Charles_de_Gaulle&oldid=2568232"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+abreviations:
+  CNR: "Conseil national de la Résistance"
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: defaite-1940, titre: "Défaite de 1940", sous_titre: "armistice du 22 juin 1940", principal: true}
+      - {id: vichy, titre: "Régime de Vichy", sous_titre: "Pétain, devise Travail, Famille, Patrie"}
+      - {id: resistance-interieure, titre: "Résistance intérieure", sous_titre: "1943, Jean Moulin, CNR"}
+      - {id: france-libre, titre: "France libre", sous_titre: "appel du 18 juin 1940, de Gaulle"}
+    liens:
+      - {de: defaite-1940, vers: vichy, libelle: "zone occupée et zone libre"}
+      - {de: defaite-1940, vers: resistance-interieure, libelle: "s'oppose à Vichy"}
+      - {de: defaite-1940, vers: france-libre, libelle: "continue le combat"}
+    jules: "Trois réalités bien distinctes après la défaite : le régime de **Vichy**, la Résistance intérieure et la France libre."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Situer l'armistice du 22 juin 1940 et la coupure entre zone occupée et zone libre."
+      - "Décrire le **régime de Vichy** dirigé par Pétain, qui collabore avec l'occupant."
+      - "Distinguer l'appel du 18 juin 1940 (de Gaulle, **France libre**) et la Résistance intérieure."
+      - "Situer 1943 : Jean Moulin unifie la Résistance intérieure dans le **CNR**."
+    jules: "Ne confonds jamais collaboration (choix politique de Vichy) et occupation (présence militaire allemande)."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Penser que collaboration et occupation désignent la même chose."
+    pourquoi_faux: "L'occupation est la présence de l'armée allemande, la **collaboration** est un choix politique du régime de Vichy."
+    bonne_idee: "Distinguer les deux mots : l'occupant est présent partout, mais seul Vichy choisit de collaborer."
+    jules: "Ce piège revient souvent : occupation subie, collaboration choisie par le régime de Vichy."
+
+  - id: exemple
+    type: exemple
+    situation: "On demande de citer l'acte fondateur de la France libre en 1940."
+    conclusion: "Il s'agit de l'**appel du 18 juin 1940**, lancé par Charles de Gaulle depuis Londres."
+    jules: "Associe toujours cette date à de Gaulle et à la poursuite du combat hors de France."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🗓️", titre: "Frise chronologique", description: "outil à venir"}
+    jules: "Reprends la frise pour ranger dans l'ordre 1940, l'appel du 18 juin et le CNR de 1943."
+
+  - id: schema
+    type: schema
+    titre: "Trois réalités après la défaite de 1940"
+    svg: |-
+      <svg viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+        <text x="340" y="28" class="th" text-anchor="middle">1940 – 1943 : Vichy, Résistance, France libre</text>
+        <rect x="230" y="45" width="220" height="45" class="box c-gray"/>
+        <text x="340" y="72" class="t" text-anchor="middle">22 juin 1940 : armistice</text>
+        <line x1="340" y1="90" x2="150" y2="140" class="leader c-gray"/>
+        <line x1="340" y1="90" x2="340" y2="140" class="leader c-gray"/>
+        <line x1="340" y1="90" x2="530" y2="140" class="leader c-gray"/>
+        <rect x="40" y="140" width="220" height="60" class="box c-coral"/>
+        <text x="150" y="163" class="t" text-anchor="middle">Régime de Vichy</text>
+        <text x="150" y="183" class="ts" text-anchor="middle">Pétain, collaboration</text>
+        <rect x="230" y="140" width="220" height="60" class="box c-teal"/>
+        <text x="340" y="163" class="t" text-anchor="middle">Résistance intérieure</text>
+        <text x="340" y="183" class="ts" text-anchor="middle">1943, Jean Moulin, CNR</text>
+        <rect x="420" y="140" width="220" height="60" class="box c-blue"/>
+        <text x="530" y="163" class="t" text-anchor="middle">France libre</text>
+        <text x="530" y="183" class="ts" text-anchor="middle">18 juin 1940, de Gaulle</text>
+      </svg>
+    jules: "La défaite de 1940 ouvre trois chemins différents : Vichy collabore, deux formes de Résistance combattent."

@@ -1,0 +1,162 @@
+notion: gravitation-poids-masse
+titre: "Gravitation, poids et masse"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer la masse (en kg) et le poids (en N), et calculer l'un à partir de l'autre avec P = m × g."
+      - "Comparer le poids d'un objet sur la Terre et sur la Lune."
+      - "Utiliser la loi de gravitation universelle (fournie) pour dire comment la force change quand une masse ou la distance change."
+
+  - type: texte
+    titre: "La gravitation : deux corps s'attirent"
+    contenu: |-
+      Deux corps qui ont une masse **s'attirent** toujours. C'est la **gravitation**.
+      - C'est une action **à distance**.
+      - Elle est toujours **attractive**.
+
+      La loi (elle est **fournie** dans les exercices) : **F = G × mA × mB ÷ d²**
+      - mA et mB : les masses, en kg.
+      - d : la distance entre les centres des corps, en m.
+      - F : la force, en N. G est une constante.
+
+  - type: texte
+    titre: "Comment la force change"
+    contenu: |-
+      Regarde où chaque grandeur se trouve dans la formule.
+      - Plus les masses sont **grandes**, plus F est **grande**.
+      - Plus les corps sont **éloignés**, plus F est **faible**.
+      - Si une masse **double**, F **double**.
+      - Si d **double**, F est **divisée par 4** (à cause du carré).
+      - Si d **triple**, F est **divisée par 9**.
+
+      La force de A sur B et la force de B sur A ont la **même valeur**.
+
+  - type: texte
+    titre: "Le poids : P = m × g"
+    contenu: |-
+      Le **poids** est la force d'attraction exercée par un astre (la Terre, la Lune) sur un objet.
+      - Point d'application : le **centre de gravité** de l'objet.
+      - Direction : **verticale**.
+      - Sens : **vers le bas**, vers le centre de l'astre.
+      - Valeur : **P = m × g** (P en N, m en kg, g en N/kg).
+
+      **g** est l'intensité de la pesanteur. On en déduit **m = P ÷ g**.
+
+  - type: texte
+    titre: "Masse ou poids ? Terre ou Lune ?"
+    contenu: |-
+      | | Masse | Poids |
+      |---|---|---|
+      | C'est | une quantité de matière | une force |
+      | Unité | kg | N |
+      | Appareil | balance | dynamomètre |
+      | Selon le lieu | ne change pas | change (g change) |
+
+      Sur Terre : g ≈ 9,8 N/kg. Sur la Lune : g ≈ 1,6 N/kg.
+      Un objet pèse environ **6 fois moins** sur la Lune.
+
+  - type: exemple
+    enonce: >-
+      Un sac a un poids de 49 N sur Terre (g = 9,8 N/kg). Quelle est sa masse ? Que valent sa
+      masse et son poids sur la Lune (g = 1,6 N/kg) ?
+    etapes:
+      - "On cherche une masse à partir d'un poids : m = P ÷ g."
+      - "m = 49 ÷ 9,8 = 5 kg."
+      - "Sur la Lune, la masse ne change pas : elle reste 5 kg."
+      - "Le poids change : P = 5 × 1,6 = 8 N."
+
+  - type: exercice
+    enonce: "Sur Terre, g = 9,8 N/kg. Calcule le poids, en newtons, d'un élève dont la masse est de 50 kg."
+    forme: nombre
+    reponse: 490
+    tolerance: 0.5
+    unite: "N"
+    indices:
+      - "Quelle relation relie le poids P, la masse m et l'intensité de la pesanteur g ?"
+      - "P = m × g, avec m en kg et g en N/kg : le résultat est en newtons."
+      - "Remplace m et g par leurs valeurs : P = 50 × 9,8. Il reste à multiplier."
+    explication: "P = m × g = 50 × 9,8 = 490 N."
+
+  - type: exercice
+    enonce: "Parmi ces affirmations, laquelle est juste ?"
+    forme: qcm
+    choix:
+      - "La masse d'un objet est la même sur la Terre et sur la Lune."
+      - "Le poids se mesure avec une balance, en kilogrammes."
+      - "Poids et masse sont deux mots pour la même grandeur."
+      - "La masse d'un objet est plus petite sur la Lune que sur la Terre."
+    reponse: 0
+    indices:
+      - "Un objet emporté sur la Lune perd-il de la matière ?"
+      - "La masse est une quantité de matière (en kg). Le poids est une force (en N) qui dépend de g."
+    explication: "La masse ne dépend pas du lieu : elle est la même sur la Terre et sur la Lune. Le poids se mesure avec un dynamomètre, en newtons. Masse et poids sont deux grandeurs différentes."
+
+  - type: exercice
+    enonce: "Un astronaute équipé a une masse de 80 kg. Sur la Lune, g = 1,6 N/kg. Calcule son poids sur la Lune, en newtons."
+    forme: nombre
+    reponse: 128
+    tolerance: 0.5
+    unite: "N"
+    indices:
+      - "Sa masse change-t-elle quand il arrive sur la Lune ? Quelle valeur de g faut-il utiliser ?"
+      - "Applique P = m × g, avec la valeur de g sur la Lune."
+      - "Il faut calculer 80 × 1,6, par exemple en faisant 80 × 1 plus 80 × 0,6."
+    explication: "P = m × g = 80 × 1,6 = 128 N."
+
+  - type: exercice
+    enonce: "Sur Terre (g = 9,8 N/kg), le poids d'un cartable est de 58,8 N. Quelle est sa masse, en kg ?"
+    forme: nombre
+    reponse: 6
+    tolerance: 0.05
+    unite: "kg"
+    indices:
+      - "On connaît le poids et g. On cherche la masse : quelle relation permet de la retrouver ?"
+      - "P = m × g, donc m = P ÷ g."
+      - "Calcule 58,8 ÷ 9,8."
+    explication: "m = P ÷ g = 58,8 ÷ 9,8 = 6 kg."
+
+  - type: exercice
+    enonce: >-
+      La loi de gravitation universelle s'écrit F = G × mA × mB ÷ d², où d est la distance entre les
+      centres des deux corps. On double la distance d, sans changer les masses. Par combien la force F
+      est-elle divisée ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    indices:
+      - "Dans la formule, la distance d apparaît-elle simplement, ou élevée au carré ?"
+      - "Remplace d par le double de d dans la formule, et regarde ce que devient d²."
+      - "Le double de d, au carré, c'est (2 × d) × (2 × d). Regroupe les nombres d'un côté et les d de l'autre."
+    explication: "Si d devient 2 × d, alors d² devient (2 × d)² = 2 × 2 × d² = 4 × d². Le dénominateur est multiplié par 4, donc la force est divisée par 4."
+
+  - type: question_ouverte
+    question: >-
+      Léo, dont la masse est de 60 kg, dit : « Sur la Lune, je pèserais 10 kg. » Explique ce qui ne va
+      pas dans sa phrase, puis corrige-la avec des calculs (g = 9,8 N/kg sur Terre et g = 1,6 N/kg sur
+      la Lune).
+    indices:
+      - "Quand Léo va sur la Lune, perd-il de la matière ? Dans quelle unité s'exprime un poids ?"
+      - "Sépare les deux grandeurs : dis ce que devient la masse, puis calcule le poids avec P = m × g sur la Terre et sur la Lune."
+    criteres:
+      - "L'élève explique que la masse de Léo ne change pas : elle reste 60 kg sur la Lune."
+      - "L'élève explique que le poids est une force, en newtons, qui dépend de g, et non une masse en kg."
+      - "L'élève calcule correctement les poids : 60 × 9,8 = 588 N sur Terre et 60 × 1,6 = 96 N sur la Lune."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre la masse et le
+      poids, avec leurs unités, et ce qui change pour un objet qui passe de la Terre à la Lune.

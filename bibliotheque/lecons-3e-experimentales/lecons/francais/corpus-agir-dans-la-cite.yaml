@@ -1,0 +1,150 @@
+notion: corpus-agir-dans-la-cite
+titre: "Agir dans la cité : regards littéraires sur le XXe siècle"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comprendre ce que le programme de 3e demande : lire une œuvre qui porte un regard sur l'histoire du XXe siècle."
+      - "Situer une œuvre dans son contexte historique (guerres mondiales, entre-deux-guerres, régimes totalitaires)."
+      - "Identifier le point de vue d'une œuvre : témoignage, fiction, dénonciation."
+
+  - type: texte
+    titre: "Ce que demande le programme"
+    contenu: |-
+      En 3e, le questionnement « **Agir dans la cité : individu et pouvoir** » demande de lire :
+      - une œuvre entière, ou une partie importante d'une œuvre : c'est la **lecture intégrale** ;
+      - qui porte un **regard sur l'histoire du XXe siècle** : guerres mondiales, société de l'entre-deux-guerres, régimes fascistes et totalitaires.
+
+      Ce travail est lié au cours d'histoire (« L'Europe, un théâtre majeur des guerres totales »).
+      On peut aussi étudier des extraits d'autres genres, des tableaux et des extraits de films.
+
+  - type: texte
+    titre: "Les repères historiques"
+    contenu: |-
+      | Période | Repère |
+      |---|---|
+      | 1914-1918 | Première Guerre mondiale |
+      | 1918-1939 | Entre-deux-guerres : des régimes autoritaires s'installent |
+      | 1939-1945 | Seconde Guerre mondiale |
+
+      Régimes de l'entre-deux-guerres : l'URSS de Staline, l'Italie fasciste de Mussolini, l'Allemagne nazie de Hitler (au pouvoir en 1933).
+
+      Un régime **totalitaire** contrôle toute la vie de la population, supprime les libertés, utilise la **propagande** et la peur. Le régime nazi est aussi à l'origine du **génocide** des Juifs d'Europe.
+
+  - type: texte
+    titre: "Les regards d'une œuvre"
+    contenu: |-
+      Une œuvre ne remplace pas le cours d'histoire : elle donne à voir et à ressentir, avec un **point de vue**.
+
+      | Point de vue | Exemple |
+      |---|---|
+      | Témoin qui raconte ce qu'il a vécu | *Le Feu*, de Henri Barbusse (guerre des tranchées) ; *Si c'est un homme*, de Primo Levi (déportation) |
+      | Fiction qui avertit | *1984*, de George Orwell (un pouvoir qui surveille tout le monde) |
+      | Œuvre d'art qui dénonce ou se moque | *Guernica*, de Picasso (1937) ; *Le Dictateur*, film de Chaplin (1940) |
+
+      Chaque art a ses moyens : les mots, les images, les couleurs, la mise en scène.
+
+  - type: exemple
+    enonce: "Analyse le tableau *Guernica* de Picasso en quatre étapes."
+    etapes:
+      - "Qui, quand ? Pablo Picasso, en 1937."
+      - "Quel événement ? Le bombardement d'une ville espagnole, Guernica. Il faut le relier au cours d'histoire sur cette période."
+      - "Quel point de vue ? Le tableau dénonce la violence contre les civils. Picasso n'utilise presque pas de couleurs : noir, blanc, gris."
+      - "Qu'apporte-t-il de plus que le cours ? Il fait ressentir l'horreur de la guerre, avec des images."
+
+  - type: exercice
+    enonce: "Qu'est-ce qu'une lecture intégrale ?"
+    forme: qcm
+    choix:
+      - "Lire une œuvre entière, du début à la fin"
+      - "Lire un seul extrait de l'œuvre"
+      - "Lire un texte à voix haute"
+      - "Résumer une œuvre en trois phrases"
+    reponse: 0
+    indices:
+      - "Le mot « intégrale » veut dire « en entier »."
+      - "Ce n'est pas la même chose qu'un extrait."
+    explication: "La lecture intégrale est la lecture complète d'une œuvre, du début à la fin, et non d'un simple extrait."
+
+  - type: exercice
+    enonce: "L'entre-deux-guerres va de 1918 à 1939. Combien d'années dure-t-elle ?"
+    forme: nombre
+    reponse: 21
+    tolerance: 0.01
+    unite: "ans"
+    indices:
+      - "Il faut calculer la durée entre deux dates."
+      - "Fais une soustraction : année de fin moins année de début."
+    explication: "1939 − 1918 = 21. L'entre-deux-guerres dure 21 ans."
+
+  - type: exercice
+    enonce: "Quel adjectif désigne un régime qui contrôle toute la vie de la population et supprime les libertés ? (un mot)"
+    forme: reponse_courte
+    reponse: "totalitaire"
+    reponses_acceptees: ["un régime totalitaire", "régime totalitaire", "totalitarisme"]
+    indices:
+      - "Ce régime ne laisse aucune liberté à la population."
+      - "Ce mot est de la famille du mot « total » : le pouvoir contrôle tout."
+    explication: "Un régime totalitaire contrôle toute la vie de la population, supprime les libertés et utilise la propagande et la peur."
+
+  - type: exercice
+    enonce: "Parmi ces œuvres, laquelle est le témoignage d'un déporté ?"
+    forme: qcm
+    choix:
+      - "Si c'est un homme, de Primo Levi"
+      - "1984, de George Orwell"
+      - "Le Dictateur, film de Chaplin"
+      - "Le Feu, de Henri Barbusse"
+    reponse: 0
+    indices:
+      - "Un témoin raconte ce qu'il a vécu lui-même."
+      - "Une déportation, c'est le fait d'être envoyé dans un camp. Deux œuvres seulement parlent de guerre ou de dictature sans parler de déportation."
+    explication: "Primo Levi raconte sa déportation dans *Si c'est un homme*. *1984* est une fiction, *Le Dictateur* est un film qui se moque d'un dictateur, *Le Feu* parle de la guerre des tranchées."
+
+  - type: exercice
+    enonce: "*1984* de George Orwell imagine un pouvoir qui surveille tout le monde. Quel est le point de vue de cette œuvre ?"
+    forme: qcm
+    choix:
+      - "Un témoignage d'un survivant"
+      - "Une fiction qui avertit sur les dangers du pouvoir absolu"
+      - "Un cours d'histoire écrit par un historien"
+      - "Un poème lyrique sur l'amour"
+    reponse: 1
+    indices:
+      - "Orwell invente une histoire : est-ce un témoignage ou une fiction ?"
+      - "Pourquoi un romancier imagine-t-il un pouvoir qui surveille tout ? Pour informer, ou pour prévenir ?"
+    explication: "*1984* est un roman : une fiction qui avertit. Ce n'est pas un récit historique ni un témoignage."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre étudiée en classe ou vue dans cette leçon (roman, tableau ou film).
+      Situe-la dans son contexte historique, puis explique quel regard elle porte sur l'histoire
+      et ce qu'elle apporte de plus que le cours d'histoire.
+    indices:
+      - "Commence par dire qui a créé l'œuvre, quand, et sur quel événement ou régime elle porte."
+      - "Dis si l'auteur est un témoin, s'il invente une fiction ou s'il dénonce. Cite un moyen (mots, images, couleurs)."
+    criteres:
+      - "L'élève situe l'œuvre : auteur, date, événement ou régime évoqué."
+      - "L'élève identifie le point de vue (témoignage, fiction qui avertit, dénonciation)."
+      - "L'élève explique ce que l'œuvre apporte de plus que le cours d'histoire (émotion, regard, avertissement)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, pourquoi on lit des œuvres sur le XXe siècle
+      en lien avec le cours d'histoire, et comment tu identifies le point de vue d'une œuvre.

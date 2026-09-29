@@ -1,0 +1,150 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: marques-de-modalisation
+titre: "Les marques de modalisation : doute, certitude, jugement"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un fait d'un point de vue grâce aux marques de modalisation."
+      - "Repérer et classer ces marques : adverbes, verbes, adjectifs et noms, mode, ponctuation."
+      - "Dire ce qu'une marque révèle (certitude, doute, jugement) et l'employer pour écrire ou parler."
+
+  - type: texte
+    titre: "Qu'est-ce que la modalisation ?"
+    contenu: |-
+      La modalisation, ce sont les marques qui montrent l'attitude de celui qui parle ou écrit : sa certitude, son jugement, son sentiment.
+
+      Elle permet de distinguer :
+
+      - un **fait** : « Il pleut. »
+      - un **point de vue** : « Il pleut malheureusement encore. »
+
+  - type: texte
+    titre: "Les marques à repérer"
+    contenu: |-
+      | Catégorie | Exemples |
+      |---|---|
+      | Adverbes de certitude | certainement, sûrement, évidemment, sans aucun doute |
+      | Adverbes de doute | peut-être, probablement, sans doute, apparemment |
+      | Verbes d'opinion ou de sentiment | je pense que, je crois que, je crains que, je doute que, il me semble que |
+      | Verbes modaux | pouvoir, devoir (« Il doit être arrivé. ») |
+      | Adjectifs et noms qui jugent | étonnant, regrettable, admirable, un exploit, un scandale |
+      | Mode | le conditionnel marque l'incertitude (« Il serait parti hier. ») |
+      | Ponctuation | point d'exclamation, guillemets qui prennent de la distance, points de suspension |
+
+  - type: texte
+    titre: "Interpréter et écrire"
+    contenu: |-
+      Interpréter une marque, c'est dire ce qu'elle révèle : certitude, doute, approbation, critique, ironie.
+
+      Attention : « sans doute » exprime le plus souvent une forte probabilité, pas une certitude totale.
+
+      Pour écrire ou parler, on choisit la marque selon l'effet voulu :
+
+      - pour convaincre : « Il est évident que... » ;
+      - pour rester prudent : « Il semblerait que... ».
+
+  - type: exemple
+    enonce: >-
+      Dans la phrase « Malheureusement, la réunion aura sans doute lieu demain ! », relève les
+      marques de modalisation et dis ce que chacune exprime.
+    etapes:
+      - "Demande-toi d'abord : est-ce un fait ou un point de vue ? Ici, il y a un point de vue."
+      - "« Malheureusement » est un adverbe. Il exprime un regret, un jugement négatif."
+      - "« Sans doute » est un adverbe de doute. Il exprime une forte probabilité, pas une certitude."
+      - "Le point d'exclamation marque le sentiment de celui qui parle."
+
+  - type: exercice
+    enonce: "Dans la phrase « Apparemment, le magasin est fermé », quel mot exprime le doute de celui qui parle ?"
+    forme: reponse_courte
+    reponse: "apparemment"
+    reponses_acceptees: ["Apparemment"]
+    indices:
+      - "Cherche le mot qui montre que celui qui parle n'est pas totalement sûr."
+      - "C'est un adverbe, placé au début de la phrase. Il est de la même famille que le mot « apparence »."
+    explication: "« Apparemment » est un adverbe de doute : celui qui parle ne l'affirme pas avec certitude."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases contient une marque de modalisation ?"
+    forme: qcm
+    choix:
+      - "Le concert commence à vingt heures."
+      - "Ce concert sera sûrement magnifique."
+      - "Le concert a eu lieu samedi."
+    reponse: 1
+    indices:
+      - "Deux phrases donnent un fait. Une seule montre un jugement ou une certitude."
+      - "Cherche un adverbe ou un adjectif qui donne l'avis de celui qui parle."
+    explication: "« Sûrement » (certitude) et « magnifique » (jugement) sont des marques de modalisation. Les deux autres phrases donnent seulement un fait."
+
+  - type: exercice
+    enonce: "Dans « Je doute que tu réussisses », que montre l'expression « je doute que » ?"
+    forme: qcm
+    choix:
+      - "Une forte certitude"
+      - "Un ordre"
+      - "Un doute"
+      - "Un regret"
+    reponse: 2
+    indices:
+      - "Regarde le sens du verbe « douter »."
+      - "Celui qui parle est-il sûr de lui ou hésite-t-il ?"
+    explication: "« Je doute que » est un verbe d'opinion : celui qui parle exprime son doute."
+
+  - type: exercice
+    enonce: "Dans « Il serait parti hier », le verbe est conjugué à un mode qui marque l'incertitude. Quel est ce mode ?"
+    forme: reponse_courte
+    reponse: "conditionnel"
+    reponses_acceptees: ["le conditionnel", "Conditionnel", "un conditionnel"]
+    indices:
+      - "Ce mode sert aussi à exprimer une hypothèse ou un fait non confirmé."
+      - "Le verbe « serait » n'est pas à l'indicatif. Son nom commence par la lettre c."
+    explication: "Le conditionnel peut marquer l'incertitude : le fait n'est pas confirmé."
+
+  - type: exercice
+    enonce: >-
+      Combien de marques de modalisation y a-t-il dans la phrase « Malheureusement, ce projet est
+      sans doute un scandale » ? Ne compte pas la ponctuation. Compte « sans doute » comme une
+      seule marque.
+    forme: nombre
+    reponse: 3
+    tolerance: 0
+    indices:
+      - "Cherche les adverbes, puis les noms ou adjectifs qui jugent."
+      - "Regarde le début de la phrase, le milieu, puis le dernier mot."
+    explication: "Il y a trois marques : « malheureusement » (regret), « sans doute » (probabilité) et « scandale » (jugement négatif). Total : 3."
+
+  - type: question_ouverte
+    question: >-
+      Réécris la phrase « Ce livre est intéressant » de deux façons : une phrase qui montre une
+      forte certitude, et une phrase qui montre un doute. Souligne la marque de modalisation dans
+      chaque phrase.
+    indices:
+      - "Choisis un adverbe de certitude pour la première phrase."
+      - "Choisis un adverbe de doute pour la seconde."
+    criteres:
+      - "Les deux phrases reprennent l'idée de départ (le livre jugé intéressant)."
+      - "La première contient une marque claire de certitude (par exemple « certainement », « évidemment »)."
+      - "La seconde contient une marque claire de doute (par exemple « peut-être », « sans doute »)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est une marque de
+      modalisation. Donne un exemple de marque de certitude et un exemple de marque de doute.

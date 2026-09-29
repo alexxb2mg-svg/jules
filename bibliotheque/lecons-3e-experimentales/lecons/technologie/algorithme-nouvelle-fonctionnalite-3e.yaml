@@ -1,0 +1,175 @@
+notion: algorithme-nouvelle-fonctionnalite-3e
+titre: "Concevoir, programmer et tester une nouvelle fonctionnalité"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Déterminer les données d'entrée et de sortie d'une nouvelle fonctionnalité."
+      - "Écrire un algorithme en français, puis le relier à un programme (blocs ou Python)."
+      - "Décrire des tests, comparer attendu et observé, puis corriger."
+
+  - type: texte
+    titre: "Les quatre temps"
+    contenu: |-
+      Pour ajouter une fonctionnalité à un objet technique :
+
+      1. **Déterminer les données** : ce que le programme lit, et ce qu'il commande.
+      2. **Concevoir l'algorithme** : décrire en français, dans l'ordre, ce que l'objet doit faire (conditions « si... alors... sinon », répétitions).
+      3. **Programmer** : traduire l'algorithme en blocs ou en langage textuel.
+      4. **Tester** : essayer chaque situation prévue. Si l'objet ne réagit pas comme prévu, on corrige et on teste de nouveau.
+
+  - type: texte
+    titre: "Entrées et sorties"
+    contenu: |-
+      | Données | Ce que c'est | Exemples |
+      |---|---|---|
+      | Entrées | Ce que le programme **lit** | Capteur, bouton |
+      | Sorties | Ce que le programme **commande** | Moteur, voyant, affichage |
+
+      Une nouvelle fonctionnalité ajoute souvent une entrée (un capteur), une sortie (un voyant) ou une variable (un compteur).
+
+      Exemple du portail : pendant la fermeture, si la cellule photoélectrique détecte un obstacle, le moteur s'arrête.
+      La cellule devient une nouvelle entrée. Il faut la **relire en permanence** pendant la fermeture.
+
+      Algorithme : répéter tant que le portail se ferme ; si la cellule détecte un obstacle, alors arrêter le moteur.
+
+  - type: texte
+    titre: "Blocs et programmation textuelle"
+    contenu: |-
+      Blocs et texte disent la même chose.
+
+      | Blocs | Python |
+      |---|---|
+      | mettre compteur à 0 | `compteur = 0` |
+      | répéter indéfiniment | `while True:` |
+      | si... alors... sinon | `if... else...` |
+
+      Les blocs se comprennent vite. Le texte est plus rapide à écrire et à modifier.
+
+  - type: texte
+    titre: "Bien tester"
+    contenu: |-
+      On prévoit **toutes les situations** :
+
+      - le cas normal (aucun obstacle) ;
+      - le cas de la nouvelle fonctionnalité (obstacle présent) ;
+      - un cas limite (obstacle qui apparaît juste avant la fin).
+
+      Pour chaque test, on note ce qu'on **attend**, puis ce qu'on **observe**.
+      Un écart montre une erreur. On change **une seule chose à la fois**, puis on teste de nouveau.
+
+  - type: exemple
+    enonce: "Un volet roulant s'ouvre et se ferme avec un bouton. Nouvelle fonctionnalité : il se ferme tout seul quand un capteur de lumière indique qu'il fait nuit. Quelles données, quel algorithme, quels tests ?"
+    etapes:
+      - "Nouvelle entrée : le capteur de lumière. Sortie : le moteur du volet (qui existe déjà)."
+      - "Algorithme : répéter indéfiniment ; lire le capteur de lumière ; s'il fait nuit et que le volet n'est pas fermé, alors fermer le volet."
+      - "Le capteur est lu dans la répétition, à chaque tour, pas une seule fois au départ."
+      - "Tests : de jour, le volet ne bouge pas ; de nuit, il se ferme ; de nuit avec le volet déjà fermé, rien ne se passe."
+
+  - type: exercice
+    enonce: "Dans la démarche pour ajouter une fonctionnalité (déterminer les données, concevoir l'algorithme, programmer...), quelle est la dernière étape ? Réponds par un verbe à l'infinitif ou un nom."
+    forme: reponse_courte
+    reponse: "tester"
+    reponses_acceptees: ["tester", "test", "les tests", "tests", "le test", "un test"]
+    indices:
+      - "Que fait-on une fois le programme écrit, pour savoir s'il réagit comme prévu ?"
+      - "Reprends les quatre temps dans l'ordre : données, algorithme, programmation, puis la dernière étape."
+      - "Le dernier temps vérifie chaque situation sur l'objet."
+    explication: "Les quatre temps sont : déterminer les données, concevoir l'algorithme, programmer, puis tester."
+
+  - type: exercice
+    enonce: "Un portail automatique possède une télécommande, deux capteurs fin de course, une cellule photoélectrique, un moteur et un feu clignotant. Lequel de ces éléments est une sortie, commandée par le programme ?"
+    forme: qcm
+    choix:
+      - "Le bouton de la télécommande"
+      - "Un capteur fin de course"
+      - "La cellule photoélectrique"
+      - "Le moteur"
+    reponse: 3
+    indices:
+      - "Une entrée renseigne le programme. Une sortie reçoit un ordre."
+      - "Un capteur ou un bouton renseigne la carte."
+      - "Un moteur ou un voyant obéit à la carte."
+    explication: "Le moteur reçoit un ordre du programme : c'est une sortie. Le bouton, le fin de course et la cellule sont des entrées."
+
+  - type: exercice
+    enonce: >-
+      Nouvelle fonctionnalité du portail : prévenir le propriétaire quand la cellule détecte
+      souvent des obstacles.
+      Au démarrage, nb_obstacles = 0.
+      À chaque fermeture : si la cellule est coupée, alors on rouvre le portail et nb_obstacles augmente de 1.
+      Si nb_obstacles ≥ 2, alors on affiche « Vérifier la cellule ».
+      Lors du test, la cellule est : fermeture n° 1 libre, n° 2 coupée, n° 3 libre, n° 4 coupée, n° 5 coupée.
+      Lors de quelle fermeture le message s'affiche-t-il pour la première fois ? Donne son numéro.
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    indices:
+      - "Que vaut nb_obstacles après chaque fermeture ?"
+      - "Fais un tableau : numéro de la fermeture, état de la cellule, valeur de nb_obstacles."
+      - "nb_obstacles n'augmente que si la cellule est coupée. Après la fermeture n° 1 il vaut 0 ; continue le tableau."
+    explication: "nb_obstacles vaut 0 après la n° 1, 1 après la n° 2, reste 1 après la n° 3. Il atteint 2 à la fermeture n° 4 : le message s'affiche à ce moment-là."
+
+  - type: exercice
+    enonce: "Quelle ligne de programme Python correspond au bloc « répéter indéfiniment » ?"
+    forme: qcm
+    choix:
+      - "compteur = 0"
+      - "while True:"
+      - "if porte_ouverte:"
+      - "else:"
+    reponse: 1
+    indices:
+      - "Un bloc « répéter » donne une boucle."
+      - "« while » veut dire « tant que »."
+      - "« if » veut dire « si » et « else » veut dire « sinon » : ce sont des conditions, pas des répétitions."
+    explication: "while True: répète sans fin. compteur = 0 met un compteur à 0 ; if et else correspondent à « si » et « sinon »."
+
+  - type: exercice
+    enonce: >-
+      Programme de sécurité d'un portail : quand le bouton est appuyé, on ouvre le portail, on
+      attend 30 s, puis on lit l'état de la cellule et on le range dans la variable obstacle.
+      Ensuite, tant que le fin de course « fermé » n'est pas atteint : si obstacle est vrai,
+      on arrête le moteur ; sinon, on ferme. Au test, un chat passe devant la cellule au milieu
+      de la fermeture, et le portail continue de se fermer. Quelle est l'erreur ?
+    forme: qcm
+    choix:
+      - "La cellule n'est lue qu'une seule fois, avant la fermeture, et jamais relue pendant la fermeture."
+      - "Il faudrait attendre 60 s au lieu de 30 s."
+      - "La cellule est une sortie du programme, pas une entrée."
+      - "Il faudrait remplacer « tant que » par « répéter 2 fois »."
+    reponse: 0
+    indices:
+      - "À quel moment exact le programme regarde-t-il la cellule ?"
+      - "Simule : la cellule est libre au début de la fermeture. Que vaut obstacle ensuite, à chaque tour ?"
+      - "Cherche où la ligne qui lit la cellule est placée par rapport à « tant que »."
+    explication: "La lecture de la cellule est placée avant la répétition : elle n'est faite qu'une fois. Il faut la placer dans la répétition, pour relire la cellule à chaque tour."
+
+  - type: question_ouverte
+    question: >-
+      Nouvelle fonctionnalité : un éclairage extérieur s'allume quand un détecteur de mouvement
+      repère quelqu'un, et s'éteint quand plus personne n'est détecté. Indique les entrées et
+      les sorties, puis décris trois tests avec le résultat attendu pour chacun.
+    indices:
+      - "Quelle donnée le programme lit ? Quel ordre donne-t-il ?"
+      - "Pense à un test où le détecteur repère quelqu'un, et à un test où il ne repère personne."
+      - "Pour chaque test, écris : ce que je fais, ce que je dois observer."
+    criteres:
+      - "L'élève nomme l'entrée (détecteur de mouvement) et la sortie (éclairage)."
+      - "L'élève propose au moins un test avec mouvement (l'éclairage s'allume) et un test sans mouvement (l'éclairage reste éteint ou s'éteint)."
+      - "L'élève indique le résultat attendu pour chaque test, dit qu'il le compare au résultat observé, et qu'il corrige puis reteste en cas d'écart."
+
+  - type: synthese
+    consigne: >-
+      Écris les quatre temps pour ajouter une fonctionnalité à un objet technique, puis explique
+      en une phrase pourquoi on relit un capteur à chaque tour de la répétition.

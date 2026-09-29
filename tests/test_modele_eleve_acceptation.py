@@ -45,6 +45,7 @@ def test_a1_a2_a3_le_modele_predit_mieux_que_l_ancienne_regle(population: list[s
     assert mesures.ece(pis, ys) < 0.08  # A3
 
 
+@pytest.mark.lent
 def test_a4_la_calibration_corrige_un_juge_biaise() -> None:
     """Juge biaise (dit « compris » a tort 40 points plus souvent) : sur un trimestre de donnees, la
     calibration ramene l'erreur sur Sp(jugement_ia) de 0,38 (valeur par defaut) a moins de 0,10 en
@@ -63,6 +64,7 @@ def test_a4_la_calibration_corrige_un_juge_biaise() -> None:
     assert sum(e <= 0.15 for e in ecarts) / len(ecarts) >= 0.6
 
 
+@pytest.mark.lent
 def test_a5_la_calibration_ne_degrade_pas_un_juge_honnete() -> None:
     traces = simulateur.simuler(simulateur.Scenario(eleves=12, biais_juge=0.0, graine=11))
     sans = mesures.brier(*evaluer(traces, "bkt"))
@@ -70,6 +72,7 @@ def test_a5_la_calibration_ne_degrade_pas_un_juge_honnete() -> None:
     assert avec - sans <= 0.005, (sans, avec)
 
 
+@pytest.mark.lent
 def test_a5_bis_la_calibration_ameliore_un_juge_biaise() -> None:
     traces = simulateur.simuler(simulateur.Scenario(eleves=12, biais_juge=0.4, jours=120, graine=13))
     sans = mesures.brier(*evaluer(traces, "bkt"))

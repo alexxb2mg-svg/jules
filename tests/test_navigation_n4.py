@@ -102,11 +102,16 @@ def donnees(client) -> dict[str, Any]:
     }
     assert MATIERE_SANS_LECON in matieres and MATIERE_SANS_LECON not in faits["avec_lecon"]
     assert MATIERE_SANS_LECON not in faits["fiches"]
-    assert faits["fiches"] == ["mathematiques"]
+    assert faits["fiches"] == ["geographie", "histoire", "mathematiques"]
     maths = {n["id"]: n for n in par_matiere["mathematiques"]["notions"]}
     assert maths[NOTION_THALES]["lecon"] is True
     assert NOTION_HISTOIRE in {n["id"] for n in par_matiere["histoire"]["notions"]}
     return faits
+
+
+def fiches_de(donnees: dict[str, Any], matiere: str) -> list[dict[str, Any]]:
+    """Notions a fiche visuelle d'une matiere, prises par identifiant (l'ordre des matieres suit l'alphabet)."""
+    return next(m for m in donnees["fiches_reponse"]["matieres"] if m["id"] == matiere)["notions"]
 
 
 def memoire(matiere: str | None) -> str:
@@ -323,7 +328,7 @@ def test_ex209f_notion_d_une_autre_matiere_laisse_la_liste(banc):
 
 
 def test_ex209g_nav_dans_l_adresse_restaure_le_chapitre(banc, donnees):
-    notions = donnees["fiches_reponse"]["matieres"][0]["notions"]
+    notions = fiches_de(donnees, "mathematiques")
     chapitre = notions[-1]["chapitre"]
     fragment = "nav=fiches/mathematiques/" + urllib.parse.quote(chapitre, safe="")
     r = jouer(
@@ -353,7 +358,7 @@ def test_ex209g_nav_mal_forme_etape_1_sans_erreur(banc, fragment):
 
 
 def test_ex209h_retour_rend_le_focus_au_chapitre_ouvert(banc, donnees):
-    chapitres = sorted({n["chapitre"] for n in donnees["fiches_reponse"]["matieres"][0]["notions"]})
+    chapitres = sorted({n["chapitre"] for n in fiches_de(donnees, "mathematiques")})
     r = jouer(
         banc,
         "/cours",

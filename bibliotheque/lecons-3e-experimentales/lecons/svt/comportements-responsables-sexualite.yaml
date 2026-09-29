@@ -1,0 +1,177 @@
+notion: comportements-responsables-sexualite
+titre: "Comportements responsables : contraception, IST, procréation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer la fertilité et pourquoi aucune période du cycle n'est sans risque."
+      - "Comparer des méthodes de contraception et dire si elles protègent des IST."
+      - "Justifier des comportements responsables : respect, consentement, prévention, dépistage."
+
+  - type: texte
+    titre: "Fertilité et grossesse"
+    contenu: >-
+      La **fertilité** est la capacité d'avoir des enfants.
+
+
+      - L'homme produit des spermatozoïdes en continu à partir de la puberté.
+
+      - La femme est fertile de la puberté à la ménopause.
+
+      - Une grossesse est possible surtout autour de l'ovulation.
+
+
+      Mais la date de l'ovulation varie d'un cycle à l'autre. Les spermatozoïdes peuvent survivre
+      quelques jours. Il n'existe donc **pas de période « sans risque » fiable**.
+
+  - type: texte
+    titre: "La contraception et le choix raisonné de la procréation"
+    contenu: >-
+      La **contraception** permet de choisir si et quand avoir un enfant. Avoir un enfant est un choix
+      qui engage. L'information et le dialogue aident à décider ensemble.
+
+
+      - **Préservatif** : barrière qui empêche les spermatozoïdes d'atteindre l'ovule.
+
+      - **Pilule** : hormones qui empêchent en général l'ovulation. Elle se prend régulièrement.
+
+      - **DIU (stérilet)** : placé dans l'utérus par un professionnel de santé.
+
+      - **Contraception d'urgence** : à prendre le plus tôt possible après un rapport non protégé.
+      Ce n'est pas une méthode régulière.
+
+  - type: texte
+    titre: "Les infections sexuellement transmissibles (IST)"
+    contenu: >-
+      Les **IST** sont dues à des bactéries ou à des virus. Elles sont transmises lors de rapports
+      sexuels. Exemples : VIH (virus responsable du sida), chlamydia (bactérie), papillomavirus,
+      hépatite B.
+
+
+      - Beaucoup d'IST ne donnent aucun symptôme pendant longtemps.
+
+      - Le **préservatif** est le seul moyen de contraception qui protège aussi des IST.
+
+      - Le **dépistage** permet de savoir si on est infecté et de se soigner.
+
+      - Des vaccins existent contre le papillomavirus et l'hépatite B.
+
+  - type: texte
+    titre: "Respect, consentement et aide à la procréation"
+    contenu: >-
+      Le **respect de l'autre** est la base de tout comportement responsable. Une relation sexuelle
+      suppose le **consentement libre** de chaque personne. Chacun peut refuser ou changer d'avis à
+      tout moment. La loi punit les violences sexuelles.
+
+
+      Quand un couple a du mal à avoir un enfant, la médecine propose des techniques d'aide à la
+      procréation, par exemple la fécondation in vitro.
+
+
+      Pour toute question personnelle : l'infirmière scolaire, un médecin ou un adulte de confiance
+      peuvent aider.
+
+  - type: exemple
+    enonce: >-
+      Une personne prend la pilule et commence une nouvelle relation. Pourquoi lui conseille-t-on
+      aussi le préservatif ?
+    etapes:
+      - "La pilule empêche l'ovulation : elle évite une grossesse."
+      - "Mais elle n'empêche pas les microbes de passer d'une personne à l'autre."
+      - "Le préservatif forme une barrière qui protège des IST. Les deux méthodes se complètent."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'accord libre d'une personne, qu'elle peut retirer à tout moment ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "consentement"
+    reponses_acceptees: ["le consentement", "un consentement"]
+    indices:
+      - "Relis le texte sur le respect de l'autre."
+      - "Ce mot commence par « con » et finit par « ment »."
+    explication: "C'est le consentement : il doit être libre, et la personne peut refuser ou changer d'avis à tout moment."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : dans une étude imaginaire, on dépiste une IST chez 250 personnes porteuses de
+      cette infection. Parmi elles, 100 n'avaient aucun symptôme. Quel pourcentage de ces personnes
+      n'avait aucun symptôme ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 40
+    tolerance: 0.01
+    unite: "%"
+    indices:
+      - "Un pourcentage, c'est une part ramenée à 100 personnes."
+      - "Divise le nombre de personnes sans symptôme par le nombre total, puis multiplie par 100."
+    explication: "100 ÷ 250 = 0,4, et 0,4 × 100 = 40. Dans ce document, 40 % des personnes infectées n'avaient aucun symptôme : sans dépistage, on ne peut pas savoir si on est porteur."
+
+  - type: exercice
+    enonce: "Quel moyen de contraception protège aussi des IST ?"
+    forme: qcm
+    choix:
+      - "Le préservatif"
+      - "La pilule"
+      - "Le DIU (stérilet)"
+      - "La contraception d'urgence"
+    reponse: 0
+    indices:
+      - "Pour se protéger d'une IST, il faut empêcher les microbes de passer d'une personne à l'autre."
+      - "Quelle méthode est une barrière ?"
+    explication: "Le préservatif est une barrière : il empêche les spermatozoïdes d'atteindre l'ovule et les microbes de passer. Les autres méthodes ne protègent pas des IST."
+
+  - type: exercice
+    enonce: "Parmi ces affirmations sur la fertilité, laquelle est correcte ?"
+    forme: qcm
+    choix:
+      - "La date de l'ovulation peut varier d'un cycle à l'autre."
+      - "Il existe une période du cycle où une grossesse est impossible à coup sûr."
+      - "L'homme n'est fertile que quelques jours par mois."
+      - "Les spermatozoïdes meurent dès qu'ils sont dans le corps de la femme."
+    reponse: 0
+    indices:
+      - "Relis le texte sur la fertilité."
+      - "Une seule phrase est compatible avec « pas de période sans risque fiable »."
+    explication: "La date d'ovulation varie et les spermatozoïdes survivent quelques jours : aucune période n'est sûre à coup sûr. L'homme produit des spermatozoïdes en continu."
+
+  - type: exercice
+    enonce: >-
+      Document fictif : un tableau compare deux méthodes. Pilule : très efficace contre une grossesse
+      si elle est prise régulièrement, aucune protection contre les IST. Préservatif : efficace contre
+      une grossesse s'il est bien utilisé, protège contre la plupart des IST. Un couple veut éviter une
+      grossesse et se protéger des IST. Que peut-on conclure ?
+    forme: qcm
+    choix:
+      - "Le préservatif répond aux deux besoins ; la pilule ne répond qu'au premier."
+      - "La pilule répond aux deux besoins."
+      - "Aucune des deux méthodes ne protège d'une grossesse."
+      - "Le préservatif ne protège que des IST, jamais d'une grossesse."
+    reponse: 0
+    indices:
+      - "Fais deux colonnes : grossesse et IST. Place chaque méthode dans les bonnes colonnes."
+      - "Cherche la méthode qui a une protection dans les deux colonnes."
+    explication: "La pilule évite une grossesse mais pas les IST. Le préservatif protège des deux."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi il n'existe pas de période du cycle « sans risque » pour éviter une grossesse.
+    indices:
+      - "Pense à la date de l'ovulation."
+      - "Pense à la durée de vie des spermatozoïdes."
+    criteres:
+      - "L'élève dit que la date de l'ovulation varie d'un cycle à l'autre."
+      - "L'élève dit que les spermatozoïdes peuvent survivre quelques jours."
+      - "L'élève conclut qu'aucune période n'est sûre à coup sûr."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre contraception et protection
+      contre les IST. Ajoute pourquoi le respect et le consentement comptent.

@@ -54,6 +54,20 @@ def _decimal_court(rng: random.Random, bas: int, haut: int, chiffres: int) -> Fr
 
 # --- variante 1 : ranger ------------------------------------------------------------------------------
 
+
+def _relance_ordre_faux(en_fraction: list[bool], valeurs: list[Fraction]) -> str:
+    """La relance d'un ordre faux, écrite d'après la liste réellement tirée (fractions ? négatifs ?)."""
+    etapes = []
+    if any(en_fraction):
+        etapes.append("écris chaque fraction en écriture décimale")
+    if any(v < 0 for v in valeurs):
+        etapes.append("place les négatifs avant les positifs")
+    comparer = "compare les parties entières, puis les dixièmes, puis les centièmes"
+    if not etapes:
+        return f"Reprends pas à pas : {comparer}."
+    return "D'abord, " + " ; ensuite, ".join(etapes) + f" ; enfin, {comparer}."
+
+
 _PALIERS_RANGER = {
     # difficulté : (fractions ?, négatifs ?)
     1: (False, False),
@@ -126,10 +140,7 @@ def _ranger(rng: random.Random, difficulte: int) -> dict[str, Any]:
         piege_diagnostic(
             "inversion_voisine", "Presque : deux nombres voisins sont inversés. Compare-les chiffre par chiffre."
         ),
-        piege_diagnostic(
-            "ordre_faux",
-            "Écris d'abord chaque fraction en écriture décimale, puis place les négatifs avant les positifs.",
-        ),
+        piege_diagnostic("ordre_faux", _relance_ordre_faux([f for _, f in nombres], [x for x, _ in nombres])),
     ]
     sens = "croissant (du plus petit au plus grand)" if croissant else "décroissant (du plus grand au plus petit)"
     return exercice_v2(
@@ -161,8 +172,8 @@ def _ranger(rng: random.Random, difficulte: int) -> dict[str, Any]:
 
 
 def _fraction_decimal(rng: random.Random, difficulte: int) -> dict[str, Any]:
-    den = rng.choice(_DENOMINATEURS_DECIMAUX if difficulte > 1 else (2, 4, 5))
-    num = tirer(rng, lambda: rng.randint(1, 3 * den), lambda n: math.gcd(n, den) == 1)
+    den = rng.choice(_DENOMINATEURS_DECIMAUX if difficulte > 1 else (2, 4, 5, 10))
+    num = tirer(rng, lambda: rng.randint(1, (5 if difficulte == 1 else 3) * den), lambda n: math.gcd(n, den) == 1)
     x = Fraction(num, den)
     if difficulte < 3:  # fraction -> décimal
         pieges = [
@@ -335,19 +346,19 @@ def _encadrer(rng: random.Random, difficulte: int) -> dict[str, Any]:
 # --- variante 4 : abscisse sur une droite graduée ---------------------------------------------------------
 
 _PALIERS_ABSCISSE = {
-    # difficulté : (parts possibles, négatif possible ?, fraction à simplifier ?)
-    1: ((2, 3, 4, 5), False, False),
-    2: ((3, 4, 5, 6, 8), True, False),
-    3: ((4, 6, 8, 9, 10, 12), True, True),
+    # difficulté : (parts possibles, négatif possible ?, fraction à simplifier ?, graduations max en unités)
+    1: ((2, 3, 4, 5, 6, 8, 10), False, False, 3),
+    2: ((3, 4, 5, 6, 8), True, False, 2),
+    3: ((4, 6, 8, 9, 10, 12), True, True, 2),
 }
 
 
 def _abscisse(rng: random.Random, difficulte: int) -> dict[str, Any]:
-    parts_possibles, negatif, simplifier = palier(_PALIERS_ABSCISSE, difficulte)
+    parts_possibles, negatif, simplifier, unites = palier(_PALIERS_ABSCISSE, difficulte)
 
     def fabrique() -> tuple[int, int, int]:
         b = rng.choice(parts_possibles)
-        k = rng.randint(2, 2 * b)  # à 1 graduation, « une graduation vaut 1 ÷ b » serait la réponse
+        k = rng.randint(2, unites * b)  # à 1 graduation, « une graduation vaut 1 ÷ b » serait la réponse
         s = rng.choice((1, -1)) if negatif else 1
         return b, k, s
 

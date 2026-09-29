@@ -21,6 +21,13 @@ def test_deux_formes_donnent_une_forme_neutre_explicite():
     assert accorder("seul{{e|}}", "garcon") == "seul"
 
 
+def test_deux_formes_avec_une_forme_vide_pas_de_double_espace_au_neutre():
+    """Une forme vide (terminaison absente, ``{{e|}}``) ne doit pas produire de double espace au
+    neutre : la jointure « ou » ne s'applique qu'entre deux formes non vides."""
+    assert accorder("motivé{{e|}} pour la suite", "neutre") == "motivée pour la suite"
+    assert accorder("{{|motivé}} pour la suite", "neutre") == "motivé pour la suite"
+
+
 def test_accolades_ordinaires_intactes():
     texte = 'JSON : {"a": 1} et {inconnue}'
     assert remplir(texte, {"prenom": "Camille"}, "fille") == texte

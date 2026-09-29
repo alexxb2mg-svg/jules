@@ -1,0 +1,147 @@
+notion: transformations-societe-francaise
+titre: "Les transformations de la société française de la fin du XXe siècle"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Immigration »"
+    url: "https://fr.vikidia.org/w/index.php?title=Immigration&oldid=2185441"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Chômage »"
+    url: "https://fr.vikidia.org/w/index.php?title=Ch%C3%B4mage&oldid=2281796"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme du cycle 4 (annexe 3) — partie Histoire et géographie, classe de 3e — BOEN n° 31 du 30 juillet 2020 (arrêté du 17-7-2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Citer les cinq grandes transformations : place des femmes, jeunesse, immigration, vieillissement, chômage."
+      - "Donner pour chacune un repère daté (loi, événement)."
+      - "Relier ces transformations à des adaptations de la loi et au débat politique."
+
+  - type: texte
+    titre: "Les femmes et la jeunesse"
+    contenu: >-
+      **1. Les femmes.** Elles obtiennent le droit de vote en 1944 (premier vote en 1945). Elles
+      travaillent de plus en plus et font plus d'études. Leurs droits progressent : loi Neuwirth
+      sur la contraception (1967), loi Veil qui légalise l'interruption volontaire de grossesse,
+      l'**IVG** (1975). **2. La jeunesse.** Après le **baby-boom** (forte hausse des naissances
+      après 1945), les jeunes sont nombreux. Ils réclament plus de liberté et plus de place. Le
+      mouvement de mai 1968 (grèves ouvrières et contestation étudiante) en est le symbole. En
+      1974, la majorité passe de 21 à 18 ans.
+
+  - type: texte
+    titre: "Immigration et vieillissement"
+    contenu: >-
+      **3. L'immigration.** Pendant les **Trente Glorieuses** (1945-1975, forte croissance et
+      plein emploi), la France fait venir des travailleurs étrangers (Italie, Espagne, Portugal,
+      Maghreb) pour reconstruire et faire tourner les usines. En 1974, l'immigration de travail
+      est suspendue. Elle devient ensuite un sujet de débat politique. **4. Le vieillissement.**
+      L'espérance de vie augmente grâce aux progrès de la médecine et du niveau de vie. La part
+      des personnes âgées grandit. La retraite à 60 ans est instaurée en 1982.
+
+  - type: texte
+    titre: "Le chômage"
+    contenu: >-
+      **5. La montée du chômage.** À partir du milieu des années 1970, la croissance ralentit :
+      c'est une crise économique. Le **chômage** (personnes sans emploi qui en cherchent un)
+      devient massif et durable. Attention : il ne faut pas le confondre avec la période des
+      Trente Glorieuses, qui est celle de la croissance et du plein emploi.
+
+  - type: texte
+    titre: "Lois, débat politique et citoyenneté"
+    contenu: >-
+      Ces changements poussent le législateur à adapter les lois : droits des femmes, droit du
+      travail, âge de la majorité, retraite. C'est un enjeu de la démocratie. Les citoyens y
+      participent par leur vote, les manifestations, les débats et les associations. Au brevet :
+      cite plusieurs transformations, donne un repère daté pour chacune et relie-les à une loi
+      ou à un débat.
+
+  - type: exemple
+    enonce: >-
+      Montre, avec un exemple précis, qu'un changement de la société conduit à changer la loi.
+    etapes:
+      - "Les jeunes sont nombreux après le baby-boom et réclament plus de liberté et de place dans la société. Mai 1968 en est le symbole."
+      - "La loi s'adapte : en 1974, la majorité passe de 21 à 18 ans."
+      - "Conclusion : l'évolution de la jeunesse a un effet sur la législation, et les citoyens participent à ce débat."
+
+  - type: exercice
+    enonce: "En quelle année la loi Veil légalise-t-elle l'interruption volontaire de grossesse (IVG) ?"
+    forme: nombre
+    reponse: 1975
+    tolerance: 0
+    indices:
+      - "C'est une loi liée aux droits des femmes, portée par Simone Veil."
+      - "Elle date de la seconde moitié des années 1970, pas de 1967."
+    explication: "La loi Veil légalise l'IVG en 1975. La loi Neuwirth (contraception) date de 1967."
+
+  - type: exercice
+    enonce: "Que désigne l'expression « Trente Glorieuses » ?"
+    forme: qcm
+    choix:
+      - "Une période de forte croissance économique en France, de 1945 à 1975 environ"
+      - "Une période de chômage massif après 1975"
+      - "Les trente premières années de la Ve République"
+      - "Les trente ans de la construction européenne"
+    reponse: 0
+    indices:
+      - "« Glorieuses » dit que c'est une période favorable, avec le plein emploi."
+      - "Elle se situe entre la fin de la guerre et la crise des années 1970."
+    explication: "Les Trente Glorieuses sont la période de forte croissance et de plein emploi de 1945 à 1975 environ. Le chômage massif vient après."
+
+  - type: exercice
+    enonce: "Quel mouvement de contestation, en France, marque en 1968 les nouvelles aspirations de la jeunesse ? (Donne son nom.)"
+    forme: reponse_courte
+    reponse: "mai 1968"
+    reponses_acceptees:
+      - "mai 68"
+      - "Mai 68"
+      - "Mai 1968"
+      - "les événements de mai 1968"
+    indices:
+      - "Il mêle grèves ouvrières et contestation des étudiants."
+      - "Son nom associe un mois et une année : le mois de printemps de 1968."
+    explication: "Le mouvement de mai 1968 associe grèves ouvrières et contestation étudiante."
+
+  - type: exercice
+    enonce: "En quelle année la loi Neuwirth autorise-t-elle la contraception en France ?"
+    forme: nombre
+    reponse: 1967
+    tolerance: 0
+    indices:
+      - "Ne la confonds pas avec la loi Veil sur l'IVG, qui est plus tardive."
+      - "Elle précède de quelques mois le mouvement de mai 1968."
+    explication: "La loi Neuwirth sur la contraception date de 1967. La loi Veil (IVG) date de 1975."
+
+  - type: exercice
+    enonce: "Pourquoi la France fait-elle appel à des travailleurs étrangers pendant les Trente Glorieuses ?"
+    forme: qcm
+    choix:
+      - "Pour répondre aux besoins de main-d'œuvre de la reconstruction et de la croissance"
+      - "Pour faire face à un chômage massif"
+      - "Pour remplacer tous les Français partis à la retraite à 60 ans"
+    reponse: 0
+    indices:
+      - "Pendant cette période, il y a la croissance et le plein emploi."
+      - "La retraite à 60 ans est instaurée en 1982, après les Trente Glorieuses."
+    explication: "Il faut reconstruire et faire tourner les usines : la France manque de main-d'œuvre. Le chômage massif apparaît après le milieu des années 1970."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre comment la société française change entre 1945 et la fin
+      du XXe siècle, à partir de deux exemples précis.
+    indices:
+      - "Choisis deux transformations parmi les cinq : femmes, jeunesse, immigration, vieillissement, chômage."
+      - "Pour chacune, donne un repère daté (loi, événement) et relie-le à un changement de la loi ou au débat."
+    criteres:
+      - "L'élève choisit deux transformations parmi les cinq du programme."
+      - "L'élève donne un repère daté exact pour chacune (loi, événement)."
+      - "L'élève relie au moins un exemple à une adaptation de la législation ou à un débat politique."
+      - "L'élève a une phrase d'introduction et une conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, deux transformations de la société
+      française au XXe siècle et un repère daté pour chacune.

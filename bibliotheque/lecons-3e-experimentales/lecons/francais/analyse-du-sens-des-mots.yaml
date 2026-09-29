@@ -1,0 +1,144 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: analyse-du-sens-des-mots
+titre: "Le sens des mots : nuances, sens figuré, expressions figées"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir le bon sens d'un mot grâce au contexte, et distinguer sens propre et sens figuré."
+      - "Expliquer une nuance entre deux mots proches et le sens d'une expression figée."
+      - "Voir comment la construction d'un verbe peut changer son sens."
+
+  - type: texte
+    titre: "Un mot, plusieurs sens"
+    contenu: >-
+      Beaucoup de mots ont plusieurs sens : c'est la **polysémie**.
+      Le **contexte** (les mots autour) permet de choisir le bon sens.
+      « Glace » peut être de l'eau gelée, un miroir ou un dessert.
+      Le **sens propre** est le sens premier, concret. Le **sens figuré** est un sens imagé.
+      Le sens d'un mot peut aussi évoluer avec le temps : c'est un **glissement de sens**.
+      Exemple : « saisir » une balle (concret), puis « saisir » une idée (abstrait).
+
+  - type: texte
+    titre: "Des mots proches, mais pas identiques"
+    contenu: >-
+      Deux synonymes ne sont pas toujours interchangeables. Ils peuvent différer par :
+      - l'**intensité** : inquiétude, peur, terreur ;
+      - le **niveau de langue** : voiture, bagnole ;
+      - la **connotation** (le sens en plus, souvent un jugement) : mince (plutôt positif), maigre (plutôt négatif).
+      Choisis le mot le plus précis pour ce que tu veux dire.
+
+  - type: texte
+    titre: "Expressions figées et construction du verbe"
+    contenu: >-
+      Une **expression figée** est un groupe de mots dont le sens ne se devine pas mot à mot.
+      « Avoir le cafard » veut dire être triste. « Poser un lapin » veut dire ne pas venir à un rendez-vous.
+      On ne peut pas la modifier (on ne dit pas « avoir la blatte »).
+      Le sens d'un **verbe** change parfois selon sa **construction**.
+      « Il sort de la salle » (sans COD) et « il sort un livre » (avec un COD).
+      « Il tient à son chien » (il y est attaché) et « il tient son chien » (il le retient).
+
+  - type: exemple
+    enonce: >-
+      Dans « Cette juge a un cœur de pierre », l'expression « cœur de pierre » est-elle au sens propre
+      ou au sens figuré ? Explique.
+    etapes:
+      - "On teste le sens propre : un vrai cœur fait de pierre. Ce n'est pas possible pour une personne."
+      - "Le sens propre ne convient pas. On cherche donc une image."
+      - "La pierre est dure et froide. L'image dit que la juge est dure et sans pitié."
+      - "Réponse : c'est le sens figuré. « Un cœur de pierre » signifie « une personne sans pitié »."
+
+  - type: exercice
+    enonce: "Dans la phrase « Léa se regarde dans la glace avant de partir », quel est le sens du mot « glace » ?"
+    forme: qcm
+    choix:
+      - "un miroir"
+      - "de l'eau gelée"
+      - "un dessert froid"
+    reponse: 0
+    indices:
+      - "Que fait-on devant cet objet, juste avant de sortir ?"
+      - "Regarde les mots autour de « glace » : « se regarde dans ». On ne mange pas et on ne patine pas."
+    explication: "Le contexte (« se regarde dans ... avant de partir ») montre que « glace » veut dire « miroir »."
+
+  - type: exercice
+    enonce: "Que signifie l'expression figée « avoir le cafard » ? Réponds par un seul mot (un adjectif)."
+    forme: reponse_courte
+    reponse: "triste"
+    reponses_acceptees: ["déprimé", "deprime", "déprimée", "deprimee", "malheureux", "malheureuse", "cafardeux"]
+    indices:
+      - "Cette expression ne parle pas vraiment d'un insecte. Elle décrit un état d'esprit."
+      - "Pense à une personne qui n'a pas le moral."
+    explication: "« Avoir le cafard » veut dire être triste, ne pas avoir le moral. Le sens ne se devine pas mot à mot."
+
+  - type: exercice
+    enonce: "Dans « Il tient à sa bicyclette », que signifie le verbe « tenir » ?"
+    forme: qcm
+    choix:
+      - "Être attaché à quelque chose, y accorder de l'importance."
+      - "Serrer quelque chose dans la main."
+      - "Contenir quelque chose."
+    reponse: 0
+    indices:
+      - "Regarde le petit mot qui suit le verbe. Il change le sens."
+      - "Compare avec « Il tient sa bicyclette », qui est un sens plus concret. Que change « à » ?"
+    explication: "« Tenir à » quelque chose veut dire y être attaché. « Tenir » quelque chose sans « à » veut dire le retenir dans la main."
+
+  - type: exercice
+    enonce: "Quel mot décrit le mieux un voisin qui refuse de donner de l'argent, même quand il en a beaucoup ?"
+    forme: qcm
+    choix:
+      - "avare"
+      - "économe"
+      - "prudent"
+    reponse: 0
+    indices:
+      - "Ces trois mots parlent d'argent ou de précaution, mais leur connotation change."
+      - "Cherche le mot qui exprime un jugement négatif : garder tout par excès."
+    explication: "« Avare » désigne quelqu'un qui garde son argent par excès. Le mot est négatif. « Économe » et « prudent » sont plutôt des qualités."
+
+  - type: exercice
+    enonce: >-
+      Dans « Sa réponse a mis de l'huile sur le feu », quelle est la bonne interprétation ?
+    forme: qcm
+    choix:
+      - "Sa réponse a aggravé le conflit."
+      - "Sa réponse a calmé tout le monde."
+      - "Sa réponse parlait de cuisine."
+      - "Sa réponse était très courte."
+    reponse: 0
+    indices:
+      - "C'est une expression figée. Ne la traduis pas mot à mot."
+      - "Imagine ce qui arrive à un feu quand on y verse de l'huile."
+    explication: "« Mettre de l'huile sur le feu » veut dire aggraver une dispute. L'image : l'huile fait brûler le feu plus fort."
+
+  - type: question_ouverte
+    question: >-
+      Le mot « pièce » a plusieurs sens. Donne-en trois, chacun dans une courte phrase où le contexte
+      permet de le reconnaître. Puis explique comment on choisit le bon sens.
+    indices:
+      - "Pense à un endroit dans une maison, à de l'argent et à un spectacle."
+      - "Dans chaque phrase, mets un mot qui aide à comprendre (habiter, payer, jouer...)."
+    criteres:
+      - "L'élève donne au moins trois sens différents (par exemple : pièce d'une maison, pièce de monnaie, pièce de théâtre)."
+      - "Chaque sens est illustré par une phrase dont le contexte permet de le reconnaître."
+      - "L'élève explique que ce sont les mots autour (le contexte) qui permettent de choisir le bon sens."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : explique la différence entre sens propre et sens figuré,
+      et dis ce que tu fais quand tu rencontres une expression figée que tu ne comprends pas.

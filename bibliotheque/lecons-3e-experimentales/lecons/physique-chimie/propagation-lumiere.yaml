@@ -1,0 +1,140 @@
+notion: propagation-lumiere
+titre: "Sources de lumière, propagation et année-lumière"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer une source primaire d'un objet diffusant."
+      - "Décrire la propagation rectiligne de la lumière et le modèle du rayon lumineux."
+      - "Calculer une distance ou une durée avec d = v × t, et expliquer l'année-lumière."
+
+  - type: texte
+    titre: "Source primaire ou objet diffusant"
+    contenu: |-
+      - Une **source primaire** produit elle-même la lumière qu'elle émet : le Soleil, une étoile, une lampe allumée, une flamme, un écran allumé.
+      - Un **objet diffusant** ne produit pas de lumière. Il renvoie dans toutes les directions une partie de la lumière reçue : la Lune, un livre, un mur.
+
+      On voit un objet quand de la lumière venant de lui **entre dans notre œil**.
+
+  - type: texte
+    titre: "Propagation rectiligne et rayon lumineux"
+    contenu: |-
+      Dans le vide, et dans un milieu transparent et homogène (air, eau pure, verre), la lumière se propage **en ligne droite**.
+      - On le vérifie avec des cartons percés : la lumière ne passe que si les trous sont alignés.
+      - Le **rayon lumineux** est un **modèle** : une droite fléchée dans le sens de propagation.
+      - La flèche va de la source vers l'œil, jamais de l'œil vers l'objet.
+
+  - type: texte
+    titre: "Vitesse de la lumière et année-lumière"
+    contenu: |-
+      La lumière se propage même dans le vide, à environ **300 000 km/s**. Elle est très rapide, mais pas instantanée.
+      - **d = v × t** (d en km, v en km/s, t en s), ou **t = d ÷ v**.
+      - Convertis les durées : 1 min = 60 s ; 1 h = 3 600 s.
+
+      L'**année-lumière** (al) est une **unité de distance** : la distance parcourue par la lumière dans le vide en un an, environ 9 500 milliards de km. Ce n'est **pas** une durée.
+
+  - type: exemple
+    enonce: "La lumière de la Lune met environ 1,3 s pour arriver sur Terre. À quelle distance est la Lune ?"
+    etapes:
+      - "La vitesse est en km/s et la durée en s : les unités sont cohérentes."
+      - "d = v × t = 300 000 × 1,3."
+      - "d ≈ 390 000 km."
+      - "La Lune ne produit pas cette lumière : elle diffuse celle du Soleil."
+
+  - type: exercice
+    enonce: "Parmi ces objets, lequel est une source primaire de lumière ?"
+    forme: qcm
+    choix:
+      - "la Lune"
+      - "une feuille de papier"
+      - "la flamme d'une bougie"
+      - "un mur blanc éclairé"
+    reponse: 2
+    indices:
+      - "Pour chaque objet, demande-toi : produit-il sa propre lumière ?"
+      - "Imagine chaque objet dans une pièce complètement noire : lequel verrais-tu encore ?"
+    explication: "La flamme produit sa lumière : c'est une source primaire. La Lune, la feuille et le mur renvoient la lumière qu'ils reçoivent : ce sont des objets diffusants."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la droite fléchée qui représente le trajet de la lumière ? (deux mots)"
+    forme: reponse_courte
+    reponse: "rayon lumineux"
+    reponses_acceptees:
+      - "rayon lumineux"
+      - "un rayon lumineux"
+      - "le rayon lumineux"
+      - "rayon de lumière"
+      - "rayons lumineux"
+    indices:
+      - "On dessine le trajet de la lumière avec un modèle. Comment s'appelle-t-il ?"
+      - "C'est un nom suivi de l'adjectif « lumineux »."
+    explication: "C'est un rayon lumineux : une droite fléchée dans le sens de propagation de la lumière."
+
+  - type: exercice
+    enonce: "Une étoile est à 100 années-lumière de la Terre. Que signifie cette phrase ?"
+    forme: qcm
+    choix:
+      - "L'étoile existe depuis 100 ans."
+      - "L'étoile est à une distance égale à celle que la lumière parcourt en 100 ans."
+      - "Il faut 100 ans à une fusée pour atteindre l'étoile."
+      - "L'étoile brille pendant 100 ans."
+    reponse: 1
+    indices:
+      - "L'année-lumière mesure-t-elle une durée ou une distance ?"
+      - "Relis la définition : c'est la distance parcourue par la lumière dans le vide en une année."
+    explication: "L'année-lumière est une distance. L'étoile est à la distance que la lumière parcourt en 100 ans : sa lumière met donc 100 ans pour nous parvenir."
+
+  - type: exercice
+    enonce: >-
+      La lumière du Soleil met environ 8 min 20 s pour arriver sur Terre. Sa vitesse est d'environ
+      300 000 km/s. Calcule la distance Soleil-Terre, en kilomètres.
+    forme: nombre
+    reponse: 150000000
+    tolerance: 1000
+    unite: "km"
+    indices:
+      - "La vitesse est en km par seconde : dans quelle unité faut-il écrire la durée ?"
+      - "Convertis la durée en secondes (1 min = 60 s), puis utilise d = v × t."
+      - "8 min = 480 s, donc 8 min 20 s = 500 s. Multiplie maintenant la vitesse par cette durée."
+    explication: "t = 8 × 60 + 20 = 500 s, donc d = v × t = 300 000 × 500 = 150 000 000 km (150 millions de km)."
+
+  - type: exercice
+    enonce: >-
+      Une sonde spatiale est à 3 000 000 000 km de la Terre. La lumière se propage à 300 000 km/s.
+      Combien de secondes met un signal lumineux pour l'atteindre ?
+    forme: nombre
+    reponse: 10000
+    tolerance: 1
+    unite: "s"
+    indices:
+      - "Quelle relation relie la distance, la vitesse et la durée ? Que cherches-tu ?"
+      - "Pour trouver la durée : t = d ÷ v, avec d en km et v en km/s. Le résultat est en secondes."
+      - "Divise 3 000 000 000 par 300 000. Tu peux d'abord enlever les mêmes zéros en haut et en bas."
+    explication: "t = d ÷ v = 3 000 000 000 ÷ 300 000 = 10 000 s."
+
+  - type: question_ouverte
+    question: >-
+      On place trois cartons percés d'un petit trou entre une lampe et ton œil. Tu ne vois la lampe
+      que si les trois trous sont alignés. Explique ce que cette expérience montre.
+    indices:
+      - "Que faut-il pour que tu voies la lampe ?"
+      - "Quand un carton est décalé, la lumière rencontre le carton. Peut-elle le contourner ?"
+    criteres:
+      - "L'élève dit que la lumière se propage en ligne droite (dans l'air, milieu transparent et homogène)."
+      - "L'élève explique que si un trou n'est pas aligné, un carton arrête la lumière et elle n'arrive pas à l'œil."
+      - "L'élève peut représenter la situation par un rayon lumineux allant de la lampe vers l'œil."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une source
+      primaire et un objet diffusant, et ce qu'est une année-lumière.

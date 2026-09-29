@@ -42,9 +42,12 @@ def _coefficient(taux: int, hausse: bool) -> Fraction:
     return Fraction(100 + taux if hausse else 100 - taux, 100)
 
 
-def _tirer_evolution(rng: random.Random, difficulte: int) -> tuple[int, bool]:
+def _tirer_evolution(
+    rng: random.Random, difficulte: int, taux_possibles: tuple[int, ...] | None = None
+) -> tuple[int, bool]:
     """(taux, hausse ?). Une baisse de 100 % ou plus n'a pas de sens : au-delà de 99, seulement des hausses."""
-    taux_possibles, _, _ = palier(_PALIERS, difficulte)
+    if taux_possibles is None:
+        taux_possibles, _, _ = palier(_PALIERS, difficulte)
     taux = rng.choice(taux_possibles)
     hausse = True if taux >= 100 else rng.choice((True, False))
     return taux, hausse
@@ -64,8 +67,13 @@ def _tirer_prix(rng: random.Random, difficulte: int, taux: int, accepte: Callabl
 # --- variante 1 : taux <-> coefficient --------------------------------------------------------------------
 
 
+# palier 1 de `coefficient` : sans prix à calculer, quatre taux ne donnent que 16 exercices ; on en ouvre
+# d'autres, toujours « ronds » (les autres variantes gardent le palier commun, leurs prix doivent tomber juste)
+_TAUX_COEFFICIENT_PALIER_1 = (5, 10, 20, 25, 30, 40, 50, 60)
+
+
 def _coefficient_variante(rng: random.Random, difficulte: int) -> dict[str, Any]:
-    taux, hausse = _tirer_evolution(rng, difficulte)
+    taux, hausse = _tirer_evolution(rng, difficulte, _TAUX_COEFFICIENT_PALIER_1 if difficulte == 1 else None)
     coef = _coefficient(taux, hausse)
     verbe, nom = _MOT[hausse]
     sens_inverse = _coefficient(taux, not hausse) if taux < 100 else None

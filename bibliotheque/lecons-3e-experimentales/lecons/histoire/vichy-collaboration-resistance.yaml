@@ -1,0 +1,154 @@
+notion: vichy-collaboration-resistance
+titre: "La France défaite et occupée : Vichy, collaboration, Résistance"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Régime de Vichy »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9gime_de_Vichy&oldid=2154610"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Résistance française »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9sistance_fran%C3%A7aise&oldid=2464574"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Conseil national de la Résistance »"
+    url: "https://fr.vikidia.org/w/index.php?title=Conseil_national_de_la_R%C3%A9sistance&oldid=2179810"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme du cycle 4 (annexe 3), Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer la défaite de 1940, l'armistice et la coupure du pays en deux zones."
+      - "Expliquer ce qu'est le régime de Vichy et pourquoi il nie les valeurs de la République."
+      - "Distinguer la France libre et la Résistance intérieure, et expliquer pourquoi elles combattent l'occupant et Vichy."
+
+  - type: texte
+    titre: "La défaite de 1940 et l'armistice"
+    contenu: >-
+      En mai-juin 1940, l'armée française est vaincue en quelques semaines par l'Allemagne nazie.
+      C'est le **choc de la défaite**.
+      Le 17 juin, le maréchal **Pétain** dit qu'il faut cesser le combat.
+      Il signe l'**armistice** le **22 juin 1940**.
+      Un armistice arrête les combats, mais ce n'est pas un traité de paix.
+
+  - type: texte
+    titre: "Deux zones, puis le régime de Vichy"
+    contenu: >-
+      La France est coupée en deux. Au nord et sur la côte atlantique, c'est la **zone occupée**.
+      Au sud, c'est la « **zone libre** », qui n'est pas occupée par l'armée allemande.
+      En **novembre 1942**, l'Allemagne occupe aussi la zone sud.
+      Le gouvernement s'installe à **Vichy**. Le 10 juillet 1940, les parlementaires votent les pleins pouvoirs à Pétain.
+      Il devient « chef de l'État français » : c'est le **régime de Vichy**.
+      Ce régime est autoritaire. Il supprime les élections et les libertés.
+      Sa devise est « Travail, Famille, Patrie », à la place de « Liberté, Égalité, Fraternité ».
+      Il **nie les valeurs de la République**.
+
+  - type: texte
+    titre: "La collaboration"
+    contenu: >-
+      Dès octobre 1940, Vichy prend des mesures d'exclusion contre les Juifs : c'est le **statut des Juifs**.
+      Le régime choisit la **collaboration** avec l'Allemagne nazie.
+      La poignée de main entre Pétain et Hitler à **Montoire**, en octobre 1940, en est le symbole.
+      **Pierre Laval** est l'un des principaux artisans de cette collaboration d'État.
+      Attention : l'**occupation** est un fait militaire subi. La **collaboration** est un choix politique de Vichy.
+
+  - type: texte
+    titre: "La Résistance en France et en Europe"
+    contenu: >-
+      Le **18 juin 1940**, le général **de Gaulle** lance un appel depuis Londres : il faut continuer le combat.
+      C'est le début de la **France libre**.
+      En France, la **Résistance intérieure** se développe.
+      Elle est **civile** (presse clandestine, faux papiers, aide aux personnes cachées).
+      Elle est aussi **militaire** (sabotages, maquis).
+      En 1943, **Jean Moulin** unifie les principaux mouvements dans le **Conseil national de la Résistance** (CNR).
+      Le CNR reconnaît de Gaulle comme chef de la Résistance.
+      En Europe, l'occupation nazie provoque aussi des résistances (Pologne, Yougoslavie, Norvège, Italie).
+      Dans certains pays, des régimes ou des personnes collaborent.
+      La Résistance combat l'occupant **et** le régime de Vichy.
+      La plupart des Français ne sont ni collaborateurs actifs ni résistants avant 1943 : beaucoup attendent.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi la « zone libre » n'était-elle pas vraiment libre ?
+    etapes:
+      - "La zone libre est le sud de la France, non occupée par l'armée allemande après l'armistice."
+      - "Mais elle est dirigée par le régime de Vichy, qui est autoritaire et collabore avec l'Allemagne nazie."
+      - "De plus, en novembre 1942, l'armée allemande occupe aussi cette zone."
+
+  - type: exercice
+    enonce: "En quelle année le général de Gaulle lance-t-il l'appel du 18 juin depuis Londres ?"
+    forme: nombre
+    reponse: 1940
+    tolerance: 0
+    indices:
+      - "Cet appel suit de quelques jours la défaite de l'armée française."
+      - "La Seconde Guerre mondiale a commencé l'année d'avant. L'appel est lancé l'année suivante."
+    explication: "De Gaulle lance l'appel du 18 juin 1940, quatre jours avant la signature de l'armistice (22 juin 1940)."
+
+  - type: exercice
+    enonce: "Qui est chargé par de Gaulle d'unifier les mouvements de la Résistance intérieure en 1943 ?"
+    forme: qcm
+    choix:
+      - "Le maréchal Pétain"
+      - "Pierre Laval"
+      - "Jean Moulin"
+      - "Le général de Gaulle lui-même, sur place en France"
+    reponse: 2
+    indices:
+      - "Pétain et Laval sont des dirigeants du régime de Vichy : ils ne dirigent pas la Résistance."
+      - "De Gaulle est à Londres. Il envoie quelqu'un en France."
+    explication: "Jean Moulin unifie la Résistance intérieure en 1943. Pétain et Laval sont à Vichy. De Gaulle dirige la France libre depuis Londres."
+
+  - type: exercice
+    enonce: "Quel sigle de trois lettres désigne le Conseil national de la Résistance, fondé en 1943 ?"
+    forme: reponse_courte
+    reponse: "CNR"
+    reponses_acceptees: ["CNR", "cnr", "le CNR", "C.N.R."]
+    indices:
+      - "Prends la première lettre de chaque mot important : Conseil, National, Résistance."
+      - "Le sigle commence par la lettre C."
+    explication: "Le CNR est le Conseil national de la Résistance. Il unifie la Résistance intérieure et reconnaît de Gaulle comme chef."
+
+  - type: exercice
+    enonce: "En quelle année l'armée allemande occupe-t-elle aussi la zone libre, au sud de la France ?"
+    forme: nombre
+    reponse: 1942
+    tolerance: 0
+    indices:
+      - "C'est après l'armistice et avant la Libération."
+      - "C'est le milieu de l'Occupation, en novembre."
+    explication: "L'Allemagne occupe la zone sud en novembre 1942."
+
+  - type: exercice
+    enonce: "Quelle affirmation est exacte ?"
+    forme: qcm
+    choix:
+      - "Le régime de Vichy rétablit les élections et la devise « Liberté, Égalité, Fraternité »."
+      - "La Résistance combat à la fois l'occupant nazi et le régime de Vichy."
+      - "Tous les Français résistent dès 1940."
+      - "L'occupation est un choix politique de Vichy."
+    reponse: 1
+    indices:
+      - "Vichy supprime les élections et change la devise de la République."
+      - "L'occupation est un fait militaire subi. Le choix politique s'appelle la collaboration."
+      - "Beaucoup de Français attendent avant 1943 : tous ne résistent pas."
+    explication: "La Résistance refuse l'occupation nazie et aussi le régime de Vichy, qui collabore et nie les valeurs républicaines. Les autres phrases sont fausses."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi la Résistance combat à la fois l'occupant allemand et le régime de Vichy.
+      Donne un exemple de résistance civile et un exemple de résistance militaire.
+    indices:
+      - "Que fait Vichy pour l'Allemagne nazie, et que devient la République sous Vichy ?"
+      - "Pense à la presse clandestine, aux faux papiers, aux sabotages, aux maquis."
+    criteres:
+      - "L'élève explique que la Résistance refuse l'occupation nazie et le régime de Vichy, qui collabore et nie les valeurs de la République."
+      - "L'élève donne un exemple de résistance civile (presse clandestine, faux papiers, aide aux personnes cachées)."
+      - "L'élève donne un exemple de résistance militaire (sabotages, maquis)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que sont le régime de Vichy, la collaboration
+      et la Résistance, et donne deux dates importantes de 1940.

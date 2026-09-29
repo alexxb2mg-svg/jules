@@ -1,0 +1,150 @@
+notion: corpus-visions-poetiques
+titre: "Corpus de référence : poèmes et prose poétique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître la prose poétique et la distinguer des poèmes en vers."
+      - "Situer un texte dans son époque (romantisme, symbolisme, XXe siècle) et dire quelle vision du monde il propose."
+      - "Comparer deux textes, ou un texte et un paysage en peinture."
+
+  - type: texte
+    titre: "Ce que demande le programme"
+    contenu: |-
+      En 3e, on étudie des **poèmes** et des textes de **prose poétique**, du romantisme à nos jours.
+      Le but : comprendre la **diversité des visions du monde**, dans des **esthétiques** différentes.
+      Un **corpus** est un ensemble d'œuvres étudiées ensemble.
+      Il peut contenir des **paysages en peinture**.
+
+  - type: texte
+    titre: "Vers ou prose poétique"
+    contenu: |-
+      - Le **vers** est une ligne de poème, avec un rythme et parfois des rimes.
+      - La **prose poétique** est un texte écrit en phrases, sans vers.
+      Elle garde des effets poétiques : images fortes, rythme, choix précis des mots.
+      Exemple : *Le Spleen de Paris*, de Baudelaire, petits poèmes en prose (publiés après sa mort).
+
+  - type: texte
+    titre: "Les repères par époque"
+    contenu: |-
+      | Époque | Ce qu'on retient |
+      |---|---|
+      | XIXe siècle, romantisme | Lamartine, Hugo : sentiments personnels, nature = reflet de l'âme |
+      | Fin du XIXe siècle, symbolisme | Baudelaire, Verlaine, Rimbaud (*Illuminations*) : suggérer plus qu'on ne dit |
+      | XXe siècle | Apollinaire, Éluard (surréalistes) : forme renouvelée, imagination libre |
+      | XXe siècle | Ponge, *Le Parti pris des choses* (1942) : décrire des objets simples |
+
+  - type: texte
+    titre: "Visions du monde, peinture et méthode"
+    contenu: |-
+      La nature peut être célébrée, apaisante, inquiétante, menacée, ou simplement observée.
+      Les peintres aussi disent leur rapport au monde : Friedrich, *Le Voyageur contemplant une mer de nuages* ; Monet, *Impression, soleil levant* (1872) ; Van Gogh, *La Nuit étoilée* (1889).
+      Comparer un poème et un tableau : même sujet, deux langages (mots, couleurs).
+      Au brevet : situe le texte, dis sa vision du monde, relève images et rythme, compare.
+
+  - type: exemple
+    enonce: >-
+      Analyse un texte du *Spleen de Paris* de Baudelaire, en trois étapes : forme, époque, effets.
+    etapes:
+      - "Forme : le texte est écrit en phrases, sans vers. C'est de la prose poétique."
+      - "Époque : Baudelaire fait partie de ceux qui, au XIXe siècle, cherchent d'autres beautés et suggèrent plus qu'ils ne disent."
+      - "Effets : on relève les images fortes, le rythme des phrases et le choix des mots. Ils montrent que le texte reste poétique sans vers."
+
+  - type: exercice
+    enonce: "Qu'est-ce que la prose poétique ?"
+    forme: qcm
+    choix:
+      - "Un texte écrit en phrases, sans vers, qui garde des effets poétiques"
+      - "Un poème en vers avec des rimes régulières"
+      - "Un texte scientifique sans images"
+      - "Un dessin qui accompagne un poème"
+    reponse: 0
+    indices:
+      - "Le mot « prose » veut dire : sans vers."
+      - "Le mot « poétique » veut dire : avec des images et du rythme."
+    explication: "La prose poétique est écrite en phrases ordinaires, sans vers, mais elle garde des images fortes et un rythme particulier."
+
+  - type: exercice
+    enonce: "Quel mouvement du XIXe siècle exprime les sentiments personnels et voit la nature comme un reflet de l'âme ? (un mot)"
+    forme: reponse_courte
+    reponse: "romantisme"
+    reponses_acceptees: ["le romantisme", "romantique", "les romantiques", "Romantisme"]
+    indices:
+      - "Lamartine et Hugo appartiennent à ce mouvement."
+      - "Ce nom se termine par « -isme » et commence par « roman- »."
+    explication: "Le romantisme exprime les sentiments personnels et voit la nature comme un reflet de l'âme."
+
+  - type: exercice
+    enonce: "Monet peint *Impression, soleil levant* en 1872. Van Gogh peint *La Nuit étoilée* en 1889. Combien d'années séparent ces deux tableaux ?"
+    forme: nombre
+    reponse: 17
+    tolerance: 0.01
+    unite: "ans"
+    indices:
+      - "Pour un écart entre deux dates, on fait une soustraction."
+      - "Soustrais la date la plus ancienne de la plus récente : 1889 − 1872."
+    explication: "1889 − 1872 = 17. Les deux tableaux sont séparés de 17 ans."
+
+  - type: exercice
+    enonce: "Dans *Le Parti pris des choses* (1942), que décrit Francis Ponge ?"
+    forme: qcm
+    choix:
+      - "Des objets simples"
+      - "Ses sentiments amoureux"
+      - "Des batailles historiques"
+      - "Des rêves fantastiques"
+    reponse: 0
+    indices:
+      - "Le titre parle de « choses »."
+      - "Ponge regarde ce qui est autour de nous, tous les jours."
+    explication: "Ponge décrit des objets simples dans *Le Parti pris des choses*."
+
+  - type: exercice
+    enonce: >-
+      Un poème montre une nature qui apaise le poète. Un autre poème, d'une autre époque, montre une
+      nature inquiétante et menacée. Que peut-on conclure ?
+    forme: qcm
+    choix:
+      - "Les visions du monde changent selon l'époque et l'auteur : les deux textes proposent des regards différents sur la nature"
+      - "L'un des deux poèmes est forcément faux"
+      - "Ces deux poèmes ne parlent pas de la nature"
+      - "Un vrai poème doit toujours célébrer la nature"
+    reponse: 0
+    indices:
+      - "Relis la partie sur les visions du monde : la nature est-elle toujours vue de la même façon ?"
+      - "Comparer, c'est chercher ce qui est différent, sans dire qu'un texte est faux."
+    explication: "La nature peut être célébrée, apaisante, inquiétante ou menacée. La vision du monde change avec l'époque et l'auteur, et c'est ce que le corpus permet de comparer."
+
+  - type: question_ouverte
+    question: >-
+      Choisis deux textes ou un texte et un tableau de paysage vus dans ce cours. Compare la façon
+      dont chacun voit la nature. Dis aussi si le texte est en vers ou en prose poétique.
+    indices:
+      - "Situe chaque œuvre : auteur, époque, forme."
+      - "Dis quelle vision de la nature chacune propose (émotion, inquiétude, observation), puis compare."
+    criteres:
+      - "L'élève situe chaque œuvre (auteur, époque, forme)."
+      - "L'élève identifie la vision du monde de chacune (célébration, inquiétude, observation, émotion)."
+      - "L'élève relève au moins un procédé (image, rythme, vers ou prose poétique, couleur pour un tableau)."
+      - "L'élève donne un point commun et une différence."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce qu'est la prose poétique et comment tu
+      compares la vision du monde de deux œuvres.

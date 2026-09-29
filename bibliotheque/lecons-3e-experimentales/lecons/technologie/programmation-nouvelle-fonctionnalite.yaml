@@ -1,0 +1,168 @@
+notion: programmation-nouvelle-fonctionnalite
+titre: "Analyser et modifier un programme : variables, opérateurs, conditions, boucles"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer les entrées, les sorties et les variables d'un programme."
+      - "Évaluer une condition avec ET, OU, NON et simuler quelques tours de boucle."
+      - "Traduire un programme en français et prévoir l'effet d'un changement de paramètre."
+
+  - type: texte
+    titre: "Entrées, sorties, variables"
+    contenu: |-
+      Le programme d'un objet est exécuté par une **carte microcontrôleur**.
+
+      - Les **entrées** : les valeurs des capteurs, les boutons.
+      - Les **sorties** : les ordres vers une lampe, un moteur, un écran, un buzzer.
+
+      Une **variable** est une case mémoire avec un nom. Elle contient une valeur : un **nombre**, un **booléen** (vrai ou faux) ou un **mot**.
+
+      L'**affectation** range une valeur dans la variable. Exemple : lum ← 280. Elle remplace l'ancienne valeur.
+
+      Une **liste** range plusieurs valeurs sous un seul nom.
+
+  - type: texte
+    titre: "Opérateurs et conditions"
+    contenu: |-
+      Les opérateurs **arithmétiques** (+, −, ×, ÷) calculent.
+
+      Les comparaisons (<, >, =) et les opérateurs **logiques** donnent vrai ou faux.
+
+      | Opérateur | Il est vrai quand... |
+      |---|---|
+      | A ET B | les deux sont vrais |
+      | A OU B | au moins l'un est vrai |
+      | NON A | A est faux |
+
+      L'**instruction conditionnelle** (si... alors... sinon) choisit une action selon une condition.
+
+  - type: texte
+    titre: "Boucles et événements"
+    contenu: |-
+      Les **instructions itératives** (boucles) répètent des actions :
+
+      - un nombre de fois donné ;
+      - tant qu'une condition est vraie ;
+      - indéfiniment.
+
+      Un **événement** (appui sur un bouton, démarrage de la carte) déclenche une suite d'instructions.
+
+      La programmation **par blocs** et la programmation **textuelle** expriment les mêmes idées.
+
+  - type: texte
+    titre: "Modifier un paramètre et simuler"
+    contenu: |-
+      Modifier un paramètre (un **seuil**, une durée) change le comportement de l'objet.
+
+      Pour prévoir l'effet, on **simule** le programme pas à pas. On fait un tableau : une ligne par tour de boucle.
+
+      On y note les valeurs des variables et l'état des sorties.
+
+      Pour une nouvelle fonctionnalité : écris d'abord en français ce qui doit se passer, puis modifie la condition ou le paramètre, puis simule de nouveau.
+
+  - type: exemple
+    enonce: >-
+      Un arrosage automatique suit la règle : si humidite < 40 ET pluie = faux alors arroser, sinon ne rien
+      faire. À un instant, humidite = 35 et pluie = faux. Que fait l'arrosage ?
+    etapes:
+      - "humidite < 40 : 35 est plus petit que 40, donc c'est vrai."
+      - "pluie = faux : c'est bien le cas, donc c'est vrai."
+      - "vrai ET vrai donne vrai : l'arrosage se met en marche."
+
+  - type: exercice
+    enonce: "Dans un programme, on écrit porte_ouverte ← vrai. Quel est le type de la valeur rangée dans la variable ?"
+    forme: qcm
+    choix:
+      - "Un nombre"
+      - "Un booléen"
+      - "Un mot"
+    reponse: 1
+    indices:
+      - "Regarde la valeur à droite de la flèche."
+      - "Quelles valeurs ne peuvent être que vrai ou faux ?"
+    explication: "vrai ou faux : c'est un booléen."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'instruction qui range une valeur dans une variable, par exemple lum ← 280 ?"
+    forme: reponse_courte
+    reponse: "affectation"
+    reponses_acceptees:
+      - "affectation"
+      - "l'affectation"
+      - "une affectation"
+      - "instruction d'affectation"
+    indices:
+      - "Cette instruction remplace l'ancienne valeur de la variable."
+      - "Le mot commence par la lettre « a » et se termine par « tion »."
+    explication: "C'est l'affectation : elle range une nouvelle valeur dans la variable."
+
+  - type: exercice
+    enonce: >-
+      Règle d'un ventilateur : si t > 28 OU bouton = vrai alors mettre le ventilateur en marche. À un
+      instant, t = 25 et bouton = vrai. Que fait le ventilateur ?
+    forme: qcm
+    choix:
+      - "Il est en marche."
+      - "Il est arrêté."
+      - "On ne peut pas savoir."
+    reponse: 0
+    indices:
+      - "Calcule chaque morceau : t > 28, puis bouton = vrai. Sont-ils vrais ou faux ?"
+      - "Avec OU, il suffit qu'un seul des deux soit vrai."
+    explication: "t > 28 est faux (25 est plus petit). bouton = vrai est vrai. Faux OU vrai donne vrai : le ventilateur est en marche."
+
+  - type: exercice
+    enonce: >-
+      Voici un programme :
+      n ← 2 ; puis on répète 3 fois : n ← n × 2. Quelle est la valeur de n à la fin ?
+    forme: nombre
+    reponse: 16
+    tolerance: 0.01
+    indices:
+      - "Fais un tableau : une ligne par tour de boucle."
+      - "Au premier tour, n passe de 2 à un nouveau nombre. Continue avec le résultat de chaque tour."
+    explication: "Tour 1 : 2 × 2 = 4. Tour 2 : 4 × 2 = 8. Tour 3 : 8 × 2 = 16. À la fin, n vaut 16."
+
+  - type: exercice
+    enonce: >-
+      Un éclairage allume la lampe quand lum < seuil. Le capteur donne successivement six mesures : 320,
+      280, 240, 190, 150 et 210. Le seuil est réglé à 300. Combien de ces mesures allument la lampe ?
+    forme: nombre
+    reponse: 5
+    tolerance: 0.01
+    indices:
+      - "Compare chaque mesure au seuil, l'une après l'autre."
+      - "La lampe s'allume quand la mesure est plus petite que le seuil. Une mesure ne l'allume pas : laquelle ?"
+    explication: "320 n'est pas inférieur à 300. Les cinq autres (280, 240, 190, 150, 210) le sont : 5 mesures allument la lampe."
+
+  - type: question_ouverte
+    question: >-
+      Traduis ce programme d'arrosage en un algorithme écrit en français, puis dis quelles sont ses
+      entrées et sa sortie. Programme : répéter indéfiniment. h ← valeur du capteur d'humidité. Si h < 40
+      OU bouton = vrai alors mettre la pompe en marche, sinon arrêter la pompe. Attendre 1 seconde.
+    indices:
+      - "Que fait la carte à chaque tour, dans l'ordre ?"
+      - "Écris une phrase par ligne. Puis classe : informations reçues, ordres envoyés."
+    criteres:
+      - "L'algorithme dit qu'en permanence on mesure l'humidité, et que la pompe se met en marche si h < 40 ou si on appuie sur le bouton, sinon elle s'arrête."
+      - "L'élève cite les entrées (capteur d'humidité, bouton) et la sortie (pompe)."
+      - "L'élève explique le rôle du OU (une seule des deux conditions suffit)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, la différence entre ET et OU, et comment tu prévois l'effet d'un changement de
+      seuil dans un programme.
