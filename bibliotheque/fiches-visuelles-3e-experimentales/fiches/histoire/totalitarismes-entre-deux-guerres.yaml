@@ -1,0 +1,78 @@
+notion: totalitarismes-entre-deux-guerres
+titre: "Crises et expériences totalitaires en Europe entre les deux guerres"
+matiere: histoire
+niveau: 3e
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Front populaire »"
+    url: "https://fr.vikidia.org/w/index.php?title=Front_populaire&oldid=2337126"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Nazisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Nazisme&oldid=2575168"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Krach de 1929 »"
+    url: "https://fr.vikidia.org/w/index.php?title=Krach_de_1929&oldid=2351031"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - id: carte
+    type: carte
+    noeuds:
+      - {id: krach-1929, titre: "Krach de 1929", sous_titre: "Grande Dépression", principal: true}
+      - {id: nazisme, titre: "Nazisme", sous_titre: "Hitler chancelier en 1933"}
+      - {id: front-populaire, titre: "Front populaire", sous_titre: "France, 1936, Léon Blum"}
+    liens:
+      - {de: krach-1929, vers: nazisme, libelle: "crise économique puis politique"}
+      - {de: krach-1929, vers: front-populaire, libelle: "contexte de crise en France"}
+    jules: "Le **krach de 1929** est la cause économique, le nazisme et le Front populaire les conséquences politiques."
+
+  - id: methode
+    type: methode
+    etapes:
+      - "Partir de la cause économique : le **krach de 1929** et la Grande Dépression."
+      - "Relier cette crise à la conséquence politique : Hitler devient chancelier en 1933."
+      - "Qualifier le nazisme de **totalitarisme** : contrôle total de l'État sur la société."
+      - "Situer le **Front populaire** de 1936 en France : Léon Blum, congés payés, semaine de 40 heures."
+    jules: "Retiens bien l'enchaînement : crise économique de 1929, puis réponse politique différente selon les pays."
+
+  - id: piege
+    type: piege
+    mauvaise_idee: "Confondre le nazisme allemand et le fascisme italien parce que les deux sont autoritaires."
+    pourquoi_faux: "Le nazisme est un **totalitarisme** raciste et antisémite propre à l'Allemagne, pas un synonyme du fascisme."
+    bonne_idee: "Nommer précisément le régime étudié : nazisme pour l'Allemagne de Hitler à partir de 1933."
+    jules: "Un devoir qui confond les deux régimes perd des points même si les grandes idées sont justes."
+
+  - id: exemple
+    type: exemple
+    situation: "On demande une mesure sociale obtenue en France en 1936 grâce au Front populaire."
+    conclusion: "Le gouvernement de **Léon Blum** instaure les congés payés et la semaine de 40 heures en 1936."
+    jules: "Associe toujours une date précise (1936) et un nom (Léon Blum) à cette mesure sociale."
+
+  - id: renfort
+    type: renfort
+    liens:
+      - {icone: "✏️", titre: "Exercices corrigés", description: "déjà dans la leçon", outil: "lecon"}
+      - {icone: "🃏", titre: "Cartes mémoire", description: "outil à venir"}
+    jules: "Revois l'enchaînement crise économique puis réponse politique, il revient souvent au brevet."
+
+  - id: schema
+    type: schema
+    titre: "De la crise économique aux régimes politiques"
+    svg: |-
+      <svg viewBox="0 0 680 240" xmlns="http://www.w3.org/2000/svg">
+        <text x="340" y="28" class="th" text-anchor="middle">1929 – 1936 : crise et réponses politiques</text>
+        <rect x="30" y="70" width="180" height="60" class="box c-red"/>
+        <text x="120" y="95" class="t" text-anchor="middle">1929</text>
+        <text x="120" y="115" class="ts" text-anchor="middle">Krach, Grande Dépression</text>
+        <line x1="210" y1="100" x2="290" y2="100" class="arr c-gray"/>
+        <rect x="290" y="50" width="180" height="60" class="box c-purple"/>
+        <text x="380" y="75" class="t" text-anchor="middle">1933</text>
+        <text x="380" y="95" class="ts" text-anchor="middle">Hitler chancelier, nazisme</text>
+        <line x1="210" y1="100" x2="290" y2="150" class="arr c-gray"/>
+        <rect x="290" y="130" width="180" height="60" class="box c-teal"/>
+        <text x="380" y="155" class="t" text-anchor="middle">1936</text>
+        <text x="380" y="175" class="ts" text-anchor="middle">Front populaire, Léon Blum</text>
+        <text x="380" y="192" class="ts" text-anchor="middle">Congés payés, 40h</text>
+      </svg>
+    jules: "Le krach de 1929 mène à deux réponses politiques très différentes : nazisme en Allemagne, Front populaire en France."
