@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { fiches, sources, type EtapeSource, type SuggestionSource } from "@/api/jules"
 import { ORDRE_MATIERES } from "@/config/matieres"
 import { ETAPES, FORMES, LIMITES, TEXTES, stylePerso, type FormeSource } from "@/config/sources"
+import { PriseDePhoto } from "@/composants/PriseDePhoto"
 import { rechargerPerso, useBibliothequePerso } from "./etat"
 
 type Progression = { faites: number; suggestion?: SuggestionSource; erreur?: string }
@@ -89,7 +90,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div key={forme ?? "rien"} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -12 }} transition={{ duration: 0.18 }}>
                   {forme === null && <p className="m-0 text-gris">Choisis la forme de ton document : photos, PDF ou texte.</p>}
-                  {forme === "photos" && <Depot multiple accept="image/jpeg,image/png,image/webp,image/heic,.heic" fichiers={photos} max={LIMITES.photos}
+                  {forme === "photos" && <Depot multiple photo accept="image/jpeg,image/png,image/webp,image/heic,.heic" fichiers={photos} max={LIMITES.photos}
                     libelle={TEXTES.deposerPhotos} aide={FORMES[0].aide} onChange={setPhotos} />}
                   {forme === "pdf" && <Depot accept="application/pdf,.pdf" fichiers={pdf ? [pdf] : []} max={1}
                     libelle={TEXTES.deposerPdf} aide={FORMES[1].aide} onChange={(f) => setPdf(f[0] ?? null)} />}
@@ -151,12 +152,12 @@ function CarteSource({ Icone, titre, texte, onClick, actif, natif }: {
   )
 }
 
-function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
-  multiple?: boolean; accept: string; fichiers: File[]; max: number; libelle: string; aide: string; onChange: (f: File[]) => void
+function Depot({ multiple, photo, accept, fichiers, max, libelle, aide, onChange }: {
+  multiple?: boolean; photo?: boolean; accept: string; fichiers: File[]; max: number; libelle: string; aide: string; onChange: (f: File[]) => void
 }) {
   const champ = useRef<HTMLInputElement>(null)
   const [survol, setSurvol] = useState(false)
-  const ajouter = (liste: FileList | null) => {
+  const ajouter = (liste: ArrayLike<File> | null) => {
     if (!liste) return
     const nouveaux = Array.from(liste)
     onChange(multiple ? [...fichiers, ...nouveaux].slice(0, max) : nouveaux.slice(0, 1))
@@ -164,6 +165,22 @@ function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
   const apercus = useApercus(fichiers)
   return (
     <div>
+      {photo ? (
+        <PriseDePhoto multiple={multiple} accept={accept} onFichiers={ajouter}>
+          {(ouvrir) => (
+          <button type="button" onClick={ouvrir}
+            onDragOver={(e) => { e.preventDefault(); setSurvol(true) }} onDragLeave={() => setSurvol(false)}
+            onDrop={(e) => { e.preventDefault(); setSurvol(false); ajouter(e.dataTransfer.files) }}
+            className={cn("flex w-full flex-col items-center gap-2 rounded-2xl border-2 border-dashed px-6 py-9 text-center transition-colors",
+              survol ? "border-(--m-accent) bg-(--m-fond)" : "border-bord bg-nav hover:border-(--m-accent) hover:bg-(--m-fond)")}>
+            <motion.span animate={survol ? { y: -4, scale: 1.08 } : { y: 0, scale: 1 }} className="grid size-14 place-items-center rounded-2xl bg-white text-(--m-texte) shadow-relief"><CloudUpload size={28} /></motion.span>
+            <b className="text-encre">{libelle}</b>
+            <span className="text-[0.9rem] text-gris">{aide}</span>
+          </button>
+          )}
+        </PriseDePhoto>
+      ) : (
+        <>
       <button type="button" onClick={() => champ.current?.click()}
         onDragOver={(e) => { e.preventDefault(); setSurvol(true) }} onDragLeave={() => setSurvol(false)}
         onDrop={(e) => { e.preventDefault(); setSurvol(false); ajouter(e.dataTransfer.files) }}
@@ -174,6 +191,8 @@ function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
         <span className="text-[0.9rem] text-gris">{aide}</span>
       </button>
       <input ref={champ} type="file" hidden multiple={multiple} accept={accept} onChange={(e) => { ajouter(e.target.files); e.target.value = "" }} />
+        </>
+      )}
       {fichiers.length > 0 && (
         <ul className="m-0 mt-4 flex list-none flex-wrap gap-3 p-0">
           <AnimatePresence>

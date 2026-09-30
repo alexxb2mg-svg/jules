@@ -7,6 +7,7 @@ import {
   conversations, infosChat, epreuve as apiEpreuve,
   type Conversation, type ConversationResume, type InfosChat, type MessageJules,
 } from "@/api/jules"
+import { PriseDePhoto } from "@/composants/PriseDePhoto"
 import { Bulle, BulleAttente } from "./Bulle"
 import { Accueil } from "./Accueil"
 
@@ -63,7 +64,6 @@ export function Chat() {
 
   const filRef = useRef<HTMLDivElement>(null)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const fichierRef = useRef<HTMLInputElement>(null)
 
   // Charger les infos au montage
   useEffect(() => {
@@ -198,7 +198,7 @@ export function Chat() {
 
   // -- Photos -----------------------------------------------------------------
 
-  const ajouterPhotos = useCallback(async (fichiers: FileList) => {
+  const ajouterPhotos = useCallback(async (fichiers: ArrayLike<File>) => {
     const restant = 3 - photos.length
     const aTraiter = Array.from(fichiers).slice(0, restant)
     const nouvelles: PhotoApercu[] = []
@@ -307,11 +307,15 @@ export function Chat() {
         {conv !== null && !saisieCache && (
           <div className="border-t border-bord px-3 py-2">
             <div className="flex items-end gap-2 rounded-2xl border-2 border-bord bg-white p-2 focus-within:border-bleu">
-              <button onClick={() => fichierRef.current?.click()}
-                className="shrink-0 rounded-xl p-2 text-gris transition hover:bg-bleu-clair/40 hover:text-bleu"
-                title="Ajouter une photo">
-                <Camera className="size-5" />
-              </button>
+              <PriseDePhoto accept="image/*" multiple compact onFichiers={(f) => void ajouterPhotos(f)}>
+                {(ouvrir) => (
+                  <button onClick={ouvrir}
+                    className="shrink-0 rounded-xl p-2 text-gris transition hover:bg-bleu-clair/40 hover:text-bleu"
+                    title="Ajouter une photo">
+                    <Camera className="size-5" />
+                  </button>
+                )}
+              </PriseDePhoto>
               <textarea ref={textareaRef} value={texte}
                 onChange={(e) => setTexte(e.target.value)}
                 onKeyDown={onKeyDown}
@@ -323,11 +327,6 @@ export function Chat() {
                 <Send className="size-4" />
               </button>
             </div>
-            <input ref={fichierRef} type="file" accept="image/*" multiple className="hidden"
-              onChange={async (e) => {
-                if (e.target.files) await ajouterPhotos(e.target.files)
-                e.target.value = ""
-              }} />
           </div>
         )}
       </div>
