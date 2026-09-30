@@ -14,6 +14,7 @@ import { RappelARanger } from "@/modules/sources/pieces"
 import { BoutonRetour } from "@/composants/BoutonRetour"
 import { Calculatrice } from "@/composants/Calculatrice"
 import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
+import { useMotion } from "@/lib/motion"
 
 /** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
 const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
@@ -30,6 +31,7 @@ export default function App() {
   // À distance (tunnel), l'espace d'administration n'existe pas : son lien disparaît de la barre.
   const [admin, setAdmin] = useState(true)
   const [calcOuverte, setCalcOuverte] = useState(false)  // le panneau calculatrice pousse le contenu (grand écran)
+  const { page } = useMotion()
   useEffect(() => {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
     session.etat().then((s) => setAdmin(s.parent)).catch(() => setAdmin(false))
@@ -48,9 +50,7 @@ export default function App() {
         <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-background">
           <SidebarTrigger className="absolute top-3 left-3 z-40 size-11 rounded-full bg-card/85 text-encre shadow-souleve backdrop-blur md:hidden" />
           <AnimatePresence mode="wait">
-            <motion.div key={cle} className={`h-full transition-[padding] duration-200 ${calcOuverte ? "md:pr-[21rem]" : ""}`}
-              initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
-              transition={{ type: "spring", stiffness: 300, damping: 32 }}>
+            <motion.div key={cle} className={`h-full transition-[padding] duration-200 ${calcOuverte ? "md:pr-[21rem]" : ""}`} {...page}>
               <Ecran route={route} aller={aller} infos={infos} />
             </motion.div>
           </AnimatePresence>

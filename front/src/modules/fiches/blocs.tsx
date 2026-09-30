@@ -9,7 +9,8 @@ import { cn } from "@/lib/utils"
 import { useMotion } from "@/lib/motion"
 import { buttonVariants } from "@/components/ui/button"
 import { Pastille } from "@/components/ui/pastille"
-import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import type { VariantProps } from "class-variance-authority"
+import { blocVariants, titreVariants } from "@/components/ui/variantes"
 import { iconeRenfort } from "@/config/renfort"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type {
@@ -20,15 +21,16 @@ import { disposerCarte, T_LIEN, T_SOUS, T_TITRE, H_SOUS, H_TITRE } from "./carte
 import { couleurCss, dessinerGabarit, evaluerCondition } from "./ponts"
 
 /** Titres par défaut (repris de accueil.js) et icône de chaque type. */
-export const TYPES: Partial<Record<TypeBloc, { titre: string; Icone: LucideIcon }>> = {
-  formule: { titre: "L'essentiel en une ligne", Icone: Sigma },
-  carte: { titre: "Comment les notions s'articulent", Icone: Network },
-  graphe: { titre: "Vois la notion bouger", Icone: SlidersHorizontal },
-  methode: { titre: "La méthode, étape par étape", Icone: ListOrdered },
-  piege: { titre: "Le piège classique", Icone: TriangleAlert },
-  exemple: { titre: "Dans la vraie vie", Icone: Lightbulb },
-  renfort: { titre: "Ensuite, pour ancrer", Icone: Dumbbell },
-  schema: { titre: "Un schéma pour s'y retrouver", Icone: Shapes },
+type Teinte = NonNullable<VariantProps<typeof blocVariants>["type"]>
+export const TYPES: Partial<Record<TypeBloc, { titre: string; Icone: LucideIcon; teinte: Teinte }>> = {
+  formule: { titre: "L'essentiel en une ligne", Icone: Sigma, teinte: "retenir" },
+  carte: { titre: "Comment les notions s'articulent", Icone: Network, teinte: "retenir" },
+  graphe: { titre: "Vois la notion bouger", Icone: SlidersHorizontal, teinte: "exercice" },
+  methode: { titre: "La méthode, étape par étape", Icone: ListOrdered, teinte: "objectifs" },
+  piege: { titre: "Le piège classique", Icone: TriangleAlert, teinte: "piege" },
+  exemple: { titre: "Dans la vraie vie", Icone: Lightbulb, teinte: "exemple" },
+  renfort: { titre: "Ensuite, pour ancrer", Icone: Dumbbell, teinte: "ouverte" },
+  schema: { titre: "Un schéma pour s'y retrouver", Icone: Shapes, teinte: "matiere" },
 }
 
 export type ContexteRendu = {
@@ -53,7 +55,7 @@ function Formule({ bloc }: { bloc: BlocFormule }) {
       <div className="flex min-w-[min(240px,100%)] flex-1 flex-col gap-2.5">
         {termes.map(([nom, info], i) => (
           <motion.div key={nom} {...entree} transition={{ delay: 0.08 * i }}
-            className="rounded-r-2xl border-l-4 bg-surface-2 py-2.5 pr-3 pl-3.5 text-lecture" style={{ borderColor: couleurCss(info!.couleur) }}>
+            className="rounded-r-2xl border-l-4 bg-card py-2.5 pr-3 pl-3.5 text-lecture" style={{ borderColor: couleurCss(info!.couleur) }}>
             <b style={{ color: couleurCss(info!.couleur) }}>{nom}</b>{" "}<Riche texte={info!.legende} />
           </motion.div>
         ))}
@@ -91,7 +93,7 @@ function CarteSvg({ d, className, statique }: { d: ReturnType<typeof disposerCar
           transition={{ type: "spring", stiffness: 260, damping: 22, delay: principal ? 0 : 0.12 + 0.07 * i }}
           whileHover={{ scale: 1.03 }}>
           <rect x={p.boite.gauche} y={p.boite.haut} width={p.boite.droite - p.boite.gauche} height={p.boite.bas - p.boite.haut} rx={14}
-            fill={principal ? "var(--m-texte)" : "var(--m-fond)"} stroke={principal ? "var(--m-texte)" : "var(--m-accent)"} strokeWidth={principal ? 0 : 1.5} />
+            fill={principal ? "var(--m-accent)" : "var(--m-fond)"} stroke="var(--m-accent)" strokeWidth={principal ? 0 : 1.5} />
           {p.titre.map((l) => { const e = <text key={`t${y}`} x={p.x} y={y} fontSize={T_TITRE} fontWeight={700} textAnchor="middle" className="carte-titre" fill={principal ? "var(--j-sur-plein)" : "var(--m-texte)"}>{l}</text>; y += H_TITRE; return e })}
           {p.sous.map((l) => { const e = <text key={`s${y}`} x={p.x} y={y + 1} fontSize={T_SOUS} textAnchor="middle" fill={principal ? "var(--j-sur-plein)" : "var(--j-trait-texte)"} fillOpacity={principal ? 0.85 : 1}>{l}</text>; y += H_SOUS; return e })}
         </motion.g>
@@ -108,6 +110,7 @@ function Carte({ bloc }: { bloc: BlocCarte }) {
   const [ouvert, setOuvert] = useState(false)
   const bouton = useRef<HTMLButtonElement>(null)
   const [couleurs, setCouleurs] = useState<Record<string, string>>({})
+  const { tap } = useMotion()
   // Le dialog vit hors de la fiche (portail) : il ne voit pas les couleurs de la matière, on les lui recopie.
   const ouvrir = () => {
     const cs = bouton.current ? getComputedStyle(bouton.current) : null
@@ -116,14 +119,14 @@ function Carte({ bloc }: { bloc: BlocCarte }) {
   }
   return (
     <div>
-      <div className="mb-2 flex items-center justify-between gap-3">
-        <p data-carte-vue-ensemble className="text-sm text-gris md:hidden">Vue d'ensemble : touche « Agrandir » pour lire les textes.</p>
-        <button ref={bouton} type="button" data-carte-agrandir onClick={(e) => { e.stopPropagation(); ouvrir() }}
-          className={buttonVariants({ variant: "doux", size: "pastille", className: "ml-auto min-h-11 text-(--m-texte) hover:bg-(--m-fond)" })}>
-          <Maximize2 size={16} aria-hidden="true" />Agrandir la carte
-        </button>
+      <div className="mb-3 flex items-center justify-between gap-3">
+        <p data-carte-vue-ensemble className="m-0 text-petit text-(--m-texte) md:hidden">Vue d'ensemble</p>
+        <motion.button ref={bouton} type="button" data-carte-agrandir onClick={(e) => { e.stopPropagation(); ouvrir() }} {...tap}
+          className={buttonVariants({ variant: "matiere", size: "pastille", className: "ml-auto h-12 bg-(--m-accent) px-5" })}>
+          <Maximize2 aria-hidden="true" />Agrandir la carte
+        </motion.button>
       </div>
-      <CarteSvg d={d} />
+      <div className="rounded-2xl bg-card p-2"><CarteSvg d={d} /></div>
       <Dialog open={ouvert} onOpenChange={setOuvert}>
         <DialogContent libelleFermer="Fermer la carte" className="max-w-5xl" style={couleurs as CSSProperties}
           onCloseAutoFocus={(e) => { e.preventDefault(); bouton.current?.focus() }}
@@ -170,7 +173,7 @@ function Graphe({ bloc }: { bloc: BlocGraphe }) {
               className="h-2 w-full cursor-pointer accent-(--m-accent)" />
           </label>
         ))}
-        <div className="min-h-[3.5rem] rounded-2xl bg-surface-2 p-4 text-lecture" aria-live="polite">
+        <div className="min-h-[3.5rem] rounded-2xl bg-card p-4 text-lecture" aria-live="polite">
           <AnimatePresence mode="popLayout" initial={false}>
             {lectures.map((l) => (
               <motion.p key={l.si + l.texte} layout initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} className="my-1">
@@ -189,11 +192,11 @@ function Methode({ bloc }: { bloc: BlocMethode }) {
   const { entree } = useMotion()
   return (
     <ol className="relative m-0 flex list-none flex-col gap-3 p-0">
-      <span aria-hidden className="absolute top-4 bottom-4 left-[15px] w-0.5 rounded bg-(--m-fond)" />
+      <span aria-hidden className="absolute top-4 bottom-4 left-[15px] w-0.5 rounded bg-(--b-plein) opacity-30" />
       {(bloc.etapes || []).map((etape, i) => (
         <motion.li key={i} {...entree} transition={{ delay: 0.06 * i }} className="relative flex items-start gap-4">
-          <Pastille ton="matiere-plein" taille="puce" className="z-10 font-titre font-bold">{i + 1}</Pastille>
-          <div className="flex-1 rounded-2xl bg-surface-2 px-4 py-3 text-lecture"><Riche texte={etape} /></div>
+          <Pastille ton="bloc" taille="puce" className="z-10 font-titre font-bold">{i + 1}</Pastille>
+          <div className="flex-1 rounded-2xl bg-card px-4 py-3 text-lecture"><Riche texte={etape} /></div>
         </motion.li>
       ))}
     </ol>
@@ -205,7 +208,7 @@ function Piege({ bloc }: { bloc: BlocPiege }) {
   const { entree } = useMotion()
   return (
     <div className="grid gap-3 text-lecture md:grid-cols-2">
-      <motion.div {...entree} className="rounded-2xl bg-erreur-fond p-4">
+      <motion.div {...entree} className="rounded-2xl bg-card p-4">
         <span className="mb-2 flex items-center gap-2 text-petit font-semibold text-erreur"><span className="grid size-6 place-items-center rounded-full bg-erreur text-white"><X size={14} strokeWidth={3} /></span>L'erreur</span>
         <Riche texte={bloc.mauvaise_idee} />
       </motion.div>
@@ -213,7 +216,7 @@ function Piege({ bloc }: { bloc: BlocPiege }) {
         <span className="mb-2 flex items-center gap-2 text-petit font-semibold text-succes"><span className="grid size-6 place-items-center rounded-full bg-succes text-white"><Check size={14} strokeWidth={3} /></span>Le bon réflexe</span>
         <Riche texte={bloc.bonne_idee} />
       </motion.div>
-      {bloc.pourquoi_faux && <p className="m-0 text-gris md:col-span-2"><Riche texte={bloc.pourquoi_faux} /></p>}
+      {bloc.pourquoi_faux && <p className="m-0 text-encre/90 md:col-span-2"><Riche texte={bloc.pourquoi_faux} /></p>}
     </div>
   )
 }
@@ -228,7 +231,7 @@ function Exemple({ bloc }: { bloc: BlocExemple }) {
   return (
     <div className="flex flex-col gap-3 text-lecture">
       {bloc.situation && <p className="m-0"><Riche texte={bloc.situation} /></p>}
-      {bloc.calcul && <p className="m-0 rounded-2xl bg-surface-2 px-4 py-3"><Riche texte={bloc.calcul} /></p>}
+      {bloc.calcul && <p className="m-0 rounded-2xl bg-card px-4 py-3"><Riche texte={bloc.calcul} /></p>}
       {bloc.figure && <svg ref={svg} className="figure rounded-2xl bg-papier" width={300} height={180} />}
       {bloc.conclusion && (
         <motion.p {...entree} className="exemple-conclusion m-0 flex gap-3 rounded-2xl bg-(--m-fond) px-4 py-3 font-semibold text-(--m-texte) shadow-[inset_3px_0_0_0_var(--m-accent)]">
@@ -317,10 +320,11 @@ export function BlocVisuel({ bloc, index, actif, ctx, onActiver }: {
         const cible = (e.target as Element).closest?.("[data-adresse]") as HTMLElement | SVGElement | null
         onActiver(bloc, cible?.dataset.adresse || `fiche/${bloc.id}`)
       }}
-      className={surfaceVariants({ ton: "plat", lisere: true, espace: "large",
-        className: cn("group relative scroll-mt-6 cursor-pointer transition-shadow duration-200", actif && "ring-2 ring-(--m-accent)") })}>
+      data-type={type.teinte}
+      className={blocVariants({ type: type.teinte,
+        className: cn("group relative scroll-mt-6 cursor-pointer transition-shadow duration-200", actif && "ring-2 ring-(--b-plein)") })}>
       <h2 className={titreVariants({ niveau: "bloc", className: "mb-4 flex items-center gap-3" })}>
-        <Pastille ton="matiere" taille="icone" className="transition-transform duration-300 group-hover:-rotate-6">
+        <Pastille ton="bloc" taille="icone" className="rounded-full transition-transform duration-300 group-hover:-rotate-6">
           <Icone size={20} />
         </Pastille>
         {typo(bloc.titre || type.titre)}

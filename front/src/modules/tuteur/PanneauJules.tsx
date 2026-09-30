@@ -17,7 +17,8 @@ import { conversations, type MessageJules } from "@/api/jules"
 import { AvatarJules } from "@/components/ui/avatar"
 import { bulleVariants } from "@/components/ui/variantes"
 import { buttonVariants } from "@/components/ui/button"
-import { surfaceVariants } from "@/components/ui/variantes"
+import { choixVariants, surfaceVariants } from "@/components/ui/variantes"
+import { BulleAttente } from "@/modules/chat/Bulle"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 
@@ -102,8 +103,8 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
                     {suggestions.map((s, i) => (
                       <ThreadPrimitive.Suggestion key={s.libelle} prompt={s.message} send asChild>
                         <motion.button {...apparition} transition={{ delay: 0.06 * i }}
-                          className={surfaceVariants({ ton: "plat", espace: "compact", cliquable: true, className: "flex items-center gap-2.5 text-courant font-medium" })}>
-                          <MessageCircleQuestion size={16} className="shrink-0 text-bleu" /> <span className="line-clamp-2">{s.libelle}</span>
+                          className={choixVariants({ forme: "suggestion", className: "justify-start gap-2.5" })}>
+                          <MessageCircleQuestion size={16} className="shrink-0" /> <span className="line-clamp-2">{s.libelle}</span>
                         </motion.button>
                       </ThreadPrimitive.Suggestion>
                     ))}
@@ -113,9 +114,7 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
             </ThreadPrimitive.Empty>
             <ThreadPrimitive.Messages components={{ UserMessage: MessageEleve, AssistantMessage: MessageJulesBulle }} />
             <ThreadPrimitive.If running>
-              <div className={cn(bulleVariants({ auteur: "jules", tete: false }), "ml-12 flex gap-1 self-start py-4")}>
-                {[0, 1, 2].map((i) => <span key={i} className="size-2 animate-bounce rounded-full bg-bleu/60" style={{ animationDelay: `${i * 120}ms` }} />)}
-              </div>
+              <BulleAttente tete={false} />
             </ThreadPrimitive.If>
           </ThreadPrimitive.Viewport>
 

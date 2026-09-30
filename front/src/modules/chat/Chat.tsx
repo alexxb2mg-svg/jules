@@ -10,9 +10,11 @@ import {
 } from "@/api/jules"
 import { PriseDePhoto } from "@/composants/PriseDePhoto"
 import { buttonVariants } from "@/components/ui/button"
-import { Pastille } from "@/components/ui/pastille"
-import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
-import { iconeMode } from "@/config/modes"
+import { AvatarJules } from "@/components/ui/avatar"
+import { choixVariants, surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import { exemplesMode } from "@/config/modes"
+import { useMatiere } from "@/modules/accueil/etat"
+import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 import { Bulle, BulleAttente } from "./Bulle"
@@ -70,6 +72,7 @@ export function Chat() {
   const [texte, setTexte] = useState("")
 
   const { tap } = useMotion()
+  const matiere = useMatiere()  // les pastilles de suggestion prennent la matière choisie (bleu de Jules sinon)
   const filRef = useRef<HTMLDivElement>(null)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -169,9 +172,10 @@ export function Chat() {
 
   // -- Envoi de message -------------------------------------------------------
 
-  const envoyer = useCallback(async () => {
+  // `impose` : une suggestion de départ touchée (envoyée telle quelle, sans passer par la saisie).
+  const envoyer = useCallback(async (impose?: string) => {
     if (occupe || !conv) return
-    const contenu = texte.trim()
+    const contenu = (impose ?? texte).trim()
     if (!contenu && photos.length === 0) return
 
     setOccupe(true)
@@ -242,7 +246,7 @@ export function Chat() {
     : "Nouvelle discussion"
 
   return (
-    <div className="flex h-full">
+    <div className="flex h-full" style={matiere ? styleMatiere(matiere) : undefined}>
       {/* Sidebar historique */}
       <aside className={cn("absolute inset-y-0 left-0 z-30 flex w-72 flex-col bg-card transition-transform md:relative md:translate-x-0",
         sidebarOuverte ? "translate-x-0 shadow-souleve md:shadow-none" : "-translate-x-full")}>
@@ -281,7 +285,7 @@ export function Chat() {
             </button>
           </div>
           <div className="mt-2 flex min-w-0 items-center gap-3 md:mt-0">
-            {conv && (() => { const Icone = iconeMode(conv.mode); return <Pastille ton="jules" taille="icone" aria-hidden><Icone size={20} /></Pastille> })()}
+            <AvatarJules taille="sm" />
             <h1 className={titreVariants({ niveau: "ecran", className: "truncate" })}>{titre}</h1>
           </div>
         </header>
@@ -297,6 +301,14 @@ export function Chat() {
                 return <div key={i} className={nouveauGroupe ? "mt-4" : undefined}><Bulle message={m} tete={i === 0 || nouveauGroupe} /></div>
               })}
               {occupe && <div className="mt-4"><BulleAttente /></div>}
+              {/* Suggestions de départ : tant que seul Jules a parlé, des pastilles à toucher pour lancer l'échange */}
+              {conv && !occupe && messages.length === 1 && messages[0].role !== "eleve" && (
+                <div className="mt-4 flex flex-wrap gap-2 pl-12.5" aria-label="Idées pour commencer">
+                  {exemplesMode(conv.mode).map((e) => (
+                    <motion.button key={e} {...tap} onClick={() => void envoyer(e)} className={choixVariants({ forme: "suggestion" })}>{e}</motion.button>
+                  ))}
+                </div>
+              )}
             </div>
           )}
         </div>
@@ -335,7 +347,7 @@ export function Chat() {
                 onKeyDown={onKeyDown}
                 rows={1} placeholder="Écris ton message…"
                 className="max-h-40 min-h-11 flex-1 resize-none bg-transparent px-1 py-2.5 text-courant outline-none placeholder:text-gris" />
-              <motion.button {...tap} onClick={envoyer} disabled={occupe || (!texte.trim() && photos.length === 0)}
+              <motion.button {...tap} onClick={() => void envoyer()} disabled={occupe || (!texte.trim() && photos.length === 0)}
                 className={buttonVariants({ variant: "jules", size: "rond", className: "shadow-none disabled:opacity-40" })}
                 aria-label="Envoyer">
                 <Send />

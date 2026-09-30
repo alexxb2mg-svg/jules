@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import type { MessageJules } from "@/api/jules"
 import { AvatarJules } from "@/components/ui/avatar"
 import { bulleVariants } from "@/components/ui/variantes"
-import { useMotion } from "@/lib/motion"
+import { useMotion, usePoint } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 import { BulleMarkdown } from "./markdown"
 
@@ -51,16 +51,18 @@ export const Bulle = memo(function Bulle({ message, tete = true }: { message: Me
   )
 })
 
+/** Pendant l'attente : « Jules écrit… » et trois points animés (lib/motion, immobiles si moins de mouvement). */
 export function BulleAttente({ tete = true }: { tete?: boolean }) {
   const { apparition } = useMotion()
+  const point = usePoint()
   return (
-    <motion.div {...apparition} className="flex items-start gap-2.5" aria-label="Jules écrit">
+    <motion.div {...apparition} className="flex items-start gap-2.5" role="status">
       <Portrait visible={tete} />
-      <div className={cn(bulleVariants({ auteur: "jules", tete }), "flex gap-1 py-4")}>
-        {[0, 1, 2].map((i) => (
-          <span key={i} className="size-2 animate-bounce rounded-full bg-bleu/60"
-            style={{ animationDelay: `${i * 120}ms` }} />
-        ))}
+      <div className={cn(bulleVariants({ auteur: "jules", tete }), "flex items-center gap-2.5 py-3")}>
+        <span className="text-courant text-bleu">Jules écrit</span>
+        <span aria-hidden className="flex gap-1">
+          {[0, 1, 2].map((i) => <motion.span key={i} {...point(i)} className="size-2 rounded-full bg-bleu" />)}
+        </span>
       </div>
     </motion.div>
   )

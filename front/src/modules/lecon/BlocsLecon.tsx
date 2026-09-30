@@ -2,14 +2,18 @@
 // Le juste/faux vient du serveur (verifier_reponse côté Python), jamais du modèle.
 import { useState, type ReactNode } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { Check, Lightbulb, Target, BookOpenText, PenLine, Sparkles, RotateCcw, AlertTriangle } from "lucide-react"
+import katex from "katex"
+import type { VariantProps } from "class-variance-authority"
+import { Check, Lightbulb, Target, BookOpenText, PenLine, Sparkles, MessageSquareText, AlertTriangle } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useMotion } from "@/lib/motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { buttonVariants } from "@/components/ui/button"
 import { Pastille } from "@/components/ui/pastille"
-import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import { blocVariants, formuleVariants, titreVariants } from "@/components/ui/variantes"
 import { cours, type Bloc, type EtatBloc, type Progression, type Tentative } from "@/api/jules"
+
+type TypeCadre = NonNullable<VariantProps<typeof blocVariants>["type"]>
 
 type Ctx = {
   session: string
@@ -78,18 +82,32 @@ function decouper(texte: string, max = 140): string[] {
   return paragraphes
 }
 
-/** Un bloc de leçon : surface blanche sur le fond de page, liseré de la matière (vert/orange une fois corrigé),
- *  étiquette en capitales aux couleurs de la matière. Pas de cadre ni d'ombre : l'espace sépare les blocs. */
-function Cadre({ Icone, etiquette, etat, children }: {
-  Icone: typeof Target; etiquette: string; etat?: EtatBloc; children: ReactNode
+/** Formule dans un contenu : $…$ (KaTeX) ou passage en gras qui contient « = », ponctuation qui suit comprise. */
+const FORMULE = /((?:\$[^$]+\$|\*\*[^*]*=[^*]*\*\*)[.,;:]?)/
+
+/** Un paragraphe de leçon ; ses formules sortent sur leur propre ligne, centrées (formuleVariants). */
+function Paragraphe({ texte }: { texte: string }) {
+  return <>{texte.split(FORMULE).map((m, i) => {
+    if (i % 2 === 0) return m.trim() && <p key={i} className="text-lecture text-encre/90"><Riche texte={m.trim()} /></p>
+    const tex = m.match(/^\$([^$]+)\$(.?)$/)
+    return tex
+      ? <div key={i} data-formule className={formuleVariants()}><span dangerouslySetInnerHTML={{ __html: katex.renderToString(tex[1], { throwOnError: false }) }} />{tex[2]}</div>
+      : <div key={i} data-formule className={formuleVariants()}>{m.replace(/\*\*/g, "")}</div>
+  })}</>
+}
+
+/** Un bloc de leçon : son type se reconnaît d'un coup d'œil (teinte de fond + icône dans une pastille pleine,
+ *  blocVariants) ; filet vert/orange une fois corrigé. Pas de cadre ni d'ombre : l'espace sépare les blocs. */
+function Cadre({ Icone, etiquette, type, etat, children }: {
+  Icone: typeof Target; etiquette: string; type: TypeCadre; etat?: EtatBloc; children: ReactNode
 }) {
   const { entree } = useMotion()
-  const lisere = etat === "reussi" ? "succes" : etat === "a_revoir" ? "alerte" : true
+  const lisere = etat === "reussi" ? "succes" : etat === "a_revoir" ? "alerte" : "aucun"
   return (
-    <motion.section layout {...entree} className={surfaceVariants({ ton: "plat", lisere, espace: "large" })}>
-      <div className="mb-3 flex items-center gap-2.5">
-        <Pastille ton="matiere" taille="icone" className="size-8 rounded-xl"><Icone size={17} /></Pastille>
-        <span className={titreVariants({ niveau: "etiquette", className: "font-sans text-(--m-texte,var(--j-bleu))" })}>{etiquette}</span>
+    <motion.section layout {...entree} data-type={type} className={blocVariants({ type, lisere })}>
+      <div className="mb-4 flex items-center gap-3">
+        <Pastille ton="bloc" taille="bloc" aria-hidden><Icone size={18} /></Pastille>
+        <span className={titreVariants({ niveau: "etiquette", className: "font-sans text-(--b-plein)" })}>{etiquette}</span>
         {etat === "reussi" && <Pastille ton="succes" className="ml-auto"><Check size={15} /> réussi</Pastille>}
         {etat === "a_revoir" && <Pastille ton="alerte" className="ml-auto"><AlertTriangle size={15} /> à revoir</Pastille>}
       </div>
@@ -102,20 +120,22 @@ function Cadre({ Icone, etiquette, etat, children }: {
 
 function Objectifs({ bloc }: { bloc: Extract<Bloc, { type: "objectifs" }> }) {
   return (
-    <Cadre Icone={Target} etiquette="Ce que tu vas savoir faire">
-      <ul className="m-0 list-none space-y-2.5 p-0 text-lecture">{bloc.items.map((it) => <li key={it} className="flex gap-2.5"><Check size={19} className="mt-1 shrink-0 text-(--m-accent,var(--j-vert))" /><span className="min-w-0">{it}</span></li>)}</ul>
+    <Cadre Icone={Target} etiquette="Ce que tu vas savoir faire" type="objectifs">
+      <ul className="m-0 list-none space-y-2.5 p-0 text-lecture">{bloc.items.map((it) => <li key={it} className="flex gap-2.5"><Check size={19} className="mt-1 shrink-0 text-(--b-plein)" /><span className="min-w-0">{it}</span></li>)}</ul>
     </Cadre>
   )
 }
 
 function Texte({ bloc }: { bloc: Extract<Bloc, { type: "texte" }> }) {
-  // Téléphone seulement : le bureau garde le paragraphe d'origine, d'un seul tenant.
+  // Téléphone seulement (découpage et formules sur leur ligne) : le bureau garde le paragraphe d'origine, d'un seul tenant.
   const mobile = useIsMobile()
   return (
-    <Cadre Icone={BookOpenText} etiquette="À retenir">
+    <Cadre Icone={BookOpenText} etiquette="À retenir" type="retenir">
       {bloc.titre && <h3 className={titreVariants({ niveau: "bloc", className: "mb-3" })}>{bloc.titre}</h3>}
       <div className="space-y-4">
-        {(mobile ? decouper(bloc.contenu) : [bloc.contenu]).map((p, i) => <p key={i} className="text-lecture text-encre/90"><Riche texte={p} /></p>)}
+        {mobile
+          ? decouper(bloc.contenu).map((p, i) => <Paragraphe key={i} texte={p} />)
+          : <p className="text-lecture text-encre/90"><Riche texte={bloc.contenu} /></p>}
       </div>
     </Cadre>
   )
@@ -125,20 +145,20 @@ function Exemple({ bloc }: { bloc: Extract<Bloc, { type: "exemple" }> }) {
   const [vues, setVues] = useState(1)
   const { apparition, tap } = useMotion()
   return (
-    <Cadre Icone={Sparkles} etiquette="Exemple guidé">
+    <Cadre Icone={Sparkles} etiquette="Exemple guidé" type="exemple">
       <p className="mt-0 mb-4 text-lecture font-semibold">{bloc.enonce}</p>
       <ol className="m-0 list-none space-y-3 p-0 text-lecture">
         <AnimatePresence initial={false}>
           {bloc.etapes.slice(0, vues).map((e, i) => (
             <motion.li key={i} {...apparition} className="flex gap-3">
-              <Pastille ton="matiere" taille="puce" className="size-7 font-bold">{i + 1}</Pastille>
+              <Pastille ton="bloc" taille="puce" className="size-7 font-bold">{i + 1}</Pastille>
               <span>{e}</span>
             </motion.li>
           ))}
         </AnimatePresence>
       </ol>
       {vues < bloc.etapes.length && (
-        <motion.button {...tap} onClick={() => setVues(vues + 1)} className={buttonVariants({ variant: "doux", size: "pastille-sm", className: "mt-4 text-(--m-texte)" })}>
+        <motion.button {...tap} onClick={() => setVues(vues + 1)} className={buttonVariants({ variant: "sombre", size: "pastille-sm", className: "mt-4 text-(--b-plein)" })}>
           Étape suivante
         </motion.button>
       )}
@@ -171,13 +191,13 @@ function Exercice({ bloc, ctx, numero }: { bloc: Extract<Bloc, { type: "exercice
   }
 
   return (
-    <Cadre Icone={PenLine} etiquette={`Exercice ${numero}`} etat={ctx.etat}>
+    <Cadre Icone={PenLine} etiquette={`Exercice ${numero}`} type="exercice" etat={ctx.etat}>
       <p className="mt-0 mb-4 text-lecture font-semibold">{bloc.enonce}</p>
       <div className="flex gap-2">
         <input value={reponse} onChange={(e) => setReponse(e.target.value)} onKeyDown={(e) => e.key === "Enter" && valider()}
           disabled={fini} inputMode={bloc.forme === "nombre" ? "decimal" : "text"}
           placeholder={bloc.forme === "nombre" ? "Ta réponse (un nombre)" : "Ta réponse"}
-          className="h-12 min-w-0 flex-1 rounded-full border-2 border-transparent bg-surface-2 px-4 text-courant outline-none placeholder:text-gris focus:border-(--m-accent) disabled:opacity-70" />
+          className="h-12 min-w-0 flex-1 rounded-full border-2 border-transparent bg-card px-4 text-courant outline-none placeholder:text-gris focus:border-(--b-plein) disabled:opacity-70" />
         <motion.button {...tap} onClick={valider} disabled={fini || envoi || !reponse.trim()}
           className={buttonVariants({ variant: "matiere", className: "h-12 px-5 text-courant disabled:opacity-40" })}>Vérifier</motion.button>
       </div>
@@ -217,14 +237,14 @@ function Ouverte({ bloc, ctx, consigne, etiquette }: { bloc: Bloc; ctx: Ctx; con
     setEnvoye(true); ctx.onProgression(r.progression); ctx.onJulesARepondu()
   }
   return (
-    <Cadre Icone={RotateCcw} etiquette={etiquette} etat={envoye ? "fait" : ctx.etat}>
+    <Cadre Icone={MessageSquareText} etiquette={etiquette} type="ouverte" etat={envoye ? "fait" : ctx.etat}>
       <p className="mt-0 mb-4 text-lecture font-semibold">{consigne}</p>
       {envoye ? (
         <p className="m-0 text-courant font-semibold text-succes">Envoyé : Jules te relit à droite.</p>
       ) : (
         <>
           <textarea value={texte} onChange={(e) => setTexte(e.target.value)} rows={3} placeholder="Avec tes mots…"
-            className="w-full resize-y rounded-2xl border-2 border-transparent bg-surface-2 px-4 py-3 text-courant outline-none placeholder:text-gris focus:border-(--m-accent)" />
+            className="w-full resize-y rounded-2xl border-2 border-transparent bg-card px-4 py-3 text-courant outline-none placeholder:text-gris focus:border-(--b-plein)" />
           <motion.button {...tap} onClick={envoyer} disabled={!texte.trim()} className={buttonVariants({ variant: "jules", size: "pastille", className: "mt-3 shadow-none disabled:opacity-40" })}>
             Faire relire par Jules
           </motion.button>

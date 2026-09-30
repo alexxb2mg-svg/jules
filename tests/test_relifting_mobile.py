@@ -136,3 +136,55 @@ def test_discussion_jules_en_personnage_et_lisible(serveur, tmp_path_factory, so
         assert page.evaluer("parseFloat(getComputedStyle(document.querySelector('h1')).fontSize)") >= 28
         assert page.evaluer(SOMBRE) is sombre
         assert page.evaluer(CONTRASTE) >= 4.5
+
+
+# --- passe 2 : blocs de lecon reconnaissables, en-tete collant, liste des lecons en cartes teintees ------------
+TEINTES = "[...document.querySelectorAll('section[data-type]')].map((s) => s.dataset.type + '=' + getComputedStyle(s).backgroundColor)"
+
+
+@pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
+def test_lecon_blocs_types_et_entete_collant(serveur, tmp_path_factory, sombre):
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-relift2"), (390, 844)) as page:
+        _ouvrir(page, serveur, "#/lecon/thales-triangles-semblables-trigonometrie", sombre=sombre)
+        page.attendre("document.querySelectorAll('section[data-type]').length > 3", delai=20)
+        time.sleep(1)
+        teintes = dict(t.split("=", 1) for t in page.evaluer(TEINTES))
+        fond_page = page.evaluer(FOND)
+        # chaque type a sa teinte, distincte des autres et du fond de page (2 niveaux en sombre)
+        assert len({teintes[t] for t in ("objectifs", "retenir", "exemple", "exercice")}) == 4, teintes
+        assert fond_page not in teintes.values(), (fond_page, teintes)
+        # pastille pleine de l'icone du type, formule seule sur sa ligne
+        assert (
+            page.evaluer(
+                "getComputedStyle(document.querySelector('section[data-type=exemple] [data-slot=pastille]')).backgroundColor"
+            )
+            != teintes["exemple"]
+        )
+        assert page.evaluer("!!document.querySelector('section[data-type=retenir] [data-formule]')")
+        # en-tete collant, titre 20 px
+        assert page.evaluer("getComputedStyle(document.querySelector('header')).position") == "sticky"
+        assert page.evaluer("parseFloat(getComputedStyle(document.querySelector('header h1')).fontSize)") == 20
+        assert page.evaluer(CONTRASTE) >= 4.5
+
+
+def test_liste_des_lecons_matiere_en_grand_et_cartes_degradees(serveur, tmp_path_factory):
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-relift2-liste"), (390, 844)) as page:
+        _ouvrir(page, serveur, "#/lecons/mathematiques", sombre=False)
+        page.attendre(
+            "!!document.querySelector('[role=tablist] [aria-selected=true]') && !!document.querySelector('button [data-slot=progress]')",
+            delai=20,
+        )
+        time.sleep(1)
+        assert page.evaluer("parseFloat(getComputedStyle(document.querySelector('h1')).fontSize)") == 30
+        assert "gradient" in page.evaluer(
+            "getComputedStyle(document.querySelector('[data-slot=progress]').closest('button')).backgroundImage"
+        )
+        # la matiere active est pleine (accent), les autres en fond de matiere : jamais la meme couleur
+        actif = page.evaluer(
+            "getComputedStyle(document.querySelector('[role=tab][aria-selected=true]')).backgroundColor"
+        )
+        autre = page.evaluer(
+            "getComputedStyle(document.querySelector('[role=tab][aria-selected=false]')).backgroundColor"
+        )
+        assert actif != autre
+        assert page.evaluer(CONTRASTE) >= 4.5

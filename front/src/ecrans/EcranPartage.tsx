@@ -81,7 +81,7 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
       {lecon.blocs.map((b) => {
         if (b.type === "exercice") numExo += 1
         return (
-          <div key={b.index} id={`bloc-${b.index}`} className="scroll-mt-4">
+          <div key={b.index} id={`bloc-${b.index}`} className="scroll-mt-36 md:scroll-mt-4">
             <BlocLecon bloc={b} numero={numExo} ctx={{
               session: session.session,
               etat: progression.blocs[b.index]?.etat ?? "a_faire",
@@ -105,19 +105,18 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
     </div>
   )
 
-  // Téléphone : l'en-tête défile avec la leçon (grand titre, puis toute la hauteur pour lire) ; bureau : il reste en haut.
-  // pl/pr : place du bouton de la barre (téléphone) et de la calculatrice, tous deux flottants en haut.
+  // Téléphone : l'en-tête colle en haut pendant qu'on lit (titre 20 px, temps, progression), sur un fond translucide ;
+  // bureau : il reste au-dessus des deux panneaux. pl/pr : place du bouton de la barre et de la calculatrice (flottants).
   const entete = (
-    <header className="flex flex-col gap-3 px-4 pt-3 pb-4 md:flex-row md:items-center md:gap-5 md:py-4 md:pr-20 md:pl-6">
-      <div className="flex min-w-0 items-center gap-1 pl-12 md:contents">
-        <button onClick={onRetour} aria-label="Retour" className={buttonVariants({ variant: "ghost", size: "pastille-sm", className: "-ml-1 px-2 text-gris md:order-first" })}>
-          <ChevronLeft className="size-5" /> <span className="hidden md:inline">Retour</span>
+    <header className="sticky top-0 z-20 flex flex-col gap-2.5 bg-background/85 px-4 pt-3 pb-3 backdrop-blur-md md:static md:flex-row md:items-center md:gap-5 md:bg-transparent md:py-4 md:pr-20 md:pl-6 md:backdrop-blur-none">
+      <div className="flex h-11 min-w-0 items-center pr-12 pl-12 md:contents">
+        <button onClick={onRetour} aria-label={`Retour : ${fil}`} className={buttonVariants({ variant: "ghost", size: "pastille-sm", className: "-ml-1 px-2 text-(--m-texte) md:order-first md:text-gris" })}>
+          <ChevronLeft className="size-5" /> <span className="md:hidden">{fil}</span><span className="hidden md:inline">Retour</span>
         </button>
-        <p className={titreVariants({ niveau: "surtitre", className: "truncate md:hidden" })}>{fil}</p>
       </div>
       <div className="min-w-0 md:flex-1">
         <p className={titreVariants({ niveau: "surtitre", className: "hidden truncate md:block" })}>{fil}</p>
-        <h1 className={titreVariants({ niveau: "ecran", className: "md:truncate md:text-bloc" })}>{lecon.titre}</h1>
+        <h1 className={titreVariants({ niveau: "bloc", className: "line-clamp-2 md:truncate" })}>{lecon.titre}</h1>
       </div>
       <div className="flex items-center gap-3 md:w-72 md:flex-none">
         {lecon.duree_minutes && <span className="flex shrink-0 items-center gap-1.5 text-petit text-gris"><Clock size={16} /> {lecon.duree_minutes} min</span>}

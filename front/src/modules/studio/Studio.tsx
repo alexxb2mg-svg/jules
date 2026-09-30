@@ -4,8 +4,12 @@ import { useEffect, useMemo, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { ArrowRight, BookOpen, Info, Layers, Plus, Trophy, X } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useMotion } from "@/lib/motion"
+import { buttonVariants } from "@/components/ui/button"
+import { choixVariants, surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import { BandeauMatieres, EnteteMatiere } from "@/composants/EnteteMatiere"
 import { studio, type CatalogueStudio, type NotionStudio, type TypeSupport } from "@/api/jules"
-import { iconeMatiere, ORDRE_MATIERES } from "@/config/matieres"
+import { ORDRE_MATIERES } from "@/config/matieres"
 import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { ORDRE_TYPES, STATUTS, TYPES } from "./config"
 
@@ -22,6 +26,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
   const [aReviser, setAReviser] = useState(0)
   const [choix, setChoix] = useState<NotionStudio | null>(null)
   const [creation, setCreation] = useState(false)
+  const { apparition, entree, tap } = useMotion()
 
   useEffect(() => {
     let annule = false
@@ -49,55 +54,37 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
 
   return (
     <div className="mx-auto max-w-[1180px] px-5 pt-16 pb-16 md:px-10 md:pt-8">
-      <div className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h1 className="m-0 font-titre text-ecran font-extrabold text-encre">Exercices et supports</h1>
-          <p className="mt-1 mb-0 text-gris">Fabrique tes propres supports : fiche, carte mentale, quiz, cartes mémoire. Jules relit, il n'écrit jamais à ta place.</p>
-        </div>
+      <EnteteMatiere rubrique="Exercices et supports" matiere={courante} nom={matieres.find((m) => m.id === courante)?.nom ?? "Exercices et supports"}
+        sousTitre="Fabrique tes propres supports : fiche, carte mentale, quiz, cartes mémoire. Jules relit, il n'écrit jamais à ta place.">
         <div className="flex flex-wrap items-center gap-2">
-        <motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onBilan}
-          className="inline-flex items-center gap-2 rounded-2xl border-2 border-bord bg-card px-4 py-2.5 font-semibold text-encre shadow-relief">
-          <Trophy size={18} className="text-succes" /> Mon bilan
-        </motion.button>
-        {aReviser > 0 && (
-          <motion.button initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} onClick={onReviser}
-            className="relative inline-flex items-center gap-2.5 rounded-2xl bg-encre px-5 py-3 font-semibold text-white shadow-relief-haut">
-            <Layers size={19} /> Réviser mes cartes
-            <span className="grid min-w-7 place-items-center rounded-full bg-card px-1.5 py-0.5 text-[0.85rem] font-bold text-encre">{aReviser}</span>
+          <motion.button {...tap} onClick={onBilan} className={buttonVariants({ variant: "doux", size: "pastille" })}>
+            <Trophy className="text-succes" /> Mon bilan
           </motion.button>
-        )}
+          {aReviser > 0 && (
+            <motion.button {...apparition} {...tap} onClick={onReviser} className={buttonVariants({ variant: "sombre", size: "pastille", className: "bg-eleve text-sur-eleve hover:bg-eleve/90" })}>
+              <Layers /> Réviser mes cartes
+              <span className="grid min-w-7 place-items-center rounded-full bg-card px-1.5 py-0.5 text-petit font-bold text-encre">{aReviser}</span>
+            </motion.button>
+          )}
         </div>
-      </div>
+      </EnteteMatiere>
 
-      <div role="tablist" aria-label="Matières" className="bandeau-fondu -mx-5 mt-6 mb-7 flex gap-2 overflow-x-auto px-5 pt-1 pb-3 [scrollbar-width:none] md:mx-[-0.25rem] md:flex-wrap md:overflow-visible md:px-1">
-        {matieres.map((m) => {
-          const Icone = iconeMatiere(m.id), on = m.id === courante
-          return (
-            <button key={m.id} role="tab" aria-selected={on} onClick={() => onMatiere(m.id)} style={styleMatiere(m.id)}
-              className={cn("relative flex shrink-0 items-center gap-2 rounded-full px-4 py-2 text-[0.95rem] font-semibold transition-colors",
-                on ? "text-white" : "bg-card text-encre shadow-relief hover:bg-(--m-fond)")}>
-              {on && <motion.span layoutId="onglet-studio" className="absolute inset-0 rounded-full bg-(--m-texte) shadow-relief" transition={{ type: "spring", stiffness: 380, damping: 32 }} />}
-              <Icone size={17} className="relative" /><span className="relative">{m.nom.replace(/ \(.*\)$/, "")}</span>
-            </button>
-          )
-        })}
-      </div>
+      <BandeauMatieres matieres={matieres} courante={courante} onChoix={onMatiere} />
 
       <AnimatePresence mode="wait">
         {cat && (
-          <motion.div key={courante} initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} style={courante ? styleMatiere(courante) : undefined}>
+          <motion.div key={courante} {...apparition} exit={{ opacity: 0 }} style={courante ? styleMatiere(courante) : undefined}>
             {notions.length === 0 ? (
-              <p className="rounded-2xl bg-nav px-5 py-4 text-gris">Pas encore de leçon dans cette matière : le studio n'y est pas encore utilisable.</p>
+              <p className="rounded-surface bg-(--m-fond) px-5 py-4 text-(--m-texte)">Pas encore de leçon dans cette matière : le studio n'y est pas encore utilisable.</p>
             ) : (
               <div className="grid grid-cols-[repeat(auto-fill,minmax(320px,1fr))] gap-4">
-                {notions.map((n, i) => (
-                  <motion.article key={n.id} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.04 * i }}
-                    className="flex flex-col rounded-surface bg-card p-5 shadow-relief">
-                    <span className="text-[0.82rem] font-semibold text-(--m-texte)">{n.chapitre}</span>
-                    <h2 className="mt-1 mb-3 text-[1.1rem] leading-snug font-bold text-encre">{n.titre}</h2>
+                {notions.map((n) => (
+                  <motion.article key={n.id} {...entree} className={surfaceVariants({ ton: "degrade", className: "flex flex-col" })}>
+                    <span className={titreVariants({ niveau: "surtitre" })}>{n.chapitre}</span>
+                    <h2 className={titreVariants({ niveau: "bloc", className: "mt-1 mb-3" })}>{n.titre}</h2>
                     {onFiche && (
                       <button onClick={() => onFiche(n.id)}
-                        className="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-(--m-fond) px-3 py-1.5 text-[0.85rem] font-semibold text-(--m-texte) hover:bg-(--m-accent) hover:text-white transition-colors">
+                        className={choixVariants({ forme: "suggestion", className: "mb-3 w-fit text-petit" })}>
                         <BookOpen size={14} /> Voir la fiche
                       </button>
                     )}
@@ -109,16 +96,16 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
                             <button onClick={() => courante && onOuvrir(s.id, courante)}
                               className="group flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left transition-colors hover:bg-(--m-fond)">
                               <d.Icone size={17} className="shrink-0 text-(--m-texte)" />
-                              <span className="min-w-0 flex-1 truncate text-[0.95rem]">{s.titre || <i className="text-gris">{d.nom} sans titre</i>}</span>
-                              {st && <span className={cn("shrink-0 rounded-full px-2 py-0.5 text-[0.75rem] font-semibold", st.classe)}>{st.texte}</span>}
-                              <ArrowRight size={15} className="shrink-0 text-gris opacity-0 transition-opacity group-hover:opacity-100" />
+                              <span className="min-w-0 flex-1 truncate text-courant">{s.titre || <i className="text-gris">{d.nom} sans titre</i>}</span>
+                              {st && <span className={cn("shrink-0 rounded-full px-2 py-0.5 text-petit font-semibold", st.classe)}>{st.texte}</span>}
+                              <ArrowRight size={15} className="shrink-0 text-(--m-texte) opacity-0 transition-opacity group-hover:opacity-100" />
                             </button>
                           </li>
                         )
                       })}
                     </ul>
                     <button onClick={() => setChoix(n)}
-                      className="mt-auto inline-flex w-fit items-center gap-1.5 rounded-full border-2 border-dashed border-(--m-accent)/40 px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) hover:border-(--m-accent) hover:bg-(--m-fond)">
+                      className={choixVariants({ actif: true, forme: "suggestion", className: "mt-auto w-fit text-petit" })}>
                       <Plus size={15} /> Nouveau support
                     </button>
                   </motion.article>
@@ -126,7 +113,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
               </div>
             )}
             {sansLecon > 0 && notions.length > 0 && (
-              <p className="mt-6 flex items-center gap-2 text-[0.88rem] text-gris"><Info size={14} /> Les {sansLecon} autres notions de la matière n'ont pas encore de leçon : le studio y arrivera avec elles.</p>
+              <p className="mt-6 flex items-center gap-2 text-petit text-(--m-texte)"><Info size={16} className="shrink-0" /> Les {sansLecon} autres notions de la matière n'ont pas encore de leçon : le studio y arrivera avec elles.</p>
             )}
           </motion.div>
         )}
@@ -141,7 +128,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
               initial={{ scale: 0.94, y: 16 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.96, opacity: 0 }}
               className="w-full max-w-[640px] rounded-3xl bg-card p-6 shadow-relief-haut">
               <div className="mb-1 flex items-start justify-between gap-3">
-                <h2 className="m-0 text-[1.35rem] font-bold text-encre">Quel support pour « {choix.titre} » ?</h2>
+                <h2 className={titreVariants({ niveau: "bloc" })}>Quel support pour « {choix.titre} » ?</h2>
                 <button onClick={() => setChoix(null)} aria-label="Fermer" className="rounded-full p-1.5 text-gris hover:bg-nav"><X size={18} /></button>
               </div>
               <p className="mt-0 mb-5 text-gris">La trame est vide : c'est toi qui écris.</p>
@@ -153,7 +140,7 @@ export function Studio({ matiere, onMatiere, onOuvrir, onReviser, onBilan, onFic
                       initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 * i }} whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}
                       className="flex items-start gap-3 rounded-2xl border-2 border-bord p-4 text-left transition-colors hover:border-(--m-accent) hover:bg-(--m-fond) disabled:opacity-50">
                       <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-(--m-fond) text-(--m-texte)"><d.Icone size={22} /></span>
-                      <span><b className="block text-[1.02rem]">{d.nom}</b><small className="text-[0.88rem] text-gris">{d.pitch}</small></span>
+                      <span><b className="block text-courant">{d.nom}</b><small className="text-petit text-gris">{d.pitch}</small></span>
                     </motion.button>
                   )
                 })}

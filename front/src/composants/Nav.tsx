@@ -49,12 +49,14 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
   return (
     <Sidebar collapsible="icon" aria-label={NAV_ARIA}>
       <SidebarHeader className="px-4 pt-5 pb-2 group-data-[collapsible=icon]:px-2">
-        <span className="font-titre text-ecran leading-none font-extrabold text-bleu group-data-[collapsible=icon]:text-center group-data-[collapsible=icon]:text-xl">
-          <span className="group-data-[collapsible=icon]:hidden">{MARQUE.nom}</span>
-          <span className="hidden group-data-[collapsible=icon]:inline">{MARQUE.nom[0]}</span>
-          <span className="text-rouge">{MARQUE.point}</span>
-        </span>
-        <div className="mt-3"><SelecteurMatiere onChoix={(m) => { onMatiere(m); fermer() }} /></div>
+        {/* Jules en personnage : son portrait et son nom en tête du tiroir */}
+        <div className="flex items-center gap-3 group-data-[collapsible=icon]:justify-center">
+          <AvatarJules taille="lg" className="ring-4 ring-bleu-clair group-data-[collapsible=icon]:size-8 group-data-[collapsible=icon]:ring-2" />
+          <span className="font-titre text-ecran leading-none font-extrabold text-bleu group-data-[collapsible=icon]:hidden">
+            {MARQUE.nom}<span className="text-rouge">{MARQUE.point}</span>
+          </span>
+        </div>
+        <div className="mt-4"><SelecteurMatiere onChoix={(m) => { onMatiere(m); fermer() }} /></div>
       </SidebarHeader>
 
       <SidebarContent>
@@ -68,8 +70,7 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
 
       <SidebarFooter className="p-3">
         <div className="flex items-center gap-3 rounded-surface bg-surface-2 p-2 text-courant text-gris group-data-[collapsible=icon]:flex-col group-data-[collapsible=icon]:bg-transparent group-data-[collapsible=icon]:p-0">
-          <AvatarJules taille="md" />
-          <span className="min-w-0 flex-1 leading-tight group-data-[collapsible=icon]:hidden"><b className="block truncate text-encre">{prenom}</b>avec Jules</span>
+          <span className="min-w-0 flex-1 pl-2 leading-tight group-data-[collapsible=icon]:hidden"><b className="block truncate text-encre">{prenom}</b>avec Jules</span>
           <button type="button" onClick={basculer} aria-pressed={theme === "sombre"}
             aria-label={theme === "sombre" ? "Passer en thème clair" : "Passer en thème sombre"} title={theme === "sombre" ? "Thème clair" : "Thème sombre"}
             className={buttonVariants({ variant: "sombre", size: "rond", className: "text-encre" })}>

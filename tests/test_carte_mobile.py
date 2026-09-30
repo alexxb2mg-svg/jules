@@ -108,4 +108,5 @@ def test_carte_reduite_a_l_ecran_et_agrandissable_sur_telephone(serveur, tmp_pat
 
         page.touche("Escape", "Escape", 27)
         page.attendre("!document.querySelector('[role=dialog]')", delai=8)
-        assert page.evaluer("document.activeElement.hasAttribute('data-carte-agrandir')")
+        # Radix rend le focus dans un setTimeout, apres avoir retire le dialog : on attend la condition (sans course).
+        page.attendre("document.activeElement.hasAttribute('data-carte-agrandir')", delai=3)

@@ -1,10 +1,11 @@
 // A : sélecteur de matière global (inspiré de DinoBot : une pastille à la couleur de la matière, qui vaut pour
 // tous les écrans). Couleurs = matieres-couleurs.css (via styleMatiere), icônes = config/matieres.ts.
-import { useEffect, useMemo, useRef, useState } from "react"
+import { createElement, useEffect, useMemo, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Check, ChevronsUpDown, Library } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useMotion } from "@/lib/motion"
+import { choixVariants } from "@/components/ui/variantes"
 import { fiches } from "@/api/jules"
 import { iconeMatiere, ORDRE_MATIERES } from "@/config/matieres"
 import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
@@ -35,7 +36,25 @@ export function SelecteurMatiere({ onChoix }: { onChoix: (m: string | null) => v
   const { tap } = useMotion()
 
   return (
-    <div ref={boite} className="relative" style={courante ? styleMatiere(courante) : undefined}>
+    <>
+    {/* Barre dépliée (et tiroir du téléphone) : toutes les matières en pastilles d'icônes, 6 par ligne */}
+    <div className="group-data-[collapsible=icon]:hidden" style={courante ? styleMatiere(courante) : undefined}>
+      <p className="mb-2 text-petit font-semibold text-(--m-texte,var(--j-gris))">{nom}</p>
+      <div role="radiogroup" aria-label="Matières" className="grid grid-cols-6 gap-1.5">
+        <motion.button {...tap} onClick={() => choisir(null)} role="radio" aria-checked={!courante} aria-label={TOUTES_MATIERES} title={TOUTES_MATIERES}
+          className={choixVariants({ actif: !courante, forme: "icone", className: "size-auto aspect-square" })}>
+          <Library size={18} />
+        </motion.button>
+        {triees.map((m) => (
+            <motion.button key={m.id} {...tap} onClick={() => choisir(m.id)} role="radio" aria-checked={m.id === courante} aria-label={m.nom} title={m.nom}
+              style={styleMatiere(m.id)} className={choixVariants({ actif: m.id === courante, forme: "icone", className: "size-auto aspect-square" })}>
+              {createElement(iconeMatiere(m.id), { size: 18 })}
+            </motion.button>
+        ))}
+      </div>
+    </div>
+    {/* Barre repliée en icônes (bureau) : une seule pastille, la liste s'ouvre en menu */}
+    <div ref={boite} className="relative hidden group-data-[collapsible=icon]:block" style={courante ? styleMatiere(courante) : undefined}>
       <motion.button {...tap} onClick={() => setOuvert((o) => !o)} aria-haspopup="listbox" aria-expanded={ouvert}
         aria-label={`Matière : ${nom}`} title={nom}
         className={cn("flex min-h-11 w-full items-center gap-2 rounded-full px-4 py-2 text-left text-petit font-semibold transition-colors",
@@ -58,6 +77,7 @@ export function SelecteurMatiere({ onChoix }: { onChoix: (m: string | null) => v
         )}
       </AnimatePresence>
     </div>
+    </>
   )
 }
 

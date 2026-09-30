@@ -135,6 +135,10 @@
   --text-ecran: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
   --text-ecran--line-height: 1.12;
   --text-ecran--font-weight: 800;
+  /* titre d'une page de matière (listes) : le nom de la matière en grand */
+  --text-matiere: 1.875rem;
+  --text-matiere--line-height: 1.1;
+  --text-matiere--font-weight: 800;
   --text-bloc: 1.25rem;
   --text-bloc--line-height: 1.3;
   --text-lecture: 1.03125rem;

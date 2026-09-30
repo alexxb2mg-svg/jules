@@ -8,7 +8,7 @@ import { AvatarJules } from "@/components/ui/avatar"
 import { bulleVariants } from "@/components/ui/variantes"
 import { buttonVariants } from "@/components/ui/button"
 import { Pastille } from "@/components/ui/pastille"
-import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import { choixVariants, surfaceVariants, titreVariants } from "@/components/ui/variantes"
 import { iconeMode } from "@/config/modes"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
@@ -103,7 +103,7 @@ function EncartExercices({ exercices, onCommencer }: {
   exercices: { id: string; titre: string; nb: number; generateur?: boolean }[]
   onCommencer: (notionId: string, generee?: boolean) => void
 }) {
-  const chip = buttonVariants({ variant: "doux", size: "pastille-sm", className: "h-auto min-h-9 py-1.5 whitespace-normal text-left" })
+  const chip = choixVariants({ forme: "suggestion" })
   return (
     <section className={surfaceVariants({ ton: "plat" })}>
       <h2 className={titreVariants({ niveau: "bloc", className: "mb-1.5 flex items-center gap-2.5" })}>
