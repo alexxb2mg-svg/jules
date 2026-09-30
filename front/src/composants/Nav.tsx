@@ -5,7 +5,7 @@
 import { ExternalLink, Folder, Inbox, Plus, Sparkles } from "lucide-react"
 import {
   Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader,
-  SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarRail,
+  SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarMenuSub, SidebarMenuSubButton, SidebarMenuSubItem, SidebarRail, useSidebar,
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils"
 import { RUBRIQUES, MARQUE, NAV_ARIA, type EntreeNav, type SectionId } from "@/config/navigation"
@@ -22,20 +22,23 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
   admin?: boolean
   actif: SectionId; onChange: (s: SectionId) => void; onMatiere: (m: string | null) => void; prenom: string; route: Route; aller: (r: Route) => void
 }) {
+  // Sur téléphone la barre est un tiroir : tout choix le referme après la navigation (sur bureau, rien ne change).
+  const { isMobile, setOpenMobile } = useSidebar()
+  const fermer = () => { if (isMobile) setOpenMobile(false) }
   const entree = ({ id, nom, Icone, pageExistante }: EntreeNav) => (
     <SidebarMenuItem key={id}>
       <SidebarMenuButton
         size="lg" tooltip={nom} isActive={actif === id} asChild={Boolean(pageExistante)}
-        onClick={pageExistante ? undefined : () => onChange(id)}
+        onClick={pageExistante ? undefined : () => { onChange(id); fermer() }}
         className="h-11 rounded-xl text-[16px] font-medium transition-all [&>svg]:size-5 data-[active=true]:bg-bleu data-[active=true]:text-white data-[active=true]:shadow-relief"
       >
         {pageExistante ? (
-          <a href={pageExistante}><Icone /><span className="flex-1">{nom}</span><ExternalLink className="!size-3.5 opacity-40" /></a>
+          <a href={pageExistante} onClick={fermer}><Icone /><span className="flex-1">{nom}</span><ExternalLink className="!size-3.5 opacity-40" /></a>
         ) : (
           <><Icone /><span>{nom}</span></>
         )}
       </SidebarMenuButton>
-      {id === "fiches" && actif === "fiches" && <SousFiches route={route} aller={aller} />}
+      {id === "fiches" && actif === "fiches" && <SousFiches route={route} aller={(r) => { aller(r); fermer() }} />}
     </SidebarMenuItem>
   )
 
@@ -47,7 +50,7 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
           <span className="hidden group-data-[collapsible=icon]:inline">{MARQUE.nom[0]}</span>
           <span className="text-rouge">{MARQUE.point}</span>
         </span>
-        <div className="mt-3"><SelecteurMatiere onChoix={onMatiere} /></div>
+        <div className="mt-3"><SelecteurMatiere onChoix={(m) => { onMatiere(m); fermer() }} /></div>
       </SidebarHeader>
 
       <SidebarContent>
