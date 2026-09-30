@@ -4,7 +4,11 @@ import { useState, type ReactNode } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Check, Lightbulb, Target, BookOpenText, PenLine, Sparkles, RotateCcw, AlertTriangle } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useMotion } from "@/lib/motion"
 import { useIsMobile } from "@/hooks/use-mobile"
+import { buttonVariants } from "@/components/ui/button"
+import { Pastille } from "@/components/ui/pastille"
+import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
 import { cours, type Bloc, type EtatBloc, type Progression, type Tentative } from "@/api/jules"
 
 type Ctx = {
@@ -74,21 +78,20 @@ function decouper(texte: string, max = 140): string[] {
   return paragraphes
 }
 
-function Cadre({ Icone, etiquette, teinte = "bleu", etat, children }: {
-  Icone: typeof Target; etiquette: string; teinte?: "bleu" | "orange" | "vert" | "violet"; etat?: EtatBloc; children: ReactNode
+/** Un bloc de leçon : surface blanche sur le fond de page, liseré de la matière (vert/orange une fois corrigé),
+ *  étiquette en capitales aux couleurs de la matière. Pas de cadre ni d'ombre : l'espace sépare les blocs. */
+function Cadre({ Icone, etiquette, etat, children }: {
+  Icone: typeof Target; etiquette: string; etat?: EtatBloc; children: ReactNode
 }) {
-  const couleurs = {
-    bleu: "text-bleu bg-bleu-clair", orange: "text-orange bg-[#FFF3E0]", vert: "text-vert bg-[#E3F4EA]", violet: "text-francais bg-[#F6E9F1]",
-  }[teinte]
-  const bordure = etat === "reussi" ? "border-vert/50" : etat === "a_revoir" ? "border-orange/60" : "border-bord"
+  const { entree } = useMotion()
+  const lisere = etat === "reussi" ? "succes" : etat === "a_revoir" ? "alerte" : true
   return (
-    <motion.section layout initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}
-      className={cn("rounded-2xl border bg-white p-5 shadow-relief transition-colors", bordure)}>
-      <div className="mb-3 flex items-center gap-2">
-        <span className={cn("grid size-7 place-items-center rounded-lg", couleurs)}><Icone size={16} /></span>
-        <span className={cn("text-[13px] font-semibold uppercase tracking-wide", couleurs.split(" ")[0])}>{etiquette}</span>
-        {etat === "reussi" && <span className="ml-auto flex items-center gap-1 text-[13px] font-semibold text-vert"><Check size={14} /> réussi</span>}
-        {etat === "a_revoir" && <span className="ml-auto flex items-center gap-1 text-[13px] font-semibold text-orange"><AlertTriangle size={14} /> à revoir</span>}
+    <motion.section layout {...entree} className={surfaceVariants({ ton: "plat", lisere, espace: "large" })}>
+      <div className="mb-3 flex items-center gap-2.5">
+        <Pastille ton="matiere" taille="icone" className="size-8 rounded-xl"><Icone size={17} /></Pastille>
+        <span className={titreVariants({ niveau: "etiquette", className: "font-sans text-(--m-texte,var(--j-bleu))" })}>{etiquette}</span>
+        {etat === "reussi" && <Pastille ton="succes" className="ml-auto"><Check size={15} /> réussi</Pastille>}
+        {etat === "a_revoir" && <Pastille ton="alerte" className="ml-auto"><AlertTriangle size={15} /> à revoir</Pastille>}
       </div>
       {children}
     </motion.section>
@@ -100,7 +103,7 @@ function Cadre({ Icone, etiquette, teinte = "bleu", etat, children }: {
 function Objectifs({ bloc }: { bloc: Extract<Bloc, { type: "objectifs" }> }) {
   return (
     <Cadre Icone={Target} etiquette="Ce que tu vas savoir faire">
-      <ul className="space-y-1.5">{bloc.items.map((it) => <li key={it} className="flex gap-2"><Check size={18} className="mt-0.5 shrink-0 text-vert" /><span className="min-w-0">{it}</span></li>)}</ul>
+      <ul className="m-0 list-none space-y-2.5 p-0 text-lecture">{bloc.items.map((it) => <li key={it} className="flex gap-2.5"><Check size={19} className="mt-1 shrink-0 text-(--m-accent,var(--j-vert))" /><span className="min-w-0">{it}</span></li>)}</ul>
     </Cadre>
   )
 }
@@ -109,10 +112,10 @@ function Texte({ bloc }: { bloc: Extract<Bloc, { type: "texte" }> }) {
   // Téléphone seulement : le bureau garde le paragraphe d'origine, d'un seul tenant.
   const mobile = useIsMobile()
   return (
-    <Cadre Icone={BookOpenText} etiquette="À retenir" teinte="orange">
-      {bloc.titre && <h3 className="mb-2 text-[20px] font-bold">{bloc.titre}</h3>}
-      <div className="space-y-4 max-md:space-y-5">
-        {(mobile ? decouper(bloc.contenu) : [bloc.contenu]).map((p, i) => <p key={i} className="leading-relaxed text-encre/90 max-md:leading-[1.65]"><Riche texte={p} /></p>)}
+    <Cadre Icone={BookOpenText} etiquette="À retenir">
+      {bloc.titre && <h3 className={titreVariants({ niveau: "bloc", className: "mb-3" })}>{bloc.titre}</h3>}
+      <div className="space-y-4">
+        {(mobile ? decouper(bloc.contenu) : [bloc.contenu]).map((p, i) => <p key={i} className="text-lecture text-encre/90"><Riche texte={p} /></p>)}
       </div>
     </Cadre>
   )
@@ -120,23 +123,24 @@ function Texte({ bloc }: { bloc: Extract<Bloc, { type: "texte" }> }) {
 
 function Exemple({ bloc }: { bloc: Extract<Bloc, { type: "exemple" }> }) {
   const [vues, setVues] = useState(1)
+  const { apparition, tap } = useMotion()
   return (
-    <Cadre Icone={Sparkles} etiquette="Exemple guidé" teinte="violet">
-      <p className="mb-3 font-semibold">{bloc.enonce}</p>
-      <ol className="space-y-2">
+    <Cadre Icone={Sparkles} etiquette="Exemple guidé">
+      <p className="mt-0 mb-4 text-lecture font-semibold">{bloc.enonce}</p>
+      <ol className="m-0 list-none space-y-3 p-0 text-lecture">
         <AnimatePresence initial={false}>
           {bloc.etapes.slice(0, vues).map((e, i) => (
-            <motion.li key={i} initial={{ opacity: 0, x: -8 }} animate={{ opacity: 1, x: 0 }} className="flex gap-3">
-              <span className="grid size-6 shrink-0 place-items-center rounded-full bg-[#F6E9F1] text-[13px] font-bold text-francais">{i + 1}</span>
+            <motion.li key={i} {...apparition} className="flex gap-3">
+              <Pastille ton="matiere" taille="puce" className="size-7 font-bold">{i + 1}</Pastille>
               <span>{e}</span>
             </motion.li>
           ))}
         </AnimatePresence>
       </ol>
       {vues < bloc.etapes.length && (
-        <button onClick={() => setVues(vues + 1)} className="mt-3 rounded-xl border border-bord px-3 py-1.5 text-[14px] font-semibold text-francais hover:bg-[#F6E9F1]">
+        <motion.button {...tap} onClick={() => setVues(vues + 1)} className={buttonVariants({ variant: "doux", size: "pastille-sm", className: "mt-4 text-(--m-texte)" })}>
           Étape suivante
-        </button>
+        </motion.button>
       )}
     </Cadre>
   )
@@ -149,6 +153,7 @@ function Exercice({ bloc, ctx, numero }: { bloc: Extract<Bloc, { type: "exercice
   const [restants, setRestants] = useState(bloc.indices?.length ?? 0)
   const [envoi, setEnvoi] = useState(false)
   const fini = ctx.etat === "reussi" || ctx.etat === "a_revoir"
+  const { apparition, tap } = useMotion()
 
   const valider = async () => {
     if (!reponse.trim() || envoi) return
@@ -167,34 +172,34 @@ function Exercice({ bloc, ctx, numero }: { bloc: Extract<Bloc, { type: "exercice
 
   return (
     <Cadre Icone={PenLine} etiquette={`Exercice ${numero}`} etat={ctx.etat}>
-      <p className="mb-3 text-[18px] font-medium">{bloc.enonce}</p>
+      <p className="mt-0 mb-4 text-lecture font-semibold">{bloc.enonce}</p>
       <div className="flex gap-2">
         <input value={reponse} onChange={(e) => setReponse(e.target.value)} onKeyDown={(e) => e.key === "Enter" && valider()}
           disabled={fini} inputMode={bloc.forme === "nombre" ? "decimal" : "text"}
           placeholder={bloc.forme === "nombre" ? "Ta réponse (un nombre)" : "Ta réponse"}
-          className="flex-1 rounded-xl border-2 border-bord px-3 py-2 text-[17px] outline-none focus:border-bleu disabled:bg-nav" />
-        <button onClick={valider} disabled={fini || envoi || !reponse.trim()}
-          className="rounded-xl bg-bleu px-5 font-semibold text-white transition-opacity disabled:opacity-40">Vérifier</button>
+          className="h-12 min-w-0 flex-1 rounded-full border-2 border-transparent bg-surface-2 px-4 text-courant outline-none placeholder:text-gris focus:border-(--m-accent) disabled:opacity-70" />
+        <motion.button {...tap} onClick={valider} disabled={fini || envoi || !reponse.trim()}
+          className={buttonVariants({ variant: "matiere", className: "h-12 px-5 text-courant disabled:opacity-40" })}>Vérifier</motion.button>
       </div>
 
       <AnimatePresence>
         {retour && (
-          <motion.div key={retour.tentatives} initial={{ opacity: 0, y: -6 }} animate={{ opacity: 1, y: 0 }}
-            className={cn("mt-3 rounded-xl px-4 py-2.5 text-[15px]",
-              retour.juste ? "bg-[#E3F4EA] text-vert" : "bg-[#FFF3E0] text-orange")}>
-            <b>{retour.juste ? "Juste !" : ctx.etat === "a_revoir" ? "Pas encore : regarde la correction." : "Pas tout à fait. Jules t'écrit à droite 👉"}</b>
+          <motion.div key={retour.tentatives} {...apparition}
+            className={cn("mt-3 rounded-2xl px-4 py-3 text-courant",
+              retour.juste ? "bg-succes-fond text-succes" : "bg-alerte-fond text-alerte")}>
+            <b>{retour.juste ? "Juste !" : ctx.etat === "a_revoir" ? "Pas encore : regarde la correction." : "Pas tout à fait. Jules t'écrit un conseil."}</b>
             {retour.explication && <p className="mt-1 text-encre/90">{retour.explication}</p>}
           </motion.div>
         )}
       </AnimatePresence>
 
       {indices.map((t, i) => (
-        <motion.p key={i} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-2 flex gap-2 rounded-xl bg-bleu-clair px-3 py-2 text-[15px]">
+        <motion.p key={i} {...apparition} className="mt-2 mb-0 flex gap-2 rounded-2xl bg-bleu-clair px-4 py-3 text-courant">
           <Lightbulb size={17} className="mt-0.5 shrink-0 text-bleu" />{t}
         </motion.p>
       ))}
       {!fini && restants > 0 && (
-        <button onClick={indice} className="mt-2 flex items-center gap-1.5 text-[14px] font-semibold text-bleu hover:underline">
+        <button onClick={indice} className="mt-3 flex min-h-9 items-center gap-1.5 text-petit font-semibold text-bleu hover:underline">
           <Lightbulb size={15} /> Un indice ({restants})
         </button>
       )}
@@ -205,23 +210,24 @@ function Exercice({ bloc, ctx, numero }: { bloc: Extract<Bloc, { type: "exercice
 function Ouverte({ bloc, ctx, consigne, etiquette }: { bloc: Bloc; ctx: Ctx; consigne: string; etiquette: string }) {
   const [texte, setTexte] = useState("")
   const [envoye, setEnvoye] = useState(ctx.etat === "fait")
+  const { tap } = useMotion()
   const envoyer = async () => {
     if (!texte.trim()) return
     const r = await cours.tentative(ctx.session, bloc.index, texte.trim())
     setEnvoye(true); ctx.onProgression(r.progression); ctx.onJulesARepondu()
   }
   return (
-    <Cadre Icone={RotateCcw} etiquette={etiquette} teinte="vert" etat={envoye ? "fait" : ctx.etat}>
-      <p className="mb-3 font-medium">{consigne}</p>
+    <Cadre Icone={RotateCcw} etiquette={etiquette} etat={envoye ? "fait" : ctx.etat}>
+      <p className="mt-0 mb-4 text-lecture font-semibold">{consigne}</p>
       {envoye ? (
-        <p className="text-[15px] text-vert">Envoyé : Jules te relit à droite.</p>
+        <p className="m-0 text-courant font-semibold text-succes">Envoyé : Jules te relit à droite.</p>
       ) : (
         <>
           <textarea value={texte} onChange={(e) => setTexte(e.target.value)} rows={3} placeholder="Avec tes mots…"
-            className="w-full resize-y rounded-xl border-2 border-bord px-3 py-2 outline-none focus:border-bleu" />
-          <button onClick={envoyer} disabled={!texte.trim()} className="mt-2 rounded-xl bg-vert px-4 py-2 font-semibold text-white disabled:opacity-40">
+            className="w-full resize-y rounded-2xl border-2 border-transparent bg-surface-2 px-4 py-3 text-courant outline-none placeholder:text-gris focus:border-(--m-accent)" />
+          <motion.button {...tap} onClick={envoyer} disabled={!texte.trim()} className={buttonVariants({ variant: "jules", size: "pastille", className: "mt-3 shadow-none disabled:opacity-40" })}>
             Faire relire par Jules
-          </button>
+          </motion.button>
         </>
       )}
     </Cadre>

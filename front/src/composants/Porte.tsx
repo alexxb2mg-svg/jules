@@ -46,7 +46,7 @@ export function Porte({ children }: { children: React.ReactNode }) {
   return (
     <div className="grid h-full place-items-center bg-[radial-gradient(ellipse_at_top,var(--j-bleu-clair),transparent_60%)] p-5">
       <motion.form onSubmit={entrer} initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-        className="flex w-full max-w-[400px] flex-col gap-4 rounded-3xl bg-white p-7 shadow-relief-haut">
+        className="flex w-full max-w-[400px] flex-col gap-4 rounded-3xl bg-card p-7 shadow-relief-haut">
         <span className="grid size-12 place-items-center rounded-2xl bg-bleu-clair text-bleu"><LockKeyhole size={22} /></span>
         <div>
           <h1 className="m-0 font-titre text-[1.6rem] font-bold text-encre">{TEXTES_PORTE.titre}</h1>

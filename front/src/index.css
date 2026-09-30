@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* Thème actif : un seul import, voir themes/README.md (base.css = thème d'avant le relifting). */
+@import "./themes/cahier.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -9,36 +11,20 @@
 @font-face { font-family: "Work Sans"; src: url("/static/polices/WorkSans-Bold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
 
 /* ============================================================================
-   THÈME DE JULES — seul endroit où l'on change les couleurs de toute l'application.
-   1) palette Jules (--j-*)  2) rôles shadcn branchés dessus  3) tokens Tailwind.
+   THÈME DE JULES — les valeurs vivent dans UN fichier de thème (themes/*.css, voir themes/README.md) ;
+   ici : 1) le thème importé en tête de fichier  2) rôles shadcn branchés sur ses --j-*  3) tokens Tailwind.
    Les adaptations dys / la persona pourront surcharger les --j-* à l'exécution.
    ========================================================================== */
 :root {
-  --j-bleu: #1F4E8C;
-  --j-bleu-clair: #EAF1FA;
-  --j-rouge: #C8102E;
-  --j-encre: #1E1446;
-  --j-gris: #6B6880;
-  --j-bord: #E4E1F0;
-  --j-nav: #F6F5FB;
-  --j-survol: #ECEAF6;
-  --j-vert: #1E8E5A;
-  --j-orange: #E07B00;
-  --j-fond: #FFFFFF;
-  /* fiches personnelles (docs/SOURCES-CONTRAT.md §8) : distinctes de toutes les couleurs de matière */
-  --j-perso: #7A3FE0;
-  --j-perso-clair: #F2EBFF;
-  --radius: 0.875rem;
-
   /* rôles shadcn/ui */
-  --background: var(--j-fond);
+  --background: var(--j-app);
   --foreground: var(--j-encre);
-  --card: #FFFFFF;
+  --card: var(--j-surface);
   --card-foreground: var(--j-encre);
-  --popover: #FFFFFF;
+  --popover: var(--j-surface);
   --popover-foreground: var(--j-encre);
   --primary: var(--j-bleu);
-  --primary-foreground: #FFFFFF;
+  --primary-foreground: var(--j-sur-plein);
   --secondary: var(--j-bleu-clair);
   --secondary-foreground: var(--j-bleu);
   --muted: var(--j-nav);
@@ -50,10 +36,10 @@
   --input: var(--j-bord);
   --ring: var(--j-bleu);
 
-  --sidebar: var(--j-nav);
+  --sidebar: var(--j-surface);
   --sidebar-foreground: var(--j-encre);
   --sidebar-primary: var(--j-bleu);
-  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-primary-foreground: var(--j-sur-plein);
   --sidebar-accent: var(--j-survol);
   --sidebar-accent-foreground: var(--j-encre);
   --sidebar-border: var(--j-bord);
@@ -77,6 +63,26 @@
   --color-orange: var(--j-orange);
   --color-perso: var(--j-perso);
   --color-perso-clair: var(--j-perso-clair);
+  /* « white » = texte posé sur un aplat coloré (encre sombre en thème sombre) */
+  --color-white: var(--j-sur-plein);
+  --color-sur-plein: var(--j-sur-plein);
+  --color-app: var(--j-app);
+  --color-surface: var(--j-surface);
+  --color-surface-2: var(--j-surface-2);
+  --color-eleve: var(--j-eleve);
+  --color-sur-eleve: var(--j-sur-eleve);
+  --color-succes: var(--j-succes);
+  --color-succes-fond: var(--j-succes-fond);
+  --color-succes-bord: var(--j-succes-bord);
+  --color-alerte: var(--j-alerte);
+  --color-alerte-fond: var(--j-alerte-fond);
+  --color-alerte-bord: var(--j-alerte-bord);
+  --color-erreur: var(--j-erreur);
+  --color-erreur-fond: var(--j-erreur-fond);
+  --color-erreur-bord: var(--j-erreur-bord);
+  --color-trait: var(--j-trait);
+  --color-trait-texte: var(--j-trait-texte);
+  --color-papier: var(--j-papier);
 
   /* couleurs des matières */
   --color-maths: #1F4E8C;
@@ -119,16 +125,31 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-surface: var(--j-rayon-surface);
 
-  --shadow-relief: 0 1px 2px rgb(30 20 70 / .06), 0 8px 24px -12px rgb(30 20 70 / .25);
-  --shadow-relief-haut: 0 2px 4px rgb(30 20 70 / .08), 0 18px 40px -14px rgb(30 20 70 / .35);
+  --shadow-relief: var(--j-ombre-relief);
+  --shadow-relief-haut: var(--j-ombre-souleve);
+  --shadow-souleve: var(--j-ombre-souleve);
+
+  /* échelle typographique (téléphone d'abord) : rien sous 14 px */
+  --text-ecran: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  --text-ecran--line-height: 1.12;
+  --text-ecran--font-weight: 800;
+  --text-bloc: 1.25rem;
+  --text-bloc--line-height: 1.3;
+  --text-lecture: 1.03125rem;
+  --text-lecture--line-height: 1.6;
+  --text-courant: 1rem;
+  --text-courant--line-height: 1.5;
+  --text-petit: 0.875rem;
+  --text-petit--line-height: 1.35;
 }
 
 @layer base {
   * { border-color: var(--border); }
   html, body, #root { height: 100%; margin: 0; }
-  body { font-family: var(--font-sans); color: var(--foreground); background: var(--background); font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
-  h1, h2, h3 { font-family: var(--font-titre); }
+  body { font-family: var(--police-texte, var(--font-sans)); color: var(--foreground); background: var(--background); font-size: 1rem; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--font-titre); letter-spacing: -0.01em; }
   :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
 }
 
@@ -142,7 +163,7 @@
 
 /* J : bloc cité par Jules (lien dans sa réponse) : contour + fond teinté 2,5 s, sans mouvement si refusé.
    outline (et non box-shadow) : visible même quand un parent coupe ce qui dépasse. */
-.jules-cite { border-radius: 22px; outline: 4px solid var(--j-bleu); outline-offset: 6px; animation: jules-cite 2.6s ease-out forwards; }
+.jules-cite { border-radius: var(--j-rayon-surface); outline: 4px solid var(--j-bleu); outline-offset: 6px; animation: jules-cite 2.6s ease-out forwards; }
 @keyframes jules-cite {
   0%, 55% { outline-color: var(--j-bleu); background-color: color-mix(in srgb, var(--j-bleu) 7%, transparent); }
   100% { outline-color: transparent; background-color: transparent; }

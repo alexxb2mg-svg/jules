@@ -39,7 +39,7 @@ export function Reprise({ onFiche, onPerso, onReviser }: {
       {dues > 0 && (
         <motion.button initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.05 }}
           whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }} onClick={onReviser}
-          className="group flex items-center gap-3 rounded-3xl border-2 border-bleu/20 bg-white px-5 py-4 text-left shadow-relief sm:w-[300px]">
+          className="group flex items-center gap-3 rounded-3xl border-2 border-bleu/20 bg-card px-5 py-4 text-left shadow-relief sm:w-[300px]">
           <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-bleu-clair text-bleu"><Layers size={20} /></span>
           <span className="min-w-0 flex-1">
             <b className="block leading-snug text-encre">{REPRISE.cartes(dues)}</b>

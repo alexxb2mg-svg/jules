@@ -47,7 +47,7 @@ export const ORDRE_TYPES: TypeSupport[] = ["fiche", "carte_mentale", "quiz", "ca
 export const STATUTS: Record<string, { texte: string; classe: string }> = {
   brouillon: { texte: "Brouillon", classe: "bg-nav text-gris" },
   relu: { texte: "Relu par Jules", classe: "bg-bleu-clair text-bleu" },
-  valide: { texte: "Validé", classe: "bg-[#E7F5EC] text-[#1E7B34]" },
+  valide: { texte: "Validé", classe: "bg-succes-fond text-succes" },
 }
 
 /** Éléments qui comptent pour la validation (même règle que jules/studio.py _verifier_nombre_elements). */
@@ -62,7 +62,7 @@ export function elementsComptes(s: Support): number {
 }
 
 export const REPONSES_CARTE = [
-  { id: "rate", texte: "Raté", aide: "je la revois demain", classe: "border-[#F2B8B5] bg-[#FDF1F0] text-[#8A1F17]" },
-  { id: "difficile", texte: "Difficile", aide: "même délai", classe: "border-[#F3D9A6] bg-[#FFF8EC] text-[#7A4B00]" },
-  { id: "facile", texte: "Facile", aide: "plus tard", classe: "border-[#9BD8B5] bg-[#EEFAF2] text-[#135C33]" },
+  { id: "rate", texte: "Raté", aide: "je la revois demain", classe: "border-erreur-bord bg-erreur-fond text-erreur" },
+  { id: "difficile", texte: "Difficile", aide: "même délai", classe: "border-alerte-bord bg-alerte-fond text-alerte" },
+  { id: "facile", texte: "Facile", aide: "plus tard", classe: "border-succes-bord bg-succes-fond text-succes" },
 ] as const

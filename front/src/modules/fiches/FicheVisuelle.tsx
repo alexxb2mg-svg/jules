@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { motion, useScroll, useSpring } from "framer-motion"
 import { BookOpen, ChevronDown, ChevronLeft, Dumbbell, Info, Target } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { titreVariants } from "@/components/ui/variantes"
 import { cours, exercices, fiches, type NotionExercices } from "@/api/jules"
 import { Entrainement } from "@/modules/exercices/Entrainement"
 import type { BlocAttendus, BlocFiche, Fiche, LienRenfort } from "./types"
@@ -123,29 +125,29 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
           <span aria-hidden className="absolute -top-24 -right-16 size-72 rounded-full bg-(--m-accent) opacity-[0.08]" />
           <span aria-hidden className="absolute top-10 right-40 size-24 rounded-full bg-(--m-accent) opacity-[0.06]" />
           <div className="relative mx-auto max-w-[1180px]">
-            <button onClick={onRetour} className="mb-4 inline-flex items-center gap-1 rounded-full bg-white/70 px-3 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) backdrop-blur hover:bg-white">
+            <button onClick={onRetour} className={buttonVariants({ variant: "sombre", size: "pastille-sm", className: "mb-4 bg-card/70 backdrop-blur" })}>
               <ChevronLeft size={16} /> {retour}
             </button>
             {fiche ? (
               <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
-                <p className="m-0 text-[0.95rem] font-semibold tracking-wide text-(--m-texte)">{habillage?.surtitre ?? `${fiche.nom_matiere} · ${fiche.niveau}`}</p>
-                <h1 className="mt-1 mb-0 max-w-[900px] text-[2.1rem] leading-tight font-bold text-balance text-encre md:text-[2.5rem]">{typo(fiche.titre)}</h1>
+                <p className={titreVariants({ niveau: "surtitre", className: "font-sans" })}>{habillage?.surtitre ?? `${fiche.nom_matiere} · ${fiche.niveau}`}</p>
+                <h1 className={titreVariants({ niveau: "ecran", className: "mt-1 max-w-[900px]" })}>{typo(fiche.titre)}</h1>
                 <div className="mt-4 flex flex-wrap items-center gap-2">
                   {attendus.length > 0 && (
                     <button onClick={() => setAttendusOuverts((o) => !o)} aria-expanded={attendusOuverts}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief">
+                      className={buttonVariants({ variant: "sombre", size: "pastille-sm" })}>
                       <Target size={15} /> Ce qu'on attend de toi <ChevronDown size={15} className={cn("transition-transform", attendusOuverts && "rotate-180")} />
                     </button>
                   )}
                   {entrainement && (
                     <button onClick={() => document.getElementById("bloc-entrainement")?.scrollIntoView({ behavior: "smooth", block: "start" })}
-                      className={cn("items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief", chemin ? "hidden lg:inline-flex" : "inline-flex")}>
-                                            <Dumbbell size={15} /> M'entraîner
+                      className={buttonVariants({ variant: "sombre", size: "pastille-sm", className: chemin ? "hidden lg:inline-flex" : "inline-flex" })}>
+                      <Dumbbell size={15} /> M'entraîner
                     </button>
                   )}
                   {avecLecon && (
                     <button onClick={() => onOuvrirLecon(notion)}
-                      className="inline-flex items-center gap-1.5 rounded-full bg-(--m-texte) px-3.5 py-1.5 text-[0.9rem] font-semibold text-white shadow-relief">
+                      className={buttonVariants({ variant: "matiere", size: "pastille-sm" })}>
                       <BookOpen size={15} /> Faire la leçon avec Jules
                     </button>
                   )}
@@ -155,21 +157,21 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
                 <motion.ul initial={false} animate={{ height: attendusOuverts ? "auto" : 0, opacity: attendusOuverts ? 1 : 0 }}
                   className="m-0 grid list-none gap-2 overflow-hidden p-0 md:grid-cols-2">
                   {attendus.map((a, i) => (
-                    <li key={i} className={cn("rounded-2xl bg-white/80 px-4 py-2.5 text-[0.95rem] leading-snug", i === 0 && "mt-3", i === 1 && "md:mt-3")}>{a}</li>
+                    <li key={i} className={cn("rounded-2xl bg-card/80 px-4 py-2.5 text-courant", i === 0 && "mt-3", i === 1 && "md:mt-3")}>{a}</li>
                   ))}
                 </motion.ul>
               </motion.div>
             ) : (
-              <div className="h-24 animate-pulse rounded-2xl bg-white/50" />
+              <div className="h-24 animate-pulse rounded-surface bg-card/50" />
             )}
           </div>
         </header>
 
         {fiche && (
-          <div className="mx-auto grid max-w-[1180px] gap-8 px-4 pt-6 pb-40 md:px-8 lg:grid-cols-[minmax(0,1fr)_290px]">
-            <article ref={article} className="flex min-w-0 flex-col gap-6">
+          <div className="mx-auto grid max-w-[1180px] gap-8 px-4 pt-5 pb-40 md:px-8 lg:grid-cols-[minmax(0,1fr)_290px]">
+            <article ref={article} className="flex min-w-0 flex-col gap-5">
               {fiche.relecture_a_relire && (
-                <p data-sans-symboles className="m-0 flex items-start gap-2 rounded-2xl border border-[#F3D9A6] bg-[#FFF8EC] px-4 py-2.5 text-[0.9rem] text-[#7A4B00]">
+                <p data-sans-symboles className="m-0 flex items-start gap-2 rounded-2xl bg-alerte-fond px-4 py-3 text-petit text-alerte">
                   <Info size={16} className="mt-0.5 shrink-0" />
                   Fiche expérimentale, pas encore relue par un adulte : sers-t'en comme appui, pas comme vérité absolue.
                 </p>
@@ -179,7 +181,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
               ))}
               {entrainement && <Entrainement key={notion} notion={notion} nb={entrainement.nb} generateur={entrainement.generateur} />}
               {suite}
-              <p data-sans-symboles className="m-0 text-[0.8rem] leading-relaxed text-gris">
+              <p data-sans-symboles className="m-0 text-petit text-gris">
                 {habillage?.mention ?? `Sources : ${fiche.sources.map((s) => (s.licence ? `${s.titre} (${s.licence})` : s.titre)).join(" · ")} — fiche sous licence ${fiche.licence}`}
               </p>
             </article>
@@ -221,7 +223,7 @@ function Sommaire({ blocs, actif, zone, entrainement }: { blocs: BlocFiche[]; ac
   const courant = actif ?? visible
   return (
     <nav data-sans-symboles aria-label="Sommaire de la fiche">
-      <p className="mt-0 mb-2 text-[0.8rem] font-semibold tracking-wide text-gris">Dans cette fiche</p>
+      <p className={titreVariants({ niveau: "etiquette", className: "mb-2 font-sans text-gris" })}>Dans cette fiche</p>
       <ul className="relative m-0 flex list-none flex-col gap-0.5 border-l-2 border-bord p-0">
         {[...blocs.map((b) => ({ id: b.id, Icone: TYPES[b.type]!.Icone, titre: b.titre || TYPES[b.type]!.titre })),
           ...(entrainement ? [{ id: "entrainement", Icone: Dumbbell, titre: "M'entraîner" }] : [])].map((b) => {
@@ -231,7 +233,7 @@ function Sommaire({ blocs, actif, zone, entrainement }: { blocs: BlocFiche[]; ac
             <li key={b.id} className="relative">
               {on && <motion.span layoutId="sommaire-actif" className="absolute top-0 bottom-0 -left-[2px] w-[3px] rounded bg-(--m-accent)" />}
               <button onClick={() => document.getElementById(`bloc-${b.id}`)?.scrollIntoView({ behavior: "smooth", block: "start" })}
-                className={cn("flex w-full items-center gap-2 rounded-r-lg py-1.5 pr-2 pl-3 text-left text-[0.88rem] leading-snug transition-colors",
+                className={cn("flex w-full items-center gap-2 rounded-r-lg py-1.5 pr-2 pl-3 text-left text-petit transition-colors",
                   on ? "font-semibold text-(--m-texte)" : "text-gris hover:text-encre")}>
                 <t.Icone size={15} className="shrink-0" />
                 <span className="line-clamp-2"><Riche texte={t.titre.replace(/\*\*/g, "")} /></span>

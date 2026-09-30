@@ -2,12 +2,19 @@
 // Sidebar interne (historique), zone de chat avec bulles, saisie avec photos et auto-resize.
 // L'envoi n'est PAS streaming : POST → JSON {reponse}. Bulle d'attente pendant le fetch.
 import { useCallback, useEffect, useRef, useState } from "react"
+import { motion } from "framer-motion"
 import { History, Plus, Send, Camera, X } from "lucide-react"
 import {
   conversations, infosChat, epreuve as apiEpreuve,
   type Conversation, type ConversationResume, type InfosChat, type MessageJules,
 } from "@/api/jules"
 import { PriseDePhoto } from "@/composants/PriseDePhoto"
+import { buttonVariants } from "@/components/ui/button"
+import { Pastille } from "@/components/ui/pastille"
+import { surfaceVariants, titreVariants } from "@/components/ui/variantes"
+import { iconeMode } from "@/config/modes"
+import { useMotion } from "@/lib/motion"
+import { cn } from "@/lib/utils"
 import { Bulle, BulleAttente } from "./Bulle"
 import { Accueil } from "./Accueil"
 
@@ -41,7 +48,7 @@ const heure = (iso: string) => {
 
 const nomMode = (id: string, infos: InfosChat | null) => {
   const mode = (infos?.modes ?? []).find((m) => m.id === id)
-  return mode ? `${mode.icone} ${mode.nom}` : id
+  return mode ? mode.nom : id
 }
 
 // -- État de la conversation active -------------------------------------------
@@ -62,6 +69,7 @@ export function Chat() {
   const [saisieCache, setSaisieCache] = useState(false)
   const [texte, setTexte] = useState("")
 
+  const { tap } = useMotion()
   const filRef = useRef<HTMLDivElement>(null)
   const textareaRef = useRef<HTMLTextAreaElement>(null)
 
@@ -236,44 +244,46 @@ export function Chat() {
   return (
     <div className="flex h-full">
       {/* Sidebar historique */}
-      <aside className={`
-        absolute inset-y-0 left-0 z-30 flex w-72 flex-col border-r border-bord bg-nav transition-transform
-        md:relative md:translate-x-0
-        ${sidebarOuverte ? "translate-x-0" : "-translate-x-full"}
-      `}>
-        <div className="flex min-h-[68px] items-center justify-between border-b border-bord py-3 pr-4 pl-16 md:pl-4">
-          <h2 className="text-sm font-semibold">Historique</h2>
+      <aside className={cn("absolute inset-y-0 left-0 z-30 flex w-72 flex-col bg-card transition-transform md:relative md:translate-x-0",
+        sidebarOuverte ? "translate-x-0 shadow-souleve md:shadow-none" : "-translate-x-full")}>
+        <div className="flex min-h-[68px] items-center justify-between py-3 pr-3 pl-16 md:pl-5">
+          <h2 className={titreVariants({ niveau: "etiquette", className: "text-gris" })}>Historique</h2>
           <button onClick={ecranAccueil} title="Nouvelle discussion" aria-label="Nouvelle discussion"
-            className="grid size-10 place-items-center rounded-lg transition hover:bg-bleu-clair/40">
-            <Plus className="size-4" />
+            className={buttonVariants({ variant: "doux", size: "rond" })}>
+            <Plus />
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex flex-1 flex-col gap-0.5 overflow-y-auto px-2 pb-3">
           {historique.map((c) => (
             <button key={c.id} onClick={() => ouvrirConversation(c.id)}
-              className={`block w-full px-4 py-2.5 text-left text-[13px] max-md:text-[14px] transition hover:bg-bleu-clair/30 ${
-                conv?.id === c.id ? "bg-bleu-clair/40 font-medium" : ""
-              }`}>
+              className={cn("block w-full rounded-2xl px-3 py-2.5 text-left text-courant transition-colors hover:bg-survol",
+                conv?.id === c.id && "bg-bleu-clair font-semibold")}>
               <span className="line-clamp-1">{c.titre || nomMode(c.mode, infos)}</span>
-              <small className="text-[11px] max-md:text-[14px] text-gris">{heure(c.dernier || c.debut)}</small>
+              <small className="text-petit text-gris">{heure(c.dernier || c.debut)}</small>
             </button>
           ))}
         </div>
       </aside>
       {/* Overlay mobile */}
       {sidebarOuverte && (
-        <div className="absolute inset-0 z-20 bg-black/20 md:hidden" onClick={() => setSidebarOuverte(false)} />
+        <div className="absolute inset-0 z-20 bg-black/30 md:hidden" onClick={() => setSidebarOuverte(false)} />
       )}
 
       {/* Zone principale */}
       <div className="flex min-w-0 flex-1 flex-col">
         {/* En-tête */}
-        <header className="flex min-h-[68px] items-center gap-2 border-b border-bord py-3 pr-16 pl-12 md:px-4 md:pr-20">
-          <button onClick={() => setSidebarOuverte(!sidebarOuverte)} aria-label="Historique des discussions"
-            className="grid size-10 place-items-center rounded-lg transition hover:bg-bleu-clair/40 md:hidden">
-            <History className="size-5" />
-          </button>
-          <h1 className="flex-1 truncate text-[15px] font-semibold">{titre}</h1>
+        {/* Téléphone : rangée des boutons (celui de la barre et la calculatrice flottent en haut), puis le titre en grand. */}
+        <header className="flex flex-col px-4 pt-3 pb-2 md:flex-row md:items-center md:gap-3 md:py-4 md:pr-20 md:pl-6">
+          <div className="flex h-11 items-center pl-12 md:hidden">
+            <button onClick={() => setSidebarOuverte(!sidebarOuverte)} aria-label="Historique des discussions"
+              className={buttonVariants({ variant: "ghost", size: "rond" })}>
+              <History />
+            </button>
+          </div>
+          <div className="mt-2 flex min-w-0 items-center gap-3 md:mt-0">
+            {conv && (() => { const Icone = iconeMode(conv.mode); return <Pastille ton="jules" taille="icone" aria-hidden><Icone size={20} /></Pastille> })()}
+            <h1 className={titreVariants({ niveau: "ecran", className: "truncate" })}>{titre}</h1>
+          </div>
         </header>
 
         {/* Fil de messages ou accueil */}
@@ -281,19 +291,22 @@ export function Chat() {
           {conv === null && infos ? (
             <Accueil infos={infos} onDemarrer={demarrer} onEpreuve={commencerEpreuve} onExercice={commencerExercice} />
           ) : (
-            <div className="flex flex-col gap-3 px-4 py-4">
-              {messages.map((m, i) => <Bulle key={i} message={m} />)}
-              {occupe && <BulleAttente />}
+            <div className="mx-auto flex max-w-3xl flex-col gap-1.5 px-4 pt-3 pb-6 md:px-6">
+              {messages.map((m, i) => {
+                const nouveauGroupe = i > 0 && (messages[i - 1].role === "eleve") !== (m.role === "eleve")
+                return <div key={i} className={nouveauGroupe ? "mt-4" : undefined}><Bulle message={m} tete={i === 0 || nouveauGroupe} /></div>
+              })}
+              {occupe && <div className="mt-4"><BulleAttente /></div>}
             </div>
           )}
         </div>
 
         {/* Aperçus photos */}
         {photos.length > 0 && (
-          <div className="flex gap-2 border-t border-bord px-4 py-2">
+          <div className="flex gap-2 px-4 pt-2">
             {photos.map((p, i) => (
               <div key={p.url} className="relative">
-                <img src={p.url} alt="aperçu" className="size-16 rounded-lg object-cover" />
+                <img src={p.url} alt="aperçu" className="size-16 rounded-2xl object-cover" />
                 <button onClick={() => retirerPhoto(i)} title="Retirer"
                   className="absolute -top-1.5 -right-1.5 flex size-5 items-center justify-center rounded-full bg-rouge text-white">
                   <X className="size-3" />
@@ -305,14 +318,15 @@ export function Chat() {
 
         {/* Saisie */}
         {conv !== null && !saisieCache && (
-          <div className="border-t border-bord px-3 py-2">
-            <div className="flex items-end gap-2 rounded-2xl border-2 border-bord bg-white p-2 focus-within:border-bleu">
+          <div className="px-3 pt-1 pb-3 md:px-6">
+            <div className={surfaceVariants({ ton: "souleve", espace: "aucun",
+              className: "mx-auto flex max-w-3xl items-end gap-1 p-1.5 focus-within:ring-2 focus-within:ring-bleu/40" })}>
               <PriseDePhoto accept="image/*" multiple compact onFichiers={(f) => void ajouterPhotos(f)}>
                 {(ouvrir) => (
                   <button onClick={ouvrir}
-                    className="shrink-0 rounded-xl p-2 text-gris transition hover:bg-bleu-clair/40 hover:text-bleu"
-                    title="Ajouter une photo">
-                    <Camera className="size-5" />
+                    className={buttonVariants({ variant: "ghost", size: "rond", className: "text-gris hover:text-bleu" })}
+                    title="Ajouter une photo" aria-label="Ajouter une photo">
+                    <Camera />
                   </button>
                 )}
               </PriseDePhoto>
@@ -320,12 +334,12 @@ export function Chat() {
                 onChange={(e) => setTexte(e.target.value)}
                 onKeyDown={onKeyDown}
                 rows={1} placeholder="Écris ton message…"
-                className="max-h-40 flex-1 resize-none bg-transparent px-1 py-1.5 text-[16px] outline-none placeholder:text-gris" />
-              <button onClick={envoyer} disabled={occupe || (!texte.trim() && photos.length === 0)}
-                className="grid size-9 shrink-0 place-items-center rounded-xl bg-bleu text-white transition-opacity disabled:opacity-40"
+                className="max-h-40 min-h-11 flex-1 resize-none bg-transparent px-1 py-2.5 text-courant outline-none placeholder:text-gris" />
+              <motion.button {...tap} onClick={envoyer} disabled={occupe || (!texte.trim() && photos.length === 0)}
+                className={buttonVariants({ variant: "jules", size: "rond", className: "shadow-none disabled:opacity-40" })}
                 aria-label="Envoyer">
-                <Send className="size-4" />
-              </button>
+                <Send />
+              </motion.button>
             </div>
           </div>
         )}

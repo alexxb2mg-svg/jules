@@ -45,7 +45,7 @@ export function Chemin({ notion, matiere, avecLecon, avecExercices, onFiche, onL
 
   return (
     <nav data-sans-symboles aria-label={CHEMIN.titre}>
-      <p className={cn("mt-0 mb-2 text-[0.8rem] font-semibold tracking-wide text-gris", horizontal && "sr-only")}>{CHEMIN.titre}</p>
+      <p className={cn("mt-0 mb-2 text-petit font-semibold tracking-wide text-gris", horizontal && "sr-only")}>{CHEMIN.titre}</p>
       <ol className={cn("m-0 list-none p-0", horizontal ? "-mr-6 flex gap-1.5 overflow-x-auto pr-6 pb-1 [scrollbar-width:none]" : "relative flex flex-col gap-1")}>
         {pas.map((p, i) => {
           const actif = p.id === suivant
@@ -57,17 +57,17 @@ export function Chemin({ notion, matiere, avecLecon, avecExercices, onFiche, onL
               <motion.button onClick={p.aller} whileHover={{ x: horizontal ? 0 : 2 }} whileTap={{ scale: 0.97 }}
                 aria-current={actif ? "step" : undefined}
                 className={cn("relative flex items-center gap-2.5 rounded-2xl text-left transition-colors",
-                  horizontal ? "shrink-0 px-3 py-1.5 text-[0.85rem] whitespace-nowrap" : "w-full px-1 py-1 text-[0.92rem]",
+                  horizontal ? "shrink-0 px-3 py-1.5 text-petit whitespace-nowrap" : "w-full px-1 py-1 text-petit",
                   actif && (horizontal ? "bg-(--m-texte) text-white" : "bg-(--m-fond) pr-3"),
                   !actif && "hover:bg-(--m-fond)")}>
                 <span className={cn("grid shrink-0 place-items-center rounded-full",
                   horizontal ? "size-5" : "size-8",
-                  p.fait ? "bg-(--m-accent) text-white" : actif ? (horizontal ? "bg-white/20" : "bg-(--m-texte) text-white shadow-relief") : "bg-white text-gris ring-2 ring-bord")}>
+                  p.fait ? "bg-(--m-accent) text-white" : actif ? (horizontal ? "bg-white/20" : "bg-(--m-texte) text-white shadow-relief") : "bg-card text-gris ring-2 ring-bord")}>
                   {p.fait ? <Check size={horizontal ? 12 : 16} strokeWidth={3} /> : <p.Icone size={horizontal ? 12 : 15} />}
                 </span>
                 <span className={cn("leading-tight", actif ? "font-bold" : p.fait ? "text-gris" : "text-encre")}>
                   {p.nom}
-                  {actif && !horizontal && <small className="block text-[0.75rem] font-semibold text-(--m-texte)">{CHEMIN.aFaire}</small>}
+                  {actif && !horizontal && <small className="block text-petit font-semibold text-(--m-texte)">{CHEMIN.aFaire}</small>}
                 </span>
               </motion.button>
             </li>

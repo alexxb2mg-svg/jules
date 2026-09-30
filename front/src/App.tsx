@@ -1,7 +1,7 @@
 // Coquille de l'interface : barre latérale + écran de la route courante (routes.ts), transitions animées.
 // Aucune donnée fictive : prénom, persona et leviers d'adaptation viennent de /api/infos.
 import { useEffect, useState } from "react"
-import { AnimatePresence, motion } from "framer-motion"
+import { AnimatePresence, MotionConfig, motion } from "framer-motion"
 import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { Nav } from "@/composants/Nav"
@@ -40,12 +40,13 @@ export default function App() {
     : route.ecran === "support" || route.ecran === "perso" || route.ecran === "dossier" ? `${route.ecran}-${route.id}` : route.ecran
 
   return (
+    <MotionConfig reducedMotion="user">
     <TooltipProvider delayDuration={300}>
       <SidebarProvider className="h-full min-h-0">
         <Nav admin={admin} actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = routeDeSection(s); if (r) aller(r) }}
           onMatiere={(m) => { const r = routeDeSection(sectionDe(route), m); if (r) aller(r) }} />
-        <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
-          <SidebarTrigger className="absolute top-3 left-3 z-40 size-10 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />
+        <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-background">
+          <SidebarTrigger className="absolute top-3 left-3 z-40 size-11 rounded-full bg-card/85 text-encre shadow-souleve backdrop-blur md:hidden" />
           <AnimatePresence mode="wait">
             <motion.div key={cle} className={`h-full transition-[padding] duration-200 ${calcOuverte ? "md:pr-[21rem]" : ""}`}
               initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
@@ -59,5 +60,6 @@ export default function App() {
         </SidebarInset>
       </SidebarProvider>
     </TooltipProvider>
+    </MotionConfig>
   )
 }

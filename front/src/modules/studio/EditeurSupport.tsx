@@ -104,7 +104,7 @@ export function EditeurSupport({ id, matiere, onRetour, onSupprime }: {
     <div className="flex h-full flex-col lg:flex-row" style={styleMatiere(matiere || "")}>
       {/* Trame */}
       <div className="min-h-0 flex-1 overflow-y-auto">
-        <header className="sticky top-0 z-20 border-b border-bord bg-[#FBFBFE]/85 px-5 pt-4 pb-3 pl-16 backdrop-blur md:px-10">
+        <header className="sticky top-0 z-20 border-b border-bord bg-background/85 px-5 pt-4 pb-3 pl-16 backdrop-blur md:px-10">
           <button onClick={onRetour} className="mb-2 inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.88rem] font-semibold text-(--m-texte) hover:bg-(--m-fond)">
             <ChevronLeft size={16} /> Exercices et supports
           </button>
@@ -129,7 +129,7 @@ export function EditeurSupport({ id, matiere, onRetour, onSupprime }: {
 
         <div className="mx-auto max-w-[900px] px-5 pt-6 pb-32 md:px-10">
           {verrouille && (
-            <p className="mt-0 mb-5 flex items-center gap-2 rounded-2xl bg-[#E7F5EC] px-4 py-2.5 text-[0.92rem] text-[#135C33]">
+            <p className="mt-0 mb-5 flex items-center gap-2 rounded-2xl bg-succes-fond px-4 py-2.5 text-[0.92rem] text-succes">
               <Lock size={16} /> {support.type === "cartes_memoire" ? TEXTES.verrouilleCartes : TEXTES.verrouille}
             </p>
           )}
@@ -139,7 +139,7 @@ export function EditeurSupport({ id, matiere, onRetour, onSupprime }: {
       </div>
 
       {/* Jules + actions */}
-      <aside className="flex max-h-[45vh] shrink-0 flex-col border-t border-bord bg-white lg:max-h-none lg:w-[360px] lg:border-t-0 lg:border-l">
+      <aside className="flex max-h-[45vh] shrink-0 flex-col border-t border-bord bg-card lg:max-h-none lg:w-[360px] lg:border-t-0 lg:border-l">
         <div className="flex items-center gap-2.5 border-b border-bord px-4 py-3">
           <img src="/api/persona/avatar" alt="" className="size-9 rounded-full bg-(--m-fond)" onError={(e) => ((e.target as HTMLImageElement).style.visibility = "hidden")} />
           <b className="text-[1rem]">{nomJules} relit</b>
@@ -167,19 +167,19 @@ export function EditeurSupport({ id, matiere, onRetour, onSupprime }: {
           <AnimatePresence>
             {message && (
               <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} role="status"
-                className={cn("m-0 flex items-start gap-2 rounded-xl px-3 py-2 text-[0.88rem]", message.ton === "erreur" ? "bg-[#FFF8EC] text-[#7A4B00]" : "bg-[#EEFAF2] text-[#135C33]")}>
+                className={cn("m-0 flex items-start gap-2 rounded-xl px-3 py-2 text-[0.88rem]", message.ton === "erreur" ? "bg-alerte-fond text-alerte" : "bg-succes-fond text-succes")}>
                 {message.ton === "erreur" ? <TriangleAlert size={16} className="mt-0.5 shrink-0" /> : <CheckCircle2 size={16} className="mt-0.5 shrink-0" />}{message.texte}
               </motion.p>
             )}
           </AnimatePresence>
 
           {confirmer ? (
-            <div className="rounded-xl border-2 border-[#F3D9A6] bg-[#FFF8EC] p-3">
-              <p className="mt-0 mb-2 text-[0.9rem] text-[#7A4B00]">{confirmer === "supprimer" ? TEXTES.confirmerSuppression : TEXTES.confirmerCartes}</p>
+            <div className="rounded-xl border-2 border-alerte-bord bg-alerte-fond p-3">
+              <p className="mt-0 mb-2 text-[0.9rem] text-alerte">{confirmer === "supprimer" ? TEXTES.confirmerSuppression : TEXTES.confirmerCartes}</p>
               <div className="flex gap-2">
-                <button className="rounded-full bg-[#7A4B00] px-4 py-1.5 text-[0.9rem] font-semibold text-white" autoFocus
+                <button className="rounded-full bg-alerte px-4 py-1.5 text-[0.9rem] font-semibold text-white" autoFocus
                   onClick={() => { const c = confirmer; setConfirmer(null); if (c === "supprimer") supprimer(); else action(() => studio.devalider(id)) }}>{TEXTES.oui}</button>
-                <button className="rounded-full px-4 py-1.5 text-[0.9rem] font-semibold text-[#7A4B00] hover:bg-white" onClick={() => setConfirmer(null)}>{TEXTES.non}</button>
+                <button className="rounded-full px-4 py-1.5 text-[0.9rem] font-semibold text-alerte hover:bg-card" onClick={() => setConfirmer(null)}>{TEXTES.non}</button>
               </div>
             </div>
           ) : verrouille ? (

@@ -9,6 +9,10 @@
     <link rel="apple-touch-icon" href="/static/apple-touch-icon.png" />
     <link rel="manifest" href="/static/manifest.webmanifest" />
     <title>Jules</title>
+    <!-- Polices chargées avant le premier rendu : sans ça, le texte change de largeur à leur arrivée et la page saute. -->
+    <link rel="preload" href="/static/polices/WorkSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/static/polices/WorkSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/static/polices/Outfit-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <!-- Infrastructure commune de Jules, partagée avec les anciennes pages (aucune copie dans front/) :
          couleurs des matières, contenu des fiches, bulles de rappel, adaptations dys, figures. -->
     <link rel="stylesheet" href="/static/matieres-couleurs.css">

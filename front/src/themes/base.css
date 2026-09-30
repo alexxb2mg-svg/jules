@@ -1,0 +1,55 @@
+/* THÈME « base » : le jeu de tokens d'avant le relifting (cadres, ombres, clair seulement).
+   Même liste de variables que cahier.css : changer de thème = changer l'import dans index.css. */
+:root {
+  --j-bleu: #1F4E8C;
+  --j-bleu-clair: #EAF1FA;
+  --j-rouge: #C8102E;
+  --j-encre: #1E1446;
+  --j-gris: #6B6880;
+  --j-bord: #E4E1F0;
+  --j-nav: #F6F5FB;
+  --j-survol: #ECEAF6;
+  --j-vert: #1E8E5A;
+  --j-orange: #E07B00;
+  --j-fond: #FFFFFF;
+  /* fiches personnelles (docs/SOURCES-CONTRAT.md §8) : distinctes de toutes les couleurs de matière */
+  --j-perso: #7A3FE0;
+  --j-perso-clair: #F2EBFF;
+
+  /* surfaces */
+  --j-app: #FBFBFE;
+  --j-surface: #FFFFFF;
+  --j-surface-2: #F8F9FC;
+  /* texte posé sur un aplat coloré (bouton bleu, pastille de matière) */
+  --j-sur-plein: #FFFFFF;
+  /* bulle de l'élève */
+  --j-eleve: #1F4E8C;
+  --j-sur-eleve: #FFFFFF;
+  /* états */
+  --j-succes: #1E7B34;
+  --j-succes-fond: #E7F5EC;
+  --j-succes-bord: #BFE3C7;
+  --j-alerte: #7A4B00;
+  --j-alerte-fond: #FFF8EC;
+  --j-alerte-bord: #F3D9A6;
+  --j-erreur: #B42318;
+  --j-erreur-fond: #FFF4F2;
+  --j-erreur-bord: #F5C6BD;
+  /* traits et libellés des dessins (carte des notions) */
+  --j-trait: #8A94A3;
+  --j-trait-texte: #4A5566;
+  /* feuille des figures dessinées par /gabarits.js (traits sombres fixes) : reste claire dans tous les thèmes */
+  --j-papier: #F8F9FC;
+  /* couleurs des termes de formule déclarées par les fiches (couleurCss) */
+  --j-terme-bleu: #1D4E89;
+  --j-terme-orange: #D9480F;
+  --j-terme-vert: #2B8A3E;
+  --j-terme-rouge: #C92A2A;
+  --j-terme-violet: #7048E8;
+  --j-terme-gris: #6B7686;
+
+  --j-ombre-relief: 0 1px 2px rgb(30 20 70 / .06), 0 8px 24px -12px rgb(30 20 70 / .25);
+  --j-ombre-souleve: 0 2px 4px rgb(30 20 70 / .08), 0 18px 40px -14px rgb(30 20 70 / .35);
+  --j-rayon-surface: 1rem;
+  --radius: 0.875rem;
+}

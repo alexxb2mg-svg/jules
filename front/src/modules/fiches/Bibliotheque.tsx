@@ -79,11 +79,11 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
               {choisie ? (
                 <>
                   <button onClick={() => onMatiere(null)} className="-ml-2 mb-1 rounded-lg px-2 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu">Mes fiches ›</button>
-                  <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{choisie.nom}</h1>
+                  <h1 className="m-0 font-titre text-ecran font-extrabold text-encre">{choisie.nom}</h1>
                 </>
               ) : (
                 <>
-                  <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">Mes fiches</h1>
+                  <h1 className="m-0 font-titre text-ecran font-extrabold text-encre">Mes fiches</h1>
                   <p className="mt-1 mb-0 text-gris">{index ? `${total} fiches visuelles pour toute la 3e, rangées par matière.` : "Chargement de la bibliothèque…"}</p>
                   {(perso?.fiches.length ?? 0) > 0 && <LegendeOrigine />}
                 </>
@@ -103,7 +103,7 @@ export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAj
         <label className="relative flex w-full items-center sm:w-[340px]">
           <Search size={18} className="pointer-events-none absolute left-4 text-gris" />
           <input value={recherche} onChange={(e) => setRecherche(e.target.value)} placeholder="Chercher une notion…" aria-label="Chercher une notion"
-            className="h-12 w-full rounded-2xl border border-bord bg-white pr-10 pl-11 text-[1rem] shadow-relief outline-none transition-shadow focus:border-bleu focus:ring-4 focus:ring-bleu-clair" />
+            className="h-12 w-full rounded-full bg-card pr-10 pl-11 text-courant outline-none transition-shadow focus:ring-2 focus:ring-bleu/40" />
           {recherche && <button onClick={() => setRecherche("")} aria-label="Effacer" className="absolute right-3 rounded-full p-1 text-gris hover:bg-survol"><X size={16} /></button>}
         </label>
         </div>
@@ -154,7 +154,7 @@ function TuileMatiere({ m, i, onClick, natives, nbPerso }: { m: MatiereIndex; i:
       initial={{ opacity: 0, y: 18, scale: 0.97 }} animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ delay: 0.03 * i, type: "spring", stiffness: 300, damping: 26 }}
       whileHover={{ y: -4 }} whileTap={{ scale: 0.97 }}
-      className="group relative flex h-[150px] flex-col justify-between overflow-hidden rounded-3xl border border-bord bg-white p-5 text-left shadow-relief transition-shadow hover:shadow-relief-haut">
+      className="group relative flex h-[150px] flex-col justify-between overflow-hidden rounded-surface bg-card p-5 text-left shadow-relief transition-shadow hover:shadow-relief-haut">
       <span aria-hidden className="absolute -right-10 -bottom-12 size-40 rounded-full bg-(--m-fond) transition-transform duration-500 group-hover:scale-125" />
       <span className="relative grid size-12 place-items-center rounded-2xl bg-(--m-fond) text-(--m-texte) ring-1 ring-(--m-accent)/20 transition-transform duration-300 group-hover:-rotate-6">
         <Icone size={24} />
@@ -210,7 +210,7 @@ function TuileNotion({ n, m, i, onOuvrir, avecMatiere }: { n: NotionIndex; m: Ma
     <motion.button onClick={() => onOuvrir(n.id)} style={styleMatiere(m.id)}
       initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 14) * 0.025 }}
       whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}
-      className="group flex items-center gap-4 rounded-2xl border border-bord bg-white px-4 py-3.5 text-left shadow-relief transition-[border-color,box-shadow] hover:border-(--m-accent) hover:shadow-relief-haut">
+      className="group flex items-center gap-4 rounded-surface bg-card px-4 py-3.5 text-left shadow-relief transition-[border-color,box-shadow] hover:border-(--m-accent) hover:shadow-relief-haut">
       <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-(--m-fond) text-(--m-texte)">
         {avecMatiere ? <Icone size={19} /> : <Sparkles size={18} />}
       </span>
