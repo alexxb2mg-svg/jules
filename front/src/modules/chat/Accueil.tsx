@@ -50,7 +50,7 @@ function ModeButton({ mode, onClick }: { mode: ModeChat; onClick: () => void }) 
       <span className="text-2xl leading-none">{mode.icone}</span>
       <div className="min-w-0">
         <strong className="block text-[14px] font-semibold">{mode.nom}</strong>
-        <small className="text-[13px] text-gris">{mode.description}</small>
+        <small className="text-[13px] max-md:text-[14px] text-gris">{mode.description}</small>
       </div>
     </button>
   )
@@ -79,7 +79,7 @@ function EncartEpreuve({ onCommencer }: { onCommencer: () => void }) {
         <Compass className="size-5 text-bleu" />
         <strong className="text-[14px]">Épreuve sans aide</strong>
       </div>
-      <p className="mb-3 text-[13px] text-gris">
+      <p className="mb-3 text-[13px] max-md:text-[14px] text-gris">
         Il y a quelques jours, tu avais compris {notions.join(", ")}. Est-ce que ça a tenu ?
       </p>
       <button onClick={onCommencer}
@@ -100,19 +100,19 @@ function EncartExercices({ exercices, onCommencer }: {
         <Dumbbell className="size-5 text-bleu" />
         <strong className="text-[14px]">S'entraîner sans IA</strong>
       </div>
-      <p className="mb-3 text-[13px] text-gris">
+      <p className="mb-3 text-[13px] max-md:text-[14px] text-gris">
         Des exercices corrigés tout de suite, avec un indice si tu bloques.
       </p>
       <div className="flex flex-wrap gap-2">
         {exercices.map((n) => (
           <div key={n.id} className="flex gap-1">
             <button onClick={() => onCommencer(n.id)}
-              className="rounded-lg border border-bord px-3 py-1.5 text-[13px] font-medium transition hover:border-bleu hover:text-bleu">
+              className="rounded-lg border border-bord px-3 py-1.5 text-[13px] max-md:text-[14px] font-medium transition hover:border-bleu hover:text-bleu">
               {n.titre} ({n.nb})
             </button>
             {n.generateur && (
               <button onClick={() => onCommencer(n.id, true)} title="Une série avec d'autres nombres à chaque fois"
-                className="rounded-lg border border-bord px-3 py-1.5 text-[13px] font-medium transition hover:border-bleu hover:text-bleu">
+                className="rounded-lg border border-bord px-3 py-1.5 text-[13px] max-md:text-[14px] font-medium transition hover:border-bleu hover:text-bleu">
                 {n.titre} : nouveaux nombres
               </button>
             )}

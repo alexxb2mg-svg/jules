@@ -4,6 +4,7 @@ import { useState, type ReactNode } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Check, Lightbulb, Target, BookOpenText, PenLine, Sparkles, RotateCcw, AlertTriangle } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { useIsMobile } from "@/hooks/use-mobile"
 import { cours, type Bloc, type EtatBloc, type Progression, type Tentative } from "@/api/jules"
 
 type Ctx = {
@@ -17,6 +18,58 @@ type Ctx = {
 /** Mise en forme minimale **gras** des contenus de leçon. */
 function Riche({ texte }: { texte: string }) {
   return <>{texte.split(/(\*\*[^*]+\*\*)/g).map((p, i) => p.startsWith("**") ? <strong key={i} className="font-semibold text-encre">{p.slice(2, -2)}</strong> : p)}</>
+}
+
+/** Dernier recours pour une phrase seule trop longue (> limite) : coupe à la virgule la plus proche du milieu,
+ *  hors parenthèses et hors gras. D'abord devant une conjonction (ou, et, mais, donc, car…), jamais dans une
+ *  énumération de points (« A, M, B ») ; à défaut, à n'importe quelle virgule si la phrase dépasse encore la limite de plus de 5 %. */
+function coupeVirgule(ph: string, limite: number): string[] {
+  if (ph.length <= limite) return [ph]
+  const cherche = (conjonction: boolean) => {
+    let profondeur = 0, gras = false, meilleur = -1
+    for (let i = 0; i < ph.length - 1; i++) {
+      const c = ph[i]
+      if (c === "(" || c === "[") profondeur++
+      else if (c === ")" || c === "]") profondeur--
+      else if (c === "*" && ph[i + 1] === "*") { gras = !gras; i++ }
+      else if (c === "," && profondeur === 0 && !gras && ph[i + 1] === " " && i > 40 && ph.length - i > 40
+        && !/(?:^|\s)[A-Z]$/.test(ph.slice(0, i))
+        && (!conjonction || /^ (?:ou|et|mais|donc|car|alors|sinon|puis|tandis) /.test(ph.slice(i + 1, i + 12)))
+        && (meilleur < 0 || Math.abs(i - ph.length / 2) < Math.abs(meilleur - ph.length / 2))) meilleur = i
+    }
+    return meilleur
+  }
+  let coupe = cherche(true)
+  if (coupe < 0 && ph.length > limite * 1.05) coupe = cherche(false)
+  if (coupe < 0) return [ph]
+  return [...coupeVirgule(ph.slice(0, coupe + 1), limite), ...coupeVirgule(ph.slice(coupe + 2), limite)]
+}
+
+/** Découpe un long paragraphe en paragraphes plus courts, aux fins de phrase seulement (jamais au milieu d'une
+ *  phrase, d'un passage en gras ni d'une parenthèse). Ordre et mots inchangés ; seul l'affichage est aéré. */
+function decouper(texte: string, max = 140): string[] {
+  if (texte.length <= max) return [texte]
+  const morceaux = texte.replace(/([.!?…]\*{0,2}[»)]?)\s+(?=[A-ZÀ-ÖØ-Þ«(*])/g, "$1\u0001").split("\u0001")
+    // Phrase très longue : on la coupe aussi après un point-virgule (fin de proposition).
+    .flatMap((ph) => (ph.length > max ? ph.replace(/(;\*{0,2})\s+/g, "$1\u0002").split("\u0002") : [ph]))
+    .flatMap((ph) => coupeVirgule(ph, max * 1.2))
+  const phrases: string[] = []
+  for (const m of morceaux) {
+    const dernier = phrases[phrases.length - 1]
+    // Coupure fausse : gras ouvert non refermé, parenthèse ouverte, initiale seule (« M. Dupont »), abréviation.
+    const ouvert = dernier !== undefined && ((dernier.match(/\*\*/g) ?? []).length % 2 === 1
+      || (dernier.match(/\(/g) ?? []).length > (dernier.match(/\)/g) ?? []).length
+      || /(?:^|\s)(?:[A-ZÀ-Þ]|cf|p|etc|ex|env|fig|n°)\.$/.test(dernier))
+    if (ouvert) phrases[phrases.length - 1] = `${dernier} ${m}`
+    else phrases.push(m)
+  }
+  const paragraphes: string[] = []
+  for (const ph of phrases) {
+    const dernier = paragraphes[paragraphes.length - 1]
+    if (dernier !== undefined && dernier.length + ph.length + 1 <= max) paragraphes[paragraphes.length - 1] = `${dernier} ${ph}`
+    else paragraphes.push(ph)
+  }
+  return paragraphes
 }
 
 function Cadre({ Icone, etiquette, teinte = "bleu", etat, children }: {
@@ -51,10 +104,14 @@ function Objectifs({ bloc }: { bloc: Extract<Bloc, { type: "objectifs" }> }) {
 }
 
 function Texte({ bloc }: { bloc: Extract<Bloc, { type: "texte" }> }) {
+  // Téléphone seulement : le bureau garde le paragraphe d'origine, d'un seul tenant.
+  const mobile = useIsMobile()
   return (
     <Cadre Icone={BookOpenText} etiquette="À retenir" teinte="orange">
       {bloc.titre && <h3 className="mb-2 text-[20px] font-bold">{bloc.titre}</h3>}
-      <p className="leading-relaxed text-encre/90"><Riche texte={bloc.contenu} /></p>
+      <div className="space-y-4 max-md:space-y-5">
+        {(mobile ? decouper(bloc.contenu) : [bloc.contenu]).map((p, i) => <p key={i} className="leading-relaxed text-encre/90 max-md:leading-[1.65]"><Riche texte={p} /></p>)}
+      </div>
     </Cadre>
   )
 }

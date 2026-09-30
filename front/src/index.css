@@ -148,3 +148,18 @@
   100% { outline-color: transparent; background-color: transparent; }
 }
 @media (prefers-reduced-motion: reduce) { .jules-cite { animation: none; } }
+
+/* Bandeaux de matières qui défilent en largeur sur téléphone : le bord droit s'estompe tant qu'il reste des
+   onglets cachés, puis redevient net en fin de course (CSS seul, piloté par le défilement du bandeau). */
+@property --fondu-droit { syntax: "<length>"; inherits: false; initial-value: 40px; }
+@keyframes fondu-droit { to { --fondu-droit: 0px; } }
+@media (max-width: 767px) {
+  @supports (animation-timeline: scroll()) {
+    .bandeau-fondu {
+      animation: fondu-droit linear both;
+      animation-timeline: scroll(self inline);
+      animation-range: calc(100% - 60px) 100%;
+      mask-image: linear-gradient(to right, #000 calc(100% - var(--fondu-droit)), transparent);
+    }
+  }
+}

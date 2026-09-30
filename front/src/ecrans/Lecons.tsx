@@ -61,7 +61,7 @@ export function Lecons({ matiere, onMatiere, onLecon, onFiche }: {
       <p className="mt-1 mb-6 text-gris">Des leçons courtes, bloc par bloc : Jules corrige tes réponses et te donne des indices.</p>
 
       {/* Onglets matières */}
-      <div role="tablist" aria-label="Matières" className="-mx-5 mb-7 flex gap-2 overflow-x-auto px-5 pt-1 pb-3 [scrollbar-width:none] md:mx-[-0.25rem] md:flex-wrap md:overflow-visible md:px-1">
+      <div role="tablist" aria-label="Matières" className="bandeau-fondu -mx-5 mb-7 flex gap-2 overflow-x-auto px-5 pt-1 pb-3 [scrollbar-width:none] md:mx-[-0.25rem] md:flex-wrap md:overflow-visible md:px-1">
         {matieres.map((m) => {
           const Icone = iconeMatiere(m.id), on = m.id === courante
           return (
