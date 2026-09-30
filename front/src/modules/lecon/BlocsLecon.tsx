@@ -26,9 +26,11 @@ function Riche({ texte }: { texte: string }) {
 function coupeVirgule(ph: string, limite: number): string[] {
   if (ph.length <= limite) return [ph]
   const cherche = (conjonction: boolean) => {
-    let profondeur = 0, gras = false, meilleur = -1
+    let profondeur = 0, gras = false, formule = false, meilleur = -1
     for (let i = 0; i < ph.length - 1; i++) {
       const c = ph[i]
+      if (c === "$") { formule = !formule; continue }
+      if (formule) continue
       if (c === "(" || c === "[") profondeur++
       else if (c === ")" || c === "]") profondeur--
       else if (c === "*" && ph[i + 1] === "*") { gras = !gras; i++ }
@@ -50,9 +52,9 @@ function coupeVirgule(ph: string, limite: number): string[] {
 function decouper(texte: string, max = 140): string[] {
   if (texte.length <= max) return [texte]
   const morceaux = texte.replace(/([.!?…]\*{0,2}[»)]?)\s+(?=[A-ZÀ-ÖØ-Þ«(*])/g, "$1\u0001").split("\u0001")
-    // Phrase très longue : on la coupe aussi après un point-virgule (fin de proposition).
-    .flatMap((ph) => (ph.length > max ? ph.replace(/(;\*{0,2})\s+/g, "$1\u0002").split("\u0002") : [ph]))
-    .flatMap((ph) => coupeVirgule(ph, max * 1.2))
+    // Phrase vraiment longue (plus d'une fois et demie la limite) : on la coupe aussi après un point-virgule.
+    .flatMap((ph) => (ph.length > max * 1.5 ? ph.replace(/(;\*{0,2})\s+/g, "$1\u0002").split("\u0002") : [ph]))
+    .flatMap((ph) => coupeVirgule(ph, max * 1.5))
   const phrases: string[] = []
   for (const m of morceaux) {
     const dernier = phrases[phrases.length - 1]

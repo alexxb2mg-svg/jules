@@ -102,7 +102,9 @@ def test_a_retenir_aere_sur_mobile_et_intact_sur_bureau(serveur, tmp_path_factor
         page.attendre("!!document.body && document.body.innerText.toLowerCase().includes('à retenir')", delai=20)
         time.sleep(1)
         lignes = page.evaluer(LIGNES_RETENIR)
-        assert lignes and max(lignes) <= 5, lignes
+        # Avant : un paragraphe de 19 lignes. Coupe aux fins de phrase d'abord (le sens prime sur la longueur) :
+        # une phrase seule un peu longue peut faire 6 lignes, jamais un pave.
+        assert lignes and max(lignes) <= 6, lignes
     with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-lisi-bur"), (1280, 800)) as page:
         _ouvrir(page, serveur, 1280, 800, LECON)
         page.attendre("!!document.body && document.body.innerText.toLowerCase().includes('à retenir')", delai=20)
