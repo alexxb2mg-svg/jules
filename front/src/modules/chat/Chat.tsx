@@ -251,11 +251,11 @@ export function Chat() {
         <div className="flex-1 overflow-y-auto">
           {historique.map((c) => (
             <button key={c.id} onClick={() => ouvrirConversation(c.id)}
-              className={`block w-full px-4 py-2.5 text-left text-[13px] transition hover:bg-bleu-clair/30 ${
+              className={`block w-full px-4 py-2.5 text-left text-[13px] max-md:text-[14px] transition hover:bg-bleu-clair/30 ${
                 conv?.id === c.id ? "bg-bleu-clair/40 font-medium" : ""
               }`}>
               <span className="line-clamp-1">{c.titre || nomMode(c.mode, infos)}</span>
-              <small className="text-[11px] text-gris">{heure(c.dernier || c.debut)}</small>
+              <small className="text-[11px] max-md:text-[14px] text-gris">{heure(c.dernier || c.debut)}</small>
             </button>
           ))}
         </div>

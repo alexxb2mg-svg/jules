@@ -2,7 +2,7 @@
 // Panneaux redimensionnables (shadcn Resizable) ; le tuteur voit la même conversation que la séance.
 // Téléphone : deux colonnes n'y tiennent pas ; la leçon prend toute la largeur et Jules s'ouvre en tiroir
 // du bas (Sheet Radix) depuis un bouton flottant.
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { ChevronLeft, Clock, MessageCircle } from "lucide-react"
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from "@/components/ui/resizable"
@@ -36,6 +36,19 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
   const [relire, setRelire] = useState(0)
   const mobile = useIsMobile()
   const [julesOuvert, setJulesOuvert] = useState(false)
+  // Bouton « Demander à Jules » : réduit en pastille ronde pendant qu'on défile vers le bas, complet à l'arrêt ou en remontant.
+  const [reduit, setReduit] = useState(false)
+  const dernierY = useRef(0)
+  const arret = useRef<number | undefined>(undefined)
+  const auDefilement = (e: React.UIEvent<HTMLDivElement>) => {
+    const y = e.currentTarget.scrollTop, delta = y - dernierY.current
+    dernierY.current = y
+    if (delta > 2) setReduit(true)
+    else if (delta < -2) setReduit(false)
+    window.clearTimeout(arret.current)
+    arret.current = window.setTimeout(() => setReduit(false), 500)
+  }
+  useEffect(() => () => window.clearTimeout(arret.current), [])
 
   useEffect(() => {
     cours.ouvrir(notion).then((s) => { setSession(s); setProgression(s.progression) }).catch((e) => setErreur(e.message))
@@ -107,11 +120,11 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
 
       {mobile ? (
         <>
-          <div className="min-h-0 flex-1 overflow-y-auto">{contenu}</div>
-          <button onClick={() => setJulesOuvert(true)}
-            className="absolute right-4 bottom-4 z-30 flex items-center gap-2 rounded-full bg-bleu py-2 pr-4 pl-2 text-[15px] font-semibold text-white shadow-relief-haut">
-            <img src="/api/persona/avatar" alt="" className="size-9 rounded-full bg-white/20" onError={(e) => (e.currentTarget.style.display = "none")} />
-            <MessageCircle size={17} /> Demander à Jules
+          <div className="min-h-0 flex-1 overflow-y-auto" onScroll={auDefilement}>{contenu}</div>
+          <button onClick={() => setJulesOuvert(true)} aria-label="Demander à Jules" data-reduit={reduit}
+            className={`absolute right-4 bottom-4 z-30 flex items-center justify-center rounded-full bg-bleu text-[15px] font-semibold text-white shadow-relief-haut transition-all duration-200 ${reduit ? "size-12" : "h-[52px] gap-2 pr-4 pl-2"}`}>
+            {!reduit && <img src="/api/persona/avatar" alt="" className="size-9 rounded-full bg-white/20" onError={(e) => (e.currentTarget.style.display = "none")} />}
+            <MessageCircle size={reduit ? 22 : 17} />{!reduit && " Demander à Jules"}
           </button>
           <Sheet open={julesOuvert} onOpenChange={setJulesOuvert}>
             <SheetContent side="bottom" className="h-[88dvh] gap-0 overflow-hidden rounded-t-2xl border-bord p-0">
