@@ -1,11 +1,12 @@
 // Registre des rendus d'une fiche visuelle : un composant par type de bloc de SCHEMA-FICHE-VISUELLE.md.
 // La logique est celle de jules/web/static/accueil.js (CONSTRUCTEURS) ; seul l'habillage change.
 // Ajouter un type = l'ajouter au schéma et au validateur côté serveur, puis une entrée dans RENDUS.
-import { useEffect, useMemo, useRef, useState, type ReactNode } from "react"
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import type { LucideIcon } from "lucide-react"
-import { Dumbbell, Lightbulb, ListOrdered, Network, Shapes, SlidersHorizontal, Sigma, TriangleAlert, Check, X, ArrowRight } from "lucide-react"
+import { Dumbbell, Lightbulb, ListOrdered, Network, Shapes, SlidersHorizontal, Sigma, TriangleAlert, Check, X, ArrowRight, Maximize2 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type {
   BlocCarte, BlocExemple, BlocFiche, BlocFormule, BlocGraphe, BlocMethode, BlocPiege, BlocRenfort, BlocSchema, LienRenfort, TypeBloc,
 } from "./types"
@@ -62,43 +63,80 @@ function Formule({ bloc }: { bloc: BlocFormule }) {
 }
 
 /* ---------------------------------------------------------------- carte */
+/** Le dessin de la carte (SVG seul). `statique` : pas d'animation d'entrée (dans l'agrandissement). */
+function CarteSvg({ d, className, statique }: { d: ReturnType<typeof disposerCarte>; className?: string; statique?: boolean }) {
+  return (
+  <svg viewBox={`0 0 ${d.largeur} ${d.hauteur}`} role="img" aria-label="Carte des notions" className={cn("mx-auto block w-full", className)}>
+    {d.traits.map((t, i) => (
+      <g key={i}>
+        {t.forme === "ligne"
+          ? <motion.line x1={t.x1} y1={t.y1} x2={t.x2} y2={t.y2} stroke="#8A94A3" strokeWidth={2}
+              initial={statique ? false : { pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.25 + 0.06 * i }} />
+          : <motion.polyline points={t.points} fill="none" stroke="#8A94A3" strokeWidth={2}
+              initial={statique ? false : { pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 + 0.06 * i }} />}
+        {t.libelle && (
+          <motion.text x={t.libelle.x} y={t.libelle.y} fontSize={T_LIEN} fill="#4A5566" textAnchor={t.libelle.ancre}
+            paintOrder="stroke" stroke="#FFFFFF" strokeWidth={5} initial={statique ? false : { opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+            transition={{ delay: 0.6 + 0.06 * i }}>{t.libelle.texte}</motion.text>
+        )}
+      </g>
+    ))}
+    {d.noeuds.map((p, i) => {
+      const principal = Boolean(p.noeud.principal)
+      let y = p.y - (p.titre.length * H_TITRE + p.sous.length * H_SOUS) / 2 + 15
+      return (
+        <motion.g key={p.noeud.id} className="carte-noeud" data-adresse={`carte/${p.noeud.id}`}
+          style={{ transformOrigin: `${p.x}px ${p.y}px`, transformBox: "view-box" }}
+          initial={statique ? false : { opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
+          transition={{ type: "spring", stiffness: 260, damping: 22, delay: principal ? 0 : 0.12 + 0.07 * i }}
+          whileHover={{ scale: 1.03 }}>
+          <rect x={p.boite.gauche} y={p.boite.haut} width={p.boite.droite - p.boite.gauche} height={p.boite.bas - p.boite.haut} rx={14}
+            fill={principal ? "var(--m-texte)" : "var(--m-fond)"} stroke={principal ? "var(--m-texte)" : "var(--m-accent)"} strokeWidth={principal ? 0 : 1.5} />
+          {p.titre.map((l) => { const e = <text key={`t${y}`} x={p.x} y={y} fontSize={T_TITRE} fontWeight={700} textAnchor="middle" className="carte-titre" fill={principal ? "#FFFFFF" : "var(--m-texte)"}>{l}</text>; y += H_TITRE; return e })}
+          {p.sous.map((l) => { const e = <text key={`s${y}`} x={p.x} y={y + 1} fontSize={T_SOUS} textAnchor="middle" fill={principal ? "rgba(255,255,255,.85)" : "#4A5566"}>{l}</text>; y += H_SOUS; return e })}
+        </motion.g>
+      )
+    })}
+  </svg>
+  )
+}
+
+// Petit écran : la carte se réduit à la largeur de l'écran (vue d'ensemble) ; « Agrandir » l'ouvre dans un Dialog
+// où elle garde une taille lisible (>= 11 px réels) et défile horizontalement si l'écran est plus étroit.
 function Carte({ bloc }: { bloc: BlocCarte }) {
   const d = useMemo(() => disposerCarte(bloc), [bloc])
+  const [ouvert, setOuvert] = useState(false)
+  const bouton = useRef<HTMLButtonElement>(null)
+  const [couleurs, setCouleurs] = useState<Record<string, string>>({})
+  // Le dialog vit hors de la fiche (portail) : il ne voit pas les couleurs de la matière, on les lui recopie.
+  const ouvrir = () => {
+    const cs = bouton.current ? getComputedStyle(bouton.current) : null
+    setCouleurs(Object.fromEntries(["--m-fond", "--m-texte", "--m-accent"].map((v) => [v, cs?.getPropertyValue(v).trim() ?? ""]).filter(([, v]) => v)))
+    setOuvert(true)
+  }
   return (
-    // Petit écran : la carte garde une taille lisible et défile horizontalement plutôt que de rétrécir.
-    <div className="-mx-2 overflow-x-auto px-2 pb-1 [scrollbar-width:thin]">
-    <svg viewBox={`0 0 ${d.largeur} ${d.hauteur}`} role="img" aria-label="Carte des notions" className="mx-auto block w-full min-w-[600px]">
-      {d.traits.map((t, i) => (
-        <g key={i}>
-          {t.forme === "ligne"
-            ? <motion.line x1={t.x1} y1={t.y1} x2={t.x2} y2={t.y2} stroke="#8A94A3" strokeWidth={2}
-                initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.25 + 0.06 * i }} />
-            : <motion.polyline points={t.points} fill="none" stroke="#8A94A3" strokeWidth={2}
-                initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 + 0.06 * i }} />}
-          {t.libelle && (
-            <motion.text x={t.libelle.x} y={t.libelle.y} fontSize={T_LIEN} fill="#4A5566" textAnchor={t.libelle.ancre}
-              paintOrder="stroke" stroke="#FFFFFF" strokeWidth={5} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-              transition={{ delay: 0.6 + 0.06 * i }}>{t.libelle.texte}</motion.text>
-          )}
-        </g>
-      ))}
-      {d.noeuds.map((p, i) => {
-        const principal = Boolean(p.noeud.principal)
-        let y = p.y - (p.titre.length * H_TITRE + p.sous.length * H_SOUS) / 2 + 15
-        return (
-          <motion.g key={p.noeud.id} className="carte-noeud" data-adresse={`carte/${p.noeud.id}`}
-            style={{ transformOrigin: `${p.x}px ${p.y}px`, transformBox: "view-box" }}
-            initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
-            transition={{ type: "spring", stiffness: 260, damping: 22, delay: principal ? 0 : 0.12 + 0.07 * i }}
-            whileHover={{ scale: 1.03 }}>
-            <rect x={p.boite.gauche} y={p.boite.haut} width={p.boite.droite - p.boite.gauche} height={p.boite.bas - p.boite.haut} rx={14}
-              fill={principal ? "var(--m-texte)" : "var(--m-fond)"} stroke={principal ? "var(--m-texte)" : "var(--m-accent)"} strokeWidth={principal ? 0 : 1.5} />
-            {p.titre.map((l) => { const e = <text key={`t${y}`} x={p.x} y={y} fontSize={T_TITRE} fontWeight={700} textAnchor="middle" className="carte-titre" fill={principal ? "#FFFFFF" : "var(--m-texte)"}>{l}</text>; y += H_TITRE; return e })}
-            {p.sous.map((l) => { const e = <text key={`s${y}`} x={p.x} y={y + 1} fontSize={T_SOUS} textAnchor="middle" fill={principal ? "rgba(255,255,255,.85)" : "#4A5566"}>{l}</text>; y += H_SOUS; return e })}
-          </motion.g>
-        )
-      })}
-    </svg>
+    <div>
+      <div className="mb-2 flex items-center justify-between gap-3">
+        <p data-carte-vue-ensemble className="text-sm text-gris md:hidden">Vue d'ensemble : touche « Agrandir » pour lire les textes.</p>
+        <button ref={bouton} type="button" data-carte-agrandir onClick={(e) => { e.stopPropagation(); ouvrir() }}
+          className="ml-auto inline-flex min-h-11 shrink-0 items-center gap-2 rounded-xl border border-bord bg-white px-3.5 text-sm font-semibold text-encre transition-colors hover:bg-(--m-fond) focus-visible:ring-[3px] focus-visible:ring-ring/50 focus-visible:outline-none">
+          <Maximize2 size={16} aria-hidden="true" />Agrandir la carte
+        </button>
+      </div>
+      <CarteSvg d={d} />
+      <Dialog open={ouvert} onOpenChange={setOuvert}>
+        <DialogContent libelleFermer="Fermer la carte" className="max-w-5xl" style={couleurs as CSSProperties}
+          onCloseAutoFocus={(e) => { e.preventDefault(); bouton.current?.focus() }}
+          onClick={(e) => { if (!(e.target as Element).closest?.("[data-adresse]")) e.stopPropagation(); else setOuvert(false) }}>
+          <DialogHeader>
+            <DialogTitle>Comment les notions s'articulent</DialogTitle>
+            <DialogDescription className="min-[780px]:hidden" data-carte-indice>Fais défiler vers la droite pour voir toute la carte.</DialogDescription>
+          </DialogHeader>
+          <div data-carte-defilement tabIndex={0} aria-label="Carte des notions, à faire défiler" className="overflow-auto rounded-xl bg-white p-2 [scrollbar-width:thin]">
+            <CarteSvg d={d} statique className="min-w-[700px]" />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 }
