@@ -295,7 +295,7 @@ def _ouvrir(adresse: str) -> tuple[str, str]:
     options = ["--headless=new", "--no-sandbox", "--disable-gpu"]
     options += ["--virtual-time-budget=15000", "--dump-dom"]
     fini = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, adresse], capture_output=True, text=True, timeout=180, check=False
+        [navigateur, *options, adresse], capture_output=True, text=True, encoding="utf-8", timeout=180, check=False
     )
     sortie = fini.stdout
     erreur = re.search(r'data-erreur="([^"]*)"', sortie)

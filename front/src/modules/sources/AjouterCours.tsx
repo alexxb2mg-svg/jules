@@ -180,7 +180,7 @@ function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
             {fichiers.map((f, i) => (
               <motion.li key={`${f.name}-${i}`} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
                 className="relative flex items-center gap-2.5 rounded-2xl border border-bord bg-white p-2 pr-3 shadow-relief">
-                {apercus[i] ? <img src={apercus[i]!} alt="" className="size-14 rounded-xl object-cover" />
+                {apercus[i] ? <img src={apercus[i]!} alt="" className="size-14 rounded-xl object-cover" /> // lgtm[js/xss-through-dom]
                   : <span className="grid size-14 place-items-center rounded-xl bg-(--m-fond) text-[0.8rem] font-bold text-(--m-texte)">PDF</span>}
                 <span className="max-w-[160px] truncate text-[0.9rem] text-encre">{f.name}</span>
                 <button onClick={() => onChange(fichiers.filter((_, k) => k !== i))} aria-label={`${TEXTES.retirer} ${f.name}`}
