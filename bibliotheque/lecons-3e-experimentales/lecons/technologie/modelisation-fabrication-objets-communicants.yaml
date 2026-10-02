@@ -1,0 +1,174 @@
+notion: modelisation-fabrication-objets-communicants
+titre: "Modéliser, fabriquer et faire communiquer des objets"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir un instrument de mesure et un moyen de production adaptés à une pièce."
+      - "Décrire les étapes pour passer d'une mesure à une pièce fabriquée."
+      - "Expliquer le rôle des composants réseau et repérer les composants d'une IHM."
+
+  - type: texte
+    titre: "Modéliser une forme"
+    contenu: |-
+      Modéliser une forme, c'est la dessiner en 3D sur un **logiciel de CAO**.
+
+      On part de dimensions mesurées sur l'objet réel. Deux instruments :
+
+      - le **réglet** : précision au millimètre ;
+      - le **pied à coulisse** : précision au dixième de millimètre, ou mieux.
+
+      Après la fabrication, on **contrôle** les dimensions de la pièce avec le même instrument.
+
+  - type: texte
+    titre: "Choisir le moyen de production"
+    contenu: |-
+      On choisit la machine selon la forme de la pièce et le matériau.
+
+      | Moyen | Pour quelle pièce ? |
+      |---|---|
+      | Découpe laser | Pièce **plane**, découpée dans une plaque (bois, carton, PMMA) |
+      | Impression 3D | Pièce **en volume**, même creuse ou compliquée, construite couche par couche |
+      | Centre d'usinage | Pièce **taillée dans un bloc** de matière, par exemple en aluminium |
+
+      Pour l'impression 3D, un **logiciel trancheur** découpe d'abord le modèle en couches.
+
+  - type: texte
+    titre: "Objets communicants et réseau"
+    contenu: |-
+      Un **objet communicant** échange des informations avec un autre objet.
+
+      Exemple : une station météo connectée. Le capteur mesure, la carte programmable traite, un module sans fil (Wi-Fi, Bluetooth, radio) transmet.
+
+      Le rôle des composants d'un réseau :
+
+      - le **commutateur** relie les appareils d'un même réseau local ;
+      - le **routeur** fait passer les données d'un réseau à un autre (par exemple vers Internet) ;
+      - le **point d'accès Wi-Fi** permet la liaison sans fil.
+
+  - type: texte
+    titre: "Interfacer et interface homme-machine"
+    contenu: |-
+      **Interfacer** deux objets, c'est les faire échanger des données.
+
+      On repère : qui **émet**, qui **reçoit**, quel moyen de liaison (câble ou sans fil), quel format de données.
+
+      L'**IHM** (interface homme-machine) regroupe ce qui permet à l'utilisateur :
+
+      - d'**agir** sur l'objet (bouton, écran tactile) ;
+      - de **recevoir** des informations (écran, voyant, buzzer).
+
+      Un capteur mesure l'environnement : il n'est pas dans l'IHM.
+
+  - type: exemple
+    enonce: >-
+      Un boîtier creux, en forme de coque arrondie, doit protéger une carte électronique. Quel moyen de
+      production choisir, et dans quel ordre travailler ?
+    etapes:
+      - "La pièce est en volume et creuse : on choisit l'impression 3D (la découpe laser convient aux pièces planes)."
+      - "On mesure la carte avec un instrument adapté, puis on modélise le boîtier sur le logiciel de CAO."
+      - "Le logiciel trancheur prépare l'impression, on imprime, puis on contrôle les dimensions de la pièce obtenue."
+
+  - type: exercice
+    enonce: >-
+      Tu dois mesurer le diamètre d'un petit capteur au dixième de millimètre près. Quel instrument de
+      mesure utilises-tu ?
+    forme: reponse_courte
+    reponse: "pied à coulisse"
+    reponses_acceptees:
+      - "pied à coulisse"
+      - "le pied à coulisse"
+      - "un pied à coulisse"
+      - "pied a coulisse"
+      - "pied à coulisse numérique"
+    indices:
+      - "Un réglet est précis seulement au millimètre. Il faut un instrument plus précis."
+      - "Cet instrument serre la pièce entre deux becs."
+    explication: "Le pied à coulisse mesure au dixième de millimètre, alors que le réglet ne donne que le millimètre."
+
+  - type: exercice
+    enonce: "On veut fabriquer une façade plane en carton, découpée dans une plaque. Quel moyen de production convient le mieux ?"
+    forme: qcm
+    choix:
+      - "L'impression 3D"
+      - "La découpe laser"
+      - "Le centre d'usinage"
+    reponse: 1
+    indices:
+      - "Regarde la forme de la pièce : est-elle plane ou en volume ?"
+      - "Un des trois moyens découpe des pièces planes dans une plaque avec un faisceau."
+    explication: "La pièce est plane et se découpe dans une plaque : on choisit la découpe laser."
+
+  - type: exercice
+    enonce: "Une pièce de fixation doit être taillée dans un bloc d'aluminium. Quelle machine à commande numérique utilises-tu ?"
+    forme: reponse_courte
+    reponse: "centre d'usinage"
+    reponses_acceptees:
+      - "centre d'usinage"
+      - "le centre d'usinage"
+      - "un centre d'usinage"
+      - "centre d'usinage"
+      - "centre usinage"
+    indices:
+      - "Cette machine enlève de la matière dans un bloc."
+      - "Son nom commence par « centre »."
+    explication: "Le centre d'usinage taille la pièce dans un bloc de matière, par enlèvement de matière."
+
+  - type: exercice
+    enonce: >-
+      La station météo du collège doit envoyer ses mesures vers un site sur Internet. Quel composant fait
+      passer les données du réseau du collège vers Internet ?
+    forme: qcm
+    choix:
+      - "Le commutateur"
+      - "Le capteur de température"
+      - "Le routeur"
+      - "L'écran d'affichage"
+    reponse: 2
+    indices:
+      - "Il faut passer d'un réseau à un autre. Quel composant a ce rôle ?"
+      - "Le commutateur relie seulement les appareils d'un même réseau."
+    explication: "Le routeur fait passer les données d'un réseau à un autre, ici du réseau du collège vers Internet."
+
+  - type: exercice
+    enonce: "Quel constituant de la station météo fait partie de son interface homme-machine (IHM) ?"
+    forme: qcm
+    choix:
+      - "Le capteur d'humidité de l'air"
+      - "Le module Wi-Fi"
+      - "Le bouton-poussoir qui change l'affichage"
+      - "Le routeur du collège"
+    reponse: 2
+    indices:
+      - "L'IHM permet à l'utilisateur d'agir sur l'objet ou de recevoir des informations."
+      - "Le capteur mesure l'air, et le module Wi-Fi parle à un autre appareil. Ni l'un ni l'autre ne parle à l'utilisateur."
+    explication: "Le bouton-poussoir permet à l'utilisateur d'agir sur la station : il fait partie de l'IHM."
+
+  - type: question_ouverte
+    question: >-
+      Cahier des charges : la station, au milieu de la cour, doit envoyer ses mesures à l'écran du hall
+      toutes les 10 minutes, sans câble dans la cour, et le Wi-Fi du collège couvre la cour. Solution A :
+      un module Wi-Fi sur la station. Solution B : les mesures sont enregistrées sur une clé USB qu'un
+      élève apporte au hall chaque soir. Choisis une solution et justifie ton choix.
+    indices:
+      - "Avec la clé USB, à quelle fréquence l'écran du hall reçoit-il de nouvelles mesures ?"
+      - "Reprends les trois critères un par un et note si chaque solution les respecte."
+    criteres:
+      - "L'élève vérifie la fréquence d'envoi (toutes les 10 minutes) pour chaque solution."
+      - "L'élève explique le rôle du module sans fil et du réseau du collège pour faire communiquer la station et l'écran."
+      - "L'élève conclut par un choix cohérent avec ses arguments."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, comment tu choisis un moyen de production pour une pièce, et quel est le rôle
+      du routeur par rapport au commutateur.

@@ -1,0 +1,158 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: litterature-et-histoire-xxe-siecle
+titre: "Littérature du XXe siècle : engagement, résistance et rapport à l'histoire"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer des textes du XXe siècle par rapport aux grands événements historiques."
+      - "Expliquer en quoi un texte littéraire va plus loin qu'un simple document historique ou qu'un témoignage."
+      - "Définir l'engagement et la résistance en littérature, et les repérer dans un texte."
+
+  - type: texte
+    titre: "Un siècle de bouleversements"
+    contenu: |-
+      Au XXe siècle, l'histoire est marquée par de grands bouleversements :
+
+      - deux guerres mondiales (1914-1918 et 1939-1945) ;
+      - des régimes totalitaires ;
+      - la Résistance en France ;
+      - la Shoah.
+
+      Beaucoup d'écrivains ont vécu ces événements. Ils ont écrit à ce sujet dans des genres variés : roman, poésie, théâtre, récit, témoignage.
+
+  - type: texte
+    titre: "Un texte littéraire n'est pas un simple document"
+    contenu: |-
+      Un **document historique** donne des faits, des dates, des chiffres.
+
+      Un **texte littéraire** va plus loin. Il cherche à faire ressentir, à faire réfléchir. Il donne une forme à une expérience difficile à dire : par les images, le rythme, le point de vue, l'émotion.
+
+      Un **témoignage** est le récit de ce qu'on a vécu ou vu, pour en garder la trace. Un texte littéraire peut partir d'un témoignage, mais il ne s'arrête pas là.
+
+  - type: texte
+    titre: "Engagement et résistance"
+    contenu: |-
+      | Mot | Sens |
+      |---|---|
+      | **Engagement** | Un auteur prend position par ses écrits sur une cause ou contre une injustice. |
+      | **Résistance littéraire** | Une écriture qui s'oppose, parfois en secret, à une oppression ou à une occupation. |
+      | **Clandestin** | Qui se publie en secret, pour échapper à la censure. |
+
+      Sous une occupation, on utilise souvent des moyens détournés : allusions, symboles, poèmes publiés en secret.
+
+  - type: texte
+    titre: "Repères et rapport à l'histoire"
+    contenu: |-
+      - Émile Zola, « J'accuse... ! » (1898, dans L'Aurore) : un engagement dans l'affaire Dreyfus, avant le XXe siècle.
+      - Barbusse, *Le Feu* (1916), et Apollinaire, *Calligrammes* (1918) : textes de la Première Guerre mondiale.
+      - Pendant l'Occupation (1940-1944) : Paul Éluard, « Liberté » (1942), poème clandestin, et Vercors, *Le Silence de la mer* (1942), récit clandestin.
+
+      Ces textes gardent la mémoire des événements, dénoncent la violence et défendent la liberté et la dignité humaine.
+
+  - type: exemple
+    enonce: >-
+      Un poème est publié en secret pendant l'Occupation. Il ne raconte pas de bataille, mais il
+      parle du désir de liberté. Explique pourquoi c'est de la résistance littéraire et pourquoi
+      ce n'est pas un simple document.
+    etapes:
+      - "Repère l'événement : l'Occupation, de 1940 à 1944. Le poème s'y rattache."
+      - "Il est publié en secret pour échapper à la censure : il est clandestin. C'est un signe de résistance."
+      - "Il s'oppose à l'oppression sans être un texte de combat direct : il utilise des images et des symboles."
+      - "Il ne donne pas de faits ni de dates. Il fait ressentir le désir de liberté. Il va donc au-delà du document et du témoignage."
+
+  - type: exercice
+    enonce: "Qu'est-ce qu'un témoignage ?"
+    forme: qcm
+    choix:
+      - "Un poème publié en secret pour échapper à la censure"
+      - "Le récit de ce qu'une personne a vécu ou vu, pour en garder la trace"
+      - "Une liste de dates sur un événement"
+    reponse: 1
+    indices:
+      - "Un témoin est quelqu'un qui a vu ou vécu un événement."
+      - "Élimine la réponse qui parle de dates seulement : c'est plutôt un document historique."
+    explication: "Un témoignage est le récit de ce qu'on a vécu ou vu, pour en garder la trace. Le poème secret relève de la résistance ; la liste de dates, du document historique."
+
+  - type: exercice
+    enonce: "Quel poète a publié en 1942 le poème clandestin « Liberté », devenu un symbole de la Résistance ? Donne son nom de famille."
+    forme: reponse_courte
+    reponse: "Éluard"
+    reponses_acceptees: ["Eluard", "éluard", "eluard", "Paul Éluard", "Paul Eluard", "paul éluard", "paul eluard"]
+    indices:
+      - "Ce poète a écrit sous l'Occupation, entre 1940 et 1944."
+      - "Il s'appelle Paul. Ce n'est ni Zola (romancier de l'affaire Dreyfus) ni Apollinaire (mort en 1918)."
+    explication: "Paul Éluard a publié « Liberté » en 1942, pendant l'Occupation."
+
+  - type: exercice
+    enonce: "Vercors publie *Le Silence de la mer* en 1942. Quelle description est correcte ?"
+    forme: qcm
+    choix:
+      - "Un récit clandestin publié pendant l'Occupation"
+      - "Un roman publié pendant la Première Guerre mondiale"
+      - "Un article de journal paru dans l'affaire Dreyfus"
+    reponse: 0
+    indices:
+      - "Regarde la date : 1942. Quel événement historique se passe alors en France ?"
+      - "L'Occupation dure de 1940 à 1944."
+    explication: "Le Silence de la mer, de Vercors, est un récit clandestin de 1942, donc de l'Occupation. Le journal de l'affaire Dreyfus, c'est le texte de Zola en 1898."
+
+  - type: exercice
+    enonce: "Quel mot désigne un texte qui se publie en secret, pour échapper à la censure ?"
+    forme: reponse_courte
+    reponse: "clandestin"
+    reponses_acceptees: ["clandestine", "un texte clandestin", "le clandestin", "un poème clandestin"]
+    indices:
+      - "Ce mot est dans le tableau sur l'engagement et la résistance."
+      - "C'est un adjectif qui commence par la lettre c."
+    explication: "Un texte clandestin est publié en secret. Sous l'Occupation, cela permet d'échapper à la censure."
+
+  - type: exercice
+    enonce: >-
+      Un élève affirme : « Un poème sur la guerre ne sert à rien, puisqu'un livre d'histoire donne
+      déjà tous les faits. » Quelle réponse est la meilleure ?
+    forme: qcm
+    choix:
+      - "Il a raison : un poème donne les mêmes informations qu'un livre d'histoire."
+      - "Il a tort : un poème sur la guerre ne parle jamais de l'histoire."
+      - "Il a tort : le texte littéraire fait ressentir et réfléchir, et donne une forme à une expérience difficile à dire."
+    reponse: 2
+    indices:
+      - "Relis la différence entre un document historique et un texte littéraire."
+      - "Un document donne des faits. Que cherche à faire un texte littéraire en plus ?"
+    explication: "Le texte littéraire va au-delà du document et du témoignage : il fait ressentir, fait réfléchir, et donne une forme à l'expérience. Il garde aussi un lien avec l'histoire."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un texte ou un auteur du XXe siècle étudié en classe. Explique en quelques phrases
+      à quel événement il se rattache, et en quoi il va au-delà d'un simple témoignage.
+    indices:
+      - "Nomme d'abord le texte ou l'auteur, puis l'événement historique."
+      - "Demande-toi : que ressent-on en lisant ce texte que l'on ne ressent pas dans une liste de faits ?"
+    criteres:
+      - "L'élève cite un texte ou un auteur précis lié à un événement du XXe siècle."
+      - "L'élève explique en quoi le texte va au-delà du témoignage (émotion, réflexion, forme littéraire)."
+      - "L'élève relie le texte à l'engagement ou à la résistance de l'auteur, ou au rapport à l'histoire."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre un document
+      historique et un texte littéraire sur un événement du XXe siècle. Ajoute une phrase pour
+      expliquer ce que veut dire « engagement ».

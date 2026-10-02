@@ -39,7 +39,7 @@ VARIANTES = ("decomposer", "reconnaitre", "sachets", "fraction")
 
 _PALIERS_DECOMPOSER = {
     # difficulté : (nombre de facteurs premiers, nombres premiers permis, valeur maximale)
-    1: (3, (2, 3, 5, 7), 100),
+    1: (3, (2, 3, 5, 7, 11), 200),
     2: (4, (2, 3, 5, 7, 11), 1000),
     3: (5, (2, 3, 5, 7, 11, 13), 5000),
 }

@@ -1,0 +1,178 @@
+notion: poesie-romantisme-a-nos-jours
+titre: "La poésie du romantisme à nos jours : les visions du monde"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comprendre que la poésie utilise les sons, le rythme, les images et les formes pour célébrer le monde et s'interroger sur son sens."
+      - "Reconnaître la place de la nature dans la poésie et repérer les grands moments du romantisme à nos jours."
+      - "Nommer des procédés poétiques précis et dire quel effet ils produisent sur le lecteur."
+
+  - type: texte
+    titre: "À quoi sert la poésie ?"
+    contenu: |-
+      Le programme de 3e propose de découvrir des poèmes, **du romantisme à nos jours**.
+
+      La poésie joue avec **toutes les ressources de la langue** :
+
+      - les **sons** ;
+      - le **rythme** ;
+      - les **images** ;
+      - les **formes**.
+
+      Elle sert à **célébrer** notre présence au monde, et à **s'interroger** sur son sens. On parle parfois de **« chant du monde »**. La **nature** y joue un rôle central.
+
+  - type: texte
+    titre: "Les grands moments"
+    contenu: |-
+      | Moment | Ce qu'on retient |
+      |---|---|
+      | **Romantisme** (début du XIXe siècle) | Le poète met ses sentiments au cœur du poème. La nature reflète son état d'âme (Lamartine, Hugo, Musset). |
+      | **Milieu du XIXe siècle** | Baudelaire (*Les Fleurs du mal*, 1857) parle aussi de la ville et du spleen. Rimbaud et Verlaine explorent la musique des vers. |
+      | **XXe siècle** | Apollinaire invente les **calligrammes**. Le surréalisme (Éluard, Breton) explore le rêve. Prévert écrit près du langage courant. |
+      | **Autres voix** | Senghor, Césaire et d'autres poètes de langue française chantent le monde depuis d'autres continents. |
+
+  - type: texte
+    titre: "Les formes et les procédés"
+    contenu: |-
+      **Les formes :**
+
+      - le **vers** : régulier (rimes et mesure) ou **libre** (sans règle fixe) ;
+      - la **strophe** : un groupe de vers ;
+      - le **poème en prose** : sans vers, mais avec des images et du rythme.
+
+      **Les procédés :**
+
+      - la **comparaison** : avec un mot comme *comme*, *tel* ;
+      - la **métaphore** : sans mot de comparaison ;
+      - la **personnification** : des traits humains donnés à une chose ;
+      - les **sonorités** (allitération, assonance) et le **rythme**.
+
+  - type: texte
+    titre: "Lire un poème et réussir au brevet"
+    contenu: |-
+      Lire un poème, c'est **vivre une expérience**. Le sens passe aussi par les sons, le rythme et les images.
+
+      **Méthode :**
+
+      1. Lis le poème **à voix haute**.
+      2. Repère la **forme** (vers, strophes, prose).
+      3. Relève les **images** et dis ce qu'elles évoquent.
+      4. Observe la **place de la nature**.
+      5. Dis quelle **vision du monde** le poème propose, avec des **preuves**.
+
+      **Attention :** citer un procédé ne suffit pas. Il faut dire **l'effet** qu'il produit.
+
+  - type: exemple
+    enonce: >-
+      Voici un petit poème écrit pour la leçon : « Le ruisseau bavarde avec les pierres, / il rit
+      dans les roseaux. » Quelle vision de la nature ce poème propose-t-il, et par quel procédé ?
+    etapes:
+      - "Je repère les images : le ruisseau « bavarde » et « rit ». Ce sont des actions humaines."
+      - "Je nomme le procédé : c'est une personnification. La nature reçoit des traits humains."
+      - "Je dis la vision du monde : la nature est vivante, joyeuse, proche de nous."
+      - "Je dis l'effet : ces images créent une impression de gaieté et de douceur."
+
+  - type: exercice
+    enonce: "Qu'est-ce qu'un calligramme ?"
+    forme: qcm
+    choix:
+      - "Un poème dont la disposition des mots sur la page dessine une image"
+      - "Un poème qui raconte une bataille"
+      - "Un dictionnaire de rimes"
+      - "Un poème sans aucune image"
+    reponse: 0
+    indices:
+      - "Le mot « calligramme » parle de la façon dont le poème est placé sur la page."
+      - "Cherche la réponse qui parle d'un dessin fait avec les mots."
+    explication: "Un calligramme est un poème dont la disposition des mots sur la page dessine une image en rapport avec le texte. Apollinaire a inventé cette forme."
+
+  - type: exercice
+    enonce: >-
+      Dans un poème, on lit : « La mer respire au creux de mes mains. » Quel procédé donne ici à la
+      mer une action humaine ? (Un seul mot.)
+    forme: reponse_courte
+    reponse: "personnification"
+    reponses_acceptees: ["la personnification", "une personnification", "personnifications"]
+    indices:
+      - "Respirer est une action que fait un être vivant, pas la mer."
+      - "Ce procédé donne des traits humains à une chose. Son nom commence par « person- »."
+    explication: "« La mer respire » : la mer reçoit une action humaine. C'est une personnification."
+
+  - type: exercice
+    enonce: "Quelle phrase contient une comparaison (et non une métaphore) ?"
+    forme: qcm
+    choix:
+      - "Le soleil est une pièce d'or dans le ciel."
+      - "Le soleil brille comme une pièce d'or."
+      - "Le soleil se lève très tôt."
+      - "La nuit est une couverture noire."
+    reponse: 1
+    indices:
+      - "Une comparaison utilise un mot de comparaison entre les deux choses rapprochées."
+      - "Cherche le petit mot « comme » (ou « tel », « semblable à »)."
+    explication: "« Le soleil brille comme une pièce d'or » rapproche deux choses avec le mot « comme » : c'est une comparaison. Les phrases avec « est une » sont des métaphores. La phrase 3 n'a pas d'image."
+
+  - type: exercice
+    enonce: >-
+      Quel poète du XIXe siècle a écrit *Les Fleurs du mal* (1857) et parle aussi de la ville ?
+      Donne son nom de famille.
+    forme: reponse_courte
+    reponse: "Baudelaire"
+    reponses_acceptees: ["baudelaire", "Charles Baudelaire", "charles baudelaire"]
+    indices:
+      - "Ce poète n'est pas un romantique qui chante seulement la nature : il parle aussi de la ville et du spleen."
+      - "Son nom de famille commence par la lettre B."
+    explication: "Baudelaire a publié *Les Fleurs du mal* en 1857. Il montre que la poésie peut parler de la ville, du spleen et de la beauté étrange."
+
+  - type: exercice
+    enonce: >-
+      Lis ce poème court : « La mer respire au creux de mes mains, / le vent chante un vieux
+      refrain, / le soleil s'endort sur le sable, / le monde est un jardin. » Quelle analyse est
+      la meilleure ?
+    forme: qcm
+    choix:
+      - "Le poème est triste, car il parle de la mer."
+      - "Le poème célèbre une nature paisible : la mer, le vent et le soleil sont personnifiés, et « le monde est un jardin » est une métaphore qui donne une impression de douceur."
+      - "Le poème n'a pas de vision du monde, il décrit seulement la plage."
+      - "Le poème est un calligramme, car il parle de sable."
+    reponse: 1
+    indices:
+      - "Une bonne analyse dit la vision du monde, nomme des procédés et dit l'effet produit."
+      - "Cherche qui « respire », « chante » et « s'endort » : que devient la nature ?"
+      - "Élimine la réponse qui ne cite aucun procédé, et celle qui confond le sujet du poème avec sa forme."
+    explication: "La mer, le vent et le soleil font des actions humaines (personnification). « Le monde est un jardin » est une métaphore : elle suggère un lieu paisible. L'effet est la douceur, et le poème célèbre la nature. Les autres réponses ne s'appuient sur aucun procédé ou se trompent sur la forme."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un poème étudié en classe. Explique quelle vision du monde ou de la nature il propose
+      au lecteur, et par quel procédé (image, rythme, forme...).
+    indices:
+      - "Ce poème célèbre-t-il la nature, ou pose-t-il des questions inquiètes sur le monde ?"
+      - "Résume en une phrase ce que le poème dit du monde, puis cherche un procédé qui le montre."
+      - "Tu peux commencer ainsi : « Dans ce poème, l'auteur... »."
+    criteres:
+      - "L'élève cite un poème ou un poète précis étudié en classe."
+      - "L'élève explique ce que le poème dit du monde ou de la nature (célébration, interrogation, inquiétude...)."
+      - "L'élève relie cette vision à un procédé précis du poème et dit son effet sur le lecteur."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce que la poésie fait du monde et
+      de la nature, et quels procédés tu cherches quand tu analyses un poème.

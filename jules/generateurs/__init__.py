@@ -6,50 +6,47 @@ calcule la réponse, rédige l'énoncé, les indices, les pièges et la solution
 (jules/fiches/correction.py) et le parcours (jules/fiches/parcours.py) servent ces exercices tels quels.
 
 Chaque module de générateur expose `NOTION` (identifiant du référentiel), `VARIANTES` et
-`generer(graine, difficulte, variante=None) -> dict`.
+`generer(graine, difficulte, variante=None) -> dict`. Un module déposé dans `mathematiques/` est
+enregistré tout seul (découverte par `pkgutil`) : aucune liste à tenir, donc aucun conflit entre PR de notion.
 """
 
 from __future__ import annotations
 
+import importlib
+import pkgutil
 from collections.abc import Callable
 from typing import Any
 
-from jules.generateurs.mathematiques import (
-    calcul_nombres_rationnels,
-    developper_factoriser_reduire,
-    ecritures_et_comparaison_nombres,
-    equations_premier_degre_et_produits,
-    fractions_irreductibles,
-    indicateurs_position,
-    multiples_diviseurs_division_euclidienne,
-    nombres_premiers_decomposition,
-    pourcentages_coefficient_multiplicateur,
-    probabilites_deux_epreuves,
-    probabilites_experiences_simples,
-    problemes_mise_en_equation,
-    racine_carree,
-)
+from jules.generateurs import mathematiques
 
 Generateur = Callable[..., dict[str, Any]]
 
-MODULES: dict[str, Any] = {
-    module.NOTION: module
-    for module in (
-        nombres_premiers_decomposition,
-        pourcentages_coefficient_multiplicateur,
-        multiples_diviseurs_division_euclidienne,
-        racine_carree,
-        equations_premier_degre_et_produits,
-        problemes_mise_en_equation,
-        calcul_nombres_rationnels,
-        fractions_irreductibles,
-        ecritures_et_comparaison_nombres,
-        developper_factoriser_reduire,
-        probabilites_deux_epreuves,
-        probabilites_experiences_simples,
-        indicateurs_position,
-    )
-}
+_PAQUETS = (mathematiques,)  # un paquet par matière ; une notion = un module qui expose NOTION
+
+
+def _decouvrir() -> dict[str, Any]:
+    """Les modules de générateurs, trouvés dans les paquets de matière (plus de liste tenue à la main).
+
+    Ordre stable : alphabétique par nom de module. Deux modules qui déclarent la même notion : erreur.
+    """
+    modules: dict[str, Any] = {}
+    for paquet in _PAQUETS:
+        for info in sorted(pkgutil.iter_modules(paquet.__path__), key=lambda i: i.name):
+            if info.name.startswith("_"):
+                continue
+            module = importlib.import_module(f"{paquet.__name__}.{info.name}")
+            notion = getattr(module, "NOTION", None)
+            if notion is None:
+                continue
+            if notion in modules:
+                raise ValueError(
+                    f"notion {notion!r} déclarée deux fois ({modules[notion].__name__}, {module.__name__})"
+                )
+            modules[notion] = module
+    return modules
+
+
+MODULES: dict[str, Any] = _decouvrir()
 GENERATEURS: dict[str, Generateur] = {notion: module.generer for notion, module in MODULES.items()}
 
 

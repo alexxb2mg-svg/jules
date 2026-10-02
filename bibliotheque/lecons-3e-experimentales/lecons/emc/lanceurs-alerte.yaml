@@ -1,0 +1,144 @@
+notion: lanceurs-alerte
+titre: "Lanceurs d'alerte"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Lanceur d'alerte »"
+    url: "https://fr.vikidia.org/w/index.php?title=Lanceur_d%27alerte&oldid=2364203"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir un lanceur d'alerte et le distinguer d'un délateur."
+      - "Analyser un exemple de mobilisation ou d'alerte (#MeToo, affaire financière, scandale sanitaire)."
+      - "Citer les protections de la loi du 21 mars 2022."
+
+  - type: texte
+    titre: "Qui est un lanceur d'alerte ?"
+    contenu: |-
+      Un **lanceur d'alerte** signale un danger ou un scandale, **de bonne foi** et **sans intérêt personnel**. Il veut protéger l'**intérêt général**.
+
+      Cela peut concerner la santé, l'environnement, la finance, la corruption ou une atteinte aux droits.
+
+      Le **délateur**, lui, dénonce par intérêt personnel ou par malveillance. Ce qui compte, c'est l'**intention**.
+
+  - type: texte
+    titre: "Exemples et médias sociaux"
+    contenu: |-
+      - Irène Frachon, médecin, a alerté sur les dangers du Mediator, un médicament.
+      - Antoine Deltour a révélé des accords fiscaux dans l'affaire « LuxLeaks » (une affaire financière).
+      - Edward Snowden a révélé en 2013 des programmes de surveillance de masse.
+
+      Les **médias sociaux** sont un lieu de débats et de mobilisations. Des lanceurs d'alerte y prennent des risques pour informer leurs concitoyens : menaces, procès, perte d'emploi, harcèlement.
+
+  - type: texte
+    titre: "Le mouvement #MeToo"
+    contenu: |-
+      #MeToo est un exemple de **mobilisation**.
+
+      À partir d'octobre 2017, de très nombreuses personnes ont témoigné publiquement de violences sexuelles. Le mot-dièse s'est diffusé dans le monde entier.
+
+      Ne réduis pas les lanceurs d'alerte à #MeToo : il y a aussi des affaires financières, sanitaires ou environnementales.
+
+  - type: texte
+    titre: "La loi du 21 mars 2022"
+    contenu: |-
+      En France, la **loi du 21 mars 2022** vise à améliorer la protection des lanceurs d'alerte.
+
+      - Elle protège leur **identité** : elle ne peut être divulguée qu'avec leur accord, sauf demande de la justice.
+      - Elle les protège contre les **représailles** (licenciement, sanction).
+      - Elle protège aussi les personnes qui les aident.
+      - Elle organise plusieurs **voies de signalement** : dans l'organisation concernée, auprès d'une autorité, et dans certains cas de façon publique.
+
+      Dans une démocratie, la liberté d'expression et une presse libre facilitent leur travail.
+
+  - type: exemple
+    enonce: >-
+      Une médecin découvre qu'un médicament est dangereux pour la santé. Elle le signale
+      publiquement, sans en tirer aucun avantage. Est-elle une lanceuse d'alerte ?
+    etapes:
+      - "On cherche l'intention. Elle n'agit pas pour son intérêt personnel, elle veut protéger la santé de tous : c'est l'intérêt général."
+      - "Elle signale de bonne foi un danger réel pour la santé."
+      - "Elle correspond à la définition : c'est une lanceuse d'alerte, pas une délatrice. Elle peut subir des représailles, d'où la protection de la loi de 2022."
+
+  - type: exercice
+    enonce: "Qu'est-ce qui distingue un lanceur d'alerte d'un délateur ?"
+    forme: qcm
+    choix:
+      - "Le lanceur d'alerte agit de bonne foi et sans intérêt personnel, pour l'intérêt général"
+      - "Le lanceur d'alerte agit toujours de façon anonyme"
+      - "Le lanceur d'alerte parle uniquement sur les médias sociaux"
+    reponse: 0
+    indices:
+      - "Pense à l'intention de la personne, pas au moyen qu'elle utilise."
+      - "Le délateur agit par intérêt personnel ou par malveillance."
+    explication: "C'est l'intention qui distingue : bonne foi et intérêt général pour le lanceur d'alerte, intérêt personnel ou malveillance pour le délateur."
+
+  - type: exercice
+    enonce: "En quelle année a été adoptée la loi française visant à améliorer la protection des lanceurs d'alerte ? Écris seulement l'année."
+    forme: nombre
+    reponse: 2022
+    tolerance: 0
+    indices:
+      - "Relis le titre du dernier bloc de texte."
+      - "L'année se situe dans les années 2020."
+    explication: "Cette loi est celle du 21 mars 2022."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une personne qui dénonce quelqu'un par intérêt personnel ou par malveillance ? Écris le mot."
+    forme: reponse_courte
+    reponse: "délateur"
+    reponses_acceptees: ["délateur", "le délateur", "delateur", "un délateur", "délatrice", "une délatrice"]
+    indices:
+      - "Ce n'est pas un lanceur d'alerte."
+      - "Le mot commence par la lettre D et finit par « eur »."
+    explication: "C'est un délateur : il agit par intérêt personnel ou par malveillance, pas pour l'intérêt général."
+
+  - type: exercice
+    enonce: "Laquelle de ces protections est prévue par la loi du 21 mars 2022 ?"
+    forme: qcm
+    choix:
+      - "L'identité du lanceur d'alerte est protégée : elle ne peut être divulguée qu'avec son accord, sauf demande de la justice"
+      - "Le lanceur d'alerte doit toujours rester anonyme"
+      - "Le lanceur d'alerte ne peut jamais parler publiquement"
+    reponse: 0
+    indices:
+      - "La loi protège la personne. Elle ne lui interdit rien."
+      - "La loi protège aussi contre les représailles, comme un licenciement."
+    explication: "La loi protège l'identité du lanceur d'alerte. Il n'est pas obligé d'être anonyme, et il existe des voies de signalement, dont une voie publique dans certains cas."
+
+  - type: exercice
+    enonce: >-
+      Une salariée découvre des faits graves de corruption dans son entreprise. Elle les signale
+      à une autorité, de bonne foi. Ensuite, son employeur la licencie pour se venger. Comment
+      analyser cette situation ?
+    forme: qcm
+    choix:
+      - "Elle est une délatrice, donc la loi ne la protège pas"
+      - "Elle est une lanceuse d'alerte et le licenciement est une représaille contre laquelle la loi du 21 mars 2022 la protège"
+      - "Elle aurait dû rester anonyme, sinon la loi ne s'applique pas"
+    reponse: 1
+    indices:
+      - "Cherche son intention : intérêt général ou intérêt personnel ?"
+      - "Le licenciement pour se venger fait partie des mesures que la loi cherche à empêcher."
+      - "Le mot à retrouver est celui du texte pour désigner une mesure de vengeance."
+    explication: "Elle agit de bonne foi pour l'intérêt général : c'est une lanceuse d'alerte. Son licenciement est une représaille, et la loi de 2022 protège contre cela. Elle n'a pas l'obligation d'être anonyme."
+
+  - type: question_ouverte
+    question: >-
+      Explique pourquoi un lanceur d'alerte prend des risques, et comment la loi du 21 mars 2022
+      essaie de le protéger. Donne un exemple.
+    indices:
+      - "Pense à ce qui peut arriver à quelqu'un qui révèle un scandale : menaces, procès, perte d'emploi."
+      - "Cite au moins une protection de la loi, puis un exemple du cours."
+    criteres:
+      - "L'élève cite au moins un risque (représailles, menaces, procès, perte d'emploi, harcèlement)."
+      - "L'élève cite au moins une protection de la loi du 21 mars 2022 (identité protégée, protection contre les représailles, voies de signalement)."
+      - "L'élève donne un exemple (affaire financière, scandale sanitaire, #MeToo)."
+
+  - type: synthese
+    consigne: >-
+      En trois phrases, définis le lanceur d'alerte, dis en quoi il est différent d'un délateur,
+      puis cite une protection donnée par la loi du 21 mars 2022.

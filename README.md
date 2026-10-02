@@ -14,14 +14,45 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 
 > **Pourquoi Jules.** Jules est né d'un essai, [*Après la dernière main levée*](docs/essai/), qui se demande ce que l'intelligence artificielle fait à l'apprentissage des enfants et à quelles conditions elle peut aider au lieu de faire à leur place. Sa lecture n'est pas nécessaire pour utiliser Jules. Elle montre d'où part le projet, les études sur lesquelles il s'appuie, et une postface dit ce que Jules en a repris, ce qu'il a corrigé et ce qui lui manque encore.
 
-> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e ; 683 notions). L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; 19 leçons expérimentales (8 matières, niveau 3e) servent de premier contenu, à relire par un enseignant. Les **fiches visuelles** couvrent la 3e et le CM1 dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) (405 fiches). Les **exercices sans IA** ont leurs premiers **générateurs** (13 notions de mathématiques 3e). Les **outils par matière** (étape 3) sont isolés et s'ouvrent depuis la page (calculatrice à côté de Jules) ; le **studio** de révision (étape 4) est construit. Les **adaptations** ont leur socle : leviers d'affichage et aménagements du PAP réglés par le parent, avec des valeurs de départ sourcées qui attendent la relecture de professionnels. Voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e ; 683 notions). L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; 186 leçons expérimentales (9 matières, niveau 3e) servent de premier contenu, à relire par un enseignant. Les **fiches visuelles** couvrent la 3e et le CM1 dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) (405 fiches). Les **exercices sans IA** ont leurs premiers **générateurs** (13 notions de mathématiques 3e). Les **outils par matière** (étape 3) sont isolés et s'ouvrent depuis la page (calculatrice à côté de Jules) ; le **studio** de révision (étape 4) est construit. Les **adaptations** ont leur socle : leviers d'affichage et aménagements du PAP réglés par le parent, avec des valeurs de départ sourcées qui attendent la relecture de professionnels. Voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
 ## Où va Jules
 
-<p align="center"><img src="docs/interface-lecon.png" alt="La nouvelle interface : une leçon sur le théorème de Pythagore au centre, le menu de l'élève à gauche (fiches, leçons, exercices, discussion, espace parent), Jules à droite qui propose de réexpliquer sans donner la réponse" width="820"></p>
-<p align="center"><em>Une leçon avec Jules à côté. Profil d'exemple, moteur Démo.</em></p>
-<p align="center"><img src="docs/interface-fiche.png" alt="Une fiche visuelle d'histoire, la Première Guerre mondiale : carte des notions, chemin de l'élève (lire la fiche, faire la leçon, s'entraîner), sommaire de la fiche et bulle de Jules" width="820"></p>
-<p align="center"><em>Une fiche visuelle, affichée sans appel à l'IA. Captures de la nouvelle interface, en cours d'intégration (branche <code>ui/refonte-2026-09-27</code>) ; <code>main</code> sert encore les pages précédentes.</em></p>
+<p align="center"><img src="docs/interface-fiches.png" alt="La page « Mes fiches » : les douze matières de 3e en cartes colorées (mathématiques, français, histoire, géographie, physique-chimie, SVT, technologie, anglais, EMC, arts plastiques, éducation musicale, histoire des arts), chacune avec son nombre de fiches et de chapitres" width="820"></p>
+<p align="center"><em>« Mes fiches » : une couleur par matière, reprise sur toutes ses pages.</em></p>
+
+<p align="center"><img src="docs/interface-cartes.png" alt="Six cartes des notions, une par matière : la Seconde Guerre mondiale en violet, le calcul avec les fractions en bleu, le circuit électrique en turquoise, la puberté en vert, la chaîne d'énergie en orange, l'aménagement du territoire en mode sombre" width="820"></p>
+<p align="center"><em>Chaque fiche a sa carte des notions : l'idée centrale et ce qui en découle, en un coup d'œil.</em></p>
+
+<p align="center"><img src="docs/interface-schemas.png" alt="Six schémas de fiches : les circuits en série et en dérivation, les 18 premiers éléments de la classification, un atome de lithium et le zoom sur son noyau, la digestion par les enzymes, le tableau à double entrée de deux dés, un diagramme de Gantt de projet technique" width="820"></p>
+<p align="center"><em>Les schémas des fiches (306 en 3e) : dessinés en SVG, vérifiés par le code, agrandissables.</em></p>
+
+<p align="center"><img src="docs/interface-carte-agrandie.png" alt="La carte d'une fiche de physique-chimie ouverte en grand au-dessus de la page : un circuit électrique, relié à « en série », « en dérivation », « loi d'Ohm » et « mesures »" width="820"></p>
+<p align="center"><em>« Agrandir la carte » l'ouvre en grand, au-dessus de la fiche.</em></p>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/interface-fiche.png" alt="Une fiche de technologie, la chaîne d'énergie : la formule N2 = N1 × Z1 ÷ Z2 avec chaque lettre expliquée, le chemin de l'élève (lire la fiche, faire la leçon, s'entraîner, cartes mémoire) et le sommaire de la fiche"></td>
+<td width="50%"><img src="docs/interface-graphe.png" alt="Une fiche de mathématiques sur la fonction linéaire : la formule f(x) = a × x, puis une figure où l'élève déplace des curseurs a et b et voit la droite bouger"></td>
+</tr>
+<tr>
+<td align="center"><em>Une fiche : la formule, chaque lettre expliquée, le chemin de l'élève à droite.</em></td>
+<td align="center"><em>Une figure à manipuler : l'élève bouge a et b, la droite suit.</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/interface-lecons.png" alt="La liste des leçons de mathématiques : des cartes avec le chapitre, le titre, la durée et l'état (à faire), et les matières en pastilles de couleur"></td>
+<td width="50%"><img src="docs/interface-lecon.png" alt="Une leçon sur les fonctions linéaires et affines : objectifs, blocs « À retenir » au centre, Jules à droite qui propose de réexpliquer sans donner la réponse"></td>
+</tr>
+<tr>
+<td align="center"><em>Les leçons d'une matière, avec leur durée.</em></td>
+<td align="center"><em>Une leçon, Jules à côté.</em></td>
+</tr>
+</table>
+
+<p align="center"><img src="docs/interface-mobile.png" alt="Quatre écrans de téléphone : la page Mes fiches en clair, les leçons de physique-chimie, une fiche sur les formes d'énergie en mode sombre avec sa carte réduite, et Mes fiches en mode sombre" width="820"></p>
+<p align="center"><em>Sur téléphone, en clair et en sombre.</em></p>
+
+<p align="center"><em>Captures de la nouvelle interface React, profil d'exemple et moteur Démo, encore en cours d'intégration (<a href="https://github.com/alexxb2mg-svg/jules/pull/76">PR #76</a>) : <code>main</code> sert encore les pages précédentes.</em></p>
 
 Quatre idées guident la suite :
 
@@ -48,7 +79,7 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent, avec une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice (« Explique-moi comment tu sais qu'un nombre est premier »). Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
 - **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
-- **Bibliothèques expérimentales** : le programme officiel sur quatre niveaux (CM1 158 notions, 5e 132, 4e 141, 3e 252, soit 683 au total, source officielle de chacune ; seul le niveau de l'élève est chargé), une fiche de repères pour chaque notion de 3e (12 matières) et de CM1 (10 matières, sources officielles éduscol uniquement), 19 leçons en blocs (8 matières de 3e, dont le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), et, dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques), les fiches v2 et les fiches visuelles de la 3e et du CM1, écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les fiches v2 de 5e et de 4e (273 notions) attendent leurs contributeurs ; les autres niveaux (CP à CE2, CM2, 6e, lycée) sont à construire.
+- **Bibliothèques expérimentales** : le programme officiel sur quatre niveaux (CM1 158 notions, 5e 132, 4e 141, 3e 252, soit 683 au total, source officielle de chacune ; seul le niveau de l'élève est chargé), une fiche de repères pour chaque notion de 3e (12 matières) et de CM1 (10 matières, sources officielles éduscol uniquement), 186 leçons en blocs (9 matières de 3e, dont le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), et, dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques), les fiches v2 et les fiches visuelles de la 3e et du CM1, écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les fiches v2 de 5e et de 4e (273 notions) attendent leurs contributeurs ; les autres niveaux (CP à CE2, CM2, 6e, lycée) sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on peut télécharger tout le dossier de l'élève (.zip), effacer une conversation, ou tout effacer d'un coup.
 
 ## Ce que Jules ne sait pas encore

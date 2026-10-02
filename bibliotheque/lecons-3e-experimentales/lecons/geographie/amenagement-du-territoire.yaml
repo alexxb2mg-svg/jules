@@ -1,0 +1,150 @@
+notion: amenagement-du-territoire
+titre: "L'aménagement du territoire, réponse aux inégalités territoriales"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Aménagement du territoire en France »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Am%C3%A9nagement_du_territoire_en_France&oldid=233193019"
+    licence: CC-BY-SA-4.0
+  - titre: "Programme du cycle 4 (annexe 3), Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer que l'aménagement du territoire cherche à réduire les inégalités entre territoires."
+      - "Citer les acteurs (État, collectivités, Union européenne) et des outils d'aménagement."
+      - "Connaître la méthode pour réaliser un croquis de l'organisation du territoire."
+
+  - type: texte
+    titre: "Pourquoi aménager le territoire ?"
+    contenu: >-
+      L'**aménagement du territoire** regroupe les actions des pouvoirs publics pour organiser le territoire.
+      Son but : **réduire les inégalités** entre les territoires.
+      Ces inégalités sont de trois sortes :
+      **économiques** (emplois, richesses),
+      **sociales** (revenus, santé, éducation),
+      et d'**accès aux équipements et services publics** (transports, écoles, hôpitaux).
+      Le mot apparaît en France en 1943.
+      En 1947, un livre dénonce « Paris et le désert français » : trop d'habitants et d'activités sont autour de Paris.
+      En 1963, l'État crée la **DATAR**, chargée de mieux répartir les activités.
+      Elle est remplacée en 2020 par l'Agence nationale de la cohésion des territoires (ANCT).
+      En 1982-1983, les lois de **décentralisation** donnent plus de pouvoirs aux collectivités territoriales.
+
+  - type: texte
+    titre: "Les acteurs et les outils"
+    contenu: >-
+      **L'État** fait les lois, décide du budget et des grands projets.
+      Les **collectivités territoriales** sont les régions, les départements et les communes.
+      La région s'occupe de développement économique et des trains régionaux.
+      Le département s'occupe de l'action sociale et des collèges.
+      La commune s'occupe de l'école primaire et de l'urbanisme.
+      L'**Union européenne** finance des projets avec sa **politique régionale** (fonds structurels, comme le FEDER),
+      surtout dans les régions les moins développées.
+      Les entreprises et les associations participent aussi.
+      Les outils : les **infrastructures** de transport (lignes à grande vitesse, autoroutes, aéroports, fibre optique),
+      le soutien aux entreprises (pôles de compétitivité, aides à l'installation),
+      le maintien des services publics dans les zones rurales,
+      la rénovation des quartiers en difficulté (politique de la ville).
+      Depuis 2016, la France métropolitaine compte 13 régions, plus grandes et mieux armées.
+
+  - type: texte
+    titre: "Les échelles et le croquis"
+    contenu: >-
+      L'aménagement se joue à plusieurs **échelles** :
+      locale (un quartier, une commune), régionale, nationale (grandes métropoles, axes de transport)
+      et européenne (fonds, réseaux transeuropéens).
+      Au brevet, on peut devoir faire un **croquis** de l'organisation du territoire national.
+      Méthode :
+      1. Repérer les grands ensembles : Paris, les métropoles, les axes de transport.
+      2. Repérer les espaces peu denses ou en difficulté.
+      3. Placer les aménagements.
+      4. Classer chaque figuré dans une légende organisée, avec un titre.
+
+  - type: exemple
+    enonce: >-
+      Un village de montagne n'a plus de médecin et aucun train. Quelles inégalités cela montre-t-il ?
+      Quel outil d'aménagement peut aider ?
+    etapes:
+      - "Il manque un service de santé et un transport : c'est une inégalité d'accès aux équipements et services publics."
+      - "Un outil possible est le maintien des services publics dans les zones rurales."
+      - "Un autre outil est une infrastructure de transport, qui désenclave le village (elle le relie aux autres territoires)."
+      - "Des acteurs peuvent agir : l'État, la région, le département, et parfois l'Union européenne avec ses fonds."
+
+  - type: exercice
+    enonce: "Depuis 2016, en combien de régions la France métropolitaine est-elle divisée ?"
+    forme: nombre
+    reponse: 13
+    tolerance: 0
+    indices:
+      - "Ce nombre est plus petit qu'avant 2016 : plusieurs régions ont fusionné."
+      - "Avant la réforme, la France métropolitaine comptait 22 régions."
+    explication: "Depuis 2016, la France métropolitaine compte 13 régions (22 auparavant)."
+
+  - type: exercice
+    enonce: "Quel niveau de collectivité territoriale s'occupe surtout de l'action sociale et des collèges ?"
+    forme: qcm
+    choix:
+      - "La commune"
+      - "Le département"
+      - "La région"
+    reponse: 1
+    indices:
+      - "La commune s'occupe de l'école primaire."
+      - "La région s'occupe du développement économique et des trains régionaux."
+    explication: "Le département s'occupe de l'action sociale et des collèges. La commune gère l'école primaire, la région l'économie et les trains régionaux."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne le transfert de compétences de l'État vers les collectivités territoriales
+      (lois de 1982-1983) ?
+    forme: reponse_courte
+    reponse: "décentralisation"
+    reponses_acceptees: ["décentralisation", "la décentralisation", "decentralisation", "la decentralisation"]
+    indices:
+      - "C'est le contraire de tout décider depuis Paris, au centre."
+      - "Le mot commence par « dé- » et contient le mot « centre »."
+    explication: "La décentralisation est le transfert de compétences de l'État vers les régions, les départements et les communes."
+
+  - type: exercice
+    enonce: "En quelle année l'État crée-t-il la DATAR, chargée de mieux répartir les activités ?"
+    forme: nombre
+    reponse: 1963
+    tolerance: 0
+    indices:
+      - "C'est dans les années 1960, avant la décentralisation des années 1980."
+      - "Le mot « aménagement du territoire » est apparu en 1943 ; la DATAR arrive vingt ans plus tard."
+    explication: "La DATAR est créée en 1963. Elle est remplacée en 2020 par l'ANCT."
+
+  - type: exercice
+    enonce: "Pour faire un croquis de l'organisation du territoire national, quelle démarche est correcte ?"
+    forme: qcm
+    choix:
+      - "Colorier au hasard, sans titre ni légende"
+      - "Repérer Paris, les métropoles et les axes, puis les espaces peu denses, puis les aménagements ; ranger les figurés dans une légende avec un titre"
+      - "Dessiner seulement les aménagements, sans les métropoles"
+      - "Oublier l'échelle européenne et toujours dessiner une seule commune"
+    reponse: 1
+    indices:
+      - "Un croquis a toujours un titre et une légende organisée."
+      - "On commence par les grands ensembles, puis on ajoute les détails."
+    explication: "On repère d'abord les grands ensembles (Paris, métropoles, axes de transport), puis les espaces peu denses ou en difficulté, puis les aménagements. Chaque figuré est classé dans une légende avec un titre."
+
+  - type: question_ouverte
+    question: >-
+      Explique, avec un exemple, comment un outil d'aménagement du territoire peut réduire les inégalités
+      entre régions. Cite au moins deux niveaux d'acteurs.
+    indices:
+      - "Choisis un outil : une ligne à grande vitesse, un pôle de compétitivité, un fonds européen..."
+      - "Qui décide et qui finance : l'État, une collectivité, l'Union européenne ?"
+    criteres:
+      - "L'élève choisit un outil précis (infrastructure de transport, pôle de compétitivité, fonds européen, maintien d'un service public)."
+      - "L'élève explique l'effet de cet outil sur un territoire (accès à l'emploi, aux services, attractivité)."
+      - "L'élève cite au moins deux niveaux d'acteurs (État, collectivités territoriales, Union européenne)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce qu'est l'aménagement du territoire,
+      qui agit, et un outil que tu as retenu.

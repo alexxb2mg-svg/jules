@@ -1,0 +1,147 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: volume-boule-et-assemblages
+titre: "Volume d'une boule et de solides assemblés"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer le volume d'une boule, ou d'une demi-boule, avec le bon rayon."
+      - "Découper un objet en solides connus (cylindre, cône, boule) et additionner leurs volumes."
+      - "Donner un résultat exact avec π, puis arrondi, avec la bonne unité."
+
+  - type: texte
+    titre: "Sphère et boule"
+    contenu: >-
+      La **sphère** est la « peau » d'un ballon : c'est une surface.
+      La **boule** est la sphère avec tout son intérieur : c'est un solide, il a un volume.
+      Le **rayon r** est la distance entre le centre et la sphère. Le rayon est la moitié du diamètre.
+      **V = 4/3 × π × r³**, avec r³ = r × r × r.
+      Attention : on utilise le rayon, jamais le diamètre. Une **demi-boule** a un volume deux fois plus petit : 2/3 × π × r³.
+
+  - type: texte
+    titre: "Les autres volumes à connaître"
+    contenu: >-
+      Pavé droit : **L × l × h**. Cube : **c³**.
+      Prisme et cylindre : **aire de la base × hauteur**. Pour un cylindre : π × r² × h.
+      Pyramide et cône : **1/3 × aire de la base × hauteur**. Pour un cône : 1/3 × π × r² × h.
+      Une boule n'a pas de hauteur h dans sa formule.
+
+  - type: texte
+    titre: "Assembler des solides, unités"
+    contenu: >-
+      Pour un objet composé : on le **découpe** en solides connus.
+      On calcule **chaque volume**, puis on **additionne** (ou on soustrait si on enlève un morceau).
+      Un cornet de glace est un cône avec une demi-boule. Un silo est un cylindre avec un cône ou une demi-boule.
+      Si les longueurs sont en cm, le volume est en cm³.
+      **1 L = 1 dm³ = 1 000 cm³** et **1 m³ = 1 000 L**.
+      On garde π jusqu'au bout (valeur exacte, par exemple 36π). On arrondit à la fin, comme l'énoncé le demande.
+
+  - type: exemple
+    enonce: >-
+      Une boule de pétanque a un rayon de 2 cm. Calculer son volume exact, puis arrondi au cm³ près.
+    etapes:
+      - "On écrit la formule : V = 4/3 × π × r³."
+      - "On remplace : r = 2, donc r³ = 2 × 2 × 2 = 8."
+      - "V = 4/3 × π × 8 = 32π/3 cm³. C'est la valeur exacte."
+      - "Avec la calculatrice : 32π/3 ≈ 33,5 cm³, soit 34 cm³ au cm³ près."
+
+  - type: exercice
+    enonce: "Quelle formule donne le volume d'une boule de rayon r ?"
+    forme: qcm
+    choix:
+      - "4 × π × r²"
+      - "4/3 × π × r³"
+      - "π × r² × h"
+      - "1/3 × π × r² × h"
+    reponse: 1
+    indices:
+      - "Un volume se mesure en cm³. Quelle puissance de r doit apparaître ?"
+      - "Une boule n'a pas de hauteur h. Cela élimine deux formules."
+    explication: "V = 4/3 × π × r³. La première formule est l'aire de la sphère. Les deux dernières sont celles du cylindre et du cône."
+
+  - type: exercice
+    enonce: >-
+      Une boule de décoration pleine a un diamètre de 6 cm. Calcule son volume, arrondi au cm³ près.
+      Écris seulement le nombre.
+    forme: nombre
+    reponse: 113
+    tolerance: 0.5
+    unite: "cm³"
+    indices:
+      - "La formule utilise le rayon. Quel est le rayon si le diamètre mesure 6 cm ?"
+      - "Le rayon est la moitié du diamètre. Calcule ensuite r × r × r."
+      - "Calcule 4/3 × π × r³ avec la touche π de la calculatrice, puis arrondis à l'unité."
+    explication: "Rayon = 6 ÷ 2 = 3 cm. V = 4/3 × π × 27 = 36π ≈ 113,1 cm³, soit 113 cm³."
+
+  - type: exercice
+    enonce: >-
+      Un bol a la forme d'une demi-boule de rayon 3 cm. Son volume exact s'écrit k × π cm³.
+      Quelle est la valeur de k ?
+    forme: nombre
+    reponse: 18
+    tolerance: 0.01
+    indices:
+      - "Une demi-boule est la moitié d'une boule. Écris d'abord le volume d'une boule entière."
+      - "Volume de la demi-boule : 2/3 × π × r³. Garde π de côté."
+      - "Calcule r³ avec r = 3, puis prends les 2/3 de ce nombre."
+    explication: "V = 1/2 × 4/3 × π × 3³ = 2/3 × π × 27 = 18π cm³, donc k = 18."
+
+  - type: exercice
+    enonce: >-
+      Un cornet de glace est un cône de rayon 3 cm et de hauteur 10 cm, surmonté d'une demi-boule de rayon 3 cm.
+      Le cornet et la demi-boule sont remplis de glace. Calcule le volume total, arrondi au cm³ près.
+    forme: nombre
+    reponse: 151
+    tolerance: 0.5
+    unite: "cm³"
+    indices:
+      - "Quels sont les deux solides ? Écris la formule du volume de chacun."
+      - "Cône : 1/3 × π × r² × h. Demi-boule : 2/3 × π × r³."
+      - "Cône : 1/3 × π × 9 × 10 = 30π. Calcule la demi-boule, additionne, puis arrondis."
+    explication: "Cône : 1/3 × π × 3² × 10 = 30π. Demi-boule : 2/3 × π × 27 = 18π. Total : 48π ≈ 150,8 cm³, soit 151 cm³."
+
+  - type: exercice
+    enonce: >-
+      Un silo est formé d'un cylindre de rayon 2 m et de hauteur 6 m, surmonté d'un cône de même rayon
+      et de hauteur 3 m. Calcule son volume, arrondi au m³ près.
+    forme: nombre
+    reponse: 88
+    tolerance: 0.5
+    unite: "m³"
+    indices:
+      - "De quels deux solides le silo est-il fait ? Écris la formule de chacun."
+      - "Cylindre : π × r² × h. Cône : 1/3 × π × r² × h. Garde π pour l'instant."
+      - "Cylindre : π × 4 × 6 = 24π. Calcule le cône, additionne les deux, puis arrondis."
+    explication: "Cylindre : π × 2² × 6 = 24π. Cône : 1/3 × π × 2² × 3 = 4π. Total : 28π ≈ 87,96 m³, soit 88 m³."
+
+  - type: question_ouverte
+    question: >-
+      Une boule de rayon 5 cm est posée dans une boîte cylindrique de rayon 5 cm et de hauteur 10 cm.
+      Elle touche le fond, le couvercle et la paroi. Montre que la boule occupe exactement
+      les deux tiers du volume de la boîte.
+    indices:
+      - "Quels sont les deux volumes à comparer ? Écris la formule de chacun."
+      - "Calcule les deux volumes en gardant π, puis calcule les deux tiers du volume de la boîte."
+    criteres:
+      - "L'élève calcule le volume de la boîte : π × 5² × 10 = 250π cm³."
+      - "L'élève calcule le volume de la boule : 4/3 × π × 5³ = 500π/3 cm³."
+      - "L'élève compare les deux volumes (2/3 de 250π est égal à 500π/3) et conclut."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : écris la formule du volume d'une boule,
+      dis quelle erreur tu évites avec le rayon, et comment tu calcules le volume d'un objet composé.

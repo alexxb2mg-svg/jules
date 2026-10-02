@@ -1,0 +1,164 @@
+notion: problemes-mise-en-equation
+titre: "Mettre un problème en équation et le résoudre"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir une inconnue et dire ce qu'elle représente."
+      - "Traduire un énoncé par une équation, puis la résoudre."
+      - "Vérifier la solution dans l'énoncé et répondre par une phrase."
+
+  - type: texte
+    titre: "Les cinq étapes"
+    contenu: >-
+      Beaucoup de problèmes se résolvent avec une équation.
+
+
+      1. **Choisir l'inconnue** : « Soit x le nombre de … (avec l'unité). »
+
+      2. **Traduire** l'énoncé par des expressions en x, puis par une égalité.
+
+      3. **Résoudre** l'équation.
+
+      4. **Vérifier** dans l'énoncé, pas seulement dans l'équation.
+
+      5. **Conclure** par une phrase qui répond à la question.
+
+  - type: texte
+    titre: "Traduire les phrases en calcul"
+    contenu: >-
+      Avec x le nombre cherché :
+
+
+      - le double de x : **2x** ; le triple : **3x** ; la moitié : **x ÷ 2**
+
+      - 5 de plus que x : **x + 5** ; 5 de moins : **x − 5**
+
+      - deux entiers consécutifs : **x** et **x + 1**
+
+      - dans 5 ans, une personne de x ans a **x + 5** ans. Tout le monde vieillit !
+
+  - type: texte
+    titre: "Trouver l'égalité, vérifier"
+    contenu: >-
+      L'égalité se cache dans une phrase comme « on obtient », « la somme vaut »
+      ou « les deux prix sont égaux ».
+
+
+      Pour comparer deux tarifs, on écrit que les deux prix sont **égaux**.
+
+      Pour un déplacement : **distance = vitesse × durée**.
+
+
+      Une solution de l'équation peut ne pas convenir au problème : un nombre de
+      personnes est un entier positif, une longueur est positive. On vérifie toujours.
+
+  - type: exemple
+    enonce: >-
+      Un stylo coûte 2 € de plus qu'un cahier. 3 cahiers et 2 stylos coûtent 19 € en tout.
+      Quel est le prix d'un cahier ?
+    etapes:
+      - "Inconnue : soit x le prix d'un cahier, en euros. Un stylo coûte alors x + 2."
+      - "Égalité : 3 cahiers coûtent 3x, 2 stylos coûtent 2(x + 2). Donc 3x + 2(x + 2) = 19."
+      - "Résolution : 3x + 2x + 4 = 19, donc 5x = 15, donc x = 3."
+      - "Vérification : cahier 3 €, stylo 5 €. 3 × 3 + 2 × 5 = 9 + 10 = 19. C'est bon."
+      - "Phrase : un cahier coûte 3 €."
+
+  - type: exercice
+    enonce: "Léo pense à un nombre. Il le multiplie par 3, puis ajoute 5. Il obtient 26. À quel nombre a-t-il pensé ?"
+    forme: nombre
+    reponse: 7
+    tolerance: 0.01
+    indices:
+      - "Appelle x le nombre de départ. Comment écrire « multiplier par 3 puis ajouter 5 » ?"
+      - "L'équation est 3x + 5 = 26."
+      - "Enlève 5 aux deux côtés : 3x = 21. Il reste à diviser."
+    explication: "3x + 5 = 26, donc 3x = 21, donc x = 7. Vérification : 3 × 7 + 5 = 26."
+
+  - type: exercice
+    enonce: >-
+      Un père a 4 fois l'âge de son fils. Dans 3 ans, la somme de leurs âges sera 51 ans.
+      On note x l'âge actuel du fils. Quelle équation traduit le problème ?
+    forme: qcm
+    choix:
+      - "x + 4x = 51"
+      - "(x + 3) + (4x + 3) = 51"
+      - "x + 3 + 4x = 51"
+      - "4x + 3 = 51"
+    reponse: 1
+    indices:
+      - "Dans 3 ans, quel âge aura le fils ? Et le père ?"
+      - "Le fils aura x + 3 ans. Le père a 4x ans aujourd'hui : et dans 3 ans ?"
+    explication: "Dans 3 ans, le fils a x + 3 ans et le père 4x + 3 ans. Donc (x + 3) + (4x + 3) = 51. On trouve 5x + 6 = 51, x = 9 : le fils a 9 ans, le père 36 ans."
+
+  - type: exercice
+    enonce: >-
+      Un rectangle a une longueur égale à deux fois sa largeur, plus 3 cm. Son périmètre est 36 cm.
+      Quelle est sa largeur, en cm ?
+    forme: nombre
+    reponse: 5
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Si x est la largeur, comment écrire la longueur ?"
+      - "La longueur est 2x + 3. Le périmètre d'un rectangle est 2 × (longueur + largeur)."
+      - "Écris 2(2x + 3 + x) = 36, réduis dans la parenthèse, puis résous."
+    explication: "2(3x + 3) = 36 donc 3x + 3 = 18 donc 3x = 15 donc x = 5. Longueur 13 cm ; 2 × (13 + 5) = 36."
+
+  - type: exercice
+    enonce: >-
+      Un magasin loue des vélos. Formule A : 30 € fixes, puis 5 € par heure. Formule B : 8 € par heure,
+      sans frais fixes. Pour combien d'heures les deux formules coûtent-elles le même prix ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: heures
+    indices:
+      - "Appelle x le nombre d'heures. Écris le prix de chaque formule en fonction de x."
+      - "La formule A coûte 30 + 5x. Écris celle de B, puis écris que les deux prix sont égaux."
+      - "Soustrais 5x des deux côtés pour regrouper les x."
+    explication: "30 + 5x = 8x donc 30 = 3x donc x = 10. Vérification : 30 + 50 = 80 et 8 × 10 = 80."
+
+  - type: exercice
+    enonce: >-
+      Programme A : choisir un nombre, le multiplier par 5, retirer 4.
+      Programme B : choisir le même nombre, ajouter 7, puis multiplier par 2.
+      Pour quel nombre les deux programmes donnent-ils le même résultat ?
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    indices:
+      - "Écris chaque programme avec x, puis écris qu'ils donnent le même résultat."
+      - "A donne 5x − 4. B donne 2(x + 7). Développe B."
+      - "5x − 4 = 2x + 14. Regroupe les x d'un côté et les nombres de l'autre."
+    explication: "5x − 4 = 2(x + 7) = 2x + 14, donc 3x = 18, donc x = 6. Vérification : A : 30 − 4 = 26 ; B : 13 × 2 = 26."
+
+  - type: question_ouverte
+    question: >-
+      La somme de trois entiers consécutifs est 78. Trouve ces trois nombres. Explique ton choix
+      d'inconnue, écris l'équation, résous-la et vérifie.
+    indices:
+      - "Si le plus petit s'appelle x, comment écris-tu les deux suivants ?"
+      - "Additionne les trois expressions et réduis."
+    criteres:
+      - "L'élève choisit une inconnue et exprime les deux autres nombres (x + 1 et x + 2)."
+      - "L'élève écrit et résout x + (x + 1) + (x + 2) = 78, soit 3x + 3 = 78."
+      - "L'élève trouve 25, 26 et 27, vérifie la somme (78) et conclut par une phrase."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les étapes à suivre pour résoudre un problème avec une équation.
+      Dis aussi pourquoi on doit vérifier la solution dans l'énoncé.

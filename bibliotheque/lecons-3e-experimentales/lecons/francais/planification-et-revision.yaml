@@ -1,0 +1,168 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: planification-et-revision
+titre: "Écrire un texte : planifier, rédiger, réviser"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver des idées et les organiser dans un plan avant d'écrire."
+      - "Rédiger un brouillon en suivant ce plan."
+      - "Réviser en plusieurs passages, avec des outils, puis réécrire."
+
+  - type: texte
+    titre: "Avant d'écrire : trouver des idées et planifier"
+    contenu: |-
+      Écrire un bon texte demande deux grands temps : **préparer** (planifier), puis **améliorer** (réviser).
+
+      Pour trouver des idées :
+
+      - faire un **remue-méninges** : noter en vrac tous les mots et idées, sans trier ;
+      - faire une **carte mentale** : le sujet au centre, les idées autour ;
+      - se poser les questions Qui ? Quoi ? Où ? Quand ? Comment ? Pourquoi ? ;
+      - relire des textes déjà lus pour y prendre des mots et des exemples.
+
+  - type: texte
+    titre: "Le plan et le brouillon"
+    contenu: |-
+      **Planifier**, c'est trier les idées, garder les meilleures et choisir un ordre.
+
+      L'ordre peut être :
+
+      - chronologique (pour un récit) ;
+      - du général au particulier ;
+      - du plus simple au plus complexe ;
+      - par arguments (pour un texte argumentatif).
+
+      Le **plan** est une liste courte de parties, avec une ou deux idées par partie.
+
+      Ensuite, on écrit le **brouillon** en suivant le plan. On saute des lignes pour laisser de la place aux corrections.
+
+  - type: texte
+    titre: "Réviser en plusieurs passages"
+    contenu: |-
+      On relit plusieurs fois, avec **un seul objectif** à chaque passage :
+
+      | Passage | On vérifie |
+      |---|---|
+      | Sens et organisation | Le texte répond au sujet. Les idées sont dans l'ordre. Les connecteurs relient les phrases. |
+      | Syntaxe | Pas de phrases trop longues ou incorrectes. |
+      | Grammaire et orthographe | Accord du sujet et du verbe, accords dans le groupe nominal, participes passés. |
+      | Vocabulaire | Pas de mots vagues (« chose », « faire »), pas de répétitions. |
+      | Ponctuation et présentation | Signes de ponctuation, mise en page. |
+
+  - type: texte
+    titre: "Les outils de révision et la réécriture"
+    contenu: |-
+      Les outils : dictionnaire, grammaire ou cahier de règles, grille de relecture, code de correction du professeur, relecture à voix haute, relecture par un camarade.
+
+      Le correcteur d'un logiciel peut aider, mais il se trompe : il faut le vérifier.
+
+      **Réécrire**, c'est modifier, ajouter, déplacer ou supprimer, pas seulement recopier.
+
+      Au brevet, la dictée et la rédaction sont notées : garde du temps pour relire et réécrire.
+
+  - type: exemple
+    enonce: >-
+      Une élève doit écrire sur une visite au marché. Elle note en vrac « les fruits », « ma grand-mère »,
+      « l'arrivée », « la foule », « le retour ». Que fait-elle ensuite pour planifier ?
+    etapes:
+      - "Ses idées notées en vrac forment un remue-méninges. Elle n'a rien trié pour l'instant."
+      - "Elle garde les meilleures idées et les classe dans un ordre logique."
+      - "Le sujet est une visite : un ordre chronologique convient. Plan : l'arrivée, la foule, les fruits avec sa grand-mère, le retour."
+      - "Seulement après, elle rédige son brouillon en suivant ce plan."
+
+  - type: exercice
+    enonce: "Quel mot désigne le fait de relire un texte déjà écrit pour l'améliorer (sens, grammaire, vocabulaire) ?"
+    forme: reponse_courte
+    reponse: "révision"
+    reponses_acceptees: ["revision", "la révision", "la revision", "réviser", "reviser"]
+    indices:
+      - "On fait cela après avoir écrit un brouillon, pas avant."
+      - "Le mot vient du verbe qui signifie « regarder de nouveau »."
+    explication: "La révision est la relecture d'un texte pour l'améliorer. C'est plus large que corriger les fautes."
+
+  - type: exercice
+    enonce: "Une élève doit écrire un texte sur un souvenir d'école. Que fait-elle en premier, avant de rédiger ?"
+    forme: qcm
+    choix:
+      - "Elle corrige les fautes de son brouillon."
+      - "Elle recopie son texte au propre."
+      - "Elle note ses idées en vrac et choisit un ordre logique."
+    reponse: 2
+    indices:
+      - "Peut-on corriger ou recopier un texte qui n'existe pas encore ?"
+      - "La première étape se fait avant d'écrire la première phrase."
+    explication: "On planifie d'abord : on liste les idées, puis on choisit un ordre logique. Corriger et recopier viennent après."
+
+  - type: exercice
+    enonce: >-
+      Une élève relit son brouillon pour vérifier que ses idées sont dans un ordre logique.
+      Quel est l'objectif de ce passage de relecture ?
+    forme: qcm
+    choix:
+      - "Le sens et l'organisation"
+      - "L'orthographe des mots"
+      - "Le choix des mots précis"
+    reponse: 0
+    indices:
+      - "Regarde-t-elle des mots isolés, ou l'ensemble du texte ?"
+      - "Consulte le tableau des passages de révision."
+    explication: "Vérifier l'ordre des idées relève du sens et de l'organisation. L'orthographe et le vocabulaire sont d'autres passages."
+
+  - type: exercice
+    enonce: "Quel livre consultes-tu pour vérifier l'orthographe d'un mot pendant la révision de ton brouillon ?"
+    forme: reponse_courte
+    reponse: "dictionnaire"
+    reponses_acceptees: ["le dictionnaire", "un dictionnaire", "Dictionnaire"]
+    indices:
+      - "Ce livre classe les mots de A à Z."
+      - "Il donne l'orthographe et le sens des mots. Son nom commence par la lettre d."
+    explication: "Le dictionnaire donne l'orthographe et le sens d'un mot. C'est un outil de révision."
+
+  - type: exercice
+    enonce: >-
+      Une élève veut relire son brouillon avec un seul objectif à chaque passage. Selon le tableau
+      de la leçon, combien de passages différents peut-elle faire (sens et organisation, syntaxe,
+      grammaire et orthographe, vocabulaire, ponctuation et présentation) ? Réponds par un nombre.
+    forme: nombre
+    reponse: 5
+    tolerance: 0
+    indices:
+      - "Compte les lignes du tableau « Réviser en plusieurs passages »."
+      - "Chaque ligne du tableau est un passage avec son propre objectif."
+    explication: "Le tableau liste cinq passages : sens et organisation, syntaxe, grammaire et orthographe, vocabulaire, ponctuation et présentation."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois écrire un texte de dix lignes intitulé « Le jour où tout a changé au collège »
+      (sujet inventé). Écris d'abord un plan en quatre lignes. Explique ensuite en deux ou trois
+      phrases comment tu réviseras ton brouillon (quels passages, quels outils).
+    indices:
+      - "Un plan chronologique peut avoir : situation de départ, événement, conséquence, fin."
+      - "Pense à relire en plusieurs passages, avec un seul objectif à chaque fois."
+    criteres:
+      - "Le plan comporte quatre parties dans un ordre logique (chronologique ou autre, justifié)."
+      - "La révision est décrite en plusieurs passages, chacun avec un objectif différent (sens, orthographe, vocabulaire)."
+      - "Au moins un outil de révision est cité (dictionnaire, grille de relecture, relecture à voix haute...)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les grandes étapes pour écrire un
+      texte, de la recherche d'idées jusqu'à la réécriture. Ajoute deux outils de révision.

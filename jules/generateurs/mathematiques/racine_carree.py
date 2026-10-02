@@ -34,6 +34,11 @@ _LETTRES = "abcdef"
 _TRIPLETS = ((3, 4, 5), (6, 8, 10), (5, 12, 13), (9, 12, 15), (8, 15, 17), (12, 16, 20))
 
 
+# palier 1 : les carrés connus jusqu'à 15², plus les carrés ronds (400, 900...)
+_RACINES_PALIER_1 = (*range(2, 16), 20, 30, 40, 50, 60, 70, 80, 90)
+_TOURNURES_CALCULER = ("Calcule {affiche}.", "Que vaut {affiche} ?", "Donne la valeur de {affiche}.")
+
+
 def _est_carre(n: int) -> bool:
     return n >= 0 and math.isqrt(n) ** 2 == n
 
@@ -43,9 +48,15 @@ def _est_carre(n: int) -> bool:
 
 def _calculer(rng: random.Random, difficulte: int) -> dict[str, Any]:
     if difficulte == 1:
-        k = rng.randint(2, 12)
+        k = rng.choice(_RACINES_PALIER_1)
         sous, affiche, reponse = k * k, f"√{k * k}", Fraction(k)
-        etape = f"Récite les carrés des nombres entiers, dans l'ordre, jusqu'à retrouver {k * k}."
+        if k >= 20:  # carré rond : 2 500 = 25 × 100, on ne récite pas les carrés jusque-là
+            etape = (
+                f"{k * k} = {(k // 10) ** 2} × 100. Cherche le nombre dont le carré vaut {(k // 10) ** 2}, "
+                "puis multiplie-le par 10."
+            )
+        else:
+            etape = f"Récite les carrés des nombres entiers, dans l'ordre, jusqu'à retrouver {k * k}."
         pieges = [
             piege_valeur(
                 nombre_machine(Fraction(k * k, 2)),
@@ -132,7 +143,8 @@ def _calculer(rng: random.Random, difficulte: int) -> dict[str, Any]:
         id=f"calculer-{difficulte}-{affiche}".replace("√", "r").replace(" ", ""),
         type="nombre",
         difficulte=difficulte,
-        enonce=f"Calcule {affiche}.",
+        # tournures au palier 1 seulement : les paliers 2 et 3 ont assez de variété, leurs graines restent inchangées
+        enonce=(rng.choice(_TOURNURES_CALCULER) if difficulte == 1 else _TOURNURES_CALCULER[0]).format(affiche=affiche),
         reponse={"valeur": nombre_machine(reponse), "forme": "libre"},
         indices={
             "relance": "Quel nombre positif, multiplié par lui-même, donne le nombre sous la racine ?",

@@ -1,0 +1,166 @@
+notion: identification-genres-et-formes-argumentatives
+titre: "Genres littéraires et formes argumentatives"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Identifier quelques genres et formes qui servent à argumenter : essai, discours, lettre ouverte, fable, conte philosophique."
+      - "Contextualiser une œuvre : la replacer dans son époque."
+      - "Repérer un effet de langue, dire son rôle et formuler un jugement justifié."
+
+  - type: texte
+    titre: "Argumenter : thèse, arguments, convaincre, persuader"
+    contenu: >-
+      Argumenter, c'est défendre une idée, la **thèse**, avec des **arguments** et des exemples.
+
+
+      - **Convaincre** : s'adresser à la raison, avec des arguments logiques.
+
+      - **Persuader** : toucher les émotions, faire adhérer.
+
+  - type: texte
+    titre: "Les genres et les formes argumentatives"
+    contenu: >-
+      | Forme | Ce que c'est | Exemple |
+
+      |---|---|---|
+
+      | **Essai** | texte en prose où l'auteur développe une réflexion personnelle | les « Essais » de Montaigne, XVIe siècle |
+
+      | **Discours** | texte prononcé devant un public pour le convaincre | |
+
+      | **Lettre ouverte** | lettre adressée publiquement à quelqu'un, souvent par la presse | « J'accuse... ! » de Zola, 1898, journal L'Aurore |
+
+      | **Article, pamphlet** | textes qui défendent une opinion, le pamphlet de façon violente | |
+
+      | **Fable** | petite histoire, souvent avec des animaux, dont la morale donne la leçon | La Fontaine, XVIIe siècle |
+
+      | **Conte philosophique** | récit imaginaire qui critique la société | « Candide », Voltaire, 1759 |
+
+
+      La fable et le conte argumentent de façon **indirecte**, à travers une histoire.
+
+  - type: texte
+    titre: "Contextualiser et interpréter les effets de langue"
+    contenu: >-
+      **Contextualiser**, c'est replacer une œuvre dans son époque : quelle date ? quels événements, quels
+      débats, quel mouvement (classicisme, Lumières, romantisme...) ? Un texte de 1898 sur l'affaire
+      Dreyfus ne se comprend pas sans cette affaire.
+
+
+      Les **effets de langue** donnent du poids à l'argument : choix des mots, rythme, images (comparaison,
+      métaphore), répétitions (anaphore), oppositions (antithèse).
+
+
+      Pour juger : « ce passage est efficace parce que... », avec un exemple pris dans le texte.
+
+  - type: exemple
+    enonce: >-
+      Un élève lit une fable de La Fontaine. Un renard flatte un corbeau pour lui prendre son fromage.
+      La morale dit de se méfier des flatteurs. Identifie la forme, la thèse et le contexte.
+    etapes:
+      - "La forme : c'est une fable. Une petite histoire avec des animaux, suivie d'une morale."
+      - "La thèse : il faut se méfier de ceux qui nous flattent."
+      - "L'argumentation est indirecte : l'auteur ne dit pas « je pense que », il le montre avec l'histoire."
+      - "Le contexte : La Fontaine écrit au XVIIe siècle."
+
+  - type: exercice
+    enonce: >-
+      Un livre raconte les aventures imaginaires d'un jeune homme pour critiquer la société et défendre des
+      idées. C'est « Candide » de Voltaire. De quel genre s'agit-il ?
+    forme: qcm
+    choix:
+      - "Un conte philosophique"
+      - "Un discours prononcé devant un public"
+      - "Un poème lyrique"
+      - "Un article de presse d'aujourd'hui"
+    reponse: 0
+    indices:
+      - "Ce texte raconte une histoire imaginaire, mais son but est d'argumenter."
+      - "Cherche le genre qui mêle un récit et une critique d'idées."
+    explication: "« Candide » est un conte philosophique : une histoire imaginaire qui sert à critiquer la société."
+
+  - type: exercice
+    enonce: "Quel verbe désigne le fait de replacer une œuvre dans son époque et ses circonstances historiques ou culturelles ?"
+    forme: reponse_courte
+    reponse: "contextualiser"
+    reponses_acceptees:
+      - "contextualiser une œuvre"
+      - "contextualiser une oeuvre"
+    indices:
+      - "Ce verbe est construit sur le nom « contexte »."
+      - "Il se termine par « -iser », comme « organiser »."
+    explication: "Le verbe est « contextualiser » : replacer une œuvre dans son époque, avec ses connaissances historiques et culturelles."
+
+  - type: exercice
+    enonce: "Un auteur cherche surtout à toucher les émotions de son public pour le faire adhérer à son idée. Que fait-il ?"
+    forme: qcm
+    choix:
+      - "Il persuade"
+      - "Il convainc"
+      - "Il résume"
+    reponse: 0
+    indices:
+      - "Un de ces verbes s'adresse à la raison, un autre aux émotions."
+      - "Le troisième ne cherche pas à faire adhérer du tout."
+    explication: "Persuader, c'est faire adhérer en touchant les émotions. Convaincre s'adresse à la raison, avec des arguments logiques."
+
+  - type: exercice
+    enonce: >-
+      Dans « J'accuse... ! » de Zola, la même expression est répétée au début de phrases successives.
+      Comment s'appelle cette figure de style ? Réponds par un mot.
+    forme: reponse_courte
+    reponse: "anaphore"
+    reponses_acceptees:
+      - "une anaphore"
+      - "l'anaphore"
+    indices:
+      - "C'est une figure de répétition qui donne de la force et du rythme."
+      - "Ce nom commence par « ana- » et rime avec « métaphore »."
+    explication: "C'est une anaphore : la répétition d'un même mot ou d'une même expression en début de phrases. Elle insiste sur l'idée."
+
+  - type: exercice
+    enonce: "Quelle phrase est un jugement personnel bien justifié sur « J'accuse... ! » de Zola ?"
+    forme: qcm
+    choix:
+      - "C'est bien."
+      - "Zola a écrit ce texte en 1898."
+      - "Ce passage est efficace parce que la répétition de « J'accuse » donne de la force à l'accusation."
+    reponse: 2
+    indices:
+      - "Un jugement justifié contient une opinion, une raison et un appui pris dans le texte."
+      - "Une phrase est trop vague, une autre donne seulement un fait."
+    explication: "La troisième phrase donne un jugement (« efficace »), une raison (« parce que… ») et un effet de langue précis du texte : la répétition."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un texte argumentatif étudié en classe. Explique sa forme, un élément de son contexte, et un
+      effet de langue qu'il utilise.
+    indices:
+      - "Nomme d'abord la forme du texte (essai, discours, fable, lettre ouverte...)."
+      - "Ajoute une époque ou un événement, puis un mot, un rythme ou une image qui t'a marqué(e)."
+    criteres:
+      - "L'élève identifie la forme argumentative du texte choisi."
+      - "L'élève donne un élément de contexte historique ou culturel de ce texte."
+      - "L'élève repère un effet de langue (choix des mots, rythme, image, répétition) et explique son rôle."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce que veut dire contextualiser une œuvre, et
+      pourquoi une fable peut être un texte argumentatif.

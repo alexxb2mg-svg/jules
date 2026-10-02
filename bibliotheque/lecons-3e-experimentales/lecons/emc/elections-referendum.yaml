@@ -1,0 +1,160 @@
+notion: elections-referendum
+titre: "Élections et référendum, moments décisifs de la vie démocratique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Élection »"
+    url: "https://fr.vikidia.org/w/index.php?title=%C3%89lection&oldid=2558947"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Référendum »"
+    url: "https://fr.vikidia.org/w/index.php?title=R%C3%A9f%C3%A9rendum&oldid=2435864"
+    licence: CC-BY-SA-3.0
+  - titre: "Définition des épreuves du DNB à compter de la session 2027, sous-épreuve EMC, note de service du 11-9-2026 (BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer qu'une campagne électorale est un moment de débat, et que le vote n'est pas obligatoire mais engage."
+      - "Connaître les grandes élections en France et leur rythme."
+      - "Distinguer une élection et un référendum, le suffrage direct et le suffrage indirect."
+
+  - type: texte
+    titre: "La campagne et le vote"
+    contenu: |-
+      Les élections et les référendums sont des **moments décisifs** de la vie démocratique.
+
+      Pendant la **campagne**, les candidats (ou les partisans de chaque camp) présentent leurs arguments. Les médias et les citoyens en discutent : c'est un temps de **débat**.
+
+      En France, le vote **n'est pas obligatoire**, mais c'est un **engagement au sein de la cité**.
+
+  - type: texte
+    titre: "Qui peut voter ?"
+    contenu: |-
+      Pour voter, il faut :
+      - avoir **18 ans** ;
+      - être de nationalité française (ou citoyen européen pour les municipales et les européennes) ;
+      - être **inscrit sur les listes électorales**.
+
+      Le vote est **secret**. On peut aussi voter par **procuration**.
+
+      Le **vote blanc** est reconnu depuis 2014, mais il n'est pas compté comme un suffrage exprimé.
+
+  - type: texte
+    titre: "Les grandes élections"
+    contenu: |-
+      | Élection | Qui est élu ? | Rythme et mode de scrutin |
+      |---|---|---|
+      | Présidentielle | le président de la République | tous les 5 ans (quinquennat depuis 2000), suffrage direct, deux tours |
+      | Législatives | les députés (Assemblée nationale) | tous les 5 ans, suffrage direct, deux tours |
+      | Sénatoriales | les sénateurs (Sénat) | suffrage **indirect** par des grands électeurs ; Sénat renouvelé par moitié tous les 3 ans |
+      | Municipales | les conseils municipaux (donc le maire) | tous les 6 ans |
+      | Régionales, départementales | conseils régionaux, conseils départementaux | tous les 6 ans |
+      | Européennes | les députés européens | tous les 5 ans |
+
+      Les grands électeurs sont des députés, des sénateurs et des élus locaux.
+
+  - type: texte
+    titre: "Le référendum"
+    contenu: |-
+      Lors d'un **référendum**, les citoyens répondent directement **« oui » ou « non »** à une question. Ce n'est pas un choix de personnes.
+
+      Exemples : la Constitution de la Ve République (28 septembre 1958), l'élection du président au suffrage universel direct (1962), le quinquennat (2000).
+
+      **Suffrage direct** : l'électeur choisit lui-même. **Suffrage indirect** : des grands électeurs choisissent.
+
+      **Abstention** : ne pas voter. Elle peut affaiblir la légitimité des élus.
+
+  - type: exemple
+    enonce: "Sami a 19 ans. Il a la nationalité française mais il ne s'est jamais inscrit sur les listes électorales. Peut-il voter à la prochaine élection ?"
+    etapes:
+      - "Première condition : avoir 18 ans. Sami a 19 ans, c'est bon."
+      - "Deuxième condition : la nationalité française. Sami est français, c'est bon."
+      - "Troisième condition : être inscrit sur les listes électorales. Sami ne l'est pas, donc il manque cette condition."
+      - "Conclusion : Sami ne peut pas voter tant qu'il ne s'est pas inscrit. Le vote n'est pas obligatoire, mais s'inscrire est nécessaire pour voter."
+
+  - type: exercice
+    enonce: "Tous les combien d'années le président de la République est-il élu, depuis le quinquennat ? (réponse en années)"
+    forme: nombre
+    reponse: 5
+    tolerance: 0
+    unite: "ans"
+    indices:
+      - "Relis le tableau des grandes élections, ligne « Présidentielle »."
+      - "Le mot « quinquennat » contient l'idée de « quinque » : le nombre de doigts d'une main."
+    explication: "Le président est élu pour un quinquennat, donc pour 5 ans (depuis 2000)."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le vote où les citoyens répondent par « oui » ou « non » à une question ?"
+    forme: reponse_courte
+    reponse: "un référendum"
+    reponses_acceptees:
+      - "référendum"
+      - "le référendum"
+      - "referendum"
+      - "un referendum"
+    indices:
+      - "Ce n'est pas le choix d'une personne : c'est une réponse à une question."
+      - "Le mot commence par « réfé- »."
+    explication: "C'est un référendum : les citoyens répondent directement « oui » ou « non » à une question."
+
+  - type: exercice
+    enonce: "En France, le vote est-il obligatoire ?"
+    forme: qcm
+    choix:
+      - "Oui, tous les électeurs doivent voter"
+      - "Non, il n'est pas obligatoire, mais c'est un engagement au sein de la cité"
+      - "Oui, mais seulement pour les élections municipales"
+    reponse: 1
+    indices:
+      - "Personne n'est obligé d'aller voter en France."
+      - "Voter est un choix. Il montre qu'on s'engage dans la vie de la cité."
+    explication: "Le vote n'est pas obligatoire en France. Mais voter est un engagement au sein de la cité."
+
+  - type: exercice
+    enonce: "Comment les sénateurs sont-ils élus ?"
+    forme: qcm
+    choix:
+      - "Au suffrage direct, par tous les électeurs"
+      - "Au suffrage indirect, par des grands électeurs"
+      - "Par un référendum"
+    reponse: 1
+    indices:
+      - "Les citoyens ne votent pas eux-mêmes pour les sénateurs."
+      - "Ce sont des députés, des sénateurs et des élus locaux qui votent."
+    explication: "Les sénateurs sont élus au suffrage indirect, par des grands électeurs : des députés, des sénateurs et des élus locaux."
+
+  - type: exercice
+    enonce: "Laquelle de ces affirmations est exacte ?"
+    forme: qcm
+    choix:
+      - "Le vote blanc est reconnu depuis 2014 mais il n'est pas compté comme un suffrage exprimé"
+      - "Les députés sont élus par des grands électeurs"
+      - "Un référendum sert à choisir une personne pour un mandat"
+      - "Le vote est obligatoire pour les élections européennes"
+    reponse: 0
+    indices:
+      - "Relis les textes « Qui peut voter ? » et « Le référendum »."
+      - "Élimine d'abord les affirmations qui confondent élection et référendum, ou direct et indirect."
+    explication: "Le vote blanc est reconnu depuis 2014 mais n'est pas un suffrage exprimé. Les députés sont élus au suffrage direct. Un référendum répond à une question. Le vote n'est jamais obligatoire."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : explique pourquoi les élections et les référendums sont des moments
+      décisifs de la vie démocratique. Appuie-toi sur la campagne et sur l'idée de vote non obligatoire.
+    indices:
+      - "Que se passe-t-il pendant une campagne ?"
+      - "Le vote n'est pas obligatoire : que montre pourtant le fait de voter ?"
+    criteres:
+      - "L'élève explique que la campagne est un moment de débat où l'on présente des arguments."
+      - "L'élève précise que le vote n'est pas obligatoire mais marque un engagement au sein de la cité."
+      - "L'élève cite au moins un exemple d'élection ou de référendum."
+      - "L'élève a une phrase d'introduction et une phrase de conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens : la différence entre
+      une élection et un référendum, la différence entre suffrage direct et indirect, et ce que veut dire
+      « le vote n'est pas obligatoire ».

@@ -1,0 +1,172 @@
+notion: theme-2-formes-circulations-medievales
+titre: "Formes et circulations artistiques au Moyen Âge (IXe-XVe siècles)"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer l'art roman et l'art gothique."
+      - "Expliquer le rôle de l'image, les circulations autour de la Méditerranée et la querelle des images."
+      - "Décrire un manuscrit enluminé et connaître quelques repères de musique et d'architecture civile."
+
+  - type: texte
+    titre: "Roman et gothique"
+    contenu: >-
+      Du IXe au XVe siècle, l'art est surtout au service de la foi chrétienne, mais aussi des seigneurs et des villes.
+
+
+      | | Art roman | Art gothique |
+
+      |---|---|---|
+
+      | **Dates** | XIe-XIIe siècles | milieu du XIIe au XVe siècle |
+
+      | **Arcs et voûtes** | arc en plein cintre (demi-cercle), voûte en berceau | arc brisé, voûte d'ogives |
+
+      | **Murs et fenêtres** | murs épais, petites fenêtres | grandes fenêtres avec vitraux |
+
+      | **Effet** | église sombre et massive | église haute et lumineuse |
+
+
+      Exemples : la basilique de Vézelay (roman) ; la cathédrale de Chartres, reconstruite après 1194,
+      et la Sainte-Chapelle de Paris (1248), gothiques.
+
+  - type: texte
+    titre: "L'image, les circulations et l'architecture civile"
+    contenu: >-
+      L'image enseigne la foi à des fidèles qui, pour la plupart, ne savent pas lire.
+
+
+      À Byzance, aux VIIIe et IXe siècles, les **iconoclastes** veulent détruire les images religieuses.
+      Leurs adversaires les défendent. Les images sont rétablies en 843.
+
+
+      Autour de la Méditerranée, les formes circulent entre mondes chrétien et musulman : arcs, décors
+      géométriques, soieries, ivoires. La mosquée de Cordoue, en Espagne musulmane, en est un témoin.
+
+
+      L'architecture protège aussi la vie : le **château fort** (donjon, remparts, tours, fossé), les maisons
+      à pans de bois, les halles, les beffrois. Le palais des Papes à Avignon (XIVe siècle) mêle forteresse et résidence.
+
+  - type: texte
+    titre: "Le manuscrit, la musique et le texte"
+    contenu: >-
+      Un **manuscrit** est un livre copié à la main sur du **parchemin** (peau d'animal), décoré d'**enluminures**
+      (peintures en couleurs et à l'or).
+
+
+      Exemple : les Très Riches Heures du duc de Berry, peintes par les frères de Limbourg vers 1411-1416.
+
+
+      Repères de musique :
+
+
+      - le **chant grégorien** est chanté à une voix, en latin ;
+
+      - au XIe siècle, Guido d'Arezzo perfectionne la portée et donne des noms aux notes ;
+
+      - au XIVe siècle, Guillaume de Machaut compose la Messe de Nostre Dame, à plusieurs voix (**polyphonie**).
+
+
+      La Tapisserie de Bayeux (fin du XIe siècle) est une longue broderie qui raconte la conquête de l'Angleterre en 1066.
+
+  - type: exemple
+    enonce: >-
+      Explique en trois phrases pourquoi une cathédrale gothique est plus lumineuse qu'une église romane.
+    etapes:
+      - "Dans une église romane, les murs épais portent la voûte : on ne peut percer que de petites fenêtres."
+      - "Dans une cathédrale gothique, la voûte d'ogives et les arcs-boutants reportent le poids sur des piliers."
+      - "Les murs peuvent donc s'ouvrir sur de grandes fenêtres avec des vitraux, qui font entrer une lumière colorée."
+
+  - type: exercice
+    enonce: >-
+      Une église a des murs très épais, de petites fenêtres, des arcs en demi-cercle et une voûte en berceau.
+      À l'intérieur, il fait plutôt sombre. De quel style est-elle ?
+    forme: qcm
+    choix:
+      - "Le style roman"
+      - "Le style gothique"
+    reponse: 0
+    indices:
+      - "Des murs épais et de petites fenêtres : ce style est plus ancien que l'autre."
+      - "Le style gothique a de grandes fenêtres, des arcs brisés et de la lumière."
+    explication: "C'est le style roman (XIe-XIIe siècles) : murs épais, petites fenêtres, arcs en plein cintre (demi-cercle), voûte en berceau."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une fenêtre d'église faite de morceaux de verre colorés, assemblés par des baguettes de plomb ?"
+    forme: reponse_courte
+    reponse: "vitrail"
+    reponses_acceptees:
+      - "vitrail"
+      - "un vitrail"
+      - "le vitrail"
+      - "vitraux"
+      - "des vitraux"
+    indices:
+      - "Pense aux grandes fenêtres colorées de la Sainte-Chapelle ou de Chartres."
+      - "Le mot commence par « vit- »."
+    explication: "C'est un vitrail : des verres colorés assemblés au plomb, qui font entrer une lumière colorée dans les églises gothiques."
+
+  - type: exercice
+    enonce: "En quelle année les images religieuses sont-elles rétablies à Byzance, après la querelle des iconoclastes ?"
+    forme: nombre
+    reponse: 843
+    tolerance: 0
+    indices:
+      - "La querelle a lieu aux VIIIe et IXe siècles."
+      - "Le rétablissement a lieu au IXe siècle : les années commencent par 8, dans la première moitié du siècle."
+    explication: "Les images religieuses sont rétablies en 843, après la querelle entre iconoclastes et défenseurs des images."
+
+  - type: exercice
+    enonce: "Que veulent les iconoclastes byzantins des VIIIe et IXe siècles ?"
+    forme: qcm
+    choix:
+      - "Détruire les images religieuses"
+      - "Copier des manuscrits enluminés"
+      - "Construire des églises gothiques"
+      - "Chanter en polyphonie"
+    reponse: 0
+    indices:
+      - "Le mot « iconoclaste » vient d'« icône » (image) et d'un mot grec qui veut dire « briser »."
+      - "Trois propositions ne concernent pas un conflit sur les images."
+    explication: "Les iconoclastes veulent détruire les images religieuses. Leur querelle avec les défenseurs des images se termine en 843."
+
+  - type: exercice
+    enonce: "Quelle description correspond à un manuscrit enluminé du Moyen Âge ?"
+    forme: qcm
+    choix:
+      - "Un livre copié à la main sur du parchemin, décoré de peintures en couleurs et à l'or."
+      - "Un livre imprimé en série sur du papier."
+      - "Une longue toile brodée qui raconte une conquête."
+      - "Une fenêtre en verre colorés assemblés au plomb."
+    reponse: 0
+    indices:
+      - "Manuscrit veut dire « écrit à la main »."
+      - "Pense au support (peau d'animal) et à la décoration (enluminures)."
+    explication: "Un manuscrit est copié à la main sur du parchemin et décoré d'enluminures. La broderie est la Tapisserie de Bayeux, la fenêtre est un vitrail."
+
+  - type: question_ouverte
+    question: >-
+      La cathédrale de Chartres a été reconstruite après 1194. Sa nef est très haute, avec des voûtes d'ogives et
+      de grandes fenêtres garnies de vitraux. Décris cette cathédrale et explique à quoi servaient ses vitraux.
+    indices:
+      - "Comment ce bâtiment peut-il avoir de si grandes fenêtres ?"
+      - "Que racontent les vitraux à des fidèles qui ne savent pas lire ?"
+    criteres:
+      - "L'élève utilise au moins deux mots précis du style gothique (voûte d'ogives, arc-boutant, vitrail, rosace, arc brisé)."
+      - "L'élève explique la fonction des vitraux : faire entrer une lumière colorée et enseigner la foi aux fidèles."
+      - "L'élève situe l'œuvre : art gothique, fin du XIIe et XIIIe siècle, société chrétienne."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, comment on distingue une église romane d'une église gothique, et ce que
+      sont un manuscrit et une enluminure.

@@ -1,0 +1,159 @@
+notion: proportionnalite-en-geometrie
+titre: "Proportionnalité en géométrie"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser une configuration de Thalès pour calculer une longueur, en justifiant."
+      - "Utiliser des triangles semblables ou une homothétie, avec un coefficient."
+      - "Passer des longueurs aux aires (k²) et aux volumes (k³), et lire une échelle."
+
+  - type: texte
+    titre: "La configuration de Thalès"
+    contenu: >-
+      M est sur [AB], N est sur [AC] et **(MN) est parallèle à (BC)**.
+      Alors :
+
+
+      **AM/AB = AN/AC = MN/BC**
+
+
+      On met les longueurs du petit triangle en haut et celles du grand triangle en bas.
+      Il faut **d'abord vérifier** que les droites sont parallèles.
+
+  - type: texte
+    titre: "Triangles semblables et homothétie"
+    contenu: >-
+      Des triangles aux angles égaux deux à deux ont leurs côtés homologues proportionnels.
+      Les côtés homologues sont ceux qui se correspondent.
+
+
+      Le nombre par lequel on multiplie est un **coefficient** : agrandissement si > 1,
+      réduction s'il est entre 0 et 1.
+
+
+      Une **homothétie** de rapport k multiplie les longueurs par |k| et garde les angles.
+
+  - type: texte
+    titre: "Aires, volumes, échelle"
+    contenu: >-
+      Si les longueurs sont multipliées par k :
+
+
+      - les **aires** sont multipliées par **k²**
+
+      - les **volumes** sont multipliés par **k³**
+
+
+      Échelle 1/25 000 : 1 cm sur la carte = 25 000 cm = 250 m en vrai.
+
+
+      Pour trouver une longueur : écris l'égalité de deux rapports, puis fais un **produit en croix**.
+
+  - type: exemple
+    enonce: >-
+      Dans le triangle ABC, D est sur [AB] et E est sur [AC], avec (DE) parallèle à (BC).
+      AD = 4 cm, AB = 10 cm et AE = 6 cm. Calcule AC.
+    etapes:
+      - "Les droites (DE) et (BC) sont parallèles : on peut utiliser la configuration de Thalès."
+      - "AD/AB = AE/AC, donc 4/10 = 6/AC."
+      - "Produit en croix : AC = 6 × 10 ÷ 4 = 15."
+      - "Conclusion : AC = 15 cm."
+
+  - type: exercice
+    enonce: "Sur une carte à l'échelle 1/25 000, un sentier mesure 4 cm. Quelle est sa longueur réelle, en km ?"
+    forme: nombre
+    reponse: 1
+    tolerance: 0.01
+    unite: km
+    indices:
+      - "Que représente un centimètre de la carte, en vrai, en centimètres ?"
+      - "Multiplie 4 par 25 000, puis convertis en mètres."
+    explication: "4 × 25 000 = 100 000 cm = 1 000 m = 1 km."
+
+  - type: exercice
+    enonce: >-
+      Dans le triangle ABC, M est sur [AB], N est sur [AC] et (MN) est parallèle à (BC).
+      AM = 3 cm, AB = 8 cm et AN = 4,5 cm. Calcule AC, en cm.
+    forme: nombre
+    reponse: 12
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Écris l'égalité des rapports avec AM, AB, AN et AC."
+      - "AM/AB = AN/AC, donc 3/8 = 4,5/AC."
+      - "Fais le produit en croix : AC = 4,5 × 8 ÷ 3."
+    explication: "3/8 = 4,5/AC donc AC = 4,5 × 8 ÷ 3 = 36 ÷ 3 = 12 cm."
+
+  - type: exercice
+    enonce: >-
+      Dans le triangle ABC, M est sur [AB], N est sur [AC], et (MN) est parallèle à (BC).
+      Quelle égalité est correcte ?
+    forme: qcm
+    choix:
+      - "AM/AB = MN/BC"
+      - "AM/MB = MN/BC"
+      - "AB/AM = MN/BC"
+      - "AM/BC = MN/AB"
+    reponse: 0
+    indices:
+      - "Petit triangle en haut, grand triangle en bas : quel est le petit triangle ?"
+      - "Le côté [MN] correspond au côté [BC]. Et [AM] correspond à quel côté ?"
+    explication: "AMN est le petit triangle, ABC le grand. AM correspond à AB et MN à BC : AM/AB = MN/BC."
+
+  - type: exercice
+    enonce: >-
+      Un solide est réduit avec un coefficient de 1/3. Son volume de départ est 270 cm³.
+      Quel est le volume du solide réduit, en cm³ ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: cm³
+    indices:
+      - "Par combien les volumes sont-ils multipliés quand les longueurs sont multipliées par k ?"
+      - "Le volume est multiplié par k³. Calcule (1/3)³."
+      - "(1/3)³ = 1/27. Multiplie 270 par ce nombre."
+    explication: "k³ = (1/3)³ = 1/27. Volume : 270 ÷ 27 = 10 cm³."
+
+  - type: exercice
+    enonce: >-
+      Dans le triangle ABC, D est sur [AB], E est sur [AC], et (DE) est parallèle à (BC).
+      AD = 4 cm, DB = 6 cm et DE = 5 cm. Calcule BC, en cm.
+    forme: nombre
+    reponse: 12.5
+    tolerance: 0.01
+    unite: cm
+    indices:
+      - "Attention : on connaît DB, mais Thalès utilise AB, la longueur totale."
+      - "Calcule d'abord AB = AD + DB. Puis écris AD/AB = DE/BC."
+      - "4/10 = 5/BC. Fais le produit en croix."
+    explication: "AB = 4 + 6 = 10. AD/AB = DE/BC donc 4/10 = 5/BC, BC = 5 × 10 ÷ 4 = 12,5 cm."
+
+  - type: question_ouverte
+    question: >-
+      Pour calculer une longueur avec la configuration de Thalès, quelles vérifications dois-tu faire
+      et quelles étapes dois-tu écrire sur ta copie ? Explique avec tes mots.
+    indices:
+      - "Qu'est-ce qu'on doit prouver avant d'écrire les rapports ?"
+      - "Pense à : justifier, écrire l'égalité, calculer, conclure avec l'unité."
+    criteres:
+      - "L'élève dit qu'il faut vérifier que les droites sont parallèles, ou que les points sont bien alignés dans la configuration."
+      - "L'élève cite l'égalité des rapports (petit triangle sur grand triangle), le produit en croix et la conclusion avec l'unité."
+
+  - type: synthese
+    consigne: >-
+      Écris, en trois phrases, comment on trouve une longueur avec Thalès,
+      et comment changent les aires et les volumes quand les longueurs sont multipliées par k.

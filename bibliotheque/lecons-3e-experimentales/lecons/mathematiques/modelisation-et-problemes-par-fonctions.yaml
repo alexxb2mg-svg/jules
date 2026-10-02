@@ -1,0 +1,157 @@
+notion: modelisation-et-problemes-par-fonctions
+titre: "Modéliser une situation par une fonction et résoudre un problème"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Écrire la fonction qui modélise une situation (prix fixe et prix par unité)."
+      - "Répondre à une question en cherchant une image, un antécédent ou en comparant deux fonctions."
+      - "Choisir le bon mode : formule, tableau ou graphique, et conclure par une phrase avec l'unité."
+
+  - type: texte
+    titre: "Écrire la fonction"
+    contenu: |-
+      Modéliser, c'est écrire une grandeur **en fonction** d'une autre.
+
+      1. Repère la **variable** x : ce qui change librement (nombre de séances, kilomètres, heures…).
+      2. Écris la formule qui donne la grandeur cherchée.
+
+      Exemple : abonnement de 15 € puis 6 € par séance. Pour x séances : **P(x) = 6x + 15**.
+
+      - 6 : le prix **par unité** (devant x).
+      - 15 : le prix **fixe** (terme constant).
+      - Fonction affine si un prix fixe existe. Fonction linéaire s'il n'y en a pas (exemple : 5x).
+
+  - type: texte
+    titre: "Trois types de questions"
+    contenu: |-
+      | La question | Ce qu'on fait |
+      |---|---|
+      | Quel prix pour x donné ? | On calcule une **image** : P(10) = 6 × 10 + 15 = 75 |
+      | Quel x pour un prix donné ? | On cherche un **antécédent** : on résout P(x) = prix |
+      | Quelle offre est la moins chère ? | On **compare** deux fonctions : on résout f(x) = g(x) |
+
+      Avant le x où les deux prix sont égaux, une offre est moins chère. Après, c'est l'autre.
+
+  - type: texte
+    titre: "Formule, tableau, graphique"
+    contenu: |-
+      On choisit le mode le plus pratique.
+
+      - **Formule** : pour calculer une image ou résoudre une équation.
+      - **Tableau de valeurs** : pour tester plusieurs valeurs. Un tableur peut le remplir : on écrit la formule dans une cellule et on la recopie vers le bas.
+      - **Graphique** : la variable est en abscisse, la grandeur en ordonnée. Le point où deux courbes se croisent donne le x où les deux résultats sont égaux.
+
+      Pour finir :
+      - Écris une **phrase de réponse avec l'unité**.
+      - Vérifie que la réponse a un sens (un nombre de séances est un entier).
+
+  - type: exemple
+    enonce: >-
+      Un parking coûte 2 € de forfait puis 1,50 € par heure. Écris le prix P(x) pour x heures.
+      Calcule le prix pour 6 heures, puis la durée pour laquelle on paie 14 €.
+    etapes:
+      - "La variable x est le nombre d'heures. Le prix fixe est 2 €. Le prix par heure est 1,50 €."
+      - "P(x) = 1,5x + 2."
+      - "Prix pour 6 heures : P(6) = 1,5 × 6 + 2 = 9 + 2 = 11 €."
+      - "Durée pour 14 € : on résout 1,5x + 2 = 14, donc 1,5x = 12."
+      - "x = 12 ÷ 1,5 = 8."
+      - "Phrase : pour 14 €, on peut rester 8 heures."
+
+  - type: exercice
+    enonce: >-
+      Un abonnement coûte 15 € puis 6 € par séance. Le prix pour x séances est P(x) = 6x + 15.
+      Quel est le prix pour 10 séances ?
+    forme: nombre
+    reponse: 75
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Pour un prix donné x, on calcule l'image de x par P."
+      - "Remplace x par le nombre de séances dans 6x + 15."
+    explication: "P(10) = 6 × 10 + 15 = 60 + 15 = 75 €."
+
+  - type: exercice
+    enonce: >-
+      Un plombier facture 30 € de déplacement, puis 45 € par heure de travail.
+      Quelle formule donne le prix pour x heures ?
+    forme: qcm
+    choix:
+      - "45x + 30"
+      - "30x + 45"
+      - "75x"
+      - "45x"
+    reponse: 0
+    indices:
+      - "Repère ce qui est payé une seule fois (prix fixe) et ce qui dépend du nombre d'heures."
+      - "Le prix par heure se place devant x. Le prix fixe s'ajoute."
+    explication: "Le déplacement (30 €) est fixe. Chaque heure coûte 45 €, donc 45x. Le prix est 45x + 30."
+
+  - type: exercice
+    enonce: >-
+      Tarif A : abonnement de 18 € puis 5 € par séance. Tarif B : 8 € par séance, sans abonnement.
+      Pour combien de séances les deux tarifs coûtent-ils le même prix ?
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    indices:
+      - "Écris les deux formules : A(x) = 5x + 18 et B(x) = 8x."
+      - "Les prix sont égaux quand A(x) = B(x). Résous cette équation."
+      - "Regroupe les x du même côté : 18 = 8x − 5x."
+    explication: "5x + 18 = 8x donne 18 = 3x, donc x = 6. Pour 6 séances, les deux tarifs coûtent 48 €."
+
+  - type: exercice
+    enonce: >-
+      Un robinet remplit un bassin avec un débit constant de 25 litres par minute.
+      Le volume d'eau après t minutes est V(t) = 25t. Au bout de combien de minutes le bassin contient-il 300 litres ?
+    forme: nombre
+    reponse: 12
+    tolerance: 0.01
+    unite: min
+    indices:
+      - "On connaît le résultat (le volume) et on cherche t : c'est un antécédent."
+      - "Résous l'équation 25t = 300."
+    explication: "25t = 300 donne t = 300 ÷ 25 = 12. Il faut 12 minutes."
+
+  - type: exercice
+    enonce: >-
+      Une salle propose deux offres. Offre 1 : 12 € d'inscription puis 4 € par entrée.
+      Offre 2 : 7 € par entrée, sans inscription. À partir de combien d'entrées
+      l'offre 1 est-elle strictement moins chère que l'offre 2 ?
+    forme: nombre
+    reponse: 5
+    tolerance: 0.01
+    indices:
+      - "Écris les deux formules, en fonction du nombre x d'entrées."
+      - "Cherche d'abord le x où les deux prix sont égaux. Que se passe-t-il pour ce x ?"
+      - "À l'égalité, les prix sont identiques : l'offre 1 n'est pas moins chère. Regarde l'entier suivant."
+    explication: "Offre 1 : 4x + 12. Offre 2 : 7x. Égalité : 4x + 12 = 7x donne x = 4 (prix égaux : 28 €). Pour x = 5 : 32 € contre 35 €. L'offre 1 est moins chère à partir de 5 entrées."
+
+  - type: question_ouverte
+    question: >-
+      Sur un graphique, les courbes de deux tarifs se croisent en un point. Que représente ce point ?
+      Que peux-tu dire avant et après ce point ?
+    indices:
+      - "Au point de croisement, les deux courbes ont la même abscisse et la même ordonnée."
+      - "Regarde quelle courbe est en dessous à gauche du point, et laquelle est en dessous à droite."
+    criteres:
+      - "L'élève dit que, en ce point, les deux tarifs donnent le même prix pour le même x."
+      - "L'élève explique qu'avant le point une offre est moins chère, et après le point c'est l'autre."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots : comment passes-tu d'une situation avec un prix fixe et un prix par unité à une
+      formule, et que fais-tu pour comparer deux tarifs ?

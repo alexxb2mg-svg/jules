@@ -1,0 +1,163 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: choix-ost-developpement-durable
+titre: Choisir un objet technique dans une démarche de développement durable
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf
+  licence: etalab-2.0
+- titre: Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol
+  url: https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Nommer les étapes du cycle de vie d'un objet et ses impacts sur l'air, l'eau, le sol et la santé.
+  - Comparer deux objets avec des calculs (bilan carbone, coût de l'énergie).
+  - Argumenter un choix avec le cycle de vie et les trois piliers du développement durable.
+- type: texte
+  titre: Le cycle de vie et les impacts
+  contenu: |-
+    Le cycle de vie d'un objet a **cinq étapes** :
+    1. extraction des matières premières ;
+    2. fabrication ;
+    3. transport et distribution ;
+    4. utilisation ;
+    5. fin de vie (réemploi, recyclage ou élimination).
+
+    Les impacts touchent **l'air**, **l'eau**, **le sol** et **la santé**.
+
+    Les choix des concepteurs (matériaux, énergie, traitement de l'information) agissent sur chaque étape. Un boîtier collé rend la réparation difficile. Une batterie demande l'extraction de métaux.
+- type: texte
+  titre: Comparer deux objets
+  contenu: |-
+    Le **bilan carbone** compte les gaz à effet de serre émis sur tout le cycle de vie, en kg équivalent CO2 (kg CO2e).
+
+    Pour comparer deux objets qui répondent au même besoin, on prend la **même durée** :
+
+    **fabrication + (émissions par an × nombre d'années)**
+
+    Un objet plus cher à l'achat peut coûter moins cher au total : il consomme moins, dure plus longtemps et se répare.
+- type: texte
+  titre: Les trois piliers et les critères
+  contenu: |-
+    Le développement durable repose sur **trois piliers** :
+    - **environnemental** : préserver la nature et les ressources ;
+    - **social** : santé, conditions de travail, accès pour tous ;
+    - **économique** : coût raisonnable à l'achat et à l'usage, activité et emplois.
+
+    Critères de choix : qualité, efficacité énergétique, durabilité, recyclabilité, prix.
+- type: texte
+  titre: Les documents qui aident à choisir
+  contenu: |-
+    | Document | Ce qu'il dit |
+    |---|---|
+    | Notice technique | caractéristiques, sécurité, utilisation, entretien, fin de vie |
+    | Étiquette énergie | consommation, classes de A (la plus économe) à G |
+    | Indice de réparabilité | note sur 10 : facilité à réparer |
+    | Poubelle barrée | ne pas jeter avec les ordures ménagères, rapporter dans un point de collecte |
+
+    Ne confonds pas l'étiquette énergie (consommation) et l'indice de réparabilité (réparation).
+- type: exemple
+  enonce: 'Document fictif : un réfrigérateur A consomme 150 kWh par an, un réfrigérateur B 250 kWh par
+    an. Quelle différence de consommation sur 10 ans ?'
+  etapes:
+  - 'On compare sur la même durée : 10 ans.'
+  - 'A : 150 × 10 = 1 500 kWh. B : 250 × 10 = 2 500 kWh.'
+  - 'Différence : 2 500 − 1 500 = 1 000 kWh en faveur de A.'
+  - Avant de choisir, il faut aussi comparer leur prix, leur fabrication et leur réparabilité.
+- type: exercice
+  enonce: Quelle est la première étape du cycle de vie d'un objet technique ?
+  forme: qcm
+  choix:
+  - Extraction des matières premières
+  - Fabrication
+  - Utilisation
+  - Fin de vie
+  reponse: 0
+  indices:
+  - Avant de fabriquer un objet, il faut avoir de la matière.
+  - Le cycle va de la matière première jusqu'à la fin de vie de l'objet.
+  explication: 'Les étapes sont : extraction des matières premières, fabrication, transport et distribution,
+    utilisation, fin de vie.'
+- type: exercice
+  enonce: En France, certains appareils affichent une note sur 10 qui indique s'il est facile de les réparer.
+    Comment s'appelle cette note ?
+  forme: reponse_courte
+  reponse: indice de réparabilité
+  reponses_acceptees:
+  - indice de réparabilité
+  - l'indice de réparabilité
+  - indice de reparabilite
+  - l'indice de reparabilite
+  indices:
+  - Cette note s'affiche sur certains appareils. Elle parle de la facilité à remettre un appareil en état.
+  - 'C''est un « indice ». Complète : indice de ...'
+  - Le deuxième mot est de la même famille que le verbe « réparer ».
+  explication: 'C''est l''indice de réparabilité : plus la note est haute, plus l''appareil est facile
+    à réparer.'
+- type: exercice
+  enonce: Quel document classe un appareil de A (le plus économe) à G selon sa consommation d'énergie
+    ?
+  forme: qcm
+  choix:
+  - L'étiquette énergie
+  - L'indice de réparabilité
+  - La notice technique
+  reponse: 0
+  indices:
+  - Il faut un document qui parle de consommation, pas de réparation.
+  - Les lettres A à G classent des appareils du plus économe au moins économe.
+  explication: C'est l'étiquette énergie. L'indice de réparabilité est une note sur 10 pour la réparation.
+    La notice technique décrit l'objet et son utilisation.
+- type: exercice
+  enonce: Un appareil est vendu à un prix abordable et coûte peu en entretien. Quel pilier du développement
+    durable cet argument concerne-t-il ?
+  forme: qcm
+  choix:
+  - Environnemental
+  - Social
+  - Économique
+  reponse: 2
+  indices:
+  - 'Regarde de quoi parle l''argument : de l''argent, des personnes ou de la nature ?'
+  - Un prix et un coût d'entretien concernent l'argent.
+  explication: 'C''est le pilier économique : coût raisonnable à l''achat et à l''usage. Environnemental
+    parle de la nature et des ressources, social des personnes.'
+- type: exercice
+  enonce: 'Document fictif : deux lampes de bureau. Lampe A : fabrication 12 kg CO2e, utilisation 5 kg
+    CO2e par an. Lampe B : fabrication 20 kg CO2e, utilisation 2 kg CO2e par an. On les garde 8 ans. Calcule
+    le bilan carbone de chaque lampe sur 8 ans. De combien de kg CO2e la lampe la moins émettrice fait-elle
+    mieux que l''autre ? Écris seulement le nombre.'
+  forme: nombre
+  reponse: 16
+  tolerance: 0.01
+  unite: kg CO2e
+  indices:
+  - Sur 8 ans, chaque lampe a une émission de fabrication et 8 années d'utilisation.
+  - Bilan = fabrication + (émissions par an × nombre d'années). Fais-le pour A, puis pour B.
+  - Tu obtiens deux bilans. La réponse est la différence entre le plus grand et le plus petit.
+  explication: 'Lampe A : 12 + 5 × 8 = 12 + 40 = 52 kg CO2e. Lampe B : 20 + 2 × 8 = 20 + 16 = 36 kg CO2e.
+    Écart : 52 − 36 = 16 kg CO2e. La lampe B est la moins émettrice sur 8 ans.'
+- type: question_ouverte
+  question: Deux smartphones répondent au même besoin. Le A est moins cher, sa coque est collée et impossible
+    à ouvrir, son indice de réparabilité est bas. Le B est plus cher, son indice de réparabilité est élevé
+    et ses pièces détachées sont disponibles pendant plusieurs années. Choisis-en un et argumente avec
+    le cycle de vie et les trois piliers du développement durable.
+  indices:
+  - Où le collage de la coque agit-il dans le cycle de vie ? Pense à la réparation et à la fin de vie.
+  - 'Passe les trois piliers un par un : environnemental, social, économique.'
+  - Un objet plus cher à l'achat peut coûter moins cher au total.
+  criteres:
+  - L'élève fait un choix clair et l'appuie sur des critères (durabilité, réparabilité, prix total).
+  - L'élève relie le choix au cycle de vie (moins de fabrications, réparation possible, fin de vie).
+  - 'L''élève cite les trois piliers : environnemental, social, économique.'
+- type: synthese
+  consigne: 'Avec tes mots : cite les étapes du cycle de vie, les trois piliers du développement durable,
+    et dis comment tu compares deux objets avant d''en choisir un.'

@@ -1,0 +1,138 @@
+notion: theme-4-etat-societe-modes-vie
+titre: État, société et modes de vie (XIIIe-XVIIIe siècle)
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Citer la hiérarchie des genres en peinture et expliquer qui l'a fixée.
+  - Expliquer comment un portrait ou un palais sert le pouvoir du roi.
+  - Décrire une scène de genre, distinguer danse populaire et danse de cour, et citer un exemple de lien entre sciences et arts.
+- type: texte
+  titre: L'Académie et la hiérarchie des genres
+  contenu: |-
+    En France, l'**Académie royale de peinture et de sculpture** est fondée en 1648. Elle forme les artistes et fixe des règles.
+    Elle classe les genres de peinture, du plus prestigieux au plus modeste :
+    - la **peinture d'histoire** (sujets religieux, mythologiques ou historiques) ;
+    - le **portrait** ;
+    - des genres jugés plus modestes : la **scène de genre** (vie quotidienne) et le paysage ;
+    - tout en bas, la **nature morte** (objets, fruits, fleurs, gibier).
+- type: texte
+  titre: Le pouvoir du roi en images
+  contenu: |-
+    L'art sert le pouvoir de l'État, surtout celui du roi.
+    - Hyacinthe Rigaud peint Louis XIV en costume de sacre (1701) : manteau fleurdelisé, couronne, sceptre, épée.
+    - La cour s'installe à Versailles en 1682.
+    - La galerie des Glaces (1678-1684) célèbre les victoires du roi.
+    - Les jardins d'André Le Nôtre dessinent une nature ordonnée.
+    L'habitat, le décor et le mobilier des nobles copient ce goût.
+- type: texte
+  titre: Modes de vie, nature et sciences
+  contenu: |-
+    Les scènes de genre montrent les modes de vie : La Laitière de Vermeer (vers 1658).
+    Le rapport à la nature change :
+    - Pieter Bruegel l'Ancien : Les Chasseurs dans la neige (1565), un paysage ;
+    - Chardin : La Raie (1728), une nature morte.
+    Au XVIIIe siècle, Buffon publie une Histoire naturelle des animaux et Linné classe les plantes et les animaux. Les bestiaires du Moyen Âge, eux, mêlaient animaux réels et imaginaires.
+- type: texte
+  titre: Les danses
+  contenu: |-
+    La danse va de la danse **populaire**, dans les villages, à la danse de **cour**, codifiée.
+    - En 1653, à 14 ans, Louis XIV incarne le Soleil levant dans le Ballet royal de la Nuit.
+    - Lully et Molière créent des comédies-ballets, comme Le Bourgeois gentilhomme (1670).
+    Une comédie-ballet mêle théâtre, musique et danse.
+- type: exemple
+  enonce: Explique comment le décor de la galerie des Glaces, à Versailles, sert le pouvoir du roi.
+  etapes:
+  - 'Repère la date : la galerie est décorée de 1678 à 1684, sous Louis XIV.'
+  - 'Cherche ce que le décor célèbre : les victoires du roi.'
+  - 'Conclusion : un palais n''est pas seulement une maison, c''est un outil qui montre la gloire du roi.'
+- type: exercice
+  enonce: Selon l'Académie royale, quel genre de peinture est tout en haut de la hiérarchie ?
+  forme: qcm
+  choix:
+  - La nature morte
+  - Le paysage
+  - La scène de genre
+  - La peinture d'histoire
+  reponse: 3
+  indices:
+  - Pense au genre qui raconte de grands récits religieux, mythologiques ou historiques.
+  - 'Le genre le plus modeste représente des objets : ce n''est pas lui qu''on cherche.'
+  explication: La peinture d'histoire est au sommet. Viennent ensuite le portrait, puis des genres plus modestes (scène de genre, paysage). La nature morte est tout en bas.
+- type: exercice
+  enonce: Comment appelle-t-on l'institution royale fondée en France en 1648 pour former les peintres et les sculpteurs et fixer les règles de l'art ?
+  forme: reponse_courte
+  reponse: Académie royale
+  reponses_acceptees:
+  - académie
+  - l'académie
+  - Académie royale
+  - académie royale
+  - Académie royale de peinture et de sculpture
+  - academie
+  indices:
+  - Aujourd'hui encore, des institutions de ce nom réunissent des écrivains ou des savants.
+  - Le mot commence par « acad- ». Tu peux aussi préciser qu'elle est royale.
+  explication: L'Académie royale de peinture et de sculpture, fondée en 1648. Elle forme les artistes et fixe la hiérarchie des genres.
+- type: exercice
+  enonce: Un tableau de Vermeer (vers 1658) montre une servante qui verse du lait dans une cuisine. À quel genre appartient-il ?
+  forme: qcm
+  choix:
+  - Une scène de genre
+  - Un portrait royal
+  - Une peinture d'histoire
+  - Une nature morte
+  reponse: 0
+  indices:
+  - 'Regarde ce que le tableau montre : une personne connue, un lieu, des objets ou la vie de tous les jours ?'
+  - La servante est une personne ordinaire, pas un roi ni un héros de récit.
+  explication: 'Le tableau montre la vie quotidienne de gens ordinaires : c''est une scène de genre. Ce n''est pas un portrait royal, ni un grand récit, ni seulement des objets.'
+- type: exercice
+  enonce: En 1653, à 14 ans, Louis XIV danse le rôle du Soleil levant dans le Ballet royal de la Nuit. Que montre cet épisode ?
+  forme: qcm
+  choix:
+  - Le roi se moque de la danse populaire
+  - La danse est interdite à la cour
+  - La danse de cour met en scène la gloire du roi
+  reponse: 2
+  indices:
+  - Demande-toi pourquoi un roi choisit de danser lui-même, en public, un rôle lumineux.
+  - Le Soleil éclaire tout, comme le roi est placé au centre de la cour. Quel message le ballet transmet-il ?
+  explication: En dansant le Soleil, Louis XIV se présente comme le centre de la cour. La danse de cour, codifiée, sert à montrer la gloire du roi.
+- type: exercice
+  enonce: Dans son portrait de 1701, Rigaud peint Louis XIV en pied, en manteau fleurdelisé, avec la couronne, le sceptre et l'épée. Quelle est la fonction principale de ce tableau ?
+  forme: qcm
+  choix:
+  - Montrer la vie quotidienne des paysans
+  - Vendre des vêtements de luxe
+  - Célébrer la puissance et la majesté du roi
+  - Dénoncer les dépenses du roi
+  reponse: 2
+  indices:
+  - Qui a commandé ce tableau, et que veut le roi qu'on pense de lui ?
+  - 'Relève les objets : la couronne, le sceptre et l''épée sont des symboles du pouvoir.'
+  - 'Regarde le ton du tableau : moqueur ou grandiose ?'
+  explication: Le costume de sacre et les symboles du pouvoir font de ce portrait une image officielle qui célèbre la puissance du roi. Un portrait royal est un outil de pouvoir, pas une simple ressemblance.
+- type: question_ouverte
+  question: Décris La Laitière de Vermeer ou un autre tableau du cours et explique à quel genre il appartient dans la hiérarchie de l'Académie. Dis si ce genre est prestigieux ou non.
+  indices:
+  - 'Commence par dire ce que l''on voit : personnages, lieu, objets.'
+  - 'Puis demande-toi : est-ce un portrait, un grand récit, un paysage, des objets ou une scène de vie quotidienne ?'
+  criteres:
+  - L'élève décrit l'œuvre avec des mots précis.
+  - L'élève nomme correctement le genre (par exemple scène de genre pour La Laitière).
+  - L'élève place ce genre dans la hiérarchie (genre jugé plus modeste que la peinture d'histoire et le portrait).
+- type: synthese
+  consigne: Écris, en deux ou trois phrases, deux moyens qu'utilise Louis XIV pour montrer son pouvoir avec les arts (image, palais, danse).

@@ -1,0 +1,157 @@
+notion: ponctuation-syntaxique
+titre: "Le rôle syntaxique de la ponctuation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer le rôle des signes de ponctuation dans une phrase."
+      - "Distinguer la virgule, le point-virgule et les deux-points."
+      - "Ponctuer correctement ses propres phrases, sans virgule entre le sujet et le verbe."
+
+  - type: texte
+    titre: "Les signes qui terminent la phrase"
+    contenu: |-
+      Chaque signe a un **rôle syntaxique** : il organise la phrase et montre les liens entre les groupes. Une virgule mal placée peut changer le sens.
+
+      | Signe | Rôle |
+      |---|---|
+      | Le **point** | termine une phrase |
+      | Le **point d'interrogation** | termine une question |
+      | Le **point d'exclamation** | marque un sentiment fort ou un ordre |
+      | Les **points de suspension** | marquent une phrase inachevée ou une hésitation |
+
+  - type: texte
+    titre: "La virgule, le point-virgule, les deux-points"
+    contenu: |-
+      **La virgule** sert à :
+
+      - séparer les éléments d'une **liste** : « Il achète des pommes, des poires et du pain. » ;
+      - isoler un groupe **déplacé** ou **détaché** : « Demain, nous partons. » ; « Paul, mon voisin, est parti. » (apposition) ;
+      - séparer des propositions **juxtaposées** : « Il arrive, il salue, il s'assoit. » ;
+      - précéder souvent **mais**, **car**, **or** ;
+      - isoler le mot à qui l'on parle : « Mange, papa. »
+
+      **Attention :** on ne met pas de virgule entre le **sujet** et son **verbe**.
+
+  - type: texte
+    titre: "Les autres signes"
+    contenu: |-
+      **Le point-virgule** relie deux propositions indépendantes proches par le sens, sans conjonction. La pause est plus forte qu'avec la virgule : « Le ciel s'assombrit ; l'orage approche. »
+
+      **Les deux-points** annoncent une explication, une conséquence, une énumération ou une parole rapportée : « Il pleuvait fort : la sortie fut annulée. »
+
+      **Les parenthèses** et **les tirets** isolent une information secondaire.
+
+      **Les guillemets** encadrent une citation ou une parole rapportée directement. **Le tiret** en début de ligne marque le changement de locuteur dans un dialogue.
+
+  - type: texte
+    titre: "La méthode"
+    contenu: |-
+      1. Repère les **propositions** et les **groupes** de la phrase.
+      2. Demande-toi : ce groupe est-il **déplacé, détaché ou supprimable** ? Alors, isole-le avec des virgules.
+      3. Entre deux propositions proches par le sens, choisis **virgule, point-virgule ou deux-points** selon le lien.
+      4. Vérifie qu'**aucune virgule** ne sépare le sujet du verbe.
+      5. Relis à voix haute.
+
+      **Erreur fréquente :** oublier la **deuxième virgule** qui ferme une apposition.
+
+  - type: exemple
+    enonce: >-
+      Ponctue cette phrase, puis explique le rôle de chaque signe : « Ma sœur la plus jeune adore le
+      dessin elle dessine tous les soirs ».
+    etapes:
+      - "« la plus jeune » précise « Ma sœur » et peut être supprimé : c'est une apposition. On l'isole avec deux virgules : « Ma sœur, la plus jeune, adore le dessin »."
+      - "Il y a deux propositions proches par le sens : la seconde explique la première. On peut mettre les deux-points : « Ma sœur, la plus jeune, adore le dessin : elle dessine tous les soirs »."
+      - "Un point termine la phrase. On n'a pas mis de virgule entre le sujet « Ma sœur » et le verbe « adore » : les virgules encadrent seulement l'apposition."
+
+  - type: exercice
+    enonce: "Dans « Il achète des pommes, des poires et du pain. », quel est le rôle de la virgule ?"
+    forme: qcm
+    choix:
+      - "Séparer les éléments d'une énumération"
+      - "Annoncer une explication"
+      - "Terminer la phrase"
+      - "Encadrer une citation"
+    reponse: 0
+    indices:
+      - "Regarde ce qui se trouve avant et après la virgule : des groupes du même genre."
+      - "Combien de fruits et d'aliments sont cités à la suite ?"
+    explication: "La virgule sépare des éléments qui se suivent : pommes, poires, pain. C'est une énumération (une liste)."
+
+  - type: exercice
+    enonce: "Quel signe de ponctuation encadre les paroles rapportées directement ? (Un mot, au pluriel.)"
+    forme: reponse_courte
+    reponse: "guillemets"
+    reponses_acceptees: ["les guillemets", "guillemet", "un guillemet", "des guillemets"]
+    indices:
+      - "Ce signe va par deux : il s'ouvre avant les paroles et se ferme après."
+      - "Pense à un dialogue écrit dans un roman : ce signe entoure ce que dit un personnage."
+    explication: "Les guillemets encadrent une citation ou une parole rapportée directement."
+
+  - type: exercice
+    enonce: "Dans quelle phrase quelqu'un demande-t-il à un enfant de manger ? Compare : « Mange, Léo. » et « Mange Léo. »"
+    forme: qcm
+    choix:
+      - "« Mange, Léo. » : la virgule isole la personne à qui l'on parle."
+      - "« Mange Léo. » : la virgule est inutile."
+      - "Les deux phrases ont le même sens."
+      - "Aucune des deux."
+    reponse: 0
+    indices:
+      - "Demande-toi qui mange, et qui reçoit l'ordre, dans chaque phrase."
+      - "Sans virgule, « Léo » devient ce qu'on mange."
+    explication: "Avec la virgule, « Léo » est isolé : c'est la personne à qui l'on s'adresse. Sans virgule, Léo serait ce qu'on mange. La virgule change le sens."
+
+  - type: exercice
+    enonce: >-
+      Quel signe relie deux propositions indépendantes proches par le sens, sans conjonction,
+      comme dans « Le vent se lève ; la pluie arrive. » ?
+    forme: reponse_courte
+    reponse: "point-virgule"
+    reponses_acceptees: ["le point-virgule", "point virgule", "le point virgule", "un point-virgule", "un point virgule"]
+    indices:
+      - "Ce signe est plus fort qu'une virgule, mais plus léger qu'un point."
+      - "Son nom est formé de deux mots, dont le nom d'un autre signe de ponctuation."
+    explication: "Le point-virgule relie deux propositions indépendantes dont le sens est proche, sans conjonction."
+
+  - type: exercice
+    enonce: "Quelle phrase est correctement ponctuée ?"
+    forme: qcm
+    choix:
+      - "Les enfants, jouent dans la cour."
+      - "Léa, ma meilleure amie, habite à Lyon."
+      - "Léa, ma meilleure amie habite à Lyon."
+      - "Léa ma meilleure amie, habite à Lyon."
+    reponse: 1
+    indices:
+      - "Une apposition (un groupe qui précise un nom) est isolée par deux virgules : une avant, une après."
+      - "Vérifie aussi qu'aucune virgule ne sépare le sujet de son verbe."
+    explication: "« ma meilleure amie » est une apposition : on l'entoure de deux virgules. La phrase 1 sépare le sujet du verbe. Les phrases 3 et 4 oublient une virgule."
+
+  - type: question_ouverte
+    question: >-
+      Écris deux phrases. La première contient une apposition isolée par deux virgules. La seconde
+      relie deux propositions indépendantes avec un point-virgule ou des deux-points. Explique en
+      une phrase le choix de chaque signe.
+    indices:
+      - "Pour l'apposition, pense à un groupe qui précise un nom et qu'on peut supprimer."
+      - "Deux idées proches se relient par un point-virgule. Une explication s'annonce par des deux-points."
+    criteres:
+      - "La première phrase contient une apposition correctement isolée par deux virgules."
+      - "La seconde phrase relie deux propositions indépendantes avec un point-virgule ou des deux-points employé à bon escient."
+      - "L'élève explique le rôle de chaque signe (isoler une précision, relier deux idées proches ou annoncer une explication)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre la virgule, le
+      point-virgule et les deux-points, et la règle à ne pas oublier pour le sujet et le verbe.

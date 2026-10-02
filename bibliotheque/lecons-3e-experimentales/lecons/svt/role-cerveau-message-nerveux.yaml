@@ -1,0 +1,164 @@
+notion: role-cerveau-message-nerveux
+titre: "Le cerveau, le message nerveux et les centres nerveux"
+duree_minutes: 28
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les éléments du système nerveux : récepteur, nerf, centres nerveux, cellules nerveuses."
+      - "Suivre le trajet d'un message nerveux, du récepteur jusqu'au muscle."
+      - "Expliquer ce que fait le cerveau quand il reçoit plusieurs informations."
+
+  - type: texte
+    titre: "Récepteurs et message nerveux"
+    contenu: |-
+      Le système nerveux reçoit des informations, les traite et commande une réponse.
+
+      - Les **organes des sens** (œil, oreille, peau, nez, langue) contiennent des **récepteurs sensoriels**.
+      - Un récepteur capte une **stimulation** (lumière, son, contact, odeur, saveur).
+      - Il la transforme en **message nerveux**.
+
+      Le message nerveux est un **signal électrique**. Il circule dans un **seul sens**.
+
+  - type: texte
+    titre: "Cellules nerveuses, nerfs et centres nerveux"
+    contenu: |-
+      | Élément | Ce que c'est |
+      |---|---|
+      | Neurone | Cellule nerveuse : un corps cellulaire et de longs prolongements (les fibres nerveuses) |
+      | Nerf | Faisceau de fibres nerveuses, comme un câble de fils électriques |
+      | Nerf sensitif | Conduit le message des récepteurs vers les centres nerveux |
+      | Nerf moteur | Conduit le message des centres nerveux vers un muscle |
+      | Centres nerveux | L'encéphale (dont le cerveau) et la moelle épinière |
+
+      La moelle épinière est protégée par la colonne vertébrale (des os). Elle relie le cerveau aux nerfs du corps.
+
+  - type: texte
+    titre: "Le rôle du cerveau"
+    contenu: |-
+      Le cerveau reçoit **en même temps** beaucoup d'informations, venues de plusieurs organes des sens.
+
+      - Chaque type d'information arrive dans une **zone précise** du cerveau (vision, audition, toucher...).
+      - Le cerveau **met ces informations en relation** : c'est l'**intégration**.
+      - Il **élabore une réponse** adaptée.
+
+      L'œil capte la lumière, mais c'est le cerveau qui donne la perception : il « voit ».
+
+  - type: texte
+    titre: "Le trajet complet"
+    contenu: |-
+      Pour un mouvement volontaire, la commande part du cerveau.
+
+      **récepteur → nerf sensitif → centres nerveux → nerf moteur → muscle**
+
+      Le message moteur descend par la moelle épinière. Un nerf moteur le conduit jusqu'au muscle, qui se contracte.
+
+  - type: exemple
+    enonce: "Pendant le cours, Yanis entend la sonnerie et se lève de sa chaise. Décris le trajet de l'information."
+    etapes:
+      - "L'oreille (organe des sens) capte le son : le récepteur produit un message nerveux sensitif."
+      - "Un nerf sensitif conduit ce message jusqu'au cerveau, dans les centres nerveux."
+      - "Le cerveau reconnaît la sonnerie et élabore une commande."
+      - "Le message moteur descend par la moelle épinière, puis des nerfs moteurs le conduisent aux muscles des jambes."
+      - "Les muscles se contractent : Yanis se lève."
+
+  - type: exercice
+    enonce: "Un nerf sensitif conduit le message nerveux dans quel sens ?"
+    forme: qcm
+    choix:
+      - "Des récepteurs vers les centres nerveux"
+      - "Des centres nerveux vers les muscles"
+      - "Des muscles vers les récepteurs"
+      - "Dans les deux sens à la fois"
+    reponse: 0
+    indices:
+      - "Le message nerveux circule dans un seul sens."
+      - "« Sensitif » veut dire « qui vient des sens »."
+      - "Le nerf qui va vers les muscles s'appelle le nerf moteur, pas le nerf sensitif."
+    explication: "Le nerf sensitif conduit le message des récepteurs vers les centres nerveux. C'est le nerf moteur qui va vers les muscles."
+
+  - type: exercice
+    enonce: "Comment s'appelle le centre nerveux, protégé par la colonne vertébrale, qui relie le cerveau aux nerfs du corps ?"
+    forme: reponse_courte
+    reponse: "la moelle épinière"
+    reponses_acceptees: ["moelle épinière", "la moelle épinière", "moelle epiniere", "la moelle epiniere", "moelle", "la moelle"]
+    indices:
+      - "La colonne vertébrale est faite d'os. Elle protège quelque chose de nerveux."
+      - "Les centres nerveux sont l'encéphale et un autre organe."
+      - "Son nom contient le mot « épinière », comme l'épine dorsale."
+    explication: "C'est la moelle épinière. Elle est protégée par la colonne vertébrale et relie le cerveau aux nerfs du corps."
+
+  - type: exercice
+    enonce: "Document (fictif) : un message nerveux parcourt 60 mètres en 0,5 seconde dans un nerf. Quelle est sa vitesse, en mètres par seconde ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 120
+    tolerance: 0.01
+    unite: "m/s"
+    indices:
+      - "Une vitesse relie une distance et une durée."
+      - "Vitesse = distance ÷ durée."
+      - "Divise le nombre de mètres par le nombre de secondes."
+    explication: "60 ÷ 0,5 = 120. Le message nerveux va à 120 mètres par seconde dans ce document."
+
+  - type: exercice
+    enonce: "Document (fictif) : après un accident, une personne ne sent plus du tout le contact d'un objet sur sa main, mais elle arrive encore à bouger ses doigts. Quelle partie du trajet est le plus probablement abîmée ?"
+    forme: qcm
+    choix:
+      - "Le nerf moteur qui va aux muscles des doigts"
+      - "Le nerf sensitif de la main"
+      - "Les muscles des doigts"
+      - "La commande du cerveau pour bouger"
+    reponse: 1
+    indices:
+      - "Sépare ce qui fonctionne encore (le mouvement) de ce qui ne fonctionne plus (la sensation)."
+      - "Un message sensitif va vers le cerveau. Un message moteur en vient."
+      - "La personne bouge ses doigts : tout le trajet de la commande est donc intact."
+    explication: "Le mouvement fonctionne : le nerf moteur, les muscles et la commande sont intacts. La sensation manque : c'est le trajet sensitif qui est coupé, donc le nerf sensitif."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : on observe le cerveau d'un élève. Quand il regarde un film, une zone A
+      (active avec l'image seule) et une zone B (active avec le son seul) s'activent en même
+      temps. Que montre cette observation ?
+    forme: qcm
+    choix:
+      - "Le cerveau reçoit plusieurs informations en même temps, chacune dans une zone précise"
+      - "Le cerveau ne peut traiter qu'une seule information à la fois"
+      - "Les yeux et les oreilles analysent eux-mêmes les informations"
+      - "Les muscles décident seuls de se contracter"
+    reponse: 0
+    indices:
+      - "Regarde combien de zones sont actives en même temps."
+      - "Chaque type d'information arrive dans une zone précise du cerveau."
+      - "Ce sont les récepteurs qui captent, et le cerveau qui interprète."
+    explication: "Deux zones sont actives ensemble : le cerveau reçoit plusieurs informations en même temps, chacune dans sa zone. Il les met ensuite en relation."
+
+  - type: question_ouverte
+    question: >-
+      Ton téléphone sonne sur la table. Tu le vois et tu l'entends, puis tu tends la main pour le
+      prendre. Décris le trajet des messages nerveux, en disant ce que fait le cerveau.
+    indices:
+      - "Quels organes des sens captent les stimulations ?"
+      - "Que fait le cerveau des deux informations, vue et son ?"
+      - "Quel trajet suit la commande pour arriver au muscle du bras ?"
+    criteres:
+      - "L'élève nomme les récepteurs (œil, oreille) et parle de messages nerveux sensitifs conduits par des nerfs jusqu'au cerveau."
+      - "L'élève dit que le cerveau reçoit les deux informations, les met en relation et élabore une commande."
+      - "L'élève décrit le message moteur : moelle épinière, nerf moteur, muscle qui se contracte."
+
+  - type: synthese
+    consigne: >-
+      Écris le trajet d'un message nerveux, du récepteur jusqu'au muscle, en une ou deux phrases.
+      Ajoute ce que le cerveau fait quand il reçoit plusieurs informations.

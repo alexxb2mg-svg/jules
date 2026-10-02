@@ -1,0 +1,163 @@
+notion: decrire-oeuvre-lexique
+titre: "Décrire une œuvre avec un lexique précis"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire une œuvre avec des mots précis, sans l'interpréter."
+      - "Décrire l'espace plan par plan, puis la composition, les couleurs et la lumière."
+      - "Utiliser des indices observés pour situer une œuvre dans une époque et une civilisation."
+
+  - type: texte
+    titre: "La carte d'identité et le genre"
+    contenu: |-
+      Décrire, c'est dire ce que l'on voit, avec des mots précis, avant de chercher ce que l'œuvre veut dire.
+
+      On commence par sa **carte d'identité** : titre, artiste, date, technique, lieu de conservation.
+      Techniques courantes : huile sur toile, fresque (peinture sur un mur recouvert d'un enduit frais),
+      mosaïque (petits cubes colorés), photographie, gravure.
+
+      Puis le **genre** : portrait (une personne), paysage (un lieu, la nature), nature morte (des objets, des fruits,
+      des fleurs), scène d'histoire ou scène religieuse.
+
+  - type: texte
+    titre: "L'espace : plan par plan"
+    contenu: |-
+      On décrit l'espace **plan par plan** :
+      - le **premier plan** : le plus proche, en général en bas de l'image ;
+      - le **second plan** ;
+      - l'**arrière-plan** : le fond.
+
+      La **perspective** donne l'illusion de la profondeur. Ses lignes se rejoignent en un **point de fuite**.
+
+  - type: texte
+    titre: "Composition, couleurs, lumière, point de vue"
+    contenu: |-
+      - **Composition** : lignes de force (verticales, horizontales, diagonales), formes géométriques (triangle, pyramide), centre de l'image.
+      - **Couleurs** : chaudes ou froides, contrastes. Puis la **lumière**.
+      - **Point de vue** : en **plongée**, on voit d'en haut. En **contre-plongée**, on voit d'en bas et le sujet paraît plus grand.
+
+  - type: texte
+    titre: "Sculpture, époque et civilisation"
+    contenu: |-
+      En sculpture : la **ronde-bosse** est une statue que l'on peut voir sous tous les angles.
+      Le **bas-relief** est une sculpture en faible saillie sur un fond. Le marbre et le bronze sont deux matériaux fréquents.
+
+      Les éléments observés aident à situer l'œuvre : des hiéroglyphes renvoient à l'Égypte antique,
+      des vitraux et des arcs brisés à l'art gothique du Moyen Âge.
+
+      Au brevet : une description organisée, avec un vocabulaire précis, sans interprétation.
+
+  - type: exemple
+    enonce: >-
+      Décris en quelques phrases le début de La Liberté guidant le peuple d'Eugène Delacroix.
+    etapes:
+      - "Carte d'identité : c'est une huile sur toile peinte par Eugène Delacroix en 1830, conservée au musée du Louvre. C'est une scène d'histoire."
+      - "Premier plan : des corps sont étendus au sol."
+      - "Plan central : une femme coiffée d'un bonnet rouge brandit un drapeau tricolore et avance sur une barricade, entourée d'insurgés."
+      - "Arrière-plan : à droite, on devine les tours de Notre-Dame dans la fumée."
+      - "Composition : elle forme une pyramide dont le drapeau est le sommet."
+
+  - type: exercice
+    enonce: "Dans une description, que désigne le « premier plan » ?"
+    forme: qcm
+    choix:
+      - "La partie de l'image la plus proche du spectateur"
+      - "Le fond de l'image"
+      - "Le personnage le plus important"
+    reponse: 0
+    indices:
+      - "Pense à l'ordre de la description : on va du plus proche au plus lointain."
+      - "Le fond de l'image s'appelle l'arrière-plan."
+    explication: "Le premier plan est la partie de l'image la plus proche du spectateur, en général en bas. Le fond est l'arrière-plan."
+
+  - type: exercice
+    enonce: >-
+      Le spectateur voit la scène d'en bas vers le haut, et le sujet paraît plus grand. Comment s'appelle
+      ce point de vue ?
+    forme: reponse_courte
+    reponse: "contre-plongée"
+    reponses_acceptees:
+      - "contre-plongée"
+      - "contre plongée"
+      - "contreplongée"
+      - "la contre-plongée"
+      - "la contre plongée"
+      - "une contre-plongée"
+      - "une contre plongée"
+      - "contre-plongee"
+      - "contre plongee"
+    indices:
+      - "Ce n'est pas le point de vue d'en haut, qui a un autre nom."
+      - "Le mot commence par « contre »."
+    explication: "Le point de vue d'en bas vers le haut, qui grandit le sujet, s'appelle la contre-plongée. La plongée, elle, est la vue d'en haut."
+
+  - type: exercice
+    enonce: >-
+      Une œuvre représente des objets : des fruits posés à côté d'un vase. Quel est son genre ?
+    forme: qcm
+    choix:
+      - "Un portrait"
+      - "Un paysage"
+      - "Une nature morte"
+    reponse: 2
+    indices:
+      - "Regarde ce qui est représenté : des objets ou des personnes ?"
+      - "Le portrait montre une personne, le paysage montre un lieu."
+    explication: "Une œuvre qui représente des objets (fruits, vases, fleurs coupées) est une nature morte."
+
+  - type: exercice
+    enonce: >-
+      Un sculpteur a réalisé une statue en marbre que l'on peut contourner et voir sous tous les angles.
+      Comment appelle-t-on ce type de sculpture ?
+    forme: qcm
+    choix:
+      - "Un bas-relief"
+      - "Une ronde-bosse"
+      - "Une fresque"
+    reponse: 1
+    indices:
+      - "Une des deux sculptures est en faible saillie sur un fond : elle ne se contourne pas."
+      - "La fresque est une peinture, pas une sculpture."
+    explication: "Une sculpture que l'on peut contourner est une ronde-bosse. Le bas-relief est fixé sur un fond, et la fresque est une peinture sur un mur."
+
+  - type: exercice
+    enonce: >-
+      Quelle phrase est une description, sans interprétation, d'un tableau ?
+    forme: qcm
+    choix:
+      - "Au premier plan, des personnages sont assis. Au centre, une diagonale mène vers une maison, à l'arrière-plan."
+      - "Le peintre a voulu montrer que la vie à la campagne est triste."
+      - "Ce tableau est très beau."
+    reponse: 0
+    indices:
+      - "Une description dit ce que l'on voit, avec de l'ordre et du vocabulaire précis."
+      - "Élimine les phrases qui donnent un sens ou un avis."
+    explication: "La première phrase décrit ce que l'on voit, plan par plan, avec un vocabulaire précis. La deuxième donne un sens (interprétation) et la troisième un avis."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre que tu connais. Décris-la en quatre ou cinq phrases, sans donner de sens : carte
+      d'identité, plans, composition, couleurs.
+    indices:
+      - "Suis l'ordre : carte d'identité, genre, premier plan, arrière-plan, composition, couleurs et lumière."
+      - "Relis ta description : chaque phrase dit-elle ce que l'on voit, sans dire ce que cela signifie ?"
+    criteres:
+      - "L'élève donne une carte d'identité (titre, artiste, date, technique) ou nomme le genre."
+      - "L'élève décrit l'espace plan par plan avec du vocabulaire précis (premier plan, arrière-plan, composition, couleurs)."
+      - "L'élève ne donne ni avis ni interprétation."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, dans quel ordre tu décris une œuvre et
+      trois mots de vocabulaire que tu utilises.

@@ -42,9 +42,12 @@ def _coefficient(taux: int, hausse: bool) -> Fraction:
     return Fraction(100 + taux if hausse else 100 - taux, 100)
 
 
-def _tirer_evolution(rng: random.Random, difficulte: int) -> tuple[int, bool]:
+def _tirer_evolution(
+    rng: random.Random, difficulte: int, taux_possibles: tuple[int, ...] | None = None
+) -> tuple[int, bool]:
     """(taux, hausse ?). Une baisse de 100 % ou plus n'a pas de sens : au-delà de 99, seulement des hausses."""
-    taux_possibles, _, _ = palier(_PALIERS, difficulte)
+    if taux_possibles is None:
+        taux_possibles, _, _ = palier(_PALIERS, difficulte)
     taux = rng.choice(taux_possibles)
     hausse = True if taux >= 100 else rng.choice((True, False))
     return taux, hausse
@@ -64,8 +67,13 @@ def _tirer_prix(rng: random.Random, difficulte: int, taux: int, accepte: Callabl
 # --- variante 1 : taux <-> coefficient --------------------------------------------------------------------
 
 
+# palier 1 de `coefficient` : sans prix à calculer, quatre taux ne donnent que 16 exercices ; on en ouvre
+# d'autres, toujours « ronds » (les autres variantes gardent le palier commun, leurs prix doivent tomber juste)
+_TAUX_COEFFICIENT_PALIER_1 = (5, 10, 20, 25, 30, 40, 50, 60)
+
+
 def _coefficient_variante(rng: random.Random, difficulte: int) -> dict[str, Any]:
-    taux, hausse = _tirer_evolution(rng, difficulte)
+    taux, hausse = _tirer_evolution(rng, difficulte, _TAUX_COEFFICIENT_PALIER_1 if difficulte == 1 else None)
     coef = _coefficient(taux, hausse)
     verbe, nom = _MOT[hausse]
     sens_inverse = _coefficient(taux, not hausse) if taux < 100 else None
@@ -121,16 +129,29 @@ def _coefficient_variante(rng: random.Random, difficulte: int) -> dict[str, Any]
             lieu=f"{NOTION}/coefficient/{nom}-{taux}",
         )
     # du coefficient au pourcentage d'évolution
-    enonce = f"Un prix est multiplié par {nombre_fr(coef)}. Quel est le pourcentage d'évolution, et dans quel sens ?"
-    pieges = [
-        piege_valeur(
-            nombre_machine(coef * 100),
-            f"{nombre_fr(coef * 100)} %, c'est ce que vaut le nouveau prix par rapport à l'ancien. "
-            "Le pourcentage d'évolution, c'est ce qui a changé par rapport à 100 %.",
-        ),
+    # réponse signée, même convention que `successives` : un seul nombre dit la valeur ET le sens
+    taux_signe = taux if hausse else -taux
+    enonce = (
+        f"Un prix est multiplié par {nombre_fr(coef)}. Quel est le pourcentage d'évolution ? "
+        "(Réponds par un nombre négatif si le prix baisse.)"
+    )
+    pieges = []
+    if coef * 100 != -taux_signe:  # baisse de 50 % : 50 est aussi l'erreur de sens, c'est ce piège-là qui parle
+        pieges.append(
+            piege_valeur(
+                nombre_machine(coef * 100),
+                f"{nombre_fr(coef * 100)} %, c'est ce que vaut le nouveau prix par rapport à l'ancien. "
+                "Le pourcentage d'évolution, c'est ce qui a changé par rapport à 100 %.",
+            )
+        )
+    pieges += [
         piege_valeur(
             nombre_machine(coef),
             "C'est le coefficient, pas un pourcentage. Compare-le à 1 : de combien de centièmes s'en éloigne-t-il ?",
+        ),
+        piege_valeur(
+            -taux_signe,
+            "Le nombre est bon, mais pas le sens. Le coefficient est-il plus grand ou plus petit que 1 ?",
         ),
         piege_diagnostic("valeur_fausse", "Écris le coefficient en pourcentage (× 100), puis compare à 100 %."),
     ]
@@ -139,7 +160,7 @@ def _coefficient_variante(rng: random.Random, difficulte: int) -> dict[str, Any]
         type="nombre",
         difficulte=difficulte,
         enonce=enonce,
-        reponse={"valeur": taux, "forme": "libre"},
+        reponse={"valeur": taux_signe, "forme": "libre"},
         indices={
             "relance": "Ce coefficient est-il plus grand ou plus petit que 1 ? Que dit cela sur le prix ?",
             "methode": "Un coefficient multiplicateur, c'est un pourcentage divisé par 100. Remultiplie-le par 100 "
@@ -149,7 +170,7 @@ def _coefficient_variante(rng: random.Random, difficulte: int) -> dict[str, Any]
         },
         pieges=pieges,
         solution=f"{nombre_fr(coef)} = {nombre_fr(coef * 100)} ÷ 100 : le nouveau prix vaut {nombre_fr(coef * 100)} % "
-        f"de l'ancien, soit une {nom} de {taux} %.",
+        f"de l'ancien, soit une {nom} de {taux} % (réponse : {nombre_fr(taux_signe)}).",
         lieu=f"{NOTION}/coefficient-inverse/{nom}-{taux}",
     )
 
@@ -172,16 +193,26 @@ def _appliquer(rng: random.Random, difficulte: int) -> dict[str, Any]:
             nombre_machine(variation),
             f"{prix_fr(variation)}, c'est de combien le prix change. On demande le nouveau prix.",
         ),
-        piege_valeur(
-            nombre_machine(prix * _coefficient(taux, not hausse)) if taux < 100 else "-1",
-            f"Tu as fait une {_MOT[not hausse][1]}. Ici, le prix {verbe} de {taux} %.",
-        ),
-        piege_valeur(
-            prix + taux if hausse else prix - taux,
-            f"{taux} %, ce n'est pas {taux} €. Un pourcentage se calcule par rapport au prix de départ.",
-        ),
-        piege_diagnostic("valeur_fausse", f"Calcule d'abord {taux} % de {prix_fr(prix)}, puis applique le bon sens."),
     ]
+    # le sens inverse n'existe pas au-delà de 100 % (une baisse de 150 % n'a pas de sens) : pas de piège
+    if taux < 100:
+        pieges.append(
+            piege_valeur(
+                nombre_machine(prix * _coefficient(taux, not hausse)),
+                f"Tu as fait une {_MOT[not hausse][1]}. Ici, le prix {verbe} de {taux} %.",
+            )
+        )
+    en_euros = prix + taux if hausse else prix - taux
+    if en_euros > 0:  # un prix négatif ou nul n'est pas une erreur qu'un élève écrit
+        pieges.append(
+            piege_valeur(
+                en_euros,
+                f"{taux} %, ce n'est pas {taux} €. Un pourcentage se calcule par rapport au prix de départ.",
+            )
+        )
+    pieges.append(
+        piege_diagnostic("valeur_fausse", f"Calcule d'abord {taux} % de {prix_fr(prix)}, puis applique le bon sens.")
+    )
     return exercice_v2(
         id=f"appliquer-{nom}-{taux}-{prix}",
         type="nombre",
@@ -198,8 +229,9 @@ def _appliquer(rng: random.Random, difficulte: int) -> dict[str, Any]:
         },
         pieges=pieges,
         solution=f"Coefficient d'une {nom} de {taux} % : {nombre_fr(coef)}. Nouveau prix : "
-        f"{prix} × {nombre_fr(coef)} = {nombre_fr(nouveau)} €. (Vérification : {taux} % de {prix} € font "
-        f"{nombre_fr(variation)} €, et {prix} {'+' if hausse else '−'} {nombre_fr(variation)} = {nombre_fr(nouveau)}.)",
+        f"{nombre_fr(prix)} × {nombre_fr(coef)} = {nombre_fr(nouveau)} €. (Vérification : {taux} % de "
+        f"{nombre_fr(prix)} € font {nombre_fr(variation)} €, et {nombre_fr(prix)} {'+' if hausse else '−'} "
+        f"{nombre_fr(variation)} = {nombre_fr(nouveau)}.)",
         lieu=f"{NOTION}/appliquer/{nom}-{taux}-{prix}",
     )
 
@@ -255,9 +287,9 @@ def _taux(rng: random.Random, difficulte: int) -> dict[str, Any]:
         },
         pieges=pieges,
         solution=f"Variation : {nombre_fr(variation)} €. "
-        f"{nombre_fr(variation)} ÷ {prix} = {nombre_fr(variation / prix)}, soit {taux} % : "
+        f"{nombre_fr(variation)} ÷ {nombre_fr(prix)} = {nombre_fr(variation / prix)}, soit {taux} % : "
         f"le prix a {'augmenté' if hausse else 'baissé'} de {taux} %. "
-        f"(Coefficient : {nombre_fr(nouveau)} ÷ {prix} = {nombre_fr(coef)}.)",
+        f"(Coefficient : {nombre_fr(nouveau)} ÷ {nombre_fr(prix)} = {nombre_fr(coef)}.)",
         lieu=f"{NOTION}/taux/{nom}-{taux}-{prix}",
     )
 
@@ -273,12 +305,16 @@ def _initial(rng: random.Random, difficulte: int) -> dict[str, Any]:
     nouveau = prix * coef
     _, nom = _MOT[hausse]
     art = article(rng)
-    pieges = [
-        piege_valeur(
-            nombre_machine(nouveau * _coefficient(taux, not hausse)) if taux < 100 else "-1",
-            f"Tu as appliqué une {_MOT[not hausse][1]} de {taux} % au nouveau prix. Mais {taux} % du nouveau prix, "
-            f"ce n'est pas {taux} % de l'ancien : pour revenir en arrière, on divise par le coefficient.",
-        ),
+    pieges = []
+    if taux < 100:  # au-delà, le sens inverse n'a pas de sens : pas de piège
+        pieges.append(
+            piege_valeur(
+                nombre_machine(nouveau * _coefficient(taux, not hausse)),
+                f"Tu as appliqué une {_MOT[not hausse][1]} de {taux} % au nouveau prix. Mais {taux} % du nouveau "
+                f"prix, ce n'est pas {taux} % de l'ancien : pour revenir en arrière, on divise par le coefficient.",
+            )
+        )
+    pieges += [
         piege_valeur(
             nombre_machine(nouveau - taux if hausse else nouveau + taux),
             f"{taux} %, ce n'est pas {taux} €.",
@@ -306,7 +342,8 @@ def _initial(rng: random.Random, difficulte: int) -> dict[str, Any]:
         },
         pieges=pieges,
         solution=f"Coefficient d'une {nom} de {taux} % : {nombre_fr(coef)}. Ancien prix : "
-        f"{nombre_fr(nouveau)} ÷ {nombre_fr(coef)} = {prix} €. (Vérification : {prix} × {nombre_fr(coef)} = "
+        f"{nombre_fr(nouveau)} ÷ {nombre_fr(coef)} = {nombre_fr(prix)} €. (Vérification : {nombre_fr(prix)} × "
+        f"{nombre_fr(coef)} = "
         f"{nombre_fr(nouveau)}.)",
         lieu=f"{NOTION}/initial/{nom}-{taux}-{prix}",
     )

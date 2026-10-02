@@ -1,0 +1,158 @@
+notion: expression-litterale-energie-cinetique
+titre: "L'énergie cinétique : la formule Ec = ½ × m × v²"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser la relation Ec = ½ × m × v² avec les bonnes unités (J, kg, m/s)."
+      - "Convertir une masse en kg et une vitesse en m/s avant de calculer."
+      - "Comparer deux énergies cinétiques sans tout recalculer, et relier l'énergie cinétique à la sécurité routière."
+
+  - type: texte
+    titre: "La formule"
+    contenu: |-
+      L'**énergie cinétique** est l'énergie d'un objet **parce qu'il bouge**.
+      Un objet immobile a une énergie cinétique **nulle**.
+
+      Pour un objet de masse **m** à la vitesse **v** :
+
+      **Ec = ½ × m × v²** (on lit « un demi m v carré »)
+
+      | Grandeur | Unité |
+      |---|---|
+      | Ec | joule (J) |
+      | m | kilogramme (kg) |
+      | v | mètre par seconde (m/s) |
+
+      **v²** veut dire **v × v**. Exemple : 10² = 10 × 10 = 100. Ne confonds pas v² avec 2 × v.
+
+  - type: texte
+    titre: "Convertir avant de calculer"
+    contenu: |-
+      Il faut des kg et des m/s.
+
+      - Masse : des grammes en kg, on **divise par 1 000** (60 g = 0,06 kg).
+      - Vitesse : des km/h en m/s, on **divise par 3,6** (72 km/h = 20 m/s).
+      - Pour l'inverse (m/s en km/h), on **multiplie par 3,6**.
+
+      Repère utile : 36 km/h = 10 m/s et 72 km/h = 20 m/s.
+
+  - type: texte
+    titre: "Comment Ec change"
+    contenu: |-
+      | Si… | Alors Ec… |
+      |---|---|
+      | la masse double | double |
+      | la vitesse double | est multipliée par 4 |
+      | la vitesse triple | est multipliée par 9 |
+
+      Attention : une vitesse deux fois plus grande ne donne **pas** une énergie deux fois plus grande.
+
+      Deux objets de même masse n'ont la même énergie cinétique que s'ils ont la même vitesse.
+
+  - type: texte
+    titre: "Sur la route, et quand un objet tombe"
+    contenu: |-
+      Plus la vitesse est grande, plus l'énergie cinétique est grande.
+
+      Pour s'arrêter, les freins doivent la convertir en **énergie thermique**. La distance de freinage augmente très vite avec la vitesse.
+
+      Un objet qui tombe perd de la hauteur : son énergie potentielle diminue. Il gagne de la vitesse : son énergie cinétique augmente.
+
+  - type: exemple
+    enonce: >-
+      Un cycliste et son vélo ont une masse totale de 80 kg et roulent à 36 km/h. Calcule leur énergie cinétique.
+    etapes:
+      - "On convertit la vitesse : 36 ÷ 3,6 = 10 m/s. La masse est déjà en kg."
+      - "On calcule v² : 10² = 10 × 10 = 100."
+      - "Ec = ½ × 80 × 100 = 4 000 J."
+
+  - type: exercice
+    enonce: "Un objet de masse 4 kg se déplace à la vitesse de 5 m/s. Calcule son énergie cinétique, en joules."
+    forme: nombre
+    reponse: 50
+    tolerance: 0.01
+    unite: "J"
+    indices:
+      - "Utilise Ec = ½ × m × v². Commence par calculer v × v."
+      - "Multiplie v² par la masse, puis prends la moitié."
+    explication: "v² = 5 × 5 = 25. Ec = ½ × 4 × 25 = ½ × 100 = 50 J."
+
+  - type: exercice
+    enonce: "Comment s'appelle l'unité de l'énergie ? Donne son nom en toutes lettres."
+    forme: reponse_courte
+    reponse: "joule"
+    reponses_acceptees:
+      - "joules"
+      - "le joule"
+      - "les joules"
+      - "un joule"
+    indices:
+      - "C'est l'unité de la grandeur Ec dans la formule."
+      - "Son symbole est la lettre J."
+    explication: "L'énergie se mesure en joules (symbole J)."
+
+  - type: exercice
+    enonce: "La vitesse d'un objet double, sa masse ne change pas. Par combien son énergie cinétique est-elle multipliée ?"
+    forme: qcm
+    choix:
+      - "Par 2"
+      - "Par 4"
+      - "Par 9"
+      - "Elle ne change pas"
+    reponse: 1
+    indices:
+      - "Dans la formule, la vitesse est au carré (v × v)."
+      - "Si v devient 2 fois plus grand, v × v devient 2 × 2 fois plus grand."
+    explication: "Ec dépend de v². Si v double, v² est multiplié par 2 × 2 = 4. Donc Ec est multipliée par 4."
+
+  - type: exercice
+    enonce: "Une balle de 50 g roule à 20 m/s. Calcule son énergie cinétique, en joules. (Pense à convertir la masse.)"
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: "J"
+    indices:
+      - "Convertis d'abord la masse en kilogrammes : on divise les grammes par 1 000."
+      - "Une fois m en kg, calcule Ec = ½ × m × v² avec v = 20 m/s."
+    explication: "50 g = 0,05 kg. v² = 20 × 20 = 400. Ec = ½ × 0,05 × 400 = ½ × 20 = 10 J."
+
+  - type: exercice
+    enonce: "Une voiture et ses passagers ont une masse totale de 1 200 kg. Elle roule à 54 km/h. Calcule son énergie cinétique, en joules."
+    forme: nombre
+    reponse: 135000
+    tolerance: 1
+    unite: "J"
+    indices:
+      - "Convertis d'abord la vitesse en m/s : pour passer de km/h à m/s, on divise par 3,6."
+      - "Calcule v × v avec la vitesse en m/s, puis applique Ec = ½ × m × v²."
+      - "La vitesse convertie est un nombre entier de m/s. Multiplie-la par elle-même, puis par 1 200, puis divise par 2."
+    explication: "54 ÷ 3,6 = 15 m/s. v² = 15 × 15 = 225. Ec = ½ × 1 200 × 225 = 600 × 225 = 135 000 J."
+
+  - type: question_ouverte
+    question: >-
+      Une voiture roule à 90 km/h, une autre de même masse roule à 45 km/h. Laquelle a la plus grande
+      énergie cinétique ? Compare-les sans tout recalculer, puis explique pourquoi la vitesse est
+      dangereuse sur la route.
+    indices:
+      - "Par combien la vitesse est-elle multipliée entre la deuxième voiture et la première ?"
+      - "Utilise la règle : si la vitesse double, Ec est multipliée par 4. Pense aux freins."
+    criteres:
+      - "L'élève dit que la voiture à 90 km/h a la plus grande énergie cinétique (vitesse 2 fois plus grande, donc Ec multipliée par 4)."
+      - "L'élève montre qu'il utilise v² (et non que l'énergie double)."
+      - "L'élève explique que les freins doivent convertir l'énergie cinétique en énergie thermique, donc que la distance de freinage augmente très vite avec la vitesse."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la formule de l'énergie cinétique, les
+      unités à utiliser, et ce qui se passe quand la vitesse double.

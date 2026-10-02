@@ -1,0 +1,146 @@
+notion: etendue-serie-statistique
+titre: "Étendue d'une série statistique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer l'étendue d'une série (données brutes, tableau, diagramme, histogramme)."
+      - "Bien repérer la plus grande et la plus petite valeur, même avec des nombres négatifs."
+      - "Interpréter une étendue et comparer la dispersion de deux séries."
+
+  - type: texte
+    titre: "Définition"
+    contenu: |
+      **étendue = plus grande valeur − plus petite valeur**
+
+      - C'est un nombre positif (ou nul si toutes les valeurs sont égales).
+      - Elle s'exprime dans la même unité que les valeurs : points, °C, m, buts...
+      - Les valeurs extrêmes ne sont pas forcément la première et la dernière de la liste.
+
+  - type: texte
+    titre: "Selon la présentation des données"
+    contenu: |
+      | Présentation | Comment faire |
+      |---|---|
+      | Données brutes | Parcourir toute la liste |
+      | Tableau, diagramme en bâtons | Chercher les **valeurs** dont l'effectif n'est pas nul (pas les effectifs) |
+      | Diagramme circulaire | Repérer les valeurs extrêmes présentes dans les secteurs |
+      | Histogramme | Borne supérieure de la dernière classe − borne inférieure de la première |
+
+      Avec un nombre négatif : 5 − (−4) = 5 + 4 = 9.
+
+  - type: texte
+    titre: "Interpréter l'étendue"
+    contenu: |
+      L'étendue mesure la **dispersion** : plus elle est grande, plus les valeurs sont éloignées.
+
+      - Deux séries peuvent avoir la même moyenne et des étendues très différentes.
+      - La série avec la plus petite étendue est la plus régulière.
+      - Une seule valeur très éloignée suffit à rendre l'étendue grande.
+      - L'étendue ne dit rien sur la moyenne.
+      - On conclut par une phrase : « les valeurs varient de ... à ... ».
+
+  - type: exemple
+    enonce: >-
+      Temps de trajet d'un élève vers le collège pendant une semaine, en minutes : 25 ; 40 ; 15 ; 32 ; 50 ; 18.
+      Calcule l'étendue.
+    etapes:
+      - "Plus grande valeur : 50 minutes. Plus petite valeur : 15 minutes."
+      - "Étendue = 50 − 15 = 35 minutes."
+      - "Phrase : « les temps de trajet varient de 35 minutes au plus »."
+
+  - type: exercice
+    enonce: "Voici les scores de Yanis à un jeu : 19 ; 8 ; 31 ; 15 ; 27 ; 12. Calcule l'étendue de cette série."
+    forme: nombre
+    reponse: 23
+    tolerance: 0.01
+    indices:
+      - "Quelle est la plus grande valeur de la série ? Et la plus petite ?"
+      - "Étendue = plus grande valeur − plus petite valeur."
+      - "La plus grande valeur est 31. Cherche la plus petite, puis soustrais."
+    explication: "Plus grande valeur : 31. Plus petite valeur : 8. Étendue = 31 − 8 = 23 points."
+
+  - type: exercice
+    enonce: "Températures minimales de sept jours d'hiver, en °C : −6 ; 1 ; −3 ; 4 ; 2 ; −1 ; 0. Calcule l'étendue (en °C)."
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: "°C"
+    indices:
+      - "Quelle est la température la plus basse ? Attention, c'est un nombre négatif."
+      - "Soustraire un nombre négatif revient à ajouter son opposé."
+      - "La plus grande valeur est 4. Calcule 4 − (le nombre négatif le plus bas de la liste)."
+    explication: "Plus grande valeur : 4 °C. Plus petite valeur : −6 °C. Étendue = 4 − (−6) = 4 + 6 = 10 °C."
+
+  - type: exercice
+    enonce: >-
+      Un tableau donne le nombre de livres lus pendant l'été par 25 élèves.
+      1 livre : 6 élèves ; 2 livres : 9 élèves ; 3 livres : 7 élèves ; 4 livres : 0 élève ; 5 livres : 3 élèves ;
+      6 livres : 0 élève. Quelle est l'étendue du nombre de livres lus ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    indices:
+      - "Ici, les valeurs sont des nombres de livres. Les nombres d'élèves sont des effectifs."
+      - "Garde seulement les valeurs dont l'effectif n'est pas nul, puis cherche la plus petite et la plus grande."
+      - "La plus petite valeur est 1 livre. Quelle est la plus grande valeur avec un effectif non nul ?"
+    explication: "Les valeurs présentes vont de 1 à 5 livres (6 livres : personne). Étendue = 5 − 1 = 4 livres."
+
+  - type: exercice
+    enonce: >-
+      Série A : 10 ; 11 ; 12 ; 13 ; 14. Série B : 4 ; 8 ; 12 ; 16 ; 20.
+      Les deux séries ont la même moyenne (12). Quelle affirmation est vraie ?
+    forme: qcm
+    choix:
+      - "Les deux séries sont aussi dispersées l'une que l'autre, car elles ont la même moyenne."
+      - "La série B est plus dispersée que la série A."
+      - "La série A est plus dispersée que la série B."
+    reponse: 1
+    indices:
+      - "Calcule l'étendue de chaque série."
+      - "Une grande étendue veut dire des valeurs très éloignées les unes des autres."
+    explication: "Étendue de A : 14 − 10 = 4. Étendue de B : 20 − 4 = 16. La série B a l'étendue la plus grande : elle est plus dispersée, malgré la même moyenne."
+
+  - type: exercice
+    enonce: >-
+      Dans une série de températures, la plus haute vaut 9 °C et l'étendue vaut 16 °C.
+      Quelle est la plus basse température de la série (en °C) ?
+    forme: nombre
+    reponse: -7
+    tolerance: 0.01
+    unite: "°C"
+    indices:
+      - "Écris la formule de l'étendue, avec un trou à la place de la plus petite valeur."
+      - "9 − (plus petite valeur) = 16. Quel nombre faut-il retirer à 9 pour obtenir 16 ?"
+      - "Plus petite valeur = plus grande valeur − étendue. Calcule 9 − 16 : le résultat est négatif."
+    explication: "Plus petite valeur = plus grande valeur − étendue = 9 − 16. Le résultat est négatif : −7 °C. Vérification : 9 − (−7) = 16."
+
+  - type: question_ouverte
+    question: >-
+      Temps d'un groupe de coureurs sur 100 m, en secondes : 13 ; 14 ; 14 ; 15 ; 15 ; 16 ; 41.
+      Calcule l'étendue. Décrit-elle bien la régularité du groupe ? Explique.
+    indices:
+      - "Toutes les valeurs sont-elles proches les unes des autres ? Laquelle se démarque ?"
+      - "Calcule l'étendue avec toutes les valeurs, puis sans la valeur qui se démarque. Compare."
+    criteres:
+      - "L'élève calcule l'étendue : 41 − 13 = 28 secondes."
+      - "L'élève repère qu'une seule valeur (41) est très éloignée des autres et rend l'étendue grande."
+      - "L'élève conclut que sans cette valeur l'étendue serait de 3 secondes : l'étendue seule décrit mal ce groupe."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases comment tu calcules une étendue, ce qu'elle dit d'une série,
+      et pourquoi il faut faire attention à une valeur isolée.

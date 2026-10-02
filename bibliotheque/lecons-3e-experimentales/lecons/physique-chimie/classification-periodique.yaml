@@ -1,0 +1,178 @@
+notion: classification-periodique
+titre: "Symboles des éléments et classification périodique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Associer le symbole d'un élément à son nom, avec la classification périodique."
+      - "Lire une formule chimique : dire quels atomes forment la molécule et combien il y en a."
+      - "Compter les atomes dans plusieurs molécules quand un nombre est écrit devant la formule."
+
+  - type: texte
+    titre: "Le symbole d'un élément"
+    contenu: |-
+      Chaque **élément chimique** a un **symbole**.
+
+      Règle : **une majuscule**, parfois suivie **d'une minuscule**.
+
+      | Élément | Symbole |
+      |---|---|
+      | hydrogène | H |
+      | hélium | He |
+      | carbone | C |
+      | azote | N |
+      | oxygène | O |
+      | sodium | Na |
+      | aluminium | Al |
+      | soufre | S |
+      | chlore | Cl |
+      | fer | Fe |
+      | cuivre | Cu |
+      | zinc | Zn |
+      | argent | Ag |
+      | or | Au |
+
+      Attention : certains symboles viennent du latin (Na, Fe, Cu, Ag, Au). Ce n'est pas toujours l'initiale du nom français.
+
+  - type: texte
+    titre: "La classification périodique"
+    contenu: |-
+      La **classification périodique** est un tableau qui range les éléments.
+
+      - Elle range les éléments par **numéro atomique croissant**.
+      - On connaît 118 éléments.
+      - Les éléments d'une **même colonne** forment une **famille**.
+      - Les éléments d'une même famille ont des propriétés chimiques voisines.
+
+      Elle sert à **retrouver le symbole** d'un élément à partir de son nom.
+
+  - type: texte
+    titre: "Lire une formule chimique"
+    contenu: |-
+      Une **molécule** est un groupe d'atomes liés. Sa **formule chimique** dit quels atomes la forment.
+
+      Le petit chiffre écrit après un symbole est l'**indice**. Il donne le **nombre d'atomes** de cet élément.
+      **Pas d'indice = un seul atome.**
+
+      | Molécule | Formule | Atomes |
+      |---|---|---|
+      | dioxygène | O₂ | 2 O |
+      | dihydrogène | H₂ | 2 H |
+      | diazote | N₂ | 2 N |
+      | eau | H₂O | 2 H et 1 O |
+      | dioxyde de carbone | CO₂ | 1 C et 2 O |
+      | méthane | CH₄ | 1 C et 4 H |
+      | protoxyde d'azote | N₂O | 2 N et 1 O |
+
+      Le préfixe « di » veut dire deux : dioxygène = deux atomes d'oxygène liés.
+
+  - type: texte
+    titre: "Un nombre devant la formule, et les majuscules"
+    contenu: |-
+      Un nombre écrit **devant** la formule compte les **molécules**.
+
+      Exemple : 3 H₂O, ce sont 3 molécules d'eau. Pour chaque molécule, il y a 2 H et 1 O. On multiplie par 3.
+
+      Attention aux majuscules :
+      - **Co** = le cobalt (un seul élément) ;
+      - **CO** = une molécule avec un atome de C et un atome de O.
+
+  - type: exemple
+    enonce: >-
+      Que signifie la formule N₂O du protoxyde d'azote ? Combien d'atomes compte une molécule ?
+    etapes:
+      - "On repère les symboles : N (azote) et O (oxygène). Une nouvelle majuscule commence un nouveau symbole."
+      - "Indice de N : 2, donc 2 atomes d'azote. O n'a pas d'indice, donc 1 atome d'oxygène."
+      - "On additionne les indices : 2 + 1 = 3. Une molécule de N₂O compte 3 atomes."
+
+  - type: exercice
+    enonce: "Quel est le symbole chimique de l'or ?"
+    forme: qcm
+    choix:
+      - "Au"
+      - "Ag"
+      - "Or"
+      - "O"
+    reponse: 0
+    indices:
+      - "Regarde le tableau des symboles de la leçon, à la ligne de l'or."
+      - "Le symbole de l'or vient du latin : ce n'est pas l'initiale du mot français."
+    explication: "Le symbole de l'or est Au. Ag est le symbole de l'argent, et O celui de l'oxygène. « Or » est le nom français de l'élément, pas son symbole."
+
+  - type: exercice
+    enonce: "La formule du méthane est CH₄. Combien d'atomes compte une molécule de méthane ?"
+    forme: nombre
+    reponse: 5
+    tolerance: 0.01
+    unite: "atomes"
+    indices:
+      - "Repère chaque symbole de la formule, puis lis son indice. Pas d'indice veut dire un seul atome."
+      - "C n'a pas d'indice. H a l'indice 4. Il faut additionner."
+    explication: "CH₄ : 1 atome de carbone (pas d'indice) et 4 atomes d'hydrogène. 1 + 4 = 5 atomes."
+
+  - type: exercice
+    enonce: "Quel élément chimique a pour symbole Na ? Donne son nom."
+    forme: reponse_courte
+    reponse: "sodium"
+    reponses_acceptees:
+      - "le sodium"
+      - "Sodium"
+      - "Le sodium"
+    indices:
+      - "Ce symbole ne ressemble pas à l'initiale du nom français : il vient du latin."
+      - "Regarde le tableau des symboles de la leçon. Cherche la ligne où on lit Na."
+    explication: "Na est le symbole du sodium. Il vient du latin, comme Fe, Cu, Ag et Au."
+
+  - type: exercice
+    enonce: "On écrit 3 H₂O. Combien y a-t-il d'atomes d'hydrogène en tout ?"
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    unite: "atomes"
+    indices:
+      - "Le nombre devant la formule compte les molécules. Combien d'atomes d'hydrogène dans une seule molécule d'eau ?"
+      - "Une molécule d'eau a 2 atomes d'hydrogène. Multiplie par le nombre de molécules."
+    explication: "Une molécule H₂O contient 2 atomes d'hydrogène. Il y a 3 molécules : 3 × 2 = 6 atomes d'hydrogène."
+
+  - type: exercice
+    enonce: >-
+      Un mélange contient 2 molécules de dioxyde de carbone (2 CO₂) et 3 molécules de méthane
+      (3 CH₄). Combien d'atomes y a-t-il en tout ?
+    forme: nombre
+    reponse: 21
+    tolerance: 0.01
+    unite: "atomes"
+    indices:
+      - "Compte d'abord les atomes d'une seule molécule de CO₂, puis d'une seule molécule de CH₄."
+      - "Multiplie le nombre d'atomes de chaque sorte de molécule par le nombre de molécules, puis additionne."
+      - "Une molécule de CO₂ compte 1 + 2 atomes. Une molécule de CH₄ compte 1 + 4 atomes."
+    explication: "CO₂ : 1 + 2 = 3 atomes, donc 2 molécules donnent 2 × 3 = 6 atomes. CH₄ : 1 + 4 = 5 atomes, donc 3 molécules donnent 3 × 5 = 15 atomes. Total : 6 + 15 = 21 atomes."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre « Co » et « CO ». Que représente chacun ?
+    indices:
+      - "Regarde combien il y a de majuscules dans chaque écriture."
+      - "Une majuscule commence un nouveau symbole."
+    criteres:
+      - "L'élève dit que Co (une majuscule puis une minuscule) est un seul symbole : le cobalt, un élément."
+      - "L'élève dit que CO contient deux symboles, C et O : une molécule formée d'un atome de carbone et d'un atome d'oxygène."
+      - "L'élève relie la différence à l'usage des majuscules."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu lis une formule chimique
+      pour compter les atomes, et ce que change un nombre écrit devant la formule.

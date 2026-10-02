@@ -1,0 +1,154 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: orthographe-affixes-et-etymons
+titre: "Orthographe des préfixes, des suffixes et des étymons"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Écrire correctement les préfixes moins fréquents et comprendre leur effet sur le sens."
+      - "Écrire correctement les suffixes et voir comment ils changent la classe du mot."
+      - "Reconnaître des étymons grecs et latins et écrire les mots qui les contiennent."
+
+  - type: texte
+    titre: "Les préfixes"
+    contenu: |-
+      Un mot se construit avec un radical, un **préfixe** (avant) et un **suffixe** (après).
+
+      | Préfixe | Sens | Exemple |
+      |---|---|---|
+      | in- (im-, il-, ir-) | négation, contraire | inutile, impossible, illisible, irrégulier |
+      | dé-, dés- | contraire, retrait | défaire, désagréable |
+      | mé-, més- | mauvais | mécontent, mésentente |
+      | anti- | contre | antibruit |
+      | sur-, sous- | au-dessus, au-dessous | |
+      | syn- (sym-) | avec, ensemble | synonyme, sympathie |
+      | co-, com-, con- | avec, ensemble | coopérer, compatir, concitoyen |
+
+  - type: texte
+    titre: "Quand le préfixe change de forme"
+    contenu: |-
+      Le préfixe **in-** change selon la lettre qui suit :
+
+      - devant **b, m, p** : **im-** (impossible, immobile) ;
+      - devant **l** : **il-** (illisible) ;
+      - devant **r** : **ir-** (irrégulier).
+
+      C'est pour cela qu'on double la consonne. Le préfixe grec **syn-** devient de même **sym-** devant b, m, p (sympathie, symbole).
+
+  - type: texte
+    titre: "Les suffixes"
+    contenu: |-
+      | Suffixe | Sens | Exemple |
+      |---|---|---|
+      | -esse | nom de qualité | tristesse, faiblesse |
+      | -erie | lieu ou activité | boulangerie |
+      | -able, -ible | « qui peut être » | mangeable, lisible |
+      | -eur, -euse | celui qui fait | chanteur |
+      | -isme, -iste | doctrine ou métier | réalisme, journaliste |
+
+      Un suffixe change la classe du mot : « triste » (adjectif) donne « tristesse » (nom).
+
+  - type: texte
+    titre: "Les étymons grecs et latins"
+    contenu: |-
+      Un **étymon** est une racine d'origine, souvent grecque ou latine.
+
+      - **Grecs** : bio (vie), chrono (temps), graph (écrire), phile (qui aime), phobe (qui craint), phone (voix, son), scope (regarder), micro (petit), géo (terre), hydro (eau), thermo (chaleur), télé (loin), poly (plusieurs), mono (un seul), anthropo (homme), cratie (pouvoir), logie (étude).
+      - **Latins** : aqua (eau), ped (pied), manu (main), vore (manger), cide (tuer), dict (dire), script (écrire), aud (entendre), vid, vis (voir).
+
+      Les lettres **ph, th, ch** (prononcé k), **y, rh** sont typiques du grec : photographe, thermomètre, chronomètre, sympathie.
+
+  - type: exemple
+    enonce: "Explique pourquoi on écrit « immangeable » avec deux m."
+    etapes:
+      - "Découpe le mot : im- + mange + -able."
+      - "Le préfixe de négation est in-. Il devient im- devant la lettre m."
+      - "Le radical « mangeable » commence par m : la rencontre donne deux m."
+      - "Sens : « qui ne peut pas être mangé »."
+
+  - type: exercice
+    enonce: "Écris le contraire de « lisible », construit avec un préfixe de négation (le mot complet)."
+    forme: reponse_courte
+    reponse: "illisible"
+    reponses_acceptees: ["Illisible"]
+    indices:
+      - "Le préfixe de négation in- change de forme devant certaines lettres."
+      - "Devant la lettre l, on double la consonne. Le préfixe devient il-."
+    explication: "in- devient il- devant l : illisible, avec deux l."
+
+  - type: exercice
+    enonce: "Quelle est l'orthographe correcte du contraire de « possible » ?"
+    forme: qcm
+    choix:
+      - "inpossible"
+      - "impossible"
+      - "irpossible"
+    reponse: 1
+    indices:
+      - "Le préfixe in- change de forme devant b, m et p."
+      - "Devant p, le n devient une autre lettre."
+    explication: "in- devient im- devant p : impossible. Le préfixe ir- s'emploie devant r."
+
+  - type: exercice
+    enonce: "Quel mot contient l'étymon grec « chrono » (temps) et désigne un instrument qui mesure le temps ?"
+    forme: qcm
+    choix:
+      - "chorégraphe"
+      - "microscope"
+      - "chronomètre"
+    reponse: 2
+    indices:
+      - "Cherche le mot qui commence par les mêmes lettres que « chrono »."
+      - "Le mot se termine par « mètre », qui veut dire « mesurer »."
+    explication: "chronomètre = chrono (temps) + mètre (mesurer). « chorégraphe » n'a pas le même étymon ; « microscope » vient de micro (petit) et scope (regarder)."
+
+  - type: exercice
+    enonce: "Assemble le préfixe grec syn- (« avec ») et « pathie » (ce qu'on ressent) pour former le mot qui désigne l'élan qui rapproche deux personnes. Écris-le sans faute."
+    forme: reponse_courte
+    reponse: "sympathie"
+    reponses_acceptees: ["Sympathie"]
+    indices:
+      - "Ce mot commence par le préfixe grec syn- (« avec »)."
+      - "Devant la lettre p, ce préfixe change de forme, comme in- devient im-."
+    explication: "syn- devient sym- devant p : sympathie. La lettre y est typique du grec."
+
+  - type: exercice
+    enonce: >-
+      Ce mot est formé de trois parties : le préfixe de négation ir-, le radical « respect » et le
+      suffixe -ueux. Quel est ce mot ? Écris-le sans faute.
+    forme: reponse_courte
+    reponse: "irrespectueux"
+    reponses_acceptees: ["Irrespectueux"]
+    indices:
+      - "Assemble les trois parties dans l'ordre : préfixe, radical, suffixe."
+      - "Le suffixe est -ueux : il faut donc ajouter « -ueux » à « respect »."
+    explication: "ir- + respect + -ueux = irrespectueux : « qui ne montre pas de respect »."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un mot construit avec un préfixe ou un suffixe (par exemple « illisible » ou
+      « chronomètre »). Écris-le, découpe-le, explique le sens de chaque élément et justifie son
+      orthographe en une ou deux phrases.
+    indices:
+      - "Sépare d'abord le préfixe ou l'étymon, puis le radical, puis le suffixe."
+      - "Cherche une double consonne ou une lettre grecque (ph, th, ch, y, rh) à expliquer."
+    criteres:
+      - "Le mot est bien découpé (préfixe ou étymon, radical, suffixe si besoin)."
+      - "Le sens de chaque élément est donné, et le sens du mot en découle."
+      - "L'orthographe est justifiée (double consonne ou lettre grecque) et le mot est écrit sans faute."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, pourquoi le préfixe in- devient im- dans « impossible » et il- dans « illisible », puis donne un exemple de
+      mot avec un étymon grec.

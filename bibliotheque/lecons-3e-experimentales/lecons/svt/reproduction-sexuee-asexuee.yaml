@@ -1,0 +1,161 @@
+notion: reproduction-sexuee-asexuee
+titre: "Reproduction sexuée et asexuée, gamètes et milieux"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer la reproduction sexuée et la reproduction asexuée."
+      - "Décrire la rencontre des gamètes chez les Vertébrés et chez les plantes à fleurs, et compter les chromosomes d'un gamète."
+      - "Relier le milieu et le mode de reproduction au nombre de descendants qui survivent."
+
+  - type: texte
+    titre: "Reproduction sexuée : les gamètes"
+    contenu: |-
+      La reproduction sexuée utilise **deux cellules reproductrices** : les **gamètes**.
+
+      - Un gamète **mâle** et un gamète **femelle**.
+      - Leur union s'appelle la **fécondation**.
+      - Elle donne une **cellule-œuf**, qui devient un nouvel individu.
+
+      Chaque gamète ne contient que **la moitié** des chromosomes : un seul de chaque paire.
+      Chez l'être humain : **23** chromosomes dans un gamète, **46** dans les autres cellules.
+      La cellule-œuf réunit des chromosomes des **deux parents**. Chaque descendant est unique.
+
+  - type: texte
+    titre: "Chez les Vertébrés et chez les plantes à fleurs"
+    contenu: |-
+      **Chez les Vertébrés**, les gamètes sont les spermatozoïdes et les ovules.
+
+      | Fécondation | Où ? | Exemples |
+      |---|---|---|
+      | Externe | Dans l'eau | La plupart des poissons et des amphibiens |
+      | Interne | Dans le corps de la femelle | Mammifères, oiseaux, reptiles |
+
+      **Chez les plantes à fleurs**, on suit l'ordre :
+
+      1. Le **grain de pollen** apporte le gamète mâle jusqu'au pistil : c'est la **pollinisation** (vent ou animaux).
+      2. Le gamète mâle s'unit au gamète femelle : c'est la **fécondation**.
+      3. L'ovule devient une **graine**, l'ovaire devient un **fruit**.
+      4. Graines et fruits sont dispersés (vent, eau, animaux) : c'est la **dissémination**.
+
+  - type: texte
+    titre: "Reproduction asexuée"
+    contenu: |-
+      La reproduction asexuée se fait à partir d'**un seul individu**, **sans gamètes**.
+
+      - Exemples : bouture, stolon (fraisier), tubercule (pomme de terre), bourgeonnement (hydre).
+      - Les descendants ont le **même patrimoine génétique** que le parent : ce sont des **clones**.
+      - Elle permet d'occuper vite un milieu favorable.
+
+      Attention : elle n'existe pas seulement chez les plantes. L'hydre est un animal.
+
+  - type: texte
+    titre: "Milieu, survie et diversité"
+    contenu: |-
+      Le milieu (eau, température, prédateurs) influence la survie des œufs et des jeunes.
+
+      - Fécondation externe, œufs laissés seuls : **beaucoup de pertes**. Les femelles produisent un très grand nombre d'ovules.
+      - Fécondation interne, petits protégés : il y en a **moins**.
+      - Ce sont les descendants qui atteignent l'âge adulte qui font durer la population.
+
+      La reproduction **sexuée** crée de la **diversité**.
+      La reproduction **asexuée** n'en crée pas : tous les individus sont sensibles de la même façon à une maladie ou à une sécheresse.
+
+  - type: exemple
+    enonce: "Une hydre forme un petit bourgeon sur son corps. Le bourgeon se détache et devient une nouvelle hydre. Quel est le mode de reproduction, et que peut-on dire de la nouvelle hydre ?"
+    etapes:
+      - "Je cherche des gamètes ou une fécondation : il n'y en a pas."
+      - "Il n'y a qu'un seul parent : c'est une reproduction asexuée (bourgeonnement)."
+      - "La nouvelle hydre a le même patrimoine génétique que le parent : c'est un clone."
+
+  - type: exercice
+    enonce: "Parmi ces éléments, lequel est un gamète ?"
+    forme: qcm
+    choix:
+      - "Un spermatozoïde"
+      - "Une cellule de la peau"
+      - "Une graine"
+      - "Un fruit"
+    reponse: 0
+    indices:
+      - "Un gamète est une cellule reproductrice."
+      - "Chez les animaux, les gamètes sont le spermatozoïde et l'ovule."
+      - "Une graine et un fruit se forment après la fécondation : ce ne sont pas des gamètes."
+    explication: "Le spermatozoïde est le gamète mâle des animaux. La cellule de peau n'est pas reproductrice ; la graine et le fruit se forment après la fécondation."
+
+  - type: exercice
+    enonce: "Le spermatozoïde humain contient 23 chromosomes. L'ovule humain en contient autant. Combien de chromosomes contient la cellule-œuf humaine ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 46
+    tolerance: 0.01
+    indices:
+      - "La cellule-œuf est formée par l'union des deux gamètes."
+      - "Elle reçoit un lot de chromosomes de chaque parent."
+      - "Additionne le lot du spermatozoïde et le lot de l'ovule."
+    explication: "23 + 23 = 46. La cellule-œuf retrouve le nombre de chromosomes des autres cellules du corps."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le transport des graines et des fruits, par le vent, l'eau ou des animaux, loin de la plante qui les a produits ?"
+    forme: reponse_courte
+    reponse: "dissémination"
+    reponses_acceptees: ["dissémination", "dissemination", "la dissémination", "la dissemination"]
+    indices:
+      - "Ne confonds pas avec le transport du pollen : ici, la graine existe déjà."
+      - "C'est la dernière étape avant la germination : les graines quittent la plante mère."
+      - "Le mot commence par « dis » et il est dans le cours."
+    explication: "C'est la dissémination : les graines et les fruits sont dispersés, ce qui permet à la plante de gagner de nouveaux milieux."
+
+  - type: exercice
+    enonce: "Chez quel animal la fécondation est-elle externe, dans l'eau de la rivière ?"
+    forme: qcm
+    choix:
+      - "Une truite"
+      - "Une lapine"
+      - "Une poule"
+      - "Une chatte"
+    reponse: 0
+    indices:
+      - "La fécondation externe a lieu hors du corps de la femelle."
+      - "Elle a lieu dans l'eau chez la plupart des poissons et des amphibiens."
+      - "Parmi les quatre animaux, un seul est un poisson."
+    explication: "La truite est un poisson : ses ovules sont fécondés dans l'eau. Lapine, poule et chatte ont une fécondation interne."
+
+  - type: exercice
+    enonce: "Document (données fictives) : une grenouille femelle pond 4 000 œufs dans une mare. En moyenne, seuls 8 têtards deviennent des grenouilles adultes. En moyenne, combien d'œufs faut-il pour obtenir une grenouille adulte ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 500
+    tolerance: 0.01
+    indices:
+      - "Tu cherches un nombre d'œufs pour un seul adulte."
+      - "Partage le nombre d'œufs entre les adultes obtenus."
+      - "Fais une division : le nombre d'œufs divisé par le nombre d'adultes."
+    explication: "4 000 ÷ 8 = 500. Les œufs sont laissés seuls dans l'eau : beaucoup sont perdus, donc la femelle en pond énormément."
+
+  - type: question_ouverte
+    question: >-
+      Un jardinier a beaucoup de fraisiers. Tous viennent de stolons du même pied. Une maladie
+      attaque un des fraisiers. Explique pourquoi elle risque d'attaquer tous les autres, et
+      compare avec des plantes obtenues par reproduction sexuée.
+    indices:
+      - "Comment sont les fraisiers obtenus par stolons par rapport au pied d'origine ?"
+      - "Ont-ils tous le même patrimoine génétique ?"
+      - "Compare avec des plantes qui viennent de la rencontre de gamètes : sont-elles toutes identiques ?"
+    criteres:
+      - "L'élève dit que les stolons donnent des clones, avec le même patrimoine génétique que le parent."
+      - "L'élève explique que des individus identiques sont sensibles de la même façon à la maladie."
+      - "L'élève dit que la reproduction sexuée crée de la diversité, donc des individus qui ne réagissent pas tous pareil."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, la différence entre reproduction sexuée et asexuée (gamètes,
+      parents, descendants), puis un lien entre le milieu et le nombre d'ovules produits.

@@ -1,0 +1,148 @@
+notion: dynamiques-espaces-faible-densite
+titre: "La diversité des dynamiques des espaces de faible densité"
+duree_minutes: 28
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Montagne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Montagne&oldid=2563354"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Tourisme »"
+    url: "https://fr.vikidia.org/w/index.php?title=Tourisme&oldid=2488818"
+    licence: CC-BY-SA-3.0
+  - titre: "Programme du cycle 4 (annexe 3), Histoire et géographie, classe de 3e, BOEN n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir un espace de faible densité et connaître la « diagonale du vide »."
+      - "Identifier des ressources : agriculture, tourisme, énergie, nouveaux habitants."
+      - "Expliquer pourquoi ces espaces ne sont pas seulement des marges délaissées."
+
+  - type: texte
+    titre: "Des espaces peu denses, en difficulté ou non"
+    contenu: >-
+      Un **espace de faible densité** a peu d'habitants au km².
+      Ce sont les campagnes, les montagnes et certains secteurs touristiques peu urbanisés.
+      On les a longtemps vus comme des **marges délaissées**, loin des villes.
+      La « **diagonale du vide** » va du Nord-Est au Sud-Ouest de la France.
+      Elle se dépeuple et vieillit.
+      Les écoles, les hôpitaux et les commerces y ferment souvent, et les jeunes partent.
+      On parle de **déprise**.
+
+  - type: texte
+    titre: "Des espaces qui attirent et qui produisent"
+    contenu: >-
+      Autour des villes, les campagnes gagnent des habitants.
+      Il y a des familles qui cherchent un logement moins cher et un cadre de vie plus calme.
+      Il y a aussi des **néoruraux**, venus de la ville.
+      Le télétravail et la fibre renforcent ce mouvement.
+      Le littoral et les régions du Sud attirent des retraités et des résidents secondaires.
+      Les ressources productives sont variées :
+      l'**agriculture** (élevage, céréales, vignes, produits de qualité),
+      le **tourisme vert** et l'accueil à la ferme (**agritourisme**),
+      les circuits courts,
+      et l'**énergie** (éolien, solaire, bois).
+
+  - type: texte
+    titre: "La montagne et la nuance à retenir"
+    contenu: >-
+      La montagne combine plusieurs activités :
+      l'élevage sur les **alpages**,
+      le tourisme d'hiver (stations de ski) et d'été (randonnée),
+      l'énergie hydroélectrique grâce aux torrents.
+      Certaines stations des Alpes du Nord attirent des touristes du monde entier.
+      Mais le réchauffement climatique réduit l'enneigement : les stations doivent diversifier leurs activités.
+      Au brevet, il faut nuancer.
+      Ne pas écrire « tout se vide », mais opposer les espaces **en déprise** et les espaces **dynamiques**.
+      Il faut citer des exemples et des causes : distance aux villes, tourisme, accessibilité.
+
+  - type: exemple
+    enonce: >-
+      Une commune rurale est à vingt minutes d'une grande ville. Sa population augmente.
+      Explique pourquoi.
+    etapes:
+      - "Le logement y est souvent moins cher qu'en ville, et le cadre de vie est plus calme."
+      - "Des familles et des néoruraux s'y installent tout en gardant un emploi dans la ville proche ou en télétravail."
+      - "La proximité de la ville est donc la cause de cette croissance. Ce n'est pas le cas d'une commune très éloignée de toute ville."
+
+  - type: exercice
+    enonce: "Qu'est-ce que la « diagonale du vide » ?"
+    forme: qcm
+    choix:
+      - "Une autoroute qui traverse la France du nord au sud"
+      - "Une bande de territoire, du Nord-Est au Sud-Ouest, où il y a peu d'habitants"
+      - "Un massif montagneux des Alpes"
+    reponse: 1
+    indices:
+      - "Ce n'est pas une route : c'est une zone du territoire."
+      - "Elle traverse plusieurs régions en diagonale."
+    explication: "La diagonale du vide est une bande du territoire français, du Nord-Est au Sud-Ouest, où la densité de population est faible."
+
+  - type: exercice
+    enonce: "Quel mot désigne une personne venue de la ville qui s'installe à la campagne ?"
+    forme: reponse_courte
+    reponse: "néorural"
+    reponses_acceptees: ["néorural", "néo-rural", "neorural", "neo-rural", "un néorural", "néoruraux", "les néoruraux"]
+    indices:
+      - "Le début du mot veut dire « nouveau »."
+      - "Le mot finit comme « rural », qui veut dire « de la campagne »."
+    explication: "Un néorural est une personne venue de la ville qui s'installe à la campagne."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne l'abandon progressif d'un espace : baisse de la population,
+      fermeture de services, terres laissées de côté ?
+    forme: reponse_courte
+    reponse: "déprise"
+    reponses_acceptees: ["déprise", "la déprise", "deprise", "la deprise", "déprise rurale"]
+    indices:
+      - "Le mot commence par « dé- » et finit par « -prise »."
+      - "C'est le contraire d'un espace bien tenu et bien occupé."
+    explication: "La déprise est l'abandon progressif d'un espace : moins d'habitants, des services qui ferment, des terres délaissées."
+
+  - type: exercice
+    enonce: "Quelle est une menace pour les stations de ski, d'après la leçon ?"
+    forme: qcm
+    choix:
+      - "Le réchauffement climatique, qui réduit l'enneigement"
+      - "Le trop grand nombre d'alpages"
+      - "L'arrivée de la fibre optique"
+    reponse: 0
+    indices:
+      - "Pense à la neige : qu'est-ce qui la fait diminuer ?"
+      - "Les stations doivent alors diversifier leurs activités."
+    explication: "Le réchauffement climatique réduit l'enneigement. Les stations doivent donc diversifier leurs activités."
+
+  - type: exercice
+    enonce: "Quelle phrase est la meilleure conclusion pour un devoir sur les espaces de faible densité ?"
+    forme: qcm
+    choix:
+      - "Tous les espaces ruraux se vident et sont délaissés."
+      - "Les espaces de faible densité sont divers : certains sont en déprise, d'autres sont dynamiques grâce au tourisme, à l'agriculture, à l'énergie ou aux nouveaux habitants."
+      - "Les espaces de faible densité vivent uniquement de l'agriculture."
+      - "Seule la montagne a des atouts."
+    reponse: 1
+    indices:
+      - "Le programme demande de nuancer : pas de phrase qui dit « tous » ou « seulement »."
+      - "Une bonne conclusion parle de la diversité des dynamiques."
+    explication: "Les espaces de faible densité sont très divers. La bonne phrase oppose déprise et dynamisme, et cite des atouts."
+
+  - type: question_ouverte
+    question: >-
+      Montre que les espaces de faible densité ne sont pas seulement des marges délaissées.
+      Donne un exemple de déprise et un exemple de dynamisme.
+    indices:
+      - "Pour la déprise, pense à la diagonale du vide et aux services qui ferment."
+      - "Pour le dynamisme, pense aux néoruraux, au tourisme, à l'énergie ou à la montagne."
+    criteres:
+      - "L'élève rappelle l'image de marges délaissées (diagonale du vide, dépeuplement, services qui ferment)."
+      - "L'élève donne un exemple de dynamisme (néoruraux, tourisme, agriculture de qualité, énergie)."
+      - "L'élève nuance en distinguant espaces en déprise et espaces dynamiques, avec une cause (distance aux villes, tourisme, accessibilité)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce qu'est un espace de faible densité
+      et deux raisons pour lesquelles ces espaces sont divers.

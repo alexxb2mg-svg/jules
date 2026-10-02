@@ -1,0 +1,213 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant). Relecture bienvenue.
+notion: subjonctif-imparfait-plus-que-parfait
+titre: L'imparfait et le plus-que-parfait du subjonctif
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître l'imparfait et le plus-que-parfait du subjonctif, et les distinguer du passé simple.
+  - Former l'imparfait du subjonctif à partir du passé simple (avec l'accent circonflexe à la 3e personne
+    du singulier).
+  - Écrire les formes des verbes du programme (être, avoir, aller, faire, venir, pouvoir, voir, vouloir,
+    prendre, savoir, falloir, valoir, dire) et former le plus-que-parfait.
+- type: texte
+  titre: À quoi servent ces temps ?
+  contenu: 'Le subjonctif a **quatre temps** : présent, passé, **imparfait**, **plus-que-parfait**.
+
+
+    L''imparfait et le plus-que-parfait du subjonctif s''emploient surtout dans la **langue écrite soutenue**
+    (textes littéraires).
+
+
+    Ils servent à la **concordance des temps** : si le verbe principal est au passé, le verbe au subjonctif
+    est à l''imparfait.
+
+
+    Exemple : « Il fallait qu''il vînt. »'
+- type: texte
+  titre: Former l'imparfait du subjonctif
+  contenu: '**Méthode en 3 étapes :**
+
+
+    1. Prendre le passé simple à la 2e personne du singulier (tu aimas, tu finis, tu vins).
+
+    2. Enlever le « s » final.
+
+    3. Ajouter : **-sse, -sses, -t, -ssions, -ssiez, -ssent**.
+
+
+    À la 3e personne du singulier, la dernière voyelle prend un **accent circonflexe** : -ât, -ît, -ût.
+
+
+    Exemples : aimer → que j''aimasse, qu''il aimât ; finir → qu''il finît ; venir (tu vins) → qu''il
+    vînt.'
+- type: texte
+  titre: Les verbes du programme
+  contenu: 'Voici la 3e personne du singulier (qu''il…) :
+
+
+    | Verbe | Forme |
+
+    |---|---|
+
+    | être | fût |
+
+    | avoir | eût |
+
+    | aller | allât |
+
+    | faire | fît |
+
+    | venir | vînt |
+
+    | pouvoir | pût |
+
+    | voir | vît |
+
+    | vouloir | voulût |
+
+    | prendre | prît |
+
+    | savoir | sût |
+
+    | falloir | fallût |
+
+    | valoir | valût |
+
+    | dire | dît |
+
+
+    **Être** : que je fusse, que tu fusses, qu''il fût, que nous fussions, que vous fussiez, qu''ils fussent.
+
+
+    **Avoir** : que j''eusse, que tu eusses, qu''il eût, que nous eussions, que vous eussiez, qu''ils
+    eussent.'
+- type: texte
+  titre: Le plus-que-parfait et le piège de l'accent
+  contenu: '**Plus-que-parfait du subjonctif** = auxiliaire (avoir ou être) **à l''imparfait du subjonctif**
+    + participe passé.
+
+
+    Exemples : qu''il eût fait, qu''elle fût partie, qu''ils eussent vu.
+
+
+    Il exprime une action **accomplie avant** l''action principale, dans un récit au passé.
+
+
+    Avec **être**, le participe passé s''accorde avec le sujet (qu''elle fût partie).
+
+
+    **Piège :** « qu''il fût » (subjonctif, avec accent) n''est pas « il fut » (passé simple, sans accent).
+    Même chose : « il eut » (passé simple) et « qu''il eût » (subjonctif).'
+- type: exemple
+  enonce: 'Écris au subjonctif imparfait (3e personne du singulier) le verbe dire dans « Il fallait qu''il
+    le ___. » Puis écris au plus-que-parfait le verbe prendre dans « Elle craignait qu''il ne l''___ déjà.
+    » (sujet : il).'
+  etapes:
+  - 'Verbe dire : le passé simple à « tu » est « tu dis ». On enlève le « s » : il reste « di ». On ajoute
+    « t » et l''accent circonflexe sur le « i » : « qu''il dît ».'
+  - 'Verbe prendre au plus-que-parfait : on utilise l''auxiliaire avoir à l''imparfait du subjonctif,
+    3e personne du singulier : « eût ».'
+  - 'On ajoute le participe passé « pris » : « qu''il eût pris ». La phrase devient : « Elle craignait
+    qu''il ne l''eût déjà pris. »'
+- type: exercice
+  enonce: 'Complète : « Bien qu''il ___ fatigué, il a terminé la course. » (subjonctif imparfait du verbe
+    être)'
+  forme: qcm
+  choix:
+  - fût
+  - fut
+  - soit
+  - est
+  reponse: 0
+  indices:
+  - Après « bien que », on emploie le subjonctif.
+  - 'Le verbe principal est au passé : il faut l''imparfait du subjonctif, pas le présent.'
+  - 'Une forme a un accent circonflexe : c''est celle du subjonctif imparfait à la 3e personne du singulier.'
+  explication: '« Bien qu''il fût fatigué » : subjonctif imparfait de être, avec l''accent circonflexe.
+    « fut » (sans accent) est le passé simple, « soit » est le présent du subjonctif.'
+- type: exercice
+  enonce: 'Complète avec le subjonctif imparfait du verbe venir : « Le professeur souhaitait que l''élève
+    ___ le voir après le cours. » (3e personne du singulier ; écris seulement le verbe)'
+  forme: reponse_courte
+  reponse: vînt
+  reponses_acceptees:
+  - vînt
+  - qu'il vînt
+  - que l'élève vînt
+  indices:
+  - 'Pars du passé simple à « tu » : « tu vins ».'
+  - Enlève le « s » final, puis ajoute la terminaison « -t » de la 3e personne du singulier.
+  - 'N''oublie pas le signe qui distingue le subjonctif du passé simple : l''accent circonflexe sur la
+    voyelle.'
+  explication: 'Passé simple « tu vins » → on enlève le s → on ajoute -t avec l''accent : « que l''élève
+    vînt ».'
+- type: exercice
+  enonce: Quelle forme est le plus-que-parfait du subjonctif du verbe faire, 3e personne du singulier
+    ?
+  forme: qcm
+  choix:
+  - qu'il eût fait
+  - qu'il a fait
+  - qu'il fît
+  - qu'il eut fait
+  reponse: 0
+  indices:
+  - 'Le plus-que-parfait du subjonctif est un temps composé : auxiliaire + participe passé.'
+  - L'auxiliaire du verbe faire est avoir. Il doit être à l'imparfait du subjonctif.
+  - Élimine « qu'il fît » (temps simple) et « qu'il a fait » (indicatif). Regarde l'accent sur l'auxiliaire
+    des deux formes qui restent.
+  explication: '« qu''il eût fait » : auxiliaire avoir à l''imparfait du subjonctif (eût) + participe
+    passé (fait). « eut » sans accent est un passé simple.'
+- type: exercice
+  enonce: 'Complète avec le subjonctif imparfait du verbe faire : « Il fallait que tu ___ ton travail
+    avant de partir. » (2e personne du singulier ; écris seulement le verbe)'
+  forme: reponse_courte
+  reponse: fisses
+  reponses_acceptees:
+  - fisses
+  - que tu fisses
+  indices:
+  - Le passé simple de faire à la 2e personne du singulier est « tu fis ».
+  - 'On enlève le « s » final : il reste « fi ».'
+  - 'Puis on ajoute la terminaison de « tu » : « -sses ».'
+  explication: « tu fis » → « fi » + « -sses » = « que tu fisses ».
+- type: exercice
+  enonce: 'Complète avec le subjonctif imparfait du verbe savoir : « Il fallait que vous ___ votre leçon.
+    » (écris seulement le verbe)'
+  forme: reponse_courte
+  reponse: sussiez
+  reponses_acceptees:
+  - sussiez
+  - que vous sussiez
+  indices:
+  - 'Cherche le passé simple de savoir à la 2e personne du singulier : « tu sus ».'
+  - On enlève le « s » final. Il reste « su ».
+  - La terminaison de « vous » est « -ssiez ».
+  explication: « tu sus » → « su » + « -ssiez » = « que vous sussiez ».
+- type: question_ouverte
+  question: Explique la différence entre « il fut » et « qu'il fût ». Donne le nom de chaque temps et
+    dis comment on les distingue à l'écrit.
+  indices:
+  - Pense au signe que porte l'une des deux formes.
+  - Un des deux temps est un temps du récit à l'indicatif. L'autre est un temps du subjonctif.
+  criteres:
+  - L'élève nomme « il fut » comme un passé simple (indicatif) et « qu'il fût » comme un subjonctif imparfait.
+  - L'élève dit que la forme du subjonctif porte un accent circonflexe et que celle du passé simple n'en
+    porte pas.
+  - L'élève donne un exemple correct de phrase avec « qu'il fût » ou une autre forme du même temps.
+- type: synthese
+  consigne: 'Écris avec tes mots, en trois phrases : comment forme-t-on l''imparfait du subjonctif ? Comment
+    forme-t-on le plus-que-parfait ? Quel piège dois-tu éviter avec l''accent circonflexe ?'

@@ -1,0 +1,158 @@
+notion: information-desinformation-complotisme
+titre: "Information, désinformation, complotisme"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Désinformation »"
+    url: "https://fr.vikidia.org/w/index.php?title=D%C3%A9sinformation&oldid=2464955"
+    licence: CC-BY-SA-3.0
+  - titre: "Définition des épreuves du DNB à compter de la session 2027, sous-épreuve EMC, note de service du 11-9-2026 (BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer une erreur et la désinformation, et connaître l'objet de la loi du 22 décembre 2018."
+      - "Expliquer comment la désinformation peut nourrir le complotisme, le racisme et l'antisémitisme."
+      - "Distinguer croyance, opinion et savoir, et vérifier les faits avec rigueur."
+
+  - type: texte
+    titre: "Erreur, désinformation, déstabilisation"
+    contenu: |-
+      Une **erreur** est une information fausse diffusée **sans intention de tromper**.
+
+      La **désinformation** est **volontaire** : ce sont des techniques de communication utilisées pour tromper ou influencer l'opinion publique.
+
+      Une **opération de déstabilisation** combine souvent fausses informations, faux comptes et campagnes coordonnées, parfois menées depuis l'étranger, pour affaiblir la confiance dans un pays ou ses élections.
+
+      Outils : montages, images et voix truquées avec l'**intelligence artificielle** (les « hypertrucages » ou deepfakes), faux comptes, partages en masse.
+
+  - type: texte
+    titre: "La loi du 22 décembre 2018"
+    contenu: |-
+      La **loi du 22 décembre 2018** est relative à la lutte contre la **manipulation de l'information**.
+
+      Elle vise surtout les **périodes électorales**. Elle permet de saisir un **juge** pour faire cesser rapidement la diffusion de fausses informations. Ces informations sont diffusées de manière délibérée, artificielle ou automatisée, et massive, pour fausser un scrutin.
+
+      Elle oblige aussi les plateformes à plus de **transparence**.
+
+      Elle **n'interdit pas les opinions**.
+
+  - type: texte
+    titre: "Désinformation et complotisme"
+    contenu: |-
+      Le **complotisme** est la croyance que des événements s'expliquent par un **complot caché**, mené par un groupe puissant.
+
+      Il s'appuie souvent sur des faits déformés ou inventés. Il refuse les preuves qui le contredisent.
+
+      La désinformation peut le nourrir. Il peut alimenter le **racisme** et l'**antisémitisme**, quand il désigne un groupe entier comme responsable. Le racisme et l'antisémitisme sont des **délits punis par la loi**.
+
+  - type: texte
+    titre: "Croyance, opinion, savoir : établir les faits"
+    contenu: |-
+      | Notion | Définition |
+      |---|---|
+      | **Croyance** | une conviction fondée sur la foi ou l'intuition, sans preuve vérifiable |
+      | **Opinion** | un point de vue personnel, discutable |
+      | **Savoir** | une connaissance établie et vérifiée, qui peut être démontrée |
+
+      Pour établir les faits avec rigueur :
+      - **vérifier la source** (qui publie, quand, avec quelles preuves) ;
+      - **croiser** plusieurs sources fiables ;
+      - chercher la **date** et l'**origine** d'une image.
+
+      Des services de **fact-checking** aident à distinguer le vrai du faux.
+
+  - type: exemple
+    enonce: "Classe ces trois phrases : « Paris est la capitale de la France. » « Cette chanson est la plus belle de l'année. » « Des extraterrestres dirigent en secret le gouvernement, mais personne ne peut le prouver. »"
+    etapes:
+      - "Phrase 1 : on peut la vérifier avec des preuves. C'est un savoir."
+      - "Phrase 2 : elle exprime un goût personnel, discutable. C'est une opinion."
+      - "Phrase 3 : elle parle d'un complot caché, sans preuve. C'est une croyance, de type complotiste."
+      - "Méthode : pour chaque phrase, demande-toi si on peut la vérifier avec des preuves."
+
+  - type: exercice
+    enonce: "En quelle année a été adoptée la loi française relative à la lutte contre la manipulation de l'information ?"
+    forme: nombre
+    reponse: 2018
+    tolerance: 0
+    indices:
+      - "C'est la loi du 22 décembre. Elle date de la seconde décennie des années 2000."
+      - "L'année se termine par « 18 »."
+    explication: "La loi relative à la lutte contre la manipulation de l'information est du 22 décembre 2018."
+
+  - type: exercice
+    enonce: "Quel mot désigne la croyance que des événements s'expliquent par un complot caché, souvent sans preuve ?"
+    forme: reponse_courte
+    reponse: "le complotisme"
+    reponses_acceptees:
+      - "complotisme"
+      - "un complotisme"
+      - "théorie du complot"
+      - "la théorie du complot"
+      - "les théories du complot"
+    indices:
+      - "Le mot est construit sur « complot »."
+      - "Il se termine par « -isme »."
+    explication: "C'est le complotisme : la croyance que des événements s'expliquent par un complot caché, souvent sans preuve."
+
+  - type: exercice
+    enonce: "Qu'est-ce qui distingue la désinformation d'une simple erreur ?"
+    forme: qcm
+    choix:
+      - "La désinformation est volontaire : elle cherche à tromper"
+      - "La désinformation circule uniquement sur les médias sociaux"
+      - "La désinformation ne concerne que la politique"
+    reponse: 0
+    indices:
+      - "Pense à l'intention de la personne qui diffuse l'information fausse."
+      - "Ce n'est ni le support, ni le sujet, qui la définit."
+    explication: "La désinformation est volontaire et vise à tromper. Une erreur est faite sans intention de tromper."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases est un savoir ?"
+    forme: qcm
+    choix:
+      - "Ce film est le meilleur de tous les temps"
+      - "L'eau bout à 100 °C au niveau de la mer"
+      - "Un groupe secret contrôle le monde, mais personne ne peut le prouver"
+    reponse: 1
+    indices:
+      - "Un savoir peut être démontré, par exemple par une mesure."
+      - "Élimine la phrase qui exprime un goût, puis celle qui n'a pas de preuve."
+    explication: "L'eau bout à 100 °C au niveau de la mer se mesure : c'est un savoir. La première phrase est une opinion. La troisième est une croyance."
+
+  - type: exercice
+    enonce: "Une image choc circule sur les médias sociaux. Que faire avant de la partager ?"
+    forme: qcm
+    choix:
+      - "La partager tout de suite, car elle est très vue"
+      - "Chercher qui l'a publiée en premier, croiser au moins deux sources fiables, puis décider"
+      - "La croire, car elle vient d'un groupe d'amis"
+    reponse: 1
+    indices:
+      - "Une information n'est pas vraie parce qu'elle est très partagée."
+      - "Il faut d'abord chercher l'origine, puis recouper avec des sources fiables."
+    explication: "On cherche l'origine et la date, puis on croise plusieurs sources fiables. Ensuite seulement on décide de partager ou non."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : explique comment la désinformation peut nourrir le complotisme, et comment
+      s'en protéger. Commence par une phrase d'introduction et termine par une phrase de conclusion.
+    indices:
+      - "Rappelle ce qu'est la désinformation, puis ce qu'est le complotisme."
+      - "Pense à ce qu'un groupe entier peut subir quand on l'accuse à tort, puis à la vérification des sources."
+    criteres:
+      - "L'élève explique que la désinformation diffuse volontairement des informations fausses ou déformées."
+      - "L'élève montre que ces informations peuvent servir de base à des théories du complot."
+      - "L'élève précise que cela peut nourrir le racisme et l'antisémitisme."
+      - "L'élève donne au moins un moyen de se protéger (vérifier la source, croiser les sources, fact-checking)."
+      - "L'élève a une phrase d'introduction et une phrase de conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens : la différence entre
+      erreur et désinformation, ce que permet la loi de 2018, et la différence entre croyance, opinion
+      et savoir.

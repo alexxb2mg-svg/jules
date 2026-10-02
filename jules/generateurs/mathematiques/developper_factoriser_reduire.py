@@ -144,7 +144,7 @@ def _simple(rng: random.Random, difficulte: int) -> dict[str, Any]:
 
 _PALIERS_DOUBLE = {
     # difficulté : (coefficients de x possibles, relatifs ?)
-    1: ((1,), False),
+    1: ((1, 2), False),
     2: ((1, 2, 3), True),
     3: ((2, 3, 4, 5), True),
 }
@@ -212,7 +212,7 @@ def _double(rng: random.Random, difficulte: int) -> dict[str, Any]:
 
 _PALIERS_DIFFERENCE = {
     # difficulté : (a possibles, b possibles)
-    1: ((1,), range(1, 11)),
+    1: ((1,), range(1, 21)),
     2: ((2, 3, 4, 5), range(1, 10)),
     3: ((2, 3, 4, 5, 6, 7), range(2, 13)),
 }
@@ -221,7 +221,7 @@ _PALIERS_DIFFERENCE = {
 def _difference(rng: random.Random, difficulte: int) -> dict[str, Any]:
     coefs, valeurs_b = palier(_PALIERS_DIFFERENCE, difficulte)
     a, b = rng.choice(coefs), rng.choice(valeurs_b)
-    if difficulte == 3 and rng.random() < 0.5:
+    if difficulte != 2 and rng.random() < 0.5:  # palier 1 : (5 − x)(5 + x) aussi, sinon trop peu de variété
         expression = f"({b} − {terme(a)})({b} + {terme(a)})"  # (b − ax)(b + ax) = b² − a²x²
         reponse = [b * b, 0, -a * a]
     else:

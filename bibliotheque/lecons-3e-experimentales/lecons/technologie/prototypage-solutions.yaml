@@ -1,0 +1,165 @@
+notion: prototypage-solutions
+titre: "Prototypage de solutions : concevoir et fabriquer un nouvel objet"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un prototype d'une maquette et choisir le bon mode de représentation."
+      - "Choisir un mécanisme (transmettre ou transformer un mouvement) et un procédé de fabrication."
+      - "Citer des règles de sécurité en atelier et justifier une solution avec le cahier des charges."
+
+  - type: texte
+    titre: "Prototype, maquette et modes de représentation"
+    contenu: >-
+      Pour produire un nouvel objet technique, l'équipe imagine plusieurs solutions et en choisit
+      une avec le cahier des charges. Puis elle fabrique un **prototype** : un premier exemplaire
+      qui **fonctionne vraiment**, pour le tester. Une **maquette** montre surtout la forme,
+      souvent sans fonctionner.
+
+      Les modes de représentation :
+
+      - le **croquis** à main levée : chercher des idées ;
+
+      - le **schéma** : montrer le principe de fonctionnement ;
+
+      - le **modèle 3D** (logiciel de CAO) : vérifier formes et dimensions, préparer la fabrication ;
+
+      - l'**algorithme** ou l'algorigramme : décrire ce que fait le programme.
+
+  - type: texte
+    titre: "Les mécanismes de mouvement"
+    contenu: >-
+      Des mécanismes **transmettent** ou **transforment** un mouvement.
+
+      - Poulies et courroie, engrenages : ils **transmettent** une rotation.
+
+      - Pignon-crémaillère, système vis-écrou : ils **transforment** une rotation en
+      **translation** (mouvement en ligne droite).
+
+      Attention : la poulie transmet, la vis-écrou transforme.
+
+  - type: texte
+    titre: "Fabriquer et assembler les pièces"
+    contenu: >-
+      Les pièces s'obtiennent par **découpe laser** (pièces planes), **impression 3D** (pièces
+      en volume), **pliage** ou **perçage**. Puis on les **assemble** : vis, clips, collage.
+
+      On choisit le procédé selon la forme de la pièce, son matériau et le temps disponible.
+
+  - type: texte
+    titre: "Ergonomie, sécurité et essais"
+    contenu: >-
+      L'**ergonomie**, c'est adapter l'objet à la personne qui l'utilise : facile, confortable
+      et sûr. On y pense dès les croquis (taille des boutons, place des commandes).
+
+      **Sécurité en atelier** : lunettes de protection, cheveux attachés, capot de la découpeuse
+      laser fermé, pièces chaudes non touchées, machine utilisée seulement après autorisation.
+
+      Après la fabrication, on teste le prototype et on le compare au cahier des charges : on
+      note ce qui marche, ce qui ne marche pas, et on améliore.
+
+  - type: exemple
+    enonce: >-
+      Pour un distributeur de croquettes, quel mode de représentation utiliser pour montrer
+      rapidement trois idées de réservoir à l'équipe ?
+    etapes:
+      - "On veut chercher et comparer des idées vite : le croquis à main levée convient."
+      - "Le croquis est rapide à faire et suffit pour comparer."
+      - "Le modèle 3D viendra ensuite, pour la solution choisie."
+
+  - type: exercice
+    enonce: >-
+      Ton équipe fabrique un premier exemplaire d'un objet, qui fonctionne vraiment, pour le
+      tester avant de le produire. Comment s'appelle cet exemplaire ?
+    forme: reponse_courte
+    reponse: "prototype"
+    reponses_acceptees:
+      - "prototype"
+      - "un prototype"
+      - "le prototype"
+    indices:
+      - "Ce n'est pas une maquette : il fonctionne vraiment."
+      - "Le mot commence par « proto »."
+    explication: "C'est un prototype : un premier exemplaire qui fonctionne, fabriqué pour tester une solution."
+
+  - type: exercice
+    enonce: >-
+      Un moteur tourne. Il doit faire avancer une trappe en ligne droite. Quel mécanisme
+      transforme une rotation en translation ?
+    forme: qcm
+    choix:
+      - "Des poulies et une courroie"
+      - "Un pignon et une crémaillère"
+      - "Deux engrenages"
+    reponse: 1
+    indices:
+      - "Certains mécanismes transmettent seulement la rotation. Lesquels ?"
+      - "Cherche celui qui contient une pièce droite dentée."
+    explication: "Le pignon et la crémaillère transforment une rotation en translation. Poulies-courroie et engrenages transmettent une rotation."
+
+  - type: exercice
+    enonce: "Quelle règle de sécurité faut-il respecter en atelier ?"
+    forme: qcm
+    choix:
+      - "Toucher les pièces chaudes pour vérifier qu'elles sont prêtes"
+      - "Utiliser la machine seulement après autorisation, avec lunettes de protection"
+      - "Ouvrir le capot de la découpeuse laser pendant la coupe"
+    reponse: 1
+    indices:
+      - "Deux propositions sont dangereuses. Lesquelles ?"
+      - "Pense à ce qu'on demande avant de lancer une machine."
+    explication: "On utilise la machine seulement après autorisation, avec des lunettes de protection. On ne touche pas les pièces chaudes et le capot de la découpeuse laser reste fermé."
+
+  - type: exercice
+    enonce: "Une pièce plane doit être découpée dans une plaque. Quel procédé de fabrication est adapté ?"
+    forme: qcm
+    choix:
+      - "La découpe laser"
+      - "L'impression 3D"
+      - "Le collage"
+    reponse: 0
+    indices:
+      - "Une de ces trois propositions est un procédé pour les pièces planes."
+      - "Une autre sert pour les pièces en volume, et la dernière sert à assembler."
+    explication: "La découpe laser convient aux pièces planes. L'impression 3D sert aux pièces en volume. Le collage est un assemblage, pas un procédé d'obtention."
+
+  - type: exercice
+    enonce: >-
+      Un distributeur doit faire coulisser une trappe en ligne droite avec un moteur qui tourne.
+      Une équipe veut aussi un système simple à utiliser. Quel choix est cohérent ?
+    forme: qcm
+    choix:
+      - "Des poulies et une courroie, car elles transforment la rotation en translation"
+      - "Un système vis-écrou, car il transforme la rotation en translation ; on vérifie l'ergonomie dès les croquis"
+      - "Un engrenage, car il transforme la rotation en translation"
+    reponse: 1
+    indices:
+      - "Quels mécanismes transforment vraiment un mouvement ? Les autres le transmettent seulement."
+      - "Relis la phrase sur l'ergonomie : à quel moment y pense-t-on ?"
+    explication: "Le système vis-écrou transforme une rotation en translation, et l'ergonomie se pense dès les croquis. Poulies-courroie et engrenages transmettent une rotation, ils ne la transforment pas."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre un prototype et une maquette, et dis pourquoi une équipe teste
+      son prototype avant de le produire.
+    indices:
+      - "Lequel des deux fonctionne vraiment ?"
+      - "Avec quoi compare-t-on les résultats du test ?"
+    criteres:
+      - "L'élève dit que le prototype fonctionne, alors que la maquette montre surtout la forme."
+      - "L'élève explique qu'on teste le prototype pour comparer avec le cahier des charges et améliorer la solution."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots, en deux ou trois phrases : cite un mode de représentation et à quoi
+      il sert, puis un mécanisme qui transforme un mouvement et une règle de sécurité en atelier.

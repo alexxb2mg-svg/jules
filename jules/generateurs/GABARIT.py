@@ -1,5 +1,6 @@
 """GABARIT d'un générateur de notion. Copie ce fichier sous `jules/generateurs/<matiere>/<notion>.py`,
-remplace NOTION et les variantes, enregistre le module dans `jules/generateurs/__init__.py` (MODULES).
+remplace NOTION et les variantes. Le module est enregistré tout seul (découverte des modules du paquet de
+matière par `jules/generateurs/__init__.py`) : aucune liste à modifier.
 Le test générique `tests/test_generateurs.py` couvre alors ta notion sans une ligne de test à écrire.
 
 Ce que le contrat exige (docs/GENERATEURS-CONTRAT.md, la version longue) :
