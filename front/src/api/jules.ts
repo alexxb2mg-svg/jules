@@ -78,6 +78,25 @@ export const epreuve = {
   commencer: () => api<{ id: string; mode: string; titre: string; presentation: string }>("/api/eleve/epreuve/commencer", { method: "POST" }),
 }
 
+/* ---- recherche des notions (barre latérale) : index complet du référentiel, sans IA ---- */
+// Forme : jules/modules/notions.py index_recherche() (GET /api/eleve/notions/index).
+
+export type NotionRecherche = {
+  id: string; titre: string; chapitre: string; matiere: string; nom_matiere: string; niveau: string
+  /** Fiche visuelle disponible (« Mes fiches »). */
+  fiche: boolean
+  /** Leçon à blocs disponible (module cours). */
+  lecon: boolean
+  mots_cles: string[]
+}
+
+let indexNotions: Promise<NotionRecherche[]> | null = null
+export const rechercheNotions = {
+  /** Toutes les notions du référentiel ; une seule requête pour toute la session de la page. */
+  index: () => (indexNotions ??= api<{ notions: NotionRecherche[] }>("/api/eleve/notions/index")
+    .then((r) => r.notions).catch((e) => { indexNotions = null; throw e })),
+}
+
 export const notionsTravaillees = {
   lire: (convId: string) => api<{ notion: { id: string; titre: string; matiere: string; origine?: string } | null }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`),
   choisir: (convId: string, notionId: string) => api<{ notion: { id: string; titre: string; matiere: string } }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`, json({ notion: notionId }, "PUT")),

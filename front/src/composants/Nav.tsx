@@ -2,6 +2,7 @@
 // entièrement pilotée par config/navigation.ts (rubriques de tests/navigation-reference.json).
 // Sous « Mes fiches » : filtre natif/perso, fiches ouvertes récemment (couleur perso pour les fiches perso),
 // dossiers et « Ajouter mon cours » (docs/SOURCES-CONTRAT.md §8). Les rubriques de référence ne changent pas.
+// En tête, sous le sélecteur de matière : la recherche des notions (modules/recherche, raccourci / ou Ctrl+K).
 import { ExternalLink, Folder, Inbox, Moon, Plus, Sparkles, Sun } from "lucide-react"
 import {
   Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader,
@@ -18,6 +19,8 @@ import { NON_CLASSE, useBibliothequePerso, useFiltre, useRecentes } from "@/modu
 import { FiltreFiches, voitNatives, voitPerso } from "@/modules/sources/pieces"
 import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
 import { SelecteurMatiere } from "@/modules/accueil/SelecteurMatiere"
+import { RechercheNotions } from "@/modules/recherche/RechercheNotions"
+import { useRaccourciRecherche } from "@/modules/recherche/etat"
 import type { Route } from "@/routes"
 
 export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, aller }: {
@@ -29,6 +32,7 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
   const { isMobile, setOpenMobile } = useSidebar()
   const fermer = () => { if (isMobile) setOpenMobile(false) }
   const { theme, basculer } = useTheme()
+  useRaccourciRecherche()
   const entree = ({ id, nom, Icone, pageExistante }: EntreeNav) => (
     <SidebarMenuItem key={id}>
       <SidebarMenuButton
@@ -57,6 +61,7 @@ export function Nav({ admin = true, actif, onChange, onMatiere, prenom, route, a
           </span>
         </div>
         <div className="mt-4"><SelecteurMatiere onChoix={(m) => { onMatiere(m); fermer() }} /></div>
+        <div className="mt-2 flex flex-col"><RechercheNotions onAller={(r) => { aller(r); fermer() }} /></div>
       </SidebarHeader>
 
       <SidebarContent>

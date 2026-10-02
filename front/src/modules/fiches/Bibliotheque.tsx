@@ -19,9 +19,7 @@ import { useBibliothequePerso, useFiltre } from "@/modules/sources/etat"
 import { FiltreFiches, SectionDossiers, TuilePerso, voitNatives, voitPerso } from "@/modules/sources/pieces"
 import { LegendeOrigine, Reprise } from "@/modules/accueil/Reprise"
 import { estNouveau, LIBELLE_NOUVEAU } from "@/config/veille"
-
-/** Comparaison sans accents ni casse, pour la recherche. */
-const plat = (s: string) => s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase()
+import { plat } from "@/lib/texte"
 
 export function Bibliotheque({ matiere, onMatiere, onOuvrir, onOuvrirPerso, onAjouter, onDossier, onReviser }: {
   matiere: string | null
