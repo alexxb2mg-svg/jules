@@ -24,6 +24,9 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 <p align="center"><img src="docs/interface-cartes.png" alt="Six cartes des notions, une par matière : la Seconde Guerre mondiale en violet, le calcul avec les fractions en bleu, le circuit électrique en turquoise, la puberté en vert, la chaîne d'énergie en orange, l'aménagement du territoire en mode sombre" width="820"></p>
 <p align="center"><em>Chaque fiche a sa carte des notions : l'idée centrale et ce qui en découle, en un coup d'œil.</em></p>
 
+<p align="center"><img src="docs/interface-schemas.png" alt="Six schémas de fiches : les circuits en série et en dérivation, les 18 premiers éléments de la classification, un atome de lithium et le zoom sur son noyau, la digestion par les enzymes, le tableau à double entrée de deux dés, un diagramme de Gantt de projet technique" width="820"></p>
+<p align="center"><em>Les schémas des fiches (306 en 3e) : dessinés en SVG, vérifiés par le code, agrandissables.</em></p>
+
 <p align="center"><img src="docs/interface-carte-agrandie.png" alt="La carte d'une fiche de physique-chimie ouverte en grand au-dessus de la page : un circuit électrique, relié à « en série », « en dérivation », « loi d'Ohm » et « mesures »" width="820"></p>
 <p align="center"><em>« Agrandir la carte » l'ouvre en grand, au-dessus de la fiche.</em></p>
 
