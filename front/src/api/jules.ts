@@ -195,7 +195,7 @@ export type Lecon = {
 export type Session = { session: string; conversation: string; lecon: Lecon; progression: Progression }
 export type Tentative = { juste: boolean | null; tentatives: number; explication: string | null; jules: string | null; progression: Progression }
 
-export type NotionParcours = { id: string; titre: string; chapitre: string; etat: string; lecon: boolean }
+export type NotionParcours = { id: string; titre: string; chapitre: string; etat: string; lecon: boolean; duree_minutes?: number }
 export type Parcours = { matieres: { id: string; nom: string }[]; matiere: string; notions: NotionParcours[]; estimation: string }
 
 const S = (id: string) => `/api/eleve/cours/sessions/${encodeURIComponent(id)}`

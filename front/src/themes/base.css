@@ -40,6 +40,12 @@
   --j-trait-texte: #4A5566;
   /* feuille des figures dessinées par /gabarits.js (traits sombres fixes) : reste claire dans tous les thèmes */
   --j-papier: #F8F9FC;
+  /* feuille des schémas SVG des fiches (/static/fiche-contenu.css) */
+  --schema-papier: #FFFFFF;
+  --schema-encre: #1A1A18;
+  --schema-encre-2: #5F5E5A;
+  --schema-boite: #F6F5F0;
+  --schema-trait: #5F5E5A;
   /* couleurs des termes de formule déclarées par les fiches (couleurCss) */
   --j-terme-bleu: #1D4E89;
   --j-terme-orange: #D9480F;

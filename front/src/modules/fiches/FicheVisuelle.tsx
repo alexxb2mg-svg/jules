@@ -23,7 +23,15 @@ export const styleMatiere = (matiere: string) => ({
   "--m-accent": `var(--matiere-${matiere}-accent, var(--j-bleu))`,
 }) as React.CSSProperties
 
-const ACCUEIL_JULES = "Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir."
+/** La figure interactive (premier bloc « graphe ») remonte juste après le premier bloc (l'énoncé) ;
+ *  le reste garde son ordre. Ordre d'affichage seulement : les données ne changent pas. */
+function figureEnTete(blocs: BlocFiche[]): BlocFiche[] {
+  const i = blocs.findIndex((b) => b.type === "graphe")
+  if (i <= 1) return blocs
+  return [blocs[0], blocs[i], ...blocs.slice(1, i), ...blocs.slice(i + 1)]
+}
+
+const ACCUEIL_JULES ="Clique sur un bloc de la fiche : je t'explique ce qu'il faut en retenir."
 
 /** Habillage d'une fiche qui n'est pas une fiche native (fiche personnelle, docs/SOURCES-CONTRAT.md §8) :
  *  mêmes blocs, même rendu ; seuls la couleur, l'en-tête, les actions et la mention des sources changent. */
@@ -100,7 +108,7 @@ export function FicheVisuelle({ notion, onRetour, retour, onOuvrirLecon, charger
 
   const notionReelle = native ? notion : fiche?.notion
   const lienDiscuter = notionReelle ? `/discuter?notion=${encodeURIComponent(notionReelle)}` : "/discuter"
-  const blocs = (fiche?.blocs || []).filter((b) => b.type !== "attendus" && RENDUS[b.type])
+  const blocs = figureEnTete((fiche?.blocs || []).filter((b) => b.type !== "attendus" && RENDUS[b.type]))
   const attendus = (fiche?.blocs.find((b) => b.type === "attendus") as BlocAttendus | undefined)?.attendus || []
 
   const { scrollYProgress } = useScroll({ container: zone })

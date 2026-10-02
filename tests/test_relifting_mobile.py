@@ -2,14 +2,16 @@
 
 Verifie : le theme sombre suit le reglage du telephone, se force depuis le tiroir et reste memorise apres
 rechargement ; dans la discussion, Jules a son portrait une fois par groupe de bulles et les textes restent
-lisibles (contraste texte/fond >= 4,5:1 en clair comme en sombre). Ignore si Chromium ou l'interface construite
-(npm run build) est absent.
+lisibles (contraste texte/fond >= 4,5:1 en clair comme en sombre). Passe 3 : schemas SVG agrandissables et lisibles dans
+les deux themes, figure interactive en tete de fiche, duree sur les cartes de lecon. Ignore si Chromium ou
+l'interface construite (npm run build) est absent.
 """
 
 # ruff: noqa: E501  (expressions JavaScript d'une ligne, plus lisibles ainsi)
 
 from __future__ import annotations
 
+import re
 import socket
 import threading
 import time
@@ -53,6 +55,10 @@ def serveur(projet, brut_config):
     if not INTERFACE.is_file():
         pytest.skip("interface React non construite (npm run build dans front/)")
     brut_config["acces"] = {"code_eleve": empreinte(CODE), "code_parent": empreinte("parent67")}
+    brut_config["modules"] = [
+        *(brut_config.get("modules") or []),
+        {"id": "fiches_visuelles", "reglages": {"bibliotheques": ["fiches-visuelles-3e-experimentales"]}},
+    ]
     llm = Factice()
     llm.regle = regle_par_defaut
     tuteur = Tuteur(depuis_dict(brut_config, projet), llm=llm)
@@ -188,3 +194,73 @@ def test_liste_des_lecons_matiere_en_grand_et_cartes_degradees(serveur, tmp_path
         )
         assert actif != autre
         assert page.evaluer(CONTRASTE) >= 4.5
+        # passe 3 : la duree de la lecon sur chaque carte (« 30 min · a faire »), jamais « 0 min »
+        metas = page.evaluer(
+            "[...document.querySelectorAll('button [data-slot=progress]')].map((p) => p.closest('button').innerText)"
+        )
+        assert metas and all(re.search(r"\d+\s*min\b", m) for m in metas), metas
+        assert not any(re.search(r"\b0\s*min", m) for m in metas), metas
+
+
+# --- passe 3 : schemas SVG, figure interactive en tete -----------------------------------------------------------
+# Contraste des textes d'un schema : fond = derniere forme pleine qui precede le texte et contient son centre, sinon la feuille.
+CONTRASTE_SCHEMA = """(() => { const cv = document.createElement('canvas').getContext('2d', {willReadFrequently: true});
+  const rgba = (s) => { cv.clearRect(0,0,1,1); cv.fillStyle = '#000'; cv.fillStyle = s; cv.fillRect(0,0,1,1); const d = cv.getImageData(0,0,1,1).data; return [d[0], d[1], d[2], d[3]/255]; };
+  const lum = ([r,g,b]) => { const f = (c) => { c /= 255; return c <= .03928 ? c/12.92 : Math.pow((c+.055)/1.055, 2.4); }; return .2126*f(r)+.7152*f(g)+.0722*f(b); };
+  const z = document.querySelector('article .bloc-schema'); const papier = rgba(getComputedStyle(z).backgroundColor); let min = 99;
+  const formes = [...z.querySelectorAll('rect,circle,ellipse,path,polygon')].filter((f) => { const c = getComputedStyle(f); return c.fill !== 'none' && rgba(c.fill)[3] > .5 && parseFloat(c.fillOpacity) > .5; });
+  for (const t of z.querySelectorAll('text')) { if (!t.textContent.trim()) continue; const b = t.getBoundingClientRect(), x = b.x + b.width/2, y = b.y + b.height/2; let fond = papier;
+    for (const f of formes) { if (!(f.compareDocumentPosition(t) & Node.DOCUMENT_POSITION_FOLLOWING)) continue; const q = f.getBoundingClientRect(); if (x >= q.left && x <= q.right && y >= q.top && y <= q.bottom) fond = rgba(getComputedStyle(f).fill); }
+    const l1 = lum(rgba(getComputedStyle(t).fill)), l2 = lum(fond); min = Math.min(min, (Math.max(l1,l2)+.05)/(Math.min(l1,l2)+.05)); }
+  return Math.round(min * 100) / 100; })()"""
+AGRANDIR = "document.querySelector('[data-schema-agrandir]')"
+
+
+@pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
+def test_schema_agrandissable_et_lisible(serveur, tmp_path_factory, sombre):
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-relift3-schema"), (390, 844)) as page:
+        _ouvrir(page, serveur, "#/fiche/parallelisme-triangles-pythagore", sombre=sombre)
+        page.attendre("!!document.querySelector('article .bloc-schema svg')", delai=20)
+        page.evaluer(f"{AGRANDIR}.closest('section').scrollIntoView({{block: 'start'}})")
+        time.sleep(1)
+        assert page.evaluer(SOMBRE) is sombre
+        # meme geste que la carte des notions : pastille de 48 px, en haut a droite du bloc
+        assert page.evaluer(f"{AGRANDIR}.innerText.trim()") == "Agrandir le schéma"
+        assert page.evaluer(f"{AGRANDIR}.getBoundingClientRect().height") >= 44
+        # feuille du schema = variable du theme, distincte du fond de page ; textes lisibles (>= 4,5:1)
+        papier = page.evaluer("getComputedStyle(document.querySelector('article .bloc-schema')).backgroundColor")
+        assert papier != page.evaluer(FOND)
+        assert papier == ("rgb(238, 235, 227)" if sombre else "rgb(255, 255, 255)")
+        assert page.evaluer(CONTRASTE_SCHEMA) >= 4.5
+        _cliquer(page, AGRANDIR)
+        page.attendre("!!document.querySelector('[role=dialog] .bloc-schema svg')", delai=5)
+        # le dialog a son propre exemplaire du SVG, a sa taille d'origine, et defile si l'ecran est plus etroit
+        assert page.evaluer(
+            "document.querySelector('[role=dialog] svg') !== document.querySelector('article .bloc-schema svg')"
+        )
+        assert page.evaluer("document.querySelector('[role=dialog] svg').getBoundingClientRect().width") >= 680
+        assert page.evaluer(
+            "(() => { const z = document.querySelector('[data-schema-defilement]'); return z.scrollWidth > z.clientWidth; })()"
+        )
+        page.commande("Input.dispatchKeyEvent", type="keyDown", key="Escape", code="Escape", windowsVirtualKeyCode=27)
+        page.commande("Input.dispatchKeyEvent", type="keyUp", key="Escape", code="Escape", windowsVirtualKeyCode=27)
+        page.attendre("!document.querySelector('[role=dialog]')", delai=3)
+        page.attendre("document.activeElement.hasAttribute('data-schema-agrandir')", delai=3)
+
+
+def test_figure_interactive_juste_apres_le_premier_bloc(serveur, tmp_path_factory):
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-relift3-graphe"), (390, 844)) as page:
+        _ouvrir(page, serveur, "#/fiche/thales-triangles-semblables-trigonometrie", sombre=False)
+        page.attendre("!!document.querySelector('article svg.figure')", delai=20)
+        types = page.evaluer(
+            "[...document.querySelectorAll('article > section')].map((s) => s.querySelector('svg.figure') ? 'graphe' : s.id)"
+        )
+        assert types.index("graphe") == 1 and types.count("graphe") == 1, types
+        assert types[0] == "bloc-formule", types  # l'enonce reste premier
+        # le sommaire (grand ecran) suit le meme ordre
+        page.commande("Emulation.setDeviceMetricsOverride", width=1280, height=800, deviceScaleFactor=1, mobile=False)
+        page.attendre("!!document.querySelector('nav[aria-label=\"Sommaire de la fiche\"] li')", delai=5)
+        sommaire = page.evaluer(
+            "[...document.querySelectorAll('nav[aria-label=\"Sommaire de la fiche\"] li')].map((l) => l.innerText.trim())"
+        )
+        assert sommaire[1] == "Vois la notion bouger", sommaire

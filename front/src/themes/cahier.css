@@ -35,6 +35,12 @@
   --j-trait-texte: #4A5566;
   /* feuille des figures dessinées par /gabarits.js (traits sombres fixes) : reste claire dans tous les thèmes */
   --j-papier: #F1EFF8;
+  /* feuille des schémas SVG des fiches (/static/fiche-contenu.css) */
+  --schema-papier: #FFFFFF;
+  --schema-encre: #1A1A18;
+  --schema-encre-2: #5F5E5A;
+  --schema-boite: #F6F5F0;
+  --schema-trait: #5F5E5A;
   /* couleurs des termes de formule déclarées par les fiches (couleurCss) */
   --j-terme-bleu: #1D4E89;
   --j-terme-orange: #C2410C;
@@ -93,6 +99,14 @@
   --j-trait: #6E6A88;
   --j-trait-texte: #C3BFD6;
   --j-papier: #ECE9F5;
+  /* La feuille des schémas reste claire en sombre : les 644 SVG des bibliothèques portent leurs couleurs en
+     attributs (3 039 textes fill="#1a1a18", 2 453 traits noirs) ; sur une feuille sombre ils deviendraient
+     illisibles. Feuille crème atténuée (moins d'éblouissement que le blanc), encres sombres : contraste tenu. */
+  --schema-papier: #EEEBE3;
+  --schema-encre: #1A1A18;
+  --schema-encre-2: #57564F;
+  --schema-boite: #E4E0D6;
+  --schema-trait: #57564F;
   --j-terme-bleu: #8DB3F2;
   --j-terme-orange: #FF9E6B;
   --j-terme-vert: #6FD28A;

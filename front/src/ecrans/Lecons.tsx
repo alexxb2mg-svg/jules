@@ -84,7 +84,9 @@ export function Lecons({ matiere, onMatiere, onLecon, onFiche }: {
                       </span>
                       <b className={titreVariants({ niveau: "bloc", className: "block" })}>{n.titre}</b>
                       <span className="mt-1 flex items-center gap-2 text-petit font-semibold text-(--m-texte)">
-                        <span className={etatVariants({ etat: etat.point })} />{etat.texte}<span aria-hidden>·</span>Leçon guidée par Jules
+                        {n.duree_minutes
+                          ? <><span>{`${n.duree_minutes} min`}</span><span aria-hidden>·</span><span className={etatVariants({ etat: etat.point })} />{etat.texte.toLowerCase()}</>
+                          : <><span className={etatVariants({ etat: etat.point })} />{etat.texte}<span aria-hidden>·</span>Leçon guidée par Jules</>}
                       </span>
                       <Progress value={etat.pct} ton="matiere" aria-label={`Avancée : ${etat.texte}`} className="mt-1 h-1.5 bg-(--m-fond)" />
                     </motion.button>

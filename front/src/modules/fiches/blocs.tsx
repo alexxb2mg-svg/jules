@@ -1,7 +1,7 @@
 // Registre des rendus d'une fiche visuelle : un composant par type de bloc de SCHEMA-FICHE-VISUELLE.md.
 // La logique est celle de jules/web/static/accueil.js (CONSTRUCTEURS) ; seul l'habillage change.
 // Ajouter un type = l'ajouter au schéma et au validateur côté serveur, puis une entrée dans RENDUS.
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from "react"
+import { useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode, type Ref } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import type { LucideIcon } from "lucide-react"
 import { Dumbbell, Lightbulb, ListOrdered, Network, Shapes, SlidersHorizontal, Sigma, TriangleAlert, Check, X, ArrowRight, Maximize2 } from "lucide-react"
@@ -103,6 +103,19 @@ function CarteSvg({ d, className, statique }: { d: ReturnType<typeof disposerCar
   )
 }
 
+/** « Agrandir » d'un dessin (carte, schéma) : pastille pleine 48 px de la matière, en haut à droite du bloc. */
+function BoutonAgrandir({ ref, marque, onOuvrir, children }: {
+  ref: Ref<HTMLButtonElement>; marque: `data-${string}`; onOuvrir: () => void; children: ReactNode
+}) {
+  const { tap } = useMotion()
+  return (
+    <motion.button ref={ref} type="button" {...{ [marque]: "" }} onClick={(e) => { e.stopPropagation(); onOuvrir() }} {...tap}
+      className={buttonVariants({ variant: "matiere", size: "pastille", className: "ml-auto h-12 bg-(--m-accent) px-5" })}>
+      <Maximize2 aria-hidden="true" />{children}
+    </motion.button>
+  )
+}
+
 // Petit écran : la carte se réduit à la largeur de l'écran (vue d'ensemble) ; « Agrandir » l'ouvre dans un Dialog
 // où elle garde une taille lisible (>= 11 px réels) et défile horizontalement si l'écran est plus étroit.
 function Carte({ bloc }: { bloc: BlocCarte }) {
@@ -110,7 +123,6 @@ function Carte({ bloc }: { bloc: BlocCarte }) {
   const [ouvert, setOuvert] = useState(false)
   const bouton = useRef<HTMLButtonElement>(null)
   const [couleurs, setCouleurs] = useState<Record<string, string>>({})
-  const { tap } = useMotion()
   // Le dialog vit hors de la fiche (portail) : il ne voit pas les couleurs de la matière, on les lui recopie.
   const ouvrir = () => {
     const cs = bouton.current ? getComputedStyle(bouton.current) : null
@@ -121,10 +133,7 @@ function Carte({ bloc }: { bloc: BlocCarte }) {
     <div>
       <div className="mb-3 flex items-center justify-between gap-3">
         <p data-carte-vue-ensemble className="m-0 text-petit text-(--m-texte) md:hidden">Vue d'ensemble</p>
-        <motion.button ref={bouton} type="button" data-carte-agrandir onClick={(e) => { e.stopPropagation(); ouvrir() }} {...tap}
-          className={buttonVariants({ variant: "matiere", size: "pastille", className: "ml-auto h-12 bg-(--m-accent) px-5" })}>
-          <Maximize2 aria-hidden="true" />Agrandir la carte
-        </motion.button>
+        <BoutonAgrandir ref={bouton} marque="data-carte-agrandir" onOuvrir={ouvrir}>Agrandir la carte</BoutonAgrandir>
       </div>
       <div className="rounded-2xl bg-card p-2"><CarteSvg d={d} /></div>
       <Dialog open={ouvert} onOpenChange={setOuvert}>
@@ -271,22 +280,51 @@ function Renfort({ bloc, ctx }: { bloc: BlocRenfort; ctx: ContexteRendu }) {
 /* ---------------------------------------------------------------- schéma */
 // Le SVG a été nettoyé côté serveur par liste blanche (jules/svg_sur.py) ; on l'importe par DOMParser +
 // importNode (jamais innerHTML), comme accueil.js. Styles : .bloc-schema dans /static/fiche-contenu.css.
-function Schema({ bloc }: { bloc: BlocSchema }) {
+// Chaque affichage importe son propre exemplaire du SVG (bloc, puis agrandissement) : aucun nœud partagé.
+function SvgSchema({ svg, className }: { svg: string; className?: string }) {
   const zone = useRef<HTMLDivElement>(null)
   const [illisible, setIllisible] = useState(false)
   useEffect(() => {
-    const doc = new DOMParser().parseFromString(String(bloc.svg || ""), "image/svg+xml")
+    const doc = new DOMParser().parseFromString(svg, "image/svg+xml")
     const racine = doc.documentElement
     if (zone.current && racine?.tagName === "svg" && !doc.querySelector("parsererror")) {
       zone.current.replaceChildren(document.importNode(racine, true))
       setIllisible(false)
     } else setIllisible(true)
-  }, [bloc.svg])
+  }, [svg])
   return (
     <>
-      <div ref={zone} className="bloc-schema" />
+      <div ref={zone} className={cn("bloc-schema", className)} />
       {illisible && <p className="text-sm text-gris">Schéma illisible.</p>}
     </>
+  )
+}
+
+// Comme la carte : réduit à la largeur du bloc ; « Agrandir le schéma » l'ouvre en pleine largeur dans un Dialog,
+// à sa taille d'origine (viewBox de 680 px de large) avec défilement si l'écran est plus étroit.
+function Schema({ bloc }: { bloc: BlocSchema }) {
+  const [ouvert, setOuvert] = useState(false)
+  const bouton = useRef<HTMLButtonElement>(null)
+  const svg = String(bloc.svg || "")
+  return (
+    <div>
+      <div className="mb-3 flex">
+        <BoutonAgrandir ref={bouton} marque="data-schema-agrandir" onOuvrir={() => setOuvert(true)}>Agrandir le schéma</BoutonAgrandir>
+      </div>
+      <SvgSchema svg={svg} />
+      <Dialog open={ouvert} onOpenChange={setOuvert}>
+        <DialogContent libelleFermer="Fermer le schéma" className="max-w-5xl" onClick={(e) => e.stopPropagation()}
+          onCloseAutoFocus={(e) => { e.preventDefault(); bouton.current?.focus() }}>
+          <DialogHeader>
+            <DialogTitle>{typo(bloc.titre || TYPES.schema!.titre)}</DialogTitle>
+            <DialogDescription className="min-[780px]:hidden">Fais défiler pour voir tout le schéma.</DialogDescription>
+          </DialogHeader>
+          <div data-schema-defilement tabIndex={0} aria-label="Schéma, à faire défiler" className="overflow-auto rounded-2xl [scrollbar-width:thin]">
+            <SvgSchema svg={svg} className="[&_svg]:max-w-none [&_svg]:min-w-[680px]" />
+          </div>
+        </DialogContent>
+      </Dialog>
+    </div>
   )
 }
 
