@@ -153,20 +153,31 @@ function Carte({ bloc }: { bloc: BlocCarte }) {
   )
 }
 
+/* ---------------------------------------------------------------- figure */
+/** La seule brique qui dessine un gabarit (extensions « figures ») : fiches (graphe, exemple) et bulles de
+ *  la discussion (modules/chat/markdown.tsx). Surface claire dans tous les thèmes, comme les gabarits. */
+export function FigureGabarit({ gabarit, valeurs, libelle, className }: {
+  gabarit: string; valeurs: Record<string, number>; libelle: string; className?: string
+}) {
+  const svg = useRef<SVGSVGElement>(null)
+  const [absent, setAbsent] = useState(false)
+  useEffect(() => { setAbsent(!dessinerGabarit(svg.current, gabarit, valeurs)) }, [gabarit, valeurs])
+  return (
+    <div className={cn("w-full max-w-[340px] rounded-surface bg-papier p-2", className)}>
+      <svg ref={svg} className="figure block w-full" role="img" aria-label={libelle} />
+      {absent && <p className="p-3 text-sm text-gris">Figure indisponible.</p>}
+    </div>
+  )
+}
+
 /* ---------------------------------------------------------------- graphe */
 function Graphe({ bloc }: { bloc: BlocGraphe }) {
-  const svg = useRef<SVGSVGElement>(null)
   const [valeurs, setValeurs] = useState<Record<string, number>>(() =>
     Object.fromEntries((bloc.curseurs || []).map((c) => [c.nom, Number(c.depart ?? c.min ?? 0)])))
-  const [gabaritAbsent, setGabaritAbsent] = useState(false)
-  useEffect(() => { setGabaritAbsent(!dessinerGabarit(svg.current, bloc.gabarit, valeurs)) }, [bloc.gabarit, valeurs])
   const lectures = (bloc.lectures || []).filter((l) => evaluerCondition(l.si, valeurs))
   return (
     <div className="grid items-start gap-6 md:grid-cols-[minmax(240px,340px)_1fr]" onClick={(e) => e.stopPropagation()}>
-      <div className="rounded-surface bg-papier p-2">
-        <svg ref={svg} className="figure block w-full" role="img" aria-label="Figure interactive" />
-        {gabaritAbsent && <p className="p-3 text-sm text-gris">Figure indisponible.</p>}
-      </div>
+      <FigureGabarit gabarit={bloc.gabarit} valeurs={valeurs} libelle="Figure interactive" className="max-w-none" />
       <div>
         {(bloc.curseurs || []).map((c) => (
           <label key={c.id} className="mb-4 block">
@@ -232,16 +243,13 @@ function Piege({ bloc }: { bloc: BlocPiege }) {
 
 /* ---------------------------------------------------------------- exemple */
 function Exemple({ bloc }: { bloc: BlocExemple }) {
-  const svg = useRef<SVGSVGElement>(null)
   const { entree } = useMotion()
-  useEffect(() => {
-    if (bloc.figure) dessinerGabarit(svg.current, bloc.figure.gabarit, Object.fromEntries((bloc.figure.curseurs || []).map((c) => [c.nom, Number(c.depart)])))
-  }, [bloc.figure])
+  const valeurs = useMemo(() => Object.fromEntries((bloc.figure?.curseurs || []).map((c) => [c.nom, Number(c.depart)])), [bloc.figure])
   return (
     <div className="flex flex-col gap-3 text-lecture">
       {bloc.situation && <p className="m-0"><Riche texte={bloc.situation} /></p>}
       {bloc.calcul && <p className="m-0 rounded-2xl bg-card px-4 py-3"><Riche texte={bloc.calcul} /></p>}
-      {bloc.figure && <svg ref={svg} className="figure rounded-2xl bg-papier" width={300} height={180} />}
+      {bloc.figure && <FigureGabarit gabarit={bloc.figure.gabarit} valeurs={valeurs} libelle="Figure de l'exemple" />}
       {bloc.conclusion && (
         <motion.p {...entree} className="exemple-conclusion m-0 flex gap-3 rounded-2xl bg-(--m-fond) px-4 py-3 font-semibold text-(--m-texte) shadow-[inset_3px_0_0_0_var(--m-accent)]">
           <ArrowRight className="mt-1 shrink-0" size={18} /><span><Riche texte={bloc.conclusion} /></span>
