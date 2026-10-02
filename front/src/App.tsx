@@ -15,6 +15,7 @@ import { BoutonRetour } from "@/composants/BoutonRetour"
 import { Calculatrice } from "@/composants/Calculatrice"
 import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
 import { useMotion } from "@/lib/motion"
+import { synchroniser } from "@/lib/magasin"
 
 /** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
 const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
@@ -35,6 +36,12 @@ export default function App() {
   useEffect(() => {
     lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
     session.etat().then((s) => setAdmin(s.parent)).catch(() => setAdmin(false))
+    // Progression, matière, filtre et fiches récentes suivent l'élève d'un appareil à l'autre : à l'ouverture,
+    // puis chaque fois que l'onglet revient au premier plan (l'autre appareil a pu avancer entre-temps).
+    synchroniser()
+    const retour = () => { if (document.visibilityState === "visible") synchroniser() }
+    document.addEventListener("visibilitychange", retour)
+    return () => document.removeEventListener("visibilitychange", retour)
   }, [])
   useEffect(() => { const m = matiereDe(route); if (m) choisirMatiere(m) }, [route])
   const Ecran = ECRANS[route.ecran]

@@ -75,6 +75,7 @@ modules:
     reglages:
       generations_par_jour: 10
   - id: retours        # bouton « Un souci, une idee ? » sur chaque page ; le parent lit (jules/modules/retours.py)
+  - id: synchro        # progression, matiere, filtre et fiches recentes suivent l eleve d un appareil a l autre (jules/modules/synchro.py)
   - id: rapport        # resume quotidien pour le parent
     reglages:
       heure: "20:00"

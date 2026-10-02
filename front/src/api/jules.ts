@@ -226,6 +226,12 @@ export const retours = {
     api<{ id: string; ok: boolean }>("/api/eleve/retours/deposer", json(r)),
 }
 
+/* ---- synchro : l'état de l'interface suit l'élève d'un appareil à l'autre (jules/modules/synchro.py) ---- */
+export const synchro = {
+  etat: () => api<Record<string, unknown>>("/api/eleve/synchro/etat"),
+  ecrire: (cle: string, valeur: unknown) => api<{ valeur: unknown }>(`/api/eleve/synchro/${encodeURIComponent(cle)}`, json({ valeur }, "PUT")),
+}
+
 export type BilanNotions = {
   groupes: { etat: string; titre: string; notions: { notion: string; titre: string; matiere: string; nom_matiere: string; savoir_faire: string[]; lecon: boolean }[] }[]
   a_explorer: number
