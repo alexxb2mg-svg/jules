@@ -197,7 +197,11 @@ function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
 function useApercus(fichiers: File[]): (string | null)[] {
   const [urls, setUrls] = useState<(string | null)[]>([])
   useEffect(() => {
-    const u = fichiers.map((f) => (f.type.startsWith("image/") && f.type !== "image/heic" ? URL.createObjectURL(f) : null))
+    const u = fichiers.map((f) => {
+      if (!f.type.startsWith("image/") || f.type === "image/heic") return null
+      const url = URL.createObjectURL(f)
+      return url.startsWith("blob:") ? url : null
+    })
     setUrls(u)
     return () => u.forEach((x) => x && URL.revokeObjectURL(x))
   }, [fichiers])
