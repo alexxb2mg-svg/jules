@@ -20,6 +20,7 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "notions",
         "fiches_visuelles",
         "cours",
+        "figures",
         "outils",
         "studio",
         "exercices",

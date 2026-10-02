@@ -82,6 +82,12 @@ def normaliser(source: str, autorises: dict[str, dict[str, Any]]) -> tuple[str |
     return normalise, gabarit, ""
 
 
+def _exemple(autorises: dict[str, Any]) -> dict[str, Any]:
+    """Exemple montre au modele : le premier gabarit avec ses valeurs par defaut."""
+    gabarit, declaration = next(iter(autorises.items()))
+    return {"gabarit": gabarit, "valeurs": {nom: b["defaut"] for nom, b in declaration["valeurs"].items()}}
+
+
 class Brique(Module):
     id = "figures"
     titre = "Figures dans la discussion"
@@ -103,7 +109,8 @@ class Brique(Module):
             "Écris pour cela, à l'endroit voulu, un bloc de code de langage figure qui contient seulement "
             "un objet JSON, par exemple :",
             "```figure",
-            json.dumps({"gabarit": next(iter(autorises)), "valeurs": {}}, ensure_ascii=False),
+            # indent=2 : accolades fermantes sur des lignes séparées, jamais « }} » (test_prompt_complet_sans_balise)
+            json.dumps(_exemple(autorises), ensure_ascii=False, indent=2),
             "```",
             "Figures disponibles (les valeurs absentes prennent leur valeur par défaut) :",
         ]
