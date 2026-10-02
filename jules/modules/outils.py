@@ -98,6 +98,15 @@ class Brique(Module):
             cible = outil.dossier / outil.entree
             return FileResponse(cible, headers=ENTETES_OUTIL, media_type=_media_type(cible))
 
+        return routeur
+
+    def routes_statiques(self) -> APIRouter:
+        """Fichiers de l'outil (html/js/css) servis sans cookie : l'iframe sandbox sans allow-same-origin
+        (origine opaque) n'envoie jamais le cookie de session, donc son outil.js et son outil.css seraient
+        refuses (401) et l'outil resterait vide. Ce sont des fichiers statiques verifies au chargement, sans
+        donnee de l'eleve ; le catalogue et l'entree restent derriere le cookie (routes_eleve)."""
+        routeur = APIRouter()
+
         @routeur.get("/{outil_id}/{chemin:path}")
         def fichier(outil_id: str, chemin: str) -> Response:
             outil = self.outils.get(outil_id)

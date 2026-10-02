@@ -33,7 +33,7 @@ h1 { font-size: 0.95rem; margin: 0 0 0.2rem; color: #334; font-weight: 600; }
 #pave button {
   font-family: var(--adapt-police, 'Segoe UI', system-ui, sans-serif);
   font-size: 0.9rem; font-weight: 500;
-  padding: 0; min-height: 2.4rem;
+  padding: 0; min-height: max(2.75rem, 44px); /* cible tactile >= 44 px (WCAG 2.5.5) */
   border: none; border-radius: 10px; cursor: pointer;
   transition: all 0.12s ease;
   position: relative; overflow: hidden;

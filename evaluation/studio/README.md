@@ -25,7 +25,7 @@ automatiquement la réponse et la fait relire par un second appel au modèle qui
 uv run --with-editable . python evaluation/studio/evaluer.py --moteur factice
 
 # Évaluation réelle, via le CLI Claude Code local (doit être sur le PATH) :
-uv run --with-editable . python evaluation/studio/evaluer.py --moteur claude --modele sonnet
+uv run --with-editable . python evaluation/studio/evaluer.py --moteur claude --modele claude-sonnet-5-5
 ```
 
 Options utiles : `--scenarios <fichier>` pour un autre jeu de scénarios, `--limite N` pour ne

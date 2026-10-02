@@ -38,6 +38,8 @@ def projet(tmp_path: Path) -> Path:
     dossier jetable."""
     for dossier in ("persona", "consignes", "profils", "bibliotheque", "extensions"):
         shutil.copytree(RACINE / dossier, tmp_path / dossier)
+    # creer_app relit config.yaml a la racine du projet (section pronote, etc.) : sans lui, tout test de l'app echoue.
+    shutil.copy(RACINE / "config.yaml", tmp_path / "config.yaml")
     return tmp_path
 
 

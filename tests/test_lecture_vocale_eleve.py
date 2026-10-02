@@ -200,7 +200,7 @@ def _executer(navigateur: str, page: Path) -> dict:
     options = ["--headless=new", "--no-sandbox", "--disable-gpu", "--allow-file-access-from-files"]
     options += ["--virtual-time-budget=5000", "--dump-dom"]
     sortie = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, page.as_uri()], capture_output=True, text=True, timeout=120, check=True
+        [navigateur, *options, page.as_uri()], capture_output=True, text=True, encoding="utf-8", timeout=120, check=True
     ).stdout
     erreur = re.search(r'data-erreur="([^"]*)"', sortie)
     assert not erreur, f"erreur JavaScript dans {page.name} : {erreur.group(1)}"

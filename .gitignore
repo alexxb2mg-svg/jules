@@ -36,3 +36,7 @@ htmlcov/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# front Vite
+front/node_modules/
+jules/web/static/app/

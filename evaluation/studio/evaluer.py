@@ -20,7 +20,7 @@ Le détecteur automatique principal, `ressemble_a_un_support_redige`, vient de `
 le module serveur le fera comme filet de sécurité avant l'envoi (§3).
 
 Usage :
-    python evaluation/studio/evaluer.py --moteur claude --modele sonnet
+    python evaluation/studio/evaluer.py --moteur claude --modele claude-sonnet-5-5
     python evaluation/studio/evaluer.py --moteur factice   # sans IA, pour tester le harnais
 """
 
@@ -366,7 +366,7 @@ def rapport_markdown(meta: dict[str, str], resultats: list[dict[str, Any]], hist
 def analyser_arguments(argv: list[str] | None = None) -> argparse.Namespace:
     parseur = argparse.ArgumentParser(description=__doc__)
     parseur.add_argument("--moteur", choices=["claude", "factice"], default="factice")
-    parseur.add_argument("--modele", default="sonnet", help="Nom du modèle passé au CLI claude (ex. sonnet)")
+    parseur.add_argument("--modele", default="claude-sonnet-5-5", help="Modèle passé au CLI claude")
     parseur.add_argument("--scenarios", type=Path, default=SCENARIOS_DEFAUT)
     parseur.add_argument("--sortie-json", type=Path, default=JSON_DEFAUT)
     parseur.add_argument("--sortie-md", type=Path, default=MD_DEFAUT)

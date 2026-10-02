@@ -342,7 +342,7 @@ def _resultat(url: str, profil: Path) -> object:
     options += ["--disable-features=IsolateSandboxedIframes"]
     options += ["--virtual-time-budget=10000", "--dump-dom"]
     fini = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, url], capture_output=True, text=True, timeout=180, check=False
+        [navigateur, *options, url], capture_output=True, text=True, encoding="utf-8", timeout=180, check=False
     )
     sortie = fini.stdout
     trouve = re.search(r'data-resultat="([^"]*)"', sortie)

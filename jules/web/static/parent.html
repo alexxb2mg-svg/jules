@@ -29,6 +29,7 @@
       <h1>Espace parent</h1>
       <input type="date" id="jour">
       <a class="bouton secondaire" id="retour-eleve" href="/">Retour à l'espace élève</a>
+      <a class="bouton bouton-pronote" id="lien-pronote" href="/app#/pronote">📋 Pronote</a>
     </header>
 
     <section class="carte" id="carte-alertes">
@@ -54,6 +55,13 @@
         <button class="bouton" type="submit">Ajouter</button>
       </form>
       <ul class="liste" id="notes"></ul>
+    </section>
+
+    <section class="carte cache" id="carte-retours">
+      <h2>Retours : bugs et idées</h2>
+      <p class="muet">Envoyés avec le petit bouton de chaque page. L'adresse permet de rouvrir la page concernée.</p>
+      <label class="muet"><input type="checkbox" id="retours-traites"> afficher aussi les retours traités</label>
+      <ul class="liste" id="retours"></ul>
     </section>
 
     <section class="carte">

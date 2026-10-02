@@ -4,6 +4,8 @@
 .symbole {
   cursor: help; border-radius: 3px; text-decoration: none;
   -webkit-text-stroke: .35px currentColor;
+  /* Au doigt : appui immediat (pas d'attente de double-tap) et pas de flash gris du navigateur. */
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
 }
 .symbole:hover, .symbole:focus { background: rgba(31, 78, 140, .10); outline: none; }
 .symbole:focus-visible { box-shadow: 0 0 0 2px rgba(31, 78, 140, .45); }

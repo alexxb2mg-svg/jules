@@ -49,6 +49,8 @@ h1, h2, h3, h4, .marque { font-family: var(--police-titre); letter-spacing: .005
   background: var(--p-principale); color: #FFFFFF; border: none; border-radius: 14px;
   padding: 12px 22px; font-weight: 600;
 }
+/* Lien Pronote de l'espace parent : couleur de Pronote (jamais de style en ligne, interdit par la CSP). */
+.bouton.bouton-pronote { background: #2D6AB4; color: #FFFFFF; text-decoration: none; }
 .bouton.secondaire { background: #FFFFFF; color: var(--p-principale); border: 2px solid var(--p-principale); }
 .erreur { color: #C62828; min-height: 1.2em; }
 

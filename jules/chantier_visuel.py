@@ -307,6 +307,14 @@ def _chromium() -> str | None:
     for candidat in [os.environ.get("JULES_CHROMIUM"), "chromium", "chromium-browser", "google-chrome"]:
         if candidat and shutil.which(candidat):
             return shutil.which(candidat)
+    if sys.platform == "win32":  # Chrome ou Edge (meme moteur), emplacements d'installation habituels
+        for chemin in (
+            r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+            r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+            r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        ):
+            if Path(chemin).is_file():
+                return chemin
     installes = sorted(Path("/opt/pw-browsers").glob("chromium-*/chrome-linux/chrome"))
     return str(installes[-1]) if installes else None
 

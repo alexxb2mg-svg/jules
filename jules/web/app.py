@@ -10,16 +10,18 @@ from pathlib import Path
 from typing import Any
 
 from fastapi import APIRouter, Depends, FastAPI, File, Form, HTTPException, Request, Response, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse
+from fastapi.responses import FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from starlette.concurrency import run_in_threadpool
+from starlette.middleware.gzip import GZipMiddleware
 
 from jules import dossier, page_adaptations
-from jules.acces import COOKIE, DUREE_S, Acces
+from jules.acces import COOKIE, DUREE_S, Acces, requete_distante
 from jules.extensions import code_des_figures, code_des_rappels
 from jules.moteur import Tuteur
 from jules.web.limite import LimiteEssais
+from jules.web.pronote_routes import routes_pronote
 
 STATIQUE = Path(__file__).parent / "static"
 EXTENSIONS = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
@@ -76,8 +78,30 @@ class NouvelleConversation(BaseModel):
     mode: str | None = None
 
 
+PAGE_ADMIN_LOCALE = (
+    '<!doctype html><html lang="fr"><meta charset="utf-8"><title>Jules</title>'
+    "<p style=\"font-family:sans-serif;margin:3rem\">L'espace d'administration ne s'ouvre que sur "
+    "l'ordinateur où tourne Jules.</p></html>"
+)
+
+
+def _charger_config_brute(racine: Path) -> dict[str, Any]:
+    """Relit config.yaml + config.local.yaml comme dict brut (pour les sections non portées par Config).
+    Les deux sont facultatifs : une config construite en mémoire (depuis_dict, tests) n'a pas de fichier."""
+    import yaml
+
+    base = racine / "config.yaml"
+    brut = (yaml.safe_load(base.read_text(encoding="utf-8")) or {}) if base.is_file() else {}
+    local = racine / "config.local.yaml"
+    if local.is_file():
+        surcharge = yaml.safe_load(local.read_text(encoding="utf-8")) or {}
+        brut.update(surcharge)
+    return brut
+
+
 def creer_app(tuteur: Tuteur) -> FastAPI:
     app = FastAPI(title="Jules", docs_url=None, redoc_url=None, openapi_url=None)
+    app.add_middleware(GZipMiddleware, minimum_size=500)
     acces = Acces(tuteur.config.acces, tuteur.config.donnees / "secret.key")
     essais = LimiteEssais(ESSAIS_MAX, ESSAIS_MAX_GLOBAL)
     app.state.tuteur = tuteur
@@ -95,10 +119,16 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     def role_de(request: Request) -> str | None:
         return acces.lire_jeton(request.cookies.get(COOKIE))
 
+    def distante(request: Request) -> bool:
+        return requete_distante(request.headers, request.client.host if request.client else None)
+
     def exiger(role_requis: str):
         def verifier(request: Request) -> str:
             role = role_de(request)
-            if not acces.autorise(role, role_requis):
+            loin = distante(request)
+            if not acces.autorise(role, role_requis, distant=loin):
+                if loin and role_requis == "parent":
+                    raise HTTPException(403, "Réservé à l'administrateur, sur son ordinateur")
                 raise HTTPException(401, "Code requis")
             return role or role_requis
 
@@ -107,28 +137,48 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     eleve = Depends(exiger("eleve"))
     parent = Depends(exiger("parent"))
 
-    # --- pages -----------------------------------------------------------
-    @app.get("/", response_class=HTMLResponse)
-    def page_accueil() -> HTMLResponse:
-        """« Mes fiches » : nouvel ecran d'accueil de l'eleve (fiches visuelles)."""
-        return HTMLResponse((STATIQUE / "accueil.html").read_text(encoding="utf-8"))
+    # --- pages : tout redirige vers la nouvelle interface React (/app#/…) ---
+    @app.get("/")
+    def page_accueil() -> RedirectResponse:
+        return RedirectResponse("/app#/fiches", status_code=302)
 
-    @app.get("/discuter", response_class=HTMLResponse)
-    def page_eleve() -> HTMLResponse:
-        """L'ancien chat, deplace de / vers /discuter (« Discuter avec Jules »)."""
-        return HTMLResponse((STATIQUE / "eleve.html").read_text(encoding="utf-8"))
+    @app.get("/discuter")
+    def page_eleve() -> RedirectResponse:
+        return RedirectResponse("/app#/discuter", status_code=302)
 
-    @app.get("/parent", response_class=HTMLResponse)
-    def page_parent() -> HTMLResponse:
-        return HTMLResponse((STATIQUE / "parent.html").read_text(encoding="utf-8"))
+    @app.get("/parent", response_model=None)
+    def page_parent(request: Request) -> RedirectResponse | HTMLResponse:
+        if distante(request):
+            return HTMLResponse(PAGE_ADMIN_LOCALE, status_code=403)
+        return RedirectResponse("/app#/parent", status_code=302)
 
-    @app.get("/cours", response_class=HTMLResponse)
-    def page_cours() -> HTMLResponse:
-        return HTMLResponse((STATIQUE / "cours.html").read_text(encoding="utf-8"))
+    @app.get("/cours")
+    def page_cours() -> RedirectResponse:
+        return RedirectResponse("/app#/lecons", status_code=302)
 
-    @app.get("/studio", response_class=HTMLResponse)
-    def page_studio() -> HTMLResponse:
-        return HTMLResponse((STATIQUE / "studio.html").read_text(encoding="utf-8"))
+    @app.get("/studio")
+    def page_studio() -> RedirectResponse:
+        return RedirectResponse("/app#/supports", status_code=302)
+
+    @app.get("/app", response_class=HTMLResponse)
+    def page_app() -> HTMLResponse:
+        """Nouvelle interface (front/, build Vite dans static/app) : a cote des pages existantes, sans
+        les remplacer. Le build n'est pas versionne : `npm run build` dans front/ le produit."""
+        index = STATIQUE / "app" / "index.html"
+        if not index.is_file():
+            message = "Nouvelle interface non construite : lancer `npm run build` dans front/."
+            return HTMLResponse(message, status_code=404)
+        return HTMLResponse(index.read_text(encoding="utf-8"))
+
+    # --- Routeur API Pronote (optionnel, si section pronote: dans config.local.yaml) ---
+    _config_brute = _charger_config_brute(tuteur.config.racine)
+    _routeur_pronote = routes_pronote(_config_brute)
+    if _routeur_pronote is not None:
+        # Espace de l'eleve (edt, devoirs, notes de l'eleve) : le code eleve suffit, y compris a distance (tunnel).
+        # Les identifiants Pronote restent cote serveur, jamais renvoyes.
+        enveloppe_pronote = APIRouter(dependencies=[eleve])
+        enveloppe_pronote.include_router(_routeur_pronote)
+        app.include_router(enveloppe_pronote, prefix="/api/pronote")
 
     @app.get("/gabarits.js")
     def gabarits() -> Response:
@@ -154,6 +204,8 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         if role is None:
             essais.enregistrer_echec(adresse)
             raise HTTPException(401, "Code incorrect")
+        if distante(request):
+            role = "eleve"  # a distance, meme le code parent n'ouvre que l'espace eleve
         response.set_cookie(COOKIE, acces.jeton(role), max_age=DUREE_S, httponly=True, samesite="strict")
         return {"role": role}
 
@@ -165,10 +217,12 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
     @app.get("/api/session")
     def etat_session(request: Request) -> dict[str, Any]:
         role = role_de(request)
+        loin = distante(request)
         return {
             "role": role,
-            "eleve": acces.autorise(role, "eleve"),
-            "parent": acces.autorise(role, "parent"),
+            "eleve": acces.autorise(role, "eleve", distant=loin),
+            "parent": acces.autorise(role, "parent", distant=loin),
+            "distant": loin,
         }
 
     # --- eleve -----------------------------------------------------------
@@ -276,6 +330,14 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
             enveloppe = APIRouter(dependencies=[garde])
             enveloppe.include_router(routeur)
             app.include_router(enveloppe, prefix=prefixe)
+
+    # Fichiers statiques sans cookie (iframe a origine opaque, docs/OUTILS-CONTRAT.md),
+    # montes apres les routes gardees :
+    # /api/eleve/outils/<id>/<fichier> repond sans session ; le catalogue et l'entree restent gardes.
+    for module in tuteur.modules:
+        statiques = module.routes_statiques()
+        if statiques is not None:
+            app.include_router(statiques, prefix=f"/api/eleve/{module.id}")
 
     return app
 

@@ -178,7 +178,7 @@ def annotations(tmp_path_factory):
     options = ["--headless=new", "--no-sandbox", "--disable-gpu", "--allow-file-access-from-files"]
     options += ["--virtual-time-budget=2000", "--dump-dom"]
     sortie = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
-        [navigateur, *options, page.as_uri()], capture_output=True, text=True, timeout=120, check=True
+        [navigateur, *options, page.as_uri()], capture_output=True, text=True, encoding="utf-8", timeout=120, check=True
     ).stdout
     brut = re.search(r'data-resultat="([^"]*)"', sortie).group(1)
     return json.loads(brut.replace("&quot;", '"').replace("&amp;", "&"))

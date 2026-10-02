@@ -18,7 +18,7 @@ from datetime import date
 from typing import Any
 
 from fastapi import APIRouter, HTTPException, Response
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from jules.lecons import CHAMPS_SERVEUR
 from jules.modules.base import Module
@@ -106,6 +106,11 @@ class TypeEntree(BaseModel):
 class EcrireEntree(BaseModel):
     chemin: list[str | int]
     valeur: str
+
+
+class RattacherEntree(BaseModel):
+    index: int = Field(ge=0, le=500)
+    parent: str | None = Field(default=None, max_length=40)
 
 
 class ReponseCarteEntree(BaseModel):
@@ -254,6 +259,27 @@ class Brique(Module):
             elif index > len(elements):
                 raise ErreurStudio("Ajoute les éléments un par un : cet emplacement n'existe pas encore.")
             elements[index][champ] = valeur
+        if support.statut == "relu":
+            support.statut = "brouillon"
+        support.modifie_le = maintenant()
+        self._sauver(support, conv_id)
+        return support
+
+    def rattacher(self, support_id: str, index: int, parent: str | None) -> Support:
+        """Carte mentale : rattache la branche `index` a une idee deja ecrite AVANT elle (pas de boucle
+        possible), ou a la racine (parent None). `parent` n'est pas un texte libre : il ne passe pas par
+        `ecrire`/`valider_champ` (voir tests/test_studio.py), seulement par ici."""
+        support, conv_id = self._charger(support_id)
+        if support.statut == "valide":
+            raise SupportVerrouille("Ce support est validé : dévalide-le d'abord pour le modifier.")
+        if support.type != "carte_mentale":
+            raise ErreurStudio("Seule une carte mentale a des branches à rattacher.")
+        noeuds = support.contenu.setdefault("noeuds", [])
+        if not 0 <= index < len(noeuds):
+            raise ErreurStudio("Cette branche n'existe pas encore.")
+        if parent and parent not in {str(n.get("id")) for n in noeuds[:index]}:
+            raise ErreurStudio("Cette branche ne peut se rattacher qu'à une idée déjà présente dans ta carte.")
+        noeuds[index]["parent"] = parent or None
         if support.statut == "relu":
             support.statut = "brouillon"
         support.modifie_le = maintenant()
@@ -454,6 +480,18 @@ class Brique(Module):
         def ecrire_route(support_id: str, entree: EcrireEntree) -> dict[str, Any]:
             try:
                 support = self.ecrire(support_id, entree.chemin, entree.valeur)
+            except KeyError as err:
+                raise HTTPException(404, "Support introuvable") from err
+            except SupportVerrouille as err:
+                raise HTTPException(409, str(err)) from err
+            except ErreurStudio as err:
+                raise HTTPException(400, str(err)) from err
+            return {"support": support.public()}
+
+        @routeur.post("/supports/{support_id}/rattacher")
+        def rattacher_route(support_id: str, entree: RattacherEntree) -> dict[str, Any]:
+            try:
+                support = self.rattacher(support_id, entree.index, entree.parent)
             except KeyError as err:
                 raise HTTPException(404, "Support introuvable") from err
             except SupportVerrouille as err:

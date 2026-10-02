@@ -42,6 +42,7 @@ sys.path.insert(0, str(DOSSIER))
 
 from juge import juger  # noqa: E402
 from moteur_cli import Journal, LimiteAtteinte, MoteurCLI  # noqa: E402
+from moteur_mistral import MoteurMistral, est_mistral  # noqa: E402
 
 from jules.config import charger_config  # noqa: E402
 from jules.moteur import Tuteur  # noqa: E402
@@ -104,8 +105,12 @@ def monter_jules(
             notifieur["actif"] = False
     (dossier / "config.yaml").write_text(yaml.safe_dump(brut, allow_unicode=True, sort_keys=False), encoding="utf-8")
     config = charger_config(dossier / "config.yaml")
-    moteur = MoteurCLI({"principal": modele_jules, "rapide": modele_rapide}, journal)
-    return Tuteur(config, llm=moteur)
+    modeles = {"principal": modele_jules, "rapide": modele_rapide}
+    if est_mistral(modele_jules) or est_mistral(modele_rapide):
+        if not (est_mistral(modele_jules) and est_mistral(modele_rapide)):
+            raise ValueError("banc Mistral : --jules et --rapide doivent etre tous deux des modeles Mistral")
+        return Tuteur(config, llm=MoteurMistral(modeles, journal))
+    return Tuteur(config, llm=MoteurCLI(modeles, journal))
 
 
 # --- eleve simule ------------------------------------------------------------------------
@@ -405,7 +410,7 @@ def deja_faits(fichier: Path) -> set[tuple[str, int]]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--jules", required=True, help="alias du modele de Jules (haiku, sonnet)")
-    parser.add_argument("--rapide", default="haiku", help="modele des taches de fond (config reelle : haiku)")
+    parser.add_argument("--rapide", default="claude-sonnet-5-5", help="modele des taches de fond (config reelle)")
     parser.add_argument("--run", required=True)
     parser.add_argument("--filtre", default="")
     parser.add_argument("--repetitions", type=int, default=3, help="repetitions des scenarios critiques")
