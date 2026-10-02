@@ -18,10 +18,41 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 
 ## Où va Jules
 
-<p align="center"><img src="docs/interface-lecon.png" alt="La nouvelle interface : une leçon sur le théorème de Pythagore au centre, le menu de l'élève à gauche (fiches, leçons, exercices, discussion, espace parent), Jules à droite qui propose de réexpliquer sans donner la réponse" width="820"></p>
-<p align="center"><em>Une leçon avec Jules à côté. Profil d'exemple, moteur Démo.</em></p>
-<p align="center"><img src="docs/interface-fiche.png" alt="Une fiche visuelle d'histoire, la Première Guerre mondiale : carte des notions, chemin de l'élève (lire la fiche, faire la leçon, s'entraîner), sommaire de la fiche et bulle de Jules" width="820"></p>
-<p align="center"><em>Une fiche visuelle, affichée sans appel à l'IA. Captures de la nouvelle interface, en cours d'intégration (branche <code>ui/refonte-2026-09-27</code>) ; <code>main</code> sert encore les pages précédentes.</em></p>
+<p align="center"><img src="docs/interface-fiches.png" alt="La page « Mes fiches » : les douze matières de 3e en cartes colorées (mathématiques, français, histoire, géographie, physique-chimie, SVT, technologie, anglais, EMC, arts plastiques, éducation musicale, histoire des arts), chacune avec son nombre de fiches et de chapitres" width="820"></p>
+<p align="center"><em>« Mes fiches » : une couleur par matière, reprise sur toutes ses pages.</em></p>
+
+<p align="center"><img src="docs/interface-cartes.png" alt="Six cartes des notions, une par matière : la Seconde Guerre mondiale en violet, le calcul avec les fractions en bleu, le circuit électrique en turquoise, la puberté en vert, la chaîne d'énergie en orange, l'aménagement du territoire en mode sombre" width="820"></p>
+<p align="center"><em>Chaque fiche a sa carte des notions : l'idée centrale et ce qui en découle, en un coup d'œil.</em></p>
+
+<p align="center"><img src="docs/interface-schemas.png" alt="Six schémas de fiches : les circuits en série et en dérivation, les 18 premiers éléments de la classification, un atome de lithium et le zoom sur son noyau, la digestion par les enzymes, le tableau à double entrée de deux dés, un diagramme de Gantt de projet technique" width="820"></p>
+<p align="center"><em>Les schémas des fiches (306 en 3e) : dessinés en SVG, vérifiés par le code, agrandissables.</em></p>
+
+<p align="center"><img src="docs/interface-carte-agrandie.png" alt="La carte d'une fiche de physique-chimie ouverte en grand au-dessus de la page : un circuit électrique, relié à « en série », « en dérivation », « loi d'Ohm » et « mesures »" width="820"></p>
+<p align="center"><em>« Agrandir la carte » l'ouvre en grand, au-dessus de la fiche.</em></p>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/interface-fiche.png" alt="Une fiche de technologie, la chaîne d'énergie : la formule N2 = N1 × Z1 ÷ Z2 avec chaque lettre expliquée, le chemin de l'élève (lire la fiche, faire la leçon, s'entraîner, cartes mémoire) et le sommaire de la fiche"></td>
+<td width="50%"><img src="docs/interface-graphe.png" alt="Une fiche de mathématiques sur la fonction linéaire : la formule f(x) = a × x, puis une figure où l'élève déplace des curseurs a et b et voit la droite bouger"></td>
+</tr>
+<tr>
+<td align="center"><em>Une fiche : la formule, chaque lettre expliquée, le chemin de l'élève à droite.</em></td>
+<td align="center"><em>Une figure à manipuler : l'élève bouge a et b, la droite suit.</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/interface-lecons.png" alt="La liste des leçons de mathématiques : des cartes avec le chapitre, le titre, la durée et l'état (à faire), et les matières en pastilles de couleur"></td>
+<td width="50%"><img src="docs/interface-lecon.png" alt="Une leçon sur les fonctions linéaires et affines : objectifs, blocs « À retenir » au centre, Jules à droite qui propose de réexpliquer sans donner la réponse"></td>
+</tr>
+<tr>
+<td align="center"><em>Les leçons d'une matière, avec leur durée.</em></td>
+<td align="center"><em>Une leçon, Jules à côté.</em></td>
+</tr>
+</table>
+
+<p align="center"><img src="docs/interface-mobile.png" alt="Quatre écrans de téléphone : la page Mes fiches en clair, les leçons de physique-chimie, une fiche sur les formes d'énergie en mode sombre avec sa carte réduite, et Mes fiches en mode sombre" width="820"></p>
+<p align="center"><em>Sur téléphone, en clair et en sombre.</em></p>
+
+<p align="center"><em>Captures de la nouvelle interface React, profil d'exemple et moteur Démo, encore en cours d'intégration (<a href="https://github.com/alexxb2mg-svg/jules/pull/76">PR #76</a>) : <code>main</code> sert encore les pages précédentes.</em></p>
 
 Quatre idées guident la suite :
 
