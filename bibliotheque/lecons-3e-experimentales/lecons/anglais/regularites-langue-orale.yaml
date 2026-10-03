@@ -1,0 +1,144 @@
+notion: regularites-langue-orale
+titre: "Les régularités de l'anglais oral : -ed, -s, accent de mot, variations"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège — éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Prononcer correctement les terminaisons -ed et -s."
+      - "Repérer l'accent de mot, les lettres muettes et les homophones."
+      - "Savoir que l'anglais se prononce différemment selon les pays, et que ce n'est pas une faute."
+
+  - type: texte
+    titre: "La terminaison -ed (prétérit des verbes réguliers)"
+    contenu: |-
+      Regarde le **dernier son** du verbe (pas la dernière lettre).
+
+      | Dernier son du verbe | -ed se dit | Exemples |
+      |---|---|---|
+      | son sourd (p, k, f, s, sh, ch) | /t/ | jumped, looked, watched |
+      | son sonore ou voyelle | /d/ | cleaned, stayed |
+      | t ou d | /id/ + une syllabe | wanted, needed |
+
+      Seul le cas /id/ ajoute une syllabe.
+
+  - type: texte
+    titre: "Le -s final (pluriel et 3e personne)"
+    contenu: |-
+      Même logique, avec un cas en plus : le son **sifflant**.
+
+      | Dernier son du mot | -s se dit | Exemples |
+      |---|---|---|
+      | son sourd | /s/ | cats, books |
+      | son sonore ou voyelle | /z/ | dogs, plays |
+      | son sifflant (s, sh, ch, ge) | /iz/ + une syllabe | buses, watches, changes |
+
+  - type: texte
+    titre: "Accent de mot, intonation, lettres muettes, homophones"
+    contenu: |-
+      - **Accent de mot** : une syllabe est dite plus fort. Il peut changer la nature du mot : **PRE**sent (nom, cadeau) / pre**SENT** (verbe, présenter) ; **RE**cord (nom) / re**CORD** (verbe).
+      - **Intonation** : la voix monte souvent à la fin d'une question fermée (Do you like tea?) et descend à la fin d'une affirmation.
+      - **Lettres muettes** : le h de hour, le k de know, le b de comb, le w de write.
+      - **Homophones** (même son, sens différent) : their / there / they're, to / two / too, write / right.
+
+  - type: texte
+    titre: "Une langue, plusieurs prononciations"
+    contenu: |-
+      L'anglais se prononce différemment selon les **pays** et les **régions**.
+      Exemple : le **r** de « car » s'entend en anglais américain, pas en anglais britannique standard.
+
+      Ces **variations** ne sont **pas des fautes**. Il faut savoir les repérer et comprendre les deux.
+
+  - type: exemple
+    enonce: "Comment se prononce le -ed de « jumped », « cleaned » et « needed » ?"
+    etapes:
+      - "« jump » finit par le son p, un son sourd : jumped se dit avec /t/, en une syllabe."
+      - "« clean » finit par le son n, un son sonore : cleaned se dit avec /d/, en une syllabe."
+      - "« need » finit par d : needed se dit /id/, avec une syllabe en plus (need-ed)."
+
+  - type: exercice
+    enonce: "Comment se prononce le -ed de « played » ?"
+    forme: qcm
+    choix:
+      - "/t/"
+      - "/d/"
+      - "/id/"
+    reponse: 1
+    indices:
+      - "« play » se termine par un son de voyelle."
+      - "Après une voyelle ou un son sonore, le -ed reste court et sonore."
+    explication: "« play » finit par une voyelle : le -ed se dit /d/. Pas de syllabe en plus, car le verbe ne finit pas par t ou d."
+
+  - type: exercice
+    enonce: "Quelle lettre est muette dans le mot « write » ? Écris seulement la lettre."
+    forme: reponse_courte
+    reponse: "w"
+    reponses_acceptees: ["W", "le w", "la lettre w"]
+    indices:
+      - "« write » se prononce comme « right »."
+      - "Compare les deux mots : quelle lettre du début ne s'entend pas ?"
+    explication: "Le w de « write » est muet : le mot se prononce comme « right »."
+
+  - type: exercice
+    enonce: "Comment se prononce le -s final de « buses » ?"
+    forme: qcm
+    choix:
+      - "/s/"
+      - "/z/"
+      - "/iz/, avec une syllabe en plus"
+    reponse: 2
+    indices:
+      - "« bus » se termine par quel genre de son : sourd, sonore ou sifflant ?"
+      - "Après un son sifflant, le mot gagne une syllabe."
+    explication: "« bus » finit par le son sifflant s : le -s se dit /iz/ et le mot gagne une syllabe (bus-es)."
+
+  - type: exercice
+    enonce: "Homophones. Complète avec le nombre : « I have ___ brothers. » (deux)"
+    forme: reponse_courte
+    reponse: "two"
+    reponses_acceptees: ["Two", "TWO"]
+    indices:
+      - "Trois mots se prononcent pareil : un veut dire « à / vers », un veut dire « aussi », un est un nombre."
+      - "Choisis l'orthographe du nombre, qui se compte après « one »."
+    explication: "« to », « too » et « two » se prononcent pareil. Ici, c'est le nombre deux : « two »."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Dans « The singer will record a new song. », le mot « record » est un verbe.
+      Où tombe l'accent de mot ?
+    forme: qcm
+    choix:
+      - "Sur la première syllabe : REcord"
+      - "Sur la deuxième syllabe : reCORD"
+      - "Il n'y a pas d'accent de mot en anglais"
+    reponse: 1
+    indices:
+      - "Après « will », on trouve un verbe. Pense à la paire present (nom) / present (verbe)."
+      - "Pour ces paires, le nom est souvent accentué au début, le verbe à la fin."
+    explication: "Ici, « record » est un verbe (il suit « will ») : on accentue la deuxième syllabe, reCORD. Le nom (un disque, un record) se dit REcord."
+
+  - type: question_ouverte
+    question: >-
+      Un camarade dit : « L'anglais américain est faux, il faut parler comme les Britanniques. »
+      Que lui réponds-tu ? Donne un exemple de différence de prononciation.
+    indices:
+      - "Pense à la façon dont on prononce une langue selon les pays ou les régions."
+      - "Rappelle-toi le r de « car »."
+    criteres:
+      - "L'élève explique que les deux prononciations sont correctes : ce sont des variations d'une même langue."
+      - "L'élève donne un exemple juste (le r de « car » entendu en américain, pas en britannique standard)."
+      - "L'élève dit qu'il faut savoir comprendre les deux."
+
+  - type: synthese
+    consigne: >-
+      Écris trois phrases avec tes mots. 1) Comment tu choisis la prononciation de -ed et de -s.
+      2) À quoi sert l'accent de mot. 3) Pourquoi deux accents différents peuvent être corrects.

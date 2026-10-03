@@ -1,0 +1,168 @@
+notion: projet-groupe-developpement-durable-3e
+titre: "Projet technique en groupe sur le développement durable"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer le besoin, la fonction et la solution technique dans un projet de groupe."
+      - "Décrire les étapes et les rôles d'un projet, et justifier un choix avec le cahier des charges."
+      - "Relier un projet à un objectif de développement durable et calculer une économie."
+
+  - type: texte
+    titre: "Un projet en groupe, pour le développement durable"
+    contenu: >-
+      En 3e, tu mènes un **projet technique en groupe**. La thématique est choisie, souvent liée
+      aux **objectifs de développement durable (ODD)** de l'ONU : eau, énergie, déchets,
+      biodiversité. Le projet réutilise tout ce que tu as appris au collège.
+      Le **développement durable**, c'est répondre aux besoins d'aujourd'hui sans priver les
+      générations futures des leurs.
+
+  - type: texte
+    titre: "Besoin, fonction, solution, critère"
+    contenu: >-
+      Le groupe part d'un **besoin** : ce qui manque ou pose problème. Il l'écrit dans un
+      **cahier des charges**. Trois niveaux à ne pas mélanger :
+
+      - le **besoin** : « arroser le potager sans gaspiller l'eau » ;
+
+      - la **fonction** : ce que l'objet doit faire, « mesurer l'humidité du sol » ;
+
+      - la **solution technique** : le composant choisi, « un capteur d'humidité ».
+
+      Un **critère** dit comment juger une fonction, avec un niveau mesurable (par exemple un
+      coût de 60 € au maximum).
+
+  - type: texte
+    titre: "Les étapes et les rôles"
+    contenu: >-
+      Les étapes d'un projet : besoin, cahier des charges, recherche de solutions, choix,
+      prototype, tests, présentation. Le **planning** place les tâches dans le temps. Les
+      **revues de projet** sont des moments prévus pour faire le point.
+
+      Chaque membre a un rôle : chef de projet (planning, revues), responsable conception
+      (modélisation, fabrication), responsable programmation, responsable communication.
+      Mais tout le groupe reste responsable du projet, et chacun aide les autres.
+
+  - type: texte
+    titre: "Choisir, puis présenter"
+    contenu: >-
+      On choisit une solution en la comparant au cahier des charges et à son impact sur
+      l'environnement : énergie, eau, matériaux, réparabilité, fin de vie.
+
+      Exemples d'ODD : ODD 6 (eau propre et assainissement), ODD 7 (énergie propre et d'un coût
+      abordable), ODD 12 (consommation et production responsables).
+
+      À la fin, le groupe présente : le besoin, les choix et leurs raisons, les tests réalisés,
+      et l'intérêt pour le développement durable (eau économisée, énergie, déchets évités),
+      chiffré si possible.
+
+  - type: exemple
+    enonce: >-
+      Un groupe veut réduire le gaspillage de lumière dans les couloirs du collège. Écrire le
+      besoin, une fonction et une solution technique.
+    etapes:
+      - "Besoin : éclairer les couloirs seulement quand c'est utile. On ne cite aucun composant."
+      - "Fonction : détecter la présence d'une personne. C'est ce que l'objet doit faire."
+      - "Solution technique : un détecteur de présence infrarouge. C'est le composant choisi."
+
+  - type: exercice
+    enonce: >-
+      Ton groupe veut réduire les déchets de la cantine. Quelle phrase exprime le besoin, sans
+      parler de solution ?
+    forme: qcm
+    choix:
+      - "Réduire les déchets jetés à la cantine"
+      - "Installer un composteur dans la cour"
+      - "Acheter une balance connectée"
+    reponse: 0
+    indices:
+      - "Quelle phrase ne cite aucun objet ni aucun composant ?"
+      - "Un besoin dit ce qui est nécessaire. Une solution dit avec quoi on le fait."
+    explication: "Le besoin est « réduire les déchets jetés à la cantine ». Le composteur et la balance sont des solutions techniques."
+
+  - type: exercice
+    enonce: "Dans un groupe de projet, quel rôle tient le planning et anime les revues de projet ?"
+    forme: reponse_courte
+    reponse: "chef de projet"
+    reponses_acceptees:
+      - "chef de projet"
+      - "le chef de projet"
+      - "cheffe de projet"
+      - "la cheffe de projet"
+    indices:
+      - "Ce rôle veille à ce que tout soit fait à temps."
+      - "Le nom du rôle contient le mot « projet »."
+    explication: "Le chef de projet tient le planning et anime les revues de projet."
+
+  - type: exercice
+    enonce: >-
+      Arrosé à la main, le potager reçoit 20 L d'eau par jour. Avec un système automatique, il
+      n'en reçoit plus que 12 L par jour en moyenne. Combien de litres d'eau le système fait-il
+      économiser en 30 jours ?
+    forme: nombre
+    reponse: 240
+    tolerance: 0.01
+    unite: "L"
+    indices:
+      - "Commence par l'économie en un seul jour : arrosage à la main moins arrosage automatique."
+      - "Multiplie ensuite l'économie d'un jour par le nombre de jours."
+    explication: "Économie par jour : 20 − 12 = 8 L. En 30 jours : 8 × 30 = 240 L."
+
+  - type: exercice
+    enonce: >-
+      Dans le cahier des charges d'un système d'arrosage, laquelle de ces phrases décrit une
+      fonction (ce que le système doit faire) et non une solution technique ?
+    forme: qcm
+    choix:
+      - "Une électrovanne 12 V"
+      - "Un capteur capacitif d'humidité"
+      - "Laisser passer ou bloquer l'eau"
+    reponse: 2
+    indices:
+      - "Une fonction commence par un verbe à l'infinitif."
+      - "Une solution technique nomme un composant précis."
+    explication: "« Laisser passer ou bloquer l'eau » dit ce que le système doit faire : c'est une fonction. L'électrovanne et le capteur sont des composants, donc des solutions techniques."
+
+  - type: exercice
+    enonce: >-
+      Cahier des charges du système d'arrosage : coût total de 60 € au maximum. Le groupe achète
+      un capteur à 12 €, une carte programmable à 25 € et une électrovanne à 18 €. De combien
+      d'euros le coût total est-il inférieur au maximum autorisé ?
+    forme: nombre
+    reponse: 5
+    tolerance: 0.01
+    unite: "€"
+    indices:
+      - "Additionne d'abord les prix des trois composants pour trouver le coût total."
+      - "Compare ensuite ce coût total au maximum de 60 € : calcule l'écart."
+    explication: "Coût total : 12 + 25 + 18 = 55 €. Écart avec le maximum : 60 − 55 = 5 €. Le critère de coût est respecté."
+
+  - type: question_ouverte
+    question: >-
+      Cahier des charges : économiser l'eau du réseau ; arroser pendant les vacances sans
+      personne ; coûter au plus 60 €. Solution A : arrosage programmé chaque jour à 7 h pendant
+      10 minutes, avec l'eau du réseau, pour 35 €. Solution B : arrosage déclenché seulement
+      quand un capteur indique que la terre est sèche, avec l'eau d'une cuve de récupération de
+      pluie, pour 55 €. Choisis une solution et justifie ton choix avec le cahier des charges.
+    indices:
+      - "Fais un tableau : les trois critères en lignes, les deux solutions en colonnes."
+      - "Pour « économiser l'eau du réseau » : d'où vient l'eau de chaque solution ? Arrose-t-elle même s'il a plu ?"
+    criteres:
+      - "L'élève vérifie les trois critères pour les deux solutions (eau du réseau, fonctionnement sans personne, coût)."
+      - "L'élève fait le lien avec le développement durable (eau de pluie réutilisée, arrosage seulement si nécessaire)."
+      - "L'élève conclut par un choix cohérent avec ses arguments."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots, en deux ou trois phrases : explique la différence entre un besoin,
+      une fonction et une solution technique, et dis comment on justifie le choix d'une solution.

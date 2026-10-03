@@ -1,0 +1,124 @@
+notion: meteo-climat-zones-climatiques
+titre: "Météo, climat et grandes zones climatiques"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer la météo et le climat."
+      - "Expliquer comment les masses d'air et les masses d'eau redistribuent la chaleur."
+      - "Relier les grandes zones climatiques à la répartition des faunes et des flores."
+
+  - type: texte
+    titre: "Météo et climat"
+    contenu: >-
+      La **météo** décrit le temps qu'il fait en un lieu, à un moment précis :
+      température, pluie, vent, nuages, pression. Elle change d'un jour à l'autre.
+      Le **climat** est l'ensemble des conditions météorologiques moyennes observées sur une longue durée
+      (au moins 30 ans). Une journée froide ne dit rien, à elle seule, sur le climat.
+
+  - type: texte
+    titre: "Masses d'air et masses d'eau"
+    contenu: >-
+      Le Soleil chauffe davantage les régions proches de l'équateur que les régions polaires.
+      Cette inégalité met en mouvement l'air et l'eau.
+      Les **vents** : l'air se déplace des hautes pressions (anticyclone, souvent temps sec)
+      vers les basses pressions (dépression, souvent nuages et pluie).
+      Les **courants océaniques**, comme le Gulf Stream, transportent de la chaleur des régions
+      tropicales vers les régions plus froides.
+      Les nuages se forment quand de l'air humide s'élève et se refroidit.
+
+  - type: texte
+    titre: "Zones climatiques, faunes et flores"
+    contenu: >-
+      Les grandes **zones climatiques** dépendent surtout de la latitude : la zone chaude,
+      les zones tempérées et les zones froides (polaires).
+      L'altitude et la proximité de l'océan modifient aussi le climat.
+      Un climat océanique (Brest) est doux et humide. Un climat continental a des hivers plus froids
+      et des étés plus chauds. En montagne, il fait plus froid à haute altitude.
+      Les êtres vivants suivent ces zones : forêt dense en climat équatorial, savane en climat
+      tropical, plantes rares dans les déserts, forêts de feuillus en climat tempéré,
+      forêts de conifères puis toundra (mousses, lichens) vers les pôles.
+
+  - type: exemple
+    enonce: >-
+      « Hier, il a gelé à Strasbourg. » et « Les hivers y sont froids. » Ces deux phrases parlent-elles
+      de météo ou de climat ?
+    etapes:
+      - "Première phrase : elle décrit un jour précis, hier. C'est de la météo."
+      - "Deuxième phrase : elle décrit ce qui se passe en général, chaque hiver. C'est du climat."
+      - "Pour parler de climat, il faut des moyennes sur au moins 30 ans."
+
+  - type: exercice
+    enonce: "Pour parler du climat d'une région, on utilise des moyennes sur une durée minimale. Quelle est cette durée, en années ?"
+    forme: nombre
+    reponse: 30
+    tolerance: 0
+    unite: "ans"
+    indices:
+      - "Le climat se calcule sur une longue durée, pas sur une saison."
+      - "Relis la définition du climat dans le cours."
+    explication: "Le climat se décrit avec des moyennes de températures et de précipitations sur au moins 30 ans."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une zone de hautes pressions, où le temps est souvent sec ?"
+    forme: reponse_courte
+    reponse: "un anticyclone"
+    reponses_acceptees: ["anticyclone", "un anticyclone", "l'anticyclone", "anticyclones"]
+    indices:
+      - "Une dépression est une zone de basses pressions. On cherche le contraire."
+      - "Le mot commence par « anti »."
+    explication: "C'est un anticyclone : l'air y descend et le temps est souvent sec. Une dépression est une zone de basses pressions, souvent nuageuse et pluvieuse."
+
+  - type: exercice
+    enonce: >-
+      Document (fictif) : deux villes sont à la même latitude. La ville A est au bord de l'océan,
+      la ville B est loin de la mer. En janvier, la température moyenne est de 8 °C à A
+      et de −2 °C à B. Quelle est la différence de température entre A et B, en °C ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    unite: "°C"
+    indices:
+      - "Attention, une des deux températures est négative."
+      - "Différence = grande valeur − petite valeur."
+      - "Retirer un nombre négatif revient à ajouter sa valeur sans le signe."
+    explication: "8 − (−2) = 8 + 2 = 10. La ville proche de l'océan est plus chaude en hiver : l'océan garde la chaleur et adoucit le climat."
+
+  - type: exercice
+    enonce: "Un document montre une région où poussent seulement des mousses et des lichens, avec des températures très basses toute l'année. Dans quelle zone climatique se trouve-t-elle ?"
+    forme: qcm
+    choix:
+      - "Dans la zone chaude, en climat équatorial"
+      - "Dans la zone froide (polaire), vers les pôles"
+      - "Dans une zone tempérée, avec des forêts de feuillus"
+    reponse: 1
+    indices:
+      - "Mousses et lichens forment la toundra."
+      - "Dans quelle direction va-t-on quand on s'éloigne de l'équateur ?"
+    explication: "La toundra (mousses, lichens) se trouve vers les pôles : c'est la zone froide. Les êtres vivants suivent le climat, ici le froid."
+
+  - type: question_ouverte
+    question: >-
+      Un élève dit : « Il a fait très froid cet hiver, donc le climat ne change pas. » Explique
+      pourquoi cette phrase mélange météo et climat.
+    indices:
+      - "Un hiver froid décrit quelle durée ?"
+      - "Comment définit-on le climat ?"
+    criteres:
+      - "L'élève dit qu'un hiver froid relève de la météo (durée courte, moment précis)."
+      - "L'élève dit que le climat se calcule avec des moyennes sur au moins 30 ans."
+
+  - type: synthese
+    consigne: >-
+      Écris en trois phrases : la différence entre météo et climat, puis un exemple où l'océan ou
+      un courant océanique modifie le climat d'une région.

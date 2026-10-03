@@ -1,0 +1,154 @@
+notion: democratie-deliberative-opinion-publique
+titre: "Démocratie délibérative et opinion publique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Opinion publique »"
+    url: "https://fr.vikidia.org/w/index.php?title=Opinion_publique&oldid=2464964"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Désinformation »"
+    url: "https://fr.vikidia.org/w/index.php?title=D%C3%A9sinformation&oldid=2464955"
+    licence: CC-BY-SA-3.0
+  - titre: "Définition des épreuves du DNB à compter de la session 2027, sous-épreuve EMC, note de service du 11-9-2026 (BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir l'opinion publique et expliquer le rôle des médias, dont les médias sociaux."
+      - "Garder l'esprit critique face à un sondage : échantillon, marge d'erreur, question, date."
+      - "Expliquer ce qu'est la démocratie délibérative, avec l'exemple d'une convention citoyenne."
+
+  - type: texte
+    titre: "L'opinion publique et les médias"
+    contenu: |-
+      L'**opinion publique** est l'opinion majoritaire d'une population, à un moment donné. Elle change avec le temps et avec l'actualité.
+
+      Dans une démocratie, elle joue un **rôle capital**. Les responsables politiques en tiennent compte. Les citoyens s'expriment par le vote, mais aussi entre les élections : débats, pétitions, manifestations, messages en ligne.
+
+      Elle s'exprime par les **médias** : presse, radio, télévision et **médias sociaux**.
+
+  - type: texte
+    titre: "Les médias sociaux : deux visages"
+    contenu: |-
+      Les médias sociaux permettent à chacun de s'exprimer publiquement. Les idées circulent très vite.
+
+      Mais il y a des risques :
+      - des informations **non vérifiées** peuvent circuler ;
+      - chacun peut être enfermé dans des contenus qui **confirment ce qu'il pense déjà**.
+
+      Beaucoup de « likes » ou de partages ne prouvent pas qu'une idée est vraie.
+
+  - type: texte
+    titre: "Les sondages : saisir l'opinion"
+    contenu: |-
+      Un **sondage** interroge un **échantillon** (un petit groupe de personnes) pour estimer ce que pense toute la population. Il existe des sondages de natures diverses : sondages d'opinion, sondages d'intentions de vote, enquêtes par téléphone, en ligne ou en face à face.
+
+      Pour juger un sondage, pose-toi ces questions :
+      - Qui l'a **commandé** et qui l'a **réalisé** ?
+      - L'échantillon est-il **représentatif** (âge, sexe, région, milieu social) et assez grand ?
+      - Quelle est la **question** posée ? Quelle est la **date** ?
+      - Quelle est la **marge d'erreur** ? Elle existe toujours.
+
+      Un sondage n'est **pas un vote** : c'est une photographie de l'opinion à un instant. Il ne décide de rien.
+
+  - type: texte
+    titre: "La démocratie délibérative"
+    contenu: |-
+      La **démocratie délibérative** ajoute une idée : les citoyens doivent pouvoir **débattre avec des arguments** avant de décider. Il ne suffit pas d'additionner des avis.
+
+      Exemple : une **convention citoyenne** réunit des citoyens tirés au sort. Ils discutent d'un sujet et font des propositions. La Convention citoyenne pour le climat (2019-2020) a réuni 150 citoyens.
+
+  - type: exemple
+    enonce: >-
+      Un site invite ses visiteurs à voter en ligne pour dire s'ils aiment les jeux vidéo. Beaucoup de
+      joueurs répondent. Peut-on dire que c'est l'opinion de toute la population ?
+    etapes:
+      - "On regarde qui répond : surtout des visiteurs d'un site de jeux, donc des personnes déjà intéressées."
+      - "L'échantillon n'est donc pas représentatif de toute la population (âge, région, milieu social)."
+      - "Même avec beaucoup de réponses, le résultat ne reflète pas l'opinion de tous."
+      - "Conclusion : ce n'est pas un bon sondage. Il faut un échantillon qui ressemble à la population."
+
+  - type: exercice
+    enonce: "Un sondage interroge 900 personnes. 360 répondent « oui ». Quel pourcentage de « oui » cela représente-t-il ? (réponse en %)"
+    forme: nombre
+    reponse: 40
+    tolerance: 0.01
+    unite: "%"
+    indices:
+      - "Un pourcentage se calcule avec une division : nombre de « oui » divisé par le nombre total de personnes."
+      - "Divise le nombre de « oui » par le nombre de personnes interrogées, puis multiplie par 100."
+    explication: "360 ÷ 900 = 0,4. Puis 0,4 × 100 = 40. Le résultat est 40 %."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le groupe de personnes interrogées dans un sondage ?"
+    forme: reponse_courte
+    reponse: "l'échantillon"
+    reponses_acceptees:
+      - "échantillon"
+      - "un échantillon"
+      - "echantillon"
+      - "l'echantillon"
+    indices:
+      - "Ce n'est pas toute la population, mais un petit groupe."
+      - "Le mot commence par « échan- »."
+    explication: "C'est l'échantillon. Il doit être représentatif de la population pour que le sondage soit fiable."
+
+  - type: exercice
+    enonce: "Quand dit-on qu'un échantillon est représentatif ?"
+    forme: qcm
+    choix:
+      - "Quand il reproduit les caractéristiques de la population (âge, sexe, région, milieu social)"
+      - "Quand il est composé uniquement des amis de celui qui fait le sondage"
+      - "Quand il a été choisi par le commanditaire du sondage pour obtenir le résultat voulu"
+    reponse: 0
+    indices:
+      - "Représentatif veut dire : qui ressemble à l'ensemble de la population."
+      - "Pense aux critères : âge, sexe, région, milieu social."
+    explication: "Un échantillon représentatif reproduit les caractéristiques de la population. Sinon, le sondage peut donner un résultat faux."
+
+  - type: exercice
+    enonce: "Que peut-on dire d'un sondage ?"
+    forme: qcm
+    choix:
+      - "Il décide à la place des citoyens, comme un vote"
+      - "Il donne une photographie de l'opinion à un instant, avec une marge d'erreur"
+      - "Il montre toujours exactement ce que pense toute la population"
+    reponse: 1
+    indices:
+      - "Un sondage n'a pas le pouvoir de décider."
+      - "Un résultat de sondage n'est jamais parfaitement exact."
+    explication: "Un sondage est une photographie de l'opinion à un moment donné. Il a toujours une marge d'erreur et il ne décide de rien."
+
+  - type: exercice
+    enonce: "Quelle situation relève de la démocratie délibérative ?"
+    forme: qcm
+    choix:
+      - "Des citoyens tirés au sort débattent d'un sujet pendant plusieurs séances et font des propositions"
+      - "Un site compte le nombre de « likes » sous une vidéo"
+      - "Un institut publie un pourcentage sans donner sa méthode"
+    reponse: 0
+    indices:
+      - "La démocratie délibérative met le débat argumenté au centre."
+      - "Cherche la situation où des citoyens discutent avec des arguments, puis font des propositions."
+    explication: "Une convention citoyenne est un exemple de démocratie délibérative : des citoyens tirés au sort débattent, puis proposent."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : explique pourquoi il faut garder son esprit critique face à un sondage,
+      en donnant au moins deux questions à se poser. Termine par une phrase de conclusion.
+    indices:
+      - "Pense à qui est interrogé et à combien de personnes."
+      - "Pense aussi à la question posée, à la date et à la marge d'erreur."
+    criteres:
+      - "L'élève explique qu'un sondage estime l'opinion mais ne la connaît pas exactement (marge d'erreur)."
+      - "L'élève donne au moins deux critères de fiabilité (échantillon représentatif, taille, question, date, commanditaire)."
+      - "L'élève précise qu'un sondage n'est pas un vote et ne décide de rien."
+      - "L'élève a une phrase d'introduction et une phrase de conclusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois ou quatre phrases, ce que tu retiens : ce qu'est
+      l'opinion publique, le rôle des médias sociaux, et deux règles pour juger un sondage.

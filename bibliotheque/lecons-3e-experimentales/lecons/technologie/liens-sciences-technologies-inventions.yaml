@@ -1,0 +1,136 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0. Relecture bienvenue.
+notion: liens-sciences-technologies-inventions
+titre: "Sciences, technologies, inventions et innovations"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer une découverte, une invention et une innovation."
+      - "Relier un objet à un besoin, une connaissance scientifique et un usage."
+      - "Suivre un objet sur son cycle de vie et citer l'impact d'une étape."
+
+  - type: texte
+    titre: "Sciences et technologie"
+    contenu: |-
+      - Les **sciences** cherchent à comprendre la nature. Elles découvrent des phénomènes et des lois.
+      - La **technologie** conçoit des objets pour répondre à un besoin. Elle s'appuie sur des connaissances scientifiques.
+      Les échanges vont dans les deux sens : des instruments (microscope, télescope, capteurs, ordinateurs) aident les scientifiques à faire de nouvelles découvertes.
+
+  - type: texte
+    titre: "Découverte, invention, innovation"
+    contenu: |-
+      - **Découverte** : on met en évidence quelque chose qui existait déjà (un phénomène, une loi).
+      - **Invention** : un objet ou un procédé nouveau, qui n'existait pas avant.
+      - **Innovation** : une invention (ou une amélioration) mise sur le marché et adoptée par les usagers.
+      C'est l'usage qui fait l'innovation. Un prototype jamais vendu est une invention, pas une innovation.
+
+  - type: texte
+    titre: "Besoins, usages et cycle de vie"
+    contenu: |-
+      Un objet répond à un besoin, puis ses usages évoluent. Un besoin peut naître d'un nouvel usage ou d'une contrainte de la société (économiser l'énergie, réduire les déchets).
+      Le **cycle de vie** d'un objet :
+      - extraction des matières premières ;
+      - fabrication ;
+      - transport ;
+      - utilisation ;
+      - fin de vie (réemploi, réparation, recyclage).
+      Chaque étape a un impact sur l'environnement. Une innovation peut réduire un impact et en créer un autre : la LED consomme moins qu'une ancienne ampoule, mais elle contient de l'électronique à recycler.
+
+  - type: exemple
+    enonce: >-
+      La bouteille isotherme garde une boisson chaude ou froide. Quel est le besoin, quelle science
+      est utilisée, et quelle étape du cycle de vie a un impact ?
+    etapes:
+      - "Besoin : garder une boisson à la bonne température pendant longtemps."
+      - "Science utilisée : le vide limite les transferts d'énergie thermique."
+      - "Cycle de vie : l'extraction des matières premières et la fabrication ont un impact ; en fin de vie, la bouteille peut être recyclée."
+
+  - type: exercice
+    enonce: "Quelle phrase décrit une découverte scientifique, et non une invention ?"
+    forme: qcm
+    choix:
+      - "Un ingénieur dessine une nouvelle gourde."
+      - "Des scientifiques montrent que l'air chaud est moins dense que l'air froid."
+      - "Une entreprise met au point un nouveau casque."
+    reponse: 1
+    indices:
+      - "Une découverte met en évidence ce qui existait déjà dans la nature."
+      - "Deux phrases parlent d'un objet qu'on conçoit. Une seule explique un phénomène."
+    explication: "La seconde phrase explique un phénomène qui existait déjà : c'est une découverte. Les deux autres décrivent des objets nouveaux : des inventions."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une invention mise sur le marché et adoptée par les usagers ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "innovation"
+    reponses_acceptees: ["innovation", "une innovation", "l'innovation", "innovations", "les innovations"]
+    indices:
+      - "Une invention qui reste dans un laboratoire n'a pas encore ce nom."
+      - "Le mot commence comme « innover »."
+    explication: "C'est une innovation : l'invention devient une innovation quand elle est vendue et utilisée."
+
+  - type: exercice
+    enonce: "Un prototype de casque a été fabriqué en un seul exemplaire. Il n'a jamais été vendu. Est-ce une invention ou une innovation ?"
+    forme: qcm
+    choix:
+      - "Une innovation"
+      - "Une invention"
+      - "Une découverte"
+    reponse: 1
+    indices:
+      - "C'est l'usage qui fait l'innovation."
+      - "Le casque est un objet nouveau, mais personne ne l'utilise."
+    explication: "C'est une invention : un objet nouveau, mais non adopté par des usagers. Sans usage, il n'y a pas d'innovation."
+
+  - type: exercice
+    enonce: "Le microscope aide des chercheurs à observer des cellules et à faire de nouvelles découvertes. Que montre cet exemple ?"
+    forme: qcm
+    choix:
+      - "Les sciences servent la technologie, mais la technologie ne sert jamais les sciences."
+      - "Les objets techniques aident aussi les scientifiques : les échanges vont dans les deux sens."
+      - "Un instrument est une découverte."
+    reponse: 1
+    indices:
+      - "Le microscope est un objet technique. Qui l'utilise ici ?"
+      - "Compare le sens « sciences vers technologie » avec le sens inverse."
+    explication: "Les instruments (microscope, télescope, capteurs...) aident les scientifiques : les échanges vont dans les deux sens."
+
+  - type: exercice
+    enonce: >-
+      Une nouvelle ampoule consomme moins d'électricité qu'une ancienne, mais elle contient de
+      l'électronique difficile à recycler. Quelle conclusion est juste ?
+    forme: qcm
+    choix:
+      - "Une innovation n'a que des avantages."
+      - "Une innovation peut réduire un impact (l'électricité consommée) et en créer un autre (le recyclage)."
+      - "L'impact d'un objet ne concerne que son utilisation."
+    reponse: 1
+    indices:
+      - "Repère l'avantage de cette ampoule, puis son inconvénient."
+      - "Le cycle de vie comprend aussi la fin de vie, pas seulement l'utilisation."
+    explication: "L'ampoule réduit l'impact à l'utilisation, mais crée un impact en fin de vie. Il faut regarder tout le cycle de vie."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un objet du quotidien (par exemple un vélo à assistance électrique). Explique à quel besoin
+      il répond, quelle connaissance scientifique il utilise, pourquoi on peut parler d'innovation, et
+      cite une étape de son cycle de vie avec son impact sur l'environnement.
+    indices:
+      - "Réponds en quatre temps : besoin, science, usage, cycle de vie."
+      - "Pour l'innovation, pense à combien de personnes utilisent l'objet."
+    criteres:
+      - "L'élève nomme le besoin et la connaissance scientifique utilisée."
+      - "L'élève justifie le mot innovation par l'adoption de l'objet par les usagers, pas seulement par sa nouveauté."
+      - "L'élève cite une étape du cycle de vie et son impact sur l'environnement."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une découverte,
+      une invention et une innovation.

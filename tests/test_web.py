@@ -44,8 +44,10 @@ def test_jeton_signe_et_falsification(tmp_path):
 def test_sans_code_tout_est_bloque(client_protege):
     assert client_protege.get("/api/infos").status_code == 401
     assert client_protege.get("/api/modules/memoire/notes").status_code == 401
-    assert client_protege.get("/").status_code == 200  # la page s'affiche (ecran de code)
-    assert client_protege.get("/discuter").status_code == 200  # l'ancien chat, deplace, s'affiche aussi
+    r = client_protege.get("/", follow_redirects=False)
+    assert r.status_code == 302  # redirige vers l'app React
+    r = client_protege.get("/discuter", follow_redirects=False)
+    assert r.status_code == 302
 
 
 def test_code_eleve_ne_donne_pas_acces_parent(client_protege):

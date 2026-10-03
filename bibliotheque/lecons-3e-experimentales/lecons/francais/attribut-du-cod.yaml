@@ -1,0 +1,152 @@
+notion: attribut-du-cod
+titre: "L'attribut du COD"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer le COD dans une phrase, puis son attribut."
+      - "Connaître les familles de verbes qui introduisent un attribut du COD : jugement, appréciation, choix, titre."
+      - "Ne pas confondre l'attribut du COD avec l'épithète, l'attribut du sujet ou un complément circonstanciel."
+
+  - type: texte
+    titre: "Qu'est-ce que l'attribut du COD ?"
+    contenu: |-
+      Le **COD** (complément d'objet direct) répond à **qui ?** ou **quoi ?** après le verbe.
+
+      L'**attribut du COD** est un mot qui **complète le COD**. Il dit comment est le COD, ou ce qu'il devient.
+
+      Exemple : « Mon frère trouve ce jeu **facile**. »
+      - Mon frère trouve **quoi** ? ce jeu → COD.
+      - « facile » dit comment est ce jeu → attribut du COD.
+
+      **Le test du verbe être :** « ce jeu est facile ». Le sens tient : c'est un attribut du COD.
+
+  - type: texte
+    titre: "Les verbes qui introduisent un attribut du COD"
+    contenu: |-
+      L'attribut du COD apparaît avec certains verbes. Voici les familles à connaître.
+
+      | Famille | Verbes |
+      |---|---|
+      | Jugement, appréciation | trouver, juger, estimer, considérer, croire, penser |
+      | Choix, désignation | élire, choisir, désigner, nommer |
+      | Titre, nom donné | appeler, baptiser, surnommer, proclamer, déclarer |
+      | Transformation | rendre |
+
+      L'attribut peut être un **adjectif** (« Je trouve ce film long. ») ou un **nom** (« On l'a nommé président. »).
+      Il est parfois introduit par **comme** ou **pour** : « On le considère comme un expert. »
+
+  - type: texte
+    titre: "Ne pas confondre"
+    contenu: |-
+      | Fonction | Comment la reconnaître | Exemple |
+      |---|---|---|
+      | Épithète | collée au nom, on peut la supprimer | J'ai acheté une robe **rouge**. |
+      | Attribut du sujet | après un verbe d'état (être, paraître, sembler, devenir) | Elle semble **contente**. |
+      | Complément circonstanciel | répond à où, quand, comment ; on peut le déplacer | Il est arrivé **hier soir**. |
+      | Attribut du COD | on ne peut pas le supprimer sans changer le sens | Je trouve ce film **long**. |
+
+      Au brevet, il faut **justifier** : nomme le verbe, le COD, puis fais le test du verbe être.
+
+  - type: exemple
+    enonce: "Dans la phrase « Ma sœur trouve cette musique trop bruyante. », identifie le COD et l'attribut du COD."
+    etapes:
+      - "Le verbe conjugué est « trouve ». Le sujet est « ma sœur »."
+      - "On pose la question : ma sœur trouve quoi ? → « cette musique ». C'est le COD."
+      - "Un mot dit comment est ce COD : « trop bruyante ». Test : « cette musique est trop bruyante ». Le sens tient."
+      - "Conclusion : « trop bruyante » est l'attribut du COD. Le verbe « trouver » exprime un jugement."
+
+  - type: exercice
+    enonce: "Dans « Je trouve ce film long. », quel est l'attribut du COD ?"
+    forme: qcm
+    choix:
+      - "ce film"
+      - "long"
+      - "Je"
+      - "trouve"
+    reponse: 1
+    indices:
+      - "Cherche d'abord le COD : je trouve quoi ?"
+      - "L'attribut du COD dit comment est le COD. Fais le test : « ce film est ... »."
+    explication: "Je trouve quoi ? ce film : c'est le COD. Le mot qui dit comment est ce film est « long » : c'est l'attribut du COD."
+
+  - type: exercice
+    enonce: "Dans « Le conseil a nommé Karim capitaine. », écris l'attribut du COD (un seul mot)."
+    forme: reponse_courte
+    reponse: "capitaine"
+    reponses_acceptees: ["Capitaine", "un capitaine", "le capitaine"]
+    indices:
+      - "Le conseil a nommé qui ? Trouve d'abord le COD."
+      - "Quel mot donne le titre de Karim après le verbe « nommer » ?"
+    explication: "Le conseil a nommé qui ? Karim : COD. Le titre donné à Karim est « capitaine » : attribut du COD (Karim est capitaine)."
+
+  - type: exercice
+    enonce: "Dans « On a baptisé ce voilier Espérance. », à quelle famille appartient le verbe « baptiser » ?"
+    forme: qcm
+    choix:
+      - "Jugement ou appréciation"
+      - "Choix ou désignation"
+      - "Titre ou nom donné"
+      - "Verbe d'état"
+    reponse: 2
+    indices:
+      - "Que fait-on quand on baptise un voilier ?"
+      - "Revois le tableau des familles : dans quelle ligne trouve-t-on « appeler » et « surnommer » ?"
+    explication: "Baptiser, c'est donner un nom. Le verbe est dans la famille « titre ou nom donné », comme appeler et surnommer. « Espérance » est l'attribut du COD « ce voilier »."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases contient un attribut du COD ?"
+    forme: qcm
+    choix:
+      - "J'ai acheté une robe rouge."
+      - "Elle semble fatiguée."
+      - "Nous considérons cette règle injuste."
+      - "Il est arrivé hier soir."
+    reponse: 2
+    indices:
+      - "Élimine d'abord les phrases avec un verbe d'état (être, paraître, sembler, devenir)."
+      - "Élimine aussi le mot qu'on peut supprimer ou déplacer. Il reste une phrase avec un verbe de jugement."
+    explication: "« robe rouge » : rouge est une épithète. « semble fatiguée » : attribut du sujet (verbe d'état). « hier soir » : complément circonstanciel. Dans « nous considérons cette règle injuste », injuste est l'attribut du COD « cette règle »."
+
+  - type: exercice
+    enonce: >-
+      Parmi ces cinq phrases, combien contiennent un attribut du COD ?
+      1) Le jury juge ce projet excellent.
+      2) Elle paraît heureuse.
+      3) On a élu ce joueur meilleur de l'année.
+      4) Il a lu un livre passionnant.
+      5) Ses parents l'ont appelée Manon.
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "Pour chaque phrase, cherche le COD, puis un mot qui dit comment il est ou ce qu'il devient."
+      - "Attention aux pièges : un verbe d'état (paraître) et une épithète (collée au nom) ne donnent pas un attribut du COD."
+    explication: "Phrases 1, 3 et 5 : excellent, meilleur de l'année et Manon sont attributs du COD. La phrase 2 a un attribut du sujet (paraît heureuse). La phrase 4 a une épithète (livre passionnant). Il y a donc 3 phrases."
+
+  - type: question_ouverte
+    question: >-
+      Dans « Je trouve ce café froid. », comment prouves-tu que « froid » est l'attribut du COD
+      et non une simple épithète ? Explique avec tes mots.
+    indices:
+      - "Commence par nommer le verbe et le COD."
+      - "Pense au test du verbe être. Que se passe-t-il si tu supprimes « froid » ?"
+    criteres:
+      - "L'élève identifie le verbe « trouve » (verbe de jugement) et le COD « ce café »."
+      - "L'élève utilise le test du verbe être (« ce café est froid ») pour justifier."
+      - "L'élève explique que « froid » ne peut pas être supprimé sans changer le sens : il exprime le jugement du sujet."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce qu'est un attribut du COD,
+      quelques verbes qui l'introduisent, et comment tu le reconnais.

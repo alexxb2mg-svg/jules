@@ -1,0 +1,148 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0. Relecture bienvenue.
+notion: materiaux-et-procedes
+titre: "Matériaux, procédés de mise en forme et cycle de vie"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Classer un matériau dans sa famille et relier sa propriété à la fonction de la pièce."
+      - "Relier la forme d'une pièce au procédé de mise en forme."
+      - "Justifier un choix avec des contraintes techniques et environnementales, en suivant le cycle de vie."
+
+  - type: texte
+    titre: "Les cinq familles de matériaux"
+    contenu: |-
+      - **Métaux** : acier, aluminium, cuivre.
+      - **Matières plastiques** : PLA, ABS, polypropylène, PVC.
+      - **Bois et matériaux d'origine végétale** : pin, chêne, contreplaqué, carton.
+      - **Céramiques et verres** : verre, porcelaine, faïence.
+      - **Composites** : plusieurs matériaux associés (fibre de carbone noyée dans une résine).
+
+  - type: texte
+    titre: "Les propriétés"
+    contenu: |-
+      On regarde : la masse volumique, la résistance mécanique, la dureté, la conduction de l'électricité et de la chaleur, la résistance à la corrosion, la facilité de mise en forme, le recyclage.
+      Exemple : à volume égal, l'aluminium (environ 2,7 g/cm³) est près de trois fois plus léger que l'acier (environ 7,8 g/cm³).
+      Les métaux conduisent ; les plastiques et le bois isolent.
+      On choisit la propriété utile à la fonction : léger pour un cadre, isolant pour une poignée, transparent pour une vitre.
+
+  - type: texte
+    titre: "Les procédés de mise en forme"
+    contenu: |-
+      La forme d'une pièce dépend de son procédé :
+      - **enlèvement de matière** : découpe, perçage, fraisage, découpe laser ;
+      - **déformation** : pliage d'une tôle, emboutissage, thermoformage ;
+      - **moulage** : injection de plastique fondu dans un moule (grandes séries), fonderie ;
+      - **ajout de matière** : impression 3D, couche par couche (pièces uniques, prototypes).
+      Le choix dépend de la forme, du matériau et du nombre de pièces.
+
+  - type: texte
+    titre: "Le cycle de vie"
+    contenu: |-
+      Les étapes du cycle de vie d'un objet :
+      1. extraction des matières premières ;
+      2. traitement (on obtient le matériau) ;
+      3. fabrication des pièces ;
+      4. assemblage ;
+      5. utilisation ;
+      6. fin de vie (réemploi, recyclage, élimination).
+      Des transports ont lieu entre les étapes. Chaque étape consomme de l'énergie et a une incidence sur l'environnement.
+
+  - type: exemple
+    enonce: >-
+      Une pièce de rechange unique, en PLA, doit réparer une machine. Quel procédé choisir, et pourquoi ?
+    etapes:
+      - "Le PLA est une matière plastique."
+      - "La pièce est unique : on choisit l'impression 3D, qui construit la pièce couche par couche."
+      - "Un moule coûterait trop cher pour une seule pièce, donc le moulage par injection n'est pas adapté."
+
+  - type: exercice
+    enonce: "L'aluminium est léger. À quelle famille de matériaux appartient-il ?"
+    forme: qcm
+    choix:
+      - "Les matières plastiques"
+      - "Les métaux"
+      - "Les composites"
+    reponse: 1
+    indices:
+      - "L'aluminium vient d'un minerai et conduit l'électricité."
+      - "Être léger ne suffit pas pour être un plastique."
+    explication: "L'aluminium est un métal. Il est léger, mais il conduit l'électricité et vient d'un minerai."
+
+  - type: exercice
+    enonce: >-
+      Quel procédé injecte du plastique fondu dans un moule pour fabriquer des pièces en grande série ?
+      Réponds en quelques mots.
+    forme: reponse_courte
+    reponse: "moulage par injection"
+    reponses_acceptees: ["moulage par injection", "le moulage par injection", "injection", "l'injection", "moulage", "le moulage", "injection plastique"]
+    indices:
+      - "Ce procédé utilise un moule, qu'on remplit de plastique fondu."
+      - "Le plastique fondu est poussé dans le moule, comme avec une seringue. Quel verbe décrit cette action ?"
+    explication: "C'est le moulage par injection : adapté aux grandes séries et aux coques creuses."
+
+  - type: exercice
+    enonce: >-
+      Une pièce en aluminium a un volume de 300 cm³. La masse volumique de l'aluminium est de
+      2,7 g/cm³. Quelle est la masse de la pièce, en grammes ?
+    forme: nombre
+    reponse: 810
+    tolerance: 0.01
+    unite: "g"
+    indices:
+      - "La masse volumique donne la masse d'un seul cm³. Combien de cm³ contient la pièce ?"
+      - "Masse = masse volumique × volume."
+    explication: "Masse = 2,7 × 300 = 810 g."
+
+  - type: exercice
+    enonce: >-
+      Une pièce en acier a un volume de 50 cm³ (masse volumique de l'acier : 7,8 g/cm³). On la remplace
+      par une pièce de même volume en aluminium (2,7 g/cm³). Combien de grammes économise-t-on ?
+    forme: nombre
+    reponse: 255
+    tolerance: 0.01
+    unite: "g"
+    indices:
+      - "Calcule d'abord la masse de chaque pièce avec masse = masse volumique × volume."
+      - "Puis compare : fais la différence entre les deux masses."
+    explication: "Acier : 7,8 × 50 = 390 g. Aluminium : 2,7 × 50 = 135 g. Économie : 390 − 135 = 255 g."
+
+  - type: exercice
+    enonce: >-
+      On veut fabriquer 5 000 coques creuses en plastique, toutes identiques. Quel procédé est le mieux adapté ?
+    forme: qcm
+    choix:
+      - "L'impression 3D, une pièce après l'autre."
+      - "Le moulage par injection dans un moule."
+      - "Le perçage d'un bloc de plastique."
+    reponse: 1
+    indices:
+      - "Pense au nombre de pièces : très grand, ou une seule ?"
+      - "Un moule coûte cher à fabriquer, mais il sert pour toutes les pièces d'une grande série."
+    explication: "Pour une grande série de coques creuses identiques, on choisit le moulage par injection. L'impression 3D convient aux pièces uniques ou en petit nombre."
+
+  - type: question_ouverte
+    question: >-
+      On veut fabriquer 50 000 boîtiers pour une lampe d'extérieur. Le boîtier doit protéger
+      l'électronique de la pluie, être léger et isolant. Propose un matériau et un procédé, et justifie
+      ton choix avec une contrainte technique et une contrainte environnementale.
+    indices:
+      - "Choisis d'abord le matériau avec les propriétés demandées, puis le procédé avec la forme et le nombre de pièces."
+      - "Pense à la fin de vie du boîtier."
+    criteres:
+      - "L'élève propose un matériau adapté (par exemple une matière plastique) et le justifie par des propriétés (léger, isolant, résiste à la pluie)."
+      - "L'élève propose un procédé adapté au nombre de pièces (moulage par injection) et le justifie."
+      - "L'élève cite une contrainte environnementale liée au cycle de vie (recyclage, moins de matière, fin de vie)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu choisis un matériau et un
+      procédé pour une pièce, et une étape du cycle de vie qui a un impact sur l'environnement.

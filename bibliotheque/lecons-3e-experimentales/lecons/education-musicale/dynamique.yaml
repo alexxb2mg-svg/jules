@@ -1,0 +1,146 @@
+notion: dynamique
+titre: "La dynamique : les nuances en musique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lire et nommer les nuances, de pianissimo à fortissimo."
+      - "Dire si un changement de volume est progressif ou soudain."
+      - "Expliquer l'effet produit par la dynamique, à l'écoute comme quand on joue."
+
+  - type: texte
+    titre: "Les nuances, du plus doux au plus fort"
+    contenu: |-
+      La **dynamique**, c'est la façon dont l'**intensité** du son (son volume) varie.
+      Sur la partition, on l'écrit avec des **nuances**, en italien abrégé :
+      **pp** pianissimo (très doux) · **p** piano (doux) · **mp** mezzo piano (moyennement doux)
+      **mf** mezzo forte (moyennement fort) · **f** forte (fort) · **ff** fortissimo (très fort).
+      « Mezzo » veut dire **moyennement**, « -issimo » veut dire **très**.
+
+  - type: texte
+    titre: "Changer de nuance : peu à peu ou d'un coup"
+    contenu: |-
+      **Progressif** : **crescendo** (soufflet qui s'ouvre « < »), de plus en plus fort.
+      **decrescendo** ou diminuendo (soufflet qui se ferme « > »), de plus en plus doux.
+      **Soudain** : on passe d'un coup à une nuance très différente. C'est un **contraste**.
+      Un **accent** fait ressortir une seule note, jouée plus appuyée.
+
+  - type: texte
+    titre: "Deux œuvres repères et des pièges"
+    contenu: |-
+      **Boléro** de Ravel (1928) : tout le morceau est un long crescendo, du pianissimo au fortissimo.
+      **Symphonie n° 94 « La Surprise »** de Haydn (2e mouvement) : un passage très doux est coupé par un accord soudain très fort.
+      La dynamique sert l'expression : calme, tension, surprise, puissance.
+      On s'en sert **en écoutant** (pour décrire) et **en jouant** (pour interpréter).
+      Piège : la dynamique, c'est le **volume**, pas la vitesse (la vitesse, c'est le tempo).
+
+  - type: exemple
+    enonce: >-
+      Un morceau commence par tout l'orchestre, très fort. Puis le volume baisse peu à peu
+      jusqu'à une seule flûte, très douce. Décris sa dynamique avec les mots justes.
+    etapes:
+      - "Nuance de départ : très fort, donc fortissimo (ff)."
+      - "Le volume baisse peu à peu : c'est un changement progressif, un decrescendo (soufflet qui se ferme « > »)."
+      - "Nuance d'arrivée : très doux, donc pianissimo (pp)."
+      - "Effet produit : la tension retombe, on va vers le calme."
+
+  - type: exercice
+    enonce: "Sur une partition, tu lis « mf ». Que dois-tu faire ?"
+    forme: qcm
+    choix:
+      - "Jouer très fort"
+      - "Jouer moyennement fort"
+      - "Jouer moyennement vite"
+    reponse: 1
+    indices:
+      - "Que veut dire la lettre f ? Et le m, qui vient de « mezzo » ?"
+      - "« Mezzo » veut dire « moyennement ». Une nuance parle du volume, pas de la vitesse."
+    explication: "mf = mezzo forte : moyennement fort. Très fort s'écrirait ff, et la vitesse n'est pas une nuance."
+
+  - type: exercice
+    enonce: >-
+      Dans le Boléro de Ravel, le volume augmente peu à peu, du début à la fin. Quel mot italien
+      désigne cette augmentation progressive de l'intensité ?
+    forme: reponse_courte
+    reponse: "crescendo"
+    reponses_acceptees:
+      - "crescendo"
+      - "un crescendo"
+      - "le crescendo"
+      - "cresc"
+      - "cresc."
+    indices:
+      - "Sur la partition, on le dessine par un soufflet qui s'ouvre « < »."
+      - "Le mot vient du verbe italien qui veut dire « croître », « grandir »."
+    explication: "C'est un crescendo : le son devient de plus en plus fort. Son contraire est le decrescendo."
+
+  - type: exercice
+    enonce: "Quelle nuance signifie « très fort » ? Donne son nom italien ou son abréviation."
+    forme: reponse_courte
+    reponse: "fortissimo"
+    reponses_acceptees:
+      - "fortissimo"
+      - "ff"
+      - "le fortissimo"
+    indices:
+      - "Cherche, dans la liste des nuances, celle qui est tout au bout du côté fort."
+      - "Relis le premier bloc : que veut dire la terminaison « -issimo » ?"
+    explication: "Fortissimo, abrégé ff, veut dire très fort. Forte (f) veut seulement dire fort."
+
+  - type: exercice
+    enonce: >-
+      Dans le 2e mouvement de la Symphonie « La Surprise » de Haydn, un passage très doux est
+      coupé par un accord très fort, d'un coup. Comment appelle-t-on ce procédé ?
+    forme: qcm
+    choix:
+      - "Un crescendo"
+      - "Un contraste soudain de nuance"
+      - "Une accélération du tempo"
+    reponse: 1
+    indices:
+      - "Le volume change-t-il peu à peu, ou d'un coup ?"
+      - "Un changement progressif s'appelle crescendo. Ici, c'est brusque."
+    explication: "On passe d'un coup du très doux au très fort : c'est un contraste soudain, qui crée la surprise. Le tempo, lui, ne change pas."
+
+  - type: exercice
+    enonce: >-
+      Un chef d'orchestre demande de jouer « piano », puis plus tard « crescendo ». Quelle
+      phrase décrit correctement ce que font les musiciens ?
+    forme: qcm
+    choix:
+      - "Ils jouent lentement, puis de plus en plus vite."
+      - "Seul le pianiste joue, puis tout l'orchestre le rejoint."
+      - "Ils jouent doucement, puis de plus en plus fort."
+    reponse: 2
+    indices:
+      - "Ici, « piano » est une nuance, pas l'instrument."
+      - "La dynamique règle le volume. Quelle réponse parle du volume ?"
+    explication: "Piano veut dire doux, crescendo veut dire de plus en plus fort. Ce sont des indications de volume, pas de vitesse ni d'instrument."
+
+  - type: question_ouverte
+    question: >-
+      Voici un extrait : « Une flûte seule joue très doucement. Peu à peu, d'autres instruments
+      s'ajoutent et le volume monte jusqu'à un passage très puissant. Soudain, tout s'arrête ;
+      puis un violon reprend, très doucement. » Décris sa dynamique en trois ou quatre phrases.
+    indices:
+      - "Donne la nuance de chaque moment : début, sommet, reprise du violon."
+      - "Dis ensuite si l'on change de nuance peu à peu ou d'un coup, et quel effet cela produit."
+    criteres:
+      - "L'élève nomme les nuances en italien : pianissimo ou piano au début, fortissimo au sommet, piano ou pianissimo à la fin."
+      - "L'élève distingue le changement progressif (crescendo) et le changement soudain (contraste)."
+      - "L'élève dit l'effet produit : tension qui monte, surprise, retour au calme."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est la dynamique, les
+      nuances de la plus douce à la plus forte, et la différence entre crescendo et contraste.

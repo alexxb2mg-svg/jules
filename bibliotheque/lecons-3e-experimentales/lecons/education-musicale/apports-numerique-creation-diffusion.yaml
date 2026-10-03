@@ -1,0 +1,153 @@
+notion: apports-numerique-creation-diffusion
+titre: "Le numérique pour créer et diffuser la musique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les étapes d'une création numérique : capter, manipuler, organiser, diffuser."
+      - "Associer chaque étape à son outil : micro, effets, séquenceur, plateforme."
+      - "Expliquer pourquoi on vérifie les droits avant de publier un morceau."
+
+  - type: texte
+    titre: "Capter le son : l'enregistrement"
+    contenu: |-
+      Avec un ordinateur, une tablette ou un téléphone, chacun peut créer de la musique.
+      **Capter**, c'est enregistrer un son avec un **micro**.
+      Le son est alors **numérisé** : il est mesuré un très grand nombre de fois par seconde.
+      Pour un CD, c'est **44 100 mesures par seconde**. Chaque mesure devient un nombre.
+
+  - type: texte
+    titre: "Manipuler et organiser les sons"
+    contenu: |-
+      **Manipuler** : on change le **timbre** avec des effets (écho, réverbération, distorsion).
+      On peut aussi ralentir un son, l'accélérer, le rendre plus grave ou plus aigu.
+      **Organiser dans le temps** : dans un logiciel de **MAO** (musique assistée par ordinateur),
+      le **séquenceur** place les sons sur des **pistes**, les copie et les met en **boucle**.
+      L'**échantillonnage** (sampling) : on prélève un extrait d'un enregistrement pour le réutiliser.
+      Le **MIDI** transmet des notes (laquelle, quand, avec quelle force), pas le son lui-même.
+
+  - type: texte
+    titre: "Diffuser, en respectant les droits"
+    contenu: |-
+      **Diffuser** : on exporte le morceau. Le **WAV** garde tout le son.
+      Le **MP3** est compressé : environ dix fois plus léger, mais il perd un peu de qualité.
+      Avec le **streaming**, on écoute en ligne sans posséder le fichier.
+      En France, une œuvre est protégée jusqu'à **70 ans après la mort** de son auteur.
+      Même un extrait très court d'une œuvre protégée demande une **autorisation**.
+      Sinon, on utilise ses propres sons, le domaine public ou une **licence libre** (en citant l'auteur).
+
+  - type: exemple
+    enonce: >-
+      Un élève enregistre sa voix, ajoute un écho, puis place sa voix sur une boucle de
+      batterie dans un logiciel. Quelles étapes a-t-il réalisées ?
+    etapes:
+      - "Capter : il enregistre sa voix avec un micro."
+      - "Manipuler : l'écho transforme le timbre et donne une impression d'espace."
+      - "Organiser : il place sa voix sur une piste, avec la boucle de batterie, grâce au séquenceur."
+      - "Il reste à diffuser : exporter le fichier, puis le publier, après avoir vérifié les droits de la boucle."
+
+  - type: exercice
+    enonce: "Quel outil sert à capter un son, c'est-à-dire à l'enregistrer ?"
+    forme: qcm
+    choix:
+      - "Le micro"
+      - "La plateforme de streaming"
+      - "Le fichier MP3"
+    reponse: 0
+    indices:
+      - "Capter est la toute première étape : il faut d'abord prendre le son."
+      - "Quel objet transforme ta voix en signal pour l'ordinateur ?"
+    explication: "Le micro capte le son. La plateforme sert à diffuser, et le MP3 est un format de fichier pour diffuser."
+
+  - type: exercice
+    enonce: >-
+      Dans un logiciel de MAO, comment appelle-t-on chaque ligne du séquenceur qui contient
+      un son ou un instrument (la voix, la batterie, la guitare) ?
+    forme: reponse_courte
+    reponse: "piste"
+    reponses_acceptees:
+      - "piste"
+      - "pistes"
+      - "une piste"
+      - "la piste"
+      - "les pistes"
+    indices:
+      - "Imagine un tableau : chaque ligne porte un instrument."
+      - "Relis le bloc « Manipuler et organiser les sons » : où le séquenceur place-t-il les sons ?"
+    explication: "Chaque ligne du séquenceur est une piste. On règle ensuite le volume de chaque piste : c'est le mixage."
+
+  - type: exercice
+    enonce: >-
+      Pour un CD, le son est mesuré 44 100 fois par seconde. Combien de mesures faut-il pour
+      5 secondes de musique ?
+    forme: nombre
+    reponse: 220500
+    tolerance: 0
+    unite: "mesures"
+    indices:
+      - "Combien de mesures en une seule seconde ? Et en 5 secondes, il y en a plus ou moins ?"
+      - "Multiplie le nombre de mesures d'une seconde par le nombre de secondes."
+    explication: "44 100 × 5 = 220 500 mesures. Vérification : 220 500 ÷ 5 = 44 100."
+
+  - type: exercice
+    enonce: >-
+      Un rappeur prélève quelques secondes d'un ancien enregistrement et les répète en boucle
+      sous sa voix. Comment s'appelle cette technique ?
+    forme: reponse_courte
+    reponse: "échantillonnage"
+    reponses_acceptees:
+      - "échantillonnage"
+      - "echantillonnage"
+      - "l'échantillonnage"
+      - "l'echantillonnage"
+      - "sampling"
+      - "le sampling"
+    indices:
+      - "Relis le bloc « Manipuler et organiser les sons »."
+      - "Cherche le mot qui désigne le fait de prélever un extrait d'un enregistrement pour le réutiliser."
+    explication: "C'est l'échantillonnage (en anglais sampling) : on prélève un échantillon pour le réutiliser, souvent en boucle."
+
+  - type: exercice
+    enonce: >-
+      Tu veux mettre en ligne un morceau qui utilise un extrait de 3 secondes d'une chanson
+      récente d'un artiste connu. Que faut-il faire ?
+    forme: qcm
+    choix:
+      - "Rien, car l'extrait dure moins de 10 secondes."
+      - "Rien, si tu cites le nom de l'artiste."
+      - "Obtenir l'autorisation des ayants droit."
+      - "Rien, car tout ce qui est sur internet est libre."
+    reponse: 2
+    indices:
+      - "Une chanson récente est-elle déjà dans le domaine public ?"
+      - "La loi fixe-t-elle une durée d'extrait libre ? Citer l'artiste remplace-t-il son accord ?"
+    explication: "Il faut l'autorisation des ayants droit. Il n'existe pas de durée d'extrait libre, et citer l'artiste ne suffit pas. Sinon, on choisit des sons libres de droits."
+
+  - type: question_ouverte
+    question: >-
+      Un élève a enregistré le claquement d'une porte, l'a ralenti pour le rendre plus grave,
+      puis l'a mis en boucle. Il a ajouté une batterie programmée et sa voix avec beaucoup
+      d'écho. Décris sa démarche avec le vocabulaire du numérique. Que doit-il vérifier avant
+      de publier ?
+    indices:
+      - "Suis l'ordre : capter, manipuler, organiser, puis diffuser."
+      - "Tu peux commencer ainsi : « D'abord, l'élève a capté deux sons avec un micro… »."
+    criteres:
+      - "L'élève nomme les étapes : capter (porte, voix), manipuler (ralenti, écho), organiser (boucle, pistes, séquenceur)."
+      - "L'élève emploie au moins deux mots précis : MAO, séquenceur, piste, boucle, effet, échantillon."
+      - "L'élève explique qu'il faut vérifier les droits de tout son emprunté avant de publier."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois phrases, les quatre étapes d'une création
+      numérique avec un outil pour chacune, puis ce qu'il faut vérifier avant de publier.

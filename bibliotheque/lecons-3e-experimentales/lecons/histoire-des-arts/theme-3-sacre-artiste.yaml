@@ -1,0 +1,140 @@
+notion: theme-3-sacre-artiste
+titre: Le sacre de l'artiste (XIVe-début XVIIe siècle)
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Expliquer pourquoi l'artiste devient célèbre à la Renaissance (mécènes, signature).
+  - Citer quelques œuvres avec leur artiste et leur date, et les situer (Trecento, Quattrocento, Cinquecento).
+  - Dire ce que changent l'imprimerie et la gravure, et distinguer un motet d'un madrigal.
+- type: texte
+  titre: L'artiste et ses mécènes
+  contenu: |-
+    Du XIVe au début du XVIIe siècle, l'artiste change de statut.
+    - Avant : un artisan anonyme.
+    - Après : un créateur admiré, qui **signe** ses œuvres.
+    C'est la **Renaissance**, née en Italie.
+    Les villes italiennes (Florence, Venise, Rome) sont riches. Des **mécènes** (la famille Médicis, les papes) commandent et financent des œuvres pour montrer leur puissance et leur goût.
+- type: texte
+  titre: Des repères pour situer les œuvres
+  contenu: |-
+    Les Italiens nomment les siècles : **Trecento** (XIVe), **Quattrocento** (XVe), **Cinquecento** (XVIe).
+    - Giotto : fresques de la chapelle Scrovegni à Padoue (vers 1305).
+    - Brunelleschi : coupole de la cathédrale de Florence (1420-1436).
+    - Botticelli : La Naissance de Vénus (vers 1485).
+    - Léonard de Vinci : La Joconde (commencée vers 1503).
+    - Michel-Ange : le David (1501-1504), puis le plafond de la chapelle Sixtine pour le pape Jules II (1508-1512).
+    Les artistes redécouvrent l'Antiquité (mythes, corps nus, colonnes) et utilisent la **perspective** : un point de fuite donne l'illusion de la profondeur.
+- type: texte
+  titre: Les formes circulent, l'image se multiplie
+  contenu: |-
+    Les formes et les styles voyagent entre les Flandres, la France et l'Italie.
+    - Flandres : Jan van Eyck peint Les Époux Arnolfini (1434) à l'huile, très précis.
+    - France : le roi François Ier invite Léonard de Vinci, qui meurt à Amboise en 1519.
+    Vers 1455, Gutenberg imprime une Bible à Mayence avec des **caractères mobiles** : c'est l'imprimerie. Elle reproduit surtout des textes.
+    La **gravure** reproduit une image en de nombreux exemplaires, comme Melencolia I d'Albrecht Dürer (1514).
+- type: texte
+  titre: Musique et arts du spectacle
+  contenu: |-
+    La musique change aussi : la musique suit le sens du poème.
+    - Le **motet** est une œuvre religieuse chantée à plusieurs voix.
+    - La chanson et le **madrigal** sont profanes (non religieux), à plusieurs voix.
+    Les arts du spectacle se développent : théâtre religieux, tragédies, comédies, fêtes de cour avec musique et danse.
+    En Italie, la commedia dell'arte est jouée par des troupes qui improvisent à partir de personnages types.
+- type: exemple
+  enonce: Explique le rôle d'un mécène à la Renaissance, avec un exemple.
+  etapes:
+  - 'Définition : un mécène est une personne riche et puissante qui commande et finance des œuvres.'
+  - 'Exemple : le pape Jules II commande à Michel-Ange le plafond de la chapelle Sixtine, peint de 1508 à 1512.'
+  - 'Conséquence : le mécène montre sa richesse, sa puissance et son goût, et l''artiste gagne en prestige.'
+- type: exercice
+  enonce: Vers 1455, à Mayence, Gutenberg réalise une Bible grâce à une nouvelle technique. Laquelle ?
+  forme: qcm
+  choix:
+  - L'imprimerie à caractères mobiles
+  - La photographie
+  - La peinture à fresque
+  - L'enluminure à la main
+  reponse: 0
+  indices:
+  - Cette technique permet de produire beaucoup de livres identiques, bien plus vite qu'avant.
+  - Élimine ce qui existait déjà au Moyen Âge, puis ce qui n'existe pas encore au XVe siècle.
+  explication: 'Gutenberg utilise de petites lettres en métal qu''on peut déplacer et réutiliser : c''est l''imprimerie à caractères mobiles. La photographie n''existe pas encore, la fresque est une peinture murale, l''enluminure se fait à la main, un livre à la fois.'
+- type: exercice
+  enonce: Comment appelle-t-on une personne riche et puissante, comme Laurent de Médicis ou le pape Jules II, qui finance et protège des artistes ?
+  forme: reponse_courte
+  reponse: mécène
+  reponses_acceptees:
+  - mécène
+  - un mécène
+  - mécènes
+  - le mécène
+  - mecene
+  indices:
+  - Ce mot vient du nom d'un Romain de l'Antiquité, ami des poètes et protecteur des arts.
+  - C'est un nom commun de six lettres qui se termine par « -ène ».
+  - 'Ce n''est pas seulement quelqu''un qui commande une œuvre : c''est quelqu''un qui protège et finance les artistes.'
+  explication: Un mécène est une personne riche qui finance et protège des artistes, comme les Médicis à Florence ou le pape Jules II à Rome.
+- type: exercice
+  enonce: Comment nomme-t-on en italien le XVe siècle, celui de Brunelleschi et de Botticelli ?
+  forme: reponse_courte
+  reponse: Quattrocento
+  reponses_acceptees:
+  - Quattrocento
+  - le Quattrocento
+  - quattrocento
+  indices:
+  - Ces noms viennent du nombre de centaines d'années, en italien.
+  - Le XVe siècle correspond aux années 1400. En italien, « quattro » veut dire « quatre ».
+  - 'Le Trecento est le XIVe siècle et le Cinquecento est le XVIe : le mot cherché est celui du milieu.'
+  explication: 'Quattrocento : le XVe siècle italien (années 1400).'
+- type: exercice
+  enonce: Qu'est-ce qu'un madrigal à la Renaissance ?
+  forme: qcm
+  choix:
+  - Une image gravée sur une plaque de métal
+  - Une chanson profane à plusieurs voix
+  - Un chant religieux à plusieurs voix
+  - Une sculpture en marbre
+  reponse: 1
+  indices:
+  - Le madrigal appartient au domaine de la musique. Est-il religieux ou non ?
+  - Compare avec le motet, l'œuvre religieuse à plusieurs voix, et élimine ce qui n'est pas de la musique.
+  explication: Un madrigal est une chanson profane à plusieurs voix ; le motet est l'équivalent religieux. Une sculpture et une gravure ne sont pas de la musique.
+- type: exercice
+  enonce: Parmi ces ensembles de faits, lequel explique le mieux pourquoi l'artiste devient célèbre à la Renaissance ?
+  forme: qcm
+  choix:
+  - Il n'utilise plus aucun modèle et ignore l'Antiquité
+  - Il vit uniquement à la campagne, loin des villes riches
+  - Des mécènes riches lui commandent des œuvres, et il signe ses créations
+  - Il travaille toujours de façon anonyme, comme un artisan du Moyen Âge
+  reponse: 2
+  indices:
+  - 'Pense aux deux mots du cours : mécène et signature.'
+  - 'Une réponse parle d''anonymat : cela ressemble-t-il à un artiste célèbre ?'
+  - Les villes italiennes riches sont des lieux de commandes. Cherche la réponse qui les utilise.
+  explication: L'artiste devient célèbre parce que des mécènes riches (Médicis, papes) lui commandent des œuvres et parce qu'il signe ses créations. Les artistes de la Renaissance redécouvrent aussi l'Antiquité et travaillent dans les villes riches.
+- type: question_ouverte
+  question: Le David de Michel-Ange est une statue de marbre de plus de cinq mètres, sculptée à Florence de 1501 à 1504. Elle représente un jeune héros nu, debout. Explique en quelques phrases pourquoi cette œuvre est typique de la Renaissance.
+  indices:
+  - 'Pense au corps nu : de quelle époque les artistes s''inspirent-ils ?'
+  - 'Pense à l''artiste : est-il anonyme ou célèbre ?'
+  criteres:
+  - L'élève relie l'œuvre à la Renaissance (nu inspiré de l'Antiquité, artiste célèbre).
+  - L'élève cite l'artiste, la ville et les dates (Michel-Ange, Florence, 1501-1504).
+  - L'élève écrit des phrases complètes, sans se contenter de mots isolés.
+- type: synthese
+  consigne: Écris, en deux ou trois phrases, ce qui change pour l'artiste à la Renaissance et ce que l'imprimerie et la gravure apportent. Donne un exemple d'œuvre avec son artiste.

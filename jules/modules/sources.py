@@ -193,7 +193,7 @@ class Brique(Module):
             except KeyError as err:
                 raise introuvable() from err
             except ErreurFicheVisuelle as err:
-                journal.error("Fiche personnelle %s non servie : %s", fiche_id, err)
+                journal.error("Fiche personnelle %s non servie : %s", fiche_id.replace("\n", "").replace("\r", ""), err)
                 raise HTTPException(409, "Cette fiche est abîmée : supprime-la et refais-la.") from err
 
         @routeur.get("/fiches/{fiche_id}/source")

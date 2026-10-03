@@ -1,0 +1,153 @@
+notion: ratio
+titre: "Partager une quantité selon un ratio"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comprendre ce que veut dire un ratio comme 2 : 3, et le simplifier."
+      - "Partager une quantité en deux ou trois parts selon un ratio donné."
+      - "Retrouver le total ou une autre part quand on connaît une des parts."
+
+  - type: texte
+    titre: "Qu'est-ce qu'un ratio ?"
+    contenu: >-
+      Un **ratio** compare des quantités. Le ratio **a : b** se lit « a pour b ».
+
+
+      - **L'ordre compte** : le ratio filles : garçons 2 : 3 n'est pas le ratio garçons : filles.
+
+      - Deux nombres a et b sont dans le ratio 2 : 3 quand **a / 2 = b / 3**.
+
+      - On **simplifie** un ratio comme une fraction : 12 : 18 donne 2 : 3 (on divise tout par 6).
+
+  - type: texte
+    titre: "Partager selon un ratio, en 4 étapes"
+    contenu: >-
+      Partager selon le ratio **a : b**, c'est couper la quantité en **a + b parts égales**.
+
+
+      1. J'additionne les nombres du ratio : c'est le **nombre de parts**.
+
+      2. Je divise le total par ce nombre : c'est la **valeur d'une part**.
+
+      3. Je multiplie la valeur d'une part par le nombre de parts de chacun.
+
+      4. Je **vérifie** : la somme des parts redonne le total.
+
+  - type: texte
+    titre: "Trois parts, ou une part déjà connue"
+    contenu: >-
+      **Avec trois nombres** a : b : c, on fait **a + b + c** parts. Exemple : 2 : 3 : 4 donne 9 parts.
+
+
+      **Si on connaît une part** : on cherche d'abord la valeur d'une part.
+      Exemple : ratio 2 : 3, la première personne a 10 €.
+      Une part vaut 10 ÷ 2 = 5 €. La seconde a 3 × 5 = 15 €. Le total est 25 €.
+
+
+      **Attention** : on divise par la **somme** des nombres du ratio, jamais par un seul d'entre eux.
+
+  - type: exemple
+    enonce: >-
+      Trois frères se partagent 60 € selon le ratio 1 : 2 : 3 (Hugo : Nils : Paul).
+      Combien reçoit chacun ?
+    etapes:
+      - "Nombre de parts : 1 + 2 + 3 = 6 parts."
+      - "Valeur d'une part : 60 ÷ 6 = 10 €."
+      - "Hugo : 1 × 10 = 10 €. Nils : 2 × 10 = 20 €. Paul : 3 × 10 = 30 €."
+      - "Vérification : 10 + 20 + 30 = 60 €. C'est bien le total."
+
+  - type: exercice
+    enonce: >-
+      Dans un club, il y a 15 garçons et 10 filles.
+      Quel est le ratio garçons : filles, simplifié ?
+    forme: qcm
+    choix:
+      - "2 : 3"
+      - "3 : 2"
+      - "15 : 25"
+      - "3 : 5"
+    reponse: 1
+    indices:
+      - "Dans le ratio garçons : filles, quel nombre vient en premier ?"
+      - "Écris 15 : 10, puis divise les deux nombres par un même diviseur, le plus grand possible."
+    explication: "Le ratio garçons : filles est 15 : 10. On divise les deux nombres par 5 : on obtient 3 : 2. Le ratio 2 : 3 serait filles : garçons."
+
+  - type: exercice
+    enonce: >-
+      Nina et Paul se partagent 45 billes selon le ratio 4 : 5 (Nina : Paul).
+      Combien de billes reçoit Nina ?
+    forme: nombre
+    reponse: 20
+    tolerance: 0
+    unite: billes
+    indices:
+      - "Combien de parts y a-t-il en tout ? Additionne les nombres du ratio."
+      - "Il y a 9 parts. Divise 45 par 9 pour trouver la valeur d'une part."
+      - "Nina reçoit 4 parts : multiplie la valeur d'une part par 4."
+    explication: "4 + 5 = 9 parts. Une part vaut 45 ÷ 9 = 5 billes. Nina reçoit 4 × 5 = 20 billes, Paul 5 × 5 = 25 billes. Vérification : 20 + 25 = 45."
+
+  - type: exercice
+    enonce: >-
+      Un jus contient 20 cL de sirop pour 35 cL d'eau.
+      Écris le ratio sirop : eau sous sa forme la plus simple (par exemple « 2 : 9 »).
+    forme: reponse_courte
+    reponse: "4 : 7"
+    reponses_acceptees: ["4:7", "4 :7", "4: 7", "4 : 7"]
+    indices:
+      - "Le ratio de départ est 20 : 35. Cherche un nombre qui divise 20 et 35."
+      - "20 et 35 sont tous les deux dans la table de 5. Divise chacun par 5, en gardant l'ordre sirop puis eau."
+    explication: "Le ratio sirop : eau est 20 : 35. On divise les deux nombres par 5 : 20 ÷ 5 = 4 et 35 ÷ 5 = 7. Le ratio simplifié est 4 : 7."
+
+  - type: exercice
+    enonce: >-
+      Un maçon prépare 200 kg de mélange avec du ciment, du sable et du gravier
+      selon le ratio 1 : 3 : 4 (ciment : sable : gravier).
+      Quelle masse de gravier faut-il, en kg ?
+    forme: nombre
+    reponse: 100
+    tolerance: 0
+    unite: kg
+    indices:
+      - "Avec trois nombres dans le ratio, additionne les trois pour avoir le nombre de parts."
+      - "Il y a 8 parts. Une part vaut 200 ÷ 8."
+      - "Le gravier, c'est 4 parts : multiplie la valeur d'une part par 4."
+    explication: "1 + 3 + 4 = 8 parts. Une part vaut 200 ÷ 8 = 25 kg. Gravier : 4 × 25 = 100 kg. Vérification : 25 + 75 + 100 = 200 kg."
+
+  - type: exercice
+    enonce: >-
+      Léo et Mia se partagent un gain selon le ratio 3 : 5 (Léo : Mia).
+      Mia reçoit 40 €. Quel est le montant total du gain, en euros ?
+    forme: nombre
+    reponse: 64
+    tolerance: 0
+    unite: "€"
+    indices:
+      - "Mia a 5 parts. Combien vaut une seule part ?"
+      - "Une part vaut 40 ÷ 5. Combien y a-t-il de parts en tout ?"
+      - "Il y a 3 + 5 = 8 parts : multiplie la valeur d'une part par 8."
+    explication: "Mia a 5 parts, donc une part vaut 40 ÷ 5 = 8 €. Léo reçoit 3 × 8 = 24 €. Total : 8 parts, soit 8 × 8 = 64 €. Vérification : 24 + 40 = 64 €."
+
+  - type: question_ouverte
+    question: >-
+      Sam doit partager 50 € selon le ratio 2 : 3. Il calcule 50 ÷ 2 = 25 € et 50 ÷ 3.
+      Explique son erreur, puis fais le bon partage.
+    indices:
+      - "Un partage selon un ratio : par quel nombre faut-il diviser le total ?"
+      - "Avec le ratio 2 : 3, combien de parts égales fait-on en tout ?"
+    criteres:
+      - "L'élève dit qu'il faut diviser par la somme 2 + 3 = 5, et non par 2 puis par 3."
+      - "L'élève trouve une part de 10 €, puis les parts 20 € et 30 €."
+      - "L'élève vérifie que 20 + 30 = 50 €."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les 4 étapes pour partager une quantité selon un ratio.
+      Ajoute comment tu fais quand tu connais déjà une des parts.

@@ -1,0 +1,160 @@
+notion: mettre-en-oeuvre-projet
+titre: "Mettre en œuvre un projet artistique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Connaître les étapes d'un projet artistique et anticiper les difficultés."
+      - "Comparer son intention et sa réalisation pour ajuster son projet."
+      - "Travailler seul ou en groupe avec autonomie et esprit critique."
+
+  - type: texte
+    titre: "Les étapes d'un projet"
+    contenu: |-
+      Un projet se **conçoit**, se **réalise** et se **donne à voir**, seul ou en groupe, avec le professeur.
+      1. Comprendre la demande et formuler son **intention** (l'effet voulu).
+      2. Chercher : croquis, essais, documentation, dans le **carnet de recherches**.
+      3. Réaliser. 4. Prendre du recul. 5. Présenter et expliquer ses choix.
+      On revient souvent en arrière : l'ordre n'est pas strict.
+
+  - type: texte
+    titre: "Anticiper, et travailler à plusieurs"
+    contenu: |-
+      Avant de commencer, on liste ce qui peut poser problème :
+      - le temps, le matériel, la taille, la solidité ;
+      - le lieu, les autorisations, la sécurité.
+
+      En groupe : se répartir les tâches, écouter les autres, décider ensemble, tenir les délais.
+      Chacun garde une part personnelle dans la production commune.
+
+  - type: texte
+    titre: "Comparer l'intention et la réalisation"
+    contenu: |-
+      Pendant le travail, on compare souvent ce que l'on voulait et ce que l'on obtient.
+      S'il y a un écart, on **adapte** la production ou on **réoriente** l'intention, sans perdre le sens artistique.
+      Un accident ou un échec peut devenir une piste : on mène sa production **à terme**.
+      On garde des traces : carnet de recherches, photos des étapes, **note d'intention**.
+      On attend autonomie, initiative, responsabilité, engagement et esprit critique.
+
+  - type: texte
+    titre: "Un exemple d'artistes"
+    contenu: |-
+      Christo et Jeanne-Claude ont emballé de toile le **Pont-Neuf** à Paris en **1985**,
+      après des années de démarches pour obtenir les autorisations.
+      Leurs dessins et maquettes préparatoires montrent toutes les étapes du projet.
+      La **maquette** est un modèle réduit qui permet de tester un projet avant de le faire en grand.
+
+  - type: exemple
+    enonce: >-
+      Projet fictif : Sarah veut exprimer « la légèreté » avec des oiseaux en papier suspendus au plafond.
+      À mi-chemin, ses oiseaux en carton épais pendent tout droit et paraissent lourds. Que peut-elle faire ?
+    etapes:
+      - "Elle compare la réalisation à son intention : elle voulait de la légèreté, mais le carton épais paraît lourd."
+      - "Elle cherche la cause : le matériau est trop rigide et trop lourd."
+      - "Elle garde son intention et change de matériau : du papier de soie, qui bouge au moindre souffle."
+      - "Elle note ce changement et sa raison dans son carnet de recherches, pour l'expliquer à l'oral."
+
+  - type: exercice
+    enonce: "Par quelle étape commence un projet artistique ?"
+    forme: qcm
+    choix:
+      - "Présenter la production au public."
+      - "Comprendre la demande et formuler son intention."
+      - "Réaliser directement la production finale."
+    reponse: 1
+    indices:
+      - "Avant de faire, il faut savoir ce que l'on veut produire."
+      - "La présentation vient à la fin, la réalisation après les recherches."
+    explication: "On commence par comprendre la demande et formuler son intention. Viennent ensuite les recherches, la réalisation, le recul et la présentation."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on le carnet où l'on garde croquis, essais, notes et images qui préparent et
+      accompagnent un projet ?
+    forme: reponse_courte
+    reponse: "carnet de recherches"
+    reponses_acceptees:
+      - "carnet de recherches"
+      - "carnet de recherche"
+      - "le carnet de recherches"
+      - "le carnet de recherche"
+      - "un carnet de recherches"
+      - "un carnet de recherche"
+      - "carnet de bord"
+    indices:
+      - "Son nom dit ce que l'on y fait : on y garde ce que l'on cherche."
+      - "Relis l'étape 2 du bloc « Les étapes d'un projet »."
+    explication: "Le carnet de recherches garde la trace des croquis, des essais et des idées abandonnées. Il aide à expliquer ses choix."
+
+  - type: exercice
+    enonce: >-
+      On fabrique parfois un modèle réduit pour tester un projet avant de le réaliser en grand.
+      Quel mot désigne ce modèle réduit ?
+    forme: reponse_courte
+    reponse: "maquette"
+    reponses_acceptees:
+      - "maquette"
+      - "la maquette"
+      - "une maquette"
+      - "maquettes"
+    indices:
+      - "Ce n'est pas un croquis : c'est un objet en volume."
+      - "Les architectes en font pour montrer un bâtiment en petit."
+    explication: "La maquette teste en petit un volume ou une installation, comme celles de Christo et Jeanne-Claude."
+
+  - type: exercice
+    enonce: >-
+      Ta classe prépare une installation dans le hall du collège. Que faut-il anticiper avant de commencer ?
+    forme: qcm
+    choix:
+      - "Le prix auquel on pourra la vendre."
+      - "La couleur préférée de chaque élève."
+      - "Les dimensions du hall, l'autorisation du chef d'établissement et le temps de montage."
+    reponse: 2
+    indices:
+      - "Qu'est-ce qui pourrait empêcher l'installation d'exister ou la rendre dangereuse ?"
+      - "Pense au lieu, à l'accord à obtenir et au calendrier."
+    explication: "Il faut anticiper le lieu (dimensions, passages), l'autorisation et le temps. Le prix et les goûts de chacun ne comptent pas ici."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Situation fictive : la grande sculpture en carton de Tom s'effondre à mi-chemin.
+      Quelle réaction montre qu'il mène son projet avec esprit critique ?
+    forme: qcm
+    choix:
+      - "Il abandonne le projet."
+      - "Il recommence exactement de la même façon."
+      - "Il cherche pourquoi elle est tombée et renforce sa structure, en gardant son intention."
+    reponse: 2
+    indices:
+      - "Si Tom refait la même chose, que risque-t-il de se passer ?"
+      - "Le programme demande de mener sa production à terme."
+    explication: "Tom cherche la cause et adapte sa réalisation sans renoncer à son intention. Abandonner ou refaire à l'identique ne règle rien."
+
+  - type: question_ouverte
+    question: >-
+      Projet fictif : Inès voulait donner une impression de calme avec un paysage marin. Sa peinture finie
+      utilise surtout du rouge et des traits en zigzag, et paraît agitée. Explique l'écart entre l'intention
+      et la réalisation, puis propose deux ajustements justifiés.
+    indices:
+      - "Quels éléments de la peinture donnent une impression d'agitation ?"
+      - "Cherche des couleurs et des lignes qui produiraient plutôt du calme."
+    criteres:
+      - "L'élève identifie l'écart : couleurs et traits produisent un effet contraire à l'intention."
+      - "L'élève propose deux ajustements plastiques précis (couleurs, lignes, gestes, composition)."
+      - "L'élève justifie chaque ajustement par l'effet voulu, ou explique pourquoi garder l'écart pourrait être un choix."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases, avec tes mots. Donne les grandes étapes d'un projet artistique.
+      Puis dis ce que tu fais quand ta réalisation ne correspond pas à ton intention.

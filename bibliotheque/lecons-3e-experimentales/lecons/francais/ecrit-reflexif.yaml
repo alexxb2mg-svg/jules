@@ -1,0 +1,158 @@
+notion: ecrit-reflexif
+titre: "Écrit pour penser, apprendre et prise de notes"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comprendre qu'écrire sert aussi à penser et à apprendre, et savoir ce qu'est un écrit réflexif."
+      - "Connaître les techniques de la prise de notes."
+      - "Rédiger un texte de 2 000 à 3 000 signes qui explique et justifie."
+
+  - type: texte
+    titre: "Écrire pour penser et pour apprendre"
+    contenu: |-
+      Écrire ne sert pas seulement à rendre un devoir.
+      En mettant tes idées sur le papier, tu les clarifies, tu les retiens mieux, et tu vois ce que tu n'as pas compris.
+      Le **brouillon** fait partie de la réflexion : on y note, on essaie, on barre, on reformule.
+      Il n'a pas besoin d'être propre : il prépare la version finale.
+
+  - type: texte
+    titre: "L'écrit réflexif"
+    contenu: |-
+      Un **écrit réflexif** est un texte où l'on :
+      - explique sa **démarche** ;
+      - **justifie** une réponse (donne les raisons) ;
+      - argumente un propos.
+      On répond au « comment » et au « pourquoi », pas seulement au « quoi ».
+      Exemple : « J'ai choisi de diviser d'abord par 2, parce que le nombre est pair. »
+      Formes possibles : quelques phrases en marge, un paragraphe de bilan, un point sur ce qui reste difficile.
+
+  - type: texte
+    titre: "La prise de notes"
+    contenu: |-
+      On n'écrit pas tout ce que dit le professeur : on garde l'**essentiel**.
+      - Repère les **mots-clés**.
+      - Utilise des **abréviations** personnelles (« qd » pour « quand »).
+      - Utilise des tirets et des flèches : → veut dire « donc », ≠ veut dire « différent de ».
+      - Aère la page et souligne les titres.
+      Des notes lisibles servent à réviser.
+
+  - type: texte
+    titre: "Rédiger 2 000 à 3 000 signes"
+    contenu: |-
+      En 3e, on te demande de rédiger un texte de **2 000 à 3 000 signes**.
+      C'est environ une demi-page à une page.
+      Les signes comptent les lettres, les espaces et la ponctuation.
+      Selon la demande, ce peut être un développement construit, une réponse argumentée ou un récit.
+      Utilise des mots de liaison (parce que, donc, ensuite, mais) et relis-toi.
+
+  - type: exemple
+    enonce: >-
+      Après avoir répondu à une question sur un poème, écris deux phrases d'écrit réflexif pour
+      justifier ta réponse.
+    etapes:
+      - "Question à te poser : quel est le « pourquoi » de ma réponse ?"
+      - "Première phrase : j'écris ma réponse et la raison, avec un mot de liaison. « J'ai dit que le poète est triste, parce qu'il parle de la nuit et du silence. »"
+      - "Deuxième phrase : je dis comment j'ai fait. « J'ai d'abord relevé les mots du texte, puis j'ai cherché ce qu'ils suggèrent. »"
+      - "Je relis : mon écrit explique-t-il le « pourquoi » et pas seulement le « quoi » ? Oui, donc il est réflexif."
+
+  - type: exercice
+    enonce: "À quelles questions un écrit réflexif répond-il surtout ?"
+    forme: qcm
+    choix:
+      - "« Comment ? » et « pourquoi ? »"
+      - "Seulement « quoi ? »"
+      - "Seulement « quand ? »"
+      - "Aucune : il recopie le cours"
+    reponse: 0
+    indices:
+      - "Un écrit réflexif explique la démarche et donne les raisons."
+      - "Il ne donne pas seulement le résultat."
+    explication: "Un écrit réflexif répond au « comment » et au « pourquoi » : il explique la démarche et justifie la réponse."
+
+  - type: exercice
+    enonce: "Quel mot désigne le texte de travail où l'on note ses idées en désordre avant de rédiger la version finale ? (un mot)"
+    forme: reponse_courte
+    reponse: "brouillon"
+    reponses_acceptees: ["le brouillon", "un brouillon", "Brouillon"]
+    indices:
+      - "Il n'a pas besoin d'être propre."
+      - "Il sert à préparer la version finale. Il commence par la lettre « b »."
+    explication: "Le brouillon est le texte de travail où l'on essaie, on barre et on reformule avant de rédiger."
+
+  - type: exercice
+    enonce: >-
+      On te demande un texte d'au moins 2 000 signes. Ton texte en compte 1 350. Combien de signes
+      te manque-t-il au minimum ?
+    forme: nombre
+    reponse: 650
+    tolerance: 0.01
+    unite: "signes"
+    indices:
+      - "Il faut trouver ce qui manque pour atteindre le minimum : on fait une soustraction."
+      - "Minimum demandé moins ce que tu as déjà écrit : 2 000 − 1 350."
+    explication: "2 000 − 1 350 = 650. Il te manque au moins 650 signes."
+
+  - type: exercice
+    enonce: "Quelle est la bonne façon de prendre des notes pendant un cours ?"
+    forme: qcm
+    choix:
+      - "Recopier tout, mot pour mot"
+      - "Garder l'essentiel : mots-clés, abréviations, tirets et flèches"
+      - "Ne rien écrire pour mieux écouter"
+      - "Écrire uniquement les titres"
+    reponse: 1
+    indices:
+      - "On n'écrit pas tout ce que dit le professeur."
+      - "Repère les mots-clés et utilise des signes pour aller plus vite."
+    explication: "On garde l'essentiel : mots-clés, abréviations personnelles, tirets, flèches. Recopier tout empêche de repérer ce qui compte."
+
+  - type: exercice
+    enonce: >-
+      Un élève doit expliquer sa réponse à un exercice. Laquelle de ces écritures est un vrai écrit
+      réflexif ?
+    forme: qcm
+    choix:
+      - "« Résultat : 12. »"
+      - "« J'ai additionné d'abord les deux nombres, parce qu'ils sont dans la même parenthèse, donc j'obtiens 12. »"
+      - "« Je n'ai pas aimé cet exercice. »"
+      - "« Voir le cours. »"
+    reponse: 1
+    indices:
+      - "Un écrit réflexif explique la démarche et donne une raison."
+      - "Cherche les mots de liaison comme « parce que » ou « donc »."
+    explication: "La deuxième phrase explique la démarche et donne la raison, avec « parce que » et « donc ». Les autres ne donnent que le résultat ou un avis."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un exercice que tu as réussi ou raté récemment. En 5 à 8 lignes, explique ta démarche,
+      justifie ta réponse et dis ce qui reste difficile pour toi.
+    indices:
+      - "Commence par dire ce qu'on te demandait, puis explique ce que tu as fait en premier."
+      - "Utilise « parce que », « donc », « ensuite », « mais » pour relier tes idées."
+    criteres:
+      - "L'élève explique sa démarche (comment il a fait), pas seulement le résultat."
+      - "L'élève justifie sa réponse avec au moins une raison (« pourquoi »)."
+      - "L'élève utilise des mots de liaison."
+      - "L'élève dit ce qui reste difficile, ou ce qu'il a appris."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, à quoi sert un écrit réflexif et comment tu
+      prends des notes efficaces.

@@ -1,0 +1,158 @@
+notion: reperage-sur-une-sphere
+titre: "Se repérer sur une sphère : latitude et longitude"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Connaître les lignes de la sphère : équateur, parallèles, méridiens."
+      - "Lire et écrire les coordonnées d'un point : latitude, puis longitude."
+      - "Calculer un écart en degrés entre deux points d'un même méridien ou d'un même parallèle."
+
+  - type: texte
+    titre: "La Terre vue comme une sphère"
+    contenu: >-
+      On modélise la Terre par une **sphère**. L'**axe des pôles** passe par le pôle Nord,
+      le pôle Sud et le centre.
+
+
+      - **Équateur** : le grand cercle à égale distance des deux pôles. Il sépare l'hémisphère Nord et l'hémisphère Sud.
+
+      - **Parallèles** : les cercles parallèles à l'équateur.
+
+      - **Méridiens** : les demi-cercles qui vont d'un pôle à l'autre.
+
+      - **Méridien de Greenwich** : le méridien de référence.
+
+  - type: texte
+    titre: "Latitude et longitude"
+    contenu: |-
+      Un point se repère par **deux angles**, en degrés, mesurés depuis le centre de la Terre.
+
+      | | Latitude | Longitude |
+      |---|---|---|
+      | Départ (0°) | l'équateur | le méridien de Greenwich |
+      | Valeurs | de 0° à **90°** | de 0° à **180°** |
+      | Lettre | **N** ou **S** | **E** ou **O** |
+      | Même valeur sur | un parallèle | un méridien |
+
+  - type: texte
+    titre: "Écrire des coordonnées et calculer un écart"
+    contenu: >-
+      On écrit **la latitude d'abord, la longitude ensuite** : M (40° N ; 10° E).
+      Sans lettre, 40° ne situe pas le point.
+
+
+      - Sur un **parallèle**, seule la longitude change. Sur un **méridien**, seule la latitude change.
+
+      - **Même côté** (de l'équateur ou de Greenwich) : on **soustrait** les angles.
+
+      - **De part et d'autre** : on **additionne** les angles.
+
+  - type: exemple
+    enonce: >-
+      Le point A a pour coordonnées (30° N ; 20° O). Le point B est sur le même méridien,
+      50° plus au sud. Quelles sont les coordonnées de B ?
+    etapes:
+      - "B est sur le même méridien que A : sa longitude ne change pas, c'est 20° O."
+      - "De A jusqu'à l'équateur, on descend de 30°. Il reste 50 − 30 = 20° à parcourir."
+      - "Ces 20° sont au sud de l'équateur : la latitude de B est 20° S."
+      - "On écrit la latitude d'abord : B (20° S ; 20° O)."
+
+  - type: exercice
+    enonce: "Comment s'appelle le grand cercle de la Terre dont tous les points ont une latitude de 0° ?"
+    forme: reponse_courte
+    reponse: "équateur"
+    reponses_acceptees: ["equateur", "l'équateur", "l'equateur", "Équateur", "l équateur"]
+    indices:
+      - "Ce cercle sépare l'hémisphère Nord de l'hémisphère Sud."
+      - "Il est à égale distance des deux pôles. C'est le plus grand des parallèles."
+    explication: "C'est l'équateur. La latitude se mesure à partir de lui, de 0° à 90° vers le nord ou vers le sud."
+
+  - type: exercice
+    enonce: "Lequel de ces points est situé dans l'hémisphère Sud ?"
+    forme: qcm
+    choix:
+      - "P (25° N ; 40° O)"
+      - "Q (10° S ; 60° E)"
+      - "R (0° ; 15° E)"
+      - "T (45° N ; 30° E)"
+    reponse: 1
+    indices:
+      - "Quelle coordonnée dit si un point est au nord ou au sud de l'équateur ?"
+      - "Regarde seulement la latitude (le premier nombre) et sa lettre, N ou S. Attention : O veut dire ouest."
+    explication: "Q a une latitude de 10° S : il est dans l'hémisphère Sud. P et T sont au nord. R est sur l'équateur (latitude 0°)."
+
+  - type: exercice
+    enonce: >-
+      Deux villes sont sur le même méridien. La première a une latitude de 35° N,
+      la seconde de 15° S. Quel angle, en degrés, sépare leurs deux parallèles ?
+    forme: nombre
+    reponse: 50
+    tolerance: 0
+    unite: "°"
+    indices:
+      - "Les deux villes sont-elles du même côté de l'équateur ?"
+      - "L'une est au nord, l'autre au sud : l'équateur est entre les deux. Faut-il ajouter ou soustraire ?"
+      - "De la première ville à l'équateur, il y a 35°. Ajoute l'angle entre l'équateur et la seconde ville."
+    explication: "Une ville est à 35° au nord de l'équateur, l'autre à 15° au sud. L'écart est 35 + 15 = 50°."
+
+  - type: exercice
+    enonce: >-
+      Deux villes sont sur le même parallèle. La première a une longitude de 12° O,
+      la seconde de 80° O. Quel angle, en degrés, sépare leurs deux méridiens ?
+    forme: nombre
+    reponse: 68
+    tolerance: 0
+    unite: "°"
+    indices:
+      - "Les deux villes sont-elles du même côté du méridien de Greenwich ?"
+      - "Elles sont toutes les deux à l'ouest : on soustrait."
+      - "Retire la plus petite longitude à la plus grande : 80 − 12."
+    explication: "Les deux villes sont à l'ouest de Greenwich. L'écart est 80 − 12 = 68°."
+
+  - type: exercice
+    enonce: >-
+      Un bateau part du point A (40° N ; 10° E). Il suit le parallèle de A
+      et parcourt 30° vers l'ouest. Quelles sont ses nouvelles coordonnées ?
+    forme: qcm
+    choix:
+      - "(40° N ; 20° O)"
+      - "(40° N ; 40° E)"
+      - "(10° N ; 10° E)"
+      - "(40° N ; 20° E)"
+    reponse: 0
+    indices:
+      - "Sur un parallèle, quelle coordonnée ne change pas ?"
+      - "En allant vers l'ouest depuis 10° E, on atteint d'abord Greenwich (0°) après 10°."
+      - "Combien de degrés reste-t-il à parcourir après Greenwich, et de quel côté ?"
+    explication: "La latitude reste 40° N. On fait 10° vers l'ouest jusqu'à Greenwich, puis encore 30 − 10 = 20° vers l'ouest. Nouvelles coordonnées : (40° N ; 20° O)."
+
+  - type: question_ouverte
+    question: >-
+      Malo pense qu'un point de la Terre peut avoir une latitude de 120° N.
+      Explique pourquoi c'est impossible.
+    indices:
+      - "Où se trouve un point de latitude 0° ? Et quel est le point le plus au nord ?"
+      - "En montant vers le nord le long d'un méridien, jusqu'où l'angle peut-il augmenter ?"
+    criteres:
+      - "L'élève dit que la latitude est un angle mesuré depuis l'équateur, vers le nord ou vers le sud."
+      - "L'élève dit que cet angle vaut au plus 90°, au pôle Nord : on ne peut pas aller plus au nord."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, ce que sont la latitude et la longitude : leur point de départ,
+      leurs valeurs possibles, leurs lettres. Ajoute quand on additionne et quand on soustrait
+      pour calculer un écart.

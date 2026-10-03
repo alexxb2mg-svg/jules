@@ -1,0 +1,151 @@
+notion: parler-en-continu
+titre: "Parler en continu : prendre la parole seul en anglais"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège — éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Préparer une prise de parole avec un plan et des mots-clés."
+      - "Raconter, décrire, expliquer et argumenter avec les bons mots de liaison."
+      - "Continuer à parler quand un mot manque, avec le bon registre et une voix claire."
+
+  - type: texte
+    titre: "Parler en continu, c'est quoi ?"
+    contenu: |-
+      Tu parles **seul**, pendant plusieurs phrases, **sans être interrompu**.
+      Le but : **te faire comprendre**. Une petite erreur n'est pas grave.
+
+      Avant de parler, prépare :
+      - un **plan simple** : introduction, deux ou trois idées, conclusion ;
+      - quelques **mots-clés**, jamais un texte appris par cœur.
+
+      Utilise les mots, les faits et la grammaire **que tu maîtrises**.
+
+  - type: texte
+    titre: "Raconter, décrire, expliquer, argumenter"
+    contenu: |-
+      | Je veux… | Temps et mots utiles | Exemple |
+      |---|---|---|
+      | **Raconter** | passé ; first, then, finally | First, I went to the beach. |
+      | **Décrire** | présent ; there is, it is, he has | There is a big tree. |
+      | **Expliquer** | because (parce que), so (donc) | I was tired, so I stayed home. |
+      | **Argumenter** | I think that, in my opinion, for example, however | In my opinion, sport is important. |
+
+  - type: texte
+    titre: "Quand un mot manque : ne t'arrête pas"
+    contenu: |-
+      - **Décris** l'objet : « It's a thing you use when it rains. »
+      - Prends un **mot plus simple** ou un mot voisin.
+      - Dis-le franchement : « I don't know the word, but it's like… »
+      - **Corrige-toi** : « Sorry, I mean… ». C'est une force, pas une faute.
+
+  - type: texte
+    titre: "Le registre et la voix"
+    contenu: |-
+      **Registre** : pour un exposé, langage soigné → « Today, I would like to talk about… ».
+      Entre amis, on peut être plus direct. « Could you help me, please? » est plus poli que « Help me! ».
+
+      **Mettre en voix** :
+      - prononce clairement et accentue les mots importants ;
+      - la voix **monte** à la fin d'une question fermée, elle **descend** à la fin d'une affirmation ;
+      - regarde ton public, fais des gestes simples.
+
+  - type: exemple
+    enonce: "Tu dois présenter ton week-end en quatre phrases devant la classe. Comment t'y prendre ?"
+    etapes:
+      - "Introduction, registre soigné : « Today, I would like to talk about my weekend. »"
+      - "Raconter au passé avec un mot d'ordre : « First, I visited my grandmother. »"
+      - "Expliquer avec « because » : « I was happy because she made a cake. »"
+      - "Il manque le mot « tablier » ? On décrit : « She wore a thing you put on to cook. »"
+      - "Conclusion : « Finally, it was a great weekend. »"
+
+  - type: exercice
+    enonce: "Complète pour expliquer : « I like this song ___ it is cheerful. » Écris le mot qui donne la raison."
+    forme: reponse_courte
+    reponse: "because"
+    reponses_acceptees: ["Because", "BECAUSE"]
+    indices:
+      - "Tu dis pourquoi tu aimes la chanson."
+      - "Ce mot veut dire « parce que »."
+    explication: "« Because » (parce que) introduit la raison : j'aime cette chanson parce qu'elle est joyeuse."
+
+  - type: exercice
+    enonce: "Pendant ton exposé, tu ne connais pas le mot anglais pour « ciseaux ». Que fais-tu ?"
+    forme: qcm
+    choix:
+      - "Je m'arrête et j'attends que le professeur m'aide."
+      - "Je dis : « It's a thing you use to cut paper. »"
+      - "Je dis le mot en français et je passe au sujet suivant."
+      - "Je recommence tout mon exposé depuis le début."
+    reponse: 1
+    indices:
+      - "Le but est de continuer à te faire comprendre en anglais."
+      - "Tu peux expliquer à quoi sert l'objet avec des mots simples."
+    explication: "Décrire l'objet (« It's a thing you use to cut paper ») permet de continuer sans s'arrêter. C'est une bonne stratégie de reformulation."
+
+  - type: exercice
+    enonce: "Complète pour donner une conséquence : « It was raining, ___ we stayed at home. »"
+    forme: reponse_courte
+    reponse: "so"
+    reponses_acceptees: ["So", "SO", "and so"]
+    indices:
+      - "La pluie a une conséquence : rester à la maison."
+      - "Le mot veut dire « donc ». Ce n'est pas « because », qui donne une raison."
+    explication: "« So » (donc) introduit une conséquence : il pleuvait, donc nous sommes restés à la maison."
+
+  - type: exercice
+    enonce: "Tu commences un exposé devant la classe. Quelle phrase a le bon registre ?"
+    forme: qcm
+    choix:
+      - "Hey guys, so, yeah, animals."
+      - "Animals, whatever, they're cool."
+      - "Today, I would like to talk about wild animals."
+      - "Listen to me now!"
+    reponse: 2
+    indices:
+      - "Un exposé en classe est une situation soignée, pas une discussion entre amis."
+      - "Cherche une phrase complète qui annonce clairement le sujet."
+    explication: "« Today, I would like to talk about wild animals. » est soigné et annonce le sujet. Les autres phrases sont trop familières ou impolies."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Tu présentes ton avis sur les réseaux sociaux. Laquelle de ces suites de
+      phrases est la mieux construite pour argumenter ?
+    forme: qcm
+    choix:
+      - "Social networks. Instagram. Phones. Yes."
+      - "In my opinion, social networks are useful. For example, I talk to my cousins in Canada. However, I think we spend too much time on them."
+      - "Yesterday I went to the cinema with my friends and we ate popcorn."
+      - "There is a phone on the table. It is black."
+    reponse: 1
+    indices:
+      - "Argumenter, c'est donner un avis et le justifier."
+      - "Cherche les mots « in my opinion », « for example » et « however »."
+    explication: "La deuxième suite donne un avis (in my opinion), un exemple (for example) et une nuance (however). La troisième raconte, la quatrième décrit, la première n'est pas construite."
+
+  - type: question_ouverte
+    question: >-
+      Prépare, en anglais, 5 à 6 phrases pour présenter un loisir que tu aimes. Ton texte doit avoir
+      une introduction, deux idées expliquées avec « because » ou « so », et une conclusion.
+    indices:
+      - "Commence par : « Today, I would like to talk about… »"
+      - "Écris d'abord ton plan en trois lignes, puis développe chaque ligne."
+    criteres:
+      - "Le texte suit un plan clair : introduction, deux idées, conclusion."
+      - "Au moins deux explications utilisent « because » ou « so »."
+      - "Le registre est soigné, adapté à un exposé."
+      - "Si un mot manque, l'élève le remplace par une description simple au lieu de s'arrêter."
+
+  - type: synthese
+    consigne: >-
+      Écris trois phrases avec tes mots. 1) Comment tu prépares une prise de parole.
+      2) Ce que tu fais quand un mot te manque. 3) Comment tu adaptes ton registre et ta voix.

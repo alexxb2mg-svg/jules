@@ -9,15 +9,17 @@ from __future__ import annotations
 
 import copy
 import itertools
+import json
 import random
 from fractions import Fraction
+from pathlib import Path
 
 import pytest
 
 from jules.fiches.correction import ILLISIBLE, corriger, piege_declenche, reponse_de_reference
 from jules.fiches.parcours import Etat, repondre
 from jules.fiches.schema import _verifier_exercice
-from jules.generateurs import GABARIT, GENERATEURS, MODULES, generer, serie_generee
+from jules.generateurs import GABARIT, GENERATEURS, MODULES, generer, mathematiques, serie_generee
 from jules.generateurs.briques import ErreurGeneration, ErreurParametre, exercice_v2
 from jules.generateurs.briques.format_fr import nombre_fr, nombre_machine, pourcentage_fr, prix_fr
 from jules.generateurs.briques.pieges import filtrer_pieges, piege_valeur
@@ -76,14 +78,32 @@ def test_meme_graine_meme_exercice(notion: str) -> None:
         assert generer(notion, 7, 2, variante) == module.generer(7, 2, variante)
 
 
-@pytest.mark.parametrize("notion", NOTIONS)
-def test_les_graines_donnent_des_variantes(notion: str) -> None:
+def _empreinte(ex: dict) -> str:
+    """Ce que l'élève voit changer d'une graine à l'autre : l'énoncé ET la réponse attendue.
+
+    Un exercice `association` ou `ordre` garde souvent une consigne fixe (« Associe chaque événement à sa
+    probabilité. ») : ce sont les paires ou les éléments qui varient. Compter les énoncés seuls lirait
+    « 1 sur 60 » pour une variante saine ; compter les réponses seules raterait deux énoncés différents
+    qui tombent sur la même réponse.
+    """
+    return ex["enonce"] + "\n" + json.dumps(ex["reponse"], sort_keys=True, ensure_ascii=False)
+
+
+@pytest.mark.parametrize(("notion", "difficulte"), [(n, d) for n in NOTIONS for d in (1, 2, 3)])
+def test_les_graines_donnent_des_variantes(notion: str, difficulte: int) -> None:
+    """Au moins un exercice distinct pour deux graines, à CHAQUE difficulté (un palier 1 étroit ressert
+    les mêmes exercices à l'élève qui débute, celui qui a le plus besoin de s'entraîner)."""
     module = MODULES[notion]
     for variante in module.VARIANTES:
-        enonces = {
-            module.generer(g, 2, variante)["enonce"] + str(module.generer(g, 2, variante)["reponse"]) for g in GRAINES
-        }
-        assert len(enonces) >= len(GRAINES) // 2, f"{notion}/{variante} : trop peu de variété"
+        vus = {_empreinte(module.generer(g, difficulte, variante)) for g in GRAINES}
+        assert len(vus) >= len(GRAINES) // 2, f"{notion}/{variante}/{difficulte} : {len(vus)} sur {len(GRAINES)}"
+
+
+def test_registre_decouvre_chaque_module_de_notion() -> None:
+    """Un module déposé dans mathematiques/ est enregistré sans liste à tenir (plus de conflit entre PR)."""
+    fichiers = {f.stem for f in Path(mathematiques.__file__).parent.glob("*.py") if not f.name.startswith("_")}
+    assert {m.__name__.rsplit(".", 1)[1] for m in MODULES.values()} == fichiers
+    assert all(notion == module.NOTION for notion, module in MODULES.items())
 
 
 @pytest.mark.parametrize("notion", NOTIONS)

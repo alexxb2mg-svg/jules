@@ -1,0 +1,155 @@
+notion: champ-beaux-arts
+titre: "Le champ classique des « Beaux-Arts »"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : programme d'histoire des arts 2020 inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les cinq domaines des beaux-arts."
+      - "Reconnaître une technique d'après une description (fresque, ronde-bosse, gravure…)."
+      - "Présenter une œuvre avec son domaine, sa technique, son artiste et sa date."
+
+  - type: texte
+    titre: "Cinq domaines, des arts de l'espace"
+    contenu: >-
+      Le champ des **beaux-arts** regroupe **cinq domaines** :
+
+      **architecture**, **peinture**, **sculpture**, **dessin**, **gravure**.
+
+
+      Ce sont des **arts de l'espace** : l'œuvre est un objet ou un bâtiment que l'on regarde.
+
+      Ce n'est pas un spectacle qui se déroule dans le temps.
+
+  - type: texte
+    titre: "Peinture et dessin"
+    contenu: >-
+      | Technique | Comment ? |
+
+      |---|---|
+
+      | **Fresque** | peinte sur un **enduit encore frais**, sur un mur ou un plafond |
+
+      | **Huile sur toile** | couleurs mêlées d'**huile**, sur une toile tendue sur un châssis |
+
+      | **Dessin** | des **lignes** tracées sur du papier : crayon, **fusain**, sanguine, encre |
+
+
+      Le dessin peut être une **esquisse** (un premier essai) ou une œuvre à part entière.
+
+      Attention : toutes les peintures anciennes ne sont pas sur toile. La Joconde est peinte sur un panneau de bois.
+
+  - type: texte
+    titre: "Sculpture, gravure, architecture"
+    contenu: >-
+      - **Ronde-bosse** : sculpture dont on peut **faire le tour**. Exemple : Le Penseur de Rodin, en bronze.
+
+      - **Bas-relief** : sculpture qui dépasse **peu** d'un fond (**haut-relief** : elle dépasse beaucoup). Exemple : la frise du Parthénon.
+
+      - **Gravure** : l'artiste creuse une **plaque** (au **burin**, à l'eau-forte), l'encre et l'imprime **en plusieurs exemplaires**. Exemple : Melencolia I de Dürer (1514).
+
+      - **Architecture** : l'art de concevoir des **bâtiments** (plan, matériaux, fonction, style). Exemple : la Villa Savoye de Le Corbusier (1928-1931).
+
+  - type: exemple
+    enonce: >-
+      Présente La Liberté guidant le peuple d'Eugène Delacroix en nommant son domaine et sa technique.
+    etapes:
+      - "Domaine : c'est une peinture."
+      - "Technique et support : de l'huile sur toile."
+      - "Artiste et date : Eugène Delacroix, 1830."
+      - "On peut finir par le sens : le tableau évoque la révolution de juillet 1830."
+
+  - type: exercice
+    enonce: "Le champ des beaux-arts compte combien de domaines ?"
+    forme: nombre
+    reponse: 5
+    tolerance: 0
+    indices:
+      - "Compte : l'architecture, la peinture, la sculpture… il en reste encore."
+      - "Pense aussi à l'art des lignes sur papier et à l'image imprimée à partir d'une plaque."
+    explication: "Il y a 5 domaines : architecture, peinture, sculpture, dessin et gravure."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une sculpture en trois dimensions dont on peut faire le tour, comme Le Penseur de Rodin ?"
+    forme: reponse_courte
+    reponse: "ronde-bosse"
+    reponses_acceptees:
+      - "ronde-bosse"
+      - "une ronde-bosse"
+      - "ronde bosse"
+      - "une ronde bosse"
+      - "en ronde-bosse"
+    indices:
+      - "Ce n'est pas un bas-relief : la sculpture n'est attachée à aucun fond."
+      - "Relis la partie « Sculpture, gravure, architecture » : quel mot désigne une sculpture qu'on peut contourner ?"
+    explication: "C'est une ronde-bosse : on peut tourner autour. Un bas-relief, lui, reste attaché à un fond."
+
+  - type: exercice
+    enonce: "Michel-Ange peint La Création d'Adam sur le plafond de la chapelle Sixtine, sur un enduit encore frais. Comment s'appelle cette technique ?"
+    forme: reponse_courte
+    reponse: "fresque"
+    reponses_acceptees:
+      - "fresque"
+      - "la fresque"
+      - "une fresque"
+      - "fresques"
+    indices:
+      - "Le support est un mur ou un plafond, pas une toile."
+      - "Relis le tableau « Peinture et dessin » : quelle technique se fait sur un enduit encore frais ?"
+    explication: "C'est une fresque : la peinture est posée sur un enduit frais ; les couleurs pénètrent l'enduit en séchant."
+
+  - type: exercice
+    enonce: "Un artiste creuse une plaque de métal au burin, l'encre, puis l'imprime sur plusieurs feuilles. À quel domaine appartient son œuvre ?"
+    forme: qcm
+    choix:
+      - "La gravure"
+      - "La fresque"
+      - "Le dessin"
+      - "La sculpture"
+    reponse: 0
+    indices:
+      - "Regarde la fin de la description : l'image existe en plusieurs exemplaires."
+      - "Quel domaine permet d'imprimer plusieurs fois la même image à partir d'une plaque ?"
+    explication: "C'est la gravure : la plaque creusée sert à imprimer la même image plusieurs fois. Exemple : Melencolia I de Dürer (1514)."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Quelle présentation est complète et exacte ?
+    forme: qcm
+    choix:
+      - "La frise du Parthénon : sculpture en bas-relief, Athènes, Ve siècle av. J.-C."
+      - "La frise du Parthénon : peinture à l'huile sur toile, XIXe siècle."
+      - "La Villa Savoye : gravure au burin de Dürer, 1514."
+      - "Le Penseur : bas-relief peint sur un mur."
+    reponse: 0
+    indices:
+      - "Vérifie pour chaque phrase : le domaine, la technique et la date vont-ils ensemble ?"
+      - "La Villa Savoye est un bâtiment, et on peut faire le tour du Penseur. Élimine ces deux phrases."
+    explication: "La frise du Parthénon est un bas-relief du Ve siècle av. J.-C., à Athènes. La Villa Savoye est une architecture de Le Corbusier ; Le Penseur est une ronde-bosse en bronze."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre des beaux-arts que tu connais (un bâtiment, un tableau, une statue…).
+      Présente-la : son domaine, sa technique et son support, son artiste et sa date, puis ce que
+      tu vois et ce que l'œuvre te fait ressentir.
+    indices:
+      - "Commence par le domaine : bâtiment, peinture, sculpture, dessin ou gravure ?"
+      - "Pour la technique, cherche le matériau (pierre, bronze, huile, encre) et l'outil (pinceau, ciseau, burin, crayon)."
+    criteres:
+      - "L'élève nomme le domaine et la technique avec le mot juste (fresque, huile sur toile, ronde-bosse, bas-relief, gravure…)."
+      - "L'élève situe l'œuvre : titre, artiste, date ou siècle."
+      - "L'élève décrit l'œuvre avec le vocabulaire du domaine et propose une interprétation."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les cinq domaines des beaux-arts, puis la différence entre une ronde-bosse
+      et un bas-relief, et ce qu'est une gravure.

@@ -1,0 +1,177 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant). Relecture bienvenue.
+notion: variation-de-la-langue
+titre: La variation de la langue
+duree_minutes: 25
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027
+    — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4
+    du 17 septembre 2026
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître un néologisme, un emprunt et un régionalisme.
+  - 'Distinguer les niveaux de langue : familier, courant, soutenu.'
+  - Expliquer comment la langue varie selon l'époque, le lieu, le contexte et le moyen de communication.
+- type: texte
+  titre: La langue change
+  contenu: 'La langue française change selon **le temps, le lieu, la situation et le moyen de communication**.
+
+
+    C''est la **variation linguistique**.
+
+
+    Une même idée peut donc s''exprimer de plusieurs manières.'
+- type: texte
+  titre: 'Les mots changent : époque, néologie, emprunts'
+  contenu: '- **Selon les époques**, le sens des mots évolue. « Gentil » signifiait autrefois « noble,
+    de bonne famille » ; aujourd''hui, il veut dire « aimable ».
+
+    - La **néologie** crée des mots nouveaux (**néologismes**) pour nommer une réalité nouvelle : « covoiturage
+    », « ordinateur », « courriel ». On les forme par dérivation, composition, ou en détournant le sens
+    d''un mot.
+
+    - Un **emprunt** est un mot pris à une autre langue : « week-end » (anglais), « pizza » (italien),
+    « sucre » (arabe).
+
+
+    Certains emprunts prennent la forme du français, d''autres gardent leur graphie d''origine.'
+- type: texte
+  titre: Selon le lieu, le contexte et le moyen de communication
+  contenu: '**Selon le lieu** : mots régionaux (« chocolatine » ou « pain au chocolat », « septante »
+    ou « soixante-dix » en Belgique et en Suisse).
+
+
+    **Selon le contexte** : trois niveaux de langue.
+
+
+    | Niveau | Exemple |
+
+    |---|---|
+
+    | familier | bagnole |
+
+    | courant | voiture |
+
+    | soutenu | automobile |
+
+
+    On choisit son niveau de langue selon la situation et l''interlocuteur. Aucun niveau n''est « mauvais
+    ».
+
+
+    **Selon le moyen de communication** : à l''oral, on hésite et on coupe les phrases ; dans un message
+    écrit, on abrège parfois ; dans un écrit formel, on soigne la syntaxe et le vocabulaire.'
+- type: exemple
+  enonce: 'Un journal du matin publie : « Le mot chocolatine est employé dans certaines régions, alors
+    que d''autres disent pain au chocolat. » De quel type de variation s''agit-il ?'
+  etapes:
+  - On compare deux mots pour désigner la même chose.
+  - 'Ces deux mots ne sont pas employés partout : cela dépend des régions.'
+  - C'est donc une variation selon le lieu. On dit que « chocolatine » est un mot régional (un régionalisme).
+- type: exercice
+  enonce: Le mot « pizza » vient de l'italien. Comment appelle-t-on ce type de mot ?
+  forme: qcm
+  choix:
+  - un emprunt
+  - un néologisme
+  - un mot régional
+  reponse: 0
+  indices:
+  - Un des trois termes désigne un mot pris à une autre langue.
+  - Le mot « pizza » n'a pas été créé en français.
+  - Le mot cherché commence par « emp- ».
+  explication: '« Pizza » est un emprunt : un mot pris à une autre langue (ici l''italien) et adopté en
+    français.'
+- type: exercice
+  enonce: À quel niveau de langue appartient le mot « bagnole » (synonyme de « voiture ») ? (un mot)
+  forme: reponse_courte
+  reponse: familier
+  reponses_acceptees:
+  - familier
+  - familière
+  - le familier
+  - langue familière
+  - registre familier
+  indices:
+  - Il existe trois niveaux de langue, du plus relâché au plus soigné.
+  - « Voiture » est le mot courant. Ce mot-ci est plus relâché.
+  - On l'emploie plutôt entre proches, à l'oral.
+  explication: « Bagnole » est de niveau familier ; « voiture » est courant ; « automobile » est plus
+    soutenu.
+- type: exercice
+  enonce: En Belgique et en Suisse, on dit « septante » plutôt que « soixante-dix ». De quel type de variation
+    s'agit-il ?
+  forme: qcm
+  choix:
+  - une variation selon l'époque
+  - une variation selon le lieu
+  - une variation selon le moyen de communication
+  - une variation selon le niveau de langue
+  reponse: 1
+  indices:
+  - 'Relis la phrase : où dit-on « septante » ?'
+  - Le mot dépend des pays, pas du moment.
+  - Deux mots pour un même nombre, selon l'endroit où l'on parle.
+  explication: 'C''est une variation selon le lieu : on emploie « septante » dans des pays francophones
+    précis, la Belgique et la Suisse.'
+- type: exercice
+  enonce: Parmi ces mots, lequel est un néologisme, c'est-à-dire un mot créé pour nommer une réalité nouvelle
+    ?
+  forme: qcm
+  choix:
+  - week-end
+  - pizza
+  - courriel
+  - sucre
+  reponse: 2
+  indices:
+  - 'Les autres mots viennent d''une autre langue : ce sont des emprunts.'
+  - Le mot cherché a été fabriqué pour désigner un message électronique.
+  - Regarde le mot qui n'a pas d'origine étrangère citée dans la leçon.
+  explication: « Courriel » est un néologisme. « week-end », « pizza » et « sucre » sont des emprunts
+    (anglais, italien, arabe).
+- type: exercice
+  enonce: 'Un élève écrit à son proviseur : « Salut, ça roule ? Je peux pas venir demain. » Quelle remarque
+    est juste ?'
+  forme: qcm
+  choix:
+  - Le niveau de langue est familier et ne convient pas à ce destinataire ni à cet écrit.
+  - Le message est en langue soutenue.
+  - Ce message ne contient aucune variation de la langue.
+  - Le niveau de langue est correct, car tous les niveaux conviennent partout.
+  reponse: 0
+  indices:
+  - Qui est le destinataire ? Quel type d'écrit est-ce ?
+  - « Salut, ça roule ? » est une formule d'entre amis.
+  - On choisit son niveau de langue selon la situation et l'interlocuteur.
+  explication: « Salut, ça roule ? » et « Je peux pas » sont familiers. Pour un proviseur, il faut un
+    niveau courant ou soutenu, avec une formule de politesse.
+- type: question_ouverte
+  question: Le mot « gentil » signifiait autrefois « noble, de bonne famille ». Aujourd'hui, il signifie
+    « aimable ». Explique en deux phrases ce que cet exemple montre sur la langue.
+  indices:
+  - Compare le sens ancien et le sens actuel.
+  - Le sens d'un mot est-il toujours le même ?
+  criteres:
+  - L'élève dit que le sens d'un mot peut changer avec le temps.
+  - L'élève cite les deux sens du mot « gentil », l'ancien (noble) et l'actuel (aimable).
+  - L'élève conclut que la langue n'est pas figée.
+- type: synthese
+  consigne: 'Écris en trois phrases : la différence entre un emprunt et un néologisme, puis les trois
+    niveaux de langue avec un exemple pour chacun.'

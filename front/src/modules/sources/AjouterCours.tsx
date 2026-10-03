@@ -216,7 +216,11 @@ function Depot({ multiple, photo, accept, fichiers, max, libelle, aide, onChange
 function useApercus(fichiers: File[]): (string | null)[] {
   const [urls, setUrls] = useState<(string | null)[]>([])
   useEffect(() => {
-    const u = fichiers.map((f) => (f.type.startsWith("image/") && f.type !== "image/heic" ? URL.createObjectURL(f) : null))
+    const u = fichiers.map((f) => {
+      if (!f.type.startsWith("image/") || f.type === "image/heic") return null
+      const raw = URL.createObjectURL(f)
+      try { return new URL(raw).href } catch { return null }
+    })
     setUrls(u)
     return () => u.forEach((x) => x && URL.revokeObjectURL(x))
   }, [fichiers])

@@ -1,0 +1,138 @@
+notion: refondation-republicaine-liberation
+titre: "La refondation républicaine à la Libération"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Droit de vote des femmes »"
+    url: "https://fr.vikidia.org/w/index.php?title=Droit_de_vote_des_femmes&oldid=2397958"
+    licence: CC-BY-SA-3.0
+  - titre: "Vikidia, « Conseil national de la Résistance »"
+    url: "https://fr.vikidia.org/w/index.php?title=Conseil_national_de_la_R%C3%A9sistance&oldid=2179810"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer pourquoi la Libération est un moment de refondation de la République."
+      - "Dater le droit de vote des femmes : ordonnance du 21 avril 1944, premier vote en 1945."
+      - "Présenter le programme du CNR comme un prolongement du Front populaire, avec des exemples de réformes."
+
+  - type: texte
+    titre: "La Libération : rétablir la République"
+    contenu: >-
+      En 1944, la France est libérée de l'occupation allemande. Le régime de Vichy, qui avait
+      supprimé les valeurs républicaines, disparaît. Un gouvernement provisoire, dirigé par le
+      général de Gaulle, rétablit la **légalité républicaine**. On parle de **refondation** :
+      il faut reconstruire un État démocratique. En 1946, une nouvelle Constitution est adoptée
+      par référendum : c'est la IVe République.
+
+  - type: texte
+    titre: "Les femmes entrent en politique"
+    contenu: >-
+      Une **ordonnance du 21 avril 1944** accorde aux femmes le droit de vote et d'éligibilité
+      (le droit de se présenter à une élection). C'est le résultat de longues mobilisations,
+      notamment de féministes comme Louise Weiss. Les femmes votent pour la première fois en
+      France en **1945**, aux élections municipales, puis à l'Assemblée constituante. Attention
+      : 1944 est la date de la loi, 1945 celle du premier vote.
+
+  - type: texte
+    titre: "Le programme du CNR"
+    contenu: >-
+      Le **Conseil national de la Résistance (CNR)** réunit des résistants, des partis politiques
+      et des syndicats. Son programme est préparé en 1943 et adopté en 1944, avant la Libération.
+      Il **prolonge et complète** celui du **Front populaire** de 1936. Il élargit la démocratie
+      dans un sens social : on parle de démocratie **politique et sociale**.
+
+  - type: texte
+    titre: "Des réformes concrètes"
+    contenu: |-
+      - La **Sécurité sociale** (1945-1946) : elle protège contre la maladie, les accidents du travail, la vieillesse, et aide les familles.
+      - Des **nationalisations** : des entreprises privées passent sous le contrôle de l'État (par exemple de grandes entreprises de l'énergie et des banques).
+      - Le rétablissement des libertés : presse, syndicats.
+
+  - type: exemple
+    enonce: >-
+      Explique en trois phrases ce qu'est la Sécurité sociale et pourquoi elle illustre une
+      démocratie « sociale ».
+    etapes:
+      - "La Sécurité sociale est un système de protection créé en 1945-1946, issu du programme du CNR."
+      - "Elle protège les personnes contre la maladie, les accidents du travail et la vieillesse, et elle aide les familles."
+      - "Elle élargit la démocratie dans un sens social : la République ne donne pas seulement des droits politiques (voter), elle protège aussi les personnes dans leur vie."
+
+  - type: exercice
+    enonce: "En quelle année une ordonnance accorde-t-elle le droit de vote aux femmes en France ?"
+    forme: nombre
+    reponse: 1944
+    tolerance: 0
+    indices:
+      - "Cette année-là, la France est libérée de l'occupation allemande."
+      - "C'est l'année de la Libération, avant le premier vote des femmes."
+    explication: "L'ordonnance date du 21 avril 1944. Les femmes votent pour la première fois en 1945."
+
+  - type: exercice
+    enonce: "Qui prépare, dès 1943, le programme de réformes appliqué à la Libération ?"
+    forme: qcm
+    choix:
+      - "Le Conseil national de la Résistance (CNR)"
+      - "Le gouvernement de Vichy"
+      - "Le Front populaire"
+    reponse: 0
+    indices:
+      - "Il réunit des résistants, des partis politiques et des syndicats."
+      - "Vichy est le régime qui disparaît à la Libération. Le Front populaire date de 1936."
+    explication: "Le CNR prépare son programme en 1943 et l'adopte en 1944. Le Front populaire (1936) est plus ancien ; Vichy est le régime supprimé à la Libération."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le passage d'entreprises privées sous le contrôle de l'État ? (Un mot.)"
+    forme: reponse_courte
+    reponse: "nationalisation"
+    reponses_acceptees:
+      - "nationalisations"
+      - "une nationalisation"
+      - "la nationalisation"
+    indices:
+      - "Ce mot est de la même famille que « nation »."
+      - "C'est une réforme du programme du CNR, avec la Sécurité sociale."
+    explication: "C'est une nationalisation : l'entreprise privée passe sous le contrôle de l'État."
+
+  - type: exercice
+    enonce: "En quelle année les femmes votent-elles pour la première fois en France ?"
+    forme: nombre
+    reponse: 1945
+    tolerance: 0
+    indices:
+      - "Le droit de vote est accordé en 1944, mais il faut attendre des élections."
+      - "Ce sont les élections municipales, puis l'Assemblée constituante, l'année qui suit l'ordonnance."
+    explication: "Le droit est accordé en 1944 ; les femmes votent pour la première fois en 1945."
+
+  - type: exercice
+    enonce: "Quel lien existe entre le programme du CNR et le Front populaire ?"
+    forme: qcm
+    choix:
+      - "Le programme du CNR prolonge et complète celui du Front populaire dans un sens social"
+      - "Le programme du CNR s'oppose au Front populaire et supprime ses réformes"
+      - "Le programme du CNR n'a aucun rapport avec les réformes sociales"
+    reponse: 0
+    indices:
+      - "Le Front populaire est un gouvernement de gauche de 1936, à l'origine de réformes sociales."
+      - "Les deux programmes vont dans le même sens : élargir la démocratie."
+    explication: "Le programme du CNR prolonge et complète celui du Front populaire de 1936 : il élargit la démocratie dans un sens social."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre que la Libération est un moment de refondation
+      démocratique et sociale de la République.
+    indices:
+      - "Commence par la date de la Libération et par ce qui disparaît (Vichy)."
+      - "Choisis deux exemples : le droit de vote des femmes, et une réforme du CNR."
+    criteres:
+      - "L'élève situe la Libération en 1944 et le retour de la légalité républicaine après Vichy."
+      - "L'élève cite le droit de vote des femmes avec ses dates (ordonnance d'avril 1944, premier vote en 1945)."
+      - "L'élève cite une réforme du programme du CNR (Sécurité sociale, nationalisations)."
+      - "L'élève relie le CNR au Front populaire ou parle de démocratie politique et sociale."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce que change la Libération pour les
+      femmes et pour la protection sociale des Français.

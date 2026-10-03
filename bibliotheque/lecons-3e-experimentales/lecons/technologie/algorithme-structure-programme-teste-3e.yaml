@@ -1,0 +1,166 @@
+notion: algorithme-structure-programme-teste-3e
+titre: "Algorithme structuré, sous-programmes, programme et tests"
+duree_minutes: 32
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve de sciences (note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026)"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Découper un besoin en sous-programmes (fonctions) avec un programme principal."
+      - "Suivre et corriger un programme pas à pas, avec ses variables."
+      - "Préparer un jeu d'essais avec le résultat attendu pour chaque essai."
+
+  - type: texte
+    titre: "Algorithme et programme"
+    contenu: |-
+      En 3e, on conçoit soi-même l'algorithme qui répond à un besoin. Puis on le traduit en programme, on le teste et on le met au point sur l'objet réel.
+
+      - Un **algorithme** est une suite d'instructions qui résout un problème.
+      - Un **programme** est sa traduction dans un langage compris par la machine (blocs, Python...).
+
+  - type: texte
+    titre: "Sous-programmes (fonctions)"
+    contenu: |-
+      Un algorithme **structuré** découpe le problème en actions simples.
+
+      - Chaque action est rangée dans un **sous-programme** (ou fonction) au nom clair : `ouvrir_barriere()`, `arroser(duree)`.
+      - On l'écrit **une seule fois**, puis on l'**appelle** autant de fois qu'il faut.
+      - Un sous-programme peut recevoir un **paramètre** (la durée d'arrosage, la vitesse...).
+
+  - type: texte
+    titre: "Le programme principal"
+    contenu: |-
+      Le programme principal contient :
+
+      - les **réglages de départ** (valeurs initiales : nombre de places, compteur à 0...) ;
+      - les **événements** et la partie qui **se répète** : lire les capteurs, décider avec des conditions, appeler le bon sous-programme ;
+      - l'**interaction humain-machine** : boutons, écran, voyant, buzzer.
+
+      Une **variable** garde une valeur qui change. Une variable qui compte doit être remise à zéro au bon moment (chaque jour, chaque cycle...).
+
+  - type: texte
+    titre: "Tester et mettre au point"
+    contenu: |-
+      On prépare un **jeu d'essais** qui couvre tous les cas :
+
+      | Cas | Exemple |
+      |---|---|
+      | Cas normal | Une voiture entre, il reste des places |
+      | Cas limite | Le parking est complet |
+      | Cas qui déclenche un message | Afficher « COMPLET » |
+
+      Pour chaque essai, on note le résultat **attendu**, puis on le compare à ce qui se passe **réellement**.
+      Si les deux diffèrent, on cherche l'erreur (le **bogue**), on corrige, et on **refait tous les essais**.
+
+  - type: exemple
+    enonce: "Besoin : un couloir s'éclaire quand un détecteur repère quelqu'un, pendant une durée réglable. Proposer une structure de programme."
+    etapes:
+      - "Entrée : le détecteur de mouvement. Sortie : la lampe."
+      - "Sous-programme : allumer_lampe(duree) — allumer la lampe, attendre duree secondes, éteindre la lampe."
+      - "Programme principal : répéter indéfiniment ; si le détecteur repère quelqu'un, alors appeler allumer_lampe(30)."
+      - "Jeu d'essais : personne passe, la lampe reste éteinte ; une personne passe, la lampe s'allume puis s'éteint ; deux personnes passent l'une après l'autre, la lampe s'allume deux fois."
+
+  - type: exercice
+    enonce: "Le sous-programme ouvrir_barriere() est écrit une seule fois. Pour l'exécuter, le programme principal écrit son nom à l'endroit voulu. Quel verbe emploie-t-on pour dire que le programme principal lance ainsi un sous-programme ?"
+    forme: reponse_courte
+    reponse: "appeler"
+    reponses_acceptees: ["appeler", "on l'appelle", "l'appeler", "appel", "un appel", "appelle", "il appelle", "on appelle"]
+    indices:
+      - "Quand on a besoin de quelqu'un, on prononce son nom. Quel verbe utilise-t-on ?"
+      - "Pense au vocabulaire des sous-programmes vu en classe."
+      - "C'est le même verbe que pour un numéro de téléphone."
+    explication: "On appelle le sous-programme : écrire ouvrir_barriere() dans le programme principal, c'est un appel."
+
+  - type: exercice
+    enonce: >-
+      Programme de la barrière d'un parking. Au démarrage : places = 5. À l'entrée d'une voiture,
+      si places est plus grand que 0, la barrière s'ouvre et places diminue de 1. À la sortie
+      d'une voiture, la barrière s'ouvre et places augmente de 1. On joue ces événements dans
+      l'ordre : entrée, entrée, entrée, sortie. Que vaut places à la fin ?
+    forme: nombre
+    reponse: 3
+    tolerance: 0.01
+    indices:
+      - "Que devient places quand une voiture entre ? Et quand une voiture sort ?"
+      - "Pars de la valeur de départ et applique chaque événement dans l'ordre."
+      - "Écris places après chaque événement, l'un après l'autre."
+    explication: "Départ : 5. Entrée : 4. Entrée : 3. Entrée : 2. Sortie : 3. À la fin, places vaut 3."
+
+  - type: exercice
+    enonce: >-
+      Programme de la barrière d'un petit parking. Au démarrage : places = 2. À l'entrée d'une
+      voiture : si places est plus grand que 0, on appelle ouvrir_barriere() et places diminue
+      de 1 ; sinon, on affiche « COMPLET ». À la sortie d'une voiture : on appelle
+      ouvrir_barriere() et places augmente de 1. On joue ces événements dans l'ordre : entrée,
+      entrée, entrée, sortie, entrée. Combien de fois ouvrir_barriere() est-il appelé ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    indices:
+      - "À chaque entrée, regarde si places est encore plus grand que 0."
+      - "Fais un tableau : événement, valeur de places avant, appel ou non, valeur de places après."
+      - "Une entrée refusée n'appelle pas le sous-programme. Compte aussi la sortie."
+    explication: "places : 2 → 1 (appel) → 0 (appel) → entrée refusée, COMPLET, pas d'appel → sortie : 1 (appel) → entrée : 0 (appel). Il y a 4 appels."
+
+  - type: exercice
+    enonce: >-
+      Programme d'arrosage d'une serre. Au démarrage : arrosages_jour = 0. Le programme se répète
+      sans fin : il lit l'humidité h du sol ; si h est inférieure à 30 ET arrosages_jour est
+      inférieur à 2, il arrose et arrosages_jour augmente de 1. La serre arrose normalement le
+      premier jour. À partir du deuxième jour, elle n'arrose plus jamais, même quand le sol est
+      très sec. Quelle correction faut-il faire ?
+    forme: qcm
+    choix:
+      - "Remettre arrosages_jour à 0 au début de chaque nouvelle journée."
+      - "Remplacer 2 par 3 dans la condition."
+      - "Lire l'humidité une seule fois, avant la répétition."
+      - "Supprimer la pause entre deux mesures."
+    reponse: 0
+    indices:
+      - "Que vaut arrosages_jour à la fin du premier jour ?"
+      - "Simule le deuxième jour avec un sol sec. Calcule chaque morceau du ET."
+      - "Le sol est sec, donc la première condition est vraie. Regarde la seconde : arrosages_jour est-il encore petit ?"
+    explication: "arrosages_jour n'est jamais remis à 0. Après deux arrosages, il vaut 2 pour toujours, donc la condition est toujours fausse. Il faut le remettre à 0 chaque jour."
+
+  - type: exercice
+    enonce: "Le parking a 20 places. Quel jeu d'essais est le plus complet pour tester le programme de la barrière ?"
+    forme: qcm
+    choix:
+      - "Une voiture entre alors qu'il reste des places ; une voiture entre alors que le parking est complet ; une voiture sort. Pour chaque essai, on note le résultat attendu."
+      - "Vingt voitures entrent l'une après l'autre, sans noter de résultat attendu."
+      - "On teste seulement une voiture qui entre dans un parking vide."
+      - "On ne teste rien : le programme est simple."
+    reponse: 0
+    indices:
+      - "Un bon jeu d'essais couvre le cas normal, le cas limite et le cas qui déclenche un message."
+      - "Pour chaque essai, il faut aussi le résultat attendu, pour le comparer à ce qu'on observe."
+      - "Cherche la proposition qui contient un cas limite ET des résultats attendus."
+    explication: "La première proposition couvre un cas normal, un cas limite (parking complet) et la sortie, avec le résultat attendu de chaque essai. Les autres oublient le cas limite ou le résultat attendu."
+
+  - type: question_ouverte
+    question: >-
+      Nouveau besoin : un ventilateur se met en marche quand la température dépasse 28 °C et
+      s'arrête quand elle passe sous 24 °C. Un bouton permet de forcer la mise en marche.
+      Écris un algorithme structuré avec des sous-programmes, puis propose trois essais avec le
+      résultat attendu pour chacun.
+    indices:
+      - "Quelles actions peux-tu ranger dans des sous-programmes, avec un nom clair ?"
+      - "Écris d'abord la partie qui se répète : lire la température et le bouton, décider, appeler."
+      - "Que doit faire le ventilateur entre 24 °C et 28 °C ? Prévois un essai dans cette zone."
+    criteres:
+      - "L'algorithme utilise au moins deux sous-programmes nommés clairement (par exemple demarrer_ventilateur() et arreter_ventilateur()), appelés par un programme principal qui lit la température et le bouton dans une partie qui se répète."
+      - "Les conditions sont justes : au-dessus de 28 °C ou bouton appuyé, marche ; sous 24 °C sans bouton, arrêt ; entre les deux, rien ne change."
+      - "Les essais couvrent des cas différents (température haute, température intermédiaire, température basse, bouton appuyé) avec le résultat attendu pour chacun."
+
+  - type: synthese
+    consigne: >-
+      Explique avec tes mots à quoi sert un sous-programme et comment on le lance, puis écris
+      les étapes pour tester un programme (jeu d'essais, attendu, observé, correction).

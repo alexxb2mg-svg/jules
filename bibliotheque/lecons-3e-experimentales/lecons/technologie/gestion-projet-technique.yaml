@@ -1,0 +1,149 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0. Relecture bienvenue.
+notion: gestion-projet-technique
+titre: "Gérer un projet technique : planning et écoconception"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Ordonner les étapes d'un projet et lire un planning pour trouver sa durée minimale."
+      - "Expliquer le rôle d'une revue de projet."
+      - "Justifier un choix par l'écoconception."
+
+  - type: texte
+    titre: "Les étapes et les tâches"
+    contenu: |-
+      Un projet se mène par étapes :
+      1. exprimer le besoin ;
+      2. rédiger le cahier des charges ;
+      3. chercher des solutions et en choisir une ;
+      4. fabriquer un prototype et le tester ;
+      5. présenter le travail.
+      Le projet a une durée donnée. On liste les **tâches**, leur durée, qui les fait et dans quel ordre.
+
+  - type: texte
+    titre: "Le diagramme de planification"
+    contenu: |-
+      Le **diagramme de planification** (souvent un diagramme de Gantt) place chaque tâche dans le temps.
+      - Une **antériorité** est une tâche à finir avant une autre.
+      - Des tâches **en parallèle** se font en même temps, par des personnes différentes.
+      La durée minimale du projet est celle du **plus long enchaînement** de tâches, pas la somme de toutes les durées.
+
+  - type: texte
+    titre: "La revue de projet"
+    contenu: |-
+      Une **revue de projet** est un moment prévu dans le planning où l'équipe fait le point :
+      - ce qui est fait ;
+      - ce qui est en retard ;
+      - ce qui respecte ou non le cahier des charges.
+      Elle décide des ajustements. Il y en a plusieurs pendant le projet, pas seulement à la fin.
+
+  - type: texte
+    titre: "L'écoconception"
+    contenu: |-
+      L'**écoconception** : penser à l'environnement dès la conception, sur tout le cycle de vie (matières premières, fabrication, transport, utilisation, fin de vie).
+      Exemples de choix :
+      - moins de matière ;
+      - matériaux recyclables ou de récupération ;
+      - faible consommation d'énergie ;
+      - assemblage démontable et réparable.
+
+  - type: exemple
+    enonce: >-
+      Un groupe construit une mangeoire connectée. La tâche A dure 1 séance. Ensuite, les tâches B
+      (2 séances) et C (4 séances) se font en parallèle. La tâche D (1 séance) commence quand B et C
+      sont finies. Quelle est la durée minimale ?
+    etapes:
+      - "A se fait d'abord : 1 séance."
+      - "B et C se font en même temps. C est la plus longue : on garde 4 séances."
+      - "D vient ensuite : 1 séance. Durée minimale : 1 + 4 + 1 = 6 séances (et non 1 + 2 + 4 + 1 = 8)."
+
+  - type: exercice
+    enonce: "Quel est le rôle d'une revue de projet ?"
+    forme: qcm
+    choix:
+      - "Faire le point sur l'avancement et décider des ajustements."
+      - "Présenter le produit fini, une seule fois, à la toute fin."
+      - "Choisir la couleur de l'objet."
+    reponse: 0
+    indices:
+      - "Une revue de projet se fait pendant le projet."
+      - "On compare ce qui est fait avec le planning et le cahier des charges."
+    explication: "Une revue de projet est un moment prévu où l'équipe fait le point (fait, en retard, conforme au cahier des charges) et décide des ajustements."
+
+  - type: exercice
+    enonce: >-
+      La tâche A dure 2 séances. Ensuite, la tâche B (3 séances) et la tâche C (5 séances) se font en
+      parallèle. Puis la tâche D (1 séance) commence quand B et C sont finies. Quelle est la durée
+      minimale du projet, en séances ?
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    unite: "séances"
+    indices:
+      - "Deux tâches en parallèle : laquelle décide du temps de cette partie ?"
+      - "Additionne A, la plus longue des deux tâches parallèles, puis D."
+    explication: "2 + 5 + 1 = 8 séances. C se fait pendant B, donc on ne compte pas les deux."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on une tâche qui doit être finie avant qu'une autre puisse commencer ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "antériorité"
+    reponses_acceptees: ["antériorité", "anteriorite", "une antériorité", "l'antériorité", "antériorités", "les antériorités"]
+    indices:
+      - "Ce mot vient de « antérieur », qui veut dire « avant »."
+      - "On dit qu'une tâche a des ... : les tâches à finir avant elle."
+    explication: "C'est une antériorité : une tâche qui doit être finie avant une autre."
+
+  - type: exercice
+    enonce: "Une équipe conçoit un boîtier. Quel choix relève de l'écoconception ?"
+    forme: qcm
+    choix:
+      - "Utiliser moins de matière et prévoir un assemblage démontable pour réparer."
+      - "Choisir la matière la moins chère sans regarder sa fin de vie."
+      - "Penser à l'environnement seulement quand l'objet est jeté."
+    reponse: 0
+    indices:
+      - "L'écoconception commence dès la conception."
+      - "Elle regarde tout le cycle de vie, pas seulement la fin de vie."
+    explication: "L'écoconception réduit l'impact dès la conception : moins de matière, matériaux recyclables, assemblage démontable et réparable."
+
+  - type: exercice
+    enonce: >-
+      Dans un projet, la tâche A dure 1 séance. Puis B (2 séances) et C (3 séances) commencent
+      ensemble. La tâche D (4 séances) commence quand B est finie. La tâche E (1 séance) commence
+      quand C et D sont finies. Quelle est la durée minimale du projet, en séances ?
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    unite: "séances"
+    indices:
+      - "Repère les deux enchaînements possibles entre A et E, et calcule leur durée."
+      - "Un enchaînement passe par B puis D. L'autre passe par C. Compare-les, et garde le plus long."
+    explication: "Enchaînement A, B, D, E : 1 + 2 + 4 + 1 = 8. Enchaînement A, C, E : 1 + 3 + 1 = 5. Le plus long est 8 séances."
+
+  - type: question_ouverte
+    question: >-
+      Ton groupe conçoit un petit boîtier électronique. Donne deux choix d'écoconception que tu peux
+      faire, et explique à quelle étape du cycle de vie ils réduisent l'impact.
+    indices:
+      - "Pense à la matière, à l'énergie, au transport, à la réparation."
+      - "Pour chaque choix, dis à quelle étape du cycle de vie il aide."
+    criteres:
+      - "L'élève donne deux choix d'écoconception réalistes (moins de matière, matériau recyclable, faible consommation d'énergie, assemblage démontable)."
+      - "L'élève relie chaque choix à une étape du cycle de vie (fabrication, utilisation, fin de vie...)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment on trouve la durée minimale
+      d'un projet et à quoi sert une revue de projet.

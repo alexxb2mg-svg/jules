@@ -1,0 +1,170 @@
+notion: rendre-compte-experience-artistique
+titre: "Rendre compte d'une expérience artistique vécue"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Parler d'une expérience artistique à la première personne."
+      - "Justifier un ressenti par un détail précis."
+      - "Organiser un compte rendu en quatre étapes."
+
+  - type: texte
+    titre: "Deux façons de vivre une expérience artistique"
+    contenu: >-
+      Le programme te demande de rendre compte d'une expérience artistique vécue.
+
+
+      Il y a deux cas :
+
+
+      - **comme spectateur** : un concert, une pièce de théâtre, un ballet, un film, une exposition ;
+
+      - **par la pratique** : chanter dans une chorale, jouer une pièce, danser, créer une œuvre en arts plastiques.
+
+
+      « En termes personnels » veut dire : tu parles avec **« je »** et tu dis ce que **tu** as ressenti.
+
+  - type: texte
+    titre: "Les quatre étapes d'un bon compte rendu"
+    contenu: >-
+      Suis toujours cet ordre :
+
+
+      1. **Présenter** l'expérience : quoi, où, quand, avec qui.
+
+      2. **Décrire** ce que tu as vu, entendu ou fait, avec des mots précis.
+
+      3. **Exprimer** tes ressentis, en les justifiant.
+
+      4. **Conclure** : qu'est-ce que cette expérience t'a appris ou changé ?
+
+
+      On écrit au **passé** pour raconter et au **présent** pour donner un avis.
+
+  - type: texte
+    titre: "Justifier un ressenti et choisir les bons mots"
+    contenu: >-
+      Un ressenti se justifie par un moment précis.
+
+
+      Exemple : « J'ai été ému quand la musique s'est arrêtée d'un coup et que la danseuse est restée
+      immobile : ce silence m'a fait sentir sa solitude. »
+
+
+      | Domaine | Mots utiles |
+
+      |---|---|
+
+      | Musique | tempo (la vitesse), nuances (fort, doux), crescendo, timbre |
+
+      | Théâtre | mise en scène, décor, costumes, lumières, jeu des comédiens |
+
+      | Danse | chorégraphie, mouvements, rythme |
+
+      | Cinéma | plan, bande-son, montage |
+
+
+      Si c'était une pratique, tu peux parler de tes difficultés, de ce que tu as réussi, du travail en groupe.
+
+  - type: exemple
+    enonce: >-
+      Rends compte en quelques phrases de ta pratique dans une chorale, en suivant les quatre étapes.
+    etapes:
+      - "Présenter : « Cette année, je chante dans la chorale de mon collège, le mardi midi, avec des élèves de plusieurs classes. »"
+      - "Décrire : « Nous chantons à plusieurs voix. Au début, j'avais du mal à garder ma ligne quand les autres chantaient autre chose. »"
+      - "Exprimer un ressenti justifié : « J'ai été fier quand nous avons réussi à chanter un morceau sans faute devant nos parents : nous avions beaucoup travaillé ensemble. »"
+      - "Conclure : « Cette expérience m'a appris à écouter les autres et à ne pas me décourager. »"
+
+  - type: exercice
+    enonce: "Quelle phrase justifie bien un ressenti ?"
+    forme: qcm
+    choix:
+      - "« C'était nul. »"
+      - "« J'ai été surpris quand les lumières se sont éteintes d'un coup : je ne savais plus où regarder. »"
+      - "« Tout le monde a adoré. »"
+      - "« J'ai adoré, c'était bien. »"
+    reponse: 1
+    indices:
+      - "Une phrase justifiée dit le ressenti ET le moment précis qui l'explique."
+      - "Cherche la phrase qui parle de toi (« je ») et d'un détail que tu peux imaginer."
+    explication: "La deuxième phrase donne un ressenti (surpris) et un moment précis (les lumières qui s'éteignent d'un coup). Les autres donnent un avis sans raison ou parlent au nom des autres."
+
+  - type: exercice
+    enonce: "En musique, quel mot désigne la vitesse d'un morceau ?"
+    forme: reponse_courte
+    reponse: "tempo"
+    reponses_acceptees:
+      - "tempo"
+      - "le tempo"
+      - "Tempo"
+    indices:
+      - "Ce mot s'utilise aussi pour dire si un morceau est lent ou rapide."
+      - "Le mot commence par « tem- »."
+    explication: "Le tempo est la vitesse d'un morceau de musique."
+
+  - type: exercice
+    enonce: "Combien d'étapes compte un bon compte rendu d'expérience artistique (présenter, décrire, exprimer, conclure) ?"
+    forme: nombre
+    reponse: 4
+    tolerance: 0
+    indices:
+      - "Compte les verbes de l'énoncé : présenter, décrire, exprimer, conclure."
+      - "Une étape correspond à un verbe."
+    explication: "Il y a quatre étapes : présenter, décrire, exprimer ses ressentis en les justifiant, puis conclure sur ce que l'expérience a apporté."
+
+  - type: exercice
+    enonce: "Quel temps utilises-tu pour raconter ce qui s'est passé pendant la sortie, et pour donner ton avis ?"
+    forme: qcm
+    choix:
+      - "Le passé pour raconter, le présent pour donner ton avis."
+      - "Le futur pour raconter, le passé pour donner ton avis."
+      - "Le présent pour raconter, le futur pour donner ton avis."
+    reponse: 0
+    indices:
+      - "Ce que tu racontes est déjà arrivé."
+      - "Ton avis, tu le pensais quand tu écris : c'est maintenant."
+    explication: "On raconte au passé (« j'ai assisté ») et on donne son avis au présent (« je trouve »)."
+
+  - type: exercice
+    enonce: >-
+      Un élève écrit : « Le film racontait l'histoire d'un chien perdu. Ensuite, le chien retrouve
+      son maître. Puis il y a la fin. C'était bien. » Que lui manque-t-il surtout pour un bon compte rendu ?
+    forme: qcm
+    choix:
+      - "Il raconte l'histoire, mais ne présente pas l'expérience et ne justifie pas son avis."
+      - "Il utilise trop de mots précis."
+      - "Il parle trop de lui à la première personne."
+      - "Il donne un ressenti justifié par un détail."
+    reponse: 0
+    indices:
+      - "Relis les quatre étapes : présenter, décrire, exprimer en justifiant, conclure."
+      - "Est-ce qu'il dit où, quand, avec qui ? Est-ce que « c'était bien » est expliqué ?"
+    explication: "Il raconte toute l'histoire au lieu de parler de son expérience, il n'a pas présenté la sortie (où, quand, avec qui) et son avis « c'était bien » n'est pas justifié."
+
+  - type: question_ouverte
+    question: >-
+      Rends compte d'une expérience artistique vécue (spectacle, film, exposition ou pratique).
+      Écris un court texte en suivant les quatre étapes.
+    indices:
+      - "Choisis une expérience dont tu te souviens bien."
+      - "Pour chaque ressenti, ajoute « parce que… » avec un moment précis."
+    criteres:
+      - "L'élève présente l'expérience (quoi, où, quand, avec qui)."
+      - "L'élève décrit ce qu'il a vu, entendu ou fait avec au moins deux mots précis."
+      - "L'élève exprime au moins un ressenti et le justifie par un détail précis."
+      - "L'élève dit ce que l'expérience lui a appris ou changé, et écrit à la première personne."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les quatre étapes d'un compte rendu d'expérience artistique et comment
+      tu justifies un ressenti.

@@ -1,0 +1,167 @@
+notion: multiples-diviseurs-division-euclidienne
+titre: Multiples, diviseurs, division euclidienne, critères de divisibilité
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Faire une division euclidienne et trouver le quotient et le reste.
+  - Dire si un nombre est multiple ou diviseur d'un autre, et utiliser les critères de divisibilité par
+    2, 3, 5, 9 et 10.
+  - Trouver tous les diviseurs d'un nombre, sans en oublier.
+- type: texte
+  titre: La division euclidienne
+  contenu: 'Diviser a par b (b non nul), c''est trouver un **quotient** q et un **reste** r, entiers,
+    tels que :
+
+
+    **a = b × q + r**, avec **r plus petit que b**.
+
+
+    Exemple : 47 = 6 × 7 + 5. Le quotient est 7, le reste est 5.
+
+
+    À la calculatrice : garde la partie entière du quotient, puis calcule **r = a − b × q**. Les chiffres
+    après la virgule ne sont **pas** le reste.'
+- type: texte
+  titre: Multiple, diviseur, divisible
+  contenu: 'Si le reste est **0**, alors a = b × q. On dit alors :
+
+    - a est un **multiple** de b ;
+
+    - b est un **diviseur** de a ;
+
+    - a est **divisible** par b.
+
+
+    Exemple : 42 = 6 × 7. 42 est un multiple de 6, et 6 est un diviseur de 42.
+
+
+    Un nombre a autant de multiples qu''on veut (7, 14, 21...). Il n''a qu''un nombre limité de diviseurs.'
+- type: texte
+  titre: Les critères de divisibilité
+  contenu: '| Divisible par | Critère |
+
+    |---|---|
+
+    | 2 | le chiffre des unités est 0, 2, 4, 6 ou 8 |
+
+    | 5 | le chiffre des unités est 0 ou 5 |
+
+    | 10 | le chiffre des unités est 0 |
+
+    | 3 | la **somme des chiffres** est divisible par 3 |
+
+    | 9 | la **somme des chiffres** est divisible par 9 |
+
+
+    Un nombre divisible par 9 est aussi divisible par 3. Mais 12 est divisible par 3, pas par 9.'
+- type: texte
+  titre: Trouver tous les diviseurs
+  contenu: 'On cherche les diviseurs **par paires** : 1 × n, puis 2 × ..., 3 × ..., et on s''arrête quand
+    les deux facteurs se rejoignent.
+
+
+    Exemple : 36 = 1 × 36 = 2 × 18 = 3 × 12 = 4 × 9 = 6 × 6.
+
+
+    Le 6 n''est compté qu''**une seule fois**. Il y a donc 9 diviseurs.
+
+
+    Une calculatrice ou un tableur peut tester chaque nombre : on garde ceux dont la division tombe juste.
+    N''oublie pas 1 et le nombre lui-même.'
+- type: exemple
+  enonce: Le nombre 2 358 est-il divisible par 2, 3, 5, 9, 10 ?
+  etapes:
+  - 'Unités : 8. Il est pair, donc divisible par 2. Il ne finit ni par 0 ni par 5 : pas divisible par
+    5 ni par 10.'
+  - 'Somme des chiffres : 2 + 3 + 5 + 8 = 18.'
+  - 18 est divisible par 3 et par 9, donc 2 358 est divisible par 3 et par 9.
+  - 'Réponse : divisible par 2, 3 et 9 ; pas par 5 ni par 10.'
+- type: exercice
+  enonce: Dans la division euclidienne de 251 par 9, quel est le reste ?
+  forme: nombre
+  reponse: 8
+  tolerance: 0.01
+  indices:
+  - Cherche le plus grand multiple de 9 qui ne dépasse pas 251.
+  - 9 × 27 = 243. Calcule maintenant 251 − 243.
+  explication: 9 × 27 = 243 et 9 × 28 = 252 (trop grand). Donc 251 = 9 × 27 + 8. Le reste est 8.
+- type: exercice
+  enonce: 56 = 8 × 7. Le nombre 56 est un ... de 8. Complète avec le bon mot (multiple ou diviseur ?).
+  forme: reponse_courte
+  reponse: multiple
+  reponses_acceptees:
+  - un multiple
+  - multiples
+  - le multiple
+  - un multiple de 8
+  indices:
+  - Regarde le calcul 56 = 8 × 7. Est-ce que 56 est dans la table de 8 ?
+  - Le nombre 56 est-il plus grand ou plus petit que 8 ?
+  explication: '56 = 8 × 7 : 56 est dans la table de 8, c''est un multiple de 8. Et 8 est un diviseur
+    de 56.'
+- type: exercice
+  enonce: Lequel de ces nombres est divisible par 9 ?
+  forme: qcm
+  choix:
+  - 5 271
+  - 5 273
+  - 5 274
+  - 5 275
+  reponse: 2
+  indices:
+  - Pour 9, additionne tous les chiffres de chaque nombre.
+  - Un nombre est divisible par 9 si cette somme est dans la table de 9.
+  explication: '5 + 2 + 7 + 4 = 18, qui est dans la table de 9. Les autres sommes sont 15, 17 et 19 :
+    15 est dans la table de 3 mais pas de 9.'
+- type: exercice
+  enonce: Combien le nombre 48 a-t-il de diviseurs ?
+  forme: nombre
+  reponse: 10
+  tolerance: 0.01
+  indices:
+  - 'Cherche les diviseurs par paires : 1 × 48, puis 2 × ... .'
+  - Continue avec 3, 4, 5, 6... et arrête-toi quand les deux facteurs se rejoignent.
+  - Compte ensuite tous les nombres des paires.
+  explication: '48 = 1 × 48 = 2 × 24 = 3 × 16 = 4 × 12 = 6 × 8. Diviseurs : 1, 2, 3, 4, 6, 8, 12, 16,
+    24, 48. Il y en a 10.'
+- type: exercice
+  enonce: Le nombre 6x4 est un nombre à trois chiffres (x est le chiffre des dizaines). Il est divisible
+    par 9. Trouve le chiffre x.
+  forme: nombre
+  reponse: 8
+  tolerance: 0.01
+  indices:
+  - Pour 9, la somme des chiffres doit être dans la table de 9. Écris cette somme avec x.
+  - Avec x entre 0 et 9, quelle valeur de la somme est possible ?
+  explication: 'La somme des chiffres est 6 + x + 4 = 10 + x. Elle doit être dans la table de 9. Avec
+    x entre 0 et 9, seule 18 convient, donc x = 8. Vérification : 684 = 9 × 76.'
+- type: question_ouverte
+  question: 'Sami calcule 187 ÷ 12 à la calculatrice et lit 15,58... Il écrit : « Le reste est 58. » Pourquoi
+    c''est faux ? Comment trouver le vrai reste ?'
+  indices:
+  - Le reste doit être plus petit que 12. Est-ce le cas de 58 ?
+  - Que faut-il garder du quotient 15,58... ? Puis quelle opération donne le reste ?
+  criteres:
+  - L'élève explique que le reste doit être plus petit que le diviseur (12), ce qui n'est pas le cas de
+    58.
+  - L'élève dit que les chiffres après la virgule ne sont pas le reste.
+  - 'L''élève propose la méthode : garder la partie entière 15, puis calculer 187 − 12 × 15 = 7.'
+- type: synthese
+  consigne: Écris avec tes mots, en deux ou trois phrases, la différence entre un multiple et un diviseur,
+    et une façon de vérifier si un nombre est divisible par 9.

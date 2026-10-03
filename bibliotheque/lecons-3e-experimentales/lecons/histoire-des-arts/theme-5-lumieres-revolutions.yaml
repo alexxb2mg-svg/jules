@@ -1,0 +1,139 @@
+notion: theme-5-lumieres-revolutions
+titre: L'art au temps des Lumières et des révolutions (1750-1850)
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Enseigner au cycle 4 (éduscol)
+  url: https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Distinguer une œuvre néoclassique d'une œuvre romantique.
+  - Expliquer ce qu'une œuvre dit de la politique ou de la sensibilité de son temps.
+  - Citer des lieux et des acteurs qui font naître un public et une critique d'art (Salon, Diderot).
+- type: texte
+  titre: Un public nouveau
+  contenu: |-
+    Les **Lumières** sont un mouvement d'idées du XVIIIe siècle : raison, savoir, liberté.
+    - Diderot et d'Alembert publient l'Encyclopédie (premier volume en 1751) : elle diffuse les savoirs.
+    - Le **Salon**, exposition de peinture organisée au Louvre par l'Académie, attire des milliers de visiteurs.
+    - Des écrivains commentent les tableaux dans des journaux ou revues : c'est la **critique d'art**, avec Diderot à partir de 1759.
+    L'artiste doit aussi convaincre ce public, pas seulement un prince.
+- type: texte
+  titre: 'Recours au passé : le néoclassicisme'
+  contenu: |-
+    Le **néoclassicisme** s'inspire de l'Antiquité grecque et romaine : lignes nettes, compositions calmes, sujets de vertu et de courage.
+    Jacques-Louis David peint :
+    - Le Serment des Horaces (1784) ;
+    - La Mort de Marat (1793), pendant la Révolution ;
+    - Le Sacre de Napoléon (1805-1807).
+    Des monuments comme le Panthéon de Paris ou l'Arc de triomphe de l'Étoile reprennent les formes antiques.
+- type: texte
+  titre: 'Sensation et sensibilité : le romantisme'
+  contenu: |-
+    Le **romantisme**, au début du XIXe siècle, privilégie l'émotion, le drame, les couleurs vives et le mouvement.
+    - Géricault : Le Radeau de la Méduse (1818-1819), d'après un naufrage réel.
+    - Goya : Le Trois Mai 1808 (1814), qui dénonce la répression des Espagnols par les soldats de Napoléon.
+    - Delacroix : La Liberté guidant le peuple (1830), après les Trois Glorieuses, la révolution de juillet 1830.
+    En musique, Beethoven compose la Symphonie n° 3 « Héroïque » (1804).
+- type: texte
+  titre: Se repérer dans le temps
+  contenu: |-
+    Pour dater une œuvre, utilise ces repères :
+    - Lumières : avant 1789 ;
+    - Révolution : 1789-1799 ;
+    - Empire : 1804-1815 ;
+    - révolution de juillet 1830 : les Trois Glorieuses.
+    Une œuvre peut célébrer (un héros, un régime) ou dénoncer (une violence, une injustice).
+- type: exemple
+  enonce: 'Le Trois Mai 1808 (1814) : que dit ce tableau de Goya sur la politique de son temps ?'
+  etapes:
+  - 'Le tableau date de 1814 : c''est un peintre espagnol qui montre un événement de la guerre en Espagne.'
+  - 'Il dénonce la répression des Espagnols par les soldats de Napoléon : la fonction est de dénoncer une violence.'
+  - 'Le style privilégie le drame et l''émotion : c''est une œuvre romantique.'
+- type: exercice
+  enonce: Comment s'appelle la grande exposition de peinture organisée à Paris, au Louvre, par l'Académie, qui attire des milliers de visiteurs ?
+  forme: reponse_courte
+  reponse: Salon
+  reponses_acceptees:
+  - Salon
+  - le Salon
+  - salon
+  - le salon
+  indices:
+  - C'est un lieu de rencontre entre les artistes et le public.
+  - Le mot est un nom commun de cinq lettres, qui commence par « S ».
+  - On le retrouve aussi dans une pièce de la maison où l'on reçoit des invités.
+  explication: Le Salon est la grande exposition de peinture organisée à Paris au Louvre. Il fait connaître les œuvres à un public nouveau.
+- type: exercice
+  enonce: Quel philosophe, qui dirige l'Encyclopédie avec d'Alembert, écrit à partir de 1759 des comptes rendus du Salon et invente ainsi la critique d'art ?
+  forme: reponse_courte
+  reponse: Diderot
+  reponses_acceptees:
+  - Diderot
+  - Denis Diderot
+  - diderot
+  indices:
+  - 'Cet écrivain ne peint pas : il raconte et juge les tableaux qu''il voit.'
+  - Son nom commence par « Did- » et compte sept lettres.
+  - D'Alembert dirige l'Encyclopédie avec lui, mais ce n'est pas lui qu'on cherche.
+  explication: 'Denis Diderot écrit ses comptes rendus du Salon à partir de 1759 : c''est la naissance de la critique d''art.'
+- type: exercice
+  enonce: Le Serment des Horaces de David (1784) montre des héros romains, avec des lignes nettes et une composition calme. À quel mouvement appartient ce tableau ?
+  forme: qcm
+  choix:
+  - Le romantisme
+  - Le cubisme
+  - Le Moyen Âge gothique
+  - Le néoclassicisme
+  reponse: 3
+  indices:
+  - 'Les Horaces sont des héros romains : de quelle époque l''artiste s''inspire-t-il ?'
+  - 'Lignes nettes et calme : ce sont les traits d''un mouvement qui imite l''Antiquité.'
+  explication: 'Sujet antique, lignes nettes, composition calme et vertu : c''est le néoclassicisme. Le romantisme recherche l''émotion, le mouvement et le drame.'
+- type: exercice
+  enonce: Dans La Liberté guidant le peuple (1830), Delacroix peint une femme qui tient le drapeau tricolore sur une barricade. Qui est cette femme ?
+  forme: qcm
+  choix:
+  - Une allégorie de la Liberté
+  - Une vraie reine de France
+  - Une paysanne qui rentre chez elle
+  - Une actrice qui fait de la publicité
+  reponse: 0
+  indices:
+  - Une allégorie est une idée abstraite représentée par un personnage.
+  - 'Le tableau célèbre la révolution de juillet 1830 : quelle idée la femme incarne-t-elle ?'
+  explication: 'La femme au drapeau n''est pas une vraie personne : c''est une allégorie de la Liberté. Le tableau célèbre le peuple de Paris pendant les Trois Glorieuses (juillet 1830).'
+- type: exercice
+  enonce: Le Sacre de Napoléon de David est peint entre 1805 et 1807. À quelle période historique se rattache-t-il, selon les repères du cours ?
+  forme: qcm
+  choix:
+  - Après la révolution de 1830
+  - L'Empire (1804-1815)
+  - Avant 1789, au temps des Lumières
+  - La Révolution (1789-1799)
+  reponse: 1
+  indices:
+  - Napoléon est sacré empereur en 1804. Compare cette date aux repères du cours.
+  - Écarte les périodes qui commencent après 1807 ou qui se terminent avant 1805.
+  - Un repère de période commence par « E » et dure de 1804 à 1815.
+  explication: Les années 1805-1807 tombent dans l'Empire (1804-1815). Le tableau est de David, un peintre néoclassique.
+- type: question_ouverte
+  question: Compare en quelques phrases un tableau néoclassique (par exemple Le Serment des Horaces) et un tableau romantique (par exemple Le Radeau de la Méduse). Donne deux différences.
+  indices:
+  - Pense aux lignes, à la composition et aux sujets pour le néoclassicisme.
+  - Pense à l'émotion, au mouvement et au drame pour le romantisme.
+  criteres:
+  - L'élève cite au moins un trait du néoclassicisme (Antiquité, lignes nettes, calme, vertu).
+  - L'élève cite au moins un trait du romantisme (émotion, mouvement, couleurs, drame).
+  - L'élève nomme correctement les œuvres et leurs peintres (David, Géricault).
+- type: synthese
+  consigne: Écris, avec tes mots et en deux ou trois phrases, ce qu'est le Salon, ce qu'est la critique d'art, et pourquoi ils comptent pour les artistes.

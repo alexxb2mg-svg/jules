@@ -1,0 +1,137 @@
+notion: temps-et-rythme
+titre: "Le temps et le rythme : pulsation, tempo, mesure et durées"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver la pulsation et nommer le tempo (BPM ou mot italien)."
+      - "Dire la mesure : 2, 3 ou 4 temps, binaire ou ternaire."
+      - "Calculer avec les durées des notes et les BPM."
+
+  - type: texte
+    titre: "Pulsation et tempo"
+    contenu: |-
+      La **pulsation** : le battement **régulier** de la musique, qu'on tape du pied.
+      Le **tempo** : la **vitesse** de la pulsation, en **BPM** (battements par minute), réglé au **métronome**.
+      60 BPM = un battement par seconde. Durée d'un temps = 60 ÷ BPM (en secondes).
+      Mots italiens, du plus lent au plus rapide : **adagio**, **andante**, **allegro**, **presto**.
+      **Accelerando** : on accélère. **Ritardando** (ou rallentando) : on ralentit.
+
+  - type: texte
+    titre: "La mesure : binaire ou ternaire"
+    contenu: |-
+      La **mesure** regroupe les pulsations par **2, 3 ou 4 temps**. Le 1er temps est souvent plus appuyé (**temps fort**).
+      Une marche est souvent à 2 temps, une valse à 3 temps.
+      **Binaire** : chaque temps se partage en **2** (2/4, 3/4, 4/4).
+      **Ternaire** : chaque temps se partage en **3** (6/8, 9/8, 12/8).
+      Piège : la valse a 3 temps, mais elle est **binaire** (chaque temps se partage en 2).
+
+  - type: texte
+    titre: "Le rythme : les durées des sons et des silences"
+    contenu: |-
+      Le **rythme** : la suite des **durées** des sons et des silences.
+      Si la noire vaut un temps : **ronde** = 4 temps · **blanche** = 2 · **noire** = 1 · **croche** = ½ · **double croche** = ¼.
+      Silences de même durée : **pause** · **demi-pause** · **soupir** · **demi-soupir** · **quart de soupir**.
+      Un **ostinato rythmique** : une courte formule rythmique répétée sans arrêt.
+      Piège : la pulsation est régulière ; le rythme, lui, peut varier.
+
+  - type: exemple
+    enonce: >-
+      Un morceau a un tempo de 80 BPM. Combien de secondes dure un temps ? Le morceau est-il
+      plus lent ou plus rapide qu'un morceau à 120 BPM ?
+    etapes:
+      - "BPM veut dire battements par minute : 80 battements en 60 secondes."
+      - "Durée d'un temps : 60 ÷ 80 = 0,75 seconde."
+      - "À 120 BPM, un temps dure 60 ÷ 120 = 0,5 seconde : les battements sont plus rapprochés."
+      - "Donc le morceau à 80 BPM est plus lent."
+
+  - type: exercice
+    enonce: "Combien de noires faut-il pour faire la même durée qu'une ronde ?"
+    forme: nombre
+    reponse: 4
+    tolerance: 0
+    indices:
+      - "Une ronde vaut deux blanches."
+      - "Et une blanche vaut deux noires. Remplace chaque blanche par des noires, puis compte."
+    explication: "Une ronde = 2 blanches = 4 noires."
+
+  - type: exercice
+    enonce: "Lequel de ces tempos est le plus rapide ?"
+    forme: qcm
+    choix:
+      - "adagio"
+      - "andante"
+      - "allegro"
+      - "presto"
+    reponse: 3
+    indices:
+      - "Adagio est lent ; andante est modéré, à la vitesse de la marche."
+      - "Allegro est rapide, mais un mot de la liste veut dire « très vite »."
+    explication: "Presto est le plus rapide. Ordre : adagio, andante, allegro, presto."
+
+  - type: exercice
+    enonce: >-
+      Dans une mesure à 3 temps, la noire vaut un temps. Combien de croches faut-il pour
+      remplir une mesure entière ?
+    forme: nombre
+    reponse: 6
+    tolerance: 0
+    indices:
+      - "Combien de croches y a-t-il dans une noire ?"
+      - "Une noire = deux croches. Multiplie par le nombre de temps de la mesure."
+    explication: "Une noire = 2 croches, et il y a 3 temps : 3 × 2 = 6 croches."
+
+  - type: exercice
+    enonce: >-
+      Dans une mesure notée 6/8, chaque temps se partage en trois croches. Comment appelle-t-on
+      ce type de mesure ?
+    forme: reponse_courte
+    reponse: "ternaire"
+    reponses_acceptees:
+      - "ternaire"
+      - "mesure ternaire"
+      - "une mesure ternaire"
+    indices:
+      - "Quand chaque temps se partage en deux, la mesure est binaire. Et en trois ?"
+      - "Relis le bloc sur la mesure : avec quelles mesures sont rangées 6/8, 9/8 et 12/8 ?"
+    explication: "C'est une mesure ternaire : chaque temps se partage en 3 (6/8, 9/8, 12/8)."
+
+  - type: exercice
+    enonce: >-
+      Un morceau a un tempo de 100 BPM. Combien de pulsations entend-on en 45 secondes ?
+    forme: nombre
+    reponse: 75
+    tolerance: 0
+    indices:
+      - "100 BPM veut dire 100 battements en une minute, soit 60 secondes."
+      - "45 secondes, c'est les trois quarts d'une minute. Prends les trois quarts de 100."
+    explication: "45 s = 3/4 de minute. 100 × 3 ÷ 4 = 75 pulsations."
+
+  - type: question_ouverte
+    question: >-
+      Voici un extrait : « Une batterie marque deux battements par seconde. On compte 1-2-3-4,
+      avec un appui sur le 1. Chaque battement se partage en deux sons égaux. La basse répète
+      toujours la même petite formule. À la fin, la musique ralentit. » Décris le temps et le
+      rythme de cet extrait.
+    indices:
+      - "Deux battements par seconde : combien de battements par minute ?"
+      - "Traite dans l'ordre : tempo, mesure (temps, binaire ou ternaire), la basse, la fin."
+    criteres:
+      - "L'élève donne un tempo cohérent (environ 120 BPM, rapide, allegro)."
+      - "L'élève identifie une mesure à 4 temps, binaire, avec un temps fort sur le 1er temps."
+      - "L'élève nomme l'ostinato rythmique de la basse et le ralentissement final (ritardando ou rallentando)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre pulsation,
+      tempo et rythme, et entre mesure binaire et mesure ternaire.

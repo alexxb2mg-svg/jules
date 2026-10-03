@@ -1,0 +1,157 @@
+notion: materialite-qualite-couleur
+titre: "La matérialité et la qualité de la couleur"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir de quoi est faite une peinture : pigment, liant, support."
+      - "Relier la sensation colorée aux qualités de la matière (épaisse, diluée, mate, brillante)."
+      - "Comprendre que la quantité de couleur change son effet."
+
+  - type: texte
+    titre: "La couleur est une matière"
+    contenu: |-
+      - Le **pigment** est une poudre colorée : il donne la couleur.
+      - Le **liant** colle les pigments entre eux et au support.
+      - Le **support** reçoit la peinture.
+
+      Le liant change la peinture : huile de lin (peinture à l'huile), gomme arabique (aquarelle, gouache),
+      résine (acrylique), jaune d'œuf (tempera).
+
+  - type: texte
+    titre: "Sensation colorée et qualités de la matière"
+    contenu: |-
+      Une même couleur ne se ressent pas pareil si elle est :
+      - **mate** ou **brillante** ;
+      - **épaisse** (opaque, elle couvre le support) ou **diluée** (transparente, on voit le support) ;
+      - **lisse** ou **striée**, sur papier ou sur toile.
+
+      Pierre Soulages, depuis 1979, peint ses « outrenoirs » : avec un seul noir, lisse ou strié, la lumière se
+      reflète différemment et le noir paraît clair ou sombre.
+
+  - type: texte
+    titre: "Mélanger les couleurs"
+    contenu: |-
+      Primaires du peintre au collège : **magenta, cyan, jaune**.
+      - cyan + jaune = vert ; magenta + jaune = rouge orangé ; magenta + cyan = bleu violet.
+      - La **complémentaire** d'une primaire est le mélange des deux autres (le vert pour le magenta).
+      - Le **blanc** éclaircit. Le noir ou la complémentaire rabat (assombrit).
+      - Une couleur vive et pure est dite **saturée**.
+
+  - type: texte
+    titre: "Quantité et qualité"
+    contenu: |-
+      Une même couleur ne fait pas le même effet en **petite touche** ou en grand **aplat**.
+      Un grand aplat de rouge vif peut écraser le regard. Une petite touche de rouge attire l'œil sur un fond gris.
+      Yves Klein dépose en 1960 la formule de son bleu, l'IKB : mat, poudreux et très intense.
+
+      Au brevet : relie la sensation (éclat, profondeur, calme) à des choix précis de matière et de quantité.
+
+  - type: exemple
+    enonce: >-
+      Un élève (fictif) peint deux carrés avec la même gouache rouge : l'un en couche épaisse, l'autre très
+      diluée à l'eau sur papier blanc. Décris la différence.
+    etapes:
+      - "Carré épais : la couche est opaque, on ne voit plus le papier. Le rouge est dense et intense."
+      - "Carré dilué : la couche est transparente, le blanc du papier passe à travers. Le rouge paraît plus clair et léger."
+      - "Dans le carré dilué, on voit aussi les traces du pinceau et les variations d'eau."
+      - "Conclusion : la même couleur produit deux sensations différentes selon la quantité de matière."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la poudre colorée qui donne sa couleur à une peinture ?"
+    forme: reponse_courte
+    reponse: "pigment"
+    reponses_acceptees:
+      - "pigment"
+      - "le pigment"
+      - "un pigment"
+      - "pigments"
+      - "les pigments"
+    indices:
+      - "Ce n'est pas ce qui colle la poudre : on cherche la poudre elle-même."
+      - "Il peut être d'origine minérale, végétale, animale ou chimique."
+    explication: "Le pigment est la poudre colorée. Le liant la fixe, le support la reçoit."
+
+  - type: exercice
+    enonce: "Avec les primaires du peintre, quelle couleur obtient-on en mélangeant du cyan et du jaune ?"
+    forme: reponse_courte
+    reponse: "vert"
+    reponses_acceptees:
+      - "vert"
+      - "le vert"
+      - "du vert"
+    indices:
+      - "Relis la ligne des mélanges dans le bloc « Mélanger les couleurs »."
+      - "C'est aussi la complémentaire du magenta."
+    explication: "Cyan + jaune = vert. Le vert est la complémentaire du magenta, la troisième primaire."
+
+  - type: exercice
+    enonce: "Quel liant sert à fabriquer la peinture à l'huile ?"
+    forme: qcm
+    choix:
+      - "La gomme arabique"
+      - "L'huile de lin"
+      - "Le jaune d'œuf"
+    reponse: 1
+    indices:
+      - "Le nom de la peinture te donne un indice."
+      - "La gomme arabique sert pour l'aquarelle et la gouache, le jaune d'œuf pour la tempera."
+    explication: "La peinture à l'huile utilise l'huile de lin comme liant."
+
+  - type: exercice
+    enonce: >-
+      Dans ses « outrenoirs », Pierre Soulages n'utilise qu'un seul noir. Pourquoi ce noir paraît-il
+      tantôt clair, tantôt sombre ?
+    forme: qcm
+    choix:
+      - "Parce qu'il mélange du blanc à certains endroits."
+      - "Parce que la surface lisse ou striée reflète la lumière différemment."
+      - "Parce qu'il peint sur des toiles de couleurs différentes."
+    reponse: 1
+    indices:
+      - "Il n'y a qu'un seul noir : la différence ne vient donc pas de la teinte."
+      - "Pense à la texture de la surface et à la lumière."
+    explication: "Avec un seul noir, c'est la texture (lisse ou striée) qui change le reflet de la lumière : le noir paraît clair ou sombre."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Sur un grand tableau gris, un peintre pose une seule petite touche de rouge vif. Quel
+      effet produit-elle le plus souvent ?
+    forme: qcm
+    choix:
+      - "Elle passe inaperçue, car elle est trop petite."
+      - "Elle attire l'œil et devient un point fort du tableau."
+      - "Elle rend tout le tableau rouge."
+    reponse: 1
+    indices:
+      - "La quantité de couleur change son effet."
+      - "Que fait ton regard devant une seule tache vive sur un fond terne ?"
+    explication: "Une petite quantité de rouge vif sur un fond gris attire le regard. Un grand aplat rouge produirait un tout autre effet."
+
+  - type: question_ouverte
+    question: >-
+      Imagine une salle où un seul grand tableau est couvert d'un bleu très intense, mat et poudreux, comme
+      l'IKB d'Yves Klein. Décris la matière de ce bleu, puis explique la sensation qu'il peut produire et
+      le rôle de la grande quantité de couleur.
+    indices:
+      - "Commence par la matière : mate ou brillante, poudreuse ou lisse ?"
+      - "Puis la quantité : une petite touche ou une très grande surface ? Qu'est-ce que cela fait au regard ?"
+    criteres:
+      - "L'élève décrit la matière (mate, poudreuse, intense) et peut citer pigment et liant."
+      - "L'élève nomme une sensation (profondeur, immersion, calme, intensité)."
+      - "L'élève relie cette sensation à la qualité de la matière et à la grande quantité de couleur."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases, avec tes mots. Dis de quoi est faite une peinture.
+      Puis explique pourquoi une même couleur peut produire des sensations différentes selon sa matière et sa quantité.

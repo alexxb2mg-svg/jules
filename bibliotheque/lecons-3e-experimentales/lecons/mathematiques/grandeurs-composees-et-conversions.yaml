@@ -1,0 +1,148 @@
+notion: grandeurs-composees-et-conversions
+titre: "Grandeurs composées et conversions d'unités"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Calculer une vitesse, un débit, une masse volumique ou une énergie avec les bonnes unités."
+      - "Convertir une grandeur composée (km/h en m/s, m³/h en L/min...)."
+      - "Vérifier que le résultat est cohérent : bonne unité, valeur vraisemblable."
+
+  - type: texte
+    titre: "Les grandeurs composées"
+    contenu: |
+      Une **grandeur composée** se calcule à partir de deux autres grandeurs.
+
+      | Grandeur | Formule | Unités |
+      |---|---|---|
+      | Vitesse | distance ÷ durée | km/h, m/s |
+      | Débit | volume ÷ durée | L/min, m³/h |
+      | Masse volumique | masse ÷ volume | g/cm³, kg/m³ |
+      | Énergie | puissance × durée | kWh, Wh |
+
+      Les formules se retournent : d = v × t et t = d ÷ v.
+
+  - type: texte
+    titre: "Les durées et les conversions"
+    contenu: |
+      Avant de calculer, on écrit la durée en **heures décimales**.
+
+      - 1 h 30 min = 1,5 h (et pas 1,30 h : 1 h vaut 60 min, pas 100).
+      - 1 h 15 min = 1,25 h.
+      - 1 h = 60 min = 3 600 s ; 1 km = 1 000 m ; 1 m³ = 1 000 L ; 1 kW = 1 000 W.
+      - km/h → m/s : on divise par 3,6.
+      - 1 g/cm³ = 1 000 kg/m³.
+
+  - type: texte
+    titre: "Convertir et vérifier"
+    contenu: |
+      Pour convertir une grandeur composée, on convertit **séparément** le haut et le bas, puis on divise.
+
+      Exemple : 36 km/h = 36 000 m en 3 600 s = 10 m/s.
+
+      À la fin, on écrit l'unité, et on vérifie que le résultat est **vraisemblable**.
+      Une voiture à 2 m/s roule beaucoup trop lentement.
+
+      Énergie : un appareil de 2 kW qui fonctionne 3 h consomme 2 × 3 = 6 kWh.
+
+  - type: exemple
+    enonce: "Un coureur parcourt 10 km en 50 minutes. Quelle est sa vitesse moyenne en km/h ?"
+    etapes:
+      - "Formule : vitesse = distance ÷ durée."
+      - "La durée doit être en heures : 50 min = 50/60 h."
+      - "v = 10 ÷ (50/60) = 10 × 60 ÷ 50 = 12."
+      - "Résultat : 12 km/h. C'est vraisemblable pour un coureur."
+
+  - type: exercice
+    enonce: "Sacha parcourt 45 km à vélo en 1 h 30 min. Quelle est sa vitesse moyenne en km/h ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 30
+    tolerance: 0.01
+    unite: "km/h"
+    indices:
+      - "La formule est vitesse = distance ÷ durée. Dans quelle unité doit être la durée ?"
+      - "La durée est une heure et une demi-heure. Écris-la en heures décimales."
+      - "Tu dois trouver une durée de 1,5 h. Calcule 45 ÷ 1,5."
+    explication: "1 h 30 min = 1,5 h. v = 45 ÷ 1,5 = 30 km/h."
+
+  - type: exercice
+    enonce: "Un scooter roule à 54 km/h. Convertis cette vitesse en m/s. Écris seulement le nombre."
+    forme: nombre
+    reponse: 15
+    tolerance: 0.01
+    unite: "m/s"
+    indices:
+      - "Convertis séparément les km en m et les heures en secondes."
+      - "54 km = 54 000 m et 1 h = 3 600 s. Il reste une division."
+      - "Autre façon : pour passer de km/h à m/s, on divise par 3,6."
+    explication: "54 km/h = 54 000 m en 3 600 s. 54 000 ÷ 3 600 = 15 m/s (ou 54 ÷ 3,6 = 15)."
+
+  - type: exercice
+    enonce: "Une pompe a un débit de 2,4 m³/h. Quel est son débit en litres par minute ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 40
+    tolerance: 0.01
+    unite: "L/min"
+    indices:
+      - "Convertis d'abord les m³ en litres, puis les heures en minutes."
+      - "1 m³ = 1 000 L, donc 2,4 m³ = 2 400 L. Et 1 h = 60 min."
+      - "Divise le nombre de litres par le nombre de minutes."
+    explication: "2,4 m³ = 2 400 L en 1 h = 60 min. 2 400 ÷ 60 = 40 L/min."
+
+  - type: exercice
+    enonce: "Une voiture roule à 80 km/h. Quelle durée met-elle pour parcourir 60 km ?"
+    forme: qcm
+    choix:
+      - "0,75 minute"
+      - "45 minutes"
+      - "1 h 20 min"
+      - "75 minutes"
+    reponse: 1
+    indices:
+      - "Utilise t = d ÷ v. Dans quelle unité sort le résultat ?"
+      - "Le résultat est en heures. Convertis-le ensuite en minutes (1 h = 60 min)."
+      - "Vérifie la cohérence : la voiture va plus vite que 60 km/h, elle met donc moins d'une heure."
+    explication: "t = 60 ÷ 80 = 0,75 h. Or 0,75 h = 0,75 × 60 min = 45 min. 1 h 20 min viendrait de 80 ÷ 60, c'est la division à l'envers."
+
+  - type: exercice
+    enonce: >-
+      Une piscine de 27 m³ est remplie par un robinet dont le débit est de 4 500 L/h.
+      Combien d'heures faut-il pour la remplir ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    unite: "h"
+    indices:
+      - "Le volume et le débit ne sont pas dans la même unité. Convertis d'abord."
+      - "27 m³ = 27 000 L. La formule du débit se retourne : durée = volume ÷ débit."
+      - "Calcule 27 000 ÷ 4 500 et vérifie que le résultat est vraisemblable."
+    explication: "27 m³ = 27 000 L. Durée = 27 000 ÷ 4 500 = 6 h."
+
+  - type: question_ouverte
+    question: >-
+      Nour écrit : « 1 h 30 min = 1,30 h, donc 45 km en 1 h 30 min font 45 ÷ 1,30 km/h. »
+      Où est l'erreur ? Corrige avec tes mots et dis quelle vitesse tu obtiens, avec l'unité.
+    indices:
+      - "Une heure contient combien de minutes ? Et un « 1,30 » de décimal ?"
+      - "30 minutes, c'est quelle fraction d'une heure ?"
+    criteres:
+      - "L'élève explique que 1 h = 60 min, donc 30 min = 0,5 h et que 1 h 30 min = 1,5 h (1,30 h serait 1 h et 30 centièmes d'heure)."
+      - "L'élève corrige le calcul : 45 ÷ 1,5 = 30 et donne l'unité km/h."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases comment tu calcules une vitesse ou un débit,
+      et comment tu convertis une grandeur composée sans te tromper.

@@ -1,0 +1,180 @@
+notion: evolution-especes
+titre: 'Évolution des espèces : fossiles, hasard, sélection naturelle'
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de
+    la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — épreuve
+    de sciences — Note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026, NOR MENE2623228N
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Utiliser les fossiles et les couches de roches pour montrer que des espèces apparaissent et disparaissent.
+  - Expliquer comment le hasard (mutation) et la sélection naturelle font évoluer une population.
+  - 'Éviter les erreurs classiques : un être vivant ne se transforme pas pour s''adapter, et l''évolution n''a pas
+    de but.'
+- type: texte
+  titre: 'Les fossiles : des espèces qui changent'
+  contenu: 'Un **fossile** est un reste ou une trace d''être vivant conservé dans une roche.
+
+    Exemples : une coquille, un os, une empreinte de pas.
+
+
+    Les fossiles montrent que les espèces n''ont pas toujours été les mêmes.
+
+    Des espèces **apparaissent**. D''autres **disparaissent** : c''est l''**extinction**.
+
+
+    Exemple : les dinosaures ont disparu il y a environ 66 millions d''années, sauf la lignée des oiseaux.'
+- type: texte
+  titre: Lire l'âge des fossiles
+  contenu: 'Les roches sédimentaires se déposent en **couches**.
+
+    Si les couches n''ont pas été retournées :
+
+    - la couche du **bas** est la plus **ancienne** ;
+
+    - la couche du **haut** est la plus **récente**.
+
+
+    La Terre a environ 4,6 milliards d''années.
+
+    Les plus anciennes traces de vie connues ont environ 3,5 milliards d''années : ce sont des êtres vivants microscopiques,
+    d''une seule cellule.'
+- type: texte
+  titre: Le hasard et la sélection naturelle
+  contenu: 'Dans une population, les individus sont tous un peu différents.
+
+    Des **mutations** apparaissent **au hasard** dans l''ADN et créent de nouveaux allèles.
+
+
+    Dans un milieu donné, les individus qui ont un caractère **avantageux** :
+
+    - survivent mieux ;
+
+    - se reproduisent davantage ;
+
+    - transmettent plus souvent leurs allèles.
+
+
+    Au fil des générations, ce caractère devient plus fréquent : c''est la **sélection naturelle**. Les formes aptes
+    à se reproduire se maintiennent.'
+- type: texte
+  titre: Hasard, pas de but
+  contenu: 'Le **hasard** joue aussi : une catastrophe (incendie, tempête) peut éliminer des individus sans tenir
+    compte de leurs caractères.
+
+
+    L''évolution **n''a pas de but**.
+
+    Un individu ne change pas pendant sa vie pour s''adapter.
+
+    La variation existe **avant** que le milieu ne change : le milieu ne crée pas les mutations, il **trie**.
+
+
+    Pour expliquer, suis toujours l''ordre : variation au hasard, avantage dans le milieu, reproduction et transmission.'
+- type: exemple
+  enonce: Dans une forêt, un champignon tue une partie des arbres d'une espèce. Quelques arbres, qui portaient déjà
+    par hasard un allèle de résistance, survivent. Que devient la population d'arbres au fil des générations ?
+  etapes:
+  - 'L''allèle de résistance existait avant l''arrivée du champignon : il est apparu au hasard.'
+  - 'Les arbres résistants survivent et se reproduisent : ils transmettent l''allèle à leurs descendants.'
+  - 'Génération après génération, la part d''arbres résistants augmente : c''est la sélection naturelle.'
+- type: exercice
+  enonce: Dans une falaise dont les couches n'ont pas été retournées, où trouve-t-on les fossiles les plus anciens
+    ?
+  forme: qcm
+  choix:
+  - Dans la couche du haut
+  - Dans la couche du bas
+  - Ils ont tous le même âge
+  - Dans la couche la plus épaisse
+  reponse: 1
+  indices:
+  - Pense à la façon dont les couches se déposent l'une après l'autre.
+  - Une couche se dépose sur celles qui existent déjà. Laquelle est arrivée en premier ?
+  explication: 'Les couches se déposent les unes sur les autres : la couche du bas est la plus ancienne, donc ses
+    fossiles aussi.'
+- type: exercice
+  enonce: Comment appelle-t-on les restes ou les traces d'êtres vivants conservés dans les roches ? Réponds par
+    un mot.
+  forme: reponse_courte
+  reponse: fossiles
+  reponses_acceptees:
+  - fossile
+  - fossiles
+  - les fossiles
+  - des fossiles
+  - un fossile
+  indices:
+  - 'Une coquille ou une empreinte de feuille retrouvée dans une pierre : quel nom leur donne-t-on ?'
+  - Pense aux squelettes de dinosaures exposés dans les musées.
+  - Le mot commence par « fo ».
+  explication: Ce sont des fossiles. Ils prouvent que des espèces ont vécu autrefois, parfois très différentes des
+    espèces actuelles.
+- type: exercice
+  enonce: 'Document (fictif) : sur un tronc sombre, on compte 120 papillons d''une même espèce. Au début, 30 sont
+    sombres et 90 sont clairs. Des oiseaux mangent surtout les papillons bien visibles. Bien des générations plus
+    tard, sur 120 papillons, 90 sont sombres. Quel est le pourcentage de papillons sombres à la fin ? Écris seulement
+    le nombre, sans le signe %.'
+  forme: nombre
+  reponse: 75
+  tolerance: 0.01
+  unite: '%'
+  indices:
+  - Un pourcentage se calcule en divisant la partie par le total, puis en multipliant par 100.
+  - Au début, 30 sombres sur 120, cela fait 25 %. Fais le même calcul avec les nombres de la fin.
+  explication: 90 ÷ 120 = 0,75 et 0,75 × 100 = 75. À la fin, 75 % des papillons sont sombres (contre 25 % au début).
+- type: exercice
+  enonce: 'Repères : la Terre a environ 4,6 milliards d''années. Les plus anciennes traces de vie connues ont environ
+    3,5 milliards d''années. Combien de temps, en milliards d''années, s''est écoulé entre la formation de la Terre
+    et les premières traces de vie ? Écris seulement le nombre.'
+  forme: nombre
+  reponse: 1.1
+  tolerance: 0.01
+  unite: milliard d'années
+  indices:
+  - Il s'agit de l'écart de temps entre deux dates, mesuré depuis la formation de la Terre.
+  - Calcule la différence entre les deux âges, dans la même unité.
+  explication: '4,6 − 3,5 = 1,1. Il s''est écoulé environ 1,1 milliard d''années. Vérification : 3,5 + 1,1 = 4,6.'
+- type: exercice
+  enonce: 'Document (fictif) : un insecticide tue presque tous les insectes d''un champ. Quelques insectes survivent
+    : ils portaient déjà, par hasard, un allèle de résistance. Après plusieurs générations, presque tous les insectes
+    du champ résistent. Quelle explication est correcte ?'
+  forme: qcm
+  choix:
+  - Les insectes se sont transformés volontairement pour résister à l'insecticide.
+  - L'insecticide a créé l'allèle de résistance chez tous les insectes.
+  - Les insectes résistants existaient déjà ; ils ont survécu, se sont reproduits et ont transmis leur allèle.
+  - L'évolution a pour but de rendre les insectes parfaits.
+  reponse: 2
+  indices:
+  - Un insecte peut-il changer ses allèles parce qu'il le voudrait ?
+  - Distingue d'où vient la variation (le hasard) et ce qui trie les individus (le milieu).
+  - Cherche la phrase où l'allèle est présent avant l'insecticide, puis transmis.
+  explication: 'La résistance existait déjà par hasard. L''insecticide trie : les résistants survivent, se reproduisent
+    davantage et transmettent leur allèle. C''est la sélection naturelle. Un individu ne se transforme pas pour
+    s''adapter, et l''évolution n''a pas de but.'
+- type: question_ouverte
+  question: 'Un élève écrit : « Les papillons clairs sont devenus sombres pour ne plus être mangés par les oiseaux.
+    » Corrige cette phrase et explique ce qui s''est vraiment passé, dans l''ordre.'
+  indices:
+  - Un papillon peut-il changer sa couleur pendant sa vie parce qu'il le veut ?
+  - 'Suis l''ordre : variation au hasard, avantage dans le milieu, reproduction et transmission.'
+  criteres:
+  - L'élève dit qu'un individu ne se transforme pas pour s'adapter.
+  - L'élève explique que des papillons sombres existaient déjà, apparus par hasard (mutation).
+  - 'L''élève explique que les sombres, moins visibles, survivent et se reproduisent davantage, et transmettent
+    leur caractère : c''est la sélection naturelle.'
+- type: synthese
+  consigne: 'En quelques phrases, explique : (1) ce que les fossiles et les couches de roches montrent ; (2) comment
+    le hasard et la sélection naturelle font évoluer une population.'

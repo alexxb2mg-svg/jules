@@ -1,0 +1,155 @@
+notion: bilan-energetique-conservation
+titre: "Bilan énergétique, conservation de l'énergie, puissance"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020), BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027), éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Établir un bilan énergétique simple : énergie reçue, utile et perdue."
+      - "Expliquer où passe l'énergie, sans dire qu'elle disparaît."
+      - "Utiliser la relation E = P × t avec les bonnes unités."
+
+  - type: texte
+    titre: "L'énergie se conserve"
+    contenu: |-
+      Un **système** est l'objet étudié (un appareil, l'eau d'une bouilloire, un vélo). Il échange de l'énergie avec son environnement.
+
+      L'énergie **se conserve** : elle ne se crée pas et ne disparaît pas. Elle peut seulement :
+
+      - se **transférer** d'un système à un autre (l'énergie thermique passe de la bouilloire à l'air) ;
+      - se **convertir** d'une forme en une autre (électrique en lumineuse dans une lampe).
+
+  - type: texte
+    titre: "Le bilan énergétique"
+    contenu: |-
+      Un **bilan énergétique** compare l'énergie reçue et l'énergie cédée par un système.
+
+      Pour un appareil qui fonctionne : **énergie reçue = énergie utile + énergie perdue**.
+
+      - L'énergie **utile** sert à ce pour quoi l'appareil est fait (la lumière d'une lampe).
+      - L'énergie **perdue** n'est pas détruite : elle est cédée à l'environnement, le plus souvent sous forme thermique (l'appareil chauffe).
+
+      Ne dis pas « l'énergie est consommée » : elle est convertie ou transférée.
+
+  - type: texte
+    titre: "Reçu et cédé sont différents"
+    contenu: |-
+      Si un système reçoit **plus** d'énergie qu'il n'en cède, l'énergie stockée dans le système **augmente** (l'eau chauffe, la batterie se charge).
+
+      S'il en cède **plus** qu'il n'en reçoit, l'énergie stockée **diminue**.
+
+      Un **diagramme énergétique** montre ces transferts par des flèches : une flèche d'entrée (énergie reçue), puis des flèches de sortie (énergie utile et énergie perdue).
+
+  - type: texte
+    titre: "La puissance"
+    contenu: |-
+      La **puissance** P est l'énergie transférée chaque seconde.
+
+      **E = P × t**, donc P = E ÷ t et t = E ÷ P.
+
+      - E en joules (J)
+      - P en watts (W)
+      - t en secondes (s)
+
+      1 W = 1 J par seconde. Convertis toujours la durée en secondes : 1 min = 60 s, 1 h = 3 600 s.
+
+  - type: exemple
+    enonce: >-
+      Un ventilateur reçoit 200 J d'énergie électrique et fournit 120 J d'énergie de mouvement.
+      Fais son bilan énergétique.
+    etapes:
+      - "L'énergie se conserve : énergie reçue = énergie utile + énergie perdue."
+      - "L'énergie utile est l'énergie de mouvement : 120 J."
+      - "Énergie perdue = 200 − 120 = 80 J."
+      - "Ces 80 J ne disparaissent pas : ils sont cédés à l'air, le plus souvent sous forme thermique."
+
+  - type: exercice
+    enonce: "Quelle est l'unité de la puissance dans le Système international ?"
+    forme: qcm
+    choix:
+      - "Le joule (J)"
+      - "Le watt (W)"
+      - "La seconde (s)"
+    reponse: 1
+    indices:
+      - "La puissance est l'énergie transférée chaque seconde."
+      - "Le joule est l'unité de l'énergie. La seconde est l'unité de la durée."
+    explication: "La puissance se mesure en watts (W). 1 W = 1 J par seconde."
+
+  - type: exercice
+    enonce: >-
+      Un sèche-cheveux de puissance 1 000 W fonctionne pendant 30 s. Calcule l'énergie qu'il
+      reçoit, en joules. Écris seulement le nombre.
+    forme: nombre
+    reponse: 30000
+    tolerance: 0
+    unite: "J"
+    indices:
+      - "Quelle relation relie l'énergie, la puissance et la durée ?"
+      - "E = P × t. La durée est déjà en secondes."
+    explication: "E = P × t = 1 000 × 30 = 30 000 J."
+
+  - type: exercice
+    enonce: "Une lampe chauffe quand elle est allumée. Où passe l'énergie qu'elle perd ?"
+    forme: qcm
+    choix:
+      - "Elle disparaît"
+      - "Elle est cédée à l'environnement, le plus souvent sous forme thermique"
+      - "Elle est détruite par la lampe"
+    reponse: 1
+    indices:
+      - "L'énergie se conserve : elle ne peut pas disparaître."
+      - "Pense à ce que ressent ta main près d'une lampe allumée."
+    explication: "L'énergie perdue n'est pas détruite : elle est cédée à l'air, le plus souvent sous forme thermique (la lampe chauffe)."
+
+  - type: exercice
+    enonce: >-
+      Un appareil de puissance 100 W reçoit une énergie de 3 000 J. Combien de temps a-t-il
+      fonctionné, en secondes ? Écris seulement le nombre.
+    forme: nombre
+    reponse: 30
+    tolerance: 0
+    unite: "s"
+    indices:
+      - "Repars de la relation E = P × t, et cherche t."
+      - "t = E ÷ P."
+    explication: "t = E ÷ P = 3 000 ÷ 100 = 30 s."
+
+  - type: exercice
+    enonce: >-
+      Un fer à repasser de puissance 1 000 W fonctionne pendant 2 minutes. Il fournit 80 000 J
+      d'énergie utile. Calcule l'énergie perdue, en joules. Écris seulement le nombre.
+    forme: nombre
+    reponse: 40000
+    tolerance: 0
+    unite: "J"
+    indices:
+      - "D'abord, calcule l'énergie reçue avec E = P × t. Attention à l'unité de la durée."
+      - "2 minutes = 2 × 60 secondes."
+      - "Ensuite : énergie reçue = énergie utile + énergie perdue."
+    explication: "Durée : 2 × 60 = 120 s. Énergie reçue : 1 000 × 120 = 120 000 J. Énergie perdue : 120 000 − 80 000 = 40 000 J."
+
+  - type: question_ouverte
+    question: >-
+      On chauffe de l'eau avec une bouilloire électrique. Explique ce qui se passe pour l'énergie
+      de l'eau, et pourquoi la bouilloire elle-même devient chaude.
+    indices:
+      - "L'eau reçoit-elle plus ou moins d'énergie qu'elle n'en cède ?"
+      - "Pense à l'énergie perdue : où va-t-elle ?"
+    criteres:
+      - "L'élève dit que l'eau reçoit plus d'énergie qu'elle n'en cède, donc son énergie augmente (elle chauffe)."
+      - "L'élève dit qu'une partie de l'énergie est perdue, cédée à l'environnement sous forme thermique, sans disparaître."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, explique ce que veut dire « l'énergie se conserve », puis écris la relation
+      entre énergie, puissance et durée avec les unités.

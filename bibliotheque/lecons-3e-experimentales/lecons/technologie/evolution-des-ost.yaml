@@ -1,0 +1,148 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0. Relecture bienvenue.
+notion: evolution-des-ost
+titre: "L'évolution des objets techniques : besoins, innovation, IA"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer la fonction technique et le principe technique, et comparer deux objets."
+      - "Expliquer pourquoi un objet évolue, avec ses avantages et ses inconvénients."
+      - "Nommer les grands types d'apprentissage d'une IA et repérer un biais."
+
+  - type: texte
+    titre: "Fonction, principe, famille, lignée"
+    contenu: |-
+      Un objet technique répond à un **besoin**.
+      - La **fonction technique** dit ce qu'il doit faire (éclairer).
+      - Le **principe technique** dit comment il le fait (un filament chauffé, une diode).
+      Pour une même fonction, plusieurs principes sont possibles : on peut les **comparer**.
+
+  - type: texte
+    titre: "Famille et lignée d'objets"
+    contenu: |-
+      - Une **famille** : des objets qui répondent au même besoin.
+      - Une **lignée** : des objets d'une famille qui ont le même principe technique et se succèdent dans le temps.
+      Exemple : s'éclairer (bougie, lampe à pétrole, ampoule) est une famille.
+
+  - type: texte
+    titre: "Pourquoi les objets évoluent"
+    contenu: |-
+      Les objets évoluent quand les besoins et les usages changent, grâce aux découvertes scientifiques, aux inventions et aux innovations, et avec le développement durable.
+      - Une **invention** est une création nouvelle.
+      - Une **innovation** est une nouveauté mise sur le marché et adoptée par les utilisateurs.
+      - Une **innovation de rupture** change le principe technique et bouleverse les usages.
+      Une découverte peut aussi mener à de nouveaux objets : les semi-conducteurs ont permis le transistor, puis les ordinateurs et les smartphones.
+      Chaque évolution a des **avantages** et des **inconvénients**. La société pose des règles (**contraintes sociétales**) : lois, normes, sécurité, environnement.
+
+  - type: texte
+    titre: "L'intelligence artificielle : trois types d'apprentissage"
+    contenu: |-
+      Une **IA** apprend à partir de données. Trois grands types :
+      - **supervisé** : on lui donne des exemples déjà étiquetés ;
+      - **non supervisé** : elle regroupe seule des données qui se ressemblent ;
+      - **par renforcement** : elle essaie, reçoit des récompenses ou des pénalités.
+      Usages : reconnaissance d'images, traduction, recommandations, aide à la conduite.
+      Si les données d'apprentissage sont incomplètes, l'IA reproduit ce défaut : c'est un **biais**. Une IA peut se tromper : on vérifie ses résultats.
+
+  - type: exemple
+    enonce: >-
+      Un baladeur à cassette et un smartphone qui lit de la musique en ligne répondent au même
+      besoin : écouter de la musique. Sont-ils de la même famille ? de la même lignée ?
+    etapes:
+      - "Le besoin est le même (écouter de la musique) : ils sont de la même famille."
+      - "Les principes techniques sont différents (bande magnétique contre fichiers numériques reçus par Internet) : ils ne sont pas de la même lignée."
+      - "Le passage à la musique en ligne a changé le principe technique et les usages : c'est une innovation de rupture."
+
+  - type: exercice
+    enonce: "« Faire briller un filament chauffé » décrit comment une ampoule éclaire. Est-ce une fonction technique ou un principe technique ?"
+    forme: qcm
+    choix:
+      - "Une fonction technique"
+      - "Un principe technique"
+    reponse: 1
+    indices:
+      - "La fonction répond à « à quoi ça sert ? ». Le principe répond à « comment ça marche ? »."
+      - "Ici, la phrase décrit un moyen, pas un but. Le but de l'ampoule est d'éclairer."
+    explication: "C'est un principe technique : il dit comment l'ampoule éclaire. La fonction technique est « éclairer »."
+
+  - type: exercice
+    enonce: "Complète par un seul mot : une nouveauté mise sur le marché et adoptée par les utilisateurs est une ..."
+    forme: reponse_courte
+    reponse: "innovation"
+    reponses_acceptees: ["innovation", "une innovation", "l'innovation", "innovations", "les innovations"]
+    indices:
+      - "Une idée ou un prototype ne suffit pas. Il faut que les gens l'utilisent vraiment."
+      - "Ce mot est différent du mot « invention »."
+    explication: "C'est une innovation. Une invention devient une innovation quand elle est fabriquée, vendue et adoptée."
+
+  - type: exercice
+    enonce: >-
+      On montre à une IA des milliers de photos de fruits. Chaque photo porte déjà son nom
+      (pomme, poire, banane). Quel type d'apprentissage est utilisé ?
+    forme: qcm
+    choix:
+      - "Apprentissage supervisé"
+      - "Apprentissage non supervisé"
+      - "Apprentissage par renforcement"
+    reponse: 0
+    indices:
+      - "Regarde si l'IA reçoit la bonne réponse avec chaque exemple."
+      - "Ici, chaque photo est accompagnée de son étiquette. Quel type utilise des exemples étiquetés ?"
+    explication: "Les photos sont étiquetées : c'est l'apprentissage supervisé."
+
+  - type: exercice
+    enonce: >-
+      Une IA sert à trier des fruits abîmés. Elle a été entraînée presque uniquement avec des photos
+      de pommes rouges. Que risque-t-il d'arriver avec des pommes vertes ?
+    forme: qcm
+    choix:
+      - "Elle sera aussi bonne qu'avec les pommes rouges, car un ordinateur ne se trompe pas."
+      - "Elle risque de faire plus d'erreurs : c'est un biais venant des données d'apprentissage."
+      - "Il suffit d'un ordinateur plus rapide pour corriger le problème."
+    reponse: 1
+    indices:
+      - "Une IA apprend à partir d'exemples. Quels exemples a-t-elle presque jamais vus ?"
+      - "Se demander si le défaut vient de la vitesse de la machine ou des données qu'elle a reçues."
+    explication: "Les données sont déséquilibrées. L'IA reproduit ce défaut : c'est un biais. Une machine plus rapide ne le corrige pas, il faut des données plus variées."
+
+  - type: exercice
+    enonce: >-
+      Dans un jeu, une IA guide un robot. Elle gagne des points quand le robot évite un obstacle et en
+      perd quand il le heurte. Elle s'améliore en essayant. Quel est le nom de ce type d'apprentissage ?
+      Réponds en quelques mots.
+    forme: reponse_courte
+    reponse: "apprentissage par renforcement"
+    reponses_acceptees: ["apprentissage par renforcement", "par renforcement", "renforcement", "l'apprentissage par renforcement", "un apprentissage par renforcement"]
+    indices:
+      - "Ici, on ne donne ni réponse toute faite ni groupes : l'IA essaie et reçoit des points."
+      - "Des points gagnés ou perdus sont des récompenses et des pénalités."
+    explication: "Récompenses et pénalités à chaque essai : c'est l'apprentissage par renforcement."
+
+  - type: question_ouverte
+    question: >-
+      Des trottinettes électriques en libre-service sont apparues dans des villes. Explique à quel besoin
+      elles répondent, donne un avantage et un inconvénient de cette évolution, puis cite une règle
+      (contrainte sociétale) qui encadre leur usage.
+    indices:
+      - "Fais trois parties : le besoin, puis un avantage et un inconvénient, puis une règle."
+      - "Pour l'inconvénient, pense à la sécurité ou à l'espace sur les trottoirs."
+    criteres:
+      - "L'élève nomme un besoin (se déplacer en ville sur de courtes distances)."
+      - "L'élève donne un avantage et un inconvénient réels de cette évolution."
+      - "L'élève cite une règle plausible (par exemple interdiction de rouler sur le trottoir) et dit qu'elle répond à un problème de sécurité ou de partage de l'espace."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une invention et une
+      innovation, et un exemple de biais d'une IA.

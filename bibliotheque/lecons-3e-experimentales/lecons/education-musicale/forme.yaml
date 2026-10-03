@@ -1,0 +1,149 @@
+notion: forme
+titre: "La forme : le plan d'un morceau"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer ce qui se répète, ce qui varie et ce qui contraste dans un morceau."
+      - "Écrire le plan d'un morceau avec des lettres (A, B, A')."
+      - "Reconnaître les formes à connaître : couplet-refrain, rondo, ABA, AABA, thème et variations."
+
+  - type: texte
+    titre: "Qu'est-ce que la forme ?"
+    contenu: |-
+      La **forme**, c'est le **plan** d'une musique : comment ses parties s'enchaînent dans le temps.
+      Trois procédés : **répétition** (une partie revient), **variation** (elle revient modifiée),
+      **contraste** (une partie nouvelle arrive).
+      On note les parties avec des lettres : **A, B, C**. **A'** (A prime) = A modifié.
+      **Introduction** : le début. **Coda** : la conclusion. **Pont** : un passage qui relie.
+
+  - type: texte
+    titre: "Les formes à connaître"
+    contenu: |-
+      **Couplet-refrain** : le refrain garde musique et paroles ; les couplets changent de paroles.
+      **Rondo** : un refrain revient entre des couplets toujours différents : **A B A C A**.
+      **ABA** (ternaire) : une partie, un contraste, puis le retour de la première.
+      **AABA** : A deux fois, un pont B, puis A. Souvent 4 parties de 8 mesures (jazz, chansons).
+      **Thème et variations** : **A A' A'' A'''**, le thème reste reconnaissable.
+
+  - type: texte
+    titre: "Repères et méthode"
+    contenu: |-
+      Rondo : le Prélude du *Te Deum* de Marc-Antoine Charpentier (fin du XVIIe siècle).
+      Thème et variations : les Variations de Mozart sur « Ah ! vous dirai-je, maman ».
+      Méthode : 1. repérer chaque nouvelle partie. 2. donner une lettre. 3. écrire le schéma.
+      4. nommer la forme et **justifier** par ce qui se répète, varie ou contraste.
+      La forme sert partout : quand on **écoute** et quand on **crée** ou **joue**.
+
+  - type: exemple
+    enonce: >-
+      Une chanson fait entendre : une introduction au piano, une partie chantée, une deuxième
+      partie différente, puis la première partie à nouveau, et enfin une courte conclusion.
+      Écris son schéma et nomme sa forme.
+    etapes:
+      - "L'introduction et la conclusion ne prennent pas les lettres principales : ce sont l'introduction et la coda."
+      - "La première partie chantée est notée A."
+      - "La deuxième partie est différente : c'est un contraste, notée B."
+      - "La première partie revient : A."
+      - "Schéma : introduction, A B A, coda. C'est une forme ABA (ternaire)."
+
+  - type: exercice
+    enonce: >-
+      Dans une chanson, comment s'appelle la partie qui revient plusieurs fois avec la même
+      musique et les mêmes paroles ?
+    forme: reponse_courte
+    reponse: "refrain"
+    reponses_acceptees:
+      - "refrain"
+      - "le refrain"
+      - "un refrain"
+      - "refrains"
+    indices:
+      - "Dans une chanson, quelle partie tout le monde finit par chanter avec le chanteur ?"
+      - "Ce n'est pas le couplet, dont les paroles changent à chaque fois."
+    explication: "Le refrain revient avec la même musique et les mêmes paroles. Les couplets gardent la musique mais changent de paroles."
+
+  - type: exercice
+    enonce: "Quel schéma correspond à un rondo ?"
+    forme: qcm
+    choix:
+      - "A A B A"
+      - "A B A C A D A"
+      - "A A' A'' A'''"
+      - "A B C D E"
+    reponse: 1
+    indices:
+      - "Dans un rondo, une partie revient plusieurs fois. Est-elle séparée par la même partie ou par des parties nouvelles ?"
+      - "Cherche le schéma où A revient, séparé à chaque fois par une lettre nouvelle."
+    explication: "A B A C A D A : le refrain A revient entre des couplets toujours différents (B, C, D). A A B A est la forme des standards, A A' A'' A''' un thème et variations."
+
+  - type: exercice
+    enonce: >-
+      Un rondo suit le plan A B A C A D A, où A est le refrain. Combien de fois le refrain
+      est-il joué ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0
+    indices:
+      - "Compte seulement la lettre qui désigne le refrain."
+      - "Barre les couplets B, C et D, puis compte ce qui reste."
+    explication: "Le plan A B A C A D A contient quatre fois la lettre A : le refrain est joué 4 fois."
+
+  - type: exercice
+    enonce: >-
+      Un standard de jazz suit la forme A A B A. Chaque partie dure 8 mesures. Combien de
+      mesures dure le morceau en tout ?
+    forme: nombre
+    reponse: 32
+    tolerance: 0
+    unite: "mesures"
+    indices:
+      - "Combien de lettres compte le schéma A A B A ? Chaque lettre est une partie jouée."
+      - "Multiplie le nombre de parties par la durée d'une partie."
+    explication: "Le schéma A A B A compte 4 parties : 4 × 8 = 32 mesures."
+
+  - type: exercice
+    enonce: >-
+      Un pianiste joue une mélodie simple. Puis elle revient, reconnaissable, avec des notes
+      rapides ajoutées. Puis elle revient dans le grave, plus lente, en mineur. Quelle est la forme ?
+    forme: qcm
+    choix:
+      - "Un rondo"
+      - "Une forme couplet-refrain"
+      - "Un thème et variations"
+      - "Une forme AABA"
+    reponse: 2
+    indices:
+      - "La mélodie est-elle remplacée par une autre, ou revient-elle modifiée ?"
+      - "Une mélodie qui revient modifiée mais reconnaissable se note A, puis A', puis A''."
+    explication: "Le schéma est A A' A'' : le thème revient à chaque fois transformé (rythme, registre, tempo, mode), mais reste reconnaissable. C'est un thème et variations."
+
+  - type: question_ouverte
+    question: >-
+      Voici un extrait décrit : « Une trompette joue une mélodie joyeuse. Puis les violons jouent
+      une mélodie calme et douce, toute différente. La mélodie joyeuse de la trompette revient,
+      identique. Enfin, un hautbois joue encore une nouvelle mélodie, puis la trompette reprend sa
+      mélodie joyeuse. » Écris le schéma, nomme la forme et justifie en trois phrases.
+    indices:
+      - "Donne la lettre A à la mélodie de la trompette. Les autres mélodies sont-elles nouvelles ?"
+      - "Une partie qui revient entre des parties toujours nouvelles : quelle forme ?"
+    criteres:
+      - "L'élève écrit le schéma A B A C A."
+      - "L'élève nomme la forme rondo."
+      - "L'élève justifie avec le vocabulaire : répétition (A revient identique) et contraste (B et C sont nouvelles)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est la forme d'un morceau,
+      comment on note ses parties avec des lettres, et la différence entre un rondo et un thème
+      et variations.

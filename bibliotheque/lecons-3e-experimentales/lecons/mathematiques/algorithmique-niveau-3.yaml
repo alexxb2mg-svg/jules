@@ -1,0 +1,152 @@
+notion: algorithmique-niveau-3
+titre: "Blocs personnalisés, boucles imbriquées et scripts en parallèle"
+duree_minutes: 35
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Découper un problème en sous-problèmes et créer un bloc personnalisé."
+      - "Compter les passages de boucles imbriquées et suivre une boucle « répéter jusqu'à »."
+      - "Comprendre des scripts qui s'exécutent en parallèle et une simulation aléatoire."
+
+  - type: texte
+    titre: "Décomposer et créer un bloc"
+    contenu: |
+      - Un problème compliqué se découpe en **sous-problèmes** plus simples.
+      - Chaque sous-problème peut devenir un **bloc personnalisé** (« Créer un bloc »).
+      - On le définit **une fois**, puis on l'utilise autant de fois qu'on veut.
+      - Un bloc peut avoir un **paramètre** : « carré (côté) » trace des carrés de tailles différentes.
+      - Figure répétitive : on programme le **motif**, puis on le répète avec une boucle.
+      - Entre deux motifs, on déplace le lutin, stylo relevé.
+
+  - type: texte
+    titre: "Boucles imbriquées, répéter jusqu'à"
+    contenu: |
+      - **Boucles imbriquées** : une boucle dans une autre. On **multiplie** les nombres de passages.
+      - « répéter 3 fois » qui contient « répéter 4 fois » : le bloc intérieur est exécuté 3 × 4 = 12 fois.
+      - « **répéter jusqu'à** condition » teste la condition **avant** chaque passage.
+      - Elle s'arrête dès que la condition est vraie. On ne connaît pas toujours le nombre de passages à l'avance.
+      - Si la condition est déjà vraie au départ, il y a **zéro** passage.
+      - On suit ces boucles avec un tableau de suivi.
+
+  - type: texte
+    titre: "Simulation et scripts en parallèle"
+    contenu: |
+      - « nombre aléatoire entre 1 et 6 » simule un lancer de dé.
+      - Pour **simuler** une expérience : on la répète beaucoup de fois, on **compte** avec une variable, puis on calcule une fréquence.
+      - Un compteur est mis à zéro **une seule fois**, avant la boucle.
+      - Plusieurs scripts lancés par le **même événement** s'exécutent **en même temps** (en parallèle).
+      - On s'en sert pour un jeu : un script pour le déplacement, un autre pour le score ou le son.
+
+  - type: exemple
+    enonce: >-
+      On définit le bloc « carré » : répéter 4 fois : avancer de 10, tourner à droite de 90 degrés.
+      Script principal, stylo posé : « répéter 6 fois : carré, puis relever le stylo, avancer de 20,
+      poser le stylo ». Combien de carrés sont tracés, et quelle longueur est tracée en tout ?
+    etapes:
+      - "Le sous-problème est « tracer un carré ». On en a fait un bloc : on l'appelle sans le réécrire."
+      - "Le script principal appelle le bloc 6 fois : il y a 6 carrés."
+      - "Un carré a 4 côtés de 10 pas : 4 × 10 = 40 pas par carré."
+      - "L'avance de 20 se fait stylo relevé : elle ne trace rien, elle sert seulement à séparer les carrés."
+      - "Longueur tracée : 6 × 40 = 240 pas."
+
+  - type: exercice
+    enonce: >-
+      Script : « répéter 2 fois : répéter 5 fois : avancer de 10 ». Combien de fois le bloc « avancer
+      de 10 » est-il exécuté en tout ?
+    forme: nombre
+    reponse: 10
+    tolerance: 0.01
+    indices:
+      - "Combien de fois la boucle intérieure est-elle exécutée à chaque passage de la boucle extérieure ?"
+      - "Pour des boucles imbriquées, on multiplie les nombres de passages. On ne les additionne pas."
+    explication: "La boucle extérieure fait 2 passages. À chacun, la boucle intérieure fait 5 passages. 2 × 5 = 10 fois."
+
+  - type: exercice
+    enonce: >-
+      Script : « mettre n à 1 ; répéter jusqu'à n > 50 : mettre n à n × 2 ». Que vaut n à la fin ?
+    forme: qcm
+    choix:
+      - "32"
+      - "50"
+      - "64"
+      - "100"
+    reponse: 2
+    indices:
+      - "Fais un tableau de suivi : n vaut 1 au départ, puis double à chaque passage."
+      - "Avant chaque passage, teste « n > 50 ». Si c'est vrai, on s'arrête."
+      - "Écris la suite des valeurs de n, et arrête-toi dès que n dépasse 50."
+    explication: "n prend les valeurs 1, 2, 4, 8, 16, 32, puis 64. Avec 32, la condition « n > 50 » est fausse : on refait un passage. Avec 64, elle est vraie : on s'arrête. n vaut 64."
+
+  - type: exercice
+    enonce: >-
+      Le bloc « carré (côté) » est défini : répéter 4 fois : avancer de côté, tourner à droite de 90 degrés.
+      Script principal, stylo posé : « mettre c à 5 ; répéter 4 fois : carré (c), puis ajouter 5 à c ».
+      Quelle longueur totale, en pas, le lutin trace-t-il ?
+    forme: nombre
+    reponse: 200
+    tolerance: 0.01
+    unite: pas
+    indices:
+      - "Le bloc est appelé 4 fois. À chaque appel, quelle est la valeur de c ?"
+      - "Un carré de côté c a une longueur totale de 4 × c."
+      - "Les côtés valent 5, puis 10, puis 15, puis 20. Calcule la longueur de chaque carré, puis additionne."
+    explication: "Côtés : 5, 10, 15, 20. Longueurs : 4 × 5 = 20, 4 × 10 = 40, 4 × 15 = 60, 4 × 20 = 80. Total : 20 + 40 + 60 + 80 = 200 pas."
+
+  - type: exercice
+    enonce: >-
+      Un chat a deux scripts. Script 1 : « quand le drapeau vert est cliqué ; répéter 10 fois : avancer de 10 ».
+      Script 2 : « quand le drapeau vert est cliqué ; jouer le son Miaou ». Les deux scripts
+      s'exécutent-ils l'un après l'autre, ou d'une autre façon ? Réponds par une courte expression.
+    forme: reponse_courte
+    reponse: "en même temps"
+    reponses_acceptees: ["en parallèle", "en parallele", "simultanément", "simultanement", "ensemble", "à la fois", "a la fois", "en meme temps", "en même temps que l'autre"]
+    indices:
+      - "Les deux scripts commencent par le même événement. Que se passe-t-il quand on clique sur le drapeau ?"
+      - "Chaque script démarre dès que l'événement arrive. L'un attend-il la fin de l'autre ?"
+    explication: "Deux scripts lancés par le même événement démarrent ensemble : le chat avance et joue le son en même temps."
+
+  - type: exercice
+    enonce: >-
+      Le bloc « carré (côté) » est défini : répéter 4 fois : avancer de côté, tourner à droite de 90 degrés.
+      Script principal, stylo posé : « répéter 12 fois : carré (20), puis tourner à droite de 30 degrés ».
+      Quelle longueur totale, en pas, le lutin trace-t-il ?
+    forme: nombre
+    reponse: 960
+    tolerance: 0.01
+    unite: pas
+    indices:
+      - "Quelle longueur trace un seul appel du bloc « carré (20) » ?"
+      - "Tourner de 30 degrés ne trace rien. Combien de fois le bloc est-il appelé ?"
+      - "Multiplie la longueur d'un carré par le nombre d'appels."
+    explication: "Un carré de côté 20 mesure 4 × 20 = 80 pas de tracé. Il est appelé 12 fois : 12 × 80 = 960 pas. (Comme 12 × 30 = 360, la figure fait un tour complet : c'est une rosace.)"
+
+  - type: question_ouverte
+    question: >-
+      Explique comment simuler 100 lancers d'un dé pour trouver la fréquence du 6. Dis quels blocs tu
+      utilises : boucle, variable, condition.
+    indices:
+      - "Que doit-on répéter 100 fois ? Quel bloc donne un lancer de dé ?"
+      - "Il faut une variable pour compter les 6. Où la mets-tu à zéro ?"
+      - "La fréquence se calcule après la boucle : nombre de 6 divisé par le nombre de lancers."
+    criteres:
+      - "L'élève utilise une boucle « répéter 100 fois » et un « nombre aléatoire entre 1 et 6 »."
+      - "L'élève utilise une condition « si le résultat = 6 alors ajouter 1 au compteur »."
+      - "L'élève met le compteur à zéro avant la boucle, et calcule la fréquence après la boucle (compteur ÷ 100)."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, écris en trois ou quatre phrases : pourquoi créer un bloc personnalisé, comment
+      on compte les passages de deux boucles imbriquées, et ce que veut dire « en parallèle ».

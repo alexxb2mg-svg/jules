@@ -1,0 +1,158 @@
+notion: algorithmique-niveau-1
+titre: "Programme simple par blocs : déplacer, tracer, répéter"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie Mathématiques — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Mathématiques — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression — Mathématiques, cycle 4 — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lire un script par blocs et dire ce que fait le lutin."
+      - "Mettre des blocs dans le bon ordre pour construire un programme simple."
+      - "Écrire un script avec une boucle « répéter … fois » pour tracer une figure."
+
+  - type: texte
+    titre: "Algorithme, script, événement"
+    contenu: |
+      - Un **algorithme** est une suite d'instructions précises, exécutées **dans l'ordre**.
+      - **Débranché** veut dire sans ordinateur : un camarade suit tes consignes à la lettre.
+      - Dans un logiciel par blocs, un **lutin** se déplace sur la scène.
+      - Un **script** est un ensemble de blocs accrochés les uns aux autres.
+      - Il démarre avec un **événement**, par exemple « quand le drapeau vert est cliqué ».
+      - Pour remettre des blocs en ordre : l'événement d'abord, puis la préparation, puis les déplacements.
+
+  - type: texte
+    titre: "Déplacer le lutin et tracer"
+    contenu: |
+      | Bloc | Effet |
+      |---|---|
+      | avancer de 50 | le lutin avance de 50 pas dans sa direction |
+      | tourner à droite de 90 degrés | il change de direction, sans avancer |
+      | aller à x: 0 y: 0 | il se place à un point de la scène |
+      | stylo en position d'écriture | il laisse une trace quand il avance |
+      | relever le stylo | il ne laisse plus de trace |
+
+      Seul le bloc **avancer** trace un trait. Tourner ne trace rien.
+      On place le lutin à son départ **avant** de poser le stylo.
+
+  - type: texte
+    titre: "Répéter, choisir, tracer un polygone"
+    contenu: |
+      - « **répéter n fois** » exécute n fois les blocs qu'elle contient. On évite de recopier.
+      - « **si … alors** » n'exécute ses blocs que si la condition est vraie.
+      - Polygone régulier à n côtés : répéter n fois « avancer » puis « tourner de 360 ÷ n degrés ».
+      - Carré : 360 ÷ 4 = 90 degrés. Ce n'est pas l'angle de l'intérieur de la figure.
+      - Longueur tracée = nombre de passages × longueur avancée à chaque passage.
+
+  - type: exemple
+    enonce: >-
+      Au clic sur le drapeau vert, le lutin doit partir du point (0 ; 0) sans trace, puis tracer un
+      rectangle de 60 pas sur 30 pas. Il est tourné vers la droite.
+    etapes:
+      - "Le script commence par l'événement : « quand le drapeau vert est cliqué »."
+      - "On prépare : « aller à x: 0 y: 0 », puis « stylo en position d'écriture »."
+      - "Un rectangle a 2 côtés de 60 et 2 côtés de 30, avec 4 angles droits. On répète 2 fois un groupe de 4 blocs."
+      - "Dans la boucle : avancer de 60, tourner à droite de 90 degrés, avancer de 30, tourner à droite de 90 degrés."
+      - "Vérification : après 2 passages, le lutin a fait 4 virages de 90 degrés, soit un tour complet. La figure est fermée."
+
+  - type: exercice
+    enonce: >-
+      Le stylo est en position d'écriture. Script : « répéter 4 fois : avancer de 25, tourner à droite
+      de 90 degrés ». Quelle figure le lutin trace-t-il ? Réponds par un mot.
+    forme: reponse_courte
+    reponse: "carré"
+    reponses_acceptees: ["carre", "un carré", "un carre", "le carré", "le carre"]
+    indices:
+      - "Combien de traits le lutin trace-t-il ? Ont-ils tous la même longueur ?"
+      - "Fais un petit dessin : un trait, un virage d'angle droit, et ainsi de suite 4 fois."
+      - "La figure a 4 côtés égaux et 4 angles droits. Quel est son nom ?"
+    explication: "Le lutin trace 4 traits de 25 pas et tourne 4 fois d'un angle droit : c'est un carré de côté 25."
+
+  - type: exercice
+    enonce: >-
+      Le stylo est en position d'écriture. Script : « répéter 9 fois : avancer de 12, tourner à droite
+      de 40 degrés ». Quelle longueur totale, en pas, le lutin a-t-il tracée ?
+    forme: nombre
+    reponse: 108
+    tolerance: 0.01
+    unite: pas
+    indices:
+      - "Combien de fois le bloc « avancer de 12 » est-il exécuté ?"
+      - "Chaque passage trace un trait. Tourner ne trace rien. Multiplie le nombre de passages par la longueur d'un trait."
+      - "Il faut calculer 9 × 12."
+    explication: "Le bloc « avancer de 12 » est exécuté 9 fois : 9 × 12 = 108 pas. (Le lutin trace un polygone régulier à 9 côtés, car 9 × 40 = 360.)"
+
+  - type: exercice
+    enonce: >-
+      Pour tracer un polygone régulier à 10 côtés, on écrit : « répéter 10 fois : avancer de 20,
+      tourner à droite de … degrés ». Quel nombre faut-il écrire à la place des points ?
+    forme: nombre
+    reponse: 36
+    tolerance: 0.01
+    unite: degrés
+    indices:
+      - "En revenant à son point de départ, de combien de degrés le lutin a-t-il tourné en tout ?"
+      - "Le lutin fait un tour complet, partagé en autant de virages égaux qu'il y a de côtés."
+      - "Il faut calculer 360 ÷ 10."
+    explication: "Un tour complet fait 360 degrés, partagé en 10 virages égaux : 360 ÷ 10 = 36 degrés."
+
+  - type: exercice
+    enonce: >-
+      Au clic sur le drapeau vert, le lutin doit aller au point (0 ; 0) sans laisser de trace, puis
+      tracer un trait de 40 pas. Quel ordre de blocs est le bon ?
+    forme: qcm
+    choix:
+      - "quand le drapeau vert est cliqué ; stylo en position d'écriture ; aller à x: 0 y: 0 ; avancer de 40"
+      - "quand le drapeau vert est cliqué ; aller à x: 0 y: 0 ; stylo en position d'écriture ; avancer de 40"
+      - "aller à x: 0 y: 0 ; quand le drapeau vert est cliqué ; stylo en position d'écriture ; avancer de 40"
+      - "quand le drapeau vert est cliqué ; avancer de 40 ; aller à x: 0 y: 0 ; stylo en position d'écriture"
+    reponse: 1
+    indices:
+      - "Quel bloc lance le script ? Il doit être tout en haut."
+      - "Si le stylo est posé avant le déplacement vers (0 ; 0), le lutin laisse une trace pendant ce déplacement."
+      - "Élimine d'abord les ordres où l'événement n'est pas en premier. Compare ensuite les deux ordres restants pour « stylo » et « aller à »."
+    explication: "L'événement est en premier. On place le lutin à son départ, puis on pose le stylo, puis on avance. Sinon un trait parasite apparaît."
+
+  - type: exercice
+    enonce: >-
+      Le stylo est en position d'écriture. Script : « répéter 5 fois : avancer de 30, tourner à droite
+      de 72 degrés » ; puis « relever le stylo » ; « avancer de 100 » ; « stylo en position d'écriture » ;
+      puis « répéter 4 fois : avancer de 25, tourner à droite de 90 degrés ». Quelle longueur totale,
+      en pas, le lutin a-t-il tracée ?
+    forme: nombre
+    reponse: 250
+    tolerance: 0.01
+    unite: pas
+    indices:
+      - "Repère les blocs « avancer » qui tracent, et ceux qui ne tracent pas."
+      - "L'avance faite avec le stylo relevé ne laisse aucun trait : ne la compte pas."
+      - "Calcule séparément la longueur de chaque boucle, puis additionne les deux longueurs."
+    explication: "Première boucle : 5 × 30 = 150 pas. L'avance de 100 se fait stylo relevé : rien n'est tracé. Deuxième boucle : 4 × 25 = 100 pas. Total : 150 + 100 = 250 pas."
+
+  - type: question_ouverte
+    question: >-
+      Écris un script qui, au clic sur le drapeau vert, trace un pentagone régulier (5 côtés égaux) de
+      côté 40 pas avec une boucle « répéter … fois ». Explique le choix de l'angle.
+    indices:
+      - "Combien de côtés ? Donc combien de passages dans la boucle ?"
+      - "Dans la boucle, il y a un bloc pour avancer et un bloc pour tourner."
+      - "L'angle est le tour complet, 360 degrés, partagé en autant de virages que de côtés."
+    criteres:
+      - "Le script commence par un événement (drapeau vert) et pose le stylo avant de tracer."
+      - "Le script utilise « répéter 5 fois » avec « avancer de 40 » et « tourner de 72 degrés »."
+      - "L'élève explique l'angle : un tour complet de 360 degrés partagé en 5 virages égaux."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, écris en trois ou quatre phrases : à quoi sert une boucle « répéter … fois »,
+      comment on trouve l'angle de virage d'un polygone régulier, et pourquoi l'ordre des blocs compte.

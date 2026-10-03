@@ -68,7 +68,8 @@ def test_detection_distante():
 
 def test_sur_l_ordinateur_tout_reste_comme_avant(avec_code_eleve):
     # code parent vide : l'administrateur, sur son ordinateur, entre sans code
-    assert avec_code_eleve.get("/parent").status_code == 200
+    r = avec_code_eleve.get("/parent", follow_redirects=False)
+    assert r.status_code == 302
     assert avec_code_eleve.get("/api/modules/retours/liste").status_code == 200
     assert avec_code_eleve.get("/api/infos").status_code == 401  # l'eleve a un code : il faut le donner
     assert avec_code_eleve.post("/api/session", json={"code": CODE_ELEVE}).status_code == 200

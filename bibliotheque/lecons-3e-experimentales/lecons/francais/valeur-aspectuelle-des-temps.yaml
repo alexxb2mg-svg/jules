@@ -1,0 +1,165 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant). Relecture bienvenue.
+notion: valeur-aspectuelle-des-temps
+titre: La valeur aspectuelle des temps
+duree_minutes: 25
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e — Français — éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Distinguer une action accomplie d'une action non accomplie, une action bornée d'une action non bornée.
+  - Connaître l'aspect de l'imparfait, du passé simple, du passé composé et du plus-que-parfait.
+  - Expliquer le choix d'un temps dans un récit avec les mots premier plan et arrière-plan.
+- type: texte
+  titre: Qu'est-ce que l'aspect ?
+  contenu: 'L''**aspect** dit **comment on regarde une action** dans le temps.
+
+
+    Il ne dit pas quand l''action a lieu : c''est le rôle du temps.
+
+
+    | Aspect | Sens |
+
+    |---|---|
+
+    | **Accompli** | l''action est vue comme terminée |
+
+    | **Non accompli** | l''action est vue en train de se dérouler |
+
+    | **Borné** | début et fin marqués |
+
+    | **Non borné** | pas de limite précise : l''action dure ou se répète |'
+- type: texte
+  titre: L'aspect des temps du passé
+  contenu: '| Temps | Aspect | Exemple |
+
+    |---|---|---|
+
+    | Passé simple | accompli et borné (action ponctuelle) | Il ferma la porte. |
+
+    | Passé composé | accompli (résultat acquis) | Il a fermé la porte. |
+
+    | Plus-que-parfait | accompli, avant une autre action passée | Il avait fermé la porte quand elle
+    arriva. |
+
+    | Imparfait | non accompli et non borné | Il pleuvait. |
+
+
+    L''imparfait exprime aussi une **habitude**, une **répétition** : « Chaque été, nous allions à la
+    mer. »'
+- type: texte
+  titre: Premier plan et arrière-plan dans un récit
+  contenu: '- Le **passé simple** et le **passé composé** font **avancer l''histoire** : c''est le **premier
+    plan**.
+
+    - L''**imparfait** décrit le décor, la situation, les habitudes : c''est l''**arrière-plan**.
+
+
+    Exemple : « Il pleuvait depuis le matin (arrière-plan). Soudain, la foudre tomba sur un arbre (premier
+    plan). »
+
+
+    Au brevet, on t''attend sur ceci : expliquer le choix d''un temps avec les mots **accompli, non accompli,
+    borné, non borné** et **premier plan, arrière-plan**.'
+- type: exemple
+  enonce: 'Analyse les verbes : « Marie ouvrit la porte. Il faisait nuit. Elle avait oublié sa clé. »'
+  etapes:
+  - '« ouvrit » est au passé simple : action accomplie et bornée, elle fait avancer l''histoire (premier
+    plan).'
+  - '« faisait » est à l''imparfait : action non accomplie et non bornée, elle décrit le décor (arrière-plan).'
+  - '« avait oublié » est au plus-que-parfait : action accomplie, antérieure à l''action « ouvrit ».'
+- type: exercice
+  enonce: Dans « Il pleuvait. », quel est l'aspect du verbe ?
+  forme: qcm
+  choix:
+  - accompli
+  - non accompli, non borné
+  - accompli et borné
+  reponse: 1
+  indices:
+  - Quel est le temps du verbe ?
+  - L'imparfait présente l'action en train de se dérouler.
+  - On ne sait ni quand la pluie commence, ni quand elle finit.
+  explication: 'L''imparfait « pleuvait » présente une action non accomplie et non bornée : elle est vue
+    en cours, sans limite précise.'
+- type: exercice
+  enonce: Dans « Chaque été, nous allions à la mer. », quelle valeur prend l'imparfait ?
+  forme: qcm
+  choix:
+  - une action ponctuelle qui fait avancer l'histoire
+  - une habitude, une action qui se répète
+  - une action terminée et bornée
+  reponse: 1
+  indices:
+  - Regarde le groupe « Chaque été ».
+  - L'action a-t-elle lieu une seule fois ?
+  - 'L''imparfait est un temps non borné : il peut exprimer une répétition.'
+  explication: « Chaque été » montre que l'action revient. L'imparfait exprime ici une habitude, sans
+    début ni fin marqués.
+- type: exercice
+  enonce: Dans « Le chien aboya. Il neigeait. », quel verbe décrit le décor (arrière-plan) ? (écris le
+    verbe conjugué)
+  forme: reponse_courte
+  reponse: neigeait
+  reponses_acceptees:
+  - neigeait
+  - il neigeait
+  indices:
+  - Regarde le temps de chacun des deux verbes.
+  - Le décor est décrit à l'imparfait.
+  - L'autre verbe, au passé simple, fait avancer l'histoire.
+  explication: '« neigeait » est à l''imparfait : il décrit le décor. « aboya » est au passé simple :
+    c''est l''action de premier plan.'
+- type: exercice
+  enonce: Dans « Quand Paul arriva, le match avait commencé. », quelle action a eu lieu en premier ?
+  forme: qcm
+  choix:
+  - Paul arriva
+  - le match avait commencé
+  - Les deux en même temps
+  reponse: 1
+  indices:
+  - Le plus-que-parfait présente une action accomplie avant une autre action passée.
+  - Repère le verbe au plus-que-parfait.
+  - L'autre verbe est au passé simple.
+  explication: '« avait commencé » est au plus-que-parfait : le match a commencé avant l''arrivée de Paul.'
+- type: exercice
+  enonce: Dans « Le soleil brillait. Soudain, un orage éclata. », pourquoi l'auteur emploie-t-il le passé
+    simple pour « éclata » ?
+  forme: qcm
+  choix:
+  - Pour présenter une action accomplie et bornée, qui fait avancer l'histoire
+  - Pour décrire le décor
+  - Pour exprimer une habitude
+  - Pour dire que l'action est plus ancienne qu'une autre
+  reponse: 0
+  indices:
+  - 'Compare « brillait » et « éclata » : lequel décrit le décor ? lequel est un événement ?'
+  - Le mot « Soudain » annonce un fait précis.
+  - Le passé simple sert au premier plan.
+  explication: '« éclata » est un événement précis, accompli et borné : c''est le premier plan. « brillait
+    » décrit le décor à l''arrière-plan.'
+- type: question_ouverte
+  question: 'Écris deux phrases sur un même lieu : une à l''imparfait qui décrit une situation, une au
+    passé simple ou au passé composé qui raconte un événement. Puis explique en une phrase ton choix des
+    temps.'
+  indices:
+  - Commence par le décor, puis raconte ce qui s'y passe.
+  - Pour l'explication, utilise des mots comme accompli, non accompli, arrière-plan ou premier plan.
+  criteres:
+  - La première phrase est à l'imparfait et décrit une situation (non accomplie, non bornée).
+  - La seconde phrase est au passé simple ou au passé composé et présente une action accomplie et bornée.
+  - L'explication emploie le vocabulaire de l'aspect ou des plans du récit.
+- type: synthese
+  consigne: 'Écris en deux ou trois phrases : la différence entre une action accomplie et non accomplie,
+    et le rôle de l''imparfait et du passé simple dans un récit.'

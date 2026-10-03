@@ -1,0 +1,176 @@
+notion: champ-arts-decoratifs
+titre: "Arts décoratifs, design, affiche, publicité et caricature"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : programme d'histoire des arts 2020 inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire ce que sont les arts décoratifs et nommer leurs domaines."
+      - "Distinguer métier d'art et design, Art nouveau et Art déco."
+      - "Analyser une affiche ou une caricature : sa fonction et sa forme."
+
+  - type: texte
+    titre: "Des objets utiles et beaux"
+    contenu: >-
+      Les **arts décoratifs** (ou **arts appliqués**) créent des objets et des images **utiles** dans la vie de tous les jours.
+
+      Ils cherchent aussi la **beauté**.
+
+
+      | Domaine | Exemples |
+
+      |---|---|
+
+      | **Mobilier, objets** | chaise, vaisselle, bijou |
+
+      | **Vêtement** | robe, tissu |
+
+      | **Métiers d'art** | ébéniste, verrier, brodeur |
+
+      | **Design** | objets fabriqués en série |
+
+      | **Affiche, publicité, caricature** | images imprimées |
+
+  - type: texte
+    titre: "Métier d'art ou design ?"
+    contenu: >-
+      - **Métier d'art** : un artisan fabrique **à la main** un objet souvent **unique**. Exemple : la Tapisserie de Bayeux, une broderie de la fin du XIe siècle.
+
+      - **Design** : on conçoit un objet **fabriqué en série** par l'industrie, à la fois utile et beau.
+        Exemple : la chaise n° 14 de Michael Thonet (1859), en bois courbé.
+
+      - **Vêtement** : au début du XXe siècle, Paul Poiret abandonne le corset.
+        Dans les années 1920, Gabrielle Chanel impose des tenues simples et confortables.
+
+  - type: texte
+    titre: "Deux styles du début du XXe siècle"
+    contenu: >-
+      | Style | Date | Formes | Exemple |
+
+      |---|---|---|---|
+
+      | **Art nouveau** | vers 1900 | **courbes**, inspirées des **plantes** | entrées du métro de Paris, Hector Guimard |
+
+      | **Art déco** | années 1920-1930 | **géométriques**, symétriques, matériaux précieux | Exposition des arts décoratifs, Paris, 1925 |
+
+
+      Astuce : Art **n**ouveau = **n**ature (courbes). Art **d**éco = **d**roites (géométrie).
+
+  - type: texte
+    titre: "Affiche, publicité, caricature"
+    contenu: >-
+      - L'**affiche** **annonce** (un spectacle). La **publicité** **vend** un produit ou **convainc**.
+        Elles doivent se comprendre en un instant : formes simples, couleurs en **aplats**, texte court.
+        Exemples : Moulin Rouge – La Goulue, Toulouse-Lautrec (1891) ; Normandie, Cassandre (1935).
+
+      - La **caricature** **exagère** les traits d'une personne pour s'en moquer ou la critiquer.
+        En 1831, Honoré Daumier dessine le roi Louis-Philippe en Gargantua, un géant qui dévore l'argent du peuple.
+
+  - type: exemple
+    enonce: >-
+      Explique pourquoi la chaise n° 14 de Michael Thonet (1859) est un objet de design.
+    etapes:
+      - "Sa fonction : elle sert à s'asseoir, par exemple dans les cafés."
+      - "Sa fabrication : Thonet l'a conçue pour être fabriquée en série, avec quelques pièces de bois courbé et des vis."
+      - "Ses qualités : elle est légère, solide, bon marché et élégante."
+      - "Conclusion : elle réunit l'utile et le beau, en série. C'est le but du design."
+
+  - type: exercice
+    enonce: "Quel style, né vers 1900, s'inspire des plantes et des lignes courbes, comme les entrées du métro de Paris d'Hector Guimard ?"
+    forme: reponse_courte
+    reponse: "Art nouveau"
+    reponses_acceptees:
+      - "Art nouveau"
+      - "l'Art nouveau"
+      - "art nouveau"
+      - "style Art nouveau"
+      - "le style Art nouveau"
+    indices:
+      - "Deux styles marquent le début du XXe siècle. Celui des années 1920 est géométrique. On cherche l'autre, plus ancien."
+      - "Relis le tableau « Deux styles du début du XXe siècle » : lequel a des formes courbes, inspirées des plantes ?"
+    explication: "C'est l'Art nouveau. Vers 1900, il s'inspire des tiges, des feuilles et des fleurs. L'Art déco, plus tard, préfère les formes géométriques."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la conception d'objets fabriqués en série par l'industrie, à la fois utiles et beaux ?"
+    forme: reponse_courte
+    reponse: "design"
+    reponses_acceptees:
+      - "design"
+      - "le design"
+      - "design industriel"
+      - "le design industriel"
+    indices:
+      - "Ce n'est pas un métier d'art : l'objet n'est pas fait à la main en pièce unique."
+      - "Relis la deuxième partie de la leçon : quel mot désigne la conception d'objets pour l'industrie ?"
+    explication: "C'est le design : on conçoit des objets fabriqués en série, utiles, pratiques et beaux, comme la chaise n° 14 de Thonet."
+
+  - type: exercice
+    enonce: "Parmi ces œuvres, laquelle appartient au champ des arts décoratifs ?"
+    forme: qcm
+    choix:
+      - "La Liberté guidant le peuple, tableau d'Eugène Delacroix (1830)"
+      - "L'affiche Normandie de Cassandre (1935), pour un paquebot"
+      - "Carmen, opéra de Georges Bizet (1875)"
+      - "Le Penseur, sculpture d'Auguste Rodin"
+    reponse: 1
+    indices:
+      - "Pour chaque œuvre, demande-toi : a-t-elle une fonction pratique dans la vie de tous les jours ?"
+      - "Un tableau et une sculpture vont au musée ; un opéra se joue sur scène. Laquelle sert à faire connaître quelque chose dans la rue ?"
+    explication: "L'affiche Normandie fait la publicité d'un paquebot : elle a une fonction pratique, c'est un art décoratif. Le tableau et la sculpture sont des beaux-arts, l'opéra est du spectacle vivant."
+
+  - type: exercice
+    enonce: "En 1831, Honoré Daumier dessine le roi Louis-Philippe en géant qui dévore l'argent du peuple. Quel est le genre de ce dessin ?"
+    forme: qcm
+    choix:
+      - "Une affiche publicitaire"
+      - "Une caricature"
+      - "Un objet de design"
+      - "Une broderie"
+    reponse: 1
+    indices:
+      - "Le dessinateur exagère la personne du roi. Dans quel but ?"
+      - "Ce genre de dessin se moque d'une personne ou la critique, souvent dans la presse."
+    explication: "C'est une caricature : Daumier exagère le roi en géant glouton pour critiquer son pouvoir et l'argent qu'il prend au peuple."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Une affiche du Moulin Rouge (Toulouse-Lautrec, 1891) utilise des couleurs en aplats,
+      de grandes silhouettes simples et le nom du cabaret en grandes lettres. Pourquoi ces choix ?
+    forme: qcm
+    choix:
+      - "Pour que l'image soit vue de loin et comprise d'un coup d'œil dans la rue"
+      - "Parce que l'artiste ne savait pas faire de dégradés"
+      - "Pour imiter une peinture à l'huile de musée"
+      - "Pour cacher le nom du cabaret"
+    reponse: 0
+    indices:
+      - "Où est collée une affiche ? Combien de temps un passant la regarde-t-il ?"
+      - "Au brevet, on montre que la forme sert la fonction. Quelle est la fonction d'une affiche ?"
+    explication: "L'affiche doit annoncer le spectacle à des passants pressés. Aplats, formes simples et texte en grandes lettres se voient de loin et se lisent vite : la forme sert la fonction."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un objet de ta vie quotidienne (une chaise, une lampe, un sac…). Présente-le comme un
+      objet d'arts décoratifs : sa fonction, sa forme et ses matériaux, et dis s'il est fait à la main
+      ou en série.
+    indices:
+      - "Commence par dire à quoi sert l'objet."
+      - "Puis décris sa forme, ses couleurs, ses matériaux. Enfin, dis si sa forme l'aide à bien remplir sa fonction."
+    criteres:
+      - "L'élève nomme la fonction de l'objet et son domaine (mobilier, objet, vêtement, design, métier d'art)."
+      - "L'élève décrit la forme, les matériaux ou les couleurs avec des mots précis."
+      - "L'élève dit si l'objet est fait à la main ou en série, et relie sa forme à sa fonction."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, en trois phrases : ce que sont les arts décoratifs, la différence entre
+      métier d'art et design, et comment on reconnaît l'Art nouveau et l'Art déco.

@@ -1,0 +1,137 @@
+notion: etapes-construction-europeenne
+titre: "Les étapes et enjeux de la construction européenne"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Vikidia, « Union européenne »"
+    url: "https://fr.vikidia.org/w/index.php?title=Union_europ%C3%A9enne&oldid=2556631"
+    licence: CC-BY-SA-3.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer pourquoi on construit l'Europe après 1945."
+      - "Dater les trois grandes étapes : CECA (1951), CEE (1957), Union européenne (1992)."
+      - "Citer des réalisations concrètes et suivre les élargissements."
+
+  - type: texte
+    titre: "Le contexte"
+    contenu: >-
+      Après la Seconde Guerre mondiale, l'Europe est ruinée et divisée par la guerre froide. Des
+      responsables veulent **éviter une nouvelle guerre**, surtout entre la France et
+      l'Allemagne. Ils veulent aussi la paix, la prospérité et un poids dans le monde. Ils
+      choisissent de bâtir l'Europe par des **réalisations concrètes**.
+
+  - type: texte
+    titre: "Les trois étapes"
+    contenu: |-
+      - **1950-1951** : le ministre français Robert Schuman propose en 1950 de mettre en commun le charbon et l'acier. En 1951, six pays créent la **CECA** : France, Allemagne de l'Ouest, Italie, Belgique, Pays-Bas, Luxembourg.
+      - **1957** : les traités de Rome créent la **CEE**, fondée sur un **marché commun** (marchandises, personnes et capitaux circulent plus librement).
+      - **1992** : le traité de **Maastricht** crée l'**Union européenne** (UE). Elle prend la suite de la CEE et ajoute des domaines : politique, monnaie, citoyenneté européenne.
+
+  - type: texte
+    titre: "Réalisations concrètes"
+    contenu: |-
+      - La politique agricole commune (PAC), née dans le cadre de la CEE.
+      - Le Parlement européen, élu au suffrage universel depuis 1979.
+      - Le programme Erasmus (échanges d'étudiants, 1987).
+      - L'espace Schengen : circulation sans contrôle aux frontières intérieures.
+      - L'euro, en circulation depuis 2002 dans une partie des États membres.
+
+  - type: texte
+    titre: "Élargissements et enjeux"
+    contenu: >-
+      Les six pays deviennent neuf en 1973, avec le Royaume-Uni. Puis l'Europe s'élargit vers le
+      sud, puis vers l'Est après la chute du mur de Berlin (1989), jusqu'à 28 membres. En 2020,
+      le Royaume-Uni quitte l'UE (**Brexit**) : il reste 27 États membres. L'UE reçoit le prix
+      Nobel de la paix en 2012. Enjeux actuels : place de l'Europe dans le monde, sécurité,
+      climat, migrations.
+
+  - type: exemple
+    enonce: >-
+      Un élève écrit : « Tous les pays de l'Union européenne utilisent l'euro, et l'euro existe
+      depuis la création de l'UE. » Corrige cette phrase.
+    etapes:
+      - "L'UE est créée en 1992 par le traité de Maastricht."
+      - "L'euro circule seulement depuis 2002 : il apparaît donc dix ans après la création de l'UE."
+      - "Seule une partie des États membres utilise l'euro. Tous ne l'ont pas adopté."
+      - "Phrase corrigée : l'euro est la monnaie unique d'une partie des États membres, en circulation depuis 2002."
+
+  - type: exercice
+    enonce: "En quelle année est créée la CECA, première étape de la construction européenne ?"
+    forme: nombre
+    reponse: 1951
+    tolerance: 0
+    indices:
+      - "La CECA met en commun le charbon et l'acier entre six pays."
+      - "C'est l'année qui suit la proposition de Robert Schuman."
+    explication: "Robert Schuman propose la mise en commun du charbon et de l'acier en 1950 ; la CECA est créée en 1951."
+
+  - type: exercice
+    enonce: "Quel événement crée l'Union européenne ?"
+    forme: qcm
+    choix:
+      - "Le traité de Maastricht"
+      - "Les traités de Rome"
+      - "La création de la CECA"
+      - "Le Brexit"
+    reponse: 0
+    indices:
+      - "L'UE prend la suite de la CEE et ajoute la monnaie et la citoyenneté européenne."
+      - "Ce traité porte le nom d'une ville des Pays-Bas."
+    explication: "Le traité de Maastricht (1992) crée l'Union européenne. Les traités de Rome (1957) ont créé la CEE."
+
+  - type: exercice
+    enonce: "Quel est le nom du ministre français qui propose, en 1950, de mettre en commun le charbon et l'acier ? (Nom de famille.)"
+    forme: reponse_courte
+    reponse: "Schuman"
+    reponses_acceptees:
+      - "Robert Schuman"
+      - "schuman"
+    indices:
+      - "Il est ministre français ; c'est le point de départ de la CECA."
+      - "Son prénom est Robert."
+    explication: "Robert Schuman propose en 1950 de mettre en commun le charbon et l'acier."
+
+  - type: exercice
+    enonce: "Combien d'États membres compte l'Union européenne après le Brexit, en 2020 ?"
+    forme: nombre
+    reponse: 27
+    tolerance: 0
+    indices:
+      - "L'UE a compté jusqu'à 28 membres."
+      - "Le Royaume-Uni est un pays qui quitte l'UE."
+    explication: "L'UE compte 28 membres, puis 27 après la sortie du Royaume-Uni en 2020 (28 − 1 = 27)."
+
+  - type: exercice
+    enonce: "Quelle affirmation sur les étapes de la construction européenne est exacte ?"
+    forme: qcm
+    choix:
+      - "La CEE (1957) devient l'UE en 1992, avec le traité de Maastricht"
+      - "L'UE est créée en 1951 et la CEE en 1992"
+      - "La CECA est créée après l'euro"
+      - "La construction européenne commence par une monnaie unique"
+    reponse: 0
+    indices:
+      - "Range les étapes dans l'ordre : CECA, CEE, UE."
+      - "La construction commence par une coopération économique concrète (charbon et acier)."
+    explication: "L'ordre est CECA (1951), CEE (1957), UE (1992). L'euro n'arrive qu'en 2002."
+
+  - type: question_ouverte
+    question: >-
+      Développement construit : montre comment l'Union européenne s'est construite par étapes
+      depuis 1951, et pourquoi.
+    indices:
+      - "Commence par le contexte : que veulent éviter les responsables européens après 1945 ?"
+      - "Cite les trois étapes avec leur date, puis une réalisation concrète."
+    criteres:
+      - "L'élève explique le contexte (paix, réconciliation franco-allemande, guerre froide)."
+      - "L'élève cite les trois étapes datées : CECA 1951, CEE 1957, UE 1992."
+      - "L'élève cite au moins une réalisation concrète (marché commun, PAC, Erasmus, Schengen, euro)."
+      - "L'élève évoque les élargissements ou le Brexit."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, pourquoi on construit l'Europe après 1945
+      et quelles sont les trois grandes étapes.

@@ -1,0 +1,155 @@
+notion: la-ressemblance
+titre: "La ressemblance, l'écart et la vraisemblance"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire si une image cherche à ressembler au réel ou crée un écart."
+      - "Nommer l'écart et dire son effet (émotion, humour, étrangeté)."
+      - "Distinguer ressemblance et vraisemblance."
+
+  - type: texte
+    titre: "Une image n'est pas la chose"
+    contenu: |-
+      Une image **ressemble** à son modèle quand on reconnaît le réel : formes, proportions, couleurs, lumière.
+      Mais une image n'est jamais la chose elle-même.
+      René Magritte le rappelle dans *La Trahison des images* (1929) : sous une pipe peinte, il écrit
+      « Ceci n'est pas une pipe ».
+      L'**hyperréalisme** cherche une ressemblance extrême, souvent à partir de photos
+      (Chuck Close, *Big Self-Portrait*, 1967-1968).
+
+  - type: texte
+    titre: "L'écart avec le réel"
+    contenu: |-
+      Un **écart**, c'est une différence voulue avec le réel : déformer, simplifier, exagérer, changer les couleurs.
+      Ce n'est pas une maladresse : il a une **valeur expressive** (émotion, point de vue, humour, étrangeté).
+      - Picasso, *Portrait de Dora Maar* (1937) : le visage est montré à la fois de face et de profil.
+      - Arcimboldo, *Vertumne* (vers 1590) : un visage fait de fruits, de légumes et de fleurs.
+
+  - type: texte
+    titre: "Trois cas"
+    contenu: |-
+      - **Figuration ressemblante** : on reconnaît le modèle tel qu'il est.
+      - **Figuration avec écart** : on reconnaît le modèle, mais l'image le transforme.
+      - **Abstraction** : on ne reconnaît plus rien de réel.
+
+  - type: texte
+    titre: "Ressemblance ou vraisemblance ?"
+    contenu: |-
+      **Ressemblance** : l'image se compare à un modèle réel.
+      **Vraisemblance** : l'image paraît possible, crédible, même si elle n'existe pas (un dragon bien dessiné).
+      C'est ainsi que les images construisent des **fictions**. Une photo retouchée peut sembler vraie sans l'être.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : une élève photographie sa grand-mère, puis fait d'elle un dessin avec un
+      visage très allongé et des couleurs bleues. Qu'est-ce qui change entre les deux images ?
+    etapes:
+      - "La photo cherche la ressemblance : on reconnaît la grand-mère telle qu'elle est."
+      - "Le dessin crée un écart : la forme du visage est déformée et les couleurs sont changées."
+      - "On reconnaît encore la personne : ce n'est pas de l'abstraction, c'est une figuration avec écart."
+      - "Effet possible : le bleu et le visage allongé donnent une impression de calme ou de mélancolie. L'écart est un choix expressif."
+
+  - type: exercice
+    enonce: "Que veut rappeler Magritte en écrivant « Ceci n'est pas une pipe » sous une pipe peinte ?"
+    forme: qcm
+    choix:
+      - "Qu'il a mal peint la pipe."
+      - "Qu'une image n'est pas la chose réelle qu'elle représente."
+      - "Que la pipe est un objet abstrait."
+    reponse: 1
+    indices:
+      - "La pipe est très bien peinte : ce n'est donc pas une question de talent."
+      - "Peux-tu fumer la pipe du tableau ?"
+    explication: "On ne peut pas fumer la pipe peinte : c'est une image de pipe. Magritte rappelle qu'une image n'est jamais la chose elle-même."
+
+  - type: exercice
+    enonce: >-
+      Quel courant artistique cherche une ressemblance extrême avec le réel, souvent à partir de
+      photographies ?
+    forme: reponse_courte
+    reponse: "hyperréalisme"
+    reponses_acceptees:
+      - "hyperréalisme"
+      - "hyperrealisme"
+      - "l'hyperréalisme"
+      - "l'hyperrealisme"
+      - "hyper-réalisme"
+      - "hyper réalisme"
+    indices:
+      - "Pense à Chuck Close et à son grand autoportrait peint d'après une photo."
+      - "Relis le bloc « Une image n'est pas la chose » : quel courant y est nommé ?"
+    explication: "L'hyperréalisme recherche une ressemblance extrême, souvent d'après des photos, comme Chuck Close."
+
+  - type: exercice
+    enonce: >-
+      Un tableau montre des taches de couleurs et des lignes. On n'y reconnaît rien du réel. De quel cas
+      s'agit-il ?
+    forme: qcm
+    choix:
+      - "Figuration ressemblante"
+      - "Figuration avec écart"
+      - "Abstraction"
+    reponse: 2
+    indices:
+      - "Demande-toi : reconnaît-on encore un modèle réel ?"
+      - "Dans une figuration, même avec écart, on reconnaît encore quelque chose."
+    explication: "On ne reconnaît plus rien de réel : c'est l'abstraction. Une figuration avec écart garde un modèle reconnaissable."
+
+  - type: exercice
+    enonce: >-
+      Dans un jeu vidéo, un dragon a des écailles, des ombres et un décor cohérent. Il n'existe pas, mais
+      il paraît crédible. Quel mot désigne ce caractère de ce qui paraît possible ?
+    forme: reponse_courte
+    reponse: "vraisemblance"
+    reponses_acceptees:
+      - "vraisemblance"
+      - "la vraisemblance"
+      - "vraisemblable"
+    indices:
+      - "Ce n'est pas la ressemblance : il n'y a aucun modèle réel à comparer."
+      - "Relis le dernier bloc de cours : il parle aussi d'un dragon."
+    explication: "C'est la vraisemblance : l'image paraît possible et crédible, sans copier un modèle réel."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Dans le Vertumne d'Arcimboldo (vers 1590), on reconnaît un visage, mais il est fait de
+      fruits, de légumes et de fleurs. Quelle analyse est juste ?
+    forme: qcm
+    choix:
+      - "C'est une abstraction, car on ne reconnaît rien."
+      - "C'est une figuration avec écart : on reconnaît un visage construit avec autre chose."
+      - "C'est une image hyperréaliste d'un vrai visage."
+    reponse: 1
+    indices:
+      - "Reconnaît-on encore un visage ?"
+      - "Le visage est-il peint avec de la peau, ou avec d'autres choses ?"
+    explication: "On reconnaît un visage, mais il est construit avec des fruits et des légumes : c'est une figuration avec écart. L'écart surprend et amuse."
+
+  - type: question_ouverte
+    question: >-
+      Imagine deux portraits du même ami : l'un très ressemblant, l'autre avec un écart (proportions,
+      couleurs ou formes changées). Décris l'écart choisi et explique l'effet qu'il produit. Puis dis
+      la différence entre ressemblance et vraisemblance.
+    indices:
+      - "Choisis un seul écart précis : yeux énormes, couleurs inventées, visage en morceaux…"
+      - "Pour l'effet, demande-toi ce que le spectateur ressent : humour, tendresse, étrangeté ?"
+    criteres:
+      - "L'élève décrit un écart précis avec le réel (proportions, formes ou couleurs)."
+      - "L'élève relie cet écart à un effet expressif (émotion, humour, étrangeté, point de vue)."
+      - "L'élève distingue ressemblance (comparaison à un modèle réel) et vraisemblance (ce qui paraît crédible)."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases, avec tes mots. Dis ce qu'est un écart avec le réel et à quoi il sert.
+      Puis dis la différence entre ressemblance et vraisemblance.

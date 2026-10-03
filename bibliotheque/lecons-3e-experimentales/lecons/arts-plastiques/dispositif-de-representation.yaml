@@ -1,0 +1,158 @@
+notion: dispositif-de-representation
+titre: "Le dispositif de représentation : l'espace en 2D et en 3D"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer espace littéral et espace suggéré dans une image en deux dimensions."
+      - "Distinguer organisation et composition."
+      - "Distinguer structure, construction et installation en trois dimensions, et reconnaître une œuvre in situ."
+
+  - type: texte
+    titre: "En 2D : espace littéral, espace suggéré"
+    contenu: |-
+      - **Espace littéral** : la surface réelle du support. Son format, ses bords, sa matière. Elle est plate.
+      - **Espace suggéré** : la profondeur que l'image fait croire. C'est une illusion.
+
+      Pour suggérer la profondeur : superposer les formes, dessiner plus petit ce qui est loin, pâlir les couleurs au loin,
+      ou utiliser la **perspective** : une ligne d'horizon et des lignes qui se rejoignent en un **point de fuite**.
+      Vers 1425-1427, Masaccio peint « La Trinité » à Florence, une des premières peintures construites ainsi.
+
+  - type: texte
+    titre: "Organiser ou composer ?"
+    contenu: |-
+      - **Organiser** : répartir des éléments selon un principe simple (grille, alignement, répétition), sans hiérarchie.
+        Exemple : une frise de carrés identiques alignés.
+      - **Composer** : agencer les éléments de façon pensée, pour un effet d'ensemble : un centre d'intérêt, des lignes qui guident le regard, des équilibres.
+        Exemple : un arbre au premier plan qui guide l'œil vers une maison au loin.
+
+  - type: texte
+    titre: "En 3D : structure, construction, installation"
+    contenu: |-
+      - **Structure** : l'ossature qui fait tenir un volume (exemple : un échafaudage).
+      - **Construction** : l'assemblage d'éléments pour édifier un volume (exemple : une maison de cartes).
+      - **Installation** : des éléments disposés dans un lieu, que le spectateur parcourt ou dans lequel il entre (exemple : des chaises suspendues dans une salle).
+
+      Une œuvre peut **intervenir sur un lieu**. Une œuvre **in situ** est conçue pour un lieu précis et en dépend.
+      Exemple : « Les Deux Plateaux », Daniel Buren, 1986, cour d'honneur du Palais-Royal à Paris.
+
+      Au brevet : dis si c'est en 2D ou en 3D, emploie le mot juste, cite un procédé précis.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : sur une feuille A4, un élève dessine une route qui se rétrécit jusqu'à un
+      point sur l'horizon. Les arbres sont de plus en plus petits. Décris l'espace littéral et
+      l'espace suggéré.
+    etapes:
+      - "Espace littéral : la feuille A4, une surface plate limitée par ses bords."
+      - "Espace suggéré : la route semble s'enfoncer au loin."
+      - "Procédés : les bords de la route convergent vers un point de fuite sur la ligne d'horizon ; les arbres rapetissent avec la distance."
+      - "Conclusion : on croit voir loin, alors que tout est sur la même surface plate."
+
+  - type: exercice
+    enonce: >-
+      Ce procédé donne l'illusion de la profondeur sur une surface plane. Il utilise une ligne d'horizon
+      et des lignes qui convergent vers un point de fuite. Comment s'appelle-t-il ?
+    forme: reponse_courte
+    reponse: "perspective"
+    reponses_acceptees:
+      - "perspective"
+      - "la perspective"
+      - "perspective linéaire"
+      - "la perspective linéaire"
+      - "perspective lineaire"
+    indices:
+      - "Quand tu dessines une route qui s'éloigne, ses deux bords se rapprochent. Comment s'appelle ce système ?"
+      - "Les peintres de la Renaissance italienne l'ont mis au point, comme Masaccio dans « La Trinité »."
+    explication: "C'est la perspective (linéaire) : les lignes convergent vers un point de fuite sur la ligne d'horizon, ce qui crée l'illusion de la profondeur."
+
+  - type: exercice
+    enonce: >-
+      Une élève colle vingt carrés de papier identiques, alignés en grille régulière, sans centre
+      d'intérêt. Est-ce une organisation ou une composition ?
+    forme: qcm
+    choix:
+      - "Une organisation"
+      - "Une composition"
+    reponse: 0
+    indices:
+      - "Les éléments sont-ils agencés pour créer un effet d'ensemble, ou simplement répartis ?"
+      - "Une grille régulière, sans hiérarchie, suit un principe simple."
+    explication: "C'est une organisation : les carrés sont répartis selon un principe simple (grille), sans centre d'intérêt ni hiérarchie."
+
+  - type: exercice
+    enonce: >-
+      Dans une salle, une artiste suspend des dizaines de chaises au plafond. Les visiteurs marchent
+      entre elles. Quel mot désigne ce dispositif en trois dimensions ?
+    forme: qcm
+    choix:
+      - "Une structure"
+      - "Une construction"
+      - "Une installation"
+    reponse: 2
+    indices:
+      - "Le spectateur parcourt le lieu et entre dans l'œuvre."
+      - "La structure fait tenir un volume ; la construction assemble des éléments en un volume."
+    explication: "C'est une installation : des éléments disposés dans un lieu, que le spectateur parcourt. Son déplacement fait partie de l'œuvre."
+
+  - type: exercice
+    enonce: >-
+      « Les Deux Plateaux » de Daniel Buren (1986) ont été pensés pour la cour d'honneur du
+      Palais-Royal, à Paris. Ils dépendent de ce lieu. Quelle expression latine désigne une œuvre
+      conçue pour un lieu précis ?
+    forme: reponse_courte
+    reponse: "in situ"
+    reponses_acceptees:
+      - "in situ"
+      - "in-situ"
+      - "une œuvre in situ"
+      - "une oeuvre in situ"
+      - "œuvre in situ"
+      - "oeuvre in situ"
+    indices:
+      - "Cette expression latine veut dire « sur place »."
+      - "Relis la fin du bloc « En 3D : structure, construction, installation »."
+    explication: "Une œuvre in situ est conçue pour un lieu précis et en dépend : déplacée ailleurs, elle perdrait son sens."
+
+  - type: exercice
+    enonce: >-
+      Sujet de type brevet. Un tableau représente une longue galerie qui semble s'enfoncer très
+      loin. Quelle phrase décrit correctement l'espace de ce tableau ?
+    forme: qcm
+    choix:
+      - "L'espace littéral est profond, car on voit la galerie au loin."
+      - "L'espace littéral est la toile plate ; l'espace suggéré est la profondeur de la galerie, créée par exemple par la perspective."
+      - "Le tableau n'a pas d'espace littéral, seulement un espace suggéré."
+    reponse: 1
+    indices:
+      - "La toile elle-même est-elle profonde ou plate ?"
+      - "Tout support a un espace littéral. La profondeur, elle, est une illusion."
+    explication: "L'espace littéral est la surface plate de la toile. La profondeur de la galerie est un espace suggéré : une illusion, créée par des procédés comme la perspective."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois créer une œuvre pour le hall de ton collège. Décris ton projet en trois ou quatre
+      phrases : sera-t-il en 2D ou en 3D ? Comment le spectateur le verra-t-il ? Pourquoi peut-on
+      dire (ou non) qu'il est in situ ?
+    indices:
+      - "Décris d'abord ce que tu fabriques et où tu le places dans le hall."
+      - "Demande-toi : mon œuvre aurait-elle le même sens dans un autre lieu ?"
+    criteres:
+      - "L'élève précise la dimension (2D ou 3D) et décrit le dispositif avec le vocabulaire juste (composition, structure, construction, installation)."
+      - "L'élève décrit la place ou le déplacement du spectateur."
+      - "L'élève justifie si l'œuvre est in situ par son lien avec le lieu."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases, avec tes propres mots. Dis la différence entre espace littéral et
+      espace suggéré. Puis dis la différence entre structure, construction et installation.

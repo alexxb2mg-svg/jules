@@ -1,0 +1,147 @@
+notion: relation-corps-production-artistique
+titre: "La relation du corps à la production artistique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lire une trace pour retrouver le geste et l'instrument qui l'ont produite."
+      - "Dire comment le corps de l'artiste est engagé dans une œuvre."
+      - "Distinguer performance, happening, œuvre éphémère et captation."
+
+  - type: texte
+    titre: "Le geste et l'instrument laissent une trace"
+    contenu: |-
+      Le **corps** de l'artiste agit : la main, le bras, ou tout le corps.
+      - Le **geste** peut être ample ou précis, rapide ou lent, appuyé ou léger.
+      - L'**instrument** change la **trace** : un bâton fait un trait fin, une brosse large une bande épaisse, la main une empreinte.
+      - Le **support** compte aussi : au sol, au mur, très grand ou petit.
+
+      La trace (coulure, éclaboussure, empreinte) garde la mémoire du geste.
+
+  - type: texte
+    titre: "Des artistes qui peignent avec le corps"
+    contenu: |-
+      - **Jackson Pollock**, fin des années 1940 : la toile est posée au sol. Il tourne autour et fait couler la peinture. C'est le **dripping**.
+      - **Yves Klein**, 1960, à Paris : ses **Anthropométries**. Des modèles couvertes de peinture bleue posent leur corps sur de grandes feuilles.
+      - **Niki de Saint Phalle**, 1961 : les **Tirs**. Elle tire à la carabine sur du plâtre qui cache des poches de peinture.
+
+      Les gestes de Pollock ne sont pas du hasard : ils sont choisis et répétés.
+
+  - type: texte
+    titre: "Quand l'action devient l'œuvre"
+    contenu: |-
+      - **Performance** : l'artiste agit avec son corps devant un public, dans un lieu et un temps donnés. Exemple : Marina Abramović, The Artist Is Present (2010).
+      - **Happening** : un événement en partie improvisé où le **public participe** (Allan Kaprow, fin des années 1950).
+      - **Œuvre éphémère** : elle disparaît après l'action. Le temps devient un matériau : l'action dure, occupe un lieu, puis s'arrête.
+      - **Captation** : photo ou vidéo qui garde la trace de l'action. Ce n'est pas l'action elle-même. Hans Namuth a filmé Pollock au travail en 1950.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : Malo trempe une éponge dans la gouache et la tamponne, très vite, sur
+      un long rouleau de papier posé au sol. Un camarade filme. Décris le rôle du corps, de
+      l'instrument et de la captation.
+    etapes:
+      - "Le corps : Malo marche le long du papier. Son bras entier fait un geste rapide et répété."
+      - "L'instrument : l'éponge laisse des empreintes rondes, avec une texture de petits trous."
+      - "La trace : les empreintes forment un chemin. On lit le rythme et la vitesse du geste."
+      - "La captation : la vidéo montre comment la trace a été faite. Elle rend le processus visible."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la technique de Jackson Pollock qui consiste à faire couler et projeter la peinture sur une toile posée au sol ?"
+    forme: reponse_courte
+    reponse: "dripping"
+    reponses_acceptees:
+      - "dripping"
+      - "le dripping"
+      - "driping"
+    indices:
+      - "Relis le bloc « Des artistes qui peignent avec le corps »."
+      - "C'est un mot anglais, formé sur un verbe qui veut dire « goutter »."
+    explication: "C'est le dripping : Pollock fait couler et projette la peinture en tournant autour de la toile posée au sol."
+
+  - type: exercice
+    enonce: >-
+      Situation fictive : un élève peint avec un large balai, en grands gestes rapides, sur une
+      feuille de trois mètres posée au sol. Quel effet visuel peut-il attendre ?
+    forme: qcm
+    choix:
+      - "Des contours fins et très précis"
+      - "De larges traces énergiques, avec des éclaboussures"
+      - "Une couleur lisse et parfaitement régulière"
+    reponse: 1
+    indices:
+      - "Un balai est-il un instrument fait pour la précision ?"
+      - "Un geste rapide projette la peinture ; un instrument large laisse une trace large."
+    explication: "L'instrument large et le geste rapide laissent des traces larges, irrégulières, avec des éclaboussures. La trace garde l'énergie du corps."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on un événement artistique en partie improvisé, où le public est invité à participer ?"
+    forme: reponse_courte
+    reponse: "happening"
+    reponses_acceptees:
+      - "happening"
+      - "un happening"
+      - "le happening"
+      - "happenings"
+    indices:
+      - "Ce n'est pas la performance : dans la performance, c'est surtout l'artiste qui agit."
+      - "C'est un mot anglais. Relis le bloc « Quand l'action devient l'œuvre »."
+    explication: "C'est un happening : un événement en partie improvisé où le public participe, comme ceux d'Allan Kaprow."
+
+  - type: exercice
+    enonce: >-
+      Hans Namuth a photographié et filmé Jackson Pollock au travail en 1950. Quel est le statut
+      de ces photos et de ce film ?
+    forme: qcm
+    choix:
+      - "Ce sont des captations : elles gardent la trace de l'action."
+      - "Ce sont les toiles de Pollock elles-mêmes."
+      - "Ce sont des happenings."
+    reponse: 0
+    indices:
+      - "Une photo d'une action, est-ce l'action elle-même ?"
+      - "Cherche le mot qui veut dire « enregistrement d'une action »."
+    explication: "Ce sont des captations : un document qui garde la mémoire de l'action. Ce n'est ni l'action, ni la toile."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Dans laquelle de ces œuvres le corps lui-même sert d'instrument et laisse
+      son empreinte sur le support ?
+    forme: qcm
+    choix:
+      - "Les Tirs de Niki de Saint Phalle (1961)"
+      - "The Artist Is Present de Marina Abramović (2010)"
+      - "Les Anthropométries d'Yves Klein (1960)"
+    reponse: 2
+    indices:
+      - "« Anthropo- » veut dire « humain »."
+      - "Dans l'une des œuvres, l'artiste utilise une carabine. Dans une autre, il n'y a pas de peinture."
+    explication: "Dans les Anthropométries, des modèles couvertes de peinture bleue posent leur corps sur le papier : le corps est l'instrument. Niki de Saint Phalle utilise une carabine ; Marina Abramović est présente, sans peinture."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois réaliser une production où ton geste reste bien visible. Choisis un instrument, un
+      geste et un support. Explique l'effet attendu, puis dis comment tu garderais une trace du
+      processus. Cite un artiste.
+    indices:
+      - "Commence par l'instrument et le support : « Je choisis… parce que… »."
+      - "Pense à une captation (photo, vidéo) ou à une action devant la classe."
+    criteres:
+      - "L'élève décrit un instrument, un geste (taille, vitesse, place du corps) et un support."
+      - "L'élève relie ces choix à un effet visuel (type de trace, énergie, échelle)."
+      - "L'élève propose un moyen de rendre le processus visible et cite un artiste de façon juste."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment le geste et l'instrument
+      changent la trace, et la différence entre une performance et sa captation.

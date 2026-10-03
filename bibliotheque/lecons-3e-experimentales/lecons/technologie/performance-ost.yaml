@@ -1,0 +1,163 @@
+notion: performance-ost
+titre: "La performance d'un objet technique : mesurer avec un protocole"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Citer des grandeurs mesurables qui décrivent la performance d'un objet."
+      - "Écrire un protocole de mesure complet et reproductible."
+      - "Calculer une moyenne, une vitesse ou une énergie, puis comparer au cahier des charges."
+
+  - type: texte
+    titre: "Les grandeurs mesurables"
+    contenu: |-
+      La performance d'un objet se décrit avec des **grandeurs mesurables**. Chacune a une unité.
+
+      | Grandeur | Unité |
+      |---|---|
+      | Vitesse | km/h ou m/s |
+      | Autonomie | km (distance) ou h (durée) |
+      | Temps de charge | h ou min |
+      | Consommation d'énergie | Wh ou kWh |
+      | Puissance | W |
+      | Masse | kg |
+      | Éclairement | lux |
+      | Niveau sonore | dB |
+
+  - type: texte
+    titre: "Le protocole de mesure"
+    contenu: |-
+      Un **protocole** est une suite d'étapes écrite à l'avance. La mesure est fiable et quelqu'un d'autre peut la refaire.
+
+      Il précise :
+
+      - la grandeur à mesurer et son unité ;
+      - le matériel et les instruments (chronomètre, mètre, balance, wattmètre, luxmètre) ;
+      - les conditions de l'essai, **identiques** d'un essai à l'autre ;
+      - les étapes, dans l'ordre ;
+      - le relevé des résultats dans un tableau.
+
+  - type: texte
+    titre: "Répéter, moyenner, comparer"
+    contenu: |-
+      Chaque mesure a une petite erreur. On **répète** la mesure plusieurs fois.
+
+      **Moyenne = somme des valeurs ÷ nombre de valeurs.**
+
+      Pour comparer deux objets, on ne change qu'**un seul élément** : l'objet testé.
+
+      Puis on compare le résultat au niveau fixé par le cahier des charges.
+
+  - type: texte
+    titre: "Formules et unités"
+    contenu: |-
+      - **Vitesse moyenne = distance ÷ durée.** Exemple : 3 km en 0,25 h font 12 km/h.
+      - **Énergie = puissance × durée.** Exemple : 20 W pendant 2 h font 40 Wh.
+
+      Attention aux unités : on convertit **avant** de calculer.
+
+      Exemple : 30 min = 0,5 h.
+
+  - type: exemple
+    enonce: >-
+      Un vélo électrique parcourt 10 km en 0,5 h à vitesse constante. Quelle est sa vitesse moyenne ?
+    etapes:
+      - "La formule : vitesse = distance ÷ durée."
+      - "La durée est déjà en heures : 0,5 h. La distance est en kilomètres : 10 km."
+      - "10 ÷ 0,5 = 20. La vitesse moyenne est de 20 km/h."
+
+  - type: exercice
+    enonce: "Quel instrument utilises-tu pour mesurer la durée de charge d'une batterie ?"
+    forme: reponse_courte
+    reponse: "chronomètre"
+    reponses_acceptees:
+      - "chronomètre"
+      - "le chronomètre"
+      - "un chronomètre"
+      - "chronometre"
+      - "chrono"
+    indices:
+      - "Une durée se mesure en secondes, en minutes ou en heures."
+      - "Cet instrument sert aussi aux courses en sport."
+    explication: "Une durée se mesure avec un chronomètre."
+
+  - type: exercice
+    enonce: "Une trottinette parcourt 90 m en 15 s à vitesse constante. Calcule sa vitesse en m/s."
+    forme: nombre
+    reponse: 6
+    tolerance: 0.01
+    unite: m/s
+    indices:
+      - "Quelle formule relie la vitesse, la distance et la durée ?"
+      - "Divise la distance par la durée. Les unités sont déjà en mètres et en secondes."
+    explication: "Vitesse = distance ÷ durée = 90 ÷ 15 = 6 m/s."
+
+  - type: exercice
+    enonce: >-
+      On mesure l'autonomie d'un vélo électrique sur le même parcours, batterie pleine au départ.
+      Essai 1 : 30 km ; essai 2 : 34 km ; essai 3 : 28 km ; essai 4 : 32 km. Calcule l'autonomie
+      moyenne, en km.
+    forme: nombre
+    reponse: 31
+    tolerance: 0.01
+    unite: km
+    indices:
+      - "Pourquoi fait-on plusieurs essais ? Comment les regrouper en une seule valeur ?"
+      - "Additionne les quatre résultats, puis divise la somme par le nombre d'essais."
+    explication: "Somme : 30 + 34 + 28 + 32 = 124 km. Moyenne : 124 ÷ 4 = 31 km."
+
+  - type: exercice
+    enonce: >-
+      On veut comparer l'autonomie de deux batteries sur le même vélo. Que doit-on changer entre les deux
+      essais ?
+    forme: qcm
+    choix:
+      - "Seulement la batterie testée"
+      - "La batterie et le parcours"
+      - "La batterie et la masse du cycliste"
+    reponse: 0
+    indices:
+      - "Pour comparer, on ne change qu'un seul élément."
+      - "Si deux choses changent, sait-on laquelle explique la différence ?"
+    explication: "On ne change que l'objet testé, ici la batterie. Le parcours et la masse du cycliste restent identiques."
+
+  - type: exercice
+    enonce: >-
+      Avec un wattmètre, on relève qu'un chargeur de 40 W a fonctionné pendant 30 minutes. Quelle énergie
+      a-t-il consommée, en wattheures ? Convertis d'abord la durée en heures.
+    forme: nombre
+    reponse: 20
+    tolerance: 0.01
+    unite: Wh
+    indices:
+      - "Quelle formule relie l'énergie, la puissance et la durée ?"
+      - "La durée doit être en heures : convertis d'abord les minutes."
+      - "Multiplie la puissance en watts par la durée en heures."
+    explication: "30 min = 0,5 h. Énergie = puissance × durée = 40 × 0,5 = 20 Wh."
+
+  - type: question_ouverte
+    question: >-
+      On veut savoir laquelle de deux ampoules consomme le moins d'énergie pour éclairer une pièce
+      pendant une heure. Écris un protocole de mesure complet.
+    indices:
+      - "Qu'est-ce qu'on mesure exactement, et avec quel instrument ?"
+      - "Suis le plan : grandeur et unité, matériel, conditions identiques, étapes, répétition, tableau."
+    criteres:
+      - "L'élève nomme la grandeur mesurée (l'énergie consommée, en Wh) et l'instrument (un wattmètre)."
+      - "L'élève fixe des conditions identiques (même durée, même pièce) et ne change que l'ampoule."
+      - "L'élève prévoit de répéter la mesure, de noter les résultats dans un tableau et de comparer."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, ce qu'un protocole de mesure doit contenir et pourquoi on répète la mesure
+      plusieurs fois.

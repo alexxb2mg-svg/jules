@@ -1,0 +1,147 @@
+notion: ecouter-comparer-construire-culture
+titre: "Écouter, comparer, se construire une culture musicale"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire une œuvre avec le vocabulaire précis des paramètres du son."
+      - "Situer une œuvre dans le temps grâce à quelques repères."
+      - "Comparer deux interprétations d'une même œuvre : ressemblances et différences."
+
+  - type: texte
+    titre: "Décrire avec des mots précis"
+    contenu: |-
+      Écouter en musicien, c'est **décrire**, pas seulement dire si on aime.
+      **Timbre** : la couleur du son (quel instrument, quelle voix).
+      **Tempo** : la vitesse. **Nuances** : l'intensité, de piano à forte.
+      **Hauteur** : grave ou aigu. Et aussi le **rythme**, la **forme** et le **style**.
+
+  - type: texte
+    titre: "Situer une œuvre : des repères"
+    contenu: |-
+      **Moyen Âge** : le chant grégorien, une seule mélodie sans instrument (une **monodie**).
+      **1725** (baroque) : Les Quatre Saisons de Vivaldi.
+      **1808** : la Symphonie n° 5 de Beethoven.
+      **1928** : le Boléro de Ravel. **1972** : Clapping Music de Steve Reich (deux paires de mains).
+      Musiques **éloignées** : on les compare quand même (timbre, rythme, répétition). Musiques **proches** : on cherche des différences fines.
+
+  - type: texte
+    titre: "Comparer deux interprétations"
+    contenu: |-
+      Une même œuvre peut être jouée de plusieurs façons.
+      **Ce qui reste pareil** : la mélodie, le texte, la forme.
+      **Ce qui peut changer** : le tempo, le timbre, les nuances, le style.
+      Exemple : Glenn Gould enregistre l'Aria des Variations Goldberg de Bach en 1955, puis en 1981 : deux interprétations différentes.
+      Au brevet : ce que j'entends · où et quand · ressemblances et différences · effet produit.
+
+  - type: exemple
+    enonce: >-
+      Les Tableaux d'une exposition ont été écrits pour piano par Moussorgsky (1874), puis
+      orchestrés par Ravel (1922). Compare les deux versions.
+    etapes:
+      - "Ressemblance : mêmes mélodies, même plan. On reconnaît la même œuvre."
+      - "Différence principale : le timbre. Un seul piano d'un côté, tout un orchestre de l'autre (cordes, bois, cuivres, percussions)."
+      - "Effet produit : l'orchestre donne plus de couleurs et des contrastes de nuances plus spectaculaires."
+
+  - type: exercice
+    enonce: >-
+      Une flûte et une trompette jouent exactement la même note, au même volume. On les
+      reconnaît quand même les yeux fermés. Quel paramètre du son permet cela ?
+    forme: reponse_courte
+    reponse: "timbre"
+    reponses_acceptees:
+      - "timbre"
+      - "le timbre"
+    indices:
+      - "Ce n'est ni la hauteur (même note) ni l'intensité (même volume)."
+      - "On l'appelle aussi la « couleur » du son. Relis le premier bloc."
+    explication: "C'est le timbre : la couleur du son, qui permet de reconnaître un instrument ou une voix."
+
+  - type: exercice
+    enonce: >-
+      Glenn Gould a enregistré l'Aria de Bach au piano en 1955, puis en 1981. La première
+      version dure environ 2 minutes, la seconde environ 3 minutes. Quel paramètre a surtout
+      changé ?
+    forme: qcm
+    choix:
+      - "Le timbre de l'instrument"
+      - "La mélodie"
+      - "Le tempo"
+    reponse: 2
+    indices:
+      - "Même pianiste, même instrument, même partition. Pourquoi la musique dure-t-elle plus longtemps ?"
+      - "Les mêmes notes jouées en plus de temps, c'est une question de vitesse."
+    explication: "Le tempo : en 1981, Glenn Gould joue beaucoup plus lentement. Les notes et l'instrument sont les mêmes."
+
+  - type: exercice
+    enonce: >-
+      Les Quatre Saisons de Vivaldi sont publiées en 1725. La Symphonie n° 5 de Beethoven est
+      créée en 1808. Combien d'années séparent ces deux œuvres ?
+    forme: nombre
+    reponse: 83
+    tolerance: 0
+    unite: "ans"
+    indices:
+      - "Pour trouver un écart entre deux dates, on fait une soustraction."
+      - "Soustrais la date la plus ancienne de la plus récente : 1808 − 1725."
+    explication: "1808 − 1725 = 83 ans. Vérification : 1725 + 83 = 1808."
+
+  - type: exercice
+    enonce: >-
+      Le chant grégorien du Moyen Âge est chanté sur une seule ligne mélodique, sans
+      accompagnement. Comment appelle-t-on ce type de musique ?
+    forme: reponse_courte
+    reponse: "monodie"
+    reponses_acceptees:
+      - "monodie"
+      - "une monodie"
+      - "la monodie"
+      - "monodique"
+    indices:
+      - "Combien de mélodies entend-on en même temps dans un chant grégorien ?"
+      - "Relis le repère « Moyen Âge » dans le bloc « Situer une œuvre »."
+    explication: "Une seule mélodie chantée sans accompagnement s'appelle une monodie. Plusieurs mélodies superposées, c'est une polyphonie."
+
+  - type: exercice
+    enonce: >-
+      Voici trois commentaires d'écoute du « Printemps » des Quatre Saisons de Vivaldi. Lequel
+      analyse l'œuvre avec un vocabulaire précis, comme au brevet ?
+    forme: qcm
+    choix:
+      - "C'est joli et ça donne envie de sortir."
+      - "C'est de la musique classique ancienne, comme toutes les musiques avec des violons."
+      - "Un violon soliste dialogue avec l'orchestre à cordes ; le tempo est rapide et le tutti revient régulièrement."
+    reponse: 2
+    indices:
+      - "Quel commentaire aiderait quelqu'un qui n'a jamais entendu l'œuvre à l'imaginer ?"
+      - "Cherche celui qui nomme des instruments et des paramètres du son."
+    explication: "Le troisième commentaire décrit le timbre (violon soliste, cordes), le tempo et la forme. Les autres donnent une impression ou une idée floue (Vivaldi est baroque)."
+
+  - type: question_ouverte
+    question: >-
+      Voici deux versions imaginaires de la chanson « Au clair de la lune ». Version A : une
+      voix d'enfant seule, a cappella, tempo lent, nuance piano. Version B : un groupe avec
+      batterie, basse et guitare électrique, tempo rapide, voix adulte forte, un solo de
+      guitare au milieu. Compare-les en un court paragraphe.
+    indices:
+      - "Qu'est-ce qui permet de reconnaître la même chanson dans les deux versions ?"
+      - "Compare paramètre par paramètre : timbre, tempo, nuances, style. Termine par l'effet produit."
+    criteres:
+      - "L'élève relève au moins une ressemblance (même mélodie, même texte)."
+      - "L'élève relève au moins trois différences avec le vocabulaire précis (timbre, tempo, nuances, style, forme)."
+      - "L'élève explique l'effet produit par chaque version (calme, intimité, énergie…)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois phrases, les paramètres qu'on décrit quand on
+      écoute, deux repères de dates, et la méthode pour comparer deux interprétations.

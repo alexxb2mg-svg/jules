@@ -1,0 +1,136 @@
+notion: fluidite-et-securite-linguistique
+titre: "Parler anglais sans bloquer : être fluide et compris"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir ce que l'on vise à l'oral : être fluide, être compris, oser parler."
+      - "Utiliser sa voix : intonation des questions, syllabe forte, formes contractées."
+      - "Continuer à parler quand un mot manque, grâce à une stratégie simple."
+
+  - type: texte
+    titre: "Le but à l'oral : être compris, pas avoir l'accent parfait"
+    contenu: |
+      Le programme vise trois choses à l'oral :
+
+      | Mot | Ce que ça veut dire |
+      |---|---|
+      | **Fluidité** (fluency) | parler sans trop s'arrêter |
+      | **Intelligibilité** | être compris facilement |
+      | **Sécurité linguistique** | oser parler, même avec de petites erreurs |
+
+      On ne vise **pas** « l'accent natif ». Garder un accent français, c'est normal.
+
+  - type: texte
+    titre: "Ta voix t'aide à être comprise"
+    contenu: |
+      - **Question en yes / no** : la voix **monte** à la fin. *Are you ready?* ⤴
+      - **Question avec what, where, why, who** : la voix **descend** souvent. *Where do you live?* ⤵
+      - **Mot long** : une syllabe est plus forte. *PHO-to-graph* : la première.
+      - **Formes contractées** : *I'm* (I am), *it's* (it is), *can't* (cannot). L'apostrophe remplace des lettres.
+
+  - type: texte
+    titre: "Un mot manque ? Ne t'arrête pas"
+    contenu: |
+      | Situation | Stratégie |
+      |---|---|
+      | Je ne connais pas le mot | Je décris : *the thing you use to…* |
+      | Je cherche le mot | Je demande : *How do you say … in English?* |
+      | Je me trompe | Je me corrige : *I mean…* |
+      | Je n'ai pas compris | Je fais répéter : *Sorry, could you say that again?* |
+
+  - type: exemple
+    enonce: "Tu veux demander son prénom à une correspondante anglaise, puis lui répondre. Comment le dire de façon fluide et claire ?"
+    etapes:
+      - "La question commence par « what » : la voix descend à la fin. *What's your name?* ⤵"
+      - "« What's » est la forme contractée de « what is » : c'est plus fluide."
+      - "Pour répondre, on contracte aussi « I am » : *I'm Chloé.*"
+      - "Si elle répond trop vite, on ne se tait pas : *Sorry, could you say that again?*"
+
+  - type: exercice
+    enonce: "Quelle intonation utilise-t-on en général pour la question « Do you like music? » ?"
+    forme: qcm
+    choix:
+      - "La voix monte à la fin"
+      - "La voix descend à la fin"
+      - "La voix reste toujours plate"
+    reponse: 0
+    indices:
+      - "Cette question attend-elle « yes / no » ou une information précise ?"
+      - "Il n'y a pas de mot comme what ou where au début : c'est une question fermée."
+    explication: "« Do you like music? » attend yes ou no : c'est une question fermée. La voix monte en général à la fin."
+
+  - type: exercice
+    enonce: "Écris la forme contractée de « do not », comme à l'oral."
+    forme: reponse_courte
+    reponse: "don't"
+    reponses_acceptees: ["don’t", "don t"]
+    indices:
+      - "Les deux mots se collent en un seul."
+      - "L'apostrophe remplace la lettre « o » de « not »."
+    explication: "« do not » devient « don't » : l'apostrophe remplace le « o » de « not ». Exemple : I don't like tea."
+
+  - type: exercice
+    enonce: "Tu veux dire « umbrella » (parapluie), mais tu as oublié le mot. Que dis-tu pour continuer ?"
+    forme: qcm
+    choix:
+      - "« I need the thing you use when it rains. »"
+      - "Tu te tais et tu attends."
+      - "Tu dis le mot en français, sans rien expliquer."
+    reponse: 0
+    indices:
+      - "Le but est que l'autre te comprenne, en anglais."
+      - "Décris l'objet avec des mots simples que tu connais : à quoi sert-il ?"
+    explication: "On décrit l'objet en anglais : « the thing you use when it rains ». La conversation continue et l'autre comprend."
+
+  - type: exercice
+    enonce: "Complète la question pour demander un mot : « How do you ___ 'parapluie' in English? »"
+    forme: reponse_courte
+    reponse: "say"
+    reponses_acceptees: ["Say"]
+    indices:
+      - "Le verbe manquant veut dire « dire »."
+      - "Relis la stratégie « Je cherche le mot » dans le tableau de la leçon."
+    explication: "On dit : « How do you say 'parapluie' in English? » C'est une phrase utile pour ne pas bloquer."
+
+  - type: exercice
+    enonce: "Oral du brevet. Tu dis : « Last year, I go to London. » Tu vois ton erreur de temps. Quelle est la meilleure réaction ?"
+    forme: qcm
+    choix:
+      - "Dire « I mean, I went to London » et continuer"
+      - "Arrêter de parler jusqu'à la fin de l'oral"
+      - "Recommencer toute ta présentation en français"
+      - "T'excuser longuement de ton accent"
+    reponse: 0
+    indices:
+      - "Le but : rester fluide et compris, sans peur de l'erreur."
+      - "Il existe une petite expression anglaise pour se corriger, puis on continue."
+    explication: "On se corrige vite avec « I mean… » puis on continue : c'est fluide et intelligible. Une petite erreur corrigée n'est pas grave."
+
+  - type: question_ouverte
+    question: >-
+      Écris en anglais un petit dialogue de quatre répliques. Dans ce dialogue, un mot te
+      manque et tu utilises une stratégie pour continuer à parler. Utilise au moins une forme
+      contractée.
+    indices:
+      - "Choisis un objet dont tu ne connais pas le nom en anglais."
+      - "Réplique 1 : tu parles. Réplique 2 : tu bloques et tu décris l'objet. Réplique 3 : on t'aide. Réplique 4 : tu remercies."
+    criteres:
+      - "Le dialogue est en anglais, avec des phrases simples et compréhensibles."
+      - "Une stratégie est utilisée : décrire l'objet, demander le mot, I mean…, ou faire répéter."
+      - "Au moins une forme contractée est juste (I'm, don't, can't, it's…)."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : que vise-t-on à l'oral en anglais, et que
+      fais-tu quand un mot te manque ?

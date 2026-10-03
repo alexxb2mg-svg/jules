@@ -1,0 +1,163 @@
+notion: corpus-denoncer
+titre: "Corpus de référence : satire et dénonciation sociale"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître les formes qui dénoncent les travers de la société : fable, conte philosophique, pamphlet, poésie satirique, dessin de presse."
+      - "Situer une œuvre (auteur, époque, genre) et dire ce qu'elle dénonce."
+      - "Comparer deux œuvres du corpus : mêmes cibles, mêmes moyens, forme différente."
+
+  - type: texte
+    titre: "Ce que demande le programme"
+    contenu: |-
+      Un **corpus de référence** est un ensemble d'œuvres étudiées ensemble.
+      En 3e, celui-ci porte sur « **Dénoncer les travers de la société** ».
+      On étudie des œuvres **de l'Antiquité à nos jours**, de genres différents.
+      Elles critiquent la société par le rire ou par la violence des mots.
+      **Dénoncer**, c'est révéler publiquement quelque chose de mal pour le critiquer.
+
+  - type: texte
+    titre: "Les genres à connaître"
+    contenu: |-
+      | Genre | En bref |
+      |---|---|
+      | Poésie satirique | poème qui se moque de défauts ou de personnes |
+      | Roman | récit long qui peut critiquer la société |
+      | Fable | court récit avec une **morale** ; les animaux représentent souvent les hommes |
+      | Conte philosophique | récit qui fait réfléchir sur une idée |
+      | Conte drolatique | conte comique, un peu grivois |
+      | Pamphlet | texte court et violent qui attaque une personne, une idée ou une institution |
+
+  - type: texte
+    titre: "Les images et les repères"
+    contenu: |-
+      La satire passe aussi par l'image : **dessin de presse**, affiche, **caricature**, bande dessinée.
+      On peut ajouter des spectacles, des émissions de radio ou de télévision, des créations numériques.
+
+      | Époque | Repère |
+      |---|---|
+      | Antiquité | Ésope et Phèdre écrivent des fables |
+      | XVIe siècle | Rabelais, textes comiques et satiriques |
+      | XVIIe siècle | La Fontaine, *Fables* ; La Bruyère, *Les Caractères* |
+      | XVIIIe siècle | Voltaire, *Candide* (1759) |
+      | XIXe siècle | Victor Hugo, *Les Châtiments* (1853) |
+
+  - type: texte
+    titre: "Ce qu'on dénonce, et comment"
+    contenu: |-
+      **Ce qu'on dénonce** : l'injustice, l'hypocrisie, la guerre, l'intolérance, l'abus de pouvoir, la flatterie, la vanité.
+
+      **Les moyens** : l'ironie, l'exagération, le déplacement (animaux, pays imaginaires), la parodie.
+
+      *Candide* se moque de l'optimisme et dénonce la guerre, l'intolérance et l'esclavage.
+      Au brevet : situe l'œuvre, dis ce qu'elle dénonce et par quels procédés, puis compare-la à une autre.
+
+  - type: exemple
+    enonce: >-
+      Une fable de La Fontaine met en scène un renard qui flatte un corbeau pour lui prendre son
+      fromage. Analyse-la en quatre étapes.
+    etapes:
+      - "Genre : c'est une fable, un court récit avec une morale."
+      - "Époque : La Fontaine écrit au XVIIe siècle, dans ses *Fables*."
+      - "Ce qui est dénoncé : la flatterie (et la vanité de celui qui la croit)."
+      - "Procédé : le déplacement. Les animaux représentent des hommes, ce qui permet de critiquer sans attaquer directement quelqu'un."
+
+  - type: exercice
+    enonce: "Quel genre désigne un texte court et violent qui attaque une personne, une idée ou une institution ?"
+    forme: qcm
+    choix:
+      - "La fable"
+      - "Le pamphlet"
+      - "Le conte philosophique"
+      - "La caricature"
+    reponse: 1
+    indices:
+      - "Ce texte n'est pas un récit avec une morale : il attaque directement."
+      - "Regarde le tableau des genres : quel mot va avec « violent » et « attaque » ?"
+    explication: "Le pamphlet est un texte court et violent qui attaque une personne, une idée ou une institution. La fable est un récit avec une morale, la caricature est une image."
+
+  - type: exercice
+    enonce: "*Candide*, de Voltaire, est un conte ... (un mot : quel adjectif complète « conte ... » ?)"
+    forme: reponse_courte
+    reponse: "philosophique"
+    reponses_acceptees: ["conte philosophique", "un conte philosophique", "Philosophique"]
+    indices:
+      - "C'est un récit qui fait réfléchir sur une idée."
+      - "L'adjectif commence par « philo- » et se termine par « -ique »."
+    explication: "*Candide* est un conte philosophique : un récit qui fait réfléchir, ici en se moquant de l'optimisme."
+
+  - type: exercice
+    enonce: "*Candide* paraît en 1759. *Les Châtiments*, de Victor Hugo, paraissent en 1853. Combien d'années séparent les deux publications ?"
+    forme: nombre
+    reponse: 94
+    tolerance: 0.01
+    unite: "ans"
+    indices:
+      - "Pour trouver un écart entre deux dates, on fait une soustraction."
+      - "Soustrais la date la plus ancienne de la plus récente : 1853 − 1759."
+    explication: "1853 − 1759 = 94. Deux siècles différents, et pourtant la même envie de dénoncer."
+
+  - type: exercice
+    enonce: "Victor Hugo publie *Les Châtiments* en 1853. Contre qui ce recueil de poésie satirique est-il écrit ?"
+    forme: qcm
+    choix:
+      - "Contre Napoléon III"
+      - "Contre Voltaire"
+      - "Contre Rabelais"
+      - "Contre La Fontaine"
+    reponse: 0
+    indices:
+      - "Ce recueil est une poésie satirique : elle attaque un homme de pouvoir de son époque."
+      - "Les trois autres noms sont des écrivains, pas des hommes de pouvoir."
+    explication: "*Les Châtiments* est un recueil de poésie satirique contre Napoléon III."
+
+  - type: exercice
+    enonce: >-
+      Un dessin de presse montre un roi minuscule assis sur un trône immense. La légende dit :
+      « Il est très modeste. » Quels procédés le dessin utilise-t-il pour dénoncer ce roi ?
+    forme: qcm
+    choix:
+      - "L'exagération (le trône immense) et l'ironie (la légende dit le contraire de ce qu'on voit)"
+      - "Une morale et un récit avec des animaux"
+      - "Un récit à la première personne, écrit après coup"
+      - "Une lecture intégrale d'un roman"
+    reponse: 0
+    indices:
+      - "Regarde ce qui est trop grand ou trop petit dans le dessin."
+      - "La légende dit une chose, le dessin en montre une autre. Comment appelle-t-on cela ?"
+    explication: "Le trône immense est une exagération. La légende « très modeste » dit le contraire de ce qu'on voit : c'est de l'ironie. Ces deux procédés dénoncent la vanité du roi."
+
+  - type: question_ouverte
+    question: >-
+      Choisis deux œuvres ou images de ce cours (par exemple *Candide* et un dessin de presse).
+      Compare-les : que dénoncent-elles, avec quels moyens, et en quoi leur forme est-elle différente ?
+    indices:
+      - "Commence par nommer chaque œuvre : auteur, époque, genre."
+      - "Cherche un point commun (ce qui est dénoncé) puis une différence (mots ou image, moyens utilisés)."
+    criteres:
+      - "L'élève situe chaque œuvre (auteur, époque, genre ou forme)."
+      - "L'élève dit ce que chaque œuvre dénonce, et pas seulement son histoire."
+      - "L'élève donne au moins un procédé (ironie, exagération, déplacement, parodie)."
+      - "L'élève donne au moins un point commun et une différence."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce que veut dire « dénoncer les travers de la
+      société » et comment tu compares deux œuvres d'un corpus.

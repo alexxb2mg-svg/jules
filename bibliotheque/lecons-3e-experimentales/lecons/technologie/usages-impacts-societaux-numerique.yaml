@@ -1,0 +1,161 @@
+notion: usages-impacts-societaux-numerique
+titre: "Usages et impacts du numérique : stockage, cybersécurité, cyberviolence"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Annexe — Programme de technologie du cycle 4 — BO n° 9 du 29 février 2024 (arrêté du 27-2-2024)"
+    url: "https://www.education.gouv.fr/sites/default/files/document/Annexe%20%E2%80%94%20Programme%20de%20technologie%20du%20cycle%204-368016.pdf"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement du programme de technologie au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/5745/ressources-d-accompagnement-du-programme-de-technologie-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire un système d'information et ranger, stocker et retrouver des fichiers."
+      - "Appliquer des règles de cybersécurité et de respect de la propriété intellectuelle."
+      - "Reconnaître la cyberviolence et savoir comment réagir."
+
+  - type: texte
+    titre: "Système d'information, fichiers et unités"
+    contenu: >-
+      Un **système d'information** sert à collecter, stocker, traiter et partager des
+      informations. Exemple : l'ENT du collège.
+
+      Les données sont enregistrées dans des **fichiers**. L'extension après le point donne le
+      type : .txt (texte), .jpg ou .png (image), .mp3 (son), .mp4 (vidéo). Les fichiers sont
+      rangés dans des dossiers : c'est l'**arborescence**.
+
+      Le **stockage** se fait sur l'appareil (disque, clé USB) ou en ligne, dans le « nuage ».
+      Une **sauvegarde** est une copie faite ailleurs.
+
+      Unités : 1 octet = 8 bits ; 1 ko = 1 000 octets ; 1 Mo = 1 000 ko ; 1 Go = 1 000 Mo.
+
+  - type: texte
+    titre: "Cybersécurité et données personnelles"
+    contenu: >-
+      Un mot de passe robuste est long (12 caractères ou plus), mélange lettres, chiffres et
+      symboles, et sert pour **un seul compte**. La **double authentification** demande une
+      deuxième preuve. On fait les mises à jour. On se méfie des messages qui demandent un mot
+      de passe ou promettent un cadeau : c'est l'**hameçonnage**.
+
+      Les **données personnelles** permettent d'identifier une personne (nom, photo, adresse,
+      localisation). Chaque action en ligne laisse des **traces numériques**. Un contenu
+      « supprimé » peut avoir été copié. La CNIL veille à leur protection.
+
+  - type: texte
+    titre: "Propriété intellectuelle"
+    contenu: >-
+      Un texte, une image, une musique ont un **auteur**. On les réutilise seulement avec son
+      accord, par exemple grâce à une **licence libre**, et on cite l'auteur.
+
+      Une image trouvée sur Internet n'est pas forcément libre de droits.
+
+      Publier la photo d'une personne demande aussi son accord.
+
+  - type: texte
+    titre: "Cyberviolence et responsabilité"
+    contenu: >-
+      La **cyberviolence** regroupe le harcèlement en ligne, les moqueries répétées, la diffusion
+      d'images sans accord, l'usurpation d'identité.
+
+      Partager, même « pour rire », c'est participer : on engage sa responsabilité.
+
+      Victime ou témoin : ne pas répondre ni partager, garder une capture, signaler, en parler à
+      un adulte de confiance, appeler le 3018 (gratuit).
+
+  - type: exemple
+    enonce: "Une vidéo de 2 Go et 300 photos de 5 Mo chacune tiennent-elles sur une clé de 4 Go (1 Go = 1 000 Mo) ?"
+    etapes:
+      - "Les photos : 300 × 5 = 1 500 Mo, soit 1,5 Go."
+      - "Avec la vidéo : 2 + 1,5 = 3,5 Go."
+      - "3,5 Go est moins que 4 Go : tout tient sur la clé."
+
+  - type: exercice
+    enonce: "Combien de bits y a-t-il dans un octet ?"
+    forme: nombre
+    reponse: 8
+    tolerance: 0.01
+    unite: "bits"
+    indices:
+      - "Un octet est un petit groupe de bits."
+      - "Il s'écrit comme une suite de 0 et de 1, par exemple 01000001. Compte les chiffres."
+    explication: "1 octet = 8 bits."
+
+  - type: exercice
+    enonce: "Parmi ces mots de passe, lequel respecte les bonnes règles ?"
+    forme: qcm
+    choix:
+      - "Ton prénom et ta date de naissance, utilisés pour tous tes comptes"
+      - "Une suite de 12 caractères ou plus, avec lettres, chiffres et symboles, utilisée pour un seul compte"
+      - "Un mot de passe court, facile à retenir, partagé avec un ami"
+    reponse: 1
+    indices:
+      - "Un mot de passe doit être long, varié et rester secret."
+      - "Il doit aussi être différent pour chaque compte."
+    explication: "Un mot de passe robuste est long (12 caractères ou plus), mélange lettres, chiffres et symboles, et sert pour un seul compte."
+
+  - type: exercice
+    enonce: "Un fichier pèse 4,2 Mo. Quelle est sa taille en ko ? (1 Mo = 1 000 ko)"
+    forme: nombre
+    reponse: 4200
+    tolerance: 0.01
+    unite: "ko"
+    indices:
+      - "Un Mo contient plusieurs ko. Pour passer d'une grande unité à une petite, faut-il multiplier ou diviser ?"
+      - "Multiplie le nombre de Mo par le nombre de ko contenus dans 1 Mo."
+    explication: "1 Mo = 1 000 ko, donc 4,2 Mo = 4,2 × 1 000 = 4 200 ko."
+
+  - type: exercice
+    enonce: >-
+      Nomme en deux ou trois mots cette forme de cyberviolence : créer un faux compte avec le nom
+      et la photo d'un camarade pour publier des messages à sa place.
+    forme: reponse_courte
+    reponse: "usurpation d'identité"
+    reponses_acceptees:
+      - "usurpation d'identité"
+      - "usurpation d'identite"
+      - "usurpation identité"
+      - "l'usurpation d'identité"
+      - "une usurpation d'identité"
+      - "usurpation de son identité"
+      - "vol d'identité"
+    indices:
+      - "Le camarade n'a rien écrit : que lui a pris l'auteur du faux compte ?"
+      - "Le deuxième mot est « identité ». Le premier commence par « usur »."
+    explication: "C'est une usurpation d'identité : l'auteur se fait passer pour quelqu'un d'autre."
+
+  - type: exercice
+    enonce: >-
+      Document fictif. Une clé USB a une capacité de 8 Go. Chaque photo occupe 4 Mo. Combien de
+      photos au maximum peut-on ranger sur la clé vide ? (1 Go = 1 000 Mo)
+    forme: nombre
+    reponse: 2000
+    tolerance: 0.01
+    unite: "photos"
+    indices:
+      - "Les deux tailles ne sont pas dans la même unité. Convertis d'abord."
+      - "Écris la capacité de la clé en Mo."
+      - "Divise ensuite cette capacité par la taille d'une photo."
+    explication: "8 Go = 8 000 Mo. Nombre de photos : 8 000 ÷ 4 = 2 000."
+
+  - type: question_ouverte
+    question: >-
+      Dans le groupe de discussion de la classe, un élève publie une photo moqueuse d'un
+      camarade, prise sans son accord. Plusieurs élèves la partagent en riant. Inès la reçoit.
+      Explique en quoi c'est grave, quelle est la responsabilité de ceux qui partagent, et ce
+      qu'Inès peut faire.
+    indices:
+      - "Le camarade a-t-il donné son accord ? Combien de personnes vont voir la photo ?"
+      - "Fais trois parties : ce que vit la victime, le rôle de ceux qui partagent, ce qu'un témoin peut faire."
+    criteres:
+      - "L'élève explique l'atteinte subie : image diffusée sans accord (vie privée), moquerie qui peut se propager ; c'est de la cyberviolence."
+      - "L'élève dit que partager, c'est participer et engager sa responsabilité, même « pour rire »."
+      - "L'élève propose des actions adaptées : ne pas partager, garder une capture, signaler, en parler à un adulte de confiance ou appeler le 3018."
+
+  - type: synthese
+    consigne: >-
+      Avec tes propres mots, en deux ou trois phrases : donne deux règles pour protéger un compte
+      et une règle avant de réutiliser une image trouvée en ligne.

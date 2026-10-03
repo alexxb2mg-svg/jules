@@ -1,0 +1,152 @@
+notion: objet-comme-materiau
+titre: "L'objet comme matériau en art"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître un ready-made, un détournement, un assemblage et une accumulation."
+      - "Expliquer la décontextualisation et la recontextualisation d'un objet."
+      - "Dire l'effet produit sur le spectateur quand un objet devient œuvre."
+
+  - type: texte
+    titre: "Choisir un objet tout fait : le ready-made"
+    contenu: |-
+      Le **ready-made** (« déjà fait ») est un objet fabriqué en usine, choisi par l'artiste et exposé presque sans modification.
+      - 1913 : Marcel Duchamp fixe une roue de bicyclette sur un tabouret (*Roue de bicyclette*).
+      - 1917 : il expose un urinoir posé à l'envers, signé « R. Mutt » (*Fontaine*).
+      Ce n'est pas « n'importe quoi » : choisir l'objet, le titre et le lieu est un geste d'artiste.
+
+  - type: texte
+    titre: "Changer de lieu : décontextualiser, recontextualiser"
+    contenu: |-
+      **Décontextualiser** : sortir l'objet de son lieu et de son usage habituels.
+      **Recontextualiser** : le placer dans un nouveau lieu (musée, galerie), souvent avec un titre.
+      Effet : on ne regarde plus l'objet pour son usage, mais pour sa forme.
+      L'œuvre pose une question : « qu'est-ce qui fait qu'un objet est une œuvre ? »
+
+  - type: texte
+    titre: "Transformer les objets"
+    contenu: |-
+      - **Détournement** : l'objet change de sens ou d'usage. Man Ray, *Cadeau* (1921) : des clous sous un fer à repasser.
+      - **Assemblage** : réunir plusieurs objets. Picasso, *Tête de taureau* (1942) : une selle et un guidon de vélo.
+      - **Accumulation** : répéter un même objet. Arman, à partir de la fin des années 1950.
+      - **Sublimation** : rendre précieux un objet banal (la *Tête de taureau* a été coulée en bronze).
+      - **Citation** : reprendre un objet ou une œuvre connue pour la faire parler autrement.
+
+  - type: exemple
+    enonce: >-
+      Une élève (fictive) colle des dizaines de vieilles clés sur un panneau pour dessiner un grand arbre,
+      puis l'expose au CDI avec le titre « Racines ». Analyse sa démarche.
+    etapes:
+      - "Objet de départ : des clés, qui servent d'habitude à ouvrir des portes."
+      - "Opérations : elle répète un même objet (accumulation) et l'organise en image (assemblage)."
+      - "Changement de contexte : les clés quittent les poches et les tiroirs pour un lieu d'exposition."
+      - "Effet : les clés ne servent plus ; le titre fait penser à la maison, aux origines."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on un objet fabriqué en usine, choisi par un artiste et exposé presque sans
+      modification, comme la Fontaine de Duchamp ?
+    forme: reponse_courte
+    reponse: "ready-made"
+    reponses_acceptees:
+      - "ready-made"
+      - "ready made"
+      - "readymade"
+      - "un ready-made"
+      - "un ready made"
+      - "le ready-made"
+      - "ready-mades"
+    indices:
+      - "L'artiste ne l'a pas fabriqué : il l'a trouvé « déjà fait »."
+      - "C'est une expression anglaise de deux mots."
+    explication: "C'est un ready-made (« déjà fait ») : un objet manufacturé présenté comme une œuvre."
+
+  - type: exercice
+    enonce: >-
+      Man Ray colle une rangée de clous sous un fer à repasser. Le fer ne peut plus repasser.
+      Quelle opération a-t-il faite ?
+    forme: qcm
+    choix:
+      - "Une accumulation"
+      - "Un détournement"
+      - "Un ready-made sans modification"
+    reponse: 1
+    indices:
+      - "Le fer garde-t-il son usage habituel ?"
+      - "Une accumulation répète un même objet en grand nombre. Est-ce le cas ici ?"
+    explication: "C'est un détournement : l'objet est transformé, il perd son usage et prend un autre sens."
+
+  - type: exercice
+    enonce: >-
+      Une chaise d'école est posée seule sur un socle blanc, au milieu du hall, avec un titre. Comment
+      appelle-t-on le fait de sortir l'objet de son lieu et de son usage habituels ?
+    forme: reponse_courte
+    reponse: "décontextualisation"
+    reponses_acceptees:
+      - "décontextualisation"
+      - "decontextualisation"
+      - "la décontextualisation"
+      - "la decontextualisation"
+      - "une décontextualisation"
+      - "décontextualiser"
+      - "decontextualiser"
+    indices:
+      - "La chaise a quitté son contexte : la salle de classe."
+      - "Cherche le nom de l'action qui retire un objet de son lieu et de son usage habituels."
+    explication: "C'est une décontextualisation. Placée ensuite dans le hall comme une œuvre, la chaise est recontextualisée."
+
+  - type: exercice
+    enonce: "Picasso réunit une selle et un guidon de vélo pour faire une tête de taureau (1942). Quelle opération ?"
+    forme: qcm
+    choix:
+      - "Un assemblage"
+      - "Une accumulation"
+      - "Une taille dans un bloc de pierre"
+    reponse: 0
+    indices:
+      - "Combien d'objets différents utilise-t-il ?"
+      - "Une accumulation répète le même objet ; ici, les deux objets sont différents."
+    explication: "C'est un assemblage : deux objets différents sont réunis pour créer une image nouvelle."
+
+  - type: exercice
+    enonce: >-
+      Au brevet, on te montre une tasse recouverte de fourrure (Meret Oppenheim, 1936). Quelle analyse
+      est la plus complète ?
+    forme: qcm
+    choix:
+      - "C'est une jolie tasse décorée."
+      - "C'est une tasse détournée : la fourrure la rend douce et étrange, on ne peut plus boire dedans, et on la regarde autrement."
+      - "C'est une tasse ordinaire exposée sans aucune modification."
+    reponse: 1
+    indices:
+      - "Une bonne analyse nomme l'opération et dit l'effet produit."
+      - "La tasse a-t-elle été modifiée ? Peut-on encore s'en servir ?"
+    explication: "La bonne analyse part de l'objet, nomme l'opération (détournement) et dit l'effet (douceur étrange, objet devenu inutilisable)."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un objet de ta trousse. Imagine comment tu le transformerais en œuvre. Nomme l'opération,
+      dis où tu l'exposerais et quel effet tu cherches.
+    indices:
+      - "Pars de l'objet : à quoi sert-il d'habitude ?"
+      - "Choisis une opération : détournement, assemblage, accumulation, ready-made."
+    criteres:
+      - "L'élève décrit l'objet de départ et son usage habituel."
+      - "L'élève nomme une opération du cours et l'applique correctement."
+      - "L'élève précise le nouveau lieu ou titre (recontextualisation) et l'effet recherché."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est un ready-made et ce que
+      change le fait d'exposer un objet du quotidien dans un musée.

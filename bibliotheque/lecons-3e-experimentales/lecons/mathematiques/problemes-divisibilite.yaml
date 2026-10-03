@@ -1,0 +1,176 @@
+notion: problemes-divisibilite
+titre: 'Problèmes avec la divisibilité : engrenages et phénomènes qui se répètent'
+duree_minutes: 30
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme du cycle 4 (annexe 3), partie Mathématiques, BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+- titre: Attendus de fin d'année de 3e, Mathématiques, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/18-maths-3e-attendus-eduscol1114748pdf-74688.pdf
+  licence: etalab-2.0
+- titre: Repères annuels de progression, Mathématiques, cycle 4, éduscol, 2019
+  url: https://eduscol.education.gouv.fr/sites/default/files/document/26-maths-c4-reperes-eduscol1114756pdf-74694.pdf
+  licence: etalab-2.0
+- titre: Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027,
+    note de service du 11-9-2026, BO spécial n° 4 du 17 septembre 2026 (MENE2623228N)
+  url: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Reconnaître si un problème demande un multiple commun ou un diviseur commun.
+  - Résoudre un problème de phénomènes qui se répètent et un problème d'engrenage.
+  - Rédiger la démarche et répondre à la question avec la bonne unité.
+- type: texte
+  titre: Deux types de problèmes
+  contenu: 'Avant de calculer, on lit la question.
+
+
+    | La question parle de... | On cherche... |
+
+    |---|---|
+
+    | « de nouveau ensemble », « en même temps », « au bout de combien de temps » | un **multiple commun**
+    (le plus petit : **PPCM**) |
+
+    | « partager sans reste », « paquets identiques », « plus grand carreau » | un **diviseur commun**
+    (le plus grand : **PGCD**) |'
+- type: texte
+  titre: 'Quand tout recommence : le multiple commun'
+  contenu: 'Deux phénomènes qui se répètent se retrouvent ensemble à un moment qui est un **multiple commun**
+    de leurs deux périodes.
+
+
+    Exemple : un bus passe toutes les 6 minutes, un autre toutes les 8 minutes.
+
+    - Multiples de 8 : 8, 16, 24...
+
+    - 24 est aussi dans la table de 6.
+
+
+    Ils se retrouvent au bout de 24 minutes, puis de 48 minutes... (on ajoute 24 à chaque fois).'
+- type: texte
+  titre: 'Partager sans reste : le diviseur commun'
+  contenu: 'Pour faire des paquets identiques sans rien laisser, le nombre de paquets est un **diviseur
+    commun** de toutes les quantités.
+
+
+    Exemple : 18 pommes et 24 poires. Diviseurs communs de 18 et 24 : 1, 2, 3, 6.
+
+
+    Le maximum est **6 paquets**, avec 3 pommes et 4 poires dans chacun.
+
+
+    Pour trouver le PGCD, on peut lister les diviseurs, ou décomposer en facteurs premiers.'
+- type: texte
+  titre: Les engrenages
+  contenu: 'Quand deux roues dentées tournent ensemble, **autant de dents défilent** pour chaque roue.
+
+
+    Les deux dents de départ se retrouvent en contact après un nombre de dents qui est un **multiple commun**
+    des nombres de dents des roues.
+
+
+    Pour avoir le nombre de tours d''une roue, on **divise** ce nombre de dents par le nombre de dents
+    de cette roue.
+
+
+    Au brevet : dis quel type de problème c''est, calcule, puis réponds avec l''unité.'
+- type: exemple
+  enonce: Deux feux clignotent, l'un toutes les 9 secondes, l'autre toutes les 12 secondes. Ils s'allument
+    ensemble à 20 h 00 min 00 s. À quelle heure s'allumeront-ils de nouveau ensemble ?
+  etapes:
+  - 'On cherche « de nouveau ensemble » : un multiple commun de 9 et de 12.'
+  - 'Multiples de 12 : 12, 24, 36... On cherche le premier qui est aussi dans la table de 9.'
+  - '12 n''est pas dans la table de 9, 24 non plus. 36 = 9 × 4 : oui. Le plus petit multiple commun est
+    36.'
+  - 'Réponse : ils s''allument de nouveau ensemble au bout de 36 secondes, à 20 h 00 min 36 s.'
+- type: exercice
+  enonce: Deux minuteries sonnent, l'une toutes les 4 minutes, l'autre toutes les 10 minutes. Elles sonnent
+    ensemble à midi. Au bout de combien de minutes sonneront-elles de nouveau ensemble ?
+  forme: nombre
+  reponse: 20
+  tolerance: 0.01
+  unite: minutes
+  indices:
+  - On cherche un moment qui est dans la table de 4 et dans la table de 10.
+  - 'Écris les multiples de 10 dans l''ordre : 10 est-il dans la table de 4 ? Passe au suivant.'
+  explication: 'Multiples de 10 : 10, 20. Le nombre 10 n''est pas dans la table de 4, mais 20 = 4 × 5.
+    Elles sonnent de nouveau ensemble au bout de 20 minutes.'
+- type: exercice
+  enonce: Une confiseuse a 30 bonbons et 42 chewing-gums. Elle veut faire le plus grand nombre de paquets
+    identiques, sans rien laisser. Combien de paquets fait-elle ?
+  forme: qcm
+  choix:
+  - '3'
+  - '6'
+  - '12'
+  - '210'
+  reponse: 1
+  indices:
+  - Le nombre de paquets doit diviser 30 et diviser 42.
+  - On cherche le plus grand nombre qui divise les deux quantités.
+  explication: 'Diviseurs communs de 30 et 42 : 1, 2, 3 et 6. Le plus grand est 6 : elle fait 6 paquets
+    (5 bonbons et 7 chewing-gums chacun).'
+- type: exercice
+  enonce: Un engrenage est formé d'une roue A de 15 dents et d'une roue B de 20 dents. On marque les deux
+    dents en contact. Combien de tours complets la roue A fait-elle, au minimum, avant que les deux dents
+    marquées soient de nouveau en contact ?
+  forme: nombre
+  reponse: 4
+  tolerance: 0.01
+  unite: tours
+  indices:
+  - Le nombre de dents qui défilent doit être dans la table de 15 et dans la table de 20.
+  - 'Multiples de 20 : 20, 40, 60... Lequel est aussi dans la table de 15 ?'
+  - Ce nombre est un nombre de dents. Divise-le par le nombre de dents de la roue A.
+  explication: 'Multiples de 20 : 20, 40, 60. Et 60 = 15 × 4. Il défile 60 dents, soit 60 ÷ 15 = 4 tours
+    de la roue A (et 3 tours de la roue B).'
+- type: exercice
+  enonce: Une terrasse rectangulaire mesure 300 cm sur 210 cm. On la recouvre entièrement de carreaux
+    carrés tous identiques, sans découpe, avec le plus grand côté possible. Combien de carreaux faut-il
+    ?
+  forme: nombre
+  reponse: 70
+  tolerance: 0.01
+  indices:
+  - Le côté d'un carreau doit se placer un nombre entier de fois dans 300 cm et dans 210 cm.
+  - Décompose 300 et 210 en facteurs premiers pour trouver le plus grand diviseur commun.
+  - Une fois le côté trouvé, compte les carreaux dans la longueur, puis dans la largeur, et multiplie.
+  explication: '300 = 2² × 3 × 5² et 210 = 2 × 3 × 5 × 7. Le plus grand diviseur commun est 2 × 3 × 5
+    = 30 : côté de 30 cm. Dans la longueur : 300 ÷ 30 = 10 carreaux. Dans la largeur : 210 ÷ 30 = 7 carreaux.
+    Total : 10 × 7 = 70 carreaux.'
+- type: exercice
+  enonce: Léa va à la piscine tous les 4 jours, Sami tous les 6 jours et Inès tous les 10 jours. Ils s'y
+    retrouvent tous les trois le 1er juin. Quel jour du mois de juillet se retrouveront-ils de nouveau
+    tous les trois, pour la première fois ?
+  forme: nombre
+  reponse: 31
+  tolerance: 0.01
+  indices:
+  - Le nombre de jours cherché est dans la table de 4, de 6 et de 10.
+  - 'Cherche d''abord le plus petit nombre de jours qui convient : teste les multiples de 10.'
+  - Ajoute ce nombre de jours au 1er juin. Juin a 30 jours.
+  explication: 'Multiples de 10 : 10, 20, 30, 40, 50, 60. Le premier qui est dans les tables de 4 et de
+    6 est 60 (60 = 4 × 15 = 6 × 10). Le 1er juin plus 60 jours : 30 jours mènent au 1er juillet, 30 de
+    plus au 31 juillet. Réponse : le 31 juillet.'
+- type: question_ouverte
+  question: 'Pour un exercice, un élève écrit : « Deux feux clignotent toutes les 4 s et toutes les 6
+    s, donc ils sont ensemble au bout de 4 + 6 = 10 secondes. » Explique pourquoi c''est faux et comment
+    trouver la bonne réponse.'
+  indices:
+  - 10 est-il dans la table de 4 ? Est-il dans la table de 6 ?
+  - Quel type de nombre doit-on chercher pour un moment « de nouveau ensemble » ?
+  criteres:
+  - 'L''élève vérifie que 10 n''est pas dans la table de 4 (ou de 6) : l''addition ne donne pas un moment
+    commun.'
+  - L'élève dit qu'on cherche un multiple commun des deux périodes.
+  - 'L''élève trouve le plus petit multiple commun : 12 secondes.'
+- type: synthese
+  consigne: Écris avec tes mots, en deux ou trois phrases, quand on cherche un multiple commun et quand
+    on cherche un diviseur commun.

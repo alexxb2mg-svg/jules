@@ -14,14 +14,45 @@ Le projet est ouvert à tous : parents, enseignants, orthophonistes, étudiants,
 
 > **Pourquoi Jules.** Jules est né d'un essai, [*Après la dernière main levée*](docs/essai/), qui se demande ce que l'intelligence artificielle fait à l'apprentissage des enfants et à quelles conditions elle peut aider au lieu de faire à leur place. Sa lecture n'est pas nécessaire pour utiliser Jules. Elle montre d'où part le projet, les études sur lesquelles il s'appuie, et une postface dit ce que Jules en a repris, ce qu'il a corrigé et ce qui lui manque encore.
 
-> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e ; 683 notions). L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; 19 leçons expérimentales (8 matières, niveau 3e) servent de premier contenu, à relire par un enseignant. Les **fiches visuelles** couvrent la 3e et le CM1 dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) (405 fiches). Les **exercices sans IA** ont leurs premiers **générateurs** (13 notions de mathématiques 3e). Les **outils par matière** (étape 3) sont isolés et s'ouvrent depuis la page (calculatrice à côté de Jules) ; le **studio** de révision (étape 4) est construit. Les **adaptations** ont leur socle : leviers d'affichage et aménagements du PAP réglés par le parent, avec des valeurs de départ sourcées qui attendent la relecture de professionnels. Voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
+> **Où en est le projet.** Jules fonctionne comme un tuteur par conversation, avec quatre bibliothèques du programme officiel (CM1, 5e, 4e, 3e ; 683 notions). L'**interface de cours** (étape 2 de la feuille de route) est construite : une leçon en blocs au centre, le parcours de l'élève à gauche, Jules à côté qui guide sans donner la réponse ; 252 leçons expérimentales (les 12 matières de 3e, une par notion) servent de premier contenu, à relire par un enseignant. Les **fiches visuelles** couvrent la 3e et le CM1 dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) (410 fiches). Les **exercices sans IA** ont leurs premiers **générateurs** (13 notions de mathématiques 3e). Les **outils par matière** (étape 3) sont isolés et s'ouvrent depuis la page (calculatrice à côté de Jules) ; le **studio** de révision (étape 4) est construit. Les **adaptations** ont leur socle : leviers d'affichage et aménagements du PAP réglés par le parent, avec des valeurs de départ sourcées qui attendent la relecture de professionnels. Voir la [feuille de route](docs/VISION.md). C'est le bon moment pour donner son avis.
 
 ## Où va Jules
 
-<p align="center"><img src="docs/interface-lecon.png" alt="La nouvelle interface : une leçon sur le théorème de Pythagore au centre, le menu de l'élève à gauche (fiches, leçons, exercices, discussion, espace parent), Jules à droite qui propose de réexpliquer sans donner la réponse" width="820"></p>
-<p align="center"><em>Une leçon avec Jules à côté. Profil d'exemple, moteur Démo.</em></p>
-<p align="center"><img src="docs/interface-fiche.png" alt="Une fiche visuelle d'histoire, la Première Guerre mondiale : carte des notions, chemin de l'élève (lire la fiche, faire la leçon, s'entraîner), sommaire de la fiche et bulle de Jules" width="820"></p>
-<p align="center"><em>Une fiche visuelle, affichée sans appel à l'IA. Captures de la nouvelle interface, en cours d'intégration (branche <code>ui/refonte-2026-09-27</code>) ; <code>main</code> sert encore les pages précédentes.</em></p>
+<p align="center"><img src="docs/interface-fiches.png" alt="La page « Mes fiches » : les douze matières de 3e en cartes colorées (mathématiques, français, histoire, géographie, physique-chimie, SVT, technologie, anglais, EMC, arts plastiques, éducation musicale, histoire des arts), chacune avec son nombre de fiches et de chapitres" width="820"></p>
+<p align="center"><em>« Mes fiches » : une couleur par matière, reprise sur toutes ses pages.</em></p>
+
+<p align="center"><img src="docs/interface-cartes.png" alt="Six cartes des notions, une par matière : la Seconde Guerre mondiale en violet, le calcul avec les fractions en bleu, le circuit électrique en turquoise, la puberté en vert, la chaîne d'énergie en orange, l'aménagement du territoire en mode sombre" width="820"></p>
+<p align="center"><em>Chaque fiche a sa carte des notions : l'idée centrale et ce qui en découle, en un coup d'œil.</em></p>
+
+<p align="center"><img src="docs/interface-schemas.png" alt="Six schémas de fiches : les circuits en série et en dérivation, les 18 premiers éléments de la classification, un atome de lithium et le zoom sur son noyau, la digestion par les enzymes, le tableau à double entrée de deux dés, un diagramme de Gantt de projet technique" width="820"></p>
+<p align="center"><em>Les schémas des fiches (306 en 3e) : dessinés en SVG, vérifiés par le code, agrandissables.</em></p>
+
+<p align="center"><img src="docs/interface-carte-agrandie.png" alt="La carte d'une fiche de physique-chimie ouverte en grand au-dessus de la page : un circuit électrique, relié à « en série », « en dérivation », « loi d'Ohm » et « mesures »" width="820"></p>
+<p align="center"><em>« Agrandir la carte » l'ouvre en grand, au-dessus de la fiche.</em></p>
+
+<table>
+<tr>
+<td width="50%"><img src="docs/interface-fiche.png" alt="Une fiche de technologie, la chaîne d'énergie : la formule N2 = N1 × Z1 ÷ Z2 avec chaque lettre expliquée, le chemin de l'élève (lire la fiche, faire la leçon, s'entraîner, cartes mémoire) et le sommaire de la fiche"></td>
+<td width="50%"><img src="docs/interface-graphe.png" alt="Une fiche de mathématiques sur la fonction linéaire : la formule f(x) = a × x, puis une figure où l'élève déplace des curseurs a et b et voit la droite bouger"></td>
+</tr>
+<tr>
+<td align="center"><em>Une fiche : la formule, chaque lettre expliquée, le chemin de l'élève à droite.</em></td>
+<td align="center"><em>Une figure à manipuler : l'élève bouge a et b, la droite suit.</em></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/interface-lecons.png" alt="La liste des leçons de mathématiques : des cartes avec le chapitre, le titre, la durée et l'état (à faire), et les matières en pastilles de couleur"></td>
+<td width="50%"><img src="docs/interface-lecon.png" alt="Une leçon sur les fonctions linéaires et affines : objectifs, blocs « À retenir » au centre, Jules à droite qui propose de réexpliquer sans donner la réponse"></td>
+</tr>
+<tr>
+<td align="center"><em>Les leçons d'une matière, avec leur durée.</em></td>
+<td align="center"><em>Une leçon, Jules à côté.</em></td>
+</tr>
+</table>
+
+<p align="center"><img src="docs/interface-mobile.png" alt="Quatre écrans de téléphone : la page Mes fiches en clair, les leçons de physique-chimie, une fiche sur les formes d'énergie en mode sombre avec sa carte réduite, et Mes fiches en mode sombre" width="820"></p>
+<p align="center"><em>Sur téléphone, en clair et en sombre.</em></p>
+
+<p align="center"><em>Captures de la nouvelle interface React — profil d'exemple et moteur Démo.</em></p>
 
 Quatre idées guident la suite :
 
@@ -40,7 +71,7 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 - **Aide aux devoirs** avec la photo de l'exercice, sans jamais donner la réponse, même si l'enfant insiste.
 - **Cinq modes de conversation** : aide aux devoirs, réexplique-moi, quiz, fiche de révision, préparer un contrôle.
 - **Épreuve sans aide** : quelques jours après, Jules propose de reprendre sans aide les notions marquées comprises. Ce qui a tenu devient « acquis », ce qui n'a pas tenu repasse « en cours », et le bilan du soir le dit au parent.
-- **Fiches visuelles (page « Mes fiches »)** : pour les notions qui en ont une, une fiche en blocs (attendus, formule, carte, graphe interactif, méthode, piège, exemple, renfort), commentée par Jules en phrases préécrites, sans aucun appel au modèle d'IA. Le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) en fournit 247 pour la 3e (12 matières) et 158 pour le CM1 (10 matières) ; ce dépôt-ci garde 23 fiches de 3e (mathématiques, histoire, géographie) comme exemples du format.
+- **Fiches visuelles (page « Mes fiches »)** : pour les notions qui en ont une, une fiche en blocs (attendus, formule, carte, graphe interactif, méthode, piège, exemple, renfort), commentée par Jules en phrases préécrites, sans aucun appel au modèle d'IA. Le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques) en fournit 252 pour la 3e (12 matières) et 158 pour le CM1 (10 matières) ; ce dépôt-ci garde 23 fiches de 3e (mathématiques, histoire, géographie) comme exemples du format.
 - **Studio** : l'élève fabrique une fiche, une carte mentale, un quiz ou des cartes mémoire, que Jules relit ; les cartes mémoire suivent une répétition espacée (`jules/revisions.py`).
 - **Mes cours** : l'élève apporte un document (photos, PDF ou texte collé) ; Jules en fait une fiche visuelle personnelle, proposée dans la notion qu'il reconnaît, et l'élève décide de la garder et où la ranger.
 - **Figures dans la discussion** : Jules peut montrer une figure (droite affine, triangle de Thalès...) tirée d'un gabarit validé, sans jamais la dessiner lui-même.
@@ -52,14 +83,15 @@ Le détail, les étapes et les règles de sécurité des outils sont dans [docs/
 - **Suivi des notions** (comprise, en cours, bloquée) et **bilan du soir** pour le parent, avec une ou deux questions à poser à l'enfant, faites pour être posées sans savoir faire l'exercice (« Explique-moi comment tu sais qu'un nombre est premier »). Ce suivi est une estimation faite par l'IA à partir des conversations, pas une évaluation : il sert à savoir de quoi parler, pas à noter l'élève.
 - **Vigilance** : un message inquiétant déclenche une alerte immédiate au parent, et l'enfant est orienté vers le 3018 et le 119.
 - **Des notions du programme** : l'élève choisit la notion sur laquelle il travaille, ou Jules la reconnaît dans son message ou sur la photo de l'exercice. Jules reçoit alors ce que le programme attend, les repères de cours disponibles et, si un enseignant en fournit une, sa direction pédagogique (`bibliotheque/`, voir son [README](bibliotheque/README.md)).
-- **Bibliothèques expérimentales** : le programme officiel sur quatre niveaux (CM1 158 notions, 5e 132, 4e 141, 3e 252, soit 683 au total, source officielle de chacune ; seul le niveau de l'élève est chargé), une fiche de repères pour chaque notion de 3e (12 matières) et de CM1 (10 matières, sources officielles éduscol uniquement), 19 leçons en blocs (8 matières de 3e, dont le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), et, dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques), les fiches v2 et les fiches visuelles de la 3e et du CM1, écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les fiches v2 de 5e et de 4e (273 notions) attendent leurs contributeurs ; les autres niveaux (CP à CE2, CM2, 6e, lycée) sont à construire.
+- **Bibliothèques expérimentales** : le programme officiel sur quatre niveaux (CM1 158 notions, 5e 132, 4e 141, 3e 252, soit 683 au total, source officielle de chacune ; seul le niveau de l'élève est chargé), une fiche de repères pour chaque notion de 3e (12 matières) et de CM1 (10 matières, sources officielles éduscol uniquement), 252 leçons en blocs (une par notion de 3e, 12 matières, dont le théorème de Pythagore, l'accord du participe passé avec avoir, la guerre totale 1914-1918), et, dans le dépôt [jules-bibliotheques](https://github.com/alexxb2mg-svg/jules-bibliotheques), les fiches v2 et les fiches visuelles de la 3e et du CM1, écrites à partir de contenus libres. Elles ne sont pas validées par un enseignant : Jules le sait, et l'élève le voit. Les fiches v2 de 5e et de 4e (273 notions) attendent leurs contributeurs ; les autres niveaux (CP à CE2, CM2, 6e, lycée) sont à construire.
 - **Données à la maison** : conversations, photos et bilans restent sur l'ordinateur familial. Pas de compte, pas de publicité. Depuis l'espace parent, on peut télécharger tout le dossier de l'élève (.zip), effacer une conversation, ou tout effacer d'un coup.
 
 ## Ce que Jules ne sait pas encore
 
 - **S'il fait progresser.** Jules n'a été essayé que dans une famille, sans mesure. Un tuteur bien réglé évite surtout que l'IA fasse le travail à la place de l'enfant ; les progrès mesurés dans les études viennent quand un adulte s'en mêle. Une épreuve sans aide, quelques jours après, vérifie déjà ce qui reste chez un élève ; ce n'est pas une étude. Un banc d'essai d'élèves simulés existe (`evaluation/eleves/`, 9 profils, plus de 35 scénarios) pour repérer des pièges de conversation ; il ne remplace pas une mesure sur de vrais élèves.
 - **Tenir la règle avec un petit modèle installé sur l'ordinateur** (voir plus bas).
-- **Garantir « jamais la réponse » partout par le code plutôt que par le prompt.** Le code la garantit dans les leçons (module `cours`), dans les exercices sans IA (module `exercices`) et, dans tous les modes de conversation, pour les exercices fermés de la fiche v2 de la notion en cours (`notions.filtre_sortie` : une réponse de Jules qui contient la bonne réponse est écartée puis remplacée). Pour un exercice apporté par l'élève (photo, énoncé tapé), Jules ne connaît pas la réponse attendue : la règle repose alors sur le prompt, donc sur le modèle choisi.
+- **Garantir « jamais la réponse » partout par le code plutôt que par le prompt.** Le code la garantit dans les leçons (module `cours`), dans les exercices sans IA (module `exercices`) et, dans tous les modes de conversation, pour les exercices fermés de la fiche v2 de la notion en cours (`notions.filtre_sortie` : une réponse de Jules qui contient la bonne réponse est écartée puis remplacée). Pour un exercice apporté par l'élève (photo, énoncé tapé), Jules ne connaît pas la réponse attendue : la règle repose alors sur le prompt, donc sur le modèle choisi. Un banc d'essai (`evaluation/cours/`) mesure si le prompt seul tient la règle sur 12 scénarios, dont insistance répétée, urgence prétendue, fausse autorisation et tentative d'injection : aucune fuite de la réponse au dernier passage (24 septembre 2026). Ses limites : seul le mode cours est couvert, un seul modèle a été mesuré (Claude Sonnet), appelé par le CLI `claude -p` et non par les moteurs de Jules, et la mesure n'est pas relancée en CI.
+- **Ne manquer aucun signal inquiétant.** L'alerte au parent (mal-être, harcèlement, adulte inquiétant) repose sur le modèle d'IA, qui peut laisser passer un signal (faux négatif). Un plancher déterministe (`consignes/vigilance_plancher.yaml`) rattrape une liste étroite d'expressions même si l'analyse par le modèle échoue, et le bilan du soir indique quand elle n'a pas pu avoir lieu. Un message auquel Jules n'a pas pu répondre (moteur d'IA en panne) n'est pas analysé du tout. Cela ne remplace pas l'attention d'un adulte.
 
 ## Installation
 
@@ -110,7 +142,7 @@ La clé API se colle dans le fichier `.env`, créé par l'assistant. Elle n'est 
 
 Sous Windows, le premier démarrage sur `0.0.0.0` déclenche une popup du pare-feu : acceptez l'accès pour les réseaux privés. Pour trouver l'adresse de l'ordinateur : `ipconfig` dans une invite de commandes Windows (ligne « Adresse IPv4 ») ; `ifconfig`, ou les réglages réseau, sur Mac.
 
-Jules refuse de démarrer sur le réseau tant que les deux codes ne sont pas définis. Ne l'exposez jamais sur Internet.
+Jules refuse de démarrer sur le réseau tant que les deux codes ne sont pas définis, et limite les essais de code (8 erreurs par appareil et 30 au total sur 10 minutes). Avec `hote: 0.0.0.0`, les échanges (codes d'accès, conversations de l'enfant) circulent en HTTP, en clair, sur le réseau local : c'est acceptable sur le wifi familial, à proscrire sur un wifi partagé ou dans un établissement sans mettre un serveur HTTPS devant Jules (reverse proxy). Ne l'exposez jamais sur Internet.
 
 ### Vous êtes enseignant ? Jules fonctionne avec Albert
 
@@ -150,7 +182,8 @@ Tout se branche par la configuration, sans toucher au cœur :
 | Profil | `profils/<id>.yaml` | Ce que Jules sait de l'élève. Seul `exemple.yaml` est publié | en place |
 | Consignes | `consignes/*.md` | Pédagogie, sécurité, format : communes à toutes les personas | en place |
 | Modes | `consignes/modes/*.md` | Un fichier = un bouton sur la page de l'élève | en place |
-| Modules | `jules/modules/<id>.py` | `modes`, `notions`, `memoire`, `suivi`, `vigilance` (plancher déterministe dans `consignes/vigilance_plancher.yaml` en plus du modèle), `rapport` (bilan du soir), `cours` (interface de leçon), `studio` (fiche, carte mentale, quiz, cartes mémoire), `exercices` (exercices sans IA corrigés par le code), `fiches_visuelles` (page « Mes fiches »), `outils` (ouvre un outil dans un espace isolé), `figures` (figures de la discussion, validées par une liste blanche), `sources` (l'élève apporte son cours : fiche personnelle), `epreuve` (épreuve sans aide), `retours` (bouton « Un souci, une idée ? » lu par le parent), `synchro` (progression et réglages suivent l'élève d'un appareil à l'autre) ; `modele_eleve` est un squelette désactivé | en place |
+| Modules | `jules/modules/<id>.py` | `modes` (modes de travail), `notions` (rattache la conversation à une notion du programme), `memoire` (ce que Jules retient du parcours), `suivi` (état des notions), `vigilance` (plancher déterministe dans `consignes/vigilance_plancher.yaml` en plus du modèle), `epreuve` (épreuve sans aide), `sources` (l'élève apporte son cours : photos, PDF, texte, transformé en fiche personnelle), `retours` (bouton « Un souci, une idée ? », lu par le parent), `synchro` (même progression d'un appareil à l'autre), `rapport` (bilan du soir), `cours` (interface de leçon), `figures` (figures tirées de gabarits validés, montrées dans la discussion), `studio` (fiche, carte mentale, quiz, cartes mémoire), `exercices` (exercices sans IA corrigés par le code), `fiches_visuelles` (page « Mes fiches »), `outils` (ouvre un outil dans un espace isolé) | en place |
+| Modèle de l'élève | `jules/modules/modele_eleve.py` | `modele_eleve` : croyance chiffrée par notion, oubli, calibration par l'épreuve ([docs/MODELE-ELEVE.md](docs/MODELE-ELEVE.md)) | squelette, désactivé dans `config.yaml` |
 | Notifieurs | `jules/notifieurs/<id>.py` | Canaux vers le parent : fichier, Telegram | en place |
 | Moteurs d'IA | `jules/llm/<id>.py` | demo, openai_compatible, anthropic | en place |
 | Bibliothèques | `bibliotheque/<id>/` | Référentiel des notions, fiches par notion, leçons en blocs, direction d'un enseignant ; chargées selon le niveau de l'élève, par ordre de priorité | en place, contenus expérimentaux (CM1, 5e, 4e, 3e) |

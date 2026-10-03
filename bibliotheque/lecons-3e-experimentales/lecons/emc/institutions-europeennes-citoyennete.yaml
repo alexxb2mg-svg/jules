@@ -1,0 +1,148 @@
+notion: institutions-europeennes-citoyennete
+titre: "Institutions européennes et citoyenneté européenne"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Wikipédia, « Cour de justice de l'Union européenne »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Cour_de_justice_de_l%27Union_europ%C3%A9enne&oldid=237798293"
+    licence: CC-BY-SA-4.0
+  - titre: "Wikipédia, « Cour européenne des droits de l'homme »"
+    url: "https://fr.wikipedia.org/w/index.php?title=Cour_europ%C3%A9enne_des_droits_de_l%27homme&oldid=238839219"
+    licence: CC-BY-SA-4.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer le Conseil de l'Europe et l'Union européenne."
+      - "Expliquer que les États de l'UE doivent appliquer le droit de l'Union (traités, règlements, directives, décisions de la CJUE)."
+      - "Distinguer la CJUE et la CEDH, et dire comment un citoyen peut saisir la justice européenne."
+
+  - type: texte
+    titre: "Deux ensembles européens"
+    contenu: |-
+      Depuis l'après-guerre, la démocratie française s'inscrit dans **deux ensembles européens**. Ils sont différents.
+
+      - Le **Conseil de l'Europe** : créé en 1949, il siège à Strasbourg. Il défend les droits de l'homme et la démocratie. Il compte 46 États. Il a rédigé la Convention européenne des droits de l'homme.
+      - L'**Union européenne (UE)** : elle naît de la coopération économique commencée dans les années 1950 (traité de Rome en 1957, traité de Maastricht en 1992). Elle compte 27 États membres.
+
+  - type: texte
+    titre: "Le droit de l'Union"
+    contenu: |-
+      Dans l'UE, les États membres sont **tenus d'appliquer** le droit de l'Union, aussi appelé **droit communautaire**. Il comprend :
+
+      - les **traités** ;
+      - les **règlements** : ils s'appliquent directement dans tous les États ;
+      - les **directives** : elles fixent un objectif, puis chaque État l'inscrit dans sa propre loi ;
+      - les **décisions de la Cour de justice** de l'Union européenne (CJUE).
+
+  - type: texte
+    titre: "Deux juridictions à ne pas confondre"
+    contenu: |-
+      Un citoyen européen peut faire valoir ses droits devant une **juridiction européenne**. Il y en a deux.
+
+      | | CJUE | CEDH |
+      |---|---|---|
+      | Nom | Cour de justice de l'Union européenne | Cour européenne des droits de l'homme |
+      | Siège | Luxembourg | Strasbourg |
+      | Elle fait respecter | le droit de l'Union | la Convention européenne des droits de l'homme |
+      | Organisation | Union européenne | Conseil de l'Europe |
+
+  - type: texte
+    titre: "La citoyenneté européenne"
+    contenu: |-
+      On peut saisir la CEDH quand on estime qu'un État a violé ses droits. Il faut d'abord avoir **épuisé les recours** devant les juges de son pays.
+
+      La CJUE, elle, veille à ce que les États et les institutions respectent le droit de l'Union. Elle aide aussi les juges nationaux à l'interpréter.
+
+      La **citoyenneté européenne** s'ajoute à la citoyenneté nationale. Elle permet de circuler et de vivre dans un autre État membre. Elle permet aussi de voter aux élections européennes et municipales là où l'on réside.
+
+  - type: exemple
+    enonce: >-
+      Un texte européen demande à tous les États d'atteindre un objectif, mais chaque État doit
+      écrire ce texte dans sa propre loi. S'agit-il d'un règlement ou d'une directive ?
+    etapes:
+      - "On regarde comment le texte s'applique. Un règlement s'applique directement, de la même façon partout."
+      - "Ici, chaque État doit d'abord inscrire l'objectif dans sa loi nationale : ce n'est pas une application directe."
+      - "C'est donc une directive. Elle fait partie du droit de l'Union, que les États sont tenus d'appliquer."
+
+  - type: exercice
+    enonce: "Dans quelle ville siège la Cour européenne des droits de l'homme (CEDH) ?"
+    forme: qcm
+    choix:
+      - "Luxembourg"
+      - "Strasbourg"
+      - "Paris"
+    reponse: 1
+    indices:
+      - "Une des deux villes du cours est le siège du Conseil de l'Europe."
+      - "La CEDH dépend du Conseil de l'Europe, pas de l'Union européenne."
+    explication: "La CEDH siège à Strasbourg. La CJUE siège à Luxembourg."
+
+  - type: exercice
+    enonce: "Combien d'États membres compte l'Union européenne ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 27
+    tolerance: 0
+    indices:
+      - "Ne confonds pas avec le Conseil de l'Europe, qui compte plus d'États."
+      - "Relis le premier bloc de texte : l'UE compte un nombre d'États entre 25 et 30."
+    explication: "L'Union européenne compte 27 États membres. Le Conseil de l'Europe en compte 46."
+
+  - type: exercice
+    enonce: >-
+      Quel sigle de quatre lettres désigne la juridiction qui siège à Strasbourg et qui fait
+      respecter la Convention européenne des droits de l'homme ?
+    forme: reponse_courte
+    reponse: "CEDH"
+    reponses_acceptees: ["CEDH", "la CEDH", "cedh", "C.E.D.H."]
+    indices:
+      - "Ce sigle commence par la lettre C, comme « Cour »."
+      - "Il se termine par le mot « homme » : la dernière lettre est un H."
+    explication: "C'est la CEDH : la Cour européenne des droits de l'homme."
+
+  - type: exercice
+    enonce: "De quelle organisation la CEDH dépend-elle ?"
+    forme: qcm
+    choix:
+      - "De l'Union européenne"
+      - "Du Conseil de l'Europe"
+      - "Du Parlement français"
+    reponse: 1
+    indices:
+      - "La CEDH fait respecter la Convention européenne des droits de l'homme."
+      - "Cette convention a été rédigée par l'organisation créée en 1949."
+    explication: "La CEDH dépend du Conseil de l'Europe (46 États), pas de l'Union européenne."
+
+  - type: exercice
+    enonce: >-
+      Un citoyen pense que son État a violé ses droits. Il a déjà fait tous les recours possibles
+      devant les juges de son pays, sans succès. À quelle juridiction européenne peut-il s'adresser ?
+    forme: qcm
+    choix:
+      - "À la CJUE, à Luxembourg, car elle juge tous les litiges des États"
+      - "À la CEDH, à Strasbourg, car elle fait respecter la Convention européenne des droits de l'homme"
+      - "Au Parlement européen, qui rend la justice"
+    reponse: 1
+    indices:
+      - "Le citoyen estime que ses droits de l'homme ont été violés."
+      - "Quelle cour fait respecter la Convention européenne des droits de l'homme ?"
+      - "La CJUE s'occupe du droit de l'Union, pas de cette convention."
+    explication: "Après avoir épuisé les recours nationaux, il peut saisir la CEDH. La CJUE fait respecter le droit de l'Union. Le Parlement européen ne rend pas la justice."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre la CJUE et la CEDH : où siège chacune, quel texte fait-elle
+      respecter, et de quelle organisation dépend-elle ?
+    indices:
+      - "Fais deux petites phrases : une pour la CJUE, une pour la CEDH."
+      - "Pour chaque cour, réponds à trois questions : où, quoi, de quelle organisation ?"
+    criteres:
+      - "L'élève associe la CJUE à Luxembourg, au droit de l'Union européenne et à l'UE."
+      - "L'élève associe la CEDH à Strasbourg, à la Convention européenne des droits de l'homme et au Conseil de l'Europe."
+      - "L'élève ne confond pas les deux juridictions ni les deux organisations."
+
+  - type: synthese
+    consigne: >-
+      En trois phrases, explique la différence entre le Conseil de l'Europe et l'Union européenne,
+      puis dis comment un citoyen peut faire valoir ses droits devant la justice européenne.

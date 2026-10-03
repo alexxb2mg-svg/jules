@@ -1,0 +1,178 @@
+notion: strategies-de-lecture
+titre: "Stratégies de lecture et justification de l'interprétation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser des stratégies pour comprendre un texte : avant, pendant et après la lecture."
+      - "Justifier une interprétation en citant le texte et en expliquant la citation."
+      - "Choisir un livre adapté à son niveau, à ses goûts et à ses besoins."
+
+  - type: texte
+    titre: "Avant, pendant et après la lecture"
+    contenu: |-
+      Un bon lecteur ne comprend pas toujours du premier coup. Il utilise des **stratégies**.
+
+      | Moment | Ce qu'il fait |
+      |---|---|
+      | **Avant** | Il observe le titre, la couverture, les images, l'auteur, la table des matières. Il **anticipe** le sujet. |
+      | **Pendant** | Il se pose des questions (qui ? où ? quand ? pourquoi ?), relit une phrase difficile, relie le texte à ce qu'il sait. |
+      | **Après** | Il **reformule**, résume, vérifie que sa compréhension est cohérente avec tout le texte. |
+
+  - type: texte
+    titre: "Un mot inconnu, un sens caché"
+    contenu: |-
+      **Face à un mot inconnu :**
+
+      1. Relis la phrase.
+      2. Cherche des **indices de contexte** : les mots et les phrases autour, la construction, la famille du mot.
+      3. Si cela ne suffit pas, utilise un **dictionnaire** ou demande de l'aide.
+
+      **Faire une inférence**, c'est comprendre ce que le texte ne dit pas directement, en assemblant des indices.
+
+      Exemple : « Théo attendit que la cour soit vide avant de sortir » laisse penser qu'il veut éviter les autres.
+
+  - type: texte
+    titre: "Justifier une interprétation"
+    contenu: |-
+      **Justifier**, c'est expliquer pourquoi on comprend un texte d'une certaine façon, en **citant des passages précis**.
+
+      Les trois temps :
+
+      1. Donne ton **interprétation**.
+      2. Recopie une **citation** entre guillemets.
+      3. **Explique** : « Le passage montre que... ».
+
+      Une interprétation sans preuve n'est qu'une impression. Plusieurs interprétations peuvent exister, mais **toutes** doivent s'appuyer sur le texte.
+
+      Une citation sans explication ne prouve rien.
+
+  - type: texte
+    titre: "Choisir un livre"
+    contenu: |-
+      Un lecteur autonome choisit un livre **adapté**.
+
+      - Lis la **quatrième de couverture** (le dos du livre).
+      - Lis **quelques lignes** des premières pages.
+      - Regarde la **longueur** et le **niveau de langue**.
+      - Pense à tes **goûts** et à ton **besoin** : se distraire, apprendre, préparer un exposé.
+
+      Au brevet, on attend une **phrase complète appuyée sur une citation**.
+
+  - type: exemple
+    enonce: >-
+      Texte : « Léa referma le carnet et regarda par la fenêtre. Elle n'avait pas faim : ce qu'elle
+      venait de lire l'avait bouleversée. » Que veut dire « bouleversée » ?
+    etapes:
+      - "Je repère le mot que je ne connais pas : « bouleversée »."
+      - "Je relis la phrase. Je cherche les indices autour : Léa n'a pas faim, et la cause est ce qu'elle a lu."
+      - "J'en déduis que « bouleversée » exprime une émotion très forte."
+      - "Je vérifie avec la suite du texte : le sens colle avec la phrase."
+
+  - type: exercice
+    enonce: "Avant de lire un roman, que peux-tu faire pour anticiper son sujet ?"
+    forme: qcm
+    choix:
+      - "Observer le titre, la couverture et la table des matières"
+      - "Lire seulement la dernière phrase"
+      - "Ne rien regarder pour être surpris"
+      - "Compter le nombre de pages uniquement"
+    reponse: 0
+    indices:
+      - "Anticiper, c'est imaginer de quoi parle le texte avant de le lire."
+      - "Cherche ce qu'on voit sur un livre fermé, sans le lire."
+    explication: "Avant la lecture, on observe le titre, la couverture, les images, l'auteur et la table des matières pour anticiper le sujet."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on la compréhension d'une information que le texte ne dit pas directement,
+      mais que l'on déduit d'indices ?
+    forme: reponse_courte
+    reponse: "inférence"
+    reponses_acceptees: ["inference", "une inférence", "une inference", "l'inférence", "l'inference"]
+    indices:
+      - "On ne lit pas seulement ce qui est écrit : on assemble des indices pour comprendre le reste."
+      - "Le mot commence par « infé- »."
+    explication: "C'est une inférence : comprendre ce que le texte sous-entend en assemblant des indices."
+
+  - type: exercice
+    enonce: >-
+      Texte : « Le vieux marin était d'humeur morose : il ne parlait à personne et regardait la mer
+      sans un sourire. » Grâce au contexte, que veut dire « morose » ?
+    forme: qcm
+    choix:
+      - "Triste et silencieux"
+      - "Très joyeux"
+      - "Affamé"
+      - "Pressé de partir"
+    reponse: 0
+    indices:
+      - "Cherche les indices autour du mot : ce que fait le marin."
+      - "Il ne parle à personne et ne sourit pas. Quelle humeur cela montre-t-il ?"
+    explication: "Le marin ne parle à personne et ne sourit pas : ce sont des indices d'une humeur triste et fermée. « Morose » veut dire triste et sombre."
+
+  - type: exercice
+    enonce: "Tu dois choisir un livre à la médiathèque. Quelle démarche est la plus adaptée ?"
+    forme: qcm
+    choix:
+      - "Choisir uniquement d'après la couverture"
+      - "Lire la quatrième de couverture et quelques lignes, puis vérifier le niveau de langue, la longueur et mes goûts"
+      - "Prendre le livre le plus long"
+      - "Prendre celui qu'un inconnu a rendu en dernier"
+    reponse: 1
+    indices:
+      - "Un bon choix tient compte de ton niveau, de tes goûts et de ton besoin."
+      - "Élimine les réponses qui ne regardent ni le contenu, ni le niveau de langue."
+    explication: "On lit la quatrième de couverture et quelques lignes, puis on vérifie le niveau de langue, la longueur et ses goûts. Choisir seulement d'après la couverture est une erreur fréquente."
+
+  - type: exercice
+    enonce: >-
+      Texte : « Théo serra son sac contre lui et baissa la tête. Personne ne lui parlait depuis le
+      matin. » Quelle réponse justifie le mieux que Théo se sent seul ?
+    forme: qcm
+    choix:
+      - "Théo se sent seul, c'est évident."
+      - "Théo a un sac."
+      - "Théo se sent seul : « Personne ne lui parlait depuis le matin » le montre, car les autres l'ignorent."
+      - "Théo baisse la tête."
+    reponse: 2
+    indices:
+      - "Une bonne justification donne l'idée, cite le texte entre guillemets, puis explique."
+      - "Cherche la réponse qui contient une citation exacte et un lien avec l'idée."
+      - "Une réponse qui donne seulement un fait, ou seulement une opinion, ne suffit pas."
+    explication: "La réponse 3 donne l'idée (Théo est seul), cite le texte et explique le lien. La réponse 1 est une opinion sans preuve. Les réponses 2 et 4 citent un fait qui ne prouve pas la solitude."
+
+  - type: question_ouverte
+    question: >-
+      Lis : « Théo serra son sac contre lui et baissa la tête. Personne ne lui parlait depuis le
+      matin. À la sonnerie, il attendit que la cour soit vide avant de sortir. » Que ressent Théo ?
+      Justifie avec deux citations.
+    indices:
+      - "Regarde ce que fait Théo, et ce que font les autres autour de lui."
+      - "Donne ton interprétation, cite un passage entre guillemets, explique-le, puis cite un second passage."
+      - "Tu peux commencer ainsi : « Théo semble... : en effet, le texte dit « ... », ce qui montre que... »."
+    criteres:
+      - "L'élève propose une interprétation claire de ce que ressent Théo (solitude, malaise, peur des autres...)."
+      - "L'élève cite au moins deux passages précis du texte, entre guillemets."
+      - "L'élève explique en quoi chaque citation appuie son interprétation."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce que tu fais face à un mot ou un
+      passage que tu ne comprends pas, et comment tu prouves ton interprétation.

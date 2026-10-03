@@ -1,0 +1,156 @@
+# Leçon EXPÉRIMENTALE (non validée par un enseignant) - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (rédigée à partir des attendus officiels cités). Relecture bienvenue.
+notion: analyse-image-et-documents-composites
+titre: "Lire une image et un document composite"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire une image fixe ou un extrait de film avec le vocabulaire précis : plan, cadrage, angle, couleurs."
+      - "Comprendre le hors-champ et l'implicite, en s'appuyant sur un détail."
+      - "Lire un document composite en reliant le texte, l'image, la légende et le graphique."
+
+  - type: texte
+    titre: "Cadrage, plans et hors-champ"
+    contenu: >-
+      Le **cadrage** est ce que l'image montre dans son cadre.
+      Le **hors-champ** est ce qui n'est pas montré, mais que l'on devine (une ombre, un regard, un bruit).
+      Le **plan** dit la distance entre l'appareil et le sujet :
+      - **plan large** : un grand décor, des personnages petits ;
+      - **plan moyen** : un personnage vu à la taille ;
+      - **gros plan** : un visage, très près ;
+      - **très gros plan** : un détail (un œil, une main).
+
+  - type: texte
+    titre: "Point de vue, couleurs et contrastes"
+    contenu: >-
+      Le **point de vue** est la hauteur de la caméra. Ne le confonds pas avec le plan (la distance).
+      - **Hauteur d'yeux** : regard neutre.
+      - **Plongée** : caméra en haut, qui regarde vers le bas. Le sujet paraît petit, fragile, écrasé.
+      - **Contre-plongée** : caméra en bas, qui regarde vers le haut. Le sujet paraît grand, puissant, parfois menaçant.
+      Les **couleurs chaudes** (rouge, orange) donnent de l'énergie ou du danger. Les **couleurs froides** (bleu) donnent du calme ou de la tristesse.
+      Un **contraste** entre ombre et lumière dramatise la scène.
+      Un film ajoute des mouvements de caméra, des sons et un montage.
+
+  - type: texte
+    titre: "Document composite et implicite"
+    contenu: >-
+      Un **document composite** associe plusieurs éléments : texte, image, légende, graphique, tableau.
+      Le texte explique. L'image montre. La légende situe. Le graphique donne des chiffres.
+      Il faut les **relier** entre eux. Cela vaut sur papier comme sur écran (page web, liens, vidéos).
+      L'**implicite** est ce que l'image suggère sans le dire : un détail, une couleur, un regard.
+      Pour interpréter, on décrit d'abord, puis on explique ce que l'image suggère, avec un **détail précis** comme preuve.
+
+  - type: exemple
+    enonce: >-
+      Une affiche de film montre un roi assis sur un trône. Il est photographié depuis le sol, la caméra
+      regarde vers le haut. Le trône est en or, sur un fond rouge. Explique ce que cette image suggère.
+    etapes:
+      - "Point de vue : la caméra est en bas et regarde vers le haut. C'est une contre-plongée."
+      - "Effet : le roi paraît grand et puissant."
+      - "Couleurs : l'or et le rouge sont chauds. Ils donnent une impression de richesse et d'autorité."
+      - "Ce que l'image suggère (implicite) : ce roi domine les autres et impose le respect."
+      - "Preuve : le point de vue depuis le bas et le trône en or."
+
+  - type: exercice
+    enonce: >-
+      Une photo montre uniquement le visage d'une personne, très près. On ne voit ni ses épaules ni le décor.
+      Comment appelle-t-on ce plan ?
+    forme: qcm
+    choix:
+      - "Un gros plan"
+      - "Un plan large"
+      - "Un plan d'ensemble"
+      - "Une plongée"
+    reponse: 0
+    indices:
+      - "Voit-on beaucoup de décor autour de la personne, ou presque rien ?"
+      - "Le nom du plan dépend de la distance, pas de l'angle de vue."
+    explication: "C'est un gros plan : l'appareil est très proche du sujet et ne montre que le visage. La plongée est un angle, pas une distance."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne ce qui n'est pas montré dans le cadre de l'image, mais que l'on devine
+      (par exemple une ombre qui entre dans l'image) ?
+    forme: reponse_courte
+    reponse: "hors-champ"
+    reponses_acceptees: ["hors champ", "le hors-champ", "le hors champ", "horschamp"]
+    indices:
+      - "Pense à ce qui se passe juste à côté du cadre, sans être montré."
+      - "Le mot est formé de deux mots. Le premier veut dire « à l'extérieur de »."
+    explication: "Le hors-champ est tout ce qui existe en dehors du cadre. On le devine sans le voir."
+
+  - type: exercice
+    enonce: "Une caméra filme un personnage depuis le haut, en le regardant vers le bas. Quel effet cela peut-il produire ?"
+    forme: qcm
+    choix:
+      - "Le personnage paraît petit, fragile ou écrasé."
+      - "Le personnage paraît très grand et puissant."
+      - "Le personnage devient invisible."
+      - "L'image devient forcément en couleur."
+    reponse: 0
+    indices:
+      - "Quand on regarde quelqu'un de haut, le voit-on plus grand ou plus petit ?"
+      - "La plongée est l'inverse de la contre-plongée."
+    explication: "Une plongée peut donner une impression de petitesse ou de fragilité. L'effet de puissance vient de la contre-plongée."
+
+  - type: exercice
+    enonce: "Une affiche est presque entièrement rouge et orange. Un personnage y crie. Quelle impression donnent surtout ces couleurs ?"
+    forme: qcm
+    choix:
+      - "Énergie, danger ou colère."
+      - "Calme et sérénité."
+      - "Froid et tristesse."
+      - "Aucune impression particulière."
+    reponse: 0
+    indices:
+      - "Le rouge et l'orange sont des couleurs chaudes. À quoi les associe-t-on ?"
+      - "Compare avec les couleurs froides comme le bleu, qui donnent une autre impression."
+    explication: "Les couleurs chaudes donnent une impression d'énergie, de danger ou de colère. Le personnage qui crie renforce cette idée."
+
+  - type: exercice
+    enonce: >-
+      Dans un extrait de film, un homme minuscule marche seul au milieu d'un immense désert.
+      La scène est filmée en plan large et en plongée. Quelle interprétation est la mieux justifiée ?
+    forme: qcm
+    choix:
+      - "L'homme est isolé et fragile face à un espace immense."
+      - "L'homme est puissant et domine le paysage."
+      - "L'homme est entouré d'amis dans une fête."
+      - "Le décor n'a aucune importance."
+    reponse: 0
+    indices:
+      - "Que montre le plan large ? Que fait la plongée au personnage ?"
+      - "Un personnage petit dans un grand décor, vu d'en haut : quelle impression cela donne-t-il ?"
+    explication: "Le plan large montre un espace immense où l'homme est tout petit. La plongée accentue sa fragilité. Cela suggère l'isolement."
+
+  - type: question_ouverte
+    question: >-
+      Une photographie montre, en contre-plongée, un enfant qui se dresse devant un immense mur sombre.
+      Le hors-champ laisse deviner un cri. Décris l'image avec le vocabulaire du cours,
+      puis explique ce qu'elle suggère.
+    indices:
+      - "Que dit la position de la caméra ? Que devines-tu de ce qu'on ne voit pas ?"
+      - "Décris d'abord (point de vue, cadrage, hors-champ, contraste), puis interprète."
+    criteres:
+      - "L'élève emploie au moins deux termes précis du cours (contre-plongée, plan, cadrage, hors-champ, contraste)."
+      - "L'élève décrit l'effet du point de vue (l'enfant paraît grand et déterminé malgré le mur)."
+      - "L'élève dit ce que l'image suggère (courage, révolte) et cite un détail précis (mur sombre, cri deviné)."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : dis comment tu décris une image (plan, point de vue, couleurs)
+      et comment tu passes de la description à ce qu'elle suggère.

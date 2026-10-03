@@ -1,0 +1,170 @@
+notion: geodynamique-globale
+titre: 'Contexte géodynamique global : système solaire, plaques, séismes, volcans'
+duree_minutes: 35
+auteurs:
+- projet-jules
+licence: CC-BY-SA-4.0
+sources:
+- titre: Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de
+    la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020
+  url: https://eduscol.education.fr/document/621/download
+  licence: etalab-2.0
+relecture:
+  statut: a_relire
+blocs:
+- type: objectifs
+  items:
+  - Situer la Terre dans le système solaire et distinguer planètes telluriques et gazeuses.
+  - Relier les séismes et les volcans aux plaques lithosphériques et à leurs limites.
+  - Calculer un déplacement de plaque à partir d'une vitesse, et situer les ères géologiques.
+- type: texte
+  titre: La Terre dans le système solaire
+  contenu: 'La Terre est la **troisième** planète à partir du Soleil.
+
+    C''est une planète **tellurique** (rocheuse), comme Mercure, Vénus et Mars.
+
+    Jupiter, Saturne, Uranus et Neptune sont des planètes **gazeuses**, bien plus grosses.
+
+
+    La Terre est presque sphérique.
+
+    Elle tourne sur elle-même en environ 24 heures (jour et nuit) et autour du Soleil en environ un an.'
+- type: texte
+  titre: Les plaques lithosphériques
+  contenu: 'La surface de la Terre est découpée en **plaques lithosphériques** rigides.
+
+    Elles se déplacent lentement (quelques centimètres par an), grâce à la dynamique interne du globe.
+
+
+    - **Dorsale océanique** : deux plaques s''écartent et du magma remonte.
+
+    - **Subduction** : une plaque océanique plonge sous une autre plaque.
+
+    - **Collision** : deux continents s''affrontent et forment une chaîne de montagnes (l''Himalaya).'
+- type: texte
+  titre: Séismes et éruptions
+  contenu: 'Un **séisme** est une rupture brutale des roches en profondeur, le long d''une faille.
+
+    Le **foyer** est le lieu de la rupture. L''**épicentre** est le point de la surface à sa verticale.
+
+    Des ondes sismiques partent du foyer et font trembler le sol.
+
+
+    Une **éruption volcanique** est l''arrivée de magma en surface.
+
+    - **Effusive** : lave fluide, coulées.
+
+    - **Explosive** : lave visqueuse, explosions, nuées ardentes.'
+- type: texte
+  titre: Où sont les séismes et les volcans ?
+  contenu: 'La plupart des séismes et des volcans sont aux **limites des plaques**.
+
+
+    Quelques volcans sont au milieu d''une plaque : ce sont des volcans de **point chaud** (Hawaï, La Réunion).
+
+    Du magma remonte d''un endroit fixe du manteau, alors que la plaque se déplace au-dessus : on obtient une chaîne
+    d''îles volcaniques.
+
+
+    Le manteau est solide : les plaques ne flottent pas sur un océan de magma.'
+- type: texte
+  titre: Les ères géologiques
+  contenu: 'L''histoire de la Terre dure environ 4,6 milliards d''années.
+
+    Elle est découpée en **ères géologiques** : primaire, secondaire, tertiaire, puis quaternaire.
+
+
+    Leurs limites correspondent à de grands changements des êtres vivants.
+
+    Exemple : la disparition des dinosaures (non aviens) il y a environ 66 millions d''années.'
+- type: exemple
+  enonce: 'Range ces ères de la plus ancienne à la plus récente : ère secondaire, ère quaternaire, ère primaire,
+    ère tertiaire.'
+  etapes:
+  - L'ère primaire est la plus ancienne.
+  - Elle est suivie de l'ère secondaire (celle des dinosaures), puis de l'ère tertiaire.
+  - 'L''ère quaternaire est la plus récente : c''est celle où nous vivons.'
+- type: exercice
+  enonce: Parmi ces planètes, laquelle est une planète tellurique (rocheuse) comme la Terre ?
+  forme: qcm
+  choix:
+  - Jupiter
+  - Saturne
+  - Mars
+  - Neptune
+  reponse: 2
+  indices:
+  - Les planètes rocheuses sont les plus proches du Soleil.
+  - Trois de ces planètes sont gazeuses et très grosses.
+  explication: Mars est une planète tellurique, comme Mercure, Vénus et la Terre. Jupiter, Saturne et Neptune sont
+    des planètes gazeuses.
+- type: exercice
+  enonce: Comment appelle-t-on le point de la surface de la Terre situé à la verticale du foyer d'un séisme ? Réponds
+    par un mot.
+  forme: reponse_courte
+  reponse: épicentre
+  reponses_acceptees:
+  - épicentre
+  - l'épicentre
+  - un épicentre
+  - epicentre
+  - l'epicentre
+  indices:
+  - Le foyer est en profondeur. Ce point est en surface, juste au-dessus.
+  - Le mot commence par « épi », qui veut dire « au-dessus ».
+  explication: C'est l'épicentre. Le foyer est le lieu de la rupture des roches, en profondeur.
+- type: exercice
+  enonce: 'Document (fictif) : deux plaques s''écartent l''une de l''autre de 3 cm par an. De combien de kilomètres
+    se seront-elles écartées en 2 millions d''années ? Écris seulement le nombre (en km).'
+  forme: nombre
+  reponse: 60
+  tolerance: 0.01
+  unite: km
+  indices:
+  - Commence par calculer la distance en centimètres. Combien y a-t-il d'années dans 2 millions d'années ?
+  - 'Multiplie la vitesse par le nombre d''années. Puis convertis : 1 km = 1 000 m et 1 m = 100 cm, donc 1 km =
+    100 000 cm.'
+  explication: 3 cm × 2 000 000 = 6 000 000 cm = 60 000 m = 60 km. Quelques centimètres par an sont très lents,
+    mais sur des millions d'années la distance devient grande.
+- type: exercice
+  enonce: Le volcan de La Réunion est situé au milieu d'une plaque, loin de ses limites. Comment l'explique-t-on
+    ?
+  forme: qcm
+  choix:
+  - 'C''est un volcan de point chaud : du magma remonte d''un endroit fixe du manteau.'
+  - C'est un volcan de dorsale océanique.
+  - C'est un volcan de collision entre deux continents.
+  - Les volcans sont répartis au hasard sur la Terre.
+  reponse: 0
+  indices:
+  - La plupart des volcans sont aux limites des plaques. Ici, ce n'est pas le cas.
+  - Pense à Hawaï, un autre exemple de volcan au milieu d'une plaque.
+  explication: 'Un volcan loin des limites de plaques est un volcan de point chaud : du magma remonte d''un endroit
+    fixe du manteau, alors que la plaque se déplace au-dessus. Les volcans ne sont pas répartis au hasard.'
+- type: exercice
+  enonce: 'Document : sur une carte du monde, les séismes et les volcans forment de longues bandes étroites, et
+    sont rares ailleurs. Que révèle cette répartition ?'
+  forme: qcm
+  choix:
+  - Les séismes et les volcans se produisent surtout aux limites des plaques lithosphériques.
+  - Les séismes et les volcans sont répartis au hasard.
+  - La Terre est faite d'une seule plaque immobile.
+  - Les séismes et les volcans n'ont aucun lien entre eux.
+  reponse: 0
+  indices:
+  - Que dessinent ces bandes étroites à la surface de la Terre ?
+  - Où les plaques bougent-elles les unes par rapport aux autres ?
+  explication: Les bandes de séismes et de volcans dessinent les limites des plaques lithosphériques, là où elles
+    s'écartent, se rapprochent ou plongent l'une sous l'autre.
+- type: question_ouverte
+  question: 'Explique avec tes mots comment le mouvement des plaques peut provoquer un séisme. Utilise les mots
+    : faille, foyer, épicentre, ondes.'
+  indices:
+  - Que se passe-t-il dans les roches quand les plaques bougent lentement ?
+  - Où se produit la rupture, et qu'est-ce qui part de cet endroit ?
+  criteres:
+  - L'élève explique que le mouvement des plaques accumule des contraintes dans les roches.
+  - L'élève explique que les roches se rompent brutalement le long d'une faille, au foyer (en profondeur).
+  - L'élève dit que des ondes sismiques partent du foyer et font trembler le sol, surtout à l'épicentre (en surface).
+- type: synthese
+  consigne: En quelques phrases, explique où se trouvent la plupart des séismes et des volcans, et pourquoi.

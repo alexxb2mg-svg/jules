@@ -1,0 +1,147 @@
+notion: activites-humaines-ecosystemes
+titre: "Impact des activités humaines sur les écosystèmes"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer comment une activité humaine modifie un écosystème."
+      - "Analyser un impact : sa nature, son importance, son rythme."
+      - "Proposer une mesure qui limite l'impact ou répare le milieu."
+
+  - type: texte
+    titre: "Un écosystème, c'est quoi ?"
+    contenu: |-
+      Un **écosystème** est un milieu de vie et l'ensemble des êtres vivants qui y vivent.
+      Ils sont reliés entre eux (relations alimentaires, pollinisation, abri…) et avec leur milieu.
+      Comme ils sont reliés, toucher une espèce en touche d'autres.
+      Exemple : moins d'insectes, c'est moins de nourriture pour les oiseaux insectivores et moins de pollinisateurs pour les fleurs.
+
+  - type: texte
+    titre: "Ce que les activités humaines changent"
+    contenu: |-
+      - **Destruction et fragmentation des habitats** (déforestation, urbanisation, routes, assèchement des zones humides) : les espèces perdent leur lieu de vie.
+      - **Pollutions** (pesticides, excès d'engrais, plastiques, marées noires) : certains polluants s'accumulent le long des chaînes alimentaires, plus concentrés chez les prédateurs.
+      - **Espèces introduites** venues d'ailleurs : elles peuvent devenir envahissantes et éliminer des espèces locales.
+      - **Surexploitation** (surpêche, chasse excessive) et **changement climatique**.
+
+  - type: texte
+    titre: "Analyser un impact"
+    contenu: |-
+      L'impact dépend de la **nature** de l'activité (bénéfices ou nuisances), de son **importance**, de son **rythme** et de sa **variabilité**.
+      Une transformation rapide ne laisse pas aux espèces le temps de s'adapter.
+      Résultat possible : la **biodiversité** diminue, et l'écosystème rend moins de services (pollinisation, épuration de l'eau, sols fertiles).
+      Pour trouver la cause, on compare avec un milieu voisin **sans** cette activité (un témoin).
+
+  - type: texte
+    titre: "Limiter les impacts"
+    contenu: |-
+      Certaines actions limitent les impacts ou réparent les milieux :
+      - aires protégées ;
+      - haies et corridors écologiques (trames vertes et bleues) qui relient les milieux ;
+      - réduction des pesticides ;
+      - lutte contre les espèces envahissantes ;
+      - restauration des zones humides.
+      Ces actions sont liées à des questions globales : perte de biodiversité, changement climatique, pollution des eaux et des sols.
+
+  - type: exemple
+    enonce: >-
+      On construit une autoroute au milieu d'une forêt. Quelles conséquences pour les animaux,
+      et quelle mesure peut les limiter ?
+    etapes:
+      - "La forêt est coupée en deux : c'est une fragmentation de l'habitat."
+      - "Les animaux ne peuvent plus circuler d'un côté à l'autre, et les populations isolées deviennent plus petites et plus fragiles."
+      - "On peut construire des passages à faune, qui servent de corridors écologiques."
+
+  - type: exercice
+    enonce: >-
+      Une espèce est introduite par les humains dans un milieu où elle n'existait pas. Elle se
+      multiplie et élimine des espèces locales. Comment appelle-t-on ce type d'espèce ?
+    forme: reponse_courte
+    reponse: "envahissante"
+    reponses_acceptees: ["envahissante", "envahissantes", "espèce envahissante", "une espèce envahissante", "espèces envahissantes", "invasive", "espèce invasive", "une espèce invasive"]
+    indices:
+      - "Pense à ce que fait cette espèce : elle prend toute la place."
+      - "Le mot est un adjectif féminin, qu'on ajoute au mot « espèce »."
+    explication: "Une espèce venue d'ailleurs qui élimine des espèces locales est une espèce envahissante."
+
+  - type: exercice
+    enonce: "Quelle action humaine permet de limiter l'impact sur un écosystème ?"
+    forme: qcm
+    choix:
+      - "Assécher une zone humide pour construire un parking"
+      - "Créer des haies et des corridors qui relient les milieux"
+      - "Relâcher dans la nature des animaux venus d'un autre continent"
+    reponse: 1
+    indices:
+      - "Pour chaque action, demande-toi si elle protège les êtres vivants ou leur fait perdre leur habitat."
+      - "Une seule action aide les animaux à circuler d'un milieu à l'autre."
+    explication: "Les haies et corridors relient les milieux. Assécher une zone humide détruit un habitat, et relâcher des animaux venus d'ailleurs risque de créer une espèce envahissante."
+
+  - type: exercice
+    enonce: >-
+      Dans ce document, une prairie humide occupe 80 hectares. On en assèche 25 % pour construire.
+      Combien d'hectares de prairie humide reste-t-il ?
+    forme: nombre
+    reponse: 60
+    tolerance: 0.01
+    unite: "hectares"
+    indices:
+      - "Commence par calculer combien d'hectares représentent 25 % de 80."
+      - "25 %, c'est le quart : divise 80 par 4. Puis retire ce résultat à 80."
+    explication: "25 % de 80 = 80 ÷ 4 = 20 hectares perdus. Il reste 80 − 20 = 60 hectares."
+
+  - type: exercice
+    enonce: >-
+      Dans ce document, la concentration d'un polluant est de 3 dans le plancton et de 90 dans les
+      gros poissons qui s'en nourrissent, par l'intermédiaire de petits poissons. Par combien la
+      concentration est-elle multipliée entre le plancton et les gros poissons ?
+    forme: nombre
+    reponse: 30
+    tolerance: 0.01
+    indices:
+      - "Pour savoir par combien une valeur est multipliée, on divise la valeur d'arrivée par la valeur de départ."
+      - "Divise 90 par 3."
+    explication: "90 ÷ 3 = 30. Le polluant s'accumule le long de la chaîne alimentaire et touche surtout les prédateurs."
+
+  - type: exercice
+    enonce: >-
+      Sur une île, des chats introduits par des humains sont arrivés, et une espèce d'oiseau nichant
+      au sol est devenue rare. Sur une île voisine sans chats, cette espèce est restée nombreuse.
+      À quoi sert la comparaison avec l'île voisine ?
+    forme: qcm
+    choix:
+      - "Elle sert de témoin : elle montre que les chats sont la cause probable du déclin."
+      - "Elle prouve que les chats ne mangent jamais d'oiseaux."
+      - "Elle montre que les oiseaux disparaissent partout de la même façon."
+    reponse: 0
+    indices:
+      - "Qu'est-ce qui est différent entre les deux îles ? Et qu'est-ce qui est pareil ?"
+      - "Pour trouver la cause d'un changement, on compare avec un milieu sans cette activité."
+    explication: "L'île sans chats sert de témoin. La seule différence est la présence des chats : ils sont donc la cause probable du déclin des oiseaux."
+
+  - type: question_ouverte
+    question: >-
+      Un agriculteur épand beaucoup d'engrais dans un champ voisin d'une rivière. Explique ce qui peut
+      arriver aux êtres vivants de la rivière, puis propose une mesure pour limiter l'impact.
+    indices:
+      - "Comment l'engrais arrive-t-il du champ jusqu'à la rivière ?"
+      - "Quels êtres vivants profitent de l'engrais dans l'eau, et que devient le dioxygène quand ils meurent ?"
+    criteres:
+      - "L'élève explique que l'excès d'engrais arrive dans la rivière et fait proliférer les algues."
+      - "L'élève relie la mort et la décomposition des algues à un manque de dioxygène, qui touche les poissons."
+      - "L'élève propose une mesure réaliste (réduire les engrais, haies ou bandes végétales le long de la rivière)."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases un exemple d'activité humaine qui modifie un écosystème, sa
+      conséquence sur les êtres vivants, et une mesure pour la limiter.

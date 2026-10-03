@@ -1,0 +1,150 @@
+notion: se-reperer-questions-art
+titre: "Se repérer dans les arts et être sensible aux questions de l'art"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître et situer des œuvres de cultures et d'époques variées."
+      - "Analyser puis interpréter une œuvre, du point de vue de l'auteur et du spectateur."
+      - "Donner un avis argumenté dans un débat sur l'art."
+
+  - type: texte
+    titre: "Des repères, du plus ancien au plus récent"
+    contenu: |-
+      - **Lascaux** (Préhistoire) : animaux peints sur les parois d'une grotte. C'est la **peinture pariétale**.
+      - **La Joconde**, Léonard de Vinci (vers 1503-1519) : huile sur panneau de bois, Renaissance italienne.
+      - **La Grande Vague de Kanagawa**, Hokusai (vers 1830-1831) : **estampe** japonaise gravée sur bois.
+      - **Carré noir sur fond blanc**, Malevitch (1915) : une peinture qui ne représente rien de reconnaissable.
+      - **Fontaine**, Duchamp (1917) : un urinoir du commerce présenté comme œuvre, un **ready-made**.
+      - **Guernica**, Picasso (1937), et **Le Pont-Neuf emballé**, Christo et Jeanne-Claude (Paris, 1985).
+
+  - type: texte
+    titre: "Situer une œuvre : les indices"
+    contenu: |-
+      Ces œuvres forment un **patrimoine**, national et mondial : on les conserve et on les transmet.
+      Pour situer une œuvre dans un lieu et une époque, on observe ses caractéristiques :
+      - **plastiques** : technique, matériaux, formes ;
+      - **culturelles** : lieu, usage ;
+      - **sémantiques** : ce qu'elle raconte ;
+      - **symboliques** : ce qu'elle représente au-delà de ce qu'on voit.
+
+  - type: texte
+    titre: "Analyser, interpréter, débattre"
+    contenu: |-
+      - On **décrit** d'abord, puis on **interprète** : on propose un sens appuyé sur ce qu'on a vu.
+      - Deux points de vue : l'**auteur** (ses intentions, son contexte) et le **spectateur** (ce qu'il voit, ressent, comprend).
+      - Les œuvres posent des questions : qu'est-ce qu'une œuvre ? Une image doit-elle représenter quelque chose ?
+      - Dans un **débat**, on donne un avis avec des arguments et on écoute ceux des autres. « J'aime » ne suffit pas.
+      - Une œuvre n'a pas besoin d'être belle ou très habile pour poser une vraie question.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi Guernica de Pablo Picasso (1937) se comprend-il mieux quand on connaît son
+      contexte ?
+    etapes:
+      - "Identifier : Guernica, Pablo Picasso, 1937, une grande peinture en noirs, blancs et gris."
+      - "Contexte (point de vue de l'auteur) : Picasso le peint après le bombardement de la ville basque de Guernica, pendant la guerre d'Espagne."
+      - "Point de vue du spectateur : il voit des corps, des cris, une scène de chaos, sans couleurs vives."
+      - "Interprétation : l'œuvre pose la question « comment l'art peut-il réagir à la violence de la guerre ? »."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'ensemble des œuvres héritées du passé, que l'on conserve et que l'on transmet ?"
+    forme: reponse_courte
+    reponse: "patrimoine"
+    reponses_acceptees:
+      - "patrimoine"
+      - "le patrimoine"
+      - "un patrimoine"
+      - "patrimoine artistique"
+      - "patrimoine culturel"
+    indices:
+      - "C'est un héritage commun, comme un trésor transmis de génération en génération."
+      - "Relis le bloc « Situer une œuvre : les indices » : quel mot désigne ces œuvres, national et mondial ?"
+    explication: "C'est le patrimoine : les œuvres et les biens hérités du passé, conservés et transmis."
+
+  - type: exercice
+    enonce: "La Grande Vague de Kanagawa, de Hokusai, est une image imprimée à partir d'un bois gravé. Quelle est sa technique ?"
+    forme: qcm
+    choix:
+      - "Une peinture pariétale"
+      - "Une estampe"
+      - "Un ready-made"
+    reponse: 1
+    indices:
+      - "L'image est imprimée : on peut la tirer en plusieurs exemplaires."
+      - "La peinture pariétale est sur les parois d'une grotte ; le ready-made est un objet tout fait."
+    explication: "C'est une estampe : une image imprimée à partir d'une matrice gravée, ici en bois. Hokusai l'a réalisée vers 1830-1831."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la peinture réalisée sur les murs d'une grotte, comme à Lascaux ? Donne l'adjectif."
+    forme: reponse_courte
+    reponse: "pariétale"
+    reponses_acceptees:
+      - "pariétale"
+      - "parietale"
+      - "pariétal"
+      - "parietal"
+      - "peinture pariétale"
+      - "peinture parietale"
+      - "rupestre"
+    indices:
+      - "Une paroi, c'est le mur d'une grotte."
+      - "Relis la ligne sur Lascaux, dans le premier bloc."
+    explication: "C'est la peinture pariétale : peinte sur les parois d'une grotte, comme à Lascaux, à la Préhistoire."
+
+  - type: exercice
+    enonce: "En 1915, Kasimir Malevitch peint un carré noir sur un fond blanc. Quelle question cette œuvre pose-t-elle surtout ?"
+    forme: qcm
+    choix:
+      - "Comment l'art peut-il réagir à un bombardement ?"
+      - "Un objet du commerce peut-il être une œuvre ?"
+      - "Une peinture doit-elle représenter quelque chose de reconnaissable ?"
+    reponse: 2
+    indices:
+      - "Que voit-on dans le tableau : un objet reconnaissable, ou une forme simple ?"
+      - "Le bombardement, c'est Guernica. L'objet du commerce, c'est Fontaine."
+    explication: "Le carré noir ne représente rien de reconnaissable. Il pose la question : une peinture doit-elle représenter quelque chose ?"
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Range mentalement ces œuvres de la plus ancienne à la plus récente :
+      Fontaine (Duchamp), La Joconde (Vinci), Lascaux, Guernica (Picasso). Laquelle est en
+      troisième position ?
+    forme: qcm
+    choix:
+      - "La Joconde"
+      - "Fontaine"
+      - "Guernica"
+    reponse: 1
+    indices:
+      - "Place d'abord la Préhistoire, puis la Renaissance."
+      - "Il reste deux œuvres du XXe siècle : 1917 et 1937."
+    explication: "Ordre : Lascaux (Préhistoire), La Joconde (vers 1503-1519), Fontaine (1917), Guernica (1937). Fontaine est troisième."
+
+  - type: question_ouverte
+    question: >-
+      Débat : « Un urinoir acheté dans un magasin peut-il être une œuvre d'art ? » À propos de
+      Fontaine de Marcel Duchamp (1917), donne ton avis avec un argument du point de vue de
+      l'artiste et un argument du point de vue du spectateur.
+    indices:
+      - "Qu'est-ce que Duchamp a fait lui-même, s'il n'a pas fabriqué l'objet ?"
+      - "Commence par « Pour moi, Fontaine est (ou n'est pas) une œuvre, parce que… », puis réponds à un avis opposé."
+    criteres:
+      - "L'élève donne un avis clair (oui, non ou nuancé)."
+      - "L'élève donne un argument du point de vue de l'artiste (le choix, le fait de présenter l'objet, la question posée)."
+      - "L'élève donne un argument du point de vue du spectateur et tient compte d'un avis opposé."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment tu situes une œuvre dans le
+      temps et dans l'espace, et comment tu défends un avis sur elle avec des arguments.

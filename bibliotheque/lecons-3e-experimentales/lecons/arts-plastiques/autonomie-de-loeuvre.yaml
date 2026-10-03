@@ -1,0 +1,158 @@
+notion: autonomie-de-loeuvre
+titre: "L'autonomie de l'œuvre : quand l'œuvre parle d'elle-même"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire si une œuvre renvoie au monde visible ou si elle vaut pour elle-même."
+      - "Distinguer art abstrait, art concret et art informel."
+      - "Reconnaître une œuvre qui montre ses propres constituants, par exemple une mise en abyme."
+
+  - type: texte
+    titre: "Une œuvre autonome"
+    contenu: |-
+      Une œuvre est **autonome** quand elle ne cherche plus d'abord à copier le monde visible.
+      Elle existe **pour elle-même** : par ses formes, ses couleurs, ses matières, son format.
+
+      En 1890, le peintre Maurice Denis rappelle qu'un tableau est « essentiellement une surface plane
+      recouverte de couleurs en un certain ordre assemblées ».
+
+      Il y a des degrés : image **figurative** (on reconnaît), image **simplifiée**, image **abstraite** (on ne reconnaît plus rien).
+
+  - type: texte
+    titre: "Abstrait, concret, informel"
+    contenu: |-
+      - **Art abstrait** : il ne représente ni objet, ni personnage, ni paysage reconnaissable. Exemple : « Carré noir sur fond blanc », Kasimir Malevitch, 1915.
+      - **Art concret** : des formes géométriques et des couleurs qui ne renvoient qu'à elles-mêmes (manifeste de Theo van Doesburg, 1930).
+      - **Art informel** : la matière, la tache et l'énergie du geste comptent plus que la géométrie. Exemple : Jackson Pollock fait couler la peinture sur une toile posée au sol (dripping), vers 1947-1950.
+
+      Attention : « informel » ne veut pas dire « sans forme ». Les formes naissent du geste et de la matière.
+
+  - type: texte
+    titre: "L'œuvre parle d'elle-même"
+    contenu: |-
+      Une œuvre peut montrer **ses propres constituants** : la toile, le cadre, la trace du pinceau, l'atelier.
+      C'est l'**autoréférence**.
+
+      La **mise en abyme** place une image dans l'image :
+      - « Les Époux Arnolfini », Jan van Eyck, 1434 : un petit miroir rond, au fond, reflète la scène ;
+      - « Les Ménines », Diego Velázquez, 1656 : le peintre se montre en train de peindre devant une grande toile.
+
+      Au brevet : dis si l'œuvre renvoie au monde visible, nomme la démarche, justifie avec des éléments plastiques visibles.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : une élève peint une grande toile couverte de bandes verticales bleues, de
+      largeurs différentes. Un camarade dit : « Ça ne veut rien dire. » Que peut-elle répondre ?
+    etapes:
+      - "Je décris ce que je vois : des bandes verticales, des largeurs différentes, plusieurs nuances de bleu, un grand format."
+      - "Je constate que la toile ne représente rien du monde visible : elle est abstraite."
+      - "Elle n'a pas besoin de raconter une histoire : elle agit par son rythme et ses couleurs. Elle est autonome."
+      - "Je peux citer Maurice Denis : un tableau est d'abord une surface plane couverte de couleurs assemblées."
+
+  - type: exercice
+    enonce: "Laquelle de ces œuvres (fictives) est abstraite ?"
+    forme: qcm
+    choix:
+      - "Un portrait très ressemblant de la grand-mère de l'artiste"
+      - "Une toile couverte de cercles rouges et de lignes noires, sans rien de reconnaissable"
+      - "Un paysage de mer au coucher du soleil"
+    reponse: 1
+    indices:
+      - "Dans chaque œuvre, demande-toi : est-ce que je reconnais quelque chose du monde réel ?"
+      - "Une œuvre abstraite ne laisse rien reconnaître : ni personne, ni lieu, ni objet."
+    explication: "La toile aux cercles et aux lignes ne représente rien de reconnaissable : elle est abstraite. Le portrait et le paysage sont figuratifs."
+
+  - type: exercice
+    enonce: >-
+      Dans « Les Époux Arnolfini » (Jan van Eyck, 1434), un petit miroir rond est accroché au fond de la pièce.
+      Il montre en petit la scène du tableau. Comment appelle-t-on ce procédé qui place une image dans l'image ?
+    forme: reponse_courte
+    reponse: "mise en abyme"
+    reponses_acceptees:
+      - "mise en abyme"
+      - "la mise en abyme"
+      - "une mise en abyme"
+      - "mise en abîme"
+      - "la mise en abîme"
+      - "une mise en abîme"
+      - "mise en abime"
+      - "la mise en abime"
+    indices:
+      - "Pense à une boîte rangée dans une boîte, elle-même rangée dans une boîte."
+      - "Relis le bloc « L'œuvre parle d'elle-même » : le procédé y est nommé."
+    explication: "C'est une mise en abyme : l'image se retrouve, en petit, à l'intérieur d'elle-même. L'œuvre parle alors de la représentation."
+
+  - type: exercice
+    enonce: >-
+      Un artiste pose sa toile au sol. Il fait couler et projette la peinture avec de grands gestes.
+      Seuls comptent la matière, les taches et l'énergie du geste. À quel courant cela correspond-il ?
+    forme: qcm
+    choix:
+      - "L'art concret"
+      - "L'art informel"
+      - "L'art figuratif"
+    reponse: 1
+    indices:
+      - "Ici, il n'y a ni formes géométriques ni sujet reconnaissable."
+      - "Le courant qui met en avant le geste et la matière, c'est celui de Jackson Pollock."
+    explication: "C'est l'art informel : la matière et le geste font l'œuvre. L'art concret, lui, utilise des formes géométriques ; l'art figuratif représente le monde visible."
+
+  - type: exercice
+    enonce: >-
+      Un élève dessine un arbre en quatre étapes. Dans le troisième dessin, il ne reste que quelques
+      lignes, mais on devine encore les branches. Comment qualifier ce troisième dessin ?
+    forme: qcm
+    choix:
+      - "Abstrait : on ne reconnaît plus rien"
+      - "Simplifié : on reconnaît encore l'arbre"
+      - "Réaliste : il copie l'arbre en détail"
+    reponse: 1
+    indices:
+      - "Reconnaît-on encore l'arbre, même un peu ?"
+      - "Une œuvre abstraite ne laisse plus rien reconnaître du tout."
+    explication: "Le dessin est simplifié : on devine encore les branches. Il deviendra abstrait quand on ne reconnaîtra plus rien. Mondrian a suivi un chemin comparable avec ses arbres dans les années 1910."
+
+  - type: exercice
+    enonce: >-
+      Sujet de type brevet. Une élève présente une toile carrée, toute noire, avec des stries faites au
+      peigne dans la peinture épaisse. Quelle phrase justifie le mieux que l'œuvre est autonome ?
+    forme: qcm
+    choix:
+      - "Elle est autonome car l'élève l'a faite toute seule, sans aide."
+      - "Elle ne représente rien du monde visible : elle vaut par son format carré, son noir, sa matière épaisse et ses stries."
+      - "Elle est autonome car elle représente une nuit sans étoiles."
+      - "Elle est autonome car elle a été faite très vite."
+    reponse: 1
+    indices:
+      - "L'autonomie parle du lien entre l'œuvre et le monde visible, pas de l'artiste."
+      - "Une bonne justification cite des éléments plastiques que l'on voit vraiment."
+    explication: "L'œuvre est autonome car elle ne copie pas le monde visible : elle vaut par ses moyens plastiques (format, couleur, matière, geste). Chercher une « nuit » cachée, c'est vouloir à tout prix qu'elle représente quelque chose."
+
+  - type: question_ouverte
+    question: >-
+      Imagine que tu peins une toile qui ne représente rien. Décris en trois ou quatre phrases tes
+      choix (format, couleurs, matière, geste) et explique pourquoi ton œuvre est autonome.
+      Dirais-tu qu'elle est plutôt concrète ou plutôt informelle ? Pourquoi ?
+    indices:
+      - "Commence par décrire : quel format, quelles couleurs, quelle matière, quel geste ?"
+      - "Formes géométriques nettes : plutôt concret. Taches, coulures, gestes libres : plutôt informel."
+    criteres:
+      - "L'élève décrit des choix plastiques précis (format, couleurs, matière, geste)."
+      - "L'élève explique que l'œuvre ne représente rien du monde visible et vaut pour elle-même."
+      - "L'élève rattache son œuvre à l'art concret ou à l'art informel avec une justification juste."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases, avec tes propres mots. Dis ce qu'est une œuvre autonome.
+      Puis donne un exemple d'œuvre qui parle d'elle-même.

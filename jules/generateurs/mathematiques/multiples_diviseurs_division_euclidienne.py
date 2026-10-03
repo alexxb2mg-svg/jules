@@ -194,7 +194,7 @@ def _criteres(rng: random.Random, difficulte: int) -> dict[str, Any]:
 
 # --- variante 3 : nombre de diviseurs ------------------------------------------------------------------------
 
-_PALIERS_NB = {1: (6, 48), 2: (24, 150), 3: (60, 200)}
+_PALIERS_NB = {1: (6, 72), 2: (24, 150), 3: (60, 200)}
 
 
 def _nb_diviseurs(rng: random.Random, difficulte: int) -> dict[str, Any]:

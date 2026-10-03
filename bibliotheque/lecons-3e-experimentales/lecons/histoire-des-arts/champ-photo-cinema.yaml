@@ -1,0 +1,169 @@
+notion: champ-photo-cinema
+titre: "La photographie et le cinéma"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : programme d'histoire des arts 2020 inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer la naissance de la photographie et du cinéma au XIXe siècle."
+      - "Employer le vocabulaire de l'image : cadrage, plan, plongée, contre-plongée, montage."
+      - "Relier un choix technique à son effet sur le spectateur."
+
+  - type: texte
+    titre: "Des arts nés au XIXe siècle"
+    contenu: >-
+      La photographie et le cinéma sont des arts de l'**image enregistrée** par un appareil.
+
+
+      - Vers **1826** : Nicéphore **Niépce** obtient l'une des premières images photographiques.
+
+      - **1839** : le **daguerréotype** de Louis Daguerre est présenté à Paris.
+
+      - **28 décembre 1895** : à Paris, les frères **Lumière** font la première projection publique payante de leur cinématographe.
+
+      - **1927** : Le Chanteur de jazz, premier long métrage **parlant**. Avant, le cinéma est **muet**.
+
+      - Fin du XXe siècle : la photographie devient **numérique**.
+
+  - type: texte
+    titre: "Le vocabulaire de l'image"
+    contenu: >-
+      Une photo est une image **fixe**. Un film est une suite de **plans** assemblés au **montage**.
+
+
+      | Mot | Sens |
+
+      |---|---|
+
+      | **Cadrage** | ce qu'on montre dans le cadre, et ce qu'on laisse dehors |
+
+      | **Plan d'ensemble / gros plan** | un vaste décor / un visage de très près |
+
+      | **Plongée** | la caméra filme **de haut en bas** : le sujet paraît **petit**, écrasé |
+
+      | **Contre-plongée** | la caméra filme **de bas en haut** : le sujet paraît **grand**, puissant |
+
+      | **Travelling / panoramique** | la caméra se déplace / la caméra pivote sur place |
+
+      | **Champ-contrechamp** | on alterne deux personnages face à face, souvent dans un dialogue |
+
+  - type: texte
+    titre: "Des repères et une méthode"
+    contenu: >-
+      Repères : Le Voyage dans la Lune de Méliès (1902) ; Le Cuirassé Potemkine d'Eisenstein (1925) ;
+      Citizen Kane d'Orson Welles (1941). En photo : Migrant Mother de Dorothea Lange (1936), qui montre la
+      misère pendant la crise des années 1930.
+
+
+      Méthode en trois temps :
+
+      1. Présente l'œuvre : photo ou film, titre, auteur, date.
+
+      2. Décris avec les mots de l'image (cadrage, plan, angle, lumière, montage).
+
+      3. Dis l'**effet** de chaque choix sur le spectateur.
+
+  - type: exemple
+    enonce: >-
+      Dans Citizen Kane d'Orson Welles (1941), le personnage de Kane est souvent filmé en contre-plongée.
+      Quel effet cela produit-il ?
+    etapes:
+      - "Nommer le choix : en contre-plongée, la caméra est plus bas que le personnage et le filme de bas en haut."
+      - "Décrire le résultat : Kane paraît immense et dominateur."
+      - "Interpréter : l'image montre sa puissance et son orgueil. L'angle aide le spectateur à comprendre le personnage."
+
+  - type: exercice
+    enonce: "En quelle année les frères Lumière organisent-ils à Paris la première projection publique payante de leur cinématographe ?"
+    forme: nombre
+    reponse: 1895
+    tolerance: 0
+    indices:
+      - "C'est à la fin du XIXe siècle."
+      - "La projection a lieu un 28 décembre, cinq ans avant l'année 1900."
+    explication: "C'est le 28 décembre 1895, à Paris. On retient souvent cette date comme la naissance du cinéma en salle."
+
+  - type: exercice
+    enonce: "La caméra, placée au-dessus du personnage, le filme de haut en bas. Il paraît petit, écrasé. Comment s'appelle cet angle de prise de vue ?"
+    forme: reponse_courte
+    reponse: "plongée"
+    reponses_acceptees:
+      - "plongée"
+      - "la plongée"
+      - "une plongée"
+      - "plongee"
+      - "en plongée"
+    indices:
+      - "Le sujet paraît petit : la caméra le regarde d'en haut ou d'en bas ?"
+      - "Ici, la caméra est au-dessus du sujet et regarde vers le bas. Relis le tableau du vocabulaire de l'image."
+    explication: "C'est la plongée : la caméra regarde vers le bas et le sujet paraît petit ou écrasé."
+
+  - type: exercice
+    enonce: "Pendant un dialogue, le film montre un personnage, puis celui qui lui répond en face, et ainsi de suite. Comment s'appelle ce procédé de montage ?"
+    forme: qcm
+    choix:
+      - "Le travelling"
+      - "Le champ-contrechamp"
+      - "Le panoramique"
+      - "Le gros plan"
+    reponse: 1
+    indices:
+      - "La caméra ne bouge pas pendant le plan : c'est l'alternance des plans qui compte."
+      - "Cherche le mot qui désigne deux plans filmés en sens opposé."
+    explication: "C'est le champ-contrechamp : on alterne deux plans filmés en sens opposé, souvent pour un dialogue."
+
+  - type: exercice
+    enonce: "Quelle phrase sur l'histoire du cinéma est exacte ?"
+    forme: qcm
+    choix:
+      - "Le cinéma est né parlant en 1895."
+      - "Les premiers films sont muets ; le premier long métrage parlant date de 1927."
+      - "La photographie est inventée après le cinéma."
+      - "Le daguerréotype est un appareil numérique."
+    reponse: 1
+    indices:
+      - "Range d'abord les dates : 1826, 1839, 1895, 1927."
+      - "Pendant plus de trente ans, un pianiste accompagnait souvent les films dans la salle. Pourquoi ?"
+    explication: "Le cinéma est d'abord muet. Le Chanteur de jazz (1927) est le premier long métrage parlant. La photographie (vers 1826) est plus ancienne que le cinéma (1895)."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Un réalisateur veut qu'un méchant paraisse menaçant et puissant. Quel choix de prise
+      de vue doit-il faire ?
+    forme: qcm
+    choix:
+      - "Le filmer en plongée"
+      - "Le filmer en contre-plongée"
+      - "Le filmer en plan d'ensemble, tout petit dans un vaste décor"
+      - "Le laisser hors du cadre"
+    reponse: 1
+    indices:
+      - "Pour paraître grand, le personnage doit être vu d'en bas ou d'en haut ?"
+      - "Pense à l'exemple de Citizen Kane."
+    explication: "La contre-plongée filme de bas en haut : le personnage paraît grand, puissant, menaçant. La plongée l'écraserait, et le plan d'ensemble le rendrait petit."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une photographie ou un plan de film que tu connais. Décris-le avec au moins deux mots du
+      vocabulaire de l'image (cadrage, taille du plan, angle, lumière…) et dis l'effet de chaque choix
+      sur le spectateur.
+    indices:
+      - "Commence par présenter l'œuvre : photo ou film, titre, auteur, date si tu la connais."
+      - "Pour chaque choix technique, complète : « Ce choix donne l'impression que… »."
+    criteres:
+      - "L'élève présente l'œuvre (type d'image, titre ou auteur)."
+      - "L'élève emploie correctement au moins deux mots du vocabulaire de l'image."
+      - "L'élève relie chaque choix technique à un effet sur le spectateur."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, deux dates de la naissance de la photo et du cinéma, puis la différence entre
+      plongée et contre-plongée, avec l'effet de chacune.

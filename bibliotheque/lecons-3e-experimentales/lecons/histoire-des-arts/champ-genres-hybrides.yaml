@@ -1,0 +1,169 @@
+notion: champ-genres-hybrides
+titre: "Genres hybrides ou éphémères des XXe-XXIe siècles"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : programme d'histoire des arts 2020 inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les genres hybrides ou éphémères : bande dessinée, performance, vidéo, installation, arts de la rue."
+      - "Expliquer ce qui rend une œuvre hybride ou éphémère."
+      - "Situer la poésie, l'éloquence et la littérature parmi les champs artistiques."
+
+  - type: texte
+    titre: "Hybride, éphémère : deux mots clés"
+    contenu: >-
+      Aux XXe et XXIe siècles, des artistes inventent des formes nouvelles.
+
+      Elles ne rentrent pas dans les catégories classiques (peinture, sculpture).
+
+
+      - **Hybride** : l'œuvre **mélange plusieurs arts** ou plusieurs techniques.
+
+      - **Éphémère** : l'œuvre **ne dure qu'un temps court**.
+
+
+      Une œuvre éphémère disparaît. On la connaît par des **photos**, des **films** ou des **témoignages**.
+
+      Sa courte durée fait partie de son sens.
+
+  - type: texte
+    titre: "Cinq genres à connaître"
+    contenu: >-
+      | Genre | Ce que c'est | Repère |
+
+      |---|---|---|
+
+      | **Bande dessinée** | un récit en images : cases, planches, bulles | Tintin d'Hergé (à partir de 1929) |
+
+      | **Performance** | une **action** de l'artiste devant un public : l'action est l'œuvre | Anthropométries d'Yves Klein (1960) |
+
+      | **Art vidéo** | la caméra et l'écran servent de matériaux | TV Buddha de Nam June Paik (1974) |
+
+      | **Installation** | des objets disposés dans un **lieu** que le spectateur parcourt | |
+
+      | **Arts de la rue** | l'œuvre est dans l'**espace public** : graffitis, pochoirs, spectacles de rue | Pont-Neuf empaqueté, Christo et Jeanne-Claude (1985) |
+
+
+      Dans un **happening**, le public participe à l'action.
+
+  - type: texte
+    titre: "Les arts de la parole et de l'écrit"
+    contenu: >-
+      Le programme associe aussi trois champs :
+
+      - la **poésie** joue avec les mots, les sons, le rythme. Dans Calligrammes (1918), Apollinaire dispose les mots pour dessiner une forme : un **calligramme** ;
+
+      - l'**éloquence** est l'art de **bien parler en public** pour convaincre ou émouvoir. Le 17 septembre 1981, Robert Badinter défend à l'Assemblée nationale l'abolition de la peine de mort ;
+
+      - la **littérature** regroupe romans, pièces, poèmes, récits. Elle dialogue avec les images, par exemple dans la bande dessinée.
+
+  - type: exemple
+    enonce: >-
+      Explique pourquoi Le Pont-Neuf empaqueté de Christo et Jeanne-Claude (1985) est une œuvre éphémère.
+    etapes:
+      - "Ce que font les artistes : ils recouvrent le Pont-Neuf, à Paris, d'une toile tenue par des cordes."
+      - "La durée : l'œuvre reste en place environ deux semaines, puis elle est démontée."
+      - "Comment on la connaît : par des photographies et des films."
+      - "Le sens : en cachant le pont, ils invitent les passants à regarder autrement un monument qu'ils ne voyaient plus."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on un récit fait d'images dessinées, organisées en cases et en planches, avec des bulles pour les paroles ?"
+    forme: reponse_courte
+    reponse: "bande dessinée"
+    reponses_acceptees:
+      - "bande dessinée"
+      - "la bande dessinée"
+      - "une bande dessinée"
+      - "bande dessinee"
+      - "BD"
+      - "la BD"
+      - "une BD"
+    indices:
+      - "Tintin d'Hergé en est un exemple célèbre."
+      - "Relis le tableau des cinq genres : lequel raconte un récit en cases et en bulles ?"
+    explication: "C'est la bande dessinée : elle mêle dessin et récit, avec des cases, des planches et des bulles."
+
+  - type: exercice
+    enonce: "Une œuvre est faite d'objets et de matériaux disposés dans une salle. Le spectateur y entre et la parcourt. Comment s'appelle ce genre ?"
+    forme: reponse_courte
+    reponse: "installation"
+    reponses_acceptees:
+      - "installation"
+      - "une installation"
+      - "l'installation"
+      - "installations"
+    indices:
+      - "Ce n'est pas une sculpture : il n'y a pas un objet unique, mais tout un espace."
+      - "Relis le tableau des cinq genres : lequel dispose des objets dans un lieu que l'on parcourt ?"
+    explication: "C'est une installation : des objets disposés dans un lieu que le spectateur parcourt."
+
+  - type: exercice
+    enonce: "En 1960, Yves Klein fait appliquer de la peinture bleue sur le corps de modèles qui s'impriment sur des toiles, devant des spectateurs. L'action elle-même est l'œuvre. Quel est ce genre ?"
+    forme: qcm
+    choix:
+      - "Une performance"
+      - "Une bande dessinée"
+      - "Une gravure"
+      - "Un art vidéo"
+    reponse: 0
+    indices:
+      - "L'œuvre, ici, c'est ce que l'artiste fait devant le public."
+      - "Quel genre désigne une action réalisée par l'artiste, souvent devant un public ?"
+    explication: "C'est une performance : l'action de l'artiste devant le public constitue l'œuvre. Ce sont les Anthropométries d'Yves Klein."
+
+  - type: exercice
+    enonce: "Le 17 septembre 1981, Robert Badinter prononce un discours à l'Assemblée nationale pour l'abolition de la peine de mort. À quel art associé ce discours se rattache-t-il ?"
+    forme: qcm
+    choix:
+      - "La poésie"
+      - "L'éloquence"
+      - "La performance"
+      - "Les arts de la rue"
+    reponse: 1
+    indices:
+      - "Un discours sert à convaincre un public en parlant."
+      - "Cherche l'art de bien parler en public."
+    explication: "C'est l'éloquence : l'art de bien parler en public pour convaincre ou émouvoir."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Une œuvre de rue est démontée au bout de deux semaines. Aujourd'hui, on la connaît
+      seulement par des photos. Quelle phrase est juste ?
+    forme: qcm
+    choix:
+      - "Ce n'est pas une vraie œuvre, puisqu'elle a disparu."
+      - "C'est une œuvre éphémère : sa courte durée fait partie de son sens."
+      - "C'est une sculpture classique en ronde-bosse."
+      - "Les photos sont l'œuvre principale, l'action ne compte pas."
+    reponse: 1
+    indices:
+      - "Une œuvre qui disparaît reste-t-elle une œuvre ? Relis la fin de la partie « Hybride, éphémère »."
+      - "Quel mot désigne une œuvre qui ne dure qu'un temps court ?"
+    explication: "C'est une œuvre éphémère. Elle n'existe qu'un temps, et c'est voulu. Les photos sont des traces qui permettent de la connaître."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une œuvre hybride ou éphémère (une bande dessinée, une performance, une installation, une
+      œuvre de rue…). Présente-la et explique ce qui la rend hybride ou éphémère. Dis aussi le rôle du
+      lieu et du public.
+    indices:
+      - "Commence par nommer le genre, l'artiste et la date si tu la connais."
+      - "Quels arts mélange-t-elle ? Combien de temps dure-t-elle ? Où le public la voit-il ?"
+    criteres:
+      - "L'élève nomme le genre de l'œuvre et la situe (artiste, date ou lieu)."
+      - "L'élève explique ce qui la rend hybride (arts mélangés) ou éphémère (courte durée, traces)."
+      - "L'élève décrit le rôle du lieu ou du public et propose une interprétation."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, ce que veulent dire « hybride » et « éphémère », cite trois genres de ce
+      champ, et nomme les trois arts de la parole et de l'écrit associés.

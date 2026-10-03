@@ -1,0 +1,141 @@
+notion: lire
+titre: "Lire et comprendre un texte en anglais"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver le type et le sujet d'un document avant même de le lire."
+      - "Deviner un mot inconnu grâce aux indices, sans tout traduire."
+      - "Répondre à une question en justifiant avec un extrait du texte."
+
+  - type: texte
+    titre: "Avant de lire : observe"
+    contenu: |
+      Lire, ce n'est pas traduire chaque mot. On cherche d'abord **l'idée générale**.
+
+      - Regarde le **titre**, les **images**, la **mise en page**, la **source**, la **date**.
+      - Ces indices donnent le **type de document** : annonce, mail, article, affiche, récit, dialogue, page web.
+      - **Skimming** : lire vite pour l'idée générale.
+      - **Scanning** : chercher une information précise (un nom, une date, un prix).
+
+  - type: texte
+    titre: "Les indices dans les mots"
+    contenu: |
+      | Indice | Exemple |
+      |---|---|
+      | Mot transparent | *hospital*, *important* |
+      | Fin ou début de mot | *-less* = sans (useless) ; *-ful* = plein de (colourful) ; *un-* = contraire (unhappy) |
+      | Faux ami | *journey* = voyage ; *actually* = en fait |
+      | Mot de liaison | and (ajout), but / however (opposition), because (cause), so (conséquence), then (après) |
+      | Temps du verbe | -ed, went, saw = passé ; will = futur |
+
+  - type: texte
+    titre: "Reconstituer le sens et le prouver"
+    contenu: |
+      - Relie les indices : **qui** parle, **à qui**, **où**, **quand**, **pourquoi** ?
+      - 1re lecture : le sens général. 2e lecture : les détails.
+      - Justifie chaque réponse avec **un mot ou une phrase du texte**.
+      - Pour progresser : lis **souvent** des textes **courts et variés**, et note les mots nouveaux.
+
+  - type: exemple
+    enonce: >-
+      Lis cette affiche : « SCHOOL CONCERT — Friday 12th June, 6 pm, in the gym. Free entry!
+      Students will play the piano and sing. » Que peux-tu dire du document ?
+    etapes:
+      - "Le titre en majuscules et la date annoncent une affiche pour un événement."
+      - "« concert » est un mot transparent : c'est un concert de l'école."
+      - "Scanning : quand ? vendredi 12 juin à 18 h. Où ? « in the gym » (le gymnase)."
+      - "« Free entry » : l'entrée est gratuite. « will play » annonce un événement futur."
+
+  - type: exercice
+    enonce: "Lis : « Found: a blue umbrella near the bus stop. Call Sam on 07 11 22 33 44. » Quel type de document est-ce ?"
+    forme: qcm
+    choix:
+      - "Une petite annonce pour rendre un objet trouvé"
+      - "Une recette de cuisine"
+      - "Un bulletin météo"
+    reponse: 0
+    indices:
+      - "« Found » veut dire « trouvé ». Pourquoi donne-t-on un numéro de téléphone ?"
+      - "Une recette donne des ingrédients, une météo parle du temps qu'il fera. Est-ce le cas ici ?"
+    explication: "C'est une petite annonce : quelqu'un a trouvé (found) un parapluie bleu et donne un numéro pour le rendre."
+
+  - type: exercice
+    enonce: "Dans la phrase « Thank you, you were very helpful! », que veut dire « helpful » ?"
+    forme: qcm
+    choix:
+      - "Qui aide beaucoup, serviable"
+      - "Qui n'aide pas du tout"
+      - "Qui est malade"
+    reponse: 0
+    indices:
+      - "Le mot est formé de « help » (aider) + une terminaison."
+      - "La terminaison « -ful » veut dire « plein de ». La personne dit aussi merci."
+    explication: "help + -ful = plein d'aide : serviable. Le « Thank you » confirme le sens positif."
+
+  - type: exercice
+    enonce: "Dans « I read a lot, so I often go to the library », le mot « library » est un faux ami. Écris en français le lieu dont il s'agit."
+    forme: reponse_courte
+    reponse: "bibliothèque"
+    reponses_acceptees: ["bibliotheque", "la bibliothèque", "une bibliothèque", "la bibliotheque", "une bibliotheque"]
+    indices:
+      - "Ce n'est pas le magasin où l'on achète des livres."
+      - "C'est le lieu où l'on emprunte des livres, comme au CDI."
+    explication: "« library » = bibliothèque. La librairie (où l'on achète) se dit « bookshop »."
+
+  - type: exercice
+    enonce: >-
+      Lis : « Lily wanted to go to the beach, but it rained all day. So she stayed at home and
+      watched a film. » Quel mot de liaison annonce une opposition ? Recopie-le.
+    forme: reponse_courte
+    reponse: "but"
+    reponses_acceptees: ["But"]
+    indices:
+      - "Lily voulait une chose, mais il s'est passé autre chose : cherche le mot entre les deux idées."
+      - "« So » annonce une conséquence : ce n'est donc pas lui."
+    explication: "« but » (mais) oppose ce que Lily voulait (la plage) à ce qui s'est passé (la pluie). « So » annonce la conséquence."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Lis ce mail : « Hi Emma, I'm in Edinburgh with my parents. We arrived on
+      Monday. Yesterday we visited the castle. It was amazing, but very windy! Tomorrow we
+      will take the train to London. See you soon, Jack » Quelle phrase est vraie ?
+    forme: qcm
+    choix:
+      - "Jack a déjà visité le château, et il ira à Londres demain."
+      - "Jack visitera le château demain."
+      - "Jack est à Londres avec ses parents."
+      - "Jack a trouvé le château ennuyeux."
+    reponse: 0
+    indices:
+      - "Repère les indices de temps : « Yesterday », « Tomorrow », et les verbes en -ed ou avec will."
+      - "« visited » est au passé ; « will take the train to London » parle de l'avenir. « amazing » est positif."
+    explication: "« Yesterday we visited the castle » (passé) et « Tomorrow we will take the train to London » (futur). Jack est à Edinburgh et a aimé le château (amazing)."
+
+  - type: question_ouverte
+    question: >-
+      Relis le mail de Jack (exercice précédent). En français, dis : qui écrit, à qui, où il
+      est, et ce qu'il pense du château. Justifie chaque réponse avec un mot ou une phrase du
+      texte.
+    indices:
+      - "Regarde le début et la fin du mail : « Hi … » et la signature."
+      - "Pour l'avis, cherche un adjectif après « It was »."
+    criteres:
+      - "L'élève dit que Jack écrit à Emma (« Hi Emma », signature « Jack »)."
+      - "L'élève dit que Jack est à Edinburgh avec ses parents et cite « I'm in Edinburgh »."
+      - "L'élève dit qu'il a trouvé le château génial mais qu'il y avait du vent, en citant « amazing » ou « very windy »."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les trois ou quatre étapes que tu suis pour lire un texte en anglais,
+      du premier coup d'œil jusqu'à la réponse justifiée.

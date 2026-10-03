@@ -1,0 +1,166 @@
+notion: visee-satirique
+titre: "Visées et modalités de la satire"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves du brevet à compter de la session 2027 — épreuve écrite de français"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Expliquer ce qu'est une satire et pourquoi elle fait rire pour critiquer."
+      - "Repérer la cible d'un texte ou d'une image satirique et nommer le procédé : ironie, grossissement, rabaissement, déplacement."
+      - "Expliquer la portée de la satire et ses limites."
+
+  - type: texte
+    titre: "Qu'est-ce qu'une satire ?"
+    contenu: >-
+      La **satire** est une œuvre (texte, image, spectacle) qui **se moque** de quelqu'un ou de
+      quelque chose **pour le critiquer**. Sa **visée** est double : **faire rire** et **faire
+      réfléchir**. Elle veut corriger les défauts des hommes ou dénoncer les travers de la société.
+      Elle prend des formes variées : poème satirique, fable, conte philosophique, roman,
+      pamphlet, dessin de presse, caricature, sketch.
+
+  - type: texte
+    titre: "La cible et les procédés"
+    contenu: >-
+      Il faut distinguer deux choses. La **cible** : ce qui est critiqué (un défaut, un groupe,
+      une institution, un pouvoir). Le **procédé** : la manière de critiquer. Les procédés à
+      connaître : l'**ironie** (dire le contraire de ce qu'on pense, en laissant comprendre la
+      critique) ; le **grossissement** ou caricature (exagérer un défaut pour le rendre ridicule) ;
+      le **rabaissement** (présenter une chose importante comme petite ou méprisable) ; le
+      **déplacement** (critiquer en parlant d'autre chose : des animaux à la place des hommes, un
+      pays imaginaire à la place du nôtre). On peut ajouter la **parodie** : imiter une œuvre pour
+      s'en moquer.
+
+  - type: texte
+    titre: "Quelques repères"
+    contenu: >-
+      Au XVIIe siècle, La Fontaine écrit des *Fables* où les animaux représentent les hommes.
+      La Bruyère peint des portraits satiriques dans *Les Caractères*. Molière fait la satire de
+      l'hypocrisie ou de l'avarice au théâtre. Au XVIIIe siècle, Voltaire écrit le conte
+      philosophique *Candide* (1759). Aujourd'hui, le dessin de presse continue cette tradition.
+
+  - type: texte
+    titre: "Pourquoi rire ? Portée et limites"
+    contenu: >-
+      Le rire rend la critique plus facile à accepter et à retenir. Le déplacement peut aussi
+      protéger l'auteur de la censure. La satire a une **portée morale et sociale** : elle veut
+      corriger un défaut de la société. Elle a aussi des **limites** : elle peut blesser, mal
+      comprendre sa cible, ou être prise au premier degré. Il faut reconnaître l'ironie pour la
+      comprendre. Au brevet : repère la cible, nomme le procédé avec une **preuve** (mot, phrase,
+      détail de l'image), puis explique la visée.
+
+  - type: exemple
+    enonce: >-
+      Dans un article satirique, on lit : « Notre député, si simple et si discret, ne possède que
+      onze maisons et arrive toujours en retard aux séances, par modestie. » Quelle est la cible ?
+      Quel procédé est utilisé ?
+    etapes:
+      - "Cible : le député, et plus largement les élus qui profitent de leur position et négligent leur travail."
+      - "Le texte dit « simple », « discret », « modestie », mais les faits décrits montrent le contraire. C'est de l'**ironie**."
+      - "Il y a aussi un peu de **grossissement** : « onze maisons » exagère pour rendre le défaut ridicule."
+      - "Preuve : les mots « si simple » s'opposent à « onze maisons ». La visée est de faire rire pour critiquer."
+
+  - type: exercice
+    enonce: "Quelle est la visée d'une satire ?"
+    forme: qcm
+    choix:
+      - "Faire rire et faire réfléchir en critiquant"
+      - "Raconter la vie de l'auteur"
+      - "Décrire un paysage avec des mots poétiques"
+      - "Expliquer un fait scientifique"
+    reponse: 0
+    indices:
+      - "Relis la définition : la satire se moque de quelque chose. Dans quel but ?"
+      - "Sa visée est double : un effet sur le lecteur (le rire) et une critique."
+    explication: "La satire se moque pour critiquer : elle veut faire rire et faire réfléchir."
+
+  - type: exercice
+    enonce: "Quel mot désigne le procédé qui consiste à exagérer un défaut pour le rendre ridicule ? (Un seul mot.)"
+    forme: reponse_courte
+    reponse: "grossissement"
+    reponses_acceptees:
+      - "le grossissement"
+      - "un grossissement"
+      - "caricature"
+      - "la caricature"
+    indices:
+      - "Ce procédé agrandit un trait, comme une loupe."
+      - "Le mot vient de l'adjectif « gros » : on rend le défaut plus gros."
+    explication: "C'est le grossissement (ou caricature) : on exagère un défaut pour le rendre visible et ridicule."
+
+  - type: exercice
+    enonce: >-
+      Un auteur écrit : « Quel homme courageux ! » à propos d'un chef qui s'est enfui dès le
+      premier danger. Quel procédé est utilisé ?
+    forme: qcm
+    choix:
+      - "L'ironie"
+      - "Le déplacement"
+      - "La parodie"
+      - "Le rabaissement"
+    reponse: 0
+    indices:
+      - "Compare ce que dit la phrase et ce qu'a fait le chef."
+      - "La phrase dit le contraire de ce que l'auteur pense vraiment."
+    explication: "La phrase dit « courageux » alors que le chef s'est enfui : elle dit le contraire de ce qu'on pense, en laissant comprendre la critique. C'est de l'ironie."
+
+  - type: exercice
+    enonce: >-
+      Un auteur décrit un ministre très important comme « un petit pantin qui s'agite dans une
+      boîte ». Quel procédé est utilisé ?
+    forme: qcm
+    choix:
+      - "Le grossissement"
+      - "Le rabaissement"
+      - "Le déplacement"
+      - "L'ironie"
+    reponse: 1
+    indices:
+      - "Le ministre est une personne importante. Comment l'auteur le présente-t-il ?"
+      - "« Petit pantin » : l'important devient petit et sans valeur."
+    explication: "Une personne importante est présentée comme petite et méprisable : c'est un rabaissement. Le grossissement, lui, exagère un défaut."
+
+  - type: exercice
+    enonce: "Parmi ces phrases, laquelle décrit une limite de la satire ?"
+    forme: qcm
+    choix:
+      - "Elle fait toujours rire tout le monde"
+      - "Elle peut être prise au premier degré si on ne reconnaît pas l'ironie"
+      - "Elle ne critique jamais personne"
+      - "Elle n'existe que dans les textes, jamais en images"
+    reponse: 1
+    indices:
+      - "Une limite est un risque : la satire peut rater son but."
+      - "Pense à un lecteur qui ne comprend pas que la phrase dit le contraire de la critique."
+    explication: "La satire joue sur un accord entre l'auteur et le lecteur. Sans reconnaître l'ironie, le lecteur prend la phrase au premier degré. Elle peut aussi blesser ou mal comprendre sa cible. Elle existe aussi en images (dessin de presse, caricature)."
+
+  - type: question_ouverte
+    question: >-
+      Dans une fable, des animaux se comportent comme des hommes vaniteux. Explique comment le
+      déplacement permet de critiquer les hommes, et pourquoi l'auteur choisit de faire rire.
+    indices:
+      - "Qui est visé en réalité : les animaux ou les hommes ?"
+      - "Pense à l'effet du rire sur le lecteur, et au risque de la censure."
+    criteres:
+      - "L'élève explique que les animaux représentent les hommes (déplacement)."
+      - "L'élève explique que le rire rend la critique plus facile à accepter ou protège l'auteur."
+      - "L'élève nomme la cible (un défaut comme la vanité)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce qu'est une satire, et cite deux
+      procédés avec une courte définition de chacun.

@@ -1,0 +1,148 @@
+notion: alea-vulnerabilite-risque
+titre: "Aléas, vulnérabilité, risque, prévention, protection, adaptation, atténuation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Sciences de la vie et de la Terre (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer aléa, enjeux, vulnérabilité et risque."
+      - "Classer une mesure : prévention, protection, atténuation ou adaptation."
+      - "Analyser un document et conclure sur le niveau de risque."
+
+  - type: texte
+    titre: "Aléa, enjeux, vulnérabilité, risque"
+    contenu: |-
+      - Un **aléa** est un phénomène qui peut se produire (séisme, cyclone, inondation…). On le décrit par sa probabilité et son intensité.
+      - Les **enjeux** sont les personnes, les biens et les activités exposés.
+      - La **vulnérabilité** est la fragilité de ces enjeux.
+      - Le **risque** naît de la rencontre entre un aléa et des enjeux vulnérables.
+      Un séisme violent dans un désert vide : risque faible. Un séisme moyen dans une grande ville aux bâtiments fragiles : risque élevé.
+
+  - type: texte
+    titre: "Prévoir un phénomène"
+    contenu: |-
+      La **prévision** permet d'annoncer certains phénomènes.
+      On suit un cyclone plusieurs jours à l'avance, on surveille les volcans et les rivières.
+      En revanche, on ne sait pas prévoir la date exacte d'un séisme.
+      On agit rarement sur l'aléa naturel lui-même : on agit surtout sur la vulnérabilité.
+
+  - type: texte
+    titre: "Les mesures face aux risques"
+    contenu: |-
+      - **Prévention** : informer, cartographier les zones à risque, interdire de construire en zone inondable, faire des exercices et des alertes.
+      - **Protection** : bâtiments parasismiques, digues, abris. On limite les dégâts.
+      Une mesure de protection réduit le risque, mais elle ne le rend pas nul.
+
+  - type: texte
+    titre: "Risques liés aux activités humaines"
+    contenu: |-
+      Pour la pollution, le réchauffement climatique ou la montée du niveau des océans :
+      - **Atténuation** : agir sur la cause. Exemple : réduire les émissions de gaz à effet de serre.
+      - **Adaptation** : s'organiser pour vivre avec les changements. Exemple : choisir des cultures résistantes à la sécheresse.
+
+  - type: exemple
+    enonce: >-
+      Une petite île inhabitée et une grande ville côtière sont menacées par le même cyclone.
+      Où le risque est-il le plus élevé ?
+    etapes:
+      - "L'aléa est le même : c'est le même cyclone."
+      - "Sur l'île inhabitée, il n'y a presque pas d'enjeux : le risque est faible."
+      - "Dans la grande ville, beaucoup de personnes et de biens sont exposés : le risque est bien plus élevé, surtout si les habitations sont fragiles."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la fragilité des personnes et des biens face à un aléa ?"
+    forme: reponse_courte
+    reponse: "vulnérabilité"
+    reponses_acceptees: ["vulnérabilité", "vulnerabilite", "la vulnérabilité", "la vulnerabilite", "vulnérable", "vulnérabilités"]
+    indices:
+      - "Ce n'est ni le phénomène lui-même, ni le risque."
+      - "Le mot commence par « vuln » et il décrit ce qui peut être blessé ou endommagé."
+    explication: "La vulnérabilité est la fragilité des enjeux (bâtiments non adaptés, absence d'alerte, population non informée) face à un aléa."
+
+  - type: exercice
+    enonce: >-
+      Deux villes subissent un séisme de même intensité. Dans la ville A, les bâtiments sont
+      parasismiques et les habitants font des exercices. Dans la ville B, les bâtiments sont fragiles
+      et personne n'a été informé. Quelle affirmation est juste ?
+    forme: qcm
+    choix:
+      - "L'aléa est plus fort dans la ville B."
+      - "Le risque est plus élevé dans la ville B, car elle est plus vulnérable."
+      - "Il n'y a aucun risque dans la ville A."
+    reponse: 1
+    indices:
+      - "Qu'est-ce qui est pareil dans les deux villes, et qu'est-ce qui est différent ?"
+      - "Le séisme a la même intensité : l'aléa est le même. Regarde ce qui change entre A et B."
+    explication: "L'aléa est le même. La ville B est plus vulnérable, donc le risque y est plus élevé. Dans la ville A le risque est réduit, mais il n'est pas nul."
+
+  - type: exercice
+    enonce: "Une digue est construite pour limiter les dégâts d'une crue. De quel type de mesure s'agit-il ?"
+    forme: qcm
+    choix:
+      - "Prévention"
+      - "Protection"
+      - "Atténuation"
+      - "Adaptation"
+    reponse: 1
+    indices:
+      - "Une digue est un ouvrage. Que fait-il : informer, limiter les dégâts, agir sur la cause ?"
+      - "Le cours cite les digues comme exemple, avec les bâtiments parasismiques et les abris."
+    explication: "Une digue est une mesure de protection : elle limite les dégâts d'une crue, mais ne supprime pas l'aléa, donc le risque reste."
+
+  - type: exercice
+    enonce: >-
+      Dans ce document, une commune compte 5 000 habitants, dont 1 000 vivent en zone inondable.
+      Quel pourcentage des habitants vit en zone inondable ?
+    forme: nombre
+    reponse: 20
+    tolerance: 0.01
+    unite: "%"
+    indices:
+      - "Écris d'abord la part sous forme de fraction : habitants concernés sur habitants au total."
+      - "Pourcentage = habitants concernés ÷ habitants au total × 100."
+      - "Calcule 1 000 ÷ 5 000, puis multiplie par 100."
+    explication: "1 000 ÷ 5 000 = 0,2 et 0,2 × 100 = 20. Donc 20 % des habitants sont des enjeux exposés à l'aléa inondation."
+
+  - type: exercice
+    enonce: >-
+      Une région choisit des cultures qui résistent mieux aux sécheresses, devenues plus fréquentes.
+      De quel type de mesure s'agit-il ?
+    forme: qcm
+    choix:
+      - "Une atténuation, car on agit sur la cause du réchauffement"
+      - "Une adaptation, car on s'organise pour vivre avec les changements"
+      - "Une protection, car on construit un ouvrage"
+    reponse: 1
+    indices:
+      - "Est-ce qu'on agit sur la cause du phénomène, ou est-ce qu'on change sa façon de vivre ?"
+      - "L'atténuation agit sur la cause. L'adaptation change nos façons de vivre avec les conséquences."
+    explication: "Choisir des cultures résistantes à la sécheresse, c'est s'adapter à un changement qu'on ne peut plus éviter : c'est une adaptation."
+
+  - type: question_ouverte
+    question: >-
+      Deux régions sont frappées par des cyclones de même force. Dans la région 1, l'alerte est donnée
+      plusieurs jours avant, les maisons sont solides et des abris existent : il y a peu de victimes.
+      Dans la région 2, l'alerte arrive tard et les habitations sont fragiles : il y a de nombreuses
+      victimes. Explique cette différence avec les mots aléa, vulnérabilité et risque, puis propose une
+      mesure pour la région 2.
+    indices:
+      - "Le cyclone est-il plus fort dans une région que dans l'autre ? Qu'est-ce qui change alors ?"
+      - "Utilise les trois mots dans l'ordre : ce qui est pareil, ce qui est différent, ce qui en résulte."
+    criteres:
+      - "L'élève dit que l'aléa est le même dans les deux régions (cyclones de même force)."
+      - "L'élève explique que la région 2 est plus vulnérable, donc que le risque y est plus élevé."
+      - "L'élève propose une mesure adaptée (alerte, information, abris, constructions plus solides) et dit ce qu'elle réduit."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases la différence entre un aléa et un risque, et donne un exemple
+      de mesure de prévention et un exemple de mesure de protection.

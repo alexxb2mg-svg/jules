@@ -1,0 +1,161 @@
+notion: physiologie-audition
+titre: "Comment on entend, et comment protéger son audition"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire le trajet du son dans l'oreille, jusqu'au cerveau."
+      - "Utiliser le décibel pour évaluer un risque, selon le niveau et la durée."
+      - "Connaître les notions de base d'acoustique, la compression et les gestes qui protègent."
+
+  - type: texte
+    titre: "Le trajet du son dans l'oreille"
+    contenu: |-
+      **Oreille externe** (pavillon, conduit auditif) : capte le son, le dirige vers le tympan.
+      **Oreille moyenne** : le **tympan** vibre ; les **osselets** (marteau, enclume, étrier) transmettent et amplifient.
+      **Oreille interne** : dans la **cochlée**, les **cellules ciliées** changent les vibrations en message nerveux.
+      Le **nerf auditif** porte ce message au **cerveau**, qui « entend ».
+      Les cellules ciliées abîmées **ne se réparent pas** : une perte due au bruit est **définitive**.
+
+  - type: texte
+    titre: "Le décibel et les risques"
+    contenu: |-
+      L'intensité se mesure en **décibels (dB)**, avec un **sonomètre**.
+      Repères : **0 dB** seuil d'audibilité · **60 dB** conversation.
+      **85 dB** seuil de danger · **120 dB** seuil de douleur · concert amplifié : souvent environ 100 dB.
+      Le risque dépend du **niveau** ET de la **durée**. Repère : 8 heures à 85 dB.
+      Chaque **+3 dB** : énergie doublée, temps sans risque **divisé par deux**.
+
+  - type: texte
+    titre: "Alerte, protection, environnement sonore"
+    contenu: |-
+      Signes d'alerte : **acouphènes** (sifflements, bourdonnements), oreilles « cotonneuses ».
+      S'ils durent le lendemain : voir un médecin **rapidement**, c'est une urgence.
+      Se protéger : s'éloigner des enceintes, faire des pauses au calme, porter des bouchons.
+      Au casque : pas plus de 60 % du volume (conseil courant), et une durée limitée.
+      Un bruit fort ou continu fatigue, gêne le sommeil, la concentration et l'apprentissage.
+
+  - type: texte
+    titre: "Un peu d'acoustique et la compression"
+    contenu: |-
+      Un son est une **vibration** qui se propage dans l'air (pas dans le vide).
+      **Fréquence** en **hertz (Hz)** : la hauteur. Plus de vibrations par seconde = son plus aigu.
+      L'oreille humaine entend environ de **20 Hz à 20 000 Hz**. L'**amplitude** donne l'intensité.
+      **Compression dynamique** : réduit l'écart entre doux et fort ; la musique paraît forte tout le temps.
+      **Compression d'un fichier** (MP3) : l'allège, avec un peu de perte de qualité.
+
+  - type: exemple
+    enonce: >-
+      Pourquoi une heure à 94 dB fait-elle courir autant de risque qu'une journée de 8 heures
+      à 85 dB ?
+    etapes:
+      - "De 85 dB à 94 dB, le niveau monte de 9 dB."
+      - "9 dB, c'est trois hausses de 3 dB (9 ÷ 3 = 3)."
+      - "À chaque hausse de 3 dB, la durée sans risque est divisée par deux : 8 h, puis 4 h, puis 2 h, puis 1 h."
+      - "À 94 dB, on atteint donc la même dose en 1 heure qu'en 8 heures à 85 dB."
+
+  - type: exercice
+    enonce: >-
+      À partir de quel niveau environ une exposition prolongée devient-elle dangereuse pour
+      l'audition ?
+    forme: qcm
+    choix:
+      - "20 dB"
+      - "60 dB"
+      - "85 dB"
+      - "120 dB"
+    reponse: 2
+    indices:
+      - "Une conversation normale est-elle dangereuse pour les oreilles ?"
+      - "Le danger commence avant que le son ne fasse mal. Le seuil de douleur est le plus haut de la liste."
+    explication: "Le seuil de danger est vers 85 dB. 60 dB, c'est une conversation, et 120 dB le seuil de douleur : on peut donc s'abîmer les oreilles sans avoir mal."
+
+  - type: exercice
+    enonce: >-
+      Dans quelle partie de l'oreille interne, en forme de coquille d'escargot, les cellules
+      ciliées transforment-elles les vibrations en message nerveux ?
+    forme: reponse_courte
+    reponse: "cochlée"
+    reponses_acceptees:
+      - "cochlée"
+      - "cochlee"
+      - "la cochlée"
+      - "la cochlee"
+    indices:
+      - "Ce n'est ni le tympan ni les osselets : eux sont dans l'oreille moyenne."
+      - "Relis le bloc « Le trajet du son dans l'oreille » : où se trouvent les cellules ciliées ?"
+    explication: "C'est la cochlée, dans l'oreille interne. Ses cellules ciliées transforment les vibrations en message nerveux, envoyé au cerveau par le nerf auditif."
+
+  - type: exercice
+    enonce: >-
+      On admet qu'on peut rester 8 heures à 85 dB sans risque, et que ce temps est divisé par deux
+      chaque fois que le niveau augmente de 3 dB. Combien d'heures peut-on rester sans risque à 91 dB ?
+    forme: nombre
+    reponse: 2
+    tolerance: 0
+    unite: "h"
+    indices:
+      - "De combien de décibels passe-t-on de 85 dB à 91 dB ? Combien de fois 3 dB cela fait-il ?"
+      - "De 85 dB à 88 dB, la durée passe de 8 heures à 4 heures. Il reste encore une hausse de 3 dB."
+    explication: "De 85 à 91 dB, il y a deux hausses de 3 dB. 8 h, puis 4 h à 88 dB, puis 2 h à 91 dB."
+
+  - type: exercice
+    enonce: >-
+      Quelle unité mesure la fréquence d'un son, c'est-à-dire le nombre de vibrations par seconde ?
+    forme: reponse_courte
+    reponse: "hertz"
+    reponses_acceptees:
+      - "hertz"
+      - "Hz"
+      - "hz"
+      - "le hertz"
+      - "les hertz"
+      - "herz"
+    indices:
+      - "Ce n'est pas le décibel : celui-ci mesure l'intensité, pas la hauteur."
+      - "L'unité porte le nom d'un physicien allemand du XIXe siècle. Son symbole a deux lettres."
+    explication: "La fréquence se mesure en hertz (Hz). Plus il y a de vibrations par seconde, plus le son est aigu. Le décibel, lui, mesure l'intensité."
+
+  - type: exercice
+    enonce: >-
+      Une chanson a subi une forte compression dynamique au mixage. Quel effet cela a-t-il sur
+      l'écoute ?
+    forme: qcm
+    choix:
+      - "Le fichier devient plus léger mais perd un peu de qualité"
+      - "L'écart entre passages doux et forts diminue : la musique paraît forte tout le temps"
+      - "La musique devient plus aiguë"
+      - "Les passages doux deviennent plus longs, ce qui repose l'oreille"
+    reponse: 1
+    indices:
+      - "Le mot « compression » a deux sens. Ici, on parle de la dynamique, donc du volume."
+      - "La compression dynamique agit sur l'écart entre le doux et le fort."
+    explication: "La compression dynamique réduit l'écart entre doux et fort : la musique paraît forte en permanence et l'oreille n'a plus de moments de repos. Un fichier plus léger, c'est l'autre sens du mot (la compression MP3)."
+
+  - type: question_ouverte
+    question: >-
+      Ton ami va à un concert de rock de trois heures et veut se placer juste devant les enceintes.
+      En quatre ou cinq phrases, explique-lui ce que le son peut faire à son oreille et donne-lui
+      des conseils précis.
+    indices:
+      - "À quel niveau sonore est un concert amplifié, et combien de temps ton ami va-t-il y rester ?"
+      - "Fais trois parties : le danger (niveau et durée), ce qui se passe dans l'oreille, puis les conseils."
+    criteres:
+      - "L'élève explique que le niveau (environ 100 dB, au-dessus du seuil de danger de 85 dB) et la durée augmentent le risque."
+      - "L'élève cite l'atteinte des cellules ciliées de la cochlée, définitive, et les signes d'alerte (acouphènes, oreilles cotonneuses)."
+      - "L'élève donne au moins deux conseils concrets (s'éloigner des enceintes, pauses au calme, bouchons, consulter si les symptômes durent)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, le trajet du son dans l'oreille,
+      le seuil de danger en décibels, et deux gestes pour protéger ton audition.
