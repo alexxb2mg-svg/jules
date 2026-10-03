@@ -1,15 +1,28 @@
 """Module 'vigilance' : repere les signaux inquietants et previent le parent tout de suite.
 
-Chaque message de l'eleve est relu par le modele rapide. Niveau 'moyen' ou 'eleve' :
-alerte immediate via les notifieurs. Tous les signaux sont journalises (evenements 'vigilance').
+Chaque message de l'eleve passe d'abord par un plancher deterministe, puis est relu par le modele
+rapide. Niveau 'moyen' ou plus (reglage `seuil_alerte`) : alerte via les notifieurs. Tous les
+signaux sont journalises (evenements 'vigilance').
 La conduite du bot face a ces situations est dans consignes/securite.md.
 
-En plus du modele, un plancher deterministe (consignes/vigilance_plancher.yaml) repere une liste
-etroite d'expressions (idees suicidaires, auto-agression, violence subie, harcelement, adulte
-inconnu inquietant). Il alerte meme si le modele est en panne ou repond n'importe quoi ; le
-niveau final retenu est le plus eleve des deux. Si le modele echoue et que le plancher n'a rien
-trouve, un evenement de repli est enregistre (niveau 'faible') sans notifier le parent : ce n'est
-pas une alerte, seulement une trace que l'analyse n'a pas pu avoir lieu.
+Le plancher (consignes/vigilance_plancher.yaml) repere une liste etroite d'expressions (idees
+suicidaires, auto-agression, violence subie, harcelement, adulte inconnu inquietant). S'il trouve
+quelque chose, l'evenement et l'alerte partent tout de suite, AVANT l'appel au modele : en cas de
+panne d'API, cet appel peut durer jusqu'a `delai_s` (120 a 180 s) avant d'echouer, et l'alerte ne
+l'attend pas. Le plancher alerte donc meme si le modele d'analyse est en panne ou repond n'importe
+quoi. (Il ne tourne qu'apres la reponse du tuteur : si le modele principal echoue, jules/moteur.py
+renvoie le message de panne sans lancer `apres_echange`, et ni le plancher ni le modele ne passent.)
+Ensuite seulement, le modele relit le message :
+  - s'il voit STRICTEMENT plus grave que le plancher, c'est une escalade : nouvel evenement, et
+    nouvelle alerte si le seuil est franchi ;
+  - s'il confirme le niveau du plancher, ou voit moins grave, rien de plus : pas de doublon ;
+  - s'il echoue (ou repond un JSON illisible) et que le plancher n'a rien trouve, un evenement de
+    repli est enregistre (niveau 'faible', motif 'analyse indisponible') sans notifier le parent :
+    ce n'est pas une alerte, seulement une trace que l'analyse n'a pas pu avoir lieu.
+
+Les modules font leur `apres_echange` l'un apres l'autre, sur un seul fil de fond, dans l'ordre de
+config.yaml : 'vigilance' y passe avant 'memoire' et 'suivi', pour que l'alerte du plancher
+n'attende pas non plus l'appel au modele du suivi.
 """
 
 from __future__ import annotations
@@ -85,31 +98,30 @@ def evaluer_plancher(texte: str, plancher: dict[str, Any] | None = None) -> tupl
     return "aucun", ""
 
 
-def _plus_haut(a: str, b: str) -> str:
-    if a not in NIVEAUX:
-        return b
-    if b not in NIVEAUX:
-        return a
-    return a if NIVEAUX.index(a) >= NIVEAUX.index(b) else b
+def _strictement_plus_haut(niveau: str, reference: str) -> bool:
+    """Vrai si `niveau` est un niveau connu, strictement au-dessus de `reference` (inconnue = 'aucun')."""
+    if niveau not in NIVEAUX:
+        return False
+    rang_reference = NIVEAUX.index(reference) if reference in NIVEAUX else 0
+    return NIVEAUX.index(niveau) > rang_reference
 
 
 class Brique(Module):
     id = "vigilance"
 
     def apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> None:
+        # 1. Plancher deterministe : evenement et alerte tout de suite, sans attendre le modele.
         niveau_plancher, motif_plancher = evaluer_plancher(eleve.texte)
-        niveau_modele, motif_modele = self._analyser_avec_le_modele(eleve, bot)
+        self._traiter(conv, eleve, niveau_plancher, motif_plancher)
 
+        # 2. Modele : il ne peut qu'aggraver le niveau du plancher (escalade), jamais le doublonner.
+        niveau_modele, motif_modele = self._analyser_avec_le_modele(eleve, bot)
         if niveau_modele is None:
             if niveau_plancher == "aucun":
                 self._enregistrer_repli(conv)
-                return
-            self._traiter(conv, eleve, niveau_plancher, motif_plancher)
             return
-
-        niveau = _plus_haut(niveau_plancher, niveau_modele)
-        motif = motif_plancher if niveau == niveau_plancher and niveau_plancher != "aucun" else motif_modele
-        self._traiter(conv, eleve, niveau, motif)
+        if _strictement_plus_haut(niveau_modele, niveau_plancher):
+            self._traiter(conv, eleve, niveau_modele, motif_modele)
 
     def _analyser_avec_le_modele(self, eleve: Message, bot: Message) -> tuple[str | None, str]:
         """Renvoie (niveau, motif). niveau vaut None si le modele a echoue ou est illisible."""
