@@ -1,0 +1,139 @@
+notion: aspects-culturels
+titre: "La culture des pays anglophones : repères et clichés"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Situer les principaux pays anglophones et leur capitale."
+      - "Reconnaître des fêtes, des symboles et des lieux connus pour comprendre un document."
+      - "Repérer un stéréotype et le remplacer par un fait précis."
+
+  - type: texte
+    titre: "Les pays anglophones et leur capitale"
+    contenu: |-
+      - Royaume-Uni → **London** (Londres)
+      - États-Unis → **Washington, D.C.**
+      - Canada → **Ottawa**
+      - Australie → **Canberra**
+      - Irlande → **Dublin**
+      - Nouvelle-Zélande → **Wellington**
+
+  - type: texte
+    titre: "Deux pièges sur les pays"
+    contenu: |-
+      - La capitale n'est pas toujours la plus grande ville. Sydney n'est pas la capitale de l'Australie. New York n'est pas celle des États-Unis.
+      - Le Royaume-Uni réunit **quatre nations** : l'Angleterre, l'Écosse, le pays de Galles et l'Irlande du Nord.
+      - Donc « England » ne veut pas dire tout le Royaume-Uni.
+      - Son drapeau, l'**Union Jack**, réunit plusieurs croix.
+
+  - type: texte
+    titre: "Fêtes et repères culturels"
+    contenu: |-
+      - **Thanksgiving** (États-Unis) : quatrième jeudi de novembre, grand repas de famille.
+      - **Independence Day** (États-Unis) : le 4 juillet, fête nationale.
+      - **Halloween** : le 31 octobre. **Bonfire Night** (Royaume-Uni) : le 5 novembre.
+      - **St Patrick's Day** (Irlande) : le 17 mars.
+      Un lieu célèbre aide à comprendre un document : Big Ben → Londres ; la Statue de la Liberté → New York.
+
+  - type: texte
+    titre: "Dépasser les clichés"
+    contenu: |-
+      Un **stéréotype** est une idée toute faite sur un groupe : « Tous les Anglais boivent du thé à cinq heures. »
+      Pour le dépasser :
+      - remplace « tous » ou « toujours » par « beaucoup » ou « certains » ;
+      - cherche un fait précis et vérifiable (une date, un lieu, un symbole) ;
+      - rappelle que chaque pays est divers : régions, origines, modes de vie.
+
+  - type: exemple
+    enonce: "Tu lis une carte postale : « Greetings from Sydney! Yesterday we visited the Opera House. » Dans quel pays est l'auteur ? Sydney est-elle la capitale ?"
+    etapes:
+      - "Repère les noms propres : « Sydney » et « the Opera House »."
+      - "L'Opéra de Sydney est un lieu célèbre d'Australie. L'auteur est donc en Australie."
+      - "Sydney est la plus grande ville d'Australie, mais pas sa capitale."
+      - "La capitale de l'Australie est Canberra."
+
+  - type: exercice
+    enonce: "Quelle est la capitale de l'Irlande ? Écris le nom de la ville."
+    forme: reponse_courte
+    reponse: "Dublin"
+    reponses_acceptees: ["dublin"]
+    indices:
+      - "Regarde la liste des capitales dans la leçon."
+      - "C'est la ville où siège le gouvernement irlandais. C'est aussi la plus grande ville du pays."
+    explication: "La capitale de l'Irlande est Dublin."
+
+  - type: exercice
+    enonce: "Quelle est la capitale du Canada ?"
+    forme: qcm
+    choix:
+      - "Toronto"
+      - "Ottawa"
+      - "Montreal"
+      - "Vancouver"
+    reponse: 1
+    indices:
+      - "Attention : la capitale n'est pas toujours la ville la plus connue."
+      - "Toronto est la plus grande ville du pays, mais ce n'est pas elle."
+    explication: "La capitale du Canada est Ottawa. Toronto, Montreal et Vancouver sont de grandes villes, mais pas la capitale."
+
+  - type: exercice
+    enonce: "Complète le nom de la fête nationale américaine, le 4 juillet : « ___ Day ». Écris le mot manquant en anglais."
+    forme: reponse_courte
+    reponse: "Independence"
+    reponses_acceptees: ["independence", "Independence Day"]
+    indices:
+      - "Le 4 juillet 1776, les États-Unis déclarent qu'ils ne dépendent plus du Royaume-Uni."
+      - "Cherche le mot anglais pour dire « ne plus dépendre de quelqu'un ». Il ressemble beaucoup au français."
+    explication: "La fête nationale des États-Unis est Independence Day, le 4 juillet."
+
+  - type: exercice
+    enonce: "Laquelle de ces phrases est un stéréotype ?"
+    forme: qcm
+    choix:
+      - "Thanksgiving takes place on the fourth Thursday of November."
+      - "All Americans eat burgers every day."
+      - "The capital of Australia is Canberra."
+    reponse: 1
+    indices:
+      - "Cherche un mot qui généralise à tout un groupe."
+      - "Deux phrases donnent un fait précis et vérifiable. Laquelle n'en donne pas ?"
+    explication: "« All Americans eat burgers every day » parle de tous les Américains (« all », « every day ») : c'est une idée toute faite. Les deux autres phrases sont des faits vérifiables."
+
+  - type: exercice
+    enonce: "Niveau brevet. Lis : « Emma lives in Edinburgh, the capital of her nation. Every year, on 5 November, she watches fireworks for Bonfire Night. » Dans quelle nation du Royaume-Uni vit Emma ?"
+    forme: qcm
+    choix:
+      - "England (l'Angleterre)"
+      - "Scotland (l'Écosse)"
+      - "Wales (le pays de Galles)"
+      - "Ireland (l'Irlande, un autre pays)"
+    reponse: 1
+    indices:
+      - "Le Royaume-Uni compte quatre nations. Edinburgh est la capitale de l'une d'elles."
+      - "Bonfire Night est fêtée au Royaume-Uni : l'Irlande, pays à part, ne convient pas. Edinburgh se dit « Édimbourg » en français."
+    explication: "Edinburgh (Édimbourg) est la capitale de l'Écosse, une des quatre nations du Royaume-Uni. Bonfire Night, le 5 novembre, est fêtée au Royaume-Uni."
+
+  - type: question_ouverte
+    question: "On entend souvent : « Les Anglais mangent mal. » Explique pourquoi c'est un stéréotype, puis réécris cette idée pour qu'elle soit plus juste."
+    indices:
+      - "Ce mot « Les Anglais » parle-t-il de chaque personne ? Est-ce vérifiable ?"
+      - "Remplace la généralisation par « certains » ou « beaucoup », ou par un fait précis."
+    criteres:
+      - "L'élève explique que la phrase généralise à tout un groupe sans fait vérifiable."
+      - "L'élève propose une reformulation nuancée ou un fait précis."
+      - "L'élève rappelle que les habitants d'un pays sont divers."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : cite deux pays anglophones avec leur capitale,
+      une fête avec sa date, et dis comment on reconnaît un stéréotype.

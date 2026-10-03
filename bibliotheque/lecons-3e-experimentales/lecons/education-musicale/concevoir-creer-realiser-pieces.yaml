@@ -1,0 +1,143 @@
+notion: concevoir-creer-realiser-pieces
+titre: "Concevoir, créer et réaliser une pièce musicale"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lister les contraintes d'une création : référence, interprétation, diffusion."
+      - "Suivre les étapes de l'idée jusqu'à la pièce jouée ou enregistrée."
+      - "Expliquer ce qu'on emprunte à un style ou à une œuvre de référence."
+
+  - type: texte
+    titre: "Trois choses à penser avant de créer"
+    contenu: |-
+      **Une référence** : un style (baroque, rock, reggae…) ou une œuvre dont on reprend un procédé.
+      Exemple : le Boléro de Ravel (1928) repose sur un **ostinato** (motif répété sans arrêt).
+      Il forme aussi un long **crescendo** (le volume monte peu à peu).
+      **Des contraintes d'interprétation** : qui va jouer ? Combien, avec quelles voix, quels instruments, quel niveau ?
+      **Des contraintes de diffusion** : où et comment la pièce sera entendue ?
+      Un concert dans le préau, un podcast au casque, la musique d'une vidéo : cela impose une durée, un volume.
+
+  - type: texte
+    titre: "De l'idée à la réalisation"
+    contenu: |-
+      **Concevoir** : penser la pièce avant de la jouer (quoi, avec qui, pour qui ?).
+      **Créer** : chercher des idées en improvisant, puis garder les meilleures.
+      **Fixer** ses idées : partition, **codage graphique** (signes inventés) ou logiciel.
+      **Organiser la forme** : un début, un développement, une fin ; choisir les nuances et le tempo.
+      **Réaliser** : répéter, ajuster, puis jouer devant un public ou enregistrer.
+      Une bonne pièce respecte toutes les contraintes de départ.
+
+  - type: exemple
+    enonce: >-
+      Le collège demande un générique de 30 secondes pour sa web-radio. Ton groupe compte cinq
+      élèves, sans instrument. Comment concevoir la pièce ?
+    etapes:
+      - "Contrainte de diffusion : 30 secondes, avec une fin nette pour laisser parler l'animateur."
+      - "Contrainte d'interprétation : cinq élèves sans instrument, donc voix et percussions corporelles."
+      - "Référence : un ostinato de frappes de mains, inspiré de Clapping Music de Steve Reich (1972)."
+      - "Forme : l'ostinato seul, puis deux voix chantent le nom de la radio, un crescendo et un arrêt net."
+      - "Réalisation : on enregistre et on vérifie que la pièce dure bien 30 secondes."
+
+  - type: exercice
+    enonce: >-
+      Ta classe crée la musique d'une vidéo d'une minute pour le site du collège. Lequel de ces
+      éléments est une contrainte de diffusion ?
+    forme: qcm
+    choix:
+      - "Le style reggae choisi par le groupe"
+      - "La durée d'une minute imposée par la vidéo"
+      - "Le nombre d'élèves qui vont chanter"
+    reponse: 1
+    indices:
+      - "Diffuser, c'est faire entendre la pièce au public. Qu'impose le support, ici la vidéo ?"
+      - "Le nombre de chanteurs concerne ceux qui jouent : c'est une contrainte d'interprétation."
+    explication: "La durée d'une minute vient de la vidéo, le support de diffusion. Le style est une référence choisie, le nombre d'élèves une contrainte d'interprétation."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on une courte formule, rythmique ou mélodique, répétée sans arrêt, sur
+      laquelle on peut construire une pièce ?
+    forme: reponse_courte
+    reponse: "ostinato"
+    reponses_acceptees:
+      - "ostinato"
+      - "un ostinato"
+      - "l'ostinato"
+      - "ostinatos"
+      - "ostinati"
+    indices:
+      - "C'est un mot italien qui veut dire « obstiné »."
+      - "Relis le premier bloc : quel procédé du Boléro de Ravel tourne du début à la fin ?"
+    explication: "Un ostinato est une formule répétée sans arrêt. Le Boléro de Ravel en utilise un du début à la fin."
+
+  - type: exercice
+    enonce: >-
+      Ta pièce doit durer 1 minute. Ton groupe veut 4 parties de même durée. Combien de
+      secondes dure chaque partie ?
+    forme: nombre
+    reponse: 15
+    tolerance: 0
+    unite: "secondes"
+    indices:
+      - "Combien de secondes y a-t-il dans une minute ?"
+      - "Partage cette durée totale en 4 parts égales : c'est une division."
+    explication: "1 minute = 60 secondes. 60 ÷ 4 = 15 secondes par partie. Vérification : 15 × 4 = 60."
+
+  - type: exercice
+    enonce: >-
+      Ton groupe crée une courte pièce « à la manière de la musique baroque ». Quel procédé
+      est une bonne référence ?
+    forme: qcm
+    choix:
+      - "Une guitare électrique saturée"
+      - "Une boîte à rythmes électronique"
+      - "Une alternance entre un soliste et le tutti, comme dans un concerto de Vivaldi"
+    reponse: 2
+    indices:
+      - "Quels instruments existaient à l'époque de Vivaldi ?"
+      - "La guitare électrique et la boîte à rythmes datent du XXe siècle."
+    explication: "L'alternance soliste-tutti vient des concertos baroques de Vivaldi. La guitare électrique et la boîte à rythmes sont bien plus récentes."
+
+  - type: exercice
+    enonce: >-
+      Tu écris une chanson pour un chœur de débutants, qui la chantera au concert du collège.
+      Quel choix respecte le mieux cette contrainte d'interprétation ?
+    forme: qcm
+    choix:
+      - "Une mélodie simple, avec peu d'écart entre les notes, chantée à l'unisson"
+      - "Une mélodie très aiguë, avec de grands sauts, à quatre voix différentes"
+      - "Une partition pour grand orchestre symphonique"
+    reponse: 0
+    indices:
+      - "Des débutants peuvent-ils chanter des notes très aiguës ou de grands sauts ?"
+      - "La tessiture, c'est l'ensemble des notes qu'une voix chante confortablement : il faut la respecter."
+    explication: "Pour des débutants, on choisit une mélodie simple, dans une tessiture réduite, à l'unisson (tout le monde chante la même mélodie)."
+
+  - type: question_ouverte
+    question: >-
+      Conçois une pièce d'une minute pour ouvrir le concert de fin d'année. Six élèves la
+      jouent avec leurs voix et des percussions corporelles, dans le préau. Elle fait référence
+      à une œuvre ou à un style étudié. Décris ta pièce.
+    indices:
+      - "Commence par l'effectif et la référence, puis décris le plan : début, développement, fin."
+      - "Tu peux écrire : « Ma pièce s'inspire de… : elle commence par un ostinato de… »."
+    criteres:
+      - "L'élève respecte les contraintes : environ une minute, six élèves, voix et percussions corporelles."
+      - "L'élève décrit une forme claire (début, développement, fin) avec au moins un procédé nommé (ostinato, canon, crescendo…)."
+      - "L'élève cite une œuvre ou un style de référence et dit ce qu'il lui emprunte."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois phrases, les trois choses à penser avant de
+      créer une pièce, puis les grandes étapes jusqu'à sa réalisation.

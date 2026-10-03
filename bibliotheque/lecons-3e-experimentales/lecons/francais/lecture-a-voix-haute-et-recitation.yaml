@@ -1,0 +1,179 @@
+notion: lecture-a-voix-haute-et-recitation
+titre: "Lire à voix haute, réciter, mettre en voix"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Préparer et réussir la lecture à voix haute d'un texte."
+      - "Réciter un texte appris en utilisant la voix, la respiration, le regard et les gestes."
+      - "Utiliser un outil numérique pour s'enregistrer et créer une mise en voix."
+
+  - type: texte
+    titre: "Lire et réciter : préparer le texte"
+    contenu: >-
+      **Lire à voix haute** : donner vie à un texte pour des auditeurs.
+      **Réciter** : dire de mémoire un texte appris.
+
+
+      Avant de lire ou de réciter :
+
+      1. Je **comprends** le texte : sens des mots, situation, sentiments.
+
+      2. Je **repère** la ponctuation, les liaisons, les mots difficiles.
+
+      3. Je **m'entraîne** à voix haute, plusieurs fois.
+
+  - type: texte
+    titre: "Les ressources de la voix"
+    contenu: >-
+      | Ressource | Ce que c'est |
+
+      |---|---|
+
+      | **volume** | la force de la voix : assez fort pour tous |
+
+      | **débit** | la vitesse : ni trop vite, ni trop lent |
+
+      | **intonation** | la mélodie : elle monte pour une question, descend pour une affirmation |
+
+      | **articulation** | bien prononcer chaque syllabe |
+
+      | **pause** | un court silence à la ponctuation ou en fin de vers |
+
+  - type: texte
+    titre: "Le souffle, le regard, les gestes"
+    contenu: >-
+      - **Respiration** : respire calmement. Reprends ton souffle aux pauses, pas au milieu d'un groupe de mots.
+
+      - **Regard** : lève les yeux vers le public, pas vers tes pieds.
+
+      - **Gestuelle** : tiens-toi droit. Quelques gestes simples, sans en faire trop.
+
+      - **Ton** : il suit le texte. Doux pour un poème triste, vif pour un texte comique.
+
+  - type: texte
+    titre: "La mise en voix avec le numérique"
+    contenu: >-
+      - On s'**enregistre** avec un téléphone ou un ordinateur.
+
+      - On se **réécoute** : trop vite ? voix monotone ? mots mal prononcés ?
+
+      - On peut **associer** à sa voix des sons, une musique, des images : lecture enregistrée, diaporama
+      sonore.
+
+  - type: exemple
+    enonce: >-
+      Tu dois réciter les vers de Victor Hugo : « Demain, dès l'aube, à l'heure où blanchit la
+      campagne, / Je partirai. » Comment les dire pour montrer que le poète est décidé ?
+    etapes:
+      - "Je comprends le sens : le poète annonce un départ qu'il a choisi."
+      - "Je repère la ponctuation : je fais une petite pause à chaque virgule du premier vers."
+      - "Je respire à la fin du premier vers, pas au milieu."
+      - "Je marque une courte pause avant « Je partirai »."
+      - "Je dis « Je partirai » d'une voix plus ferme, en regardant le public."
+
+  - type: exercice
+    enonce: "Comment s'appelle la vitesse à laquelle on parle quand on lit à voix haute ? Réponds par un mot."
+    forme: reponse_courte
+    reponse: "débit"
+    reponses_acceptees:
+      - "le débit"
+      - "debit"
+      - "le debit"
+    indices:
+      - "Regarde le tableau des ressources de la voix."
+      - "C'est le même mot que pour l'eau qui coule d'un robinet, plus ou moins vite."
+    explication: "Le débit, c'est la vitesse de la parole. Il ne doit être ni trop rapide, ni trop lent."
+
+  - type: exercice
+    enonce: >-
+      Un élève lit un texte très vite. Il ne s'arrête jamais aux virgules ni aux points. Quel est le
+      problème principal ?
+    forme: qcm
+    choix:
+      - "Il ne respecte pas la ponctuation : le public a du mal à comprendre."
+      - "Il lit trop lentement."
+      - "Il regarde trop le public."
+      - "Il fait trop de gestes."
+    reponse: 0
+    indices:
+      - "Relis l'énoncé : que fait-il aux virgules et aux points ?"
+      - "La ponctuation indique où faire une pause."
+    explication: "Sans pauses aux virgules et aux points, les phrases se mélangent. Le public ne suit plus le sens du texte."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne la mélodie de la voix, qui monte pour une question et descend pour une
+      affirmation ?
+    forme: reponse_courte
+    reponse: "intonation"
+    reponses_acceptees:
+      - "l'intonation"
+      - "une intonation"
+      - "Intonation"
+    indices:
+      - "Ce mot est de la même famille que « ton »."
+      - "Relis le tableau des ressources de la voix : laquelle parle de mélodie ?"
+    explication: "L'intonation est la mélodie de la voix. Elle aide à faire entendre une question, un ordre ou une émotion."
+
+  - type: exercice
+    enonce: "Pourquoi est-il utile de s'enregistrer avant de réciter devant la classe ?"
+    forme: qcm
+    choix:
+      - "Pour ne pas avoir à apprendre le texte."
+      - "Pour se réécouter, repérer ses défauts et progresser."
+      - "Pour déformer sa voix."
+      - "Pour remplacer la récitation en classe."
+    reponse: 1
+    indices:
+      - "Que peut-on faire avec un enregistrement de sa propre voix ?"
+      - "Pense à ce qu'on entend en se réécoutant : vitesse, mélodie, prononciation."
+    explication: "L'enregistrement sert à s'entraîner : on se réécoute, on repère ce qui ne va pas (trop vite, voix monotone) et on s'améliore."
+
+  - type: exercice
+    enonce: >-
+      Une élève récite un poème triste devant la classe. Quelle façon de faire est la plus réussie ?
+    forme: qcm
+    choix:
+      - "Elle regarde ses pieds et récite très vite pour en finir."
+      - "Elle chuchote pour ne pas se tromper."
+      - "Elle parle d'une voix douce mais audible, marque les pauses et regarde le public."
+      - "Elle crie chaque vers et fait de grands gestes."
+    reponse: 2
+    indices:
+      - "Vérifie chaque réponse : volume, débit, regard, gestes."
+      - "Le ton doit suivre le sentiment du poème, mais tout le monde doit entendre."
+    explication: "Une voix douce convient au poème triste. Elle reste audible, les pauses laissent le sens se poser, et le regard garde le contact avec le public."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois réciter un poème la semaine prochaine. Explique en 5 à 7 lignes comment tu vas te
+      préparer, puis ce que tu feras pendant la récitation (voix, respiration, regard, gestes).
+    indices:
+      - "Fais deux parties : avant (préparation), puis pendant (récitation)."
+      - "Pour chaque ressource citée, dis à quoi elle sert pour le public."
+    criteres:
+      - "L'élève décrit une préparation concrète : comprendre le texte, l'apprendre, s'entraîner, s'enregistrer."
+      - "L'élève cite au moins trois ressources (volume, débit, intonation, pauses, respiration, regard, gestes) et dit à quoi elles servent."
+      - "Les phrases sont complètes et organisées."
+
+  - type: synthese
+    consigne: >-
+      Écris avec tes mots, en trois phrases : comment tu prépares un texte avant de le dire, quelles
+      ressources de la voix et du corps tu utilises, et à quoi sert un enregistrement.

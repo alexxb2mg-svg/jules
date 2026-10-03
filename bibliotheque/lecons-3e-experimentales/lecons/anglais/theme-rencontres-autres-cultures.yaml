@@ -1,0 +1,149 @@
+notion: theme-rencontres-autres-cultures
+titre: "Rencontres avec d'autres cultures : patrimoine, nature et énergies"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Langues vivantes (étrangères ou régionales) », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Donner des repères sur le patrimoine et les cultures du monde anglophone (Commonwealth, Thanksgiving)."
+      - "Parler d'inclusion et d'exclusion, des parcs nationaux et des réserves de biosphère."
+      - "Utiliser le vocabulaire du climat, de la biodiversité et des énergies renouvelables."
+
+  - type: texte
+    titre: "Le patrimoine et quelques repères"
+    contenu: |-
+      - **heritage** : le patrimoine, ce qu'un pays protège pour le transmettre.
+      - Il peut être **historique** (un château), **naturel** (une montagne) ou **architectural** (un pont, une cathédrale).
+      - **the Commonwealth** : un groupe de 56 pays, la plupart anciennement liés au Royaume-Uni (Canada, Australie, Inde, Kenya…). Ce n'est pas le Royaume-Uni seul.
+      - **Thanksgiving** : fête nationale aux États-Unis, le **quatrième jeudi de novembre**. Les familles partagent un grand repas, souvent avec de la dinde (**turkey**).
+
+  - type: texte
+    titre: "Inclusion et exclusion"
+    contenu: |-
+      - **inclusion** : donner une place à chacun dans la société, quelle que soit son origine.
+      - **exclusion** : mettre des personnes à l'écart.
+      - Une école ou une ville est **inclusive** quand tout le monde y est accueilli.
+      - Rencontrer une autre culture pose une question : comment accueillir l'autre ?
+
+  - type: texte
+    titre: "Nature : parcs, réserves, climat"
+    contenu: |-
+      - **a national park** : un grand espace naturel protégé, ouvert aux visiteurs. Yellowstone, aux États-Unis, est le premier parc national du monde (créé en 1872).
+      - **a biosphere reserve** : un espace où l'on protège la nature tout en permettant des activités humaines.
+      - **climate** : le climat. Il change beaucoup d'un pays à l'autre : désert en Australie, froid au Canada, pluie fréquente en Irlande.
+      - **biodiversity** : la variété des espèces vivantes d'un lieu. Le climat explique une faune et une flore différentes.
+
+  - type: texte
+    titre: "Les énergies renouvelables"
+    contenu: |-
+      - **renewable energy** : une énergie qui ne s'épuise pas.
+      - **wind power** : l'énergie du vent (les éoliennes).
+      - **solar power** : l'énergie du soleil.
+      - **hydropower** : l'énergie de l'eau.
+      - À l'inverse, **fossil fuels** (le pétrole = **oil**, le charbon = **coal**) ne sont pas renouvelables.
+
+  - type: exemple
+    enonce: >-
+      Présente en deux phrases simples en anglais le climat du Canada et une conséquence pour la
+      nature.
+    etapes:
+      - "Repérer le sujet : le climat, puis la nature (la biodiversité)."
+      - "Phrase 1, le climat : « Canada is a very cold country in winter. »"
+      - "Phrase 2, la conséquence : « So animals and plants must live with the cold. »"
+      - "Vérifier : chaque phrase a un sujet et un verbe conjugué au présent."
+
+  - type: exercice
+    enonce: "Que veut dire le mot anglais « heritage » ?"
+    forme: qcm
+    choix:
+      - "Le patrimoine"
+      - "L'héritier"
+      - "La météo"
+      - "Un parc d'attractions"
+    reponse: 0
+    indices:
+      - "C'est ce qu'un pays veut protéger et transmettre aux générations futures."
+      - "Un château ancien ou une cathédrale en font partie."
+    explication: "« Heritage » désigne le patrimoine : historique, naturel ou architectural. Un pays le protège pour le transmettre."
+
+  - type: exercice
+    enonce: >-
+      Complète en anglais le nom de l'énergie du soleil : « ______ power ». Écris seulement le mot
+      qui manque.
+    forme: reponse_courte
+    reponse: "solar"
+    reponses_acceptees:
+      - "Solar"
+      - "solar power"
+    indices:
+      - "Le mot anglais ressemble à l'adjectif français « solaire »."
+      - "Relis le bloc « Les énergies renouvelables »."
+    explication: "On dit « solar power » : l'énergie solaire. C'est une énergie renouvelable, comme « wind power » (le vent)."
+
+  - type: exercice
+    enonce: "En quelle année a été créé Yellowstone, le premier parc national du monde, aux États-Unis ?"
+    forme: nombre
+    reponse: 1872
+    tolerance: 0
+    indices:
+      - "C'est au XIXe siècle, quelques années après la fin de la guerre de Sécession (1865)."
+      - "Relis le bloc « Nature : parcs, réserves, climat »."
+    explication: "Yellowstone National Park a été créé en 1872. C'est le premier parc national du monde."
+
+  - type: exercice
+    enonce: "Laquelle de ces énergies n'est PAS renouvelable ?"
+    forme: qcm
+    choix:
+      - "wind power"
+      - "solar power"
+      - "coal"
+      - "hydropower"
+    reponse: 2
+    indices:
+      - "Une énergie renouvelable ne s'épuise pas : le vent, le soleil, l'eau reviennent toujours."
+      - "Cherche le mot qui désigne une énergie fossile, formée sous terre en des millions d'années."
+    explication: "« Coal », le charbon, est une énergie fossile : elle s'épuise. Le vent (wind), le soleil (solar) et l'eau (hydropower) sont renouvelables."
+
+  - type: exercice
+    enonce: >-
+      Lis ce texte. « Maya arrived in Canada from India two years ago. At first, she felt alone at
+      school. Then her teacher created a club for new students. Now Maya has friends from many
+      countries, and everybody has a place in the club. » Quelle idée ce texte montre-t-il surtout ?
+    forme: qcm
+    choix:
+      - "L'exclusion : Maya reste seule et à l'écart."
+      - "L'inclusion : l'école donne une place à chacun."
+      - "Les énergies renouvelables au Canada."
+      - "Un voyage touristique en Inde."
+    reponse: 1
+    indices:
+      - "Comment se sent Maya au début ? Et à la fin du texte ?"
+      - "Relis la dernière phrase : « everybody has a place »."
+    explication: "Au début, Maya est seule. Grâce au club, elle a des amis et chacun a sa place : c'est l'inclusion. L'exclusion serait de la laisser à l'écart."
+
+  - type: question_ouverte
+    question: >-
+      Écris trois ou quatre phrases en anglais. Explique pourquoi il faut protéger un parc national
+      ou une réserve naturelle, puis cite une énergie renouvelable qu'un pays peut utiliser.
+    indices:
+      - "Que trouve-t-on dans un parc national ? Pense aux animaux, aux plantes, aux paysages."
+      - "Tu peux commencer par « We must protect national parks because… » puis écrire « A country can use… »."
+    criteres:
+      - "Les phrases sont en anglais, avec un sujet et un verbe conjugué."
+      - "L'élève donne une raison de protéger la nature (animaux, plantes, biodiversité, paysages)."
+      - "L'élève cite correctement une énergie renouvelable (wind power, solar power ou hydropower)."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases avec tes mots. Donne un repère culturel du monde anglophone
+      (le Commonwealth ou Thanksgiving). Explique la différence entre inclusion et exclusion.
+      Cite deux énergies renouvelables en anglais.

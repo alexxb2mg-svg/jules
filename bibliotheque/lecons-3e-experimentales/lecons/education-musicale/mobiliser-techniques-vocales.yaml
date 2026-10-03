@@ -1,0 +1,151 @@
+notion: mobiliser-techniques-vocales
+titre: "Chanter et jouer avec son corps : les techniques au service d'un projet"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Adopter une posture et une respiration qui aident la voix."
+      - "S'échauffer dans le bon ordre et prendre soin de sa voix."
+      - "Choisir ses techniques vocales et corporelles selon le projet (chœur, soliste, percussions corporelles)."
+
+  - type: texte
+    titre: "Posture et respiration"
+    contenu: |-
+      **Posture** : pieds bien posés, écartés de la largeur du bassin, genoux souples,
+      dos droit, épaules et nuque relâchées, regard vers l'avant.
+      **Respiration** : on inspire calmement en ouvrant le ventre et les côtes, **sans lever les épaules**.
+      Puis on souffle **lentement et régulièrement** pendant la phrase.
+      On repère à l'avance les endroits où l'on reprend son souffle.
+
+  - type: texte
+    titre: "S'échauffer et bien chanter"
+    contenu: |-
+      **Échauffement**, dans l'ordre : détente du corps, posture, souffle, **vocalises** douces, articulation.
+      Les vocalises commencent dans le **médium** (les notes du milieu de la voix), puis vont vers l'aigu et le grave.
+      **Justesse** : chanter les bonnes hauteurs. **Articulation** : prononcer clairement les consonnes.
+      **Tessiture** : l'étendue des notes qu'une voix chante confortablement.
+      Dans un chœur ou un canon : tenir sa partie **et** écouter l'ensemble.
+
+  - type: texte
+    titre: "Le corps instrument, et la voix au service du projet"
+    contenu: |-
+      **Percussions corporelles** : frappes de mains, claquements de doigts, cuisses, poitrine, pieds.
+      *Clapping Music* de Steve Reich (1972) : deux musiciens jouent seulement en frappant des mains.
+      **Chœur** : des **pupitres** (sopranos, altos, ténors, basses). Un **soliste** chante seul.
+      On choisit sa technique selon le projet : chant doux = souffle long ; chant rythmé = consonnes nettes.
+      Prendre soin de sa voix : boire de l'eau, ne pas crier, ne pas forcer, s'arrêter si la gorge fait mal.
+
+  - type: exemple
+    enonce: >-
+      Ton chœur prépare un chant très doux et lent, avec de longues phrases. Le jour du concert,
+      tu as un peu le trac. Comment adaptes-tu ta technique ?
+    etapes:
+      - "Je m'installe : pieds ancrés, genoux souples, épaules relâchées. Un corps stable aide à rester calme."
+      - "Je respire lentement par le ventre avant de commencer : cela fait baisser le trac."
+      - "Pour les longues phrases, je repère mes respirations et je laisse sortir l'air lentement."
+      - "Pour la nuance douce, je garde une voix légère, sans forcer, et j'écoute mon pupitre."
+      - "Je commence et je termine avec les autres, en suivant le geste du chef de chœur."
+
+  - type: exercice
+    enonce: >-
+      Quel mot désigne la qualité d'une voix qui chante exactement les bonnes hauteurs de notes,
+      ni trop haut ni trop bas ?
+    forme: reponse_courte
+    reponse: "justesse"
+    reponses_acceptees:
+      - "justesse"
+      - "la justesse"
+    indices:
+      - "Quand quelqu'un chante « faux », quelle qualité lui manque-t-il ?"
+      - "Relis le bloc « S'échauffer et bien chanter »."
+    explication: "La justesse, c'est chanter exactement les bonnes hauteurs. Une voix qui n'est pas juste chante « faux »."
+
+  - type: exercice
+    enonce: "Quelle consigne fait partie d'une bonne posture de chant ?"
+    forme: qcm
+    choix:
+      - "Garder les genoux bloqués, bien raides"
+      - "Lever les épaules à chaque inspiration"
+      - "Garder les épaules et la nuque relâchées"
+      - "Lever le menton et rejeter la tête en arrière"
+    reponse: 2
+    indices:
+      - "Une posture de chant doit-elle être crispée ou détendue ?"
+      - "Élimine les consignes qui parlent de raideur ou de tension."
+    explication: "Les épaules et la nuque restent relâchées. Des genoux raides, des épaules levées ou une tête rejetée en arrière créent des tensions qui gênent la voix et le souffle."
+
+  - type: exercice
+    enonce: >-
+      Dans Clapping Music (1972) de Steve Reich, deux musiciens jouent sans aucun instrument.
+      Avec quoi jouent-ils ?
+    forme: qcm
+    choix:
+      - "Avec leurs voix, en chantant"
+      - "Avec leurs mains, en frappant"
+      - "Avec deux tambours"
+    reponse: 1
+    indices:
+      - "Traduis le titre : que veut dire « clapping » en anglais ?"
+      - "« To clap » veut dire applaudir."
+    explication: "Ils frappent des mains : c'est une pièce de percussions corporelles. Les deux musiciens frappent le même motif, puis l'un le décale régulièrement."
+
+  - type: exercice
+    enonce: >-
+      Dans un chœur, comment s'appelle chaque groupe de chanteurs qui chantent la même partie
+      (les sopranos, les altos, les ténors, les basses) ?
+    forme: reponse_courte
+    reponse: "pupitre"
+    reponses_acceptees:
+      - "pupitre"
+      - "un pupitre"
+      - "le pupitre"
+      - "pupitres"
+      - "les pupitres"
+    indices:
+      - "Ce n'est pas le chœur entier, mais chacun de ses sous-groupes."
+      - "Relis le bloc « Le corps instrument, et la voix au service du projet »."
+    explication: "Un pupitre est un groupe de chanteurs qui chantent la même partie : pupitre des sopranos, des altos, des ténors, des basses."
+
+  - type: exercice
+    enonce: >-
+      Ta classe chante en canon à quatre voix. Ton groupe se laisse entraîner par le groupe voisin
+      et perd sa mélodie. Quelle est la meilleure solution ?
+    forme: qcm
+    choix:
+      - "Chanter beaucoup plus fort pour ne plus entendre les autres"
+      - "Chanter plus vite pour finir avant les autres"
+      - "Bien connaître sa mélodie seul, puis s'écouter tout en entendant l'ensemble"
+      - "Se boucher les oreilles pendant tout le canon"
+    reponse: 2
+    indices:
+      - "Dans un canon, doit-on ignorer les autres voix, ou les entendre sans les suivre ?"
+      - "Forcer la voix ou changer de tempo casse l'ensemble. Quelle solution garde l'écoute et la justesse ?"
+    explication: "Il faut d'abord maîtriser sa mélodie seul, puis chanter en s'écoutant tout en entendant l'ensemble. Crier fatigue la voix, et dans un canon toutes les voix gardent le même tempo."
+
+  - type: question_ouverte
+    question: >-
+      Ton groupe crée une courte pièce rythmée et énergique, avec un texte parlé-chanté et des
+      percussions corporelles. Explique quelles techniques vocales et corporelles tu choisis, et
+      pourquoi elles servent ce projet.
+    indices:
+      - "Pense à la voix (articulation, souffle) et au corps (posture, frappes)."
+      - "Pour chaque technique, dis à quoi elle sert dans une pièce rythmée."
+    criteres:
+      - "L'élève cite une technique vocale adaptée (consonnes nettes, articulation, souffle) et dit à quoi elle sert."
+      - "L'élève cite des percussions corporelles précises (mains, cuisses, poitrine, pieds) et une pulsation partagée."
+      - "L'élève relie ses choix à l'intention du projet (énergie, rythme, être compris du public) et pense à ménager sa voix."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les étapes d'un bon échauffement
+      et une technique que tu adaptes selon le projet (chant doux ou chant rythmé).

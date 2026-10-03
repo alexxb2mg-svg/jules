@@ -1,0 +1,162 @@
+notion: nom-et-groupe-nominal
+titre: "Le nom et le groupe nominal en anglais : genre, pronoms, pluriel"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège — éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Savoir où le genre (masculin, féminin) se voit en anglais."
+      - "Choisir le bon pronom : sujet, complément ou réfléchi."
+      - "Mettre un nom au pluriel et marquer la possession avec 's."
+
+  - type: texte
+    titre: "Le genre en anglais"
+    contenu: |-
+      En anglais, les noms n'ont **pas de genre grammatical**. « The table », « the sun » : ni masculin, ni féminin.
+      Le mot **the** ne change jamais.
+
+      Le genre se voit seulement :
+      - dans les **pronoms** : **he** (un homme), **she** (une femme), **it** (un objet, une idée, souvent un animal) ;
+      - dans quelques **noms** qui désignent un homme ou une femme : actor / actress, brother / sister, waiter / waitress.
+
+  - type: texte
+    titre: "Pronoms sujets, compléments et réfléchis"
+    contenu: |-
+      | Singulier : sujet | Complément | Réfléchi |
+      |---|---|---|
+      | I | me | myself |
+      | you | you | yourself |
+      | he | him | himself |
+      | she | her | herself |
+      | it | it | itself |
+
+      | Pluriel : sujet | Complément | Réfléchi |
+      |---|---|---|
+      | we | us | ourselves |
+      | you | you | yourselves |
+      | they | them | themselves |
+
+      - Le **complément** se place après un verbe ou une préposition : « I see **him**. », « I talk to **them**. »
+      - Le **réfléchi** sert quand le sujet fait l'action **sur lui-même** : « She hurt **herself**. »
+      - Singulier : **-self**. Pluriel : **-selves**.
+
+  - type: texte
+    titre: "Réfléchi ou complément ? Le piège de « her »"
+    contenu: |-
+      Pose-toi une question : le sujet et le complément sont-ils **la même personne** ?
+      - Oui → pronom réfléchi : « Tom hurt **himself**. » (Tom s'est fait mal.)
+      - Non → pronom complément : « Tom hurt **her**. » (Tom lui a fait mal, à elle.)
+
+      Attention : **her** est aussi un **possessif** (« her book » = son livre à elle). C'est le contexte qui décide.
+
+  - type: texte
+    titre: "Le pluriel et le génitif"
+    contenu: |-
+      | Règle | Exemple |
+      |---|---|
+      | On ajoute **-s** | a book → books |
+      | **-es** après s, sh, ch, x | a box → boxes |
+      | Pluriels irréguliers | man → men, woman → women, child → children, foot → feet, mouse → mice |
+
+      **Le génitif** marque la possession. Le possesseur vient en premier :
+      - singulier : **'s** → Tom's dog ;
+      - pluriel en -s : **'** seule → my parents' house ;
+      - pluriel irrégulier : **'s** → the children's toys.
+
+  - type: exemple
+    enonce: "Traduis en anglais : « Le chat de ma sœur se lave. »"
+    etapes:
+      - "Le possesseur est « ma sœur » : on le met en premier avec 's → « my sister's cat »."
+      - "Le chat fait l'action sur lui-même : il faut un pronom réfléchi."
+      - "Un chat est un animal : on prend « it », donc le réfléchi « itself »."
+      - "Résultat : « My sister's cat washes itself. »"
+
+  - type: exercice
+    enonce: "Écris le pluriel de « a woman »."
+    forme: reponse_courte
+    reponse: "women"
+    reponses_acceptees: ["Women", "WOMEN"]
+    indices:
+      - "Ce pluriel est irrégulier : on n'ajoute pas -s."
+      - "Pense à « a man », qui change une voyelle au pluriel."
+    explication: "« Woman » a un pluriel irrégulier : « women ». C'est comme « man → men »."
+
+  - type: exercice
+    enonce: "Complète : « I know Lucy and Sam. I often play with ___. »"
+    forme: qcm
+    choix:
+      - "they"
+      - "them"
+      - "her"
+      - "themselves"
+    reponse: 1
+    indices:
+      - "Lucy et Sam : une personne ou deux personnes ?"
+      - "Après la préposition « with », il faut un pronom complément, pas un pronom sujet."
+    explication: "Lucy et Sam sont deux personnes. Après « with », on met le pronom complément pluriel : « them ». « They » est un sujet. « Themselves » voudrait dire que le sujet (I) et le complément sont les mêmes personnes."
+
+  - type: exercice
+    enonce: "Complète avec le pronom réfléchi : « Be careful, Max! You will hurt ___. »"
+    forme: reponse_courte
+    reponse: "yourself"
+    reponses_acceptees: ["Yourself", "YOURSELF"]
+    indices:
+      - "Le sujet est « you ». On parle à une seule personne, Max."
+      - "Une seule personne : le réfléchi se termine par -self."
+    explication: "Le sujet est « you » et on parle à Max seul : le réfléchi est « yourself ». Au pluriel, on dirait « yourselves »."
+
+  - type: exercice
+    enonce: "Comment écrit-on « les jouets des enfants » ?"
+    forme: qcm
+    choix:
+      - "the childrens' toys"
+      - "the toys children's"
+      - "the children's toys"
+      - "the childs' toys"
+    reponse: 2
+    indices:
+      - "« Children » est un pluriel irrégulier : il ne se termine pas par -s."
+      - "Le possesseur vient en premier, puis la marque de possession, puis l'objet."
+    explication: "« Children » est un pluriel irrégulier sans -s : on ajoute 's. Le possesseur vient avant l'objet : « the children's toys »."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Lis : « My brother is in hospital. He fell off his bike and hurt (1) ___.
+      I visit (2) ___ every day. » Quels pronoms complètent les trous (1) et (2) ?
+    forme: qcm
+    choix:
+      - "(1) him — (2) himself"
+      - "(1) himself — (2) him"
+      - "(1) himself — (2) he"
+      - "(1) herself — (2) him"
+    reponse: 1
+    indices:
+      - "Trou (1) : le sujet est « He ». Il s'est fait mal à qui ?"
+      - "Trou (2) : le sujet est « I ». Je rends visite à qui ? Est-ce la même personne que le sujet ?"
+    explication: "(1) Mon frère s'est fait mal lui-même : sujet et complément sont la même personne, donc « himself ». (2) « I » rend visite à mon frère : deux personnes différentes, et après le verbe il faut un complément, donc « him »."
+
+  - type: question_ouverte
+    question: >-
+      Explique la différence entre « She hurt her. » et « She hurt herself. ». Qui s'est fait mal
+      dans chaque phrase ?
+    indices:
+      - "Dans chaque phrase, regarde si le sujet et le complément sont la même personne."
+      - "Un pronom en -self renvoie toujours au sujet."
+    criteres:
+      - "L'élève dit que dans « She hurt herself », la personne s'est fait mal elle-même."
+      - "L'élève dit que dans « She hurt her », c'est une autre femme qui a été blessée."
+      - "L'élève relie le pronom réfléchi au fait que le sujet et le complément sont la même personne."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en trois phrases, où le genre se voit en anglais, quand on emploie un
+      pronom réfléchi, et comment on écrit la possession avec 's.

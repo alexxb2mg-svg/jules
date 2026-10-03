@@ -1,0 +1,152 @@
+notion: theme-voyages-et-migrations
+titre: "Voyages et migrations : voyager, migrer, rêver"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Langues vivantes (étrangères ou régionales) », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Parler d'un voyage scolaire ou touristique et du tourisme écoresponsable (carbon footprint)."
+      - "Distinguer les mots de l'exil et de la migration, avec l'exemple d'Ellis Island."
+      - "Employer le vocabulaire de l'imaginaire, du rêve et du fantastique."
+
+  - type: texte
+    titre: "Voyager"
+    contenu: |-
+      - **to travel** : voyager (le verbe général).
+      - **a trip** : un voyage précis et court. **a school trip** : un voyage scolaire.
+      - **a journey** : un trajet, souvent long. **a holiday** : des vacances.
+      - Expressions : **to book a ticket** (réserver un billet), **to pack a suitcase** (faire sa valise).
+      - **a tourist** : un touriste. **tourism** : le tourisme.
+
+  - type: texte
+    titre: "Le tourisme écoresponsable"
+    contenu: |-
+      - **eco-friendly tourism** ou **responsible tourism** : un tourisme qui respecte l'environnement.
+      - **carbon footprint** : l'empreinte carbone, la quantité de gaz à effet de serre produite par une activité.
+      - Pour la réduire : prendre le train plutôt que l'avion, marcher, faire du vélo, ne pas gaspiller.
+      - Verbes utiles : **to reduce** (réduire), **to save** (économiser), **to recycle** (recycler).
+
+  - type: texte
+    titre: "Exil, migration, émigration"
+    contenu: |-
+      - **to emigrate** : quitter son pays. **to immigrate** : arriver dans un nouveau pays pour y vivre.
+      - **a migrant** : une personne qui migre. **an immigrant** : une personne qui arrive pour vivre dans un pays.
+      - **an exile** : une personne qui vit loin de son pays, souvent pour des raisons politiques.
+      - **a refugee** : une personne qui a fui un danger, une guerre ou une persécution.
+      - **Ellis Island** : une île près de New York. De 1892 à 1954, on y contrôle l'identité et la santé de millions d'immigrants. Ce n'est pas une prison.
+
+  - type: texte
+    titre: "L'imaginaire, le rêve, le fantastique"
+    contenu: |-
+      - **a dream** : un rêve. **a nightmare** : un cauchemar.
+      - **imagination** : l'imagination. **a fantasy** : un monde fantastique.
+      - **a ghost** : un fantôme. **magic** : la magie.
+      - **the American Dream** : l'idée d'une vie meilleure aux États-Unis. Elle a attiré beaucoup d'immigrants.
+
+  - type: exemple
+    enonce: >-
+      Lis ce petit texte : « In 1905, Giulia left Italy by boat. Ten days later, she arrived at
+      Ellis Island. She dreamed of a better life in America. » Repère les mots du thème et dis ce
+      qu'ils montrent.
+    etapes:
+      - "« left Italy » : Giulia quitte son pays. Elle émigre (to emigrate)."
+      - "« arrived at Ellis Island » : elle arrive aux États-Unis et passe le contrôle. Elle devient une immigrante (an immigrant)."
+      - "« dreamed of a better life » : c'est le rêve d'une vie meilleure, l'idée de l'American Dream."
+      - "Conclusion : le texte parle de migration et de rêve, pas de tourisme."
+
+  - type: exercice
+    enonce: >-
+      Une classe part en voyage scolaire à 300 km. Quel moyen de transport a la plus petite
+      empreinte carbone (carbon footprint) par élève ?
+    forme: qcm
+    choix:
+      - "by train"
+      - "by plane"
+      - "by car, one car for each family"
+    reponse: 0
+    indices:
+      - "L'empreinte carbone mesure les gaz à effet de serre produits."
+      - "Un transport collectif qui emmène beaucoup de personnes pollue moins par personne."
+    explication: "Le train (by train) est un transport collectif : il produit beaucoup moins de gaz à effet de serre par personne que l'avion ou plusieurs voitures."
+
+  - type: exercice
+    enonce: "Quel mot anglais désigne une personne qui ARRIVE dans un nouveau pays pour y vivre ?"
+    forme: reponse_courte
+    reponse: "immigrant"
+    reponses_acceptees:
+      - "an immigrant"
+      - "Immigrant"
+      - "immigrants"
+    indices:
+      - "Ce mot ressemble beaucoup au mot français."
+      - "Relis le bloc « Exil, migration, émigration » : qui arrive pour vivre dans un pays ?"
+    explication: "« An immigrant » arrive dans un pays pour y vivre. Celui qui quitte son pays émigre (to emigrate). « A tourist » voyage seulement pour le plaisir."
+
+  - type: exercice
+    enonce: >-
+      Ellis Island a servi de centre de contrôle des immigrants de 1892 à 1954. Combien d'années
+      cela représente-t-il ?
+    forme: nombre
+    reponse: 62
+    tolerance: 0
+    unite: "ans"
+    indices:
+      - "Pour trouver une durée, on compare la date de fin et la date de début."
+      - "Soustrais : 1954 − 1892."
+    explication: "1954 − 1892 = 62. Ellis Island a fonctionné pendant 62 ans."
+
+  - type: exercice
+    enonce: "Que veut dire « a nightmare » ?"
+    forme: qcm
+    choix:
+      - "Un rêve agréable"
+      - "Un cauchemar"
+      - "Un fantôme"
+      - "Une nuit de voyage"
+    reponse: 1
+    indices:
+      - "« Night » veut dire la nuit. Ce mot parle de ce qu'on voit en dormant."
+      - "C'est le contraire d'un beau rêve."
+    explication: "« A nightmare » est un cauchemar, un mauvais rêve. Un rêve se dit « a dream », un fantôme « a ghost »."
+
+  - type: exercice
+    enonce: >-
+      Lis ce texte. « Amir had to leave his country with his parents because of a war. They
+      crossed the sea and arrived in a new country. They could not go back home. » Quel mot décrit
+      le mieux la famille d'Amir ?
+    forme: qcm
+    choix:
+      - "tourists"
+      - "refugees"
+      - "students on a school trip"
+    reponse: 1
+    indices:
+      - "Pourquoi la famille part-elle ? Relis « because of a war »."
+      - "Un touriste voyage pour le plaisir et rentre chez lui. Est-ce le cas ici ?"
+    explication: "La famille fuit une guerre et ne peut pas rentrer : ce sont des réfugiés (refugees). Les touristes voyagent pour le plaisir, puis rentrent chez eux."
+
+  - type: question_ouverte
+    question: >-
+      Écris trois ou quatre phrases en anglais sur le voyage de tes rêves (your dream trip).
+      Dis où tu vas et comment tu voyages. Donne une action pour réduire ton empreinte carbone.
+    indices:
+      - "Tu peux commencer par « My dream trip is to… »."
+      - "Pour le transport, pense à « by train », « by bike », « on foot ». Puis utilise « to reduce my carbon footprint »."
+    criteres:
+      - "Les phrases sont en anglais, avec un sujet et un verbe conjugué."
+      - "L'élève emploie au moins un mot du voyage (trip, travel, journey, holiday) ou du rêve (dream)."
+      - "L'élève cite une action concrète qui réduit l'empreinte carbone (train, vélo, marche, recyclage…)."
+
+  - type: synthese
+    consigne: >-
+      Écris deux ou trois phrases avec tes mots. Explique la différence entre « a trip » et
+      « to travel », puis entre « to emigrate » et « to immigrate ». Dis ce qu'était Ellis Island.
