@@ -1,0 +1,18 @@
+id: plaque-dixiemes-centiemes
+titre: "Figure : unités, dixièmes et centièmes en plaques, barres et petits carrés"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [plaque-dixiemes-centiemes]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que les curseurs de la fiche CM1 « fractions
+# decimales et ecriture a virgule ».
+# Aucune ecriture a virgule n'est ecrite sur la figure (l'eleve la construit) : revele absent = false.
+discussion:
+  plaque-dixiemes-centiemes:
+    quand: "Pour faire voir un nombre décimal avec du matériel : u carrés-unités (100 cases chacun), di barres-dixièmes (1/10 du carré), c petits carrés-centièmes (1/100 du carré). Dix barres font une unité, dix petits carrés une barre. Sert à passer de 1 + 3/10 + 5/100 à 1,35 et à voir le 0 de 1,05."
+    valeurs:
+      u: {min: 0, max: 3, pas: 1, defaut: 1}
+      di: {min: 0, max: 9, pas: 1, defaut: 3}
+      c: {min: 0, max: 9, pas: 1, defaut: 5}
