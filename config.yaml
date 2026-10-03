@@ -128,6 +128,10 @@ extensions:
   - demi-droite-graduee       # grands entiers sur une demi-droite, avec loupes (CM1)
   - demi-droite-decimaux      # decimaux sur une demi-droite, loupes dixiemes/centiemes (CM1)
   - plaque-dixiemes-centiemes # unites, dixiemes, centiemes en plaques (CM1)
+  - angle                     # figures CM1 (audit 03/10/2026)
+  - symetrie-axe
+  - quadrilatere-deformable
+  - rectangle-quadrille
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

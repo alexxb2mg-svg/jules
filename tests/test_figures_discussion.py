@@ -146,8 +146,12 @@ GABARITS_DECLARES = [
     "triangle-rectangle",
     "equation-solutions",
     "probabilites-frequences",
+    "angle",
+    "symetrie-axe",
+    "quadrilatere-deformable",
+    "rectangle-quadrille",
 ]
-REVELENT = {"triangle-rectangle", "equation-solutions"}
+REVELENT = {"triangle-rectangle", "equation-solutions", "symetrie-axe"}
 
 
 def _bornes(tuteur, gabarit: str) -> dict[str, dict[str, float]]:

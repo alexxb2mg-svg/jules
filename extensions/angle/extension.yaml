@@ -1,0 +1,18 @@
+id: angle
+titre: "Figure : angle aigu, droit ou obtus"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [angle]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « les angles » (cm1-angles). ouverture est interne : aucun degre n'est affiche
+# (hors programme de CM1). revele: false : la figure ne nomme pas l'angle (aigu, droit, obtus), l'eleve compare
+# avec le coin d'equerre dessine en pointilles.
+discussion:
+  angle:
+    quand: "Pour faire voir un angle ABC (sommet B) et le comparer à l'angle droit, au CM1 : ouverture règle l'écartement des côtés (90 = angle droit, moins = aigu, plus = obtus ; aucun degré n'est affiché), longueur règle seulement la longueur des côtés dessinés, pour montrer qu'elle ne change pas l'angle."
+    valeurs:
+      ouverture: {min: 10, max: 170, pas: 5, defaut: 60}
+      longueur: {min: 1, max: 5, pas: 1, defaut: 3}
