@@ -50,7 +50,7 @@ modules:
         - lecons-3e-experimentales     # ecrite par le lot B ; absente = module actif sans lecon
   - id: figures        # Jules montre une figure dans la discussion (bloc ```figure, cle `discussion` des extensions)
     reglages:          # TOUJOURS apres 'notions' et 'cours' : leurs filtres peuvent relancer le modele
-      modes: [aide-devoirs, reexplique]   # jamais epreuve, exercice, controle, quiz, cours
+      modes: [aide-devoirs, reexplique, cours]   # jamais epreuve, exercice, controle, quiz ; cours : panneau de la lecon
       modes_revele: [reexplique]          # figures `revele: true` (montrent la reponse) : jamais aide-devoirs
       schemas: true                       # schema de la fiche visuelle de la notion en cours ({"schema": id})
   - id: outils         # outils isoles (extensions : calculatrice...) servis sous /api/eleve/outils, docs/OUTILS-CONTRAT.md

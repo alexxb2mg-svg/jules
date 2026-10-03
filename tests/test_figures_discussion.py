@@ -23,7 +23,7 @@ from jules.config import depuis_dict
 from jules.extensions import figures_pour_discussion
 from jules.llm.factice import Brique as Factice
 from jules.modules.base import Module
-from jules.modules.figures import normaliser, texte_sans_figures
+from jules.modules.figures import REGLE_DESSIN, normaliser, texte_sans_figures
 from jules.modules.suivi import extrait
 from jules.moteur import Tuteur
 from jules.stockage import Message
@@ -86,7 +86,7 @@ def test_deux_blocs_un_seul_garde(tuteur):
 
 def test_mode_epreuve_sans_contribution_et_bloc_retire(tuteur):
     conv = tuteur.stockage.creer_conversation("epreuve")
-    assert tuteur.module("figures").contribution(conv) is None
+    assert tuteur.module("figures").contribution(conv) == REGLE_DESSIN  # seulement : jamais de dessin en caracteres
     sortie, ecartees = _filtrer(tuteur, _bloc('{"gabarit": "droite-affine", "valeurs": {"a": 2}}'), "epreuve")
     assert "figure" not in sortie
     assert ecartees == [{"gabarit": "droite-affine", "raison": "mode sans figure"}]
@@ -522,12 +522,12 @@ def test_sans_notion_pas_de_phrase_schema(tuteur):
     assert "schéma de la notion" not in contribution and '"schema"' not in contribution
 
 
-@pytest.mark.parametrize("mode", ["epreuve", "exercice", "controle", "cours"])
+@pytest.mark.parametrize("mode", ["epreuve", "exercice", "controle"])
 def test_mode_sans_figure_aucun_schema(tuteur, mode):
     conv = _conv_notion(tuteur, mode)
     figures = tuteur.module("figures")
     assert figures.schemas(conv) == {}
-    assert figures.contribution(conv) is None
+    assert figures.contribution(conv) == REGLE_DESSIN
     sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(f'{{"schema": "{PYTHAGORE}"}}'))
     assert "figure" not in sortie
     assert ecartees == [{"gabarit": f"schema:{PYTHAGORE}", "raison": "mode sans figure"}]
