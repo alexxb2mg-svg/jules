@@ -20,7 +20,8 @@ from jules.config import depuis_dict
 from jules.extensions import figures_pour_discussion
 from jules.llm.factice import Brique as Factice
 from jules.modules.base import Module
-from jules.modules.figures import normaliser
+from jules.modules.figures import normaliser, texte_sans_figures
+from jules.modules.suivi import extrait
 from jules.moteur import Tuteur
 from jules.stockage import Message
 from jules.web.app import creer_app
@@ -129,7 +130,7 @@ def test_aucun_module_ne_filtre_la_reponse_apres_figures(tuteur):
     assert [m.id for m in apres if type(m).filtrer_reponse is not Module.filtrer_reponse] == []
 
 
-# --- lot 2 : les cinq gabarits declares, drapeau `revele` ------------------------------------------------
+# --- lot 2 : les cinq gabarits declares, drapeau `revele`, texte sans figures ---------------------------
 
 GABARITS_DECLARES = [
     "droite-affine",
@@ -210,6 +211,24 @@ def test_contribution_et_prompt_complet_sans_double_accolade(tuteur, mode):
     systeme = tuteur.systeme(conv)
     assert "}}" not in systeme and "{{" not in systeme
     assert ("equation-solutions" in contribution) is (mode == "reexplique")
+
+
+def test_texte_sans_figures():
+    texte = (
+        "Regarde :\n\n```figure\n" + '{"gabarit":"triangle-thales","valeurs":{"t":0.5}}' + "\n```\n\nEt alors ?\n"
+        "~~~figure\n{pas du json\n~~~\nFin."
+    )
+    assert texte_sans_figures(texte) == "Regarde :\n\n[figure : triangle-thales]\n\nEt alors ?\n[figure]\nFin."
+    assert texte_sans_figures("Une figure de style, sans bloc.") == "Une figure de style, sans bloc."
+
+
+def test_analyse_de_suivi_ne_voit_pas_le_json_des_figures(tuteur):
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.stockage.ajouter_message(conv.id, Message(role="eleve", texte="Thalès ?"))
+    tuteur.stockage.ajouter_message(conv.id, Message(role="bot", texte=f"Regarde :\n\n{NORMALISE}\n\nEt b ?"))
+    lu = extrait(tuteur.stockage.conversation(conv.id))
+    assert "[figure : droite-affine]" in lu
+    assert "gabarit" not in lu and "{" not in lu
 
 
 # --- rendu dans la bulle, dans un vrai Chromium (tests/cdp.py) ; ignore sans Chromium ou sans npm run build ---

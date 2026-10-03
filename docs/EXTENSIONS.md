@@ -107,6 +107,10 @@ conversation figure dans `reglages.modes_revele` du module `figures` (`config.ya
 au modèle et un bloc qui la cite est retiré (`figure_ecartee`, raison « gabarit non autorise »). Ne
 jamais mettre `aide-devoirs` dans `modes_revele` : la figure ferait l'exercice à la place de l'élève.
 
+Ce qui lit les messages sans les dessiner (analyse du module `suivi`) passe par
+`texte_sans_figures(texte)` (`jules/modules/figures.py`) : chaque bloc `figure` y devient
+« [figure : <gabarit>] ».
+
 **Rappels (bulles au survol).** Sur toutes les pages, ce qui est abrégé ou symbolique montre ce
 qu'il veut dire dans une petite bulle (souris, toucher, clavier). Le cœur,
 `jules/web/static/symboles.js`, ne connaît aucune règle de matière : il parcourt le texte affiché,

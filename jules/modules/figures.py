@@ -91,6 +91,21 @@ def _exemple(autorises: dict[str, Any]) -> dict[str, Any]:
     return {"gabarit": gabarit, "valeurs": {nom: b["defaut"] for nom, b in declaration["valeurs"].items()}}
 
 
+def texte_sans_figures(texte: str) -> str:
+    """Le texte d'un message avec chaque bloc ```figure remplace par « [figure : <gabarit>] » : pour ce qui
+    lit les messages sans les dessiner (analyse de suivi...). Un bloc illisible devient « [figure] »."""
+
+    def resume(m: re.Match[str]) -> str:
+        try:
+            objet = json.loads(m.group("json"))
+        except (json.JSONDecodeError, RecursionError):
+            objet = None
+        gabarit = objet.get("gabarit") if isinstance(objet, dict) else None
+        return f"[figure : {gabarit[:60]}]" if isinstance(gabarit, str) and gabarit else "[figure]"
+
+    return _BLOC.sub(resume, texte) if "figure" in texte else texte
+
+
 class Brique(Module):
     id = "figures"
     titre = "Figures dans la discussion"

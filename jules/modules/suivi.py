@@ -11,6 +11,7 @@ from typing import Any
 
 from jules.llm.base import Tour
 from jules.modules.base import Module, extraire_json
+from jules.modules.figures import texte_sans_figures
 from jules.stockage import Conversation, Message
 
 journal = logging.getLogger("jules.suivi")
@@ -116,7 +117,8 @@ def extrait(conv: Conversation, nb: int = 6) -> str:
     for m in conv.messages[-nb:]:
         qui = "ÉLÈVE" if m.role == "eleve" else "TUTEUR"
         photo = " [+ photo]" if m.images else ""
-        lignes.append(f"{qui}{photo} : {m.texte[:1500]}")
+        # Un bloc ```figure (JSON) devient « [figure : <gabarit>] » : l'analyse lit le sens, pas le code.
+        lignes.append(f"{qui}{photo} : {texte_sans_figures(m.texte)[:1500]}")
     return "\n".join(lignes)
 
 
