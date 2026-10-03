@@ -66,6 +66,12 @@ jobs:
         run: python -m pytest -rs -n auto --durations=25 --cov --cov-report=term-missing
       - name: Tests (Windows, macOS)
         if: runner.os != 'Linux'
+        # Dossiers temporaires des tests sur le disque du runner (runner.temp, D: sous Windows) plutot que sur C: :
+        # la fixture `projet` copie ~850 fichiers par test.
+        env:
+          TMP: ${{ runner.temp }}
+          TEMP: ${{ runner.temp }}
+          TMPDIR: ${{ runner.temp }}
         run: python -m pytest -rs -n auto --durations=25
       - name: Tests lents (exclus de la suite par defaut, voir pyproject.toml)
         run: python -m pytest -rs -m lent
