@@ -30,6 +30,13 @@ LUES_HORS_DISCUSSION: dict[str, set[str]] = {
     # frise generique : unite « mois » ou « souvenir » (age), second repere (intervalle, auteur), periode
     # surlignee (de, a / à) et « début » accentue ; voir extensions/frise/extension.yaml.
     "frise": {"début", "mois", "souvenir", "auteur", "intervalle", "de", "a", "à"},
+    # une figure, plusieurs fiches : la PRESENCE d'un curseur choisit le dessin (personne/habitude : present
+    # simple ; indirect : discours indirect ; longueur : present perfect ; lien : preterit/present perfect). La
+    # discussion n'a que la lecture par defaut (moment, fini) : declarer ces curseurs (donc avec un defaut,
+    # toujours presents) changerait de dessin.
+    "frise-temps-verbaux": {"personne", "habitude", "indirect", "longueur", "lien"},
+    # meme principe : adjectifs/place (place de l'adjectif), voisin/verbe (accord sujet-verbe, attribut).
+    "chaine-accords": {"adjectifs", "place", "voisin", "verbe"},
 }
 
 
@@ -77,9 +84,25 @@ def declarations_du_depot() -> dict[str, tuple[bool, dict[str, tuple[float, floa
 
 
 def valeurs_lues_par_le_gabarit(gabarit: str) -> set[str]:
-    """Noms de valeurs que gabarit.js lit : `valeurs.<nom>`, `valeurs["<nom>"]` et `"<nom>" in valeurs`."""
+    """Noms de valeurs que gabarit.js lit : `valeurs.<nom>`, `valeurs["<nom>"]`, `"<nom>" in valeurs`, et les
+    noms passes en premier argument a une petite fonction d'acces (`const n = (cle, ...) => ... valeurs[cle]`,
+    ou `hasOwnProperty.call(valeurs, cle)`), forme employee par plusieurs gabarits de la vague 1."""
     code = (EXTENSIONS / gabarit / "gabarit.js").read_text(encoding="utf-8")
     noms = set(re.findall(r"valeurs\.(\w+)", code))
     noms |= set(re.findall(r"valeurs\[\s*[\"']([^\"']+)[\"']\s*\]", code))
     noms |= set(re.findall(r"[\"']([^\"']+)[\"']\s+in\s+valeurs\b", code))
+    lignes = code.splitlines()
+    for i, ligne in enumerate(lignes):
+        m = re.match(r"(\s*)const\s+(\w+)\s*=\s*\(\s*(\w+)\b[^)]*\)\s*=>", ligne)
+        if not m:
+            continue
+        retrait, fonction, cle = m.groups()
+        corps = [ligne]
+        if ligne.rstrip().endswith("{"):  # corps en bloc : jusqu'a l'accolade fermante au meme retrait
+            for suite in lignes[i + 1 :]:
+                corps.append(suite)
+                if suite.startswith(retrait + "}"):
+                    break
+        if re.search(rf"valeurs\[\s*{cle}\s*\]|valeurs\s*,\s*{cle}\b", "\n".join(corps)):
+            noms |= set(re.findall(rf"(?<![\w.]){fonction}\(\s*[\"']([^\"']+)[\"']", code))
     return noms
