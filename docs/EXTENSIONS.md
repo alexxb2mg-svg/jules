@@ -88,6 +88,11 @@ le `pas`, valeurs absentes = `defaut`) est récrit en JSON compact ; tout autre 
 bruit (une seule figure par message) et l'événement `figure_ecartee` est journalisé avec sa raison.
 Aucun SVG ni code ne vient du modèle : seulement un id de la liste blanche et des nombres bornés.
 
+**Figure dynamique dans la bulle.** Sous la figure, la bulle affiche un curseur par valeur (même
+composant `Graphe` que le bloc graphe des fiches) : départ = les valeurs choisies par Jules, bornes et
+pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (clé `figures`, module
+`figures`). Les mêmes bornes valent donc pour le modèle et pour l'élève.
+
 **Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
 (`equation-solutions` place −√a et √a, `triangle-rectangle` écrit « AB ≈ … »). Leur déclaration porte
 `revele: true` (facultatif, booléen, défaut `false`) :

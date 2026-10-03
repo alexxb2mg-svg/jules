@@ -18,6 +18,7 @@ import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 import { Bulle, BulleAttente } from "./Bulle"
+import { BornesFiguresContexte } from "./markdown"
 import { Accueil } from "./Accueil"
 
 // -- Resize de photo (identique à eleve.js) -----------------------------------
@@ -296,10 +297,13 @@ export function Chat() {
             <Accueil infos={infos} onDemarrer={demarrer} onEpreuve={commencerEpreuve} onExercice={commencerExercice} />
           ) : (
             <div className="mx-auto flex max-w-3xl flex-col gap-1.5 px-4 pt-3 pb-6 md:px-6">
-              {messages.map((m, i) => {
-                const nouveauGroupe = i > 0 && (messages[i - 1].role === "eleve") !== (m.role === "eleve")
-                return <div key={i} className={nouveauGroupe ? "mt-4" : undefined}><Bulle message={m} tete={i === 0 || nouveauGroupe} /></div>
-              })}
+              {/* Bornes des curseurs sous les figures des bulles (module 'figures', /api/infos) */}
+              <BornesFiguresContexte.Provider value={infos?.figures}>
+                {messages.map((m, i) => {
+                  const nouveauGroupe = i > 0 && (messages[i - 1].role === "eleve") !== (m.role === "eleve")
+                  return <div key={i} className={nouveauGroupe ? "mt-4" : undefined}><Bulle message={m} tete={i === 0 || nouveauGroupe} /></div>
+                })}
+              </BornesFiguresContexte.Provider>
               {occupe && <div className="mt-4"><BulleAttente /></div>}
               {/* Suggestions de départ : tant que seul Jules a parlé, des pastilles à toucher pour lancer l'échange */}
               {conv && !occupe && messages.length === 1 && messages[0].role !== "eleve" && (
