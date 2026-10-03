@@ -2,6 +2,8 @@
 // (react-markdown + remark-gfm + remark-math + rehype-katex).
 // Un bloc ```figure (JSON {gabarit, valeurs}, déjà vérifié par le serveur : jules/modules/figures.py) est dessiné
 // par FigureGabarit à sa place dans le texte ; illisible, il ne s'affiche pas.
+// Un bloc ```figure {"schema": id} (schéma de la fiche visuelle de la notion, vérifié par le même module) est
+// rendu par SchemaNotion (même rendu que dans la fiche : importNode, bouton Agrandir, feuille claire en sombre).
 
 import { useMemo } from "react"
 import Markdown, { type Components } from "react-markdown"
@@ -9,16 +11,20 @@ import remarkGfm from "remark-gfm"
 import remarkMath from "remark-math"
 import rehypeKatex from "rehype-katex"
 import "katex/dist/katex.min.css"
-import { FigureGabarit } from "@/modules/fiches/blocs"
+import { FigureGabarit, SchemaNotion } from "@/modules/fiches/blocs"
+
+type FigureLue = { gabarit: string; valeurs: Record<string, number> } | { schema: string }
 
 function FigureBulle({ source }: { source: string }) {
-  const figure = useMemo(() => {
+  const figure = useMemo((): FigureLue | null => {
     try {
       const o = JSON.parse(source)
+      if (typeof o?.schema === "string" && /^[a-z0-9][a-z0-9-]*$/.test(o.schema)) return { schema: o.schema }
       return typeof o?.gabarit === "string" && o.valeurs && typeof o.valeurs === "object" ? (o as { gabarit: string; valeurs: Record<string, number> }) : null
     } catch { return null }
   }, [source])
   if (!figure) return null
+  if ("schema" in figure) return <SchemaNotion notion={figure.schema} className="my-2" />
   return <FigureGabarit gabarit={figure.gabarit} valeurs={figure.valeurs} libelle={`Figure : ${figure.gabarit.replaceAll("-", " ")}`} className="my-2" />
 }
 

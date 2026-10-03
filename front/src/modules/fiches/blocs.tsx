@@ -14,8 +14,10 @@ import { blocVariants, titreVariants } from "@/components/ui/variantes"
 import { iconeRenfort } from "@/config/renfort"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type {
-  BlocCarte, BlocExemple, BlocFiche, BlocFormule, BlocGraphe, BlocMethode, BlocPiege, BlocRenfort, BlocSchema, LienRenfort, TypeBloc,
+  BlocCarte, BlocExemple, BlocFiche, BlocFormule, BlocGraphe, BlocMethode, BlocPiege, BlocRenfort, BlocSchema, Fiche, LienRenfort, TypeBloc,
 } from "./types"
+import { fiches } from "@/api/jules"
+import { styleMatiere } from "./matiere"
 import { Riche, typo } from "./texte"
 import { disposerCarte, T_LIEN, T_SOUS, T_TITRE, H_SOUS, H_TITRE } from "./carte"
 import { couleurCss, dessinerGabarit, evaluerCondition } from "./ponts"
@@ -333,6 +335,38 @@ function Schema({ bloc }: { bloc: BlocSchema }) {
         </DialogContent>
       </Dialog>
     </div>
+  )
+}
+
+/* ---------------------------------------------------------------- schéma d'une notion (discussion, exercices) */
+// Le schéma de la fiche visuelle d'une notion, cité par son id (bloc ```figure {"schema": id} de Jules, déjà
+// vérifié par jules/modules/figures.py ; ou en tête des exercices sans IA). Le SVG vient de la route existante
+// des fiches visuelles (une requête par notion et par page) ; même rendu que dans la fiche (Schema ci-dessus).
+const fichesLues = new Map<string, Promise<Fiche>>()
+function lireFiche(notion: string): Promise<Fiche> {
+  let p = fichesLues.get(notion)
+  if (!p) { p = fiches.lire(notion); p.catch(() => fichesLues.delete(notion)); fichesLues.set(notion, p) }
+  return p
+}
+
+export function SchemaNotion({ notion, className }: { notion: string; className?: string }) {
+  const [etat, setEtat] = useState<{ bloc: BlocSchema; matiere: string; titre: string } | "absent" | null>(null)
+  useEffect(() => {
+    let annule = false
+    setEtat(null)
+    lireFiche(notion).then((f) => {
+      const bloc = f.blocs.find((b): b is BlocSchema => b.type === "schema" && typeof (b as BlocSchema).svg === "string")
+      if (!annule) setEtat(bloc ? { bloc, matiere: f.matiere, titre: f.titre } : "absent")
+    }).catch(() => { if (!annule) setEtat("absent") })
+    return () => { annule = true }
+  }, [notion])
+  if (etat === null) return <div data-schema-notion={notion} className={cn("h-24 w-full animate-pulse rounded-surface bg-papier/60", className)} aria-hidden="true" />
+  if (etat === "absent") return null
+  return (
+    <figure data-schema-notion={notion} style={styleMatiere(etat.matiere)} className={cn("m-0 w-full min-w-0", className)}
+      aria-label={`Schéma : ${etat.titre}`}>
+      <Schema bloc={{ ...etat.bloc, titre: etat.bloc.titre || etat.titre }} />
+    </figure>
   )
 }
 

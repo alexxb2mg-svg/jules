@@ -6,10 +6,13 @@ selon la liste blanche et les bornes declarees dans extensions/droite-affine/ext
 
 from __future__ import annotations
 
+import base64
 import json
+import os
 import socket
 import threading
 import time
+from pathlib import Path
 
 import pytest
 import uvicorn
@@ -296,3 +299,236 @@ def test_figure_dessinee_dans_la_bulle_a_390px(serveur, tmp_path_factory, sombre
         derniere = "[...document.querySelectorAll('.bulle-jules')].at(-1)"
         assert page.evaluer(f"{derniere}.querySelector('svg')") is None  # un <svg> ecrit reste du texte
         assert "<svg>" in page.evaluer(f"{derniere}.innerText")
+
+
+# --- schema de la fiche visuelle de la notion ({"schema": id}) : toutes matieres ------------------------------
+
+PYTHAGORE = "parallelisme-triangles-pythagore"  # notion du depot dont la fiche visuelle a un bloc schema
+HORS_CONVERSATION = "guerre-froide-bipolarisation"  # a aussi un schema, mais n'est pas la notion de la conversation
+SCHEMA_NORMALISE = '```figure\n{"schema":"parallelisme-triangles-pythagore"}\n```'
+
+
+def _conv_notion(tuteur, mode: str = "aide-devoirs", notion: str | None = PYTHAGORE):
+    conv = tuteur.stockage.creer_conversation(mode)
+    if notion:
+        tuteur.module("notions").fixer(conv.id, notion)
+    return conv
+
+
+def _filtrer_conv(tuteur, conv, texte: str) -> tuple[str, list[dict]]:
+    sortie = tuteur.module("figures").filtrer_reponse(conv, texte, lambda: "relance interdite")
+    return sortie, [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+
+
+def test_schema_de_la_notion_valide_normalise(tuteur):
+    conv = _conv_notion(tuteur)
+    titre = tuteur.module("fiches_visuelles").fiches[PYTHAGORE].titre
+    assert tuteur.module("figures").schemas(conv) == {PYTHAGORE: titre}
+    sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(f'{{ "schema" : "{PYTHAGORE}" }}'))
+    assert sortie == f"Regarde la droite :\n\n{SCHEMA_NORMALISE}\n\nOù coupe-t-elle l'axe vertical ?"
+    assert ecartees == []
+
+
+def test_schema_de_bout_en_bout_par_le_moteur(tuteur):
+    tuteur.llm.regle = lambda s, t, m: _bloc(f'{{"schema": "{PYTHAGORE}"}}')
+    conv = _conv_notion(tuteur)
+    bot = tuteur.echanger(conv.id, "Je comprends pas Pythagore")
+    assert SCHEMA_NORMALISE in bot.texte
+    assert any("Tu peux montrer le schéma de la notion" in a["systeme"] for a in tuteur.llm.appels)
+
+
+SANS = "schema non autorise"
+
+
+def test_schema_inconnu_hors_conversation_ou_sans_notion_retire(tuteur):
+    cas = [
+        (_conv_notion(tuteur), '{"schema": "notion-inventee"}', "schema:notion-inventee", "schema non autorise"),
+        (
+            _conv_notion(tuteur),
+            f'{{"schema": "{HORS_CONVERSATION}"}}',
+            f"schema:{HORS_CONVERSATION}",
+            "schema non autorise",
+        ),
+        (_conv_notion(tuteur, notion=None), f'{{"schema": "{PYTHAGORE}"}}', f"schema:{PYTHAGORE}", SANS),
+        (_conv_notion(tuteur), f'{{"schema": "{PYTHAGORE}", "svg": "<svg/>"}}', "", "attendu {schema}"),
+        (_conv_notion(tuteur), '{"schema": 3}', "schema:", "schema non autorise"),
+    ]
+    for conv, json_brut, lu, raison in cas:
+        sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(json_brut))
+        assert sortie == "Regarde la droite :\n\nOù coupe-t-elle l'axe vertical ?", json_brut
+        assert ecartees[0] == {"gabarit": lu, "raison": raison}, json_brut
+
+
+def test_schema_d_un_prerequis_accepte(tuteur, monkeypatch):
+    figures = tuteur.module("figures")
+    monkeypatch.setattr(figures, "_prerequis", lambda notion_id: ["notion-sans-fiche", HORS_CONVERSATION])
+    conv = _conv_notion(tuteur)
+    assert list(figures.schemas(conv)) == [PYTHAGORE, HORS_CONVERSATION]  # sans fiche visuelle : pas propose
+    assert f"- {HORS_CONVERSATION} :" in figures.contribution(conv)
+    sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(f'{{"schema": "{HORS_CONVERSATION}"}}'))
+    assert f'{{"schema":"{HORS_CONVERSATION}"}}' in sortie and ecartees == []
+
+
+def test_prerequis_lus_dans_les_fiches_v2(tuteur):
+    """nombres-premiers-decomposition (fiches-v2-demonstration) declare un prerequis."""
+    prerequis = tuteur.module("figures")._prerequis("nombres-premiers-decomposition")
+    assert prerequis == ["multiples-diviseurs-division-euclidienne"]
+
+
+def test_schema_et_gabarit_une_seule_figure(tuteur):
+    conv = _conv_notion(tuteur)
+    texte = _bloc(f'{{"schema": "{PYTHAGORE}"}}') + "\n\n" + _bloc('{"gabarit": "droite-affine", "valeurs": {}}')
+    sortie, ecartees = _filtrer_conv(tuteur, conv, texte)
+    assert sortie.count("```figure") == 1 and SCHEMA_NORMALISE in sortie
+    assert ecartees == [{"gabarit": "droite-affine", "raison": "une seule figure par message"}]
+
+
+@pytest.mark.parametrize("mode", ["aide-devoirs", "reexplique"])
+def test_contribution_schema_courte_sans_double_accolade(tuteur, mode):
+    conv = _conv_notion(tuteur, mode)
+    titre = tuteur.module("fiches_visuelles").fiches[PYTHAGORE].titre
+    contribution = tuteur.module("figures").contribution(conv)
+    assert f"Tu peux montrer le schéma de la notion « {titre} »" in contribution
+    assert f'{{"schema": "{PYTHAGORE}"}}' in contribution
+    assert "toujours accompagné de ton explication en mots" in contribution
+    assert "}}" not in contribution and "{{" not in contribution
+    systeme = tuteur.systeme(conv)
+    assert "}}" not in systeme and "{{" not in systeme
+    assert HORS_CONVERSATION not in contribution  # jamais les 410 ids : la notion et ses prerequis seulement
+
+
+def test_sans_notion_pas_de_phrase_schema(tuteur):
+    contribution = tuteur.module("figures").contribution(_conv_notion(tuteur, notion=None))
+    assert "schéma de la notion" not in contribution and '"schema"' not in contribution
+
+
+@pytest.mark.parametrize("mode", ["epreuve", "exercice", "controle", "cours"])
+def test_mode_sans_figure_aucun_schema(tuteur, mode):
+    conv = _conv_notion(tuteur, mode)
+    figures = tuteur.module("figures")
+    assert figures.schemas(conv) == {}
+    assert figures.contribution(conv) is None
+    sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(f'{{"schema": "{PYTHAGORE}"}}'))
+    assert "figure" not in sortie
+    assert ecartees == [{"gabarit": f"schema:{PYTHAGORE}", "raison": "mode sans figure"}]
+
+
+def test_reglage_schemas_desactivable(tuteur):
+    figures = tuteur.module("figures")
+    figures.reglages["schemas"] = False
+    assert figures.schemas(_conv_notion(tuteur)) == {}
+
+
+def test_texte_sans_figures_resume_le_schema():
+    assert texte_sans_figures(f"Vois :\n{SCHEMA_NORMALISE}\nFin.") == f"Vois :\n[schéma : {PYTHAGORE}]\nFin."
+
+
+# Schema de la bulle : largeur du svg et de la bulle, elements dessines, feuille, bouton Agrandir, debordement.
+SCHEMA_MESURE = """(() => { const f = document.querySelector('.bulle-jules [data-schema-notion] .bloc-schema svg');
+  if (!f) return null; const b = f.closest('.bulle-jules'); const z = f.closest('.bloc-schema');
+  const bouton = b.querySelector('[data-schema-agrandir]');
+  return {svg: f.getBoundingClientRect().width, bulle: b.getBoundingClientRect().width,
+  elements: f.querySelectorAll('*').length, fond: getComputedStyle(z).backgroundColor,
+  bouton: bouton ? bouton.getBoundingClientRect().width : 0,
+  boutonFond: bouton ? getComputedStyle(bouton).backgroundColor : '',
+  ecran: document.documentElement.scrollWidth}; })()"""
+
+
+def _capture(page, nom: str) -> None:
+    """Capture d'ecran si JULES_CAPTURES est defini (preuve visuelle a regarder, hors du depot)."""
+    dossier = os.environ.get("JULES_CAPTURES")
+    if not dossier:
+        return
+    Path(dossier).mkdir(parents=True, exist_ok=True)
+    donnees = page.commande("Page.captureScreenshot", format="png")["data"]
+    (Path(dossier) / nom).write_bytes(base64.b64decode(donnees))
+
+
+def _ouvrir_app(page, url: str, sombre: bool, ancre: str) -> None:
+    page.commande("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=2, mobile=True)
+    theme = "dark" if sombre else "light"
+    page.commande("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": theme}])
+    page.commande("Page.navigate", url=url + "/static/favicon.ico")
+    time.sleep(0.5)
+    page.evaluer(
+        "fetch('/api/session', {method: 'POST', headers: {'Content-Type': 'application/json'},"
+        f" body: JSON.stringify({{code: '{CODE}'}})}}).then((r) => r.status)"
+    )
+    page.commande("Page.navigate", url=url + "/app" + ancre)
+
+
+@pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
+def test_schema_dessine_dans_la_bulle_a_390px(serveur, tmp_path_factory, sombre):
+    url, tuteur = serveur
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.stockage.renommer(conv.id, "Schema de test")
+    tuteur.stockage.ajouter_message(conv.id, Message(role="eleve", texte="Je comprends pas Pythagore"))
+    texte = f"Regarde le schéma : les trois côtés.\n\n{SCHEMA_NORMALISE}\n\nLe plus long, c'est l'hypoténuse."
+    tuteur.stockage.ajouter_message(conv.id, Message(role="bot", texte=texte))
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-schema"), (390, 844)) as page:
+        _ouvrir_app(page, url, sombre, "#/discuter")
+        bouton = "[...document.querySelectorAll('aside button')].find((b) => b.innerText.includes('Schema de test'))"
+        page.attendre(f"!!{bouton}", delai=20)
+        page.evaluer(f"{bouton}.click()")
+        attente = f"(() => {{ const m = {SCHEMA_MESURE}; return m && m.elements ? m : null; }})()"
+        mesure = page.attendre(attente, delai=15)
+        assert mesure["elements"] >= 5
+        assert 0 < mesure["svg"] <= mesure["bulle"]
+        assert mesure["ecran"] <= 390  # aucun debordement horizontal
+        assert mesure["fond"] not in ("rgba(0, 0, 0, 0)", "")  # feuille claire, dans les deux themes
+        assert mesure["bouton"] > 0 and mesure["boutonFond"] != "rgba(0, 0, 0, 0)"  # « Agrandir » visible
+        assert page.evaluer("document.documentElement.classList.contains('dark')") is sombre
+        texte_bulle = page.evaluer("document.querySelector('.bulle-jules').innerText")
+        assert "hypoténuse" in texte_bulle and '"schema"' not in texte_bulle  # le texte reste, le JSON non
+        page.evaluer("document.querySelector('.bulle-jules [data-schema-notion]').scrollIntoView({block: 'center'})")
+        time.sleep(0.8)
+        _capture(page, f"schema-bulle-{'sombre' if sombre else 'clair'}.png")
+        mesure_jeton = page.attendre(attente, delai=5)
+        print("mesure bulle", "sombre" if sombre else "clair", mesure_jeton)
+
+
+@pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
+def test_schema_au_dessus_de_l_enonce_des_exercices_a_390px(serveur, tmp_path_factory, sombre):
+    url, _ = serveur
+    notion = "guerre-totale-1914-1918"  # fiche v2 servable sans IA + fiche visuelle avec un schema
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-schema-ex"), (390, 844)) as page:
+        _ouvrir_app(page, url, sombre, f"#/fiche/{notion}")
+        bouton_de = (
+            "[...document.querySelectorAll('#bloc-entrainement button')].find((b) => b.innerText.includes('{}'))"
+        )
+        commencer = bouton_de.format("Commencer")
+        page.attendre(f"!!{commencer}", delai=20)
+        page.evaluer(f"{commencer}.scrollIntoView({{block: 'center'}}); {commencer}.click()")
+        # 1er exercice « En quelle annee commence... ? » : la frise ecrit 1914, donc pas de schema (serveur).
+        champ = "document.querySelector('#bloc-entrainement input')"
+        page.attendre(f"!!{champ}", delai=10)
+        assert page.evaluer("!document.querySelector('#bloc-entrainement [data-exercice-schema]')") is True
+        page.evaluer(
+            f"(() => {{ const c = {champ}; const set = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype,"
+            " 'value').set; set.call(c, '1914'); c.dispatchEvent(new Event('input', {bubbles: true})); })()"
+        )
+        page.attendre(f"!!{bouton_de.format('Valider')} && !{bouton_de.format('Valider')}.disabled", delai=5)
+        page.evaluer(f"{bouton_de.format('Valider')}.click()")
+        page.attendre(f"!!{bouton_de.format('Exercice suivant')}", delai=10)
+        page.evaluer(f"{bouton_de.format('Exercice suivant')}.click()")
+        # 2e exercice (qui organise le genocide ?) : la reponse n'est pas sur le schema, il s'affiche.
+        mesure = page.attendre(
+            """(() => { const bloc = document.querySelector('#bloc-entrainement');
+              const z = bloc.querySelector('[data-exercice-schema]');
+              const s = z && z.querySelector('.bloc-schema svg'); if (!s) return null;
+              const enonce = [...bloc.querySelectorAll('p')].find((p) => p.className.includes('text-[1.1rem]'));
+              return {svg: s.getBoundingClientRect().width, bloc: bloc.getBoundingClientRect().width,
+                avantEnonce: !!enonce && !!(z.compareDocumentPosition(enonce) & Node.DOCUMENT_POSITION_FOLLOWING),
+                ecran: document.documentElement.scrollWidth}; })()""",
+            delai=15,
+        )
+        assert 0 < mesure["svg"] <= mesure["bloc"]
+        assert mesure["avantEnonce"] is True
+        assert mesure["ecran"] <= 390
+        page.evaluer("document.querySelector('[data-exercice-schema]').scrollIntoView({block: 'start'})")
+        time.sleep(0.8)
+        _capture(page, f"schema-exercice-{'sombre' if sombre else 'clair'}.png")
+        # « Masquer le schéma » le replie (l'eleve garde la main) ; « Voir le schéma » le rouvre.
+        page.evaluer("document.querySelector('[data-exercice-schema] button').click()")
+        page.attendre("!document.querySelector('[data-exercice-schema] .bloc-schema')", delai=5)
+        assert "Voir le schéma" in page.evaluer("document.querySelector('[data-exercice-schema] button').innerText")

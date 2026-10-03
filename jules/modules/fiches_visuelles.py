@@ -12,7 +12,9 @@ Reglages (config.yaml) :
 
 from __future__ import annotations
 
+import html
 import logging
+import re
 from typing import Any
 
 from fastapi import APIRouter, HTTPException
@@ -91,6 +93,29 @@ class Brique(Module):
         publique["nom_matiere"] = notion.nom_matiere if notion else fiche.matiere
         publique["relecture_a_relire"] = fiche.relecture == "a_relire"
         return publique
+
+    # --- schema d'une notion (discussion, exercices) ----------------------------------
+    def schema(self, notion_id: str) -> dict[str, str] | None:
+        """Le premier bloc `schema` de la fiche visuelle de la notion (SVG deja nettoye au chargement),
+        ou None. Sert de liste blanche aux blocs ```figure {"schema": id} (module 'figures') et au schema
+        affiche en tete des exercices sans IA (module 'exercices'). Le SVG lui-meme part par la route
+        /notions/{id} : ici, seulement de quoi decider et nommer."""
+        fiche = self.fiches.get(notion_id)
+        if fiche is None:
+            return None
+        bloc = next((b for b in fiche.blocs if b.type == "schema" and b.donnees.get("svg")), None)
+        if bloc is None:
+            return None
+        return {"notion": notion_id, "titre": fiche.titre, "titre_schema": str(bloc.donnees.get("titre") or "")}
+
+    def texte_schema(self, notion_id: str) -> str:
+        """Les textes ecrits dans le schema de la notion (noeuds <text>/<tspan>), pour verifier qu'il ne
+        donne pas la reponse d'un exercice (module 'exercices'). Vide sans schema."""
+        fiche = self.fiches.get(notion_id)
+        if fiche is None:
+            return ""
+        svgs = [str(b.donnees.get("svg") or "") for b in fiche.blocs if b.type == "schema"]
+        return " ".join(html.unescape(t) for svg in svgs[:1] for t in re.findall(r">([^<]+)<", svg))
 
     # --- routes eleve ---------------------------------------------------------------
     def routes_eleve(self) -> APIRouter:
