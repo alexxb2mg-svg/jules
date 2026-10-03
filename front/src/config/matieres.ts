@@ -13,6 +13,7 @@ export const ICONES_MATIERES: Record<string, LucideIcon> = {
   technologie: Cpu,
   "arts-plastiques": Palette,
   anglais: Languages,
+  espagnol: Languages,
   "education-musicale": Music,
   "histoire-des-arts": Brush,
   emc: Scale,
@@ -22,5 +23,5 @@ export const iconeMatiere = (id: string): LucideIcon => ICONES_MATIERES[id] || L
 /** Ordre d'affichage des matières dans la bibliothèque (les autres suivent, par ordre du serveur). */
 export const ORDRE_MATIERES = [
   "mathematiques", "francais", "histoire", "geographie", "physique-chimie", "svt",
-  "technologie", "anglais", "emc", "arts-plastiques", "education-musicale", "histoire-des-arts",
+  "technologie", "anglais", "espagnol", "emc", "arts-plastiques", "education-musicale", "histoire-des-arts",
 ]

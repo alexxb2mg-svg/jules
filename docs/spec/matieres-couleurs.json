@@ -48,6 +48,11 @@
       "texte": "#27307A",
       "accent": "#4A55C2"
     },
+    "espagnol": {
+      "fond": "#FDE8E0",
+      "texte": "#7A2200",
+      "accent": "#C24417"
+    },
     "education-musicale": {
       "fond": "#FBE9F5",
       "texte": "#6E1A58",

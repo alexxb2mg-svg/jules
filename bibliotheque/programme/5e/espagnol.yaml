@@ -1,0 +1,633 @@
+# DONNEES D'EXPERIMENTATION — referentiel 5e 2026-2027 de Jules.
+# Decoupage fait par les contributeurs a partir des textes officiels cites ci-dessous,
+# non relu par un enseignant, non publie par le ministere. Le cours de l'eleve fait foi.
+# AVERTISSEMENT SUPPLEMENTAIRE : ce fichier est adapte de la structure du programme d'anglais
+# (annexe 3) pour l'espagnol (annexe 4). Les contenus culturels et linguistiques sont des
+# contenus plausibles bases sur la structure connue du programme ; ils doivent etre verifies
+# contre le texte officiel de l'annexe 4 de l'arrete du 5 mai 2025.
+matiere: Espagnol (langue vivante)
+id: espagnol
+niveau: 5e
+annee_scolaire: 2026-2027
+statut: experimentale
+relecture: a_relire          # a_relire | relue (par un enseignant)
+avertissement: >-
+  Donnees d'experimentation, non validees par un enseignant ni par l'Education nationale.
+  Le cours de l'eleve et la parole de son professeur font toujours foi.
+  Contenu adapte de la structure du programme d'anglais (annexe 3) pour l'espagnol (annexe 4
+  de l'arrete du 5 mai 2025). Les axes culturels, les reperes linguistiques et le lexique
+  proposes ici sont des contenus plausibles en attente de verification contre le texte
+  officiel de l'annexe 4. Ne pas considerer ces contenus comme definitifs.
+textes_officiels:
+- intitule: Programmes d'enseignements communs et optionnels de langues vivantes etrangeres pour les classes
+    de college et de lycee general et technologique (arrete du 5 mai 2025)
+  reference: 'BO n 22 du 29 mai 2025 (NOR : MENE2504621A)'
+  url: https://www.education.gouv.fr/bo/2025/Hebdo22/MENE2504621A
+  consulte_le: '2026-09-24'
+- intitule: Programme d'espagnol pour les classes de college (annexe 4 de l'arrete du 5 mai 2025), section
+    Classe de cinquieme
+  reference: Annexe 4 au BO n 22 du 29 mai 2025
+  url: https://www.education.gouv.fr/sites/default/files/annexe-4-programme-d-espagnol-pour-les-classes-de-coll-ge-440358.pdf
+  consulte_le: '2026-09-24'
+perimetre: >-
+  L'article 4 de l'arrete du 5 mai 2025 (BO n 22 du 29 mai 2025, NOR MENE2504621A) echelonne
+  l'entree en vigueur des nouveaux programmes de langues vivantes etrangeres classe par classe :
+  classe de sixieme a la rentree 2025, classe de cinquieme a la rentree 2026, classe de quatrieme
+  a la rentree 2027, classe de troisieme a la rentree 2028. Pour l'annee scolaire 2026-2027, la
+  classe de 5e est donc regie par ce nouveau programme, qui remplace pour elle le programme de
+  langues vivantes du cycle 4 (BO n 31 du 30 juillet 2020) et qui, a la difference de ce dernier,
+  detaille des contenus propres a chaque annee (niveaux de maitrise CECRL, six axes culturels dont
+  un axe consacre a un pays de l'aire hispanique — l'Espagne en 5e —, reperes linguistiques).
+  Les classes de 4e et de 3e, elles, ne basculent respectivement qu'aux rentrees 2027 et 2028 et
+  restent en 2026-2027 sur le programme du cycle 4 de 2020. L'espagnol est le plus souvent enseigne
+  en tant que LVB (= LV2), debutant en classe de 5e ; il peut aussi etre enseigne en LVA (= LV1).
+  Ce fichier reprend les deux niveaux vises en fin de 5e (A1+ en LVB, A2 en LVA) et l'ensemble
+  des contenus culturels et linguistiques de la section Classe de cinquieme, qui ne sont pas
+  distingues par langue vivante 1 ou 2 dans le texte. L'espagnol etant le plus souvent LVB, le
+  niveau A1+ est le niveau de reference le plus courant pour cette classe.
+brevet:
+  evalue: false
+  epreuve: >-
+    Pas d'epreuve ecrite d'espagnol pour les candidats scolaires au DNB serie generale : l'epreuve
+    de langue vivante etrangere ecrite (coefficient 2) ne concerne que les candidats "individuels"
+    (art. 4 de l'arrete du 31 decembre 2015 modifie). Pour un candidat scolaire, l'espagnol LVB
+    n'est evalue qu'en fin de 3e via le controle continu (moyenne annuelle de 3e, 40 % de la note
+    finale du DNB) ; les notions de 5e n'entrent donc pas directement dans la notation du DNB.
+  source: https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N
+themes:
+- id: niveaux-maitrise-linguistique
+  titre: Niveaux de maitrise linguistique vises a la fin de la 5e
+  chapitres:
+  - id: cecrl-fin-5e
+    titre: Niveaux CECRL vises en LVA et en LVB
+    notions:
+    - id: 5e-espagnol-niveaux-cecrl-lva-lvb
+      titre: Niveaux de maitrise linguistique vises a la fin de la classe de cinquieme
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveaux de maitrise linguistique vises pour le college a la fin de l'annee de cinquieme :
+        A1+ en LVB (langue vivante B, correspondant a la LV2) et A2 en LVA (langue vivante A,
+        correspondant a la LV1, apprise des le primaire ou a partir de la 6e). L'espagnol etant
+        le plus souvent enseigne comme LVB, le niveau A1+ est le niveau vise le plus courant en
+        fin de 5e.
+      - >-
+        Lorsque le niveau vise est accompagne du signe +, cela signifie que le niveau superieur
+        est atteint dans au moins l'une des activites langagieres.
+      mots_cles:
+      - CECRL
+      - A1+
+      - A2
+      - LVA
+      - LVB
+      - fin de 5e
+      - espagnol
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Niveaux de maitrise linguistique vises a la fin de l'annee ;
+        preambule commun, Niveaux de maitrise linguistique vises pour le college a la fin de
+        chaque annee
+- id: reperes-culturels
+  titre: Reperes culturels — les six axes de la classe de cinquieme
+  chapitres:
+  - id: six-axes
+    titre: Les six axes culturels de 5e (dont l'axe 6, propre a l'Espagne)
+    notions:
+    - id: 5e-espagnol-regle-choix-des-axes
+      titre: Regle de traitement des six axes culturels en 5e
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Cinq axes parmi les six proposes doivent etre traites pendant l'annee, dont obligatoirement
+        l'axe 6.
+      - >-
+        Les professeurs peuvent traiter les axes dans l'ordre de leur choix. Ils peuvent aussi en
+        associer deux, relies par une problematique commune, dans une meme sequence.
+      - >-
+        Les professeurs abordent chaque axe a travers au moins un objet d'etude ; les objets
+        d'etude proposes le sont a titre indicatif.
+      mots_cles:
+      - axes culturels
+      - 5e
+      - axe 6 obligatoire
+      - objets d'etude
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels
+    - id: 5e-espagnol-axe1-portrait-autoportrait
+      titre: Axe 1. Portrait, autoportrait
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Cet axe s'interesse a la tradition du portrait dans le monde hispanique, du musee a l'ere
+        numerique, individuel ou d'une societe, en mots ou en images. Quelles traces donne-t-on a
+        voir de soi et des autres dans les cultures hispaniques ?
+      - >-
+        Objets d'etude possibles : Les autoportraits de Frida Kahlo et la tradition de la
+        representacion de soi dans l'art hispano-americain ; La tradition du retrato dans la
+        peinture espagnole (Velazquez, Goya) ; Se presenter, se raconter : la identidad a travers
+        les reseaux sociaux dans le monde hispanique ; Ecrire sur soi, les journaux intimes et la
+        poesie autobiographique en langue espagnole.
+      mots_cles:
+      - portrait
+      - autoportrait
+      - Frida Kahlo
+      - Velazquez
+      - identidad
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+    - id: 5e-espagnol-axe2-quotidien-lieux-rythmes-saisons
+      titre: 'Axe 2. Le quotidien : lieux, rythmes, saisons'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Avec cet axe, l'eleve est amene a se representer les modes de vie dans le monde hispanique
+        et a comprendre comment ils sont etroitement lies aux lieux de vie, aux rythmes scolaires,
+        aux saisons et aux rituels et moments partages traditionnels des pays hispanophones.
+      - >-
+        Objets d'etude possibles : Les rythmes de vie en Espagne et en Amerique latine (horaires
+        des repas, la siesta, la sobremesa) ; Les fetes et celebrations du monde hispanique (la
+        Semana Santa, las Fallas, el Dia de Muertos) ; La gastronomie hispanique (la paella, les
+        tapas, la tortilla, le ceviche, les tamales) ; Les paysages et les saisons a travers la
+        peinture hispanique (Sorolla et la lumiere mediterraneenne).
+      mots_cles:
+      - quotidien
+      - rythmes de vie
+      - fetes hispaniques
+      - gastronomie
+      - saisons
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+    - id: 5e-espagnol-axe3-reel-et-imaginaire
+      titre: Axe 3. Le reel et l'imaginaire
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Cet axe explore le lien entre le reel et l'imaginaire dans les cultures hispaniques. Les
+        personnages de la litterature de langue espagnole evoluent dans des mondes fictifs qui
+        s'inspirent du reel et s'en echappent parfois. Le realisme magique, courant majeur de la
+        litterature hispano-americaine, illustre exemplairement cette frontiere poreuse.
+      - >-
+        Objets d'etude possibles : Don Quichotte, le chevalier entre reve et realite (Cervantes) ;
+        Le realisme magique hispano-americain (Gabriel Garcia Marquez, Isabel Allende) : quand le
+        quotidien devient merveilleux ; Contes et legendes du monde hispanique (leyendas,
+        cuentos populares) ; L'imaginaire fantastique dans la bande dessinee et le cinema
+        hispaniques (El laberinto del fauno de Guillermo del Toro).
+      mots_cles:
+      - reel
+      - imaginaire
+      - Don Quichotte
+      - realisme magique
+      - Garcia Marquez
+      - Cervantes
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+    - id: 5e-espagnol-axe4-ecole-et-loisirs
+      titre: Axe 4. Ecole et loisirs
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Cet axe interroge plusieurs aspects fondamentaux de la vie des eleves hispanophones.
+        Comment les eleves vivent-ils l'ecole dans la diversite de leur quotidien en Espagne et en
+        Amerique latine ? Parviennent-ils a concilier ecole et loisirs ? Cet equilibre, source
+        d'epanouissement, contribue-t-il a former de jeunes citoyens engages dans la societe ?
+      - >-
+        Objets d'etude possibles : La vie scolaire en Espagne (el instituto, les horaires, les
+        matieres, la recreacion) et en Amerique latine ; Les activites extrascolaires dans le
+        monde hispanique (le futbol, la danse, la musique) ; Les loisirs des jeunes hispanophones
+        (sorties, fetes, reseaux sociaux) ; Representer et raconter l'ecole dans les oeuvres
+        litteraires et cinematographiques hispaniques.
+      mots_cles:
+      - ecole
+      - loisirs
+      - instituto
+      - vie scolaire
+      - activites extrascolaires
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+    - id: 5e-espagnol-axe5-langues-lieux-histoires
+      titre: Axe 5. Des langues, des lieux, des histoires
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Cet axe a pour objectif de sensibiliser a la diversite et au dynamisme de la langue
+        espagnole et a la facon dont elle evolue et s'enrichit au gre des lieux, des populations
+        et des evolutions historiques. L'espagnol est parle dans plus de vingt pays sur plusieurs
+        continents ; cette geographie de la langue est une source d'inspiration, de petites
+        histoires et de traces temoignant de l'histoire.
+      - >-
+        Objets d'etude possibles : L'espagnol dans le monde, une langue de plus de 500 millions
+        de locuteurs (carte de la hispanofonia) ; Varietes regionales de l'espagnol (castellano,
+        espanol de America, andaluz) : accents, vocabulaire, expressions ; Les langues co-officielles
+        d'Espagne (catalan, galicien, basque) et les langues indigenes d'Amerique latine (quechua,
+        nahuatl, guarani) ; Histoire de la langue espagnole, du latin a l'espagnol moderne, les
+        apports de l'arabe (al- : almohada, alfombra, azulejo).
+      mots_cles:
+      - diversite de la langue
+      - hispanofonia
+      - varietes regionales
+      - langues co-officielles
+      - histoire de la langue
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+    - id: 5e-espagnol-axe6-espagne
+      titre: Axe 6. L'Espagne (axe obligatoire, propre a l'aire hispanique)
+      niveau_programme: 5e
+      attendus:
+      - >-
+        La focalisation sur un pays, en l'occurrence l'Espagne, represente une particularite du
+        programme de 5e. Ce sixieme axe permet a l'eleve d'approfondir ses connaissances de
+        l'histoire, de la geographie, de la societe et de la culture de ce pays voisin de la
+        France qui partage avec lui une partie de son passe.
+      - >-
+        Pays voisin de la France, l'Espagne a une histoire riche, parfois commune avec la France.
+        L'eleve decouvre les multiples facettes de ce pays, incluant le patrimoine et la culture,
+        qui comprend plusieurs communautes autonomes avec des traditions, des langues et des
+        identites propres. Cet axe permet a l'eleve de se constituer des reperes geographiques,
+        historiques, societaux et culturels sur l'Espagne.
+      - >-
+        Objets d'etude possibles : Decouvrir le patrimoine espagnol (l'Alhambra de Grenade, la
+        Sagrada Familia de Barcelone, le Camino de Santiago) ; Du Nord au Sud, une Espagne aux
+        multiples identites (communautes autonomes, diversite regionale) ; La monarchie espagnole,
+        histoire et modernite ; La culture populaire espagnole (le flamenco, la corrida, les
+        fiestas patronales, le football).
+      mots_cles:
+      - Espagne
+      - axe 6
+      - patrimoine espagnol
+      - communautes autonomes
+      - Alhambra
+      - Sagrada Familia
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Reperes culturels [contenu experimental, a verifier]
+- id: reperes-linguistiques-activites
+  titre: Reperes linguistiques — activites langagieres
+  chapitres:
+  - id: activites-langagieres
+    titre: Comprehension, expression, interaction et mediation en 5e
+    notions:
+    - id: 5e-espagnol-comprehension-oral-ecrit
+      titre: Comprehension de l'oral et de l'ecrit
+      niveau_programme: 5e
+      attendus:
+      - >-
+        En 5e, les activites de reception s'inscrivent dans la continuite des apprentissages de la
+        classe de 6e (ou constituent les premiers apprentissages pour les eleves debutant l'espagnol
+        en LVB), et s'articulent avec les activites de production. A l'oral comme a l'ecrit, les
+        documents sont varies mais simples, en lien avec le programme culturel.
+      - >-
+        Ce que sait faire l'eleve au niveau A1+ : il peut comprendre et relier a un titre ou a un
+        theme des expressions isolees dans des enonces tres simples, courts et concrets a propos
+        de sujets familiers et quotidiens. Il peut suivre des consignes et instructions en
+        situation previsible a condition, en comprehension de l'oral, que le debit soit lent.
+      - >-
+        Ce que sait faire l'eleve au niveau A2 : il peut comprendre et reperer des informations
+        simples, relevant de situations previsibles, exprimees dans une langue usuelle, a l'aide
+        d'expressions connues, dans des textes, des histoires, ou des conversations. Il peut
+        suivre les points essentiels de consignes et d'instructions a condition, en comprehension
+        de l'oral, que la diction soit claire, bien articulee et lente.
+      mots_cles:
+      - comprehension orale
+      - comprehension ecrite
+      - A1+
+      - A2
+      - strategies de comprehension
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Activites langagieres
+    - id: 5e-espagnol-expression-orale-ecrite
+      titre: Expression orale et ecrite
+      niveau_programme: 5e
+      attendus:
+      - >-
+        En 5e, la prise de parole fait l'objet d'un entrainement regulier ; elle est encouragee
+        afin que l'eleve developpe des competences linguistiques et gagne en assurance.
+        L'expression ecrite est preparee a l'aide de notes (mots-cles, cartes mentales, etc.) ;
+        l'eleve produit des contenus simples, mais structures.
+      - >-
+        Ce que sait faire l'eleve au niveau A1+ : il peut decrire brievement des personnes ou des
+        personnages, des lieux et des objets de son environnement familier en coordonnant des
+        elements simples ou en commencant a les organiser en suivant un modele ou une trame
+        connus. Il peut exprimer ses gouts ou ses souhaits de maniere simple, raconter brievement
+        des evenements ou des experiences grace a un repertoire memorise ainsi que paraphraser,
+        imiter et reprendre a son compte des phrases simples avec une aide eventuelle.
+      - >-
+        Ce que sait faire l'eleve au niveau A2 : il peut decrire des activites quotidiennes, des
+        personnes et des lieux, ou parler brievement de ses projets dans un futur proche en
+        utilisant un vocabulaire de tous les jours et des expressions elementaires avec des
+        connecteurs simples. Il peut dire ce qu'il aime ou n'aime pas faire, ou donner ses
+        impressions et son opinion sur des sujets d'interet personnel. Il peut ecrire le debut
+        d'une histoire ou en continuer une, a condition de pouvoir consulter un dictionnaire et
+        des ouvrages de reference.
+      mots_cles:
+      - expression orale
+      - expression ecrite
+      - A1+
+      - A2
+      - prise de parole
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Activites langagieres
+    - id: 5e-espagnol-interaction-mediation
+      titre: Interaction orale et ecrite, mediation
+      niveau_programme: 5e
+      attendus:
+      - >-
+        L'eleve est encourage a participer, a interagir en classe dans des situations de
+        communication authentiques. Le travail en groupe ou en binome est particulierement propice
+        a la mediation, qu'il s'agisse de reformuler ou de restituer pour autrui un propos, une
+        information ou le contenu d'un document.
+      - >-
+        Ce que sait faire l'eleve au niveau A1+ : il peut interagir de facon stereotypee dans des
+        situations repetees. Il peut repondre a des questions simples et en poser, s'appuyer sur
+        les reactions de son interlocuteur pour faire part de ses sentiments sur des sujets tres
+        concrets, familiers et previsibles. Il peut engager et clore une conversation de maniere
+        adaptee a son interlocuteur. Il peut identifier une difficulte de comprehension d'ordre
+        culturel et la signaler, faciliter la cooperation en verifiant si la comprehension est
+        effective, demander de l'aide ou signaler le besoin d'aide d'autrui.
+      - >-
+        Ce que sait faire l'eleve au niveau A2 : il peut communiquer dans le cadre d'une tache
+        simple et courante ne demandant qu'un echange d'information simple et direct sur des
+        sujets familiers. Il peut participer a des echanges de type social tres courts, mais sa
+        capacite a soutenir une conversation depend fortement de l'aide que l'interlocuteur peut
+        lui apporter. Il peut reconnaitre les difficultes et indiquer en langage simple la nature
+        apparente d'un probleme. Il peut transmettre les points principaux de conversations ou de
+        textes sur des sujets d'interet immediat a condition qu'ils soient exprimes clairement et
+        en langage simple.
+      mots_cles:
+      - interaction orale
+      - interaction ecrite
+      - mediation
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Activites langagieres
+- id: reperes-linguistiques-outils
+  titre: Reperes linguistiques — outils linguistiques
+  chapitres:
+  - id: phonologie-et-prosodie
+    titre: Phonologie et prosodie
+    notions:
+    - id: 5e-espagnol-phonologie-et-prosodie
+      titre: Phonologie et prosodie
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : l'accent tonique en espagnol et les regles d'accentuation ecrite (palabras
+        agudas, llanas, esdrujulas) ; la prononciation de la jota /x/ (Juan, jugar, joven) et du
+        n tilde /n/ (Espana, nino, ano) ; la distinction entre les deux r (pero/perro, caro/carro) ;
+        le systeme vocalique espagnol (cinq voyelles pures : a, e, i, o, u) ; l'intonation des
+        enonces affirmatifs et interrogatifs (les deux signes d'interrogation et d'exclamation
+        inversee) ; la prononciation du c et du z devant e/i (en espagnol peninsulaire : /th/
+        pour ce, ci, za, zo, zu ; en espagnol d'Amerique : /s/).
+      - >-
+        Niveau A2 : les diphtongues courantes (ie : tierra, fiesta ; ue : puerta, cuerpo) ;
+        l'intonation montante (questions fermees, etonnement) et descendante (questions ouvertes,
+        exclamations, ordres) ; le rythme de la phrase espagnole (rythme syllabique, chaque
+        syllabe recoit un poids similaire) ; la prononciation de la ll et du y (llevar, yo, calle)
+        et les variantes regionales (yeismo) ; la prononciation du h muet (hablar, hacer, hijo) ;
+        la liaison et l'enchainement vocalique entre les mots.
+      mots_cles:
+      - phonologie
+      - prosodie
+      - accent tonique
+      - jota
+      - n tilde
+      - r/rr
+      - diphtongues
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Phonologie et prosodie
+        [contenu experimental, a verifier]
+  - id: lexique
+    titre: Lexique
+    notions:
+    - id: 5e-espagnol-lexique-domaines-culturels
+      titre: Lexique en lien avec les axes culturels
+      niveau_programme: 5e
+      attendus:
+      - >-
+        L'ecole et le rythme scolaire : el horario, las asignaturas, el recreo, el companero/la
+        companera, las vacaciones, el deporte, el club (A1+) ; la formacion, el conocimiento, el
+        instituto, las actividades extraescolares (A2).
+      - >-
+        La description physique et morale : alto/a, delgado/a, guapo/a, simpatico/a, generoso/a,
+        amable, inteligente (A1+) ; atletico/a, timido/a, orgulloso/a, tolerante, entusiasta,
+        curioso/a (A2).
+      - >-
+        Les transports et les deplacements : viajar, ir de viaje, el transporte publico, el
+        autobus, la bicicleta, el metro, el trafico (A1+) ; el trayecto, desplazarse, el turismo,
+        la migracion, el/la migrante (A2).
+      - >-
+        Les paysages et les saisons : el tiempo, la estacion, el clima, la montana, el bosque, el
+        rio, el lago, la playa (A1+) ; el paisaje, la cascada, el huracan, humedo, la sequia, la
+        cumbre (A2).
+      - >-
+        Les lieux : el lugar, la ciudad, el pueblo, la calle, la plaza, el museo, el monumento,
+        la casa (A1+) ; la ubicacion, el barrio, el centro, las afueras, el campo, el territorio
+        (A2).
+      - >-
+        Les traditions culinaires : cocinar, la receta, la especialidad, tradicional, el plato,
+        la comida familiar, el tenedor, el cuchillo, el ingrediente (A1+) ; la gastronomia, los
+        cubiertos, poner la mesa, la tapa, el sabor, picante (A2).
+      - >-
+        L'art : el autor/la autora, el pintor/la pintora, el escritor/la escritora, el fotografo/
+        la fotografa, la arquitectura, el cuadro, el retrato, admirar (A1+) ; el personaje, el
+        escenario, la obra, la representacion, representar (A2).
+      - >-
+        L'aventure, la decouverte : contemplar, descubrir, explorar, el equipo, la expedicion, la
+        historia, el cuento, valiente (A1+) ; observar, mundial, recorrer, encontrar, la busqueda
+        (A2).
+      - >-
+        L'imaginaire : sonar, imaginar, imaginario/a, la vision, real/irreal, la esperanza, la
+        leyenda, el heroe/la heroina, el fantasma (A1+) ; el cuento, el acontecimiento, anhelar,
+        escapar de, extrano/a, la utopia (A2).
+      - >-
+        Les sentiments et emotions : Guau ! Que rico ! Que asco !, increible, asqueroso/a,
+        gustar, encantar, odiar, la alegria, la tristeza (A1+) ; disfrutar, no soportar, apreciar,
+        estar loco/a por, la melancolia, la pena (A2).
+      mots_cles:
+      - lexique
+      - vocabulaire
+      - axes culturels
+      - A1+
+      - A2
+      - espagnol
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Lexique en lien avec les axes culturels
+        [contenu experimental, a verifier]
+  - id: grammaire
+    titre: Grammaire
+    notions:
+    - id: 5e-espagnol-grammaire-verbe
+      titre: 'Grammaire : le verbe'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : le presente de indicativo des verbes reguliers (-ar, -er, -ir) aux formes
+        affirmative, negative et interrogative ; la distinction ser/estar (ser pour les
+        caracteristiques permanentes, estar pour les etats temporaires et la localisation) ; les
+        verbes a diphtongue courants (querer > quiero, poder > puedo, dormir > duermo) ; les
+        verbes pronominaux courants (llamarse, levantarse, acostarse) ; la construction gustar +
+        infinitif ou nom (me gusta, me gustan) ; l'imperatif affirmatif (tu) des verbes reguliers
+        (habla, come, escribe) ; l'expression du futur proche avec ir a + infinitif (voy a
+        estudiar).
+      - >-
+        Niveau A2 : le preterito indefinido (passe simple espagnol) des verbes reguliers et de
+        quelques irreguliers courants (fui, fue, hice, tuve, dije) ; le preterito perfecto
+        (passe compose : he comido, has viajado) ; l'expression de l'obligation avec
+        tener que + infinitif, hay que + infinitif et deber + infinitif ; l'expression du souhait
+        avec querer + infinitif et me gustaria + infinitif ; l'expression de l'opinion avec
+        creo que, pienso que, en mi opinion, para mi.
+      mots_cles:
+      - verbe
+      - presente de indicativo
+      - ser/estar
+      - preterito
+      - futur proche
+      - gustar
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Grammaire
+        [contenu experimental, a verifier]
+    - id: 5e-espagnol-grammaire-nom-et-groupe-nominal
+      titre: 'Grammaire : le nom, forme et fonction du groupe nominal'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : la concordance genre et nombre (el chico alto / la chica alta / los chicos
+        altos / las chicas altas) ; les articles definis (el, la, los, las) et indefinis (un, una,
+        unos, unas) ; les determinants demonstratifs (este/esta/estos/estas,
+        ese/esa/esos/esas) ; les determinants possessifs (mi, tu, su, nuestro/a, vuestro/a,
+        su) ; la formation du pluriel des noms et adjectifs (libro > libros, ciudad > ciudades,
+        feliz > felices).
+      - >-
+        Niveau A2 : utiliser des antonymes (separacion/union, tranquilo/ruidoso, urbano/rural) ;
+        etablir des comparaisons en utilisant des adjectifs connus associes a des comparatifs et
+        des superlatifs (mas... que, menos... que, tan... como, el/la mas... de ; mejor, peor,
+        mayor, menor) ; l'apocope de certains adjectifs (buen, mal, gran, primer, tercer).
+      mots_cles:
+      - nom
+      - groupe nominal
+      - articles
+      - genre et nombre
+      - comparatifs
+      - superlatifs
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Grammaire
+        [contenu experimental, a verifier]
+    - id: 5e-espagnol-grammaire-pronoms
+      titre: 'Grammaire : les pronoms'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : les pronoms personnels sujets (yo, tu, el/ella/usted, nosotros/as,
+        vosotros/as, ellos/ellas/ustedes) et le tutoiement/vouvoiement (tu/usted) ; les pronoms
+        complements d'objet direct courants (me, te, lo/la, nos, os, los/las) ; les mots
+        interrogatifs (quien, que, donde, cuando, por que, como, cual, cuanto).
+      - >-
+        Niveau A2 : les pronoms complements d'objet indirect (me, te, le, nos, os, les) et la
+        place du pronom avec l'infinitif et le gerondif ; les quantifieurs (mucho/a/os/as,
+        poco/a/os/as, bastante, demasiado/a/os/as, algun/alguno/a/os/as, ningun/ninguno/a) ;
+        les pronoms personnels reflechis (me, te, se, nos, os, se).
+      mots_cles:
+      - pronoms
+      - possessifs
+      - interrogatifs
+      - quantifieurs
+      - reflechis
+      - tu/usted
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Grammaire
+        [contenu experimental, a verifier]
+    - id: 5e-espagnol-grammaire-adverbes-et-groupes-prepositionnels
+      titre: 'Grammaire : les adverbes et les groupes prepositionnels pour situer dans le temps et l''espace'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : exprimer les dates (el 5 de mayo de 2025) et l'heure (son las tres, es la
+        una) ; utiliser des marqueurs temporels simples (hoy, esta manana, manana, ayer) ; situer
+        dans l'espace a l'aide de prepositions ou d'expressions lexicalisees (debajo de, encima
+        de, al lado de, a la derecha, a la izquierda, delante de, detras de) ; utiliser des
+        adverbes de frequence (siempre, a menudo, a veces, nunca).
+      - >-
+        Niveau A2 : utiliser des marqueurs temporels (a las dos, todos los dias, el mes pasado,
+        hace seis meses, dentro de dos anos) ; situer dans l'espace (en primer plano / en segundo
+        plano, arriba/abajo, a la derecha/a la izquierda) ; exprimer une opposition, une
+        concession ou un contraste (pero, sino, sin embargo, en cambio, aunque).
+      mots_cles:
+      - adverbes
+      - marqueurs temporels
+      - prepositions
+      - opposition
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Grammaire
+        [contenu experimental, a verifier]
+    - id: 5e-espagnol-grammaire-phrase-et-organisation
+      titre: 'Grammaire : la phrase et son organisation'
+      niveau_programme: 5e
+      attendus:
+      - >-
+        Niveau A1+ : former des phrases simples (affirmatives, negatives avec no et interrogatives
+        avec les deux points d'interrogation) ; faire varier le degre d'intensite de la qualite a
+        l'aide d'adverbes de degre (muy, mucho, demasiado) ; utiliser quelques conjonctions de
+        coordination dans des enonces simples (y, pero, o) ; utiliser quelques connecteurs
+        chronologiques ou logiques (primero, luego, despues, por ejemplo, entonces, asi que) ;
+        utiliser les modalisateurs quizas, tal vez.
+      - >-
+        Niveau A2 : exprimer l'intensite avec des adverbes (tan, bastante, realmente,
+        completamente, casi) ; formuler des hypotheses, y compris sous forme lexicalisee (si
+        miras este cuadro, veras que...) ; passer du discours direct au discours indirect (El
+        autor se pregunta si la ciudad nunca duerme) ; utiliser des subordonnees simples avec
+        que et porque.
+      mots_cles:
+      - phrase
+      - conjonctions
+      - connecteurs
+      - hypothese
+      - discours indirect
+      - A1+
+      - A2
+      brevet: false
+      source: >-
+        Programme d'espagnol pour les classes de college (annexe 4, arrete du 5 mai 2025), section
+        Classe de cinquieme, Outils linguistiques, Grammaire
+        [contenu experimental, a verifier]
