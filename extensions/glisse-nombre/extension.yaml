@@ -1,0 +1,19 @@
+id: glisse-nombre
+titre: "Figure : les chiffres glissent quand on multiplie ou divise par 10"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [glisse-nombre]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « calculer mentalement avec la numeration ».
+# rangs : -1 = ÷ 10, 0 = aucune operation, 1 = × 10, 2 = × 100, 3 = × 1 000.
+# revele: la figure ecrit le resultat (« 4,7 × 10 = 47 ») : proposee seulement en mode reexplique.
+discussion:
+  glisse-nombre:
+    quand: "Pour faire voir qu'en multipliant par 10, 100 ou 1 000 (ou en divisant par 10) chaque chiffre glisse d'un, deux ou trois rangs dans le tableau de numération, la virgule restant fixe ; rangs vaut -1 pour ÷ 10, 1 pour × 10, 2 pour × 100, 3 pour × 1 000."
+    revele: true
+    valeurs:
+      nombre: {min: 0.1, max: 99.9, pas: 0.1, defaut: 4.7}
+      rangs: {min: -1, max: 3, pas: 1, defaut: 1}

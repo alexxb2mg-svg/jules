@@ -238,6 +238,16 @@ DECLARATIONS_DU_DEPOT = {
     "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+    "balance-equation": (
+        True,
+        {"paquets": (1, 5, 1, 3), "gauche": (0, 10, 1, 2), "droite": (0, 30, 1, 17), "x": (0, 10, 0.5, 3)},
+    ),
+    "courbe-point-mobile": (
+        True,
+        {"x": (-4, 4, 0.5, 1), "courbure": (-1, 1, 0.5, 0.5), "pente": (-3, 3, 1, 0), "hauteur": (-4, 4, 1, -2)},
+    ),
+    "glisse-nombre": (True, {"nombre": (0.1, 99.9, 0.1, 4.7), "rangs": (-1, 3, 1, 1)}),
+    "schema-en-barres": (False, {"a": (1, 100, 1, 30), "b": (0, 100, 1, 20), "fois": (1, 5, 1, 1)}),
 }
 
 

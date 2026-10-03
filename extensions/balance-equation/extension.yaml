@@ -1,0 +1,23 @@
+id: balance-equation
+titre: "Figure : balance de l'équation ax + b = c"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [balance-equation]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « equations du premier degre et equations produits » (x au pas de 0,5 ici pour
+# les solutions comme 2,5 ; la fiche garde le pas de 1). paquets, gauche, droite = a, b, c de ax + b = c.
+# revele: la figure n'ecrit jamais la solution, mais la balance devient horizontale (signe =) quand x est la
+# solution : avec les nombres d'un exercice, l'eleve la trouverait en glissant x, sans resoudre. Proposee
+# seulement en mode reexplique (jamais en aide-devoirs).
+discussion:
+  balance-equation:
+    quand: "Pour faire voir qu'une équation ax + b = c est une balance : paquets = a boîtes x et gauche = b jetons sur le plateau de gauche, droite = c jetons à droite ; elle penche tant que x n'est pas la solution, et ôter la même chose des deux plateaux garde l'équilibre."
+    revele: true
+    valeurs:
+      paquets: {min: 1, max: 5, pas: 1, defaut: 3}
+      gauche: {min: 0, max: 10, pas: 1, defaut: 2}
+      droite: {min: 0, max: 30, pas: 1, defaut: 17}
+      x: {min: 0, max: 10, pas: 0.5, defaut: 3}
