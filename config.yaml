@@ -153,6 +153,8 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
+  - distance-temps-transports
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
