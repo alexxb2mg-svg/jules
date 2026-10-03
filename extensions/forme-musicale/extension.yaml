@@ -1,0 +1,18 @@
+id: forme-musicale
+titre: "Figure : forme d'un morceau en blocs de couleur"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [forme-musicale]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches d'education musicale 3e (« forme », « identifier-decrire-organisation-musicale »)
+# et CM1 (« cm1-forme-musicale-simple »). Formes types (AB, ABA, couplet-refrain, rondeau), aucune oeuvre
+# precise : la figure ne donne pas la reponse d'un exercice d'ecoute (revele absent = false).
+discussion:
+  forme-musicale:
+    quand: "Pour faire voir la forme d'un morceau, ce qui revient et ce qui change : forme 1 = AB, 2 = ABA, 3 = couplet-refrain, 4 = rondeau ABACA (même lettre = même couleur = même musique) ; lecture = position de la tête de lecture, en % du morceau, qui allume la partie en cours."
+    valeurs:
+      forme: {min: 1, max: 4, pas: 1, defaut: 2}
+      lecture: {min: 0, max: 100, pas: 5, defaut: 0}

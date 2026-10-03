@@ -1,0 +1,21 @@
+id: cercle-couleurs
+titre: "Figure : cercle chromatique et complémentaire"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [cercle-couleurs]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches d'arts plastiques 3e et CM1 (« materialite-qualite-couleur »).
+# revele: la figure ecrit le nom de la couleur, son type (primaire, secondaire, intermediaire) et le nom de sa
+# complementaire : la reponse d'un exercice « quelle est la complementaire du bleu ? ». Proposee seulement en
+# mode reexplique.
+discussion:
+  cercle-couleurs:
+    quand: "Pour faire voir le cercle des couleurs : teinte en degrés (0 = rouge, 120 = jaune, 240 = bleu, tous les 30), la complémentaire est allumée en face ; blanc = part de blanc ajoutée, en % (la couleur s'éclaircit) ; surface = taille de l'aplat (1 = petite touche, 5 = grande surface)."
+    revele: true
+    valeurs:
+      teinte: {min: 0, max: 330, pas: 30, defaut: 0}
+      blanc: {min: 0, max: 80, pas: 10, defaut: 0}
+      surface: {min: 1, max: 5, pas: 1, defaut: 3}
