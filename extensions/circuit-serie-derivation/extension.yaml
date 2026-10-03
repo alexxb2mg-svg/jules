@@ -1,0 +1,19 @@
+id: circuit-serie-derivation
+titre: "Figure : deux lampes en série ou en dérivation"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [circuit-serie-derivation]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « circuits en serie et en derivation ». La figure n'ecrit que la tension U
+# du generateur (choisie) ; U1, U2, I, I1, I2 sont montres par des longueurs et des epaisseurs, sans valeur :
+# elle ne donne pas la reponse d'un exercice.
+discussion:
+  circuit-serie-derivation:
+    quand: "Pour faire voir les lois des circuits : en série (montage = 0), même intensité et U = U1 + U2 ; en dérivation (montage = 1), même tension et I = I1 + I2. tension = U du générateur (V) ; r2 = résistance de la lampe 2 comparée à la lampe 1 (1 = identiques)."
+    valeurs:
+      montage: {min: 0, max: 1, pas: 1, defaut: 0}
+      tension: {min: 0, max: 12, pas: 1, defaut: 6}
+      r2: {min: 0.5, max: 3, pas: 0.5, defaut: 1}

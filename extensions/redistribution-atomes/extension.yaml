@@ -1,0 +1,20 @@
+id: redistribution-atomes
+titre: "Figure : les atomes se réarrangent (combustion du méthane)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [redistribution-atomes]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « transformation chimique, molecules, atomes, ions ».
+# revele: la figure ecrit l'equation ajustee CH4 + 2 O2 -> CO2 + 2 H2O et le compte des atomes, qui est la
+# reponse d'un exercice classique (« ajuster l'equation de la combustion du methane ») : proposee seulement
+# en mode reexplique.
+discussion:
+  redistribution-atomes:
+    quand: "Pour faire voir qu'une transformation chimique réarrange les atomes sans en créer ni en détruire (conservation de la masse), sur la combustion du méthane CH₄ + 2 O₂ → CO₂ + 2 H₂O : x = avancement (0 = réactifs, 1 = produits) ; n = molécules de méthane au départ."
+    revele: true
+    valeurs:
+      x: {min: 0, max: 1, pas: 0.25, defaut: 0}
+      n: {min: 1, max: 3, pas: 1, defaut: 1}

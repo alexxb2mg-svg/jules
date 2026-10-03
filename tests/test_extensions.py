@@ -238,6 +238,10 @@ DECLARATIONS_DU_DEPOT = {
     "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+    "circuit-serie-derivation": (False, {"montage": (0, 1, 1, 0), "tension": (0, 12, 1, 6), "r2": (0.5, 3, 0.5, 1)}),
+    "palier-changement-etat": (False, {"t": (0, 30, 1, 8)}),
+    "redistribution-atomes": (True, {"x": (0, 1, 0.25, 0), "n": (1, 3, 1, 1)}),
+    "rampe-energie": (False, {"x": (0, 1, 0.05, 0.25), "f": (0, 0.5, 0.1, 0)}),
 }
 
 

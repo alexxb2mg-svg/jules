@@ -1,0 +1,17 @@
+id: palier-changement-etat
+titre: "Figure : courbe de chauffage de l'eau et ses paliers"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [palier-changement-etat]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur t de la fiche 3e « etats et changements d'etat ». La figure ecrit l'etat et la temperature
+# de l'eau pure (0 °C a la fusion, 100 °C a l'ebullition) : des faits du cours, pas la reponse d'un exercice
+# chiffre ; la courbe est schematique (durees non proportionnelles aux energies reelles).
+discussion:
+  palier-changement-etat:
+    quand: "Pour faire voir le palier de température d'un corps pur : on chauffe de la glace (eau pure) depuis −10 °C ; t = durée de chauffage en minutes ; palier à 0 °C pendant la fusion (t de 5 à 12), à 100 °C pendant l'ébullition (t de 20 à 30), avec les particules qui se désordonnent puis s'écartent."
+    valeurs:
+      t: {min: 0, max: 30, pas: 1, defaut: 8}
