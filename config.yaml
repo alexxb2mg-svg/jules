@@ -155,6 +155,9 @@ extensions:
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
+  - frise-temps-verbaux
+  - chaine-accords
+  - position-objet
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
