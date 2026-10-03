@@ -41,7 +41,8 @@ blocs:
     titre: "L'œuvre et l'image de l'œuvre"
     contenu: |-
       Une œuvre est un **objet unique**, avec ses dimensions et sa matière.
-      « La Joconde » de Léonard de Vinci (vers 1503-1519) est une peinture à l'huile sur panneau de bois, d'environ 77 × 53 cm, au musée du Louvre.
+      « La Joconde » de Léonard de Vinci (vers 1503-1519) est une peinture à l'huile sur panneau de bois.
+      Elle mesure environ 77 × 53 cm et se trouve au musée du Louvre.
 
       Sa photo dans un livre, sur un écran ou un tee-shirt est une **reproduction**.
       Elle change la taille, la matière, les couleurs et le lieu.
@@ -88,7 +89,7 @@ blocs:
     reponse: 1
     indices:
       - "La colombe ne montre pas la paix : elle l'évoque, par une habitude partagée dans une culture."
-      - "Le mot cherché vient de « symbole »."
+      - "Pense aussi à la balance, qui évoque la justice."
     explication: "C'est une propriété symbolique : par convention, la colombe évoque la paix. Dire « on voit un oiseau » serait iconique ; parler des couleurs ou du coup de pinceau serait plastique."
 
   - type: exercice
@@ -116,7 +117,7 @@ blocs:
     reponse: 0
     indices:
       - "Elle dit seulement ce qu'elle reconnaît dans l'image, sans parler du sens."
-      - "La propriété qui dit « ce qu'on reconnaît » a un nom qui vient de « icône »."
+      - "Relis la liste des quatre propriétés : laquelle dit « ce qu'on reconnaît » ?"
     explication: "Elle décrit une propriété iconique : ce que l'image représente et que l'on reconnaît."
 
   - type: exercice
@@ -126,7 +127,7 @@ blocs:
     forme: qcm
     choix:
       - "Rien ne change : voir la photo revient à voir le tableau."
-      - "L'image est bien plus petite, faite de lumière et non de peinture sur bois, ses couleurs sont modifiées et elle est sortie de son lieu."
+      - "L'image est bien plus petite et faite de lumière, pas de peinture sur bois. Ses couleurs changent et elle est hors de son lieu."
       - "Seul le cadre change, le reste est identique."
     reponse: 1
     indices:
@@ -149,5 +150,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une œuvre et sa
-      reproduction, et entre une œuvre et une image de communication visuelle.
+      Écris deux ou trois phrases, avec tes propres mots. Dis la différence entre une œuvre et sa
+      reproduction. Puis dis la différence entre une œuvre et une image de communication visuelle.

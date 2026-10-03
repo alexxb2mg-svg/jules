@@ -69,7 +69,7 @@ blocs:
       - "vignettes"
     indices:
       - "Ce n'est pas la page entière : la page s'appelle une planche."
-      - "C'est le même mot que pour un carré d'un damier."
+      - "Une planche contient plusieurs de ces images, séparées par des blancs."
     explication: "Chaque image encadrée est une case (ou vignette). La page entière est une planche."
 
   - type: exercice
@@ -99,7 +99,7 @@ blocs:
       - "une ellipse temporelle"
     indices:
       - "Les années entre les deux plans ne sont pas montrées. Le spectateur les devine."
-      - "C'est aussi le nom d'une forme géométrique ovale."
+      - "Relis le bloc « Découper, monter, sauter » : quel mot désigne un moment sauté ?"
     explication: "C'est une ellipse : un moment n'est pas montré, le spectateur devine le temps écoulé."
 
   - type: exercice

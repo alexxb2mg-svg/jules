@@ -90,7 +90,7 @@ blocs:
     reponses_acceptees: ["Want to", "want to."]
     indices:
       - "« Wanna » est une forme collée de deux mots qui veulent dire « vouloir » + la petite marque de l'infinitif."
-      - "Le premier mot est le verbe « vouloir » en anglais. Le second mot a deux lettres."
+      - "Le premier mot est le verbe « vouloir » en anglais. Pour le second, pense à la phrase « I like ___ read »."
     explication: "« Wanna » est la forme orale de « want to » : I want to go home."
 
   - type: exercice

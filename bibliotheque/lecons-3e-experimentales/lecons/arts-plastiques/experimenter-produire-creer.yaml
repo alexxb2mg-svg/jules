@@ -124,7 +124,7 @@ blocs:
       - "un métissage"
     indices:
       - "Ce n'est pas « collage » : le collage est une seule technique."
-      - "Pense à une voiture qui roule à l'essence et à l'électricité. Le nom finit par « -ation »."
+      - "Pense au nom donné à une voiture qui roule à la fois à l'essence et à l'électricité."
     explication: "On parle d'hybridation (ou de métissage) : plusieurs techniques ou champs artistiques sont croisés."
 
   - type: exercice
@@ -157,5 +157,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en deux ou trois phrases, comment tu expérimentes avant de choisir tes
-      moyens, ce que tu fais d'un accident, et pourquoi tu penses à la présentation dès le début.
+      Écris deux ou trois phrases, avec tes mots. Dis comment tu expérimentes avant de choisir tes moyens.
+      Dis ce que tu fais d'un accident. Puis dis pourquoi tu penses à la présentation dès le début.

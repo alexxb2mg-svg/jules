@@ -93,7 +93,7 @@ blocs:
       - "la cochlee"
     indices:
       - "Ce n'est ni le tympan ni les osselets : eux sont dans l'oreille moyenne."
-      - "Son nom vient d'un mot latin qui veut dire « escargot ». Il commence par « coch- »."
+      - "Relis le bloc « Le trajet du son dans l'oreille » : où se trouvent les cellules ciliées ?"
     explication: "C'est la cochlée, dans l'oreille interne. Ses cellules ciliées transforment les vibrations en message nerveux, envoyé au cerveau par le nerf auditif."
 
   - type: exercice

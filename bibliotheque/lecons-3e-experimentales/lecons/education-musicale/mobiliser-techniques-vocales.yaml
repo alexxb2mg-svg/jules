@@ -31,7 +31,7 @@ blocs:
     titre: "S'échauffer et bien chanter"
     contenu: |-
       **Échauffement**, dans l'ordre : détente du corps, posture, souffle, **vocalises** douces, articulation.
-      Les vocalises commencent dans le **médium**, puis vont vers l'aigu et le grave.
+      Les vocalises commencent dans le **médium** (les notes du milieu de la voix), puis vont vers l'aigu et le grave.
       **Justesse** : chanter les bonnes hauteurs. **Articulation** : prononcer clairement les consonnes.
       **Tessiture** : l'étendue des notes qu'une voix chante confortablement.
       Dans un chœur ou un canon : tenir sa partie **et** écouter l'ensemble.
@@ -67,7 +67,7 @@ blocs:
       - "la justesse"
     indices:
       - "Quand quelqu'un chante « faux », quelle qualité lui manque-t-il ?"
-      - "Cherche le nom formé à partir de l'adjectif contraire de « faux »."
+      - "Relis le bloc « S'échauffer et bien chanter »."
     explication: "La justesse, c'est chanter exactement les bonnes hauteurs. Une voix qui n'est pas juste chante « faux »."
 
   - type: exercice
@@ -113,7 +113,7 @@ blocs:
       - "les pupitres"
     indices:
       - "Ce n'est pas le chœur entier, mais chacun de ses sous-groupes."
-      - "C'est aussi le nom du support sur lequel on pose sa partition. Le mot commence par « pup- »."
+      - "Relis le bloc « Le corps instrument, et la voix au service du projet »."
     explication: "Un pupitre est un groupe de chanteurs qui chantent la même partie : pupitre des sopranos, des altos, des ténors, des basses."
 
   - type: exercice

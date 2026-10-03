@@ -34,8 +34,8 @@ blocs:
       | Indice | Exemple |
       |---|---|
       | Mot transparent | *hospital*, *important* |
-      | Fin ou début de mot | *-less* = sans (useless) ; *-ful* = plein de (helpful) ; *un-* = contraire (unhappy) |
-      | Faux ami | *library* = bibliothèque ; *actually* = en fait |
+      | Fin ou début de mot | *-less* = sans (useless) ; *-ful* = plein de (colourful) ; *un-* = contraire (unhappy) |
+      | Faux ami | *journey* = voyage ; *actually* = en fait |
       | Mot de liaison | and (ajout), but / however (opposition), because (cause), so (conséquence), then (après) |
       | Temps du verbe | -ed, went, saw = passé ; will = futur |
 
@@ -67,7 +67,7 @@ blocs:
     reponse: 0
     indices:
       - "« Found » veut dire « trouvé ». Pourquoi donne-t-on un numéro de téléphone ?"
-      - "Quelqu'un a trouvé un objet et veut le rendre à son propriétaire."
+      - "Une recette donne des ingrédients, une météo parle du temps qu'il fera. Est-ce le cas ici ?"
     explication: "C'est une petite annonce : quelqu'un a trouvé (found) un parapluie bleu et donne un numéro pour le rendre."
 
   - type: exercice

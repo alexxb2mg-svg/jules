@@ -94,7 +94,7 @@ blocs:
       - "le fortissimo"
     indices:
       - "Cherche, dans la liste des nuances, celle qui est tout au bout du côté fort."
-      - "On ajoute « -issimo » au mot italien qui veut dire « fort »."
+      - "Relis le premier bloc : que veut dire la terminaison « -issimo » ?"
     explication: "Fortissimo, abrégé ff, veut dire très fort. Forte (f) veut seulement dire fort."
 
   - type: exercice

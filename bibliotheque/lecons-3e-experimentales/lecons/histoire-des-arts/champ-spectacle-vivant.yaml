@@ -117,7 +117,7 @@ blocs:
       - "la didascalie"
     indices:
       - "Ce ne sont pas les répliques : celles-là, on les entend."
-      - "Le mot vient du grec et veut dire « enseignement ». Il commence par « didas »."
+      - "Le mot vient du grec et veut dire « enseignement » : ce sont des consignes de jeu écrites pour les comédiens."
     explication: "Ce sont les didascalies : elles guident le jeu, mais on ne les entend pas sur scène."
 
   - type: exercice
@@ -131,7 +131,7 @@ blocs:
     reponse: 1
     indices:
       - "La partition, c'est la musique écrite. On cherche les paroles."
-      - "Le mot se cache dans « librettiste ». C'est un diminutif de « livre »."
+      - "Relis la partie « Les formes et leur vocabulaire », à la ligne de l'opéra."
     explication: "C'est le livret. La partition contient la musique ; le scénario est le texte d'un film."
 
   - type: exercice

@@ -89,7 +89,7 @@ blocs:
       - "une BD"
     indices:
       - "Tintin d'Hergé en est un exemple célèbre."
-      - "On l'appelle souvent par ses deux initiales."
+      - "Relis le tableau des cinq genres : lequel raconte un récit en cases et en bulles ?"
     explication: "C'est la bande dessinée : elle mêle dessin et récit, avec des cases, des planches et des bulles."
 
   - type: exercice
@@ -103,7 +103,7 @@ blocs:
       - "installations"
     indices:
       - "Ce n'est pas une sculpture : il n'y a pas un objet unique, mais tout un espace."
-      - "Le mot vient du verbe qui veut dire « mettre en place, disposer » des objets dans un lieu."
+      - "Relis le tableau des cinq genres : lequel dispose des objets dans un lieu que l'on parcourt ?"
     explication: "C'est une installation : des objets disposés dans un lieu que le spectateur parcourt."
 
   - type: exercice
@@ -146,7 +146,7 @@ blocs:
       - "Les photos sont l'œuvre principale, l'action ne compte pas."
     reponse: 1
     indices:
-      - "Relis l'erreur fréquente : une œuvre qui disparaît reste une œuvre."
+      - "Une œuvre qui disparaît reste-t-elle une œuvre ? Relis la fin de la partie « Hybride, éphémère »."
       - "Quel mot désigne une œuvre qui ne dure qu'un temps court ?"
     explication: "C'est une œuvre éphémère. Elle n'existe qu'un temps, et c'est voulu. Les photos sont des traces qui permettent de la connaître."
 

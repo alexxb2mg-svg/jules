@@ -88,7 +88,7 @@ blocs:
       - "immigrants"
     indices:
       - "Ce mot ressemble beaucoup au mot français."
-      - "Il commence par « im- », comme « in » (dedans) : on entre dans un pays."
+      - "Relis le bloc « Exil, migration, émigration » : qui arrive pour vivre dans un pays ?"
     explication: "« An immigrant » arrive dans un pays pour y vivre. Celui qui quitte son pays émigre (to emigrate). « A tourist » voyage seulement pour le plaisir."
 
   - type: exercice
@@ -136,8 +136,8 @@ blocs:
 
   - type: question_ouverte
     question: >-
-      Écris trois ou quatre phrases en anglais sur le voyage de tes rêves (your dream trip) : où tu
-      vas, comment tu voyages, et une action pour réduire ton empreinte carbone.
+      Écris trois ou quatre phrases en anglais sur le voyage de tes rêves (your dream trip).
+      Dis où tu vas et comment tu voyages. Donne une action pour réduire ton empreinte carbone.
     indices:
       - "Tu peux commencer par « My dream trip is to… »."
       - "Pour le transport, pense à « by train », « by bike », « on foot ». Puis utilise « to reduce my carbon footprint »."
@@ -148,5 +148,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Avec tes mots, en deux ou trois phrases : explique la différence entre « a trip » et « to
-      travel », entre « to emigrate » et « to immigrate », et dis ce qu'était Ellis Island.
+      Écris deux ou trois phrases avec tes mots. Explique la différence entre « a trip » et
+      « to travel », puis entre « to emigrate » et « to immigrate ». Dis ce qu'était Ellis Island.

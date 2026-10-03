@@ -103,7 +103,7 @@ blocs:
       - "en plongée"
     indices:
       - "Le sujet paraît petit : la caméra le regarde d'en haut ou d'en bas ?"
-      - "Ici, la caméra est au-dessus du sujet et regarde vers le bas, comme un plongeur au bord du plongeoir."
+      - "Ici, la caméra est au-dessus du sujet et regarde vers le bas. Relis le tableau du vocabulaire de l'image."
     explication: "C'est la plongée : la caméra regarde vers le bas et le sujet paraît petit ou écrasé."
 
   - type: exercice

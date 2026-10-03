@@ -85,7 +85,7 @@ blocs:
       - "rayons UV"
     indices:
       - "La crème solaire protège la peau contre ce rayonnement."
-      - "Il se trouve juste après le violet, du côté des rayonnements les plus énergétiques."
+      - "Il est plus énergétique que la lumière visible, mais moins que les rayons X."
     explication: "Ce sont les ultraviolets (UV). Ils sont invisibles et peuvent brûler la peau et abîmer les yeux."
 
   - type: exercice

@@ -70,13 +70,13 @@ blocs:
     reponse: 1
     indices:
       - "Dans chaque œuvre, demande-toi : est-ce que je reconnais quelque chose du monde réel ?"
-      - "Une personne, une mer : on les reconnaît. Reste une seule œuvre."
+      - "Une œuvre abstraite ne laisse rien reconnaître : ni personne, ni lieu, ni objet."
     explication: "La toile aux cercles et aux lignes ne représente rien de reconnaissable : elle est abstraite. Le portrait et le paysage sont figuratifs."
 
   - type: exercice
     enonce: >-
-      Dans « Les Époux Arnolfini » (Jan van Eyck, 1434), un petit miroir rond, au fond de la pièce,
-      montre en petit la scène du tableau. Comment appelle-t-on ce procédé qui place une image dans l'image ?
+      Dans « Les Époux Arnolfini » (Jan van Eyck, 1434), un petit miroir rond est accroché au fond de la pièce.
+      Il montre en petit la scène du tableau. Comment appelle-t-on ce procédé qui place une image dans l'image ?
     forme: reponse_courte
     reponse: "mise en abyme"
     reponses_acceptees:
@@ -89,8 +89,8 @@ blocs:
       - "mise en abime"
       - "la mise en abime"
     indices:
-      - "C'est une expression de trois mots, comme une boîte rangée dans une boîte."
-      - "Elle commence par « mise en… ». Le dernier mot désigne un gouffre sans fond."
+      - "Pense à une boîte rangée dans une boîte, elle-même rangée dans une boîte."
+      - "Relis le bloc « L'œuvre parle d'elle-même » : le procédé y est nommé."
     explication: "C'est une mise en abyme : l'image se retrouve, en petit, à l'intérieur d'elle-même. L'œuvre parle alors de la représentation."
 
   - type: exercice
@@ -154,5 +154,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est une œuvre autonome, et
-      donne un exemple d'œuvre qui parle d'elle-même.
+      Écris deux ou trois phrases, avec tes propres mots. Dis ce qu'est une œuvre autonome.
+      Puis donne un exemple d'œuvre qui parle d'elle-même.

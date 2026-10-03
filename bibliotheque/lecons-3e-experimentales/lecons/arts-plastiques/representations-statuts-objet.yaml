@@ -32,7 +32,7 @@ blocs:
     contenu: |-
       - **Ready-made** : un objet tout fait, choisi par l'artiste et exposé presque tel quel. Marcel Duchamp, Fontaine (1917) : un urinoir retourné, signé « R. Mutt ». Duchamp ne l'a pas fabriqué.
       - **Assemblage** : réunir plusieurs objets. Pablo Picasso, Tête de taureau (1942) : une selle et un guidon de vélo.
-      - **Détournement** : enlever à l'objet sa fonction. Méret Oppenheim, Le Déjeuner en fourrure (1936) : une tasse couverte de fourrure.
+      - **Détournement** : enlever à l'objet sa fonction. Meret Oppenheim, Le Déjeuner en fourrure (1936) : une tasse couverte de fourrure.
       - **Accumulation** : répéter le même objet en grand nombre.
 
   - type: texte
@@ -68,7 +68,7 @@ blocs:
       - "nature-morte"
     indices:
       - "C'est une expression de deux mots, un genre de la peinture."
-      - "Le premier mot désigne aussi les arbres et les plantes ; le second est le contraire de « vivante »."
+      - "Relis le bloc « Représenter ou présenter » : quel genre représente des fruits et de la vaisselle ?"
     explication: "C'est une nature morte : la représentation d'objets inanimés. L'objet est représenté, pas présenté."
 
   - type: exercice

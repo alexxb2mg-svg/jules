@@ -88,7 +88,7 @@ blocs:
       - "hyper réalisme"
     indices:
       - "Pense à Chuck Close et à son grand autoportrait peint d'après une photo."
-      - "Le mot commence par un préfixe qui veut dire « au-delà, très », comme dans « hypermarché »."
+      - "Relis le bloc « Une image n'est pas la chose » : quel courant y est nommé ?"
     explication: "L'hyperréalisme recherche une ressemblance extrême, souvent d'après des photos, comme Chuck Close."
 
   - type: exercice
@@ -118,7 +118,7 @@ blocs:
       - "vraisemblable"
     indices:
       - "Ce n'est pas la ressemblance : il n'y a aucun modèle réel à comparer."
-      - "Le mot contient l'adjectif « vrai » et veut dire « qui semble vrai »."
+      - "Relis le dernier bloc de cours : il parle aussi d'un dragon."
     explication: "C'est la vraisemblance : l'image paraît possible et crédible, sans copier un modèle réel."
 
   - type: exercice
@@ -151,5 +151,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en deux ou trois phrases, ce qu'est un écart avec le réel et à quoi il sert,
-      puis la différence entre ressemblance et vraisemblance.
+      Écris deux ou trois phrases, avec tes mots. Dis ce qu'est un écart avec le réel et à quoi il sert.
+      Puis dis la différence entre ressemblance et vraisemblance.

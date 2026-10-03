@@ -69,7 +69,7 @@ blocs:
       - "patrimoine culturel"
     indices:
       - "C'est un héritage commun, comme un trésor transmis de génération en génération."
-      - "Les Journées européennes de ce mot ouvrent les monuments au public en septembre."
+      - "Relis le bloc « Situer une œuvre : les indices » : quel mot désigne ces œuvres, national et mondial ?"
     explication: "C'est le patrimoine : les œuvres et les biens hérités du passé, conservés et transmis."
 
   - type: exercice
@@ -86,7 +86,7 @@ blocs:
     explication: "C'est une estampe : une image imprimée à partir d'une matrice gravée, ici en bois. Hokusai l'a réalisée vers 1830-1831."
 
   - type: exercice
-    enonce: "Comment appelle-t-on la peinture réalisée sur les parois d'une grotte, comme à Lascaux ? Donne l'adjectif."
+    enonce: "Comment appelle-t-on la peinture réalisée sur les murs d'une grotte, comme à Lascaux ? Donne l'adjectif."
     forme: reponse_courte
     reponse: "pariétale"
     reponses_acceptees:
@@ -99,7 +99,7 @@ blocs:
       - "rupestre"
     indices:
       - "Une paroi, c'est le mur d'une grotte."
-      - "L'adjectif vient du latin « paries », qui veut dire « mur »."
+      - "Relis la ligne sur Lascaux, dans le premier bloc."
     explication: "C'est la peinture pariétale : peinte sur les parois d'une grotte, comme à Lascaux, à la Préhistoire."
 
   - type: exercice

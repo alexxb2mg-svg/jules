@@ -22,7 +22,8 @@ blocs:
     titre: "Trois choses à penser avant de créer"
     contenu: |-
       **Une référence** : un style (baroque, rock, reggae…) ou une œuvre dont on reprend un procédé.
-      Exemple : un **ostinato** et un long **crescendo**, comme dans le Boléro de Ravel (1928).
+      Exemple : le Boléro de Ravel (1928) repose sur un **ostinato** (motif répété sans arrêt).
+      Il forme aussi un long **crescendo** (le volume monte peu à peu).
       **Des contraintes d'interprétation** : qui va jouer ? Combien, avec quelles voix, quels instruments, quel niveau ?
       **Des contraintes de diffusion** : où et comment la pièce sera entendue ?
       Un concert dans le préau, un podcast au casque, la musique d'une vidéo : cela impose une durée, un volume.
@@ -77,7 +78,7 @@ blocs:
       - "ostinati"
     indices:
       - "C'est un mot italien qui veut dire « obstiné »."
-      - "Le mot commence par « osti- »."
+      - "Relis le premier bloc : quel procédé du Boléro de Ravel tourne du début à la fin ?"
     explication: "Un ostinato est une formule répétée sans arrêt. Le Boléro de Ravel en utilise un du début à la fin."
 
   - type: exercice

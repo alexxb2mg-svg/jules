@@ -103,7 +103,7 @@ blocs:
       - "decontextualiser"
     indices:
       - "La chaise a quitté son contexte : la salle de classe."
-      - "Le mot commence par « dé- » et contient le mot « contexte »."
+      - "Cherche le nom de l'action qui retire un objet de son lieu et de son usage habituels."
     explication: "C'est une décontextualisation. Placée ensuite dans le hall comme une œuvre, la chaise est recontextualisée."
 
   - type: exercice

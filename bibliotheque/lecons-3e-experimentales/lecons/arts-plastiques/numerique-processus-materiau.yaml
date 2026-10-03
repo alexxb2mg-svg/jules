@@ -95,7 +95,7 @@ blocs:
       - "algorythme"
     indices:
       - "C'est le cœur du numérique comme processus, chez Vera Molnar par exemple."
-      - "Le mot commence par « algo »."
+      - "On utilise aussi ce mot en mathématiques, pour une suite d'étapes de calcul."
     explication: "Un algorithme est une suite de règles précises suivie par une machine."
 
   - type: exercice
