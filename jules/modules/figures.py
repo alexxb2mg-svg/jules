@@ -325,7 +325,14 @@ class Brique(Module):
             if normalise is not None and gardee:
                 normalise, raison = None, "une seule figure par message"
             if normalise is None:
-                ecartees.append({"gabarit": gabarit, "raison": raison if permis else "mode sans figure"})
+                # `source` : ce que le modele a ecrit (tronque), pour comprendre les rejets en conditions reelles
+                ecartees.append(
+                    {
+                        "gabarit": gabarit,
+                        "raison": raison if permis else "mode sans figure",
+                        "source": m.group("json").strip()[:200],
+                    }
+                )
                 return ""
             gardee = True
             return f"```figure\n{normalise}\n```"

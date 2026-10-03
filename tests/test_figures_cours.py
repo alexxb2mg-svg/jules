@@ -72,7 +72,9 @@ def _conv_lecon(tuteur):
 
 
 def _ecartees(tuteur) -> list[dict]:
-    return [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+    return [
+        {k: v for k, v in e["donnees"].items() if k != "source"} for e in tuteur.stockage.evenements("figure_ecartee")
+    ]
 
 
 def test_cours_lecon_thales_schema_et_gabarits_non_revele(tuteur_thales):

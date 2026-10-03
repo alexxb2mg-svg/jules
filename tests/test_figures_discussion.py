@@ -38,10 +38,15 @@ def _bloc(json_brut: str) -> str:
     return f"Regarde la droite :\n\n```figure\n{json_brut}\n```\n\nOù coupe-t-elle l'axe vertical ?"
 
 
+def _sans_source(donnees: dict) -> dict:
+    """L'evenement porte aussi la `source` ecrite par le modele (diagnostic) : les tests comparent le reste."""
+    return {k: v for k, v in donnees.items() if k != "source"}
+
+
 def _filtrer(tuteur, texte: str, mode: str = "aide-devoirs") -> tuple[str, list[dict]]:
     conv = tuteur.stockage.creer_conversation(mode)
     sortie = tuteur.module("figures").filtrer_reponse(conv, texte, lambda: "relance interdite")
-    return sortie, [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+    return sortie, [_sans_source(e["donnees"]) for e in tuteur.stockage.evenements("figure_ecartee")]
 
 
 def test_bloc_valide_normalise_de_bout_en_bout(tuteur):
@@ -437,7 +442,7 @@ def _conv_notion(tuteur, mode: str = "aide-devoirs", notion: str | None = PYTHAG
 
 def _filtrer_conv(tuteur, conv, texte: str) -> tuple[str, list[dict]]:
     sortie = tuteur.module("figures").filtrer_reponse(conv, texte, lambda: "relance interdite")
-    return sortie, [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+    return sortie, [_sans_source(e["donnees"]) for e in tuteur.stockage.evenements("figure_ecartee")]
 
 
 def test_schema_de_la_notion_valide_normalise(tuteur):
