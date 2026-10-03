@@ -121,6 +121,11 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - cycle-lune                # CM1 sciences : phases de la Lune
+  - ombre-portee              # CM1 sciences : ombres et matériaux
+  - balance-plateaux          # CM1 sciences : masse et volume
+  - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
+  - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

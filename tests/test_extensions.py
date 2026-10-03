@@ -238,6 +238,11 @@ DECLARATIONS_DU_DEPOT = {
     "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+    "cycle-lune": (False, {"jour": (0, 29, 1, 7)}),
+    "ombre-portee": (False, {"distance": (0.5, 2.5, 0.25, 1.5), "hauteur": (5, 20, 5, 10), "matiere": (1, 3, 1, 3)}),
+    "balance-plateaux": (False, {"masse": (0, 1000, 50, 300), "taille": (1, 5, 1, 4)}),
+    "effort-frequences": (False, {"activite": (0, 100, 10, 0), "entraine": (0, 1, 1, 0)}),
+    "capteur-seuil": (False, {"mesure": (0, 1023, 1, 600), "seuil": (0, 1023, 1, 300)}),
 }
 
 

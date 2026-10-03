@@ -1,0 +1,16 @@
+id: balance-plateaux
+titre: "Figure : balance à plateaux (comparer des masses)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [balance-plateaux]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « masse et volume ». La masse de l'objet est le curseur lui-meme : revele false.
+discussion:
+  balance-plateaux:
+    quand: "Pour faire voir qu'une balance à plateaux compare des masses : objet à gauche (masse = sa masse en g), masse marquée de 500 g à droite ; le côté le plus lourd descend. taille = taille de l'objet (1 petit à 5 très gros) : elle ne change pas la masse, la balance ne bouge pas."
+    valeurs:
+      masse: {min: 0, max: 1000, pas: 50, defaut: 300}
+      taille: {min: 1, max: 5, pas: 1, defaut: 4}
