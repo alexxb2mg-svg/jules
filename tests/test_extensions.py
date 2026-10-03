@@ -238,6 +238,10 @@ DECLARATIONS_DU_DEPOT = {
     "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+    "chronophotographie": (False, {"v": (1, 10, 1, 5), "e": (-1, 1, 1, 0), "r": (0, 1, 1, 0)}),
+    "poids-astres": (False, {"m": (1, 10, 1, 5), "astre": (1, 4, 1, 3)}),
+    "onde-sonore": (False, {"hauteur": (1, 13, 1, 6), "intensite": (1, 5, 1, 3), "duree": (1, 4, 1, 4), "milieu": (0, 2, 1, 1)}),
+    "jauge-decibels": (False, {"niveau": (20, 130, 5, 60), "duree": (0.5, 8, 0.5, 1)}),
 }
 
 
