@@ -76,7 +76,7 @@ blocs:
       - "à l'unisson"
     indices:
       - "Ils chantent comme s'ils n'étaient qu'une seule voix."
-      - "Le mot vient du latin et veut dire « un seul son ». Il commence par « uni- »."
+      - "Relis le bloc « Une seule ligne ou une mélodie soutenue » : ce cas reste une monodie."
     explication: "Ils chantent à l'unisson. Il n'y a qu'une seule mélodie : c'est une monodie, pas une polyphonie."
 
   - type: exercice
@@ -106,7 +106,7 @@ blocs:
     reponse: 2
     indices:
       - "Les voix entrent-elles l'une après l'autre ? Chantent-elles les mêmes notes ?"
-      - "Le préfixe « homo- » veut dire « le même ». Qu'est-ce qui est le même ici ?"
+      - "Ici, le rythme est le même pour toutes les voix, mais pas les notes. Quel procédé correspond ?"
     explication: "Même rythme, notes différentes : c'est l'homorythmie. À l'unisson, les notes seraient les mêmes ; dans un canon, les entrées seraient décalées."
 
   - type: exercice
@@ -137,7 +137,7 @@ blocs:
     reponse: 0
     indices:
       - "La formule ne change jamais, alors que le reste change."
-      - "Le mot italien veut dire « obstiné »."
+      - "Ce procédé peut servir d'accompagnement : un motif qui revient en boucle."
     explication: "C'est un ostinato : un motif répété sans arrêt sous des mélodies qui changent. Le Canon en ré de Pachelbel repose sur une basse de ce type."
 
   - type: question_ouverte

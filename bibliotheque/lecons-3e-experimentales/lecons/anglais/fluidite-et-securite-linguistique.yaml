@@ -74,7 +74,7 @@ blocs:
     enonce: "Écris la forme contractée de « do not », comme à l'oral."
     forme: reponse_courte
     reponse: "don't"
-    reponses_acceptees: ["don’t", "dont", "don t"]
+    reponses_acceptees: ["don’t", "don t"]
     indices:
       - "Les deux mots se collent en un seul."
       - "L'apostrophe remplace la lettre « o » de « not »."
@@ -100,7 +100,7 @@ blocs:
     reponses_acceptees: ["Say"]
     indices:
       - "Le verbe manquant veut dire « dire »."
-      - "C'est un verbe très court, de trois lettres, qui commence par « s »."
+      - "Relis la stratégie « Je cherche le mot » dans le tableau de la leçon."
     explication: "On dit : « How do you say 'parapluie' in English? » C'est une phrase utile pour ne pas bloquer."
 
   - type: exercice

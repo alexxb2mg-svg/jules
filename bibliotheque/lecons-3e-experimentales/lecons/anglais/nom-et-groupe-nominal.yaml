@@ -31,13 +31,16 @@ blocs:
   - type: texte
     titre: "Pronoms sujets, compléments et réfléchis"
     contenu: |-
-      | Sujet | Complément | Réfléchi |
+      | Singulier : sujet | Complément | Réfléchi |
       |---|---|---|
       | I | me | myself |
       | you | you | yourself |
       | he | him | himself |
       | she | her | herself |
       | it | it | itself |
+
+      | Pluriel : sujet | Complément | Réfléchi |
+      |---|---|---|
       | we | us | ourselves |
       | you | you | yourselves |
       | they | them | themselves |

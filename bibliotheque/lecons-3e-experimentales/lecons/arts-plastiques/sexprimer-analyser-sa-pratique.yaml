@@ -64,7 +64,7 @@ blocs:
       - "une verbalisation"
     indices:
       - "Le mot est de la même famille que « verbe » : on met en mots."
-      - "Il se termine par « -isation »."
+      - "Relis le premier bloc : il donne le nom de ce moment de la classe."
     explication: "C'est la verbalisation : on décrit, on analyse, on interprète et on donne un avis argumenté."
 
   - type: exercice
@@ -97,7 +97,7 @@ blocs:
       - "une contre-plongée"
     indices:
       - "Le point de vue d'en haut a un nom qui vient du plongeon. On cherche son contraire."
-      - "C'est un mot composé qui commence par « contre- »."
+      - "Relis le bloc « Les mots justes »."
     explication: "C'est la contre-plongée : on regarde d'en bas, le sujet paraît grand et puissant. Son contraire est la plongée."
 
   - type: exercice

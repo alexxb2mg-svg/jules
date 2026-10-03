@@ -79,7 +79,7 @@ blocs:
       - "les pixels"
     indices:
       - "C'est le plus petit élément d'une image matricielle, comme une petite pièce dans une mosaïque."
-      - "Le mot a cinq lettres. Il vient de l'anglais et commence par « pix- »."
+      - "On compte ces petits carrés pour dire si un écran est précis, par exemple 1920 × 1080."
     explication: "C'est un pixel : le plus petit élément d'une image matricielle. Une image de 1920 × 1080 a 1920 pixels de large et 1080 de haut."
 
   - type: exercice
@@ -155,5 +155,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes propres mots et en deux ou trois phrases, ce que le numérique change pour
+      Écris deux ou trois phrases, avec tes propres mots. Dis ce que le numérique change pour
       concevoir, produire et diffuser une œuvre.

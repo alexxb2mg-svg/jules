@@ -105,7 +105,7 @@ blocs:
     reponse: 1
     indices:
       - "Ce n'est ni un tableau ni un monument."
-      - "En français, on dit « bande dessinée ». Le premier mot anglais fait penser à « comique »."
+      - "Relis le bloc « Les langages artistiques » : cherche la bande dessinée."
     explication: "« A comic strip » est une bande dessinée courte. « A painting » est un tableau, « a poem » un poème, « a landmark » un monument célèbre."
 
   - type: exercice
@@ -119,7 +119,7 @@ blocs:
       - "Stars & Stripes"
     indices:
       - "Le nom décrit simplement ce qu'on voit sur ce drapeau."
-      - "Traduis « étoiles » et « bandes » en anglais, puis relie les deux mots avec « and »."
+      - "Relis le bloc « Lire un document et ses codes » : le nom cite deux éléments du drapeau."
     explication: "Le drapeau américain s'appelle « the Stars and Stripes » : les étoiles et les bandes. Le drapeau britannique, lui, s'appelle l'Union Jack."
 
   - type: exercice
@@ -154,6 +154,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Avec tes mots, en deux ou trois phrases : cite trois types de documents ou de médias en
-      anglais, deux langages artistiques, et un code culturel américain que tu dois connaître pour
-      bien lire un document.
+      Écris deux ou trois phrases avec tes mots. Cite trois types de documents ou de médias en anglais.
+      Cite deux langages artistiques. Donne un code culturel américain utile pour bien lire un document.

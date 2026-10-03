@@ -93,13 +93,13 @@ blocs:
       - "carnet de bord"
     indices:
       - "Son nom dit ce que l'on y fait : on y garde ce que l'on cherche."
-      - "Il se compose de trois mots : « carnet de … »."
+      - "Relis l'étape 2 du bloc « Les étapes d'un projet »."
     explication: "Le carnet de recherches garde la trace des croquis, des essais et des idées abandonnées. Il aide à expliquer ses choix."
 
   - type: exercice
     enonce: >-
-      Quel mot désigne le modèle réduit qui permet de tester un projet en volume ou dans un lieu avant de
-      le réaliser en grand ?
+      On fabrique parfois un modèle réduit pour tester un projet avant de le réaliser en grand.
+      Quel mot désigne ce modèle réduit ?
     forme: reponse_courte
     reponse: "maquette"
     reponses_acceptees:
@@ -109,7 +109,7 @@ blocs:
       - "maquettes"
     indices:
       - "Ce n'est pas un croquis : c'est un objet en volume."
-      - "Les architectes en font pour montrer un bâtiment en petit. Le mot commence par « ma »."
+      - "Les architectes en font pour montrer un bâtiment en petit."
     explication: "La maquette teste en petit un volume ou une installation, comme celles de Christo et Jeanne-Claude."
 
   - type: exercice
@@ -156,5 +156,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en deux ou trois phrases, les grandes étapes d'un projet artistique et ce que
-      tu fais quand ta réalisation ne correspond pas à ton intention.
+      Écris deux ou trois phrases, avec tes mots. Donne les grandes étapes d'un projet artistique.
+      Puis dis ce que tu fais quand ta réalisation ne correspond pas à ton intention.

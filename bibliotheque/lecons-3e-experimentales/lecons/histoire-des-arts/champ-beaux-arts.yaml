@@ -90,7 +90,7 @@ blocs:
       - "en ronde-bosse"
     indices:
       - "Ce n'est pas un bas-relief : la sculpture n'est attachée à aucun fond."
-      - "Le nom a deux mots reliés par un tiret. Le premier évoque une forme circulaire."
+      - "Relis la partie « Sculpture, gravure, architecture » : quel mot désigne une sculpture qu'on peut contourner ?"
     explication: "C'est une ronde-bosse : on peut tourner autour. Un bas-relief, lui, reste attaché à un fond."
 
   - type: exercice
@@ -104,7 +104,7 @@ blocs:
       - "fresques"
     indices:
       - "Le support est un mur ou un plafond, pas une toile."
-      - "Le mot vient de l'italien « fresco », qui veut dire « frais »."
+      - "Relis le tableau « Peinture et dessin » : quelle technique se fait sur un enduit encore frais ?"
     explication: "C'est une fresque : la peinture est posée sur un enduit frais ; les couleurs pénètrent l'enduit en séchant."
 
   - type: exercice

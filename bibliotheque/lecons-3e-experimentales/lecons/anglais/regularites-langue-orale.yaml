@@ -16,7 +16,7 @@ blocs:
     items:
       - "Prononcer correctement les terminaisons -ed et -s."
       - "Repérer l'accent de mot, les lettres muettes et les homophones."
-      - "Savoir que l'anglais se prononce différemment selon les pays, sans faute."
+      - "Savoir que l'anglais se prononce différemment selon les pays, et que ce n'est pas une faute."
 
   - type: texte
     titre: "La terminaison -ed (prétérit des verbes réguliers)"
@@ -140,5 +140,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en trois phrases, comment tu choisis la prononciation de -ed et de -s,
-      à quoi sert l'accent de mot, et pourquoi deux accents différents peuvent être corrects.
+      Écris trois phrases avec tes mots. 1) Comment tu choisis la prononciation de -ed et de -s.
+      2) À quoi sert l'accent de mot. 3) Pourquoi deux accents différents peuvent être corrects.

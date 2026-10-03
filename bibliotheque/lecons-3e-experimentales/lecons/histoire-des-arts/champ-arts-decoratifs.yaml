@@ -96,7 +96,7 @@ blocs:
       - "le style Art nouveau"
     indices:
       - "Deux styles marquent le début du XXe siècle. Celui des années 1920 est géométrique. On cherche l'autre, plus ancien."
-      - "Son nom a deux mots : « Art » puis un adjectif qui est le contraire de « ancien »."
+      - "Relis le tableau « Deux styles du début du XXe siècle » : lequel a des formes courbes, inspirées des plantes ?"
     explication: "C'est l'Art nouveau. Vers 1900, il s'inspire des tiges, des feuilles et des fleurs. L'Art déco, plus tard, préfère les formes géométriques."
 
   - type: exercice
@@ -110,7 +110,7 @@ blocs:
       - "le design industriel"
     indices:
       - "Ce n'est pas un métier d'art : l'objet n'est pas fait à la main en pièce unique."
-      - "C'est un mot anglais de six lettres, qui veut dire « dessin, conception »."
+      - "Relis la deuxième partie de la leçon : quel mot désigne la conception d'objets pour l'industrie ?"
     explication: "C'est le design : on conçoit des objets fabriqués en série, utiles, pratiques et beaux, comme la chaise n° 14 de Thonet."
 
   - type: exercice

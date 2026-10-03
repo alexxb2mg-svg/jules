@@ -68,8 +68,8 @@ blocs:
     reponse: "Dublin"
     reponses_acceptees: ["dublin"]
     indices:
-      - "Regarde le tableau des capitales dans la leçon."
-      - "C'est la ville où siège le gouvernement irlandais. Son nom commence par un D."
+      - "Regarde la liste des capitales dans la leçon."
+      - "C'est la ville où siège le gouvernement irlandais. C'est aussi la plus grande ville du pays."
     explication: "La capitale de l'Irlande est Dublin."
 
   - type: exercice
@@ -90,7 +90,7 @@ blocs:
     enonce: "Complète le nom de la fête nationale américaine, le 4 juillet : « ___ Day ». Écris le mot manquant en anglais."
     forme: reponse_courte
     reponse: "Independence"
-    reponses_acceptees: ["independence", "Independence Day", "independance"]
+    reponses_acceptees: ["independence", "Independence Day"]
     indices:
       - "Le 4 juillet 1776, les États-Unis déclarent qu'ils ne dépendent plus du Royaume-Uni."
       - "Cherche le mot anglais pour dire « ne plus dépendre de quelqu'un ». Il ressemble beaucoup au français."

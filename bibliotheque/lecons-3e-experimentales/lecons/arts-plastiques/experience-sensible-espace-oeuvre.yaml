@@ -51,8 +51,8 @@ blocs:
 
   - type: exemple
     enonce: >-
-      Production fictive : dans une salle obscure, des élèves tendent du sol au plafond des centaines
-      de fils de laine blanche, éclairés par une lampe noire. On doit se frayer un chemin entre eux.
+      Production fictive : dans une salle obscure, des élèves tendent des centaines de fils de laine
+      blanche, du sol au plafond. Une lampe à lumière noire les éclaire. On doit se frayer un chemin entre eux.
       Analyse l'expérience du spectateur.
     etapes:
       - "L'espace n'est pas représenté mais construit : le spectateur entre dans l'œuvre."
@@ -75,8 +75,8 @@ blocs:
 
   - type: exercice
     enonce: >-
-      Comment appelle-t-on une œuvre qui occupe et transforme tout un espace, dans lequel le
-      spectateur peut entrer et se déplacer, comme « The Weather Project » d'Olafur Eliasson ?
+      Certaines œuvres occupent et transforment tout un espace. Le spectateur peut y entrer et s'y déplacer,
+      comme dans « The Weather Project » d'Olafur Eliasson. Comment appelle-t-on ce type d'œuvre ?
     forme: reponse_courte
     reponse: "installation"
     reponses_acceptees:
@@ -87,8 +87,8 @@ blocs:
       - "une installation immersive"
       - "installations"
     indices:
-      - "Le mot vient d'un verbe qui veut dire « mettre en place, disposer dans un lieu »."
-      - "Le mot se termine par « -ation »."
+      - "Ce n'est pas un tableau ni une statue : on y entre avec tout son corps, comme dans une pièce."
+      - "C'est le même type d'œuvre que les salles de miroirs de Kusama ou les Pénétrables de Soto."
     explication: "C'est une installation : l'œuvre occupe un espace où le spectateur entre. Quand elle l'entoure de tous côtés, on dit qu'elle est immersive."
 
   - type: exercice
@@ -125,7 +125,7 @@ blocs:
   - type: exercice
     enonce: >-
       Sujet de type brevet. Dans « The Weather Project » (Olafur Eliasson, 2003), des visiteurs
-      restent longtemps allongés au sol et se regardent dans le miroir du plafond. Quelle phrase
+      restent longtemps allongés au sol. Ils se regardent dans le miroir du plafond. Quelle phrase
       analyse le mieux leur expérience ?
     forme: qcm
     choix:
@@ -153,5 +153,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre un espace
-      représenté et un espace construit, et le rôle du corps du spectateur dans une installation.
+      Écris deux ou trois phrases, avec tes propres mots. Dis la différence entre un espace représenté
+      et un espace construit. Puis dis le rôle du corps du spectateur dans une installation.

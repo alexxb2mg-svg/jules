@@ -66,7 +66,7 @@ blocs:
       - "cartels"
     indices:
       - "Ce n'est ni le socle ni la vitrine : c'est un petit texte."
-      - "Le mot commence par « car » et compte six lettres."
+      - "Dans un musée, tu le lis pour connaître l'auteur et le titre de l'œuvre."
     explication: "C'est le cartel : il informe le visiteur sur l'œuvre."
 
   - type: exercice
@@ -107,7 +107,7 @@ blocs:
       - "In situ"
     indices:
       - "Les colonnes de Buren pourraient-elles aller dans un autre jardin sans rien perdre ?"
-      - "L'expression latine veut dire « sur place » ; le second mot ressemble à « site »."
+      - "L'expression latine veut dire « sur place »."
     explication: "In situ : l'œuvre est pensée pour un lieu précis, comme Les Deux Plateaux de Buren au Palais-Royal."
 
   - type: exercice

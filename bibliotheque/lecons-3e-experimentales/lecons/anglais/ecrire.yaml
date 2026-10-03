@@ -83,7 +83,7 @@ blocs:
     reponses_acceptees: []
     indices:
       - "Le froid est-il la cause ou la conséquence ? Mettre son manteau, c'est quoi ?"
-      - "Le mot cherché veut dire « donc ». Il a deux lettres."
+      - "Le mot cherché veut dire « donc ». Relis la liste des mots de liaison."
     explication: "« So » (donc) introduit la conséquence : il faisait froid, donc j'ai mis mon manteau."
 
   - type: exercice

@@ -79,7 +79,7 @@ blocs:
       - "les pigments"
     indices:
       - "Ce n'est pas ce qui colle la poudre : on cherche la poudre elle-même."
-      - "Il peut être d'origine minérale, végétale, animale ou chimique. Le mot commence par « pig »."
+      - "Il peut être d'origine minérale, végétale, animale ou chimique."
     explication: "Le pigment est la poudre colorée. Le liant la fixe, le support la reçoit."
 
   - type: exercice
@@ -91,7 +91,7 @@ blocs:
       - "le vert"
       - "du vert"
     indices:
-      - "C'est la couleur des feuilles d'arbre au printemps."
+      - "Relis la ligne des mélanges dans le bloc « Mélanger les couleurs »."
       - "C'est aussi la complémentaire du magenta."
     explication: "Cyan + jaune = vert. Le vert est la complémentaire du magenta, la troisième primaire."
 
@@ -153,5 +153,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en deux ou trois phrases, de quoi est faite une peinture, et pourquoi une
-      même couleur peut produire des sensations différentes selon sa matière et sa quantité.
+      Écris deux ou trois phrases, avec tes mots. Dis de quoi est faite une peinture.
+      Puis explique pourquoi une même couleur peut produire des sensations différentes selon sa matière et sa quantité.

@@ -41,7 +41,7 @@ blocs:
       Une même œuvre peut être jouée de plusieurs façons.
       **Ce qui reste pareil** : la mélodie, le texte, la forme.
       **Ce qui peut changer** : le tempo, le timbre, les nuances, le style.
-      Exemple : Glenn Gould enregistre l'Aria des Variations Goldberg de Bach en 1955, puis en 1981, beaucoup plus lentement.
+      Exemple : Glenn Gould enregistre l'Aria des Variations Goldberg de Bach en 1955, puis en 1981 : deux interprétations différentes.
       Au brevet : ce que j'entends · où et quand · ressemblances et différences · effet produit.
 
   - type: exemple
@@ -64,7 +64,7 @@ blocs:
       - "le timbre"
     indices:
       - "Ce n'est ni la hauteur (même note) ni l'intensité (même volume)."
-      - "On l'appelle aussi la « couleur » du son. C'est aussi le nom d'une vignette collée sur une lettre."
+      - "On l'appelle aussi la « couleur » du son. Relis le premier bloc."
     explication: "C'est le timbre : la couleur du son, qui permet de reconnaître un instrument ou une voix."
 
   - type: exercice
@@ -109,7 +109,7 @@ blocs:
       - "monodique"
     indices:
       - "Combien de mélodies entend-on en même temps dans un chant grégorien ?"
-      - "Le mot commence par un préfixe grec qui veut dire « un seul » : « mono- »."
+      - "Relis le repère « Moyen Âge » dans le bloc « Situer une œuvre »."
     explication: "Une seule mélodie chantée sans accompagnement s'appelle une monodie. Plusieurs mélodies superposées, c'est une polyphonie."
 
   - type: exercice

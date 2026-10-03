@@ -65,8 +65,8 @@ blocs:
       - "le dripping"
       - "driping"
     indices:
-      - "C'est un mot anglais. Il vient du verbe « to drip », qui veut dire « goutter »."
-      - "Ajoute « -ing » au verbe, en doublant la dernière consonne."
+      - "Relis le bloc « Des artistes qui peignent avec le corps »."
+      - "C'est un mot anglais, formé sur un verbe qui veut dire « goutter »."
     explication: "C'est le dripping : Pollock fait couler et projette la peinture en tournant autour de la toile posée au sol."
 
   - type: exercice
@@ -95,7 +95,7 @@ blocs:
       - "happenings"
     indices:
       - "Ce n'est pas la performance : dans la performance, c'est surtout l'artiste qui agit."
-      - "C'est un mot anglais. Il vient du verbe « to happen », qui veut dire « se passer »."
+      - "C'est un mot anglais. Relis le bloc « Quand l'action devient l'œuvre »."
     explication: "C'est un happening : un événement en partie improvisé où le public participe, comme ceux d'Allan Kaprow."
 
   - type: exercice
