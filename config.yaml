@@ -121,6 +121,9 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
+  - frise-pulsations
+  - cercle-couleurs
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
