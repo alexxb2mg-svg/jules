@@ -31,7 +31,6 @@ from __future__ import annotations
 import json
 import re
 import subprocess
-import sys
 import threading
 import time
 from pathlib import Path
@@ -311,11 +310,7 @@ def test_rien_n_est_coupe_ni_superpose(serveur, tmp_path, cas, largeur):
     url = f"{base}/essai-outils" if cas == "outils" else f"{base}/essai-page/{cas}{CAS_PAGES[cas][1]}"
     r = _resultat(url, tmp_path / "profil", largeur)
     assert "erreur" not in r, r.get("erreur")
-    if sys.platform == "win32":
-        # Chrome plein : --hide-scrollbars sans effet (-16 px) et largeur minimum ~500 px
-        assert abs(r["largeur"] - max(largeur, 500)) <= 20
-    else:
-        assert r["largeur"] == largeur
+    assert r["largeur"] == largeur
     attendus = {f"data-adapt-{i}" for i in MAXIMA} if condition == "maxima" else set()
     for doc in r["resultats"]:
         assert doc["textes"] > 5, (doc["doc"], "page vide : la sonde n'a rien mesure")
