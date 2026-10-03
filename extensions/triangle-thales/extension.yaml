@@ -6,3 +6,12 @@ auteurs: ["projet-jules"]
 fournit:
   figures: [triangle-thales]
 permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur t de la fiche 3e « Thales, triangles semblables, trigonometrie » (0,1 a 0,9 : M et N jamais
+# confondus avec A, B ou C ; les fiches de proportionnalite vont de 0 a 1, figure degeneree aux bornes).
+# Aucune longueur ecrite : la figure ne donne pas la reponse (revele absent = false).
+discussion:
+  triangle-thales:
+    quand: "Pour faire voir la configuration de Thalès : (MN) parallèle à (BC), M sur [AB] et N sur [AC], avec t = AM/AB = AN/AC = MN/BC (le même rapport pour les trois côtés)."
+    valeurs:
+      t: {min: 0.1, max: 0.9, pas: 0.1, defaut: 0.5}

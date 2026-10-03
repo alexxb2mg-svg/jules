@@ -6,3 +6,11 @@ auteurs: ["projet-jules"]
 fournit:
   figures: [probabilites-frequences]
 permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur n des fiches 3e de probabilites (defaut 50 : fiche « deux epreuves » ; « experiences
+# simples » part de 20). Simulation pile ou face fixe, probabilite 0,5 : ne donne pas la reponse d'un exercice.
+discussion:
+  probabilites-frequences:
+    quand: "Pour faire voir que la fréquence observée de « pile » se rapproche de la probabilité 0,5 quand le nombre n de lancers augmente (loi des grands nombres, estimer une probabilité par l'expérience)."
+    valeurs:
+      n: {min: 10, max: 500, pas: 10, defaut: 50}

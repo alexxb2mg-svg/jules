@@ -58,7 +58,9 @@ CLES_FOURNIT = frozenset(
 # Permissions connues sous `permissions:` ; toute cle absente vaut False.
 CLES_PERMISSIONS = frozenset({"reseau", "appel_ia", "ecriture_dossier_eleve", "notification_parent"})
 # Figures proposees dans la discussion (cle de premier niveau `discussion:`, voir docs/EXTENSIONS.md).
-CLES_DISCUSSION = frozenset({"quand", "valeurs"})
+# `revele` (facultatif, booleen, defaut false) : la figure montre la reponse (solutions placees, longueur
+# ecrite) ; jules/modules/figures.py ne la propose alors que dans les modes `modes_revele`.
+CLES_DISCUSSION = frozenset({"quand", "valeurs", "revele"})
 CLES_BORNES = ("min", "max", "pas", "defaut")
 LIMITE_QUAND = 300  # caracteres : une phrase pour le modele, pas un cours
 
@@ -158,7 +160,7 @@ def _lire_discussion(brut: Any, identifiant: str, figures: list[str]) -> dict[st
         if gabarit not in figures:
             raise ErreurExtension(f"{ou} : ce gabarit doit figurer dans fournit.figures")
         if not isinstance(declaration, dict) or set(declaration) - CLES_DISCUSSION:
-            raise ErreurExtension(f"{ou} : un objet {{quand, valeurs}} est attendu")
+            raise ErreurExtension(f"{ou} : un objet {{quand, valeurs}} est attendu (revele facultatif)")
         quand = str(declaration.get("quand") or "").strip()
         if not quand or len(quand) > LIMITE_QUAND:
             raise ErreurExtension(f"{ou} : 'quand' doit etre une phrase de 1 a {LIMITE_QUAND} caracteres")
@@ -179,7 +181,10 @@ def _lire_discussion(brut: Any, identifiant: str, figures: list[str]) -> dict[st
             if erreur := erreur_bornes(mini, maxi, pas, defaut, "defaut"):
                 raise ErreurExtension(f"{sous_ou} : {erreur}")
             bornes_lues[nom] = {"min": mini, "max": maxi, "pas": pas, "defaut": defaut}
-        resultat[gabarit] = {"quand": quand, "valeurs": bornes_lues}
+        revele = declaration.get("revele", False)
+        if not isinstance(revele, bool):
+            raise ErreurExtension(f"{ou} : 'revele' doit etre true ou false")
+        resultat[gabarit] = {"quand": quand, "valeurs": bornes_lues, "revele": revele}
     return resultat
 
 

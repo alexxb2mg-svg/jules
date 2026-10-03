@@ -88,6 +88,25 @@ le `pas`, valeurs absentes = `defaut`) est récrit en JSON compact ; tout autre 
 bruit (une seule figure par message) et l'événement `figure_ecartee` est journalisé avec sa raison.
 Aucun SVG ni code ne vient du modèle : seulement un id de la liste blanche et des nombres bornés.
 
+**Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
+(`equation-solutions` place −√a et √a, `triangle-rectangle` écrit « AB ≈ … »). Leur déclaration porte
+`revele: true` (facultatif, booléen, défaut `false`) :
+
+```yaml
+discussion:
+  equation-solutions:
+    quand: "Pour faire voir combien de solutions a l'équation x² = a..."
+    revele: true                     # la figure montre la réponse
+    valeurs:
+      a: {min: -25, max: 81, pas: 1, defaut: 49}
+```
+
+Une telle figure n'est proposée au modèle **et** acceptée dans sa réponse que si le mode de la
+conversation figure dans `reglages.modes_revele` du module `figures` (`config.yaml`, défaut
+`[reexplique]`) ; dans les autres modes autorisés (`aide-devoirs`), elle est absente de la liste donnée
+au modèle et un bloc qui la cite est retiré (`figure_ecartee`, raison « gabarit non autorise »). Ne
+jamais mettre `aide-devoirs` dans `modes_revele` : la figure ferait l'exercice à la place de l'élève.
+
 **Rappels (bulles au survol).** Sur toutes les pages, ce qui est abrégé ou symbolique montre ce
 qu'il veut dire dans une petite bulle (souris, toucher, clavier). Le cœur,
 `jules/web/static/symboles.js`, ne connaît aucune règle de matière : il parcourt le texte affiché,
@@ -206,7 +225,8 @@ rien fait, ou plusieurs fois).
 - une valeur de `fournit.*` n'est pas une liste de textes, ou une valeur de `permissions.*`
   n'est pas un booléen ;
 - elle fournit des figures sans `gabarit.js`, ou avec un motif interdit dans ce fichier ;
-- sa clé `discussion` cite un gabarit absent de `fournit.figures`, n'a pas de phrase `quand`, ou
+- sa clé `discussion` cite un gabarit absent de `fournit.figures`, n'a pas de phrase `quand`, porte
+  un `revele` qui n'est pas un booléen, ou
   déclare une valeur sans exactement `min`, `max`, `pas`, `defaut` numériques avec `pas > 0` et
   `min ≤ defaut ≤ max` (mêmes règles que les curseurs d'une fiche visuelle) ;
 - elle fournit un module dont le fichier `<module>.py` est absent, ou dont l'id n'est pas de la forme

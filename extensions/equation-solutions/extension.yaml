@@ -6,3 +6,12 @@ auteurs: ["projet-jules"]
 fournit:
   figures: [equation-solutions]
 permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur a de la fiche 3e « equations du premier degre et equations produits » (droite graduee -9..9).
+# revele: la figure place les solutions -√a et √a : proposee seulement en mode reexplique.
+discussion:
+  equation-solutions:
+    quand: "Pour faire voir combien de solutions a l'équation x² = a sur une droite graduée : deux solutions opposées si a > 0, une seule (0) si a = 0, aucune si a < 0."
+    revele: true
+    valeurs:
+      a: {min: -25, max: 81, pas: 1, defaut: 49}

@@ -197,8 +197,14 @@ def test_discussion_valide_exposee(tmp_path):
     _avec_discussion(tmp_path, DISCUSSION_VALIDE)
     bornes = {"min": -3.0, "max": 3.0, "pas": 0.5, "defaut": 1.0}
     assert figures_pour_discussion(charger_extensions(tmp_path, ["pack"])) == {
-        "ma-figure": {"quand": "Pour voir.", "valeurs": {"a": bornes}}
+        "ma-figure": {"quand": "Pour voir.", "valeurs": {"a": bornes}, "revele": False}
     }
+
+
+def test_discussion_revele_lu(tmp_path):
+    """`revele: true` est lu tel quel ; absent, il vaut false (test precedent)."""
+    _avec_discussion(tmp_path, DISCUSSION_VALIDE.replace("    valeurs:", "    revele: true\n    valeurs:"))
+    assert figures_pour_discussion(charger_extensions(tmp_path, ["pack"]))["ma-figure"]["revele"] is True
 
 
 @pytest.mark.parametrize(
@@ -215,12 +221,46 @@ def test_discussion_valide_exposee(tmp_path):
         (DISCUSSION_VALIDE.replace("      a:", "      A b:"), "nom invalide"),
         ("  ma-figure: {quand: x, valeurs: {}}\n", "au moins une valeur"),
         ("  ma-figure: {quand: x, valeurs: {a: {min: 0, max: 1, pas: 1, defaut: 0}}, svg: x}\n", "{quand, valeurs}"),
+        (DISCUSSION_VALIDE.replace("    valeurs:", "    revele: oui-non\n    valeurs:"), "'revele'"),
     ],
 )
 def test_discussion_invalide_refusee(tmp_path, declaration, message):
     dossier = _avec_discussion(tmp_path, declaration)
     with pytest.raises(ErreurExtension, match=re.escape(message)):
         lire_extension(dossier)
+
+
+# Figures declarees pour la discussion par les extensions du depot : id -> (revele attendu, bornes reprises
+# des curseurs des fiches visuelles 3e, voir le commentaire de chaque extension.yaml).
+DECLARATIONS_DU_DEPOT = {
+    "droite-affine": (False, {"a": (-3, 3, 0.5, 1), "b": (-4, 4, 1, 0)}),
+    "triangle-thales": (False, {"t": (0.1, 0.9, 0.1, 0.5)}),
+    "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
+    "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
+    "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+}
+
+
+def test_toutes_les_declarations_du_depot_se_chargent():
+    """Chaque extension du depot qui a une cle `discussion` passe le controle, et les bornes sont celles prevues."""
+    racine = Path(__file__).resolve().parents[1] / "extensions"
+    ids = [d.name for d in sorted(racine.iterdir()) if (d / "extension.yaml").is_file()]
+    declarations = figures_pour_discussion(charger_extensions(racine, ids))
+    assert set(declarations) == set(DECLARATIONS_DU_DEPOT)
+    for gabarit, (revele, valeurs) in DECLARATIONS_DU_DEPOT.items():
+        assert declarations[gabarit]["revele"] is revele, gabarit
+        lues = {
+            nom: tuple(b[c] for c in ("min", "max", "pas", "defaut"))
+            for nom, b in declarations[gabarit]["valeurs"].items()
+        }
+        assert lues == valeurs, gabarit
+
+
+@pytest.mark.parametrize("gabarit", sorted(DECLARATIONS_DU_DEPOT))
+def test_valeurs_declarees_lues_par_le_gabarit(gabarit):
+    """Les noms de valeurs declares sont ceux que gabarit.js lit vraiment (`valeurs.<nom>`), ni plus ni moins."""
+    code = (Path(__file__).resolve().parents[1] / "extensions" / gabarit / "gabarit.js").read_text(encoding="utf-8")
+    assert set(re.findall(r"valeurs\.(\w+)", code)) == set(DECLARATIONS_DU_DEPOT[gabarit][1])
 
 
 def test_droite_affine_du_depot_declaree_pour_la_discussion():

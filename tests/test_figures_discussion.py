@@ -6,6 +6,7 @@ selon la liste blanche et les bornes declarees dans extensions/droite-affine/ext
 
 from __future__ import annotations
 
+import json
 import socket
 import threading
 import time
@@ -16,8 +17,10 @@ import yaml
 
 from jules.acces import empreinte
 from jules.config import depuis_dict
+from jules.extensions import figures_pour_discussion
 from jules.llm.factice import Brique as Factice
 from jules.modules.base import Module
+from jules.modules.figures import normaliser
 from jules.moteur import Tuteur
 from jules.stockage import Message
 from jules.web.app import creer_app
@@ -124,6 +127,89 @@ def test_aucun_module_ne_filtre_la_reponse_apres_figures(tuteur):
     ids = [m.id for m in tuteur.modules]
     apres = tuteur.modules[ids.index("figures") + 1 :]
     assert [m.id for m in apres if type(m).filtrer_reponse is not Module.filtrer_reponse] == []
+
+
+# --- lot 2 : les cinq gabarits declares, drapeau `revele` ------------------------------------------------
+
+GABARITS_DECLARES = [
+    "droite-affine",
+    "triangle-thales",
+    "triangle-rectangle",
+    "equation-solutions",
+    "probabilites-frequences",
+]
+REVELENT = {"triangle-rectangle", "equation-solutions"}
+
+
+def _bornes(tuteur, gabarit: str) -> dict[str, dict[str, float]]:
+    return figures_pour_discussion(tuteur.extensions)[gabarit]["valeurs"]
+
+
+def _json(gabarit: str, valeurs: dict, compact: bool = False) -> str:
+    objet = {"gabarit": gabarit, "valeurs": valeurs}
+    return json.dumps(objet, sort_keys=True, separators=(",", ":")) if compact else json.dumps(objet)
+
+
+@pytest.mark.parametrize("gabarit", GABARITS_DECLARES)
+def test_bornes_de_chaque_gabarit(tuteur, gabarit):
+    """En reexplique (tout est permis) : min et max acceptes et normalises ; min - pas et une valeur entre
+    deux crans refuses, valeur par valeur."""
+    bornes = _bornes(tuteur, gabarit)
+    autorises = figures_pour_discussion(tuteur.extensions)
+    for cle in ("min", "max"):
+        valeurs = {nom: b[cle] for nom, b in bornes.items()}
+        normalise, lu, raison = normaliser(_json(gabarit, valeurs), autorises)
+        assert (lu, raison) == (gabarit, ""), cle
+        attendu = {nom: int(v) if v == int(v) else v for nom, v in valeurs.items()}
+        assert normalise == _json(gabarit, attendu, compact=True), cle
+        sortie, ecartees = _filtrer(tuteur, _bloc(_json(gabarit, valeurs)), "reexplique")
+        assert f"```figure\n{normalise}\n```" in sortie and ecartees == [], cle
+    for nom, b in bornes.items():
+        _, _, raison = normaliser(_json(gabarit, {nom: b["min"] - b["pas"]}), autorises)
+        assert raison == f"{nom} hors bornes"
+        _, _, raison = normaliser(_json(gabarit, {nom: b["min"] + b["pas"] / 2}), autorises)
+        assert raison == f"{nom} hors pas"
+        sortie, ecartees = _filtrer(tuteur, _bloc(_json(gabarit, {nom: b["max"] + b["pas"]})), "reexplique")
+        assert "```figure" not in sortie and ecartees[0]["raison"] == f"{nom} hors bornes"  # le plus recent d'abord
+
+
+def test_valeurs_decimales_normalisees_sans_bruit_flottant(tuteur):
+    sortie, _ = _filtrer(tuteur, _bloc('{"gabarit": "triangle-thales", "valeurs": {"t": 0.7}}'))
+    assert '{"gabarit":"triangle-thales","valeurs":{"t":0.7}}' in sortie
+
+
+@pytest.mark.parametrize("gabarit", GABARITS_DECLARES)
+def test_drapeau_revele_selon_le_mode(tuteur, gabarit):
+    """Une figure qui montre la reponse : proposee et acceptee en reexplique, absente et retiree en aide-devoirs."""
+    figures = tuteur.module("figures")
+    bloc = _bloc(_json(gabarit, {}))
+    for mode, permis in (("reexplique", True), ("aide-devoirs", gabarit not in REVELENT)):
+        conv = tuteur.stockage.creer_conversation(mode)
+        assert (gabarit in figures.autorises(conv)) is permis, mode
+        assert (f"- {gabarit} :" in figures.contribution(conv)) is permis, mode
+        sortie, ecartees = _filtrer(tuteur, bloc, mode)
+        assert ("```figure" in sortie) is permis, mode
+        if not permis:
+            assert ecartees[0] == {"gabarit": gabarit, "raison": "gabarit non autorise"}
+
+
+def test_modes_revele_reglable(tuteur):
+    figures = tuteur.module("figures")
+    assert figures.modes_revele == ("reexplique",)  # config.yaml du depot
+    figures.reglages["modes_revele"] = ["aide-devoirs"]
+    assert "equation-solutions" in figures.autorises(tuteur.stockage.creer_conversation("aide-devoirs"))
+    assert "equation-solutions" not in figures.autorises(tuteur.stockage.creer_conversation("reexplique"))
+
+
+@pytest.mark.parametrize("mode", ["aide-devoirs", "reexplique"])
+def test_contribution_et_prompt_complet_sans_double_accolade(tuteur, mode):
+    """Voir test_prompt_complet_sans_balise_restante (tests/test_texte.py) : « }} » ne doit jamais arriver au modele."""
+    conv = tuteur.stockage.creer_conversation(mode)
+    contribution = tuteur.module("figures").contribution(conv)
+    assert contribution and "}}" not in contribution and "{{" not in contribution
+    systeme = tuteur.systeme(conv)
+    assert "}}" not in systeme and "{{" not in systeme
+    assert ("equation-solutions" in contribution) is (mode == "reexplique")
 
 
 # --- rendu dans la bulle, dans un vrai Chromium (tests/cdp.py) ; ignore sans Chromium ou sans npm run build ---

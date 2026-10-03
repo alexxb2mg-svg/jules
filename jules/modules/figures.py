@@ -28,6 +28,9 @@ from jules.modules.base import Module
 from jules.stockage import Conversation
 
 MODES_PAR_DEFAUT = ("aide-devoirs", "reexplique")
+# Gabarits `revele: true` (la figure montre la reponse : solutions placees, longueur ecrite) : proposes et
+# acceptes seulement dans ces modes. Jamais 'aide-devoirs' : la figure ferait l'exercice a la place de l'eleve.
+MODES_REVELE_PAR_DEFAUT = ("reexplique",)
 
 # Bloc de code cloture (``` ou ~~~, 3 espaces d'indentation au plus) de langage `figure`. Sans cloture,
 # le bloc va jusqu'a la fin du message, comme le fait le rendu markdown.
@@ -96,9 +99,21 @@ class Brique(Module):
     def modes(self) -> tuple[str, ...]:
         return tuple(self.reglages.get("modes") or MODES_PAR_DEFAUT)
 
+    @property
+    def modes_revele(self) -> tuple[str, ...]:
+        return tuple(self.reglages.get("modes_revele") or MODES_REVELE_PAR_DEFAUT)
+
     def autorises(self, conv: Conversation) -> dict[str, dict[str, Any]]:
-        """Gabarits que Jules peut montrer dans cette conversation (aucun hors des modes autorises)."""
-        return figures_pour_discussion(self.tuteur.extensions) if conv.mode in self.modes else {}
+        """Gabarits que Jules peut montrer dans cette conversation : aucun hors des modes autorises, et
+        ceux qui revelent la reponse seulement dans les modes `modes_revele` (proposes ET acceptes)."""
+        if conv.mode not in self.modes:
+            return {}
+        revele_permis = conv.mode in self.modes_revele
+        return {
+            gabarit: declaration
+            for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
+            if revele_permis or not declaration.get("revele")
+        }
 
     def contribution(self, conv: Conversation) -> str | None:
         autorises = self.autorises(conv)
