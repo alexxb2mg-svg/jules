@@ -137,6 +137,12 @@ parcourir pour trouver des fiches v2 servables sans IA, par ordre de priorité. 
 événement `suivi` est écrit (même forme que le module `cours`) : l'épreuve sans aide et le bilan du soir
 voient la notion travaillée comme n'importe quelle autre.
 
+Réglage `schema_en_exercice` (défaut `true`) : chaque exercice présenté porte un champ `schema` (id de la
+notion si sa fiche visuelle a un schéma, sinon `null`) et l'écran d'entraînement affiche ce schéma
+au-dessus de l'énoncé (retour d'Ellie : une figure aide quand la représentation mentale est difficile).
+Jamais sur un exercice dont la réponse est écrite dans le schéma, ni sur un exercice « ordre » : voir
+`docs/EXTENSIONS.md`, « Schéma au-dessus de l'énoncé ».
+
 ## Le vérificateur
 
 ```

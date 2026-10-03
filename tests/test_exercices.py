@@ -6,6 +6,7 @@ import yaml
 from fastapi.testclient import TestClient
 
 from jules.fiches.schema import empreinte
+from jules.modules.exercices import schema_revele
 from jules.web.app import creer_app
 
 NOTION_MATHS = "nombres-premiers-decomposition"
@@ -385,3 +386,56 @@ def test_pourquoi_seulement_apres_une_reponse_juste(tuteur):
         assert faux["pourquoi"] is None
         juste = _repondre(client, conv_id, "non")
         assert juste["verdict"] == "juste" and juste["pourquoi"]
+
+
+# --- schema de la fiche visuelle au-dessus de l'enonce (retour d'Ellie, reglage schema_en_exercice) ---------
+
+
+def _par_id(tuteur, notion: str) -> dict:
+    return {e["id"]: e for e in tuteur.module("exercices").fiches[notion]["exercices"]}
+
+
+def test_schema_annonce_sur_chaque_exercice_sauf_s_il_donne_la_reponse(tuteur):
+    module = tuteur.module("exercices")
+    assert module.reglages.get("schema_en_exercice") is True  # config.yaml du depot
+    exercices = _par_id(tuteur, NOTION_HISTOIRE)
+    # La frise du schema ecrit 1914, « genocide », les deux camps : ces exercices-la ne l'affichent pas.
+    vus = {i: module._vue(NOTION_HISTOIRE, e)["schema"] for i, e in exercices.items()}
+    assert vus == {
+        "annee-debut": None,  # reponse 1914 ecrite sur la frise
+        "auteur-genocide": NOTION_HISTOIRE,  # « gouvernement ottoman » n'est pas dans le schema
+        "camps": None,  # association : les camps sont ecrits sur le schema
+        "chronologie": None,  # ordre : une frise donne l'ordre
+        "mot-genocide": None,  # texte_court : « génocide » est ecrit sur le schema
+        "consequence-russie": NOTION_HISTOIRE,
+        "developpement-guerre-totale": NOTION_HISTOIRE,
+    }
+    assert module._vue(NOTION_MATHS, _par_id(tuteur, NOTION_MATHS)["un-est-il-premier"])["schema"] is None  # sans fiche
+
+
+def test_schema_suit_la_serie_commencer_suivant_etat(tuteur):
+    module = tuteur.module("exercices")
+    lancee = module.commencer(NOTION_HISTOIRE)
+    sans_schema = {"annee-debut", "camps", "chronologie", "mot-genocide"}
+    attendu = None if lancee["exercice"]["id"] in sans_schema else NOTION_HISTOIRE
+    assert lancee["exercice"]["schema"] == attendu
+    client = TestClient(creer_app(tuteur))
+    etat = client.get(f"/api/eleve/exercices/{lancee['conversation']}/etat").json()
+    assert etat["exercice"]["schema"] == attendu
+    fiche = client.get(f"/api/eleve/fiches_visuelles/notions/{NOTION_HISTOIRE}").json()
+    assert any(b["type"] == "schema" and b["svg"].startswith("<svg") for b in fiche["blocs"])  # SVG pour le front
+    assert "schema" not in tuteur.stockage.conversation(lancee["conversation"]).messages[-1].texte
+
+
+def test_schema_revele_regles():
+    nombre = {"type": "nombre", "reponse": {"valeur": 2.5}}
+    assert schema_revele("Longueur : 2,5 cm", nombre) and not schema_revele("Longueur : 12,5 cm", nombre)
+    choix = {"type": "choix", "reponse": {"options": [{"id": "a", "texte": "Le Rhône"}], "bonnes": ["a"]}}
+    assert schema_revele("fleuves : le rhone, la Loire", choix) and not schema_revele("la Loire", choix)
+    assert not schema_revele("", {"type": "ordre", "reponse": {"elements": []}})
+
+
+def test_schema_en_exercice_desactivable(tuteur):
+    module = tuteur.module("exercices")
+    module.reglages["schema_en_exercice"] = False
+    assert module._vue(NOTION_HISTOIRE, _par_id(tuteur, NOTION_HISTOIRE)["consequence-russie"])["schema"] is None
