@@ -235,7 +235,11 @@ def test_hote_dans_un_vrai_navigateur(serveur, tmp_path):
     options += ["--virtual-time-budget=5000", "--dump-dom"]
     sortie = subprocess.run(  # noqa: S603 - navigateur local, arguments fixes
         [navigateur, *options, f"{url}/essai-hote"],
-        capture_output=True, text=True, encoding="utf-8", timeout=120, check=True
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        timeout=120,
+        check=True,
     ).stdout
     trouve = re.search(r'data-resultat="([^"]*)"', sortie)
     assert trouve, sortie[-2000:]
