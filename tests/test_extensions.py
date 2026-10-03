@@ -264,6 +264,10 @@ DECLARATIONS_DU_DEPOT = {
     "horloge": (False, {"h": (0, 23, 1, 9), "m": (0, 55, 5, 15), "duree": (0, 180, 5, 0)}),
     "urne-tirage": (False, {"rouges": (0, 10, 1, 3)}),
     "paquets-proportionnels": (False, {"a": (1, 10, 1, 4), "b": (50, 500, 50, 250), "fois": (0.25, 4, 0.25, 1)}),
+    "circuit-serie-derivation": (False, {"montage": (0, 1, 1, 0), "tension": (0, 12, 1, 6), "r2": (0.5, 3, 0.5, 1)}),
+    "palier-changement-etat": (False, {"t": (0, 30, 1, 8)}),
+    "redistribution-atomes": (True, {"x": (0, 1, 0.25, 0), "n": (1, 3, 1, 1)}),
+    "rampe-energie": (False, {"x": (0, 1, 0.05, 0.25), "f": (0, 0.5, 0.1, 0)}),
 }
 
 
