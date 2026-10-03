@@ -75,6 +75,9 @@ modules:
       delai_jours: 3   # age minimum d'une notion comprise pour etre reprise
       fenetre_jours: 30
       notions_max: 3
+  - id: annales        # entrainement sur les sujets du brevet (et a terme du bac)
+    reglages:
+      bibliotheques: []  # dossiers de bibliotheque/ contenant des annales structurees (a remplir)
   - id: sources        # l'eleve apporte son cours (photos, PDF, texte) -> fiche perso (docs/SOURCES-CONTRAT.md)
     reglages:
       generations_par_jour: 10
