@@ -6,10 +6,13 @@ selon la liste blanche et les bornes declarees dans extensions/droite-affine/ext
 
 from __future__ import annotations
 
+import base64
 import json
+import os
 import socket
 import threading
 import time
+from pathlib import Path
 
 import pytest
 import uvicorn
@@ -243,8 +246,7 @@ MESURE = """(() => { const s = document.querySelector('.bulle-jules svg[viewBox=
   fond: getComputedStyle(s.parentElement).backgroundColor}; })()"""
 
 
-@pytest.fixture
-def serveur(projet, brut_config):
+def _demarrer(projet, brut_config):
     if not INTERFACE.is_file():
         pytest.skip("interface React non construite (npm run build dans front/)")
     brut_config["acces"] = {"code_eleve": empreinte(CODE), "code_parent": empreinte("parent67")}
@@ -265,6 +267,29 @@ def serveur(projet, brut_config):
     tuteur.fermer()
 
 
+@pytest.fixture
+def serveur(projet, brut_config):
+    yield from _demarrer(projet, brut_config)
+
+
+def _ouvrir_conversation(page, url: str, titre: str, sombre: bool, nb_bulles: int) -> None:
+    """390x844 mobile, theme du systeme clair ou sombre, code eleve, puis #/discuter -> la conversation `titre`."""
+    page.commande("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=2, mobile=True)
+    theme = "dark" if sombre else "light"
+    page.commande("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": theme}])
+    page.commande("Page.navigate", url=url + "/static/favicon.ico")
+    time.sleep(0.5)
+    page.evaluer(
+        "fetch('/api/session', {method: 'POST', headers: {'Content-Type': 'application/json'},"
+        f" body: JSON.stringify({{code: '{CODE}'}})}}).then((r) => r.status)"
+    )
+    page.commande("Page.navigate", url=url + "/app#/discuter")
+    bouton = f"[...document.querySelectorAll('aside button')].find((b) => b.innerText.includes('{titre}'))"
+    page.attendre(f"!!{bouton}", delai=20)
+    page.evaluer(f"{bouton}.click()")
+    page.attendre(f"document.querySelectorAll('.bulle-jules').length === {nb_bulles}", delai=10)
+
+
 @pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
 def test_figure_dessinee_dans_la_bulle_a_390px(serveur, tmp_path_factory, sombre):
     url, tuteur = serveur
@@ -274,20 +299,7 @@ def test_figure_dessinee_dans_la_bulle_a_390px(serveur, tmp_path_factory, sombre
     tuteur.stockage.ajouter_message(conv.id, Message(role="bot", texte=f"Regarde :\n\n{NORMALISE}\n\nEt b ?"))
     tuteur.stockage.ajouter_message(conv.id, Message(role="bot", texte='Dessin : <svg><circle r="5"/></svg>'))
     with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-figure"), (390, 844)) as page:
-        page.commande("Emulation.setDeviceMetricsOverride", width=390, height=844, deviceScaleFactor=2, mobile=True)
-        theme = "dark" if sombre else "light"
-        page.commande("Emulation.setEmulatedMedia", features=[{"name": "prefers-color-scheme", "value": theme}])
-        page.commande("Page.navigate", url=url + "/static/favicon.ico")
-        time.sleep(0.5)
-        page.evaluer(
-            "fetch('/api/session', {method: 'POST', headers: {'Content-Type': 'application/json'},"
-            f" body: JSON.stringify({{code: '{CODE}'}})}}).then((r) => r.status)"
-        )
-        page.commande("Page.navigate", url=url + "/app#/discuter")
-        bouton = "[...document.querySelectorAll('aside button')].find((b) => b.innerText.includes('Droite de test'))"
-        page.attendre(f"!!{bouton}", delai=20)
-        page.evaluer(f"{bouton}.click()")
-        page.attendre("document.querySelectorAll('.bulle-jules').length === 2", delai=10)
+        _ouvrir_conversation(page, url, "Droite de test", sombre, nb_bulles=2)
         mesure = page.attendre(f"(() => {{ const m = {MESURE}; return m && m.lignes ? m : null; }})()", delai=10)
         assert mesure["lignes"] >= 1
         assert 0 < mesure["svg"] <= mesure["bulle"]
@@ -296,3 +308,114 @@ def test_figure_dessinee_dans_la_bulle_a_390px(serveur, tmp_path_factory, sombre
         derniere = "[...document.querySelectorAll('.bulle-jules')].at(-1)"
         assert page.evaluer(f"{derniere}.querySelector('svg')") is None  # un <svg> ecrit reste du texte
         assert "<svg>" in page.evaluer(f"{derniere}.innerText")
+
+
+# --- lot 3 : figure dynamique dans la bulle (curseurs sous la figure, meme composant Graphe que les fiches) ---
+
+
+def test_infos_interface_donne_les_bornes_des_curseurs(tuteur):
+    """Le front recoit les bornes de chaque valeur (cle `discussion` des extensions), rien d'autre."""
+    figures = tuteur.infos_interface()["figures"]
+    assert figures["droite-affine"] == {
+        "a": {"min": -3, "max": 3, "pas": 0.5, "defaut": 1},
+        "b": {"min": -4, "max": 4, "pas": 1, "defaut": 0},
+    }
+    assert set(figures) == set(figures_pour_discussion(tuteur.extensions))
+
+
+# Droite tracee par le gabarit droite-affine (trait epais) et curseurs de la bulle.
+DROITE = "document.querySelector('[data-figure-bulle] svg line[stroke-width=\"3\"]')"
+CURSEURS = "[...document.querySelectorAll('[data-figure-bulle] input[type=range]')]"
+ETAT = f"""(() => {{ const c = {CURSEURS}; const d = {DROITE}; const g = document.querySelector('[data-figure-bulle]');
+  const bulle = g.closest('.bulle-jules').getBoundingClientRect(), r = g.getBoundingClientRect();
+  return {{y2: d && d.getAttribute('y2'), textes: c.map((i) => i.getAttribute('aria-valuetext')),
+  svg: g.querySelector('svg').getBoundingClientRect().width, bulle: bulle.width,
+  noms: c.map((i) => i.labels[0] && i.labels[0].firstElementChild.firstElementChild.innerText),
+  hauteurs: c.map((i) => i.getBoundingClientRect().height),
+  dedans: r.left >= bulle.left - 0.5 && r.right <= bulle.right + 0.5,
+  debord: document.scrollingElement.scrollWidth - innerWidth}}; }})()"""
+
+
+def _capture(page, chemin: Path) -> None:
+    donnees = base64.b64decode(page.commande("Page.captureScreenshot", format="png")["data"])
+    chemin.write_bytes(donnees)
+    if dossier := os.environ.get("JULES_CAPTURES"):  # preuve visuelle a regarder (lot 3 de la spec)
+        Path(dossier).mkdir(parents=True, exist_ok=True)
+        (Path(dossier) / chemin.name).write_bytes(donnees)
+
+
+@pytest.mark.parametrize("sombre", [False, True], ids=["clair", "sombre"])
+def test_curseurs_sous_la_figure_de_la_bulle_a_390px(serveur, tmp_path_factory, sombre):
+    url, tuteur = serveur
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    tuteur.stockage.renommer(conv.id, "Droite mobile")
+    tuteur.stockage.ajouter_message(conv.id, Message(role="eleve", texte="Comment on trace f(x) = 2x + 1 ?"))
+    tuteur.stockage.ajouter_message(conv.id, Message(role="bot", texte=f"Regarde :\n\n{NORMALISE}\n\nEt b ?"))
+    dossier = tmp_path_factory.mktemp("captures-lot3")
+    theme = "sombre" if sombre else "clair"
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-curseurs"), (390, 844)) as page:
+        _ouvrir_conversation(page, url, "Droite mobile", sombre, nb_bulles=1)
+        page.attendre(f"{CURSEURS}.length === 2 && !!{DROITE}", delai=10)
+        avant = page.evaluer(ETAT)
+        # depart = valeurs de Jules (a = 2, b = 1), lues « a = 2 » ; libelles a et b ; y2 = 170 - (2*6 + 1)*30
+        assert avant["textes"] == ["a = 2", "b = 1"] and avant["noms"] == ["a", "b"]
+        assert avant["y2"] == "-220"
+        assert avant["dedans"] and avant["debord"] <= 0  # dans la bulle, rien ne deborde a 390 px
+        assert avant["svg"] >= 240 and avant["bulle"] >= 280, avant  # la bulle s'elargit pour la figure (~304 px)
+        assert min(avant["hauteurs"]) >= 24  # cible tactile
+        page.evaluer("document.querySelector('[data-figure-bulle]').scrollIntoView({block: 'center'})")
+        time.sleep(0.4)
+        _capture(page, dossier / f"lot3-{theme}-avant.png")
+
+        # Clavier : focus sur le curseur a, fleche droite -> a = 2,5 (pas 0,5)
+        page.evaluer(f"{CURSEURS}[0].focus()")
+        page.touche("ArrowRight", "ArrowRight", 39)
+        apres_clavier = page.attendre(f"(() => {{ const e = {ETAT}; return e.y2 !== '-220' ? e : null; }})()", delai=5)
+        assert apres_clavier["textes"][0] == "a = 2,5" and apres_clavier["y2"] == "-310"
+
+        # Souris : vrai clic pres du debut du curseur a -> pente negative, la droite change encore
+        boite = page.evaluer(
+            f"(() => {{ const r = {CURSEURS}[0].getBoundingClientRect(); return [r.left, r.top, r.height]; }})()"
+        )
+        page.cliquer(boite[0] + 6, boite[1] + boite[2] / 2)
+        apres = page.attendre(f"(() => {{ const e = {ETAT}; return e.y2 !== '-310' ? e : null; }})()", delai=5)
+        a = float(apres["textes"][0].split("= ")[1].replace(",", "."))
+        assert a < 0 and apres["textes"][1] == "b = 1"
+        assert float(apres["y2"]) == 170 - (a * 6 + 1) * 30
+        time.sleep(0.4)
+        _capture(page, dossier / f"lot3-{theme}-apres.png")
+
+
+@pytest.fixture
+def serveur_fiches(projet, brut_config):
+    """Comme `serveur`, avec les fiches visuelles 3e (bloc graphe de fonctions-lineaires-affines)."""
+    brut_config["modules"] = [
+        *(brut_config.get("modules") or []),
+        {"id": "fiches_visuelles", "reglages": {"bibliotheques": ["fiches-visuelles-3e-experimentales"]}},
+    ]
+    yield from _demarrer(projet, brut_config)
+
+
+GRILLE = """(() => { const g = document.querySelector('[data-graphe]'); if (!g) return null;
+  const f = g.querySelector('svg').getBoundingClientRect();
+  const c = g.querySelector('input[type=range]').getBoundingClientRect();
+  return {cote_a_cote: c.left >= f.right, dessous: c.top >= f.bottom}; })()"""
+
+
+@pytest.mark.parametrize(("largeur", "cote_a_cote"), [(1280, True), (390, False)], ids=["ordinateur", "telephone"])
+def test_graphe_de_fiche_garde_sa_grille_avec_la_requete_de_conteneur(
+    serveur_fiches, tmp_path_factory, largeur, cote_a_cote
+):
+    """Graphe passe de `md:` (ecran) a `@container` (son bloc) : la fiche garde figure et curseurs cote a cote sur
+    ordinateur, empiles sur telephone."""
+    url, _ = serveur_fiches
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-grille"), (largeur, 900)) as page:
+        page.commande("Page.navigate", url=url + "/static/favicon.ico")
+        time.sleep(0.5)
+        page.evaluer(
+            "fetch('/api/session', {method: 'POST', headers: {'Content-Type': 'application/json'},"
+            f" body: JSON.stringify({{code: '{CODE}'}})}}).then((r) => r.status)"
+        )
+        page.commande("Page.navigate", url=url + "/app#/fiche/fonctions-lineaires-affines")
+        grille = page.attendre(GRILLE, delai=20)
+        assert grille == {"cote_a_cote": cote_a_cote, "dessous": not cote_a_cote}

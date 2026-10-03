@@ -130,6 +130,20 @@ class Brique(Module):
             if revele_permis or not declaration.get("revele")
         }
 
+    def infos_interface(self) -> dict[str, Any]:
+        """Bornes des curseurs sous une figure de la bulle (lot 3) : {gabarit -> {nom -> {min, max, pas,
+        defaut}}}, pour tous les gabarits declares. Le serveur a deja choisi quelles figures un message
+        peut porter (filtrer_reponse) ; ici l'eleve fait seulement bouger, dans les bornes, celle qu'il a."""
+        return {
+            "figures": {
+                gabarit: {
+                    nom: {cle: bornes[cle] for cle in ("min", "max", "pas", "defaut")}
+                    for nom, bornes in declaration["valeurs"].items()
+                }
+                for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
+            }
+        }
+
     def contribution(self, conv: Conversation) -> str | None:
         autorises = self.autorises(conv)
         if not autorises:

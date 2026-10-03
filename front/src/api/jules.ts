@@ -27,7 +27,10 @@ export type Infos = {
   retours?: { types: string[]; testeurs: string[] }
   /** Module 'outils' : catalogue des outils isolés disponibles (calculatrice…). */
   outils?: { catalogue: { id: string; titre?: string; evenements?: string[] }[] }
+  /** Module 'figures' : bornes des curseurs d'une figure de la discussion, par gabarit puis par valeur. */
+  figures?: BornesFigures
 }
+export type BornesFigures = Record<string, Record<string, { min: number; max: number; pas: number; defaut: number }>>
 
 export const session = {
   etat: () => api<EtatSession>("/api/session"),
