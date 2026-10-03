@@ -1,0 +1,18 @@
+id: paquets-proportionnels
+titre: "Figure : paquets liés de deux grandeurs proportionnelles"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [paquets-proportionnels]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « identifier et resoudre un probleme de proportionnalite ». revele false : les
+# totaux ne sont pas ecrits, seulement le contenu d'un paquet (donnee) et le nombre de paquets (en mots).
+discussion:
+  paquets-proportionnels:
+    quand: "Pour faire voir, au CM1, que deux grandeurs proportionnelles se multiplient ensemble : en haut des paquets de a (par exemple 4 personnes), en bas autant de paquets de b (par exemple 250 g de farine) ; fois est le nombre de paquets (0,25 = un quart de paquet) : on multiplie, on n'ajoute pas."
+    valeurs:
+      a: {min: 1, max: 10, pas: 1, defaut: 4}
+      b: {min: 50, max: 500, pas: 50, defaut: 250}
+      fois: {min: 0.25, max: 4, pas: 0.25, defaut: 1}

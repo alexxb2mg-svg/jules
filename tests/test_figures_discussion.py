@@ -146,8 +146,13 @@ GABARITS_DECLARES = [
     "triangle-rectangle",
     "equation-solutions",
     "probabilites-frequences",
+    "engrenages",
+    "horloge",
+    "urne-tirage",
+    "paquets-proportionnels",
 ]
-REVELENT = {"triangle-rectangle", "equation-solutions"}
+# triangle-rectangle n'ecrit plus « AB ≈ » (carres sur les cotes, version 2.0) : seule equation-solutions revele.
+REVELENT = {"equation-solutions"}
 
 
 def _bornes(tuteur, gabarit: str) -> dict[str, dict[str, float]]:

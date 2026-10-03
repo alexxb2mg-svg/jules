@@ -1,0 +1,18 @@
+id: horloge
+titre: "Figure : horloge à aiguilles et durée coloriée"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [horloge]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « temps et durees ». revele false : l'heure n'est jamais ecrite en chiffres
+# (seulement « le matin », « l'apres-midi »...) et la duree est une part de cadran coloriee, sans nombre.
+discussion:
+  horloge:
+    quand: "Pour faire voir comment se lit une horloge à aiguilles (h = heure de départ de 0 à 23, m = minutes) : la petite aiguille avance un peu quand la grande tourne ; duree (en minutes) colorie en vert la part du cadran parcourue par la grande aiguille, avec un anneau vert par heure entière."
+    valeurs:
+      h: {min: 0, max: 23, pas: 1, defaut: 9}
+      m: {min: 0, max: 55, pas: 5, defaut: 15}
+      duree: {min: 0, max: 180, pas: 5, defaut: 0}

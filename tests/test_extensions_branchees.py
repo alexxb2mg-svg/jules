@@ -23,7 +23,17 @@ from jules.outils import charger_outils
 from jules.web.app import creer_app
 
 RACINE = Path(__file__).resolve().parents[1]
-FIGURES = {"droite-affine", "triangle-thales", "triangle-rectangle", "equation-solutions", "probabilites-frequences"}
+FIGURES = {
+    "droite-affine",
+    "triangle-thales",
+    "triangle-rectangle",
+    "equation-solutions",
+    "probabilites-frequences",
+    "engrenages",
+    "horloge",
+    "urne-tirage",
+    "paquets-proportionnels",
+}
 OUTILS = {"calculatrice", "frise-chronologique", "lexique"}
 RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais", "rappels-musique"}
 
@@ -53,7 +63,7 @@ def creer(
 # --- les extensions du depot, telles qu'activees dans config.yaml --------------------
 
 
-def test_config_active_les_cinq_figures_les_trois_outils_et_les_rappels():
+def test_config_active_les_figures_les_trois_outils_et_les_rappels():
     ids = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))["extensions"]
     extensions = charger_extensions(RACINE / "extensions", ids)
     assert set(extensions) == FIGURES | OUTILS | RAPPELS  # aucune ecartee
@@ -158,6 +168,10 @@ def test_sans_extension_de_figures_aucune_fiche_a_graphe_acceptee(projet, brut_c
             "triangle-rectangle",
             "probabilites-frequences",
             "triangle-thales",
+            "engrenages",
+            "horloge",
+            "urne-tirage",
+            "paquets-proportionnels",
         }
         utilisees = {b.gabarit for f in fiches.values() for b in f.blocs if getattr(b, "gabarit", None)}
         assert not utilisees & figures

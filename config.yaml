@@ -121,6 +121,10 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - engrenages
+  - horloge
+  - urne-tirage
+  - paquets-proportionnels
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

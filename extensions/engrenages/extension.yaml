@@ -1,0 +1,20 @@
+id: engrenages
+titre: "Figure : deux roues dentées (ou deux poulies) qui tournent ensemble"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [engrenages]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Bornes : celles des
+# fiches 3e « problemes de divisibilite » (dents 6 a 24 et 6 a 36, pas 1) et « chaine d'energie » (dents 10 a 60,
+# pas 5, courroie), reunies. revele false : la figure n'ecrit que les nombres de dents (donnees) ; les tours et le
+# premier multiple commun se voient en faisant tourner (reperes verts), ils ne sont jamais ecrits.
+discussion:
+  engrenages:
+    quand: "Pour faire voir deux roues dentées A et B qui s'engrènent (poulies et courroie si courroie = 1) : dents_a, dents_b = nombres de dents, avance = dents passées au contact. Un repère redevient vert à chaque tour entier : deux verts ensemble = un multiple commun. Montre aussi le sens et la vitesse."
+    valeurs:
+      dents_a: {min: 6, max: 60, pas: 1, defaut: 12}
+      dents_b: {min: 6, max: 60, pas: 1, defaut: 18}
+      avance: {min: 0, max: 360, pas: 1, defaut: 0}
+      courroie: {min: 0, max: 1, pas: 1, defaut: 0}
