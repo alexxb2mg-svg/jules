@@ -82,7 +82,7 @@ discussion:
 
 Le module `figures` (`jules/modules/figures.py`, placé **après** `notions` et `cours` dans
 `config.yaml`) donne ces déclarations au modèle dans les modes autorisés (`reglages.modes`, par défaut
-`aide-devoirs` et `reexplique`), puis relit chaque réponse : un bloc valide (gabarit déclaré, mode
+`aide-devoirs` et `reexplique` ; `config.yaml` du dépôt y ajoute `cours`, le panneau de Jules dans une leçon), puis relit chaque réponse : un bloc valide (gabarit déclaré, mode
 autorisé, objet `{gabarit, valeurs}` sans autre clé, chaque valeur un nombre dans `[min ; max]` et sur
 le `pas`, valeurs absentes = `defaut`) est récrit en JSON compact ; tout autre bloc est retiré sans
 bruit (une seule figure par message) et l'événement `figure_ecartee` est journalisé avec sa raison.
@@ -139,11 +139,17 @@ schéma de la notion « <titre> » avec ce bloc, quand une image aide (toujours 
 en mots) ». Sans notion rattachée, pas de schéma. Validation stricte : un bloc `schema` avec une autre clé,
 un identifiant inconnu ou hors de cette liste est retiré (`figure_ecartee`, `gabarit: "schema:<id>"`,
 raison « schema non autorise » ou « attendu {schema} »). Même règle d'une figure par message, mêmes modes
-que les gabarits (`reglages.modes`, jamais `epreuve`, `exercice`, `controle`, `cours`). Un schéma de fiche
+que les gabarits (`reglages.modes`, jamais `epreuve`, `exercice`, `controle`). Un schéma de fiche
 est un support de cours, pas la réponse d'un exercice : il n'a pas de drapeau `revele` et vaut dans
 `aide-devoirs`. Seul le schéma est cité ; les blocs `formule` et `carte` de la fiche ne le sont pas (non
 livré : le bloc `formule` devrait suivre les règles de `modes_revele`). Réglage `schemas: false` du module
 `figures` pour couper ce type de bloc.
+
+**Mode `cours` et dessin en caractères.** Dans le panneau de Jules d'une leçon, la notion est celle de la leçon
+(module `cours`), les gabarits `revele` restent exclus, et une figure ou un schéma qui montrerait la réponse de
+l'exercice actif est retiré (raison « revelerait la reponse ») ; le panneau dessine le bloc avec le même
+composant que la bulle du chat (`FigureBulle`). Dans TOUS les modes, même sans figure (`epreuve` compris), la
+contribution du module dit au modèle de ne jamais dessiner en caractères (traits, barres, schéma ASCII).
 
 **Schéma au-dessus de l'énoncé des exercices sans IA.** Le module `exercices` (réglage
 `schema_en_exercice`, défaut `true`, `config.yaml`) ajoute à chaque exercice présenté (`commencer`,

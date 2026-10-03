@@ -15,7 +15,8 @@ import { titreVariants } from "@/components/ui/variantes"
 import { styleMatiere } from "@/modules/fiches/FicheVisuelle"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
-import { cours, type Session, type Progression } from "@/api/jules"
+import { cours, infosChat, type BornesFigures, type Session, type Progression } from "@/api/jules"
+import { BornesFiguresContexte } from "@/modules/chat/markdown"
 import { BlocLecon } from "@/modules/lecon/BlocsLecon"
 import { PanneauJules, type AideRapide } from "@/modules/tuteur/PanneauJules"
 import { SUGGESTIONS } from "@/config/veille"
@@ -56,6 +57,10 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
     arret.current = window.setTimeout(() => setReduit(false), 500)
   }
   useEffect(() => () => window.clearTimeout(arret.current), [])
+
+  // Bornes des curseurs des figures que Jules montre dans le panneau (module 'figures', /api/infos), comme Chat.tsx.
+  const [bornes, setBornes] = useState<BornesFigures | undefined>(undefined)
+  useEffect(() => { infosChat().then((i) => setBornes(i.figures)).catch(() => {}) }, [])
 
   useEffect(() => {
     cours.ouvrir(notion).then((s) => { setSession(s); setProgression(s.progression) }).catch((e) => setErreur(e.message))
@@ -99,9 +104,11 @@ export function EcranPartage({ notion, fil, onRetour }: { notion: string; fil: s
   // Une citation d'une partie (« voir À retenir ») dans le tiroir y mène : on ferme le tiroir pour la montrer.
   const panneau = (
     <div className="h-full" onClickCapture={(e) => { if (mobile && (e.target as HTMLElement).closest("a[href^='#bloc-']")) setJulesOuvert(false) }}>
-      <PanneauJules conversationId={session.conversation} sousTitre="Il voit la leçon que tu fais" aides={AIDES}
-        suggestions={suggestionsDe(lecon)} rafraichir={relire}
-        ancres={lecon.blocs.flatMap((b) => (b.type === "texte" && b.titre ? [{ titre: b.titre, cible: `bloc-${b.index}` }] : []))} />
+      <BornesFiguresContexte.Provider value={bornes}>
+        <PanneauJules conversationId={session.conversation} sousTitre="Il voit la leçon que tu fais" aides={AIDES}
+          suggestions={suggestionsDe(lecon)} rafraichir={relire}
+          ancres={lecon.blocs.flatMap((b) => (b.type === "texte" && b.titre ? [{ titre: b.titre, cible: `bloc-${b.index}` }] : []))} />
+      </BornesFiguresContexte.Provider>
     </div>
   )
 
