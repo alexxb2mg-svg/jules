@@ -91,11 +91,11 @@ export function FichePersonnelle({ id, onRetour, onOuvrirLecon, onRegeneree }: {
               )}
               <BoutonDocument id={id} />
               <button onClick={regenerer} disabled={!!refaire && refaire.endsWith("…")}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief disabled:opacity-60">
+                className="inline-flex items-center gap-1.5 rounded-full bg-card px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief disabled:opacity-60">
                 <RefreshCw size={15} className={cn(refaire?.endsWith("…") && "animate-spin")} /> {TEXTES.refaire}
               </button>
               <button onClick={supprimer}
-                className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-gris shadow-relief hover:text-rouge">
+                className="inline-flex items-center gap-1.5 rounded-full bg-card px-3.5 py-1.5 text-[0.9rem] font-semibold text-gris shadow-relief hover:text-rouge">
                 <Trash2 size={15} /> {TEXTES.supprimer}
               </button>
               {refaire && !refaire.endsWith("…") && <span role="alert" className="text-[0.88rem] text-rouge">{refaire}</span>}
@@ -166,7 +166,7 @@ export function QuestionRangement({ fiche, onFermer, onFait }: {
       <motion.div ref={boite} role="dialog" aria-modal="true" aria-labelledby="question-garder" onClick={(e) => e.stopPropagation()}
         initial={{ y: 40, scale: 0.97, opacity: 0 }} animate={{ y: 0, scale: 1, opacity: 1 }} exit={{ y: 30, opacity: 0 }}
         transition={{ type: "spring", stiffness: 380, damping: 32 }}
-        className="relative w-full max-w-[460px] rounded-3xl bg-white p-5 shadow-relief-haut sm:p-6">
+        className="relative w-full max-w-[460px] rounded-3xl bg-card p-5 shadow-relief-haut sm:p-6">
         <button onClick={onFermer} aria-label={TEXTES.annuler} className="absolute top-4 right-4 rounded-full p-1.5 text-gris hover:bg-survol"><X size={18} /></button>
         <div className="mb-4 flex items-center gap-3 pr-8">
           <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-(--m-fond) text-(--m-texte)"><Sparkles size={22} /></span>
@@ -175,7 +175,7 @@ export function QuestionRangement({ fiche, onFermer, onFait }: {
             <p className="m-0 truncate text-[0.92rem] text-gris">{fiche.titre}</p>
           </div>
         </div>
-        {!avecNotion && <p className="mt-0 mb-3 flex items-start gap-2 rounded-2xl bg-[#FFF8EC] px-3.5 py-2.5 text-[0.9rem] text-[#7A4B00]"><TriangleAlert size={16} className="mt-0.5 shrink-0" />{TEXTES.aucuneNotion}</p>}
+        {!avecNotion && <p className="mt-0 mb-3 flex items-start gap-2 rounded-2xl bg-alerte-fond px-3.5 py-2.5 text-[0.9rem] text-alerte"><TriangleAlert size={16} className="mt-0.5 shrink-0" />{TEXTES.aucuneNotion}</p>}
 
         <AnimatePresence mode="wait" initial={false}>
           {!dossiers ? (

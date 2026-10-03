@@ -76,7 +76,7 @@ export function DocumentLisible({ id, onFermer }: { id: string; onFermer: () => 
             <p className="m-0 text-[0.8rem] font-semibold tracking-wide text-perso">{doc?.titre ?? "…"}</p>
             <h2 className="m-0 truncate text-[1.15rem] font-bold text-encre">{LISIBLE.titre}</h2>
           </div>
-          <div className="flex items-center gap-1 rounded-full bg-white p-1 shadow-relief">
+          <div className="flex items-center gap-1 rounded-full bg-card p-1 shadow-relief">
             <button aria-label={LISIBLE.moins} title={LISIBLE.moins} disabled={taille === 0} onClick={() => setTaille((t) => Math.max(0, t - 1))}
               className="grid size-9 place-items-center rounded-full text-encre hover:bg-nav disabled:opacity-35"><AArrowDown size={18} /></button>
             <button aria-label={LISIBLE.plus} title={LISIBLE.plus} disabled={taille === TAILLES.length - 1} onClick={() => setTaille((t) => Math.min(TAILLES.length - 1, t + 1))}
@@ -85,7 +85,7 @@ export function DocumentLisible({ id, onFermer }: { id: string; onFermer: () => 
           {paragraphes.length > 0 && (
             <button onClick={lire} disabled={!voix} title={voix ? undefined : LISIBLE.sansVoix}
               className={cn("inline-flex items-center gap-1.5 rounded-full px-3.5 py-2 text-[0.9rem] font-semibold shadow-relief disabled:opacity-45",
-                lecture ? "bg-perso text-white" : "bg-white text-perso")}>
+                lecture ? "bg-perso text-white" : "bg-card text-perso")}>
               {lecture ? <Pause size={16} /> : <Volume2 size={16} />} {lecture ? LISIBLE.arreter : LISIBLE.lire}
             </button>
           )}
@@ -105,7 +105,7 @@ export function DocumentLisible({ id, onFermer }: { id: string; onFermer: () => 
             <section className="mx-auto mt-6 max-w-[62ch]">
               <h3 className="mt-0 mb-3 text-[0.95rem] font-bold text-gris">{LISIBLE.photos}</h3>
               <div className="flex flex-col gap-4">
-                {doc.images.map((src) => <img key={src} src={src} alt="" className="w-full rounded-2xl border border-bord bg-white shadow-relief" />)}
+                {doc.images.map((src) => <img key={src} src={src} alt="" className="w-full rounded-2xl border border-bord bg-card shadow-relief" />)}
               </div>
             </section>
           )}
@@ -125,7 +125,7 @@ export function BoutonDocument({ id }: { id: string }) {
   return (
     <>
       <button onClick={() => setOuvert(true)}
-        className="inline-flex items-center gap-1.5 rounded-full bg-white px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief">
+        className="inline-flex items-center gap-1.5 rounded-full bg-card px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte) shadow-relief">
         <Volume2 size={15} /> {LISIBLE.bouton}
       </button>
       <AnimatePresence>{ouvert && <DocumentLisible id={id} onFermer={() => setOuvert(false)} />}</AnimatePresence>

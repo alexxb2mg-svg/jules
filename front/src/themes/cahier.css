@@ -1,0 +1,169 @@
+/* THÈME « cahier » (relifting 30/09/2026) : surfaces teintées plutôt que cadres, une seule ombre pour ce
+   qui est soulevé, clair ET sombre. Même liste de variables que base.css.
+   Sombre : classe .dark sur <html> (lib/theme.ts : suit prefers-color-scheme, forçable depuis le tiroir). */
+:root {
+  --j-bleu: #1F4E8C;
+  --j-bleu-clair: #E8EFFA;
+  --j-rouge: #C8102E;
+  --j-encre: #1E1446;
+  --j-gris: #625F78;
+  --j-bord: #E7E4F1;
+  --j-nav: #F1EFF8;
+  --j-survol: #EFEDF7;
+  --j-vert: #17744A;
+  --j-orange: #A35600;
+  --j-fond: #FFFFFF;
+  --j-perso: #7A3FE0;
+  --j-perso-clair: #F2EBFF;
+
+  --j-app: #F7F6FB;
+  --j-surface: #FFFFFF;
+  --j-surface-2: #F1EFF8;
+  --j-sur-plein: #FFFFFF;
+  --j-eleve: #1E1446;
+  --j-sur-eleve: #FFFFFF;
+  --j-succes: #17744A;
+  --j-succes-fond: #E4F4EA;
+  --j-succes-bord: #BFE3C7;
+  --j-alerte: #7A4B00;
+  --j-alerte-fond: #FFF4E0;
+  --j-alerte-bord: #F3D9A6;
+  --j-erreur: #B42318;
+  --j-erreur-fond: #FFF0EE;
+  --j-erreur-bord: #F5C6BD;
+  --j-trait: #8A94A3;
+  --j-trait-texte: #4A5566;
+  /* feuille des figures dessinées par /gabarits.js (traits sombres fixes) : reste claire dans tous les thèmes */
+  --j-papier: #F1EFF8;
+  /* feuille des schémas SVG des fiches (/static/fiche-contenu.css) */
+  --schema-papier: #FFFFFF;
+  --schema-encre: #1A1A18;
+  --schema-encre-2: #5F5E5A;
+  --schema-boite: #F6F5F0;
+  --schema-trait: #5F5E5A;
+  /* couleurs des termes de formule déclarées par les fiches (couleurCss) */
+  --j-terme-bleu: #1D4E89;
+  --j-terme-orange: #C2410C;
+  --j-terme-vert: #2B7A3A;
+  --j-terme-rouge: #C92A2A;
+  --j-terme-violet: #6A3FD9;
+  --j-terme-gris: #5D6878;
+  /* types de bloc (leçon, fiche) : une teinte de fond très légère + une couleur pleine (pastille, étiquette) */
+  --j-bloc-objectifs: #6B3FD0;
+  --j-bloc-objectifs-fond: #F4EFFF;
+  --j-bloc-exemple: #8F4B00;
+  --j-bloc-exemple-fond: #FFF5E4;
+  --j-bloc-exercice: #0B6962;
+  --j-bloc-exercice-fond: #E5F5F2;
+  --j-bloc-ouverte: #9C2B64;
+  --j-bloc-ouverte-fond: #FCEEF5;
+
+  /* « relief » n'est plus qu'un filet de lumière ; seul « soulevé » (tiroir, dialog, bouton flottant) porte une ombre */
+  --j-ombre-relief: 0 1px 2px rgb(30 20 70 / .04);
+  --j-ombre-souleve: 0 2px 6px rgb(30 20 70 / .06), 0 16px 36px -14px rgb(30 20 70 / .32);
+  --j-rayon-surface: 1.375rem;
+  --radius: 1rem;
+}
+
+:root.dark {
+  color-scheme: dark;
+  --j-bleu: #8DB3F2;
+  --j-bleu-clair: #1F2A4C;
+  --j-rouge: #FF7D8E;
+  --j-encre: #EEEAF8;
+  --j-gris: #A39FB8;
+  --j-bord: #2E2947;
+  --j-nav: #241F3C;
+  --j-survol: #2A2545;
+  --j-vert: #62D69D;
+  --j-orange: #FFB35C;
+  --j-fond: #14111F;
+  --j-perso: #BBA0FF;
+  --j-perso-clair: #2B2247;
+
+  --j-app: #14111F;
+  --j-surface: #1C1830;
+  --j-surface-2: #241F3C;
+  --j-sur-plein: #14111F;
+  --j-eleve: #3A335C;
+  --j-sur-eleve: #EEEAF8;
+  --j-succes: #6FDCA5;
+  --j-succes-fond: #173127;
+  --j-succes-bord: #25583F;
+  --j-alerte: #FFC87E;
+  --j-alerte-fond: #33260F;
+  --j-alerte-bord: #5C4417;
+  --j-erreur: #FF96A2;
+  --j-erreur-fond: #3A1820;
+  --j-erreur-bord: #6B2A36;
+  --j-trait: #6E6A88;
+  --j-trait-texte: #C3BFD6;
+  --j-papier: #ECE9F5;
+  /* La feuille des schémas reste claire en sombre : les 644 SVG des bibliothèques portent leurs couleurs en
+     attributs (3 039 textes fill="#1a1a18", 2 453 traits noirs) ; sur une feuille sombre ils deviendraient
+     illisibles. Feuille crème atténuée (moins d'éblouissement que le blanc), encres sombres : contraste tenu. */
+  --schema-papier: #EEEBE3;
+  --schema-encre: #1A1A18;
+  --schema-encre-2: #57564F;
+  --schema-boite: #E4E0D6;
+  --schema-trait: #57564F;
+  --j-terme-bleu: #8DB3F2;
+  --j-terme-orange: #FF9E6B;
+  --j-terme-vert: #6FD28A;
+  --j-terme-rouge: #FF8A8A;
+  --j-terme-violet: #BBA0FF;
+  --j-terme-gris: #B3B9C6;
+  --j-bloc-objectifs: #C7ADFF;
+  --j-bloc-objectifs-fond: color-mix(in oklab, #C7ADFF 13%, #1C1830);
+  --j-bloc-exemple: #FFC374;
+  --j-bloc-exemple-fond: color-mix(in oklab, #FFC374 11%, #1C1830);
+  --j-bloc-exercice: #6FDACF;
+  --j-bloc-exercice-fond: color-mix(in oklab, #6FDACF 11%, #1C1830);
+  --j-bloc-ouverte: #FFA3CF;
+  --j-bloc-ouverte-fond: color-mix(in oklab, #FFA3CF 11%, #1C1830);
+
+  --j-ombre-relief: 0 1px 2px rgb(0 0 0 / .25);
+  --j-ombre-souleve: 0 2px 6px rgb(0 0 0 / .35), 0 18px 40px -12px rgb(0 0 0 / .7);
+
+  /* Couleurs de matière (table SPEC, /static/matieres-couleurs.css) en sombre : fond = accent 22 % dans le fond
+     de page ; texte et accent éclaircis pour rester lisibles (≥ 4,5:1) et porter l'encre sombre des aplats. */
+  --matiere-mathematiques-fond: color-mix(in oklab, #2F66B0 22%, #14111F);
+  --matiere-mathematiques-texte: color-mix(in oklab, #2F66B0 45%, #FFFFFF);
+  --matiere-mathematiques-accent: color-mix(in oklab, #2F66B0 70%, #FFFFFF);
+  --matiere-francais-fond: color-mix(in oklab, #C0304D 22%, #14111F);
+  --matiere-francais-texte: color-mix(in oklab, #C0304D 45%, #FFFFFF);
+  --matiere-francais-accent: color-mix(in oklab, #C0304D 70%, #FFFFFF);
+  --matiere-histoire-fond: color-mix(in oklab, #7A4DB3 22%, #14111F);
+  --matiere-histoire-texte: color-mix(in oklab, #7A4DB3 45%, #FFFFFF);
+  --matiere-histoire-accent: color-mix(in oklab, #7A4DB3 70%, #FFFFFF);
+  --matiere-geographie-fond: color-mix(in oklab, #237239 22%, #14111F);
+  --matiere-geographie-texte: color-mix(in oklab, #237239 45%, #FFFFFF);
+  --matiere-geographie-accent: color-mix(in oklab, #237239 70%, #FFFFFF);
+  --matiere-physique-chimie-fond: color-mix(in oklab, #18727E 22%, #14111F);
+  --matiere-physique-chimie-texte: color-mix(in oklab, #18727E 45%, #FFFFFF);
+  --matiere-physique-chimie-accent: color-mix(in oklab, #18727E 70%, #FFFFFF);
+  --matiere-svt-fond: color-mix(in oklab, #4A6E14 22%, #14111F);
+  --matiere-svt-texte: color-mix(in oklab, #4A6E14 45%, #FFFFFF);
+  --matiere-svt-accent: color-mix(in oklab, #4A6E14 70%, #FFFFFF);
+  --matiere-technologie-fond: color-mix(in oklab, #8F5200 22%, #14111F);
+  --matiere-technologie-texte: color-mix(in oklab, #8F5200 45%, #FFFFFF);
+  --matiere-technologie-accent: color-mix(in oklab, #8F5200 70%, #FFFFFF);
+  --matiere-arts-plastiques-fond: color-mix(in oklab, #C2521F 22%, #14111F);
+  --matiere-arts-plastiques-texte: color-mix(in oklab, #C2521F 45%, #FFFFFF);
+  --matiere-arts-plastiques-accent: color-mix(in oklab, #C2521F 70%, #FFFFFF);
+  --matiere-anglais-fond: color-mix(in oklab, #4A55C2 22%, #14111F);
+  --matiere-anglais-texte: color-mix(in oklab, #4A55C2 45%, #FFFFFF);
+  --matiere-anglais-accent: color-mix(in oklab, #4A55C2 70%, #FFFFFF);
+  --matiere-education-musicale-fond: color-mix(in oklab, #B0388F 22%, #14111F);
+  --matiere-education-musicale-texte: color-mix(in oklab, #B0388F 45%, #FFFFFF);
+  --matiere-education-musicale-accent: color-mix(in oklab, #B0388F 70%, #FFFFFF);
+  --matiere-histoire-des-arts-fond: color-mix(in oklab, #9A6A2E 22%, #14111F);
+  --matiere-histoire-des-arts-texte: color-mix(in oklab, #9A6A2E 45%, #FFFFFF);
+  --matiere-histoire-des-arts-accent: color-mix(in oklab, #9A6A2E 70%, #FFFFFF);
+  --matiere-emc-fond: color-mix(in oklab, #4F6B82 22%, #14111F);
+  --matiere-emc-texte: color-mix(in oklab, #4F6B82 45%, #FFFFFF);
+  --matiere-emc-accent: color-mix(in oklab, #4F6B82 70%, #FFFFFF);
+  --matiere-_neutre-fond: color-mix(in oklab, #6B6880 22%, #14111F);
+  --matiere-_neutre-texte: #EEEAF8;
+  --matiere-_neutre-accent: #A39FB8;
+}

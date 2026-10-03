@@ -16,13 +16,13 @@ export function PastillePerso({ className }: { className?: string }) {
 export function FiltreFiches({ compact }: { compact?: boolean }) {
   const [filtre, setFiltre] = useFiltre()
   return (
-    <div role="radiogroup" aria-label="Afficher" className={cn("inline-flex rounded-2xl bg-nav p-1", compact && "grid w-full grid-cols-[auto_1fr_1fr] rounded-xl bg-white p-0.5 ring-1 ring-bord")}>
+    <div role="radiogroup" aria-label="Afficher" className={cn("inline-flex rounded-2xl bg-nav p-1", compact && "grid w-full grid-cols-[auto_1fr_1fr] rounded-xl bg-card p-0.5 ring-1 ring-bord")}>
       {FILTRES.map((f) => (
         <button key={f.id} role="radio" aria-checked={filtre === f.id} onClick={() => setFiltre(f.id)}
           className={cn("relative rounded-xl px-3.5 py-1.5 text-[0.9rem] font-semibold transition-colors", compact && "rounded-lg px-2 py-1 text-[0.75rem] whitespace-nowrap",
             filtre === f.id ? (f.id === "perso" ? "text-white" : "text-encre") : "text-gris hover:text-encre")}>
           {filtre === f.id && <motion.span layoutId={compact ? "filtre-compact" : "filtre"} transition={{ type: "spring", stiffness: 420, damping: 34 }}
-            className={cn("absolute inset-0 rounded-[inherit] shadow-relief", f.id === "perso" ? "bg-perso" : compact ? "bg-bleu-clair" : "bg-white")} />}
+            className={cn("absolute inset-0 rounded-[inherit] shadow-relief", f.id === "perso" ? "bg-perso" : compact ? "bg-bleu-clair" : "bg-card")} />}
           <span className="relative">{f.nom}</span>
         </button>
       ))}
@@ -39,7 +39,7 @@ export function TuilePerso({ f, i, onOuvrir, avecLieu }: { f: EntreePerso; i: nu
     <motion.button onClick={() => onOuvrir(f.id)} style={stylePerso}
       initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: Math.min(i, 14) * 0.025 }}
       whileHover={{ x: 4 }} whileTap={{ scale: 0.98 }}
-      className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-(--m-accent)/30 bg-white px-4 py-3.5 text-left shadow-relief transition-[border-color,box-shadow] hover:border-(--m-accent) hover:shadow-relief-haut">
+      className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-(--m-accent)/30 bg-card px-4 py-3.5 text-left shadow-relief transition-[border-color,box-shadow] hover:border-(--m-accent) hover:shadow-relief-haut">
       <span aria-hidden className="absolute inset-y-0 left-0 w-1 bg-(--m-accent)" />
       <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-(--m-fond) text-(--m-texte)"><Sparkles size={18} /></span>
       <span className="min-w-0 flex-1">
@@ -85,7 +85,7 @@ export function SectionDossiers({ onDossier, onOuvrir }: { onDossier: (id: strin
             </motion.button>
           ) : (
             <motion.form key="form" onSubmit={(e) => { e.preventDefault(); creer() }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-              className="flex h-[84px] items-center gap-2 rounded-2xl border border-(--m-accent) bg-white px-3">
+              className="flex h-[84px] items-center gap-2 rounded-2xl border border-(--m-accent) bg-card px-3">
               <input autoFocus value={nom} onChange={(e) => setNom(e.target.value.slice(0, 40))} onBlur={() => !nom && setNom(null)} aria-label={TEXTES.nomDossier} placeholder={TEXTES.nomDossier}
                 className="h-10 min-w-0 flex-1 rounded-xl bg-nav px-3 outline-none" />
               <button type="submit" className="rounded-xl bg-(--m-accent) px-3 py-2 text-[0.9rem] font-semibold text-white">{TEXTES.creer}</button>
@@ -100,7 +100,7 @@ export function SectionDossiers({ onDossier, onOuvrir }: { onDossier: (id: strin
 function CarteDossier({ nom, n, i, onClick, Icone = Folder }: { nom: string; n: number; i: number; onClick: () => void; Icone?: typeof Folder }) {
   return (
     <motion.button onClick={onClick} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.03 }} whileHover={{ y: -3 }} whileTap={{ scale: 0.97 }}
-      className="group flex h-[84px] items-center gap-3 rounded-2xl border border-bord bg-white px-4 text-left shadow-relief hover:border-(--m-accent)">
+      className="group flex h-[84px] items-center gap-3 rounded-surface bg-card px-4 text-left shadow-relief hover:border-(--m-accent)">
       <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-(--m-fond) text-(--m-texte) transition-transform group-hover:-rotate-6"><Icone size={21} /></span>
       <span className="min-w-0"><b className="block truncate text-encre">{nom}</b><span className="text-[0.85rem] text-gris">{n} fiche{n > 1 ? "s" : ""}</span></span>
     </motion.button>
@@ -120,7 +120,7 @@ export function EcranDossier({ id, onRetour, onOuvrir }: { id: string; onRetour:
     <div className="mx-auto max-w-[1180px] px-5 pt-16 pb-16 md:px-10 md:pt-8" style={stylePerso}>
       <button onClick={onRetour} className="mb-1 inline-flex items-center gap-1 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu"><ChevronLeft size={16} /> Mes fiches</button>
       <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
-        <h1 className="m-0 flex items-center gap-3 text-[2.2rem] leading-tight font-bold text-encre">
+        <h1 className="m-0 flex items-center gap-3 font-titre text-ecran font-extrabold text-encre">
           <span className="grid size-12 place-items-center rounded-2xl bg-(--m-fond) text-(--m-texte)">{id === NON_CLASSE ? <Inbox size={24} /> : <Folder size={24} />}</span>
           {id === NON_CLASSE ? TEXTES.nonClasse : dossier?.nom ?? "…"}
         </h1>
@@ -145,7 +145,7 @@ export function RappelARanger({ onOuvrir }: { onOuvrir: (id: string) => void }) 
           className="fixed right-4 bottom-4 left-4 z-40 mx-auto flex max-w-[520px] items-center gap-3 rounded-2xl bg-encre px-4 py-3 text-white shadow-relief-haut md:left-auto">
           <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-(--m-accent)"><Inbox size={18} /></span>
           <span className="min-w-0 flex-1 text-[0.95rem]">{TEXTES.aRangerAuDemarrage(aRanger.length)}</span>
-          <button onClick={() => { setVu(true); onOuvrir(aRanger[0].id) }} className="rounded-xl bg-white px-3 py-1.5 text-[0.9rem] font-semibold text-encre">{TEXTES.voir}</button>
+          <button onClick={() => { setVu(true); onOuvrir(aRanger[0].id) }} className="rounded-xl bg-card px-3 py-1.5 text-[0.9rem] font-semibold text-encre">{TEXTES.voir}</button>
           <button onClick={() => setVu(true)} aria-label="Fermer" className="rounded-full p-1 text-white/70 hover:text-white">×</button>
         </motion.div>
       )}

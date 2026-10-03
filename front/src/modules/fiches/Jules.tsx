@@ -5,6 +5,10 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { MessageCircle } from "lucide-react"
 import { Riche } from "./texte"
+import { avatarVariants } from "@/components/ui/variantes"
+import { buttonVariants } from "@/components/ui/button"
+import { bulleVariants } from "@/components/ui/variantes"
+import { cn } from "@/lib/utils"
 
 export function useBulleJules(accueil: string) {
   const [texte, setTexte] = useState<string | null>(accueil)
@@ -26,7 +30,7 @@ export function BulleJules({ texte, cle, fermer, lienDiscuter }: {
 
   return (
     <div className="flex items-end gap-3">
-      <motion.img src="/api/persona/avatar" alt="Jules" className="size-12 shrink-0 rounded-full border-4 border-white bg-bleu-clair object-cover shadow-relief-haut"
+      <motion.img src="/api/persona/avatar" alt="Jules" className={avatarVariants({ taille: "lg", className: "object-cover ring-4 ring-card shadow-souleve" })}
         animate={texte ? { rotate: [0, -8, 6, 0] } : { rotate: 0 }} transition={{ duration: 0.6 }} key={`a${cle}`} />
       <div className="min-w-0 flex-1">
         <AnimatePresence mode="wait">
@@ -35,12 +39,12 @@ export function BulleJules({ texte, cle, fermer, lienDiscuter }: {
               initial={{ opacity: 0, y: 12, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: -6, scale: 0.98 }}
               transition={{ type: "spring", stiffness: 380, damping: 30 }}
               onClick={fermer} onMouseEnter={() => window.clearTimeout(minuterie.current)} onMouseLeave={armer}
-              className="bulle-jules relative cursor-pointer rounded-3xl rounded-bl-md bg-bleu px-4 py-3 text-[0.97rem] leading-relaxed text-white shadow-relief-haut [&_.cle]:bg-white/20">
+              className={cn(bulleVariants({ auteur: "jules", tete: false }), "bulle-jules relative cursor-pointer rounded-bl-md bg-bleu text-white shadow-souleve [&_.cle]:bg-white/20")}>
               <Riche texte={texte} />
             </motion.div>
           ) : lienDiscuter ? (
             <motion.a key="discuter" href={lienDiscuter} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-              className="inline-flex items-center gap-2 rounded-full border border-bord bg-white px-4 py-2 text-[0.95rem] font-semibold text-bleu shadow-relief hover:bg-bleu-clair">
+              className={buttonVariants({ variant: "sombre", size: "pastille", className: "text-bleu shadow-souleve hover:bg-bleu-clair" })}>
               <MessageCircle size={16} /> Poser une question à Jules
             </motion.a>
           ) : null}

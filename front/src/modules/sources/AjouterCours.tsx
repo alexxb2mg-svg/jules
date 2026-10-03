@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { fiches, sources, type EtapeSource, type SuggestionSource } from "@/api/jules"
 import { ORDRE_MATIERES } from "@/config/matieres"
 import { ETAPES, FORMES, LIMITES, TEXTES, stylePerso, type FormeSource } from "@/config/sources"
+import { PriseDePhoto } from "@/composants/PriseDePhoto"
 import { rechargerPerso, useBibliothequePerso } from "./etat"
 
 type Progression = { faites: number; suggestion?: SuggestionSource; erreur?: string }
@@ -60,7 +61,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
       <button onClick={onRetour} className="mb-4 -ml-1 inline-flex items-center gap-1 rounded-full px-1 py-2 text-[0.95rem] font-semibold text-gris hover:text-bleu">
         <ChevronLeft size={16} /> Mes fiches
       </button>
-      <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{TEXTES.titreAjout}</h1>
+      <h1 className="m-0 font-titre text-ecran font-extrabold text-encre">{TEXTES.titreAjout}</h1>
       <p className="mt-1 mb-7 max-w-[640px] text-gris">{TEXTES.sousTitreAjout}</p>
 
       <AnimatePresence mode="wait" initial={false}>
@@ -74,7 +75,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
               <CarteSource Icone={Sparkles} titre={TEXTES.carteDocument.titre} texte={TEXTES.carteDocument.texte} actif onClick={() => {}} />
             </div>
 
-            <section className="rounded-3xl border border-bord bg-white p-5 shadow-relief md:p-7">
+            <section className="rounded-surface bg-card p-5 shadow-relief md:p-7">
               <div role="tablist" aria-label="Forme du document" className="mb-5 flex flex-wrap gap-2">
                 {FORMES.map(({ id, nom, Icone }) => (
                   <button key={id} role="tab" aria-selected={forme === id} onClick={() => setForme(id)}
@@ -89,14 +90,14 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
               <AnimatePresence mode="wait" initial={false}>
                 <motion.div key={forme ?? "rien"} initial={{ opacity: 0, x: 12 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -12 }} transition={{ duration: 0.18 }}>
                   {forme === null && <p className="m-0 text-gris">Choisis la forme de ton document : photos, PDF ou texte.</p>}
-                  {forme === "photos" && <Depot multiple accept="image/jpeg,image/png,image/webp,image/heic,.heic" fichiers={photos} max={LIMITES.photos}
+                  {forme === "photos" && <Depot multiple photo accept="image/jpeg,image/png,image/webp,image/heic,.heic" fichiers={photos} max={LIMITES.photos}
                     libelle={TEXTES.deposerPhotos} aide={FORMES[0].aide} onChange={setPhotos} />}
                   {forme === "pdf" && <Depot accept="application/pdf,.pdf" fichiers={pdf ? [pdf] : []} max={1}
                     libelle={TEXTES.deposerPdf} aide={FORMES[1].aide} onChange={(f) => setPdf(f[0] ?? null)} />}
                   {forme === "texte" && (
                     <div>
                       <textarea value={texte} onChange={(e) => setTexte(e.target.value.slice(0, LIMITES.texte))} rows={9} placeholder={TEXTES.placeholderTexte}
-                        className="w-full resize-y rounded-2xl border border-bord bg-white p-4 text-[1rem] leading-relaxed outline-none focus:border-(--m-accent) focus:ring-4 focus:ring-(--m-fond)" />
+                        className="w-full resize-y rounded-2xl border border-bord bg-card p-4 text-[1rem] leading-relaxed outline-none focus:border-(--m-accent) focus:ring-4 focus:ring-(--m-fond)" />
                       <p className="m-0 mt-1 text-right text-[0.8rem] text-gris tabular-nums">{texte.length.toLocaleString("fr")} / {LIMITES.texte.toLocaleString("fr")}</p>
                     </div>
                   )}
@@ -108,7 +109,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
                   <label className="flex flex-col gap-1.5 text-[0.9rem] font-semibold text-gris">
                     {TEXTES.matiere}
                     <select value={matiere} onChange={(e) => setMatiere(e.target.value)}
-                      className="h-11 min-w-[220px] rounded-xl border border-bord bg-white px-3 text-[1rem] font-normal text-encre outline-none focus:border-(--m-accent)">
+                      className="h-11 min-w-[220px] rounded-xl border border-bord bg-card px-3 text-[1rem] font-normal text-encre outline-none focus:border-(--m-accent)">
                       <option value="">{TEXTES.matiereInconnue}</option>
                       {matieres.map((m) => <option key={m.id} value={m.id}>{m.nom}</option>)}
                     </select>
@@ -123,7 +124,7 @@ export function AjouterCours({ onRetour, onNatif, onFiche }: {
                   </div>
                 </div>
               )}
-              {refus && <p role="alert" className="mt-4 mb-0 flex items-start gap-2 rounded-2xl bg-[#FDECEE] px-4 py-3 text-[0.95rem] text-rouge"><TriangleAlert size={18} className="mt-0.5 shrink-0" />{refus}</p>}
+              {refus && <p role="alert" className="mt-4 mb-0 flex items-start gap-2 rounded-2xl bg-erreur-fond px-4 py-3 text-[0.95rem] text-rouge"><TriangleAlert size={18} className="mt-0.5 shrink-0" />{refus}</p>}
             </section>
           </motion.div>
         )}
@@ -137,7 +138,7 @@ function CarteSource({ Icone, titre, texte, onClick, actif, natif }: {
 }) {
   return (
     <motion.button onClick={onClick} whileHover={{ y: -3 }} whileTap={{ scale: 0.98 }} aria-pressed={actif}
-      className={cn("group relative flex items-center gap-4 overflow-hidden rounded-3xl border-2 bg-white p-5 text-left shadow-relief transition-colors",
+      className={cn("group relative flex items-center gap-4 overflow-hidden rounded-3xl border-2 bg-card p-5 text-left shadow-relief transition-colors",
         actif ? "border-(--m-accent)" : "border-bord hover:border-bleu")}>
       <span aria-hidden className={cn("absolute -right-10 -bottom-12 size-36 rounded-full transition-transform duration-500 group-hover:scale-125", natif ? "bg-bleu-clair" : "bg-(--m-fond)")} />
       <span className={cn("relative grid size-13 shrink-0 place-items-center rounded-2xl", natif ? "bg-bleu-clair text-bleu" : "bg-(--m-fond) text-(--m-texte)")}><Icone size={26} /></span>
@@ -151,12 +152,12 @@ function CarteSource({ Icone, titre, texte, onClick, actif, natif }: {
   )
 }
 
-function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
-  multiple?: boolean; accept: string; fichiers: File[]; max: number; libelle: string; aide: string; onChange: (f: File[]) => void
+function Depot({ multiple, photo, accept, fichiers, max, libelle, aide, onChange }: {
+  multiple?: boolean; photo?: boolean; accept: string; fichiers: File[]; max: number; libelle: string; aide: string; onChange: (f: File[]) => void
 }) {
   const champ = useRef<HTMLInputElement>(null)
   const [survol, setSurvol] = useState(false)
-  const ajouter = (liste: FileList | null) => {
+  const ajouter = (liste: ArrayLike<File> | null) => {
     if (!liste) return
     const nouveaux = Array.from(liste)
     onChange(multiple ? [...fichiers, ...nouveaux].slice(0, max) : nouveaux.slice(0, 1))
@@ -164,22 +165,40 @@ function Depot({ multiple, accept, fichiers, max, libelle, aide, onChange }: {
   const apercus = useApercus(fichiers)
   return (
     <div>
+      {photo ? (
+        <PriseDePhoto multiple={multiple} accept={accept} onFichiers={ajouter}>
+          {(ouvrir) => (
+          <button type="button" onClick={ouvrir}
+            onDragOver={(e) => { e.preventDefault(); setSurvol(true) }} onDragLeave={() => setSurvol(false)}
+            onDrop={(e) => { e.preventDefault(); setSurvol(false); ajouter(e.dataTransfer.files) }}
+            className={cn("flex w-full flex-col items-center gap-2 rounded-2xl border-2 border-dashed px-6 py-9 text-center transition-colors",
+              survol ? "border-(--m-accent) bg-(--m-fond)" : "border-bord bg-nav hover:border-(--m-accent) hover:bg-(--m-fond)")}>
+            <motion.span animate={survol ? { y: -4, scale: 1.08 } : { y: 0, scale: 1 }} className="grid size-14 place-items-center rounded-2xl bg-card text-(--m-texte) shadow-relief"><CloudUpload size={28} /></motion.span>
+            <b className="text-encre">{libelle}</b>
+            <span className="text-[0.9rem] text-gris">{aide}</span>
+          </button>
+          )}
+        </PriseDePhoto>
+      ) : (
+        <>
       <button type="button" onClick={() => champ.current?.click()}
         onDragOver={(e) => { e.preventDefault(); setSurvol(true) }} onDragLeave={() => setSurvol(false)}
         onDrop={(e) => { e.preventDefault(); setSurvol(false); ajouter(e.dataTransfer.files) }}
         className={cn("flex w-full flex-col items-center gap-2 rounded-2xl border-2 border-dashed px-6 py-9 text-center transition-colors",
           survol ? "border-(--m-accent) bg-(--m-fond)" : "border-bord bg-nav hover:border-(--m-accent) hover:bg-(--m-fond)")}>
-        <motion.span animate={survol ? { y: -4, scale: 1.08 } : { y: 0, scale: 1 }} className="grid size-14 place-items-center rounded-2xl bg-white text-(--m-texte) shadow-relief"><CloudUpload size={28} /></motion.span>
+        <motion.span animate={survol ? { y: -4, scale: 1.08 } : { y: 0, scale: 1 }} className="grid size-14 place-items-center rounded-2xl bg-card text-(--m-texte) shadow-relief"><CloudUpload size={28} /></motion.span>
         <b className="text-encre">{libelle}</b>
         <span className="text-[0.9rem] text-gris">{aide}</span>
       </button>
       <input ref={champ} type="file" hidden multiple={multiple} accept={accept} onChange={(e) => { ajouter(e.target.files); e.target.value = "" }} />
+        </>
+      )}
       {fichiers.length > 0 && (
         <ul className="m-0 mt-4 flex list-none flex-wrap gap-3 p-0">
           <AnimatePresence>
             {fichiers.map((f, i) => (
               <motion.li key={`${f.name}-${i}`} layout initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-                className="relative flex items-center gap-2.5 rounded-2xl border border-bord bg-white p-2 pr-3 shadow-relief">
+                className="relative flex items-center gap-2.5 rounded-surface bg-card p-2 pr-3 shadow-relief">
                 {apercus[i] ? <img src={apercus[i]!} alt="" className="size-14 rounded-xl object-cover" />
                   : <span className="grid size-14 place-items-center rounded-xl bg-(--m-fond) text-[0.8rem] font-bold text-(--m-texte)">PDF</span>}
                 <span className="max-w-[160px] truncate text-[0.9rem] text-encre">{f.name}</span>
@@ -212,7 +231,7 @@ function Avancement({ p, onRecommencer }: { p: Progression; onRecommencer: () =>
   const fini = p.faites >= 4
   return (
     <motion.section initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}
-      className="mx-auto flex max-w-[560px] flex-col gap-5 rounded-3xl border border-bord bg-white p-6 shadow-relief md:p-8" aria-live="polite">
+      className="mx-auto flex max-w-[560px] flex-col gap-5 rounded-surface bg-card p-6 shadow-relief md:p-8" aria-live="polite">
       <div className="flex items-center gap-4">
         <motion.img src="/api/persona/avatar" alt="Jules" className="size-14 rounded-full border-4 border-(--m-fond) bg-bleu-clair object-cover"
           animate={p.erreur ? { rotate: 0 } : { rotate: [0, -6, 6, 0] }} transition={{ repeat: p.erreur || fini ? 0 : Infinity, duration: 1.6 }} />
@@ -239,10 +258,10 @@ function Avancement({ p, onRecommencer }: { p: Progression; onRecommencer: () =>
           )
         })}
       </ol>
-      {p.suggestion?.avertissement && <p className="m-0 flex items-start gap-2 rounded-2xl bg-[#FFF8EC] px-4 py-2.5 text-[0.92rem] text-[#7A4B00]"><TriangleAlert size={16} className="mt-0.5 shrink-0" />{p.suggestion.avertissement}</p>}
+      {p.suggestion?.avertissement && <p className="m-0 flex items-start gap-2 rounded-2xl bg-alerte-fond px-4 py-2.5 text-[0.92rem] text-alerte"><TriangleAlert size={16} className="mt-0.5 shrink-0" />{p.suggestion.avertissement}</p>}
       {p.erreur && (
         <>
-          <p role="alert" className="m-0 rounded-2xl bg-[#FDECEE] px-4 py-3 text-[0.95rem] text-rouge">{p.erreur}</p>
+          <p role="alert" className="m-0 rounded-2xl bg-erreur-fond px-4 py-3 text-[0.95rem] text-rouge">{p.erreur}</p>
           <button onClick={onRecommencer} className="self-start rounded-2xl bg-encre px-5 py-2.5 font-semibold text-white">{TEXTES.recommencer}</button>
         </>
       )}

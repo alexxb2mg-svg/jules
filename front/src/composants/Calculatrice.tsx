@@ -56,7 +56,7 @@ export function Calculatrice({ infos, onOuvert }: { infos: Infos | null; onOuver
       <Button type="button" variant="ghost" size="icon" aria-label={TEXTES.fermer} className="size-11 rounded-xl text-encre hover:bg-bleu-clair"><X className="size-5" /></Button>
     </Fermer>
   )
-  const classeBouton = "absolute top-3 right-4 z-40 size-11 rounded-full border-bord bg-white text-bleu shadow-relief hover:border-bleu hover:bg-white hover:text-bleu aria-expanded:bg-bleu aria-expanded:text-white [&_svg:not([class*='size-'])]:size-[22px]"
+  const classeBouton = "absolute top-3 right-4 z-40 size-11 rounded-full border-bord bg-card text-bleu shadow-relief hover:border-bleu hover:bg-card hover:text-bleu aria-expanded:bg-bleu aria-expanded:text-white [&_svg:not([class*='size-'])]:size-[22px]"
 
   if (mobile) {
     return (
@@ -64,7 +64,7 @@ export function Calculatrice({ infos, onOuvert }: { infos: Infos | null; onOuver
         <Button ref={boutonMobile} type="button" variant="outline" size="icon" aria-label={TEXTES.nom} title={TEXTES.nom} aria-expanded={ouvert}
           onClick={() => setOuvert(true)} className={classeBouton}><Calculator /></Button>
         <Sheet open={ouvert} onOpenChange={setOuvert}>
-          <SheetContent side="bottom" showCloseButton={false} onCloseAutoFocus={(e) => { e.preventDefault(); boutonMobile.current?.focus() }} className="h-[min(38rem,92dvh)] gap-0 rounded-t-2xl border-bord bg-white p-0">
+          <SheetContent side="bottom" showCloseButton={false} onCloseAutoFocus={(e) => { e.preventDefault(); boutonMobile.current?.focus() }} className="h-[min(38rem,92dvh)] gap-0 rounded-t-2xl border-bord bg-card p-0">
             <div className="flex items-center justify-between border-b border-bord py-1 pr-1 pl-3.5">
               <SheetTitle className="font-titre text-base font-bold text-bleu">{titre}</SheetTitle>
               {boutonFermer(SheetClose)}
@@ -86,7 +86,7 @@ export function Calculatrice({ infos, onOuvert }: { infos: Infos | null; onOuver
       <PopoverContent align="end" side="bottom" sideOffset={8} collisionPadding={16} aria-label={titre}
         // Non modale : la calculatrice reste ouverte quand on lit ou écrit dans la page ; on la ferme par le bouton, la croix ou Échap.
         onInteractOutside={(e) => e.preventDefault()}
-        className="flex h-[min(36rem,var(--radix-popover-content-available-height))] w-[19rem] flex-col overflow-hidden rounded-2xl border-bord bg-white p-0 shadow-relief-haut">
+        className="flex h-[min(36rem,var(--radix-popover-content-available-height))] w-[19rem] flex-col overflow-hidden rounded-2xl border-bord bg-card p-0 shadow-relief-haut">
         <div className="flex items-center justify-between border-b border-bord py-1 pr-1 pl-3.5">
           <span className="font-titre text-base font-bold text-bleu">{titre}</span>
           {boutonFermer(PopoverClose)}

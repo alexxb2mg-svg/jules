@@ -57,7 +57,7 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
   return (
     <div className="flex h-full flex-col bg-[radial-gradient(ellipse_at_top,var(--j-bleu-clair),transparent_60%)]">
       <header className="flex items-center gap-3 px-5 pt-4 pl-16 md:px-10">
-        <button onClick={onRetour} className="inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.9rem] font-semibold text-bleu hover:bg-white">
+        <button onClick={onRetour} className="inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.9rem] font-semibold text-bleu hover:bg-card">
           <ChevronLeft size={16} /> Exercices et supports
         </button>
         {total > 0 && !fini && (
@@ -80,16 +80,16 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
             <motion.div key={`${carte.support}-${carte.carte_id}`} className="flex w-full max-w-[560px] flex-col items-center gap-6"
               initial={{ opacity: 0, x: 60, rotate: 3 }} animate={{ opacity: 1, x: 0, rotate: 0 }} exit={{ opacity: 0, x: -80, rotate: -4 }}
               transition={{ type: "spring", stiffness: 260, damping: 26 }}>
-              <p className="m-0 text-[0.9rem] font-semibold text-gris">{carte.notion}{entrainement && <span className="ml-2 rounded-full bg-[#FDF1F0] px-2 py-0.5 text-[#8A1F17]">entraînement</span>}</p>
+              <p className="m-0 text-[0.9rem] font-semibold text-gris">{carte.notion}{entrainement && <span className="ml-2 rounded-full bg-erreur-fond px-2 py-0.5 text-erreur">entraînement</span>}</p>
               <button onClick={retourner} aria-label={verso === null ? "Retourner la carte" : "Carte retournée"}
                 className="w-full [perspective:1200px]">
                 <motion.div animate={{ rotateY: verso === null ? 0 : 180 }} transition={{ type: "spring", stiffness: 200, damping: 22 }}
                   className="relative h-[280px] w-full [transform-style:preserve-3d]">
-                  <div className="absolute inset-0 grid place-items-center rounded-[28px] bg-white p-8 text-center shadow-relief-haut [backface-visibility:hidden]">
+                  <div className="absolute inset-0 grid place-items-center rounded-[28px] bg-card p-8 text-center shadow-relief-haut [backface-visibility:hidden]">
                     <p className="m-0 text-[1.5rem] leading-snug font-bold text-encre">{carte.recto}</p>
                     <span className="absolute bottom-5 inline-flex items-center gap-1.5 text-[0.85rem] font-semibold text-gris"><RotateCw size={14} /> Clique ou Espace pour retourner</span>
                   </div>
-                  <div className="absolute inset-0 grid [transform:rotateY(180deg)] place-items-center rounded-[28px] border-4 border-bleu bg-white p-8 text-center shadow-relief-haut [backface-visibility:hidden]">
+                  <div className="absolute inset-0 grid [transform:rotateY(180deg)] place-items-center rounded-[28px] border-4 border-bleu bg-card p-8 text-center shadow-relief-haut [backface-visibility:hidden]">
                     <p className="m-0 text-[1.3rem] leading-snug text-encre">{verso}</p>
                   </div>
                 </motion.div>
@@ -116,7 +116,7 @@ export function Revision({ onRetour }: { onRetour: () => void }) {
               <div className="mt-2 flex flex-wrap justify-center gap-2">
                 {ratees.length > 0 && (
                   <motion.button whileTap={{ scale: 0.96 }} onClick={revoirRatees}
-                    className="inline-flex items-center gap-2 rounded-full border-2 border-[#F2B8B5] bg-[#FDF1F0] px-5 py-2.5 font-semibold text-[#8A1F17]">
+                    className="inline-flex items-center gap-2 rounded-full border-2 border-erreur-bord bg-erreur-fond px-5 py-2.5 font-semibold text-erreur">
                     <RotateCw size={16} /> {REVOIR_RATEES.bouton(ratees.length)}
                   </motion.button>
                 )}

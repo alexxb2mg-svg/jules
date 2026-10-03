@@ -19,10 +19,10 @@ export const TEXTES_BILAN = {
   toutes: "Toutes les matières",
 }
 const ASPECT: Record<string, { Icone: typeof Trophy; classe: string }> = {
-  acquis: { Icone: Trophy, classe: "bg-[#E7F5EC] text-[#1E7B34]" },
-  compris: { Icone: Sparkles, classe: "bg-[#EEFAF2] text-[#135C33]" },
+  acquis: { Icone: Trophy, classe: "bg-succes-fond text-succes" },
+  compris: { Icone: Sparkles, classe: "bg-succes-fond text-succes" },
   en_cours: { Icone: Hourglass, classe: "bg-bleu-clair text-bleu" },
-  bloque: { Icone: Wrench, classe: "bg-[#FFF8EC] text-[#7A4B00]" },
+  bloque: { Icone: Wrench, classe: "bg-alerte-fond text-alerte" },
 }
 
 export function Bilan({ onRetour, onFiche }: { onRetour: () => void; onFiche: (notion: string) => void }) {
@@ -38,7 +38,7 @@ export function Bilan({ onRetour, onFiche }: { onRetour: () => void; onFiche: (n
         <button onClick={onRetour} className="mb-3 inline-flex items-center gap-1 rounded-full px-2 py-2 text-[0.9rem] font-semibold text-bleu hover:bg-nav">
           <ChevronLeft size={16} /> {TEXTES_BILAN.retour}
         </button>
-        <h1 className="m-0 text-[2.2rem] leading-tight font-bold text-encre">{TEXTES_BILAN.titre}</h1>
+        <h1 className="m-0 font-titre text-ecran font-extrabold text-encre">{TEXTES_BILAN.titre}</h1>
         <p className="mt-1 mb-7 text-gris">{TEXTES_BILAN.intro}</p>
         {erreur && <p className="text-rouge">{erreur}</p>}
         {!bilan && !erreur && <div className="h-40 animate-pulse rounded-3xl bg-nav" />}
@@ -57,7 +57,7 @@ export function Bilan({ onRetour, onFiche }: { onRetour: () => void; onFiche: (n
                   {g.notions.map((n) => {
                     const IconeM = iconeMatiere(n.matiere)
                     return (
-                      <article key={n.notion} style={styleMatiere(n.matiere)} className="flex flex-col gap-2 rounded-3xl border border-bord bg-white p-4 shadow-relief">
+                      <article key={n.notion} style={styleMatiere(n.matiere)} className="flex flex-col gap-2 rounded-surface bg-card p-4 shadow-relief">
                         <p className="m-0 flex items-center gap-1.5 text-[0.82rem] font-semibold text-(--m-texte)"><IconeM size={14} /> {n.nom_matiere}</p>
                         <h3 className="m-0 text-[1.05rem] leading-snug font-bold text-encre">{n.titre}</h3>
                         {n.savoir_faire.length > 0 && (

@@ -13,24 +13,25 @@
 .cle.colle { padding-left: 0; padding-right: 0; border-radius: 0; }
 
 /* schema : SVG nettoye par le code (jules/svg_sur.py), avec les classes du systeme de design
-   "concept-diagrams" (mode clair uniquement, jamais de mode sombre : fiche imprimee comme a l'ecran). */
-.bloc-schema { background: #FFFFFF; border-radius: 10px; padding: 6px; }
+   "concept-diagrams". Feuille toujours claire (les SVG portent des couleurs sombres en attributs) ; ses teintes
+   sont des variables du theme (front/src/themes/*.css : --schema-*), repli = valeurs d'origine (accueil.html). */
+.bloc-schema { background: var(--schema-papier, #FFFFFF); border-radius: 10px; padding: 6px; }
 .bloc-schema svg { max-width: 100%; display: block; margin: 0 auto; }
 .bloc-schema .t { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); }
-.bloc-schema .t:not([fill]) { fill: #1a1a18; }
+.bloc-schema .t:not([fill]) { fill: var(--schema-encre, #1a1a18); }
 .bloc-schema .ts { font-family: inherit; font-size: calc(0.75rem * var(--adapt-echelle-texte, 1)); }
-.bloc-schema .ts:not([fill]) { fill: #5f5e5a; }
+.bloc-schema .ts:not([fill]) { fill: var(--schema-encre-2, #5f5e5a); }
 .bloc-schema .th { font-family: inherit; font-size: calc(0.875rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
-.bloc-schema .th:not([fill]) { fill: #1a1a18; }
+.bloc-schema .th:not([fill]) { fill: var(--schema-encre, #1a1a18); }
 /* Gros textes (chiffres d'une operation posee, fractions, etiquettes pour les plus jeunes) */
 .bloc-schema .tl { font-family: inherit; font-size: calc(1.25rem * var(--adapt-echelle-texte, 1)); font-weight: 500; }
-.bloc-schema .tl:not([fill]) { fill: #1a1a18; }
+.bloc-schema .tl:not([fill]) { fill: var(--schema-encre, #1a1a18); }
 .bloc-schema .tx { font-family: inherit; font-size: calc(1.75rem * var(--adapt-echelle-texte, 1)); font-weight: 600; }
-.bloc-schema .tx:not([fill]) { fill: #1a1a18; }
+.bloc-schema .tx:not([fill]) { fill: var(--schema-encre, #1a1a18); }
 /* Code (programme, pseudo-code) dans un schema : class="t code", police a chasse fixe. */
 .bloc-schema text.code, .bloc-schema tspan.code { font-family: ui-monospace, "Cascadia Mono", "DejaVu Sans Mono", Consolas, monospace; }
-.bloc-schema .box { fill: #f6f5f0; stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
-.bloc-schema .arr { stroke: #5f5e5a; stroke-width: 1.5px; fill: none; }
+.bloc-schema .box { fill: var(--schema-boite, #f6f5f0); stroke: rgba(0,0,0,0.15); stroke-width: 0.5px; }
+.bloc-schema .arr { stroke: var(--schema-trait, #5f5e5a); stroke-width: 1.5px; fill: none; }
 .bloc-schema .leader { stroke: #88877f; stroke-width: 0.5px; stroke-dasharray: 4 3; fill: none; }
 .bloc-schema .node { cursor: pointer; transition: opacity .15s; }
 .bloc-schema .node:hover { opacity: .82; }
