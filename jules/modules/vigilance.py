@@ -10,8 +10,8 @@ suicidaires, auto-agression, violence subie, harcelement, adulte inconnu inquiet
 quelque chose, l'evenement et l'alerte partent tout de suite, AVANT l'appel au modele : en cas de
 panne d'API, cet appel peut durer jusqu'a `delai_s` (120 a 180 s) avant d'echouer, et l'alerte ne
 l'attend pas. Le plancher alerte donc meme si le modele d'analyse est en panne ou repond n'importe
-quoi. (Il ne tourne qu'apres la reponse du tuteur : si le modele principal echoue, jules/moteur.py
-renvoie le message de panne sans lancer `apres_echange`, et ni le plancher ni le modele ne passent.)
+quoi, et meme si le moteur principal a echoue : jules/moteur.py previent les modules aussi dans ce
+cas, avec le message de panne en guise de reponse.
 Ensuite seulement, le modele relit le message :
   - s'il voit STRICTEMENT plus grave que le plancher, c'est une escalade : nouvel evenement, et
     nouvelle alerte si le seuil est franchi ;
