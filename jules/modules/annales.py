@@ -83,7 +83,7 @@ class Brique(Module):
         module = self.tuteur.module("notions")
         if module is None:
             raise RuntimeError("Le module 'annales' nécessite le module 'notions'")
-        return module.catalogue
+        return module.catalogue  # type: ignore[attr-defined]
 
     @property
     def sujets(self) -> dict[str, dict[str, Any]]:
@@ -268,8 +268,8 @@ class Brique(Module):
                 continue
             pts = r.get("points_obtenus", 0)
             total = r.get("points_total", 0)
-            points_obtenus += pts if isinstance(pts, (int, float)) else 0
-            points_total += total if isinstance(total, (int, float)) else 0
+            points_obtenus += int(pts) if isinstance(pts, (int, float)) else 0
+            points_total += int(total) if isinstance(total, (int, float)) else 0
             for notion_id in r.get("notions") or []:
                 notion_id = str(notion_id).strip()
                 if notion_id in notions_vues:
