@@ -121,6 +121,13 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - bande-fractions           # fractions : parts egales, simplification (fiches 3e et CM1)
+  - bande-fractions-comparees # comparer et ajouter deux fractions de meme denominateur (CM1)
+  - droite-graduee            # fraction n/d placee sur une droite graduee (3e)
+  - droite-graduee-somme      # a + b : un saut sur la droite graduee (3e)
+  - demi-droite-graduee       # grands entiers sur une demi-droite, avec loupes (CM1)
+  - demi-droite-decimaux      # decimaux sur une demi-droite, loupes dixiemes/centiemes (CM1)
+  - plaque-dixiemes-centiemes # unites, dixiemes, centiemes en plaques (CM1)
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
