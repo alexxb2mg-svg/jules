@@ -92,7 +92,7 @@ pre-commit install
 ruff check .
 ruff format --check .
 mypy
-python -m pytest --cov
+python -m pytest --cov -n auto   # -n auto : la suite sur tous les coeurs (pytest-xdist)
 ```
 
 Tout doit passer : la CI de GitHub lance les mêmes contrôles sous Linux, Windows et macOS, plus une analyse de sécurité (CodeQL) et un audit des dépendances.
