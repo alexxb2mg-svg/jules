@@ -16,12 +16,9 @@ import { typo, Riche } from "./texte"
 import { Chemin } from "@/modules/accueil/Chemin"
 import { marquerEtape } from "@/modules/accueil/etat"
 
-/** Variables CSS de la matière (table SPEC, /static/matieres-couleurs.css) reprises sous --m-*. */
-export const styleMatiere = (matiere: string) => ({
-  "--m-fond": `var(--matiere-${matiere}-fond, var(--j-bleu-clair))`,
-  "--m-texte": `var(--matiere-${matiere}-texte, var(--j-bleu))`,
-  "--m-accent": `var(--matiere-${matiere}-accent, var(--j-bleu))`,
-}) as React.CSSProperties
+// styleMatiere vit dans ./matiere (importé aussi par blocs.tsx sans cycle) ; réexporté ici pour les écrans.
+import { styleMatiere } from "./matiere"
+export { styleMatiere }
 
 /** La figure interactive (premier bloc « graphe ») remonte juste après le premier bloc (l'énoncé) ;
  *  le reste garde son ordre. Ordre d'affichage seulement : les données ne changent pas. */

@@ -16,12 +16,15 @@ autre notion travaillee.
 
 Reglages (config.yaml) :
   bibliotheques: [fiches-v2-demonstration]   # dossiers de bibliotheque/ contenant des fiches v2
+  schema_en_exercice: true   # montre le schema de la fiche visuelle de la notion au-dessus de l'enonce
 """
 
 from __future__ import annotations
 
 import logging
 import random
+import re
+import unicodedata
 from dataclasses import asdict
 from typing import Any
 
@@ -92,6 +95,38 @@ def _rendre_exercice(vue: dict[str, Any]) -> str:
     if vue.get("aide_format"):
         parties.append(str(vue["aide_format"]))
     return "\n\n".join(parties)
+
+
+def _cle(texte: str) -> str:
+    """Minuscules, sans accents ni ponctuation, espaces reduits : pour chercher une reponse dans un schema."""
+    sans_accents = unicodedata.normalize("NFKD", texte).encode("ascii", "ignore").decode().lower()
+    sans_accents = re.sub(r"(?<!\d)[.,]|[.,](?!\d)", " ", sans_accents)  # virgule decimale gardee
+    return " ".join(re.sub(r"[^a-z0-9,.]+", " ", sans_accents).split())
+
+
+def schema_revele(texte_schema: str, ex: dict[str, Any]) -> bool:
+    """Vrai si les textes du schema contiennent la reponse attendue de l'exercice : nombre ou expression
+    attendus (comme un mot entier), texte d'une bonne option ou d'une reponse acceptee, ou au moins deux
+    elements d'une association ; toujours pour un exercice « ordre » (une frise donne l'ordre). Prudence
+    par exces : au moindre doute, le schema n'est pas montre sur cet exercice (il reste dans la fiche)."""
+    schema = f" {_cle(texte_schema)} "
+    if not schema.strip():
+        return False
+    if ex.get("type") == "ordre":  # remettre dans l'ordre : une frise ou un schema d'etapes donne l'ordre
+        return True
+    rep = ex.get("reponse") or {}
+    cherches: list[str] = []
+    if "valeur" in rep:
+        valeur = str(rep["valeur"])
+        cherches += [valeur, valeur.replace(".", ",")]
+    if ex.get("type") == "choix":
+        bonnes = {str(b) for b in rep.get("bonnes") or []}
+        cherches += [str(o.get("texte") or "") for o in rep.get("options") or [] if str(o.get("id")) in bonnes]
+    cherches += [str(a) for a in rep.get("acceptees") or []]
+    if any(c and f" {_cle(c)} " in schema for c in cherches if _cle(c)):
+        return True
+    elements = [str(e.get("texte") or "") for cle in ("elements", "gauche", "droite") for e in rep.get(cle) or []]
+    return sum(1 for e in elements if _cle(e) and f" {_cle(e)} " in schema) >= 2
 
 
 class Brique(Module):
@@ -233,10 +268,30 @@ class Brique(Module):
             **extra,
         }
         self._sauver(conv.id, donnees)
-        vue = presenter(premier)
+        vue = self._vue(notion_id, premier)
         stockage.ajouter_message(conv.id, Message(role="bot", texte=_rendre_exercice(vue)))
         total = sum(1 for e in fiche.get("exercices") or [] if e.get("type") in TYPES_AUTO)
         return {"conversation": conv.id, "exercice": vue, "total": total}
+
+    def _vue(self, notion_id: str, ex: dict[str, Any]) -> dict[str, Any]:
+        """Ce que l'eleve voit de l'exercice (presenter), plus `schema` : l'id de la notion si le schema de sa
+        fiche visuelle doit s'afficher au-dessus de l'enonce, sinon None."""
+        return {**presenter(ex), "schema": self.schema_de(notion_id, ex)}
+
+    def schema_de(self, notion_id: str, ex: dict[str, Any] | None = None) -> str | None:
+        """Id de la notion si sa fiche visuelle a un schema a montrer en tete de l'exercice (retour d'Ellie :
+        une figure aide quand la representation mentale est difficile), sinon None. Le front recupere le
+        SVG par la route des fiches visuelles. Reglage `schema_en_exercice` (defaut : oui). Jamais si les
+        textes du schema contiennent la reponse de l'exercice (une frise qui ecrit « 1914 » sous la question
+        « En quelle annee... ? ») : voir schema_revele."""
+        if not self.reglages.get("schema_en_exercice", True):
+            return None
+        fiches = self.tuteur.module("fiches_visuelles")
+        if fiches is None or fiches.schema(notion_id) is None:  # type: ignore[attr-defined]
+            return None
+        if ex is not None and schema_revele(fiches.texte_schema(notion_id), ex):  # type: ignore[attr-defined]
+            return None
+        return notion_id
 
     def _fiche_de(self, donnees: dict[str, Any]) -> dict[str, Any] | None:
         """La serie generee rangee avec la conversation, sinon la fiche figee de la notion."""
@@ -325,7 +380,7 @@ class Brique(Module):
                 donnees["exercice"] = suivant["id"]
                 donnees["etat"] = asdict(Etat(suivant["id"]))
                 transition = TRANSITION_REUSSI if etat.reussi else TRANSITION_ECHEC
-                vue = presenter(suivant)
+                vue = self._vue(donnees["notion"], suivant)
                 dernier["suivant"] = vue
                 message += transition + _rendre_exercice(vue)
         donnees["dernier"] = dernier
@@ -417,7 +472,7 @@ class Brique(Module):
             fiche = self._fiche_de(donnees)
             en_cours = None
             if fiche is not None and not donnees.get("fini"):
-                en_cours = presenter(exercice_de(fiche, donnees["exercice"]))
+                en_cours = self._vue(donnees["notion"], exercice_de(fiche, donnees["exercice"]))
             total = sum(1 for e in (fiche or {}).get("exercices") or [] if e.get("type") in TYPES_AUTO)
             return {
                 "notion": donnees["notion"],

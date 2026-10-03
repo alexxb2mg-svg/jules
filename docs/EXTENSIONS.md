@@ -88,6 +88,72 @@ le `pas`, valeurs absentes = `defaut`) est récrit en JSON compact ; tout autre 
 bruit (une seule figure par message) et l'événement `figure_ecartee` est journalisé avec sa raison.
 Aucun SVG ni code ne vient du modèle : seulement un id de la liste blanche et des nombres bornés.
 
+**Figure dynamique dans la bulle.** Sous la figure, la bulle affiche un curseur par valeur (même
+composant `Graphe` que le bloc graphe des fiches) : départ = les valeurs choisies par Jules, bornes et
+pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (clé `figures`, module
+`figures`). Les mêmes bornes valent donc pour le modèle et pour l'élève.
+
+**Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
+(`equation-solutions` place −√a et √a, `triangle-rectangle` écrit « AB ≈ … »). Leur déclaration porte
+`revele: true` (facultatif, booléen, défaut `false`) :
+
+```yaml
+discussion:
+  equation-solutions:
+    quand: "Pour faire voir combien de solutions a l'équation x² = a..."
+    revele: true                     # la figure montre la réponse
+    valeurs:
+      a: {min: -25, max: 81, pas: 1, defaut: 49}
+```
+
+Une telle figure n'est proposée au modèle **et** acceptée dans sa réponse que si le mode de la
+conversation figure dans `reglages.modes_revele` du module `figures` (`config.yaml`, défaut
+`[reexplique]`) ; dans les autres modes autorisés (`aide-devoirs`), elle est absente de la liste donnée
+au modèle et un bloc qui la cite est retiré (`figure_ecartee`, raison « gabarit non autorise »). Ne
+jamais mettre `aide-devoirs` dans `modes_revele` : la figure ferait l'exercice à la place de l'élève.
+
+Ce qui lit les messages sans les dessiner (analyse du module `suivi`) passe par
+`texte_sans_figures(texte)` (`jules/modules/figures.py`) : chaque bloc `figure` y devient
+« [figure : <gabarit>] » (et un schéma, « [schéma : <id-notion>] »).
+
+**Schéma de la fiche visuelle dans la discussion (toutes matières).** En plus des gabarits, Jules peut
+citer le schéma SVG de la fiche visuelle d'une notion, par son seul identifiant :
+
+```figure
+{"schema": "parallelisme-triangles-pythagore"}
+```
+
+Forme choisie : une clé `schema` seule, plutôt que `{"gabarit": "schema", "notion": ...}`, parce que ce
+n'est pas un gabarit (aucun dessin paramétré, aucune extension, aucune valeur bornée) : le modèle cite un
+dessin déjà écrit et vérifié par le code au chargement de la fiche (`jules/fiches_visuelles.py`). Le SVG
+ne passe jamais par le modèle ni par le message : le front le lit par la route existante
+`GET /api/eleve/fiches_visuelles/notions/<id>` et le dessine avec le même rendu que la fiche
+(`SchemaNotion` puis `Schema`, `front/src/modules/fiches/blocs.tsx` : `importNode`, jamais `innerHTML` ;
+bouton « Agrandir le schéma » ; feuille claire en thème sombre ; largeur bornée par la bulle).
+
+Liste blanche, par conversation (`FiguresBrique.schemas`, `jules/modules/figures.py`) : la notion de la
+conversation (module `notions`, `conv.notion`) puis ses prérequis (champ `prerequis` de sa fiche, module
+`notions` ou fiches v2 du module `exercices`, au plus 4), s'ils ont une fiche visuelle chargée avec un bloc
+`schema`. Le prompt ne reçoit que ces identifiants, jamais les 410 : une phrase courte « Tu peux montrer le
+schéma de la notion « <titre> » avec ce bloc, quand une image aide (toujours accompagné de ton explication
+en mots) ». Sans notion rattachée, pas de schéma. Validation stricte : un bloc `schema` avec une autre clé,
+un identifiant inconnu ou hors de cette liste est retiré (`figure_ecartee`, `gabarit: "schema:<id>"`,
+raison « schema non autorise » ou « attendu {schema} »). Même règle d'une figure par message, mêmes modes
+que les gabarits (`reglages.modes`, jamais `epreuve`, `exercice`, `controle`, `cours`). Un schéma de fiche
+est un support de cours, pas la réponse d'un exercice : il n'a pas de drapeau `revele` et vaut dans
+`aide-devoirs`. Seul le schéma est cité ; les blocs `formule` et `carte` de la fiche ne le sont pas (non
+livré : le bloc `formule` devrait suivre les règles de `modes_revele`). Réglage `schemas: false` du module
+`figures` pour couper ce type de bloc.
+
+**Schéma au-dessus de l'énoncé des exercices sans IA.** Le module `exercices` (réglage
+`schema_en_exercice`, défaut `true`, `config.yaml`) ajoute à chaque exercice présenté (`commencer`,
+`generer`, exercice suivant, `etat`) un champ `schema` : l'identifiant de la notion si sa fiche visuelle a
+un schéma, sinon `null`. L'écran d'entraînement l'affiche, ouvert, au-dessus de l'énoncé, avec un bouton
+« Masquer le schéma » / « Voir le schéma » (même composant `SchemaNotion`). Garde-fou : `schema` est
+`null` pour un exercice dont la réponse est écrite dans le schéma (`schema_revele` : valeur attendue, texte
+d'une bonne option ou d'une réponse acceptée, deux éléments d'une association ; toujours pour un exercice
+« ordre », qu'une frise résout). Le schéma reste alors dans la fiche, pas sur cet exercice.
+
 **Rappels (bulles au survol).** Sur toutes les pages, ce qui est abrégé ou symbolique montre ce
 qu'il veut dire dans une petite bulle (souris, toucher, clavier). Le cœur,
 `jules/web/static/symboles.js`, ne connaît aucune règle de matière : il parcourt le texte affiché,
@@ -206,7 +272,8 @@ rien fait, ou plusieurs fois).
 - une valeur de `fournit.*` n'est pas une liste de textes, ou une valeur de `permissions.*`
   n'est pas un booléen ;
 - elle fournit des figures sans `gabarit.js`, ou avec un motif interdit dans ce fichier ;
-- sa clé `discussion` cite un gabarit absent de `fournit.figures`, n'a pas de phrase `quand`, ou
+- sa clé `discussion` cite un gabarit absent de `fournit.figures`, n'a pas de phrase `quand`, porte
+  un `revele` qui n'est pas un booléen, ou
   déclare une valeur sans exactement `min`, `max`, `pas`, `defaut` numériques avec `pas > 0` et
   `min ≤ defaut ≤ max` (mêmes règles que les curseurs d'une fiche visuelle) ;
 - elle fournit un module dont le fichier `<module>.py` est absent, ou dont l'id n'est pas de la forme

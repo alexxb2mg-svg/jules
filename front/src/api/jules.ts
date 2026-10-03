@@ -27,7 +27,10 @@ export type Infos = {
   retours?: { types: string[]; testeurs: string[] }
   /** Module 'outils' : catalogue des outils isolés disponibles (calculatrice…). */
   outils?: { catalogue: { id: string; titre?: string; evenements?: string[] }[] }
+  /** Module 'figures' : bornes des curseurs d'une figure de la discussion, par gabarit puis par valeur. */
+  figures?: BornesFigures
 }
+export type BornesFigures = Record<string, Record<string, { min: number; max: number; pas: number; defaut: number }>>
 
 export const session = {
   etat: () => api<EtatSession>("/api/session"),
@@ -112,6 +115,9 @@ export type ExerciceVue = {
   type: "nombre" | "expression" | "choix" | "texte_court" | "ordre" | "association" | string
   difficulte: number
   enonce: string
+  /** Id de la notion si le schéma de sa fiche visuelle s'affiche au-dessus de l'énoncé (réglage
+   *  schema_en_exercice ; jamais s'il contient la réponse de cet exercice), sinon null. */
+  schema?: string | null
   aide_format?: string
   options?: OptionExercice[]
   plusieurs?: boolean

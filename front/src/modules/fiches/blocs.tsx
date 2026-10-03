@@ -14,8 +14,10 @@ import { blocVariants, titreVariants } from "@/components/ui/variantes"
 import { iconeRenfort } from "@/config/renfort"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import type {
-  BlocCarte, BlocExemple, BlocFiche, BlocFormule, BlocGraphe, BlocMethode, BlocPiege, BlocRenfort, BlocSchema, LienRenfort, TypeBloc,
+  BlocCarte, BlocExemple, BlocFiche, BlocFormule, BlocGraphe, BlocMethode, BlocPiege, BlocRenfort, BlocSchema, Fiche, LienRenfort, TypeBloc,
 } from "./types"
+import { fiches } from "@/api/jules"
+import { styleMatiere } from "./matiere"
 import { Riche, typo } from "./texte"
 import { disposerCarte, T_LIEN, T_SOUS, T_TITRE, H_SOUS, H_TITRE } from "./carte"
 import { couleurCss, dessinerGabarit, evaluerCondition } from "./ponts"
@@ -171,36 +173,50 @@ export function FigureGabarit({ gabarit, valeurs, libelle, className }: {
 }
 
 /* ---------------------------------------------------------------- graphe */
-function Graphe({ bloc }: { bloc: BlocGraphe }) {
+const nombre = (v: number) => String(v).replace(".", ",")
+
+/** Figure + curseurs : bloc « graphe » d'une fiche, et figure d'une bulle de la discussion (modules/chat/markdown.tsx,
+ *  bloc synthétique : curseurs = bornes déclarées par l'extension, départ = valeurs choisies par Jules, sans lectures).
+ *  La grille suit la largeur de SON conteneur (@container), pas celle de l'écran : une bulle à 70 % sur tablette
+ *  reste en une colonne. Les couleurs de la matière (--m-*) ont un repli : la discussion n'en définit pas toujours. */
+export function Graphe({ bloc, libelle = "Figure interactive", classeFigure = "max-w-none" }: {
+  bloc: BlocGraphe; libelle?: string; classeFigure?: string
+}) {
   const [valeurs, setValeurs] = useState<Record<string, number>>(() =>
     Object.fromEntries((bloc.curseurs || []).map((c) => [c.nom, Number(c.depart ?? c.min ?? 0)])))
   const lectures = (bloc.lectures || []).filter((l) => evaluerCondition(l.si, valeurs))
   return (
-    <div className="grid items-start gap-6 md:grid-cols-[minmax(240px,340px)_1fr]" onClick={(e) => e.stopPropagation()}>
-      <FigureGabarit gabarit={bloc.gabarit} valeurs={valeurs} libelle="Figure interactive" className="max-w-none" />
-      <div>
-        {(bloc.curseurs || []).map((c) => (
-          <label key={c.id} className="mb-4 block">
-            <span className="mb-1.5 flex items-baseline justify-between font-semibold">
-              <span>{c.nom}</span>
-              <motion.span key={valeurs[c.nom]} initial={{ scale: 1.25, color: "var(--m-accent)" }} animate={{ scale: 1, color: "var(--j-encre)" }}
-                className="rounded-full bg-(--m-fond) px-3 py-0.5 font-titre text-lg text-(--m-texte) tabular-nums">
-                {String(valeurs[c.nom]).replace(".", ",")}
-              </motion.span>
-            </span>
-            <input type="range" min={c.min} max={c.max} step={c.pas ?? 1} value={valeurs[c.nom]} data-adresse={`graphe/${c.id}`}
-              onChange={(e) => setValeurs((v) => ({ ...v, [c.nom]: Number(e.target.value) }))}
-              className="h-2 w-full cursor-pointer accent-(--m-accent)" />
-          </label>
-        ))}
-        <div className="min-h-[3.5rem] rounded-2xl bg-card p-4 text-lecture" aria-live="polite">
-          <AnimatePresence mode="popLayout" initial={false}>
-            {lectures.map((l) => (
-              <motion.p key={l.si + l.texte} layout initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} className="my-1">
-                <Riche texte={l.texte} />
-              </motion.p>
-            ))}
-          </AnimatePresence>
+    <div className="@container" data-graphe>
+      <div className="grid items-start gap-4 @min-[34rem]:grid-cols-[minmax(240px,340px)_1fr] @min-[34rem]:gap-6" onClick={(e) => e.stopPropagation()}>
+        <FigureGabarit gabarit={bloc.gabarit} valeurs={valeurs} libelle={libelle} className={classeFigure} />
+        <div>
+          {(bloc.curseurs || []).map((c) => (
+            <label key={c.id} className="mb-3 block last:mb-0">
+              <span className="mb-1 flex items-baseline justify-between gap-3 font-semibold">
+                <span>{c.nom}</span>
+                {/* La valeur est lue par aria-valuetext (« a = 2 ») ; la pastille n'est que visuelle. */}
+                <motion.span key={valeurs[c.nom]} aria-hidden initial={{ scale: 1.25, color: "var(--m-accent,var(--j-bleu))" }} animate={{ scale: 1, color: "var(--j-encre)" }}
+                  className="rounded-full bg-(--m-fond,var(--j-surface)) px-3 py-0.5 font-titre text-lg text-(--m-texte,var(--j-bleu)) tabular-nums">
+                  {nombre(valeurs[c.nom])}
+                </motion.span>
+              </span>
+              <input type="range" min={c.min} max={c.max} step={c.pas ?? 1} value={valeurs[c.nom]} data-adresse={`graphe/${c.id}`}
+                aria-valuetext={`${c.nom} = ${nombre(valeurs[c.nom])}`}
+                onChange={(e) => setValeurs((v) => ({ ...v, [c.nom]: Number(e.target.value) }))}
+                className="h-8 w-full cursor-pointer rounded-full accent-(--m-accent,var(--j-bleu)) focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-(--m-accent,var(--j-bleu))" />
+            </label>
+          ))}
+          {(bloc.lectures || []).length > 0 && (
+            <div className="mt-4 min-h-[3.5rem] rounded-2xl bg-card p-4 text-lecture" aria-live="polite">
+              <AnimatePresence mode="popLayout" initial={false}>
+                {lectures.map((l) => (
+                  <motion.p key={l.si + l.texte} layout initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} className="my-1">
+                    <Riche texte={l.texte} />
+                  </motion.p>
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -333,6 +349,38 @@ function Schema({ bloc }: { bloc: BlocSchema }) {
         </DialogContent>
       </Dialog>
     </div>
+  )
+}
+
+/* ---------------------------------------------------------------- schéma d'une notion (discussion, exercices) */
+// Le schéma de la fiche visuelle d'une notion, cité par son id (bloc ```figure {"schema": id} de Jules, déjà
+// vérifié par jules/modules/figures.py ; ou en tête des exercices sans IA). Le SVG vient de la route existante
+// des fiches visuelles (une requête par notion et par page) ; même rendu que dans la fiche (Schema ci-dessus).
+const fichesLues = new Map<string, Promise<Fiche>>()
+function lireFiche(notion: string): Promise<Fiche> {
+  let p = fichesLues.get(notion)
+  if (!p) { p = fiches.lire(notion); p.catch(() => fichesLues.delete(notion)); fichesLues.set(notion, p) }
+  return p
+}
+
+export function SchemaNotion({ notion, className }: { notion: string; className?: string }) {
+  const [etat, setEtat] = useState<{ bloc: BlocSchema; matiere: string; titre: string } | "absent" | null>(null)
+  useEffect(() => {
+    let annule = false
+    setEtat(null)
+    lireFiche(notion).then((f) => {
+      const bloc = f.blocs.find((b): b is BlocSchema => b.type === "schema" && typeof (b as BlocSchema).svg === "string")
+      if (!annule) setEtat(bloc ? { bloc, matiere: f.matiere, titre: f.titre } : "absent")
+    }).catch(() => { if (!annule) setEtat("absent") })
+    return () => { annule = true }
+  }, [notion])
+  if (etat === null) return <div data-schema-notion={notion} className={cn("h-24 w-full animate-pulse rounded-surface bg-papier/60", className)} aria-hidden="true" />
+  if (etat === "absent") return null
+  return (
+    <figure data-schema-notion={notion} style={styleMatiere(etat.matiere)} className={cn("m-0 w-full min-w-0", className)}
+      aria-label={`Schéma : ${etat.titre}`}>
+      <Schema bloc={{ ...etat.bloc, titre: etat.bloc.titre || etat.titre }} />
+    </figure>
   )
 }
 

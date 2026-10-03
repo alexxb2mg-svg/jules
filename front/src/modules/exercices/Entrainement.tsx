@@ -2,10 +2,11 @@
 // Chaque réponse passe par Tuteur.echanger (même historique et même suivi que dans le chat), sans IA.
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { ArrowRight, ChevronDown, CircleCheck, CircleX, Dumbbell, HelpCircle, Lightbulb, RotateCcw, Shuffle, Sparkles, TriangleAlert } from "lucide-react"
+import { ArrowRight, ChevronDown, CircleCheck, Shapes, CircleX, Dumbbell, HelpCircle, Lightbulb, RotateCcw, Shuffle, Sparkles, TriangleAlert } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { exercices, type Bilan, type ExerciceVue, type ReponseExercice, type Verdict } from "@/api/jules"
 import { Riche } from "@/modules/fiches/texte"
+import { SchemaNotion } from "@/modules/fiches/blocs"
 import { SAISIES } from "./saisies"
 import { marquerEtape } from "@/modules/accueil/etat"
 
@@ -28,6 +29,8 @@ const TEXTES = {
   indiceN: (n: number) => `Indice ${n} sur 3`,
   plusDIndice: "Plus d'indice",
   pourquoi: "Pourquoi ?",
+  voirSchema: "Voir le schéma",
+  masquerSchema: "Masquer le schéma",
 }
 
 /** Nombre de paliers de l'échelle d'indices (jules/fiches/schema.py PALIERS). */
@@ -55,6 +58,10 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
   // Coups de pouce demandés sur l'exercice en cours (idée D) : affichés au-dessus de la saisie.
   const [indices, setIndices] = useState<{ texte: string; palier: number }[]>([])
   const [palier, setPalier] = useState(0)
+  // Schéma de la fiche visuelle au-dessus de l'énoncé (retour d'Ellie : une figure aide à se représenter
+  // l'exercice). Le serveur ne l'envoie pas si le schéma donne la réponse de cet exercice. Ouvert d'office ;
+  // l'élève peut le replier, il le reste pour la série.
+  const [schemaOuvert, setSchemaOuvert] = useState(true)
 
   const lancer = async (genere: boolean) => {
     setErreur(null); setVerdict(null); setEnvoi(true)
@@ -145,6 +152,16 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
                 {TEXTES.exercice(serie.numero, serie.total)}
                 {DIFFICULTE[serie.exercice.difficulte] && <span className="rounded-full bg-nav px-2 py-0.5 text-[0.75rem]">{DIFFICULTE[serie.exercice.difficulte]}</span>}
               </p>
+              {serie.exercice.schema && (
+                <div data-exercice-schema className="flex flex-col gap-2">
+                  <button type="button" onClick={() => setSchemaOuvert((o) => !o)} aria-expanded={schemaOuvert}
+                    className="inline-flex items-center gap-1.5 self-start rounded-full border-2 border-(--m-accent) px-3.5 py-1.5 text-[0.9rem] font-semibold text-(--m-texte)">
+                    <Shapes size={16} /> {schemaOuvert ? TEXTES.masquerSchema : TEXTES.voirSchema}
+                    <ChevronDown size={16} className={cn("transition-transform", schemaOuvert && "rotate-180")} />
+                  </button>
+                  {schemaOuvert && <SchemaNotion notion={serie.exercice.schema} />}
+                </div>
+              )}
               <p className="m-0 text-[1.1rem] leading-relaxed font-medium whitespace-pre-line text-encre"><Riche texte={serie.exercice.enonce} /></p>
 
               <AnimatePresence initial={false}>

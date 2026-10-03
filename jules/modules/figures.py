@@ -11,6 +11,14 @@ Le dessin est fait par le gabarit de l'extension (gabarit.js, dans la page de l'
     et l'evenement `figure_ecartee` est journalise. Il n'appelle jamais `relancer()`.
 Liste blanche et bornes : cle `discussion` des extension.yaml (jules/extensions.py, docs/EXTENSIONS.md).
 
+Schema d'une fiche visuelle : le modele peut aussi CITER le schema (SVG deja verifie, jamais ecrit par lui)
+de la fiche visuelle d'une notion :
+    ```figure
+    {"schema": "theoreme-pythagore"}
+    ```
+Liste blanche par conversation : la notion de la conversation (module 'notions') et ses prerequis, s'ils ont
+une fiche visuelle chargee avec un bloc `schema` (module 'fiches_visuelles'). Jamais les 410 ids dans le prompt.
+
 Doit etre place APRES 'notions' et 'cours' dans config.yaml : leurs filtres peuvent remplacer la reponse
 par une relance (texte brut du modele), qui doit encore passer ici.
 """
@@ -28,6 +36,10 @@ from jules.modules.base import Module
 from jules.stockage import Conversation
 
 MODES_PAR_DEFAUT = ("aide-devoirs", "reexplique")
+# Gabarits `revele: true` (la figure montre la reponse : solutions placees, longueur ecrite) : proposes et
+# acceptes seulement dans ces modes. Jamais 'aide-devoirs' : la figure ferait l'exercice a la place de l'eleve.
+MODES_REVELE_PAR_DEFAUT = ("reexplique",)
+PREREQUIS_MAX = 4  # schemas de prerequis proposes au modele, au-dela de celui de la notion
 
 # Bloc de code cloture (``` ou ~~~, 3 espaces d'indentation au plus) de langage `figure`. Sans cloture,
 # le bloc va jusqu'a la fin du message, comme le fait le rendu markdown.
@@ -82,10 +94,51 @@ def normaliser(source: str, autorises: dict[str, dict[str, Any]]) -> tuple[str |
     return normalise, gabarit, ""
 
 
+def normaliser_schema(objet: dict[str, Any], schemas: dict[str, str]) -> tuple[str | None, str, str]:
+    """Bloc {"schema": id} : (JSON normalise ou None, id lu, raison du rejet). `schemas` : id -> titre."""
+    if set(objet) != {"schema"}:
+        return None, "", "attendu {schema}"
+    notion = objet["schema"] if isinstance(objet["schema"], str) else ""
+    if notion not in schemas:
+        return None, f"schema:{notion[:60]}", "schema non autorise"
+    return json.dumps({"schema": notion}, separators=(",", ":")), f"schema:{notion}", ""
+
+
+def normaliser_bloc(
+    source: str, autorises: dict[str, dict[str, Any]], schemas: dict[str, str]
+) -> tuple[str | None, str, str]:
+    """Un bloc ```figure : schema de fiche ({"schema": id}) ou gabarit ({gabarit, valeurs})."""
+    try:
+        objet = json.loads(source)
+    except (json.JSONDecodeError, RecursionError):
+        objet = None
+    if isinstance(objet, dict) and "schema" in objet:
+        return normaliser_schema(objet, schemas)
+    return normaliser(source, autorises)
+
+
 def _exemple(autorises: dict[str, Any]) -> dict[str, Any]:
     """Exemple montre au modele : le premier gabarit avec ses valeurs par defaut."""
     gabarit, declaration = next(iter(autorises.items()))
     return {"gabarit": gabarit, "valeurs": {nom: b["defaut"] for nom, b in declaration["valeurs"].items()}}
+
+
+def texte_sans_figures(texte: str) -> str:
+    """Le texte d'un message avec chaque bloc ```figure remplace par « [figure : <gabarit>] » : pour ce qui
+    lit les messages sans les dessiner (analyse de suivi...). Un bloc illisible devient « [figure] »."""
+
+    def resume(m: re.Match[str]) -> str:
+        try:
+            objet = json.loads(m.group("json"))
+        except (json.JSONDecodeError, RecursionError):
+            objet = None
+        gabarit = objet.get("gabarit") if isinstance(objet, dict) else None
+        schema = objet.get("schema") if isinstance(objet, dict) else None
+        if isinstance(schema, str) and schema:
+            return f"[schéma : {schema[:60]}]"
+        return f"[figure : {gabarit[:60]}]" if isinstance(gabarit, str) and gabarit else "[figure]"
+
+    return _BLOC.sub(resume, texte) if "figure" in texte else texte
 
 
 class Brique(Module):
@@ -96,15 +149,98 @@ class Brique(Module):
     def modes(self) -> tuple[str, ...]:
         return tuple(self.reglages.get("modes") or MODES_PAR_DEFAUT)
 
+    @property
+    def modes_revele(self) -> tuple[str, ...]:
+        return tuple(self.reglages.get("modes_revele") or MODES_REVELE_PAR_DEFAUT)
+
     def autorises(self, conv: Conversation) -> dict[str, dict[str, Any]]:
-        """Gabarits que Jules peut montrer dans cette conversation (aucun hors des modes autorises)."""
-        return figures_pour_discussion(self.tuteur.extensions) if conv.mode in self.modes else {}
+        """Gabarits que Jules peut montrer dans cette conversation : aucun hors des modes autorises, et
+        ceux qui revelent la reponse seulement dans les modes `modes_revele` (proposes ET acceptes)."""
+        if conv.mode not in self.modes:
+            return {}
+        revele_permis = conv.mode in self.modes_revele
+        return {
+            gabarit: declaration
+            for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
+            if revele_permis or not declaration.get("revele")
+        }
+
+    def infos_interface(self) -> dict[str, Any]:
+        """Bornes des curseurs sous une figure de la bulle (lot 3) : {gabarit -> {nom -> {min, max, pas,
+        defaut}}}, pour tous les gabarits declares. Le serveur a deja choisi quelles figures un message
+        peut porter (filtrer_reponse) ; ici l'eleve fait seulement bouger, dans les bornes, celle qu'il a."""
+        return {
+            "figures": {
+                gabarit: {
+                    nom: {cle: bornes[cle] for cle in ("min", "max", "pas", "defaut")}
+                    for nom, bornes in declaration["valeurs"].items()
+                }
+                for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
+            }
+        }
+
+    # --- schemas des fiches visuelles -------------------------------------------------------------
+    def _prerequis(self, notion_id: str) -> list[str]:
+        """Prerequis declares par les fiches de la notion (module 'notions', puis fiches v2 de 'exercices')."""
+        trouves: list[str] = []
+        notions = self.tuteur.module("notions")
+        if notions is not None:
+            fiche, _ = notions.catalogue.fiche(notion_id)  # type: ignore[attr-defined]
+            trouves.extend(str(p) for p in fiche.get("prerequis") or [])
+        exercices = self.tuteur.module("exercices")
+        if exercices is not None:
+            fiche_v2 = exercices.fiches.get(notion_id) or {}  # type: ignore[attr-defined]
+            trouves.extend(str(p) for p in fiche_v2.get("prerequis") or [])
+        return list(dict.fromkeys(p for p in trouves if p != notion_id))
+
+    def schemas(self, conv: Conversation) -> dict[str, str]:
+        """Schemas de fiche que Jules peut montrer ici (id de notion -> titre de la notion) : la notion de la
+        conversation puis ses prerequis, s'ils ont un schema. Rien hors des modes autorises ni sans notion."""
+        if conv.mode not in self.modes or not self.reglages.get("schemas", True):
+            return {}
+        notions = self.tuteur.module("notions")
+        fiches = self.tuteur.module("fiches_visuelles")
+        if notions is None or fiches is None:
+            return {}
+        notion_id = str(notions.etat(conv.id).get("notion") or "")  # type: ignore[attr-defined]
+        if not notion_id:
+            return {}
+        resultat: dict[str, str] = {}
+        for candidat in [notion_id, *self._prerequis(notion_id)]:
+            if len(resultat) > PREREQUIS_MAX:
+                break
+            schema = fiches.schema(candidat)  # type: ignore[attr-defined]
+            if schema is not None:
+                resultat[candidat] = schema["titre"]
+        return resultat
+
+    def _contribution_schemas(self, schemas: dict[str, str]) -> list[str]:
+        ids = list(schemas)
+        lignes = [
+            f"Tu peux montrer le schéma de la notion « {schemas[ids[0]]} » avec ce bloc, quand une image aide "
+            "(toujours accompagné de ton explication en mots) :",
+            "```figure",
+            json.dumps({"schema": ids[0]}, ensure_ascii=False),
+            "```",
+        ]
+        if len(ids) > 1:
+            lignes.append("Schémas des notions à revoir avant celle-ci (même bloc, autre identifiant) :")
+            lignes.extend(f"- {i} : {schemas[i]}" for i in ids[1:])
+        return lignes
 
     def contribution(self, conv: Conversation) -> str | None:
         autorises = self.autorises(conv)
-        if not autorises:
+        schemas = self.schemas(conv)
+        if not autorises and not schemas:
             return None
-        lignes = [
+        lignes = self._contribution_schemas(schemas) if schemas else []
+        if not autorises:
+            lignes.append(
+                "Règles : une figure au plus par réponse ; jamais de SVG, de code de dessin ni de dessin en "
+                "caractères. Un bloc hors de ces règles est retiré avant que l'élève le voie."
+            )
+            return "\n".join(lignes)
+        lignes += [
             "Tu peux montrer UNE figure dans ta réponse, si elle aide vraiment l'élève à comprendre. "
             "Écris pour cela, à l'endroit voulu, un bloc de code de langage figure qui contient seulement "
             "un objet JSON, par exemple :",
@@ -131,16 +267,18 @@ class Brique(Module):
         if "figure" not in texte:
             return texte
         autorises = self.autorises(conv)
+        schemas = self.schemas(conv)
+        permis = bool(autorises or schemas)
         ecartees: list[dict[str, str]] = []
         gardee = False
 
         def remplacer(m: re.Match[str]) -> str:
             nonlocal gardee
-            normalise, gabarit, raison = normaliser(m.group("json"), autorises)
+            normalise, gabarit, raison = normaliser_bloc(m.group("json"), autorises, schemas)
             if normalise is not None and gardee:
                 normalise, raison = None, "une seule figure par message"
             if normalise is None:
-                ecartees.append({"gabarit": gabarit, "raison": raison if autorises else "mode sans figure"})
+                ecartees.append({"gabarit": gabarit, "raison": raison if permis else "mode sans figure"})
                 return ""
             gardee = True
             return f"```figure\n{normalise}\n```"
