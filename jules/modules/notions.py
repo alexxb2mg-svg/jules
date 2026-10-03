@@ -18,6 +18,10 @@ Reglages (config.yaml) :
   filtre_sortie: true        # garde-fou de sortie sur les exercices fermes de la fiche courante (voir
                               # filtrer_reponse ci-dessous) ; false pour le couper si besoin
 
+Recherche (GET /api/eleve/notions/index, aucun appel IA) : toutes les notions du referentiel charge, a plat,
+avec les drapeaux `fiche` (fiche visuelle) et `lecon` (lecon a blocs) lus dans les modules qui les servent.
+Sert la barre de recherche de la barre laterale (front/src/modules/recherche/).
+
 Garde-fou de sortie (filtrer_reponse) :
   Si la conversation a une notion et que le mode y donne droit (pas dans MODES_SANS_NOTION), toute
   reponse de Jules qui contient la bonne reponse d'un exercice FERME (auto-corrige par le code : voir
@@ -350,9 +354,50 @@ class Brique(Module):
         nouvelle = relancer()
         return QUESTION_DE_REPLI if any(contient_la_reponse(nouvelle, b) for b in blocs) else nouvelle
 
+    # --- index de recherche (barre laterale, aucun appel IA) ------------------------
+    def _ids_de(self, module_id: str, attribut: str) -> set[str]:
+        """Notions couvertes par un autre module (fiches visuelles, lecons) ; module absent : aucune."""
+        module = self.tuteur.module(module_id)
+        if module is None:
+            return set()
+        return set(getattr(module, attribut, None) or {})
+
+    def index_recherche(self) -> dict[str, Any]:
+        """Toutes les notions du referentiel charge (toutes matieres, niveaux du profil), a plat.
+
+        Les drapeaux reprennent ce que savent les autres modules, sans rien recalculer : `fiche` = une fiche
+        visuelle est servie par 'fiches_visuelles' (meme critere que /api/eleve/fiches_visuelles/notions),
+        `lecon` = une lecon a blocs est servie par 'cours' (meme critere que le parcours). `mots_cles` : ceux
+        du referentiel puis les declencheurs des fiches, sans doublon ; liste vide s'il n'y en a pas.
+        """
+        cat = self.catalogue
+        avec_fiche = self._ids_de("fiches_visuelles", "fiches")
+        avec_lecon = self._ids_de("cours", "lecons")
+        notions = []
+        for n in cat.notions.values():
+            mots = list(dict.fromkeys([*n.mots_cles, *cat.declencheurs(n.id)]))
+            notions.append(
+                {
+                    "id": n.id,
+                    "titre": n.titre,
+                    "chapitre": n.chapitre,
+                    "matiere": n.matiere,
+                    "nom_matiere": n.nom_matiere,
+                    "niveau": n.niveau,
+                    "fiche": n.id in avec_fiche,
+                    "lecon": n.id in avec_lecon,
+                    "mots_cles": mots,
+                }
+            )
+        return {"notions": notions}
+
     # --- routes eleve ---------------------------------------------------------------
     def routes_eleve(self) -> APIRouter:
         routeur = APIRouter()
+
+        @routeur.get("/index")
+        def index() -> dict[str, Any]:
+            return self.index_recherche()
 
         def conversation(conv_id: str) -> Conversation:
             conv = self.tuteur.stockage.conversation(conv_id)

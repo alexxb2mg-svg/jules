@@ -149,7 +149,7 @@ export function Pronote() {
         {data && (
           <div className="flex flex-col gap-6">
             {/* EDT */}
-            <section className="rounded-2xl border border-bord bg-white p-5 shadow-relief">
+            <section className="rounded-surface bg-card p-5 shadow-relief">
               <div className="mb-3 flex items-center gap-2">
                 <Calendar className="size-5 text-bleu" />
                 <h2 className="text-base font-semibold">Emploi du temps</h2>
@@ -158,7 +158,7 @@ export function Pronote() {
             </section>
 
             {/* Devoirs */}
-            <section className="rounded-2xl border border-bord bg-white p-5 shadow-relief">
+            <section className="rounded-surface bg-card p-5 shadow-relief">
               <div className="mb-3 flex items-center gap-2">
                 <BookOpen className="size-5 text-orange-500" />
                 <h2 className="text-base font-semibold">Travail à faire</h2>
@@ -167,7 +167,7 @@ export function Pronote() {
             </section>
 
             {/* Notes */}
-            <section className="rounded-2xl border border-bord bg-white p-5 shadow-relief">
+            <section className="rounded-surface bg-card p-5 shadow-relief">
               <div className="mb-3 flex items-center gap-2">
                 <GraduationCap className="size-5 text-violet" />
                 <h2 className="text-base font-semibold">Notes</h2>

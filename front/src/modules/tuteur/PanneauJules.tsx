@@ -14,6 +14,13 @@ import "katex/dist/katex.min.css"
 import { ArrowUp, MessageCircleQuestion } from "lucide-react"
 import { motion } from "framer-motion"
 import { conversations, type MessageJules } from "@/api/jules"
+import { AvatarJules } from "@/components/ui/avatar"
+import { bulleVariants } from "@/components/ui/variantes"
+import { buttonVariants } from "@/components/ui/button"
+import { choixVariants, surfaceVariants } from "@/components/ui/variantes"
+import { BulleAttente } from "@/modules/chat/Bulle"
+import { useMotion } from "@/lib/motion"
+import { cn } from "@/lib/utils"
 
 export type AideRapide = { libelle: string; message: string }
 /** J : parties du contenu affiché que Jules peut citer (titre exact → id du bloc à illuminer). */
@@ -43,6 +50,7 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
 }) {
   const [messages, setMessages] = useState<MessageJules[]>([])
   const [enCours, setEnCours] = useState(false)
+  const { apparition } = useMotion()
 
   useEffect(() => {
     conversations.lire(conversationId)
@@ -76,27 +84,27 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
-      <div className="flex h-full flex-col bg-nav">
-        <div className="flex items-center gap-3 border-b border-bord px-5 py-3.5">
-          <img src="/api/persona/avatar" alt="" className="size-9 rounded-full bg-bleu" onError={(e) => (e.currentTarget.style.display = "none")} />
+      <div className="flex h-full flex-col bg-background">
+        <div className="flex items-center gap-3 px-5 pt-4 pb-2">
+          <AvatarJules taille="lg" />
           <div className="leading-tight">
-            <b className="font-titre text-[17px]">Jules</b>
-            {sousTitre && <small className="block text-[13px] text-gris">{sousTitre}</small>}
+            <b className="font-titre text-bloc font-bold">Jules</b>
+            {sousTitre && <small className="block text-petit text-gris">{sousTitre}</small>}
           </div>
         </div>
 
         <ThreadPrimitive.Root className="flex min-h-0 flex-1 flex-col">
-          <ThreadPrimitive.Viewport className="flex flex-1 flex-col gap-3 overflow-y-auto px-4 py-4">
+          <ThreadPrimitive.Viewport className="flex flex-1 flex-col gap-4 overflow-y-auto px-4 py-4">
             <ThreadPrimitive.Empty>
-              <div className="m-auto flex max-w-[320px] flex-col items-center gap-4 text-center text-[15px] text-gris">
+              <div className="m-auto flex max-w-[320px] flex-col items-center gap-4 text-center text-courant text-gris">
                 <p className="m-0">Je suis là si tu bloques. Je ne te donne pas la réponse, mais je t'aide à la trouver.</p>
                 {suggestions.length > 0 && (
                   <div className="flex w-full flex-col gap-2">
                     {suggestions.map((s, i) => (
                       <ThreadPrimitive.Suggestion key={s.libelle} prompt={s.message} send asChild>
-                        <motion.button initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 * i }}
-                          className="flex items-center gap-2 rounded-2xl border border-bord bg-white px-3.5 py-2.5 text-left text-[14px] font-medium text-encre shadow-relief transition-colors hover:border-bleu hover:text-bleu">
-                          <MessageCircleQuestion size={16} className="shrink-0 text-bleu" /> <span className="line-clamp-2">{s.libelle}</span>
+                        <motion.button {...apparition} transition={{ delay: 0.06 * i }}
+                          className={choixVariants({ forme: "suggestion", className: "justify-start gap-2.5" })}>
+                          <MessageCircleQuestion size={16} className="shrink-0" /> <span className="line-clamp-2">{s.libelle}</span>
                         </motion.button>
                       </ThreadPrimitive.Suggestion>
                     ))}
@@ -106,27 +114,26 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
             </ThreadPrimitive.Empty>
             <ThreadPrimitive.Messages components={{ UserMessage: MessageEleve, AssistantMessage: MessageJulesBulle }} />
             <ThreadPrimitive.If running>
-              <div className="flex gap-1 self-start rounded-2xl rounded-bl-md bg-bleu-clair px-4 py-3">
-                {[0, 1, 2].map((i) => <span key={i} className="size-2 animate-bounce rounded-full bg-bleu/60" style={{ animationDelay: `${i * 120}ms` }} />)}
-              </div>
+              <BulleAttente tete={false} />
             </ThreadPrimitive.If>
           </ThreadPrimitive.Viewport>
 
           {aides.length > 0 && (
-            <div className="flex flex-wrap gap-1.5 px-3 pb-2">
+            <div className="flex flex-wrap gap-2 px-3 pb-2">
               {aides.map((a) => (
                 <ThreadPrimitive.Suggestion key={a.libelle} prompt={a.message} send
-                  className="rounded-full border border-bord bg-white px-3.5 py-2 text-[14px] font-medium transition-colors hover:border-bleu hover:text-bleu">
+                  className={buttonVariants({ variant: "sombre", size: "pastille-sm", className: "text-bleu" })}>
                   {a.libelle}
                 </ThreadPrimitive.Suggestion>
               ))}
             </div>
           )}
 
-          <ComposerPrimitive.Root className="m-3 mt-0 flex items-end gap-2 rounded-2xl border-2 border-bord bg-white p-2 focus-within:border-bleu">
+          <ComposerPrimitive.Root className={surfaceVariants({ ton: "souleve", espace: "aucun",
+            className: "m-3 mt-0 flex items-end gap-2 p-1.5 pl-3 focus-within:ring-2 focus-within:ring-bleu/40" })}>
             <ComposerPrimitive.Input placeholder="Écris à Jules…" rows={1} autoFocus={false}
-              className="max-h-40 flex-1 resize-none bg-transparent px-2 py-1.5 text-[16px] outline-none placeholder:text-gris" />
-            <ComposerPrimitive.Send className="grid size-9 place-items-center rounded-xl bg-bleu text-white transition-opacity disabled:opacity-40" aria-label="Envoyer">
+              className="max-h-40 min-h-11 flex-1 resize-none bg-transparent px-1 py-2.5 text-courant outline-none placeholder:text-gris" />
+            <ComposerPrimitive.Send className={buttonVariants({ variant: "jules", size: "rond", className: "shadow-none disabled:opacity-40" })} aria-label="Envoyer">
               <ArrowUp size={18} />
             </ComposerPrimitive.Send>
           </ComposerPrimitive.Root>
@@ -138,7 +145,7 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
 
 function MessageEleve() {
   return (
-    <MessagePrimitive.Root className="max-w-[88%] self-end rounded-2xl rounded-br-md bg-bleu px-4 py-2.5 text-[16px] text-white">
+    <MessagePrimitive.Root className={cn(bulleVariants({ auteur: "eleve" }), "max-w-[88%] self-end")}>
       <MessagePrimitive.Parts />
     </MessagePrimitive.Root>
   )
@@ -171,7 +178,7 @@ function Lien({ href, children, ...reste }: React.AnchorHTMLAttributes<HTMLAncho
     const cible = href.slice(7)
     return (
       <a href={`#${cible}`} role="button" onClick={(e) => { e.preventDefault(); allerALaCitation(cible) }} title="Voir ce passage"
-        className="rounded bg-white/70 px-0.5 font-semibold text-bleu underline decoration-bleu/40 decoration-2 underline-offset-2 [box-decoration-break:clone] hover:decoration-bleu">
+        className="rounded bg-card/70 px-0.5 font-semibold text-bleu underline decoration-bleu/40 decoration-2 underline-offset-2 [box-decoration-break:clone] hover:decoration-bleu">
         {children}
       </a>
     )
@@ -184,10 +191,17 @@ function Markdown() {
     className="prose-jules [&_p]:my-1 [&_strong]:font-semibold [&_ul]:my-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5" />
 }
 
+/** Réponse de Jules : son portrait à côté (les réponses alternent avec l'élève : une par groupe), apparition courte. */
 function MessageJulesBulle() {
+  const { apparition } = useMotion()
   return (
-    <MessagePrimitive.Root className="max-w-[92%] self-start rounded-2xl rounded-bl-md bg-bleu-clair px-4 py-2.5 text-[16px] leading-relaxed">
-      <MessagePrimitive.Parts components={{ Text: Markdown }} />
+    <MessagePrimitive.Root asChild>
+      <motion.div {...apparition} className="flex max-w-[94%] items-start gap-2 self-start">
+        <AvatarJules taille="md" className="mt-0.5" />
+        <div className={cn(bulleVariants({ auteur: "jules", tete: true }), "bulle-jules min-w-0")}>
+          <MessagePrimitive.Parts components={{ Text: Markdown }} />
+        </div>
+      </motion.div>
     </MessagePrimitive.Root>
   )
 }

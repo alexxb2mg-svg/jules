@@ -189,15 +189,18 @@ class Brique(Module):
         resultat_notions = []
         for n in notions:
             cle = (nom_matiere.casefold(), n.titre.casefold())
-            resultat_notions.append(
-                {
-                    "id": n.id,
-                    "titre": n.titre,
-                    "chapitre": n.chapitre,
-                    "etat": statuts.get(cle, "a_venir"),
-                    "lecon": n.id in self.lecons,
-                }
-            )
+            lecon = self.lecons.get(n.id)
+            entree = {
+                "id": n.id,
+                "titre": n.titre,
+                "chapitre": n.chapitre,
+                "etat": statuts.get(cle, "a_venir"),
+                "lecon": lecon is not None,
+            }
+            # duree declaree par la lecon (lue au chargement) ; absente si pas de lecon ou duree inconnue
+            if lecon is not None and lecon.duree_minutes > 0:
+                entree["duree_minutes"] = lecon.duree_minutes
+            resultat_notions.append(entree)
         return {
             "matieres": [{"id": mid, "nom": nom} for mid, nom, _ in matieres],
             "matiere": matiere_use,

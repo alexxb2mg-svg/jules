@@ -137,6 +137,12 @@ def test_parcours_groupe_par_matiere_avec_etat_estime(tuteur):
     assert autre["lecon"] is False  # aucune lecon ecrite pour les autres notions
 
 
+def test_parcours_donne_la_duree_de_la_lecon_seulement_si_elle_existe(tuteur):
+    notions = tuteur.module("cours").parcours(MATIERE_ID)["notions"]
+    assert next(n for n in notions if n["id"] == NOTION)["duree_minutes"] == 10  # duree_minutes de la lecon
+    assert "duree_minutes" not in next(n for n in notions if n["id"] == NOTION_SANS_LECON)  # pas de « 0 min »
+
+
 def test_parcours_matiere_par_defaut_si_inconnue(tuteur):
     module = tuteur.module("cours")
     parcours = module.parcours("matiere-inexistante")

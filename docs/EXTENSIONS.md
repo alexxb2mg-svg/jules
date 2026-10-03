@@ -64,6 +64,30 @@ est écartée. Le cœur en tire deux choses, sans connaître aucune figure par s
   des extensions actives (dans l'ordre de `extensions:`). Ajouter une figure = ajouter une
   extension et l'activer, sans toucher à `accueil.html`.
 
+**Figures dans la discussion (clé `discussion`).** Jules peut montrer une figure dans sa réponse, jamais
+la dessiner : le modèle n'écrit qu'un bloc de code markdown de langage `figure` contenant du JSON
+`{"gabarit": "<id>", "valeurs": {...}}`, et la bulle le dessine avec le gabarit de l'extension
+(`FigureGabarit`, `front/src/modules/fiches/blocs.tsx`). Une figure n'est proposée dans la discussion
+que si son extension la déclare, sous une clé de premier niveau `discussion:` (activation volontaire,
+figure par figure ; sans déclaration, elle reste utilisable dans les fiches seulement) :
+
+```yaml
+discussion:
+  droite-affine:                     # doit figurer dans fournit.figures
+    quand: "Pour faire voir une fonction affine f(x) = ax + b..."   # une phrase pour le modèle
+    valeurs:                         # toutes les valeurs du gabarit, chacune avec ses quatre bornes
+      a: {min: -3, max: 3, pas: 0.5, defaut: 1}
+      b: {min: -4, max: 4, pas: 1, defaut: 0}
+```
+
+Le module `figures` (`jules/modules/figures.py`, placé **après** `notions` et `cours` dans
+`config.yaml`) donne ces déclarations au modèle dans les modes autorisés (`reglages.modes`, par défaut
+`aide-devoirs` et `reexplique`), puis relit chaque réponse : un bloc valide (gabarit déclaré, mode
+autorisé, objet `{gabarit, valeurs}` sans autre clé, chaque valeur un nombre dans `[min ; max]` et sur
+le `pas`, valeurs absentes = `defaut`) est récrit en JSON compact ; tout autre bloc est retiré sans
+bruit (une seule figure par message) et l'événement `figure_ecartee` est journalisé avec sa raison.
+Aucun SVG ni code ne vient du modèle : seulement un id de la liste blanche et des nombres bornés.
+
 **Rappels (bulles au survol).** Sur toutes les pages, ce qui est abrégé ou symbolique montre ce
 qu'il veut dire dans une petite bulle (souris, toucher, clavier). Le cœur,
 `jules/web/static/symboles.js`, ne connaît aucune règle de matière : il parcourt le texte affiché,
@@ -182,6 +206,9 @@ rien fait, ou plusieurs fois).
 - une valeur de `fournit.*` n'est pas une liste de textes, ou une valeur de `permissions.*`
   n'est pas un booléen ;
 - elle fournit des figures sans `gabarit.js`, ou avec un motif interdit dans ce fichier ;
+- sa clé `discussion` cite un gabarit absent de `fournit.figures`, n'a pas de phrase `quand`, ou
+  déclare une valeur sans exactement `min`, `max`, `pas`, `defaut` numériques avec `pas > 0` et
+  `min ≤ defaut ≤ max` (mêmes règles que les curseurs d'une fiche visuelle) ;
 - elle fournit un module dont le fichier `<module>.py` est absent, ou dont l'id n'est pas de la forme
   `minuscules_et_underscores`.
 

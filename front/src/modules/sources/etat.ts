@@ -2,33 +2,19 @@
 // récemment (barre latérale), garde « on la garde ? » (contrat §7), rafraîchissement de la bibliothèque perso.
 import { useSyncExternalStore } from "react"
 import { sources, type BibliothequePerso } from "@/api/jules"
+import { magasin } from "@/lib/magasin"
 import type { Filtre } from "@/config/sources"
 
 /** Identifiant du dossier fixe « Non classé » (jules/sources.py NON_CLASSE). */
 export const NON_CLASSE = "non-classe"
 
-function magasin<T>(cle: string | null, initial: T) {
-  let valeur: T = initial
-  if (cle) { try { const v = localStorage.getItem(cle); if (v) valeur = JSON.parse(v) } catch { /* stockage indisponible */ } }
-  const abonnes = new Set<() => void>()
-  return {
-    lire: () => valeur,
-    ecrire: (v: T) => {
-      valeur = v
-      if (cle) { try { localStorage.setItem(cle, JSON.stringify(v)) } catch { /* stockage indisponible */ } }
-      abonnes.forEach((f) => f())
-    },
-    abonner: (f: () => void) => { abonnes.add(f); return () => { abonnes.delete(f) } },
-  }
-}
-
 /* ---- filtre ---- */
-const filtre = magasin<Filtre>("jules.filtre-fiches", "toutes")
+const filtre = magasin<Filtre>("jules.filtre-fiches", "toutes", { cle: "filtre_fiches" })
 export const useFiltre = (): [Filtre, (f: Filtre) => void] => [useSyncExternalStore(filtre.abonner, filtre.lire), filtre.ecrire]
 
 /* ---- ouvertes récemment ---- */
 export type Recente = { genre: "native" | "perso"; id: string; titre: string; matiere: string }
-const recentes = magasin<Recente[]>("jules.fiches-recentes", [])
+const recentes = magasin<Recente[]>("jules.fiches-recentes", [], { cle: "fiches_recentes" })
 export const useRecentes = () => useSyncExternalStore(recentes.abonner, recentes.lire)
 export function noterOuverture(r: Recente) {
   recentes.ecrire([r, ...recentes.lire().filter((x) => !(x.genre === r.genre && x.id === r.id))].slice(0, 6))

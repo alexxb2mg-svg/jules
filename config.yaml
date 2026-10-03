@@ -48,6 +48,9 @@ modules:
     reglages:
       bibliotheques:   # bibliotheques de type 'lecons', par ordre de priorite
         - lecons-3e-experimentales     # ecrite par le lot B ; absente = module actif sans lecon
+  - id: figures        # Jules montre une figure dans la discussion (bloc ```figure, cle `discussion` des extensions)
+    reglages:          # TOUJOURS apres 'notions' et 'cours' : leurs filtres peuvent relancer le modele
+      modes: [aide-devoirs, reexplique]   # jamais epreuve, exercice, controle, quiz, cours
   - id: outils         # outils isoles (extensions : calculatrice...) servis sous /api/eleve/outils, docs/OUTILS-CONTRAT.md
   - id: studio         # l'eleve fabrique ses supports de revision, Jules relit (etape 4) ; apres 'cours'
   - id: exercices      # entrainement sans IA sur les fiches v2 servables sans IA (docs/FICHES-V2.md)
@@ -73,6 +76,7 @@ modules:
     reglages:
       generations_par_jour: 10
   - id: retours        # bouton « Un souci, une idee ? » sur chaque page ; le parent lit (jules/modules/retours.py)
+  - id: synchro        # progression, matiere, filtre et fiches recentes suivent l eleve d un appareil a l autre (jules/modules/synchro.py)
   - id: rapport        # resume quotidien pour le parent
     reglages:
       heure: "20:00"

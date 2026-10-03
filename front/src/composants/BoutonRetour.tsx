@@ -25,10 +25,10 @@ export const TEXTES_RETOUR = {
 }
 
 export const TYPES_RETOUR: { id: TypeRetour; nom: string; Icone: typeof Bug; classe: string }[] = [
-  { id: "bug", nom: "Bug", Icone: Bug, classe: "border-[#F2B8B5] bg-[#FDF1F0] text-[#8A1F17]" },
-  { id: "dysfonctionnement", nom: "Ça marche mal", Icone: Wrench, classe: "border-[#F3D9A6] bg-[#FFF8EC] text-[#7A4B00]" },
-  { id: "suggestion", nom: "Suggestion", Icone: Lightbulb, classe: "border-[#C9DBF5] bg-bleu-clair text-bleu" },
-  { id: "amelioration", nom: "Amélioration", Icone: Sparkles, classe: "border-[#D8C7FA] bg-perso-clair text-perso" },
+  { id: "bug", nom: "Bug", Icone: Bug, classe: "border-erreur-bord bg-erreur-fond text-erreur" },
+  { id: "dysfonctionnement", nom: "Ça marche mal", Icone: Wrench, classe: "border-alerte-bord bg-alerte-fond text-alerte" },
+  { id: "suggestion", nom: "Suggestion", Icone: Lightbulb, classe: "border-bleu/30 bg-bleu-clair text-bleu" },
+  { id: "amelioration", nom: "Amélioration", Icone: Sparkles, classe: "border-perso/30 bg-perso-clair text-perso" },
 ]
 
 /** `testeurs` : prénoms déclarés dans le profil (profil de test) ; vide = l'élève, pas de question. */
@@ -38,7 +38,7 @@ export function BoutonRetour({ testeurs = [] }: { testeurs?: string[] }) {
     <>
       <motion.button onClick={() => setOuvert(true)} whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.94 }}
         aria-label={TEXTES_RETOUR.bouton} title={TEXTES_RETOUR.bouton}
-        className="absolute bottom-16 left-4 z-40 grid size-10 place-items-center rounded-full border border-bord bg-white/90 text-gris opacity-70 shadow-relief backdrop-blur transition-[opacity,color] hover:text-encre hover:opacity-100 focus-visible:opacity-100 sm:bottom-4">
+        className="absolute bottom-16 left-4 z-40 grid size-10 place-items-center rounded-full border border-bord bg-card/90 text-gris opacity-70 shadow-relief backdrop-blur transition-[opacity,color] hover:text-encre hover:opacity-100 focus-visible:opacity-100 sm:bottom-4">
         <MessageSquareWarning size={18} />
       </motion.button>
       <AnimatePresence>{ouvert && <FenetreRetour testeurs={testeurs} onFermer={() => setOuvert(false)} />}</AnimatePresence>
@@ -80,11 +80,11 @@ function FenetreRetour({ testeurs, onFermer }: { testeurs: string[]; onFermer: (
       <motion.div role="dialog" aria-modal aria-label={TEXTES_RETOUR.titre} onClick={(e) => e.stopPropagation()}
         initial={{ y: 24, opacity: 0, scale: 0.98 }} animate={{ y: 0, opacity: 1, scale: 1 }} exit={{ y: 16, opacity: 0 }}
         transition={{ type: "spring", stiffness: 340, damping: 30 }}
-        className="w-full max-w-[520px] rounded-3xl bg-white p-5 shadow-relief-haut">
+        className="w-full max-w-[520px] rounded-3xl bg-card p-5 shadow-relief-haut">
         {fait ? (
           <div className="flex flex-col items-center gap-3 py-6 text-center">
             <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: "spring", stiffness: 300, damping: 14 }}
-              className="grid size-14 place-items-center rounded-full bg-[#E7F5EC] text-[#1E7B34]"><Check size={28} /></motion.span>
+              className="grid size-14 place-items-center rounded-full bg-succes-fond text-succes"><Check size={28} /></motion.span>
             <p className="m-0 text-[1.1rem] font-bold text-encre">{TEXTES_RETOUR.merci}</p>
           </div>
         ) : (
@@ -100,7 +100,7 @@ function FenetreRetour({ testeurs, onFermer }: { testeurs: string[]; onFermer: (
                 {testeurs.map((t) => (
                   <button key={t} role="radio" aria-checked={auteur === t} onClick={() => setAuteur(t)}
                     className={cn("rounded-full border-2 px-3.5 py-1 text-[0.9rem] font-semibold transition-colors",
-                      auteur === t ? "border-bleu bg-bleu text-white" : "border-bord bg-white text-encre hover:border-bleu/40")}>
+                      auteur === t ? "border-bleu bg-bleu text-white" : "border-bord bg-card text-encre hover:border-bleu/40")}>
                     {t}
                   </button>
                 ))}
@@ -110,7 +110,7 @@ function FenetreRetour({ testeurs, onFermer }: { testeurs: string[]; onFermer: (
               {TYPES_RETOUR.map((t) => (
                 <button key={t.id} role="radio" aria-checked={type === t.id} onClick={() => setType(t.id)}
                   className={cn("flex flex-col items-center gap-1 rounded-2xl border-2 px-2 py-2.5 text-[0.85rem] font-semibold transition-all",
-                    type === t.id ? cn(t.classe, "shadow-relief") : "border-bord bg-white text-gris hover:border-gris/40")}>
+                    type === t.id ? cn(t.classe, "shadow-relief") : "border-bord bg-card text-gris hover:border-gris/40")}>
                   <t.Icone size={18} /> {t.nom}
                 </button>
               ))}
@@ -118,7 +118,7 @@ function FenetreRetour({ testeurs, onFermer }: { testeurs: string[]; onFermer: (
             <textarea ref={zone} value={texte} onChange={(e) => setTexte(e.target.value)} maxLength={2000} rows={4}
               placeholder={TEXTES_RETOUR.placeholder[type]}
               onKeyDown={(e) => { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) envoyer() }}
-              className="w-full resize-y rounded-2xl border-2 border-bord bg-white px-3.5 py-2.5 text-[1rem] leading-relaxed outline-none focus:border-bleu" />
+              className="w-full resize-y rounded-2xl border-2 border-bord bg-card px-3.5 py-2.5 text-[1rem] leading-relaxed outline-none focus:border-bleu" />
             <p className="mt-2 mb-0 truncate text-[0.8rem] text-gris" title={adresse}>{TEXTES_RETOUR.page} : <code className="rounded bg-nav px-1.5 py-0.5">{adresse}</code></p>
             {erreur && <p role="alert" className="mt-2 mb-0 text-[0.9rem] text-rouge">{erreur}</p>}
             <div className="mt-4 flex justify-end">

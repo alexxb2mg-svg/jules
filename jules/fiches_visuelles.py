@@ -336,6 +336,18 @@ def _nombre(valeur: Any, champ: str, ou: str) -> float:
     return float(valeur)
 
 
+def erreur_bornes(mini: float, maxi: float, pas: float, depart: float, nom_depart: str) -> str | None:
+    """Regles communes d'un curseur de fiche et d'une valeur de figure dans la discussion
+    (jules/extensions.py, cle `discussion`) : le probleme en clair, ou None si tout va bien."""
+    if pas <= 0:
+        return "pas doit etre strictement positif"
+    if not mini <= maxi:
+        return "min doit etre inferieur ou egal a max"
+    if not mini <= depart <= maxi:
+        return f"{nom_depart} doit etre compris entre min et max"
+    return None
+
+
 def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
     if not isinstance(curseurs, list) or not curseurs:
         raise ErreurFicheVisuelle(f"{ou} : au moins un curseur attendu")
@@ -358,12 +370,8 @@ def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
         maxi = _nombre(c.get("max"), "max", sous_ou)
         pas = _nombre(c.get("pas"), "pas", sous_ou)
         depart = _nombre(c.get("depart"), "depart", sous_ou)
-        if pas <= 0:
-            raise ErreurFicheVisuelle(f"{sous_ou} : pas doit etre strictement positif")
-        if not mini <= maxi:
-            raise ErreurFicheVisuelle(f"{sous_ou} : min doit etre inferieur ou egal a max")
-        if not mini <= depart <= maxi:
-            raise ErreurFicheVisuelle(f"{sous_ou} : depart doit etre compris entre min et max")
+        if erreur := erreur_bornes(mini, maxi, pas, depart, "depart"):
+            raise ErreurFicheVisuelle(f"{sous_ou} : {erreur}")
         resultat.append({"id": identifiant, "nom": nom, "min": mini, "max": maxi, "pas": pas, "depart": depart})
     return resultat
 
