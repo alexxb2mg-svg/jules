@@ -22,6 +22,7 @@ from jules.modules.cours import ESPACE
 from jules.modules.figures import REGLE_DESSIN
 from jules.stockage import Message
 from tests.cdp import navigateur, navigateur_cdp
+from tests.registre_figures import declarations_du_depot
 from tests.test_figures_discussion import CODE, _bloc, _demarrer
 
 THALES = "thales-triangles-semblables-trigonometrie"
@@ -90,6 +91,20 @@ def test_cours_lecon_thales_schema_et_gabarits_non_revele(tuteur_thales):
     contribution = figures.contribution(conv)
     assert "Tu peux montrer le schéma de la notion" in contribution and "- triangle-thales :" in contribution
     assert "}}" not in tuteur_thales.systeme(conv)
+
+
+def test_cours_propose_tous_les_gabarits_non_revele_et_aucun_revele(tuteur_thales):
+    """Registre LU dans extensions/*/extension.yaml (tests/registre_figures.py) : en cours, exactement les
+    gabarits sans `revele`, quel que soit leur nombre (plus de liste a tenir a jour ici)."""
+    figures = tuteur_thales.module("figures")
+    conv, _ = _conv_lecon(tuteur_thales)
+    declarations = declarations_du_depot()
+    attendus = {g for g, (revele, _) in declarations.items() if not revele}
+    assert attendus and attendus != set(declarations)  # il y a des deux sortes : sinon le test ne prouve rien
+    assert set(figures.autorises(conv)) == attendus
+    contribution = figures.contribution(conv)
+    for gabarit in declarations:
+        assert (f"- {gabarit} :" in contribution) is (gabarit in attendus), gabarit
 
 
 def test_cours_filtre_schema_gabarit_et_revele(tuteur_thales):

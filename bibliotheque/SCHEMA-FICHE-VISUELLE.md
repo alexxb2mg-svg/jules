@@ -118,17 +118,27 @@ fonction, une parenthèse, un opérateur non listé, une variable inconnue du bl
 
 Un gabarit est fourni par une extension active (`extensions/<id>/gabarit.js`, voir
 `docs/EXTENSIONS.md`) et dessine du SVG à partir des valeurs de curseurs, jamais de code libre
-embarqué dans la fiche. Les gabarits livrés :
+embarqué dans la fiche. Les gabarits livrés (45, vague 1 du 03/10/2026 comprise ; curseurs et bornes dans
+la clé `discussion` de chaque `extensions/<id>/extension.yaml`) :
 
-- `droite-affine` : f(x) = ax + b (curseurs `a`, `b`)
-- `triangle-thales` : configuration de Thalès (curseur `t`, position de M sur [AB])
-- `triangle-rectangle` : triangle rectangle en C et carrés sur ses trois côtés, aire écrite dans chacun, AB non écrit (curseurs `ac`, `bc`)
-- `equation-solutions` : x² = a sur une droite graduée (curseur `a`)
-- `probabilites-frequences` : fréquence observée qui se stabilise avec n (curseur `n`)
-- `engrenages` : deux roues dentées (ou poulies et courroie) avec un repère chacune (curseurs `dents_a`, `dents_b`, `avance`, `courroie`)
-- `horloge` : cadran à aiguilles et durée coloriée, heure jamais écrite en chiffres (curseurs `h`, `m`, `duree`)
-- `urne-tirage` : sac de 10 boules et échelle impossible… certain (curseur `rouges`)
-- `paquets-proportionnels` : paquets liés de deux grandeurs proportionnelles (curseurs `a`, `b`, `fois`)
+- **Mathématiques 3e** : `droite-affine` (f(x) = ax + b), `triangle-thales`, `triangle-rectangle` (carrés sur
+  les trois côtés, aire écrite dans chacun, AB non écrit), `equation-solutions` (x² = a), `probabilites-frequences`,
+  `droite-graduee` (n/d sur une droite), `droite-graduee-somme` (a + b comme un saut), `balance-equation`
+  (ax + b = c), `courbe-point-mobile` (image, antécédent), `engrenages` (divisibilité).
+- **Mathématiques CM1** : `bande-fractions`, `bande-fractions-comparees`, `demi-droite-graduee`,
+  `demi-droite-decimaux`, `plaque-dixiemes-centiemes`, `glisse-nombre` (× et ÷ par 10), `schema-en-barres`,
+  `angle`, `symetrie-axe`, `quadrilatere-deformable`, `rectangle-quadrille` (périmètre, aire), `horloge`
+  (durées), `urne-tirage` (probabilité), `paquets-proportionnels` (proportionnalité).
+- **Physique-chimie 3e** : `circuit-serie-derivation`, `palier-changement-etat`, `redistribution-atomes`,
+  `rampe-energie`, `chronophotographie` (mouvement, référentiel), `poids-astres`, `onde-sonore` (aussi en
+  éducation musicale).
+- **SVT et technologie 3e** : `effort-frequences`, `capteur-seuil` (chaîne d'information, algorithme).
+- **Sciences CM1** : `cycle-lune`, `ombre-portee`, `balance-plateaux`.
+- **Histoire-géographie** : `frise` (frise générique à curseur date, repères portés par la fiche),
+  `distance-temps-transports` (CM1).
+- **Français et langues vivantes** : `frise-temps-verbaux`, `chaine-accords`, `position-objet` (in, on, under…).
+- **Éducation musicale et arts plastiques** : `jauge-decibels`, `forme-musicale`, `frise-pulsations`,
+  `cercle-couleurs`.
 
 Ajouter un gabarit = créer une extension `extensions/<id>/` (`extension.yaml` avec
 `fournit: figures: [<id>]`, et `gabarit.js`) puis l'activer dans `extensions:` de `config.yaml` :

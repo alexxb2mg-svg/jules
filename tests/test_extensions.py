@@ -17,6 +17,12 @@ from jules.extensions import (
     figures_pour_discussion,
     lire_extension,
 )
+from tests.registre_figures import (
+    LUES_HORS_DISCUSSION,
+    declarations_brutes,
+    declarations_du_depot,
+    valeurs_lues_par_le_gabarit,
+)
 
 MANIFESTE_VALIDE = """\
 id: {id}
@@ -230,58 +236,24 @@ def test_discussion_invalide_refusee(tmp_path, declaration, message):
         lire_extension(dossier)
 
 
-# Figures declarees pour la discussion par les extensions du depot : id -> (revele attendu, bornes reprises
-# des curseurs des fiches visuelles 3e, voir le commentaire de chaque extension.yaml).
-DECLARATIONS_DU_DEPOT = {
-    "droite-affine": (False, {"a": (-3, 3, 0.5, 1), "b": (-4, 4, 1, 0)}),
-    "triangle-thales": (False, {"t": (0.1, 0.9, 0.1, 0.5)}),
-    # triangle-rectangle 2.0 : carres sur les cotes, la longueur AB n'est plus ecrite -> revele false.
-    "triangle-rectangle": (False, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
-    "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
-    "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
-    # figures CM1 (audit du 03/10/2026) : bornes des curseurs des fiches visuelles CM1
-    "angle": (False, {"ouverture": (10, 170, 5, 60), "longueur": (1, 5, 1, 3)}),
-    "symetrie-axe": (True, {"axe": (4, 8, 1, 6), "horizontal": (0, 1, 1, 0), "pointilles": (0, 1, 1, 1)}),
-    "quadrilatere-deformable": (False, {"angle": (60, 120, 5, 90), "allonge": (0, 3, 1, 0)}),
-    "rectangle-quadrille": (
-        False,
-        {"longueur": (1, 12, 1, 5), "largeur": (1, 8, 1, 3), "deroule": (0, 1, 1, 0), "forme": (0, 1, 1, 0)},
-    ),
-    "balance-equation": (
-        True,
-        {"paquets": (1, 5, 1, 3), "gauche": (0, 10, 1, 2), "droite": (0, 30, 1, 17), "x": (0, 10, 0.5, 3)},
-    ),
-    "courbe-point-mobile": (
-        True,
-        {"x": (-4, 4, 0.5, 1), "courbure": (-1, 1, 0.5, 0.5), "pente": (-3, 3, 1, 0), "hauteur": (-4, 4, 1, -2)},
-    ),
-    "glisse-nombre": (True, {"nombre": (0.1, 99.9, 0.1, 4.7), "rangs": (-1, 3, 1, 1)}),
-    "schema-en-barres": (False, {"a": (1, 100, 1, 30), "b": (0, 100, 1, 20), "fois": (1, 5, 1, 1)}),
-    "engrenages": (
-        False,
-        {"dents_a": (6, 60, 1, 12), "dents_b": (6, 60, 1, 18), "avance": (0, 360, 1, 0), "courroie": (0, 1, 1, 0)},
-    ),
-    "horloge": (False, {"h": (0, 23, 1, 9), "m": (0, 55, 5, 15), "duree": (0, 180, 5, 0)}),
-    "urne-tirage": (False, {"rouges": (0, 10, 1, 3)}),
-    "paquets-proportionnels": (False, {"a": (1, 10, 1, 4), "b": (50, 500, 50, 250), "fois": (0.25, 4, 0.25, 1)}),
-    "circuit-serie-derivation": (False, {"montage": (0, 1, 1, 0), "tension": (0, 12, 1, 6), "r2": (0.5, 3, 0.5, 1)}),
-    "palier-changement-etat": (False, {"t": (0, 30, 1, 8)}),
-    "redistribution-atomes": (True, {"x": (0, 1, 0.25, 0), "n": (1, 3, 1, 1)}),
-    "rampe-energie": (False, {"x": (0, 1, 0.05, 0.25), "f": (0, 0.5, 0.1, 0)}),
-    "chronophotographie": (False, {"v": (1, 10, 1, 5), "e": (-1, 1, 1, 0), "r": (0, 1, 1, 0)}),
-    "poids-astres": (False, {"m": (1, 10, 1, 5), "astre": (1, 4, 1, 3)}),
-    "onde-sonore": (False, {"hauteur": (1, 13, 1, 6), "intensite": (1, 5, 1, 3), "duree": (1, 4, 1, 4), "milieu": (0, 2, 1, 1)}),
-    "jauge-decibels": (False, {"niveau": (20, 130, 5, 60), "duree": (0.5, 8, 0.5, 1)}),
-    "cycle-lune": (False, {"jour": (0, 29, 1, 7)}),
-    "ombre-portee": (False, {"distance": (0.5, 2.5, 0.25, 1.5), "hauteur": (5, 20, 5, 10), "matiere": (1, 3, 1, 3)}),
-    "balance-plateaux": (False, {"masse": (0, 1000, 50, 300), "taille": (1, 5, 1, 4)}),
-    "effort-frequences": (False, {"activite": (0, 100, 10, 0), "entraine": (0, 1, 1, 0)}),
-    "capteur-seuil": (False, {"mesure": (0, 1023, 1, 600), "seuil": (0, 1023, 1, 300)}),
-}
+# Figures declarees pour la discussion par les extensions du depot : id -> (revele, bornes). La table n'est plus
+# recopiee en dur (une ligne par gabarit, a completer a chaque nouveau gabarit) : elle est LUE en YAML brut dans
+# extensions/*/extension.yaml (tests/registre_figures.py), puis comparee a la lecture validee de jules/extensions.py.
+DECLARATIONS_DU_DEPOT = declarations_du_depot()
+# Reperes fixes, decides a la main, que la decouverte ne doit pas faire oublier (garde-fou de non-regression).
+REVELE_FIXE = {"equation-solutions": True, "triangle-rectangle": False, "droite-affine": False}
+
+
+def test_registre_decouvert_non_vide_et_reperes_fixes():
+    """La decouverte trouve bien les figures (sinon tous les tests parametres passeraient a vide)."""
+    assert len(DECLARATIONS_DU_DEPOT) >= len(REVELE_FIXE)
+    for gabarit, revele in REVELE_FIXE.items():
+        assert DECLARATIONS_DU_DEPOT[gabarit][0] is revele, gabarit
 
 
 def test_toutes_les_declarations_du_depot_se_chargent():
-    """Chaque extension du depot qui a une cle `discussion` passe le controle, et les bornes sont celles prevues."""
+    """Chaque extension du depot qui a une cle `discussion` passe le controle, et les bornes lues par
+    jules/extensions.py sont exactement celles ecrites dans extension.yaml."""
     racine = Path(__file__).resolve().parents[1] / "extensions"
     ids = [d.name for d in sorted(racine.iterdir()) if (d / "extension.yaml").is_file()]
     declarations = figures_pour_discussion(charger_extensions(racine, ids))
@@ -296,10 +268,33 @@ def test_toutes_les_declarations_du_depot_se_chargent():
 
 
 @pytest.mark.parametrize("gabarit", sorted(DECLARATIONS_DU_DEPOT))
+def test_declaration_brute_coherente(gabarit):
+    """Controle de fond, independant du chargeur : `revele` absent ou booleen YAML (pas « oui », pas 1) ; au moins
+    une valeur ; pour chaque valeur min < max, pas > 0, min <= defaut <= max, et defaut tombe sur un cran."""
+    brute = declarations_brutes()[gabarit]
+    assert isinstance(brute.get("revele", False), bool), gabarit
+    assert isinstance(brute.get("quand"), str) and brute["quand"].strip(), gabarit
+    _, valeurs = DECLARATIONS_DU_DEPOT[gabarit]
+    assert valeurs, gabarit
+    for nom, (mini, maxi, pas, defaut) in valeurs.items():
+        assert all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in (mini, maxi, pas, defaut)), nom
+        assert mini < maxi and pas > 0 and mini <= defaut <= maxi, (gabarit, nom)
+        crans = (defaut - mini) / pas
+        assert abs(crans - round(crans)) < 1e-9, (gabarit, nom, "defaut hors pas")
+
+
+@pytest.mark.parametrize("gabarit", sorted(DECLARATIONS_DU_DEPOT))
 def test_valeurs_declarees_lues_par_le_gabarit(gabarit):
-    """Les noms de valeurs declares sont ceux que gabarit.js lit vraiment (`valeurs.<nom>`), ni plus ni moins."""
-    code = (Path(__file__).resolve().parents[1] / "extensions" / gabarit / "gabarit.js").read_text(encoding="utf-8")
-    assert set(re.findall(r"valeurs\.(\w+)", code)) == set(DECLARATIONS_DU_DEPOT[gabarit][1])
+    """Les noms de valeurs declares sont ceux que gabarit.js lit vraiment, ni plus ni moins ; seules exceptions :
+    les curseurs portes par une fiche seulement, listes et justifies dans LUES_HORS_DISCUSSION."""
+    declarees = set(DECLARATIONS_DU_DEPOT[gabarit][1])
+    lues = valeurs_lues_par_le_gabarit(gabarit)
+    assert declarees <= lues, f"{gabarit} : declarees mais jamais lues {sorted(declarees - lues)}"
+    assert lues - declarees == LUES_HORS_DISCUSSION.get(gabarit, set()), gabarit
+
+
+def test_exceptions_hors_discussion_a_jour():
+    assert set(LUES_HORS_DISCUSSION) <= set(DECLARATIONS_DU_DEPOT)
 
 
 def test_droite_affine_du_depot_declaree_pour_la_discussion():

@@ -99,7 +99,6 @@ pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (
 sans écrire la valeur : `triangle-rectangle` (2.0) dessine un carré sur chaque côté avec son aire, sans écrire AB,
 et n'est donc plus `revele`.
 
-
 ```yaml
 discussion:
   equation-solutions:
@@ -114,6 +113,22 @@ conversation figure dans `reglages.modes_revele` du module `figures` (`config.ya
 `[reexplique]`) ; dans les autres modes autorisés (`aide-devoirs`), elle est absente de la liste donnée
 au modèle et un bloc qui la cite est retiré (`figure_ecartee`, raison « gabarit non autorise »). Ne
 jamais mettre `aide-devoirs` dans `modes_revele` : la figure ferait l'exercice à la place de l'élève.
+
+**Gabarits livrés.** 45 figures, toutes déclarées pour la discussion (liste détaillée par matière dans
+`bibliotheque/SCHEMA-FICHE-VISUELLE.md`, § gabarits) : mathématiques 3e (10) et CM1 (14), physique-chimie 3e (7),
+SVT et technologie 3e (2), sciences CM1 (3), histoire-géographie (2 : `frise`, `distance-temps-transports`),
+français et langues vivantes (3), éducation musicale et arts plastiques (4). Révèlent la réponse (`revele: true`) :
+`equation-solutions`, `symetrie-axe`, `balance-equation`, `courbe-point-mobile`, `glisse-nombre`, `droite-graduee`,
+`droite-graduee-somme`, `bande-fractions-comparees`, `demi-droite-graduee`, `demi-droite-decimaux`,
+`redistribution-atomes`, `frise`, `frise-temps-verbaux`, `chaine-accords`, `cercle-couleurs`.
+
+**Ajouter un gabarit, côté tests.** Rien à recopier : `tests/registre_figures.py` lit la clé `discussion` de chaque
+`extensions/*/extension.yaml` et la liste `extensions:` de `config.yaml`. Chaque gabarit déclaré est alors contrôlé
+tout seul : déclaration chargée à l'identique par `jules/extensions.py`, `revele` booléen, bornes cohérentes
+(min < max, pas > 0, défaut dans les bornes et sur un cran), noms de valeurs lus par `gabarit.js` = noms déclarés
+(exception justifiée : `LUES_HORS_DISCUSSION`, curseurs que seule une fiche porte), figure active = figure
+déclarée, bornes et drapeau `revele` appliqués selon le mode (`tests/test_figures_discussion.py`, mode cours dans
+`tests/test_figures_cours.py`).
 
 Ce qui lit les messages sans les dessiner (analyse du module `suivi`) passe par
 `texte_sans_figures(texte)` (`jules/modules/figures.py`) : chaque bloc `figure` y devient

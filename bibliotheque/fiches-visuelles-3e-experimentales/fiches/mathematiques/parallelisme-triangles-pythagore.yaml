@@ -42,7 +42,7 @@ blocs:
       - {si: "ac == 6", texte: "AC vaut 6 : compare-le à BC pour voir de quel côté penche le triangle."}
       - {si: "ac > 8", texte: "AC est grand : l'hypoténuse penche davantage du côté de AC."}
       - {si: "ac < 5", texte: "AC est petit : l'hypoténuse penche surtout du côté de BC."}
-    jules: "Bouge un côté et regarde l'hypoténuse recalculée : AB² = AC² + BC² à chaque fois."
+    jules: "Bouge un côté : un carré est posé sur chaque côté, et l'aire du carré de l'hypoténuse [AB] est toujours la somme des deux autres, AC² + BC² = AB²."
 
   - id: methode
     type: methode

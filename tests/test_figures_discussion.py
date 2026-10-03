@@ -30,6 +30,7 @@ from jules.stockage import Message
 from jules.web.app import creer_app
 from tests.cdp import navigateur, navigateur_cdp
 from tests.conftest import RACINE
+from tests.registre_figures import declarations_du_depot
 
 NORMALISE = '```figure\n{"gabarit":"droite-affine","valeurs":{"a":2,"b":1}}\n```'
 
@@ -138,29 +139,25 @@ def test_aucun_module_ne_filtre_la_reponse_apres_figures(tuteur):
     assert [m.id for m in apres if type(m).filtrer_reponse is not Module.filtrer_reponse] == []
 
 
-# --- lot 2 : les cinq gabarits declares, drapeau `revele`, texte sans figures ---------------------------
+# --- lot 2 : les gabarits declares, drapeau `revele`, texte sans figures ---------------------------
 
-GABARITS_DECLARES = [
-    "droite-affine",
-    "triangle-thales",
-    "triangle-rectangle",
-    "equation-solutions",
-    "probabilites-frequences",
-    "angle",
-    "symetrie-axe",
-    "quadrilatere-deformable",
-    "rectangle-quadrille",
-    "engrenages",
-    "horloge",
-    "urne-tirage",
-    "paquets-proportionnels",
-    "circuit-serie-derivation",
-    "palier-changement-etat",
-    "redistribution-atomes",
-    "rampe-energie",
-]
+# Gabarits declares et drapeau `revele` : LUS dans extensions/*/extension.yaml (tests/registre_figures.py) au
+# lieu de listes fermees ; chaque nouveau gabarit est ainsi teste (bornes, revele selon le mode) sans retoucher ce
+# fichier. Le repere fixe ci-dessous garde les decisions deja prises a la main.
+GABARITS_DECLARES = sorted(declarations_du_depot())
+REVELENT = {g for g, (revele, _) in declarations_du_depot().items() if revele}
 # triangle-rectangle n'ecrit plus « AB ≈ » (carres sur les cotes, version 2.0) : il ne revele plus.
-REVELENT = {"equation-solutions", "redistribution-atomes", "symetrie-axe"}
+REVELENT_FIXES, NON_REVELENT_FIXES = {"equation-solutions"}, {"triangle-rectangle", "droite-affine", "triangle-thales"}
+
+
+def test_registre_decouvert_et_reperes_fixes(tuteur):
+    """La decouverte n'est pas vide, ne contredit pas les decisions fixes, et le tuteur (config.yaml du depot)
+    propose exactement ces gabarits avec ce drapeau."""
+    assert len(GABARITS_DECLARES) >= 5
+    assert REVELENT_FIXES <= REVELENT and not (NON_REVELENT_FIXES & REVELENT)
+    declarations = figures_pour_discussion(tuteur.extensions)
+    assert sorted(declarations) == GABARITS_DECLARES
+    assert {g for g, d in declarations.items() if d["revele"]} == REVELENT
 
 
 def _bornes(tuteur, gabarit: str) -> dict[str, dict[str, float]]:

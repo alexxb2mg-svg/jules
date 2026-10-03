@@ -21,23 +21,13 @@ from jules.extensions import (
 from jules.moteur import Tuteur
 from jules.outils import charger_outils
 from jules.web.app import creer_app
+from tests.registre_figures import declarations_du_depot, figures_actives
 
 RACINE = Path(__file__).resolve().parents[1]
-FIGURES = {
-    "droite-affine",
-    "triangle-thales",
-    "triangle-rectangle",
-    "equation-solutions",
-    "probabilites-frequences",
-    "balance-equation",
-    "courbe-point-mobile",
-    "glisse-nombre",
-    "schema-en-barres",
-    "engrenages",
-    "horloge",
-    "urne-tirage",
-    "paquets-proportionnels",
-}
+# Figures actives : LUES dans config.yaml (`extensions:`) et dans `fournit.figures` de chaque extension activee
+# (tests/registre_figures.py), au lieu d'une liste fermee a completer a chaque nouveau gabarit. Les outils et les
+# rappels, stables, restent figes ici.
+FIGURES = figures_actives()
 OUTILS = {"calculatrice", "frise-chronologique", "lexique"}
 RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais", "rappels-musique"}
 
@@ -70,12 +60,21 @@ def creer(
 def test_config_active_les_figures_les_trois_outils_et_les_rappels():
     ids = yaml.safe_load((RACINE / "config.yaml").read_text(encoding="utf-8"))["extensions"]
     extensions = charger_extensions(RACINE / "extensions", ids)
-    assert set(extensions) == FIGURES | OUTILS | RAPPELS  # aucune ecartee
+    assert len(FIGURES) >= 5 and {"droite-affine", "triangle-thales", "triangle-rectangle"} <= FIGURES
+    assert len(ids) == len(set(ids)), "extension activee deux fois dans config.yaml"
+    assert set(extensions) == set(ids)  # aucune ecartee par le chargeur
+    assert {i for i in ids if not extensions[i].fournit_liste("figures")} == OUTILS | RAPPELS
     assert {e.id for e in extensions.values() if e.fournit_liste("rappels")} == RAPPELS
     assert set(figures_fournies(extensions)) == FIGURES
     dossiers = dossiers_outils(extensions)
     assert {d.name for d in dossiers} == OUTILS
     assert all((d / "outil.yaml").is_file() for d in dossiers)
+
+
+def test_chaque_figure_active_est_declaree_pour_la_discussion():
+    """Figure activee sans cle `discussion` : jamais proposee a Jules (oubli) ; declaration d'une figure non
+    activee : Jules la proposerait sans que le front sache la dessiner."""
+    assert set(declarations_du_depot()) == FIGURES
 
 
 # --- figures : controle du code -----------------------------------------------------

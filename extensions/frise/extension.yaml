@@ -14,14 +14,11 @@ permissions: {}
 # frise ne peut pas écrire le nom d'un événement, seulement des dates ; une seule période surlignée.
 # Complète l'outil « frise-chronologique » (remise en ordre d'événements) sans le remplacer.
 # revele: les graduations et le repère écrivent des dates : proposée seulement en mode réexplique.
-# Cle `discussion` prete mais COMMENTEE : tests/test_extensions.py (DECLARATIONS_DU_DEPOT) fige la liste des figures
-# de la discussion, et ce test est hors du perimetre des extensions. Pour l'activer : decommenter ci-dessous ET
-# ajouter la ligne correspondante dans DECLARATIONS_DU_DEPOT (voir le compte rendu de fabrication).
-# discussion:
-#   frise:
-#     quand: "Pour situer une date dans le temps : une frise de debut à fin (années négatives = avant J.-C.), le repère bleu est à l'année date et la partie déjà écoulée se colore. Pratique pour ordonner des événements ou faire sentir une durée."
-#     revele: true
-#     valeurs:
-#       debut: {min: -3000, max: 2025, pas: 1, defaut: 1900}
-#       fin: {min: -3000, max: 2025, pas: 1, defaut: 2000}
-#       date: {min: -3000, max: 2025, pas: 1, defaut: 1950}
+discussion:
+  frise:
+    quand: "Pour situer une date dans le temps : une frise de debut à fin (années négatives = avant J.-C.), le repère bleu est à l'année date et la partie déjà écoulée se colore. Pratique pour ordonner des événements ou faire sentir une durée."
+    revele: true
+    valeurs:
+      debut: {min: -3000, max: 2025, pas: 1, defaut: 1900}
+      fin: {min: -3000, max: 2025, pas: 1, defaut: 2000}
+      date: {min: -3000, max: 2025, pas: 1, defaut: 1950}
