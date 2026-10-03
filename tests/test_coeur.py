@@ -28,6 +28,7 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "memoire",
         "suivi",
         "epreuve",
+        "annales",
         "sources",
         "retours",
         "synchro",

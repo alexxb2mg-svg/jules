@@ -1,0 +1,34 @@
+# DNB 2024 — Mathématiques — Métropole
+# Sujet-squelette : la structure est en place, le contenu sera rempli à partir du sujet officiel.
+# Source : https://eduscol.education.fr (sujet d'examen, domaine public)
+
+sujet:
+  id: "mathematiques-2024-metropole"
+  session: "2024"
+  matiere: "Mathématiques"
+  centre: "Métropole"
+  titre: "Mathématiques — DNB 2024 Métropole"
+  duree: "2 heures"
+  examen: dnb
+  serie: generale
+  consignes_generales: |
+    Le sujet est composé de deux parties indépendantes.
+    Partie 1 — Automatismes (20 minutes, sans calculatrice, 6 points).
+    Partie 2 — Raisonnement et résolution de problèmes (1 h 40, avec calculatrice, 14 points).
+
+  exercices: []
+  # Les exercices seront ajoutés ici au format défini dans SCHEMA.md.
+  # Exemple :
+  # - numero: 1
+  #   titre: "Automatismes"
+  #   partie: "Partie 1 — sans calculatrice"
+  #   bareme: 6
+  #   enonce: |
+  #     ...
+  #   notions:
+  #     - calcul-litteral
+
+  source:
+    titre: "DNB 2024 — Mathématiques — Métropole"
+    url: ""
+    licence: "domaine public (sujet d'examen)"

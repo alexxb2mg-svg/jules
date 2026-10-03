@@ -32,7 +32,7 @@ def test_evenement_suivi_porte_l_origine():
         "titre": "Thalès",
         "origine": "cours",
     }
-    assert set(ORIGINES_SUIVI) == {"analyse", "epreuve", "cours", "exercices", "studio"}
+    assert set(ORIGINES_SUIVI) == {"analyse", "epreuve", "cours", "exercices", "studio", "annales"}
 
 
 def test_evenement_suivi_refuse_une_origine_inconnue():

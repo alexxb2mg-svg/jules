@@ -23,7 +23,7 @@ MODES_IGNORES = ("epreuve", "exercice")
 # Chaque evenement 'suivi' porte son origine : qui a decide du statut. Un evenement sans ce champ
 # (ecrit avant son introduction) est traite comme 'analyse', l'origine la moins fiable (voir
 # dernier_statut ci-dessous et docs/EPREUVE-PROTOCOLE.md).
-ORIGINES_SUIVI = ("analyse", "epreuve", "cours", "exercices", "studio")
+ORIGINES_SUIVI = ("analyse", "epreuve", "cours", "exercices", "studio", "annales")
 ORIGINE_DEFAUT = "analyse"
 # 'acquis' n'est retrograde que par une origine qui reprend directement la notion (l'epreuve sans
 # aide, une nouvelle lecon ou une nouvelle serie d'exercices sur la meme notion) : jamais par la
