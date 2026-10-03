@@ -47,10 +47,15 @@ blocs:
 
 
       | Connecteur | Il sert à… |
+
       |---|---|
+
       | car, parce que | donner une cause |
+
       | donc, c'est pourquoi | donner une conséquence |
+
       | par exemple | illustrer |
+
       | mais, cependant | s'opposer |
 
 
@@ -74,8 +79,11 @@ blocs:
     titre: "Animer ou arbitrer un débat"
     contenu: >-
       | Rôle | Ce qu'il fait |
+
       |---|---|
+
       | **Animateur** | présente le sujet, donne la parole à tour de rôle, relance, recentre, résume à la fin |
+
       | **Arbitre** | vérifie les règles : tour de parole, temps de parole, respect des personnes |
 
 
@@ -134,7 +142,7 @@ blocs:
       - "le reformuler"
     indices:
       - "C'est l'étape qui vient juste après l'écoute."
-      - "Ce verbe veut dire « redire autrement ». Il commence par « re- »."
+      - "C'est ce qu'on fait quand on dit : « Si je comprends bien, tu penses que… »."
     explication: "On reformule : on redit l'idée de l'autre avec ses mots. Cela prouve qu'on a écouté et évite les malentendus."
 
   - type: exercice
@@ -165,7 +173,7 @@ blocs:
       - "Arbitre"
     indices:
       - "Sami ne distribue pas la parole : il surveille les règles."
-      - "Pense à la personne neutre qui siffle les fautes dans un match."
+      - "Relis le tableau des rôles : lequel vérifie que les règles sont respectées ?"
     explication: "Sami est l'arbitre : il veille aux règles (temps de parole, respect) sans prendre parti. L'animateur, lui, organise la parole."
 
   - type: question_ouverte

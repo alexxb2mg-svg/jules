@@ -37,7 +37,7 @@ blocs:
   - type: texte
     titre: "Nature : parcs, réserves, climat"
     contenu: |-
-      - **a national park** : un grand espace naturel protégé, ouvert aux visiteurs. Yellowstone, aux États-Unis, est le premier parc national du monde.
+      - **a national park** : un grand espace naturel protégé, ouvert aux visiteurs. Yellowstone, aux États-Unis, est le premier parc national du monde (créé en 1872).
       - **a biosphere reserve** : un espace où l'on protège la nature tout en permettant des activités humaines.
       - **climate** : le climat. Il change beaucoup d'un pays à l'autre : désert en Australie, froid au Canada, pluie fréquente en Irlande.
       - **biodiversity** : la variété des espèces vivantes d'un lieu. Le climat explique une faune et une flore différentes.
@@ -86,7 +86,7 @@ blocs:
       - "solar power"
     indices:
       - "Le mot anglais ressemble à l'adjectif français « solaire »."
-      - "Il commence par « so » et a cinq lettres."
+      - "Relis le bloc « Les énergies renouvelables »."
     explication: "On dit « solar power » : l'énergie solaire. C'est une énergie renouvelable, comme « wind power » (le vent)."
 
   - type: exercice
@@ -96,7 +96,7 @@ blocs:
     tolerance: 0
     indices:
       - "C'est au XIXe siècle, quelques années après la fin de la guerre de Sécession (1865)."
-      - "L'année commence par 18 et se situe au début des années 1870."
+      - "Relis le bloc « Nature : parcs, réserves, climat »."
     explication: "Yellowstone National Park a été créé en 1872. C'est le premier parc national du monde."
 
   - type: exercice
@@ -144,6 +144,6 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Avec tes mots, en deux ou trois phrases : donne un repère culturel du monde anglophone (le
-      Commonwealth ou Thanksgiving), explique la différence entre inclusion et exclusion, et cite
-      deux énergies renouvelables en anglais.
+      Écris deux ou trois phrases avec tes mots. Donne un repère culturel du monde anglophone
+      (le Commonwealth ou Thanksgiving). Explique la différence entre inclusion et exclusion.
+      Cite deux énergies renouvelables en anglais.

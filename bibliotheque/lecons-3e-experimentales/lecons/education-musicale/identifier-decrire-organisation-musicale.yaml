@@ -53,7 +53,7 @@ blocs:
       - "Procédé : le rythme répété de la caisse claire est un ostinato rythmique."
       - "Forme : deux mélodies reviennent sans cesse, mais confiées à des instruments différents : c'est le timbre qui change."
       - "Évolution dans le temps : des instruments s'ajoutent peu à peu, c'est un immense crescendo."
-      - "Réseau de références : c'est une œuvre du XXe siècle fondée sur la répétition, comme, autrement, le Canon de Pachelbel avec sa basse obstinée."
+      - "Réseau de références : c'est une œuvre du XXe siècle fondée sur la répétition. Le Canon de Pachelbel répète lui aussi, avec sa basse obstinée."
 
   - type: exercice
     enonce: >-
@@ -81,9 +81,10 @@ blocs:
       - "un canon"
       - "le canon"
       - "en canon"
+      - "canons"
     indices:
       - "Les voix chantent la même chose, mais pas au même moment."
-      - "C'est aussi le nom d'une œuvre célèbre de Pachelbel. Le mot compte cinq lettres."
+      - "Relis le bloc « Les procédés et le réseau de références »."
     explication: "C'est un canon : plusieurs voix chantent la même mélodie en entrant l'une après l'autre. C'est une sorte de polyphonie."
 
   - type: exercice
@@ -115,8 +116,8 @@ blocs:
       - "la basse obstinée"
       - "ground"
     indices:
-      - "Le nom a deux mots. Le premier désigne les sons graves."
-      - "Le second mot ressemble à « obstiné » : qui ne s'arrête pas, qui se répète."
+      - "Relis le bloc « Les procédés et le réseau de références »."
+      - "C'est le procédé que l'on entend à la ligne grave du Canon de Pachelbel."
     explication: "C'est une basse obstinée : une ligne grave répétée sous des mélodies qui changent, comme dans le Canon de Pachelbel."
 
   - type: exercice

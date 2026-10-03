@@ -36,7 +36,7 @@ blocs:
       |---|---|
       | faire répéter | Could you repeat, please? / Sorry, I didn't understand. |
       | faire expliquer un mot | What does … mean? |
-      | montrer que je suis | I see. / Really? / That's interesting. |
+      | montrer que j'écoute | I see. / Really? / That's interesting. |
       | être d'accord | I agree. / Me too. / That's a good point. |
       | ne pas être d'accord | I don't agree. / I'm not sure. |
       | gagner du temps | Well… / Let me think… |
@@ -70,18 +70,18 @@ blocs:
     reponse: 1
     indices:
       - "Tu veux qu'il redise sa phrase."
-      - "Cherche une formule polie qui commence par « Sorry »."
+      - "Choisis une formule polie, qui demande une seule chose : redire la phrase."
     explication: "« Sorry, could you repeat, please? » demande poliment de redire la phrase. Répondre « yes » sans comprendre crée des malentendus."
 
   - type: exercice
     enonce: "Complète la question de relance : « I like pizza. ___ about you? » (Et toi ?)"
     forme: reponse_courte
     reponse: "What"
-    reponses_acceptees: ["what", "WHAT"]
+    reponses_acceptees: ["what", "WHAT", "How", "how"]
     indices:
       - "C'est un mot interrogatif."
-      - "Il sert aussi à demander « quoi ? »."
-    explication: "« What about you? » veut dire « Et toi ? ». C'est une relance très utile pour que l'autre parle à son tour."
+      - "Relis le bloc « Faire avancer le dialogue » : la partie « Relance »."
+    explication: "« What about you? » veut dire « Et toi ? ». C'est une relance très utile pour que l'autre parle à son tour. « How about you? » est aussi correct."
 
   - type: exercice
     enonce: "Ton camarade dit : « Maths is the most boring subject. » Tu n'es pas d'accord. Quelle réponse est polie et fait avancer le dialogue ?"
@@ -104,7 +104,7 @@ blocs:
     reponses_acceptees: ["really", "Really?", "really?", "REALLY"]
     indices:
       - "C'est une réaction pour montrer ta surprise et que tu écoutes."
-      - "Le mot finit par -lly, comme beaucoup d'adverbes."
+      - "Relis le tableau : la ligne « montrer que j'écoute »."
     explication: "« Really? » montre que tu écoutes et que tu es surpris. Tu peux continuer : « What's his name? »"
 
   - type: exercice
@@ -120,7 +120,7 @@ blocs:
     reponse: 1
     indices:
       - "Tu parles à une adulte inconnue : quel ton faut-il ?"
-      - "Cherche « please » et « Could you…? », puis une demande d'explication."
+      - "La bonne réplique est polie, demande de ralentir et fait expliquer le mot."
     explication: "Avec une adulte inconnue, on est poli : « Excuse me », « Could you… », « please ». On demande de ralentir et on fait expliquer le mot. Les autres réponses sont impolies ou arrêtent l'échange."
 
   - type: question_ouverte

@@ -77,11 +77,11 @@ blocs:
     reponses_acceptees: ["Recycle", "to recycle", "To recycle", "RECYCLE"]
     indices:
       - "C'est un mot transparent : il ressemble beaucoup au mot français."
-      - "Le mot anglais a 7 lettres et commence exactement comme le mot français."
+      - "Pense au nom « recycling » (le recyclage) : le verbe est de la même famille."
     explication: "« recycle » veut dire recycler. Le nom est « recycling » (le recyclage)."
 
   - type: exercice
-    enonce: "Un élève anglais te dit : « Next year, I will go to college. » Que veut-il dire ?"
+    enonce: "Un lycéen américain de 17 ans te dit : « Next year, I will go to college. » Que veut-il dire ?"
     forme: qcm
     choix:
       - "Il entre au collège, comme en France."
@@ -98,10 +98,10 @@ blocs:
     enonce: "Aux États-Unis, comment s'appelle l'établissement des élèves d'environ 14 à 18 ans ?"
     forme: reponse_courte
     reponse: "high school"
-    reponses_acceptees: ["High school", "High School", "a high school", "the high school", "highschool"]
+    reponses_acceptees: ["High school", "High School", "a high school", "the high school", "highschool", "high-school"]
     indices:
       - "Il vient juste après la middle school."
-      - "Deux mots : un adjectif qui veut dire « haut », puis le mot « école »."
+      - "Relis le tableau des systèmes scolaires, à la ligne des États-Unis."
     explication: "La « high school » accueille les élèves d'environ 14 à 18 ans, après la « middle school »."
 
   - type: exercice

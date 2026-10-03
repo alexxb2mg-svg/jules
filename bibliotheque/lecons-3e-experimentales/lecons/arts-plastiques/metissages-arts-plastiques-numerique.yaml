@@ -70,7 +70,7 @@ blocs:
       - "interactif"
     indices:
       - "Le spectateur agit, et l'œuvre lui répond : il y a une action dans les deux sens."
-      - "Le mot commence par « inter- », qui veut dire « entre »."
+      - "Pense à un jeu vidéo : il réagit à chaque action du joueur."
     explication: "Une œuvre interactive réagit aux actions du public : sans lui, elle ne se déclenche pas."
 
   - type: exercice
@@ -85,7 +85,7 @@ blocs:
       - "des capteurs"
     indices:
       - "La sculpture CYSP 1 de Schöffer en possède pour réagir à son environnement."
-      - "Le mot vient du verbe « capter » (recueillir, attraper une information)."
+      - "Un téléphone en contient plusieurs : pour la lumière de l'écran, pour la rotation, pour le son."
     explication: "Un capteur détecte la lumière, le son, un mouvement ou la chaleur, et transmet l'information à la machine."
 
   - type: exercice
@@ -108,7 +108,7 @@ blocs:
     tolerance: 0
     indices:
       - "C'est dans les années 1950, au milieu du XXe siècle."
-      - "C'est trois ans avant les premières Méta-matics de Tinguely (1959)."
+      - "Relis le bloc « Trois exemples à connaître »."
     explication: "CYSP 1 date de 1956 : ces croisements entre art et technologie existent bien avant Internet."
 
   - type: exercice
@@ -141,5 +141,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes mots et en deux ou trois phrases, ce qu'est un métissage entre art et technologie,
-      et ce qu'il change pour l'œuvre, l'artiste et le public.
+      Écris deux ou trois phrases, avec tes mots. Dis ce qu'est un métissage entre art et technologie.
+      Puis dis ce qu'il change pour l'œuvre, l'artiste et le public.

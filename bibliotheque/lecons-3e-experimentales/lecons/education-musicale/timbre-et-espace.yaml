@@ -52,7 +52,7 @@ blocs:
       L'**espace**, c'est la **place** des sons.
       **Stéréo** : deux haut-parleurs, un son peut venir de gauche, de droite ou du centre.
       Un son **fort et net** paraît **proche**. Un son **faible et très réverbéré** paraît **lointain**.
-      **Réverbération** : le son se prolonge sur les murs, comme dans une grande église.
+      **Réverbération** : le son rebondit sur les murs et se prolonge, comme dans une grande église.
       Sur scène, l'orchestre est placé par familles : cordes devant, bois au milieu, cuivres et percussions au fond.
 
   - type: exemple
@@ -111,7 +111,7 @@ blocs:
       - "pizzicati"
     indices:
       - "Son contraire est « arco », qui veut dire « avec l'archet »."
-      - "Le mot vient du verbe italien qui veut dire « pincer ». Il commence par « pi »."
+      - "Le mot vient du verbe italien qui veut dire « pincer ». Relis le bloc « Les voix et les modes de jeu »."
     explication: "Pizzicato (abrégé « pizz. ») : on pince la corde avec le doigt. Le timbre devient plus sec et plus court."
 
   - type: exercice

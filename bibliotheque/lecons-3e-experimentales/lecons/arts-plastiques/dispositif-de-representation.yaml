@@ -51,7 +51,7 @@ blocs:
   - type: exemple
     enonce: >-
       Production fictive : sur une feuille A4, un élève dessine une route qui se rétrécit jusqu'à un
-      point sur l'horizon, avec des arbres de plus en plus petits. Décris l'espace littéral et
+      point sur l'horizon. Les arbres sont de plus en plus petits. Décris l'espace littéral et
       l'espace suggéré.
     etapes:
       - "Espace littéral : la feuille A4, une surface plate limitée par ses bords."
@@ -61,8 +61,8 @@ blocs:
 
   - type: exercice
     enonce: >-
-      Quel procédé donne l'illusion de la profondeur sur une surface plane, avec une ligne d'horizon
-      et des lignes qui convergent vers un point de fuite ?
+      Ce procédé donne l'illusion de la profondeur sur une surface plane. Il utilise une ligne d'horizon
+      et des lignes qui convergent vers un point de fuite. Comment s'appelle-t-il ?
     forme: reponse_courte
     reponse: "perspective"
     reponses_acceptees:
@@ -73,7 +73,7 @@ blocs:
       - "perspective lineaire"
     indices:
       - "Quand tu dessines une route qui s'éloigne, ses deux bords se rapprochent. Comment s'appelle ce système ?"
-      - "Le mot commence par « pers… ». Les peintres de la Renaissance italienne l'ont mis au point."
+      - "Les peintres de la Renaissance italienne l'ont mis au point, comme Masaccio dans « La Trinité »."
     explication: "C'est la perspective (linéaire) : les lignes convergent vers un point de fuite sur la ligne d'horizon, ce qui crée l'illusion de la profondeur."
 
   - type: exercice
@@ -108,7 +108,7 @@ blocs:
   - type: exercice
     enonce: >-
       « Les Deux Plateaux » de Daniel Buren (1986) ont été pensés pour la cour d'honneur du
-      Palais-Royal, à Paris, et dépendent de ce lieu. Quelle expression latine désigne une œuvre
+      Palais-Royal, à Paris. Ils dépendent de ce lieu. Quelle expression latine désigne une œuvre
       conçue pour un lieu précis ?
     forme: reponse_courte
     reponse: "in situ"
@@ -116,10 +116,12 @@ blocs:
       - "in situ"
       - "in-situ"
       - "une œuvre in situ"
+      - "une oeuvre in situ"
+      - "œuvre in situ"
       - "oeuvre in situ"
     indices:
-      - "C'est une expression latine de deux mots qui veut dire « sur place »."
-      - "Le premier mot est « in ». Le second commence par « si- »."
+      - "Cette expression latine veut dire « sur place »."
+      - "Relis la fin du bloc « En 3D : structure, construction, installation »."
     explication: "Une œuvre in situ est conçue pour un lieu précis et en dépend : déplacée ailleurs, elle perdrait son sens."
 
   - type: exercice
@@ -152,5 +154,5 @@ blocs:
 
   - type: synthese
     consigne: >-
-      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre espace littéral et
-      espace suggéré, puis entre structure, construction et installation.
+      Écris deux ou trois phrases, avec tes propres mots. Dis la différence entre espace littéral et
+      espace suggéré. Puis dis la différence entre structure, construction et installation.

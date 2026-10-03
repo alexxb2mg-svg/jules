@@ -31,11 +31,17 @@ blocs:
 
 
       | Visée | Exemple |
+
       |---|---|
+
       | informer | le bulletin météo |
+
       | convaincre (par des arguments) | un candidat au poste de délégué |
+
       | persuader (par les émotions) | un appel à la solidarité |
+
       | divertir | une blague, un sketch |
+
       | inciter à agir | une publicité à la radio |
 
 
@@ -102,7 +108,7 @@ blocs:
       - "une visée"
     indices:
       - "Ce mot vient du verbe qu'on emploie quand on tire sur une cible."
-      - "C'est le premier mot du titre de cette leçon."
+      - "On se demande toujours : que veut obtenir celui qui parle ? Relis le premier bloc de la leçon."
     explication: "La visée, c'est le but de l'orateur : l'effet qu'il cherche à produire sur ceux qui l'écoutent."
 
   - type: exercice
@@ -166,7 +172,7 @@ blocs:
       - "Ironie"
     indices:
       - "Le soupir et la pluie contredisent les mots « super » et « magnifique »."
-      - "Ce mot est de la même famille que l'adjectif « ironique »."
+      - "Relis la partie « L'implicite » : quel procédé fait dire aux mots le contraire de ce qu'on pense ?"
     explication: "C'est de l'ironie : les mots sont positifs, mais la pluie et le soupir montrent que l'élève est déçue."
 
   - type: question_ouverte

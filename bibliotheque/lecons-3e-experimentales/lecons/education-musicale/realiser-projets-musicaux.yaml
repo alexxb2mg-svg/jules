@@ -91,7 +91,7 @@ blocs:
       - "repetition generale"
     indices:
       - "C'est la dernière répétition avant le concert."
-      - "Le mot vient du verbe « filer » : aller tout droit, sans arrêt."
+      - "Relis le bloc « Répéter par étapes » : c'est l'étape qui vient après « assembler »."
     explication: "C'est le filage (on dit aussi répétition générale). Il permet de vérifier l'enchaînement et la fatigue, comme en vrai."
 
   - type: exercice
@@ -106,7 +106,7 @@ blocs:
       - "un tutti"
     indices:
       - "C'est le contraire d'un passage pour soliste."
-      - "Le mot italien a deux t au milieu et finit par un i."
+      - "Relis l'exemple des percussions corporelles : c'est le mot employé pour la fin tous ensemble."
     explication: "Tutti veut dire « tous ». On alterne souvent soliste et tutti dans un projet."
 
   - type: exercice

@@ -65,7 +65,7 @@ blocs:
       - "tailler"
     indices:
       - "Le sculpteur ajoute-t-il de la matière, ou en retire-t-il ?"
-      - "Pense à l'outil qui rend un crayon pointu : le premier mot de son nom est la réponse."
+      - "Relis le bloc « Quatre opérations » : laquelle se fait dans un bloc dur ?"
     explication: "C'est la taille : on enlève de la matière dans un bloc dur, sans pouvoir revenir en arrière."
 
   - type: exercice
@@ -97,7 +97,7 @@ blocs:
       - "l'empâtement"
     indices:
       - "Ce n'est pas le lavis : le lavis est fluide et transparent."
-      - "Le mot est de la même famille que « pâte » : la peinture est « en pâte »."
+      - "Relis la dernière ligne du bloc « Quatre opérations »."
     explication: "C'est un empâtement : une couche de peinture épaisse, en relief, qui garde la trace du couteau."
 
   - type: exercice

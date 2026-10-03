@@ -43,11 +43,17 @@ blocs:
     titre: "Les ressources de la voix"
     contenu: >-
       | Ressource | Ce que c'est |
+
       |---|---|
+
       | **volume** | la force de la voix : assez fort pour tous |
+
       | **débit** | la vitesse : ni trop vite, ni trop lent |
+
       | **intonation** | la mélodie : elle monte pour une question, descend pour une affirmation |
+
       | **articulation** | bien prononcer chaque syllabe |
+
       | **pause** | un court silence à la ponctuation ou en fin de vers |
 
   - type: texte
@@ -123,7 +129,7 @@ blocs:
       - "Intonation"
     indices:
       - "Ce mot est de la même famille que « ton »."
-      - "Il commence par « in- »."
+      - "Relis le tableau des ressources de la voix : laquelle parle de mélodie ?"
     explication: "L'intonation est la mélodie de la voix. Elle aide à faire entendre une question, un ordre ou une émotion."
 
   - type: exercice

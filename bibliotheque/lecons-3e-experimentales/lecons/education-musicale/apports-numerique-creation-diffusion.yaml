@@ -83,7 +83,7 @@ blocs:
       - "les pistes"
     indices:
       - "Imagine un tableau : chaque ligne porte un instrument."
-      - "C'est le même mot que pour un chemin de course dans un stade, ou une ligne de ski."
+      - "Relis le bloc « Manipuler et organiser les sons » : où le séquenceur place-t-il les sons ?"
     explication: "Chaque ligne du séquenceur est une piste. On règle ensuite le volume de chaque piste : c'est le mixage."
 
   - type: exercice
@@ -113,8 +113,8 @@ blocs:
       - "sampling"
       - "le sampling"
     indices:
-      - "L'extrait prélevé s'appelle un échantillon. La technique porte un nom de la même famille."
-      - "Le mot français se termine par « -age », comme « montage » ou « mixage »."
+      - "Relis le bloc « Manipuler et organiser les sons »."
+      - "Cherche le mot qui désigne le fait de prélever un extrait d'un enregistrement pour le réutiliser."
     explication: "C'est l'échantillonnage (en anglais sampling) : on prélève un échantillon pour le réutiliser, souvent en boucle."
 
   - type: exercice

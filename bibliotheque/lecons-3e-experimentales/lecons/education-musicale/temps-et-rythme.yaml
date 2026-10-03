@@ -62,7 +62,7 @@ blocs:
     tolerance: 0
     indices:
       - "Une ronde vaut deux blanches."
-      - "Et une blanche vaut deux noires. Combien font deux fois deux ?"
+      - "Et une blanche vaut deux noires. Remplace chaque blanche par des noires, puis compte."
     explication: "Une ronde = 2 blanches = 4 noires."
 
   - type: exercice
@@ -103,7 +103,7 @@ blocs:
       - "une mesure ternaire"
     indices:
       - "Quand chaque temps se partage en deux, la mesure est binaire. Et en trois ?"
-      - "Le mot commence par « ter- », comme « tercet »."
+      - "Relis le bloc sur la mesure : avec quelles mesures sont rangées 6/8, 9/8 et 12/8 ?"
     explication: "C'est une mesure ternaire : chaque temps se partage en 3 (6/8, 9/8, 12/8)."
 
   - type: exercice

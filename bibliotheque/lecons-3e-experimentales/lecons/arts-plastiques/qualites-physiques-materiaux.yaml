@@ -66,7 +66,7 @@ blocs:
       - "textures"
     indices:
       - "Ferme les yeux et touche une écorce, puis une vitre : qu'est-ce qui change ?"
-      - "Le mot commence comme « textile »."
+      - "Relis le bloc sur les caractéristiques plastiques : quel mot désigne l'aspect de la surface ?"
     explication: "C'est la texture : l'aspect de la surface d'un matériau."
 
   - type: exercice
@@ -102,7 +102,7 @@ blocs:
       - "inacheve"
     indices:
       - "Une œuvre à la surface polie et achevée est dite « finie ». Et celle-ci ?"
-      - "Cherche le contraire de « fini », formé avec une négation."
+      - "Ici, la surface n'est pas polie et l'on voit le travail en cours. Relis le dernier bloc du cours."
     explication: "C'est le non fini : l'œuvre montre le matériau brut et les traces du travail."
 
   - type: exercice

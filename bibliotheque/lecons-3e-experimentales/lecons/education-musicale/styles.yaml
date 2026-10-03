@@ -40,7 +40,8 @@ blocs:
     titre: "Du romantisme au XXe siècle"
     contenu: |-
       **Romantique** (XIXe s.) : sentiments forts, grand orchestre, virtuosité.
-      Repères : Beethoven (Symphonie n° 5, 1808), Berlioz (Symphonie fantastique, 1830), Chopin, Schubert.
+      Beethoven (Symphonie n° 5, 1808) annonce cette période.
+      Repères : Berlioz (Symphonie fantastique, 1830), Chopin, Schubert.
       **XXe siècle** : recherches sur les timbres et les rythmes.
       Repères : Debussy, Ravel, Le Sacre du printemps de Stravinsky (1913).
       **Musique concrète** : Pierre Schaeffer, Étude aux chemins de fer (1948), faite de bruits enregistrés.
@@ -79,7 +80,7 @@ blocs:
       - "musique baroque"
     indices:
       - "Cette période vient juste après la Renaissance et avant la période classique."
-      - "En art, ce mot désigne aussi un style chargé d'ornements. Il commence par « ba- »."
+      - "En art (architecture, peinture), ce mot désigne aussi un style très chargé d'ornements."
     explication: "C'est la période baroque (vers 1600-1750) : basse continue, concerto, naissance de l'opéra."
 
   - type: exercice

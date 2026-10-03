@@ -47,9 +47,10 @@ blocs:
   - type: texte
     titre: "Discours indirect et interrogation indirecte"
     contenu: |-
-      On rapporte des paroles **sans guillemets**. Si le verbe qui introduit est au passé (said, asked), le verbe **recule** souvent d'un temps, et les pronoms changent.
+      On rapporte des paroles **sans guillemets**. Les pronoms changent.
+      Si le verbe qui introduit est au passé (said, asked), le verbe **recule** souvent d'un temps.
       - « I am tired. » → She said (that) she was tired.
-      Pour une question : **plus d'inversion**, plus de point d'interrogation.
+      Pour une question : on **n'inverse plus** sujet et verbe, et on enlève le point d'interrogation.
       - « Where do you live? » → He asked where I lived.
       - Question en oui / non : on ajoute **if**.
 
