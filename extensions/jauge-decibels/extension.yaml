@@ -1,0 +1,18 @@
+id: jauge-decibels
+titre: "Figure : niveau sonore en décibels et dose d'écoute"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [jauge-decibels]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e d'education musicale « physiologie de l'audition ». Dose : 80 dB pendant
+# 8 h = la limite, chaque +3 dB divise par deux la duree sans risque (regle d'egale energie). Aucun nombre
+# calcule n'est ecrit (barre et mots seulement) : revele: false.
+discussion:
+  jauge-decibels:
+    quand: "Pour faire voir le risque pour l'oreille : la jauge des décibels (conversation ≈ 60, cantine ≈ 85, concert ≈ 100, douleur ≈ 120 dB) et la dose du jour, qui dépend du niveau ET de la durée d'écoute (en heures)."
+    valeurs:
+      niveau: {min: 20, max: 130, pas: 5, defaut: 60}
+      duree: {min: 0.5, max: 8, pas: 0.5, defaut: 1}

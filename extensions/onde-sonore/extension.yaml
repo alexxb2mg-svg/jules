@@ -1,0 +1,22 @@
+id: onde-sonore
+titre: "Figure : onde sonore (hauteur, intensité, durée, milieu)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [onde-sonore]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). hauteur est un
+# cran sur une echelle de frequences adaptee (un curseur lineaire de 10 a 40 000 Hz rendrait les sons
+# audibles impossibles a regler) : 1 = 10 Hz, 2 = 20, 3 = 50, 4 = 100, 5 = 200, 6 = 440, 7 = 1 000,
+# 8 = 2 000, 9 = 5 000, 10 = 10 000, 11 = 20 000, 12 = 30 000, 13 = 40 000 Hz ; la frequence est ecrite
+# sur la figure. Fiche 3e « propagation du son » : hauteur et milieu ; fiche CM1 « parametres du son » :
+# hauteur (crans 3 a 10, tous audibles), intensite, duree. Aucune reponse de calcul n'est ecrite (revele: false).
+discussion:
+  onde-sonore:
+    quand: "Pour faire voir un son : vagues serrées = aigu, larges = grave (hauteur 1 à 13 = 10 Hz à 40 000 Hz, audible de 20 à 20 000 Hz), vagues hautes = fort (intensite), longueur = durée ; milieu 0 = vide (aucun son), 1 = air, 2 = eau."
+    valeurs:
+      hauteur: {min: 1, max: 13, pas: 1, defaut: 6}
+      intensite: {min: 1, max: 5, pas: 1, defaut: 3}
+      duree: {min: 1, max: 4, pas: 1, defaut: 4}
+      milieu: {min: 0, max: 2, pas: 1, defaut: 1}

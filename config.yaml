@@ -144,6 +144,10 @@ extensions:
   - palier-changement-etat
   - redistribution-atomes
   - rampe-energie
+  - chronophotographie        # physique-chimie 3e : mouvement, referentiel
+  - poids-astres              # physique-chimie 3e : poids et masse
+  - onde-sonore               # son : physique-chimie 3e, education musicale CM1
+  - jauge-decibels            # education musicale 3e : risques auditifs
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

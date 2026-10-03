@@ -268,6 +268,10 @@ DECLARATIONS_DU_DEPOT = {
     "palier-changement-etat": (False, {"t": (0, 30, 1, 8)}),
     "redistribution-atomes": (True, {"x": (0, 1, 0.25, 0), "n": (1, 3, 1, 1)}),
     "rampe-energie": (False, {"x": (0, 1, 0.05, 0.25), "f": (0, 0.5, 0.1, 0)}),
+    "chronophotographie": (False, {"v": (1, 10, 1, 5), "e": (-1, 1, 1, 0), "r": (0, 1, 1, 0)}),
+    "poids-astres": (False, {"m": (1, 10, 1, 5), "astre": (1, 4, 1, 3)}),
+    "onde-sonore": (False, {"hauteur": (1, 13, 1, 6), "intensite": (1, 5, 1, 3), "duree": (1, 4, 1, 4), "milieu": (0, 2, 1, 1)}),
+    "jauge-decibels": (False, {"niveau": (20, 130, 5, 60), "duree": (0.5, 8, 0.5, 1)}),
 }
 
 
