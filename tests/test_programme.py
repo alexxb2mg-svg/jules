@@ -23,9 +23,9 @@ def test_les_trois_niveaux_sont_declares():
 
 
 def test_la_3e_ne_change_pas():
-    """Rien ne change pour un eleve de 3e : les memes 252 notions qu'avant l'ajout de la 4e et de la 5e."""
+    """Rien ne change pour un eleve de 3e : les memes 269 notions qu'avant l'ajout de la 4e et de la 5e."""
     cat = charger_catalogue(BIBLIOTHEQUES, ["programme"], "3e")
-    assert len(cat.notions) == 252
+    assert len(cat.notions) == 269
     assert {n.niveau for n in cat.notions.values()} == {"3e"}
 
 

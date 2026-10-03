@@ -154,6 +154,9 @@
   --matiere-anglais-fond: color-mix(in oklab, #4A55C2 22%, #14111F);
   --matiere-anglais-texte: color-mix(in oklab, #4A55C2 45%, #FFFFFF);
   --matiere-anglais-accent: color-mix(in oklab, #4A55C2 70%, #FFFFFF);
+  --matiere-espagnol-fond: color-mix(in oklab, #C24417 22%, #14111F);
+  --matiere-espagnol-texte: color-mix(in oklab, #C24417 45%, #FFFFFF);
+  --matiere-espagnol-accent: color-mix(in oklab, #C24417 70%, #FFFFFF);
   --matiere-education-musicale-fond: color-mix(in oklab, #B0388F 22%, #14111F);
   --matiere-education-musicale-texte: color-mix(in oklab, #B0388F 45%, #FFFFFF);
   --matiere-education-musicale-accent: color-mix(in oklab, #B0388F 70%, #FFFFFF);
