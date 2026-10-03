@@ -63,10 +63,10 @@ jobs:
       # de Python) : sous Windows, le tracage triplait la duree des tests de generateurs (03/10/2026, t_57cf0494).
       - name: Tests et couverture (Linux)
         if: runner.os == 'Linux'
-        run: python -m pytest -rs -n auto --cov --cov-report=term-missing
+        run: python -m pytest -rs -n auto --durations=25 --cov --cov-report=term-missing
       - name: Tests (Windows, macOS)
         if: runner.os != 'Linux'
-        run: python -m pytest -rs -n auto
+        run: python -m pytest -rs -n auto --durations=25
       - name: Tests lents (exclus de la suite par defaut, voir pyproject.toml)
         run: python -m pytest -rs -m lent
       - name: La commande s'installe et demarre
