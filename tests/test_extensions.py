@@ -238,6 +238,14 @@ DECLARATIONS_DU_DEPOT = {
     "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
+    # figures CM1 (audit du 03/10/2026) : bornes des curseurs des fiches visuelles CM1
+    "angle": (False, {"ouverture": (10, 170, 5, 60), "longueur": (1, 5, 1, 3)}),
+    "symetrie-axe": (True, {"axe": (4, 8, 1, 6), "horizontal": (0, 1, 1, 0), "pointilles": (0, 1, 1, 1)}),
+    "quadrilatere-deformable": (False, {"angle": (60, 120, 5, 90), "allonge": (0, 3, 1, 0)}),
+    "rectangle-quadrille": (
+        False,
+        {"longueur": (1, 12, 1, 5), "largeur": (1, 8, 1, 3), "deroule": (0, 1, 1, 0), "forme": (0, 1, 1, 0)},
+    ),
 }
 
 

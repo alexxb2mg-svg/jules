@@ -121,6 +121,10 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - angle                     # figures CM1 (audit 03/10/2026)
+  - symetrie-axe
+  - quadrilatere-deformable
+  - rectangle-quadrille
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
