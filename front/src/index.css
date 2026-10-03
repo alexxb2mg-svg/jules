@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Polices livrées avec Jules (SIL OFL), servies par FastAPI depuis jules/web/static/polices : rien ne sort de la machine. */
+@font-face { font-family: "Outfit"; src: url("/static/polices/Outfit-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Outfit"; src: url("/static/polices/Outfit-Bold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("/static/polices/WorkSans-Regular.ttf") format("truetype"); font-weight: 400 500; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("/static/polices/WorkSans-Bold.ttf") format("truetype"); font-weight: 600 800; font-display: swap; }
+
+/* ============================================================================
+   THÈME DE JULES — seul endroit où l'on change les couleurs de toute l'application.
+   1) palette Jules (--j-*)  2) rôles shadcn branchés dessus  3) tokens Tailwind.
+   Les adaptations dys / la persona pourront surcharger les --j-* à l'exécution.
+   ========================================================================== */
+:root {
+  --j-bleu: #1F4E8C;
+  --j-bleu-clair: #EAF1FA;
+  --j-rouge: #C8102E;
+  --j-encre: #1E1446;
+  --j-gris: #6B6880;
+  --j-bord: #E4E1F0;
+  --j-nav: #F6F5FB;
+  --j-survol: #ECEAF6;
+  --j-vert: #1E8E5A;
+  --j-orange: #E07B00;
+  --j-fond: #FFFFFF;
+  /* fiches personnelles (docs/SOURCES-CONTRAT.md §8) : distinctes de toutes les couleurs de matière */
+  --j-perso: #7A3FE0;
+  --j-perso-clair: #F2EBFF;
+  --radius: 0.875rem;
+
+  /* rôles shadcn/ui */
+  --background: var(--j-fond);
+  --foreground: var(--j-encre);
+  --card: #FFFFFF;
+  --card-foreground: var(--j-encre);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--j-encre);
+  --primary: var(--j-bleu);
+  --primary-foreground: #FFFFFF;
+  --secondary: var(--j-bleu-clair);
+  --secondary-foreground: var(--j-bleu);
+  --muted: var(--j-nav);
+  --muted-foreground: var(--j-gris);
+  --accent: var(--j-survol);
+  --accent-foreground: var(--j-encre);
+  --destructive: var(--j-rouge);
+  --border: var(--j-bord);
+  --input: var(--j-bord);
+  --ring: var(--j-bleu);
+
+  --sidebar: var(--j-nav);
+  --sidebar-foreground: var(--j-encre);
+  --sidebar-primary: var(--j-bleu);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: var(--j-survol);
+  --sidebar-accent-foreground: var(--j-encre);
+  --sidebar-border: var(--j-bord);
+  --sidebar-ring: var(--j-bleu);
+}
+
+@theme inline {
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-titre: "Outfit", "Work Sans", sans-serif;
+
+  /* tokens Jules (bg-bleu, text-encre, border-bord…) */
+  --color-bleu: var(--j-bleu);
+  --color-bleu-clair: var(--j-bleu-clair);
+  --color-rouge: var(--j-rouge);
+  --color-encre: var(--j-encre);
+  --color-gris: var(--j-gris);
+  --color-bord: var(--j-bord);
+  --color-nav: var(--j-nav);
+  --color-survol: var(--j-survol);
+  --color-vert: var(--j-vert);
+  --color-orange: var(--j-orange);
+  --color-perso: var(--j-perso);
+  --color-perso-clair: var(--j-perso-clair);
+
+  /* couleurs des matières */
+  --color-maths: #1F4E8C;
+  --color-francais: #8E2A6B;
+  --color-hg: #A0522D;
+  --color-pc: #0E7C86;
+  --color-svt: #2E8B57;
+  --color-techno: #5B4BB5;
+  --color-anglais: #C8102E;
+
+  /* tokens shadcn */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-relief: 0 1px 2px rgb(30 20 70 / .06), 0 8px 24px -12px rgb(30 20 70 / .25);
+  --shadow-relief-haut: 0 2px 4px rgb(30 20 70 / .08), 0 18px 40px -14px rgb(30 20 70 / .35);
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  html, body, #root { height: 100%; margin: 0; }
+  body { font-family: var(--font-sans); color: var(--foreground); background: var(--background); font-size: 17px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  h1, h2, h3 { font-family: var(--font-titre); }
+  :focus-visible { outline: 2px solid var(--ring); outline-offset: 2px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Énoncés d'exercice : symboles.js y repère parfois une partie d'équation seulement (« 4x − 17 = 15 » :
+   le « − » typographique n'est pas dans sa ZONE_FORMULE). Le rappel au survol reste, sans la demi-mise en gras. */
+[data-bloc="entrainement"] .formule-texte { font-weight: inherit; }
+
+/* J : bloc cité par Jules (lien dans sa réponse) : contour + fond teinté 2,5 s, sans mouvement si refusé.
+   outline (et non box-shadow) : visible même quand un parent coupe ce qui dépasse. */
+.jules-cite { border-radius: 22px; outline: 4px solid var(--j-bleu); outline-offset: 6px; animation: jules-cite 2.6s ease-out forwards; }
+@keyframes jules-cite {
+  0%, 55% { outline-color: var(--j-bleu); background-color: color-mix(in srgb, var(--j-bleu) 7%, transparent); }
+  100% { outline-color: transparent; background-color: transparent; }
+}
+@media (prefers-reduced-motion: reduce) { .jules-cite { animation: none; } }

@@ -52,7 +52,7 @@ MOTEURS = (
         {
             "backend": "anthropic",
             "cle_env": "ANTHROPIC_API_KEY",
-            "modeles": {"principal": "claude-sonnet-5", "rapide": "claude-haiku-4-5"},
+            "modeles": {"principal": "claude-sonnet-5-5", "rapide": "claude-sonnet-5-5"},
         },
         cle_env="ANTHROPIC_API_KEY",
         aide="Clé sur https://console.anthropic.com ; fixer un plafond de dépense mensuel.",

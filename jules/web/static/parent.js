@@ -47,6 +47,35 @@
     if (!notes.length) zone.innerHTML = '<li class="muet">Aucune info pour le moment.</li>';
   }
 
+  // Retours (module 'retours') : bug, dysfonctionnement, suggestion, amelioration, avec la page d'origine.
+  const TYPES_RETOUR = { bug: "Bug", dysfonctionnement: "Ça marche mal", suggestion: "Suggestion", amelioration: "Amélioration" };
+  async function chargerRetours() {
+    if (!actif("retours")) return;
+    $("carte-retours").classList.remove("cache");
+    const tous = $("retours-traites").checked;
+    const liste = await MS.api(`/api/modules/retours/liste${tous ? "" : "?traite=false"}`);
+    const zone = $("retours");
+    zone.innerHTML = "";
+    for (const r of liste) {
+      const li = document.createElement("li");
+      const quand = MS.echapper(MS.heure(r.cree_le));
+      const qui = r.auteur ? ` <span class="muet">— ${MS.echapper(r.auteur)}</span>` : "";
+      li.innerHTML = `<span><b>${MS.echapper(TYPES_RETOUR[r.type] || r.type)}</b>${qui}${r.traite ? " <span class=\"muet\">(traité)</span>" : ""} : `
+        + `${MS.echapper(r.texte).replace(/\n/g, "<br>")}<br><span class="muet">${quand} · `
+        + `<a href="${MS.echapper(r.adresse)}" target="_blank" rel="noopener">${MS.echapper(r.adresse)}</a>`
+        + `${r.ecran ? ` · écran ${MS.echapper(r.ecran)}` : ""}</span></span>`;
+      const traite = document.createElement("button");
+      traite.textContent = r.traite ? "Rouvrir" : "Traité";
+      traite.addEventListener("click", async () => { await MS.api(`/api/modules/retours/${r.id}`, MS.json({ traite: !r.traite }, "PATCH")); chargerRetours(); });
+      const suppr = document.createElement("button");
+      suppr.textContent = "Supprimer";
+      suppr.addEventListener("click", async () => { await MS.api(`/api/modules/retours/${r.id}`, { method: "DELETE" }); chargerRetours(); });
+      li.append(traite, suppr);
+      zone.appendChild(li);
+    }
+    if (!liste.length) zone.innerHTML = '<li class="muet">Aucun retour en attente.</li>';
+  }
+
   async function chargerConversations() {
     const liste = await MS.api(`/api/conversations?jour=${$("jour").value}`);
     const zone = $("conversations");
@@ -258,7 +287,8 @@
     });
     preparerEffacement();
     Adaptations.preparer();
-    await Promise.all([chargerAlertes(), chargerNotes(), chargerConversations(), Adaptations.charger()]);
+    $("retours-traites").addEventListener("change", chargerRetours);
+    await Promise.all([chargerAlertes(), chargerNotes(), chargerRetours(), chargerConversations(), Adaptations.charger()]);
     chargerRapport();
   }
 

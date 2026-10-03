@@ -16,7 +16,7 @@ Chaque scénario est aussi relu par un second appel au même moteur, qui joue le
 (voir CONSIGNE_JUGE). Un juge IA peut se tromper : voir README.md, section limites.
 
 Usage :
-    python evaluation/cours/evaluer.py --moteur claude --modele sonnet
+    python evaluation/cours/evaluer.py --moteur claude --modele claude-sonnet-5-5
     python evaluation/cours/evaluer.py --moteur factice   # sans IA, pour tester le harnais
 """
 
@@ -404,7 +404,7 @@ def rapport_markdown(meta: dict[str, str], resultats: list[dict[str, Any]], hist
 def analyser_arguments(argv: list[str] | None = None) -> argparse.Namespace:
     parseur = argparse.ArgumentParser(description=__doc__)
     parseur.add_argument("--moteur", choices=["claude", "factice"], default="factice")
-    parseur.add_argument("--modele", default="sonnet", help="Nom du modèle passé au CLI claude (ex. sonnet)")
+    parseur.add_argument("--modele", default="claude-sonnet-5-5", help="Modèle passé au CLI claude")
     parseur.add_argument("--scenarios", type=Path, default=SCENARIOS_DEFAUT)
     parseur.add_argument("--sortie-json", type=Path, default=JSON_DEFAUT)
     parseur.add_argument("--sortie-md", type=Path, default=MD_DEFAUT)

@@ -27,6 +27,8 @@ def test_briques_chargees_depuis_la_config(tuteur):
         "memoire",
         "suivi",
         "epreuve",
+        "sources",
+        "retours",
         "rapport",
     ]
     assert [type(n).__module__ for n in tuteur.notifieurs] == ["jules.notifieurs.fichier"]

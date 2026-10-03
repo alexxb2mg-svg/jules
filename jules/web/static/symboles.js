@@ -323,7 +323,8 @@ const Symboles = (() => {
   }
 
   // --- la bulle : une seule pour la page, placee par le script, toujours dans l'ecran --------------
-  let bulleAffichee = null, abbrCourant = null;
+  // `epingle` : bulle ouverte par un appui (doigt) ou un clic ; elle reste jusqu'a un autre appui.
+  let bulleAffichee = null, abbrCourant = null, epingle = null;
   function montrer(abbr) {
     abbrCourant = abbr;
     if (!bulleAffichee) {
@@ -343,6 +344,7 @@ const Symboles = (() => {
   }
   function cacher() {
     abbrCourant = null;
+    epingle = null;
     if (bulleAffichee) bulleAffichee.classList.remove("visible");
   }
   function suivre() {
@@ -356,10 +358,21 @@ const Symboles = (() => {
   function demarrer() {
     if (demarre) return;
     demarre = true;
-    document.addEventListener("mouseover", (e) => { const a = cible(e); if (a) montrer(a); });
-    document.addEventListener("mouseout", (e) => { if (cible(e)) cacher(); });
-    document.addEventListener("focusin", (e) => { const a = cible(e); if (a) montrer(a); else cacher(); });
-    document.addEventListener("focusout", (e) => { if (cible(e)) cacher(); });
+    // Survol : souris seulement (un doigt emule aussi mouseover, d'ou pointerover filtre).
+    document.addEventListener("pointerover", (e) => {
+      const a = cible(e);
+      if (a && e.pointerType === "mouse" && !epingle) montrer(a);
+    });
+    document.addEventListener("pointerout", (e) => { if (e.pointerType === "mouse" && cible(e) && !epingle) cacher(); });
+    // Appui (tablette, telephone) ou clic : ouvre la bulle, un nouvel appui dessus ou ailleurs la ferme.
+    document.addEventListener("click", (e) => {
+      const a = cible(e);
+      if (a && epingle !== a) { montrer(a); epingle = a; }
+      else if (epingle) cacher();
+    });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && abbrCourant) cacher(); });
+    document.addEventListener("focusin", (e) => { const a = cible(e); if (a) montrer(a); else if (!epingle) cacher(); });
+    document.addEventListener("focusout", (e) => { if (cible(e) && !epingle) cacher(); });
     addEventListener("scroll", suivre, true);
     addEventListener("resize", suivre);
     annoter(document.body);

@@ -13,8 +13,8 @@ profil: exemple
 #   backend: anthropic
 #   cle_env: ANTHROPIC_API_KEY
 #   modeles:
-#     principal: claude-sonnet-5
-#     rapide: claude-haiku-4-5
+#     principal: claude-sonnet-5-5
+#     rapide: claude-sonnet-5-5
 
 # --- OpenAI, cle API payante -------------------------------------------------
 # llm:

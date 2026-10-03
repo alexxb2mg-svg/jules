@@ -1,0 +1,63 @@
+// Coquille de l'interface : barre latérale + écran de la route courante (routes.ts), transitions animées.
+// Aucune donnée fictive : prénom, persona et leviers d'adaptation viennent de /api/infos.
+import { useEffect, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { Nav } from "@/composants/Nav"
+import { infos as lireInfos, session, type Infos } from "@/api/jules"
+import { appliquerLeviers } from "@/modules/fiches/ponts"
+import { sectionDe, useRoute, type Route } from "@/routes"
+import { ECRANS } from "@/ecrans/registre"
+import type { SectionId } from "@/config/navigation"
+import { RappelARanger } from "@/modules/sources/pieces"
+import { BoutonRetour } from "@/composants/BoutonRetour"
+import { Calculatrice } from "@/composants/Calculatrice"
+import { choisirMatiere, lireMatiere } from "@/modules/accueil/etat"
+
+/** Entrée d'une section : ouverte sur la matière choisie en haut de la barre (idée A), sinon toutes. */
+const routeDeSection = (s: SectionId, m = lireMatiere()): Route | null =>
+  s === "fiches" ? { ecran: "fiches", matiere: m } : s === "lecons" ? { ecran: "lecons", matiere: m }
+    : s === "supports" ? { ecran: "supports", matiere: m } : s === "discuter" ? { ecran: "discuter" } : s === "pronote" ? { ecran: "pronote" } : s === "parent" ? { ecran: "parent" } : null
+
+/** Matière portée par la route (écrans par matière) : elle devient la matière courante. */
+const matiereDe = (r: Route): string | null | undefined =>
+  r.ecran === "fiches" || r.ecran === "lecons" || r.ecran === "supports" || r.ecran === "support" ? r.matiere : undefined
+
+export default function App() {
+  const [route, aller] = useRoute()
+  const [infos, setInfos] = useState<Infos | null>(null)
+  // À distance (tunnel), l'espace d'administration n'existe pas : son lien disparaît de la barre.
+  const [admin, setAdmin] = useState(true)
+  const [calcOuverte, setCalcOuverte] = useState(false)  // le panneau calculatrice pousse le contenu (grand écran)
+  useEffect(() => {
+    lireInfos().then((i) => { setInfos(i); appliquerLeviers(i) }).catch(() => {})
+    session.etat().then((s) => setAdmin(s.parent)).catch(() => setAdmin(false))
+  }, [])
+  useEffect(() => { const m = matiereDe(route); if (m) choisirMatiere(m) }, [route])
+  const Ecran = ECRANS[route.ecran]
+  const cle = route.ecran === "fiche" || route.ecran === "lecon" ? `${route.ecran}-${route.notion}`
+    : route.ecran === "support" || route.ecran === "perso" || route.ecran === "dossier" ? `${route.ecran}-${route.id}` : route.ecran
+
+  return (
+    <TooltipProvider delayDuration={300}>
+      <SidebarProvider className="h-full min-h-0">
+        <Nav admin={admin} actif={sectionDe(route)} prenom={infos?.prenom || ""} route={route} aller={aller} onChange={(s) => { const r = routeDeSection(s); if (r) aller(r) }}
+          onMatiere={(m) => { const r = routeDeSection(sectionDe(route), m); if (r) aller(r) }} />
+        <SidebarInset className="relative h-full min-h-0 overflow-hidden bg-[#FBFBFE]">
+          <SidebarTrigger className="absolute top-3 left-3 z-40 size-10 bg-white/80 text-gris shadow-relief backdrop-blur md:hidden" />
+          <AnimatePresence mode="wait">
+            <motion.div key={cle} className={`h-full transition-[padding] duration-200 ${calcOuverte ? "md:pr-[21rem]" : ""}`}
+              initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 32 }}>
+              <Ecran route={route} aller={aller} infos={infos} />
+            </motion.div>
+          </AnimatePresence>
+          {route.ecran !== "perso" && <RappelARanger onOuvrir={(id) => aller({ ecran: "perso", id })} />}
+          <Calculatrice infos={infos} onOuvert={setCalcOuverte} />
+          <BoutonRetour testeurs={infos?.retours?.testeurs} />
+        </SidebarInset>
+      </SidebarProvider>
+    </TooltipProvider>
+  )
+}

@@ -1,7 +1,9 @@
 """Interface commune des moteurs d'IA.
 
 Un moteur recoit : un prompt systeme, l'historique (tours), un nom de modele logique
-('principal' ou 'rapide'), et renvoie du texte. Rien d'autre ne connait le fournisseur.
+('principal', 'rapide', ou tout autre role logique declare dans llm.modeles - ex. 'redaction'
+pour la generation de documents, jules/sources.py), et renvoie du texte. Un role logique absent
+de la config retombe sur 'principal' (voir nom_modele). Rien d'autre ne connait le fournisseur.
 """
 
 from __future__ import annotations

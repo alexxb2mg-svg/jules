@@ -92,6 +92,11 @@ class Module:
     def routes_eleve(self) -> APIRouter | None:
         return None
 
+    def routes_statiques(self) -> APIRouter | None:
+        """Fichiers statiques SANS cookie, montes sous /api/eleve/<id> : pour ce qu'une iframe a origine opaque
+        doit charger (elle n'envoie pas le cookie de session). Jamais de donnees de l'eleve ici."""
+        return None
+
     def infos_interface(self) -> dict[str, Any]:
         return {}
 

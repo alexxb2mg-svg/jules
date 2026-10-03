@@ -13,6 +13,7 @@ import secrets
 import time
 from itertools import pairwise
 from pathlib import Path
+from typing import Any
 
 DUREE_S = 30 * 24 * 3600
 COOKIE = "jules_session"
@@ -109,6 +110,25 @@ def verifier_exposition(hote: str, empreintes: dict[str, str]) -> None:
         )
 
 
+# En-tetes poses par un relais (tunnel Cloudflare, proxy) : un navigateur sur l'ordinateur lui-meme ne les
+# envoie jamais. Leur presence suffit a traiter la requete comme venue d'Internet (pas de confiance a leur
+# CONTENU, seulement a leur presence : un visiteur ne peut pas les retirer, le relais les ajoute).
+ENTETES_RELAIS = (
+    "cf-connecting-ip", "cf-ray", "cf-visitor", "cf-ipcountry", "x-forwarded-for", "x-real-ip", "forwarded",
+)  # fmt: skip
+
+
+# « testclient » : nom du client en memoire de Starlette (tests), qui ne passe par aucun reseau.
+CLIENTS_LOCAUX = HOTES_LOCAUX | {"testclient"}
+
+
+def requete_distante(entetes: Any, hote_client: str | None) -> bool:
+    """Vrai si la requete vient d'ailleurs que de l'ordinateur ou tourne Jules (tunnel, reseau)."""
+    if any(entetes.get(nom) for nom in ENTETES_RELAIS):
+        return True
+    return (hote_client or "") not in CLIENTS_LOCAUX
+
+
 class Acces:
     def __init__(self, empreintes: dict[str, str], fichier_secret: Path) -> None:
         self.empreintes = {role: str(empreintes.get(f"code_{role}", "") or "") for role in ROLES}
@@ -153,7 +173,11 @@ class Acces:
     def _signer(self, charge: str) -> str:
         return hmac.new(self.secret, charge.encode("utf-8"), hashlib.sha256).hexdigest()[:32]
 
-    def autorise(self, role_session: str | None, role_requis: str) -> bool:
+    def autorise(self, role_session: str | None, role_requis: str, distant: bool = False) -> bool:
+        """`distant` : requete venue d'Internet (tunnel). L'administration (role parent) n'y est jamais
+        ouverte, et un code vide n'y vaut jamais acces libre : seul un vrai code eleve fait entrer."""
+        if distant:
+            return role_requis == "eleve" and role_session in ("eleve", "parent") and not self.libre("eleve")
         if role_requis == "eleve":
             return role_session in ("eleve", "parent") or self.libre("eleve")
         return role_session == "parent" or self.libre("parent")

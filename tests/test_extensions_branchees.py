@@ -143,16 +143,32 @@ def test_sixieme_figure_ajoutee_par_extension_sans_toucher_l_accueil(projet, bru
 
 
 def test_sans_extension_de_figures_aucune_fiche_a_graphe_acceptee(projet, brut_config):
-    """Preuve que le coeur ne connait plus les gabarits par leur nom : sans extension, les fiches a
-    graphe (les 5 de mathematiques) sont ecartees, celles sans figure (histoire, geographie) restent,
-    et /gabarits.js est vide."""
+    """Preuve que le coeur ne connait plus les gabarits par leur nom : sans extension, toute fiche qui utilise une
+    figure d'extension (ici les 5 fiches de maths a graphe) est ecartee, et /gabarits.js est vide. Les fiches sans
+    figure d'extension (cartes, schemas : histoire-geographie, etc.) restent servies : elles n'en ont pas besoin."""
     tuteur, client = client_pour(projet, brut_config, [])
     try:
         assert client.get("/gabarits.js").text == ""
-        restantes = tuteur.module("fiches_visuelles").fiches
-        assert restantes, "les fiches sans graphe doivent rester servies"
-        assert all(b.type != "graphe" for f in restantes.values() for b in f.blocs)
-        assert {f.matiere for f in restantes.values()}.isdisjoint({"mathematiques"})
+        fiches = tuteur.module("fiches_visuelles").fiches
+        assert fiches, "les fiches sans graphe doivent rester servies"
+        assert all(b.type != "graphe" for f in fiches.values() for b in f.blocs)
+        figures = {
+            "equation-solutions",
+            "droite-affine",
+            "triangle-rectangle",
+            "probabilites-frequences",
+            "triangle-thales",
+        }
+        utilisees = {b.gabarit for f in fiches.values() for b in f.blocs if getattr(b, "gabarit", None)}
+        assert not utilisees & figures
+        a_graphe = {
+            "equations-premier-degre-et-produits",
+            "fonctions-lineaires-affines",
+            "parallelisme-triangles-pythagore",
+            "probabilites-experiences-simples",
+            "thales-triangles-semblables-trigonometrie",
+        }
+        assert a_graphe.isdisjoint(fiches)
         assert client.get("/api/eleve/outils/catalogue").json() == []
     finally:
         tuteur.fermer()

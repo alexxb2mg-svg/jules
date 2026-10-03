@@ -88,6 +88,18 @@ def choisir(fiche: dict[str, Any], faits: set[str] | None = None) -> dict[str, A
     return min(restants, key=lambda e: e["difficulte"]) if restants else None
 
 
+def indice_demande(fiche: dict[str, Any], etat: Etat) -> str | None:
+    """L'eleve demande un coup de pouce AVANT de repondre : le palier suivant de l'echelle (le meme que
+    celui qu'une erreur aurait donne), jamais la solution. None quand l'echelle est epuisee ou l'exercice
+    termine : on ne donne alors rien de plus (la solution ne vient qu'apres une vraie tentative)."""
+    ex = exercice(fiche, etat.exercice)
+    if etat.termine or etat.paliers_donnes >= len(PALIERS):
+        return None
+    texte = str(ex["indices"][PALIERS[etat.paliers_donnes]]).strip()
+    etat.paliers_donnes += 1
+    return texte
+
+
 def repondre(fiche: dict[str, Any], etat: Etat, reponse: Any) -> Retour:
     """Une reponse de l'eleve -> ce que Jules dit, et l'etat mis a jour (modifie en place)."""
     ex = exercice(fiche, etat.exercice)

@@ -41,6 +41,7 @@ from jules.bibliotheques import (
     lire_identite,
 )
 from jules.svg_sur import ErreurSvg, nettoyer_svg
+from jules.yaml_rapide import charger as charger_yaml
 
 # --- constantes du format --------------------------------------------------------
 
@@ -66,6 +67,10 @@ LIMITE_NOEUDS_CARTE = 8
 
 MIN_BLOCS = 3
 MAX_BLOCS = 12
+
+ORIGINE_NATIVE = "native"
+ORIGINE_PERSONNELLE = "personnelle"
+LICENCE_PERSONNELLE = "personnel"  # jamais diffusee, jamais versee dans une bibliotheque du depot
 
 
 class ErreurFicheVisuelle(ValueError):
@@ -148,6 +153,7 @@ class FicheVisuelle:
     avertissement: str = ""
     variables: dict[str, str] = field(default_factory=dict)
     abreviations: dict[str, str] = field(default_factory=dict)
+    origine: str = ORIGINE_NATIVE  # 'personnelle' : generee depuis une source de l'eleve (SOURCES-CONTRAT.md)
 
     def toutes_les_variables(self) -> dict[str, str]:
         """Le sens des lettres de grandeur de la notion (champ `variables:`), rappele au survol sur
@@ -161,7 +167,7 @@ class FicheVisuelle:
                 {"id": ID_ATTENDUS, "type": ID_ATTENDUS, "adresse": f"fiche/{ID_ATTENDUS}", "attendus": attendus}
             )
         blocs.extend(b.public() for b in self.blocs)
-        return {
+        publique: dict[str, Any] = {
             "notion": self.notion,
             "titre": self.titre,
             "matiere": self.matiere,
@@ -174,6 +180,9 @@ class FicheVisuelle:
             "variables": self.toutes_les_variables(),
             "abreviations": dict(self.abreviations),
         }
+        if self.origine != ORIGINE_NATIVE:  # seul champ ajoute, et seulement pour une fiche personnelle
+            publique["origine"] = self.origine
+        return publique
 
 
 # --- verifications de contenu -------------------------------------------------------
@@ -596,7 +605,7 @@ def lire_fiche_visuelle(
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurFicheVisuelle(f"{nom} : fichier trop gros")
     try:
-        brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+        brut = charger_yaml(chemin.read_text(encoding="utf-8")) or {}
     except yaml.YAMLError as err:
         raise ErreurFicheVisuelle(f"{nom} : YAML illisible ({err})") from err
     if not isinstance(brut, dict):
@@ -673,3 +682,69 @@ def charger_fiches_visuelles(
                 continue
             fiches.setdefault(fiche.notion, fiche)
     return fiches
+
+
+# --- fiches personnelles (docs/SOURCES-CONTRAT.md §5) ----------------------------------
+
+
+def lire_fiche_personnelle(
+    brut: Any,
+    notions: dict[str, Notion],
+    matieres: dict[str, str],
+    niveau: str,
+    source: dict[str, str],
+    gabarits: frozenset[str],
+    nom: str = "fiche personnelle",
+) -> FicheVisuelle:
+    """Verifie une fiche generee depuis une source de l'eleve : meme format, memes blocs, memes
+    limites qu'une fiche native. Ecarts (contrat §5), tous ici et jamais dans le format :
+      - `notion` : du referentiel, ou absente (Non classe, dossier) ; un id inconnu est refuse ;
+      - `sources` : exactement la source de l'eleve (`source`), pas d'url ni de licence ;
+      - `licence` : 'personnel' ; `relecture` : toujours 'a_relire' ; `origine` : 'personnelle' ;
+      - `schema` : SVG en ligne seulement (aucun fichier a cote).
+    `matieres` : id -> nom des matieres du niveau (une fiche sans notion garde sa matiere).
+    Leve ErreurFicheVisuelle avec un message clair (renvoye tel quel au modele pour un nouvel essai).
+    """
+    if not isinstance(brut, dict):
+        raise ErreurFicheVisuelle(f"{nom} : un objet YAML est attendu")
+    identifiant = str(brut.get("notion") or "").strip()
+    notion = notions.get(identifiant) if identifiant else None
+    if identifiant and notion is None:
+        raise ErreurFicheVisuelle(f"{nom} : notion {identifiant!r} inconnue du referentiel")
+    matiere = notion.matiere if notion else str(brut.get("matiere") or "").strip()
+    if not notion and matiere and matiere not in matieres:
+        matiere = ""  # matiere inventee : la fiche reste sans matiere plutot qu'a une fausse
+    titre = str(brut.get("titre") or "").strip() or (notion.titre if notion else "")
+    if not titre:
+        raise ErreurFicheVisuelle(f"{nom} : champ 'titre' manquant")
+    titre = _texte(titre, "titre", nom, limite=LIMITE_TITRE)
+    _verifier_division(titre, "titre", nom)
+    blocs_bruts = brut.get("blocs") or []
+    if not isinstance(blocs_bruts, list) or not MIN_BLOCS <= len(blocs_bruts) <= MAX_BLOCS:
+        raise ErreurFicheVisuelle(f"{nom} : entre {MIN_BLOCS} et {MAX_BLOCS} blocs attendus")
+    for i, b in enumerate(blocs_bruts):
+        svg = str(b.get("svg") or "") if isinstance(b, dict) else ""
+        if isinstance(b, dict) and b.get("type") == "schema" and not svg.lstrip().startswith("<svg"):
+            raise ErreurFicheVisuelle(f"{nom}, bloc {i + 1} : 'svg' doit etre un SVG en ligne (commence par <svg)")
+    # Aucun fichier a cote d'une fiche personnelle : le dossier passe au verificateur est vide par construction.
+    sans_fichier = Path("/nonexistent-jules-fiche-personnelle")
+    blocs = [_verifier_bloc(b, i, nom, sans_fichier, gabarits) for i, b in enumerate(blocs_bruts)]
+    ids = [b.id for b in blocs]
+    if len(ids) != len(set(ids)):
+        raise ErreurFicheVisuelle(f"{nom} : des ids de blocs sont en double")
+    return FicheVisuelle(
+        notion=notion.id if notion else "",
+        titre=titre,
+        matiere=matiere,
+        niveau=notion.niveau if notion else niveau,
+        bibliotheque="personnelle",
+        statut="personnelle",
+        licence=LICENCE_PERSONNELLE,
+        sources=[{"titre": str(source.get("titre") or "Mon document"), "personnelle": str(source.get("id") or "")}],
+        relecture="a_relire",
+        blocs=blocs,
+        avertissement="",
+        variables=_verifier_variables(brut.get("variables"), nom),
+        abreviations=_verifier_abreviations(brut.get("abreviations"), nom),
+        origine=ORIGINE_PERSONNELLE,
+    )

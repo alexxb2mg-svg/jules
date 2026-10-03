@@ -33,6 +33,7 @@ from jules.bibliotheques import (
     lire_identite,
     normaliser,
 )
+from jules.yaml_rapide import charger as charger_yaml
 
 journal = logging.getLogger("jules.lecons")
 
@@ -133,7 +134,7 @@ def lire_lecon(chemin: Path, notions: dict[str, Notion], bibliotheque: Bibliothe
     if chemin.stat().st_size > TAILLE_MAX_FICHIER:
         raise ErreurLecon(f"{nom} : fichier trop gros")
     try:
-        brut = yaml.safe_load(chemin.read_text(encoding="utf-8")) or {}
+        brut = charger_yaml(chemin.read_text(encoding="utf-8")) or {}
     except yaml.YAMLError as err:
         raise ErreurLecon(f"{nom} : YAML illisible ({err})") from err
     if not isinstance(brut, dict):
