@@ -19,6 +19,7 @@ import { bulleVariants } from "@/components/ui/variantes"
 import { buttonVariants } from "@/components/ui/button"
 import { choixVariants, surfaceVariants } from "@/components/ui/variantes"
 import { BulleAttente } from "@/modules/chat/Bulle"
+import { FigureBulle } from "@/modules/chat/markdown"
 import { useMotion } from "@/lib/motion"
 import { cn } from "@/lib/utils"
 
@@ -84,7 +85,7 @@ export function PanneauJules({ conversationId, sousTitre, aides = [], suggestion
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
-      <div className="flex h-full flex-col bg-background">
+      <div data-panneau-jules className="flex h-full flex-col bg-background">
         <div className="flex items-center gap-3 px-5 pt-4 pb-2">
           <AvatarJules taille="lg" />
           <div className="leading-tight">
@@ -186,8 +187,15 @@ function Lien({ href, children, ...reste }: React.AnchorHTMLAttributes<HTMLAncho
   return <a href={href} {...reste} target="_blank" rel="noreferrer">{children}</a>
 }
 
+/** Bloc ```figure (vérifié par le serveur, jules/modules/figures.py) : même rendu que dans la bulle du chat
+ *  (FigureBulle de markdown.tsx : figure à curseurs ou schéma de la fiche), sans en-tête de bloc de code. */
+const figureParLangage = {
+  figure: { CodeHeader: () => null, SyntaxHighlighter: ({ code }: { code: string }) => <FigureBulle source={code} /> },
+}
+
 function Markdown() {
   return <MarkdownTextPrimitive remarkPlugins={[remarkGfm, remarkMath]} rehypePlugins={[rehypeKatex]} components={{ a: Lien }}
+    componentsByLanguage={figureParLangage}
     className="prose-jules [&_p]:my-1 [&_strong]:font-semibold [&_ul]:my-1 [&_ul]:list-disc [&_ul]:pl-5 [&_ol]:list-decimal [&_ol]:pl-5" />
 }
 

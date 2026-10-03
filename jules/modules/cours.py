@@ -314,6 +314,20 @@ class Brique(Module):
     def _relire(self, conv_id: str, message_eleve: str) -> str:
         return self.tuteur.echanger(conv_id, message_eleve).texte
 
+    def notion_de(self, conv: Conversation) -> str | None:
+        """Notion de la lecon liee a cette conversation (mode cours), ou None. Lue par le module 'figures'
+        pour proposer le schema de la fiche visuelle de la lecon dans le panneau de Jules."""
+        if conv.mode != MODE:
+            return None
+        session_id = self.tuteur.stockage.lire_etat(ESPACE, self._cle_conv(conv.id))
+        etat = self.tuteur.stockage.lire_etat(ESPACE, session_id) if session_id else None
+        return str(etat["notion"]) if etat and etat.get("notion") else None
+
+    def bloc_protege(self, conv: Conversation) -> Bloc | None:
+        """Exercice actif non resolu de la lecon (sa reponse est secrete) : le module 'figures' ecarte une
+        figure ou un schema qui la montrerait (ses valeurs sont normalisees APRES le filtre de 'cours')."""
+        return self._bloc_a_proteger(conv)
+
     # --- garde-fou sur TOUS les messages de Jules dans une lecon ------------------
     def _bloc_a_proteger(self, conv: Conversation) -> Bloc | None:
         """Exercice actif, pas encore resolu, de la lecon liee a cette conversation (sinon None)."""

@@ -23,7 +23,7 @@ from jules.config import depuis_dict
 from jules.extensions import figures_pour_discussion
 from jules.llm.factice import Brique as Factice
 from jules.modules.base import Module
-from jules.modules.figures import normaliser, texte_sans_figures
+from jules.modules.figures import REGLE_DESSIN, normaliser, texte_sans_figures
 from jules.modules.suivi import extrait
 from jules.moteur import Tuteur
 from jules.stockage import Message
@@ -38,10 +38,15 @@ def _bloc(json_brut: str) -> str:
     return f"Regarde la droite :\n\n```figure\n{json_brut}\n```\n\nOù coupe-t-elle l'axe vertical ?"
 
 
+def _sans_source(donnees: dict) -> dict:
+    """L'evenement porte aussi la `source` ecrite par le modele (diagnostic) : les tests comparent le reste."""
+    return {k: v for k, v in donnees.items() if k != "source"}
+
+
 def _filtrer(tuteur, texte: str, mode: str = "aide-devoirs") -> tuple[str, list[dict]]:
     conv = tuteur.stockage.creer_conversation(mode)
     sortie = tuteur.module("figures").filtrer_reponse(conv, texte, lambda: "relance interdite")
-    return sortie, [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+    return sortie, [_sans_source(e["donnees"]) for e in tuteur.stockage.evenements("figure_ecartee")]
 
 
 def test_bloc_valide_normalise_de_bout_en_bout(tuteur):
@@ -86,7 +91,7 @@ def test_deux_blocs_un_seul_garde(tuteur):
 
 def test_mode_epreuve_sans_contribution_et_bloc_retire(tuteur):
     conv = tuteur.stockage.creer_conversation("epreuve")
-    assert tuteur.module("figures").contribution(conv) is None
+    assert tuteur.module("figures").contribution(conv) == REGLE_DESSIN  # seulement : jamais de dessin en caracteres
     sortie, ecartees = _filtrer(tuteur, _bloc('{"gabarit": "droite-affine", "valeurs": {"a": 2}}'), "epreuve")
     assert "figure" not in sortie
     assert ecartees == [{"gabarit": "droite-affine", "raison": "mode sans figure"}]
@@ -437,7 +442,7 @@ def _conv_notion(tuteur, mode: str = "aide-devoirs", notion: str | None = PYTHAG
 
 def _filtrer_conv(tuteur, conv, texte: str) -> tuple[str, list[dict]]:
     sortie = tuteur.module("figures").filtrer_reponse(conv, texte, lambda: "relance interdite")
-    return sortie, [e["donnees"] for e in tuteur.stockage.evenements("figure_ecartee")]
+    return sortie, [_sans_source(e["donnees"]) for e in tuteur.stockage.evenements("figure_ecartee")]
 
 
 def test_schema_de_la_notion_valide_normalise(tuteur):
@@ -522,12 +527,12 @@ def test_sans_notion_pas_de_phrase_schema(tuteur):
     assert "schéma de la notion" not in contribution and '"schema"' not in contribution
 
 
-@pytest.mark.parametrize("mode", ["epreuve", "exercice", "controle", "cours"])
+@pytest.mark.parametrize("mode", ["epreuve", "exercice", "controle"])
 def test_mode_sans_figure_aucun_schema(tuteur, mode):
     conv = _conv_notion(tuteur, mode)
     figures = tuteur.module("figures")
     assert figures.schemas(conv) == {}
-    assert figures.contribution(conv) is None
+    assert figures.contribution(conv) == REGLE_DESSIN
     sortie, ecartees = _filtrer_conv(tuteur, conv, _bloc(f'{{"schema": "{PYTHAGORE}"}}'))
     assert "figure" not in sortie
     assert ecartees == [{"gabarit": f"schema:{PYTHAGORE}", "raison": "mode sans figure"}]

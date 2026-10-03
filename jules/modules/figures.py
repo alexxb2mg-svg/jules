@@ -19,6 +19,13 @@ de la fiche visuelle d'une notion :
 Liste blanche par conversation : la notion de la conversation (module 'notions') et ses prerequis, s'ils ont
 une fiche visuelle chargee avec un bloc `schema` (module 'fiches_visuelles'). Jamais les 410 ids dans le prompt.
 
+Mode 'cours' (panneau de Jules dans une lecon) : la notion est celle de la lecon (module 'cours'), et une
+figure ou un schema qui montrerait la reponse de l'exercice actif est ecarte (raison « revelerait la reponse ») :
+les valeurs d'un gabarit ne sont completees qu'ici, apres le garde-fou du module 'cours'.
+
+Dans TOUS les modes (meme sans figure), la contribution interdit le dessin en caracteres (REGLE_DESSIN) :
+mesure du 03/10, en cours sans figure le modele dessinait un triangle en ASCII.
+
 Doit etre place APRES 'notions' et 'cours' dans config.yaml : leurs filtres peuvent remplacer la reponse
 par une relance (texte brut du modele), qui doit encore passer ici.
 """
@@ -32,6 +39,7 @@ from collections.abc import Callable
 from typing import Any
 
 from jules.extensions import figures_pour_discussion
+from jules.lecons import contient_la_reponse
 from jules.modules.base import Module
 from jules.stockage import Conversation
 
@@ -39,6 +47,12 @@ MODES_PAR_DEFAUT = ("aide-devoirs", "reexplique")
 # Gabarits `revele: true` (la figure montre la reponse : solutions placees, longueur ecrite) : proposes et
 # acceptes seulement dans ces modes. Jamais 'aide-devoirs' : la figure ferait l'exercice a la place de l'eleve.
 MODES_REVELE_PAR_DEFAUT = ("reexplique",)
+# Envoyee dans tous les modes, meme sans figure disponible (epreuve comprise).
+REGLE_DESSIN = (
+    "Ne dessine jamais en caractères (traits, barres, schéma ASCII) : si une image aiderait et qu'aucune figure "
+    "n'est disponible ici, dis-le en une phrase et explique avec des mots, ou propose d'ouvrir la fiche visuelle "
+    "de la notion."
+)
 PREREQUIS_MAX = 4  # schemas de prerequis proposes au modele, au-dela de celui de la notion
 
 # Bloc de code cloture (``` ou ~~~, 3 espaces d'indentation au plus) de langage `figure`. Sans cloture,
@@ -117,6 +131,13 @@ def normaliser_bloc(
     return normaliser(source, autorises)
 
 
+def _revele(normalise: str, bloc: Any) -> bool:
+    """Vrai si les valeurs d'un gabarit normalise (« t = 0.5 ») donnent la reponse de l'exercice `bloc`
+    (garde-fou du module 'cours', applique ici car les valeurs absentes ne sont completees qu'ici)."""
+    valeurs = json.loads(normalise).get("valeurs") or {}
+    return bool(valeurs) and contient_la_reponse(" ; ".join(f"{n} = {v}" for n, v in valeurs.items()), bloc)
+
+
 def _exemple(autorises: dict[str, Any]) -> dict[str, Any]:
     """Exemple montre au modele : le premier gabarit avec ses valeurs par defaut."""
     gabarit, declaration = next(iter(autorises.items()))
@@ -193,25 +214,46 @@ class Brique(Module):
             trouves.extend(str(p) for p in fiche_v2.get("prerequis") or [])
         return list(dict.fromkeys(p for p in trouves if p != notion_id))
 
+    def _bloc_protege(self, conv: Conversation) -> Any:
+        """Exercice actif non resolu de la lecon (mode cours), dont la reponse ne doit pas etre montree."""
+        cours = self.tuteur.module("cours")
+        return cours.bloc_protege(conv) if cours is not None else None  # type: ignore[attr-defined]
+
+    def _notion(self, conv: Conversation) -> str:
+        """Notion de la conversation : celle de la lecon en mode cours, sinon celle du module 'notions'."""
+        cours = self.tuteur.module("cours")
+        notion_id = cours.notion_de(conv) if cours is not None else None  # type: ignore[attr-defined]
+        if notion_id:
+            return str(notion_id)
+        notions = self.tuteur.module("notions")
+        if notions is None:
+            return ""
+        return str(notions.etat(conv.id).get("notion") or "")  # type: ignore[attr-defined]
+
     def schemas(self, conv: Conversation) -> dict[str, str]:
         """Schemas de fiche que Jules peut montrer ici (id de notion -> titre de la notion) : la notion de la
-        conversation puis ses prerequis, s'ils ont un schema. Rien hors des modes autorises ni sans notion."""
+        conversation (ou de la lecon) puis ses prerequis, s'ils ont un schema. Rien hors des modes autorises ni
+        sans notion ; en lecon, jamais un schema dont les textes donnent la reponse de l'exercice actif."""
         if conv.mode not in self.modes or not self.reglages.get("schemas", True):
             return {}
-        notions = self.tuteur.module("notions")
         fiches = self.tuteur.module("fiches_visuelles")
-        if notions is None or fiches is None:
+        if fiches is None:
             return {}
-        notion_id = str(notions.etat(conv.id).get("notion") or "")  # type: ignore[attr-defined]
+        notion_id = self._notion(conv)
         if not notion_id:
             return {}
+        protege = self._bloc_protege(conv)
         resultat: dict[str, str] = {}
         for candidat in [notion_id, *self._prerequis(notion_id)]:
             if len(resultat) > PREREQUIS_MAX:
                 break
             schema = fiches.schema(candidat)  # type: ignore[attr-defined]
-            if schema is not None:
-                resultat[candidat] = schema["titre"]
+            if schema is None:
+                continue
+            textes = fiches.texte_schema(candidat)  # type: ignore[attr-defined]
+            if protege is not None and contient_la_reponse(textes, protege):
+                continue
+            resultat[candidat] = schema["titre"]
         return resultat
 
     def _contribution_schemas(self, schemas: dict[str, str]) -> list[str]:
@@ -232,13 +274,14 @@ class Brique(Module):
         autorises = self.autorises(conv)
         schemas = self.schemas(conv)
         if not autorises and not schemas:
-            return None
+            return REGLE_DESSIN  # tous les modes, meme epreuve : jamais de dessin en caracteres
         lignes = self._contribution_schemas(schemas) if schemas else []
         if not autorises:
-            lignes.append(
+            lignes += [
                 "Règles : une figure au plus par réponse ; jamais de SVG, de code de dessin ni de dessin en "
-                "caractères. Un bloc hors de ces règles est retiré avant que l'élève le voie."
-            )
+                "caractères. Un bloc hors de ces règles est retiré avant que l'élève le voie.",
+                REGLE_DESSIN,
+            ]
             return "\n".join(lignes)
         lignes += [
             "Tu peux montrer UNE figure dans ta réponse, si elle aide vraiment l'élève à comprendre. "
@@ -261,6 +304,7 @@ class Brique(Module):
             "Règles : une figure au plus par réponse ; seulement si elle aide vraiment ; jamais de SVG, de code "
             "de dessin ni de dessin en caractères. Un bloc hors de ces règles est retiré avant que l'élève le voie."
         )
+        lignes.append(REGLE_DESSIN)
         return "\n".join(lignes)
 
     def filtrer_reponse(self, conv: Conversation, texte: str, relancer: Callable[[], str]) -> str:
@@ -269,16 +313,26 @@ class Brique(Module):
         autorises = self.autorises(conv)
         schemas = self.schemas(conv)
         permis = bool(autorises or schemas)
+        protege = self._bloc_protege(conv) if permis else None
         ecartees: list[dict[str, str]] = []
         gardee = False
 
         def remplacer(m: re.Match[str]) -> str:
             nonlocal gardee
             normalise, gabarit, raison = normaliser_bloc(m.group("json"), autorises, schemas)
+            if normalise is not None and protege is not None and _revele(normalise, protege):
+                normalise, raison = None, "revelerait la reponse"
             if normalise is not None and gardee:
                 normalise, raison = None, "une seule figure par message"
             if normalise is None:
-                ecartees.append({"gabarit": gabarit, "raison": raison if permis else "mode sans figure"})
+                # `source` : ce que le modele a ecrit (tronque), pour comprendre les rejets en conditions reelles
+                ecartees.append(
+                    {
+                        "gabarit": gabarit,
+                        "raison": raison if permis else "mode sans figure",
+                        "source": m.group("json").strip()[:200],
+                    }
+                )
                 return ""
             gardee = True
             return f"```figure\n{normalise}\n```"

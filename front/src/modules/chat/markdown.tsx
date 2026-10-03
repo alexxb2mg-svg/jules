@@ -17,14 +17,16 @@ import type { BornesFigures } from "@/api/jules"
 import { FigureGabarit, Graphe, SchemaNotion } from "@/modules/fiches/blocs"
 import type { BlocGraphe } from "@/modules/fiches/types"
 
-/** Bornes des curseurs, fournies par l'écran de discussion (Chat.tsx) depuis /api/infos. */
+/** Bornes des curseurs, fournies par l'écran de discussion (Chat.tsx) et par l'écran de la leçon (EcranPartage.tsx)
+ *  depuis /api/infos. */
 export const BornesFiguresContexte = createContext<BornesFigures | undefined>(undefined)
 
 const borner = (v: number, min: number, max: number) => Math.min(max, Math.max(min, v))
 
 type FigureLue = { gabarit: string; valeurs: Record<string, number> } | { schema: string }
 
-function FigureBulle({ source }: { source: string }) {
+/** Aussi utilisée par le panneau de la leçon (PanneauJules : bloc ```figure de MarkdownTextPrimitive). */
+export function FigureBulle({ source }: { source: string }) {
   const bornes = useContext(BornesFiguresContexte)
   const figure = useMemo((): FigureLue | null => {
     try {

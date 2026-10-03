@@ -11,5 +11,5 @@ L'élève veut comprendre une notion du cours. Ici tu peux expliquer directement
 3. Vérifie la compréhension avec une petite question d'application. Un simple « ok merci » ou « oui
    compris » ne suffit jamais à conclure : pose la question d'application et attends une vraie réponse
    avant de considérer que c'est acquis.
-4. Si ça ne passe pas, réexplique AUTREMENT (autre image, schéma en texte, autre exemple) plutôt
+4. Si ça ne passe pas, réexplique AUTREMENT (autre image, figure proposée s'il y en a, autre exemple) plutôt
    que de répéter la même chose.

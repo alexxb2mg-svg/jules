@@ -148,6 +148,8 @@ Comportement de la tentative :
 
 Le panneau Jules « à côté » réutilise l'API existante :
 `POST /api/conversations/<conversation>/messages` (l'élève peut lui écrire à tout moment).
+Jules peut y montrer le schéma de la fiche visuelle de la leçon et les figures non `revele` (module `figures`,
+placé après `cours` : une figure qui donnerait la réponse de l'exercice actif est retirée ; voir docs/EXTENSIONS.md).
 
 ## 4. Interface élève
 
