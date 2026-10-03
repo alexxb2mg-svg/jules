@@ -1,0 +1,21 @@
+id: frise-temps-verbaux
+titre: "Figure : frise des temps verbaux"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [frise-temps-verbaux]
+permissions: {}
+# Un seul gabarit, cinq lectures choisies par les noms des curseurs de la fiche (voir gabarit.js) :
+#   moment + fini (francais 3e), longueur + fini (aspect, francais 3e), moment + lien (anglais 3e),
+#   moment + indirect (discours indirect, anglais 3e), moment + habitude + personne (conjugaison CM1).
+# Dans la discussion, seule la premiere lecture est proposee (moment de l'action, terminee ou non).
+# revele: la figure ecrit le nom du temps (imparfait, passe compose...) : c'est la reponse d'un exercice
+# « quel temps employer ? », donc proposee seulement en mode reexplique.
+discussion:
+  frise-temps-verbaux:
+    quand: "Pour situer une action sur la flèche du temps (moment : -2 bien avant, 0 maintenant, 2 après) en cours ou terminée (fini 0 ou 1) : la figure écrit le temps du français qui convient (imparfait, présent, futur simple, passé composé, plus-que-parfait, futur antérieur)."
+    revele: true
+    valeurs:
+      moment: {min: -2, max: 2, pas: 1, defaut: -1}
+      fini: {min: 0, max: 1, pas: 1, defaut: 0}

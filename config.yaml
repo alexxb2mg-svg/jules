@@ -121,6 +121,9 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - frise-temps-verbaux
+  - chaine-accords
+  - position-objet
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
