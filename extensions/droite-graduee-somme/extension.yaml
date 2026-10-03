@@ -1,0 +1,18 @@
+id: droite-graduee-somme
+titre: "Figure : ajouter un nombre relatif, un saut sur la droite graduée"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [droite-graduee-somme]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que les curseurs de la fiche 3e « calcul avec les
+# nombres rationnels ».
+# revele: le point d'arrivee a + b est place sur la graduation : la figure donne le resultat de l'addition.
+discussion:
+  droite-graduee-somme:
+    quand: "Pour faire voir une addition de nombres relatifs a + b sur une droite graduée de −10 à 10 : on part de a (point bleu) et on fait un saut de longueur b (flèche orange), vers la droite si b est positif, vers la gauche s'il est négatif ; le point rouge est a + b. Soustraire b, c'est ajouter −b."
+    revele: true
+    valeurs:
+      a: {min: -5, max: 5, pas: 0.5, defaut: 2}
+      b: {min: -5, max: 5, pas: 0.5, defaut: -3}
