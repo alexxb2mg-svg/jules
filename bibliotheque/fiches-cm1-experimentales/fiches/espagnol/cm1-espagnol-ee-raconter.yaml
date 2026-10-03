@@ -1,0 +1,47 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-ee-raconter
+declencheurs:
+- écrire une histoire en espagnol
+- raconter par écrit en espagnol
+- écrire ce que j'ai fait en espagnol
+essentiel: 'Pour raconter à l''écrit, on utilise des structures grammaticales et des expressions simples déjà apprises.
+
+  On exprime l''appartenance et l''origine : Soy de..., Ella viene de..., Él vive en...
+
+  On utilise le présent de verbes usuels au singulier : Me gusta, Vive, Duermes.
+
+  On situe dans le temps (hoy, ayer, mañana) et dans l''espace (Vive cerca del colegio).'
+methode:
+- Choisir ce qu'on veut raconter (un fait vécu ou imaginé).
+- Faire une phrase avec un verbe au présent.
+- Ajouter un repère de temps ou de lieu si besoin.
+- Relire sa phrase pour vérifier l'accord du verbe.
+vocabulaire: []
+erreurs_frequentes:
+- Confondre la conjugaison de la première et de la troisième personne (vivo / vive).
+- Ne pas préciser d'où vient ou où habite la personne dont on parle.
+exemple:
+  enonce: Écris une phrase simple pour dire que Sam sait skier mais ne sait pas monter à cheval.
+  solution: Sam sabe esquiar. No sabe montar a caballo.
+exercices:
+- enonce: Écris une phrase pour dire que tu habites en France et que tu viens de Nantes.
+  indices:
+  - Utilise Vivo en... et Soy de...
+  solution: Vivo en Francia, soy de Nantes.
+- enonce: Écris que Sarah aime le football, en espagnol, à la troisième personne.
+  indices:
+  - Utilise le verbe gustar à la troisième personne.
+  solution: A Sarah le gusta el fútbol.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 16
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

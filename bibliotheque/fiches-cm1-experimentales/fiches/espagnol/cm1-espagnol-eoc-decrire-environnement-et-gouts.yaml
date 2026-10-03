@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoc-decrire-environnement-et-gouts
+declencheurs:
+- décrire ma chambre en espagnol
+- décrire l'école en espagnol
+- dire ce que j'aime faire en espagnol
+- parler de mes activités préférées en espagnol
+essentiel: 'Pour décrire son environnement proche, on utilise hay (il y a), qui est invariable en espagnol : Hay
+  una cancha de baloncesto. Hay 4 bancos.
+
+  On utilise des articles (un, una, el, la) et des mots comme este, esta, ese, esa pour montrer un objet.
+
+  Pour exprimer ses goûts, on utilise des verbes comme gustar, encantar, odiar, et des adjectifs comme ¡Genial!
+
+  On peut relier deux phrases simples avec y ou o.
+
+  Pour dire à quel point on aime, on ajoute mucho, muchísimo : Me gusta mucho.'
+methode:
+- Observer ce qu'on veut décrire (une pièce, une cour, une ville).
+- Faire une phrase avec Hay (un ou plusieurs éléments).
+- Ajouter une phrase sur ses goûts avec gustar, encantar ou odiar.
+- Relier deux idées avec y ou o si besoin.
+vocabulaire:
+- terme: hay
+  definition: 'structure pour dire qu''il y a quelque chose, invariable en espagnol : hay un banco, hay dos bancos'
+erreurs_frequentes:
+- Oublier l'article un, una, el ou la devant un nom.
+- Ne dire que me gusta sans jamais varier avec me encanta, odio ou no me gusta.
+- Oublier que hay est invariable (ne pas dire « han » pour le pluriel au présent).
+exemple:
+  enonce: 'Décris ta cour d''école : il y a un terrain de basket et deux bancs.'
+  solution: Hay una cancha de baloncesto. Hay dos bancos.
+exercices:
+- enonce: Dis que tu aimes beaucoup les chats, en utilisant mucho.
+  indices:
+  - Utilise Me gustan mucho, adapté aux chats.
+  solution: Me gustan mucho los gatos.
+- enonce: 'Décris ta ville : il y a une piscine et deux parcs. Relie les deux informations avec y.'
+  indices:
+  - Hay pour dire « il y a ».
+  solution: En nuestra ciudad, hay una piscina y dos parques.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 8
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

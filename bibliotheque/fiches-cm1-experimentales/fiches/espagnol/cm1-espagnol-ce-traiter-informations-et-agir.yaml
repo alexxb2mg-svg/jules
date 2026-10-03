@@ -1,0 +1,50 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-ce-traiter-informations-et-agir
+declencheurs:
+- lire une recette en espagnol
+- suivre un mode d'emploi en espagnol
+- comprendre des instructions écrites en espagnol
+essentiel: 'Pour comprendre un texte informatif, une recette ou un mode d''emploi en espagnol, on s''appuie sur l''image
+  pour comprendre les étapes ou les ingrédients.
+
+  On reconnaît l''impératif à la forme affirmative (coge, mezcla, siéntate) et on adapte son geste.
+
+  On comprend le lexique simple des fournitures scolaires (lápiz, goma, papel, tijeras) ou des ustensiles
+  de cuisine (cuchara, cuchillo, bol).'
+methode:
+- Regarder les images pour comprendre l'ordre des étapes.
+- Repérer les verbes à l'impératif qui disent quoi faire (coge, mezcla, añade).
+- Repérer le nom des objets ou ingrédients nécessaires.
+- Réaliser l'action étape par étape, dans l'ordre du texte.
+vocabulaire:
+- terme: mode d'emploi
+  definition: un texte qui explique, étape par étape, comment faire quelque chose
+erreurs_frequentes:
+- Ne pas suivre l'ordre des étapes indiqué par le texte.
+- Confondre des ustensiles proches, comme cuchara (cuillère) et cuchillo (couteau).
+exemple:
+  enonce: 'Une recette dit : « Echa la harina en el bol. Añade los huevos. ». Que dois-tu faire en premier ?'
+  solution: Verser la farine dans le saladier (echa la harina en el bol), puis ajouter les oeufs (añade los huevos).
+exercices:
+- enonce: 'On te dit : « Coge una hoja de papel cuadrada. Dobla el papel. ». Que fais-tu, dans l''ordre ?'
+  indices:
+  - 'Repère les deux verbes à l''impératif : coge et dobla.'
+  solution: Tu prends une feuille de papier carrée, puis tu la plies.
+- enonce: Pour préparer des crêpes, il te faut 2 huevos, 120g de harina, 25cl de leche. Traduis simplement cette liste
+    d'ingrédients.
+  indices:
+  - Huevos, harina et leche sont des mots simples de cuisine.
+  solution: 2 oeufs, 120 g de farine, 25 cl de lait.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,52 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoi-clarifier-un-point
+declencheurs:
+- mot inconnu en espagnol
+- puede repetir
+- demander la traduction d'un mot en espagnol
+- épeler un mot en espagnol
+essentiel: 'Quand on ne comprend pas, on peut le dire simplement : No entiendo.
+
+  On peut demander de répéter : ¿Puede repetir? ou ¿Puedes repetir?
+
+  On peut demander le sens d''un mot : ¿Cómo se dice... en español? ou ¿Qué significa...?
+
+  On peut aussi épeler un mot familier, lettre par lettre, en connaissant l''alphabet espagnol.
+
+  Enfin, on peut répéter une consigne pour être sûr de l''avoir bien comprise.'
+methode:
+- Dire simplement qu'on n'a pas compris, sans avoir honte.
+- Demander de répéter ou demander le sens d'un mot précis.
+- Répéter la consigne avec ses propres mots pour vérifier qu'on a compris.
+- Épeler un mot lettre par lettre si besoin, en utilisant l'alphabet espagnol.
+vocabulaire:
+- terme: épeler
+  definition: dire un mot lettre par lettre
+erreurs_frequentes:
+- Ne rien dire quand on n'a pas compris, au lieu de demander de l'aide.
+- Confondre demander de répéter (¿Puedes repetir?) et demander le sens d'un mot (¿Qué significa...?).
+exemple:
+  enonce: Tu n'as pas compris une consigne donnée à l'oral. Que dis-tu ?
+  solution: Perdón, no entiendo. ¿Puede repetir, por favor?
+exercices:
+- enonce: Tu veux savoir comment on dit « stylo » en espagnol. Quelle question poses-tu ?
+  indices:
+  - Utilise la formule pour demander une traduction.
+  solution: ¿Cómo se dice « stylo » en español?
+- enonce: On te demande d'épeler ton prénom en espagnol. Que fais-tu ?
+  indices:
+  - Il faut dire chaque lettre l'une après l'autre.
+  solution: Tu dis chaque lettre de ton prénom une par une, en espagnol.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

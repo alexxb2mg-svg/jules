@@ -1,0 +1,60 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-co-comprendre-et-agir
+declencheurs:
+- comprendre une consigne en espagnol
+- faire ce qu'on me dit en espagnol
+- suivre les instructions en espagnol
+- un jeu où on doit écouter en espagnol
+- comprendre levántate siéntate
+essentiel: 'Comprendre et agir, c''est écouter une consigne en espagnol et faire ce qu''elle demande, sans avoir
+  besoin de la traduire mot à mot.
+
+  On reconnaît des formes de l''impératif, la façon de donner un ordre en espagnol : Escucha, No te muevas, Vamos,
+  Añade.
+
+  On reconnaît aussi les mots poder et no poder, qui disent ce qu''on a le droit de faire ou pas.
+
+  Des mots comme en, dentro de, debajo de, sobre, entre, delante de, encima de disent où se trouve quelque chose,
+  et des verbes comme ir, sentarse, saltar, caminar disent quoi faire.
+
+  On s''appuie enfin sur une image pour deviner ce que la consigne demande.'
+methode:
+- 'Repérer le verbe à l''impératif : c''est souvent le premier mot de la phrase.'
+- Repérer un mot de lieu (en, dentro de, debajo de, entre...) pour savoir où agir.
+- 'Vérifier si puedes ou no puedes est présent : cela dit ce qui est permis ou interdit.'
+- S'aider d'une image ou d'un geste du professeur si on hésite.
+- Réaliser l'action, puis vérifier avec les autres élèves qu'on a bien compris.
+vocabulaire:
+- terme: impératif
+  definition: la forme du verbe qui sert à donner un ordre ou une consigne, comme Escucha ou No te muevas
+- terme: verbe modal
+  definition: un verbe comme poder qui dit ce qu'on peut ou ne peut pas faire
+erreurs_frequentes:
+- Ne pas repérer l'impératif et donc ne pas comprendre qu'il faut agir tout de suite.
+- 'Confondre puedes (autorisation) et no puedes (interdiction).'
+- Ignorer les mots de lieu (en, dentro de, debajo de) et donc se tromper d'endroit.
+exemple:
+  enonce: 'Le professeur dit : « Salta por encima del aro. ». Que doit faire l''élève ?'
+  solution: 'Salta (saute) et por encima del (par-dessus) : l''élève doit sauter par-dessus le cerceau.'
+exercices:
+- enonce: 'On te dit : « Pon el bolígrafo en la mesa. ». Où dois-tu poser le stylo ?'
+  indices:
+  - En la mesa veut dire « sur la table ».
+  solution: Tu dois poser le stylo sur la table.
+- enonce: 'On te dit : « No puedes correr en la clase. ». As-tu le droit de courir dans la classe ?'
+  indices:
+  - No puedes est la forme négative de puedes.
+  solution: 'Non : no puedes veut dire que ce n''est pas autorisé, tu n''as pas le droit de courir.'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 5
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,67 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-co-suivre-fil-histoire-simple
+declencheurs:
+- j'écoute une histoire en espagnol
+- suivre une histoire espagnole
+- comprendre une chanson en espagnol
+- une comptine en espagnol
+- histoire en espagnol
+- écouter un conte en espagnol
+essentiel: 'Quand on écoute une histoire, une chanson ou un conte en espagnol, on n''a pas besoin de comprendre chaque
+  mot.
+
+  On s''appuie sur ce qu''on voit (une image, un dessin) et sur ce qu''on entend (la musique, les bruitages) pour
+  deviner de quoi ça parle.
+
+  On repère les mots qu''on connaît déjà, par exemple ceux qui parlent de soi et de sa famille : cuerpo, comida,
+  familia.
+
+  On écoute aussi la voix : est-ce une question, une affirmation, une exclamation de surprise ou de peur ? L''intonation
+  aide à comprendre.
+
+  On reconnaît des phrases qu''on a déjà entendues souvent, comme soy, me gusta, esto es.'
+methode:
+- 'Regarder l''image ou le titre avant d''écouter : cela donne une idée du thème.'
+- Écouter une première fois sans chercher à tout comprendre, juste pour repérer l'ambiance.
+- Repérer les mots connus du champ lexical de soi et de sa famille.
+- Écouter l'intonation de la voix pour savoir si c'est une question ou une exclamation.
+- Réécouter pour vérifier ce qu'on a compris.
+vocabulaire:
+- terme: champ lexical
+  definition: un ensemble de mots qui parlent du même sujet, par exemple la famille
+- terme: intonation
+  definition: la façon dont la voix monte ou descend, qui change le sens d'une phrase
+erreurs_frequentes:
+- Vouloir traduire chaque mot au lieu de s'appuyer sur les images et les sons.
+- Abandonner dès qu'un mot est inconnu, au lieu de continuer à écouter.
+- Ne pas utiliser l'intonation de la voix pour deviner si c'est une question ou une exclamation.
+exemple:
+  enonce: 'Dans une chanson, on entend : « Tengo una mascota. Es un ratón. Y dice: "chit, chit, chit"
+    ». Que peut-on comprendre sans connaître tous les mots ?'
+  solution: Grâce au mot mascota (animal familier) et au bruit chit (couinement), on comprend que l'animal est une
+    petite bête qui couine, même sans connaître ratón.
+exercices:
+- enonce: Tu écoutes une histoire accompagnée d'images de la météo dans plusieurs villes. Comment fais-tu pour comprendre
+    sans tout traduire ?
+  indices:
+  - Que peux-tu utiliser en plus des mots que tu entends ?
+  solution: Tu associes les images (soleil, pluie, nuages) aux mots que tu reconnais et à l'endroit où ils sont
+    dits.
+- enonce: 'Une phrase entendue monte à la fin : « ¿Estás listo? ». Est-ce une question ou une affirmation ?'
+  indices:
+  - Écoute comment l'intonation de la voix évolue à la fin de la phrase.
+  solution: 'C''est une question : en espagnol, les questions sont aussi signalées par les signes ¿ ... ? et par
+    l''intonation montante.'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 4
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,54 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-ce-identifier-trame-narrative
+declencheurs:
+- comprendre l'histoire d'un album en espagnol
+- suivre les étapes d'un récit en espagnol
+- comprendre l'ordre d'une histoire en espagnol
+essentiel: 'Pour identifier la trame d''un récit (comment l''histoire est construite), on s''appuie sur les images
+  pour deviner ce qui se passe.
+
+  On repère les phrases affirmatives et les phrases négatives, avec le mot no.
+
+  On repère des connecteurs simples comme y et pero, qui relient les idées.
+
+  On reconnaît des mots sur la famille et le caractère (simpático, divertido, amable) et des verbes d''activités
+  quotidiennes (comer, beber, dormir, jugar).'
+methode:
+- Observer les images dans l'ordre pour deviner l'histoire avant de lire.
+- Repérer les connecteurs y et pero qui relient les phrases.
+- Repérer si une phrase est affirmative ou négative (présence de no).
+- Vérifier sa compréhension en résumant l'histoire avec ses propres mots.
+vocabulaire:
+- terme: connecteur
+  definition: un petit mot qui relie deux phrases ou deux idées, comme y ou pero
+- terme: phrase négative
+  definition: une phrase qui dit que quelque chose n'est pas le cas, avec le mot no
+erreurs_frequentes:
+- Ne pas remarquer le mot no et donc comprendre le contraire de ce qui est écrit.
+- Lire le texte sans s'aider des images qui racontent déjà une partie de l'histoire.
+exemple:
+  enonce: 'Tu lis : « El conejo no quiere abrazar a la tortuga. ». Que comprends-tu grâce à no ?'
+  solution: 'No indique la négation : le lapin ne veut pas faire un câlin à la tortue.'
+exercices:
+- enonce: 'Relie ces deux idées avec y : « La tortuga está triste. » et « Pide un abrazo. »'
+  indices:
+  - Y sert à ajouter une idée à une autre.
+  solution: La tortuga está triste y pide un abrazo.
+- enonce: Une phrase dit « El lunes llueve. El Señor Lobo se pone su impermeable. ». Quelle image t'aiderait à comprendre
+    llueve sans le traduire ?
+  indices:
+  - Pense à ce qu'on porte quand il pleut.
+  solution: Une image de pluie et d'un imperméable (impermeable) aide à deviner que llueve veut dire qu'il pleut.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 14
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

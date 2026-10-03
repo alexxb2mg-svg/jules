@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoi-etablir-un-contact
+declencheurs:
+- hola
+- saluer en espagnol
+- au revoir en espagnol
+- se présenter à quelqu'un en espagnol
+- gracias
+- adiós
+- buenos días
+essentiel: 'Pour engager un échange, on utilise des formules d''adresse : Hola, Buenos días, Buenas tardes.
+
+  On utilise des formules de politesse : Gracias, Por favor, Perdón, Disculpe.
+
+  On peut relancer la conversation avec des questions simples : ¿Quién? ¿Qué? ¿Dónde? ¿Cuándo?
+
+  Pour clore une conversation, on utilise des mots simples : Gracias, Vale, Adiós, ¡Hasta pronto!'
+methode:
+- Choisir la formule de salutation adaptée au moment de la journée.
+- Utiliser une formule de politesse pendant l'échange (merci, s'il te plaît, pardon).
+- Poser une question simple pour continuer l'échange si besoin.
+- Terminer poliment la conversation avec une formule de congé.
+vocabulaire:
+- terme: formule de politesse
+  definition: une expression toute faite pour être poli, comme Gracias ou Por favor
+erreurs_frequentes:
+- Dire Buenos días l'après-midi au lieu de Buenas tardes.
+- Oublier de dire au revoir à la fin d'un échange.
+- Ne pas utiliser Por favor ou Gracias dans une demande.
+exemple:
+  enonce: Tu croises ton professeur d'espagnol l'après-midi. Que dis-tu ?
+  solution: ¡Buenas tardes!
+exercices:
+- enonce: Tu veux remercier l'assistante de langue à la fin de sa présentation. Que dis-tu ?
+  indices:
+  - Utilise une formule de remerciement.
+  solution: ¡Muchas gracias!
+- enonce: Tu quittes un ami à la fin de la journée d'école, en lui disant que tu le reverras bientôt. Que dis-tu
+    ?
+  indices:
+  - Utilise une expression pour clore la conversation.
+  solution: ¡Hasta pronto!
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 11
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

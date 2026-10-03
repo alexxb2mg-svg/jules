@@ -1,6 +1,6 @@
-# DONNEES D'EXPERIMENTATION — referentiel 5e 2026-2027 de Jules.
-# Decoupage fait par les contributeurs a partir des textes officiels cites ci-dessous,
-# non relu par un enseignant, non publie par le ministere. Le cours de l'eleve fait foi.
+# DONNÉES D'EXPÉRIMENTATION — référentiel 5e 2026-2027 de Jules.
+# Découpage fait par les contributeurs à partir des textes officiels cités ci-dessous,
+# non relu par un enseignant, non publié par le ministère. Le cours de l'élève fait foi.
 # AVERTISSEMENT SUPPLEMENTAIRE : ce fichier est adapte de la structure du programme d'anglais
 # (annexe 3) pour l'espagnol (annexe 4). Les contenus culturels et linguistiques sont des
 # contenus plausibles bases sur la structure connue du programme ; ils doivent etre verifies
@@ -12,8 +12,8 @@ annee_scolaire: 2026-2027
 statut: experimentale
 relecture: a_relire          # a_relire | relue (par un enseignant)
 avertissement: >-
-  Donnees d'experimentation, non validees par un enseignant ni par l'Education nationale.
-  Le cours de l'eleve et la parole de son professeur font toujours foi.
+  Données d'expérimentation, non validées par un enseignant ni par l'Éducation nationale.
+  Le cours de l'élève et la parole de son professeur font toujours foi.
   Contenu adapte de la structure du programme d'anglais (annexe 3) pour l'espagnol (annexe 4
   de l'arrete du 5 mai 2025). Les axes culturels, les reperes linguistiques et le lexique
   proposes ici sont des contenus plausibles en attente de verification contre le texte
