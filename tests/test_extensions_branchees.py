@@ -23,7 +23,17 @@ from jules.outils import charger_outils
 from jules.web.app import creer_app
 
 RACINE = Path(__file__).resolve().parents[1]
-FIGURES = {"droite-affine", "triangle-thales", "triangle-rectangle", "equation-solutions", "probabilites-frequences"}
+FIGURES = {
+    "droite-affine",
+    "triangle-thales",
+    "triangle-rectangle",
+    "equation-solutions",
+    "probabilites-frequences",
+    "balance-equation",
+    "courbe-point-mobile",
+    "glisse-nombre",
+    "schema-en-barres",
+}
 OUTILS = {"calculatrice", "frise-chronologique", "lexique"}
 RAPPELS = {"rappels-sciences", "rappels-histoire", "rappels-francais", "rappels-anglais", "rappels-musique"}
 

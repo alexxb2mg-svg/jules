@@ -246,6 +246,16 @@ DECLARATIONS_DU_DEPOT = {
         False,
         {"longueur": (1, 12, 1, 5), "largeur": (1, 8, 1, 3), "deroule": (0, 1, 1, 0), "forme": (0, 1, 1, 0)},
     ),
+    "balance-equation": (
+        True,
+        {"paquets": (1, 5, 1, 3), "gauche": (0, 10, 1, 2), "droite": (0, 30, 1, 17), "x": (0, 10, 0.5, 3)},
+    ),
+    "courbe-point-mobile": (
+        True,
+        {"x": (-4, 4, 0.5, 1), "courbure": (-1, 1, 0.5, 0.5), "pente": (-3, 3, 1, 0), "hauteur": (-4, 4, 1, -2)},
+    ),
+    "glisse-nombre": (True, {"nombre": (0.1, 99.9, 0.1, 4.7), "rangs": (-1, 3, 1, 1)}),
+    "schema-en-barres": (False, {"a": (1, 100, 1, 30), "b": (0, 100, 1, 20), "fois": (1, 5, 1, 1)}),
 }
 
 

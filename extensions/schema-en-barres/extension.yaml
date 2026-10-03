@@ -1,0 +1,18 @@
+id: schema-en-barres
+titre: "Figure : schéma en barres (parties-tout et comparaison)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [schema-en-barres]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « types de problemes arithmetiques ».
+# Pas de revele : la quantite cherchee reste un « ? », la figure ne calcule ni le tout ni le produit.
+discussion:
+  schema-en-barres:
+    quand: "Pour faire voir la structure d'un problème avec un schéma en barres : fois = 1, le tout (?) fait des parties a et b ; fois de 2 à 5, une quantité vaut « fois » fois la quantité a (comparaison multiplicative). b n'est utilisé que si fois = 1."
+    valeurs:
+      a: {min: 1, max: 100, pas: 1, defaut: 30}
+      b: {min: 0, max: 100, pas: 1, defaut: 20}
+      fois: {min: 1, max: 5, pas: 1, defaut: 1}

@@ -132,6 +132,10 @@ extensions:
   - symetrie-axe
   - quadrilatere-deformable
   - rectangle-quadrille
+  - balance-equation
+  - courbe-point-mobile
+  - glisse-nombre
+  - schema-en-barres
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
