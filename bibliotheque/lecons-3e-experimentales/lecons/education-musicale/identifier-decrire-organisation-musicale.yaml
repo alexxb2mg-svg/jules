@@ -1,0 +1,157 @@
+notion: identifier-decrire-organisation-musicale
+titre: "Identifier, décrire et commenter l'organisation d'une musique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire une musique avec trois questions : sa forme, sa texture, ses procédés."
+      - "Nommer avec le mot juste : monodie, mélodie accompagnée, polyphonie, ostinato, canon, basse obstinée."
+      - "Situer une œuvre dans un réseau de références : époque, style, autres œuvres."
+
+  - type: texte
+    titre: "Trois questions pour décrire une musique"
+    contenu: |-
+      1. **La forme** : comment le morceau avance dans le temps (ce qui revient, ce qui change).
+      2. **La texture** : comment les sons se **superposent**.
+      3. **Les procédés** : ce qui se répète ou s'imite.
+      On décrit **dans l'ordre** : début, milieu, fin.
+      Une œuvre peut enchaîner des sections très différentes, comme *Bohemian Rhapsody* de Queen (1975).
+
+  - type: texte
+    titre: "La texture : combien de lignes en même temps ?"
+    contenu: |-
+      **Monodie** : une seule mélodie, sans accompagnement (seul ou à l'unisson). Ex. : le chant grégorien.
+      **Mélodie accompagnée** : une mélodie principale soutenue par des accords.
+      **Polyphonie** : plusieurs mélodies **différentes** en même temps.
+      Piège : un chœur qui chante tout entier la même mélodie, c'est encore une monodie.
+
+  - type: texte
+    titre: "Les procédés et le réseau de références"
+    contenu: |-
+      **Ostinato** : court motif répété obstinément. Ex. : la caisse claire du *Boléro* de Ravel (1928).
+      **Basse obstinée** : ligne grave répétée sous des mélodies qui changent.
+      **Canon** : plusieurs voix jouent la même mélodie en entrant l'une après l'autre.
+      Le *Canon* de Pachelbel (fin du XVIIe siècle) réunit canon et basse obstinée.
+      Enfin, on **situe** l'œuvre : époque, style, et d'autres œuvres qui utilisent les mêmes procédés.
+
+  - type: exemple
+    enonce: >-
+      Décris l'organisation du Boléro de Ravel (1928) à partir de cette écoute : une caisse claire
+      répète le même rythme du début à la fin, sur un tempo constant ; deux mélodies passent d'un
+      instrument à l'autre ; l'orchestre s'étoffe et le volume grandit jusqu'à la fin.
+    etapes:
+      - "Procédé : le rythme répété de la caisse claire est un ostinato rythmique."
+      - "Forme : deux mélodies reviennent sans cesse, mais confiées à des instruments différents : c'est le timbre qui change."
+      - "Évolution dans le temps : des instruments s'ajoutent peu à peu, c'est un immense crescendo."
+      - "Réseau de références : c'est une œuvre du XXe siècle fondée sur la répétition, comme, autrement, le Canon de Pachelbel avec sa basse obstinée."
+
+  - type: exercice
+    enonce: >-
+      Dans un chant grégorien, un chœur d'hommes chante tous ensemble la même mélodie, sans
+      instrument. Comment qualifier cette texture ?
+    forme: qcm
+    choix:
+      - "Une monodie"
+      - "Une polyphonie"
+      - "Une mélodie accompagnée"
+    reponse: 0
+    indices:
+      - "Combien de mélodies différentes entend-on en même temps ?"
+      - "Il y a plusieurs chanteurs, mais ils chantent tous la même chose, sans instrument."
+    explication: "C'est une monodie : une seule mélodie, chantée à l'unisson, sans accompagnement. Plusieurs chanteurs ne suffisent pas à faire une polyphonie."
+
+  - type: exercice
+    enonce: >-
+      Quand on chante « Frère Jacques » en groupes, chaque groupe chante la même mélodie mais
+      commence un peu après le précédent. Quel est le nom précis de ce procédé ?
+    forme: reponse_courte
+    reponse: "canon"
+    reponses_acceptees:
+      - "canon"
+      - "un canon"
+      - "le canon"
+      - "en canon"
+    indices:
+      - "Les voix chantent la même chose, mais pas au même moment."
+      - "C'est aussi le nom d'une œuvre célèbre de Pachelbel. Le mot compte cinq lettres."
+    explication: "C'est un canon : plusieurs voix chantent la même mélodie en entrant l'une après l'autre. C'est une sorte de polyphonie."
+
+  - type: exercice
+    enonce: >-
+      Un violon joue une mélodie pendant que le piano joue des accords derrière lui. Comment
+      qualifier cette texture ?
+    forme: qcm
+    choix:
+      - "Une monodie"
+      - "Un canon"
+      - "Une mélodie accompagnée"
+      - "Un ostinato"
+    reponse: 2
+    indices:
+      - "Combien de lignes entends-tu, et quel est le rôle de chacune ?"
+      - "Le violon chante, le piano soutient avec des accords. Le piano joue-t-il la même mélodie ?"
+    explication: "Le violon joue la mélodie principale et le piano l'accompagne avec des accords : c'est une mélodie accompagnée."
+
+  - type: exercice
+    enonce: >-
+      Dans un morceau, une ligne grave de quatre notes est répétée du début à la fin, pendant que
+      les mélodies au-dessus changent. Comment appelle-t-on cette ligne grave ?
+    forme: reponse_courte
+    reponse: "basse obstinée"
+    reponses_acceptees:
+      - "basse obstinée"
+      - "basse obstinee"
+      - "une basse obstinée"
+      - "la basse obstinée"
+      - "ground"
+    indices:
+      - "Le nom a deux mots. Le premier désigne les sons graves."
+      - "Le second mot ressemble à « obstiné » : qui ne s'arrête pas, qui se répète."
+    explication: "C'est une basse obstinée : une ligne grave répétée sous des mélodies qui changent, comme dans le Canon de Pachelbel."
+
+  - type: exercice
+    enonce: >-
+      Dans le Canon en ré majeur de Pachelbel, quels procédés entend-on superposés tout au long
+      de l'œuvre ?
+    forme: qcm
+    choix:
+      - "Un couplet et un refrain, comme dans une chanson"
+      - "Une basse obstinée et trois violons en canon"
+      - "Une monodie chantée sans instrument"
+      - "Un long crescendo sur un ostinato de caisse claire"
+    reponse: 1
+    indices:
+      - "Le titre de l'œuvre donne déjà un des deux procédés."
+      - "Pense aussi à la ligne grave de huit notes qui revient du début à la fin."
+    explication: "Le Canon de Pachelbel superpose une basse obstinée de huit notes et trois violons qui jouent la même mélodie en entrant l'un après l'autre. Le crescendo sur caisse claire, c'est le Boléro de Ravel."
+
+  - type: question_ouverte
+    question: >-
+      Voici une écoute décrite : « Un tambour répète le même petit rythme sans arrêt. Une flûte
+      joue une mélodie, accompagnée par une guitare qui fait des accords. Au milieu, la flûte
+      s'arrête et une autre mélodie arrive au violon. À la fin, la mélodie de la flûte revient. »
+      Décris l'organisation de cette musique (procédé, texture, forme) et relie-la à une œuvre
+      que tu connais.
+    indices:
+      - "Commence par ce qui se répète, puis dis combien de lignes on entend, puis donne le plan avec des lettres."
+      - "Termine par une œuvre qui utilise le même procédé de répétition."
+    criteres:
+      - "L'élève nomme le procédé du tambour : un ostinato rythmique."
+      - "L'élève nomme la texture : une mélodie accompagnée."
+      - "L'élève donne la forme A B A (ternaire) en justifiant par le retour de la mélodie de la flûte."
+      - "L'élève relie à une œuvre connue fondée sur un ostinato ou une répétition (par exemple le Boléro de Ravel)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois questions qui servent
+      à décrire une musique, et la différence entre une monodie et une polyphonie.

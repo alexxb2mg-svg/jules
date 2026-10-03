@@ -1,0 +1,137 @@
+notion: enonces-simples-et-complexes
+titre: "Relier des phrases et rapporter des paroles en anglais"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) - partie « Langues vivantes (étrangères ou régionales) » - BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Relier deux idées avec le bon connecteur (and, but, so, because...)."
+      - "Choisir le bon pronom relatif : who, which ou that."
+      - "Rapporter une phrase ou une question au discours indirect."
+
+  - type: texte
+    titre: "Phrase simple, phrase complexe, coordination"
+    contenu: |-
+      - Phrase **simple** : un seul verbe conjugué. She plays tennis.
+      - Phrase **complexe** : plusieurs verbes conjugués, reliés.
+      **Coordination** : on relie deux idées de même importance.
+      - **and** (et), **but** (mais), **or** (ou), **so** (donc).
+      - I like tennis, **but** my brother prefers football.
+
+  - type: texte
+    titre: "Subordination et connecteurs"
+    contenu: |-
+      **Subordination** : une partie de la phrase dépend de l'autre.
+      - **because** (parce que) donne la cause : I stay home because it is raining.
+      - **when** (quand), **if** (si), **although** (bien que).
+      Ne confonds pas : **because** = la cause ; **so** = la conséquence (It rained, so we stayed home).
+      Pour un récit : **first**, **then**, **finally** (d'abord, ensuite, enfin) ; **however** (cependant).
+
+  - type: texte
+    titre: "Les pronoms relatifs"
+    contenu: |-
+      Une proposition relative donne une précision sur un nom.
+      - **who** pour une personne : the boy who lives here.
+      - **which** pour une chose ou un animal : the book which I read.
+      - **that** peut remplacer who ou which dans la plupart des cas.
+
+  - type: texte
+    titre: "Discours indirect et interrogation indirecte"
+    contenu: |-
+      On rapporte des paroles **sans guillemets**. Si le verbe qui introduit est au passé (said, asked), le verbe **recule** souvent d'un temps, et les pronoms changent.
+      - « I am tired. » → She said (that) she was tired.
+      Pour une question : **plus d'inversion**, plus de point d'interrogation.
+      - « Where do you live? » → He asked where I lived.
+      - Question en oui / non : on ajoute **if**.
+
+  - type: exemple
+    enonce: "Rapporte la question de Paul : « Are you ready? » (Paul me l'a demandé hier.)"
+    etapes:
+      - "C'est une question en oui / non : on ajoute « if »."
+      - "Le verbe qui introduit est au passé : « Paul asked me »."
+      - "« you » devient « I », et le verbe recule : « are » devient « was »."
+      - "On remet l'ordre sujet + verbe, sans point d'interrogation : « Paul asked me if I was ready. »"
+
+  - type: exercice
+    enonce: "Complète avec un pronom relatif : « I have a cousin ___ plays the guitar. » Écris un seul mot."
+    forme: reponse_courte
+    reponse: "who"
+    reponses_acceptees: ["that"]
+    indices:
+      - "« A cousin » est-il une personne ou une chose ?"
+      - "Choisis le pronom relatif réservé aux personnes."
+    explication: "« Cousin » désigne une personne, donc on utilise « who » (« that » est aussi possible) : I have a cousin who plays the guitar."
+
+  - type: exercice
+    enonce: "Choisis le bon connecteur : « I'm very tired ___ I went to bed late. »"
+    forme: qcm
+    choix:
+      - "so"
+      - "because"
+      - "but"
+    reponse: 1
+    indices:
+      - "Se coucher tard, est-ce la cause ou la conséquence de la fatigue ?"
+      - "Cherche le mot qui veut dire « parce que »."
+    explication: "Se coucher tard explique la fatigue : c'est la cause. On utilise « because » (parce que)."
+
+  - type: exercice
+    enonce: "Discours indirect. Anna said: « I am happy. » → « Anna said that she ___ happy. » Écris un seul mot."
+    forme: reponse_courte
+    reponse: "was"
+    reponses_acceptees: []
+    indices:
+      - "Le verbe qui introduit, « said », est au passé. Que fait alors le verbe rapporté ?"
+      - "« am » est le présent du verbe « be ». Quel est son prétérit avec « she » ?"
+    explication: "Après « said », le verbe recule d'un temps : « am » (présent) devient « was » (prétérit). Anna said that she was happy."
+
+  - type: exercice
+    enonce: "Interrogation indirecte. « Where does he live? » Quelle phrase rapporte bien cette question ?"
+    forme: qcm
+    choix:
+      - "She asked me where does he live."
+      - "She asked me where he lived."
+      - "She asked me where did he live?"
+    reponse: 1
+    indices:
+      - "Dans une question rapportée, garde-t-on « does » ou « did » avant le sujet ?"
+      - "Remets l'ordre sujet + verbe, fais reculer le temps et enlève le point d'interrogation."
+    explication: "Plus d'inversion ni d'auxiliaire « does », et le verbe recule : « She asked me where he lived. »"
+
+  - type: exercice
+    enonce: "Niveau brevet. Relie les deux phrases en une seule : « I met a girl. She speaks four languages. » Quelle phrase est correcte ?"
+    forme: qcm
+    choix:
+      - "I met a girl which speaks four languages."
+      - "I met a girl who speaks four languages."
+      - "I met a girl who she speaks four languages."
+      - "I met a girl, so she speaks four languages."
+    reponse: 1
+    indices:
+      - "« A girl » est-elle une personne ou une chose ? Cela décide du pronom relatif."
+      - "Le pronom relatif remplace « she » : faut-il garder « she » en plus ?"
+    explication: "Pour une personne, on utilise « who », et il remplace « she » (on ne garde pas les deux). « So » changerait le sens : parler quatre langues n'est pas la conséquence de la rencontre."
+
+  - type: question_ouverte
+    question: "Écris trois phrases en anglais sur un ami ou une amie : une phrase avec « who », une phrase avec « because », et une phrase qui rapporte ce qu'il ou elle t'a dit (He said that... / She said that...)."
+    indices:
+      - "Commence par : « I have a friend who... »."
+      - "Pour la troisième phrase, pense à faire reculer le verbe après « said »."
+    criteres:
+      - "La phrase avec « who » parle bien d'une personne et ne répète pas le pronom sujet."
+      - "« because » introduit une cause logique."
+      - "Le discours indirect est correct : pronoms adaptés et verbe au passé après « said »."
+
+  - type: synthese
+    consigne: >-
+      En deux ou trois phrases, avec tes mots : quelle différence entre « because » et « so » ?
+      entre « who » et « which » ? Que change-t-on quand on rapporte une question ?

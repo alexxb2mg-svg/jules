@@ -1,0 +1,115 @@
+notion: niveau-lv2-a2
+titre: "Le niveau visé en LV2 : A2 dans au moins deux activités"
+duree_minutes: 20
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Dire le niveau visé en LV2 à la fin de la 3e."
+      - "Comprendre pourquoi l'objectif de LV2 est plus modeste qu'en LV1."
+      - "Juger le cas d'un élève en comptant ses activités au niveau A2."
+
+  - type: texte
+    titre: "LV1, LV2 : deux objectifs différents"
+    contenu: |
+      Le **CECRL** classe les niveaux : A1, A2, B1, B2, C1, C2. **A2** = niveau élémentaire (phrases simples, sujets familiers).
+
+      | Langue | Commencée | Objectif fin de 3e |
+      |---|---|---|
+      | **LV1** (souvent l'anglais) | dès l'école primaire | au moins A2 dans les 5 activités, B1 dans plusieurs |
+      | **LV2** (espagnol, allemand, italien…) | en général en 5e | **A2 dans au moins 2 activités** |
+
+  - type: texte
+    titre: "Bien lire « au moins deux »"
+    contenu: |
+      - Les **5 activités** : écouter et comprendre, lire, parler en continu, écrire, réagir et dialoguer.
+      - « Au moins deux » = deux, trois, quatre ou cinq. C'est un **minimum**, pas un plafond.
+      - Pourquoi plus modeste ? La LV2 a **moins d'années d'apprentissage**.
+      - Ce n'est **pas** parce qu'elle serait moins importante ou moins utile.
+
+  - type: exemple
+    enonce: "Hugo, en LV2 allemand, est A2 en « réagir et dialoguer », mais A1 dans les quatre autres activités. A-t-il atteint l'objectif ?"
+    etapes:
+      - "On liste les activités où Hugo atteint A2 : seulement « réagir et dialoguer »."
+      - "On compte : une seule activité."
+      - "On compare au minimum de deux : une, c'est moins que deux."
+      - "Conclusion : l'objectif n'est pas encore atteint. Il lui faut A2 dans une activité de plus."
+
+  - type: exercice
+    enonce: "Pour la LV2, dans combien d'activités langagières au minimum vise-t-on le niveau A2 ?"
+    forme: qcm
+    choix:
+      - "Dans une seule activité"
+      - "Dans au moins deux activités"
+      - "Dans les cinq activités"
+    reponse: 1
+    indices:
+      - "Ce nombre est plus petit que le nombre total d'activités langagières."
+      - "Relis le tableau : la ligne LV2, colonne « Objectif »."
+    explication: "En LV2, on vise A2 dans au moins 2 activités langagières, sur les 5."
+
+  - type: exercice
+    enonce: "Quelle langue a l'objectif le plus élevé en fin de 3e ? Réponds « LV1 » ou « LV2 »."
+    forme: reponse_courte
+    reponse: "LV1"
+    reponses_acceptees: ["lv1", "la LV1", "LV 1"]
+    indices:
+      - "Quelle langue est apprise depuis le plus longtemps ?"
+      - "Celle qui commence à l'école primaire a l'objectif le plus élevé."
+    explication: "La LV1 vise au moins A2 dans les 5 activités et B1 dans plusieurs. La LV2 vise A2 dans au moins 2 activités."
+
+  - type: exercice
+    enonce: "Pourquoi l'objectif de niveau en LV2 est-il plus modeste qu'en LV1 ?"
+    forme: qcm
+    choix:
+      - "Parce que la LV2 est commencée plus tard : moins d'années d'apprentissage"
+      - "Parce que la LV2 est une langue moins utile"
+      - "Parce que la LV2 n'est pas évaluée"
+    reponse: 0
+    indices:
+      - "Pense au moment où l'on commence chaque langue."
+      - "Un objectif dépend du temps qu'on a eu pour apprendre."
+    explication: "La LV2 commence en général en 5e, la LV1 dès le primaire. Moins de temps d'apprentissage, donc un objectif plus modeste. Cela ne dit rien de l'importance de la langue."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Quelle élève a atteint l'objectif en LV2 ?
+      Léa : A2 seulement en « lire ». Sofia : A2 en « lire », « écrire » et « écouter et comprendre ».
+      Nora : B1 en « lire », A1 dans les autres activités.
+    forme: qcm
+    choix:
+      - "Léa"
+      - "Sofia"
+      - "Nora"
+      - "Aucune des trois"
+    reponse: 1
+    indices:
+      - "Pour chaque élève, compte les activités où elle a au moins A2."
+      - "Un très bon niveau dans une seule activité ne compte que pour une activité."
+    explication: "Sofia a A2 dans trois activités : c'est au moins deux, l'objectif est atteint. Léa et Nora n'ont qu'une activité au niveau A2 ou plus."
+
+  - type: question_ouverte
+    question: >-
+      Un camarade dit : « En LV2, il faut avoir A2 dans les cinq activités, comme en LV1. »
+      Corrige-le en deux ou trois phrases, et explique la raison de la différence.
+    indices:
+      - "Combien d'activités au minimum sont visées en LV2 ? Et en LV1 ?"
+      - "Pense au nombre d'années d'apprentissage de chaque langue."
+    criteres:
+      - "L'élève dit qu'en LV2 l'objectif est A2 dans au moins deux activités (et non cinq)."
+      - "L'élève rappelle qu'en LV1 on vise au moins A2 dans les cinq activités (et B1 dans plusieurs)."
+      - "L'élève explique l'écart par le temps d'apprentissage, pas par l'importance de la langue."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux phrases, avec tes mots, le niveau visé en LV2 et la méthode pour savoir si un
+      élève l'a atteint.

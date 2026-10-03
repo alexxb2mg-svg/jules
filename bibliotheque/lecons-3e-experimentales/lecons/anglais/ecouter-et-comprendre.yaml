@@ -1,0 +1,136 @@
+notion: ecouter-et-comprendre
+titre: "Écouter et comprendre un document oral en anglais"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Trouver la situation d'un message oral : qui parle, à qui, où, pourquoi."
+      - "Repérer des indices (ton, bruits, images, mots sûrs) pour comprendre sans tout traduire."
+      - "Reconnaître les formes de l'anglais parlé et prendre des notes courtes."
+
+  - type: texte
+    titre: "Avant d'écouter : la situation"
+    contenu: |-
+      Tu n'as pas besoin de comprendre chaque mot. Cherche d'abord le **sens général**.
+      Avant d'écouter, pose-toi 5 questions :
+      - **Qui** parle ? À **qui** ?
+      - **Où** ? **Quand** ? **Pourquoi** ?
+      Le titre, la consigne et les images donnent déjà des réponses.
+
+  - type: texte
+    titre: "Les indices qui aident"
+    contenu: |-
+      | Indices sans les mots | Indices dans les mots |
+      |---|---|
+      | le ton de la voix (joie, colère, question) | les nombres, les noms propres |
+      | les bruits de fond (gare, cour, rue) | les mots proches du français |
+      | les images et les gestes d'une vidéo | les mots répétés ou accentués |
+      Dans une vidéo, relie toujours ce que tu **vois** et ce que tu **entends**.
+
+  - type: texte
+    titre: "L'anglais parlé n'est pas l'anglais écrit"
+    contenu: |-
+      - Les formes courtes sont fréquentes : I'm = I am ; don't = do not ; it's = it is.
+      - Des mots se collent : « want to » se dit souvent « wanna ».
+      - Les mots importants sont **accentués** (forts). Les petits mots sont faibles.
+      - Les mots de liaison donnent la logique : because (cause), so (conséquence), but (opposition), first / then / finally (ordre).
+
+  - type: texte
+    titre: "Écouter plusieurs fois et mémoriser"
+    contenu: |-
+      - **1re écoute** : ne note rien. Cherche le sens général, le ton, les bruits.
+      - **2e écoute** : note des **mots-clés** et des chiffres, pas des phrases.
+      - **Après** : relie tes indices et dis en français ce que tu as compris, même si c'est incomplet.
+
+  - type: exemple
+    enonce: "Tu entends une voix joyeuse, des rires et de la musique. Une fille dit : « Happy birthday, Jack! This present is for you. I hope you like it. » Que se passe-t-il ?"
+    etapes:
+      - "Indices sans les mots : voix joyeuse, rires, musique. C'est une fête."
+      - "Mots sûrs : « Happy birthday » et le prénom « Jack »."
+      - "Mot proche du français : « present » (un cadeau, ici)."
+      - "Conclusion : c'est l'anniversaire de Jack, et une amie lui offre un cadeau."
+
+  - type: exercice
+    enonce: "Tu entends : « Good morning, everyone. Sit down, please, and open your books at page 20. » Où se passe la scène ?"
+    forme: qcm
+    choix:
+      - "Dans une gare"
+      - "Dans une salle de classe"
+      - "Dans un magasin"
+    reponse: 1
+    indices:
+      - "Qui peut dire « open your books » à tout un groupe ?"
+      - "Repère les mots « books » et « page »."
+    explication: "« Open your books at page 20 » : un professeur parle à ses élèves. La scène se passe dans une salle de classe."
+
+  - type: exercice
+    enonce: "Annonce dans une gare : « The train to Manchester will leave from platform 6 at 9.45. » Quel est le numéro du quai (platform) ? Écris seulement le nombre."
+    forme: nombre
+    reponse: 6
+    tolerance: 0
+    indices:
+      - "Le mot « platform » veut dire « quai ». Quel nombre vient juste après ?"
+      - "Ne confonds pas avec l'heure du départ, qui vient après « at »."
+    explication: "« from platform 6 » : le train part du quai numéro 6. 9.45 est l'heure de départ."
+
+  - type: exercice
+    enonce: "À l'oral, on entend souvent « I wanna go home ». Écris en deux mots anglais la forme complète de « wanna »."
+    forme: reponse_courte
+    reponse: "want to"
+    reponses_acceptees: ["Want to", "want to."]
+    indices:
+      - "« Wanna » est une forme collée de deux mots qui veulent dire « vouloir » + la petite marque de l'infinitif."
+      - "Le premier mot est le verbe « vouloir » en anglais. Le second mot a deux lettres."
+    explication: "« Wanna » est la forme orale de « want to » : I want to go home."
+
+  - type: exercice
+    enonce: "Tu entends : « I wanted to go to the park, but it started raining. » Que t'annonce le mot « but » ?"
+    forme: qcm
+    choix:
+      - "Une cause"
+      - "Une opposition : quelque chose s'est passé autrement que prévu"
+      - "Une liste de choses"
+    reponse: 1
+    indices:
+      - "Le personnage voulait aller au parc. Y est-il allé ?"
+      - "Traduis « but » en français."
+    explication: "« But » veut dire « mais ». Il annonce une opposition : il voulait aller au parc, mais il a commencé à pleuvoir."
+
+  - type: exercice
+    enonce: "Niveau brevet. Message vocal, voix triste qui tousse : « Hi Tom, it's Sarah. Sorry, I can't come to your party on Saturday because I'm ill. See you next week! » Pourquoi Sarah ne vient-elle pas ?"
+    forme: qcm
+    choix:
+      - "Elle part en voyage samedi."
+      - "Elle est malade."
+      - "Elle n'aime pas les fêtes."
+      - "Elle a oublié la date."
+    reponse: 1
+    indices:
+      - "Quel mot annonce la raison ? Écoute ce qui vient juste après."
+      - "Le ton et la toux sont aussi des indices. Que veut dire « ill » ?"
+    explication: "« because I'm ill » : Sarah est malade. La toux et la voix triste le confirment."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots ce que tu fais pendant la première écoute, puis pendant la deuxième écoute d'un document oral. Pourquoi ne pas tout noter tout de suite ?"
+    indices:
+      - "À la première écoute, cherches-tu les détails ou le sens général ?"
+      - "Que notes-tu à la deuxième écoute : des phrases ou des mots-clés ?"
+    criteres:
+      - "L'élève dit que la première écoute sert au sens général (situation, ton, bruits)."
+      - "L'élève dit que la deuxième écoute sert aux détails, avec des notes courtes (mots-clés, chiffres)."
+      - "L'élève explique qu'écrire des phrases fait perdre le fil du message."
+
+  - type: synthese
+    consigne: >-
+      En deux ou trois phrases, avec tes mots : quels indices t'aident à comprendre un
+      message oral en anglais ? Cite au moins un indice sans les mots et un indice dans les mots.

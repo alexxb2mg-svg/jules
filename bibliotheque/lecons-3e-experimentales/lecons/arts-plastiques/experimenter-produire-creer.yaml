@@ -1,0 +1,161 @@
+notion: experimenter-produire-creer
+titre: "Expérimenter, produire, créer"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Essayer plusieurs moyens plastiques et choisir celui qui sert ton intention."
+      - "Garder un accident utile et utiliser le numérique pour capter ou transformer."
+      - "Penser dès le départ à la présentation de ta production."
+
+  - type: texte
+    titre: "Essayer, observer, choisir"
+    contenu: |-
+      **Expérimenter**, c'est essayer des moyens plastiques pour voir leurs **effets**.
+      - Le **support** reçoit la production : feuille, toile, carton, mur, écran.
+      - Le **médium** sert à produire : gouache, encre, fusain, photo, vidéo.
+      - Le **geste** agit sur la matière : frotter, projeter, gratter, étaler.
+
+      On teste, on compare, puis on choisit le moyen qui sert le mieux son **intention**.
+
+  - type: texte
+    titre: "Rester attentif à l'inattendu"
+    contenu: |-
+      Une tache, une coulure, une déchirure peuvent devenir une **piste**.
+      Au lieu d'effacer, on se demande : cet effet sert-il mon intention ?
+      On peut ensuite apprendre à le refaire exprès.
+
+      Exemple : Jackson Pollock laisse couler et projette la peinture sur une toile posée au sol
+      (fin des années 1940). On réfléchit à ce que l'on fait : on pratique, puis on observe.
+
+  - type: texte
+    titre: "Croiser les pratiques, utiliser le numérique"
+    contenu: |-
+      - Les champs de la pratique : dessin, peinture, sculpture, photo, vidéo, installation, création numérique.
+      - Les croiser dans une même production, c'est l'**hybridation**.
+      - Outils de **captation** : appareil photo, scanner, caméra, micro. Ils enregistrent le réel.
+      - Outils de **réalisation** : logiciels de retouche, de montage, de dessin. Ils transforment.
+      - La **documentation** (photos, reproductions, croquis) nourrit le projet : on la transforme, on ne la recopie pas.
+
+  - type: texte
+    titre: "Penser au spectateur dès le début"
+    contenu: |-
+      Où sera vue la production ? Au mur, sur un socle, au sol, sur un écran, en ligne.
+      Le mode de **présentation** change la façon dont le spectateur la regarde.
+      On peut aussi montrer une série d'essais ou une trace du travail.
+
+      Au brevet, on attend : plusieurs pistes essayées, des choix justifiés, et l'effet de chaque moyen.
+
+  - type: exemple
+    enonce: >-
+      Consigne fictive : « Rendre visible le bruit d'une ville ». Un élève hésite entre plusieurs moyens.
+      Comment peut-il expérimenter ?
+    etapes:
+      - "Il fait trois essais rapides : des traits nerveux à l'encre, un collage de tickets et d'affiches, une photo floue de voitures prise au téléphone."
+      - "Il observe : les traits nerveux donnent une impression d'agitation ; une goutte d'encre a éclaté en étoile, il la garde."
+      - "Il choisit l'encre et la photo floue, et les croise : il dessine à l'encre sur la photo imprimée."
+      - "Il décide de présenter le résultat au mur, à côté de ses essais, pour montrer son chemin."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la surface ou l'objet qui reçoit une production plastique (feuille, toile, mur, écran) ?"
+    forme: reponse_courte
+    reponse: "support"
+    reponses_acceptees:
+      - "support"
+      - "le support"
+      - "un support"
+      - "supports"
+    indices:
+      - "Ce n'est pas le médium : le médium sert à produire. On cherche ce qui reçoit."
+      - "C'est aussi le nom d'un objet sur lequel on pose quelque chose pour le tenir."
+    explication: "Le support reçoit la production. Le médium (gouache, encre…) sert à produire."
+
+  - type: exercice
+    enonce: "Lequel de ces outils sert à capter, c'est-à-dire à enregistrer une image du réel ?"
+    forme: qcm
+    choix:
+      - "Un pinceau"
+      - "Un scanner"
+      - "Un tube de colle"
+    reponse: 1
+    indices:
+      - "Cherche l'outil qui fabrique une copie de ce qui est devant lui."
+      - "Le pinceau pose de la peinture, la colle assemble. Lequel a un capteur ?"
+    explication: "Le scanner enregistre une image du document posé sur sa vitre. Le pinceau et la colle produisent ou assemblent, ils ne captent rien."
+
+  - type: exercice
+    enonce: >-
+      Situation fictive : Lina peint un ciel à l'encre. Une goutte d'eau tombe et l'encre s'étale en
+      auréole. Quelle réaction montre qu'elle reste attentive à l'inattendu ?
+    forme: qcm
+    choix:
+      - "Elle jette la feuille et recommence."
+      - "Elle cache la tache sous de la gouache."
+      - "Elle observe l'effet et se demande s'il peut servir son intention."
+    reponse: 2
+    indices:
+      - "Cet accident est-il forcément une erreur ?"
+      - "Écarte les réactions qui font disparaître l'accident."
+    explication: "Lina observe l'auréole et se demande si elle sert son ciel. Jeter ou cacher, c'est perdre une piste."
+
+  - type: exercice
+    enonce: >-
+      Une élève peint à la gouache sur une photo imprimée, puis filme le résultat en vidéo. Comment
+      appelle-t-on ce croisement de plusieurs techniques dans une même production ?
+    forme: reponse_courte
+    reponse: "hybridation"
+    reponses_acceptees:
+      - "hybridation"
+      - "l'hybridation"
+      - "une hybridation"
+      - "métissage"
+      - "metissage"
+      - "le métissage"
+      - "un métissage"
+    indices:
+      - "Ce n'est pas « collage » : le collage est une seule technique."
+      - "Pense à une voiture qui roule à l'essence et à l'électricité. Le nom finit par « -ation »."
+    explication: "On parle d'hybridation (ou de métissage) : plusieurs techniques ou champs artistiques sont croisés."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Un élève a photographié des ombres de feuilles sur un mur. Il veut que le
+      spectateur compare l'ombre réelle et l'image. Quel choix de présentation est le plus adapté ?
+    forme: qcm
+    choix:
+      - "Laisser la photo posée à plat dans un tiroir de la classe."
+      - "Accrocher la photo au mur, à hauteur des yeux, près du mur photographié."
+      - "Envoyer la photo sans titre, sans dire où elle a été prise."
+    reponse: 1
+    indices:
+      - "Le spectateur doit pouvoir voir les deux choses en même temps."
+      - "Le mode de présentation change ce que le spectateur peut comparer."
+    explication: "Accrochée près du mur d'origine, la photo permet de comparer l'ombre réelle et l'image. La présentation sert l'intention."
+
+  - type: question_ouverte
+    question: >-
+      Production fictive : un élève photographie au téléphone les ombres d'un arbre, imprime la photo en
+      grand, puis peint en blanc par-dessus certaines ombres. Dis ce que chaque moyen apporte, puis
+      propose une présentation et justifie-la.
+    indices:
+      - "Prends les moyens un par un : photo, impression en grand, gouache blanche."
+      - "Pour la présentation : où, à quelle taille, et qu'est-ce que cela change pour le spectateur ?"
+    criteres:
+      - "L'élève nomme au moins deux moyens (captation photo, impression, gouache) et l'effet de chacun."
+      - "L'élève relie ces choix à une intention possible (garder un moment, jouer entre ombre et lumière)."
+      - "L'élève propose une présentation précise et explique ce qu'elle change pour le spectateur."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, comment tu expérimentes avant de choisir tes
+      moyens, ce que tu fais d'un accident, et pourquoi tu penses à la présentation dès le début.

@@ -1,0 +1,187 @@
+notion: debat-argumente
+titre: "Le débat argumenté : participer, animer, arbitrer"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Donner une opinion argumentée dans un débat : avis, raison, exemple."
+      - "Réagir à une opinion différente : écouter, reformuler, répondre avec respect."
+      - "Savoir animer ou arbitrer un débat en classe."
+
+  - type: texte
+    titre: "Donner une opinion argumentée"
+    contenu: >-
+      Un **débat** est un échange oral organisé sur une question qui fait discuter. Le but n'est pas de
+      « gagner », mais de mieux comprendre la question.
+
+
+      - **Opinion** : ton avis. « Je pense que… »
+
+      - **Argument** : ta raison. « car », « parce que ».
+
+      - **Exemple** : un cas précis. « par exemple ».
+
+
+      « C'est nul » n'est pas une opinion argumentée : il manque la raison.
+
+  - type: texte
+    titre: "Les mots qui relient et qui nuancent"
+    contenu: >-
+      Les **connecteurs** relient les idées :
+
+
+      | Connecteur | Il sert à… |
+      |---|---|
+      | car, parce que | donner une cause |
+      | donc, c'est pourquoi | donner une conséquence |
+      | par exemple | illustrer |
+      | mais, cependant | s'opposer |
+
+
+      Les **modalisateurs** nuancent ton avis : « il me semble que », « peut-être », « sans doute ».
+
+  - type: texte
+    titre: "Réagir à une opinion différente"
+    contenu: >-
+      1. **Écoute** sans couper la parole.
+
+      2. **Reformule** : « Si je comprends bien, tu penses que… »
+
+      3. Dis ton **accord ou ton désaccord**, même partiel : « Je suis d'accord sur ce point, mais… »
+
+      4. Donne **ton argument**.
+
+
+      Règle d'or : on critique une **idée**, jamais la **personne**.
+
+  - type: texte
+    titre: "Animer ou arbitrer un débat"
+    contenu: >-
+      | Rôle | Ce qu'il fait |
+      |---|---|
+      | **Animateur** | présente le sujet, donne la parole à tour de rôle, relance, recentre, résume à la fin |
+      | **Arbitre** | vérifie les règles : tour de parole, temps de parole, respect des personnes |
+
+
+      Les deux restent **neutres** : ils ne défendent pas d'avis sur le sujet. Ces rôles peuvent être
+      tenus par des élèves.
+
+  - type: exemple
+    enonce: >-
+      Débat : « Faut-il une cantine 100 % végétarienne ? » Léo dit : « Oui, c'est meilleur pour la
+      planète. » Tu n'es pas tout à fait d'accord. Construis ta réponse.
+    etapes:
+      - "J'écoute Léo jusqu'au bout, sans le couper."
+      - "Je reformule : « Si je comprends bien, tu penses qu'un repas sans viande protège la planète. »"
+      - "Je dis mon accord partiel : « Je suis d'accord sur l'idée, mais pas tous les jours… »"
+      - "Je donne mon argument avec un connecteur : « … car certains élèves aiment pouvoir choisir. »"
+      - "Je nuance avec un modalisateur : « Il me semble que deux repas végétariens par semaine seraient un bon compromis. »"
+
+  - type: exercice
+    enonce: "Quelle prise de parole contient une opinion ET un argument ?"
+    forme: qcm
+    choix:
+      - "Je suis contre."
+      - "Je suis contre les sorties sans téléphone, car les parents veulent pouvoir joindre leur enfant."
+      - "Les sorties, c'est nul."
+      - "Tout le monde pense comme moi."
+    reponse: 1
+    indices:
+      - "Un argument répond à la question « pourquoi ? »."
+      - "Cherche la phrase qui contient un mot comme « car » ou « parce que »."
+    explication: "La deuxième phrase donne un avis (« je suis contre ») et une raison introduite par « car ». Les autres phrases n'expliquent rien."
+
+  - type: exercice
+    enonce: >-
+      Pendant un débat, Inès dit à Tom : « Tu as toujours des idées bizarres, toi. » Quelle règle du
+      débat Inès ne respecte-t-elle pas ?
+    forme: qcm
+    choix:
+      - "Elle parle trop longtemps."
+      - "Elle attaque la personne au lieu de discuter son idée."
+      - "Elle utilise un connecteur."
+      - "Elle reformule l'idée de Tom."
+    reponse: 1
+    indices:
+      - "Inès parle-t-elle de l'idée de Tom ou de Tom lui-même ?"
+      - "Relis la règle d'or du débat."
+    explication: "Inès vise Tom, pas son idée. Dans un débat, on critique une idée avec un argument, jamais la personne."
+
+  - type: exercice
+    enonce: >-
+      Complète avec un seul verbe : « Avant de répondre, je dois d'abord ___ ce que l'autre a dit, avec
+      mes propres mots, pour montrer que j'ai compris. »
+    forme: reponse_courte
+    reponse: "reformuler"
+    reponses_acceptees:
+      - "Reformuler"
+      - "le reformuler"
+    indices:
+      - "C'est l'étape qui vient juste après l'écoute."
+      - "Ce verbe veut dire « redire autrement ». Il commence par « re- »."
+    explication: "On reformule : on redit l'idée de l'autre avec ses mots. Cela prouve qu'on a écouté et évite les malentendus."
+
+  - type: exercice
+    enonce: >-
+      Dans un débat, deux élèves parlent en même temps. Une troisième élève n'a pas encore pu parler.
+      Qui doit intervenir, et que doit-il faire ?
+    forme: qcm
+    choix:
+      - "Un participant, pour donner son avis plus fort que les autres."
+      - "L'animateur, pour rétablir le tour de parole et donner la parole à l'élève qui n'a pas parlé."
+      - "L'animateur, pour dire quel camp a raison."
+      - "Personne : il faut laisser faire."
+    reponse: 1
+    indices:
+      - "Quel rôle organise la parole ?"
+      - "Ce rôle reste neutre : il ne dit pas qui a raison."
+    explication: "L'animateur distribue la parole à tour de rôle. Il rétablit l'ordre sans donner son avis sur le sujet."
+
+  - type: exercice
+    enonce: >-
+      Lors d'un débat en classe, Sami ne défend aucun camp. Il vérifie seulement que chacun respecte son
+      temps de parole et que personne n'est insulté. Quel rôle tient-il ? Réponds par un nom.
+    forme: reponse_courte
+    reponse: "arbitre"
+    reponses_acceptees:
+      - "l'arbitre"
+      - "un arbitre"
+      - "Arbitre"
+    indices:
+      - "Sami ne distribue pas la parole : il surveille les règles."
+      - "Pense à la personne neutre qui siffle les fautes dans un match."
+    explication: "Sami est l'arbitre : il veille aux règles (temps de parole, respect) sans prendre parti. L'animateur, lui, organise la parole."
+
+  - type: question_ouverte
+    question: >-
+      Un camarade affirme : « Les élèves devraient pouvoir choisir toutes leurs matières. » Écris
+      l'intervention que tu ferais dans le débat (4 à 6 lignes) : reformule son idée, dis ton accord ou
+      ton désaccord, et donne deux arguments dont un exemple.
+    indices:
+      - "Commence par « Si je comprends bien, tu penses que… »."
+      - "Utilise au moins un connecteur (car, par exemple, mais) et un modalisateur (il me semble que)."
+    criteres:
+      - "L'élève reformule correctement l'idée du camarade avant de réagir."
+      - "L'élève donne clairement son opinion et la justifie par deux arguments, dont un exemple, reliés par des connecteurs."
+      - "Le ton reste respectueux : aucune attaque contre la personne."
+
+  - type: synthese
+    consigne: >-
+      Écris avec tes mots, en trois phrases : ce qu'est une opinion argumentée, les étapes pour réagir à
+      une opinion différente, et la différence entre animer et arbitrer un débat.

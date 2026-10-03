@@ -1,0 +1,141 @@
+notion: presence-materielle-oeuvre-espace
+titre: "L'œuvre dans l'espace et sa présentation"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser les mots échelle, in situ, éphémère et espace public."
+      - "Dire l'effet d'un dispositif de présentation : socle, vitrine, sol, suspension, cartel."
+      - "Expliquer le rôle de l'architecture et du lieu dans la façon de voir une œuvre."
+
+  - type: texte
+    titre: "Échelle et in situ"
+    contenu: |-
+      **Rapport d'échelle** : la taille de l'œuvre comparée au corps du spectateur et au lieu.
+      Claes Oldenburg agrandit des objets banals : *Clothespin* (1976) est une pince à linge en acier haute de plusieurs étages, à Philadelphie.
+      **In situ** : l'œuvre est conçue pour un lieu précis. Ailleurs, elle perdrait son sens.
+      Daniel Buren, *Les Deux Plateaux* (1986) : des colonnes rayées dans la cour d'honneur du Palais-Royal, à Paris.
+
+  - type: texte
+    titre: "Éphémère et espace public"
+    contenu: |-
+      **Éphémère** : l'œuvre ne dure qu'un temps. Christo et Jeanne-Claude emballent le Pont-Neuf à Paris en 1985, pendant quatorze jours.
+      Photos et films en gardent la trace. Une courte durée n'est pas un échec : elle fait partie du projet.
+      **Espace public** : rue, place, parc, paysage, ouverts à tous.
+      Robert Smithson, *Spiral Jetty* (1970) : une spirale de roches dans le Grand Lac Salé (Utah). C'est le **land art**.
+
+  - type: texte
+    titre: "Présenter une œuvre : rien n'est neutre"
+    contenu: |-
+      - **Socle** : il sépare l'œuvre du sol et la désigne.
+      - **Vitrine** : elle protège et met à distance.
+      - **Au sol** : l'œuvre partage l'espace du spectateur. **Suspendue** : le point de vue change.
+      - **Cartel** : petite étiquette (artiste, titre, date, matériaux). **Cimaise** : mur d'exposition.
+      L'**architecture** (salle, escalier, lumière) guide nos déplacements. Présenter tes productions, c'est aussi choisir : lieu, hauteur, lumière, cartel.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : une classe pose cent petits bateaux en papier sur les marches de l'escalier
+      du collège, pendant trois jours. Analyse la présentation.
+    etapes:
+      - "Dispositif : pas de socle ni de vitrine. Les bateaux sont posés au sol, dans un lieu de passage."
+      - "Lieu : l'escalier est choisi pour ses marches, comme des vagues. L'œuvre est pensée pour ce lieu : in situ."
+      - "Échelle : chaque bateau est petit, mais leur nombre occupe tout l'escalier."
+      - "Durée : trois jours, l'œuvre est éphémère. Des photos en garderont la trace."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on la petite étiquette placée près d'une œuvre, avec l'artiste, le titre, la
+      date et les matériaux ?
+    forme: reponse_courte
+    reponse: "cartel"
+    reponses_acceptees:
+      - "cartel"
+      - "un cartel"
+      - "le cartel"
+      - "cartels"
+    indices:
+      - "Ce n'est ni le socle ni la vitrine : c'est un petit texte."
+      - "Le mot commence par « car » et compte six lettres."
+    explication: "C'est le cartel : il informe le visiteur sur l'œuvre."
+
+  - type: exercice
+    enonce: >-
+      Christo et Jeanne-Claude ont emballé le Pont-Neuf en 1985 pendant quatorze jours seulement. Quelle
+      dimension de l'œuvre cette durée met-elle en avant ?
+    forme: qcm
+    choix:
+      - "Sa dimension éphémère"
+      - "Sa taille miniature"
+      - "Sa présentation sous vitrine"
+    reponse: 0
+    indices:
+      - "L'énoncé insiste sur la durée."
+      - "Comment appelle-t-on ce qui ne dure pas ?"
+    explication: "L'œuvre n'a existé que quatorze jours : elle est éphémère. Photos et films en gardent la trace."
+
+  - type: exercice
+    enonce: >-
+      Maël agrandit une gomme de 5 cm de long en une sculpture de 2 m de long. Par combien la longueur
+      a-t-elle été multipliée ?
+    forme: nombre
+    reponse: 40
+    tolerance: 0
+    indices:
+      - "Mets d'abord les deux longueurs dans la même unité : 1 m = 100 cm."
+      - "Divise ensuite la grande longueur par la petite."
+    explication: "2 m = 200 cm. 200 ÷ 5 = 40. La longueur est multipliée par 40 : ce changement d'échelle rend l'objet banal étrange et imposant."
+
+  - type: exercice
+    enonce: "Comment dit-on d'une œuvre conçue pour un lieu précis, qui perdrait son sens ailleurs ? (deux mots latins)"
+    forme: reponse_courte
+    reponse: "in situ"
+    reponses_acceptees:
+      - "in situ"
+      - "in-situ"
+      - "insitu"
+      - "In situ"
+    indices:
+      - "Les colonnes de Buren pourraient-elles aller dans un autre jardin sans rien perdre ?"
+      - "L'expression latine veut dire « sur place » ; le second mot ressemble à « site »."
+    explication: "In situ : l'œuvre est pensée pour un lieu précis, comme Les Deux Plateaux de Buren au Palais-Royal."
+
+  - type: exercice
+    enonce: "Quel rôle joue l'architecture d'un lieu d'exposition (hall, escalier, salle) dans la présentation des œuvres ?"
+    forme: qcm
+    choix:
+      - "Aucun : un lieu ne change jamais la façon de voir une œuvre"
+      - "Elle organise la circulation, la lumière et le point de vue du spectateur"
+      - "Elle sert seulement à protéger les œuvres de la pluie"
+    reponse: 1
+    indices:
+      - "Pense à un musée : couloirs, escaliers, éclairage."
+      - "Ces éléments agissent-ils sur la façon dont on regarde ?"
+    explication: "L'architecture organise la circulation, la lumière et le point de vue : elle fait partie de la présentation."
+
+  - type: question_ouverte
+    question: >-
+      Tu dois exposer une sculpture de la classe dans le hall du collège. Choisis un emplacement et un
+      dispositif (socle, sol, suspension…). Justifie ton choix et dis l'effet produit sur les visiteurs.
+    indices:
+      - "Observe le lieu : lumière, passages, hauteur."
+      - "Demande-toi : l'œuvre sera-t-elle à distance, à notre niveau, au-dessus de nous ?"
+    criteres:
+      - "L'élève choisit un emplacement précis en tenant compte du lieu (lumière, passage, architecture)."
+      - "L'élève nomme un dispositif de présentation du cours."
+      - "L'élève explique l'effet sur le spectateur (distance, surprise, point de vue)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce que veulent dire « in situ » et
+      « éphémère », et pourquoi un socle n'est pas neutre.

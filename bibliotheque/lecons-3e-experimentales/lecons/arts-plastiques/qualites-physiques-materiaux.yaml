@@ -1,0 +1,149 @@
+notion: qualites-physiques-materiaux
+titre: "Les qualités physiques des matériaux"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Décrire un matériau par sa nature et ses qualités physiques."
+      - "Dire ce qu'un matériau évoque et ce qu'il symbolise."
+      - "Distinguer le fini et le non fini, et analyser un agencement de matériaux."
+
+  - type: texte
+    titre: "Nature et qualités d'un matériau"
+    contenu: |-
+      **Nature** : pierre, bois, métal, verre, papier, tissu, plastique, fourrure…
+      **Qualités physiques**, par paires de contraires :
+      - dur / mou ; lourd / léger ; rigide / souple ;
+      - lisse / rugueux ; opaque / transparent ; mat / brillant ; durable / éphémère.
+      Attention : **transparent**, on voit nettement à travers ; **translucide**, la lumière passe mais l'image est floue.
+
+  - type: texte
+    titre: "Un matériau porte du sens"
+    contenu: |-
+      On distingue quatre sortes de caractéristiques :
+      - **plastiques** : couleur, **texture** (aspect de la surface), poids, brillance ;
+      - **techniques** : comment on le travaille (tailler, coller, souder) et comment il résiste ;
+      - **sémantiques** : ce qu'il évoque (le papier de soie fait penser à la fragilité) ;
+      - **symboliques** : sa valeur dans une culture (le marbre : durée, prestige).
+
+  - type: texte
+    titre: "Agencer des matériaux ; fini et non fini"
+    contenu: |-
+      **Agencer** des matériaux différents crée des **contrastes** : lourd et léger, dur et doux, brut et poli.
+      Exemple : en 1936, Meret Oppenheim recouvre une tasse de fourrure ; l'objet devient doux et troublant.
+      **Fini** : surface achevée, polie, les traces du travail ont disparu.
+      **Non fini** : on voit le matériau brut et les traces d'outils. Les *Captifs* de Michel-Ange (vers 1520-1530), en marbre, sont restés inachevés.
+      Le non fini peut aussi être un choix de l'artiste.
+
+  - type: exemple
+    enonce: >-
+      Deux élèves (fictifs) font le même oiseau : l'un en plaque de métal, l'autre en plumes collées sur
+      du carton. Compare les deux productions.
+    etapes:
+      - "Même forme, mais pas les mêmes matériaux."
+      - "Métal : dur, lourd, froid, brillant. L'oiseau semble figé, solide, peut-être menaçant."
+      - "Plumes : légères, douces, fragiles. L'oiseau semble vivant, prêt à s'envoler."
+      - "Conclusion : le choix du matériau change le sens de l'œuvre."
+
+  - type: exercice
+    enonce: "Lisse, rugueuse, granuleuse, soyeuse : comment appelle-t-on l'aspect d'une surface perçu au toucher ou à la vue ?"
+    forme: reponse_courte
+    reponse: "texture"
+    reponses_acceptees:
+      - "texture"
+      - "la texture"
+      - "une texture"
+      - "textures"
+    indices:
+      - "Ferme les yeux et touche une écorce, puis une vitre : qu'est-ce qui change ?"
+      - "Le mot commence comme « textile »."
+    explication: "C'est la texture : l'aspect de la surface d'un matériau."
+
+  - type: exercice
+    enonce: >-
+      Une élève veut faire un nuage suspendu qui évoque la légèreté et la fragilité. Quel matériau sert
+      le mieux son intention ?
+    forme: qcm
+    choix:
+      - "Du béton coulé dans un moule"
+      - "Du papier de soie blanc froissé"
+      - "Une plaque d'acier découpée"
+    reponse: 1
+    indices:
+      - "Lequel de ces matériaux pourrait bouger au moindre souffle ?"
+      - "Le béton et l'acier sont lourds et solides."
+    explication: "Le papier de soie, léger et facile à déchirer, évoque la légèreté et la fragilité du nuage."
+
+  - type: exercice
+    enonce: >-
+      Une sculpture laisse voir le bloc de pierre brute et les traces des outils, comme les Captifs de
+      Michel-Ange. Comment appelle-t-on cet état de l'œuvre ?
+    forme: reponse_courte
+    reponse: "non fini"
+    reponses_acceptees:
+      - "non fini"
+      - "non-fini"
+      - "le non fini"
+      - "le non-fini"
+      - "non finie"
+      - "non-finie"
+      - "inachevé"
+      - "inachevée"
+      - "inacheve"
+    indices:
+      - "Une œuvre à la surface polie et achevée est dite « finie ». Et celle-ci ?"
+      - "Cherche le contraire de « fini », formé avec une négation."
+    explication: "C'est le non fini : l'œuvre montre le matériau brut et les traces du travail."
+
+  - type: exercice
+    enonce: "Un élève pose une plume sur un gros pavé de granit. Quel effet cet agencement produit-il surtout ?"
+    forme: qcm
+    choix:
+      - "Une harmonie entre deux matériaux semblables"
+      - "Un contraste entre le lourd et le léger"
+      - "Aucun effet : seule la couleur compte"
+    reponse: 1
+    indices:
+      - "La plume et le granit ont-ils le même poids ?"
+      - "Quand deux qualités s'opposent, que produit leur rencontre ?"
+    explication: "C'est un contraste : le granit est lourd et dur, la plume légère et douce."
+
+  - type: exercice
+    enonce: "« Dans notre culture, l'or fait penser à la richesse. » Quelle sorte de caractéristique du matériau est décrite ?"
+    forme: qcm
+    choix:
+      - "Une caractéristique plastique"
+      - "Une caractéristique technique"
+      - "Une valeur symbolique"
+    reponse: 2
+    indices:
+      - "La phrase parle-t-elle de l'aspect, du travail ou de ce que l'or représente ?"
+      - "Le mot « culture » est un indice."
+    explication: "C'est une valeur symbolique : ce que le matériau représente dans une culture."
+
+  - type: question_ouverte
+    question: >-
+      Un élève sculpte un visage dans un bloc de plâtre. Il polit le visage mais laisse le reste du bloc
+      brut, avec les traces de la râpe. Explique l'effet de ce choix.
+    indices:
+      - "Où va ton regard d'abord : sur la partie polie ou sur la partie brute ?"
+      - "Utilise les mots fini, non fini et contraste."
+    criteres:
+      - "L'élève applique fini et non fini aux deux parties de la sculpture."
+      - "L'élève décrit les deux surfaces (lisse et polie, rugueuse et brute) et le contraste."
+      - "L'élève propose un sens justifié (un visage qui sort de la matière), éventuellement avec les Captifs de Michel-Ange."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment tu décris un matériau dans une
+      œuvre, et la différence entre fini et non fini.

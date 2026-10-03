@@ -1,0 +1,188 @@
+notion: visees-et-implicite-du-discours-oral
+titre: "Visées et implicite d'un discours oral"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), enseignement du français — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Attendus de fin d'année de 3e — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/17-francais-3e-attendus-eduscolpdf-74685.pdf"
+    licence: etalab-2.0
+  - titre: "Repères annuels de progression pour le cycle 4 — Français — éduscol, 2019"
+    url: "https://eduscol.education.gouv.fr/sites/default/files/document/25-francais-c4-reperes-eduscol1114755pdf-74691.pdf"
+    licence: etalab-2.0
+  - titre: "Définition des épreuves de l'examen du diplôme national du brevet à compter de la session 2027 — I. Épreuve écrite de français — Note de service du 11-9-2026 (NOR MENE2623228N), BO spécial n° 4 du 17 septembre 2026"
+    url: "https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2623228N"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Identifier la visée d'un discours oral : ce que l'orateur veut obtenir."
+      - "Hiérarchiser les informations entendues : l'essentiel d'abord, les détails ensuite."
+      - "Comprendre et expliquer l'implicite : présupposé, sous-entendu, ironie."
+
+  - type: texte
+    titre: "La visée d'un discours"
+    contenu: >-
+      La **visée**, c'est l'effet que l'orateur veut produire sur celui qui écoute.
+
+
+      | Visée | Exemple |
+      |---|---|
+      | informer | le bulletin météo |
+      | convaincre (par des arguments) | un candidat au poste de délégué |
+      | persuader (par les émotions) | un appel à la solidarité |
+      | divertir | une blague, un sketch |
+      | inciter à agir | une publicité à la radio |
+
+
+      Un discours a souvent **plusieurs visées**. Pour les trouver : qui parle ? à qui ? quel ton ?
+
+  - type: texte
+    titre: "Hiérarchiser les informations"
+    contenu: >-
+      À l'oral, on ne peut pas relire. Il faut trier ce qu'on entend.
+
+
+      - L'**information principale** : l'idée essentielle. Elle est souvent annoncée au début ou répétée à
+      la fin.
+
+      - Les **informations secondaires** : exemples, détails, anecdotes.
+
+
+      Prends des notes courtes : mots-clés, chiffres, dates. Puis classe-les par importance.
+
+  - type: texte
+    titre: "L'implicite : ce qui n'est pas dit"
+    contenu: >-
+      L'**implicite**, c'est ce qu'on doit comprendre sans que ce soit dit directement.
+
+
+      - **Présupposé** : idée déjà admise dans la phrase. « Il a arrêté de tricher » → il trichait avant.
+
+      - **Sous-entendu** : idée suggérée, qu'on déduit du contexte. « Il fait froid ici… » → « Ferme la
+      fenêtre. »
+
+      - **Ironie** : dire le contraire de ce qu'on pense. Le ton, l'insistance ou un silence la trahissent.
+
+  - type: texte
+    titre: "Expliquer un implicite en trois temps"
+    contenu: >-
+      1. **Ce qui est dit** : les mots prononcés.
+
+      2. **Ce qui est compris** : le vrai message.
+
+      3. **L'indice** qui le montre : un mot, le ton, la situation.
+
+
+      Sans indice précis, l'explication ne prouve rien.
+
+  - type: exemple
+    enonce: >-
+      Une mère voit la chambre de son fils, en désordre. Elle dit d'un ton calme : « Tes amis viennent
+      dormir ici samedi, c'est bien ça ? » Explique l'implicite.
+    etapes:
+      - "Ce qui est dit : une simple question sur la venue des amis."
+      - "Le contexte : la chambre est en désordre."
+      - "Ce qui est compris : « Range ta chambre avant samedi. »"
+      - "C'est un sous-entendu : l'idée n'est pas dite, on la déduit de la situation."
+      - "La visée : faire agir le fils, sans donner un ordre direct."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'effet qu'un orateur veut produire sur son auditoire (informer, convaincre, faire rire…) ? Réponds par un nom."
+    forme: reponse_courte
+    reponse: "visée"
+    reponses_acceptees:
+      - "la visée"
+      - "visee"
+      - "la visee"
+      - "une visée"
+    indices:
+      - "Ce mot vient du verbe qu'on emploie quand on tire sur une cible."
+      - "C'est le premier mot du titre de cette leçon."
+    explication: "La visée, c'est le but de l'orateur : l'effet qu'il cherche à produire sur ceux qui l'écoutent."
+
+  - type: exercice
+    enonce: >-
+      Une publicité à la radio dit : « Ne manquez pas notre offre exceptionnelle, seulement jusqu'à
+      samedi ! » Quelle est sa visée principale ?
+    forme: qcm
+    choix:
+      - "Divertir seulement."
+      - "Inciter à acheter."
+      - "Informer de façon neutre."
+      - "Raconter une histoire."
+    reponse: 1
+    indices:
+      - "Qui parle ? Un vendeur. Que veut-il obtenir de toi ?"
+      - "Les mots « ne manquez pas » et « jusqu'à samedi » poussent à faire quelque chose vite."
+    explication: "La publicité veut faire agir : « ne manquez pas » et la date limite poussent l'auditeur à acheter vite."
+
+  - type: exercice
+    enonce: "Dans la phrase « Il a enfin arrêté de mentir », quelle idée est présupposée ?"
+    forme: qcm
+    choix:
+      - "Il ment encore aujourd'hui."
+      - "Il mentait avant."
+      - "Il n'a jamais menti."
+      - "Il est en colère."
+    reponse: 1
+    indices:
+      - "Le verbe « arrêter » dit qu'une action est terminée."
+      - "Pour arrêter de faire quelque chose, il faut l'avoir fait."
+    explication: "« Arrêter de mentir » présuppose qu'il mentait auparavant. C'est une idée déjà admise dans la phrase."
+
+  - type: exercice
+    enonce: >-
+      Un élève écoute un exposé sur les abeilles. L'oratrice commence par : « Les abeilles sont
+      indispensables à nos cultures. » Elle cite ensuite le nom de son apiculteur et la couleur de ses
+      ruches. Puis elle termine : « Sans abeilles, beaucoup de fruits disparaîtraient. » Quelle est
+      l'information principale ?
+    forme: qcm
+    choix:
+      - "Le nom de l'apiculteur."
+      - "La couleur des ruches."
+      - "Les abeilles sont indispensables aux cultures."
+      - "L'oratrice aime le miel."
+    reponse: 2
+    indices:
+      - "L'idée essentielle est souvent dite au début et reprise à la fin."
+      - "Les noms et les couleurs sont des détails."
+    explication: "L'idée annoncée au début et reprise à la fin est l'information principale : les abeilles sont indispensables aux cultures. Le reste est secondaire."
+
+  - type: exercice
+    enonce: >-
+      Une élève regarde la pluie tomber le jour du pique-nique et dit, en soupirant : « Super, quel
+      temps magnifique ! » Comment s'appelle le procédé qui consiste à dire le contraire de ce qu'on
+      pense ? Réponds par un nom.
+    forme: reponse_courte
+    reponse: "ironie"
+    reponses_acceptees:
+      - "l'ironie"
+      - "une ironie"
+      - "Ironie"
+    indices:
+      - "Le soupir et la pluie contredisent les mots « super » et « magnifique »."
+      - "Ce mot est de la même famille que l'adjectif « ironique »."
+    explication: "C'est de l'ironie : les mots sont positifs, mais la pluie et le soupir montrent que l'élève est déçue."
+
+  - type: question_ouverte
+    question: >-
+      Un entraîneur dit à son équipe, après une défaite, d'un ton sec : « Bravo, on a vraiment tout donné
+      aujourd'hui ! » Explique en trois temps : ce qui est dit, ce qui est compris, et l'indice qui le
+      montre. Puis dis quelle est la visée de l'entraîneur.
+    indices:
+      - "L'équipe a-t-elle gagné ? Le ton est-il joyeux ?"
+      - "Suis les trois temps de la leçon, puis demande-toi ce que l'entraîneur veut obtenir de ses joueurs."
+    criteres:
+      - "L'élève distingue le sens des mots (des félicitations) et le vrai message (un reproche)."
+      - "L'élève nomme l'ironie et cite au moins un indice précis : le ton sec, la défaite."
+      - "L'élève propose une visée cohérente : faire réagir les joueurs, les pousser à faire mieux."
+
+  - type: synthese
+    consigne: >-
+      Écris avec tes mots, en trois phrases : ce qu'est la visée d'un discours, comment repérer
+      l'information principale, et comment on explique un implicite.

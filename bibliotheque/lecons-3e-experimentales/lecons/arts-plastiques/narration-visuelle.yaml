@@ -1,0 +1,149 @@
+notion: narration-visuelle
+titre: "La narration visuelle : raconter avec des images"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer un mouvement suggéré (image fixe) d'un mouvement réel (image animée)."
+      - "Utiliser les mots découpage, montage, séquence et ellipse."
+      - "Expliquer comment la taille et le nombre d'images changent le rythme d'un récit."
+
+  - type: texte
+    titre: "Une image seule peut suggérer le mouvement"
+    contenu: |-
+      Une image fixe peut **suggérer** un mouvement ou un temps :
+      - un **flou** ou des **lignes de vitesse** ;
+      - un personnage en **déséquilibre** ;
+      - le moment choisi **juste avant** l'action.
+      Exemple : dans *Nu descendant un escalier n° 2* (1912), Marcel Duchamp superpose plusieurs positions du corps.
+      Le mouvement est **réel** quand l'image bouge vraiment : vidéo, animation, objet qui bouge.
+
+  - type: texte
+    titre: "Plusieurs images à la suite : la séquence"
+    contenu: |-
+      Plusieurs images mises à la suite forment un **dispositif séquentiel** : bande dessinée, roman-photo, storyboard, film d'animation.
+      La **Tapisserie de Bayeux** (fin du XIe siècle, environ 70 m de long) raconte scène après scène la conquête de l'Angleterre en 1066.
+      En 1878, **Eadweard Muybridge** photographie un cheval au galop avec une série d'appareils : c'est la **chronophotographie**.
+      Une animation est une suite d'images fixes : à 12 images par seconde, il faut 12 images pour 1 seconde.
+
+  - type: texte
+    titre: "Découper, monter, sauter : le temps du récit"
+    contenu: |-
+      - **Découpage** : on divise l'histoire en moments.
+      - **Montage** : on choisit l'ordre et l'enchaînement des images.
+      - **Ellipse** : on saute un moment ; le spectateur le devine.
+      - **Rythme** : beaucoup de petites cases ou de plans courts **accélèrent** ; une grande image ou un plan long **ralentissent**.
+      Attention : la durée de l'histoire (des années) n'est pas la durée du récit (le temps de lecture).
+
+  - type: exemple
+    enonce: >-
+      Une BD fictive en trois cases. Case 1 : une fille met une lettre dans une boîte. Case 2 : un facteur
+      roule à vélo. Case 3 : une vieille dame ouvre la lettre et sourit. Analyse cette séquence.
+    etapes:
+      - "Dispositif : trois cases à la suite, donc une séquence (dispositif séquentiel)."
+      - "Découpage : trois moments clés, l'envoi, le transport, la lecture."
+      - "Ellipses : on ne voit ni le tri du courrier ni les jours de trajet. Le lecteur les devine."
+      - "Effet : le récit est court et rapide, et l'on comprend tout le voyage de la lettre."
+
+  - type: exercice
+    enonce: "Dans une bande dessinée, comment appelle-t-on chaque image encadrée ?"
+    forme: reponse_courte
+    reponse: "case"
+    reponses_acceptees:
+      - "case"
+      - "une case"
+      - "la case"
+      - "cases"
+      - "vignette"
+      - "une vignette"
+      - "vignettes"
+    indices:
+      - "Ce n'est pas la page entière : la page s'appelle une planche."
+      - "C'est le même mot que pour un carré d'un damier."
+    explication: "Chaque image encadrée est une case (ou vignette). La page entière est une planche."
+
+  - type: exercice
+    enonce: >-
+      Un film d'animation fictif tourne à 12 images par seconde. Combien d'images faut-il dessiner
+      pour une scène de 3 secondes ?
+    forme: nombre
+    reponse: 36
+    tolerance: 0
+    unite: "images"
+    indices:
+      - "Chaque seconde demande le même nombre d'images."
+      - "Multiplie le nombre d'images d'une seconde par le nombre de secondes."
+    explication: "12 images par seconde × 3 secondes = 36 images."
+
+  - type: exercice
+    enonce: >-
+      Dans un film, on voit un enfant planter un arbre. Le plan suivant montre un vieil homme assis sous
+      ce grand arbre. Comment s'appelle ce saut dans le temps ?
+    forme: reponse_courte
+    reponse: "ellipse"
+    reponses_acceptees:
+      - "ellipse"
+      - "une ellipse"
+      - "l'ellipse"
+      - "ellipse temporelle"
+      - "une ellipse temporelle"
+    indices:
+      - "Les années entre les deux plans ne sont pas montrées. Le spectateur les devine."
+      - "C'est aussi le nom d'une forme géométrique ovale."
+    explication: "C'est une ellipse : un moment n'est pas montré, le spectateur devine le temps écoulé."
+
+  - type: exercice
+    enonce: "Un auteur de BD veut accélérer le rythme d'une scène de poursuite. Que doit-il choisir ?"
+    forme: qcm
+    choix:
+      - "Une seule grande case sur toute la page"
+      - "Beaucoup de petites cases à la suite"
+      - "Des cases toutes identiques et très grandes"
+    reponse: 1
+    indices:
+      - "Pense à la vitesse de lecture : passe-t-on vite sur une petite image ?"
+      - "Une grande image ralentit le récit et installe la durée."
+    explication: "Beaucoup de petites cases font lire vite : le rythme s'accélère. Une grande case ralentit."
+
+  - type: exercice
+    enonce: >-
+      Pour créer un storyboard, un élève divise d'abord son histoire en dix moments. Ensuite, il choisit
+      dans quel ordre il va enchaîner les images. Comment s'appelle cette deuxième étape ?
+    forme: qcm
+    choix:
+      - "Le découpage"
+      - "Le montage"
+      - "Le cadrage"
+      - "La chronophotographie"
+    reponse: 1
+    indices:
+      - "La première étape, diviser l'histoire en moments, s'appelle le découpage."
+      - "Le cadrage choisit ce que montre une image, pas l'ordre des images."
+    explication: "Choisir l'ordre et l'enchaînement des images, c'est le montage. Diviser l'histoire en moments, c'est le découpage."
+
+  - type: question_ouverte
+    question: >-
+      Prépare le découpage d'une histoire en quatre images : « un élève rate son bus ». Décris chaque
+      image en une phrase. Place une ellipse et dis quel rythme tu donnes au récit.
+    indices:
+      - "Choisis un début, un moment fort et une fin. Quel moment sautes-tu ?"
+      - "Pour le rythme, pense à la taille des images : petites pour aller vite, grande pour ralentir."
+    criteres:
+      - "L'élève décrit quatre images dans un ordre lisible."
+      - "L'élève place une ellipse et dit ce que le spectateur doit deviner."
+      - "L'élève justifie le rythme (taille, nombre ou durée des images) par l'effet recherché."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre découpage et montage,
+      et ce qu'est une ellipse.

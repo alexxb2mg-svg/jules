@@ -1,0 +1,159 @@
+notion: theme-langages
+titre: "Langages : médias, codes culturels et arts dans le monde anglophone"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Langues vivantes (étrangères ou régionales) », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Lire un document en anglais (graphique, carte, logo, tableau) et repérer un code culturel."
+      - "Nommer les médias et comprendre une publicité (advert, slogan, social media)."
+      - "Nommer en anglais les langages artistiques et quelques monuments célèbres."
+
+  - type: texte
+    titre: "Lire un document et ses codes"
+    contenu: |-
+      - Les documents à lire : **graph** ou **chart** (graphique), **map** (carte), **table** (tableau), **logo**, schéma.
+      - Regarde d'abord le **titre**, la **légende** et les **unités**. Ensuite seulement, lis les détails.
+      - Cherche **où** et **quand** le document a été fait : un lieu, une époque.
+      - Code culturel : aux États-Unis, une date s'écrit **mois/jour/année**. En France, c'est jour/mois/année.
+      - Le drapeau des États-Unis a un nom : **the Stars and Stripes** (les étoiles et les bandes).
+
+  - type: texte
+    titre: "Médias et façons de communiquer"
+    contenu: |-
+      - **the media** : les médias (presse, télévision, radio).
+      - **social media** : les réseaux sociaux. On y publie et on y partage des messages.
+      - **an advert** : une publicité. Elle a peu de mots, une image, des couleurs et un **slogan** (phrase courte, facile à retenir).
+      - **a logo** : un dessin simple qui représente une marque.
+      - En classe, on lit aussi des extraits de **manuels scolaires** de pays anglophones.
+
+  - type: texte
+    titre: "Les langages artistiques"
+    contenu: |-
+      - **painting** : la peinture. **sculpture** : la sculpture.
+      - **music** et **songs** : la musique et les chansons. **poetry** : la poésie.
+      - **cinema** (ou **film**) et **theatre** : le cinéma et le théâtre.
+      - **literature** : la littérature. **science fiction** : la science-fiction.
+      - **a comic strip** : une bande dessinée courte.
+      - **architecture** : l'art de construire des bâtiments.
+
+  - type: texte
+    titre: "Monuments et méthode du brevet"
+    contenu: |-
+      - **a landmark** : un monument célèbre qui représente une ville ou un pays.
+      - Exemples : **Big Ben** à Londres, **the Statue of Liberty** (la statue de la Liberté) à New York.
+      - Au brevet, pour présenter un document : 1) sa nature (poster, advert, painting…) ; 2) ce que tu vois ; 3) le message principal.
+
+  - type: exemple
+    enonce: >-
+      Une affiche montre une plage, un grand soleil jaune et le slogan « Feel the sun! ». En bas, on
+      lit le logo d'une compagnie de trains. Présente ce document en trois phrases simples en anglais.
+    etapes:
+      - "Nature du document : c'est une publicité. Phrase 1 : « This is an advert for a train company. »"
+      - "Ce que je vois : une plage et un soleil. Phrase 2 : « I can see a beach and a big yellow sun. »"
+      - "Le message : le slogan donne envie de partir au soleil en train. Phrase 3 : « The message is: take the train to go on holiday in the sun. »"
+
+  - type: exercice
+    enonce: "Que veut dire le mot anglais « an advert » ?"
+    forme: qcm
+    choix:
+      - "Une publicité"
+      - "Un avertissement de la police"
+      - "Un article de journal"
+      - "Une carte de géographie"
+    reponse: 0
+    indices:
+      - "Pense aux affiches et aux petits films qui vendent un produit."
+      - "Ce mot va souvent avec un slogan et un logo."
+    explication: "« An advert » est une publicité : un message qui vend un produit ou une idée. Attention, ce n'est pas un « avertissement »."
+
+  - type: exercice
+    enonce: >-
+      Sur un site américain, tu lis la date « 11/03/2026 ». Écris en anglais le nom du mois de cette
+      date.
+    forme: reponse_courte
+    reponse: "November"
+    reponses_acceptees:
+      - "november"
+      - "Nov"
+      - "Nov."
+    indices:
+      - "Aux États-Unis, l'ordre est mois/jour/année. Quel nombre vient en premier ?"
+      - "Le mois est donc le numéro 11. Compte les mois en anglais à partir de January."
+      - "C'est l'avant-dernier mois de l'année."
+    explication: "Format américain : mois/jour/année. « 11/03/2026 » = mois 11 (November), jour 3. C'est donc le 3 novembre 2026, et pas le 11 mars."
+
+  - type: exercice
+    enonce: >-
+      Une histoire courte est racontée avec des dessins dans des cases et des bulles de dialogue.
+      Quel est son nom en anglais ?
+    forme: qcm
+    choix:
+      - "a painting"
+      - "a comic strip"
+      - "a poem"
+      - "a landmark"
+    reponse: 1
+    indices:
+      - "Ce n'est ni un tableau ni un monument."
+      - "En français, on dit « bande dessinée ». Le premier mot anglais fait penser à « comique »."
+    explication: "« A comic strip » est une bande dessinée courte. « A painting » est un tableau, « a poem » un poème, « a landmark » un monument célèbre."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on en anglais le drapeau des États-Unis ?"
+    forme: reponse_courte
+    reponse: "the Stars and Stripes"
+    reponses_acceptees:
+      - "Stars and Stripes"
+      - "stars and stripes"
+      - "the stars and stripes"
+      - "Stars & Stripes"
+    indices:
+      - "Le nom décrit simplement ce qu'on voit sur ce drapeau."
+      - "Traduis « étoiles » et « bandes » en anglais, puis relie les deux mots avec « and »."
+    explication: "Le drapeau américain s'appelle « the Stars and Stripes » : les étoiles et les bandes. Le drapeau britannique, lui, s'appelle l'Union Jack."
+
+  - type: exercice
+    enonce: >-
+      Lis ce graphique (chiffres imaginaires). Titre : « Favourite media of British teenagers ».
+      Social media : 50 %. Television : 20 %. Music streaming : 20 %. Newspapers : 10 %.
+      Quelle phrase est vraie ?
+    forme: qcm
+    choix:
+      - "Half of the teenagers prefer social media."
+      - "Most teenagers prefer newspapers."
+      - "Television is more popular than social media."
+      - "Nobody chooses music streaming."
+    reponse: 0
+    indices:
+      - "Commence par le titre : de qui et de quoi parle le graphique ?"
+      - "« Half » veut dire la moitié. Combien fait la moitié de 100 % ?"
+    explication: "50 % = la moitié. « Half of the teenagers prefer social media » est vrai. Les journaux n'ont que 10 %, la télévision (20 %) est moins choisie que les réseaux sociaux (50 %), et la musique a 20 %."
+
+  - type: question_ouverte
+    question: >-
+      Choisis un monument célèbre d'un pays anglophone (par exemple Big Ben ou la statue de la
+      Liberté). Écris trois phrases en anglais pour le présenter : son nom, la ville, et ce qu'il
+      représente pour toi ou pour le pays.
+    indices:
+      - "Phrase 1 : le nom et la ville. Par exemple : « This landmark is in London. »"
+      - "Phrase 2 : décris-le avec un adjectif (big, old, famous, tall). Phrase 3 : son sens (a symbol of…)."
+    criteres:
+      - "Les trois phrases sont en anglais, avec un sujet et un verbe conjugué."
+      - "Le monument et sa ville sont exacts (Big Ben à Londres, la statue de la Liberté à New York…)."
+      - "L'élève dit ce que le monument représente (symbole d'une ville, d'un pays, de la liberté…)."
+
+  - type: synthese
+    consigne: >-
+      Avec tes mots, en deux ou trois phrases : cite trois types de documents ou de médias en
+      anglais, deux langages artistiques, et un code culturel américain que tu dois connaître pour
+      bien lire un document.

@@ -1,0 +1,148 @@
+notion: types-rayonnements
+titre: "Les différents types de rayonnements"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Citer des rayonnements invisibles : ondes radio, infrarouge, ultraviolets, rayons X."
+      - "Associer chaque rayonnement à un usage et savoir lesquels sont dangereux."
+      - "Savoir que tous les rayonnements vont dans le vide à environ 300 000 km/s, et calculer une durée."
+
+  - type: texte
+    titre: "La lumière visible n'est qu'une petite partie"
+    contenu: |-
+      Un **rayonnement** transporte de l'énergie, même dans le vide.
+      L'œil ne voit que la **lumière visible** (du rouge au violet). Moins énergétiques que le rouge, et invisibles :
+      - **ondes radio** : radio, télévision, téléphone portable, wifi ;
+      - **micro-ondes** : four à micro-ondes ;
+      - **infrarouge** : télécommande, caméra thermique, chaleur d'un radiateur.
+
+  - type: texte
+    titre: "Les rayonnements les plus énergétiques"
+    contenu: |-
+      Après le violet viennent des rayonnements invisibles et plus énergétiques :
+      - **ultraviolets (UV)** : bronzage, coups de soleil. Protection : crème solaire, lunettes de soleil ;
+      - **rayons X** : radiographie. Les os les arrêtent plus que la chair. Protection : le plomb ;
+      - **rayons gamma** : émis par certains noyaux radioactifs.
+
+      Plus un rayonnement est énergétique, plus il peut être dangereux pour le corps.
+
+  - type: texte
+    titre: "Ce qu'ils ont en commun"
+    contenu: |-
+      Ordre du moins au plus énergétique : radio, micro-ondes, infrarouge, visible, UV, X, gamma.
+      - Tous sont de même nature que la lumière : ils se propagent **dans le vide**.
+      - Dans le vide, ils vont tous à environ **300 000 km/s**.
+      - Le **son** n'est pas un rayonnement : il ne traverse pas le vide.
+      - Durée d'un trajet : **t = d ÷ v** (d en km, v en km/s, t en s).
+
+  - type: exemple
+    enonce: >-
+      La lumière du Soleil parcourt environ 150 000 000 km pour arriver sur Terre. Elle va à environ
+      300 000 km/s. Combien de temps met-elle ? Le Soleil envoie-t-il seulement de la lumière visible ?
+    etapes:
+      - "On cherche une durée : t = d ÷ v."
+      - "t = 150 000 000 ÷ 300 000. On enlève 5 zéros en haut et en bas : 1 500 ÷ 3 = 500 s."
+      - "500 s, c'est environ 8 minutes et 20 secondes."
+      - "Le Soleil envoie aussi de l'infrarouge (on sent sa chaleur) et des ultraviolets (coups de soleil)."
+
+  - type: exercice
+    enonce: "Quel rayonnement utilise-t-on à l'hôpital pour faire une radiographie des os ?"
+    forme: qcm
+    choix:
+      - "les ondes radio"
+      - "l'infrarouge"
+      - "les rayons X"
+      - "la lumière visible"
+    reponse: 2
+    indices:
+      - "Ce rayonnement traverse la chair, mais il est arrêté en partie par les os."
+      - "Il est très énergétique : le manipulateur se protège derrière du plomb."
+    explication: "Une radiographie utilise des rayons X. Les os les arrêtent plus que la chair : l'image montre les os."
+
+  - type: exercice
+    enonce: >-
+      Quel rayonnement invisible, envoyé par le Soleil, provoque le bronzage et les coups de soleil ?
+    forme: reponse_courte
+    reponse: "ultraviolets"
+    reponses_acceptees:
+      - "ultraviolet"
+      - "les ultraviolets"
+      - "des ultraviolets"
+      - "rayons ultraviolets"
+      - "UV"
+      - "les UV"
+      - "rayons UV"
+    indices:
+      - "La crème solaire protège la peau contre ce rayonnement."
+      - "Il se trouve juste après le violet, du côté des rayonnements les plus énergétiques."
+    explication: "Ce sont les ultraviolets (UV). Ils sont invisibles et peuvent brûler la peau et abîmer les yeux."
+
+  - type: exercice
+    enonce: "Lequel de ces rayonnements notre œil peut-il voir ?"
+    forme: qcm
+    choix:
+      - "l'infrarouge d'une télécommande"
+      - "la lumière violette"
+      - "les ondes radio du wifi"
+      - "les rayons X"
+    reponse: 1
+    indices:
+      - "Un seul type de rayonnement est perçu par l'œil : la lumière visible."
+      - "La lumière visible va du rouge au violet, comme les couleurs de l'arc-en-ciel."
+    explication: "La lumière violette fait partie de la lumière visible. L'infrarouge, les ondes radio et les rayons X sont invisibles."
+
+  - type: exercice
+    enonce: "Quelle liste est rangée du MOINS énergétique au PLUS énergétique ?"
+    forme: qcm
+    choix:
+      - "rayons X, ultraviolets, lumière visible, infrarouge, ondes radio"
+      - "ondes radio, infrarouge, lumière visible, ultraviolets, rayons X"
+      - "lumière visible, ondes radio, rayons X, infrarouge, ultraviolets"
+      - "infrarouge, ondes radio, ultraviolets, lumière visible, rayons X"
+    reponse: 1
+    indices:
+      - "Place la lumière visible au milieu. « Infra » veut dire « en dessous », « ultra » veut dire « au-delà »."
+      - "Les ondes radio nous traversent sans danger. Les rayons X sont dangereux. Où mettre chacun ?"
+    explication: "Ordre : ondes radio, infrarouge, lumière visible, ultraviolets, rayons X. La première liste est dans l'ordre inverse."
+
+  - type: exercice
+    enonce: >-
+      Un signal radio est envoyé vers un satellite situé à 36 000 km. Les ondes radio vont à environ
+      300 000 km/s. Calcule la durée du trajet, en secondes, en écriture décimale.
+    forme: nombre
+    reponse: 0.12
+    tolerance: 0.001
+    unite: "s"
+    indices:
+      - "Tu connais la distance et la vitesse. Quelle relation donne la durée ?"
+      - "t = d ÷ v, avec d en km et v en km/s : le résultat est en secondes."
+      - "Simplifie d'abord par 1 000 : 36 ÷ 300."
+    explication: "t = d ÷ v = 36 000 ÷ 300 000 = 36 ÷ 300 = 0,12 s. Le signal arrive en un peu plus d'un dixième de seconde."
+
+  - type: question_ouverte
+    question: >-
+      Pendant une radiographie, le manipulateur se met à l'abri derrière une paroi. Personne ne se
+      protège de la lumière d'une lampe. Explique pourquoi.
+    indices:
+      - "Quel rayonnement utilise-t-on pour une radiographie ?"
+      - "Compare ce rayonnement à la lumière visible : lequel transporte le plus d'énergie ?"
+    criteres:
+      - "L'élève dit que la radiographie utilise des rayons X, un rayonnement invisible."
+      - "L'élève explique que les rayons X transportent beaucoup plus d'énergie que la lumière visible et peuvent être dangereux, surtout si on y est exposé souvent."
+      - "L'élève indique que la protection (paroi, tablier de plomb) arrête ces rayons."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, trois rayonnements invisibles avec
+      leur usage, lesquels sont dangereux, et ce que tous les rayonnements ont en commun.

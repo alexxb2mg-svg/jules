@@ -1,0 +1,144 @@
+notion: numerique-processus-materiau
+titre: "Le numérique : outil, processus et matériau de l'artiste"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer les trois rôles du numérique en arts plastiques : outil, processus, matériau."
+      - "Expliquer un dialogue entre pratique traditionnelle et pratique numérique."
+      - "Porter un regard critique sur l'énergie consommée par le numérique."
+
+  - type: texte
+    titre: "Trois rôles du numérique"
+    contenu: |-
+      - **Outil** : une tablette ou un logiciel remplace le crayon. David Hockney dessine sur iPhone puis sur iPad depuis la fin des années 2000.
+      - **Processus** : l'artiste écrit des règles (un **algorithme**, dans un langage de programmation) et la machine produit l'image. Vera Molnar crée dès 1968 des dessins avec un ordinateur.
+      - **Matériau** : le **pixel**, la lumière de l'écran, le fichier, et même le bug d'affichage (le **glitch**) deviennent le sujet de l'œuvre.
+      Attention : l'ordinateur ne crée pas seul. L'artiste choisit les règles et les résultats.
+
+  - type: texte
+    titre: "Ce que permet le numérique, et le dialogue avec la main"
+    contenu: |-
+      Le numérique permet de **répéter**, **annuler**, **superposer des calques**, copier, transformer et diffuser largement.
+      Traditionnel et numérique ne s'opposent pas. Un aller-retour possible :
+      dessin à l'encre → **numériser** (scanner) → transformer dans un logiciel → imprimer → reprendre à la main.
+      Une image numérique est faite de pixels. La **résolution** est leur nombre : plus elle est grande, plus le fichier est lourd.
+
+  - type: texte
+    titre: "Le numérique n'est pas immatériel"
+    contenu: |-
+      Fabriquer les appareils utilise des métaux.
+      Stocker, envoyer et calculer des images consomme de l'électricité (ordinateurs, serveurs).
+      Un regard critique, c'est se demander :
+      - le numérique est-il utile à mon projet ?
+      - ma résolution est-elle adaptée ? Est-ce que j'évite les copies et envois inutiles ?
+
+  - type: exemple
+    enonce: >-
+      Production fictive : Léo écrit un petit programme qui trace 100 cercles de tailles tirées au hasard.
+      Il imprime le résultat, puis colorie certains cercles aux crayons de couleur. Analyse sa démarche.
+    etapes:
+      - "Le programme suit des règles écrites par Léo : le numérique est ici un processus."
+      - "Le hasard fait partie des règles, mais c'est Léo qui a choisi ces règles."
+      - "En imprimant puis en coloriant à la main, il fait dialoguer pratique numérique et pratique traditionnelle."
+      - "Regard critique : une seule impression suffit, inutile d'en tirer des dizaines d'essais."
+
+  - type: exercice
+    enonce: "Comment s'appelle le plus petit élément d'une image numérique, un petit carré d'une seule couleur ?"
+    forme: reponse_courte
+    reponse: "pixel"
+    reponses_acceptees:
+      - "pixel"
+      - "pixels"
+      - "un pixel"
+      - "le pixel"
+      - "les pixels"
+    indices:
+      - "Si tu agrandis beaucoup une photo sur un écran, tu vois apparaître de petits carrés."
+      - "Le mot vient de l'anglais « picture element »."
+    explication: "C'est le pixel. Une image numérique est une mosaïque de pixels, visibles quand on l'agrandit beaucoup."
+
+  - type: exercice
+    enonce: "Une artiste dessine un paysage sur une tablette, comme elle le ferait au crayon. Quel rôle joue le numérique ?"
+    forme: qcm
+    choix:
+      - "Un outil"
+      - "Un processus"
+      - "Un matériau"
+    reponse: 0
+    indices:
+      - "La tablette remplace-t-elle un instrument, ou devient-elle ce qu'on regarde ?"
+      - "Ici, personne n'écrit de règles pour la machine : c'est la main qui dessine."
+    explication: "La tablette remplace le crayon : le numérique est un outil."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on une suite de règles précises qu'une machine peut suivre pour produire un
+      résultat, par exemple un dessin ?
+    forme: reponse_courte
+    reponse: "algorithme"
+    reponses_acceptees:
+      - "algorithme"
+      - "un algorithme"
+      - "l'algorithme"
+      - "algorithmes"
+      - "algorythme"
+    indices:
+      - "C'est le cœur du numérique comme processus, chez Vera Molnar par exemple."
+      - "Le mot commence par « algo »."
+    explication: "Un algorithme est une suite de règles précises suivie par une machine."
+
+  - type: exercice
+    enonce: "Pour un projet en classe, quelle pratique réduit l'énergie consommée par le numérique ?"
+    forme: qcm
+    choix:
+      - "Garder en ligne toutes les versions de tous les fichiers « au cas où »"
+      - "Envoyer une vidéo très haute définition à toute la classe après chaque essai"
+      - "Choisir une résolution adaptée et supprimer les doublons"
+    reponse: 2
+    indices:
+      - "Stocker en ligne fait tourner des serveurs jour et nuit."
+      - "Un fichier lourd, stocké et envoyé souvent, consomme plus d'électricité."
+    explication: "Une résolution adaptée et moins de doublons réduisent les données stockées et envoyées, donc l'énergie consommée."
+
+  - type: exercice
+    enonce: >-
+      Tom photographie une feuille d'arbre, l'agrandit jusqu'à voir de gros carrés de couleur, puis fait de
+      ces carrés le sujet d'une grande peinture à la gouache. Quels rôles joue le numérique ?
+    forme: qcm
+    choix:
+      - "Seulement un outil"
+      - "Un outil (photo, agrandissement), puis un matériau (les pixels deviennent le sujet)"
+      - "Un processus seulement, car un programme peint à sa place"
+    reponse: 1
+    indices:
+      - "Regarde chaque étape : la photo, puis ce que Tom peint."
+      - "Les petits carrés de l'image deviennent ce que l'on regarde dans l'œuvre."
+    explication: "Le numérique est d'abord un outil (photographier, agrandir), puis un matériau : les pixels deviennent le sujet de la peinture. La gouache crée un dialogue avec la pratique traditionnelle."
+
+  - type: question_ouverte
+    question: >-
+      Imagine une production qui passe du papier à l'écran puis revient au papier. Décris ses étapes,
+      dis quel rôle joue le numérique, et donne un geste pour limiter l'énergie consommée.
+    indices:
+      - "Suis le trajet de l'image : papier, écran, papier."
+      - "Pense à la résolution, au nombre de fichiers gardés et d'impressions."
+    criteres:
+      - "L'élève décrit dans l'ordre au moins trois étapes, avec un passage par l'écran et un passage par la main."
+      - "L'élève nomme le rôle du numérique (outil, processus ou matériau) et le justifie."
+      - "L'élève propose un geste réaliste de sobriété numérique."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois rôles du numérique en arts
+      plastiques, avec un exemple pour l'un d'eux.

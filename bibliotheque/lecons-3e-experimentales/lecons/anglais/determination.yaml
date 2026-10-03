@@ -1,0 +1,135 @@
+notion: determination
+titre: "Les articles et les quantifieurs en anglais"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) - partie « Langues vivantes (étrangères ou régionales) » - BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir entre a, an, the ou pas d'article devant un nom."
+      - "Choisir entre some, any et no selon le type de phrase."
+      - "Choisir entre much, many, a few, a little et a lot of selon le nom."
+
+  - type: texte
+    titre: "A ou an ? On écoute le son"
+    contenu: |-
+      **A** et **an** veulent dire « un » ou « une ». On regarde le **son**, pas la lettre.
+      - **a** devant un son de consonne : a dog, a university (on entend « you »).
+      - **an** devant un son de voyelle : an apple, an hour (le h ne se prononce pas).
+      On les utilise avec un nom **singulier** que l'on cite **pour la première fois**.
+
+  - type: texte
+    titre: "The ou pas d'article ?"
+    contenu: |-
+      - **the** : une chose **précise** ou **déjà connue**. I bought a pen. **The** pen is blue.
+      - **pas d'article (Ø)** : un sens **général**, avec un pluriel ou un nom qu'on ne compte pas.
+      - Exemples : I like music. Dogs are loyal.
+      Attention : en français on dit « J'aime **la** musique », en anglais on dit « I like music ».
+
+  - type: texte
+    titre: "Some, any, no : selon la phrase"
+    contenu: |-
+      Ces quantifieurs disent « combien ».
+      - **some** : phrase affirmative. I have some apples.
+      - **any** : phrase négative ou question. I don't have any apples. Have you got any apples?
+      - **no** : « aucun », avec un verbe affirmatif. I have no apples.
+
+  - type: texte
+    titre: "Much, many, a few, a little : le nom se compte-t-il ?"
+    contenu: |-
+      | Nom qu'on compte (apples) | Nom qu'on ne compte pas (water, money) |
+      |---|---|
+      | many apples (beaucoup) | much water (beaucoup) |
+      | a few apples (quelques) | a little water (un peu de) |
+      **a lot of** marche avec les deux : a lot of apples, a lot of water.
+
+  - type: exemple
+    enonce: "Complète : « At the zoo, I saw ___ elephant and ___ monkeys. ___ elephant was very big. »"
+    etapes:
+      - "Premier trou : « elephant » commence par un son de voyelle, et on le cite pour la première fois : an elephant."
+      - "Deuxième trou : « monkeys » est un pluriel, dans une phrase affirmative : some monkeys."
+      - "Troisième trou : on reparle du même éléphant, il est déjà connu : The elephant."
+      - "Phrase complète : « At the zoo, I saw an elephant and some monkeys. The elephant was very big. »"
+
+  - type: exercice
+    enonce: "Complète avec a ou an : « I eat ___ orange every morning. » Écris un seul mot."
+    forme: reponse_courte
+    reponse: "an"
+    reponses_acceptees: []
+    indices:
+      - "Dis le mot « orange » à voix haute. Par quel son commence-t-il ?"
+      - "Le son « o » est un son de voyelle. Quel article va devant un son de voyelle ?"
+    explication: "« Orange » commence par un son de voyelle, donc on écrit « an orange »."
+
+  - type: exercice
+    enonce: "Choisis le bon mot : « There isn't ___ milk in the fridge. »"
+    forme: qcm
+    choix:
+      - "some"
+      - "any"
+      - "many"
+    reponse: 1
+    indices:
+      - "Regarde le verbe : « isn't ». La phrase est-elle affirmative ou négative ?"
+      - "« Milk » se compte-t-il ? Peut-on dire « two milks » ?"
+    explication: "La phrase est négative (isn't), donc on utilise « any ». « Many » ne va pas : « milk » ne se compte pas."
+
+  - type: exercice
+    enonce: "Complète la question avec much ou many : « How ___ sugar do you want in your tea? » Écris un seul mot."
+    forme: reponse_courte
+    reponse: "much"
+    reponses_acceptees: []
+    indices:
+      - "Peut-on compter le sucre en poudre : « one sugar, two sugars » ?"
+      - "Avec un nom qu'on ne compte pas, on n'utilise pas « many »."
+    explication: "« Sugar » (le sucre en poudre) ne se compte pas. On dit donc « How much sugar...? »."
+
+  - type: exercice
+    enonce: "Choisis le bon début : « Yesterday I bought a T-shirt and a cap. ___ T-shirt is red. »"
+    forme: qcm
+    choix:
+      - "A"
+      - "The"
+      - "Pas d'article (Ø)"
+    reponse: 1
+    indices:
+      - "Ce T-shirt, est-ce la première fois qu'on en parle ?"
+      - "Quand une chose est déjà connue, on utilise l'article défini."
+    explication: "On a déjà parlé de ce T-shirt dans la première phrase. Il est connu et précis, donc « The T-shirt is red »."
+
+  - type: exercice
+    enonce: "Niveau brevet. Quelle phrase est correcte ?"
+    forme: qcm
+    choix:
+      - "I have a few money for the cinema."
+      - "I have a little money for the cinema."
+      - "I have many money for the cinema."
+      - "I have any money for the cinema."
+    reponse: 1
+    indices:
+      - "« Money » se compte-t-il ? Peut-on dire « two moneys » ?"
+      - "Avec un nom qu'on ne compte pas, quel mot veut dire « un peu de » ? Pense aussi au type de phrase."
+    explication: "« Money » ne se compte pas : on dit « a little money » (un peu d'argent). « A few » et « many » vont avec un nom qu'on compte. « Any » ne va pas dans une phrase affirmative."
+
+  - type: question_ouverte
+    question: "Explique avec tes mots comment tu choisis entre « some » et « any ». Donne un exemple en anglais pour chacun."
+    indices:
+      - "Regarde le type de phrase : affirmative, négative ou question."
+      - "Écris une phrase sur ce qu'il y a dans ton sac, puis une phrase sur ce qu'il n'y a pas."
+    criteres:
+      - "L'élève dit que « some » va dans une phrase affirmative."
+      - "L'élève dit que « any » va dans une phrase négative ou une question."
+      - "Les deux exemples en anglais sont corrects."
+
+  - type: synthese
+    consigne: >-
+      En deux ou trois phrases, avec tes mots : comment choisis-tu entre a et an ? entre much
+      et many ? Donne un exemple anglais de ton choix pour chaque règle.

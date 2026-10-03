@@ -1,0 +1,157 @@
+notion: presenter-justifier-choix
+titre: "Présenter et justifier ses choix en musique"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Présenter un choix d'interprétation ou de création et dire l'effet recherché."
+      - "Justifier un avis sur une œuvre avec ce qu'on entend."
+      - "Défendre un point de vue dans un débat et répondre à une objection."
+
+  - type: texte
+    titre: "Présenter et justifier un choix"
+    contenu: |-
+      **Présenter** un choix, c'est dire ce qu'on a décidé.
+      **Justifier**, c'est dire **pourquoi** : on nomme l'**effet recherché** sur l'auditeur.
+      Le schéma : **le choix**, puis **l'effet**, puis si possible **un exemple précis**.
+      « Nous chantons le couplet pianissimo (choix) pour créer une ambiance intime (effet). »
+      Mots utiles : **parce que**, **pour que**, **afin de**, **c'est pourquoi**.
+
+  - type: texte
+    titre: "Sur quoi portent les choix ?"
+    contenu: |-
+      **Interprétation** (on joue une œuvre qui existe) : tempo, nuances, timbre (quelles voix, quels instruments).
+      Aussi : qui chante en soliste, quand tout le groupe reprend (tutti), l'articulation.
+      **Création** (on invente une pièce) : en plus, la forme et les procédés (ostinato, canon).
+      On peut aussi faire référence à une œuvre ou à un style.
+
+  - type: texte
+    titre: "Avis, argument, point de vue"
+    contenu: |-
+      « C'est beau » est un **avis** : ce qu'on pense.
+      « Le volume grandit peu à peu, ce qui crée de la tension » est un **argument** : il s'appuie sur ce qu'on entend.
+      Un **point de vue** défendu = un avis + au moins un argument.
+      On ne justifie pas par la célébrité de l'œuvre ni par l'habitude.
+      Dans un débat : on écoute l'**objection**, on la reformule, on répond. On ne critique jamais la personne.
+
+  - type: texte
+    titre: "Le plan d'une présentation orale"
+    contenu: |-
+      1. Annoncer l'œuvre : titre, auteur, style ou époque.
+      2. Présenter les choix.
+      3. Expliquer l'effet recherché.
+      4. Conclure.
+      On parle clairement, sans lire, en regardant le public.
+
+  - type: exemple
+    enonce: >-
+      Ta classe a décidé de terminer son chant en ralentissant le tempo et en baissant le
+      volume peu à peu. Présente et justifie ce choix.
+    etapes:
+      - "Le choix, avec le mot juste : « Sur les dernières mesures, nous ralentissons le tempo et nous faisons un decrescendo. »"
+      - "L'effet recherché : « pour que le public sente clairement que la chanson se termine, dans le calme. »"
+      - "Une image ou un exemple précis : « comme une lumière qui s'éteint doucement. »"
+
+  - type: exercice
+    enonce: "Quelle phrase présente ET justifie un choix d'interprétation ?"
+    forme: qcm
+    choix:
+      - "Nous chantons le dernier refrain forte."
+      - "Nous chantons le dernier refrain forte pour donner une impression de fête finale."
+      - "Nous chantons le dernier refrain forte parce qu'on aime bien."
+    reponse: 1
+    indices:
+      - "Quelle phrase dit ce qui est fait ET l'impression que cela produit sur le public ?"
+      - "« On aime bien » parle de ton goût, pas de l'effet sur l'auditeur."
+    explication: "La deuxième phrase donne le choix (forte) et l'effet recherché (une fête finale). La première ne justifie pas. La troisième parle seulement de goût."
+
+  - type: exercice
+    enonce: >-
+      Un élève dit : « Ce morceau est beau. » Est-ce un avis ou un argument ? Réponds par un
+      seul mot.
+    forme: reponse_courte
+    reponse: "avis"
+    reponses_acceptees:
+      - "avis"
+      - "un avis"
+      - "c'est un avis"
+      - "l'avis"
+    indices:
+      - "Un argument s'appuie sur quelque chose qu'on entend dans la musique. Est-ce le cas ici ?"
+      - "La phrase dit seulement ce que l'élève pense, sans raison."
+    explication: "C'est un avis : il dit ce que l'élève pense. Pour en faire un point de vue, il faut ajouter un argument tiré de l'écoute."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on l'impression que l'on veut produire chez l'auditeur (calme,
+      tension, surprise, joie…) ?
+    forme: reponse_courte
+    reponse: "effet recherché"
+    reponses_acceptees:
+      - "effet recherché"
+      - "l'effet recherché"
+      - "un effet recherché"
+      - "effet recherche"
+      - "effet"
+      - "l'effet"
+    indices:
+      - "C'est la deuxième partie du schéma : le choix, puis…"
+      - "On le présente souvent avec « pour que… » ou « afin de… »."
+    explication: "C'est l'effet recherché. Une justification relie toujours le choix à cet effet sur l'auditeur."
+
+  - type: exercice
+    enonce: >-
+      Dans un débat, Léa dit : « Le Boléro de Ravel est ennuyeux, c'est toujours la même
+      chose. » Quelle réponse défend un autre point de vue de la bonne manière ?
+    forme: qcm
+    choix:
+      - "Tu n'y connais rien en musique."
+      - "C'est vrai que la mélodie revient, mais les instruments changent à chaque fois et le volume grandit jusqu'à la fin : ça crée de la tension."
+      - "Il est très célèbre, donc il est forcément bien."
+    reponse: 1
+    indices:
+      - "Une bonne réponse critique-t-elle la personne ou parle-t-elle de la musique ?"
+      - "La célébrité d'une œuvre n'est pas un argument. Cherche ce qu'on entend."
+    explication: "La deuxième réponse reprend l'objection de Léa, puis y répond avec des arguments entendus (timbres qui changent, crescendo). La première attaque la personne ; la troisième s'appuie sur la célébrité."
+
+  - type: exercice
+    enonce: >-
+      Tu présentes ton projet à la classe. Quel ordre suit le plan d'une présentation orale ?
+    forme: qcm
+    choix:
+      - "Expliquer l'effet recherché, conclure, annoncer l'œuvre, présenter les choix."
+      - "Annoncer l'œuvre, présenter les choix, expliquer l'effet recherché, conclure."
+      - "Présenter les choix, conclure, annoncer l'œuvre, expliquer l'effet recherché."
+    reponse: 1
+    indices:
+      - "Le public doit d'abord savoir de quelle œuvre tu parles."
+      - "On dit ce qu'on a choisi avant de dire pourquoi."
+    explication: "On annonce l'œuvre (titre, auteur, style), on présente les choix, on explique l'effet recherché, puis on conclut."
+
+  - type: question_ouverte
+    question: >-
+      Ta classe va chanter une berceuse traditionnelle devant les autres élèves. Propose
+      deux choix d'interprétation (par exemple tempo, nuance, timbre) et justifie chacun
+      par l'effet recherché, en trois ou quatre phrases.
+    indices:
+      - "Une berceuse sert à endormir un enfant. Quelle vitesse et quel volume conviennent ?"
+      - "Pour chaque choix, utilise le schéma : le choix, puis « pour que… », puis un exemple."
+    criteres:
+      - "L'élève nomme deux choix avec le vocabulaire musical (tempo lent, nuance piano, une voix soliste…)."
+      - "Chaque choix est justifié par un effet sur l'auditeur (calme, douceur, intimité), avec un connecteur."
+      - "Les phrases sont construites et ne se limitent pas au goût (« parce qu'on aime »)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, comment on justifie un choix
+      musical, et la différence entre un avis et un argument.
