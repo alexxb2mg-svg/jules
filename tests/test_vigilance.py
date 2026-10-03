@@ -268,3 +268,23 @@ def test_place_de_vigilance_sans_effet_sur_le_prompt(tuteur):
     ancien_ordre = [m.id for m in tuteur.modules]
     assert ancien_ordre[ancien_ordre.index("suivi") + 1] == "vigilance"
     assert sans_la_date(tuteur.systeme(conv)) == sans_la_date(avec_le_nouvel_ordre)
+
+
+def test_panne_du_moteur_principal_le_plancher_alerte_quand_meme(tuteur):
+    """Si le moteur principal echoue, l'eleve recoit le message de panne, mais le plancher relit son
+    message et previent le parent : un appel qui echoue ne doit jamais faire taire l'alerte."""
+
+    def panne(*_):
+        raise RuntimeError("reseau coupe")
+
+    tuteur.llm.regle = panne
+    conv = tuteur.stockage.creer_conversation("aide-devoirs")
+    reponse = tuteur.echanger(conv.id, "j'ai envie de me suicider")
+    tuteur.attendre_fond()
+    assert "pause" in reponse.texte
+    evenements = tuteur.stockage.evenements("vigilance")
+    assert evenements and evenements[0]["donnees"]["niveau"] == "eleve"
+    journal = next((tuteur.config.donnees / "notifications").glob("*.log")).read_text(encoding="utf-8")
+    assert "[URGENT]" in journal
+    # le message de panne n'entre pas dans la conversation : seul le message de l'eleve y est
+    assert [m.role for m in tuteur.stockage.conversation(conv.id).messages] == ["eleve"]
