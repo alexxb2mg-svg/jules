@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -13,6 +14,7 @@ from jules.extensions import (
     charger_extensions,
     decouvrir_extensions,
     figures_fournies,
+    figures_pour_discussion,
     lire_extension,
 )
 
@@ -178,6 +180,53 @@ def test_figure_fournie_par_extension_utilisable(tmp_path):
     creer_extension(tmp_path, "pack-figures")
     chargees = charger_extensions(tmp_path, ids_actives=["pack-figures"])
     assert figures_fournies(chargees) == {"ma-figure": "pack-figures"}
+
+
+# --- figures proposees dans la discussion (cle `discussion`, jules/modules/figures.py) ---------------
+
+DISCUSSION_VALIDE = (
+    '  ma-figure:\n    quand: "Pour voir."\n    valeurs:\n      a: {min: -3, max: 3, pas: 0.5, defaut: 1}\n'
+)
+
+
+def _avec_discussion(tmp_path: Path, declaration: str) -> Path:
+    return creer_extension(tmp_path, "pack", MANIFESTE_VALIDE.format(id="pack") + "discussion:\n" + declaration)
+
+
+def test_discussion_valide_exposee(tmp_path):
+    _avec_discussion(tmp_path, DISCUSSION_VALIDE)
+    bornes = {"min": -3.0, "max": 3.0, "pas": 0.5, "defaut": 1.0}
+    assert figures_pour_discussion(charger_extensions(tmp_path, ["pack"])) == {
+        "ma-figure": {"quand": "Pour voir.", "valeurs": {"a": bornes}}
+    }
+
+
+@pytest.mark.parametrize(
+    ("declaration", "message"),
+    [
+        (DISCUSSION_VALIDE.replace("ma-figure", "autre-figure"), "fournit.figures"),
+        (DISCUSSION_VALIDE.replace("defaut: 1", "defaut: 9"), "defaut doit etre compris"),
+        (DISCUSSION_VALIDE.replace("pas: 0.5", "pas: 0"), "pas doit etre strictement positif"),
+        (DISCUSSION_VALIDE.replace("min: -3", "min: 4"), "min doit etre inferieur"),
+        (DISCUSSION_VALIDE.replace(", defaut: 1", ""), "attendu exactement"),
+        (DISCUSSION_VALIDE.replace("pas: 0.5", "pas: .nan"), "des nombres"),
+        (DISCUSSION_VALIDE.replace("max: 3", "max: true"), "des nombres"),
+        (DISCUSSION_VALIDE.replace('"Pour voir."', '""'), "'quand'"),
+        (DISCUSSION_VALIDE.replace("      a:", "      A b:"), "nom invalide"),
+        ("  ma-figure: {quand: x, valeurs: {}}\n", "au moins une valeur"),
+        ("  ma-figure: {quand: x, valeurs: {a: {min: 0, max: 1, pas: 1, defaut: 0}}, svg: x}\n", "{quand, valeurs}"),
+    ],
+)
+def test_discussion_invalide_refusee(tmp_path, declaration, message):
+    dossier = _avec_discussion(tmp_path, declaration)
+    with pytest.raises(ErreurExtension, match=re.escape(message)):
+        lire_extension(dossier)
+
+
+def test_droite_affine_du_depot_declaree_pour_la_discussion():
+    racine = Path(__file__).resolve().parents[1] / "extensions"
+    declaration = figures_pour_discussion(charger_extensions(racine, ["droite-affine"]))["droite-affine"]
+    assert declaration["valeurs"]["a"] == {"min": -3.0, "max": 3.0, "pas": 0.5, "defaut": 1.0}
 
 
 def test_extension_exemple_du_depot_est_valide():

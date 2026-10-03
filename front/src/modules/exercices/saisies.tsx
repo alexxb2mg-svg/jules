@@ -33,7 +33,7 @@ function Libre({ exercice, bloque, onRepondre }: PropsSaisie) {
       <div className="flex flex-wrap gap-2">
         <input value={texte} onChange={(e) => setTexte(e.target.value)} disabled={bloque} autoComplete="off" spellCheck={exercice.type === "texte_court"}
           aria-label="Ta réponse" placeholder="Ta réponse"
-          className="min-w-0 flex-1 rounded-2xl border-2 border-bord bg-white px-4 py-2.5 text-[1.05rem] outline-none focus:border-(--m-accent)" />
+          className="min-w-0 flex-1 rounded-2xl border-2 border-bord bg-card px-4 py-2.5 text-[1.05rem] outline-none focus:border-(--m-accent)" />
         <Valider actif={!!texte.trim() && !bloque} onClick={envoyer} />
       </div>
       {exercice.aide_format && <p className="m-0 text-[0.85rem] text-gris">{exercice.aide_format}</p>}
@@ -60,7 +60,7 @@ function Choix({ exercice, bloque, onRepondre }: PropsSaisie) {
             <motion.button key={o.id} type="button" disabled={bloque} onClick={() => basculer(o.id)}
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.04 }}
               whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} aria-pressed={on}
-              className={cn("flex items-start gap-3 rounded-2xl border-2 bg-white px-4 py-3 text-left text-[0.98rem] leading-snug transition-colors",
+              className={cn("flex items-start gap-3 rounded-2xl border-2 bg-card px-4 py-3 text-left text-[0.98rem] leading-snug transition-colors",
                 on ? "border-(--m-accent) bg-(--m-fond)" : "border-bord hover:border-(--m-accent)/50")}>
               <span className={cn("grid size-7 shrink-0 place-items-center rounded-full text-[0.85rem] font-bold uppercase",
                 on ? "bg-(--m-accent) text-white" : "bg-nav text-(--m-texte)")}>{o.id}</span>
@@ -88,7 +88,7 @@ function Ordre({ exercice, bloque, onRepondre }: PropsSaisie) {
       <Reorder.Group axis="y" values={liste} onReorder={setListe} className="m-0 flex list-none flex-col gap-2 p-0">
         {liste.map((e, i) => (
           <Reorder.Item key={e.id} value={e} dragListener={!bloque}
-            className="flex cursor-grab items-center gap-3 rounded-2xl border-2 border-bord bg-white px-3 py-2.5 active:cursor-grabbing"
+            className="flex cursor-grab items-center gap-3 rounded-2xl border-2 border-bord bg-card px-3 py-2.5 active:cursor-grabbing"
             whileDrag={{ scale: 1.02, boxShadow: "var(--shadow-relief-haut)" }}>
             <GripVertical size={18} className="shrink-0 text-gris" aria-hidden />
             <span className="grid size-7 shrink-0 place-items-center rounded-full bg-(--m-fond) text-[0.85rem] font-bold text-(--m-texte)">{i + 1}</span>
@@ -115,7 +115,7 @@ function Association({ exercice, bloque, onRepondre }: PropsSaisie) {
     <div className="flex flex-col gap-3">
       <div className="flex flex-col gap-2">
         {gauche.map((g) => (
-          <div key={g.id} className="flex flex-col gap-2 rounded-2xl border-2 border-bord bg-white px-4 py-3">
+          <div key={g.id} className="flex flex-col gap-2 rounded-2xl border-2 border-bord bg-card px-4 py-3">
             <span className="text-[0.98rem] leading-snug font-medium"><Riche texte={g.texte} /></span>
             <div className="flex shrink-0 flex-wrap gap-1.5" role="radiogroup" aria-label={g.texte}>
               {droite.map((d) => {

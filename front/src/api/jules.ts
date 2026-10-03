@@ -78,6 +78,25 @@ export const epreuve = {
   commencer: () => api<{ id: string; mode: string; titre: string; presentation: string }>("/api/eleve/epreuve/commencer", { method: "POST" }),
 }
 
+/* ---- recherche des notions (barre latérale) : index complet du référentiel, sans IA ---- */
+// Forme : jules/modules/notions.py index_recherche() (GET /api/eleve/notions/index).
+
+export type NotionRecherche = {
+  id: string; titre: string; chapitre: string; matiere: string; nom_matiere: string; niveau: string
+  /** Fiche visuelle disponible (« Mes fiches »). */
+  fiche: boolean
+  /** Leçon à blocs disponible (module cours). */
+  lecon: boolean
+  mots_cles: string[]
+}
+
+let indexNotions: Promise<NotionRecherche[]> | null = null
+export const rechercheNotions = {
+  /** Toutes les notions du référentiel ; une seule requête pour toute la session de la page. */
+  index: () => (indexNotions ??= api<{ notions: NotionRecherche[] }>("/api/eleve/notions/index")
+    .then((r) => r.notions).catch((e) => { indexNotions = null; throw e })),
+}
+
 export const notionsTravaillees = {
   lire: (convId: string) => api<{ notion: { id: string; titre: string; matiere: string; origine?: string } | null }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`),
   choisir: (convId: string, notionId: string) => api<{ notion: { id: string; titre: string; matiere: string } }>(`/api/eleve/notions/conversations/${encodeURIComponent(convId)}`, json({ notion: notionId }, "PUT")),
@@ -195,7 +214,7 @@ export type Lecon = {
 export type Session = { session: string; conversation: string; lecon: Lecon; progression: Progression }
 export type Tentative = { juste: boolean | null; tentatives: number; explication: string | null; jules: string | null; progression: Progression }
 
-export type NotionParcours = { id: string; titre: string; chapitre: string; etat: string; lecon: boolean }
+export type NotionParcours = { id: string; titre: string; chapitre: string; etat: string; lecon: boolean; duree_minutes?: number }
 export type Parcours = { matieres: { id: string; nom: string }[]; matiere: string; notions: NotionParcours[]; estimation: string }
 
 const S = (id: string) => `/api/eleve/cours/sessions/${encodeURIComponent(id)}`
@@ -205,6 +224,12 @@ export type TypeRetour = "bug" | "dysfonctionnement" | "suggestion" | "ameliorat
 export const retours = {
   deposer: (r: { type: TypeRetour; texte: string; adresse: string; titre_page: string; ecran: string; auteur?: string }) =>
     api<{ id: string; ok: boolean }>("/api/eleve/retours/deposer", json(r)),
+}
+
+/* ---- synchro : l'état de l'interface suit l'élève d'un appareil à l'autre (jules/modules/synchro.py) ---- */
+export const synchro = {
+  etat: () => api<Record<string, unknown>>("/api/eleve/synchro/etat"),
+  ecrire: (cle: string, valeur: unknown) => api<{ valeur: unknown }>(`/api/eleve/synchro/${encodeURIComponent(cle)}`, json({ valeur }, "PUT")),
 }
 
 export type BilanNotions = {

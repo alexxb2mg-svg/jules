@@ -24,9 +24,10 @@ export function contexteSymboles(racine: Element | null, rappels: Rappels) {
   if (racine && typeof Symboles !== "undefined") Symboles.contexte(racine, rappels)
 }
 
-/** Couleurs déclarées dans les fiches (mots français) → couleurs fixes ; inconnue → bleu Jules. */
-const COULEURS: Record<string, string> = { bleu: "#1D4E89", orange: "#D9480F", vert: "#2B8A3E", rouge: "#C92A2A", violet: "#7048E8", gris: "#6B7686" }
-export const couleurCss = (nom?: string) => (nom && COULEURS[nom]) || "#1D4E89"
+/** Couleurs déclarées dans les fiches (mots français) → tokens du thème (--j-terme-*, lisibles en clair et en sombre) ;
+ *  inconnue → bleu. */
+const COULEURS = new Set(["bleu", "orange", "vert", "rouge", "violet", "gris"])
+export const couleurCss = (nom?: string) => `var(--j-terme-${nom && COULEURS.has(nom) ? nom : "bleu"})`
 
 /** Évaluateur sûr des conditions « si » des lectures (jamais d'eval) : (var op nombre) (&& …)*. */
 export function evaluerCondition(expression: string | undefined, valeurs: Record<string, number>) {

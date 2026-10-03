@@ -6,3 +6,11 @@ auteurs: ["projet-jules"]
 fournit:
   figures: [droite-affine]
 permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « fonctions lineaires et affines ».
+discussion:
+  droite-affine:
+    quand: "Pour faire voir une fonction affine f(x) = ax + b : la droite, sa pente a et le point où elle coupe l'axe vertical (0 ; b)."
+    valeurs:
+      a: {min: -3, max: 3, pas: 0.5, defaut: 1}
+      b: {min: -4, max: 4, pas: 1, defaut: 0}

@@ -24,7 +24,10 @@ from jules.web.limite import LimiteEssais
 from jules.web.pronote_routes import routes_pronote
 
 STATIQUE = Path(__file__).parent / "static"
-EXTENSIONS = {"image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif"}
+EXTENSIONS = {
+    "image/jpeg": "jpg", "image/png": "png", "image/webp": "webp", "image/gif": "gif",
+    "image/heic": "heic", "image/heif": "heic", "application/octet-stream": "heic",  # iPhone : HEIC parfois sans type
+}  # fmt: skip
 IMAGE_MAX_OCTETS = 8 * 1024 * 1024
 IMAGES_PAR_MESSAGE = 3
 TEXTE_MAX = 6000
@@ -54,7 +57,21 @@ def extension_reelle(contenu: bytes) -> str | None:
         return "webp"
     if contenu[:6] in (b"GIF87a", b"GIF89a"):
         return "gif"
+    if contenu[4:12] in (b"ftypheic", b"ftypheix", b"ftypmif1", b"ftypmsf1", b"ftyphevc"):
+        return "heic"
     return None
+
+
+def photo_en_jpeg_si_heic(contenu: bytes, extension: str) -> tuple[bytes, str]:
+    """Photo d'iPhone (HEIC) -> JPEG, comme pour les sources personnelles (jules/sources.py)."""
+    if extension != "heic":
+        return contenu, extension
+    from jules.sources import ErreurSource, heic_en_jpeg
+
+    try:
+        return heic_en_jpeg(contenu), "jpg"
+    except ErreurSource as err:
+        raise HTTPException(400, str(err)) from err
 
 
 class CodeEntree(BaseModel):
@@ -276,13 +293,14 @@ def creer_app(tuteur: Tuteur) -> FastAPI:
         noms = []
         for photo in photos:
             if photo.content_type not in EXTENSIONS:
-                raise HTTPException(400, "Format de photo non accepté (JPEG, PNG, WebP, GIF)")
+                raise HTTPException(400, "Format de photo non accepté (JPEG, PNG, WebP, GIF, HEIC)")
             contenu = await photo.read(IMAGE_MAX_OCTETS + 1)
             if len(contenu) > IMAGE_MAX_OCTETS:
                 raise HTTPException(400, "Photo trop lourde (8 Mo maximum)")
             extension = extension_reelle(contenu)
             if extension is None:
                 raise HTTPException(400, "Ce fichier n'est pas une image valide")
+            contenu, extension = photo_en_jpeg_si_heic(contenu, extension)
             noms.append(tuteur.stockage.enregistrer_image(contenu, extension))
         try:
             reponse = await _en_fil(tuteur.echanger, conv_id, texte, noms)

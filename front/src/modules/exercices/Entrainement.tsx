@@ -37,10 +37,10 @@ const DIFFICULTE = ["", "Facile", "Moyen", "Costaud"]
 
 /** Aspect d'un retour, selon le verdict décidé par le serveur. */
 const RETOURS: Record<Verdict["verdict"], { Icone: typeof CircleCheck; classe: string }> = {
-  juste: { Icone: CircleCheck, classe: "border-[#9BD8B5] bg-[#EEFAF2] text-[#135C33]" },
-  faux: { Icone: CircleX, classe: "border-[#F2B8B5] bg-[#FDF1F0] text-[#8A1F17]" },
-  indice: { Icone: Lightbulb, classe: "border-[#F3D9A6] bg-[#FFF8EC] text-[#7A4B00]" },
-  illisible: { Icone: TriangleAlert, classe: "border-[#F3D9A6] bg-[#FFF8EC] text-[#7A4B00]" },
+  juste: { Icone: CircleCheck, classe: "border-succes-bord bg-succes-fond text-succes" },
+  faux: { Icone: CircleX, classe: "border-erreur-bord bg-erreur-fond text-erreur" },
+  indice: { Icone: Lightbulb, classe: "border-alerte-bord bg-alerte-fond text-alerte" },
+  illisible: { Icone: TriangleAlert, classe: "border-alerte-bord bg-alerte-fond text-alerte" },
   relire: { Icone: Sparkles, classe: "border-bord bg-nav text-encre" },
   fini: { Icone: Sparkles, classe: "border-bord bg-nav text-encre" },
 }
@@ -97,7 +97,7 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
   const exerciceTermine = !!verdict?.termine
 
   return (
-    <section id="bloc-entrainement" data-bloc="entrainement" className="scroll-mt-6 overflow-hidden rounded-[22px] border-2 border-(--m-accent) bg-white shadow-relief">
+    <section id="bloc-entrainement" data-bloc="entrainement" className="scroll-mt-6 overflow-hidden rounded-[22px] border-2 border-(--m-accent) bg-card shadow-relief">
       <header className="flex items-center gap-3 bg-(--m-fond) px-5 py-3.5">
         <span className="grid size-9 place-items-center rounded-xl bg-(--m-accent) text-white"><Dumbbell size={19} /></span>
         <h2 className="m-0 flex-1 font-titre text-[1.2rem] font-bold text-(--m-texte)">{TEXTES.titre}</h2>
@@ -166,7 +166,7 @@ export function Entrainement({ notion, nb, generateur }: { notion: string; nb: n
 
               {!exerciceTermine && (
                 <motion.button whileTap={{ scale: 0.96 }} onClick={demanderIndice} disabled={envoi || palier >= PALIERS}
-                  className="inline-flex items-center gap-1.5 self-end rounded-full border-2 border-[#F3D9A6] bg-[#FFF8EC] px-3.5 py-1.5 text-[0.9rem] font-semibold text-[#7A4B00] transition-opacity disabled:opacity-45">
+                  className="inline-flex items-center gap-1.5 self-end rounded-full border-2 border-alerte-bord bg-alerte-fond px-3.5 py-1.5 text-[0.9rem] font-semibold text-alerte transition-opacity disabled:opacity-45">
                   <Lightbulb size={16} /> {palier >= PALIERS ? TEXTES.plusDIndice : TEXTES.demanderIndice}
                   <span className="text-[0.78rem] font-normal opacity-80">{Math.min(palier, PALIERS)}/{PALIERS}</span>
                 </motion.button>
@@ -205,7 +205,7 @@ function Retour({ verdict }: { verdict: Verdict }) {
         <span><Riche texte={verdict.message} /></span>
       </p>
       {verdict.correction && (
-        <div className="ml-7 rounded-xl bg-white/70 px-3 py-2 text-encre">
+        <div className="ml-7 rounded-xl bg-card/70 px-3 py-2 text-encre">
           <p className="m-0 text-[0.8rem] font-semibold tracking-wide text-gris">{TEXTES.correction}</p>
           <p className="m-0 text-[0.95rem] leading-relaxed whitespace-pre-line"><Riche texte={verdict.correction} /></p>
         </div>
@@ -231,7 +231,7 @@ function Pourquoi({ texte }: { texte: string }) {
       <AnimatePresence initial={false}>
         {ouvert && (
           <motion.p initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }}
-            className="m-0 mt-1 overflow-hidden rounded-xl bg-white/70 px-3 py-2 text-[0.95rem] leading-relaxed whitespace-pre-line text-encre">
+            className="m-0 mt-1 overflow-hidden rounded-xl bg-card/70 px-3 py-2 text-[0.95rem] leading-relaxed whitespace-pre-line text-encre">
             <Riche texte={texte} />
           </motion.p>
         )}

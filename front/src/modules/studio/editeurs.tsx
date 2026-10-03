@@ -38,7 +38,7 @@ export function Champ({ valeur, chemin, ecrire, verrouille, placeholder, zone, l
     onChange: (e: React.ChangeEvent<HTMLInputElement & HTMLTextAreaElement>) => { courant.current = e.target.value; setV(e.target.value) },
     onBlur: enregistrer,
     className: cn("w-full resize-none rounded-xl border-2 border-transparent bg-transparent px-2.5 py-1.5 outline-none transition-colors",
-      "placeholder:text-gris/60 hover:border-bord focus:border-(--m-accent) focus:bg-white disabled:hover:border-transparent", className),
+      "placeholder:text-gris/60 hover:border-bord focus:border-(--m-accent) focus:bg-card disabled:hover:border-transparent", className),
   }
   const reste = TAILLE_CHAMP_MAX - v.length
   return (
@@ -79,7 +79,7 @@ function Fiche({ support, verrouille, ecrire, ajouter }: PropsEditeur) {
     <div className="flex flex-col gap-4">
       <AnimatePresence initial={false}>
         {sections.map((s, i) => (
-          <motion.section key={s.id} layout {...apparition} className="rounded-2xl border border-bord bg-white p-3 shadow-relief">
+          <motion.section key={s.id} layout {...apparition} className="rounded-surface bg-card p-3 shadow-relief">
             <div className="flex items-center gap-2">
               <span className="grid size-7 shrink-0 place-items-center rounded-lg bg-(--m-fond) text-[0.85rem] font-bold text-(--m-texte)">{i + 1}</span>
               <Champ valeur={s.titre} chemin={["sections", i, "titre"]} ecrire={ecrire} verrouille={verrouille} label={`Titre de la section ${i + 1}`}
@@ -104,7 +104,7 @@ function Quiz({ support, verrouille, ecrire, ajouter }: PropsEditeur) {
     <div className="flex flex-col gap-3">
       <AnimatePresence initial={false}>
         {questions.map((q, i) => (
-          <motion.div key={q.id} layout {...apparition} className="grid gap-1 rounded-2xl border border-bord bg-white p-3 shadow-relief sm:grid-cols-[1fr_1fr] sm:gap-3">
+          <motion.div key={q.id} layout {...apparition} className="grid gap-1 rounded-surface bg-card p-3 shadow-relief sm:grid-cols-[1fr_1fr] sm:gap-3">
             <div className="flex items-start gap-2">
               <span className="mt-1.5 grid size-7 shrink-0 place-items-center rounded-full bg-(--m-accent) text-[0.8rem] font-bold text-white">Q{i + 1}</span>
               <Champ zone valeur={q.question} chemin={["questions", i, "question"]} ecrire={ecrire} verrouille={verrouille} label={`Question ${i + 1}`}
@@ -131,7 +131,7 @@ function CartesMemoire({ support, verrouille, ecrire, ajouter }: PropsEditeur) {
     <div className="flex flex-col gap-3">
       <AnimatePresence initial={false}>
         {cartes.map((c, i) => (
-          <motion.div key={c.id} layout {...apparition} className="rounded-2xl border border-bord bg-white p-3 shadow-relief">
+          <motion.div key={c.id} layout {...apparition} className="rounded-surface bg-card p-3 shadow-relief">
             <div className="mb-1 flex items-center justify-between px-1">
               <span className="text-[0.8rem] font-semibold text-gris">Carte {i + 1}</span>
               {verrouille && (
@@ -219,7 +219,7 @@ function CarteMentale(props: PropsEditeur) {
             <ul className="m-0 grid w-full grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-3 p-0">
               <AnimatePresence initial={false}>
                 {enfants(r.id).map((b) => (
-                  <div key={b.id} className="rounded-2xl border-2 border-(--m-accent)/30 bg-white p-2 shadow-relief">
+                  <div key={b.id} className="rounded-2xl border-2 border-(--m-accent)/30 bg-card p-2 shadow-relief">
                     <Branche id={b.id} niveau={1} arbre={arbre} />
                   </div>
                 ))}

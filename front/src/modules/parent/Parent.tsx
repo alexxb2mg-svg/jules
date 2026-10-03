@@ -34,7 +34,7 @@ function Carte({ id, titre, Icone, cache, enfants }: {
 }) {
   if (cache) return null
   return (
-    <section id={id} className="rounded-2xl border border-bord bg-white p-5 shadow-relief">
+    <section id={id} className="rounded-surface bg-card p-5 shadow-relief">
       <div className="mb-3 flex items-center gap-2">
         <Icone className="size-5 text-bleu" />
         <h2 className="text-base font-semibold">{titre}</h2>

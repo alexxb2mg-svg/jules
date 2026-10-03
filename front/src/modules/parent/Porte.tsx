@@ -27,7 +27,7 @@ export function Porte({ onAcces }: { onAcces: () => void }) {
 
   return (
     <div className="flex h-full items-center justify-center">
-      <div className="mx-auto w-full max-w-sm rounded-2xl border border-bord bg-white p-8 shadow-relief text-center">
+      <div className="mx-auto w-full max-w-sm rounded-surface bg-card p-8 shadow-relief text-center">
         <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-bleu/10">
           <Lock className="size-7 text-bleu" />
         </div>

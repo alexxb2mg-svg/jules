@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import importlib.util
 import logging
+import math
 import re
 import sys
 from dataclasses import dataclass, field
@@ -31,6 +32,7 @@ from typing import TYPE_CHECKING, Any
 
 import yaml
 
+from jules.fiches_visuelles import erreur_bornes
 from jules.outils import _MOTIFS_INTERDITS
 
 if TYPE_CHECKING:
@@ -55,6 +57,10 @@ CLES_FOURNIT = frozenset(
 )
 # Permissions connues sous `permissions:` ; toute cle absente vaut False.
 CLES_PERMISSIONS = frozenset({"reseau", "appel_ia", "ecriture_dossier_eleve", "notification_parent"})
+# Figures proposees dans la discussion (cle de premier niveau `discussion:`, voir docs/EXTENSIONS.md).
+CLES_DISCUSSION = frozenset({"quand", "valeurs"})
+CLES_BORNES = ("min", "max", "pas", "defaut")
+LIMITE_QUAND = 300  # caracteres : une phrase pour le modele, pas un cours
 
 
 class ErreurExtension(ValueError):
@@ -71,6 +77,8 @@ class Extension:
     auteurs: list[str] = field(default_factory=list)
     fournit: dict[str, list[str]] = field(default_factory=dict)
     permissions: dict[str, bool] = field(default_factory=dict)
+    # {id de gabarit: {"quand": str, "valeurs": {nom: {"min", "max", "pas", "defaut"}}}}
+    discussion: dict[str, dict[str, Any]] = field(default_factory=dict)
 
     def fournit_liste(self, famille: str) -> list[str]:
         """Ce que l'extension fournit dans une famille donnee (liste vide si elle n'y touche pas)."""
@@ -137,6 +145,44 @@ def _lire_permissions(brut: Any, identifiant: str) -> dict[str, bool]:
     return resultat
 
 
+def _lire_discussion(brut: Any, identifiant: str, figures: list[str]) -> dict[str, dict[str, Any]]:
+    """Gabarits que Jules peut montrer dans la discussion, avec les bornes de chaque valeur. Un gabarit
+    absent d'ici reste utilisable dans les fiches, mais n'est jamais propose dans la discussion."""
+    if brut is None:
+        return {}
+    if not isinstance(brut, dict):
+        raise ErreurExtension(f"{identifiant} : 'discussion' doit etre un objet")
+    resultat: dict[str, dict[str, Any]] = {}
+    for gabarit, declaration in brut.items():
+        ou = f"{identifiant}, discussion.{gabarit}"
+        if gabarit not in figures:
+            raise ErreurExtension(f"{ou} : ce gabarit doit figurer dans fournit.figures")
+        if not isinstance(declaration, dict) or set(declaration) - CLES_DISCUSSION:
+            raise ErreurExtension(f"{ou} : un objet {{quand, valeurs}} est attendu")
+        quand = str(declaration.get("quand") or "").strip()
+        if not quand or len(quand) > LIMITE_QUAND:
+            raise ErreurExtension(f"{ou} : 'quand' doit etre une phrase de 1 a {LIMITE_QUAND} caracteres")
+        valeurs = declaration.get("valeurs")
+        if not isinstance(valeurs, dict) or not valeurs:
+            raise ErreurExtension(f"{ou} : 'valeurs' doit declarer au moins une valeur")
+        bornes_lues: dict[str, dict[str, float]] = {}
+        for nom, bornes in valeurs.items():
+            sous_ou = f"{ou}, valeur {nom!r}"
+            if not isinstance(nom, str) or not _ID_MODULE.match(nom):
+                raise ErreurExtension(f"{sous_ou} : nom invalide (attendu : a-z, 0-9, _)")
+            if not isinstance(bornes, dict) or set(bornes) != set(CLES_BORNES):
+                raise ErreurExtension(f"{sous_ou} : attendu exactement {', '.join(CLES_BORNES)}")
+            nombres = [bornes[cle] for cle in CLES_BORNES]
+            if not all(isinstance(n, int | float) and not isinstance(n, bool) and math.isfinite(n) for n in nombres):
+                raise ErreurExtension(f"{sous_ou} : {', '.join(CLES_BORNES)} doivent etre des nombres")
+            mini, maxi, pas, defaut = map(float, nombres)
+            if erreur := erreur_bornes(mini, maxi, pas, defaut, "defaut"):
+                raise ErreurExtension(f"{sous_ou} : {erreur}")
+            bornes_lues[nom] = {"min": mini, "max": maxi, "pas": pas, "defaut": defaut}
+        resultat[gabarit] = {"quand": quand, "valeurs": bornes_lues}
+    return resultat
+
+
 def _controler_gabarit(chemin: Path, identifiant: str, famille: str = "figures") -> None:
     """Le code des figures et des rappels s'execute dans la page de l'eleve (pas dans une iframe
     isolee comme un outil) : meme premier filtre que le code d'un outil (jules/outils.py)."""
@@ -183,6 +229,7 @@ def lire_extension(dossier: Path) -> Extension:
     if fournit.get("rappels"):
         _controler_gabarit(dossier / FICHIER_RAPPELS, identifiant, "rappels")
     _controler_modules(dossier, identifiant, fournit.get("modules", []))
+    discussion = _lire_discussion(brut.get("discussion"), identifiant, fournit.get("figures", []))
     return Extension(
         id=identifiant,
         titre=titre,
@@ -192,6 +239,7 @@ def lire_extension(dossier: Path) -> Extension:
         auteurs=auteurs,
         fournit=fournit,
         permissions=permissions,
+        discussion=discussion,
     )
 
 
@@ -233,6 +281,12 @@ def figures_fournies(extensions: dict[str, Extension]) -> dict[str, str]:
         for figure in extension.fournit_liste("figures"):
             resultat[figure] = extension.id
     return resultat
+
+
+def figures_pour_discussion(extensions: dict[str, Extension]) -> dict[str, dict[str, Any]]:
+    """Gabarits declares pour la discussion par les extensions actives (cle `discussion`), dans l'ordre
+    de `extensions:` : {id de gabarit -> {"quand", "valeurs": {nom -> bornes}}}. Lu par jules/modules/figures.py."""
+    return {gabarit: decl for extension in extensions.values() for gabarit, decl in extension.discussion.items()}
 
 
 def code_des_figures(extensions: dict[str, Extension]) -> str:
