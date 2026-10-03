@@ -1,0 +1,17 @@
+id: ombre-portee
+titre: "Figure : ombre portée d'un objet éclairé par une lampe"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [ombre-portee]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « ombres et materiaux ». Aucune mesure d'ombre n'est ecrite : revele false.
+discussion:
+  ombre-portee:
+    quand: "Pour faire voir comment se forme une ombre portée : lampe, objet et écran vus de côté (écran à 3 m). distance = distance lampe-objet en m (plus l'objet est près de la lampe, plus l'ombre est grande), hauteur = hauteur de l'objet en cm, matiere = 1 transparent, 2 translucide, 3 opaque."
+    valeurs:
+      distance: {min: 0.5, max: 2.5, pas: 0.25, defaut: 1.5}
+      hauteur: {min: 5, max: 20, pas: 5, defaut: 10}
+      matiere: {min: 1, max: 3, pas: 1, defaut: 3}

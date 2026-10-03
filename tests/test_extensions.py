@@ -272,6 +272,11 @@ DECLARATIONS_DU_DEPOT = {
     "poids-astres": (False, {"m": (1, 10, 1, 5), "astre": (1, 4, 1, 3)}),
     "onde-sonore": (False, {"hauteur": (1, 13, 1, 6), "intensite": (1, 5, 1, 3), "duree": (1, 4, 1, 4), "milieu": (0, 2, 1, 1)}),
     "jauge-decibels": (False, {"niveau": (20, 130, 5, 60), "duree": (0.5, 8, 0.5, 1)}),
+    "cycle-lune": (False, {"jour": (0, 29, 1, 7)}),
+    "ombre-portee": (False, {"distance": (0.5, 2.5, 0.25, 1.5), "hauteur": (5, 20, 5, 10), "matiere": (1, 3, 1, 3)}),
+    "balance-plateaux": (False, {"masse": (0, 1000, 50, 300), "taille": (1, 5, 1, 4)}),
+    "effort-frequences": (False, {"activite": (0, 100, 10, 0), "entraine": (0, 1, 1, 0)}),
+    "capteur-seuil": (False, {"mesure": (0, 1023, 1, 600), "seuil": (0, 1023, 1, 300)}),
 }
 
 

@@ -148,6 +148,11 @@ extensions:
   - poids-astres              # physique-chimie 3e : poids et masse
   - onde-sonore               # son : physique-chimie 3e, education musicale CM1
   - jauge-decibels            # education musicale 3e : risques auditifs
+  - cycle-lune                # CM1 sciences : phases de la Lune
+  - ombre-portee              # CM1 sciences : ombres et matériaux
+  - balance-plateaux          # CM1 sciences : masse et volume
+  - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
+  - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
