@@ -118,13 +118,17 @@ fonction, une parenthèse, un opérateur non listé, une variable inconnue du bl
 
 Un gabarit est fourni par une extension active (`extensions/<id>/gabarit.js`, voir
 `docs/EXTENSIONS.md`) et dessine du SVG à partir des valeurs de curseurs, jamais de code libre
-embarqué dans la fiche. Les cinq gabarits livrés :
+embarqué dans la fiche. Les gabarits livrés :
 
 - `droite-affine` : f(x) = ax + b (curseurs `a`, `b`)
 - `triangle-thales` : configuration de Thalès (curseur `t`, position de M sur [AB])
-- `triangle-rectangle` : triangle rectangle en C (curseurs `ac`, `bc`, hypoténuse calculée)
+- `triangle-rectangle` : triangle rectangle en C et carrés sur ses trois côtés, aire écrite dans chacun, AB non écrit (curseurs `ac`, `bc`)
 - `equation-solutions` : x² = a sur une droite graduée (curseur `a`)
 - `probabilites-frequences` : fréquence observée qui se stabilise avec n (curseur `n`)
+- `engrenages` : deux roues dentées (ou poulies et courroie) avec un repère chacune (curseurs `dents_a`, `dents_b`, `avance`, `courroie`)
+- `horloge` : cadran à aiguilles et durée coloriée, heure jamais écrite en chiffres (curseurs `h`, `m`, `duree`)
+- `urne-tirage` : sac de 10 boules et échelle impossible… certain (curseur `rouges`)
+- `paquets-proportionnels` : paquets liés de deux grandeurs proportionnelles (curseurs `a`, `b`, `fois`)
 
 Ajouter un gabarit = créer une extension `extensions/<id>/` (`extension.yaml` avec
 `fournit: figures: [<id>]`, et `gabarit.js`) puis l'activer dans `extensions:` de `config.yaml` :

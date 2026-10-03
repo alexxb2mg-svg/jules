@@ -94,8 +94,11 @@ pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (
 `figures`). Les mêmes bornes valent donc pour le modèle et pour l'élève.
 
 **Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
-(`equation-solutions` place −√a et √a, `triangle-rectangle` écrit « AB ≈ … »). Leur déclaration porte
-`revele: true` (facultatif, booléen, défaut `false`) :
+(`equation-solutions` place −√a et √a). Leur déclaration porte
+`revele: true` (facultatif, booléen, défaut `false`). Quand c'est possible, mieux vaut une figure qui montre
+sans écrire la valeur : `triangle-rectangle` (2.0) dessine un carré sur chaque côté avec son aire, sans écrire AB,
+et n'est donc plus `revele`.
+
 
 ```yaml
 discussion:

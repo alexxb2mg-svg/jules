@@ -235,7 +235,8 @@ def test_discussion_invalide_refusee(tmp_path, declaration, message):
 DECLARATIONS_DU_DEPOT = {
     "droite-affine": (False, {"a": (-3, 3, 0.5, 1), "b": (-4, 4, 1, 0)}),
     "triangle-thales": (False, {"t": (0.1, 0.9, 0.1, 0.5)}),
-    "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
+    # triangle-rectangle 2.0 : carres sur les cotes, la longueur AB n'est plus ecrite -> revele false.
+    "triangle-rectangle": (False, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
     "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
     "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
     # figures CM1 (audit du 03/10/2026) : bornes des curseurs des fiches visuelles CM1
@@ -256,6 +257,13 @@ DECLARATIONS_DU_DEPOT = {
     ),
     "glisse-nombre": (True, {"nombre": (0.1, 99.9, 0.1, 4.7), "rangs": (-1, 3, 1, 1)}),
     "schema-en-barres": (False, {"a": (1, 100, 1, 30), "b": (0, 100, 1, 20), "fois": (1, 5, 1, 1)}),
+    "engrenages": (
+        False,
+        {"dents_a": (6, 60, 1, 12), "dents_b": (6, 60, 1, 18), "avance": (0, 360, 1, 0), "courroie": (0, 1, 1, 0)},
+    ),
+    "horloge": (False, {"h": (0, 23, 1, 9), "m": (0, 55, 5, 15), "duree": (0, 180, 5, 0)}),
+    "urne-tirage": (False, {"rouges": (0, 10, 1, 3)}),
+    "paquets-proportionnels": (False, {"a": (1, 10, 1, 4), "b": (50, 500, 50, 250), "fois": (0.25, 4, 0.25, 1)}),
 }
 
 

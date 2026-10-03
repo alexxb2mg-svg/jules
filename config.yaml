@@ -136,6 +136,10 @@ extensions:
   - courbe-point-mobile
   - glisse-nombre
   - schema-en-barres
+  - engrenages
+  - horloge
+  - urne-tirage
+  - paquets-proportionnels
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

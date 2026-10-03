@@ -85,7 +85,8 @@ def test_cours_lecon_thales_schema_et_gabarits_non_revele(tuteur_thales):
     assert THALES in figures.schemas(conv)
     autorises = figures.autorises(conv)
     assert "triangle-thales" in autorises
-    assert "triangle-rectangle" not in autorises and "equation-solutions" not in autorises  # revele : jamais en cours
+    assert "equation-solutions" not in autorises  # revele : jamais en cours
+    assert "triangle-rectangle" in autorises  # plus revele depuis la version 2.0 (AB n'est plus ecrit)
     contribution = figures.contribution(conv)
     assert "Tu peux montrer le schéma de la notion" in contribution and "- triangle-thales :" in contribution
     assert "}}" not in tuteur_thales.systeme(conv)
@@ -98,9 +99,9 @@ def test_cours_filtre_schema_gabarit_et_revele(tuteur_thales):
     assert SCHEMA_THALES in sortie
     sortie = figures.filtrer_reponse(conv, _bloc('{"gabarit": "triangle-thales", "valeurs": {}}'), lambda: "")
     assert FIGURE_THALES in sortie
-    sortie = figures.filtrer_reponse(conv, _bloc('{"gabarit": "triangle-rectangle", "valeurs": {}}'), lambda: "")
+    sortie = figures.filtrer_reponse(conv, _bloc('{"gabarit": "equation-solutions", "valeurs": {}}'), lambda: "")
     assert "```figure" not in sortie
-    assert _ecartees(tuteur_thales) == [{"gabarit": "triangle-rectangle", "raison": "gabarit non autorise"}]
+    assert _ecartees(tuteur_thales) == [{"gabarit": "equation-solutions", "raison": "gabarit non autorise"}]
 
 
 def test_cours_figure_ou_schema_qui_donnerait_la_reponse_ecarte(tuteur_thales, monkeypatch):
@@ -139,13 +140,13 @@ def test_cours_garde_fou_puis_figures_de_bout_en_bout(tuteur_thales):
     reponses = iter(
         [
             "AC = 7,5 cm.\n\n" + _bloc('{"gabarit": "triangle-thales", "valeurs": {"t": 0.4}}'),
-            "Quel rapport connais-tu ?\n\n" + _bloc('{"gabarit": "triangle-rectangle", "valeurs": {}}'),
+            "Quel rapport connais-tu ?\n\n" + _bloc('{"gabarit": "equation-solutions", "valeurs": {}}'),
         ]
     )
     tuteur_thales.llm.regle = lambda s, t, m: next(reponses) if "Leçon en cours" in s else "Réponse factice."
     bot = tuteur_thales.echanger(conv.id, "montre moi avec une illustration")
     assert "7,5" not in bot.texte and "Quel rapport" in bot.texte
-    assert "```figure" not in bot.texte  # triangle-rectangle (revele) retire meme apres la relance
+    assert "```figure" not in bot.texte  # equation-solutions (revele) retire meme apres la relance
     assert any(REGLE_DESSIN in a["systeme"] for a in tuteur_thales.llm.appels)
 
 
