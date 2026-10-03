@@ -1,0 +1,18 @@
+id: droite-graduee
+titre: "Figure : une fraction n/d placée sur une droite graduée"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [droite-graduee]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que les curseurs de la fiche 3e « representations
+# et comparaison des nombres rationnels ».
+# revele: le point est place et porte l'ecriture n/d : « placer n/d sur une droite graduee » est fait par la figure.
+discussion:
+  droite-graduee:
+    quand: "Pour placer une fraction n/d sur une droite graduée de −3 à 3 (élargie si besoin) : chaque unité est coupée en d parts égales, le point est à n petites parts de 0 (à gauche de 0 si n est négatif). Sert à comparer des fractions et à voir que 2/4 = 1/2 = 0,5."
+    revele: true
+    valeurs:
+      n: {min: -12, max: 12, pas: 1, defaut: 3}
+      d: {min: 1, max: 10, pas: 1, defaut: 4}

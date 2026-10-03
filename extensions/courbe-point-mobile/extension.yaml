@@ -1,0 +1,23 @@
+id: courbe-point-mobile
+titre: "Figure : courbe d'une fonction et point mobile (image, antécédent)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [courbe-point-mobile]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches 3e « vocabulaire et notations », « modes de representation » et « image et
+# antecedent » (x au pas de 0,5 ; la fiche « modes de representation » le limite au pas de 1).
+# courbure, pente, hauteur = a, b, c de ax² + bx + c (a et b sont pris par f(a) = b dans ces fiches).
+# revele: la figure ecrit l'image f(x), l'autre antecedent et un tableau de valeurs : proposee seulement en
+# mode reexplique.
+discussion:
+  courbe-point-mobile:
+    quand: "Pour faire voir f(x) = courbure × x² + pente × x + hauteur (courbure 0 : une droite) : le point de la courbe d'abscisse x, son image f(x) lue sur l'axe vertical, les antécédents sur la ligne horizontale, et le tableau de valeurs aux mêmes couples (x ; f(x))."
+    revele: true
+    valeurs:
+      x: {min: -4, max: 4, pas: 0.5, defaut: 1}
+      courbure: {min: -1, max: 1, pas: 0.5, defaut: 0.5}
+      pente: {min: -3, max: 3, pas: 1, defaut: 0}
+      hauteur: {min: -4, max: 4, pas: 1, defaut: -2}

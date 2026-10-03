@@ -17,6 +17,12 @@ from jules.extensions import (
     figures_pour_discussion,
     lire_extension,
 )
+from tests.registre_figures import (
+    LUES_HORS_DISCUSSION,
+    declarations_brutes,
+    declarations_du_depot,
+    valeurs_lues_par_le_gabarit,
+)
 
 MANIFESTE_VALIDE = """\
 id: {id}
@@ -230,19 +236,24 @@ def test_discussion_invalide_refusee(tmp_path, declaration, message):
         lire_extension(dossier)
 
 
-# Figures declarees pour la discussion par les extensions du depot : id -> (revele attendu, bornes reprises
-# des curseurs des fiches visuelles 3e, voir le commentaire de chaque extension.yaml).
-DECLARATIONS_DU_DEPOT = {
-    "droite-affine": (False, {"a": (-3, 3, 0.5, 1), "b": (-4, 4, 1, 0)}),
-    "triangle-thales": (False, {"t": (0.1, 0.9, 0.1, 0.5)}),
-    "triangle-rectangle": (True, {"ac": (1, 12, 1, 6), "bc": (1, 12, 1, 8)}),
-    "equation-solutions": (True, {"a": (-25, 81, 1, 49)}),
-    "probabilites-frequences": (False, {"n": (10, 500, 10, 50)}),
-}
+# Figures declarees pour la discussion par les extensions du depot : id -> (revele, bornes). La table n'est plus
+# recopiee en dur (une ligne par gabarit, a completer a chaque nouveau gabarit) : elle est LUE en YAML brut dans
+# extensions/*/extension.yaml (tests/registre_figures.py), puis comparee a la lecture validee de jules/extensions.py.
+DECLARATIONS_DU_DEPOT = declarations_du_depot()
+# Reperes fixes, decides a la main, que la decouverte ne doit pas faire oublier (garde-fou de non-regression).
+REVELE_FIXE = {"equation-solutions": True, "triangle-rectangle": False, "droite-affine": False}
+
+
+def test_registre_decouvert_non_vide_et_reperes_fixes():
+    """La decouverte trouve bien les figures (sinon tous les tests parametres passeraient a vide)."""
+    assert len(DECLARATIONS_DU_DEPOT) >= len(REVELE_FIXE)
+    for gabarit, revele in REVELE_FIXE.items():
+        assert DECLARATIONS_DU_DEPOT[gabarit][0] is revele, gabarit
 
 
 def test_toutes_les_declarations_du_depot_se_chargent():
-    """Chaque extension du depot qui a une cle `discussion` passe le controle, et les bornes sont celles prevues."""
+    """Chaque extension du depot qui a une cle `discussion` passe le controle, et les bornes lues par
+    jules/extensions.py sont exactement celles ecrites dans extension.yaml."""
     racine = Path(__file__).resolve().parents[1] / "extensions"
     ids = [d.name for d in sorted(racine.iterdir()) if (d / "extension.yaml").is_file()]
     declarations = figures_pour_discussion(charger_extensions(racine, ids))
@@ -257,10 +268,33 @@ def test_toutes_les_declarations_du_depot_se_chargent():
 
 
 @pytest.mark.parametrize("gabarit", sorted(DECLARATIONS_DU_DEPOT))
+def test_declaration_brute_coherente(gabarit):
+    """Controle de fond, independant du chargeur : `revele` absent ou booleen YAML (pas « oui », pas 1) ; au moins
+    une valeur ; pour chaque valeur min < max, pas > 0, min <= defaut <= max, et defaut tombe sur un cran."""
+    brute = declarations_brutes()[gabarit]
+    assert isinstance(brute.get("revele", False), bool), gabarit
+    assert isinstance(brute.get("quand"), str) and brute["quand"].strip(), gabarit
+    _, valeurs = DECLARATIONS_DU_DEPOT[gabarit]
+    assert valeurs, gabarit
+    for nom, (mini, maxi, pas, defaut) in valeurs.items():
+        assert all(isinstance(x, (int, float)) and not isinstance(x, bool) for x in (mini, maxi, pas, defaut)), nom
+        assert mini < maxi and pas > 0 and mini <= defaut <= maxi, (gabarit, nom)
+        crans = (defaut - mini) / pas
+        assert abs(crans - round(crans)) < 1e-9, (gabarit, nom, "defaut hors pas")
+
+
+@pytest.mark.parametrize("gabarit", sorted(DECLARATIONS_DU_DEPOT))
 def test_valeurs_declarees_lues_par_le_gabarit(gabarit):
-    """Les noms de valeurs declares sont ceux que gabarit.js lit vraiment (`valeurs.<nom>`), ni plus ni moins."""
-    code = (Path(__file__).resolve().parents[1] / "extensions" / gabarit / "gabarit.js").read_text(encoding="utf-8")
-    assert set(re.findall(r"valeurs\.(\w+)", code)) == set(DECLARATIONS_DU_DEPOT[gabarit][1])
+    """Les noms de valeurs declares sont ceux que gabarit.js lit vraiment, ni plus ni moins ; seules exceptions :
+    les curseurs portes par une fiche seulement, listes et justifies dans LUES_HORS_DISCUSSION."""
+    declarees = set(DECLARATIONS_DU_DEPOT[gabarit][1])
+    lues = valeurs_lues_par_le_gabarit(gabarit)
+    assert declarees <= lues, f"{gabarit} : declarees mais jamais lues {sorted(declarees - lues)}"
+    assert lues - declarees == LUES_HORS_DISCUSSION.get(gabarit, set()), gabarit
+
+
+def test_exceptions_hors_discussion_a_jour():
+    assert set(LUES_HORS_DISCUSSION) <= set(DECLARATIONS_DU_DEPOT)
 
 
 def test_droite_affine_du_depot_declaree_pour_la_discussion():

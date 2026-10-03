@@ -1,0 +1,16 @@
+id: distance-temps-transports
+titre: "Figure : distance en km et distance en temps selon le transport"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [distance-temps-transports]
+permissions: {}
+# Un seul curseur, km (1 a 1 000) ; echelles logarithmiques ; aucune duree ecrite en chiffres (barres seulement),
+# le mode le plus rapide est en vert. Vitesses reprises des exemples de la fiche CM1 (voir gabarit.js).
+# revele: false (la figure n'ecrit aucune duree).
+discussion:
+  distance-temps-transports:
+    quand: "Pour faire voir qu'un même trajet de km kilomètres prend un temps très différent à pied, à vélo, en voiture, en train ou en avion : distance kilométrique et distance en temps. Le transport le plus rapide est en vert."
+    valeurs:
+      km: {min: 1, max: 1000, pas: 1, defaut: 5}

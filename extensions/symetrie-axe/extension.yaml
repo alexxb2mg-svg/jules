@@ -1,0 +1,21 @@
+id: symetrie-axe
+titre: "Figure : symétrie par rapport à un axe, sur quadrillage"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [symetrie-axe]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « symetrie axiale » (cm1-symetrie-axiale). L'axe va de 4 a 8 carreaux (l'audit
+# proposait 4 a 12) : au-dela, la figure symetrique sortirait du quadrillage de 16 carreaux.
+# revele: la figure trace le symetrique, c'est-a-dire la reponse d'un exercice de construction : proposee
+# seulement en mode reexplique.
+discussion:
+  symetrie-axe:
+    quand: "Pour faire voir le symétrique d'une figure en L sur quadrillage, au CM1 : axe = position de l'axe rouge en carreaux depuis le bord, horizontal 0 = axe vertical et 1 = axe horizontal, pointilles 1 = relier chaque sommet à son image (même distance à l'axe, de part et d'autre)."
+    revele: true
+    valeurs:
+      axe: {min: 4, max: 8, pas: 1, defaut: 6}
+      horizontal: {min: 0, max: 1, pas: 1, defaut: 0}
+      pointilles: {min: 0, max: 1, pas: 1, defaut: 1}

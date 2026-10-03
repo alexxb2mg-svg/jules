@@ -124,6 +124,46 @@ extensions:
   - triangle-rectangle
   - equation-solutions
   - probabilites-frequences
+  - bande-fractions           # fractions : parts egales, simplification (fiches 3e et CM1)
+  - bande-fractions-comparees # comparer et ajouter deux fractions de meme denominateur (CM1)
+  - droite-graduee            # fraction n/d placee sur une droite graduee (3e)
+  - droite-graduee-somme      # a + b : un saut sur la droite graduee (3e)
+  - demi-droite-graduee       # grands entiers sur une demi-droite, avec loupes (CM1)
+  - demi-droite-decimaux      # decimaux sur une demi-droite, loupes dixiemes/centiemes (CM1)
+  - plaque-dixiemes-centiemes # unites, dixiemes, centiemes en plaques (CM1)
+  - angle                     # figures CM1 (audit 03/10/2026)
+  - symetrie-axe
+  - quadrilatere-deformable
+  - rectangle-quadrille
+  - balance-equation
+  - courbe-point-mobile
+  - glisse-nombre
+  - schema-en-barres
+  - engrenages
+  - horloge
+  - urne-tirage
+  - paquets-proportionnels
+  - circuit-serie-derivation
+  - palier-changement-etat
+  - redistribution-atomes
+  - rampe-energie
+  - chronophotographie        # physique-chimie 3e : mouvement, referentiel
+  - poids-astres              # physique-chimie 3e : poids et masse
+  - onde-sonore               # son : physique-chimie 3e, education musicale CM1
+  - jauge-decibels            # education musicale 3e : risques auditifs
+  - cycle-lune                # CM1 sciences : phases de la Lune
+  - ombre-portee              # CM1 sciences : ombres et matériaux
+  - balance-plateaux          # CM1 sciences : masse et volume
+  - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
+  - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
+  - distance-temps-transports
+  - frise-temps-verbaux
+  - chaine-accords
+  - position-objet
+  - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
+  - frise-pulsations
+  - cercle-couleurs
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

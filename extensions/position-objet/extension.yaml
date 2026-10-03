@@ -1,0 +1,15 @@
+id: position-objet
+titre: "Figure : où est le chat ? (in, on, under, next to)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [position-objet]
+permissions: {}
+# Pas de revele : la figure place le chat sans ecrire le mot de lieu, c'est l'eleve qui le dit.
+discussion:
+  position-objet:
+    quand: "Pour faire voir les mots de lieu en anglais avec un chat et une boîte : place = 0 au niveau de la boîte (alors hauteur -1 = under, 0 = in, 1 = on), place = -1 ou 1 à côté de la boîte (next to) ; la figure n'écrit pas le mot, l'élève le trouve."
+    valeurs:
+      place: {min: -1, max: 1, pas: 1, defaut: 0}
+      hauteur: {min: -1, max: 1, pas: 1, defaut: 1}

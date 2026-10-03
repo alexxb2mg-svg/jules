@@ -1,0 +1,18 @@
+id: poids-astres
+titre: "Figure : poids et masse sur quatre astres"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [poids-astres]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « gravitation, poids et masse ». astre : 1 Lune (g = 1,6 N/kg), 2 Mars (3,7),
+# 3 Terre (9,8), 4 Jupiter (24,8). La figure ecrit m et g mais jamais la valeur du poids P (fleche a
+# l'echelle seulement) : elle ne fait pas le calcul P = m x g a la place de l'eleve (revele: false).
+discussion:
+  poids-astres:
+    quand: "Pour faire voir que la masse m d'un objet est la même partout alors que son poids P = m × g change d'un astre à l'autre (astre : 1 Lune, 2 Mars, 3 Terre, 4 Jupiter) ; la flèche grise rappelle le poids sur Terre."
+    valeurs:
+      m: {min: 1, max: 10, pas: 1, defaut: 5}
+      astre: {min: 1, max: 4, pas: 1, defaut: 3}

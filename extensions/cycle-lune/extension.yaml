@@ -1,0 +1,15 @@
+id: cycle-lune
+titre: "Figure : les phases de la Lune"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [cycle-lune]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur de la fiche CM1 « phases de la Lune ». La figure n'ecrit pas le nom de la phase : revele false.
+discussion:
+  cycle-lune:
+    quand: "Pour faire voir pourquoi la Lune change de forme : en haut, la Lune tourne autour de la Terre, toujours éclairée à moitié par le Soleil ; en bas, la partie éclairée qu'on voit depuis la Terre. jour = jours depuis la nouvelle lune (7 : premier quartier, 15 : pleine lune, 22 : dernier quartier)."
+    valeurs:
+      jour: {min: 0, max: 29, pas: 1, defaut: 7}

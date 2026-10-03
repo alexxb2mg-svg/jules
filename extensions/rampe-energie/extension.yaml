@@ -1,0 +1,17 @@
+id: rampe-energie
+titre: "Figure : skateur sur une rampe et barres d'énergie"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [rampe-energie]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « formes d'energie ». Barres sans valeur chiffree : ne donne pas la
+# reponse d'un exercice.
+discussion:
+  rampe-energie:
+    quand: "Pour faire voir l'énergie de position qui devient cinétique et la conservation de l'énergie : un skateur part arrêté du haut d'une rampe en U ; x = position (0 = haut gauche, 0,5 = en bas, 1 = haut droite) ; f = frottements (0 = aucun), qui donnent de l'énergie thermique."
+    valeurs:
+      x: {min: 0, max: 1, pas: 0.05, defaut: 0.25}
+      f: {min: 0, max: 0.5, pas: 0.1, defaut: 0}

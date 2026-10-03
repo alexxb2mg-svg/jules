@@ -1,0 +1,21 @@
+id: frise-pulsations
+titre: "Figure : pulsations sur une ligne de temps (tempo, mesure, nuance)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [frise-pulsations]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches d'education musicale 3e (« dynamique », « temps-et-rythme ») et CM1
+# (« cm1-vocabulaire-expression-musicale »). Une fiche peut ne proposer qu'une partie des curseurs : une valeur
+# absente n'est pas dessinee (pas de mesure, pas de nom de nuance, pas de soufflet). Aucune reponse d'exercice
+# ecrite : le tempo affiche est celui que l'on regle (revele absent = false).
+discussion:
+  frise-pulsations:
+    quand: "Pour faire voir que tempo et nuance sont indépendants : tempo = pulsations par minute (écart des ronds) ; mesure = 2, 3 ou 4 temps, le 1er accentué ; nuance = nuance de départ, 1 = pp à 6 = ff (taille des ronds) ; ecart = évolution (positif = crescendo, négatif = decrescendo)."
+    valeurs:
+      tempo: {min: 40, max: 200, pas: 10, defaut: 90}
+      mesure: {min: 2, max: 4, pas: 1, defaut: 4}
+      nuance: {min: 1, max: 6, pas: 1, defaut: 2}
+      ecart: {min: -5, max: 5, pas: 1, defaut: 0}
