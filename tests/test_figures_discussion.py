@@ -420,6 +420,7 @@ def test_graphe_de_fiche_garde_sa_grille_avec_la_requete_de_conteneur(
         grille = page.attendre(GRILLE, delai=20)
         assert grille == {"cote_a_cote": cote_a_cote, "dessous": not cote_a_cote}
 
+
 # --- schema de la fiche visuelle de la notion ({"schema": id}) : toutes matieres ------------------------------
 
 PYTHAGORE = "parallelisme-triangles-pythagore"  # notion du depot dont la fiche visuelle a un bloc schema
