@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-m-identifier-reperes-culturels
+declencheurs:
+- les différences entre la France et l'Espagne
+- les fêtes espagnoles
+- les habitudes espagnoles différentes
+- la date s'écrit pas pareil en espagnol
+- repères culturels espagnols
+essentiel: 'Identifier les repères culturels, c''est remarquer une similitude ou une différence entre la culture
+  française et une culture hispanophone.
+
+  Par exemple, la façon de fêter les Rois mages ou les horaires des repas peuvent être différents.
+
+  On peut informer ou alerter quelqu''un avec des formules ou des gestes simples : espera, por favor, para.'
+methode:
+- Observer un document (date, horaire, fête) venant d'un pays hispanophone.
+- Comparer avec ce qu'on connaît en France.
+- Nommer ce qui est pareil et ce qui est différent.
+vocabulaire:
+- terme: différence culturelle
+  definition: une façon de faire qui change d'un pays à l'autre
+erreurs_frequentes:
+- Croire que toutes les habitudes sont identiques d'un pays à l'autre.
+- Ne pas remarquer qu'une fête ou un horaire est différent.
+exemple:
+  enonce: 'En Espagne, on dit l''heure ainsi : « son las siete y media » pour 7h30. Est-ce la même façon de dire
+    l''heure qu''en France ?'
+  solution: 'C''est assez proche : en espagnol on dit « il est sept heures et demie » (son las siete y media) comme
+    en français « sept heures et demie », mais la structure est un peu différente (utilisation de son las).'
+exercices:
+- enonce: Dis « stop » à un camarade pour l'empêcher de continuer une action dangereuse, en espagnol.
+  indices:
+  - Utilise un mot très simple dans ce contexte.
+  solution: ¡Para!
+- enonce: En Espagne, les enfants reçoivent des cadeaux le 6 janvier (jour des Rois mages). Est-ce pareil en France
+    ?
+  indices:
+  - Pense à quand on fête Noël et les Rois en France.
+  solution: En France, les cadeaux sont surtout le 25 décembre (Noël), alors qu'en Espagne la tradition principale
+    est le 6 janvier, le jour des Rois mages (los Reyes Magos).
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 18
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,55 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-ce-comprendre-textes-courts-simples
+declencheurs:
+- lire un texte court en espagnol
+- comprendre une carte postale en espagnol
+- lire une bande dessinée en espagnol
+- comprendre un message écrit en espagnol
+essentiel: 'Pour comprendre un texte court en espagnol, on s''appuie sur les images et sur le titre.
+
+  On repère les mots transparents, qui ressemblent au français : música, familia, tomate.
+
+  On repère les chiffres et les nombres écrits : cinco, quince, cincuenta.
+
+  On reconnaît le type de texte grâce à sa mise en forme : une bande dessinée, une carte postale, une publicité
+  n''ont pas la même forme.'
+methode:
+- Regarder d'abord les images et le titre pour deviner le sujet.
+- Repérer les mots transparents, qu'on comprend sans traduire.
+- Repérer les chiffres et les nombres écrits en lettres.
+- Identifier le type de texte grâce à sa forme (carte postale, bande dessinée...).
+vocabulaire:
+- terme: mot transparent
+  definition: un mot espagnol qui ressemble beaucoup à un mot français, comme música ou tomate
+erreurs_frequentes:
+- Vouloir traduire tous les mots inconnus au lieu de s'appuyer sur les images.
+- Ne pas remarquer les mots transparents qui ressemblent au français.
+- Ignorer la mise en forme qui donne des indices sur le type de texte.
+exemple:
+  enonce: 'Tu lis : « Hoy hace viento en Madrid. ». Quels indices t''aident à comprendre, même si tu ne connais
+    pas viento ?'
+  solution: 'Hoy (aujourd''hui) et le nom d''une ville te donnent le sujet : une phrase sur la météo dans une
+    ville.'
+exercices:
+- enonce: Dans le texte « Me gusta nadar y leer. Llevo pantalones negros. », quels mots transparents reconnais-tu
+    ?
+  indices:
+  - Cherche des mots qui ressemblent à des mots français.
+  solution: Pantalones ressemble à « pantalons » et negros à « noirs », ce sont des mots transparents.
+- enonce: Tu vois un texte avec un timbre, une adresse et « Queridos padres, ». Quel type de texte est-ce ?
+  indices:
+  - 'Pense à la mise en forme : timbre, adresse, formule d''appel.'
+  solution: C'est une carte postale.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 13-14
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

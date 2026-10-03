@@ -1,0 +1,64 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-co-comprendre-message-oral-court
+declencheurs:
+- consigne en espagnol
+- comprendre un message oral en espagnol
+- comprendre l'espagnol parlé
+- reconnaître les mots en espagnol à l'oral
+- comprendre une conversation simple en espagnol
+essentiel: 'Pour comprendre un message oral court, il faut d''abord repérer les mots de salutation : Hola, Buenos
+  días, Adiós, ¿Qué tal?, ¿Cómo estás?
+
+  On s''aide ensuite des mots qu''on connaît déjà, sur soi et sur sa famille.
+
+  On repère les mots qui posent une question : ¿Quién?, ¿Qué?, ¿Dónde?, ¿Cuándo? Ils annoncent qu''on attend une
+  réponse précise.
+
+  On repère aussi qui parle grâce aux pronoms : yo, tú, él, ella, et à qui appartient quelque chose grâce à mi,
+  tu, su.
+
+  Enfin, on écoute l''émotion dans la voix (joie, tristesse, colère) pour comprendre le sens même si on ne connaît
+  pas tous les mots.
+
+  Cela marche seulement si la personne parle lentement et distinctement.'
+methode:
+- 'Repérer d''abord les formules de salutation : elles indiquent le début de l''échange.'
+- Écouter les pronoms interrogatifs (¿Quién? ¿Qué? ¿Dónde? ¿Cuándo?) pour savoir ce qu'on demande.
+- Repérer les pronoms personnels (yo, tú, él, ella) pour savoir de qui on parle.
+- S'aider du ton de la voix pour deviner l'émotion de la personne qui parle.
+- Demander de répéter si on n'a pas compris (voir la fiche « clarifier un point »).
+vocabulaire:
+- terme: pronom interrogatif
+  definition: un mot qui sert à poser une question, comme Quién, Qué, Dónde, Cuándo
+- terme: adjectif possessif
+  definition: un mot qui dit à qui appartient quelque chose, comme mi, tu, su
+erreurs_frequentes:
+- Ne pas reconnaître Quién, Qué, Dónde, Cuándo et donc ne pas comprendre qu'une question est posée.
+- Confondre él et ella, ou mi et tu.
+- Ne pas s'aider de l'émotion dans la voix pour comprendre le sens général du message.
+exemple:
+  enonce: 'Le professeur dit : « ¡Hola, entrad! ¡Sentaos! ». Que doit faire l''élève ?'
+  solution: 'L''élève reconnaît une salutation (Hola) suivie d''une consigne : il entre et s''assoit.'
+exercices:
+- enonce: 'Tu entends : « ¿Dónde vives? ». Quel pronom interrogatif reconnais-tu et que te demande-t-on ?'
+  indices:
+  - Dónde veut dire « où ».
+  solution: 'Dónde : on te demande où tu habites.'
+- enonce: 'Tu entends quelqu''un dire d''une voix triste : « Estoy triste porque no tengo cacahuetes. ». Même sans
+    connaître cacahuetes, que comprends-tu ?'
+  indices:
+  - Écoute l'émotion dans la voix et le mot triste.
+  solution: Tu comprends que la personne est triste (triste), même sans connaître le mot cacahuetes.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 5
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

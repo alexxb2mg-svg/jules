@@ -421,12 +421,13 @@ def test_referentiel_cm1():
     """CM1 2026-2027 : 10 matieres, ids prefixes cm1-, chaque notion a attendus et source, rien de la 3e ne fuit."""
     cat = charger_catalogue(BIBLIOTHEQUES, ["programme", "fiches-3e-experimentales"], "CM1")
     notions = list(cat.notions.values())
-    assert len(notions) == 158
+    assert len(notions) == 182
     assert {n.matiere for n in notions} == {
         "anglais",
         "arts-plastiques",
         "education-musicale",
         "emc",
+        "espagnol",
         "francais",
         "geographie",
         "histoire",

@@ -1,0 +1,48 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-ee-epeler-copier-ecrire-sous-dictee
+declencheurs:
+- copier des mots espagnols
+- écrire sous la dictée en espagnol
+- épeler un mot en espagnol à l'écrit
+essentiel: 'Pour épeler, copier ou écrire sous la dictée en espagnol, on recopie dans son cahier des éléments écrits
+  au tableau ou dans un texte court.
+
+  On retranscrit aussi quelques mots qu''on entend, à condition qu''ils soient déjà connus.
+
+  L''important est de bien recopier chaque lettre, sans en oublier, et de penser aux accents (á, é, í, ó, ú) et
+  au ñ.'
+methode:
+- Regarder le mot ou la phrase à copier en entier avant de commencer.
+- Copier lettre par lettre, en vérifiant chaque mot et chaque accent.
+- Relire ce qu'on a écrit en le comparant au modèle.
+- Pour un mot entendu, le répéter dans sa tête avant de l'écrire.
+vocabulaire: []
+erreurs_frequentes:
+- Oublier une lettre ou un accent en copiant un mot espagnol.
+- Confondre des lettres qui se ressemblent à l'écrit (b et d, par exemple).
+- Ne pas relire ce qu'on a copié.
+exemple:
+  enonce: Tu dois copier la phrase « En mi mochila, hay un bolígrafo azul y una regla. » depuis l'affichage de la classe.
+  solution: Tu recopies la phrase entière, lettre par lettre, en vérifiant chaque mot et chaque accent avec l'affichage.
+exercices:
+- enonce: 'Copie ce mot déjà connu sans erreur : « tijeras ».'
+  indices:
+  - Vérifie chaque lettre avant d'écrire la suivante.
+  solution: tijeras
+- enonce: 'Le professeur dicte lentement : « unas tijeras ». Écris ce que tu entends.'
+  indices:
+  - Répète les mots dans ta tête avant de les écrire.
+  solution: unas tijeras
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 16
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
