@@ -55,10 +55,12 @@ def test_generateurs_annonces_sont_les_vrais():
 def test_niveaux_du_paquet_et_du_readme_concordent():
     pyproject = (RACINE / "pyproject.toml").read_text(encoding="utf-8")
     description = re.search(r'^description\s*=\s*"([^"]+)"', pyproject, re.MULTILINE)[1]  # type: ignore[index]
-    niveaux = re.search(r"du (\w+) [àa] la (\w+)", description)
-    assert niveaux, "la description du paquet doit annoncer ses niveaux (« du CM1 a la 3e »)"
-    assert re.search(rf"du {niveaux[1]} à la {niveaux[2]}", README), (
-        "le README n'annonce pas les mêmes niveaux que pyproject.toml"
+    # Depuis l'audit externe (#85), le paquet est un harnais « fourni avec les bibliotheques du programme
+    # officiel de CM1, 5e, 4e et 3e » : le README doit citer les memes niveaux, dans le meme ordre.
+    niveaux = re.findall(r"\b(CP|CE[12]|CM[12]|[3-6]e)\b", description)
+    assert niveaux, "la description du paquet doit annoncer ses niveaux (« de CM1, 5e, 4e et 3e »)"
+    assert f"({', '.join(niveaux)}" in README, (
+        f"le README n'annonce pas les mêmes niveaux que pyproject.toml ({', '.join(niveaux)})"
     )
 
 
