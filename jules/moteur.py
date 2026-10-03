@@ -154,7 +154,11 @@ class Tuteur:
         except Exception as err:
             journal.exception("Echec du moteur d'IA")
             self.stockage.ajouter_evenement("erreur", {"message": str(err)[:500]}, conv_id)
-            return Message(role="bot", texte=MESSAGE_PANNE)
+            # Le message de panne n'entre pas dans la conversation, mais les modules sont prevenus quand
+            # meme : le plancher de vigilance doit relire chaque message de l'eleve, repondu ou non.
+            panne = Message(role="bot", texte=MESSAGE_PANNE)
+            self._lancer_apres_echange(conv, eleve, panne)
+            return panne
         bot = self.stockage.ajouter_message(conv_id, Message(role="bot", texte=reponse or "…"))
         conv.messages.append(bot)
         self._lancer_apres_echange(conv, eleve, bot)

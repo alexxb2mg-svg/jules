@@ -64,6 +64,8 @@ class Module:
         return None
 
     def apres_echange(self, conv: Conversation, eleve: Message, bot: Message) -> None:
+        """Appele en tache de fond apres chaque message de l'eleve, y compris quand le moteur d'IA a
+        echoue : `bot` est alors le message de panne (jules.moteur.MESSAGE_PANNE), absent de `conv`."""
         return None
 
     def bloc_consulte(self, conv: Conversation | None, adresse: str, notion: str | None = None) -> None:
