@@ -154,7 +154,7 @@ def test_etat_du_chantier(externe, tmp_path):
 
     page = rendre_etat(list(etats.values()), depot="exemple/depot", jour="2026-09-26")
     assert "*Page générée le 2026-09-26" in page
-    assert "| 3e | 252 | 249 | 1 | 0 | 1 | 1 | 0 | 0 % |" in page
+    assert "| 3e | 269 | 266 | 1 | 0 | 1 | 1 | 0 | 0 % |" in page
     assert "| Racine carrée (`racine-carree`) |" in page
     assert "@camille ([#7](https://github.com/exemple/depot/issues/7))" in page
 

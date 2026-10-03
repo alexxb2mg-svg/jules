@@ -1,0 +1,47 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-m-participer-travail-collectif
+declencheurs:
+- travailler en groupe en espagnol
+- coopérer avec des correspondants espagnols
+- travail de groupe en espagnol
+essentiel: 'Participer à un travail collectif, c''est faciliter un échange en se montrant accueillant, avec des
+  mots simples ou des gestes : Hola, bienvenido.
+
+  On donne des consignes ou des ordres simples et ritualisés : Te toca, ¡Vamos a jugar!, ¡Se acabó el tiempo!
+
+  On demande ou on dit si on a compris : ¿Entiendes?'
+methode:
+- Accueillir les autres avec un mot simple (Hola, bienvenido).
+- Donner un tour de parole ou une consigne simple pendant le travail de groupe.
+- Demander régulièrement si tout le monde a compris.
+- Répondre si on a compris ou pas, pour que le groupe avance ensemble.
+vocabulaire: []
+erreurs_frequentes:
+- Ne jamais vérifier si les autres ont compris pendant un travail de groupe.
+- Oublier d'accueillir poliment un nouveau camarade ou un correspondant.
+exemple:
+  enonce: 'Tu expliques à un camarade comment plier un papier : « Coge una hoja de papel cuadrada. ». Comment vérifies-tu
+    qu''il a compris ?'
+  solution: ¿Entiendes? (Est-ce que tu as compris ?)
+exercices:
+- enonce: C'est le tour de ton camarade de jouer. Dis-le-lui simplement.
+  indices:
+  - Utilise une expression courte et ritualisée.
+  solution: ¡Te toca!
+- enonce: Le temps est écoulé pendant un jeu de groupe. Que dis-tu ?
+  indices:
+  - Utilise une expression toute faite pour signaler la fin du temps.
+  solution: ¡Se acabó el tiempo!
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 19
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

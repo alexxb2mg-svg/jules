@@ -1,0 +1,58 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoc-raconter
+declencheurs:
+- raconter une histoire en espagnol
+- raconter ce que j'ai fait en espagnol
+- me présenter en espagnol
+- raconter une journée en espagnol
+essentiel: 'Pour raconter en espagnol, on utilise des phrases simples juxtaposées, en s''aidant d''images.
+
+  On nomme et on compte les personnes, les objets, les lieux avec des mots simples (l''école, la famille) et en
+  comptant avec les nombres (uno, dos, tres).
+
+  On situe dans le temps avec des mots comme hoy, ahora, esta mañana, ayer, mañana, et on peut dire la date
+  (viernes, 25 de noviembre).
+
+  On situe dans l''espace avec des mots comme delante de, en, cerca de, detrás de.
+
+  On peut reprendre le modèle d''une histoire répétitive découverte en classe pour raconter à son tour.'
+methode:
+- Choisir les images ou les étapes de l'histoire à raconter, dans l'ordre.
+- Pour chaque étape, faire une phrase simple avec un verbe d'action.
+- Ajouter un repère de temps (hoy, luego, después) ou de lieu si besoin.
+- Relier deux phrases simples avec y ou pero si besoin.
+- S'entraîner à dire les phrases dans l'ordre, en s'aidant des images.
+vocabulaire:
+- terme: règle d'accord
+  definition: la règle qui change un mot selon le genre et le nombre, comme gato/gatos ou gato/gata
+erreurs_frequentes:
+- Oublier de mettre le pluriel (gato au lieu de gatos) quand on parle de plusieurs choses.
+- Ne pas relier ses phrases avec y, ce qui rend le récit haché.
+- Ne pas s'appuyer sur les images alors qu'elles aident à ne rien oublier.
+exemple:
+  enonce: Raconte en deux phrases simples, à l'aide d'images, l'histoire d'un enfant qui va à l'école puis rentre
+    chez lui.
+  solution: 'Image 1 : Ana va al colegio. Image 2 : Vuelve a casa.'
+exercices:
+- enonce: 'Reproduis le modèle répétitif suivant en changeant l''aliment : « Fui al supermercado y compré unas
+    galletas locas. » avec des biscuits (galletas).'
+  indices:
+  - Garde la même structure, change seulement le nom de l'aliment.
+  solution: Fui al supermercado y compré unas galletas.
+- enonce: Dis aujourd'hui est mardi, le 2 octobre, en espagnol (comme un modèle de date).
+  indices:
+  - Utilise le modèle Hoy es ... , ... de ...
+  solution: Hoy es martes, 2 de octubre.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 7-8
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

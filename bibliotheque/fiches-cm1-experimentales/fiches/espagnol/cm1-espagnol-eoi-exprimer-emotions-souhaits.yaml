@@ -1,0 +1,51 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoi-exprimer-emotions-souhaits
+declencheurs:
+- content en espagnol
+- exprimer mes émotions en espagnol
+- dire que j'ai peur en espagnol
+- réagir à une histoire en espagnol
+essentiel: 'Pour exprimer une émotion, on peut utiliser des expressions toutes faites comme Estoy bien, Es difícil,
+  Es fácil.
+
+  On peut aussi utiliser des onomatopées : ¡Ñam! (miam), ¡Guau! (waouh), ¡Ay! (aïe), ¡Pum!, ¡Splash!
+
+  On réagit à ce que dit ou fait quelqu''un, positivement ou négativement.
+
+  Ces expressions servent dans des situations connues, comme réagir à une chanson ou à une histoire.'
+methode:
+- Identifier l'émotion ressentie (joie, tristesse, surprise, peur).
+- Choisir l'expression ou l'onomatopée qui correspond le mieux.
+- Dire la réaction avec l'intonation qui va avec l'émotion.
+- S'appuyer sur la réaction de la personne en face pour continuer l'échange.
+vocabulaire:
+- terme: onomatopée
+  definition: un mot qui imite un bruit ou une réaction, comme ¡Guau! ou ¡Ay!
+erreurs_frequentes:
+- Utiliser toujours la même expression (Estoy bien) pour toutes les émotions.
+- Ne pas faire varier l'intonation selon l'émotion exprimée.
+exemple:
+  enonce: Tu goûtes un nouveau plat et tu le trouves délicieux. Que dis-tu ?
+  solution: ¡Ñam! ¡Qué rico!
+exercices:
+- enonce: Tu te fais mal en trébuchant. Quelle onomatopée utilises-tu ?
+  indices:
+  - C'est une réaction à la douleur.
+  solution: ¡Ay!
+- enonce: Un ami te raconte une histoire drôle. Comment réagis-tu simplement en espagnol ?
+  indices:
+  - Utilise une expression simple pour dire que tu trouves ça drôle ou que tu es content.
+  solution: 'Réponse possible : ¡Es una historia muy divertida! ¡Estoy contento!'
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 10
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''

@@ -1,0 +1,53 @@
+# DONNÉES D'EXPÉRIMENTATION - fiche CM1 non validée par un enseignant - voir ../../bibliotheque.yaml
+# Licence : CC BY-SA 4.0 (adaptation des sources citées). Relecture bienvenue.
+notion: cm1-espagnol-eoc-se-presenter-exprimer-gouts
+declencheurs:
+- se présenter en espagnol
+- dire mon prénom en espagnol
+- dire ce que j'aime en espagnol
+- présenter un copain en espagnol
+- me llamo en espagnol
+essentiel: 'Pour se présenter en espagnol, on répète ou on récite un modèle qu''on a appris : Me llamo Lea. Tengo
+  9 años. Soy de Poitiers.
+
+  On peut aussi décrire brièvement quelqu''un d''autre (un camarade, un animal), après s''être entraîné.
+
+  On utilise le présent d''un verbe courant à la première personne (tengo) ou à la troisième personne (tiene, va).
+
+  Pour présenter un camarade, on remplace yo par él ou ella : Se llama Paul. Tiene 10 años.'
+methode:
+- 'Choisir les informations à donner : nom, âge, ville, famille.'
+- Construire chaque phrase avec yo ou él/ella selon qui on présente.
+- S'entraîner à voix haute avant de parler devant les autres.
+- Ajouter un détail (un animal, une activité) pour enrichir la présentation.
+vocabulaire:
+- terme: presente
+  definition: le temps utilisé pour parler de ce qui est vrai maintenant, par exemple tengo ou tiene
+erreurs_frequentes:
+- Confondre la conjugaison de la première et de la troisième personne (tengo / tiene).
+- Confondre yo et él/ella en présentant un camarade au lieu de soi-même.
+- Réciter sans s'être entraîné avant, ce qui rend la présentation peu compréhensible.
+exemple:
+  enonce: Présente ton camarade Paul, qui a 10 ans et vit à Bordeaux.
+  solution: Se llama Paul. Tiene 10 años. Vive en Burdeos.
+exercices:
+- enonce: Présente-toi en trois phrases très simples (nom, âge, ville).
+  indices:
+  - Utilise Me llamo / Tengo ... años / Soy de...
+  solution: 'Exemple possible : Me llamo Léo. Tengo 9 años. Soy de Lyon.'
+- enonce: Ton camarade Tom aime le football. Comment le dis-tu en espagnol, à la troisième personne ?
+  indices:
+  - Utilise le verbe gustar à la troisième personne.
+  solution: A Tom le gusta el fútbol.
+sources:
+- titre: Programme de langues vivantes étrangères et régionales pour le cours moyen, arrêté du 26-2-2026, BO n°
+    12 du 19/03/2026, p. 7-8
+  url: https://www.education.gouv.fr/sites/default/files/document/Annexe%202%20%E2%80%93%20Programme%20de%20langues%20vivantes%20%C3%A9trang%C3%A8res%20et%20r%C3%A9gionales%20pour%20les%20classes%20de%20cours%20moyen%20%28cycle%203%29-481190.pdf
+  auteurs: Ministère de l'Éducation nationale (DGESCO)
+  licence: etalab-2.0
+  consulte_le: '2026-09-24'
+  usage: reformulé et résumé
+relecture:
+  statut: a_relire
+  par: ''
+  le: ''
