@@ -41,7 +41,7 @@ modules:
   - id: fiches_visuelles   # « Mes fiches » : fiches visuelles affichees sans appel IA (voir jules/fiches_visuelles.py)
     reglages:
       bibliotheques:
-        - fiches-visuelles-3e-experimentales   # experimentale, relecture Alex en cours
+        - fiches-visuelles-3e-experimentales   # experimentale, non validee par un enseignant
         - fiches-visuelles-3e                  # depot jules-bibliotheques (bibliotheques_externes) : absente = ignoree
         - fiches-visuelles-cm1                 # idem, CM1
   - id: cours          # interface de lecon guidee, notion par notion (etape 2)
