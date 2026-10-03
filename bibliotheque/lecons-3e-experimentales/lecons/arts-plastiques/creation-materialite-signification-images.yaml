@@ -1,0 +1,153 @@
+notion: creation-materialite-signification-images
+titre: "Les images : matérialité, statut et signification"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Analyser une image avec ses quatre propriétés : plastiques, iconiques, sémantiques, symboliques."
+      - "Distinguer l'intention d'une œuvre et celle d'une image de communication visuelle."
+      - "Distinguer une œuvre et l'image d'une œuvre (sa reproduction)."
+
+  - type: texte
+    titre: "Des images très diverses, quatre propriétés"
+    contenu: |-
+      Peintures, photos, affiches, logos, images d'écran : les images sont très diverses.
+
+      Pour analyser une image, on regarde ses **propriétés** :
+      - **plastiques** : ce qui la constitue (support, format, couleurs, lignes, matière, technique) ;
+      - **iconiques** : ce qu'elle représente, ce qu'on reconnaît (une pomme, un visage) ;
+      - **sémantiques** : le sens, le message ;
+      - **symboliques** : ce qu'un élément évoque par convention (la colombe pour la paix, la balance pour la justice).
+
+  - type: texte
+    titre: "Exprimer ou communiquer ?"
+    contenu: |-
+      - **Communication visuelle** (publicité, affiche, logo, panneau) : un message clair et rapide, pour informer, convaincre ou vendre.
+      - **Expression artistique** (œuvre) : elle peut rester ouverte, faire douter, poser une question.
+
+      Le **lieu** compte : un dessin exposé au musée est regardé comme une œuvre. Le même dessin sur une boîte de biscuits sert à vendre.
+
+  - type: texte
+    titre: "L'œuvre et l'image de l'œuvre"
+    contenu: |-
+      Une œuvre est un **objet unique**, avec ses dimensions et sa matière.
+      « La Joconde » de Léonard de Vinci (vers 1503-1519) est une peinture à l'huile sur panneau de bois, d'environ 77 × 53 cm, au musée du Louvre.
+
+      Sa photo dans un livre, sur un écran ou un tee-shirt est une **reproduction**.
+      Elle change la taille, la matière, les couleurs et le lieu.
+
+      Au brevet : nomme le statut de l'image, ses propriétés, et justifie l'intention avec un détail précis.
+
+  - type: exemple
+    enonce: >-
+      Un même dessin d'oiseau (fictif) est exposé dans un musée, puis imprimé sur une boîte de
+      biscuits. Son statut et son intention changent-ils ?
+    etapes:
+      - "Au musée, le dessin est présenté comme une œuvre : on le regarde pour lui-même, il peut faire réfléchir."
+      - "Sur la boîte, il est entouré du nom de la marque : il sert à attirer l'acheteur. C'est de la communication visuelle."
+      - "Le dessin imprimé est aussi une reproduction : plus petit, sur du carton, en milliers d'exemplaires."
+      - "Conclusion : la même image change de statut et d'intention selon le lieu où on la voit."
+
+  - type: exercice
+    enonce: >-
+      La photo de « La Joconde » imprimée sur un tee-shirt n'est pas l'œuvre de Léonard de Vinci.
+      Quel mot désigne cette copie de l'œuvre ?
+    forme: reponse_courte
+    reponse: "reproduction"
+    reponses_acceptees:
+      - "reproduction"
+      - "une reproduction"
+      - "la reproduction"
+      - "reproductions"
+      - "image d'œuvre"
+      - "image d'oeuvre"
+    indices:
+      - "Le tee-shirt porte-t-il la vraie peinture, sur son panneau de bois ?"
+      - "Le mot désigne une image fabriquée à partir de l'œuvre, par photo ou impression, en de nombreux exemplaires."
+    explication: "C'est une reproduction : elle n'a ni la taille, ni la matière, ni le lieu de l'original."
+
+  - type: exercice
+    enonce: >-
+      Sur une affiche (fictive) contre la guerre, on voit une colombe blanche. Quelle propriété de
+      l'image décrit-on quand on dit « la colombe évoque la paix » ?
+    forme: qcm
+    choix:
+      - "Une propriété plastique"
+      - "Une propriété symbolique"
+      - "Une propriété iconique"
+    reponse: 1
+    indices:
+      - "La colombe ne montre pas la paix : elle l'évoque, par une habitude partagée dans une culture."
+      - "Le mot cherché vient de « symbole »."
+    explication: "C'est une propriété symbolique : par convention, la colombe évoque la paix. Dire « on voit un oiseau » serait iconique ; parler des couleurs ou du coup de pinceau serait plastique."
+
+  - type: exercice
+    enonce: "Laquelle de ces images relève surtout de la communication visuelle ?"
+    forme: qcm
+    choix:
+      - "Une peinture exposée au musée, qui laisse le spectateur se poser des questions"
+      - "Un panneau routier qui indique un virage dangereux"
+      - "Une sculpture abstraite dans un jardin"
+    reponse: 1
+    indices:
+      - "Quelle image doit être comprise par tous, tout de suite, sans hésiter ?"
+      - "La communication visuelle transmet un message clair et rapide."
+    explication: "Le panneau routier transmet un message clair et rapide : c'est de la communication visuelle. La peinture et la sculpture relèvent de l'expression artistique."
+
+  - type: exercice
+    enonce: >-
+      Une élève décrit une affiche : « On voit une pomme rouge sur une table. » Quelle propriété de
+      l'image décrit-elle ?
+    forme: qcm
+    choix:
+      - "Iconique : ce que l'image représente"
+      - "Sémantique : le message de l'image"
+      - "Symbolique : ce qu'un élément évoque par convention"
+    reponse: 0
+    indices:
+      - "Elle dit seulement ce qu'elle reconnaît dans l'image, sans parler du sens."
+      - "La propriété qui dit « ce qu'on reconnaît » a un nom qui vient de « icône »."
+    explication: "Elle décrit une propriété iconique : ce que l'image représente et que l'on reconnaît."
+
+  - type: exercice
+    enonce: >-
+      Sujet de type brevet. On regarde « La Joconde » sur l'écran d'un téléphone. Quelle phrase
+      décrit correctement ce qui change par rapport à l'œuvre du Louvre ?
+    forme: qcm
+    choix:
+      - "Rien ne change : voir la photo revient à voir le tableau."
+      - "L'image est bien plus petite, faite de lumière et non de peinture sur bois, ses couleurs sont modifiées et elle est sortie de son lieu."
+      - "Seul le cadre change, le reste est identique."
+    reponse: 1
+    indices:
+      - "Compare la taille, la matière et le lieu."
+      - "L'œuvre mesure environ 77 × 53 cm, peinte à l'huile sur un panneau de bois. Et l'écran ?"
+    explication: "Sur l'écran, on voit une reproduction : plus petite, faite de lumière, aux couleurs modifiées, hors du musée. L'image renvoie à l'œuvre, mais ce n'est pas l'œuvre."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une image que tu vois souvent (affiche, logo, photo, tableau). Analyse-la en quatre
+      phrases : une pour chaque propriété (plastique, iconique, sémantique, symbolique). Puis dis
+      si son intention est d'exprimer ou de communiquer, et pourquoi.
+    indices:
+      - "Commence par le support, le format et les couleurs. Puis dis ce qu'on y reconnaît."
+      - "Pour l'intention : l'image veut-elle informer, vendre, ou faire réfléchir ?"
+    criteres:
+      - "L'élève décrit au moins trois propriétés avec le bon vocabulaire (plastique, iconique, sémantique, symbolique)."
+      - "L'élève nomme l'intention (expression artistique ou communication visuelle)."
+      - "L'élève justifie l'intention avec un détail précis de l'image ou de son lieu de diffusion."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre une œuvre et sa
+      reproduction, et entre une œuvre et une image de communication visuelle.

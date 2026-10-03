@@ -1,0 +1,159 @@
+notion: styles
+titre: "Les styles : reconnaître une époque, un genre, une culture"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Utiliser les marqueurs stylistiques et les grandes catégories musicales."
+      - "Situer les grandes périodes de la musique européenne et des œuvres repères."
+      - "Reconnaître des musiques actuelles et une musique non occidentale."
+
+  - type: texte
+    titre: "Marqueurs stylistiques et grandes catégories"
+    contenu: |-
+      Un style se reconnaît à des **marqueurs stylistiques** : instruments et voix, rythme, forme, époque, lieu.
+      Grandes catégories :
+      **vocale** (des voix) · **instrumentale** (des instruments)
+      **électroacoustique** (sons enregistrés ou fabriqués, puis transformés)
+      **mixte** (instruments et sons électroacoustiques ensemble).
+
+  - type: texte
+    titre: "Du Moyen Âge au classique"
+    contenu: |-
+      **Moyen Âge** (Ve-XVe s.) : chant grégorien (une seule mélodie), Machaut (XIVe s.).
+      **Renaissance** (XVe-XVIe s.) : polyphonie vocale riche, chansons et messes.
+      **Baroque** (vers 1600-1750) : **basse continue**, concerto (soliste contre orchestre), naissance de l'opéra.
+      Repères : Monteverdi (L'Orfeo, 1607), Vivaldi (Les Quatre Saisons), Bach, Lully, Rameau.
+      **Classique** (vers 1750-1820) : clarté, équilibre, symphonie et sonate. Repères : Haydn, Mozart.
+
+  - type: texte
+    titre: "Du romantisme au XXe siècle"
+    contenu: |-
+      **Romantique** (XIXe s.) : sentiments forts, grand orchestre, virtuosité.
+      Repères : Beethoven (Symphonie n° 5, 1808), Berlioz (Symphonie fantastique, 1830), Chopin, Schubert.
+      **XXe siècle** : recherches sur les timbres et les rythmes.
+      Repères : Debussy, Ravel, Le Sacre du printemps de Stravinsky (1913).
+      **Musique concrète** : Pierre Schaeffer, Étude aux chemins de fer (1948), faite de bruits enregistrés.
+
+  - type: texte
+    titre: "Musiques actuelles et musique non occidentale"
+    contenu: |-
+      **Jazz** : né à La Nouvelle-Orléans au début du XXe s. ; improvisation, swing, cuivres (Louis Armstrong).
+      **Rock** : né aux États-Unis dans les années 1950 ; guitare électrique, basse, batterie.
+      **Rap** : né à New York dans les années 1970 (hip-hop) ; texte scandé (le flow) sur un rythme (le beat).
+      **Gamelan** (Indonésie : Java, Bali) : ensemble de gongs et de métallophones.
+      Debussy l'a découvert à l'Exposition universelle de Paris, en 1889.
+      **Repères du patrimoine français** : Machaut, Lully, Rameau, Berlioz, Debussy, Ravel.
+
+  - type: exemple
+    enonce: >-
+      On entend un très grand orchestre. La musique exprime des sentiments très forts, avec
+      des passages très doux puis très puissants, et un soliste très virtuose. De quelle
+      période s'agit-il probablement ? Justifie.
+    etapes:
+      - "Repérer les marqueurs : très grand orchestre, sentiments forts, grands contrastes, virtuosité."
+      - "Associer ces marqueurs à une période : ce sont ceux de la période romantique (XIXe siècle)."
+      - "Justifier et citer une œuvre repère : « C'est romantique parce que… », comme la Symphonie fantastique de Berlioz (1830)."
+
+  - type: exercice
+    enonce: >-
+      Comment s'appelle la période de la musique européenne, d'environ 1600 à 1750, marquée
+      par la basse continue, avec Vivaldi et Bach ?
+    forme: reponse_courte
+    reponse: "baroque"
+    reponses_acceptees:
+      - "baroque"
+      - "le baroque"
+      - "période baroque"
+      - "la période baroque"
+      - "musique baroque"
+    indices:
+      - "Cette période vient juste après la Renaissance et avant la période classique."
+      - "En art, ce mot désigne aussi un style chargé d'ornements. Il commence par « ba- »."
+    explication: "C'est la période baroque (vers 1600-1750) : basse continue, concerto, naissance de l'opéra."
+
+  - type: exercice
+    enonce: "Lequel de ces éléments est un marqueur essentiel du jazz ?"
+    forme: qcm
+    choix:
+      - "La basse continue au clavecin"
+      - "L'improvisation"
+      - "Le chant grégorien en latin"
+    reponse: 1
+    indices:
+      - "Le jazz est né au début du XXe siècle. Quels éléments de la liste sont bien plus anciens ?"
+      - "Dans le jazz, les musiciens inventent souvent leur partie au moment où ils jouent."
+    explication: "L'improvisation est un marqueur du jazz. La basse continue est baroque, le chant grégorien vient du Moyen Âge."
+
+  - type: exercice
+    enonce: >-
+      Une pièce est faite uniquement de bruits de trains enregistrés, puis transformés et
+      montés. Dans quelle grande catégorie la range-t-on ?
+    forme: qcm
+    choix:
+      - "Musique vocale"
+      - "Musique instrumentale"
+      - "Musique électroacoustique"
+      - "Musique mixte"
+    reponse: 2
+    indices:
+      - "Y a-t-il des voix ? Des instruments joués en direct ?"
+      - "La catégorie « mixte » mélange instruments et sons enregistrés. Ici, il n'y a que des sons enregistrés."
+    explication: "Des sons enregistrés puis transformés : c'est de la musique électroacoustique, comme l'Étude aux chemins de fer de Pierre Schaeffer (1948)."
+
+  - type: exercice
+    enonce: >-
+      Le gamelan est un ensemble de gongs et de métallophones. De quel pays vient-il ?
+    forme: reponse_courte
+    reponse: "Indonésie"
+    reponses_acceptees:
+      - "Indonésie"
+      - "l'Indonésie"
+      - "Indonesie"
+      - "en Indonésie"
+    indices:
+      - "Il vient des îles de Java et de Bali, en Asie du Sud-Est."
+      - "Debussy l'a découvert à Paris en 1889. Quel pays regroupe Java et Bali ?"
+    explication: "Le gamelan vient d'Indonésie (Java, Bali). C'est une musique non occidentale."
+
+  - type: exercice
+    enonce: "Quelle liste range les périodes dans l'ordre, de la plus ancienne à la plus récente ?"
+    forme: qcm
+    choix:
+      - "Classique, baroque, romantique, Renaissance"
+      - "Renaissance, baroque, classique, romantique"
+      - "Baroque, Renaissance, romantique, classique"
+    reponse: 1
+    indices:
+      - "Vivaldi (baroque) a vécu avant Mozart (classique)."
+      - "La Renaissance vient juste après le Moyen Âge ; le romantisme, c'est le XIXe siècle."
+    explication: "Renaissance (XVe-XVIe s.), baroque (vers 1600-1750), classique (vers 1750-1820), romantique (XIXe s.)."
+
+  - type: question_ouverte
+    question: >-
+      Voici la description d'un extrait : « Une trompette joue un solo qui semble inventé sur
+      le moment. Derrière, un piano, une contrebasse et une batterie donnent un rythme qui
+      balance. » Donne le style, justifie avec deux ou trois marqueurs, et cite un musicien
+      repère.
+    indices:
+      - "Quel style utilise souvent l'improvisation et les cuivres ?"
+      - "Commence par « C'est probablement du … parce que… », puis donne les marqueurs un par un."
+    criteres:
+      - "L'élève nomme le jazz."
+      - "L'élève justifie par au moins deux marqueurs entendus (improvisation, swing, cuivre soliste, section rythmique)."
+      - "L'élève cite un repère juste (Louis Armstrong, La Nouvelle-Orléans, début du XXe siècle)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est un marqueur
+      stylistique, et donne trois périodes ou styles avec un marqueur chacun.

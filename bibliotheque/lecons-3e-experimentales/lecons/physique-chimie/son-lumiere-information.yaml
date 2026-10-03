@@ -1,0 +1,165 @@
+notion: son-lumiere-information
+titre: "Le son et la lumière transportent une information"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme d'enseignement du cycle des approfondissements (cycle 4) — volet 3, Physique-Chimie (annexe 3, arrêté du 17-7-2020) — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (page de référence listant les programmes en vigueur en 2026-2027) — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Repérer l'émetteur, le signal et le récepteur dans une transmission."
+      - "Comprendre qu'un signal ne transmet une information que si l'on partage un code."
+      - "Choisir entre un signal sonore et un signal lumineux, et calculer une durée ou une distance."
+
+  - type: texte
+    titre: "La chaîne de transmission"
+    contenu: |-
+      Un **signal** transporte une **information** à distance. Le son et la lumière peuvent servir de signal.
+      - **Émetteur** : il produit le signal (sifflet, lampe, sirène, haut-parleur).
+      - **Milieu** : le signal s'y propage (l'air, l'eau, le vide pour la lumière).
+      - **Récepteur** : il reçoit le signal (oreille, œil, micro, capteur).
+
+      L'ordre est toujours : émission, propagation, réception, puis compréhension.
+
+  - type: texte
+    titre: "Sans code, pas d'information"
+    contenu: |-
+      L'émetteur et le récepteur doivent connaître le même **code**. C'est la règle qui donne un sens au signal.
+      - Feu tricolore : rouge veut dire « stop ».
+      - Phare : le rythme des éclats indique quel phare on voit.
+      - Code Morse : des points et des traits forment des lettres.
+      - **Fibre optique** : un fil de verre guide des impulsions de lumière, qui codent les données d'Internet.
+
+      Sans code partagé, on reçoit un signal, mais on ne comprend rien.
+
+  - type: texte
+    titre: "Signal sonore ou signal lumineux ?"
+    contenu: |-
+      | | Signal sonore | Signal lumineux |
+      |---|---|---|
+      | Traverse le vide ? | non | oui |
+      | Vitesse (dans l'air) | environ 340 m/s | environ 300 000 km/s |
+      | Exemples | sirène, voix, sifflet | feu, phare, fibre optique |
+
+      De loin ou la nuit, on choisit la lumière. Derrière un obstacle, le son peut passer.
+
+  - type: texte
+    titre: "Le retard du son"
+    contenu: |-
+      La lumière arrive presque tout de suite. Le son, lui, met du temps.
+      - C'est pour cela qu'on voit l'éclair avant d'entendre le tonnerre.
+      - Durée du trajet du son : **t = d ÷ v**.
+      - Distance parcourue : **d = v × t**.
+      - Unités : d en m, v en m/s, t en s.
+
+  - type: exemple
+    enonce: >-
+      Au départ d'une course, le starter tire un coup de pistolet. Le pistolet fait un bruit et un
+      petit éclair. Un chronométreur est à 170 m. Décris la transmission, puis calcule le retard du
+      son (vitesse du son dans l'air : 340 m/s).
+    etapes:
+      - "Émetteur : le pistolet. Signaux : un son et une lumière, qui se propagent dans l'air."
+      - "Récepteurs : l'oreille et l'œil du chronométreur. Code : le coup de pistolet veut dire « partez »."
+      - "La lumière arrive presque tout de suite. Le son met t = d ÷ v = 170 ÷ 340 = 0,5 s."
+      - "Le chronométreur démarre donc au signal lumineux : il est plus précis."
+
+  - type: exercice
+    enonce: "Un nageur entend le coup de sifflet du maître-nageur. Dans cette transmission, quel est le rôle de l'oreille du nageur ?"
+    forme: qcm
+    choix:
+      - "l'émetteur"
+      - "le signal"
+      - "le récepteur"
+      - "le code"
+    reponse: 2
+    indices:
+      - "L'oreille produit-elle le son, ou le reçoit-elle ?"
+      - "Le sifflet produit le signal. Comment s'appelle ce qui reçoit le signal ?"
+    explication: "Le sifflet est l'émetteur, le son est le signal, l'oreille est le récepteur."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on la règle, connue de l'émetteur et du récepteur, qui donne un sens au
+      signal (comme les points et les traits du Morse) ? Réponds par un seul mot.
+    forme: reponse_courte
+    reponse: "code"
+    reponses_acceptees:
+      - "le code"
+      - "un code"
+      - "codes"
+    indices:
+      - "Sans cette règle commune, tu verrais des éclats de lumière sans savoir ce qu'ils veulent dire."
+      - "Le Morse, les couleurs d'un feu tricolore et le rythme d'un phare en sont des exemples."
+    explication: "C'est le code. Émetteur et récepteur doivent le partager pour que le signal transmette une information."
+
+  - type: exercice
+    enonce: >-
+      Deux astronautes sont dans l'espace, hors de leur vaisseau, sans radio. Il n'y a pas d'air
+      autour d'eux. Quel signal peut transmettre un message de l'un à l'autre ?
+    forme: qcm
+    choix:
+      - "un signal sonore (crier)"
+      - "un signal lumineux (une lampe)"
+      - "les deux fonctionnent aussi bien"
+      - "aucun des deux"
+    reponse: 1
+    indices:
+      - "Dans l'espace, il n'y a pas d'air : c'est le vide."
+      - "Lequel des deux signaux a besoin d'un milieu matériel pour se propager ?"
+    explication: "Le son ne se propage pas dans le vide. La lumière, elle, traverse le vide : seul le signal lumineux fonctionne."
+
+  - type: exercice
+    enonce: >-
+      Pendant un orage, tu vois l'éclair, puis tu entends le tonnerre 5 s plus tard. La lumière
+      arrive presque instantanément. Le son va à 340 m/s dans l'air. À quelle distance, en mètres,
+      l'éclair a-t-il eu lieu ?
+    forme: nombre
+    reponse: 1700
+    tolerance: 1
+    unite: "m"
+    indices:
+      - "Seul le son met du temps à arriver. Pendant combien de secondes a-t-il voyagé ?"
+      - "Utilise d = v × t, avec v en m/s et t en s : le résultat est en mètres."
+      - "Multiplie la vitesse du son par la durée du décalage."
+    explication: "d = v × t = 340 × 5 = 1 700 m. L'éclair a eu lieu à environ 1,7 km."
+
+  - type: exercice
+    enonce: >-
+      Sur un chantier, un chef d'équipe donne le signal de la pause par un coup de sirène et par un
+      gyrophare qui s'allume. Un ouvrier travaille à 1 360 m. Le son va à 340 m/s dans l'air.
+      Combien de secondes après avoir vu le gyrophare entend-il la sirène ?
+    forme: nombre
+    reponse: 4
+    tolerance: 0.01
+    unite: "s"
+    indices:
+      - "La lumière arrive presque tout de suite. Le décalage vient donc seulement du son."
+      - "Pour trouver une durée, utilise t = d ÷ v (d en m, v en m/s)."
+      - "Divise la distance par la vitesse du son."
+    explication: "t = d ÷ v = 1 360 ÷ 340 = 4 s. L'ouvrier voit le gyrophare presque tout de suite, puis entend la sirène 4 s plus tard."
+
+  - type: question_ouverte
+    question: >-
+      Deux amis veulent communiquer la nuit, d'une fenêtre à l'autre, avec une lampe de poche.
+      Propose un code simple pour dire « oui », « non » et « viens ». Puis décris la chaîne de
+      transmission.
+    indices:
+      - "Avec une lampe, que peux-tu changer pour envoyer des messages différents ?"
+      - "Choisis un nombre d'éclats ou une durée pour chaque mot. Puis dis qui émet, ce qui se propage et qui reçoit."
+    criteres:
+      - "L'élève propose un code clair (nombre ou durée des éclats) qui distingue les trois messages."
+      - "L'élève nomme l'émetteur (la lampe), le signal lumineux qui se propage dans l'air et le récepteur (l'œil de l'ami)."
+      - "L'élève précise que les deux amis doivent connaître le code à l'avance."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les trois éléments d'une chaîne de
+      transmission, pourquoi il faut un code, et une différence entre un signal sonore et un signal
+      lumineux.

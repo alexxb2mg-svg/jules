@@ -1,0 +1,157 @@
+notion: experience-sensible-espace-oeuvre
+titre: "L'expérience sensible de l'espace de l'œuvre"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer espace représenté, espace construit et espace perçu ou ressenti."
+      - "Repérer comment l'espace, le temps et les sens deviennent des matériaux de l'œuvre."
+      - "Analyser le point de vue de l'artiste et celui du spectateur, et la place de son corps."
+
+  - type: texte
+    titre: "Espace représenté, construit, perçu"
+    contenu: |-
+      - **Espace représenté** : une image, par exemple un paysage peint en perspective sur une toile plate. On le regarde de l'extérieur.
+      - **Espace construit** : un lieu réel, comme une installation où l'on entre, marche, se retourne.
+      - **Espace perçu et ressenti** : ce que le corps vit vraiment (distances, lumière, sons). On peut se sentir petit, enfermé, perdu, apaisé.
+
+      Ce que le corps perçoit n'est pas ce que montre une image. Une œuvre peut jouer sur cet écart.
+
+  - type: texte
+    titre: "L'espace, le temps et les sens comme matériaux"
+    contenu: |-
+      L'**espace** et le **temps** deviennent des matériaux : le parcours, la durée de la visite, la lumière qui change.
+      Plusieurs **sens** sont mobilisés : la vue, l'ouïe, le toucher, parfois l'odorat.
+
+      - Yayoi Kusama, « Infinity Mirror Rooms », à partir de 1965 : des pièces couvertes de miroirs. On croit l'espace sans fin.
+      - Olafur Eliasson, « The Weather Project », 2003, Tate Modern à Londres : un immense soleil artificiel, de la brume, un miroir au plafond.
+      - Jesús Rafael Soto, les « Pénétrables », à partir de la fin des années 1960 : des milliers de fils ou de tubes suspendus que l'on traverse.
+
+  - type: texte
+    titre: "Point de vue et corps du spectateur"
+    contenu: |-
+      L'**auteur** choisit où placer le spectateur. Le **spectateur** se déplace et vit l'œuvre à sa façon.
+
+      Felice Varini peint des formes sur des murs et des bâtiments. Elles ne se recomposent que depuis un seul endroit.
+      Ailleurs, on ne voit que des morceaux.
+
+      Le **corps** entre dans l'œuvre, la parcourt, la modifie parfois : les fils de Soto bougent quand on passe.
+
+      Au brevet : décris l'espace, le corps et les sens, le temps, puis le ressenti, avec un exemple d'artiste.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : dans une salle obscure, des élèves tendent du sol au plafond des centaines
+      de fils de laine blanche, éclairés par une lampe noire. On doit se frayer un chemin entre eux.
+      Analyse l'expérience du spectateur.
+    etapes:
+      - "L'espace n'est pas représenté mais construit : le spectateur entre dans l'œuvre."
+      - "Le corps touche les fils en avançant : le toucher s'ajoute à la vue."
+      - "La lumière fait briller les fils dans le noir et brouille les distances : on se sent un peu perdu."
+      - "La traversée prend du temps, et le point de vue change à chaque pas, comme dans les Pénétrables de Soto."
+
+  - type: exercice
+    enonce: "Dans laquelle de ces situations l'espace est-il représenté, et non construit ?"
+    forme: qcm
+    choix:
+      - "Un paysage de montagne peint en perspective sur une toile accrochée au mur"
+      - "Une salle couverte de miroirs dans laquelle on entre"
+      - "Des fils suspendus qu'on traverse en marchant"
+    reponse: 0
+    indices:
+      - "Dans quelle situation reste-t-on à l'extérieur, devant une surface plate ?"
+      - "Un espace construit est un lieu réel où le corps entre."
+    explication: "Le paysage peint est un espace représenté : une image sur une toile plate, qu'on regarde de l'extérieur. La salle de miroirs et les fils sont des espaces construits où l'on entre."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on une œuvre qui occupe et transforme tout un espace, dans lequel le
+      spectateur peut entrer et se déplacer, comme « The Weather Project » d'Olafur Eliasson ?
+    forme: reponse_courte
+    reponse: "installation"
+    reponses_acceptees:
+      - "installation"
+      - "une installation"
+      - "l'installation"
+      - "installation immersive"
+      - "une installation immersive"
+      - "installations"
+    indices:
+      - "Le mot vient d'un verbe qui veut dire « mettre en place, disposer dans un lieu »."
+      - "Le mot se termine par « -ation »."
+    explication: "C'est une installation : l'œuvre occupe un espace où le spectateur entre. Quand elle l'entoure de tous côtés, on dit qu'elle est immersive."
+
+  - type: exercice
+    enonce: >-
+      Dans un Pénétrable de Jesús Rafael Soto, le spectateur traverse des milliers de fils suspendus
+      qui frôlent son corps. Quel sens est mobilisé en plus de la vue ?
+    forme: qcm
+    choix:
+      - "L'odorat"
+      - "Le goût"
+      - "Le toucher"
+    reponse: 2
+    indices:
+      - "Que sent la peau quand on passe au milieu des fils ?"
+      - "Les fils frôlent le corps : c'est un contact."
+    explication: "Le toucher : les fils frôlent le corps du spectateur et bougent quand il passe. L'œuvre mobilise la vue et le toucher."
+
+  - type: exercice
+    enonce: >-
+      Felice Varini peint une forme sur plusieurs murs d'une place. Elle ne se recompose
+      entièrement que depuis un seul endroit ; ailleurs, on voit des morceaux. Qu'est-ce qui est
+      donc décisif pour lire l'œuvre ?
+    forme: qcm
+    choix:
+      - "La couleur du ciel ce jour-là"
+      - "L'endroit d'où regarde le spectateur, choisi par l'artiste"
+      - "La taille du musée"
+    reponse: 1
+    indices:
+      - "Ce qu'on voit change quand on se déplace sur la place."
+      - "L'artiste a prévu un emplacement précis pour regarder."
+    explication: "Le point de vue est décisif : depuis l'endroit choisi par l'artiste, la forme se recompose ; ailleurs, on ne voit que des fragments."
+
+  - type: exercice
+    enonce: >-
+      Sujet de type brevet. Dans « The Weather Project » (Olafur Eliasson, 2003), des visiteurs
+      restent longtemps allongés au sol et se regardent dans le miroir du plafond. Quelle phrase
+      analyse le mieux leur expérience ?
+    forme: qcm
+    choix:
+      - "Le spectateur est passif : il regarde une image de soleil, de face, comme un tableau."
+      - "Le spectateur est dans l'œuvre : son corps, son reflet et le temps qu'il passe font partie de l'expérience."
+      - "Le spectateur n'a aucun rôle : l'œuvre existe sans lui."
+    reponse: 1
+    indices:
+      - "Les visiteurs sont-ils devant l'œuvre ou à l'intérieur ?"
+      - "Pense au corps (allongé), au reflet dans le miroir et à la durée."
+    explication: "Le visiteur est dans l'œuvre : il s'allonge, se voit dans le miroir et prend son temps. Son corps, son point de vue et la durée font partie de l'œuvre."
+
+  - type: question_ouverte
+    question: >-
+      Imagine une installation pour une petite salle de ton collège. Décris-la en quatre phrases :
+      l'espace, ce que fait le corps du spectateur, les sens mobilisés, le rôle du temps, et ce que
+      tu veux faire ressentir.
+    indices:
+      - "Commence par le lieu et les matériaux : lumière, miroirs, fils, sons…"
+      - "Puis raconte le parcours du spectateur : il entre, il avance, que ressent-il ?"
+    criteres:
+      - "L'élève décrit un espace construit et la place ou le déplacement du corps du spectateur."
+      - "L'élève nomme au moins deux sens mobilisés et le rôle du temps (parcours, durée, lumière qui change)."
+      - "L'élève nomme un ressenti et le relie à ses choix (lumière, matières, échelle), éventuellement en citant un artiste de la leçon."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre un espace
+      représenté et un espace construit, et le rôle du corps du spectateur dans une installation.

@@ -1,0 +1,153 @@
+notion: theme-ecole-et-societe
+titre: "École et société : écoles, environnement et métiers en pays anglophones"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège — éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comparer l'école au Royaume-Uni, aux États-Unis et en France."
+      - "Connaître le vocabulaire de l'environnement et des loisirs écoresponsables."
+      - "Présenter un métier lié à l'environnement avec une fiche métier simple."
+
+  - type: texte
+    titre: "Comparer les systèmes scolaires"
+    contenu: |-
+      | Pays | Ce qu'il faut retenir |
+      |---|---|
+      | Royaume-Uni | beaucoup d'élèves portent un **school uniform** ; classes par **year groups** (Year 7 à Year 11, environ 11 à 16 ans) |
+      | États-Unis | **elementary school**, puis **middle school** (environ 11-14 ans), puis **high school** (environ 14-18 ans) |
+      | France | école primaire, collège, lycée |
+
+      **Faux ami** : « college » désigne surtout des études **après le lycée**, pas notre collège.
+      Pour comparer : « In the UK, pupils wear a uniform, **but** in France we don't. »
+
+  - type: texte
+    titre: "L'environnement au quotidien"
+    contenu: |-
+      | Anglais | Français |
+      |---|---|
+      | water / green spaces / town planning | l'eau / les espaces verts / l'urbanisme |
+      | rubbish, recycling | les déchets, le recyclage |
+      | to save energy / pollution | économiser l'énergie / la pollution |
+      | responsible consumption | la consommation responsable |
+      | eco-friendly | respectueux de l'environnement |
+
+      Au présent simple : « We **recycle** paper. », « She **turns off** the lights. » (n'oublie pas le **-s** avec he / she).
+
+  - type: texte
+    titre: "Loisirs écoresponsables et parcs"
+    contenu: |-
+      **Loisirs et consommation écoresponsables** :
+      - walk or cycle to school (aller au collège à pied ou à vélo) ;
+      - repair instead of throwing away (réparer plutôt que jeter) ;
+      - join a nature club (s'inscrire à un club nature).
+
+      **National parks** : grands espaces naturels protégés. **Urban parks** : parcs en ville.
+
+  - type: texte
+    titre: "Le monde du travail et le numérique"
+    contenu: |-
+      **Fiche métier (job profile)** : nom du métier, ce qu'on fait, une qualité.
+      - **park ranger** : protège un parc naturel et informe les visiteurs ;
+      - **recycling worker** (agent de recyclage), **water treatment technician** (technicien en traitement de l'eau), **renewable energy engineer** (ingénieur en énergies renouvelables).
+
+      **Numérique** : éteindre son ordinateur, garder son téléphone longtemps, recycler les appareils.
+
+  - type: exemple
+    enonce: "Rédige une petite fiche métier en anglais pour un « recycling worker »."
+    etapes:
+      - "Le nom du métier : « Job: recycling worker. »"
+      - "Ce qu'il fait, au présent simple avec -s : « He sorts rubbish and sends it to factories. »"
+      - "Pourquoi c'est utile : « He helps the environment because we waste less. »"
+      - "Une qualité : « He must be careful and organised. »"
+
+  - type: exercice
+    enonce: "Traduis en anglais le verbe « recycler » (forme de base)."
+    forme: reponse_courte
+    reponse: "recycle"
+    reponses_acceptees: ["Recycle", "to recycle", "To recycle", "RECYCLE"]
+    indices:
+      - "C'est un mot transparent : il ressemble beaucoup au mot français."
+      - "Le mot anglais a 7 lettres et commence exactement comme le mot français."
+    explication: "« recycle » veut dire recycler. Le nom est « recycling » (le recyclage)."
+
+  - type: exercice
+    enonce: "Un élève anglais te dit : « Next year, I will go to college. » Que veut-il dire ?"
+    forme: qcm
+    choix:
+      - "Il entre au collège, comme en France."
+      - "Il va faire des études après le lycée."
+      - "Il va à l'école primaire."
+      - "Il commence un métier dans un parc."
+    reponse: 1
+    indices:
+      - "« college » est un faux ami."
+      - "En anglais, ce mot ne désigne pas l'établissement des 11-15 ans."
+    explication: "« college » désigne surtout des études après le lycée. Aux États-Unis, l'âge de notre collège correspond plutôt à la « middle school »."
+
+  - type: exercice
+    enonce: "Aux États-Unis, comment s'appelle l'établissement des élèves d'environ 14 à 18 ans ?"
+    forme: reponse_courte
+    reponse: "high school"
+    reponses_acceptees: ["High school", "High School", "a high school", "the high school", "highschool"]
+    indices:
+      - "Il vient juste après la middle school."
+      - "Deux mots : un adjectif qui veut dire « haut », puis le mot « école »."
+    explication: "La « high school » accueille les élèves d'environ 14 à 18 ans, après la « middle school »."
+
+  - type: exercice
+    enonce: "Which activity is eco-friendly?"
+    forme: qcm
+    choix:
+      - "Leaving your computer on all night"
+      - "Cycling to school"
+      - "Throwing plastic bottles in the park"
+      - "Buying a new phone every year"
+    reponse: 1
+    indices:
+      - "Trois actions gaspillent ou polluent. Une seule respecte l'environnement."
+      - "Pense à la façon d'aller au collège sans polluer."
+    explication: "« Cycling to school » (aller au collège à vélo) ne pollue pas. Les autres gaspillent l'énergie, polluent ou créent des déchets."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Lis : « Hi, I'm Kate. I live near a national park in Wales. My mum is a park
+      ranger. She protects the animals and the trees, and she explains the rules to visitors. At my
+      school, we wear a uniform and we have a gardening club. » Quelle phrase est vraie ?
+    forme: qcm
+    choix:
+      - "Kate's mum works in a factory."
+      - "Kate's mum protects nature and helps visitors."
+      - "Kate doesn't wear a uniform at school."
+      - "Kate lives in a big city in the USA."
+    reponse: 1
+    indices:
+      - "Relis la phrase qui parle du métier de la mère de Kate."
+      - "« protects the animals and the trees » : de quoi s'occupe-t-elle ?"
+    explication: "La mère de Kate est « park ranger » : elle protège les animaux et les arbres et explique les règles aux visiteurs. Kate porte un uniforme et vit au pays de Galles, près d'un parc national."
+
+  - type: question_ouverte
+    question: >-
+      Écris en anglais 4 phrases pour comparer ton collège avec une école britannique, puis
+      présenter une action eco-friendly de ton collège.
+    indices:
+      - "Utilise « In the UK, … but in France, … »."
+      - "Pour l'action, utilise le présent simple : « We recycle… » ou « We save energy by… »."
+    criteres:
+      - "L'élève fait au moins une comparaison juste (uniforme, year groups…) avec « but » ou « like »."
+      - "L'élève présente une action écoresponsable avec un mot du vocabulaire (recycle, save energy, eco-friendly…)."
+      - "Les phrases sont au présent simple, avec un sujet et un verbe conjugué."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en trois phrases, une différence entre l'école en France et dans un pays
+      anglophone, trois mots anglais sur l'environnement, et un métier lié à l'environnement.

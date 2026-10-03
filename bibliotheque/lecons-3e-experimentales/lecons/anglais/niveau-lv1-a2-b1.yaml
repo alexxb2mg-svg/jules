@@ -1,0 +1,137 @@
+notion: niveau-lv1-a2-b1
+titre: "Le niveau visé en LV1 : A2, puis B1"
+duree_minutes: 20
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Ranger les niveaux du CECRL, de A1 à C2."
+      - "Dire le niveau visé en LV1 à la fin de la 3e : au moins A2 partout, B1 dans plusieurs activités."
+      - "Expliquer qu'un élève a un profil : son niveau change selon l'activité."
+
+  - type: texte
+    titre: "L'échelle du CECRL"
+    contenu: |
+      Le **CECRL** (Cadre européen commun de référence pour les langues) a **6 niveaux** :
+
+      **A1 → A2 → B1 → B2 → C1 → C2** (du plus simple au plus avancé)
+
+      - A = utilisateur élémentaire ; B = indépendant ; C = expérimenté.
+      - Dans une même lettre, 2 est plus avancé que 1.
+
+  - type: texte
+    titre: "Ce qui est visé en LV1 en fin de 3e"
+    contenu: |
+      Les **5 activités langagières** : écouter et comprendre, lire, parler en continu, écrire, réagir et dialoguer.
+
+      | Objectif LV1 (souvent l'anglais) | Pour qui ? |
+      |---|---|
+      | **Au moins A2** dans les **5** activités | tous les élèves |
+      | **B1** dans **plusieurs** activités | rendu possible par les activités de classe |
+
+  - type: texte
+    titre: "A2, B1 et le profil de chaque élève"
+    contenu: |
+      - **A2** : phrases simples sur des sujets familiers (se présenter, sa famille, ses goûts, son quotidien).
+      - **B1** : plus autonome (raconter un événement, décrire un projet, donner un avis et le justifier).
+      - Le niveau n'est **pas un score unique** : on peut être B1 en « lire » et A2 en « écrire ».
+      - Il dépend : de la correction de la langue, du registre choisi, de l'aisance à l'oral, du vocabulaire à l'écrit.
+      - A2 n'est pas un échec : c'est le minimum visé pour tous. (En LV2, l'objectif est différent.)
+
+  - type: exemple
+    enonce: >-
+      Inès est B1 pour « réagir et dialoguer », mais A2 pour « écrire ». Quel est « son » niveau
+      d'anglais ?
+    etapes:
+      - "On ne donne pas un seul niveau : on regarde chaque activité langagière."
+      - "Réagir et dialoguer : B1. Écrire : A2. C'est un profil individualisé."
+      - "Elle a au moins A2 dans ces activités : si c'est vrai dans les cinq, l'objectif minimum de LV1 est atteint."
+      - "Elle est déjà B1 dans une activité : c'est ce que le programme rend possible."
+
+  - type: exercice
+    enonce: "Quel niveau est le plus avancé : A2 ou B1 ?"
+    forme: qcm
+    choix:
+      - "A2"
+      - "B1"
+      - "Ils sont égaux"
+    reponse: 1
+    indices:
+      - "Les lettres suivent l'ordre de l'alphabet : A, puis B, puis C."
+      - "Toute la lettre A vient avant la lettre B, quel que soit le chiffre."
+    explication: "B1 est plus avancé que A2. L'ordre est A1, A2, B1, B2, C1, C2."
+
+  - type: exercice
+    enonce: "Combien d'activités langagières le programme distingue-t-il ?"
+    forme: nombre
+    reponse: 5
+    tolerance: 0
+    indices:
+      - "Cite-les : écouter et comprendre, lire… puis compte."
+      - "Deux pour recevoir (écouter, lire), deux pour produire (parler, écrire), et une pour échanger."
+    explication: "5 activités : écouter et comprendre, lire, parler en continu, écrire, réagir et dialoguer."
+
+  - type: exercice
+    enonce: "En LV1, à la fin de la 3e, quel niveau tous les élèves doivent-ils avoir au moins atteint dans toutes les activités ? (écris le niveau, par exemple « C1 »)"
+    forme: reponse_courte
+    reponse: "A2"
+    reponses_acceptees: ["a2", "le niveau A2", "niveau A2"]
+    indices:
+      - "C'est le niveau minimum, pour tous les élèves."
+      - "Il est juste au-dessus du tout premier niveau, et juste en dessous de B1."
+    explication: "Au moins A2 dans les cinq activités langagières. B1 est atteint dans plusieurs activités."
+
+  - type: exercice
+    enonce: "Quelle tâche correspond plutôt au niveau B1 ?"
+    forme: qcm
+    choix:
+      - "Dire son prénom et son âge"
+      - "Raconter un voyage et dire pourquoi on l'a aimé"
+      - "Comprendre « hello » et « goodbye »"
+    reponse: 1
+    indices:
+      - "B1 demande plus d'autonomie que A2."
+      - "Cherche la tâche où l'on raconte et où l'on justifie un avis."
+    explication: "Raconter un événement et justifier son avis, c'est B1. Se présenter simplement, c'est plutôt A1 ou A2."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Tom, en LV1 anglais, est B1 en « lire » et en « écouter et comprendre », et
+      A2 dans les trois autres activités. Quelle phrase est juste ?
+    forme: qcm
+    choix:
+      - "Tom atteint l'objectif minimum, avec B1 dans plusieurs activités."
+      - "Tom n'atteint pas l'objectif, car il n'est pas B1 partout."
+      - "Tom a un niveau unique : B1."
+      - "Tom a un niveau unique : A2."
+    reponse: 0
+    indices:
+      - "Vérifie d'abord : Tom a-t-il au moins A2 dans les cinq activités ?"
+      - "Le programme n'exige pas B1 partout. Et le niveau n'est pas un score unique."
+    explication: "Tom a au moins A2 dans les cinq activités : l'objectif minimum est atteint. Il est même B1 dans deux activités. C'est un profil, pas un niveau unique."
+
+  - type: question_ouverte
+    question: >-
+      Explique en quelques phrases pourquoi on ne peut pas dire qu'un élève « est B1 » sans
+      préciser l'activité langagière. Donne un exemple.
+    indices:
+      - "Un élève est-il toujours aussi à l'aise pour lire que pour parler ?"
+      - "Pose l'idée, donne un exemple avec deux activités et deux niveaux, puis conclus."
+    criteres:
+      - "L'élève explique que le niveau varie selon l'activité langagière (profil individualisé)."
+      - "L'élève donne un exemple précis avec deux activités et deux niveaux différents."
+      - "L'élève ne confond pas l'ordre des niveaux (A2 est en dessous de B1)."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases, avec tes mots, ce qui est visé en LV1 à la fin de la 3e et
+      ce que veut dire « profil individualisé ».

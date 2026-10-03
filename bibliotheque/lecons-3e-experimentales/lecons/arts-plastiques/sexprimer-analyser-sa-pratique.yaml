@@ -1,0 +1,149 @@
+notion: sexprimer-analyser-sa-pratique
+titre: "S'exprimer et analyser sa pratique, celle des autres et des artistes"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Présenter une production en trois temps : décrire, analyser, interpréter."
+      - "Employer le vocabulaire plastique juste et relier son travail à celui d'artistes."
+      - "Écouter les avis des autres et s'en servir pour avancer."
+
+  - type: texte
+    titre: "Parler d'une production, étape par étape"
+    contenu: |-
+      En classe, ce moment s'appelle la **verbalisation**.
+      1. **Décrire** : dire ce que l'on voit, sans juger (sujet, formes, couleurs, support, format).
+      2. **Analyser** : dire comment c'est fait et quel effet cela produit.
+      3. **Interpréter** : proposer un sens, appuyé sur ce que l'on a vu.
+      4. Donner un **avis argumenté**. « C'est beau » ne décrit rien.
+
+  - type: texte
+    titre: "Les mots justes"
+    contenu: |-
+      - **Cadrage** : ce qui est montré dans l'image, et ce qui reste dehors.
+      - **Gros plan** : un détail vu de très près. **Plan d'ensemble** : le sujet dans son décor.
+      - **Plongée** : on regarde d'en haut, le sujet paraît plus petit.
+      - **Contre-plongée** : on regarde d'en bas, le sujet paraît plus grand, plus puissant.
+      - **Composition** : l'organisation des éléments. Aussi : couleurs chaudes ou froides, contraste, texture, geste, support, médium.
+
+  - type: texte
+    titre: "Relier, écouter, regarder autour de soi"
+    contenu: |-
+      - On relie son travail aux œuvres et aux démarches d'artistes : « Comme cet artiste, j'ai utilisé… ».
+      - On explique ses choix, pour un travail seul ou en groupe : pourquoi cette couleur, ce cadrage, ce geste.
+      - On écoute les avis, même contraires. Une remarque n'est pas une attaque : elle montre ce qu'un spectateur a perçu.
+      - Ensuite, on décide ce que l'on garde et ce que l'on change.
+      - On regarde avec curiosité toutes les images : fixes ou animées, anciennes ou numériques, d'ici ou d'ailleurs.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : un dessin au fusain montre un lampadaire allumé dans une rue vide,
+      vu d'en bas, avec beaucoup de noir autour. Présente-le en trois temps.
+    etapes:
+      - "Je décris : un lampadaire allumé, au centre, dans une rue sans personne, dessiné au fusain noir sur papier blanc."
+      - "J'analyse : la contre-plongée rend le lampadaire très grand. Le contraste entre le noir et la lumière attire l'œil sur la lampe."
+      - "J'interprète : le lampadaire semble veiller seul sur la rue. Le dessin peut évoquer la solitude ou le calme de la nuit."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on, en arts plastiques, le moment où l'on parle de sa production ou de celle des autres avec un vocabulaire précis ?"
+    forme: reponse_courte
+    reponse: "verbalisation"
+    reponses_acceptees:
+      - "verbalisation"
+      - "la verbalisation"
+      - "une verbalisation"
+    indices:
+      - "Le mot est de la même famille que « verbe » : on met en mots."
+      - "Il se termine par « -isation »."
+    explication: "C'est la verbalisation : on décrit, on analyse, on interprète et on donne un avis argumenté."
+
+  - type: exercice
+    enonce: >-
+      Production fictive : un grand personnage peint en rouge vif sur un fond gris. Quelle phrase
+      est une description, sans jugement ni interprétation ?
+    forme: qcm
+    choix:
+      - "Le personnage semble en colère contre le monde."
+      - "Au centre, un grand personnage est peint en rouge vif sur un fond gris."
+      - "C'est vraiment trop beau."
+    reponse: 1
+    indices:
+      - "Laquelle de ces phrases dirait n'importe quel observateur, quel que soit son avis ?"
+      - "« Trop beau » est un jugement. « En colère » suppose un sens."
+    explication: "La description dit seulement ce qui est visible : place, taille, couleurs. Les autres phrases jugent ou interprètent."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on le point de vue où l'on regarde le sujet d'en bas, ce qui le fait souvent paraître plus grand ?"
+    forme: reponse_courte
+    reponse: "contre-plongée"
+    reponses_acceptees:
+      - "contre-plongée"
+      - "contre-plongee"
+      - "contreplongée"
+      - "contreplongee"
+      - "contre plongée"
+      - "contre plongee"
+      - "la contre-plongée"
+      - "une contre-plongée"
+    indices:
+      - "Le point de vue d'en haut a un nom qui vient du plongeon. On cherche son contraire."
+      - "C'est un mot composé qui commence par « contre- »."
+    explication: "C'est la contre-plongée : on regarde d'en bas, le sujet paraît grand et puissant. Son contraire est la plongée."
+
+  - type: exercice
+    enonce: >-
+      Situation fictive : pendant la verbalisation, un camarade dit de ta peinture : « On ne
+      comprend pas que c'est la nuit ». Quelle réaction est la plus adaptée ?
+    forme: qcm
+    choix:
+      - "Répondre que c'est ta production et que son avis ne compte pas."
+      - "Effacer toute ta peinture."
+      - "Lui demander ce qui lui donne cette impression, expliquer ton intention, puis te demander si un changement aiderait."
+    reponse: 2
+    indices:
+      - "Que t'apprend cette remarque sur ce qu'un spectateur voit ?"
+      - "Écarte les réactions qui refusent d'écouter ou qui détruisent tout."
+    explication: "On cherche à comprendre la remarque, on explique son intention, puis on décide soi-même si l'on change quelque chose (couleurs plus sombres, une lune…)."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Un élève a photographié un visage de très près, en gros plan. Quel effet ce
+      choix produit-il le plus souvent ?
+    forme: qcm
+    choix:
+      - "Il isole un détail et rapproche le spectateur."
+      - "Il situe le sujet dans son environnement."
+      - "Il rend le sujet plus petit et plus fragile."
+    reponse: 0
+    indices:
+      - "Plus on est près du sujet, que voit-on de ce qui l'entoure ?"
+      - "Situer dans le décor, c'est le plan d'ensemble. Rendre plus petit, c'est la plongée."
+    explication: "Le gros plan isole un détail et rapproche le spectateur. Le plan d'ensemble montre le décor ; la plongée rend le sujet plus petit."
+
+  - type: question_ouverte
+    question: >-
+      Production fictive : un élève a photographié ses baskets usées en très gros plan, en
+      contre-plongée, sur fond de ciel bleu. Présente cette production en trois temps (décrire,
+      analyser, interpréter) avec au moins trois mots du vocabulaire plastique.
+    indices:
+      - "D'où a été prise la photo, et à quelle distance des baskets ?"
+      - "Tu peux commencer ainsi : « On voit une paire de baskets usées qui occupe presque toute l'image… »."
+    criteres:
+      - "L'élève décrit ce qui est visible sans juger (sujet, couleurs, fond)."
+      - "L'élève analyse au moins deux choix (gros plan, contre-plongée, fond de ciel) et leur effet, avec le vocabulaire plastique."
+      - "L'élève propose une interprétation appuyée sur ses observations."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, les trois temps pour présenter une
+      production, et ce que tu fais quand un camarade donne un avis différent du tien.

@@ -1,0 +1,145 @@
+notion: metissages-arts-plastiques-numerique
+titre: "Les métissages entre arts plastiques et technologies numériques"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Reconnaître une œuvre qui croise art, sciences et technologies."
+      - "Citer trois exemples d'œuvres pionnières."
+      - "Expliquer ce qui change pour l'œuvre, l'artiste et le public."
+
+  - type: texte
+    titre: "Art, sciences et technologies"
+    contenu: |-
+      Depuis le **milieu du XXe siècle**, des artistes croisent les arts plastiques avec l'électronique,
+      la vidéo, la robotique, l'informatique.
+      Aujourd'hui, l'ordinateur, Internet et la réalité virtuelle prolongent ces croisements.
+      Quand une œuvre mêle des pratiques ou des techniques différentes, on parle de **métissage**
+      ou d'**hybridation**.
+
+  - type: texte
+    titre: "Trois exemples à connaître"
+    contenu: |-
+      - **Nicolas Schöffer**, *CYSP 1* (1956) : une sculpture en métal qui se déplace et réagit à la lumière et aux sons, grâce à des **capteurs**.
+      - **Jean Tinguely**, les *Méta-matics* (à partir de 1959) : des machines qui dessinent quand un visiteur les met en marche.
+      - **Nam June Paik**, *TV Buddha* (1974) : une statue de Bouddha regarde un téléviseur qui montre son image, filmée en direct (circuit fermé).
+
+  - type: texte
+    titre: "Ce qui change"
+    contenu: |-
+      - **L'œuvre** peut bouger, changer, réagir : elle n'est plus forcément fixe, unique et finie.
+      - **L'artiste** conçoit un dispositif, des règles ou un **programme** (suite d'instructions). La machine exécute.
+      - **Le public** peut devenir acteur : dans une œuvre **interactive**, ses gestes ou sa voix la déclenchent.
+      - Un programme peut donner un résultat différent à chaque lancement : c'est l'**art génératif**.
+
+      Au brevet : décris le dispositif, nomme le croisement, dis ce qui change pour l'œuvre, l'artiste et le public.
+
+  - type: exemple
+    enonce: >-
+      Production fictive d'élèves : un grand dessin au fusain est accroché au mur. Un petit projecteur,
+      relié à un capteur de son, y fait apparaître des cercles de couleur quand les visiteurs parlent.
+      Qui fait quoi dans cette œuvre ?
+    etapes:
+      - "Le dispositif : un dessin au fusain, un projecteur, un capteur de son et un programme."
+      - "Les élèves ont conçu le dispositif : le dessin, le programme et le choix des réactions."
+      - "La machine exécute : le capteur détecte la voix, le programme commande le projecteur."
+      - "Le public déclenche l'œuvre en parlant : c'est une œuvre interactive, qui croise dessin et technologie."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on une œuvre qui réagit aux actions du spectateur (mouvement, voix, toucher) ?
+      Complète : une œuvre ...
+    forme: reponse_courte
+    reponse: "interactive"
+    reponses_acceptees:
+      - "interactive"
+      - "œuvre interactive"
+      - "oeuvre interactive"
+      - "une œuvre interactive"
+      - "une oeuvre interactive"
+      - "interactif"
+    indices:
+      - "Le spectateur agit, et l'œuvre lui répond : il y a une action dans les deux sens."
+      - "Le mot commence par « inter- », qui veut dire « entre »."
+    explication: "Une œuvre interactive réagit aux actions du public : sans lui, elle ne se déclenche pas."
+
+  - type: exercice
+    enonce: "Quel composant électronique détecte la lumière, le son, un mouvement ou la chaleur ?"
+    forme: reponse_courte
+    reponse: "capteur"
+    reponses_acceptees:
+      - "capteur"
+      - "un capteur"
+      - "le capteur"
+      - "capteurs"
+      - "des capteurs"
+    indices:
+      - "La sculpture CYSP 1 de Schöffer en possède pour réagir à son environnement."
+      - "Le mot vient du verbe « capter » (recueillir, attraper une information)."
+    explication: "Un capteur détecte la lumière, le son, un mouvement ou la chaleur, et transmet l'information à la machine."
+
+  - type: exercice
+    enonce: "Quel artiste a créé TV Buddha (1974), où une statue regarde son image filmée en direct ?"
+    forme: qcm
+    choix:
+      - "Jean Tinguely"
+      - "Nam June Paik"
+      - "Nicolas Schöffer"
+    reponse: 1
+    indices:
+      - "Cet artiste est un pionnier de l'art vidéo."
+      - "Tinguely a fait des machines à dessiner, Schöffer une sculpture à capteurs."
+    explication: "TV Buddha est de Nam June Paik, pionnier de l'art vidéo. La caméra et l'écran forment un circuit fermé."
+
+  - type: exercice
+    enonce: "En quelle année Nicolas Schöffer présente-t-il CYSP 1, sa sculpture qui réagit à la lumière et aux sons ?"
+    forme: nombre
+    reponse: 1956
+    tolerance: 0
+    indices:
+      - "C'est dans les années 1950, au milieu du XXe siècle."
+      - "C'est trois ans avant les premières Méta-matics de Tinguely (1959)."
+    explication: "CYSP 1 date de 1956 : ces croisements entre art et technologie existent bien avant Internet."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Une œuvre est un programme écrit par une artiste : à chaque lancement, l'ordinateur
+      dessine une image différente. Qui est le créateur de l'œuvre ?
+    forme: qcm
+    choix:
+      - "L'ordinateur, car c'est lui qui dessine."
+      - "L'artiste, car elle a conçu le programme et ses règles."
+      - "Personne, car l'image change tout le temps."
+    reponse: 1
+    indices:
+      - "Qui a écrit les instructions que la machine suit ?"
+      - "La machine exécute ; quelqu'un a conçu ce qu'elle exécute."
+    explication: "L'artiste conçoit le programme et ses règles ; la machine exécute. C'est de l'art génératif, et l'artiste en reste l'auteur."
+
+  - type: question_ouverte
+    question: >-
+      Choisis une des trois œuvres de la leçon (CYSP 1, les Méta-matics ou TV Buddha). Décris son
+      dispositif, nomme le croisement entre art et technologie, puis explique ce qui change pour
+      l'œuvre, l'artiste ou le public.
+    indices:
+      - "Pour le dispositif : quels matériaux, quelles machines, quels capteurs ou écrans ?"
+      - "Puis demande-toi : qui a conçu, qui exécute, qui déclenche ?"
+    criteres:
+      - "L'élève décrit le dispositif avec des éléments exacts de la leçon."
+      - "L'élève nomme le croisement (sculpture et électronique, dessin et machine, sculpture et vidéo)."
+      - "L'élève explique au moins un changement : œuvre mobile ou changeante, artiste concepteur, public acteur."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, ce qu'est un métissage entre art et technologie,
+      et ce qu'il change pour l'œuvre, l'artiste et le public.

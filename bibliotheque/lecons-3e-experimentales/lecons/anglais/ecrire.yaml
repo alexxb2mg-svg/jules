@@ -1,0 +1,129 @@
+notion: ecrire
+titre: "Écrire un texte court et clair en anglais"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Préparer un plan et relier ses phrases avec des mots de liaison."
+      - "Se relire avec une liste de vérification et ses outils (leçons, dictionnaire)."
+      - "Choisir le bon temps selon ce qu'on fait : raconter, décrire, expliquer, donner son avis."
+
+  - type: texte
+    titre: "Structurer son texte, comme à l'oral"
+    contenu: |-
+      À l'oral, tu prépares tes idées et tu choisis des mots simples. À l'écrit, c'est pareil.
+      - **Plan** : un début (le sujet), un milieu (les idées, dans l'ordre), une fin (une conclusion).
+      - **Phrases simples et sûres**, plutôt que de traduire mot à mot du français.
+      - **Mots de liaison** : and (et), but (mais), because (parce que), so (donc), first / then / finally (d'abord / ensuite / enfin).
+
+  - type: texte
+    titre: "Se relire avec ses outils"
+    contenu: |-
+      Relis **plusieurs fois**, une question à chaque fois :
+      1. **Sens** : mon texte est-il clair et complet ?
+      2. **Verbes** : bon temps ? accord (she likes, he has) ?
+      3. **Majuscules** : I, les jours (Monday), les mois, les villes, les nationalités.
+      4. **Orthographe** : vérifie avec ta leçon, la liste des verbes irréguliers ou le dictionnaire.
+
+  - type: texte
+    titre: "Ce que tu fais quand tu écris"
+    contenu: |-
+      | Je dois... | Ce qui m'aide |
+      |---|---|
+      | raconter | le prétérit : went, saw, played |
+      | décrire | le présent : she is, he has |
+      | expliquer, donner mon avis | because, so, I think that..., In my opinion..., however... |
+      **Reformuler** ou **rendre compte**, c'est redire un message avec tes mots : « She says that... ».
+
+  - type: exemple
+    enonce: "Corrige ce brouillon : « my friend and i goes to the beach last sunday and we swim. »"
+    etapes:
+      - "Majuscules : début de phrase (My), le pronom I, le jour (Sunday)."
+      - "Temps : « last Sunday » parle du passé, donc il faut le prétérit."
+      - "« goes » devient « went », et « swim » devient « swam » (verbes irréguliers)."
+      - "Texte corrigé : « My friend and I went to the beach last Sunday and we swam. »"
+
+  - type: exercice
+    enonce: "Corrige le verbe : « Yesterday I go to the cinema. » Écris seulement la forme correcte du verbe."
+    forme: reponse_courte
+    reponse: "went"
+    reponses_acceptees: []
+    indices:
+      - "« Yesterday » parle de quand ? Quel temps faut-il pour raconter ?"
+      - "« Go » est un verbe irrégulier. Cherche son prétérit dans ta liste."
+    explication: "« Yesterday » (hier) demande le prétérit. Le prétérit irrégulier de « go » est « went » : Yesterday I went to the cinema."
+
+  - type: exercice
+    enonce: "Quelle phrase est écrite correctement ?"
+    forme: qcm
+    choix:
+      - "On friday i visited london with my cousin."
+      - "On Friday I visited London with my cousin."
+      - "on Friday, I visited london with my cousin."
+    reponse: 1
+    indices:
+      - "Quels mots prennent toujours une majuscule en anglais ?"
+      - "Vérifie le premier mot, le jour, le pronom « I » et la ville."
+    explication: "« On », « Friday », « I » et « London » prennent une majuscule. Seule la deuxième phrase les respecte toutes."
+
+  - type: exercice
+    enonce: "Complète avec un mot de liaison qui exprime la conséquence : « It was very cold, ___ I put on my coat. » Écris un seul mot."
+    forme: reponse_courte
+    reponse: "so"
+    reponses_acceptees: []
+    indices:
+      - "Le froid est-il la cause ou la conséquence ? Mettre son manteau, c'est quoi ?"
+      - "Le mot cherché veut dire « donc ». Il a deux lettres."
+    explication: "« So » (donc) introduit la conséquence : il faisait froid, donc j'ai mis mon manteau."
+
+  - type: exercice
+    enonce: "Tu veux donner ton avis dans un mail. Quel début de phrase convient ?"
+    forme: qcm
+    choix:
+      - "In my opinion, ..."
+      - "Last weekend, ..."
+      - "First of all, I went ..."
+    reponse: 0
+    indices:
+      - "Donner son avis, c'est dire ce que l'on pense."
+      - "Deux des débuts servent plutôt à raconter. Lequel reste ?"
+    explication: "« In my opinion » veut dire « à mon avis ». Les deux autres débuts servent à raconter des actions."
+
+  - type: exercice
+    enonce: "Niveau brevet. Ta correspondante t'écrit : « I can't come to France in July because my mum is working. » Tu rends compte de son message en anglais. Quelle phrase est correcte ?"
+    forme: qcm
+    choix:
+      - "She say she can't come in July because my mum is working."
+      - "She says she can't come in July because her mum is working."
+      - "She says she can't come in July so her mum is working."
+    reponse: 1
+    indices:
+      - "Avec « she », que faut-il ajouter au verbe au présent ?"
+      - "Quand tu rapportes ses paroles, « my mum » devient la mère de qui ? Et le mot de liaison garde-t-il le même sens ?"
+    explication: "« She says » (accord avec she), « her mum » (c'est la mère de la correspondante), et « because » garde la cause. « So » changerait le sens."
+
+  - type: question_ouverte
+    question: "Écris 4 ou 5 phrases en anglais pour raconter tes dernières vacances à un ami, puis donne ton avis. Utilise au moins deux mots de liaison."
+    indices:
+      - "Fais un petit plan : où ? avec qui ? deux actions ? ton avis ?"
+      - "Raconte au prétérit, puis relis : verbes, majuscules, orthographe."
+    criteres:
+      - "Le texte a 4 ou 5 phrases simples, avec un début, un milieu et une fin."
+      - "Les actions passées sont au prétérit (went, visited, saw...)."
+      - "Au moins deux mots de liaison sont bien utilisés, et une phrase donne un avis (I think..., In my opinion...)."
+      - "Le pronom I et les noms propres ont une majuscule."
+
+  - type: synthese
+    consigne: >-
+      En deux ou trois phrases, avec tes mots : quelles sont les étapes pour écrire un texte en
+      anglais, du plan jusqu'à la relecture ? Que vérifies-tu en premier quand tu te relis ?

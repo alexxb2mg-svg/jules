@@ -1,0 +1,160 @@
+notion: successif-et-simultane
+titre: "Le successif et le simultané : les sons qui se suivent et ceux qui se superposent"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer le successif (horizontal) et le simultané (vertical)."
+      - "Nommer les façons d'organiser les voix : monodie, mélodie accompagnée, homorythmie, polyphonie, canon."
+      - "Repérer un bourdon ou un ostinato, et calculer la durée d'un canon."
+
+  - type: texte
+    titre: "Deux directions d'écoute"
+    contenu: |-
+      **Le successif** (l'horizontal) : les sons qui **se suivent**.
+      Une **mélodie** est une suite de notes ; elle se découpe en phrases et en motifs.
+      **Le simultané** (le vertical) : les sons entendus **en même temps**.
+      Un **accord**, c'est au moins trois notes jouées ensemble.
+      L'**accompagnement** soutient la mélodie.
+
+  - type: texte
+    titre: "Une seule ligne ou une mélodie soutenue"
+    contenu: |-
+      **Monodie** : une seule mélodie, sans accompagnement (ex. : le chant grégorien du Moyen Âge).
+      **Unisson** : plusieurs voix chantent la même mélodie, à la même hauteur. Cela reste une monodie.
+      **Mélodie accompagnée** : une mélodie principale soutenue par des accords ou d'autres instruments.
+      **Bourdon** : une note tenue ou répétée sous la mélodie (cornemuse, vielle à roue).
+
+  - type: texte
+    titre: "Plusieurs voix ensemble"
+    contenu: |-
+      **Homorythmie** : toutes les voix ont le même rythme en même temps, sur des notes différentes.
+      **Polyphonie** : plusieurs mélodies différentes et indépendantes en même temps.
+      **Canon** : la même mélodie, mais les voix entrent l'une après l'autre (« Frère Jacques »).
+      **Ostinato** : un motif répété sans arrêt pendant que le reste change.
+      **Question-réponse**, **solo-tutti** : des groupes alternent, puis parfois se superposent.
+
+  - type: texte
+    titre: "Le canon : successif ET simultané"
+    contenu: |-
+      Dans un canon, les entrées **se suivent** (successif), puis les voix **s'entendent ensemble** (simultané).
+      Durée d'un canon : la dernière voix entre après **(nombre de voix − 1) décalages**.
+      On ajoute ensuite la **durée de la mélodie** chantée par cette dernière voix.
+      Exemple : 3 voix, décalage de 4 s, mélodie de 12 s → 2 × 4 + 12 = 20 s.
+
+  - type: exemple
+    enonce: >-
+      Un chanteur chante une mélodie. Dessous, une guitare joue des accords. Au refrain, un
+      chœur répond au chanteur, puis tous chantent ensemble. Décris l'organisation avec les
+      mots justes.
+    etapes:
+      - "Compter les plans : une mélodie (le chanteur) et des accords (la guitare) en même temps."
+      - "Une mélodie principale soutenue par des accords : c'est une mélodie accompagnée."
+      - "Au refrain, le chœur répond au chanteur : c'est une question-réponse (successif)."
+      - "Puis tous chantent ensemble : les voix se superposent (simultané)."
+
+  - type: exercice
+    enonce: >-
+      Tous les membres d'une chorale chantent exactement la même mélodie, à la même hauteur,
+      en même temps. On dit qu'ils chantent à l'… ?
+    forme: reponse_courte
+    reponse: "unisson"
+    reponses_acceptees:
+      - "unisson"
+      - "l'unisson"
+      - "a l'unisson"
+      - "à l'unisson"
+    indices:
+      - "Ils chantent comme s'ils n'étaient qu'une seule voix."
+      - "Le mot vient du latin et veut dire « un seul son ». Il commence par « uni- »."
+    explication: "Ils chantent à l'unisson. Il n'y a qu'une seule mélodie : c'est une monodie, pas une polyphonie."
+
+  - type: exercice
+    enonce: "Un pianiste joue un accord : trois notes frappées en même temps. Cela relève…"
+    forme: qcm
+    choix:
+      - "du successif (l'horizontal)"
+      - "du simultané (le vertical)"
+      - "ni de l'un, ni de l'autre"
+    reponse: 1
+    indices:
+      - "Les trois notes se suivent-elles, ou sonnent-elles ensemble ?"
+      - "Le vertical, ce sont les sons entendus au même moment."
+    explication: "Les notes d'un accord sonnent ensemble : c'est du simultané. Une mélodie, elle, relève du successif."
+
+  - type: exercice
+    enonce: >-
+      Un chœur à quatre voix chante les paroles toutes en même temps, avec le même rythme,
+      mais chaque voix sur des notes différentes. Les paroles se comprennent bien. Comment
+      appelle-t-on ce procédé ?
+    forme: qcm
+    choix:
+      - "Un canon"
+      - "L'unisson"
+      - "L'homorythmie"
+      - "Un bourdon"
+    reponse: 2
+    indices:
+      - "Les voix entrent-elles l'une après l'autre ? Chantent-elles les mêmes notes ?"
+      - "Le préfixe « homo- » veut dire « le même ». Qu'est-ce qui est le même ici ?"
+    explication: "Même rythme, notes différentes : c'est l'homorythmie. À l'unisson, les notes seraient les mêmes ; dans un canon, les entrées seraient décalées."
+
+  - type: exercice
+    enonce: >-
+      Quatre groupes chantent une mélodie en canon. Chaque groupe entre 5 secondes après le
+      précédent. La mélodie dure 20 secondes et chaque groupe la chante une seule fois.
+      Combien de secondes dure le canon en tout ?
+    forme: nombre
+    reponse: 35
+    tolerance: 0
+    unite: "s"
+    indices:
+      - "Après combien de décalages entre le dernier groupe ? Ce n'est pas 4."
+      - "Calcule le moment où le dernier groupe commence, puis ajoute la durée de sa mélodie."
+    explication: "Le dernier groupe entre après 4 − 1 = 3 décalages, soit 3 × 5 = 15 s. Il chante ensuite 20 s. Total : 15 + 20 = 35 s."
+
+  - type: exercice
+    enonce: >-
+      Dans un extrait, la basse répète sans arrêt la même petite formule de quatre notes,
+      pendant que les violons jouent des mélodies qui changent au-dessus. Comment s'appelle
+      la formule répétée de la basse ?
+    forme: qcm
+    choix:
+      - "Un ostinato"
+      - "Une monodie"
+      - "Une homorythmie"
+      - "Un unisson"
+    reponse: 0
+    indices:
+      - "La formule ne change jamais, alors que le reste change."
+      - "Le mot italien veut dire « obstiné »."
+    explication: "C'est un ostinato : un motif répété sans arrêt sous des mélodies qui changent. Le Canon en ré de Pachelbel repose sur une basse de ce type."
+
+  - type: question_ouverte
+    question: >-
+      Voici un extrait : « Une cornemuse tient une note grave sans s'arrêter. Au-dessus, une
+      flûte joue seule une mélodie. Puis une deuxième flûte entre et joue la même mélodie,
+      avec un temps de retard. » Décris ce qu'on entend en successif et en simultané, avec
+      les mots justes.
+    indices:
+      - "Commence par ce qui ne bouge pas, sous la mélodie."
+      - "Puis demande-toi : la deuxième flûte joue-t-elle une autre mélodie, ou la même en décalé ?"
+    criteres:
+      - "L'élève nomme le bourdon (la note tenue de la cornemuse) entendu en même temps que la mélodie."
+      - "L'élève identifie l'imitation décalée de la deuxième flûte comme un canon."
+      - "L'élève distingue ce qui se suit (entrées décalées) et ce qui se superpose (bourdon, deux flûtes)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre le
+      successif et le simultané, et explique pourquoi le canon relève des deux.

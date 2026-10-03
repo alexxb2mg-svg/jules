@@ -1,0 +1,156 @@
+notion: realiser-projets-musicaux
+titre: "Réaliser un projet musical, de la préparation au concert"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir les caractéristiques musicales d'un projet."
+      - "Organiser le travail et choisir les ressources adaptées."
+      - "Interpréter devant d'autres élèves et présenter ses choix artistiques."
+
+  - type: texte
+    titre: "Interpréter ou créer"
+    contenu: |-
+      Un **projet musical** : préparer une musique pour la jouer **devant d'autres**.
+      **Interpréter** : jouer ou chanter une œuvre qui existe déjà, en faisant des choix.
+      **Créer** : inventer une pièce nouvelle.
+      Dans les deux cas, on **définit le projet avant de répéter**.
+
+  - type: texte
+    titre: "Définir le projet et choisir les ressources"
+    contenu: |-
+      Les **caractéristiques musicales** : l'**effectif** (combien de voix, quels instruments),
+      le **style**, la **forme** (introduction, couplets, refrain, fin), le **tempo**, les **nuances**, la **durée**.
+      Les **ressources** : la voix, les percussions corporelles, les instruments de la classe,
+      un logiciel ou un enregistreur, une partition ou un simple codage.
+
+  - type: texte
+    titre: "Répéter par étapes, chacun son rôle"
+    contenu: |-
+      Les rôles : **soliste**, membre d'un **pupitre** (groupe qui a la même partie), accompagnateur, personne qui donne les départs.
+      Étapes : apprendre chaque partie seule, **assembler**, soigner nuances et départs.
+      Puis le **filage** : on joue tout, sans s'arrêter, comme le jour du concert.
+      Avant de chanter : posture droite, respiration, concentration.
+
+  - type: texte
+    titre: "Le jour J, puis le bilan"
+    contenu: |-
+      On **interprète** devant le public, avec sérieux.
+      On **présente les choix artistiques** : pourquoi ce tempo, pourquoi un soliste ici, pourquoi cette fin.
+      Chaque choix s'explique par l'**effet** voulu sur le public.
+      Après : on écoute l'**enregistrement** pour faire un bilan précis.
+
+  - type: exemple
+    enonce: >-
+      Ta classe crée une pièce de percussions corporelles (claquements de mains, frappes sur
+      les cuisses, pieds) pour la fête du collège. Définis les caractéristiques du projet.
+    etapes:
+      - "Effectif : toute la classe, en trois pupitres (mains, cuisses, pieds)."
+      - "Forme : une introduction par un seul pupitre, puis les autres entrent un par un, puis une fin tous ensemble (tutti)."
+      - "Tempo et nuances : tempo modéré et régulier ; on commence piano et on finit forte."
+      - "Ressources : le corps seul, et un codage écrit au tableau pour retenir les rythmes."
+      - "Choix à présenter : les entrées successives font monter l'énergie jusqu'à la fin."
+
+  - type: exercice
+    enonce: >-
+      La classe prépare un chant pour le concert. Quelle décision fait partie des
+      caractéristiques musicales du projet ?
+    forme: qcm
+    choix:
+      - "Choisir la couleur des affiches"
+      - "Choisir le tempo et les nuances de chaque partie"
+      - "Fixer l'heure du goûter après le concert"
+    reponse: 1
+    indices:
+      - "Laquelle de ces décisions change ce que le public va entendre ?"
+      - "Une caractéristique musicale concerne le son : vitesse, volume, qui chante, quand."
+    explication: "Le tempo et les nuances s'entendent : ce sont des caractéristiques musicales. Les affiches et le goûter ne s'entendent pas."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on, en un seul mot, la répétition où l'on joue tout le programme d'un
+      bout à l'autre, sans s'arrêter, comme le jour du concert ?
+    forme: reponse_courte
+    reponse: "filage"
+    reponses_acceptees:
+      - "filage"
+      - "le filage"
+      - "un filage"
+      - "répétition générale"
+      - "la répétition générale"
+      - "repetition generale"
+    indices:
+      - "C'est la dernière répétition avant le concert."
+      - "Le mot vient du verbe « filer » : aller tout droit, sans arrêt."
+    explication: "C'est le filage (on dit aussi répétition générale). Il permet de vérifier l'enchaînement et la fatigue, comme en vrai."
+
+  - type: exercice
+    enonce: >-
+      Quel mot italien, qui veut dire « tous », désigne le passage où tout l'ensemble joue ou
+      chante ?
+    forme: reponse_courte
+    reponse: "tutti"
+    reponses_acceptees:
+      - "tutti"
+      - "le tutti"
+      - "un tutti"
+    indices:
+      - "C'est le contraire d'un passage pour soliste."
+      - "Le mot italien a deux t au milieu et finit par un i."
+    explication: "Tutti veut dire « tous ». On alterne souvent soliste et tutti dans un projet."
+
+  - type: exercice
+    enonce: "Dans quel ordre organise-t-on le travail d'un projet musical ?"
+    forme: qcm
+    choix:
+      - "Filage, puis définir le projet, puis apprendre chaque partie, puis concert."
+      - "Définir le projet, apprendre chaque partie, assembler, filage, concert, bilan."
+      - "Concert, puis apprendre chaque partie, puis définir le projet, puis bilan."
+    reponse: 1
+    indices:
+      - "Que faut-il décider avant même de commencer à répéter ?"
+      - "Le filage se fait juste avant le concert, et le bilan juste après."
+    explication: "On définit d'abord le projet, on apprend chaque partie, on assemble, on fait le filage, puis le concert, et enfin le bilan avec l'enregistrement."
+
+  - type: exercice
+    enonce: >-
+      Après le concert, un groupe présente ses choix. Quelle présentation explique vraiment un
+      choix artistique ?
+    forme: qcm
+    choix:
+      - "On l'a fait comme ça parce que c'était plus simple."
+      - "Le refrain final est chanté en tutti et forte, pour que le public ressente la joie de tout le groupe réuni."
+      - "On a beaucoup répété et on est contents."
+    reponse: 1
+    indices:
+      - "Quelle phrase nomme un choix musical précis ?"
+      - "Cherche la phrase qui dit l'effet voulu sur le public, avec « pour que »."
+    explication: "La deuxième phrase nomme le choix (tutti, forte) et l'effet recherché (la joie du groupe réuni). Les autres ne justifient rien."
+
+  - type: question_ouverte
+    question: >-
+      Ta classe doit interpréter une chanson à deux voix au concert de fin d'année. Décris
+      ton projet : effectif, forme, tempo, nuances, ressources, et un choix que tu
+      présenterais au public avec son effet.
+    indices:
+      - "Commence par qui chante (combien de groupes, un soliste ?) et le plan de la chanson."
+      - "Termine par un choix précis, justifié avec « pour que… »."
+    criteres:
+      - "L'élève donne au moins quatre caractéristiques avec le vocabulaire musical (effectif, forme, tempo, nuances)."
+      - "L'élève cite des ressources adaptées (voix, instrument, enregistreur, partition…)."
+      - "L'élève présente un choix artistique et l'explique par l'effet voulu sur le public."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, les grandes étapes d'un projet
+      musical, de la définition du projet jusqu'au bilan.

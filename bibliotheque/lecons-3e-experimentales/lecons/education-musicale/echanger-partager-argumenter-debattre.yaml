@@ -1,0 +1,151 @@
+notion: echanger-partager-argumenter-debattre
+titre: "Échanger, argumenter et débattre en musique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Formuler une critique constructive, sur sa production ou sur celle d'un groupe."
+      - "Distinguer créateur, interprète et auditeur."
+      - "Respecter les droits d'auteur et choisir des sons qu'on a le droit d'utiliser."
+
+  - type: texte
+    titre: "Critiquer pour faire progresser"
+    contenu: |-
+      **Sa production** : on se réécoute (enregistrement) et on compare avec ce qu'on voulait faire.
+      On note ce qui est réussi et ce qu'on veut retravailler.
+      **Une production collective** : on fait une **critique constructive**.
+      Elle situe un moment précis, décrit ce qu'on entend, puis propose une amélioration.
+      On critique la musique, **jamais la personne**.
+
+  - type: texte
+    titre: "Argumenter à partir de faits"
+    contenu: |-
+      Une **analyse objective** décrit des faits qu'on peut vérifier en réécoutant :
+      « le tempo accélère », « la voix est couverte par la batterie ».
+      Un **jugement de goût** (« j'aime », « c'est ennuyeux ») est personnel : seul, il ne prouve rien.
+      Un avis argumenté s'appuie sur un fait entendu, avec « parce que ».
+      Dans un débat : on écoute l'autre, on attend son tour, on peut changer d'avis.
+
+  - type: texte
+    titre: "Créateur, interprète, auditeur"
+    contenu: |-
+      **Créateur** : il invente l'œuvre (le compositeur).
+      **Interprète** : il la joue ou la chante.
+      **Auditeur** : il l'écoute.
+      Une même personne change de posture : un élève qui compose est créateur, qui chante est interprète.
+      Chanter la chanson d'un autre (une reprise) fait de toi l'interprète, pas l'auteur.
+
+  - type: texte
+    titre: "Respecter les droits d'auteur"
+    contenu: |-
+      En France, une œuvre est protégée toute la vie de l'auteur, puis **70 ans après sa mort**.
+      Ensuite, elle entre dans le **domaine public** : on peut l'utiliser librement.
+      Pour une œuvre protégée, il faut une **autorisation**. La **SACEM** gère les droits de nombreux auteurs.
+      Une **licence libre** (Creative Commons) autorise l'usage à certaines conditions, souvent citer l'auteur.
+      On cite toujours la source : titre, auteur, licence.
+
+  - type: exemple
+    enonce: >-
+      Ta classe vient de chanter un chant à deux voix. Formule une critique constructive.
+    etapes:
+      - "Décrire ce qui est réussi : les deux voix étaient bien ensemble au début, et justes dans les couplets."
+      - "Situer le problème : au dernier refrain, les voix aiguës couvraient les voix graves."
+      - "Proposer : les voix aiguës pourraient chanter mezzo forte pendant ce refrain, pour équilibrer le groupe."
+
+  - type: exercice
+    enonce: "Un groupe vient de présenter sa création. Quelle remarque est une critique constructive ?"
+    forme: qcm
+    choix:
+      - "C'était raté, vous n'avez pas assez travaillé."
+      - "Au milieu, la boucle de percussions couvrait la voix : baisser son volume rendrait le texte plus clair."
+      - "Je n'aime pas ce genre de musique."
+    reponse: 1
+    indices:
+      - "Quelle remarque pourrait vraiment aider le groupe à progresser ?"
+      - "Une critique constructive situe un moment, décrit ce qu'on entend et propose une solution."
+    explication: "La remarque sur les percussions situe le moment, décrit le problème et propose une solution. Les autres jugent la personne ou donnent un simple goût."
+
+  - type: exercice
+    enonce: "Un orchestre joue le Boléro de Ravel en concert. Quelle est la posture des musiciens ?"
+    forme: qcm
+    choix:
+      - "Créateurs"
+      - "Interprètes"
+      - "Auditeurs"
+    reponse: 1
+    indices:
+      - "Ont-ils inventé l'œuvre, la jouent-ils, ou l'écoutent-ils ?"
+      - "Le Boléro a été composé par Ravel, en 1928."
+    explication: "Les musiciens font entendre l'œuvre d'un autre : ce sont des interprètes. Ravel est le créateur, le public est auditeur."
+
+  - type: exercice
+    enonce: >-
+      En France, dans le cas général, pendant combien d'années après la mort de l'auteur une
+      œuvre musicale reste-t-elle protégée par le droit d'auteur ?
+    forme: nombre
+    reponse: 70
+    tolerance: 0
+    unite: "ans"
+    indices:
+      - "Relis la partie de la leçon sur les droits d'auteur."
+      - "C'est un nombre entier de dizaines d'années, entre 50 et 100."
+    explication: "70 ans après la mort de l'auteur. Ensuite, l'œuvre entre dans le domaine public."
+
+  - type: exercice
+    enonce: >-
+      Comment appelle-t-on l'ensemble des œuvres dont la protection par le droit d'auteur est
+      terminée, et qu'on peut utiliser librement ?
+    forme: reponse_courte
+    reponse: "domaine public"
+    reponses_acceptees:
+      - "domaine public"
+      - "le domaine public"
+      - "dans le domaine public"
+    indices:
+      - "Que devient une œuvre quand la durée de protection est écoulée ?"
+      - "Deux mots : le premier désigne un territoire, le second est le contraire de « privé »."
+    explication: "Ce sont les œuvres du domaine public : elles appartiennent à tout le monde. On cite quand même leur auteur."
+
+  - type: exercice
+    enonce: >-
+      La classe publie en ligne une vidéo de son projet et cherche une musique de fond. Quel
+      choix respecte le droit d'auteur sans demander d'autorisation ?
+    forme: qcm
+    choix:
+      - "Un tube récent, à condition de n'en garder que 30 secondes"
+      - "N'importe quelle musique écoutée gratuitement sur une plateforme"
+      - "Un morceau sous licence libre, en citant l'auteur comme la licence le demande"
+    reponse: 2
+    indices:
+      - "Qui a le droit de décider de l'utilisation d'une musique ?"
+      - "Couper un extrait ou écouter gratuitement ne supprime pas les droits de l'auteur."
+    explication: "La licence libre est une autorisation donnée à l'avance par l'auteur, à condition de le citer. Un tube récent reste protégé, même court."
+
+  - type: question_ouverte
+    question: >-
+      En 1952, John Cage présente 4′33″ : pendant quatre minutes et trente-trois secondes, le
+      pianiste ne joue aucune note ; on entend seulement les bruits de la salle. Est-ce de la
+      musique ? Défends ton point de vue en quelques phrases.
+    indices:
+      - "Que fait l'interprète pendant 4′33″ ? Et qu'entend l'auditeur ?"
+      - "Donne ton avis, puis deux arguments avec « parce que ». Termine en répondant à un avis contraire."
+    criteres:
+      - "L'élève donne clairement son point de vue."
+      - "L'élève l'appuie sur au moins deux arguments liés à l'œuvre (ce qu'on entend, le rôle du public, l'intention du compositeur)."
+      - "L'élève répond à un argument du camp opposé, sans critiquer les personnes."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en trois phrases, ce qu'est une critique constructive,
+      les trois postures face à une œuvre, et quels sons tu as le droit d'utiliser dans une
+      création publiée.

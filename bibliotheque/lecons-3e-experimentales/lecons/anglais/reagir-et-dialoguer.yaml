@@ -1,0 +1,143 @@
+notion: reagir-et-dialoguer
+titre: "Réagir et dialoguer en anglais"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège — éduscol"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Comprendre l'autre pendant l'échange grâce aux mots-clés, au ton et aux gestes."
+      - "Réagir tout de suite avec des expressions toutes prêtes."
+      - "Faire avancer le dialogue : ajouter une idée, contredire poliment, relancer."
+
+  - type: texte
+    titre: "Comprendre pendant l'échange"
+    contenu: |-
+      Dialoguer, c'est parler **à deux**, sans phrases préparées. On écoute, on répond, on relance.
+
+      Pour comprendre, tu n'as pas besoin de tout saisir. Repère :
+      - les **mots-clés** (indices dans la langue) ;
+      - le **ton**, les **gestes**, l'**expression du visage** (indices hors de la langue).
+
+      Chacun s'appuie sur ce que l'autre vient de dire : on construit un **discours commun**.
+
+  - type: texte
+    titre: "Des expressions toutes prêtes"
+    contenu: |-
+      | Je veux… | Je dis… |
+      |---|---|
+      | faire répéter | Could you repeat, please? / Sorry, I didn't understand. |
+      | faire expliquer un mot | What does … mean? |
+      | montrer que je suis | I see. / Really? / That's interesting. |
+      | être d'accord | I agree. / Me too. / That's a good point. |
+      | ne pas être d'accord | I don't agree. / I'm not sure. |
+      | gagner du temps | Well… / Let me think… |
+
+  - type: texte
+    titre: "Faire avancer le dialogue"
+    contenu: |-
+      - **Réponds** à la question posée, pas à côté.
+      - **Alimente** : ajoute une information. « Me too, I love football! »
+      - Ou **contredis** poliment : « Really? I prefer tennis. »
+      - **Relance** avec une question : « And you? », « Why? », « What about you? »
+
+      **Adapte-toi** : simple avec un camarade ; avec un adulte, « please », « thank you » et « Could you…? ».
+
+  - type: exemple
+    enonce: "Ta correspondante te dit : « I went to a concert last night! » Comment faire durer l'échange ?"
+    etapes:
+      - "Tu montres que tu suis : « Really? That's great! »"
+      - "Tu relances avec une question : « Who did you see? »"
+      - "Elle répond avec un mot que tu ne connais pas. Tu demandes : « What does that mean? »"
+      - "Tu donnes ton avis et tu relances encore : « I love concerts too. What about you, do you play music? »"
+
+  - type: exercice
+    enonce: "Tu n'as pas entendu la question de ton camarade. Quelle phrase dis-tu ?"
+    forme: qcm
+    choix:
+      - "I don't care."
+      - "Sorry, could you repeat, please?"
+      - "Yes, yes."
+      - "Goodbye."
+    reponse: 1
+    indices:
+      - "Tu veux qu'il redise sa phrase."
+      - "Cherche une formule polie qui commence par « Sorry »."
+    explication: "« Sorry, could you repeat, please? » demande poliment de redire la phrase. Répondre « yes » sans comprendre crée des malentendus."
+
+  - type: exercice
+    enonce: "Complète la question de relance : « I like pizza. ___ about you? » (Et toi ?)"
+    forme: reponse_courte
+    reponse: "What"
+    reponses_acceptees: ["what", "WHAT"]
+    indices:
+      - "C'est un mot interrogatif."
+      - "Il sert aussi à demander « quoi ? »."
+    explication: "« What about you? » veut dire « Et toi ? ». C'est une relance très utile pour que l'autre parle à son tour."
+
+  - type: exercice
+    enonce: "Ton camarade dit : « Maths is the most boring subject. » Tu n'es pas d'accord. Quelle réponse est polie et fait avancer le dialogue ?"
+    forme: qcm
+    choix:
+      - "That's stupid!"
+      - "I agree with you."
+      - "I'm not sure. I think maths is useful. Why don't you like it?"
+      - "No."
+    reponse: 2
+    indices:
+      - "Tu veux contredire sans blesser."
+      - "La meilleure réponse donne ton avis puis pose une question."
+    explication: "« I'm not sure. I think maths is useful. Why don't you like it? » contredit poliment, donne un avis et relance. « That's stupid! » est agressif, « No. » arrête l'échange."
+
+  - type: exercice
+    enonce: "Ton amie dit : « I have a new dog! » Écris un mot de réaction courte qui veut dire « Vraiment ? »."
+    forme: reponse_courte
+    reponse: "Really"
+    reponses_acceptees: ["really", "Really?", "really?", "REALLY"]
+    indices:
+      - "C'est une réaction pour montrer ta surprise et que tu écoutes."
+      - "Le mot finit par -lly, comme beaucoup d'adverbes."
+    explication: "« Really? » montre que tu écoutes et que tu es surpris. Tu peux continuer : « What's his name? »"
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Tu demandes un renseignement à une dame dans une gare à Londres. Elle parle
+      vite et tu ne comprends pas un mot. Quelle réplique est la mieux adaptée ?
+    forme: qcm
+    choix:
+      - "What? Again!"
+      - "Excuse me, could you speak more slowly, please? What does that word mean?"
+      - "Can you speak French?"
+      - "Okay, thanks, bye."
+    reponse: 1
+    indices:
+      - "Tu parles à une adulte inconnue : quel ton faut-il ?"
+      - "Cherche « please » et « Could you…? », puis une demande d'explication."
+    explication: "Avec une adulte inconnue, on est poli : « Excuse me », « Could you… », « please ». On demande de ralentir et on fait expliquer le mot. Les autres réponses sont impolies ou arrêtent l'échange."
+
+  - type: question_ouverte
+    question: >-
+      Écris en anglais un mini-dialogue de 6 répliques avec un camarade sur les vacances. Dans ton
+      dialogue, une personne demande de répéter, une personne n'est pas d'accord, et chacun pose une
+      question de relance.
+    indices:
+      - "Commence par : « A: Where do you want to go on holiday? »"
+      - "Plan : A demande, B répond et relance, A ne comprend pas, B répète, A donne un avis différent."
+    criteres:
+      - "Les répliques se répondent : chacune réagit à la précédente."
+      - "Une expression pour faire répéter est utilisée correctement."
+      - "Un désaccord est exprimé poliment (I don't agree / I'm not sure)."
+      - "Chaque personne pose au moins une question de relance."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en trois phrases, comment tu comprends l'autre pendant un dialogue,
+      ce que tu dis quand tu n'as pas compris, et comment tu fais durer l'échange.

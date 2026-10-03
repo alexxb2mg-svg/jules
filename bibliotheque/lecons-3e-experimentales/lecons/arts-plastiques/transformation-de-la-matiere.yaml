@@ -1,0 +1,148 @@
+notion: transformation-de-la-matiere
+titre: "La transformation de la matière"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer la matière, l'outil et le geste d'une production."
+      - "Distinguer taille, modelage, moulage et assemblage."
+      - "Expliquer comment la réalité physique d'une œuvre produit du sens."
+
+  - type: texte
+    titre: "Matière, outil, geste"
+    contenu: |-
+      Une production naît de la rencontre d'une **matière**, d'un **outil** et d'un **geste**.
+      - Matière : dure (pierre, bois), molle (argile, cire), liquide (plâtre, peinture), souple (papier, tissu).
+      - Outil : ciseau, maillet, gouge, pinceau, couteau, presse, ou la main.
+      - Geste : tailler, modeler, couler, assembler, froisser, gratter, projeter, fendre.
+      Chaque geste laisse une **trace**. Une trace peut être voulue : ce n'est pas forcément une maladresse.
+
+  - type: texte
+    titre: "Quatre opérations de la sculpture, deux états de la peinture"
+    contenu: |-
+      - **Taille** : on enlève de la matière dans un bloc dur. On ne peut pas revenir en arrière.
+      - **Modelage** : on façonne une matière molle, en ajoutant, en retirant, en poussant.
+      - **Moulage** : on coule une matière liquide dans un moule, puis on démoule.
+      - **Assemblage** : on réunit des éléments (collage, clouage, soudure).
+      En peinture : le **lavis** est fluide et transparent ; l'**empâtement** est épais, en relief.
+
+  - type: texte
+    titre: "La réalité concrète de l'œuvre a du sens"
+    contenu: |-
+      Une œuvre est faite d'une matière, avec un poids, une texture, des dimensions.
+      Cette réalité physique peut produire du sens, autant que ce qu'elle représente.
+      - **César**, 1960 : ses premières **Compressions**. Des carrosseries de voitures écrasées par une presse hydraulique deviennent des blocs de métal.
+      - **Lucio Fontana**, à partir de 1958 : il fend d'un coup de lame des toiles d'une seule couleur. L'entaille ouvre la toile sur l'espace : elle est le sujet de l'œuvre.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : Yanis gratte avec une fourchette une couche épaisse de gouache encore
+      fraîche, sur un carton. Décris la transformation de la matière et l'effet produit.
+    etapes:
+      - "La matière : une gouache épaisse, encore molle, sur un support rigide (carton)."
+      - "L'outil et le geste : une fourchette, qui gratte la peinture en lignes parallèles."
+      - "La trace : des sillons réguliers, en relief, qui accrochent la lumière."
+      - "Le sens : la surface évoque un champ labouré ou des cheveux peignés. La trace de l'outil devient le motif."
+
+  - type: exercice
+    enonce: "Un sculpteur enlève de la matière dans un bloc de pierre avec un ciseau et un maillet. Comment s'appelle cette opération ?"
+    forme: reponse_courte
+    reponse: "taille"
+    reponses_acceptees:
+      - "taille"
+      - "la taille"
+      - "taille directe"
+      - "tailler"
+    indices:
+      - "Le sculpteur ajoute-t-il de la matière, ou en retire-t-il ?"
+      - "Pense à l'outil qui rend un crayon pointu : le premier mot de son nom est la réponse."
+    explication: "C'est la taille : on enlève de la matière dans un bloc dur, sans pouvoir revenir en arrière."
+
+  - type: exercice
+    enonce: "Une élève façonne une boule d'argile avec ses doigts, en poussant et en ajoutant de la matière. Quelle opération fait-elle ?"
+    forme: qcm
+    choix:
+      - "Le moulage"
+      - "Le modelage"
+      - "La taille"
+    reponse: 1
+    indices:
+      - "L'argile est-elle dure, molle ou liquide ?"
+      - "La taille se fait dans un bloc dur ; le moulage demande une matière liquide et un moule."
+    explication: "C'est le modelage : on façonne une matière molle avec les mains ou des outils, en ajoutant ou en retirant."
+
+  - type: exercice
+    enonce: >-
+      Une élève étale au couteau une peinture très épaisse, qui forme des reliefs où l'on voit la
+      trace de l'outil. Comment appelle-t-on cette couche de peinture épaisse ?
+    forme: reponse_courte
+    reponse: "empâtement"
+    reponses_acceptees:
+      - "empâtement"
+      - "empatement"
+      - "empâtements"
+      - "empatements"
+      - "un empâtement"
+      - "un empatement"
+      - "l'empâtement"
+    indices:
+      - "Ce n'est pas le lavis : le lavis est fluide et transparent."
+      - "Le mot est de la même famille que « pâte » : la peinture est « en pâte »."
+    explication: "C'est un empâtement : une couche de peinture épaisse, en relief, qui garde la trace du couteau."
+
+  - type: exercice
+    enonce: >-
+      À partir de 1958, Lucio Fontana fend d'un coup de lame des toiles peintes d'une seule
+      couleur. Que montre surtout ce geste ?
+    forme: qcm
+    choix:
+      - "Que l'artiste a abîmé sa toile par accident."
+      - "Que la toile est une matière réelle, qu'on peut ouvrir sur l'espace."
+      - "Qu'il voulait représenter une rivière dans un paysage."
+    reponse: 1
+    indices:
+      - "Fontana a refait ce geste sur de nombreuses toiles. Est-ce un accident ?"
+      - "Les toiles sont d'une seule couleur, sans paysage. Le geste agit sur le support lui-même."
+    explication: "L'entaille est voulue. Elle montre que la toile est une matière réelle, qu'on peut ouvrir : le geste est le sujet de l'œuvre."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. En 1960, César présente ses Compressions : des carrosseries de voitures
+      écrasées en blocs de métal. Quelle affirmation est juste ?
+    forme: qcm
+    choix:
+      - "Seule compte la couleur de la voiture, pas la matière."
+      - "L'œuvre est un paysage peint sur une toile."
+      - "La matière, le poids et la forme du bloc font partie de ce que l'œuvre exprime."
+    reponse: 2
+    indices:
+      - "Que reste-t-il de la voiture après la presse : une image ou un objet réel ?"
+      - "César ne peint pas : il transforme un objet réel avec une machine."
+    explication: "Les Compressions sont de vrais blocs de métal. Leur réalité concrète (matière, poids, forme) porte le sens : un objet de consommation devient sculpture."
+
+  - type: question_ouverte
+    question: >-
+      Pense aux Compressions de César (1960). En quelques phrases, décris la transformation de la
+      matière (matière, outil, geste), puis dis ce que cette transformation peut signifier.
+    indices:
+      - "Que reste-t-il de la voiture après le passage de la presse ?"
+      - "Suis l'ordre : matière de départ, outil, geste, résultat, puis ce que cela évoque."
+    criteres:
+      - "L'élève nomme la matière (métal, carrosserie), l'outil (presse hydraulique) et l'action (écraser, compresser)."
+      - "L'élève décrit le résultat concret (bloc, plis, perte de la forme de la voiture)."
+      - "L'élève propose un sens justifié (objet de consommation réduit à un bloc, rebut devenu œuvre, force de la machine)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre taille et modelage,
+      et comment la matière d'une œuvre peut elle-même avoir du sens.

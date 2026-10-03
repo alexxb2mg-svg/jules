@@ -1,0 +1,183 @@
+notion: champ-spectacle-vivant
+titre: "Le spectacle vivant : musique, théâtre, opéra, danse, cirque, marionnette"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Histoire des arts », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : programme d'histoire des arts 2020 inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Nommer les six formes du spectacle vivant."
+      - "Dire qui fait quoi : auteur, compositeur, metteur en scène, chorégraphe, interprète."
+      - "Employer le vocabulaire juste : réplique, didascalie, livret, chorégraphie."
+
+  - type: texte
+    titre: "Des arts joués en direct"
+    contenu: >-
+      Le **spectacle vivant** regroupe les arts joués **devant un public, en direct** :
+
+      la **musique**, le **théâtre**, l'**opéra**, la **danse**, le **cirque** et la **marionnette**.
+
+
+      L'œuvre existe pleinement au moment de la **représentation**.
+
+      Chaque soir, elle est un peu différente.
+
+  - type: texte
+    titre: "Qui fait quoi ?"
+    contenu: >-
+      | Personne | Rôle |
+
+      |---|---|
+
+      | **Auteur** | écrit le texte |
+
+      | **Compositeur** | écrit la musique |
+
+      | **Metteur en scène** | décide du jeu, des décors, des costumes, des lumières |
+
+      | **Chorégraphe** | invente les pas et les mouvements des danseurs |
+
+      | **Interprètes** | comédiens, chanteurs, danseurs, musiciens, acrobates, marionnettistes |
+
+  - type: texte
+    titre: "Les formes et leur vocabulaire"
+    contenu: >-
+      - **Musique** : un orchestre réunit cordes, vents et percussions, sous la direction d'un chef.
+
+      - **Théâtre** : les **répliques** sont dites ; les **didascalies** (indications de l'auteur) ne sont pas dites.
+
+      - **Opéra** : du théâtre **chanté** avec orchestre ; son texte est le **livret**.
+
+      - **Ballet** : une œuvre de **danse** sur une musique, sans paroles.
+
+      - **Cirque** : acrobates, jongleurs, clowns, sous un **chapiteau**. Il naît à Londres au XVIIIe siècle avec Philip Astley.
+
+      - **Marionnette** : une figure animée par un artiste. Repère : Guignol, créé à Lyon par Laurent Mourguet au début du XIXe siècle.
+
+  - type: texte
+    titre: "Repères dans le temps"
+    contenu: >-
+      | Œuvre | Forme | Date |
+
+      |---|---|---|
+
+      | Le Bourgeois gentilhomme, Molière et Lully | comédie-ballet | 1670 |
+
+      | Les Noces de Figaro, Mozart | opéra | 1786 |
+
+      | Carmen, Georges Bizet | opéra | 1875 |
+
+      | Le Lac des cygnes, Tchaïkovski | ballet | 1877 |
+
+      | Cyrano de Bergerac, Edmond Rostand | théâtre | 1897 |
+
+      | Le Sacre du printemps, Stravinsky et Nijinski | ballet | 1913 |
+
+  - type: exemple
+    enonce: >-
+      Explique pourquoi Carmen de Georges Bizet appartient au champ du spectacle vivant.
+    etapes:
+      - "La forme : Carmen est un opéra, créé à Paris en 1875."
+      - "Ce qui se passe : des chanteurs jouent une histoire sur scène, avec un orchestre, devant un public."
+      - "Chaque représentation est unique : elle dépend de la mise en scène (décors, costumes, jeu)."
+      - "Conclusion : c'est une œuvre du spectacle vivant."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on l'artiste qui invente les pas et les mouvements d'un ballet ?"
+    forme: reponse_courte
+    reponse: "chorégraphe"
+    reponses_acceptees:
+      - "chorégraphe"
+      - "le chorégraphe"
+      - "la chorégraphe"
+      - "un chorégraphe"
+      - "choregraphe"
+    indices:
+      - "Ce n'est pas celui qui danse : c'est celui qui compose la danse à l'avance."
+      - "Pour la musique, on dit « compositeur ». Pour la danse, le mot vient du grec « choros », la danse."
+    explication: "C'est le chorégraphe. Par exemple, Vaslav Nijinski est le chorégraphe du Sacre du printemps."
+
+  - type: exercice
+    enonce: "Dans le texte d'une pièce de théâtre, comment appelle-t-on les indications de l'auteur sur les gestes, le ton ou le décor, que les comédiens ne prononcent pas ?"
+    forme: reponse_courte
+    reponse: "didascalie"
+    reponses_acceptees:
+      - "didascalie"
+      - "didascalies"
+      - "les didascalies"
+      - "une didascalie"
+      - "la didascalie"
+    indices:
+      - "Ce ne sont pas les répliques : celles-là, on les entend."
+      - "Le mot vient du grec et veut dire « enseignement ». Il commence par « didas »."
+    explication: "Ce sont les didascalies : elles guident le jeu, mais on ne les entend pas sur scène."
+
+  - type: exercice
+    enonce: "Quel est le texte d'un opéra, écrit par un librettiste puis mis en musique par le compositeur ?"
+    forme: qcm
+    choix:
+      - "La partition"
+      - "Le livret"
+      - "Le scénario"
+      - "La chorégraphie"
+    reponse: 1
+    indices:
+      - "La partition, c'est la musique écrite. On cherche les paroles."
+      - "Le mot se cache dans « librettiste ». C'est un diminutif de « livre »."
+    explication: "C'est le livret. La partition contient la musique ; le scénario est le texte d'un film."
+
+  - type: exercice
+    enonce: "Parmi ces œuvres, laquelle appartient au spectacle vivant ?"
+    forme: qcm
+    choix:
+      - "Le Radeau de la Méduse, tableau de Géricault"
+      - "Le Voyage dans la Lune, film de Méliès"
+      - "Le Lac des cygnes, ballet de Tchaïkovski"
+      - "La chaise n° 14 de Thonet"
+    reponse: 2
+    indices:
+      - "Faut-il des interprètes en chair et en os devant un public pour que l'œuvre existe ?"
+      - "Un tableau est accroché, un film est projeté, une chaise sert à s'asseoir. Et la dernière ?"
+    explication: "Le Lac des cygnes est un ballet : il est dansé en direct devant un public. Le tableau relève des beaux-arts, le film du cinéma, la chaise des arts décoratifs."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Aujourd'hui, un théâtre joue Le Bourgeois gentilhomme avec des décors et des costumes
+      modernes. Quelle phrase est juste ?
+    forme: qcm
+    choix:
+      - "Molière est le metteur en scène de ce spectacle."
+      - "Molière est l'auteur ; la mise en scène est l'œuvre d'un autre artiste d'aujourd'hui."
+      - "Les didascalies sont lues à voix haute par les comédiens."
+      - "C'est un opéra, car il n'y a pas de texte."
+    reponse: 1
+    indices:
+      - "Molière a vécu au XVIIe siècle. Peut-il diriger un spectacle d'aujourd'hui ?"
+      - "Distingue l'œuvre écrite (le texte) et sa mise en scène, qui change d'une époque à l'autre."
+    explication: "Molière a écrit le texte en 1670 : il en est l'auteur. Chaque mise en scène actuelle est faite par un autre artiste, qui choisit décors, costumes et jeu."
+
+  - type: question_ouverte
+    question: >-
+      Raconte un spectacle vivant que tu as vu (théâtre, concert, danse, cirque, marionnettes…), en vrai
+      ou en vidéo. Nomme sa forme, décris la représentation (lieu, décor, costumes, lumières, gestes) et
+      dis ce que tu as ressenti.
+    indices:
+      - "Commence par la forme du spectacle et, si tu les connais, ses créateurs."
+      - "Puis décris ce que tu as vu et entendu, et termine par l'effet sur toi et sur le public."
+    criteres:
+      - "L'élève nomme la forme du spectacle (théâtre, opéra, ballet, concert, cirque, marionnette)."
+      - "L'élève décrit la représentation avec le vocabulaire du champ (scène, décor, costumes, lumières, mise en scène…)."
+      - "L'élève exprime un ressenti personnel justifié ou propose une interprétation."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots, les six formes du spectacle vivant, ce qui les rend « vivantes », et le rôle
+      de trois personnes qui créent un spectacle.

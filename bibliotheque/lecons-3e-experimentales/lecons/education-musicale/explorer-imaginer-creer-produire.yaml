@@ -1,0 +1,151 @@
+notion: explorer-imaginer-creer-produire
+titre: "Explorer, imaginer, créer et produire en musique"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Éducation musicale » — BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 — éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Réutiliser une caractéristique d'une œuvre connue (style, procédé, instrument) sans la recopier."
+      - "Distinguer arrangement et pastiche, et utiliser des outils numériques pour créer."
+      - "Se servir de sa propre expérience de création pour commenter la pièce d'un autre groupe."
+
+  - type: texte
+    titre: "S'inspirer d'une œuvre, sans la recopier"
+    contenu: |-
+      Créer, ce n'est pas toujours partir de rien.
+      On peut **réutiliser une caractéristique** d'une œuvre connue :
+      un **style**, un **procédé** (ostinato, canon), un **instrument**, un **plan**.
+      Réutiliser ne veut pas dire **recopier** les notes.
+      Quand on présente son travail, on **cite l'œuvre de départ**.
+
+  - type: texte
+    titre: "Arranger ou pasticher"
+    contenu: |-
+      **Arranger** : on garde la **mélodie** et on change le reste (instruments, style, tempo).
+      Exemple : Ravel orchestre en 1922 les *Tableaux d'une exposition*, écrits pour piano par Moussorgsky.
+      **Pasticher** : on écrit une pièce **nouvelle** « **à la manière de** » quelqu'un.
+      Exemple : la Symphonie n° 1 « Classique » de Prokofiev (1917), à la manière de Haydn.
+      Piège : un pastiche n'est pas une copie. Il imite une manière, pas des notes.
+
+  - type: texte
+    titre: "Les outils numériques et l'écoute des autres"
+    contenu: |-
+      **Enregistreur** : capter des sons réels. **Pistes** : superposer des sons.
+      **Boucle** : répéter un court motif. **Échantillon** : court extrait sonore réutilisé.
+      **Effets** (réverbération…) : transformer le son. On parle de **MAO** (musique assistée par ordinateur).
+      Pierre Schaeffer crée vers 1948 la **musique concrète**, faite de bruits enregistrés.
+      Avoir créé soi-même aide à **repérer et nommer** les procédés dans la pièce des autres.
+
+  - type: exemple
+    enonce: >-
+      Ton groupe veut créer une courte pièce « à la manière du Boléro de Ravel (1928) ».
+      Que peux-tu réutiliser, sans recopier l'œuvre ?
+    etapes:
+      - "Je repère ce qui caractérise le Boléro : un ostinato rythmique à la caisse claire, un tempo qui ne change pas, un long crescendo."
+      - "Je garde cette manière : une boucle rythmique qui tourne du début à la fin, sur le même tempo."
+      - "J'invente ma propre mélodie, et je la confie à un instrument ou une voix différente à chaque reprise."
+      - "J'ajoute des pistes peu à peu pour faire monter le volume jusqu'à la fin."
+      - "Je présente la pièce en disant qu'elle est écrite « à la manière du Boléro de Ravel »."
+
+  - type: exercice
+    enonce: >-
+      Ta classe garde la mélodie de « Frère Jacques », mais la joue en style rock, avec une
+      batterie. Comment s'appelle ce travail ?
+    forme: qcm
+    choix:
+      - "Un pastiche"
+      - "Un arrangement"
+      - "Une copie"
+    reponse: 1
+    indices:
+      - "Ici, la mélodie de départ est-elle gardée ou remplacée ?"
+      - "Quand on garde la mélodie et qu'on change le style ou les instruments, on adapte la pièce."
+    explication: "C'est un arrangement : la mélodie reste, le style et les instruments changent. Un pastiche, lui, invente une mélodie nouvelle."
+
+  - type: exercice
+    enonce: >-
+      Prokofiev a écrit sa Symphonie n° 1 (1917) en imitant la manière de Haydn, sans recopier
+      ses notes. Quel mot désigne une œuvre nouvelle écrite « à la manière de » ?
+    forme: reponse_courte
+    reponse: "pastiche"
+    reponses_acceptees:
+      - "pastiche"
+      - "un pastiche"
+      - "le pastiche"
+      - "pastiches"
+    indices:
+      - "Ce n'est ni une copie ni une adaptation : c'est une imitation de style."
+      - "Le mot s'emploie aussi en littérature. Il commence par « pas- »."
+    explication: "C'est un pastiche : une œuvre nouvelle qui imite la manière d'un compositeur ou d'un style, sans en recopier les notes."
+
+  - type: exercice
+    enonce: >-
+      Dans un logiciel de musique, une boucle de percussions dure 2 secondes. Elle est répétée
+      8 fois de suite, sans pause. Quelle est la durée totale, en secondes ?
+    forme: nombre
+    reponse: 16
+    tolerance: 0
+    unite: "s"
+    indices:
+      - "Combien de fois la boucle est-elle jouée, et combien de temps dure chaque passage ?"
+      - "Répéter une même durée plusieurs fois, c'est la multiplier par le nombre de répétitions."
+    explication: "8 × 2 = 16 : la boucle dure 16 secondes au total."
+
+  - type: exercice
+    enonce: >-
+      Ton groupe veut créer un paysage sonore avec des bruits enregistrés dans le collège (pas,
+      porte, cloche). Quel outil sert d'abord à récolter ces sons ?
+    forme: qcm
+    choix:
+      - "Un effet de réverbération"
+      - "Une boucle"
+      - "Un enregistreur"
+      - "Un pupitre de chœur"
+    reponse: 2
+    indices:
+      - "Avant de transformer ou de répéter un son, il faut d'abord l'avoir."
+      - "Quel outil capte des sons réels autour de toi ?"
+    explication: "L'enregistreur capte les sons réels. Ensuite seulement, on les place sur des pistes, on les répète en boucle ou on ajoute des effets."
+
+  - type: exercice
+    enonce: >-
+      Pierre Schaeffer a composé vers 1948 des pièces faites uniquement de bruits enregistrés
+      puis montés ensemble (trains, objets, voix). Quel nom a-t-il donné à cette musique ?
+    forme: qcm
+    choix:
+      - "La musique concrète"
+      - "La musique baroque"
+      - "Le chant grégorien"
+    reponse: 0
+    indices:
+      - "Cette musique part de sons réels, du quotidien, et non de notes écrites sur une partition."
+      - "Le mot choisi par Schaeffer s'oppose à « abstrait »."
+    explication: "C'est la musique concrète : une musique construite avec des sons enregistrés (bruits, voix, objets) puis montés. Le baroque et le grégorien sont des musiques bien plus anciennes."
+
+  - type: question_ouverte
+    question: >-
+      Un autre groupe présente sa création : une boucle de percussions corporelles tourne sans
+      arrêt ; une voix chuchote, puis deux autres voix entrent en canon ; tout devient de plus en
+      plus fort, puis s'arrête d'un coup. En t'appuyant sur ta propre expérience de création,
+      commente cette pièce.
+    indices:
+      - "Quels procédés reconnais-tu : boucle, canon, changement de volume, fin brusque ?"
+      - "Nomme chaque procédé, dis l'effet qu'il produit, puis propose une idée que tu as déjà testée toi-même."
+    criteres:
+      - "L'élève nomme au moins deux procédés avec le mot juste (ostinato ou boucle, canon, crescendo, fin brusque)."
+      - "L'élève dit ce qui fonctionne et pourquoi, en parlant de l'effet produit."
+      - "L'élève propose une amélioration précise, en s'appuyant sur ce qu'il a lui-même expérimenté."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, la différence entre un arrangement
+      et un pastiche, et cite un outil numérique qui aide à créer, avec son rôle.

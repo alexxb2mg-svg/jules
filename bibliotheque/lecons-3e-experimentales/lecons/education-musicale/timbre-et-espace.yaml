@@ -1,0 +1,166 @@
+notion: timbre-et-espace
+titre: "Le timbre et l'espace : qui joue, comment, et où ?"
+duree_minutes: 30
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Éducation musicale », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4 (éduscol) : le programme d'éducation musicale 2020 est inchangé pour la rentrée 2026-2027"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Définir le timbre et classer un instrument dans sa famille."
+      - "Nommer les voix et les principaux modes de jeu."
+      - "Décrire l'espace sonore d'un extrait : gauche ou droite, proche ou lointain, réverbération."
+
+  - type: texte
+    titre: "Le timbre, la couleur du son"
+    contenu: |-
+      Le **timbre**, c'est la **couleur** d'un son.
+      Il permet de **reconnaître** un instrument ou une voix.
+      Exemple : un violon et une flûte jouent la même note, aussi fort. On les distingue quand même.
+      Attention, ne pas confondre :
+      **hauteur** = aigu ou grave · **nuance** = fort ou doux · **timbre** = la couleur.
+
+  - type: texte
+    titre: "Les familles d'instruments"
+    contenu: |-
+      La famille dépend de la **façon de produire le son**, pas de la matière.
+      **Cordes** : frottées (violon, violoncelle), pincées (guitare, harpe), frappées (piano).
+      **Bois** : flûte, clarinette, hautbois, basson, saxophone (souffle, anche ou biseau).
+      **Cuivres** : trompette, cor, trombone, tuba (les lèvres vibrent dans l'embouchure).
+      **Percussions** : timbales, xylophone, caisse claire, cymbales.
+      Piège : la flûte traversière et le saxophone sont en métal, mais ce sont des **bois**.
+
+  - type: texte
+    titre: "Les voix et les modes de jeu"
+    contenu: |-
+      **Voix**, de la plus aiguë à la plus grave :
+      **soprano**, **alto** (femmes et enfants), **ténor**, **basse** (hommes).
+      Un même instrument change de timbre selon son **mode de jeu** :
+      **arco** = avec l'archet · **pizzicato** = corde pincée avec le doigt.
+      **sourdine** = objet qui adoucit et modifie le son.
+
+  - type: texte
+    titre: "L'espace sonore"
+    contenu: |-
+      L'**espace**, c'est la **place** des sons.
+      **Stéréo** : deux haut-parleurs, un son peut venir de gauche, de droite ou du centre.
+      Un son **fort et net** paraît **proche**. Un son **faible et très réverbéré** paraît **lointain**.
+      **Réverbération** : le son se prolonge sur les murs, comme dans une grande église.
+      Sur scène, l'orchestre est placé par familles : cordes devant, bois au milieu, cuivres et percussions au fond.
+
+  - type: exemple
+    enonce: >-
+      Tu entends un chœur d'hommes, avec des voix graves, dans une grande église. Le son
+      résonne longtemps. Un violoncelle joue en pinçant ses cordes, et il semble venir de la
+      droite. Décris cet extrait en trois temps : qui, comment, où.
+    etapes:
+      - "Qui joue ? Des voix d'hommes graves : ténors et basses. Et un violoncelle, de la famille des cordes."
+      - "Comment ? Le violoncelle pince ses cordes : c'est le mode de jeu pizzicato."
+      - "Où ? Le son résonne longtemps : il y a beaucoup de réverbération, l'espace paraît vaste."
+      - "Le violoncelle vient de la droite : c'est un placement dans l'espace stéréo."
+
+  - type: exercice
+    enonce: >-
+      Une clarinette et une trompette jouent la même note, aussi fort l'une que l'autre. Qu'est-ce
+      qui permet de les reconnaître ?
+    forme: qcm
+    choix:
+      - "La hauteur du son"
+      - "Le timbre du son"
+      - "La nuance du son"
+    reponse: 1
+    indices:
+      - "Elles jouent la même note : est-ce la hauteur qui change ?"
+      - "Elles jouent aussi fort : est-ce la nuance qui change ? Il reste la couleur du son."
+    explication: "C'est le timbre, la couleur du son. La hauteur (même note) et la nuance (même volume) sont identiques ici."
+
+  - type: exercice
+    enonce: >-
+      Le saxophone est en métal. Il se joue avec une anche. À quelle famille d'instruments
+      appartient-il ? Donne le nom de la famille.
+    forme: reponse_courte
+    reponse: "bois"
+    reponses_acceptees:
+      - "bois"
+      - "les bois"
+      - "la famille des bois"
+      - "famille des bois"
+    indices:
+      - "La famille dépend-elle de la matière, ou de la façon de produire le son ?"
+      - "Les cuivres font vibrer les lèvres dans une embouchure. Avec une anche, c'est l'autre famille des vents."
+    explication: "Le saxophone est un bois : son son naît d'une anche qui vibre. Sa matière (le métal) ne compte pas pour la famille."
+
+  - type: exercice
+    enonce: >-
+      Sur une partition de violon, un mot italien demande de pincer les cordes avec le doigt, sans
+      l'archet. Quel est ce mot ?
+    forme: reponse_courte
+    reponse: "pizzicato"
+    reponses_acceptees:
+      - "pizzicato"
+      - "le pizzicato"
+      - "pizz"
+      - "pizz."
+      - "pizzicati"
+    indices:
+      - "Son contraire est « arco », qui veut dire « avec l'archet »."
+      - "Le mot vient du verbe italien qui veut dire « pincer ». Il commence par « pi »."
+    explication: "Pizzicato (abrégé « pizz. ») : on pince la corde avec le doigt. Le timbre devient plus sec et plus court."
+
+  - type: exercice
+    enonce: >-
+      Dans un enregistrement, une trompette sonne faible, avec beaucoup de réverbération. Quelle
+      impression d'espace cela donne-t-il ?
+    forme: qcm
+    choix:
+      - "La trompette paraît très proche."
+      - "La trompette paraît lointaine."
+      - "La trompette paraît jouer plus aigu."
+    reponse: 1
+    indices:
+      - "Un son fort et net paraît proche. Ici, le son est-il fort et net ?"
+      - "La réverbération est un effet d'espace : elle ne change pas la hauteur de la note."
+    explication: "Un son faible et très réverbéré paraît lointain. La réverbération change l'espace, pas la hauteur."
+
+  - type: exercice
+    enonce: >-
+      Voici la description d'un extrait : « Une voix de femme très aiguë chante. Une harpe
+      l'accompagne. Au casque, la voix est à gauche et la harpe à droite. » Quelle phrase décrit
+      correctement cet extrait ?
+    forme: qcm
+    choix:
+      - "Une voix d'alto, accompagnée par un instrument à cordes frottées, en mono."
+      - "Une voix de ténor, accompagnée par un instrument à vent, placé au centre."
+      - "Une voix de soprano, accompagnée par un instrument à cordes pincées, placés en stéréo."
+    reponse: 2
+    indices:
+      - "Quelle est la voix de femme la plus aiguë ? Comment joue-t-on de la harpe ?"
+      - "Un son à gauche et un autre à droite : est-ce une diffusion sur un seul ou sur deux haut-parleurs ?"
+    explication: "La voix de femme la plus aiguë est le soprano. La harpe est une corde pincée. Gauche et droite : c'est la stéréo."
+
+  - type: question_ouverte
+    question: >-
+      Voici un extrait : « Un orchestre joue dans une grande salle. On entend d'abord les violons,
+      tout proches, en pinçant les cordes. Puis les cors et les trombones entrent, très brillants.
+      Une caisse claire semble jouer au loin, avec beaucoup d'écho. » Décris-le en quatre ou cinq
+      phrases avec le vocabulaire du timbre et de l'espace.
+    indices:
+      - "Commence par qui joue : donne la famille de chaque instrument."
+      - "Puis dis comment ils jouent (mode de jeu) et où ils semblent être (proche, lointain, réverbération)."
+    criteres:
+      - "L'élève nomme les familles : cordes (violons), cuivres (cors, trombones), percussions (caisse claire)."
+      - "L'élève nomme le mode de jeu des violons : pizzicato (cordes pincées)."
+      - "L'élève décrit l'espace : violons proches, caisse claire lointaine, réverbération d'une grande salle."
+      - "L'élève emploie des mots précis (timbre, famille, réverbération) plutôt que des mots vagues."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes propres mots et en deux ou trois phrases, ce qu'est le timbre, ce qui décide
+      de la famille d'un instrument, et comment on décrit l'espace d'un extrait.

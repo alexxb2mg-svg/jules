@@ -1,0 +1,139 @@
+notion: groupe-verbal
+titre: "Le groupe verbal : temps, modaux, passif, construction des verbes"
+duree_minutes: 35
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3) — partie « Langues vivantes (étrangères ou régionales) » — BO n° 31 du 30 juillet 2020"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Ressources d'accompagnement pour les langues vivantes étrangères et régionales au collège (éduscol)"
+    url: "https://eduscol.education.gouv.fr/4758/ressources-d-accompagnement-pour-les-langues-vivantes-etrangeres-et-regionales-au-college"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Choisir le bon temps pour parler du présent, du passé ou de l'avenir."
+      - "Employer un modal (must, can, should) et former un passif (BE + participe passé)."
+      - "Mettre la bonne construction après un verbe (to, for, -ing, to + verbe)."
+
+  - type: texte
+    titre: "Présent, passé, avenir : repère l'indice de temps"
+    contenu: |
+      | Indice | Temps | Exemple |
+      |---|---|---|
+      | every day | présent simple (habitude) | She **plays** tennis. (-s avec he, she, it) |
+      | now | BE + -ING (action en cours) | I **am reading** now. |
+      | yesterday, last year | prétérit (action finie) | I **watched** a film. / I **went** out. |
+      | since, for | present perfect (have / has + participe passé) | I **have lived** here **since** 2020. |
+      | tomorrow | will (décision, prédiction) / be going to (projet) | It **will** rain. / I **am going to** visit London. |
+
+  - type: texte
+    titre: "Deux pièges sur le passé"
+    contenu: |
+      - Beaucoup de verbes sont **irréguliers** : go → went, see → saw, have → had, buy → bought.
+      - **since** + point de départ (since 2020) ; **for** + durée (for six years).
+      - Avec une date passée précise (yesterday), on prend le **prétérit**, pas le present perfect.
+
+  - type: texte
+    titre: "Les modaux et le passif"
+    contenu: |
+      - **Modal** (must, can, should, may, will) + verbe **sans to**, **jamais de -s** : *She must go.*
+      - must = obligation ; should = conseil ; can = capacité ou permission.
+      - *have to* = obligation, et il se conjugue : *She has to go.*
+      - *mustn't* = interdit ; *don't have to* = pas obligé.
+      - **Passif** = BE conjugué + participe passé : *The window was broken (by a boy).*
+
+  - type: texte
+    titre: "Ce qui vient après le verbe"
+    contenu: |
+      | Construction | Exemple |
+      |---|---|
+      | complément direct | I like **music**. |
+      | préposition | I listen **to** music. I wait **for** the bus. |
+      | verbe en -ING | I enjoy **swimming**. |
+      | to + verbe | I want **to go**. |
+
+  - type: exemple
+    enonce: "Traduis : « Mon frère travaille dans ce magasin depuis trois mois. »"
+    etapes:
+      - "« depuis » + une action qui dure encore : on prend le present perfect."
+      - "Le sujet est « my brother » (he) : on prend « has », pas « have »."
+      - "« trois mois » est une durée : on met « for », pas « since »."
+      - "Phrase : *My brother has worked in this shop for three months.*"
+
+  - type: exercice
+    enonce: "Complète au présent simple : « He ___ (watch) TV every evening. »"
+    forme: reponse_courte
+    reponse: "watches"
+    reponses_acceptees: ["Watches"]
+    indices:
+      - "Le sujet est « he » : 3e personne du singulier."
+      - "On ajoute une marque à la fin du verbe. Après « ch », on ajoute « -es »."
+    explication: "« He watches TV every evening. » Habitude (every evening) : présent simple, avec -es après « ch » à la 3e personne."
+
+  - type: exercice
+    enonce: "Complète au prétérit : « Yesterday, my mother ___ (buy) a new bike. »"
+    forme: reponse_courte
+    reponse: "bought"
+    reponses_acceptees: ["Bought"]
+    indices:
+      - "« Yesterday » : action finie dans le passé, donc prétérit."
+      - "« buy » est irrégulier : pas de -ed (« buyed » n'existe pas)."
+    explication: "buy → bought. « Yesterday, my mother bought a new bike. »"
+
+  - type: exercice
+    enonce: "Choisis la phrase correcte."
+    forme: qcm
+    choix:
+      - "You should drink more water."
+      - "You should to drink more water."
+      - "You shoulds drink more water."
+    reponse: 0
+    indices:
+      - "« should » est un modal."
+      - "Après un modal : pas de « to », et le modal ne prend jamais de -s."
+    explication: "« You should drink more water. » Modal + verbe sans « to ». C'est un conseil."
+
+  - type: exercice
+    enonce: "Mets au passif : « Someone stole my phone. » → « My phone ___ stolen. »"
+    forme: reponse_courte
+    reponse: "was"
+    reponses_acceptees: ["Was"]
+    indices:
+      - "Le passif se forme avec BE + participe passé."
+      - "La phrase de départ est au prétérit, et le sujet est « my phone » (singulier) : conjugue BE au passé."
+    explication: "« My phone was stolen. » BE au prétérit (was) + participe passé (stolen)."
+
+  - type: exercice
+    enonce: "Niveau brevet. Complète : « I'm sorry, I can't come. I ___ to wait ___ my little sister after school. »"
+    forme: qcm
+    choix:
+      - "have … for"
+      - "must … for"
+      - "have … to"
+      - "has … for"
+    reponse: 0
+    indices:
+      - "Le premier trou est suivi de « to » : ce n'est donc pas un modal. Et le sujet est « I »."
+      - "Le verbe « wait » se construit avec une préposition : I wait ___ the bus."
+    explication: "« I have to wait for my little sister. » have to = obligation (et « has » va avec he, she, it). On dit « wait for »."
+
+  - type: question_ouverte
+    question: >-
+      Écris trois phrases en anglais sur toi : une habitude (présent simple), un souvenir précis
+      (prétérit), et un conseil à un ami (modal should ou must). Souligne dans ta tête l'indice de
+      temps de chaque phrase.
+    indices:
+      - "Habitude : every week… Souvenir : last summer… Conseil : you should…"
+      - "Vérifie : -s à la 3e personne, verbe irrégulier au prétérit, pas de « to » après le modal."
+    criteres:
+      - "Les trois phrases sont en anglais, avec un sujet et un verbe conjugué."
+      - "Le présent simple est juste pour l'habitude, le prétérit est juste pour le souvenir."
+      - "Le modal est suivi du verbe sans « to » et sans -s."
+
+  - type: synthese
+    consigne: >-
+      Écris en deux ou trois phrases, avec tes mots, comment tu choisis le temps d'un verbe en
+      anglais, et ce qu'il faut retenir après un modal.

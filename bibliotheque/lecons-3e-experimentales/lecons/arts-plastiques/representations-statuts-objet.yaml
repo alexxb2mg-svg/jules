@@ -1,0 +1,147 @@
+notion: representations-statuts-objet
+titre: "Les représentations et statuts de l'objet en art"
+duree_minutes: 25
+auteurs: ["projet-jules"]
+licence: CC-BY-SA-4.0
+sources:
+  - titre: "Programme du cycle 4 (annexe 3), partie « Arts plastiques », BO n° 31 du 30 juillet 2020 (arrêté du 17 juillet 2020)"
+    url: "https://eduscol.education.fr/document/621/download"
+    licence: etalab-2.0
+  - titre: "Enseigner au cycle 4, éduscol"
+    url: "https://eduscol.education.gouv.fr/4362/enseigner-au-cycle-4"
+    licence: etalab-2.0
+relecture: {statut: a_relire}
+blocs:
+  - type: objectifs
+    items:
+      - "Distinguer représenter un objet et présenter un objet."
+      - "Expliquer comment un objet ordinaire change de statut dans l'art."
+      - "Dire en quoi une œuvre est un objet matériel, un objet d'art et un objet d'étude."
+
+  - type: texte
+    titre: "Représenter ou présenter"
+    contenu: |-
+      - **Représenter** un objet, c'est en faire une **image** : le peindre, le dessiner, le photographier. Une **nature morte** représente des objets (fruits, vaisselle, fleurs coupées).
+      - **Présenter** un objet, c'est montrer l'**objet réel** lui-même.
+
+      René Magritte peint une pipe et écrit dessous « Ceci n'est pas une pipe » (La Trahison des images, vers 1929).
+      Il rappelle que l'image d'un objet n'est pas l'objet.
+
+  - type: texte
+    titre: "L'objet non artistique entre dans l'art"
+    contenu: |-
+      - **Ready-made** : un objet tout fait, choisi par l'artiste et exposé presque tel quel. Marcel Duchamp, Fontaine (1917) : un urinoir retourné, signé « R. Mutt ». Duchamp ne l'a pas fabriqué.
+      - **Assemblage** : réunir plusieurs objets. Pablo Picasso, Tête de taureau (1942) : une selle et un guidon de vélo.
+      - **Détournement** : enlever à l'objet sa fonction. Méret Oppenheim, Le Déjeuner en fourrure (1936) : une tasse couverte de fourrure.
+      - **Accumulation** : répéter le même objet en grand nombre.
+
+  - type: texte
+    titre: "Le statut change, l'œuvre est un objet"
+    contenu: |-
+      Ce qui change le **statut** d'un objet : le choix de l'artiste, le titre, la signature, le lieu (musée, galerie, rue), la présentation (socle, vitrine, **cartel**).
+      Le prix ou la marque ne font pas une œuvre.
+
+      Une œuvre est aussi un objet, de trois façons :
+      - un **objet matériel** : fait de matières, il s'abîme et se restaure ;
+      - un **objet d'art** : reconnu, exposé, conservé ;
+      - un **objet d'étude** : on le décrit, on l'analyse, on le compare.
+
+  - type: exemple
+    enonce: >-
+      Production fictive : Inès pose un vieux réveil cassé dans une vitrine du CDI, avec un
+      cartel « Le temps perdu, 2026 ». Qu'est-ce qui a changé pour ce réveil ?
+    etapes:
+      - "L'objet : un réveil, qui sert d'habitude à donner l'heure. Cassé, il ne sert plus."
+      - "Ce qu'Inès en fait : elle le présente tel quel, sans le peindre ni le dessiner."
+      - "Ce qui change son statut : la vitrine, le titre, la date. On le regarde comme une œuvre."
+      - "Le sens : le titre fait penser au temps qui passe. Comme Duchamp, c'est le choix et la présentation qui comptent."
+
+  - type: exercice
+    enonce: "Comment appelle-t-on la représentation peinte ou dessinée d'objets inanimés, comme des fruits ou de la vaisselle ?"
+    forme: reponse_courte
+    reponse: "nature morte"
+    reponses_acceptees:
+      - "nature morte"
+      - "une nature morte"
+      - "la nature morte"
+      - "natures mortes"
+      - "nature-morte"
+    indices:
+      - "C'est une expression de deux mots, un genre de la peinture."
+      - "Le premier mot désigne aussi les arbres et les plantes ; le second est le contraire de « vivante »."
+    explication: "C'est une nature morte : la représentation d'objets inanimés. L'objet est représenté, pas présenté."
+
+  - type: exercice
+    enonce: "Dans laquelle de ces situations l'objet est-il présenté lui-même, et non représenté ?"
+    forme: qcm
+    choix:
+      - "Une pomme peinte à l'huile sur une toile"
+      - "La photographie d'une tasse"
+      - "Un vrai vélo posé au milieu d'une salle d'exposition"
+    reponse: 2
+    indices:
+      - "Dans quelle situation pourrais-tu toucher l'objet réel ?"
+      - "La peinture et la photographie sont des images."
+    explication: "Le vrai vélo est l'objet lui-même : il est présenté. La pomme peinte et la photo de la tasse sont des représentations."
+
+  - type: exercice
+    enonce: "Quel mot anglais désigne un objet tout fait, choisi par l'artiste et exposé presque tel quel, comme Fontaine de Marcel Duchamp (1917) ?"
+    forme: reponse_courte
+    reponse: "ready-made"
+    reponses_acceptees:
+      - "ready-made"
+      - "readymade"
+      - "ready made"
+      - "un ready-made"
+      - "le ready-made"
+      - "ready-mades"
+    indices:
+      - "Duchamp a-t-il fabriqué cet urinoir, ou l'a-t-il trouvé déjà fait ?"
+      - "C'est un mot composé anglais qui veut dire « déjà prêt, tout fait »."
+    explication: "C'est un ready-made : l'artiste choisit un objet manufacturé et l'expose presque sans le changer."
+
+  - type: exercice
+    enonce: "Un tableau de musée est abîmé ; on restaure sa toile. Dans cette situation, l'œuvre est surtout considérée comme…"
+    forme: qcm
+    choix:
+      - "un objet matériel"
+      - "un objet d'étude"
+      - "un ready-made"
+    reponse: 0
+    indices:
+      - "Restaurer, c'est réparer la matière."
+      - "Un objet d'étude, on le décrit et on l'analyse. Ici, on répare."
+    explication: "On répare la toile qui s'abîme : l'œuvre est un objet matériel, fait de matières."
+
+  - type: exercice
+    enonce: >-
+      Niveau brevet. Qu'est-ce qui fait d'un urinoir du commerce une œuvre, dans le cas de
+      Fontaine de Marcel Duchamp (1917) ?
+    forme: qcm
+    choix:
+      - "Le prix très élevé de la porcelaine"
+      - "Le choix de l'artiste, le titre, la signature et la présentation dans une exposition"
+      - "Le travail de sculpture fait à la main par Duchamp"
+    reponse: 1
+    indices:
+      - "Duchamp n'a pas fabriqué l'objet. Qu'a-t-il ajouté ou changé ?"
+      - "Cherche ce qui dépend de l'artiste et de la présentation, pas de l'objet lui-même."
+    explication: "Duchamp choisit l'objet, le retourne, le signe « R. Mutt », lui donne un titre et le propose à une exposition. C'est cela qui change son statut. Il ne l'a pas sculpté."
+
+  - type: question_ouverte
+    question: >-
+      Production fictive : Lina a collé vingt fourchettes en plastique sur une planche dorée,
+      posée sur un socle, avec le titre « Trophée du self ». Analyse cette production : que
+      fait-elle des objets, et comment leur statut change-t-il ? Cite un artiste.
+    indices:
+      - "Peut-on encore manger avec ces fourchettes ?"
+      - "Décris les objets, puis ce qui a été fait avec eux, puis ce qu'ajoutent le socle, la couleur et le titre."
+    criteres:
+      - "L'élève nomme ce que Lina fait (accumulation, assemblage, détournement) et dit que les fourchettes perdent leur fonction."
+      - "L'élève explique le rôle de la présentation (socle, dorure, titre) dans le changement de statut."
+      - "L'élève fait un lien juste avec une œuvre réelle (Duchamp, Picasso ou Oppenheim)."
+
+  - type: synthese
+    consigne: >-
+      Écris, avec tes mots et en deux ou trois phrases, la différence entre représenter et
+      présenter un objet, et ce qui peut faire d'un objet ordinaire une œuvre d'art.
