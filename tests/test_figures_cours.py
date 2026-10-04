@@ -87,7 +87,7 @@ def test_cours_lecon_thales_schema_et_gabarits_non_revele(tuteur_thales):
     autorises = figures.autorises(conv)
     assert "triangle-thales" in autorises
     assert "equation-solutions" not in autorises  # revele : jamais en cours
-    assert "triangle-rectangle" not in autorises  # revele : les aires des carres sont ecrites (36 + 64 = 100)
+    assert "triangle-rectangle" in autorises  # 2.1 : « ? » dans le carre de l'hypotenuse (reponse = 0 par defaut)
     contribution = figures.contribution(conv)
     assert "Tu peux montrer le schéma de la notion" in contribution and "- triangle-thales :" in contribution
     assert "}}" not in tuteur_thales.systeme(conv)

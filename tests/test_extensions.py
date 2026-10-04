@@ -243,7 +243,7 @@ DECLARATIONS_DU_DEPOT = declarations_du_depot()
 # Reperes fixes, decides a la main, que la decouverte ne doit pas faire oublier (garde-fou de non-regression).
 REVELE_FIXE = {
     "equation-solutions": True,
-    "triangle-rectangle": True,
+    "triangle-rectangle": False,  # 2.1 : carre de l'hypotenuse « ? » tant que reponse = 0
     "onde-sonore": True,
     "jauge-decibels": True,
     "urne-tirage": False,

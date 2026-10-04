@@ -146,10 +146,11 @@ def test_aucun_module_ne_filtre_la_reponse_apres_figures(tuteur):
 # fichier. Le repere fixe ci-dessous garde les decisions deja prises a la main.
 GABARITS_DECLARES = sorted(declarations_du_depot())
 REVELENT = {g for g, (revele, _) in declarations_du_depot().items() if revele}
-# triangle-rectangle ecrit les aires des carres (AC² + BC²), onde-sonore le domaine du son (ultrason...), jauge-decibels
-# « juste a la limite » : ils revelent. urne-tirage n'ecrit plus de verdict en mots : il ne revele pas.
-REVELENT_FIXES = {"equation-solutions", "triangle-rectangle", "onde-sonore", "jauge-decibels"}
-NON_REVELENT_FIXES = {"droite-affine", "triangle-thales", "urne-tirage"}
+# onde-sonore ecrit le domaine du son (ultrason...), jauge-decibels « juste a la limite » : ils revelent. urne-tirage
+# n'ecrit plus de verdict en mots, triangle-rectangle (2.1) met « ? » dans le carre de l'hypotenuse tant que
+# reponse = 0 : ils ne revelent pas.
+REVELENT_FIXES = {"equation-solutions", "onde-sonore", "jauge-decibels"}
+NON_REVELENT_FIXES = {"droite-affine", "triangle-thales", "urne-tirage", "triangle-rectangle"}
 
 
 def test_registre_decouvert_et_reperes_fixes(tuteur):
