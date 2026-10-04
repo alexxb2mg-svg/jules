@@ -185,12 +185,16 @@ export function Graphe({ bloc, libelle = "Figure interactive", classeFigure = "m
   const [valeurs, setValeurs] = useState<Record<string, number>>(() =>
     Object.fromEntries((bloc.curseurs || []).map((c) => [c.nom, Number(c.depart ?? c.min ?? 0)])))
   const lectures = (bloc.lectures || []).filter((l) => evaluerCondition(l.si, valeurs))
+  // Un curseur min = max est un paramètre fixé par la fiche (bornes d'une frise, période…) : sa valeur reste dans
+  // `valeurs` (gabarit et conditions « si ») mais il n'est pas affiché (SCHEMA-FICHE-VISUELLE.md, § graphe).
+  const mobiles = (bloc.curseurs || []).filter((c) => c.min !== c.max)
+  const colonne = mobiles.length > 0 || (bloc.lectures || []).length > 0
   return (
     <div className="@container" data-graphe>
-      <div className="grid items-start gap-4 @min-[34rem]:grid-cols-[minmax(240px,340px)_1fr] @min-[34rem]:gap-6" onClick={(e) => e.stopPropagation()}>
+      <div className={cn("grid items-start gap-4", colonne && "@min-[34rem]:grid-cols-[minmax(240px,340px)_1fr] @min-[34rem]:gap-6")} onClick={(e) => e.stopPropagation()}>
         <FigureGabarit gabarit={bloc.gabarit} valeurs={valeurs} libelle={libelle} className={classeFigure} />
-        <div>
-          {(bloc.curseurs || []).map((c) => (
+        {colonne && <div>
+          {mobiles.map((c) => (
             <label key={c.id} className="mb-3 block last:mb-0">
               <span className="mb-1 flex items-baseline justify-between gap-3 font-semibold">
                 <span>{c.nom}</span>
@@ -217,7 +221,7 @@ export function Graphe({ bloc, libelle = "Figure interactive", classeFigure = "m
               </AnimatePresence>
             </div>
           )}
-        </div>
+        </div>}
       </div>
     </div>
   )
