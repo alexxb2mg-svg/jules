@@ -2,8 +2,8 @@
 // (1 carreau = 1 N). Curseurs : intensite (valeur de la force, N) et angle (direction et sens, en degres :
 // 0 = vers la droite, 90 = vers le haut, 180 = vers la gauche, 270 = vers le bas).
 // Ce qui est montre, et rien de plus : le point d'application (point noir), la direction (droite grise en
-// pointilles), le sens (pointe de la fleche) et la valeur (longueur en carreaux). La valeur n'est jamais ecrite :
-// l'eleve compte les carreaux (revele: false).
+// pointilles), le sens (pointe de la fleche) et la valeur (longueur : 1 N par carreau, une graduation par newton
+// sur la fleche). La valeur n'est jamais ecrite : l'eleve compte (revele: false).
 // Source : programme de physique-chimie du cycle 4 (BO n° 31 du 30/07/2020, annexe 3, theme « Mouvement et
 // interactions ») : « Modeliser une action exercee sur un objet par une force caracterisee par un point
 // d'application, une direction, un sens et une valeur. »
@@ -31,13 +31,15 @@ window.GABARITS["vecteur-force"] = {
 
     // Quadrillage : 20 x 20 carreaux de 14 px autour du point d'application (10 carreaux = la plus grande force).
     const C = 14, CX = 170, CY = 165, R = 10 * C;
+    // L'objet (une caisse) : la force s'exerce sur lui. Dessine AVANT le quadrillage et en fond pale : les
+    // lignes restent visibles a travers, aucun carreau n'est cache autour du point d'application.
+    el("rect", { x: CX - 21, y: CY - 21, width: 42, height: 42, rx: 3, fill: "#DCE8F6", "fill-opacity": 0.5 });
     for (let i = -10; i <= 10; i++) {
       el("line", { x1: CX + i * C, y1: CY - R, x2: CX + i * C, y2: CY + R, stroke: "#E3E8EF", "stroke-width": 2 });
       el("line", { x1: CX - R, y1: CY + i * C, x2: CX + R, y2: CY + i * C, stroke: "#E3E8EF", "stroke-width": 2 });
     }
 
-    // L'objet (une caisse) : la force s'exerce sur lui.
-    el("rect", { x: CX - 21, y: CY - 21, width: 42, height: 42, rx: 3, fill: "#DCE8F6", stroke: BLEU, "stroke-width": 2 });
+    el("rect", { x: CX - 21, y: CY - 21, width: 42, height: 42, rx: 3, fill: "none", stroke: BLEU, "stroke-width": 2 });
 
     // Direction : la droite qui porte la fleche, des deux cotes du point (gris, pointilles).
     const rad = (angle * Math.PI) / 180, ux = Math.cos(rad), uy = -Math.sin(rad);
@@ -57,13 +59,19 @@ window.GABARITS["vecteur-force"] = {
       points: `${f(CX + ux * L)},${f(CY + uy * L)} ${f(bx + px * 7)},${f(by + py * 7)} ${f(bx - px * 7)},${f(by - py * 7)}`,
       fill: ROUGE,
     });
+    // Graduation : un trait tous les 1 N le long de la fleche (lisible meme en diagonale, ou les carreaux
+    // ne mesurent plus la longueur). Le dernier newton est la pointe.
+    for (let k = 1; k < intensite; k++) {
+      const gx = CX + ux * k * C, gy = CY + uy * k * C;
+      el("line", { x1: f(gx + px * 6), y1: f(gy + py * 6), x2: f(gx - px * 6), y2: f(gy - py * 6), stroke: ROUGE, "stroke-width": 2 });
+    }
     // Point d'application
     el("circle", { cx: CX, cy: CY, r: 5, fill: ENCRE });
 
     // Legende courte sous le quadrillage.
     el("circle", { cx: 22, cy: 325, r: 5, fill: ENCRE });
     el("text", { x: 32, y: 330, "font-size": 13, fill: ENCRE }, "point d'application");
-    el("text", { x: 318, y: 330, "font-size": 13, "text-anchor": "end", fill: GRIS }, "1 carreau = 1 N");
+    el("text", { x: 318, y: 330, "font-size": 13, "text-anchor": "end", fill: GRIS }, "1 graduation = 1 N");
     return { intensite, angle };
   },
 };

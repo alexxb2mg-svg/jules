@@ -63,7 +63,7 @@ window.GABARITS["rectangle-puissance-duree"] = {
 
     // Exemple d'appareil (gammes ADEME, voir l'en-tete).
     let exemple = "";
-    if (P <= 25) exemple = "lampe, chargeur";
+    if (P <= 25) exemple = "lampe";
     else if (P >= 60 && P <= 160) exemple = "télé, ordinateur";
     else if (P >= 750 && P < 1000) exemple = "micro-ondes";
     else if (P >= 1000 && P < 2000) exemple = "bouilloire";

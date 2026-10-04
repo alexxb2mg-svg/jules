@@ -51,7 +51,7 @@ window.GABARITS["courbe-energie-cinetique"] = {
     // Reperes de vitesse en km/h (lignes grises fines, etiquette en haut du repere).
     for (const [vv, nom] of [[50 / 3.6, "50 km/h"], [130 / 3.6, "130 km/h"]]) {
       el("line", { x1: f(X(vv)), y1: Y1, x2: f(X(vv)), y2: Y0, stroke: "#D5DAE1", "stroke-width": 2, "stroke-dasharray": "4 4" });
-      el("text", { x: f(X(vv)), y: Y1 - 4, "font-size": 13, "text-anchor": "middle", fill: GRIS }, nom);
+      el("text", { x: f(X(vv)), y: Y1 - 14, "font-size": 13, "text-anchor": "middle", fill: GRIS }, nom);
     }
     el("line", { x1: X0, y1: Y0, x2: X1 + 4, y2: Y0, stroke: ENCRE, "stroke-width": 2 });
     el("line", { x1: X0, y1: Y0, x2: X0, y2: Y1 - 4, stroke: ENCRE, "stroke-width": 2 });

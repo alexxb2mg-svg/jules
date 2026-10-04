@@ -8,10 +8,10 @@ fournit:
 permissions: {}
 # Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
 # les curseurs de la fiche 3e « actions et forces ». revele: false : la valeur de la force n'est jamais ecrite,
-# l'eleve compte les carreaux (1 carreau = 1 N), comme sur le quadrillage de rectangle-quadrille.
+# l'eleve compte les graduations de la fleche (1 graduation = 1 N), comme sur le quadrillage de rectangle-quadrille.
 discussion:
   vecteur-force:
-    quand: "Pour faire voir les 4 caractéristiques d'une force : point d'application (point noir), direction (pointillés), sens (pointe), valeur (longueur, 1 carreau = 1 N). intensite = valeur en N ; angle en degrés : 0 vers la droite, 90 vers le haut, 180 vers la gauche, 270 vers le bas (le poids)."
+    quand: "Pour faire voir les 4 caractéristiques d'une force : point d'application (point noir), direction (pointillés), sens (pointe), valeur (longueur, une graduation par newton). intensite = valeur en N ; angle en degrés : 0 vers la droite, 90 vers le haut, 180 vers la gauche, 270 vers le bas (le poids)."
     valeurs:
       intensite: {min: 1, max: 10, pas: 1, defaut: 4}
       angle: {min: 0, max: 345, pas: 15, defaut: 0}
