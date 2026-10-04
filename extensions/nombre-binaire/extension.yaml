@@ -1,0 +1,20 @@
+id: nombre-binaire
+titre: "Figure : écrire un nombre en binaire avec des ampoules (bits et octet)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [nombre-binaire]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e de technologie « structurer et traiter des donnees ».
+# revele true : les ampoules allumees, les 0 et 1 et la somme des poids ECRIVENT la conversion en binaire, qui est
+# la reponse d'un exercice de la notion (« ecrire 13 sur un octet ») ; une version sans cette ecriture perdrait
+# l'idee meme de la figure (lire un nombre dans ses bits).
+discussion:
+  nombre-binaire:
+    quand: "Pour faire voir l'écriture binaire d'un entier de 0 à 255 : 8 ampoules (les bits) de poids 128, 64, 32, 16, 8, 4, 2, 1 s'allument pour les 1, et on relit le nombre en additionnant les poids allumés. Avec n bits on code 2ⁿ valeurs ; 8 bits font un octet."
+    revele: true
+    valeurs:
+      valeur: {min: 0, max: 255, pas: 1, defaut: 5}
+      bits: {min: 1, max: 8, pas: 1, defaut: 8}

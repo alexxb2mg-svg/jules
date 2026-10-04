@@ -1,0 +1,16 @@
+id: reseau-routage
+titre: "Figure : trajet d'un paquet dans un réseau, routage et panne"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [reseau-routage]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e de technologie « reseau local et Internet ». Aucun calcul a trouver : revele false.
+discussion:
+  reseau-routage:
+    quand: "Pour faire voir le chemin d'un paquet de données : ordinateur, commutateur et box dans le réseau local, puis des routeurs dans Internet jusqu'au serveur (etape 0 = ordinateur, 6 = serveur). coupure met une liaison en panne (0 = aucune) : les routeurs font passer le paquet par une autre route."
+    valeurs:
+      etape: {min: 0, max: 6, pas: 1, defaut: 0}
+      coupure: {min: 0, max: 3, pas: 1, defaut: 0}

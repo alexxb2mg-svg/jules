@@ -170,6 +170,10 @@ extensions:
   - action-enzyme             # 3e SVT : enzymes digestives, temperature
   - reponse-immunitaire       # 3e SVT : anticorps, memoire immunitaire, vaccination
   - cycle-menstruel           # 3e SVT : cycle de 28 jours, hormones ovariennes
+  - force-mot-de-passe        # 3e technologie : numerique (vague 2, lot 16)
+  - nombre-binaire
+  - reseau-routage
+  - numerisation-signal
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
