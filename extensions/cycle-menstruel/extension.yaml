@@ -1,0 +1,16 @@
+id: cycle-menstruel
+titre: "Figure : le cycle de 28 jours (ovaire, paroi de l'utérus, hormones)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [cycle-menstruel]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# le curseur de la fiche 3e svt « appareils reproducteurs, puberte ». Cycle moyen de 28 jours, aucune valeur
+# ecrite hors du jour choisi : revele false.
+discussion:
+  cycle-menstruel:
+    quand: "Pour faire voir le cycle féminin moyen de 28 jours : une roue des jours relie l'ovaire (ovulation vers le 14e jour), la paroi de l'utérus (éliminée pendant les règles, jours 1 à 5, puis épaissie) et les hormones de l'ovaire. jour = jour du cycle ; la durée réelle varie."
+    valeurs:
+      jour: {min: 1, max: 28, pas: 1, defaut: 1}

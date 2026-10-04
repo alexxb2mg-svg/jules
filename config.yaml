@@ -165,6 +165,11 @@ extensions:
   - arbre-generations         # 3e SVT : reproduction sexuee et asexuee
   - brassage-chromosomes      # 3e SVT : meiose, diversite genetique
   - selection-naturelle       # 3e SVT : evolution des especes
+  - parcours-message-nerveux  # 3e SVT : message nerveux, synapse
+  - tube-digestif             # 3e SVT : digestion, absorption
+  - action-enzyme             # 3e SVT : enzymes digestives, temperature
+  - reponse-immunitaire       # 3e SVT : anticorps, memoire immunitaire, vaccination
+  - cycle-menstruel           # 3e SVT : cycle de 28 jours, hormones ovariennes
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux

@@ -1,0 +1,18 @@
+id: parcours-message-nerveux
+titre: "Figure : trajet du message nerveux (organe des sens, cerveau, muscle ; synapse)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [parcours-message-nerveux]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e svt « role du cerveau, message nerveux » (vue 0) et « mecanismes nerveux a
+# l'echelle cellulaire » (vue 1). La figure n'ecrit aucune valeur : revele false.
+discussion:
+  parcours-message-nerveux:
+    quand: "Pour faire voir le trajet du message nerveux. vue 0 : œil, nerf sensitif, cerveau, nerf moteur, muscle ; vue 1 : neurone, synapse (neurotransmetteur), neurone. t = avancement (0 stimulus, 1 réponse) ; perturbation 0 normal, 1 ralenti (fatigue, alcool), 2 nerf coupé ou synapse bloquée."
+    valeurs:
+      t: {min: 0, max: 1, pas: 0.1, defaut: 0.2}
+      perturbation: {min: 0, max: 2, pas: 1, defaut: 0}
+      vue: {min: 0, max: 1, pas: 1, defaut: 0}
