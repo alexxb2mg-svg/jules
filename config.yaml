@@ -156,6 +156,11 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - parcours-message-nerveux  # 3e SVT : message nerveux, synapse
+  - tube-digestif             # 3e SVT : digestion, absorption
+  - action-enzyme             # 3e SVT : enzymes digestives, temperature
+  - reponse-immunitaire       # 3e SVT : anticorps, memoire immunitaire, vaccination
+  - cycle-menstruel           # 3e SVT : cycle de 28 jours, hormones ovariennes
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
