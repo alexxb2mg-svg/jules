@@ -159,6 +159,9 @@ extensions:
   - pistes-superposees        # vague 2, lot 03 : education musicale (successif, simultane, canon)
   - pavage-motif              # histoire des arts : frise, pavement (translation, symetrie)
   - arbre-multiplication      # EMC (partages d'un message), SVT (divisions de cellules)
+  - reservoir-flux            # 3e SVT : ressources naturelles, dynamique des populations
+  - photosynthese-facteurs    # 3e SVT : nutrition de la plante chlorophyllienne
+  - reseau-populations        # CM1 sciences : reseaux alimentaires
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
