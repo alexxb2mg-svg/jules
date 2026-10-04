@@ -1,0 +1,17 @@
+id: brassage-chromosomes
+titre: "Figure : méiose et brassage des chromosomes, tous les gamètes possibles"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [brassage-chromosomes]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « diversite et stabilite genetique ». Le nombre de gametes (2 puissance paires)
+# n'est pas ecrit : l'eleve compte les gametes dessines. revele false.
+discussion:
+  brassage-chromosomes:
+    quand: "Pour voir le brassage à la méiose : une cellule et ses paires de chromosomes (bleu du père, orange de la mère), et en dessous tous les gamètes possibles, avec un chromosome de chaque paire. paires = 1 à 4 (chaque paire double le nombre de gamètes) ; tirage = gamète entouré en rouge."
+    valeurs:
+      paires: {min: 1, max: 4, pas: 1, defaut: 2}
+      tirage: {min: 1, max: 16, pas: 1, defaut: 1}

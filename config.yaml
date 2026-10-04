@@ -162,6 +162,9 @@ extensions:
   - reservoir-flux            # 3e SVT : ressources naturelles, dynamique des populations
   - photosynthese-facteurs    # 3e SVT : nutrition de la plante chlorophyllienne
   - reseau-populations        # CM1 sciences : reseaux alimentaires
+  - arbre-generations         # 3e SVT : reproduction sexuee et asexuee
+  - brassage-chromosomes      # 3e SVT : meiose, diversite genetique
+  - selection-naturelle       # 3e SVT : evolution des especes
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
