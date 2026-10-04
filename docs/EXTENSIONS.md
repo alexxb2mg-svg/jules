@@ -122,6 +122,13 @@ français et langues vivantes (3), éducation musicale et arts plastiques (4). R
 `droite-graduee-somme`, `bande-fractions-comparees`, `demi-droite-graduee`, `demi-droite-decimaux`,
 `redistribution-atomes`, `frise`, `frise-temps-verbaux`, `chaine-accords`, `cercle-couleurs`.
 
+**Périodes multiples de `frise`.** La fiche peut surligner jusqu'à trois périodes au-dessus de l'axe : `de`/`à`
+(ou `a`), puis `de2`/`a2` et `de3`/`a3`, toutes en curseurs figés (min = max, donc non affichés à l'élève).
+Une période n'existe que si ses deux bornes sont données ; elle est vive quand le repère `date` est dedans,
+pâle sinon ; des périodes qui se chevauchent sont décalées en hauteur (jusqu'à trois rangées). Ces noms ne
+sont pas dans la `discussion` (un défaut ajouterait une période à toutes les frises) : c'est leur présence
+qui ajoute une période, d'où leur entrée dans `LUES_HORS_DISCUSSION`.
+
 **Ajouter un gabarit, côté tests.** Rien à recopier : `tests/registre_figures.py` lit la clé `discussion` de chaque
 `extensions/*/extension.yaml` et la liste `extensions:` de `config.yaml`. Chaque gabarit déclaré est alors contrôlé
 tout seul : déclaration chargée à l'identique par `jules/extensions.py`, `revele` booléen, bornes cohérentes
