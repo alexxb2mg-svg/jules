@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - echelle-puissances-dix    # vague 2, lot 06 : mathematiques 3e (nombres, calcul, fonctions) et CM1 (calcul)
+  - carre-aire-cote
+  - jetons-en-rangees
+  - rectangle-multiplication
+  - deux-droites
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
