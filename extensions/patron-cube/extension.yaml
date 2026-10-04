@@ -1,0 +1,19 @@
+id: patron-cube
+titre: "Figure : patron de cube qui se replie"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [patron-cube]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « les solides ». modele 1 croix, 2 escalier (vrais patrons), 3 six carres avec un
+# bloc 2 x 2 (faux patron). revele: true : plie jusqu'au bout, la figure montre si les six carres forment un cube
+# (faces en rouge et cote ouvert pour le modele 3), ce qui est la reponse a « est-ce un patron du cube ? ».
+discussion:
+  patron-cube:
+    quand: "Pour faire voir comment un patron de cube se plie, au CM1 : pliage 0 = à plat, 10 = plié jusqu'au bout ; modele 1 = patron en croix, 2 = patron en escalier, 3 = six carrés avec un bloc de 2 sur 2, qui ne forment pas un cube (deux faces l'une sur l'autre, un côté ouvert)."
+    revele: true
+    valeurs:
+      pliage: {min: 0, max: 10, pas: 1, defaut: 5}
+      modele: {min: 1, max: 3, pas: 1, defaut: 1}

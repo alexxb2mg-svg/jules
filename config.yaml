@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - patron-cube               # vague 2, lot 09 : mathematiques CM1 (espace, construction, suites) et anglais CM1
+  - assemblage-cubes
+  - construction-pas-a-pas
+  - grille-deplacement
+  - suite-motifs
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

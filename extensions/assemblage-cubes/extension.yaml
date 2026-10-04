@@ -1,0 +1,19 @@
+id: assemblage-cubes
+titre: "Figure : assemblage de cubes, étage par étage"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [assemblage-cubes]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « reperage dans l'espace ». revele: false : le nombre de cubes n'est jamais
+# ecrit, l'eleve compte une rangee, les rangees d'un etage, puis les etages.
+discussion:
+  assemblage-cubes:
+    quand: "Pour faire compter les cubes d'un pavé, cubes cachés compris, au CM1 : longueur, profondeur, hauteur = nombre de cubes dans chaque direction ; etages = étages gardés en partant du bas (les étages enlevés restent en pointillés et laissent voir les cubes cachés). Le total n'est pas écrit."
+    valeurs:
+      longueur: {min: 1, max: 5, pas: 1, defaut: 3}
+      profondeur: {min: 1, max: 4, pas: 1, defaut: 2}
+      hauteur: {min: 1, max: 4, pas: 1, defaut: 2}
+      etages: {min: 1, max: 4, pas: 1, defaut: 4}
