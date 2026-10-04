@@ -1,6 +1,8 @@
 // Jules - gabarit "triangle-rectangle" : triangle ABC rectangle en C, cotes ac = AC et bc = BC reglables,
 // avec un carre construit sur chaque cote et son aire ecrite (AC², BC², et AC² + BC² sur l'hypotenuse).
 // La longueur AB n'est jamais ecrite : la figure montre le theoreme de Pythagore sans donner la longueur.
+// reponse (0 ou 1, defaut 0) : a 0, le carre orange porte « ? » au lieu de AC² + BC² ; aucune valeur de AB ni de
+// AB² n'est ecrite (aide aux devoirs, cours). A 1, son aire est ecrite (mode reexplique seulement).
 // Echelle adaptee a la taille de la figure (carres compris) : meme 1 et 1 remplissent le cadre.
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
@@ -11,6 +13,7 @@ window.GABARITS["triangle-rectangle"] = {
   dessiner(svg, valeurs) {
     const ac = Number(valeurs.ac ?? 6);
     const bc = Number(valeurs.bc ?? 8);
+    const reponse = Number(valeurs.reponse ?? 0) >= 1;
     const NS = "http://www.w3.org/2000/svg";
     const el = (nom, attrs, texte) => {
       const e = document.createElementNS(NS, nom);
@@ -56,7 +59,7 @@ window.GABARITS["triangle-rectangle"] = {
     const TAILLE = 16;
     carres.forEach((c, i) => {
       const centre = { x: c.coins.reduce((s, p) => s + p.x, 0) / 4, y: c.coins.reduce((s, p) => s + p.y, 0) / 4 };
-      const texte = String(c.aire);
+      const texte = i === 2 && !reponse ? "?" : String(c.aire);
       const assez = c.cote >= texte.length * 10 + 10;
       let x = centre.x, y = centre.y + TAILLE * 0.35, ancre = "middle";
       if (!assez && i === 0) { x = c.coins[2].x - 4; y = c.coins[2].y + TAILLE * 0.35; ancre = "end"; }
@@ -68,6 +71,6 @@ window.GABARITS["triangle-rectangle"] = {
     el("text", { x: A.x.toFixed(1), y: (A.y - 8).toFixed(1), "font-size": 15, "font-weight": 700, "text-anchor": "middle", fill: "#14243B" }, "A");
     el("text", { x: (B.x + 8).toFixed(1), y: (B.y + 5).toFixed(1), "font-size": 15, "font-weight": 700, fill: "#14243B" }, "B");
     el("text", { x: (C.x - 5).toFixed(1), y: (C.y + 16).toFixed(1), "font-size": 15, "font-weight": 700, "text-anchor": "end", fill: "#14243B" }, "C");
-    return { ac, bc };
+    return { ac, bc, reponse: reponse ? 1 : 0 };
   },
 };
