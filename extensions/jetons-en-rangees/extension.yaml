@@ -1,0 +1,20 @@
+id: jetons-en-rangees
+titre: "Figure : jetons rangés par rangées (quotient et reste)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [jetons-en-rangees]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion. Bornes : fiches 3e « multiples, diviseurs, division
+# euclidienne » et « nombres premiers », fiches CM1 « multiples et diviseurs » et « poser et effectuer les
+# operations », reunies. Absorbe paquets-reste (spec vague 2, § 2.2) : la CM1 regle le nombre de jetons et la
+# taille des rangees au lieu du quotient et du reste.
+# revele: false : seules les donnees (jetons, rangee) sont ecrites ; quotient (rangees pleines) et reste (jetons
+# orange) se comptent, ils ne sont jamais ecrits (meme principe qu'engrenages).
+discussion:
+  jetons-en-rangees:
+    quand: "Pour faire voir une division euclidienne, un multiple, un diviseur ou un nombre premier (CM1, 3e) : jetons rangés par rangées de « rangee » ; rangées pleines en bleu (quotient), jetons qui restent en orange (reste, toujours plus petit que la rangée). Aucun jeton orange = ça tombe juste."
+    valeurs:
+      jetons: {min: 1, max: 100, pas: 1, defaut: 36}
+      rangee: {min: 1, max: 12, pas: 1, defaut: 5}

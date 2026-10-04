@@ -1,0 +1,19 @@
+id: echelle-puissances-dix
+titre: "Figure : échelle des puissances de dix (a × 10ⁿ)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [echelle-puissances-dix]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Bornes : fiche 3e
+# « puissances et notation scientifique » (a de 1 a 9,5, n de -6 a 6) et fiche 3e de physique-chimie « structure de
+# l'Univers » (a fige a 1, n de 7 a 25), reunies. Absorbe zoom-puissances-dix (spec vague 2, § 2.2).
+# revele: false : seul a × 10ⁿ (la donnee) est ecrit ; l'ecriture decimale n'est jamais ecrite, le point se lit
+# entre deux puissances de 10 (ordre de grandeur), comme une regle (meme principe que rectangle-quadrille).
+discussion:
+  echelle-puissances-dix:
+    quand: "Pour faire voir l'ordre de grandeur de a × 10ⁿ (3e) : échelle où chaque cran vaut 10 fois le précédent, repères en mètres. n de -6 à 6 : de la bactérie à la Loire ; n de 7 à 25 : de la Terre aux galaxies, unité adaptée (km, ua, al). Le point saute d'un cran avec n, glisse avec a."
+    valeurs:
+      a: {min: 1, max: 9.5, pas: 0.5, defaut: 3}
+      n: {min: -6, max: 25, pas: 1, defaut: 2}

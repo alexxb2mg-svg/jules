@@ -1,0 +1,17 @@
+id: carre-aire-cote
+titre: "Figure : carré d'aire a et son côté √a lu sur une règle"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [carre-aire-cote]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que le curseur de la fiche 3e « racine carree ».
+# revele: false : seule l'aire a (la donnee) est ecrite ; la racine carree n'est jamais ecrite, elle se lit sur la
+# regle sous le cote (repere vert sur une graduation pour un carre parfait, orange entre deux graduations sinon),
+# comme le perimetre de rectangle-quadrille.
+discussion:
+  carre-aire-cote:
+    quand: "Pour faire voir que √a est le côté d'un carré d'aire a (3e) : le carré quadrillé grandit avec a, son côté se lit sur une règle graduée ; il tombe pile sur une graduation (repère vert) seulement pour un carré parfait (49, 64, 144…). √a n'est pas écrit."
+    valeurs:
+      a: {min: 0, max: 144, pas: 1, defaut: 49}

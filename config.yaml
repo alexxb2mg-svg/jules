@@ -185,6 +185,11 @@ extensions:
   - courbe-evolution          # 3e histoire-geographie : series historiques qui se dessinent
   - journee-repartition       # CM1 geographie : acces a l'eau, journee en 24 cases
   - itineraire-carte          # CM1 histoire : Magellan, commerce triangulaire
+  - echelle-puissances-dix    # vague 2, lot 06 : mathematiques 3e (nombres, calcul, fonctions) et CM1 (calcul)
+  - carre-aire-cote
+  - jetons-en-rangees
+  - rectangle-multiplication
+  - deux-droites
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
