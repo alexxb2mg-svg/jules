@@ -51,7 +51,7 @@ window.GABARITS["echelle-intensite"] = {
       { titre: "Mon avis (anglais)", mots: ["I hate it!", "I don't like it.", "It's OK.", "I like it.", "I love it!"], bas: "je déteste", haut: "j'adore", visage: true },
     ];
     const serie = entier(valeurs.serie, 1, 1, SERIES.length);
-    const degre = entier(valeurs.degre, 2, 0, 4);
+    const degre = entier(valeurs.degre, 1, 0, 4);
     const S = SERIES[serie - 1];
 
     svg.setAttribute("viewBox", "0 0 340 340");
