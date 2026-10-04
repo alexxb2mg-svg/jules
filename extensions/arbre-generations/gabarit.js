@@ -34,12 +34,18 @@ window.GABARITS["arbre-generations"] = {
     const Y0 = 52, PAS_Y = 56;
     const XS = [50, 130, 210, 290];
 
-    // Generateur pseudo-aleatoire fixe : le meme dessin a chaque affichage.
-    let graine = 7;
-    const hasard = () => {
-      graine = (graine * 1103515245 + 12345) % 2147483648;
-      return graine / 2147483648;
-    };
+    // Sexuee : descendants fixes a la main (le meme dessin a chaque affichage). Un tirage au hasard peut tomber
+    // sur un couple qui ne differe que d'un gene : ses seuls descendants possibles sont alors les parents eux-memes
+    // (des clones). La table garantit, pour chaque generation : chaque gene vient de l'un des deux parents ;
+    // 4 individus differents ; aucun identique a un individu de la ligne du dessus ; chaque couple de la ligne
+    // differe d'au moins 2 genes (il peut donc avoir 2 descendants differents de lui-meme).
+    const PARENTS_SEXUES = [[0, 0, 1, 0], [1, 1, 0, 1]];
+    const DESCENDANTS_SEXUES = [
+      [[0, 1, 1, 1], [1, 0, 0, 1], [1, 1, 1, 0], [0, 1, 0, 0]],
+      [[1, 0, 1, 1], [0, 1, 0, 1], [0, 1, 1, 0], [1, 1, 0, 0]],
+      [[1, 1, 1, 1], [0, 0, 1, 1], [0, 1, 0, 0], [1, 1, 1, 0]],
+      [[0, 1, 1, 1], [1, 0, 1, 1], [0, 1, 1, 0], [1, 1, 0, 0]],
+    ];
 
     const individu = (cx, cy, bandes) => {
       bandes.forEach((b, i) => {
@@ -49,7 +55,6 @@ window.GABARITS["arbre-generations"] = {
     };
     const trait = (x1, y1, x2, y2) =>
       el("line", { x1, y1: y1 + H / 2, x2, y2: y2 - H / 2, stroke: "#6B7686", "stroke-width": 2 });
-    const egal = (a, b) => a.every((v, i) => v === b[i]);
 
     el("text", { x: 170, y: 22, "font-size": 15, "text-anchor": "middle", fill: "#14243B", "font-weight": "bold" },
       mode ? "sexuée : deux parents" : "asexuée : un seul parent");
@@ -59,7 +64,7 @@ window.GABARITS["arbre-generations"] = {
     if (mode === 0) {
       rangee = [{ x: 170, bandes: [0, 1, 1, 0] }];
     } else {
-      rangee = [{ x: 120, bandes: [0, 0, 1, 0] }, { x: 220, bandes: [1, 1, 0, 1] }];
+      rangee = [{ x: 120, bandes: PARENTS_SEXUES[0] }, { x: 220, bandes: PARENTS_SEXUES[1] }];
       el("text", { x: 170, y: Y0 + 6, "font-size": 18, "text-anchor": "middle", fill: "#14243B", "font-weight": "bold" }, "+");
     }
     const dessines = [];
@@ -79,13 +84,8 @@ window.GABARITS["arbre-generations"] = {
           // Deux parents : le couple de depart, puis les paires (0,1) et (2,3) de la ligne du dessus.
           const couple = g === 1 ? rangee : (i < 2 ? [rangee[0], rangee[1]] : [rangee[2], rangee[3]]);
           couple.forEach((p) => trait(p.x, yh, x, y));
-          // Pour chaque gene, la version d'un des deux parents au hasard ; on retire si le descendant
-          // ressemble exactement a un parent ou a un frere deja dessine (on veut voir « tous differents »).
-          for (let essai = 0; essai < 40; essai++) {
-            bandes = [0, 1, 2, 3].map((k) => couple[hasard() < 0.5 ? 0 : 1].bandes[k]);
-            const deja = couple.concat(suivante).some((o) => egal(o.bandes, bandes));
-            if (!deja) break;
-          }
+          // Pour chaque gene, la version de l'un des deux parents (table DESCENDANTS_SEXUES ci-dessus).
+          bandes = DESCENDANTS_SEXUES[g - 1][i].slice();
         }
         suivante.push({ x, bandes });
       });
