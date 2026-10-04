@@ -116,15 +116,18 @@ conversation figure dans `reglages.modes_revele` du module `figures` (`config.ya
 au modèle et un bloc qui la cite est retiré (`figure_ecartee`, raison « gabarit non autorise »). Ne
 jamais mettre `aide-devoirs` dans `modes_revele` : la figure ferait l'exercice à la place de l'élève.
 
-**Gabarits livrés.** 45 figures, toutes déclarées pour la discussion (liste détaillée par matière dans
-`bibliotheque/SCHEMA-FICHE-VISUELLE.md`, § gabarits) : mathématiques 3e (10) et CM1 (14), physique-chimie 3e (7),
-SVT et technologie 3e (2), sciences CM1 (3), histoire-géographie (2 : `frise`, `distance-temps-transports`),
-français et langues vivantes (3), éducation musicale et arts plastiques (4). Révèlent la réponse (`revele: true`) :
-`equation-solutions`, `symetrie-axe`, `balance-equation`, `courbe-point-mobile`, `glisse-nombre`, `droite-graduee`,
-`droite-graduee-somme`, `bande-fractions-comparees`, `demi-droite-graduee`, `demi-droite-decimaux`,
-`redistribution-atomes`, `frise`, `frise-temps-verbaux`, `chaine-accords`, `cercle-couleurs`, `triangle-rectangle`
-(aires des carrés), `onde-sonore` (domaine du son : ultrason...), `jauge-decibels` (« juste à la limite » trouvé en
-glissant la durée) : 18 figures.
+**Gabarits livrés.** 134 figures, toutes déclarées pour la discussion (liste détaillée par matière dans
+`bibliotheque/SCHEMA-FICHE-VISUELLE.md`, § gabarits) : mathématiques 3e (25) ; mathématiques CM1 (20) ;
+physique-chimie 3e (17) ; SVT 3e (14) ; technologie 3e (10) ; sciences CM1 (7) ; histoire-géographie et EMC (11) ;
+français (9) ; langues vivantes (7) ; éducation musicale, arts plastiques et histoire des arts (14). Révèlent la
+réponse (`revele: true`, raison écrite en commentaire dans chaque `extension.yaml`) : `aire-attraction`,
+`atome-constructeur`, `autonomie-batterie`, `balance-equation`, `bande-fractions-comparees`, `barre-evolution`,
+`carte-tuiles-europe`, `cercle-couleurs`, `chaine-accords`, `construction-pas-a-pas`, `courbe-evolution`,
+`courbe-point-mobile`, `demi-droite-decimaux`, `demi-droite-graduee`, `deux-droites`, `droite-graduee`,
+`droite-graduee-somme`, `echelle-intensite`, `echelles-paralleles`, `equation-solutions`, `frise`,
+`frise-temps-verbaux`, `glisse-nombre`, `grille-deplacement`, `grille-deux-epreuves`, `itineraire-carte`,
+`jauge-decibels`, `nombre-binaire`, `onde-sonore`, `patron-cube`, `redistribution-atomes`, `spectre-ondes`,
+`symetrie-axe`, `trace-programme`, `triangle-rectangle` : 35 figures.
 
 **Périodes multiples de `frise`.** La fiche peut surligner jusqu'à trois périodes au-dessus de l'axe : `de`/`à`
 (ou `a`), puis `de2`/`a2` et `de3`/`a3`, toutes en curseurs figés (min = max, donc non affichés à l'élève).
