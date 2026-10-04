@@ -195,6 +195,10 @@ extensions:
   - grille-deux-epreuves
   - barre-ratio
   - barre-evolution
+  - homothetie-rotation       # mathematiques 3e (vague 2, lot 08) : transformations, reperage, solides, Scratch
+  - globe-latitude-longitude
+  - section-solide
+  - lutin-trace               # aussi CM1 sciences et technologie (absorbe trace-robot)
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

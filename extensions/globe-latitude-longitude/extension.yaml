@@ -1,0 +1,18 @@
+id: globe-latitude-longitude
+titre: "Figure : globe, latitude et longitude (vue de profil et vue du pôle Nord)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [globe-latitude-longitude]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « reperage sur une sphere ».
+# revele: false : les seules valeurs ecrites (« 45° N », « 30° E ») sont les coordonnees donnees en entree ; aucune
+# distance ni aucun calcul n'est ecrit.
+discussion:
+  globe-latitude-longitude:
+    quand: "Pour faire voir les deux angles qui repèrent un point sur la Terre : lat = latitude (degrés, Nord positif), vue de profil depuis l'équateur ; lon = longitude (degrés, Est positif), vue du pôle Nord depuis le méridien de Greenwich."
+    valeurs:
+      lat: {min: -90, max: 90, pas: 15, defaut: 45}
+      lon: {min: -180, max: 180, pas: 15, defaut: 30}

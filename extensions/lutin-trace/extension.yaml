@@ -1,0 +1,29 @@
+id: lutin-trace
+titre: "Figure : tracé d'un lutin ou d'un robot (boucle « répéter », variable, motif)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [lutin-trace]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; bornes larges qui
+# couvrent les fiches 3e « algorithmique niveau 1, 2, 3 » et la fiche CM1 « programme simple d'un objet technique »
+# (absorbe le gabarit trace-robot de l'audit). Les curseurs L / n / m de l'audit sont renommes longueur /
+# repetitions / cotes (EX-202 : nom lisible, affiche a l'eleve). cotes = 1 : boucle simple ; cotes >= 2 : chaque
+# repetition dessine un polygone (bloc personnalise) puis tourne de 360 / repetitions (rosace, comme l'audit du
+# niveau 3) ; angle est alors ignore.
+# angle au pas de 3 : 360 / n tombe sur un cran pour n = 3, 4, 5, 6, 8, 10, 12. cases = 1 : robot sur
+# quadrillage (longueur en cases) ; cases = 0 : lutin Scratch (longueur en pas).
+# revele: false : la figure n'ecrit aucune valeur (ni angle interieur, ni nom du polygone), seulement le programme
+# donne en entree. Doute signale a la revue : elle DESSINE le trace, reponse d'un exercice « que dessine ce
+# programme ? » (meme question que symetrie-axe, marque revele en vague 1) ; EX-204 ne vise que les valeurs ecrites.
+discussion:
+  lutin-trace:
+    quand: "Pour faire voir ce que dessine un programme Scratch ou robot : répéter « repetitions » fois [avancer de longueur, tourner ↻ de angle] ; ajout > 0 : longueur grandit (spirale) ; cotes >= 2 : motif polygone puis 360° ÷ repetitions (rosace, angle ignoré) ; cases 1 : robot sur quadrillage."
+    valeurs:
+      repetitions: {min: 1, max: 20, pas: 1, defaut: 4}
+      angle: {min: 0, max: 180, pas: 3, defaut: 90}
+      longueur: {min: 1, max: 100, pas: 1, defaut: 60}
+      ajout: {min: 0, max: 20, pas: 1, defaut: 0}
+      cotes: {min: 1, max: 8, pas: 1, defaut: 1}
+      cases: {min: 0, max: 1, pas: 1, defaut: 0}
