@@ -11,7 +11,7 @@
 // - fourmi : quelques mm (fourmi rousse 4 a 9 mm, Wikipedia « Formica rufa ») -> 5e-3 ;
 // - humain (eleve de 3e) : environ 1,6 m ;
 // - tour Eiffel : 330 m (toureiffel.paris, « Les chiffres de la tour Eiffel », depuis 2022) -> 3,3e2 ;
-// - mont Blanc : 4 805,59 m (mesure 2021, chambre des geometres-experts de Haute-Savoie) -> 4,8e3 ;
+// - mont Blanc : 4 805,59 m (mesure de septembre 2023, geometres-experts de Haute-Savoie, AFP 05/10/2023) -> 4,8e3 ;
 // - Loire : 1 006 km (Wikipedia « Loire », SANDRE) -> 1,0e6 ;
 // - Terre : diametre 12 742 km (NASA, Earth Fact Sheet, rayon moyen 6 371 km) -> 1,3e7 ;
 // - Terre-Lune : 384 400 km (NASA, Moon Fact Sheet, demi-grand axe) -> 3,8e8 ;
