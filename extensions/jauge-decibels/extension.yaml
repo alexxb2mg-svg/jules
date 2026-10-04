@@ -1,18 +1,26 @@
 id: jauge-decibels
 titre: "Figure : niveau sonore en décibels et dose d'écoute"
-version: "1.0.0"
+version: "1.1.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
   figures: [jauge-decibels]
 permissions: {}
 # Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
-# que les curseurs de la fiche 3e d'education musicale « physiologie de l'audition ». Dose : 80 dB pendant
-# 8 h = la limite, chaque +3 dB divise par deux la duree sans risque (regle d'egale energie). Aucun nombre
-# calcule n'est ecrit (barre et mots seulement) : revele: false.
+# que les curseurs de la fiche 3e d'education musicale « physiologie de l'audition ». Dose : 85 dB(A) pendant
+# 8 h = la limite, chaque +3 dB divise par deux la duree sans risque (regle d'egale energie) : 91 dB -> 2 h,
+# 94 dB -> 1 h. Reference : Code du travail art. R4431-2, valeur d'exposition superieure declenchant l'action
+# = 85 dB(A) sur 8 h (80 = valeur inferieure, 87 = valeur limite) ; la zone orange commence donc a 85 dB.
+# Reperes = ordres de grandeur : conversation ≈ 60 ; cantine ≈ 85 (bruit.fr/CidB, indicateurs de bruit en
+# cantine regles sur 85 dB) ; concert ≈ 100 (decret 2017-1244 : 102 dB(A) au plus sur 15 min dans les lieux a
+# sons amplifies) ; douleur ≈ 120 dB.
+# revele: aucun nombre calcule n'est ecrit, mais la barre affiche « juste a la limite » quand la dose vaut 1 :
+# « combien d'heures a 91 dB ? » se resout en glissant duree, sans calculer (meme raison que balance-equation).
+# Proposee seulement en mode reexplique.
 discussion:
   jauge-decibels:
     quand: "Pour faire voir le risque pour l'oreille : la jauge des décibels (conversation ≈ 60, cantine ≈ 85, concert ≈ 100, douleur ≈ 120 dB) et la dose du jour, qui dépend du niveau ET de la durée d'écoute (en heures)."
+    revele: true
     valeurs:
       niveau: {min: 20, max: 130, pas: 5, defaut: 60}
       duree: {min: 0.5, max: 8, pas: 0.5, defaut: 1}

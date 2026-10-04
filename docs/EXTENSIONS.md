@@ -95,9 +95,11 @@ pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (
 
 **Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
 (`equation-solutions` place −√a et √a). Leur déclaration porte
-`revele: true` (facultatif, booléen, défaut `false`). Quand c'est possible, mieux vaut une figure qui montre
-sans écrire la valeur : `triangle-rectangle` (2.0) dessine un carré sur chaque côté avec son aire, sans écrire AB,
-et n'est donc plus `revele`.
+`revele: true` (facultatif, booléen, défaut `false`). Écrire une étape décisive suffit : `triangle-rectangle` (2.0)
+n'écrit pas AB, mais l'aire de ses trois carrés (36, 64 et 100 pour AC = 6, BC = 8) ne laisse que la racine carrée à
+prendre, il est donc `revele`. Quand c'est possible, mieux vaut une figure qui montre sans écrire : `urne-tirage`
+place une flèche sur une échelle impossible / une chance sur deux / certain sans écrire « peu probable » ni
+« probable », et n'est pas `revele`.
 
 ```yaml
 discussion:
@@ -120,7 +122,9 @@ SVT et technologie 3e (2), sciences CM1 (3), histoire-géographie (2 : `frise`, 
 français et langues vivantes (3), éducation musicale et arts plastiques (4). Révèlent la réponse (`revele: true`) :
 `equation-solutions`, `symetrie-axe`, `balance-equation`, `courbe-point-mobile`, `glisse-nombre`, `droite-graduee`,
 `droite-graduee-somme`, `bande-fractions-comparees`, `demi-droite-graduee`, `demi-droite-decimaux`,
-`redistribution-atomes`, `frise`, `frise-temps-verbaux`, `chaine-accords`, `cercle-couleurs`.
+`redistribution-atomes`, `frise`, `frise-temps-verbaux`, `chaine-accords`, `cercle-couleurs`, `triangle-rectangle`
+(aires des carrés), `onde-sonore` (domaine du son : ultrason...), `jauge-decibels` (« juste à la limite » trouvé en
+glissant la durée) : 18 figures.
 
 **Ajouter un gabarit, côté tests.** Rien à recopier : `tests/registre_figures.py` lit la clé `discussion` de chaque
 `extensions/*/extension.yaml` et la liste `extensions:` de `config.yaml`. Chaque gabarit déclaré est alors contrôlé
