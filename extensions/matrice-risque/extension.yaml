@@ -1,0 +1,17 @@
+id: matrice-risque
+titre: "Figure : le risque selon l'aléa et la vulnérabilité"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [matrice-risque]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e SVT « alea, vulnerabilite, risque ». revele false : aucun niveau de risque n'est
+# ecrit pres du point ; la couleur de la case se lit dans la legende (nul, faible, moyen, fort).
+discussion:
+  matrice-risque:
+    quand: "Pour montrer que le risque n'est fort que si l'aléa ET la vulnérabilité sont forts : grille du gris (nul) au rouge (fort), un point à la situation choisie. alea = force et probabilité du phénomène, de 0 à 3 ; vuln = vulnérabilité, de 0 (rien d'exposé) à 3."
+    valeurs:
+      alea: {min: 0, max: 3, pas: 1, defaut: 2}
+      vuln: {min: 0, max: 3, pas: 1, defaut: 2}
