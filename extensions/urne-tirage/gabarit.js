@@ -1,6 +1,7 @@
 // Jules - gabarit "urne-tirage" : un sac de 10 boules, rouges (valeur rouges, 0 a 10) et bleues (les autres),
 // et une echelle de probabilite « impossible ... une chance sur deux ... certain » ou une fleche montre la chance
-// de tirer une boule rouge. Rien n'est calcule ni ecrit en fraction : on voit la composition du sac et la fleche.
+// de tirer une boule rouge. Rien n'est calcule ni ecrit en fraction, et aucun verdict en mots : on voit la
+// composition du sac et la fleche.
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
@@ -19,7 +20,7 @@ window.GABARITS["urne-tirage"] = {
       svg.appendChild(e);
       return e;
     };
-    svg.setAttribute("viewBox", "0 0 340 340");
+    svg.setAttribute("viewBox", "0 0 340 314"); // bas = « sur deux », seconde ligne de l'echelle (y 305)
     svg.innerHTML = ""; // vide le SVG (aucune donnee inseree ici) ; tous les elements sont crees via createElementNS
 
     // Le sac : corps arrondi, col resserre et lien.
@@ -57,11 +58,8 @@ window.GABARITS["urne-tirage"] = {
     const xf = X0 + (rouges / TOTAL) * (X1 - X0);
     el("polygon", { points: `${xf - 9},${Y - 18} ${xf + 9},${Y - 18} ${xf},${Y - 5}`, fill: "#C8102E" });
     el("line", { x1: xf, y1: Y - 26, x2: xf, y2: Y - 16, stroke: "#C8102E", "stroke-width": 4 });
-
-    // Le verdict, en mots.
-    const verdict = rouges === 0 ? "impossible" : rouges < 5 ? "peu probable" : rouges === 5 ? "une chance sur deux"
-      : rouges < TOTAL ? "probable" : "certain";
-    el("text", { x: 170, y: 332, "font-size": 16, "font-weight": 700, "text-anchor": "middle", fill: "#14243B" }, `Tirer une rouge : ${verdict}`);
+    // Pas de phrase verdict (« peu probable », « probable »...) : qualifier l'evenement en lisant la fleche est
+    // l'exercice de l'eleve (fiche CM1), la figure montre sans l'ecrire.
     return { rouges };
   },
 };

@@ -1,6 +1,6 @@
 id: urne-tirage
 titre: "Figure : sac de boules et échelle de probabilité"
-version: "1.0.0"
+version: "1.1.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
@@ -8,7 +8,9 @@ fournit:
 permissions: {}
 # Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
 # le curseur de la fiche CM1 « premieres notions de probabilite ». revele false : la figure place une fleche sur
-# une echelle en mots (impossible, peu probable, une chance sur deux, probable, certain), sans fraction calculee.
+# une echelle a trois reperes (impossible, une chance sur deux, certain), sans fraction calculee et sans phrase
+# verdict. Rien n'ecrit « peu probable » ou « probable » : c'est l'eleve qui qualifie l'evenement en lisant ou
+# tombe la fleche, et c'est justement ce que demandent les exercices de la fiche.
 discussion:
   urne-tirage:
     quand: "Pour faire voir, au CM1, qu'avec un sac de 10 boules (rouges = nombre de boules rouges, les autres sont bleues), tirer une rouge peut être impossible, peu probable, une chance sur deux, probable ou certain selon le nombre de rouges : deux couleurs ne veut pas dire une chance sur deux."
