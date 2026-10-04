@@ -5,8 +5,8 @@
 // En haut : l'image vue (cadre bleu) ; vu d'en bas, le haut du sujet se resserre (il parait grand et puissant),
 // vu d'en haut, c'est le bas qui se resserre (il parait petit). En bas : le meme lieu vu de cote, l'oeil (rouge)
 // et ce qu'il regarde. Les noms des plans ne sont pas ecrits (c'est ce que l'eleve doit nommer) : revele false.
-// Sans curseur distance (fiches d'arts plastiques qui ne parlent que d'echelle et de point de vue), la figure
-// prend distance = 5 : tout le lieu est visible, l'oeuvre a cote du personnage.
+// Les fiches d'arts plastiques qui ne parlent que d'echelle et de point de vue figent distance = 5 (min = max) :
+// tout le lieu est visible, l'oeuvre a cote du personnage (valeur prise aussi si distance manque).
 // Dessins schematiques faits pour Jules : aucune oeuvre reelle n'est reproduite (la sculpture est un robot simple).
 // Echelle des plans (vocabulaire du cinema enseigne en francais et en arts plastiques au cycle 4) : plan
 // d'ensemble (le lieu), plan moyen (personnage en pied), plan americain (coupe a mi-cuisse), plan rapproche
