@@ -134,7 +134,8 @@ bornes dans la clé `discussion` de chaque `extensions/<id>/extension.yaml`), ra
 (un gabarit sert souvent dans plusieurs matières) :
 
 - **Mathématiques 3e** (25) : `droite-affine` (f(x) = ax + b), `triangle-thales`, `triangle-rectangle` (carrés sur
-  les trois côtés, aire écrite dans chacun, AB non écrit mais `revele` : il ne reste que la racine carrée),
+  les trois côtés, AC² et BC² écrits ; carré de l'hypoténuse « ? » tant que `reponse` = 0, son aire AC² + BC²
+  avec `reponse` = 1 ; une fiche fige `reponse` à 0 par un curseur min = max),
   `equation-solutions` (x² = a), `probabilites-frequences`,
   `droite-graduee` (n/d sur une droite), `droite-graduee-somme` (a + b comme un saut), `balance-equation`
   (ax + b = c), `courbe-point-mobile` (image, antécédent), `engrenages` (divisibilité) ; vague 2 :

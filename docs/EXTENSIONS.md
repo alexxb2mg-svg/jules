@@ -95,11 +95,14 @@ pas = la déclaration `discussion` ci-dessus, servie au front par `/api/infos` (
 
 **Figures qui montrent la réponse (`revele: true`).** Certaines figures donnent la réponse d'un exercice
 (`equation-solutions` place −√a et √a). Leur déclaration porte
-`revele: true` (facultatif, booléen, défaut `false`). Écrire une étape décisive suffit : `triangle-rectangle` (2.0)
-n'écrit pas AB, mais l'aire de ses trois carrés (36, 64 et 100 pour AC = 6, BC = 8) ne laisse que la racine carrée à
-prendre, il est donc `revele`. Quand c'est possible, mieux vaut une figure qui montre sans écrire : `urne-tirage`
-place une flèche sur une échelle impossible / une chance sur deux / certain sans écrire « peu probable » ni
-« probable », et n'est pas `revele`.
+`revele: true` (facultatif, booléen, défaut `false`). Écrire une étape décisive suffit : l'aire des trois carrés de
+`triangle-rectangle` 2.0 (36, 64 et 100 pour AC = 6, BC = 8) ne laissait que la racine carrée à prendre. Quand c'est
+possible, mieux vaut une figure qui montre sans écrire : `urne-tirage` place une flèche sur une échelle impossible /
+une chance sur deux / certain sans écrire « peu probable » ni « probable », et n'est pas `revele`. Autre voie, une
+valeur qui masque l'étape décisive : `triangle-rectangle` 2.1 a une valeur `reponse` (0 ou 1, défaut 0) ; à 0, le
+carré de l'hypoténuse porte « ? » et aucune valeur de AB ni de AB² n'est écrite, la figure n'est donc plus `revele`
+(proposée en aide aux devoirs et en cours) ; `reponse: 1` écrit AC² + BC², réservé à la réexplication (phrase
+`quand`). Une fiche visuelle fige `reponse` à 0 par un curseur min = max (non affiché).
 
 ```yaml
 discussion:
@@ -127,7 +130,7 @@ réponse (`revele: true`, raison écrite en commentaire dans chaque `extension.y
 `droite-graduee-somme`, `echelle-intensite`, `echelles-paralleles`, `equation-solutions`, `frise`,
 `frise-temps-verbaux`, `glisse-nombre`, `grille-deplacement`, `grille-deux-epreuves`, `itineraire-carte`,
 `jauge-decibels`, `nombre-binaire`, `onde-sonore`, `patron-cube`, `redistribution-atomes`, `spectre-ondes`,
-`symetrie-axe`, `trace-programme`, `triangle-rectangle` : 35 figures.
+`symetrie-axe`, `trace-programme` : 34 figures.
 
 **Périodes multiples de `frise`.** La fiche peut surligner jusqu'à trois périodes au-dessus de l'axe : `de`/`à`
 (ou `a`), puis `de2`/`a2` et `de3`/`a3`, toutes en curseurs figés (min = max, donc non affichés à l'élève).
