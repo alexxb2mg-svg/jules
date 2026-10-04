@@ -1,0 +1,16 @@
+id: recipient-gradue
+titre: "Figure : pichets d'un litre gradués (contenances)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [recipient-gradue]
+permissions: {}
+# Un seul curseur, v (0 a 3 000 mL, par 50 mL) : trois pichets d'1 L gradues tous les 50 mL se remplissent l'un
+# apres l'autre. revele: false : la quantite versee n'est jamais ecrite, l'eleve lit la graduation et compte les
+# pichets pleins.
+discussion:
+  recipient-gradue:
+    quand: "Pour faire voir au CM1 une quantité de liquide de v millilitres dans des pichets d'1 litre gradués tous les 50 mL (grand trait tous les 100 mL) : 1 L = 1 000 mL = 100 cL, un demi-litre = 500 mL. La quantité n'est pas écrite : l'élève lit la graduation."
+    valeurs:
+      v: {min: 0, max: 3000, pas: 50, defaut: 750}
