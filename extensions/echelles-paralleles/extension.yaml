@@ -1,0 +1,23 @@
+id: echelles-paralleles
+titre: "Figure : échelles parallèles (°C / °F, classes France / Angleterre / États-Unis)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [echelles-paralleles]
+permissions: {}
+# Un gabarit, deux dessins choisis par le curseur echelle (fige par chaque fiche, min = max) :
+#   1 = thermometre a deux graduations, degres Celsius et Fahrenheit (curseur celsius) : fiche 3e anglais
+#       « Langages » ; la valeur convertie n'est pas ecrite, elle se lit sur la graduation ;
+#   2 = trois reglettes des classes alignees sur l'age (curseur age) : fiche 3e anglais « Ecole et societe ».
+# revele: true : en echelle 2, la figure ECRIT l'equivalence des classes (3e = Year 10 = 9th grade), qui est la
+# reponse d'un exercice de la notion ; aucune version sans les noms des classes n'a de sens (on lit un tableau).
+# Sources des faits : en tete de gabarit.js.
+discussion:
+  echelles-paralleles:
+    revele: true
+    quand: "Lire la même chose dans deux codes anglophones : echelle 1 = thermomètre gradué en °C et en °F (même hauteur, même température) ; echelle 2 = classes France, Angleterre (Year), États-Unis (grade) alignées sur l'âge : 3e = Year 10 = 9th grade."
+    valeurs:
+      echelle: {min: 1, max: 2, pas: 1, defaut: 1}
+      celsius: {min: -10, max: 40, pas: 5, defaut: 20}
+      age: {min: 11, max: 17, pas: 1, defaut: 14}

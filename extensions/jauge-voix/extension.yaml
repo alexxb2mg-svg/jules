@@ -1,0 +1,20 @@
+id: jauge-voix
+titre: "Figure : régler sa voix (volume, débit, pauses, public)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [jauge-voix]
+permissions: {}
+# Fiches CM1 de francais « Lire à voix haute avec expression » (curseurs volume, debit, pauses ; public reste a 3,
+# la classe) et « Dire pour être compris » (volume, debit, public ; pauses reste a 2). Zones vertes : debit 90 a
+# 130 mots/min (Eduscol : 110 mots/min vises en CM1) ; volume selon le public (1-2, 2-3, 3-4). Sources en tete
+# de gabarit.js. revele false : aucune valeur calculee ecrite.
+discussion:
+  jauge-voix:
+    quand: "Régler sa voix à l'oral (CM1) : jauges du volume (1 chuchoter à 5 crier) et du débit (mots/min, vert de 90 à 130), zone verte du volume selon le public (1 un camarade, 2 un groupe, 3 la classe), pauses dans la phrase (0 aucune, 1 aux points, 2 aussi aux virgules)."
+    valeurs:
+      volume: {min: 1, max: 5, pas: 1, defaut: 3}
+      debit: {min: 60, max: 180, pas: 10, defaut: 110}
+      pauses: {min: 0, max: 2, pas: 1, defaut: 2}
+      public: {min: 1, max: 3, pas: 1, defaut: 3}

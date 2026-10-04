@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - echelles-paralleles       # vague 2, lot 18 : anglais 3e (°C/°F, classes), francais 3e (satire), CM1 (voix, copie)
+  - empreinte-carbone-trajet
+  - caricature-grossissement
+  - jauge-voix
+  - mots-par-regard
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

@@ -1,0 +1,18 @@
+id: empreinte-carbone-trajet
+titre: "Figure : CO₂ d'un trajet selon le moyen de transport (plane, car, coach, train)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [empreinte-carbone-trajet]
+permissions: {}
+# Barres = kg de CO2e par passager pour le meme trajet (facteurs ADEME, Base Empreinte, via impactco2.fr : avion
+# trajet court, voiture thermique conducteur seul, autocar thermique, TGV ; detail en tete de gabarit.js).
+# Libelles en anglais : la figure sert la fiche 3e anglais « Voyages et migrations » (comparatifs, superlatifs).
+# revele false : aucune valeur ecrite sur les barres, seulement l'axe gradue en kg.
+discussion:
+  empreinte-carbone-trajet:
+    quand: "Comparer en anglais le CO₂ par passager d'un même trajet (km, 100 à 1 000) en plane, car (alone), coach et train ; transport met une barre en avant (1 plane, 2 car, 3 coach, 4 train). The plane is the most polluting, the train the greenest."
+    valeurs:
+      km: {min: 100, max: 1000, pas: 100, defaut: 500}
+      transport: {min: 1, max: 4, pas: 1, defaut: 1}

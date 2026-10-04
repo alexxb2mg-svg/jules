@@ -1,0 +1,17 @@
+id: caricature-grossissement
+titre: "Figure : du portrait à la caricature, un trait grossi"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [caricature-grossissement]
+permissions: {}
+# Fiche 3e de francais « Visées et modalités de la satire ». Le trait choisi (1 nez, 2 oreilles, 3 bouche) grossit
+# de 1 (fidele) a 3 fois sa taille ; une reglette situe le degre (fidele, caricature, exageration).
+# revele false : aucun nombre ni reponse ecrits.
+discussion:
+  caricature-grossissement:
+    quand: "Pour faire voir que la satire est une question de degré : un visage dont un trait (trait 1 = nez, 2 = oreilles, 3 = bouche) grossit avec grossissement (1 = portrait fidèle, 3 = exagération extrême) ; on passe du portrait à la caricature, puis au rabaissement pur."
+    valeurs:
+      grossissement: {min: 1, max: 3, pas: 0.25, defaut: 2}
+      trait: {min: 1, max: 3, pas: 1, defaut: 1}
