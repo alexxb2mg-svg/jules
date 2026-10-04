@@ -2,8 +2,9 @@
 // (1 carreau = 1 N). Curseurs : intensite (valeur de la force, N) et angle (direction et sens, en degres :
 // 0 = vers la droite, 90 = vers le haut, 180 = vers la gauche, 270 = vers le bas).
 // Ce qui est montre, et rien de plus : le point d'application (point noir), la direction (droite grise en
-// pointilles), le sens (pointe de la fleche) et la valeur (longueur : 1 N par carreau, une graduation par newton
-// sur la fleche). La valeur n'est jamais ecrite : l'eleve compte (revele: false).
+// pointilles), le sens (pointe de la fleche) et la valeur (longueur : 1 N par carreau ; un trait en travers de la
+// fleche au bout de chaque newton, le dernier sur la pointe : intensite traits = intensite N).
+// La valeur n'est jamais ecrite : l'eleve compte les traits (revele: false).
 // Source : programme de physique-chimie du cycle 4 (BO n° 31 du 30/07/2020, annexe 3, theme « Mouvement et
 // interactions ») : « Modeliser une action exercee sur un objet par une force caracterisee par un point
 // d'application, une direction, un sens et une valeur. »
@@ -59,11 +60,15 @@ window.GABARITS["vecteur-force"] = {
       points: `${f(CX + ux * L)},${f(CY + uy * L)} ${f(bx + px * 7)},${f(by + py * 7)} ${f(bx - px * 7)},${f(by - py * 7)}`,
       fill: ROUGE,
     });
-    // Graduation : un trait tous les 1 N le long de la fleche (lisible meme en diagonale, ou les carreaux
-    // ne mesurent plus la longueur). Le dernier newton est la pointe.
-    for (let k = 1; k < intensite; k++) {
+    // Graduation : un trait en travers de la fleche au bout de chaque newton, le dernier sur la pointe
+    // (lisible meme en diagonale, ou les carreaux ne mesurent plus la longueur). Nombre de traits = intensite,
+    // a toutes les valeurs : l'eleve compte les traits, 1 trait = 1 N. Encre foncee pour trancher sur le rouge.
+    for (let k = 1; k <= intensite; k++) {
       const gx = CX + ux * k * C, gy = CY + uy * k * C;
-      el("line", { x1: f(gx + px * 6), y1: f(gy + py * 6), x2: f(gx - px * 6), y2: f(gy - py * 6), stroke: ROUGE, "stroke-width": 2 });
+      el("line", {
+        x1: f(gx + px * 7), y1: f(gy + py * 7), x2: f(gx - px * 7), y2: f(gy - py * 7),
+        stroke: ENCRE, "stroke-width": 2.5, "stroke-linecap": "round",
+      });
     }
     // Point d'application
     el("circle", { cx: CX, cy: CY, r: 5, fill: ENCRE });
@@ -71,7 +76,7 @@ window.GABARITS["vecteur-force"] = {
     // Legende courte sous le quadrillage.
     el("circle", { cx: 22, cy: 325, r: 5, fill: ENCRE });
     el("text", { x: 32, y: 330, "font-size": 13, fill: ENCRE }, "point d'application");
-    el("text", { x: 318, y: 330, "font-size": 13, "text-anchor": "end", fill: GRIS }, "1 graduation = 1 N");
+    el("text", { x: 318, y: 330, "font-size": 13, "text-anchor": "end", fill: GRIS }, "1 trait = 1 N");
     return { intensite, angle };
   },
 };
