@@ -164,6 +164,10 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - boule-cylindre            # mathematiques 3e : volume de la boule (lot 20, vague 2)
+  - recipient-gradue          # mathematiques CM1 : contenances
+  - carre-densite             # geographie 3e : densite de population
+  - diagramme-gantt           # technologie 3e : gestion de projet
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

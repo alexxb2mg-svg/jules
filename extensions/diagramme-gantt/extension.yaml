@@ -1,0 +1,17 @@
+id: diagramme-gantt
+titre: "Figure : diagramme de Gantt d'un projet technique (retard et dépendances)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [diagramme-gantt]
+permissions: {}
+# Deux curseurs : semaine (1 a 13, la ligne « aujourd'hui ») et retard (0 a 3 semaines prises par la conception).
+# Semaine va jusqu'a 13 (et non 10 comme dans l'audit) pour voir la fin reelle d'un projet en retard de 3 semaines.
+# revele: false : la date de fin n'est pas ecrite, elle se lit sur l'axe des semaines.
+discussion:
+  diagramme-gantt:
+    quand: "Pour faire voir en technologie (3e) un diagramme de Gantt de 5 tâches sur 10 semaines : semaine avance la ligne « aujourd'hui » (vert terminé, orange en cours, gris à venir) ; retard allonge la conception et décale les tâches qui en dépendent, pas la programmation menée en parallèle."
+    valeurs:
+      semaine: {min: 1, max: 13, pas: 1, defaut: 3}
+      retard: {min: 0, max: 3, pas: 1, defaut: 0}
