@@ -156,6 +156,9 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - arbre-generations         # 3e SVT : reproduction sexuee et asexuee
+  - brassage-chromosomes      # 3e SVT : meiose, diversite genetique
+  - selection-naturelle       # 3e SVT : evolution des especes
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
