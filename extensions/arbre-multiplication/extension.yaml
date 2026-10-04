@@ -1,0 +1,24 @@
+id: arbre-multiplication
+titre: "Figure : un arbre qui se multiplie à chaque étape (partages d'un message, divisions de cellules)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [arbre-multiplication]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches EMC 3e (« information-desinformation-complotisme ») et CM1 (« cm1-cyberviolences-
+# harcelement-en-ligne ») et SVT 3e (« applications-biotechnologiques », « monde-microbien-immunite »). Fusion
+# des propositions d'audit propagation-partages et multiplication-cellules (spec vague 2, § 2.2 ; curseurs etapes,
+# facteur, frein, motif decides par SPEC). Lisibilite : au-dela de 64 elements sur un anneau, une bande grise et un
+# compteur « Au total : N personnes ont reçu » prennent le relais (motif 1 seulement : en motif 2, au plus
+# 2^6 = 64 cellules, toutes dessinees, rien n'est ecrit). revele absent = false : aucun exercice des quatre notions
+# ne demande de calculer ce total (exemples des fiches : loi de 2018, temoin, antibiotique, OGM).
+discussion:
+  arbre-multiplication:
+    quand: "Pour faire voir une croissance qui se multiplie à chaque étape : etapes = nombre d'étapes ; motif 1 = un message transmis à « facteur » personnes par chacun, motif 2 = des cellules qui se divisent en deux ; frein 1 = on vérifie avant de partager, ou un antibiotique agit."
+    valeurs:
+      etapes: {min: 0, max: 6, pas: 1, defaut: 3}
+      facteur: {min: 1, max: 5, pas: 1, defaut: 2}
+      frein: {min: 0, max: 1, pas: 1, defaut: 0}
+      motif: {min: 1, max: 2, pas: 1, defaut: 1}
