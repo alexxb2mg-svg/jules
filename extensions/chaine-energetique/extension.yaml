@@ -1,0 +1,17 @@
+id: chaine-energetique
+titre: "Figure : bilan énergétique d'un convertisseur (énergie reçue = utile + perdue)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [chaine-energetique]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « bilan energetique, conservation de l'energie ». revele: false : aucune energie
+# n'est ecrite, seules des epaisseurs et des longueurs se comparent (la reponse d'un calcul de bilan n'apparait pas).
+discussion:
+  chaine-energetique:
+    quand: "Pour faire voir un bilan d'énergie : l'énergie reçue par un convertisseur (moteur, lampe…) se partage en énergie utile et en énergie perdue, surtout en chaleur ; en bas, la barre reçue = utile + perdue. energie = énergie reçue en J ; u = part utile en %."
+    valeurs:
+      energie: {min: 100, max: 1000, pas: 100, defaut: 500}
+      u: {min: 10, max: 95, pas: 5, defaut: 40}
