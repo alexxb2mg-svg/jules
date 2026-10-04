@@ -62,8 +62,13 @@ window.GABARITS["matrice-risque"] = {
       el("text", { x: X0 - 8, y: Y0 - i * C - C / 2 + 5, "font-size": 13, "text-anchor": "end", fill: "#14243B" }, String(i));
     }
     el("text", { x: X0 + 2 * C, y: Y0 + 38, "font-size": 14, "text-anchor": "middle", fill: "#E07B00", "font-weight": "bold" }, "aléa (le phénomène) →");
-    el("text", { x: 8, y: 16, "font-size": 14, fill: "#1F4E8C", "font-weight": "bold" }, "↑ vulnérabilité");
-    el("text", { x: 8, y: 32, "font-size": 13, fill: "#1F4E8C" }, "(ce qui est exposé)");
+    // Titre de l'axe vertical sur une seule ligne, au-dessus de la grille (haut de grille : Y0 - 4C = 26).
+    const titreV = el("text", { x: 8, y: 16, "font-size": 14, fill: "#1F4E8C", "font-weight": "bold" }, "↑ vulnérabilité ");
+    const sousTitreV = document.createElementNS(NS, "tspan");
+    sousTitreV.setAttribute("font-weight", "normal");
+    sousTitreV.setAttribute("font-size", 13);
+    sousTitreV.textContent = "(ce qui est exposé)";
+    titreV.appendChild(sousTitreV);
 
     // Point de la situation choisie.
     const px = X0 + alea * C + C / 2, py = Y0 - vuln * C - C / 2;
