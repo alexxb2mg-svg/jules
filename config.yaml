@@ -236,6 +236,11 @@ extensions:
   - eclairement-latitude      # zones climatiques (SVT 3e), saisons des deux hemispheres (anglais 3e)
   - matrice-risque            # SVT 3e : alea, vulnerabilite, risque
   - courbe-releves            # CM1 sciences : mesures meteorologiques
+  - echelles-paralleles       # vague 2, lot 18 : anglais 3e (°C/°F, classes), francais 3e (satire), CM1 (voix, copie)
+  - empreinte-carbone-trajet
+  - caricature-grossissement
+  - jauge-voix
+  - mots-par-regard
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
