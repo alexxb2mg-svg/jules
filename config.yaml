@@ -164,6 +164,10 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - homothetie-rotation       # mathematiques 3e (vague 2, lot 08) : transformations, reperage, solides, Scratch
+  - globe-latitude-longitude
+  - section-solide
+  - lutin-trace               # aussi CM1 sciences et technologie (absorbe trace-robot)
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

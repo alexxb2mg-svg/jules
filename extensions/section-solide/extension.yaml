@@ -1,0 +1,20 @@
+id: section-solide
+titre: "Figure : section plane d'un solide parallèle à sa base (perspective cavalière)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [section-solide]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « representations et sections planes de solides ». Curseurs de l'audit renommes
+# (EX-202 : nom lisible, affiche a l'eleve) : s -> solide, h -> hauteur.
+# revele: false : aucune longueur ni aire n'est ecrite ; la section est dessinee en vraie grandeur sur le contour
+# de la base, l'eleve compare. Doute signale a la revue : la nature de la section se VOIT (rectangle, disque,
+# carre) ; EX-204 ne vise que les valeurs ecrites.
+discussion:
+  section-solide:
+    quand: "Pour faire voir la section d'un solide par un plan parallèle à sa base : solide 1 pavé, 2 cylindre, 3 cône, 4 pyramide ; hauteur = position du plan (0 base, 1 sommet). Section redessinée en vraie grandeur sur la base : identique (pavé, cylindre) ou réduite (cône, pyramide)."
+    valeurs:
+      solide: {min: 1, max: 4, pas: 1, defaut: 3}
+      hauteur: {min: 0, max: 1, pas: 0.1, defaut: 0.5}
