@@ -1,0 +1,17 @@
+id: rectangle-puissance-duree
+titre: "Figure : énergie électrique consommée = aire du rectangle puissance × durée"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [rectangle-puissance-duree]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « puissance electrique et consommation ». revele: false : l'energie n'est jamais
+# ecrite ; l'eleve compte des carreaux de 1 kWh (meme principe que les carreaux de rectangle-quadrille).
+discussion:
+  rectangle-puissance-duree:
+    quand: "Pour faire voir que l'énergie consommée E = P × t est l'aire d'un rectangle : hauteur = puissance de l'appareil, largeur = durée de fonctionnement ; un carreau = 1 000 W pendant 1 h = 1 kWh. puissance en W, t = durée en heures."
+    valeurs:
+      puissance: {min: 10, max: 3000, pas: 10, defaut: 1000}
+      t: {min: 0.5, max: 10, pas: 0.5, defaut: 1}

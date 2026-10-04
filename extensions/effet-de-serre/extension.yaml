@@ -1,0 +1,17 @@
+id: effet-de-serre
+titre: "Figure : effet de serre (lumière du Soleil, infrarouge du sol, part renvoyée par l'atmosphère)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [effet-de-serre]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e « transfert d'energie par rayonnement » (physique-chimie) et « changements
+# climatiques » (SVT). revele: false : aucune temperature ni aucune valeur n'est ecrite ; le partage des fleches
+# est un schema (voir l'en-tete de gabarit.js).
+discussion:
+  effet-de-serre:
+    quand: "Pour faire voir l'effet de serre : la lumière du Soleil (orange) chauffe le sol, qui émet de l'infrarouge (rouge) ; les gaz à effet de serre en renvoient une partie vers le sol. co2 en ppm : environ 180 aux périodes glaciaires, 280 avant 1850, environ 425 en 2024. Schéma, pas une mesure."
+    valeurs:
+      co2: {min: 180, max: 560, pas: 20, defaut: 280}

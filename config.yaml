@@ -208,6 +208,11 @@ extensions:
   - verre-dissolution
   - echelle-ph
   - atome-constructeur
+  - vecteur-force             # vague 2, lot 11 : physique-chimie 3e, forces et energie ; SVT 3e climat
+  - courbe-energie-cinetique
+  - chaine-energetique
+  - rectangle-puissance-duree
+  - effet-de-serre
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
