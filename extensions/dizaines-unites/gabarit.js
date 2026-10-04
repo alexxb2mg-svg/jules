@@ -42,7 +42,7 @@ window.GABARITS["dizaines-unites"] = {
       const x = 14 + i * 28;
       el("rect", { x, y: BAS - 10 * H, width: L, height: 10 * H, fill: "#C9D6EA", stroke: BLEU, "stroke-width": 2 });
       for (let k = 1; k < 10; k++) {
-        el("line", { x1: x, y1: BAS - k * H, x2: x + L, y2: BAS - k * H, stroke: BLEU, "stroke-width": 1 });
+        el("line", { x1: x, y1: BAS - k * H, x2: x + L, y2: BAS - k * H, stroke: BLEU, "stroke-width": 1.5 });
       }
     }
     // Separation entre les dizaines et les unites.

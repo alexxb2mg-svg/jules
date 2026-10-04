@@ -31,7 +31,7 @@ window.GABARITS["pres-loin"] = {
     svg.setAttribute("viewBox", "0 0 340 250");
     svg.innerHTML = ""; // vide le SVG (aucune donnee inseree ici) ; tous les elements sont crees via createElementNS
 
-    const SOL = 200, LIMITE = 200; // la limite pres / loin passe entre d = 3 (x 180) et d = 4 (x 220)
+    const SOL = 200, LIMITE = 200; // la limite pres / loin passe entre d = 3 (centre x 175) et d = 4 (centre x 225)
     // Zone « près » legerement teintee, sol, limite et mots des zones.
     el("rect", { x: 60, y: 60, width: LIMITE - 60, height: SOL - 60, fill: "#EAF3EA" });
     el("line", { x1: 10, y1: SOL, x2: 330, y2: SOL, stroke: GRIS, "stroke-width": 3, "stroke-linecap": "round" });
@@ -47,7 +47,9 @@ window.GABARITS["pres-loin"] = {
     el("line", { x1: 36, y1: 126, x2: 70, y2: 140, stroke: BLEU, "stroke-width": 4, "stroke-linecap": "round" });
 
     // Les balles (orange), posees au sol a la distance d ; deux cote a cote, trois en petite pyramide.
-    const cx = 60 + d * 40, R = 11;
+    // Demi-largeur du groupe : 12 d'ecart + rayon 11 + demi-trait 1 = 24. Centres 95/135/175 (pres) et
+    // 225/265/305 (loin) : toutes les balles restent entierement du bon cote du trait (175 + 24 < 200 < 225 - 24).
+    const cx = d <= 3 ? 55 + d * 40 : 65 + d * 40, R = 11;
     const places = q === 1 ? [[0, 0]] : q === 2 ? [[-12, 0], [12, 0]] : [[-12, 0], [12, 0], [0, -21]];
     for (const [dx, dy] of places) {
       el("circle", { cx: cx + dx, cy: SOL - R - 1 + dy, r: R, fill: ORANGE, stroke: ENCRE, "stroke-width": 2 });
