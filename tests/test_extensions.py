@@ -241,7 +241,14 @@ def test_discussion_invalide_refusee(tmp_path, declaration, message):
 # extensions/*/extension.yaml (tests/registre_figures.py), puis comparee a la lecture validee de jules/extensions.py.
 DECLARATIONS_DU_DEPOT = declarations_du_depot()
 # Reperes fixes, decides a la main, que la decouverte ne doit pas faire oublier (garde-fou de non-regression).
-REVELE_FIXE = {"equation-solutions": True, "triangle-rectangle": False, "droite-affine": False}
+REVELE_FIXE = {
+    "equation-solutions": True,
+    "triangle-rectangle": True,
+    "onde-sonore": True,
+    "jauge-decibels": True,
+    "urne-tirage": False,
+    "droite-affine": False,
+}
 
 
 def test_registre_decouvert_non_vide_et_reperes_fixes():

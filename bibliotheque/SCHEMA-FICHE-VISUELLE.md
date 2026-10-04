@@ -122,7 +122,8 @@ embarqué dans la fiche. Les gabarits livrés (45, vague 1 du 03/10/2026 compris
 la clé `discussion` de chaque `extensions/<id>/extension.yaml`) :
 
 - **Mathématiques 3e** : `droite-affine` (f(x) = ax + b), `triangle-thales`, `triangle-rectangle` (carrés sur
-  les trois côtés, aire écrite dans chacun, AB non écrit), `equation-solutions` (x² = a), `probabilites-frequences`,
+  les trois côtés, aire écrite dans chacun, AB non écrit mais `revele` : il ne reste que la racine carrée),
+  `equation-solutions` (x² = a), `probabilites-frequences`,
   `droite-graduee` (n/d sur une droite), `droite-graduee-somme` (a + b comme un saut), `balance-equation`
   (ax + b = c), `courbe-point-mobile` (image, antécédent), `engrenages` (divisibilité).
 - **Mathématiques CM1** : `bande-fractions`, `bande-fractions-comparees`, `demi-droite-graduee`,
@@ -137,7 +138,8 @@ la clé `discussion` de chaque `extensions/<id>/extension.yaml`) :
 - **Histoire-géographie** : `frise` (frise générique à curseur date, repères portés par la fiche),
   `distance-temps-transports` (CM1).
 - **Français et langues vivantes** : `frise-temps-verbaux`, `chaine-accords`, `position-objet` (in, on, under…).
-- **Éducation musicale et arts plastiques** : `jauge-decibels`, `forme-musicale`, `frise-pulsations`,
+- **Éducation musicale et arts plastiques** : `jauge-decibels` (dose : 8 h à 85 dB,
+  durée divisée par 2 tous les 3 dB), `forme-musicale`, `frise-pulsations`,
   `cercle-couleurs`.
 
 Ajouter un gabarit = créer une extension `extensions/<id>/` (`extension.yaml` avec
