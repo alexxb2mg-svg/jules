@@ -1,0 +1,17 @@
+id: courbe-croissance
+titre: "Figure : deux courbes de croissance, la poussée de la puberté à des âges différents"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [courbe-croissance]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « cm1-changements-morphologiques-puberte ». Modele simplifie (voir gabarit.js) ;
+# les exercices de la fiche utilisent d'autres mesures, aucune reponse n'est ecrite : revele false.
+discussion:
+  courbe-croissance:
+    quand: "Pour faire voir que la puberté n'arrive pas au même âge pour tout le monde : taille de deux enfants de 8 à 18 ans, A commence sa poussée de croissance à 10 ans, B ecart années plus tard ; age = âge regardé (ans). La poussée est le morceau épais de chaque courbe."
+    valeurs:
+      age: {min: 8, max: 18, pas: 1, defaut: 11}
+      ecart: {min: 0, max: 4, pas: 1, defaut: 3}

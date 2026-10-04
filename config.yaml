@@ -258,3 +258,6 @@ extensions:
   - rappels-francais          # abreviations de grammaire
   - rappels-anglais           # phonetique, abreviations de grammaire, niveaux du CECRL
   - rappels-musique           # nuances, figures de notes, signes de la portee
+  - spectre-ondes             # vague 2, lot 21 : physique-chimie 3e, types de rayonnements
+  - illusion-optique          # vague 2, lot 21 : CM1 sciences, le cerveau interprete (Muller-Lyer)
+  - courbe-croissance         # vague 2, lot 21 : CM1 sciences, poussee de croissance a la puberte

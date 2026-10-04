@@ -1,0 +1,17 @@
+id: illusion-optique
+titre: "Figure : illusion des deux traits (Müller-Lyer), ce que je vois et ce que mesure la règle"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [illusion-optique]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche CM1 « cm1-cerveau-grandes-fonctions ». Aucune longueur n'est ecrite (la regle
+# montre l'egalite par des pointilles et deux regles identiques) : revele false.
+discussion:
+  illusion-optique:
+    quand: "Pour faire voir que le cerveau interprète ce que voient les yeux et peut se tromper : deux traits A et B de même longueur à pointes ; angle = inclinaison des pointes en degrés (positif : A paraît plus long, négatif : B, 0 : pas d'illusion) ; regle = 1 affiche la vérification."
+    valeurs:
+      angle: {min: -60, max: 60, pas: 15, defaut: 45}
+      regle: {min: 0, max: 1, pas: 1, defaut: 0}
