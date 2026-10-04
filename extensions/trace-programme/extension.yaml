@@ -1,0 +1,23 @@
+id: trace-programme
+titre: "Figure : un programme exécuté pas à pas et la mémoire de sa variable"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [trace-programme]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e technologie « lire et modifier un programme » (modele 0 : boucle et test « si ») et
+# « programmer un objet technique » (modele 1 : sous-programme appele).
+# revele: true : la boite memoire ecrit la valeur de x a chaque etape, donc la valeur finale, qui est la reponse
+# d'un exercice « que vaut x a la fin du programme ? ». Pas de version sans ecrire : voir la valeur changer est
+# toute l'idee de la figure.
+discussion:
+  trace-programme:
+    quand: "Pour suivre un programme en blocs pas à pas et sa variable x en mémoire : etape avance d'une instruction ; repetitions = tours de boucle ; pas_var = valeur ajoutée par tour ; modele 0 = boucle puis test « si », 1 = appel d'un sous-programme. À la fin, x = repetitions × pas_var."
+    revele: true
+    valeurs:
+      etape: {min: 0, max: 12, pas: 1, defaut: 0}
+      repetitions: {min: 1, max: 5, pas: 1, defaut: 3}
+      pas_var: {min: 1, max: 5, pas: 1, defaut: 2}
+      modele: {min: 0, max: 1, pas: 1, defaut: 0}

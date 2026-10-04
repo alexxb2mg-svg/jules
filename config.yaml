@@ -156,6 +156,10 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - trace-programme           # 3e technologie : programme pas a pas, variable en memoire
+  - bilan-cycle-de-vie        # 3e technologie : cycle de vie, impact par annee d'usage
+  - autonomie-batterie        # 3e technologie : autonomie et exigence du cahier des charges
+  - poutre-flexion            # 3e technologie : flexion d'une poutre, validation mecanique
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
