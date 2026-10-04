@@ -52,8 +52,12 @@ window.GABARITS["parcours-message-nerveux"] = {
       const P0 = { x: 64, y: 200 }, P1 = { x: 122, y: 92 }, C = { x: 170, y: 74 }, P2 = { x: 218, y: 92 };
       const P3 = { x: 278, y: 190 };
       const sensitif = e > 0 ? "#1F4E8C" : GRIS, moteur = e > 0.6 ? "#2E7D32" : GRIS;
+      // Nerf moteur en deux troncons : apres la coupure (perturbation 2), il reste gris, le message n'y passe pas.
+      const PC = entre(P2, P3, (COUPURE - 0.6) / 0.3);
+      const apresCoupure = perturbation === 2 ? GRIS : moteur;
       el("line", { x1: P0.x, y1: P0.y, x2: P1.x, y2: P1.y, stroke: sensitif, "stroke-width": 5, "stroke-linecap": "round" });
-      el("line", { x1: P2.x, y1: P2.y, x2: P3.x, y2: P3.y, stroke: moteur, "stroke-width": 5, "stroke-linecap": "round" });
+      el("line", { x1: P2.x, y1: P2.y, x2: PC.x, y2: PC.y, stroke: moteur, "stroke-width": 5, "stroke-linecap": "round" });
+      el("line", { x1: PC.x, y1: PC.y, x2: P3.x, y2: P3.y, stroke: apresCoupure, "stroke-width": 5, "stroke-linecap": "round" });
       texte(46, 130, "nerf", "#1F4E8C", { "font-size": 13 });
       texte(46, 146, "sensitif", "#1F4E8C", { "font-size": 13 });
       texte(296, 130, "nerf", "#2E7D32", { "font-size": 13 });
@@ -73,10 +77,13 @@ window.GABARITS["parcours-message-nerveux"] = {
         "fill-opacity": c > 0 ? 0.35 + 0.4 * c : 1, stroke: "#2E7D32", "stroke-width": 3 });
       texte(290, 276, "muscle", "#14243B");
       // Position du message (point orange).
+      // Dans le cerveau, le point passe au-dessus du mot « cerveau » (A -> B) pour ne jamais le masquer.
+      const A = { x: 134, y: 54 }, B = { x: 206, y: 54 };
       let point;
       if (e <= 0.3) point = entre(P0, P1, e / 0.3);
-      else if (e <= 0.45) point = entre(P1, C, (e - 0.3) / 0.15);
-      else if (e <= 0.6) point = entre(C, P2, (e - 0.45) / 0.15);
+      else if (e <= 0.35) point = entre(P1, A, (e - 0.3) / 0.05);
+      else if (e <= 0.55) point = entre(A, B, (e - 0.35) / 0.2);
+      else if (e <= 0.6) point = entre(B, P2, (e - 0.55) / 0.05);
       else if (e <= 0.9) point = entre(P2, P3, (e - 0.6) / 0.3);
       else point = P3;
       if (perturbation === 2) {

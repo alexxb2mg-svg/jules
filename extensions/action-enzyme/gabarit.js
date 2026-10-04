@@ -101,13 +101,12 @@ window.GABARITS["action-enzyme"] = {
     texte(JX, JY + 34, "nulle", "#6B7686", { "text-anchor": "start", "font-size": 13 });
     texte(JX + JL, JY + 34, "maximale (37 °C)", "#6B7686", { "text-anchor": "end", "font-size": 13 });
 
-    // Test a l'eau iodee : bleu-noir tant qu'il reste de l'amidon.
+    // Test a l'eau iodee : bleu-noir tant qu'il reste de l'amidon. La couleur est montree, jamais ecrite :
+    // l'interpreter est la reponse de l'exercice type des tubes (EX-204).
     const amidonReste = morceau.some((m) => m >= 3);
     el("rect", { x: 40, y: 206, width: 24, height: 44, rx: 8, fill: amidonReste ? "#14243B" : "#E07B00",
       "fill-opacity": amidonReste ? 1 : 0.35, stroke: "#6B7686", "stroke-width": 2 });
-    texte(76, 226, "eau iodée :", "#14243B", { "text-anchor": "start" });
-    texte(76, 246, amidonReste ? "bleu-noir, il reste de l'amidon" : "jaune-orangé, plus d'amidon",
-      "#14243B", { "text-anchor": "start", "font-weight": "bold" });
+    texte(76, 234, "test à l'eau iodée", "#14243B", { "text-anchor": "start" });
     return { temps, temp, enzyme, coupes, amidonReste };
   },
 };

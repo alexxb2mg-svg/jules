@@ -99,7 +99,7 @@ window.GABARITS["cycle-menstruel"] = {
     texte(HX0, 316, "œstrogènes", OESTRO, { "text-anchor": "start", "font-weight": "bold" });
     texte(HX1, 316, "progestérone", PROGE, { "text-anchor": "end", "font-weight": "bold" });
     texte(HX0, 232, "hormones de l'ovaire", "#14243B", { "text-anchor": "start", "font-weight": "bold" });
-    const phase = jour <= 5 ? "regles" : jour < 13 ? "follicule" : jour <= 15 ? "ovulation" : "paroi epaisse";
+    const phase = jour <= 5 ? "regles" : jour < 14 ? "follicule" : jour <= 16 ? "ovulation" : "paroi epaisse";
     return { jour, phase };
   },
 };
