@@ -61,10 +61,13 @@ window.GABARITS["barre-evolution"] = {
       el("text", { x: x - 10, y: (y1 + y2) / 2 + 1, "font-size": 15, "font-weight": 700, "text-anchor": "end", fill: ORANGE }, `${signe}${Math.abs(t)} %  :  × ${fr(cm)}`);
     };
 
-    // Repere 100 : pointille vertical dessine AVANT les barres (cache dans une barre plus longue, visible au bout
-    // d'une barre plus courte, sans jamais barrer une valeur ecrite).
+    // Repere 100 : trois segments pointilles, un par barre, limites a la hauteur de la barre (y a y + 34), dessines
+    // AVANT les barres (caches dans une barre plus longue, visibles au bout d'une barre plus courte). Ils ne
+    // traversent ni les titres au-dessus des barres ni les valeurs ecrites.
     const x100 = X0 + 100 * ECHELLE;
-    el("line", { x1: x100, y1: 26, x2: x100, y2: 250, stroke: ENCRE, "stroke-width": 2, "stroke-dasharray": "5 4" });
+    for (const y of [30, 122, 214]) {
+      el("line", { x1: x100, y1: y, x2: x100, y2: y + 34, stroke: ENCRE, "stroke-width": 2, "stroke-dasharray": "5 4" });
+    }
     ligne(30, "départ", v0, BLEU);
     fleche(70, 112, cm1, p);
     ligne(122, "après la 1re évolution", v1, couleur(v0, v1));
