@@ -24,6 +24,9 @@ window.GABARITS = window.GABARITS || {};
 window.GABARITS["jauge-voix"] = {
   dessiner(svg, valeurs) {
     const NS = "http://www.w3.org/2000/svg";
+    // Police explicite (comme chaine-accords) : la largeur des mots est mesuree tout de suite avec la police
+    // reellement affichee ; sans elle, les traits de pause se decalent quand la police de la page arrive apres.
+    const POLICE = "system-ui, Arial, sans-serif";
     const ENCRE = "#14243B", BLEU = "#1F4E8C", GRIS = "#6B7686", VERT = "#2E7D32", ORANGE = "#E07B00";
     const borne = (v, min, max, d) => {
       const n = Number(v);
@@ -36,6 +39,7 @@ window.GABARITS["jauge-voix"] = {
     const el = (nom, attrs, texte) => {
       const e = document.createElementNS(NS, nom);
       for (const k in attrs) e.setAttribute(k, attrs[k]);
+      if (nom === "text") e.setAttribute("font-family", POLICE);
       if (texte !== undefined) e.textContent = texte;
       svg.appendChild(e);
       return e;
@@ -43,11 +47,13 @@ window.GABARITS["jauge-voix"] = {
     const ZONE_VOLUME = { 1: [1, 2], 2: [2, 3], 3: [3, 4] }[public_];
     const volumeOk = volume >= ZONE_VOLUME[0] && volume <= ZONE_VOLUME[1];
     const debitOk = debit >= 90 && debit <= 130;
+    const pausesOk = pauses >= 1; // sans aucune pause, les phrases se melangent : jamais « on te comprend »
+    const toutOk = volumeOk && debitOk && pausesOk;
 
     svg.setAttribute("viewBox", "0 0 340 320");
     svg.replaceChildren(); // vide le SVG ; tous les elements sont crees via createElementNS
-    el("text", { x: 170, y: 24, "font-size": 17, "font-weight": "bold", "text-anchor": "middle", fill: volumeOk && debitOk ? VERT : ORANGE },
-      volumeOk && debitOk ? "on te comprend" : "règle ta voix");
+    el("text", { x: 170, y: 24, "font-size": 17, "font-weight": "bold", "text-anchor": "middle", fill: toutOk ? VERT : ORANGE },
+      toutOk ? "on te comprend" : volumeOk && debitOk ? "respire à la ponctuation" : "règle ta voix");
 
     const BAS = 220, HAUT = 70;
     // Jauge du volume : 5 cases empilees, zone verte selon le public.
