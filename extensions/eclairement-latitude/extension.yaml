@@ -1,0 +1,18 @@
+id: eclairement-latitude
+titre: "Figure : même faisceau de Soleil, éclairement selon la latitude et le mois"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [eclairement-latitude]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e SVT « meteo, climat, zones climatiques » (mois fige au 21 mars) et 3e anglais
+# « rencontres avec d'autres cultures » (lat figee a 40). revele false : aucune valeur n'est ecrite (ni energie,
+# ni saison) ; le nom du mois et des zones climatiques sont des reperes, pas des reponses.
+discussion:
+  eclairement-latitude:
+    quand: "Pour montrer pourquoi il fait plus froid aux pôles et pourquoi les saisons sont inversées entre hémisphères : la Terre à midi le 21 du mois, deux faisceaux égaux arrivent à la latitude lat nord et sud. lat en degrés (0 à 90), mois de 1 (janvier) à 12."
+    valeurs:
+      lat: {min: 0, max: 90, pas: 10, defaut: 40}
+      mois: {min: 1, max: 12, pas: 1, defaut: 3}

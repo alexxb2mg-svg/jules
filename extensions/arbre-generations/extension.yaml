@@ -1,0 +1,16 @@
+id: arbre-generations
+titre: "Figure : reproduction asexuée ou sexuée, génération après génération"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [arbre-generations]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « reproduction sexuee et asexuee ». Aucune valeur ecrite : revele false.
+discussion:
+  arbre-generations:
+    quand: "Pour voir la différence entre reproduction asexuée et sexuée : chaque individu est une carte de 4 bandes (une bande = un gène, sa couleur = sa version). mode 0 : un parent, des clones identiques ; mode 1 : deux parents, des descendants tous différents. gen = générations affichées."
+    valeurs:
+      gen: {min: 1, max: 4, pas: 1, defaut: 2}
+      mode: {min: 0, max: 1, pas: 1, defaut: 0}

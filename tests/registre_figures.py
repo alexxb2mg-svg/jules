@@ -28,15 +28,18 @@ EXTENSIONS = RACINE / "extensions"
 # (souvent figes, min = max). Toute entree ici est une exception relue a la main, avec sa raison.
 LUES_HORS_DISCUSSION: dict[str, set[str]] = {
     # frise generique : unite « mois » ou « souvenir » (age), second repere (intervalle, auteur), periode
-    # surlignee (de, a / à) et « début » accentue ; voir extensions/frise/extension.yaml.
-    "frise": {"début", "mois", "souvenir", "auteur", "intervalle", "de", "a", "à"},
+    # surlignee (de, a / à) et « début » accentue ; voir extensions/frise/extension.yaml. Vague 2 (EX-222, seule
+    # entree nouvelle admise) : de2/a2, de3/a3, presence = une periode de plus (un defaut dans « discussion »
+    # ajouterait une periode a toutes les frises).
+    "frise": {"début", "mois", "souvenir", "auteur", "intervalle", "de", "a", "à", "de2", "a2", "de3", "a3"},
     # une figure, plusieurs fiches : la PRESENCE d'un curseur choisit le dessin (personne/habitude : present
     # simple ; indirect : discours indirect ; longueur : present perfect ; lien : preterit/present perfect). La
     # discussion n'a que la lecture par defaut (moment, fini) : declarer ces curseurs (donc avec un defaut,
     # toujours presents) changerait de dessin.
     "frise-temps-verbaux": {"personne", "habitude", "indirect", "longueur", "lien"},
-    # meme principe : adjectifs/place (place de l'adjectif), voisin/verbe (accord sujet-verbe, attribut).
-    "chaine-accords": {"adjectifs", "place", "voisin", "verbe"},
+    # meme principe : adjectifs (place de l'adjectif, avec place), voisin/verbe (accord sujet-verbe, attribut).
+    # place est declaree depuis la vague 2 (participe passe avec avoir, EX-213) : elle sort de la liste.
+    "chaine-accords": {"adjectifs", "voisin", "verbe"},
 }
 
 

@@ -1,0 +1,17 @@
+id: numerisation-signal
+titre: "Figure : numériser un signal (mesures et niveaux)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [numerisation-signal]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e de technologie « caracteriser les chaines d'energie et d'information ». Les niveaux
+# sont des lignes a compter et la taille des donnees une barre sans nombre : revele false.
+discussion:
+  numerisation-signal:
+    quand: "Pour faire voir ce que veut dire numériser : un signal réel (courbe bleue) mesuré à intervalles réguliers (points) et arrondi au niveau permis le plus proche (bits : 2ⁿ niveaux) donne un escalier orange, qui colle mieux à la courbe avec plus de mesures et de bits, mais pèse plus lourd."
+    valeurs:
+      points: {min: 4, max: 40, pas: 2, defaut: 10}
+      bits: {min: 1, max: 4, pas: 1, defaut: 2}

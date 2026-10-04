@@ -1,0 +1,17 @@
+id: deplacement-plaques
+titre: "Figure : un océan s'ouvre de part et d'autre d'une dorsale"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [deplacement-plaques]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e SVT « geodynamique globale ». revele false : la largeur de l'ocean (v x duree x 10 km)
+# n'est jamais ecrite, elle se mesure avec l'echelle « 1 000 km », comme sur une carte.
+discussion:
+  deplacement-plaques:
+    quand: "Pour faire voir comment quelques centimètres par an ouvrent un océan : coupe avec une dorsale au milieu, deux continents qui s'éloignent et la croûte océanique neuve en bandes de 10 millions d'années. v = vitesse d'écartement des plaques en cm par an, duree = temps écoulé en millions d'années."
+    valeurs:
+      v: {min: 1, max: 10, pas: 1, defaut: 3}
+      duree: {min: 0, max: 100, pas: 10, defaut: 60}

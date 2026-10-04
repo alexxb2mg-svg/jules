@@ -1,0 +1,21 @@
+id: autonomie-batterie
+titre: "Figure : autonomie d'une batterie et exigence du cahier des charges"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [autonomie-batterie]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e technologie « performance d'un OST » et « validation des performances ».
+# revele: true : la figure ecrit « exigence respectee / non respectee » et l'axe gradue heure par heure donne
+# l'autonomie (energie / puissance), reponses d'un exercice de validation ; l'autonomie n'est pas ecrite en
+# chiffres, mais elle se lit sur l'axe.
+discussion:
+  autonomie-batterie:
+    quand: "Pour voir l'autonomie d'un objet sur batterie : énergie restante (Wh) selon le temps (h), la droite descend de puissance Wh par heure et touche l'axe à energie ÷ puissance ; pointillé = exigence (h), vert si la batterie tient jusque-là, rouge sinon."
+    revele: true
+    valeurs:
+      energie: {min: 5, max: 100, pas: 5, defaut: 40}
+      puissance: {min: 1, max: 50, pas: 1, defaut: 10}
+      exigence: {min: 1, max: 20, pas: 1, defaut: 5}

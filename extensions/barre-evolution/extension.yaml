@@ -1,0 +1,20 @@
+id: barre-evolution
+titre: "Figure : deux évolutions successives en pourcentage (coefficients multiplicateurs)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [barre-evolution]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « pourcentages d'evolution et coefficient multiplicateur ». Bornes -50 % a +50 %
+# (l'audit proposait jusqu'a +100 %) : a echelle fixe, 225 tient sur 300 px et l'ecart 100 / 96 reste visible.
+# revele true : la figure ecrit le coefficient multiplicateur de chaque evolution et la valeur obtenue a partir
+# de 100 ; une version sans nombres ne montrerait pas l'ecart de 4 % du piege « +20 % puis -20 % ».
+discussion:
+  barre-evolution:
+    quand: "Pour faire voir, en 3e, deux évolutions successives à partir de 100 : p puis q en %, le coefficient multiplicateur 1 + t/100 écrit sur chaque flèche et la valeur au bout de chaque barre. Montre que +20 % puis −20 % ne ramène pas à 100."
+    revele: true
+    valeurs:
+      p: {min: -50, max: 50, pas: 5, defaut: 20}
+      q: {min: -50, max: 50, pas: 5, defaut: 0}

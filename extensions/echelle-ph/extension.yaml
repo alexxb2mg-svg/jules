@@ -1,0 +1,18 @@
+id: echelle-ph
+titre: "Figure : échelle de pH et ions H⁺ / HO⁻ dans un bécher"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [echelle-ph]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur de la fiche 3e « pH, acide-base... ». Les nombres d'ions dessines sont schematiques (le dessin
+# ne suit pas l'echelle x 10 par unite de pH). La figure ecrit la valeur du pH choisie (le curseur) et les zones
+# acide / neutre / basique de l'echelle, comme le cours : revele false (pas de resultat d'exercice calcule).
+discussion:
+  echelle-ph:
+    quand: "Pour faire voir l'échelle de pH : ph = pH de la solution (0 à 14) ; le repère glisse sur l'échelle, le bécher montre plus d'ions H⁺ (rouges) en milieu acide, autant à pH 7, plus d'ions HO⁻ (bleus) en milieu basique ; signe d'avertissement « corrosif » à pH ≤ 2 ou ≥ 12."
+    revele: false
+    valeurs:
+      ph: {min: 0, max: 14, pas: 0.5, defaut: 7}

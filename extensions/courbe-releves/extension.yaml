@@ -1,0 +1,17 @@
+id: courbe-releves
+titre: "Figure : température d'une journée type, courbe et thermomètre"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [courbe-releves]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « mesures meteorologiques ». revele false : la temperature n'est jamais ecrite en
+# chiffres, elle se lit sur le thermometre gradue (journee type d'Orleans, normales 1991-2020).
+discussion:
+  courbe-releves:
+    quand: "Pour faire lire en même temps une courbe de température et un thermomètre : la courbe d'une journée type, un point à l'heure choisie relié au haut de la colonne du thermomètre. heure de 0 à 23, saison 1 hiver, 2 printemps, 3 été, 4 automne (toute la courbe monte ou descend)."
+    valeurs:
+      heure: {min: 0, max: 23, pas: 1, defaut: 8}
+      saison: {min: 1, max: 4, pas: 1, defaut: 2}

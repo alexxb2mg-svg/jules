@@ -1,0 +1,18 @@
+id: point-de-vue
+titre: "Figure : point de vue, cadrage et rapport d'échelle (plans, plongée, contre-plongée)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [point-de-vue]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Absorbe l'idee
+# « cadrage-plan » de l'audit (SPEC vague 2, § 2.2). Elle n'ecrit pas le nom du plan ni de l'angle de vue
+# (c'est ce que l'eleve doit nommer en exercice) : revele false.
+discussion:
+  point-de-vue:
+    quand: "Pour faire voir comment la place de l'œil change l'image : distance de 1 (gros plan) à 5 (plan d'ensemble) ; hauteur de -2 (contre-plongée, le sujet paraît puissant) à 2 (plongée, il paraît petit) ; taille = hauteur en m d'une œuvre près d'un personnage de 1,5 m (0 = pas d'œuvre)."
+    valeurs:
+      distance: {min: 1, max: 5, pas: 1, defaut: 3}
+      hauteur: {min: -2, max: 2, pas: 1, defaut: 0}
+      taille: {min: 0, max: 20, pas: 0.5, defaut: 0}

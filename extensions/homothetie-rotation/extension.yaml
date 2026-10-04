@@ -1,0 +1,20 @@
+id: homothetie-rotation
+titre: "Figure : image d'un drapeau par homothétie et rotation de centre O"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [homothetie-rotation]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e « grandeurs et transformations », « proportionnalite et configurations geometriques »
+# (second bloc graphe, a cote de triangle-thales) et « rotations et homotheties ». k au pas de 0,25 (reductions
+# 0,5 et 0,75) ; k = 0 ecrase l'image en O (rien n'est dessine pour l'image).
+# revele: false : la figure n'ecrit ni longueur ni aire ; l'image est quadrillee en carreaux du drapeau d'origine,
+# l'eleve compte (4 carreaux pour 1 quand k = 2), comme rectangle-quadrille.
+discussion:
+  homothetie-rotation:
+    quand: "Pour faire voir l'image d'un drapeau quadrillé par l'homothétie de centre O et de rapport k puis la rotation de centre O d'angle « angle » (degrés, sens inverse des aiguilles) : carreaux d'origine dans l'image (longueurs × |k|, aire × k²) ; k < 0 : de l'autre côté de O."
+    valeurs:
+      k: {min: -2, max: 3, pas: 0.25, defaut: 2}
+      angle: {min: 0, max: 360, pas: 15, defaut: 0}

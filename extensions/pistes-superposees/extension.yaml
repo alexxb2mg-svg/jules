@@ -1,0 +1,20 @@
+id: pistes-superposees
+titre: "Figure : pistes superposées et barre de lecture (successif, simultané, canon)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [pistes-superposees]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches d'education musicale 3e (« successif-et-simultane », « apports-numerique-creation-
+# diffusion ») et CM1 (« cm1-polyphonie-simple », « cm1-creation-organisation-sonore »). Parties types, aucune
+# oeuvre precise ; la figure n'ecrit que le nombre de pistes qui sonnent sous la barre, ce qui se voit deja :
+# elle ne donne pas la reponse d'un exercice d'ecoute (revele absent = false).
+discussion:
+  pistes-superposees:
+    quand: "Pour faire voir le successif (une piste, de gauche à droite) et le simultané (plusieurs pistes sous la barre de lecture) : voix = pistes qui jouent ; lecture = barre, en % du morceau ; decalage 0 = parties différentes, decalage > 0 = canon (même mélodie, entrée retardée de ce nombre de mesures)."
+    valeurs:
+      voix: {min: 1, max: 4, pas: 1, defaut: 2}
+      lecture: {min: 0, max: 100, pas: 5, defaut: 25}
+      decalage: {min: 0, max: 4, pas: 1, defaut: 0}

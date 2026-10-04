@@ -1,0 +1,22 @@
+id: rectangle-multiplication
+titre: "Figure : rectangle quadrillé découpé, (a + b) × (c + d)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [rectangle-multiplication]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion. Bornes : fiche 3e « developper, factoriser, reduire » (a + b
+# lignes, c + d colonnes) et fiches CM1 « memoriser des faits numeriques » (a lignes, c colonnes) et « procedures de
+# calcul mental » (a lignes, c + d colonnes), reunies. Absorbe rectangle-distributivite (spec vague 2, § 2.2). Une
+# fiche qui ne porte pas b ou d les laisse a 0.
+# revele: false : chaque morceau porte son calcul (« 7 × 10 ») mais aucun produit n'est ecrit ; les carreaux se
+# comptent.
+discussion:
+  rectangle-multiplication:
+    quand: "Pour faire voir une multiplication comme un rectangle quadrillé : a lignes (+ b), c colonnes (+ d). b = d = 0 : une table (3 × 7) ; d > 0 : calcul mental, 7 × (10 + 2) = 7 × 10 + 7 × 2 ; b et d > 0 : double distributivité (a + b)(c + d), quatre morceaux. Produits non écrits."
+    valeurs:
+      a: {min: 1, max: 10, pas: 1, defaut: 3}
+      b: {min: 0, max: 6, pas: 1, defaut: 0}
+      c: {min: 1, max: 20, pas: 1, defaut: 7}
+      d: {min: 0, max: 10, pas: 1, defaut: 0}

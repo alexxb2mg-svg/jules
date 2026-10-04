@@ -1,0 +1,18 @@
+id: action-enzyme
+titre: "Figure : une enzyme découpe l'amidon, selon le temps et la température"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [action-enzyme]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e svt « mecanismes moleculaires de la digestion ». La vitesse vient d'un modele
+# simplifie (voir gabarit.js), aucune valeur de reponse n'est ecrite : revele false.
+discussion:
+  action-enzyme:
+    quand: "Pour faire voir une enzyme (l'amylase) qui découpe l'amidon en petits sucres, vite près de 37 °C, lentement au froid, plus du tout au-dessus de 60 °C (enzyme détruite), et le test à l'eau iodée. temps en minutes ; temp en °C ; enzyme 0 = tube témoin avec de l'eau, 1 = avec amylase."
+    valeurs:
+      temps: {min: 0, max: 30, pas: 5, defaut: 10}
+      temp: {min: 0, max: 80, pas: 10, defaut: 40}
+      enzyme: {min: 0, max: 1, pas: 1, defaut: 1}

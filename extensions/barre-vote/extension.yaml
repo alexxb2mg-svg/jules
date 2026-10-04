@@ -1,0 +1,19 @@
+id: barre-vote
+titre: "Figure : inscrits, votants, voix et majorité absolue"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [barre-vote]
+permissions: {}
+# Fiches d'EMC « élections et référendum » (3e, 100 inscrits figés) et « la démocratie, le suffrage direct » (CM1,
+# classe de 24 élèves qui votent tous). L'audit marquait la figure « revele » ; version retenue (EX-204) : aucun
+# nombre n'est ecrit (ni abstention, ni pourcentage, ni total de voix), l'eleve compte les bonshommes et voit
+# si la part orange depasse le repere de la moitie des votants. D'ou revele: false.
+discussion:
+  barre-vote:
+    quand: "Pour faire voir abstention et majorité (EMC) : inscrits = bonshommes, votants = ceux qui votent (les autres en gris), voix = votants qui choisissent A (en orange) ; un repère rouge marque la moitié des votants : le dépasser, c'est la majorité absolue. Aucun nombre écrit."
+    valeurs:
+      inscrits: {min: 10, max: 100, pas: 1, defaut: 100}
+      votants: {min: 0, max: 100, pas: 1, defaut: 70}
+      voix: {min: 0, max: 100, pas: 1, defaut: 30}

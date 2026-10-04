@@ -1,0 +1,17 @@
+id: pixellisation
+titre: "Figure : une image en pixels (définition et nombre de couleurs)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [pixellisation]
+permissions: {}
+# Fiches 3e d'arts plastiques « conception, production, diffusion à l'ère du numérique » et « le numérique,
+# processus et matériau ». La jauge du poids du fichier n'a aucun chiffre (proportionnelle a pixels² x bits par
+# pixel). revele: false : seuls les reglages choisis par l'eleve sont ecrits, aucun resultat calcule.
+discussion:
+  pixellisation:
+    quand: "Pour faire voir qu'une image numérique est une grille de pixels (arts plastiques, technologie) : pixels = nombre de pixels par côté, couleurs = nombre de couleurs de la palette ; peu de pixels, on voit les carrés ; beaucoup, l'image est fine mais le fichier plus lourd (jauge sans chiffre)."
+    valeurs:
+      pixels: {min: 4, max: 64, pas: 4, defaut: 16}
+      couleurs: {min: 2, max: 16, pas: 2, defaut: 8}

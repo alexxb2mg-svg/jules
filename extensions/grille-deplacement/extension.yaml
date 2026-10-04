@@ -1,0 +1,19 @@
+id: grille-deplacement
+titre: "Figure : robot qui suit un programme de déplacement sur un quadrillage"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [grille-deplacement]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches CM1 « codage de deplacements » (parcours 1 a 3) et anglais « traiter les informations
+# et agir » (parcours 4, fige). Une etape au-dela de la fin du programme laisse le robot a l'arrivee.
+# revele: true : le chemin trace jusqu'a la fin est la reponse d'un exercice « ou arrive le robot ? ».
+discussion:
+  grille-deplacement:
+    quand: "Pour suivre un programme de robot une instruction à la fois : avancer d'une case, ou tourner d'un quart de tour SUR PLACE ; G et D = sa gauche et sa droite. parcours 1 à 3 : 5, 7, 10 instructions ; 4 : chemin en anglais vers la boulangerie. etape = instructions faites."
+    revele: true
+    valeurs:
+      parcours: {min: 1, max: 4, pas: 1, defaut: 1}
+      etape: {min: 0, max: 10, pas: 1, defaut: 2}

@@ -1,0 +1,21 @@
+id: deux-droites
+titre: "Figure : deux tarifs, deux droites, un croisement"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [deux-droites]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; bornes de la fiche 3e « modeliser un phenomene par une fonction
+# et resoudre des problemes », elargies (prix jusqu'a 10, partie fixe jusqu'a 40).
+# revele: true : le croisement est marque (point vert et pointilles vers les axes) ; lire la quantite pour laquelle
+# les deux tarifs sont egaux, c'est la resolution graphique demandee dans les exercices de la notion.
+discussion:
+  deux-droites:
+    quand: "Pour comparer deux tarifs (ou deux fonctions affines) en 3e : tarif 1 = a1 × x + b1 (bleu), tarif 2 = a2 × x + b2 (orange, tirets), x de 0 à 10, prix de 0 à 100. Le croisement (point vert) donne la quantité où les tarifs sont égaux ; de chaque côté, la droite du dessous est le tarif le moins cher."
+    revele: true
+    valeurs:
+      a1: {min: 0, max: 10, pas: 0.5, defaut: 4}
+      b1: {min: 0, max: 40, pas: 5, defaut: 0}
+      a2: {min: 0, max: 10, pas: 0.5, defaut: 2}
+      b2: {min: 0, max: 40, pas: 5, defaut: 10}

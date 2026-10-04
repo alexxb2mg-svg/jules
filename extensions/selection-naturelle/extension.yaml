@@ -1,0 +1,17 @@
+id: selection-naturelle
+titre: "Figure : sélection naturelle chez la phalène du bouleau"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [selection-naturelle]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « evolution des especes ». La figure dessine 20 papillons et une barre (modele
+# simplifie, voir gabarit.js) sans ecrire de pourcentage : revele false.
+discussion:
+  selection-naturelle:
+    quand: "Pour voir la sélection naturelle : 20 phalènes claires ou sombres sur un tronc et une barre avec la part de chaque forme. La forme sombre, rare au départ, vient d'une mutation ; pression = avantage des sombres (0 aucun, 3 troncs très noircis) ; gen = générations. Modèle simplifié."
+    valeurs:
+      gen: {min: 0, max: 20, pas: 1, defaut: 0}
+      pression: {min: 0, max: 3, pas: 1, defaut: 2}

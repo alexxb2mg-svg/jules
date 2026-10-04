@@ -1,0 +1,18 @@
+id: courbe-energie-cinetique
+titre: "Figure : courbe de l'énergie cinétique en fonction de la vitesse (Ec = ½ m v²)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [courbe-energie-cinetique]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « expression litterale de l'energie cinetique ». revele: false : Ec n'est jamais
+# ecrite ; on la lit approximativement sur l'axe gradue de 400 en 400 kJ, ce qui ne remplace pas le calcul
+# demande dans un exercice (meme principe que la regle de rectangle-quadrille).
+discussion:
+  courbe-energie-cinetique:
+    quand: "Pour faire voir que l'énergie cinétique dépend du carré de la vitesse (Ec = ½ m v²) : la courbe se cabre quand v augmente, et s'étire seulement quand m augmente (courbe grise = voiture de 1 000 kg). v = vitesse en m/s, m = masse du véhicule en kg ; repères 50 km/h et 130 km/h sur l'axe."
+    valeurs:
+      v: {min: 0, max: 40, pas: 2, defaut: 10}
+      m: {min: 500, max: 2000, pas: 250, defaut: 1000}

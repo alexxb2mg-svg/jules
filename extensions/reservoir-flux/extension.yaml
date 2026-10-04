@@ -1,0 +1,17 @@
+id: reservoir-flux
+titre: "Figure : un stock avec une entrée et une sortie, et sa courbe sur 20 ans"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [reservoir-flux]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e SVT « exploitation des ressources naturelles » et « dynamique des populations ».
+# Seuls les curseurs (« +10 % par an ») et le sens de variation sont ecrits, aucun effectif calcule : revele false.
+discussion:
+  reservoir-flux:
+    quand: "Pour faire voir qu'un stock (ressource naturelle, effectif d'une population) monte si l'entrée dépasse la sortie, reste stable si elles sont égales, baisse sinon. entree = renouvellement ou naissances et arrivées, sortie = prélèvement ou décès et départs, en % du stock de départ par an."
+    valeurs:
+      entree: {min: 0, max: 20, pas: 1, defaut: 10}
+      sortie: {min: 0, max: 20, pas: 1, defaut: 12}

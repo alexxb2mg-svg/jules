@@ -1,0 +1,18 @@
+id: barre-objectif
+titre: "Figure : une minute de lecture, mots bien lus et erreurs face au repère"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [barre-objectif]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que les
+# curseurs de la fiche CM1 « lire avec fluidite ». revele false : le nombre de mots bien lus (lus - erreurs) n'est
+# jamais ecrit, l'eleve le lit sur la regle graduee (seuls les nombres de la regle et le repere sont dessines).
+# Repere de 110 mots par minute : Eduscol, exemples de mise en oeuvre du programme de francais CM1 (2025), p. 3.
+discussion:
+  barre-objectif:
+    quand: "Pour faire voir une minute de lecture à voix haute (CM1) : lus = mots lus en une minute, erreurs = mots mal lus ; la barre bleue (mots bien lus) et la rouge (erreurs) sont posées sur une règle de 0 à 160, face au repère vert du CM1 (110 mots bien lus par minute)."
+    valeurs:
+      lus: {min: 40, max: 160, pas: 5, defaut: 95}
+      erreurs: {min: 0, max: 20, pas: 1, defaut: 9}

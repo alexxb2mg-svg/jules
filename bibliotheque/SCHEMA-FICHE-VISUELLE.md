@@ -43,7 +43,7 @@ pour les exercices, pas pour les fiches ni pour les cartes mentales.
 |---|---|---|
 | `formule` | `expression`, `termes: {lettre: {couleur, legende}}` | expression ≤ 80 car., légende ≤ 160 car. |
 | `carte` | `noeuds: [{id, titre, sous_titre?, principal?}]`, `liens: [{de, vers, libelle?}]` | 2 à 8 nœuds, liens vers des id existants |
-| `graphe` | `gabarit` (voir plus bas), `curseurs: [{id, nom, min, max, pas, depart}]`, `lectures: [{si, texte}]` | 1 à 6 curseurs, condition `si` limitée (voir plus bas) |
+| `graphe` | `gabarit` (voir plus bas), `curseurs: [{id, nom, min, max, pas, depart}]`, `lectures: [{si, texte}]` | 1 à 6 curseurs mobiles, 12 au total figés compris (voir plus bas), condition `si` limitée (voir plus bas) |
 | `methode` | `etapes: ["...", ...]` | 2 à 6 étapes, chacune ≤ 260 car. |
 | `piege` | `mauvaise_idee`, `pourquoi_faux`, `bonne_idee` | chacun ≤ 260 car. |
 | `exemple` | `situation`, `calcul?`, `conclusion`, `figure?: {gabarit, curseurs}` | chaque champ ≤ 400 car. |
@@ -102,6 +102,17 @@ L'affichage utilise les classes de couleur du système de design `concept-diagra
 uniquement, embarquées dans `accueil.css` sous `.bloc-schema`) : `.t .ts .th .box .arr .leader
 .node` et `.c-purple .c-teal .c-coral .c-pink .c-gray .c-blue .c-green .c-amber .c-red`.
 
+## Curseurs figés d'un bloc `graphe`
+
+Un curseur dont `min` = `max` (donc `depart` = `min`) est un **paramètre figé** par la fiche : bornes d'une
+frise, période surlignée, grandeur tenue constante pendant qu'une autre varie. Sa valeur est transmise au
+gabarit et utilisable dans les conditions `si`, mais il n'est **pas affiché** à l'élève (ni libellé, ni
+glissière, ni pastille de valeur). Un bloc dont tous les curseurs sont figés affiche la figure seule. Pas de
+clé `fixe` : min = max suffit.
+
+Deux plafonds, chacun avec son message d'erreur : **6 curseurs mobiles** (min < max), ceux que l'élève fait
+bouger ; **12 curseurs au total**, figés compris.
+
 ## Les conditions `si` d'un bloc `graphe`
 
 Jamais d'`eval()`, ni côté serveur ni côté client. Une condition est une suite de comparaisons
@@ -118,29 +129,52 @@ fonction, une parenthèse, un opérateur non listé, une variable inconnue du bl
 
 Un gabarit est fourni par une extension active (`extensions/<id>/gabarit.js`, voir
 `docs/EXTENSIONS.md`) et dessine du SVG à partir des valeurs de curseurs, jamais de code libre
-embarqué dans la fiche. Les gabarits livrés (45, vague 1 du 03/10/2026 comprise ; curseurs et bornes dans
-la clé `discussion` de chaque `extensions/<id>/extension.yaml`) :
+embarqué dans la fiche. Les gabarits livrés (134, vagues 1 du 03/10/2026 et 2 du 04/10/2026 ; curseurs et
+bornes dans la clé `discussion` de chaque `extensions/<id>/extension.yaml`), rangés par matière principale
+(un gabarit sert souvent dans plusieurs matières) :
 
-- **Mathématiques 3e** : `droite-affine` (f(x) = ax + b), `triangle-thales`, `triangle-rectangle` (carrés sur
+- **Mathématiques 3e** (25) : `droite-affine` (f(x) = ax + b), `triangle-thales`, `triangle-rectangle` (carrés sur
   les trois côtés, aire écrite dans chacun, AB non écrit mais `revele` : il ne reste que la racine carrée),
   `equation-solutions` (x² = a), `probabilites-frequences`,
   `droite-graduee` (n/d sur une droite), `droite-graduee-somme` (a + b comme un saut), `balance-equation`
-  (ax + b = c), `courbe-point-mobile` (image, antécédent), `engrenages` (divisibilité).
-- **Mathématiques CM1** : `bande-fractions`, `bande-fractions-comparees`, `demi-droite-graduee`,
+  (ax + b = c), `courbe-point-mobile` (image, antécédent), `engrenages` (divisibilité) ; vague 2 :
+  `carre-aire-cote`, `deux-droites`, `echelle-puissances-dix`, `jetons-en-rangees`, `rectangle-multiplication`,
+  `barre-evolution`, `barre-ratio`, `diagramme-barres`, `grille-deux-epreuves`, `serie-statistique`,
+  `globe-latitude-longitude`, `homothetie-rotation`, `lutin-trace`, `section-solide`, `boule-cylindre`.
+- **Mathématiques CM1** (20) : `bande-fractions`, `bande-fractions-comparees`, `demi-droite-graduee`,
   `demi-droite-decimaux`, `plaque-dixiemes-centiemes`, `glisse-nombre` (× et ÷ par 10), `schema-en-barres`,
   `angle`, `symetrie-axe`, `quadrilatere-deformable`, `rectangle-quadrille` (périmètre, aire), `horloge`
-  (durées), `urne-tirage` (probabilité), `paquets-proportionnels` (proportionnalité).
-- **Physique-chimie 3e** : `circuit-serie-derivation`, `palier-changement-etat`, `redistribution-atomes`,
+  (durées), `urne-tirage` (probabilité), `paquets-proportionnels` (proportionnalité) ; vague 2 :
+  `assemblage-cubes`, `construction-pas-a-pas`, `grille-deplacement`, `patron-cube`, `suite-motifs`,
+  `recipient-gradue`.
+- **Physique-chimie 3e** (17) : `circuit-serie-derivation`, `palier-changement-etat`, `redistribution-atomes`,
   `rampe-energie`, `chronophotographie` (mouvement, référentiel), `poids-astres`, `onde-sonore` (aussi en
-  éducation musicale).
-- **SVT et technologie 3e** : `effort-frequences`, `capteur-seuil` (chaîne d'information, algorithme).
-- **Sciences CM1** : `cycle-lune`, `ombre-portee`, `balance-plateaux`.
-- **Histoire-géographie** : `frise` (frise générique à curseur date, repères portés par la fiche),
-  `distance-temps-transports` (CM1).
-- **Français et langues vivantes** : `frise-temps-verbaux`, `chaine-accords`, `position-objet` (in, on, under…).
-- **Éducation musicale et arts plastiques** : `jauge-decibels` (dose : 8 h à 85 dB,
+  éducation musicale) ; vague 2 : `atome-constructeur`, `echelle-ph`, `flotte-coule`, `verre-dissolution`,
+  `chaine-energetique`, `courbe-energie-cinetique`, `effet-de-serre`, `rectangle-puissance-duree`,
+  `vecteur-force`, `spectre-ondes`.
+- **SVT 3e** (14) : `effort-frequences` ; vague 2 : `deplacement-plaques`, `eclairement-latitude`, `matrice-risque`,
+  `photosynthese-facteurs`, `reservoir-flux`, `arbre-generations`, `brassage-chromosomes`,
+  `selection-naturelle`, `action-enzyme`, `cycle-menstruel`, `parcours-message-nerveux`,
+  `reponse-immunitaire`, `tube-digestif`.
+- **Technologie 3e** (10) : `capteur-seuil` (chaîne d'information, algorithme) ; vague 2 : `force-mot-de-passe`,
+  `nombre-binaire`, `numerisation-signal`, `reseau-routage`, `autonomie-batterie`, `bilan-cycle-de-vie`,
+  `poutre-flexion`, `trace-programme`, `diagramme-gantt`.
+- **Sciences CM1** (7) : `cycle-lune`, `ombre-portee`, `balance-plateaux` ; vague 2 : `courbe-releves`,
+  `reseau-populations`, `courbe-croissance`, `illusion-optique`.
+- **Histoire-géographie et EMC** (11) : `frise` (frise générique à curseur date, repères portés par la fiche, jusqu'à trois
+  périodes surlignées `de`/`à`, `de2`/`a2`, `de3`/`a3`),
+  `distance-temps-transports` (CM1) ; vague 2 : `carte-tuiles-europe`, `aire-attraction`, `courbe-evolution`,
+  `journee-repartition`, `itineraire-carte`, `carre-densite`, `arbre-multiplication` (EMC, aussi en SVT),
+  `barre-vote`, `effet-cumule`.
+- **Français** (9) : `frise-temps-verbaux`, `chaine-accords` ; vague 2 : `barre-objectif`, `echelle-intensite`,
+  `phrase-en-blocs`, `schema-narratif`, `caricature-grossissement`, `jauge-voix`, `mots-par-regard`.
+- **Langues vivantes** (7) : `position-objet` (in, on, under…) ; vague 2 : `bocal-quantite`, `dizaines-unites`,
+  `pres-loin`, `rythme-intonation`, `echelles-paralleles`, `empreinte-carbone-trajet`.
+- **Éducation musicale, arts plastiques et histoire des arts** (14) : `jauge-decibels` (dose : 8 h à 85 dB,
   durée divisée par 2 tous les 3 dB), `forme-musicale`, `frise-pulsations`,
-  `cercle-couleurs`.
+  `cercle-couleurs` ; vague 2 : `figuratif-abstrait`, `perspective-point-de-fuite`, `decomposition-mouvement`,
+  `point-de-vue`, `equilibre-empilement`, `pavage-motif`, `pistes-superposees`, `pixellisation`, `trace-geste`,
+  `spatialisation-stereo`.
 
 Ajouter un gabarit = créer une extension `extensions/<id>/` (`extension.yaml` avec
 `fournit: figures: [<id>]`, et `gabarit.js`) puis l'activer dans `extensions:` de `config.yaml` :

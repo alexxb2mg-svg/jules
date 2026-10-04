@@ -1,0 +1,15 @@
+id: tube-digestif
+titre: "Figure : un aliment suit le tube digestif (digestion, absorption)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [tube-digestif]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# le curseur de la fiche 3e svt « devenir des aliments dans le tube digestif ». Aucune valeur ecrite : revele false.
+discussion:
+  tube-digestif:
+    quand: "Pour faire voir le trajet d'un aliment dans le tube digestif et distinguer digestion et absorption. position = où est l'aliment (0 bouche, 0,2 estomac, 0,4 à 0,7 intestin grêle où les nutriments passent dans le sang, 0,7 à 1 gros intestin puis anus)."
+    valeurs:
+      position: {min: 0, max: 1, pas: 0.1, defaut: 0}

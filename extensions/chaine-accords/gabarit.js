@@ -2,9 +2,19 @@
 // vers les mots qui s'accordent avec lui, et les marques d'accord (e, s, x, nt...) en orange.
 // Quatre lectures selon les curseurs de la fiche :
 //   adjectifs + place                -> le groupe nominal s'allonge autour d'un seul nom noyau (CM1)
-//   exemple + genre + nombre         -> chaine d'accords dans le groupe nominal (CM1, discussion)
+//   exemple + genre + nombre         -> chaine d'accords dans le groupe nominal (CM1, discussion) ;
+//     + noms 2 (exemple 1 a 3)        -> deux noms coordonnes, un adjectif commun (3e) ;
+//     exemple 4 + place               -> participe passe avec avoir : 0 COD apres, 1 COD avant (3e)
 //   verbe + voisin + genre + nombre  -> accord sujet-verbe, piege du groupe intercale (CM1)
 //   genre + nombre (seuls)           -> quels mots varient, lesquels restent invariables (CM1)
+// Faits (3e) : un adjectif qui qualifie deux noms coordonnes se met au pluriel, au masculin des qu'un des noms est
+// masculin (le pantalon et la veste neufs ; la jupe et la veste neuves) ; avec avoir, le participe passe s'accorde
+// avec le COD seulement s'il est place avant le verbe, souvent le pronom relatif « que » qui reprend son antecedent
+// (les pommes que j'ai mangees), et reste invariable si le COD est apres (j'ai mange les pommes).
+// Sources : Eduscol, « La grammaire du francais — Terminologie grammaticale » (accords : adjectif, participe passe)
+// https://eduscol.education.gouv.fr/sites/default/files/document/guide-la-grammaire-du-francais-terminologie-grammaticale-67998.pdf ;
+// Wikipedia, « Accord du participe passe en francais » (oldid 239496579) et « Accord (grammaire) » (oldid 238071441),
+// sources des fiches 3e chaines-daccord et accord-participe-passe-avec-avoir.
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
@@ -127,11 +137,42 @@ window.GABARITS["chaine-accords"] = {
       return { genre: f, nombre: p, voisin: ecran, verbe: etre };
     }
 
-    // ------------------------------------------------ chaine d'accords dans le groupe nominal (3 exemples)
+    // ------------------------------------------------ chaine d'accords dans le groupe nominal (3 exemples, deux noms) et participe passe avec avoir
     if (a("exemple")) {
-      // lecture proposee dans la discussion : seules ces trois valeurs y sont declarees (extension.yaml)
-      const ex = n("exemple", valeurs.exemple ?? 1, 1, 3), f = n("genre", valeurs.genre ?? 0, 0, 1), p = n("nombre", valeurs.nombre ?? 0, 0, 1);
+      // lecture proposee dans la discussion : exemple, genre, nombre, noms et place y sont declarees (extension.yaml)
+      const ex = n("exemple", valeurs.exemple ?? 1, 1, 4), f = n("genre", valeurs.genre ?? 0, 0, 1), p = n("nombre", valeurs.nombre ?? 0, 0, 1);
+      const noms = n("noms", 1, 1, 2);
       svg.setAttribute("viewBox", "0 0 340 220");
+      if (ex === 4) {
+        // participe passe avec avoir (3e) : place 0 = COD apres le verbe, pas d'accord ; 1 = COD place avant
+        // (pronom relatif « que » qui reprend son antecedent), le participe s'accorde avec lui.
+        const avant = n("place", 1, 0, 1);
+        const cod = { bouts: p ? [b("les "), b(f ? "pommes" : "gâteaux")] : [b(f ? "la pomme" : "le gâteau")],
+          classe: avant ? "antécédent" : "COD", ton: "noyau" };
+        const aux = { bouts: [b("j'ai")], classe: "avoir", ton: "gris" };
+        const pp = { bouts: [b("mangé")].concat(avant && f ? [m("e")] : [], avant && p ? [m("s")] : []),
+          classe: "participe", ton: "accord" };
+        rangee(avant ? [cod, { bouts: [b("que")], classe: "COD", ton: "neutre" }, aux, pp] : [aux, pp, cod], 100);
+        if (avant) arc(cod, pp, VERT);
+        texte(170, 200, avant ? "COD avant : accord, " + genreNombre(f, p) : "COD après : pas d'accord", 15,
+          avant ? VERT : GRIS, true);
+        return { exemple: ex, genre: f, nombre: p, noms, place: avant };
+      }
+      if (noms === 2) {
+        // deux noms coordonnes (3e) : l'adjectif se met au pluriel, au masculin des que l'un des noms est masculin
+        // genre 0 : le pantalon (m.) et la veste (f.) -> neufs ; genre 1 : la jupe et la veste (f.) -> neuves
+        const s = p ? [m("s")] : [];
+        const n1 = { bouts: p ? [b("les "), b(f ? "jupe" : "pantalon")].concat(s) : [b(f ? "la jupe" : "le pantalon")],
+          classe: f ? "nom féminin" : "nom masculin", ton: "noyau" };
+        const et = { bouts: [b("et")], classe: "", ton: "gris" };
+        const n2 = { bouts: p ? [b("les "), b("veste")].concat(s) : [b("la veste")], classe: "nom féminin", ton: "noyau" };
+        const adj = { bouts: f ? [b("neu"), m("ves")] : [b("neuf"), m("s")], classe: "adjectif", ton: "accord" };
+        rangee([n1, et, n2, adj], 100);
+        arc(n1, adj, VERT);
+        arc(n2, adj, VERT, 1);
+        texte(170, 200, f ? "deux noms féminins : féminin pluriel" : "masculin + féminin : masculin pluriel", 15, VERT, true);
+        return { exemple: ex, genre: f, nombre: p, noms };
+      }
       const det = p ? [b("l"), m("es")] : f ? [b("l"), m("a")] : [b("le")];
       const s = p ? [m("s")] : [];
       let adj1, nom, adj2;

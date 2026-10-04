@@ -1,0 +1,19 @@
+id: mots-par-regard
+titre: "Figure : copier par groupes de mots, moins d'allers-retours des yeux"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [mots-par-regard]
+permissions: {}
+# Fiche CM1 de francais « L'écriture attachée et la copie ». Des arcs regroupent les mots retenus en un regard
+# (taille, 1 a 5) dans une phrase de mots (10 a 30) blocs ; compteur = nombre de regards (mots / taille arrondi a
+# l'entier superieur). En vert de 3 a 5 mots par regard, ce que recommande la fiche.
+# revele false : le compteur ne donne la reponse d'aucun exercice de copie ; l'exemple de la fiche (120 mots,
+# 4 par regard) est hors des bornes du curseur mots.
+discussion:
+  mots-par-regard:
+    quand: "Pourquoi copier par groupes de mots (CM1) : des arcs regroupent les mots gardés en tête en un regard (taille, 1 à 5) dans une phrase de mots mots ; le compteur d'allers-retours des yeux entre modèle et cahier baisse quand les groupes grandissent."
+    valeurs:
+      taille: {min: 1, max: 5, pas: 1, defaut: 1}
+      mots: {min: 10, max: 30, pas: 1, defaut: 20}

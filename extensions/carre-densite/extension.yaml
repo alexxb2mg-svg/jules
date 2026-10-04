@@ -1,0 +1,16 @@
+id: carre-densite
+titre: "Figure : un km² rempli d'habitants (densité de population)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [carre-densite]
+permissions: {}
+# Un seul curseur, densite (5 a 500 habitants par km²) : un point par habitant dans un carre d'1 km de cote ;
+# carre vert sous 30 hab./km² (faible densite), orange au-dela. revele: false : le seul nombre ecrit est la
+# valeur du curseur.
+discussion:
+  carre-densite:
+    quand: "Pour faire voir en 3e ce que veut dire une densité de population : un carré d'1 km de côté, un point par habitant. Sous 30 habitants par km², c'est un espace de faible densité (carré vert) ; la France métropolitaine compte environ 120 habitants par km²."
+    valeurs:
+      densite: {min: 5, max: 500, pas: 5, defaut: 20}

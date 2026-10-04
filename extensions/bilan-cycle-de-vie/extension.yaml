@@ -1,0 +1,21 @@
+id: bilan-cycle-de-vie
+titre: "Figure : impact d'un objet par année d'usage, étape par étape du cycle de vie"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [bilan-cycle-de-vie]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches 3e technologie « choix d'un OST et developpement durable » (duree, conso, repare) et
+# « materiaux et procedes » (recycle, transport). Modele simplifie sans unite, hypotheses et sources en tete de
+# gabarit.js. revele: false : aucun nombre n'est ecrit, la figure compare des longueurs de barres.
+discussion:
+  bilan-cycle-de-vie:
+    quand: "Pour voir le cycle de vie d'un objet (modèle simplifié), une barre par étape ramenée à une année d'usage : duree = années avant la panne ; conso 1 économe à 5 gourmand ; repare 1 = réparé, sert deux fois plus ; recycle = % recyclé ; transport = milliers de km."
+    valeurs:
+      duree: {min: 1, max: 10, pas: 1, defaut: 3}
+      conso: {min: 1, max: 5, pas: 1, defaut: 2}
+      repare: {min: 0, max: 1, pas: 1, defaut: 0}
+      recycle: {min: 0, max: 100, pas: 10, defaut: 0}
+      transport: {min: 0, max: 20, pas: 1, defaut: 2}

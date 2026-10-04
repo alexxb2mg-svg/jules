@@ -8,6 +8,8 @@
 //   intervalle                  second repere (vert) a date + intervalle, ecart ecrit en orange
 //   auteur                      avec souvenir : second repere a l'age ou l'auteur ecrit (« j'ecris : 50 ans »)
 //   de, « à » (ou a)            une periode surlignee en orange au-dessus de l'axe, vive quand le repere est dedans
+//   de2, a2 / de3, a3           deuxieme et troisieme periodes (meme rendu) ; des periodes qui se chevauchent sont
+//                               decalees en hauteur (au plus 3 rangees)
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
 
@@ -39,8 +41,24 @@ window.GABARITS["frise"] = {
     let q = null; // second repere
     if (unite === "age" && "auteur" in valeurs) q = nombre(valeurs.auteur, p);
     else if (unite !== "age" && "intervalle" in valeurs) q = p + nombre(valeurs.intervalle, 0);
-    const finPeriode = valeurs["à"] ?? valeurs.a;
-    const periode = "de" in valeurs && finPeriode !== undefined ? [nombre(valeurs.de, lo), nombre(finPeriode, hi)].sort((m, n) => m - n) : null;
+    // Periodes surlignees : (de, à) puis (de2, a2) et (de3, a3) ; une periode n'existe que si ses deux bornes sont donnees.
+    const bornesPeriodes = [
+      [valeurs.de, valeurs["à"] ?? valeurs.a],
+      [valeurs.de2, valeurs.a2],
+      [valeurs.de3, valeurs.a3],
+    ];
+    const periodes = bornesPeriodes
+      .filter(([debutP, finP]) => debutP !== undefined && finP !== undefined)
+      .map(([debutP, finP]) => [nombre(debutP, lo), nombre(finP, hi)].sort((m, n) => m - n))
+      .filter(([m, n]) => n >= lo && m <= hi);
+    // Rangees : une periode prend la premiere rangee ou elle ne touche aucune autre (rangee 0 = juste au-dessus de l'axe).
+    const finsRangees = [];
+    const rangees = periodes.map(([m, n]) => {
+      let r = finsRangees.findIndex((f) => f < m);
+      if (r < 0) r = finsRangees.length;
+      finsRangees[r] = n;
+      return r;
+    });
 
     // --- mise en page --------------------------------------------------------------------------------------
     const X0 = 28, X1 = 312, YA = 100; // axe de X0 a X1, barre centree sur YA
@@ -64,12 +82,16 @@ window.GABARITS["frise"] = {
     svg.setAttribute("viewBox", `0 0 340 ${H}`);
     svg.innerHTML = ""; // vide le SVG (aucune donnee inseree ici) ; tous les elements sont crees via createElementNS
 
-    // Periode surlignee (de -> a), au-dessus de l'axe.
-    if (periode && periode[1] >= lo && periode[0] <= hi) {
-      const dedans = p >= periode[0] && p <= periode[1];
-      const xa = X(periode[0]), xb = X(periode[1]);
-      el("rect", { x: xa, y: 62, width: Math.max(4, xb - xa), height: 16, rx: 4, fill: ORANGE, opacity: dedans ? 1 : 0.35 });
-    }
+    // Periodes surlignees, au-dessus de l'axe : une seule rangee = bande de 16 (rendu historique) ; sinon bandes de 12
+    // empilees vers le haut (y 66, 52, 38), sous l'etiquette du repere (ligne de base 30).
+    const uneRangee = finsRangees.length <= 1;
+    periodes.forEach(([m, n], i) => {
+      const dedans = p >= m && p <= n;
+      const xa = X(m), xb = X(n);
+      const y = uneRangee ? 62 : 66 - 14 * rangees[i];
+      const rect = el("rect", { x: xa, y, width: Math.max(4, xb - xa), height: uneRangee ? 16 : 12, rx: 4, fill: ORANGE, opacity: dedans ? 1 : 0.35 });
+      rect.setAttribute("data-periode", String(i + 1));
+    });
 
     // Axe : avenir en gris, passe (jusqu'au repere) en bleu.
     el("rect", { x: X0, y: YA - 6, width: X1 - X0, height: 12, rx: 6, fill: "#D5DAE1" });

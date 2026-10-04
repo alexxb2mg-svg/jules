@@ -1,0 +1,20 @@
+id: construction-pas-a-pas
+titre: "Figure : programme de construction, étape par étape"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [construction-pas-a-pas]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « programmes de construction ». Programme fixe : segment [AB], rectangle ABCD,
+# milieu I de [AB], cercle de centre A passant par I. revele: true : la figure trace la construction terminee,
+# qui est la reponse d'un exercice « suis ce programme » (AB et BC sont ecrits, le rayon AI ne l'est pas).
+discussion:
+  construction-pas-a-pas:
+    quand: "Pour suivre un programme de construction pas à pas (CM1) : 1. segment [AB] ; 2. rectangle ABCD ; 3. milieu I de [AB] ; 4. cercle de centre A passant par I. etape = instructions faites (0 = feuille vide), longueur = AB, largeur = BC en cm ; nouveau tracé en orange."
+    revele: true
+    valeurs:
+      etape: {min: 0, max: 4, pas: 1, defaut: 1}
+      longueur: {min: 3, max: 8, pas: 1, defaut: 5}
+      largeur: {min: 1, max: 6, pas: 1, defaut: 3}

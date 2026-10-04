@@ -1,0 +1,17 @@
+id: reponse-immunitaire
+titre: "Figure : microbes et anticorps au fil des jours, premier contact ou personne vaccinée"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [reponse-immunitaire]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e svt « explication globale des reactions immunitaires ». Formes de courbes sans
+# nombre sur l'axe vertical (voir gabarit.js) : revele false.
+discussion:
+  reponse-immunitaire:
+    quand: "Pour faire voir à quoi servent la mémoire immunitaire et la vaccination : microbes et anticorps dans le sang au fil des jours. jour = jours après l'entrée du microbe ; vaccin 0 = premier contact (anticorps lents, on est malade), 1 = déjà vacciné (anticorps rapides et nombreux)."
+    valeurs:
+      jour: {min: 0, max: 30, pas: 1, defaut: 10}
+      vaccin: {min: 0, max: 1, pas: 1, defaut: 0}

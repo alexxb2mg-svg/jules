@@ -156,14 +156,100 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - pistes-superposees        # vague 2, lot 03 : education musicale (successif, simultane, canon)
+  - pavage-motif              # histoire des arts : frise, pavement (translation, symetrie)
+  - arbre-multiplication      # EMC (partages d'un message), SVT (divisions de cellules)
+  - reservoir-flux            # 3e SVT : ressources naturelles, dynamique des populations
+  - photosynthese-facteurs    # 3e SVT : nutrition de la plante chlorophyllienne
+  - reseau-populations        # CM1 sciences : reseaux alimentaires
+  - arbre-generations         # 3e SVT : reproduction sexuee et asexuee
+  - brassage-chromosomes      # 3e SVT : meiose, diversite genetique
+  - selection-naturelle       # 3e SVT : evolution des especes
+  - parcours-message-nerveux  # 3e SVT : message nerveux, synapse
+  - tube-digestif             # 3e SVT : digestion, absorption
+  - action-enzyme             # 3e SVT : enzymes digestives, temperature
+  - reponse-immunitaire       # 3e SVT : anticorps, memoire immunitaire, vaccination
+  - cycle-menstruel           # 3e SVT : cycle de 28 jours, hormones ovariennes
+  - force-mot-de-passe        # 3e technologie : numerique (vague 2, lot 16)
+  - nombre-binaire
+  - reseau-routage
+  - numerisation-signal
+  - trace-programme           # 3e technologie : programme pas a pas, variable en memoire
+  - bilan-cycle-de-vie        # 3e technologie : cycle de vie, impact par annee d'usage
+  - autonomie-batterie        # 3e technologie : autonomie et exigence du cahier des charges
+  - poutre-flexion            # 3e technologie : flexion d'une poutre, validation mecanique
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
   - chaine-accords
+  - barre-objectif            # vague 2, lot 04 : francais CM1, fluidite de lecture (mots lus, erreurs, objectif)
+  - schema-narratif           # etapes d'un recit, situation initiale -> final (francais, anglais CM1)
+  - phrase-en-blocs           # grammaire CM1 : types et formes, groupes de la phrase, nature et fonction
+  - echelle-intensite         # mots ordonnes par intensite (francais 3e et CM1, anglais CM1)
   - position-objet
+  - bocal-quantite            # langues vivantes (vague 2, lot 01) : a few / a little, much / many
+  - rythme-intonation         # syllabe forte et intonation (anglais 3e et CM1)
+  - dizaines-unites           # dire les nombres en anglais : -teen / -ty (CM1)
+  - pres-loin                 # this, these, that, those (CM1)
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - figuratif-abstrait        # arts plastiques (vague 2, lot 02) : ressemblance, ecart, abstraction
+  - perspective-point-de-fuite
+  - decomposition-mouvement   # narration visuelle, photographie et cinema
+  - point-de-vue              # cadrage, plongee / contre-plongee, rapport d'echelle (arts, francais)
+  - equilibre-empilement      # CM1 arts plastiques : espace en trois dimensions
+  - carte-tuiles-europe       # 3e histoire, geographie, EMC : UE, euro, Schengen, Conseil de l'Europe
+  - aire-attraction           # 3e geographie : pole, couronne, periurbanisation
+  - courbe-evolution          # 3e histoire-geographie : series historiques qui se dessinent
+  - journee-repartition       # CM1 geographie : acces a l'eau, journee en 24 cases
+  - itineraire-carte          # CM1 histoire : Magellan, commerce triangulaire
+  - echelle-puissances-dix    # vague 2, lot 06 : mathematiques 3e (nombres, calcul, fonctions) et CM1 (calcul)
+  - carre-aire-cote
+  - jetons-en-rangees
+  - rectangle-multiplication
+  - deux-droites
+  - serie-statistique         # vague 2, lot 07 : statistiques, probabilites, proportions (3e et CM1)
+  - diagramme-barres
+  - grille-deux-epreuves
+  - barre-ratio
+  - barre-evolution
+  - homothetie-rotation       # mathematiques 3e (vague 2, lot 08) : transformations, reperage, solides, Scratch
+  - globe-latitude-longitude
+  - section-solide
+  - lutin-trace               # aussi CM1 sciences et technologie (absorbe trace-robot)
+  - patron-cube               # vague 2, lot 09 : mathematiques CM1 (espace, construction, suites) et anglais CM1
+  - assemblage-cubes
+  - construction-pas-a-pas
+  - grille-deplacement
+  - suite-motifs
+  - flotte-coule              # vague 2, lot 10 (physique-chimie : matiere)
+  - verre-dissolution
+  - echelle-ph
+  - atome-constructeur
+  - vecteur-force             # vague 2, lot 11 : physique-chimie 3e, forces et energie ; SVT 3e climat
+  - courbe-energie-cinetique
+  - chaine-energetique
+  - rectangle-puissance-duree
+  - effet-de-serre
+  - deplacement-plaques       # vague 2, lot 12 : SVT 3e geodynamique
+  - eclairement-latitude      # zones climatiques (SVT 3e), saisons des deux hemispheres (anglais 3e)
+  - matrice-risque            # SVT 3e : alea, vulnerabilite, risque
+  - courbe-releves            # CM1 sciences : mesures meteorologiques
+  - echelles-paralleles       # vague 2, lot 18 : anglais 3e (°C/°F, classes), francais 3e (satire), CM1 (voix, copie)
+  - empreinte-carbone-trajet
+  - caricature-grossissement
+  - jauge-voix
+  - mots-par-regard
+  - pixellisation             # vague 2 lot 19 : arts plastiques 3e (image en pixels)
+  - trace-geste               # arts plastiques CM1 et 3e : effets du geste
+  - spatialisation-stereo     # education musicale 3e : timbre et espace
+  - barre-vote                # EMC 3e et CM1 : abstention, majorite absolue
+  - effet-cumule              # EMC CM1 : incivilites
+  - boule-cylindre            # mathematiques 3e : volume de la boule (lot 20, vague 2)
+  - recipient-gradue          # mathematiques CM1 : contenances
+  - carre-densite             # geographie 3e : densite de population
+  - diagramme-gantt           # technologie 3e : gestion de projet
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
@@ -172,3 +258,6 @@ extensions:
   - rappels-francais          # abreviations de grammaire
   - rappels-anglais           # phonetique, abreviations de grammaire, niveaux du CECRL
   - rappels-musique           # nuances, figures de notes, signes de la portee
+  - spectre-ondes             # vague 2, lot 21 : physique-chimie 3e, types de rayonnements
+  - illusion-optique          # vague 2, lot 21 : CM1 sciences, le cerveau interprete (Muller-Lyer)
+  - courbe-croissance         # vague 2, lot 21 : CM1 sciences, poussee de croissance a la puberte

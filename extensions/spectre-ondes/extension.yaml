@@ -1,0 +1,18 @@
+id: spectre-ondes
+titre: "Figure : spectre des rayonnements, des ondes radio aux rayons X"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [spectre-ondes]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que le curseur de la fiche 3e « types-rayonnements ».
+# revele true : la figure ECRIT le nom du domaine et un usage (radio, four, telecommande, radiographie...), ce qui
+# est la reponse d'un exercice « quel rayonnement pour cet usage ? ». Une bande sans noms ne servirait plus a rien.
+discussion:
+  spectre-ondes:
+    quand: "Pour faire voir que la lumière visible n'est qu'une petite partie d'une même famille de rayonnements : k = position sur le spectre (1 radio, 2 micro-ondes, 3 infrarouge, 4 visible, 5 UV, 6 rayons X) ; l'onde se resserre et l'énergie augmente vers la droite ; le domaine et un usage sont écrits."
+    revele: true
+    valeurs:
+      k: {min: 1, max: 6, pas: 0.25, defaut: 4}

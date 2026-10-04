@@ -1,0 +1,19 @@
+id: pavage-motif
+titre: "Figure : motif répété en frise ou en pavement (translation, symétrie)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [pavage-motif]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches d'histoire des arts 3e (« champ-arts-decoratifs ») et CM1 (« cm1-caracteristiques-
+# techniques-formelles-oeuvre »). Motif generique, aucune oeuvre precise, aucun nombre ecrit : la figure ne donne
+# pas la reponse d'un exercice (revele absent = false).
+discussion:
+  pavage-motif:
+    quand: "Pour faire voir comment un ornement naît de la répétition d'un motif : repetitions = motifs par rangée ; mode 0 = le motif glisse (translation), mode 1 = retourné une fois sur deux comme dans un miroir (symétrie axiale) ; lignes = rangées (1 = frise, plus = pavement, papier peint)."
+    valeurs:
+      repetitions: {min: 1, max: 6, pas: 1, defaut: 4}
+      mode: {min: 0, max: 1, pas: 1, defaut: 1}
+      lignes: {min: 1, max: 4, pas: 1, defaut: 2}

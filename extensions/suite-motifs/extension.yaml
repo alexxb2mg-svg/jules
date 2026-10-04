@@ -1,0 +1,19 @@
+id: suite-motifs
+titre: "Figure : suite de motifs en carrés qui grandit"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [suite-motifs]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « programmes de calcul et suites ». revele: false : aucun nombre n'est ecrit ;
+# l'eleve compte les carres de chaque etape (comme rectangle-quadrille), et au-dela de 4 etapes seules les
+# etapes 1, 2, 3 et la derniere sont dessinees.
+discussion:
+  suite-motifs:
+    quand: "Pour faire trouver la règle d'une suite de motifs qui grandit, au CM1 : depart = carrés de l'étape 1 (bleu), ajout = carrés ajoutés à chaque étape (orange, le bloc de la dernière étape en orange plein), etape = dernière étape dessinée. Aucun nombre n'est écrit : l'élève compte."
+    valeurs:
+      etape: {min: 1, max: 8, pas: 1, defaut: 3}
+      depart: {min: 1, max: 5, pas: 1, defaut: 1}
+      ajout: {min: 1, max: 5, pas: 1, defaut: 2}

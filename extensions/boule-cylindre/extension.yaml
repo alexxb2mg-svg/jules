@@ -1,0 +1,16 @@
+id: boule-cylindre
+titre: "Figure : la boule dans le cylindre qui l'enveloppe (volume de la boule)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [boule-cylindre]
+permissions: {}
+# Un seul curseur, r (1 a 10 cm) : la boule et son cylindre grandissent a echelle fixe, une boule de rayon 1
+# sert de repere ; deux jauges en 3 parts montrent que la boule occupe toujours 2 parts sur 3 du cylindre.
+# revele: false : aucun volume n'est ecrit (seul r, la valeur choisie, est ecrit sous la figure).
+discussion:
+  boule-cylindre:
+    quand: "Pour faire voir, en 3e, qu'une boule de rayon r occupe toujours les 2/3 du cylindre qui l'enveloppe (même diamètre, hauteur 2r), et que la boule grandit bien plus vite que son rayon (comparer avec la boule de rayon 1). Aucun volume n'est écrit."
+    valeurs:
+      r: {min: 1, max: 10, pas: 1, defaut: 3}
