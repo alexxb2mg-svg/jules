@@ -9,10 +9,14 @@ permissions: {}
 # Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
 # que les curseurs des fiches 3e « parallelisme, triangles, Pythagore » et « Thales, trigonometrie ».
 # 2.0.0 : carres construits sur les trois cotes, aire ecrite dans chacun (AC², BC², AC² + BC²), echelle adaptee
-# a la figure. La longueur AB n'est plus ecrite : revele false (l'eleve doit encore prendre la racine carree).
+# a la figure. La longueur AB n'est pas ecrite.
+# revele: les aires des trois carres sont ecrites, dont AC² + BC² (36, 64 et 100 pour AC = 6, BC = 8) : pour
+# « calcule AB », il ne reste que la racine carree a prendre, le coeur de l'exercice est fait par la figure.
+# Proposee seulement en mode reexplique (jamais en aide-devoirs ni en cours).
 discussion:
   triangle-rectangle:
     quand: "Pour faire voir un triangle ABC rectangle en C et le théorème de Pythagore : ac = AC et bc = BC sont les côtés de l'angle droit ; un carré est dessiné sur chaque côté avec son aire écrite, et l'aire du carré de l'hypoténuse [AB] est la somme des deux autres (la longueur AB n'est pas écrite)."
+    revele: true
     valeurs:
       ac: {min: 1, max: 12, pas: 1, defaut: 6}
       bc: {min: 1, max: 12, pas: 1, defaut: 8}
