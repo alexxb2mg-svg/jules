@@ -1,0 +1,23 @@
+id: diagramme-barres
+titre: "Figure : diagramme en barres et bande des fréquences"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [diagramme-barres]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs des fiches CM1 « lire et produire des representations de donnees » (e1 a e4, grad) et 3e
+# « effectifs et frequences » (e1 a e4, frequences). Absorbe la proposition « diagramme-effectifs » de l'audit.
+# revele false : ni les valeurs des barres ni les frequences ne sont ecrites ; l'eleve lit l'axe gradue (dont le
+# pas change avec grad) ou la bande graduee en quarts.
+discussion:
+  diagramme-barres:
+    quand: "Pour faire voir un diagramme en barres de quatre catégories A, B, C, D : e1 à e4 sont leurs valeurs (effectifs), grad le pas des graduations de l'axe (lire le pas avant de lire une barre, CM1) ; frequences = 1 ajoute une bande 100 % partagée selon les fréquences (3e). Aucune valeur n'est écrite."
+    valeurs:
+      e1: {min: 0, max: 30, pas: 1, defaut: 12}
+      e2: {min: 0, max: 30, pas: 1, defaut: 8}
+      e3: {min: 0, max: 30, pas: 1, defaut: 6}
+      e4: {min: 0, max: 30, pas: 1, defaut: 4}
+      grad: {min: 1, max: 5, pas: 1, defaut: 5}
+      frequences: {min: 0, max: 1, pas: 1, defaut: 0}

@@ -190,6 +190,11 @@ extensions:
   - jetons-en-rangees
   - rectangle-multiplication
   - deux-droites
+  - serie-statistique         # vague 2, lot 07 : statistiques, probabilites, proportions (3e et CM1)
+  - diagramme-barres
+  - grille-deux-epreuves
+  - barre-ratio
+  - barre-evolution
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
