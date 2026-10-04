@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - figuratif-abstrait        # arts plastiques (vague 2, lot 02) : ressemblance, ecart, abstraction
+  - perspective-point-de-fuite
+  - decomposition-mouvement   # narration visuelle, photographie et cinema
+  - point-de-vue              # cadrage, plongee / contre-plongee, rapport d'echelle (arts, francais)
+  - equilibre-empilement      # CM1 arts plastiques : espace en trois dimensions
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

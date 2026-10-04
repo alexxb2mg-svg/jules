@@ -1,0 +1,17 @@
+id: figuratif-abstrait
+titre: "Figure : un motif, du réel à l'abstrait (ressemblance, écart)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [figuratif-abstrait]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Elle n'ecrit que le
+# nom de l'etape montree (imiter, accentuer...), choisie par le curseur : aucune valeur qui serait la reponse d'un
+# exercice (revele: false). Dessins schematiques : aucune oeuvre reelle reproduite.
+discussion:
+  figuratif-abstrait:
+    quand: "Pour faire voir la ressemblance et l'écart : un même motif (motif = 1 visage, 2 arbre, 3 pomme) passe de l'imitation (ecart = 0) à l'accentuation (1), à l'interprétation (2) puis à l'abstraction (3) ; l'écart est un choix de l'artiste, pas une erreur."
+    valeurs:
+      ecart: {min: 0, max: 3, pas: 1, defaut: 0}
+      motif: {min: 1, max: 3, pas: 1, defaut: 1}
