@@ -1,0 +1,18 @@
+id: reseau-populations
+titre: "Figure : réseau alimentaire du jardin et quantité de chaque être vivant"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [reseau-populations]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 sciences « reseaux alimentaires ».
+# Barres de quantite sans graduation ni nombre (seul le reglage de l'insecticide est ecrit) : revele false.
+discussion:
+  reseau-populations:
+    quand: "Pour faire voir en CM1 qu'un réseau alimentaire est relié : rosier, pucerons, coccinelles, mésanges, une barre de quantité sous chacun. lumiere et eau (0 non, 1 oui) nourrissent la plante ; insecticide = part des pucerons tués (%). Les barres baissent de proche en proche."
+    valeurs:
+      lumiere: {min: 0, max: 1, pas: 1, defaut: 1}
+      eau: {min: 0, max: 1, pas: 1, defaut: 1}
+      insecticide: {min: 0, max: 100, pas: 25, defaut: 0}

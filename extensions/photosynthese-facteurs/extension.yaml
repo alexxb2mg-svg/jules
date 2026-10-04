@@ -1,0 +1,18 @@
+id: photosynthese-facteurs
+titre: "Figure : besoins de la plante chlorophyllienne et production de matière (facteur limitant)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [photosynthese-facteurs]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e SVT « nutrition de la plante chlorophyllienne ».
+# Aucun nombre calcule n'est ecrit (jauge sans graduation, « facteur limitant » en mots) : revele false.
+discussion:
+  photosynthese-facteurs:
+    quand: "Pour faire voir que la plante ne fabrique sa matière que si tous ses besoins sont couverts : lumiere (en %), co2 et eau (eau et sels minéraux, 0 rien à 3 beaucoup). Le besoin le moins bien couvert est marqué « facteur limitant » ; sève brute qui monte, sève élaborée qui descend."
+    valeurs:
+      lumiere: {min: 0, max: 100, pas: 10, defaut: 60}
+      co2: {min: 0, max: 3, pas: 1, defaut: 2}
+      eau: {min: 0, max: 3, pas: 1, defaut: 2}
