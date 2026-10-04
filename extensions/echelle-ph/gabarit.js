@@ -1,14 +1,16 @@
 // Jules - gabarit "echelle-ph" : une echelle de pH de 0 a 14 avec un repere mobile, et un becher ou l'on voit
 // les ions H+ (rouges) et HO- (bleus). Curseur : ph (pH de la solution, 0 a 14).
 // - pH < 7 : acide, plus d'ions H+ que d'ions HO- ; pH = 7 : neutre, autant ; pH > 7 : basique, plus de HO-.
-// - Les nombres d'ions dessines sont SCHEMATIQUES (de 1 a 11, egaux a pH 7) : en realite la concentration en
+// - Les nombres d'ions dessines sont SCHEMATIQUES (de 1 a 11, egaux seulement a pH 7, sinon l'ion majoritaire a
+//   toujours au moins un ion de plus) : en realite la concentration en
 //   ions H+ est multipliee par 10 quand le pH baisse de 1 (le dessin ne peut pas suivre une echelle x 10).
-// - pH <= 2 ou >= 12 : solution corrosive, pictogramme de danger et rappel « gants, lunettes ».
+// - pH <= 2 ou >= 12 : solution corrosive, signe d'avertissement et rappel « gants, lunettes ».
 // Faits et notations (ions H+ et HO-, echelle 0-14, neutre a 7 a 25 degres) : programme de physique-chimie du
 // cycle 4 (BO n° 31 du 30 juillet 2020, « Identifier le caractere acide ou basique d'une solution par mesure de
 // pH ; associer le caractere acide ou basique a la presence d'ions H+ et HO- »),
-// https://eduscol.education.fr/document/621/download ; danger : pictogramme SGH05 « corrosif » (INRS, etiquetage
-// des produits chimiques, https://www.inrs.fr/risques/classification-etiquetage-produits-chimiques/pictogrammes-dangers.html).
+// https://eduscol.education.fr/document/621/download. Le danger est signale par un simple triangle
+// d'avertissement « ! » et le mot « corrosif » : ce n'est PAS le pictogramme reglementaire SGH05 (losange rouge,
+// mains et surface rongees), trop detaille a cette taille ; le mot et la consigne « gants, lunettes » portent l'info.
 // La figure ecrit la valeur du pH (le curseur lui-meme) mais pas « acide / basique » : revele false.
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
@@ -35,11 +37,13 @@ window.GABARITS["echelle-ph"] = {
     for (let i = 0; i < 14; i++) {
       const milieu = i + 0.5;
       let couleur, opacite;
-      if (milieu < 6.5) { couleur = "#C8102E"; opacite = 0.25 + (0.7 * (7 - milieu)) / 7; }
-      else if (milieu > 7.5) { couleur = "#1F4E8C"; opacite = 0.25 + (0.7 * (milieu - 7)) / 7; }
-      else { couleur = "#2E7D32"; opacite = 0.75; }
+      // Toute case sous 7 est acide (rouge), toute case au-dessus basique (bleu) : seul pH 7 est neutre.
+      if (milieu < 7) { couleur = "#C8102E"; opacite = 0.25 + (0.7 * (7 - milieu)) / 7; }
+      else { couleur = "#1F4E8C"; opacite = 0.25 + (0.7 * (milieu - 7)) / 7; }
       el("rect", { x: xDe(i), y: Y, width: U + 0.4, height: H, fill: couleur, "fill-opacity": opacite.toFixed(2) });
     }
+    // Neutre = le seul point pH 7 : trait vert epais sur l'echelle.
+    el("rect", { x: xDe(7) - 3, y: Y, width: 6, height: H, fill: "#2E7D32" });
     el("rect", { x: X0, y: Y, width: X1 - X0, height: H, fill: "none", stroke: "#14243B", "stroke-width": 2 });
     for (const p of [0, 2, 4, 6, 7, 8, 10, 12, 14]) {
       el("line", { x1: xDe(p), y1: Y + H, x2: xDe(p), y2: Y + H + 6, stroke: "#14243B", "stroke-width": 2 });
@@ -62,8 +66,10 @@ window.GABARITS["echelle-ph"] = {
     const BG = 30, BD = 200, BH = 150, BB = 290;
     el("rect", { x: BG, y: BH + 14, width: BD - BG, height: BB - BH - 14, fill: "#EEF3F8" });
     el("path", { d: `M${BG},${BH} V${BB} H${BD} V${BH}`, fill: "none", stroke: "#6B7686", "stroke-width": 3 });
-    const nH = 1 + Math.round((10 * (14 - ph)) / 14);
-    const nHO = 1 + Math.round((10 * ph) / 14);
+    // 6 + 6 a pH 7 ; ailleurs un ecart d'au moins 1 (majorite stricte, meme a pH 6,5 ou 7,5), 11 contre 1 aux bouts.
+    const ecart = ph === 7 ? 0 : Math.max(1, Math.round((5 * Math.abs(ph - 7)) / 7));
+    const nH = ph < 7 ? 6 + ecart : 6 - ecart;
+    const nHO = ph < 7 ? 6 - ecart : 6 + ecart;
     // 24 emplacements (grille 6 x 4) parcourus dans un ordre fixe melange.
     const ordre = [7, 16, 2, 21, 11, 4, 18, 9, 0, 14, 23, 5, 12, 19, 3, 8, 22, 15, 1, 10, 17, 6, 20, 13];
     const place = (k) => ({ x: BG + 20 + (k % 6) * 26 + (Math.floor(k / 6) % 2) * 10, y: BH + 34 + Math.floor(k / 6) * 30 });
