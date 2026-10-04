@@ -88,7 +88,8 @@ window.GABARITS["reseau-routage"] = {
       el("circle", { cx: p.x, cy: p.y, r: 17, fill: "#E6EEF8", stroke: BLEU, "stroke-width": 2 });
       el("text", { x: p.x, y: p.y + 5, "font-size": 14, "text-anchor": "middle", fill: BLEU, "font-weight": "bold" }, nom);
     }
-    el("text", { x: 248, y: 205, "font-size": 13, fill: BLEU }, "routeurs");
+    // Au centre de la maille R1-R2-R4-R5 : aucune liaison ni enveloppe n'y passe, quel que soit l'etat.
+    el("text", { x: 150, y: 192, "font-size": 13, "text-anchor": "middle", fill: BLEU }, "routeurs");
 
     // --- Le paquet : une enveloppe orange posee sur le noeud atteint ---
     const P = N[chemin[etape]];

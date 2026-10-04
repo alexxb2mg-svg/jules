@@ -58,11 +58,11 @@ window.GABARITS["nombre-binaire"] = {
       el("text", { x, y: 55, "font-size": 14, "text-anchor": "middle", fill: dispo ? ENCRE : GRIS }, String(poids));
       // ampoule : allumee (jaune) si le bit vaut 1 ; rouge si le bit vaut 1 mais n'est pas disponible
       const manque = un && !dispo;
-      if (un && dispo) {
+      if (un && dispo) { // rayons courts (19 px, ampoules a 40 px) : ceux de deux ampoules voisines ne se touchent pas
         for (let k = 0; k < 6; k++) {
-          const a = (k * Math.PI) / 3 + Math.PI / 6;
+          const a = ([1, 2, 3, 5, 6, 7][k] * Math.PI) / 4; // haut, bas et diagonales : rien vers le cadre ni la voisine
           el("line", {
-            x1: x + 17 * Math.cos(a), y1: YA + 17 * Math.sin(a), x2: x + 22 * Math.cos(a), y2: YA + 22 * Math.sin(a),
+            x1: x + 16 * Math.cos(a), y1: YA + 16 * Math.sin(a), x2: x + 19 * Math.cos(a), y2: YA + 19 * Math.sin(a),
             stroke: ORANGE, "stroke-width": 2, "stroke-linecap": "round",
           });
         }
