@@ -1,0 +1,17 @@
+id: decomposition-mouvement
+titre: "Figure : un mouvement décomposé en images (pellicule, ralenti, accéléré, ellipse)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [decomposition-mouvement]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Elle n'ecrit aucune
+# duree ni aucun nombre (les durees sont des barres a comparer) : revele: false.
+discussion:
+  decomposition-mouvement:
+    quand: "Pour faire voir comment les images font le mouvement : images = nombre d'images de l'action (peu : saccadé, beaucoup : fluide), vitesse = défilement (moins de 1 : ralenti, plus de 1 : accéléré ; barre bleue = durée à l'écran, grise = durée vraie), ellipse = images retirées au milieu."
+    valeurs:
+      images: {min: 3, max: 24, pas: 1, defaut: 12}
+      vitesse: {min: 0.25, max: 4, pas: 0.25, defaut: 1}
+      ellipse: {min: 0, max: 6, pas: 1, defaut: 0}

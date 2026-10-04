@@ -1,0 +1,16 @@
+id: perspective-point-de-fuite
+titre: "Figure : perspective à un point de fuite (horizon, fuyantes)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [perspective-point-de-fuite]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Elle n'ecrit que
+# « ligne d'horizon » et « point de fuite » : aucune valeur qui serait la reponse d'un exercice (revele: false).
+discussion:
+  perspective-point-de-fuite:
+    quand: "Pour faire voir la perspective à un point de fuite : horizon = hauteur de la ligne d'horizon sur la feuille en % (bas : on voit le dessous des objets, haut : leur dessus), fuite = point de fuite de -5 (gauche) à 5 (droite) ; toutes les fuyantes vont au point de fuite."
+    valeurs:
+      horizon: {min: 10, max: 90, pas: 10, defaut: 50}
+      fuite: {min: -5, max: 5, pas: 1, defaut: 0}

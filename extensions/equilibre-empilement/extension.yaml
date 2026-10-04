@@ -1,0 +1,15 @@
+id: equilibre-empilement
+titre: "Figure : deux blocs empilés, équilibre et bascule"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [equilibre-empilement]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Elle n'ecrit aucun
+# nombre, seulement « ça tient » ou « ça bascule », ce que l'eleve voit de toute facon : revele false.
+discussion:
+  equilibre-empilement:
+    quand: "Pour faire voir pourquoi un empilement tient ou bascule : base de 4 carreaux ; decalage = déplacement du bloc du haut en carreaux (- à gauche, + à droite). Si la verticale du centre de gravité (point rouge) tombe sur la base, ça tient ; au-delà de 2 carreaux, ça bascule."
+    valeurs:
+      decalage: {min: -4, max: 4, pas: 0.5, defaut: 1}
