@@ -21,7 +21,11 @@
 //     Manuel MSD (Merck), « Croissance physique et maturation sexuelle des adolescents » (poussee des filles entre
 //     9,5 et 13,5 ans, jusqu'a 9 cm l'annee du pic) ; courbes AFPA-CRESS/Inserm 2018 du carnet de sante.
 //   - debut de la puberte entre 8 et 13 ans chez les filles, 9 et 14 ans chez les garcons (Naitre et grandir,
-//     « La puberte precoce » ; Manuel MSD) : ecart 0..4 reste dans la variation normale.
+//     « La puberte precoce » ; Manuel MSD) : ecart 0..3 (debut a 10..13 ans) reste dans la fourchette des
+//     filles ; ecart 4 (debut a 14 ans) n'est dans la variation normale que pour un garcon. Les enfants A et B
+//     ne sont pas sexues dans la figure ; les tailles d'arrivee (163..166 cm) restent des ordres de grandeur.
+//   - lectures de la fiche : a 17 ans et plus, A a fini (gains nuls apres 15 ans) mais B grandit encore entre 17
+//     et 18 ans : 1 cm pour ecart 3, 3 cm pour ecart 4 (etat « ralentit ») ; la lecture « age >= 17 » le dit.
 // Aucune reponse d'exercice n'est ecrite (les exercices de la fiche utilisent d'autres mesures) : revele false.
 // Contrat : extension.yaml de ce dossier (fournit.figures), voir docs/EXTENSIONS.md. Rendu SVG pur, aucun eval().
 "use strict";
