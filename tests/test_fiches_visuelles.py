@@ -390,3 +390,35 @@ def test_une_soustraction_s_ecrit_avec_le_signe_moins(tmp_path, notions, biblio)
     brut["blocs"][0]["jules"] = "Le règne dure 1715 - 1643 = 72 ans."
     with pytest.raises(ErreurFicheVisuelle, match="tiret"):
         lire_fiche_visuelle(ecrire(tmp_path, brut), notions, biblio, GABARITS)
+
+
+# --- EX-221 : plafonds de curseurs (mobiles min < max, total figes compris) ---------------------------------
+
+
+def _graphe_a_curseurs(mobiles: int, figes: int) -> dict:
+    brut = copy.deepcopy(fiche_valide())
+    graphe = next(b for b in brut["blocs"] if b["type"] == "graphe")
+    curseurs = [
+        {"id": f"curseur-m{i}", "nom": f"m{i}", "min": 0, "max": 10, "pas": 1, "depart": 0} for i in range(mobiles)
+    ]
+    curseurs += [{"id": f"curseur-f{i}", "nom": f"f{i}", "min": 5, "max": 5, "pas": 1, "depart": 5} for i in range(figes)]
+    graphe["curseurs"] = curseurs
+    graphe["lectures"] = []
+    return brut
+
+
+def test_six_mobiles_et_six_figes_acceptes(tmp_path, notions, biblio):
+    fiche = lire_fiche_visuelle(ecrire(tmp_path, _graphe_a_curseurs(6, 6)), notions, biblio, GABARITS)
+    graphe = next(b for b in fiche.blocs if b.type == "graphe")
+    assert len(graphe.donnees["curseurs"]) == 12
+    assert sum(1 for c in graphe.donnees["curseurs"] if c["min"] == c["max"]) == 6
+
+
+def test_sept_mobiles_refuses(tmp_path, notions, biblio):
+    with pytest.raises(ErreurFicheVisuelle, match=r"trop de curseurs mobiles \(7, max 6"):
+        lire_fiche_visuelle(ecrire(tmp_path, _graphe_a_curseurs(7, 0)), notions, biblio, GABARITS)
+
+
+def test_treize_curseurs_au_total_refuses(tmp_path, notions, biblio):
+    with pytest.raises(ErreurFicheVisuelle, match=r"trop de curseurs au total \(13, max 12"):
+        lire_fiche_visuelle(ecrire(tmp_path, _graphe_a_curseurs(1, 12)), notions, biblio, GABARITS)
