@@ -1,0 +1,18 @@
+id: quadrilatere-deformable
+titre: "Figure : quadrilatère qu'on déforme (carré, rectangle, losange)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [quadrilatere-deformable]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche CM1 « figures planes usuelles » (cm1-figures-planes-usuelles). Aucun degre affiche.
+# revele: false : la figure montre les codages (petit carre = angle droit, memes traits = meme longueur), jamais
+# le nom de la figure ; c'est a l'eleve de le dire.
+discussion:
+  quadrilatere-deformable:
+    quand: "Pour faire voir comment un même quadrilatère ABCD devient carré, rectangle, losange ou rien de tout ça, au CM1 : angle règle l'angle en A (90 = droit, aucun degré affiché), allonge rend [AB] et [DC] plus longs que [AD] et [BC] (0 = quatre côtés égaux) ; les codages apparaissent ou disparaissent."
+    valeurs:
+      angle: {min: 60, max: 120, pas: 5, defaut: 90}
+      allonge: {min: 0, max: 3, pas: 1, defaut: 0}

@@ -1,0 +1,20 @@
+id: demi-droite-decimaux
+titre: "Figure : un nombre décimal sur une demi-droite graduée, avec loupes"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [demi-droite-decimaux]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que les curseurs de la fiche CM1 « nombres
+# decimaux, ecriture a virgule ». Le point n'est pas etiquete, mais les deux bouts de chaque ligne de loupe sont
+# ecrits (3 et 4, puis 3,4 et 3,5).
+# revele: la figure ecrit l'encadrement du nombre a l'unite puis au dixieme : reponse d'un exercice « encadrer ».
+discussion:
+  demi-droite-decimaux:
+    quand: "Pour placer un nombre décimal u,c (u unités et c centièmes : u = 3 et c = 47 placent 3,47) sur une demi-droite graduée de 0 à 10 ; zoom = 2 ajoute une loupe en dixièmes entre u et u + 1, zoom = 3 une seconde loupe en centièmes. Sert à comparer (3,5 > 3,12), encadrer et arrondir."
+    revele: true
+    valeurs:
+      u: {min: 0, max: 9, pas: 1, defaut: 3}
+      c: {min: 0, max: 99, pas: 1, defaut: 47}
+      zoom: {min: 1, max: 3, pas: 1, defaut: 2}

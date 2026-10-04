@@ -1,0 +1,21 @@
+id: bande-fractions
+titre: "Figure : bande partagée en parts égales (fractions, simplification)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [bande-fractions]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md). Dans la discussion
+# toutes les valeurs sont envoyees (defaut si absentes) : e est donc toujours la, et n compte les parts EN PLUS
+# des e bandes entieres (gabarit.js le limite a d - 1 et l'ecrit en rouge s'il est demande plus grand).
+# Les fiches 3e (fractions irreductibles) n'ont pas de curseur e : n y peut depasser d (bornes de la fiche).
+# Aucune fraction n'est ecrite sur la figure (l'eleve compte les parts) : revele absent = false.
+discussion:
+  bande-fractions:
+    quand: "Pour faire voir une fraction comme des parts égales de bandes-unités : d parts par bande (dénominateur), e bandes entières et n parts en plus (n < d), soit (e × d + n)/d. g regroupe les parts par paquets : ils tombent juste quand g divise d et le nombre de parts coloriées (simplifier)."
+    valeurs:
+      d: {min: 2, max: 12, pas: 1, defaut: 4}
+      e: {min: 0, max: 3, pas: 1, defaut: 0}
+      n: {min: 0, max: 11, pas: 1, defaut: 3}
+      g: {min: 1, max: 6, pas: 1, defaut: 1}

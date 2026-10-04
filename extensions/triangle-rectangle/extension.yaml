@@ -1,18 +1,18 @@
 id: triangle-rectangle
-titre: "Figure : triangle rectangle (Pythagore)"
-version: "1.0.0"
+titre: "Figure : triangle rectangle et carrés sur les côtés (Pythagore)"
+version: "2.0.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
   figures: [triangle-rectangle]
 permissions: {}
 # Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
-# que les curseurs de la fiche 3e « parallelisme, triangles, Pythagore » (gabarit.js plafonne a 12).
-# revele: la figure ecrit « AB ≈ ... » (l'hypotenuse calculee) : proposee seulement en mode reexplique.
+# que les curseurs des fiches 3e « parallelisme, triangles, Pythagore » et « Thales, trigonometrie ».
+# 2.0.0 : carres construits sur les trois cotes, aire ecrite dans chacun (AC², BC², AC² + BC²), echelle adaptee
+# a la figure. La longueur AB n'est plus ecrite : revele false (l'eleve doit encore prendre la racine carree).
 discussion:
   triangle-rectangle:
-    quand: "Pour faire voir un triangle ABC rectangle en C et le théorème de Pythagore : ac = AC et bc = BC sont les côtés de l'angle droit, l'hypoténuse [AB] est le plus long côté (sa longueur approchée est écrite sur la figure)."
-    revele: true
+    quand: "Pour faire voir un triangle ABC rectangle en C et le théorème de Pythagore : ac = AC et bc = BC sont les côtés de l'angle droit ; un carré est dessiné sur chaque côté avec son aire écrite, et l'aire du carré de l'hypoténuse [AB] est la somme des deux autres (la longueur AB n'est pas écrite)."
     valeurs:
       ac: {min: 1, max: 12, pas: 1, defaut: 6}
       bc: {min: 1, max: 12, pas: 1, defaut: 8}

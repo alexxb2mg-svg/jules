@@ -1,0 +1,20 @@
+id: bande-fractions-comparees
+titre: "Figure : deux fractions de même dénominateur, comparées et ajoutées"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [bande-fractions-comparees]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion ; memes bornes que les curseurs de la fiche CM1 « comparer et
+# calculer avec des fractions ». n commence a 1 : avec n = 0 et un ecart negatif, la 2e fraction serait ramenee a 0
+# (pas moins de 0 part) et egale a la 1re, ce qui contredirait la lecture « ecart < 0 : plus petite ».
+# revele: on voit d'un coup d'oeil laquelle des deux fractions est la plus grande, et la somme sur la graduation.
+discussion:
+  bande-fractions-comparees:
+    quand: "Pour comparer ou additionner deux fractions de même dénominateur d : la 1re a n parts, la 2e a n + ecart parts, sur des bandes de même longueur (1 bande = 1 unité) ; la 3e ligne les met bout à bout (la somme). Les parts gardent leur taille : on ajoute les numérateurs, jamais les dénominateurs."
+    revele: true
+    valeurs:
+      d: {min: 2, max: 10, pas: 1, defaut: 5}
+      n: {min: 1, max: 10, pas: 1, defaut: 2}
+      ecart: {min: -5, max: 5, pas: 1, defaut: 1}

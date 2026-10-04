@@ -1,0 +1,18 @@
+id: capteur-seuil
+titre: "Figure : capteur, seuil et LED (chaîne d'information)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [capteur-seuil]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs des fiches 3e « chaine d'information » et « algorithme d'une nouvelle fonctionnalite »
+# (defauts de la premiere). La figure affiche les deux valeurs choisies et la branche suivie, sans calcul a
+# trouver : revele false.
+discussion:
+  capteur-seuil:
+    quand: "Pour faire voir une chaîne d'information (acquérir, traiter, communiquer) et un test « si… alors… sinon » : un capteur de lumière donne une mesure de 0 à 1023, le programme teste « mesure < seuil ? » ; oui : il allume la LED, non : il l'éteint. Au cas limite mesure = seuil, le test « < » est faux."
+    valeurs:
+      mesure: {min: 0, max: 1023, pas: 1, defaut: 600}
+      seuil: {min: 0, max: 1023, pas: 1, defaut: 300}
