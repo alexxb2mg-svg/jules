@@ -1,0 +1,16 @@
+id: bocal-quantite
+titre: "Figure : un bocal de pommes ou d'eau, pour choisir a few, a little, many, much, a lot of"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [bocal-quantite]
+permissions: {}
+# revele false : la figure montre la quantite et dit seulement si le nom se compte ; elle n'ecrit jamais le
+# quantifieur, que l'eleve doit choisir.
+discussion:
+  bocal-quantite:
+    quand: "Pour faire voir le choix du quantifieur anglais : compt = 1 remplit le bocal de pommes qu'on peut compter (a few, many), compt = 0 le remplit d'eau qu'on ne compte pas (a little, much) ; n = la quantité (0 = vide : no, not any ; beaucoup : a lot of avec les deux)."
+    valeurs:
+      n: {min: 0, max: 20, pas: 1, defaut: 3}
+      compt: {min: 0, max: 1, pas: 1, defaut: 1}

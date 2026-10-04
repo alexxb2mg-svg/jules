@@ -161,6 +161,10 @@ extensions:
   - frise-temps-verbaux
   - chaine-accords
   - position-objet
+  - bocal-quantite            # langues vivantes (vague 2, lot 01) : a few / a little, much / many
+  - rythme-intonation         # syllabe forte et intonation (anglais 3e et CM1)
+  - dizaines-unites           # dire les nombres en anglais : -teen / -ty (CM1)
+  - pres-loin                 # this, these, that, those (CM1)
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
