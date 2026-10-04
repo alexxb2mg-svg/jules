@@ -43,7 +43,7 @@ pour les exercices, pas pour les fiches ni pour les cartes mentales.
 |---|---|---|
 | `formule` | `expression`, `termes: {lettre: {couleur, legende}}` | expression ≤ 80 car., légende ≤ 160 car. |
 | `carte` | `noeuds: [{id, titre, sous_titre?, principal?}]`, `liens: [{de, vers, libelle?}]` | 2 à 8 nœuds, liens vers des id existants |
-| `graphe` | `gabarit` (voir plus bas), `curseurs: [{id, nom, min, max, pas, depart}]`, `lectures: [{si, texte}]` | 1 à 6 curseurs, condition `si` limitée (voir plus bas) |
+| `graphe` | `gabarit` (voir plus bas), `curseurs: [{id, nom, min, max, pas, depart}]`, `lectures: [{si, texte}]` | 1 à 6 curseurs mobiles, 12 au total figés compris (voir plus bas), condition `si` limitée (voir plus bas) |
 | `methode` | `etapes: ["...", ...]` | 2 à 6 étapes, chacune ≤ 260 car. |
 | `piege` | `mauvaise_idee`, `pourquoi_faux`, `bonne_idee` | chacun ≤ 260 car. |
 | `exemple` | `situation`, `calcul?`, `conclusion`, `figure?: {gabarit, curseurs}` | chaque champ ≤ 400 car. |
@@ -102,6 +102,17 @@ L'affichage utilise les classes de couleur du système de design `concept-diagra
 uniquement, embarquées dans `accueil.css` sous `.bloc-schema`) : `.t .ts .th .box .arr .leader
 .node` et `.c-purple .c-teal .c-coral .c-pink .c-gray .c-blue .c-green .c-amber .c-red`.
 
+## Curseurs figés d'un bloc `graphe`
+
+Un curseur dont `min` = `max` (donc `depart` = `min`) est un **paramètre figé** par la fiche : bornes d'une
+frise, période surlignée, grandeur tenue constante pendant qu'une autre varie. Sa valeur est transmise au
+gabarit et utilisable dans les conditions `si`, mais il n'est **pas affiché** à l'élève (ni libellé, ni
+glissière, ni pastille de valeur). Un bloc dont tous les curseurs sont figés affiche la figure seule. Pas de
+clé `fixe` : min = max suffit.
+
+Deux plafonds, chacun avec son message d'erreur : **6 curseurs mobiles** (min < max), ceux que l'élève fait
+bouger ; **12 curseurs au total**, figés compris.
+
 ## Les conditions `si` d'un bloc `graphe`
 
 Jamais d'`eval()`, ni côté serveur ni côté client. Une condition est une suite de comparaisons
@@ -135,7 +146,8 @@ la clé `discussion` de chaque `extensions/<id>/extension.yaml`) :
   éducation musicale).
 - **SVT et technologie 3e** : `effort-frequences`, `capteur-seuil` (chaîne d'information, algorithme).
 - **Sciences CM1** : `cycle-lune`, `ombre-portee`, `balance-plateaux`.
-- **Histoire-géographie** : `frise` (frise générique à curseur date, repères portés par la fiche),
+- **Histoire-géographie** : `frise` (frise générique à curseur date, repères portés par la fiche, jusqu'à trois
+  périodes surlignées `de`/`à`, `de2`/`a2`, `de3`/`a3`),
   `distance-temps-transports` (CM1).
 - **Français et langues vivantes** : `frise-temps-verbaux`, `chaine-accords`, `position-objet` (in, on, under…).
 - **Éducation musicale et arts plastiques** : `jauge-decibels` (dose : 8 h à 85 dB,

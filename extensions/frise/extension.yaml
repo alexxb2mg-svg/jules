@@ -6,12 +6,14 @@ auteurs: ["projet-jules"]
 fournit:
   figures: [frise]
 permissions: {}
-# Frise générique : le gabarit ne connaît AUCUN événement. Les bornes (debut, fin) et une période surlignée
-# facultative (de, a) sont des curseurs figés par la fiche (min = max) ; les repères nommés sont les lectures
-# du bloc graphe. Curseurs reconnus : « début », fin, date | mois | souvenir, intervalle | auteur, de, « à »
-# (voir gabarit.js ; « date » et non « année » parce qu'une condition « si » n'accepte pas d'accent).
-# Limite du contrat (curseurs numériques seulement) : un curseur figé reste affiché à l'élève, immobile ; la
-# frise ne peut pas écrire le nom d'un événement, seulement des dates ; une seule période surlignée.
+# Frise générique : le gabarit ne connaît AUCUN événement. Les bornes (debut, fin) et jusqu'à
+# trois périodes surlignées (de/a, de2/a2, de3/a3) sont des curseurs figés par la fiche (min = max : non affichés
+# à l'élève) ; les repères nommés sont les lectures du bloc graphe. Curseurs reconnus : « début », fin,
+# date | mois | souvenir, intervalle | auteur, de, « à », de2, a2, de3, a3 (voir gabarit.js ; « date » et non
+# « année » parce qu'une condition « si » n'accepte pas d'accent). Des périodes qui se chevauchent sont
+# décalées en hauteur ; elles ne sont pas dans « discussion » : leur PRÉSENCE ajoute une période.
+# Limite du contrat (curseurs numériques seulement) : la frise ne peut pas écrire le nom d'un événement,
+# seulement des dates.
 # Complète l'outil « frise-chronologique » (remise en ordre d'événements) sans le remplacer.
 # revele: les graduations et le repère écrivent des dates : proposée seulement en mode réexplique.
 discussion:

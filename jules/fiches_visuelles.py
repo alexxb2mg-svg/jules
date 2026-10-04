@@ -60,7 +60,8 @@ LIMITE_JULES = 320  # 1 a 3 phrases
 LIMITE_LEGENDE = 160
 LIMITE_TEXTE = 260
 LIMITE_TITRE = 90
-LIMITE_CURSEURS = 6
+LIMITE_CURSEURS = 6  # curseurs mobiles (min < max), ceux que l'eleve fait bouger
+LIMITE_CURSEURS_TOTAL = 12  # mobiles + figes (min = max : parametre fixe par la fiche, non affiche)
 LIMITE_ETAPES = 6
 LIMITE_LIENS_RENFORT = 6
 LIMITE_NOEUDS_CARTE = 8
@@ -349,12 +350,18 @@ def erreur_bornes(mini: float, maxi: float, pas: float, depart: float, nom_depar
 
 
 def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
+    """Un curseur min = max est un parametre fige par la fiche (bornes d'une frise, periode surlignee) : sa valeur
+    est transmise au gabarit et aux conditions, mais le front ne l'affiche pas. Deux plafonds : LIMITE_CURSEURS
+    mobiles (min < max) et LIMITE_CURSEURS_TOTAL figes compris."""
     if not isinstance(curseurs, list) or not curseurs:
         raise ErreurFicheVisuelle(f"{ou} : au moins un curseur attendu")
-    if len(curseurs) > LIMITE_CURSEURS:
-        raise ErreurFicheVisuelle(f"{ou} : trop de curseurs (max {LIMITE_CURSEURS})")
+    if len(curseurs) > LIMITE_CURSEURS_TOTAL:
+        raise ErreurFicheVisuelle(
+            f"{ou} : trop de curseurs au total ({len(curseurs)}, max {LIMITE_CURSEURS_TOTAL} figes compris)"
+        )
     vus: set[str] = set()
-    resultat = []
+    resultat: list[dict[str, Any]] = []
+    mobiles = 0
     for i, c in enumerate(curseurs):
         sous_ou = f"{ou}, curseur {i + 1}"
         if not isinstance(c, dict):
@@ -373,6 +380,13 @@ def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
         if erreur := erreur_bornes(mini, maxi, pas, depart, "depart"):
             raise ErreurFicheVisuelle(f"{sous_ou} : {erreur}")
         resultat.append({"id": identifiant, "nom": nom, "min": mini, "max": maxi, "pas": pas, "depart": depart})
+        if mini < maxi:
+            mobiles += 1
+    if mobiles > LIMITE_CURSEURS:
+        raise ErreurFicheVisuelle(
+            f"{ou} : trop de curseurs mobiles ({mobiles}, max {LIMITE_CURSEURS} ; un curseur min = max est fige "
+            "et ne compte pas)"
+        )
     return resultat
 
 
