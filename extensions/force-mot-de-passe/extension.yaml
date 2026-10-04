@@ -1,0 +1,17 @@
+id: force-mot-de-passe
+titre: "Figure : force d'un mot de passe (longueur et types de caractères)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [force-mot-de-passe]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e de technologie « usages et impacts societaux du numerique ». La duree pour tout essayer
+# est ecrite en mots (ordre de grandeur), jamais le nombre de combinaisons : revele false.
+discussion:
+  force-mot-de-passe:
+    quand: "Pour faire voir pourquoi un mot de passe doit être long ET varié : une case par caractère, les familles de signes utilisées (chiffres, minuscules, majuscules, symboles) et une jauge du temps qu'il faudrait à un ordinateur pour essayer toutes les combinaisons."
+    valeurs:
+      longueur: {min: 4, max: 16, pas: 1, defaut: 8}
+      types: {min: 1, max: 4, pas: 1, defaut: 2}

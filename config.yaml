@@ -156,6 +156,10 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - force-mot-de-passe        # 3e technologie : numerique (vague 2, lot 16)
+  - nombre-binaire
+  - reseau-routage
+  - numerisation-signal
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
