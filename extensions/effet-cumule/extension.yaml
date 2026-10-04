@@ -1,0 +1,16 @@
+id: effet-cumule
+titre: "Figure : un petit geste multiplié (papiers dans la cour)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [effet-cumule]
+permissions: {}
+# Fiche CM1 d'EMC « les incivilités et les règles de civilité ». Il y a personnes x jours papiers dans la cour,
+# mais le total n'est jamais ecrit (on voit la cour se salir) : revele: false.
+discussion:
+  effet-cumule:
+    quand: "Pour faire voir qu'une petite incivilité répétée par beaucoup gêne tout le monde (EMC, CM1) : personnes = élèves qui jettent un papier par terre chaque jour, jours = jours d'école qui passent ; les papiers s'accumulent dans la cour, sans total écrit."
+    valeurs:
+      personnes: {min: 1, max: 25, pas: 1, defaut: 5}
+      jours: {min: 1, max: 5, pas: 1, defaut: 3}

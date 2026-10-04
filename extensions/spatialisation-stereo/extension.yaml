@@ -1,0 +1,16 @@
+id: spatialisation-stereo
+titre: "Figure : placer un son dans l'espace (stéréo gauche-droite, distance)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [spatialisation-stereo]
+permissions: {}
+# Fiche 3e d'education musicale « le timbre et l'espace ». Volumes des deux enceintes : loi de panoramique a
+# puissance constante, attenuation en 1/distance ; barres sans chiffre. revele: false.
+discussion:
+  spatialisation-stereo:
+    quand: "Pour faire voir la spatialisation en stéréo (éducation musicale) : pan de -5 (gauche) à 5 (droite) place la source, distance de 1 (proche) à 5 (lointain) l'éloigne ; deux barres montrent le volume envoyé à l'enceinte gauche et à l'enceinte droite."
+    valeurs:
+      pan: {min: -5, max: 5, pas: 1, defaut: 0}
+      distance: {min: 1, max: 5, pas: 1, defaut: 2}

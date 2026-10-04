@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - pixellisation             # vague 2 lot 19 : arts plastiques 3e (image en pixels)
+  - trace-geste               # arts plastiques CM1 et 3e : effets du geste
+  - spatialisation-stereo     # education musicale 3e : timbre et espace
+  - barre-vote                # EMC 3e et CM1 : abstention, majorite absolue
+  - effet-cumule              # EMC CM1 : incivilites
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique

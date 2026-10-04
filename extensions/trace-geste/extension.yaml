@@ -1,0 +1,17 @@
+id: trace-geste
+titre: "Figure : la trace d'un geste (amplitude, pression, hasard)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [trace-geste]
+permissions: {}
+# Fiches d'arts plastiques « la relation du corps à la production artistique » (3e) et « les effets du geste et
+# de l'instrument » (CM1). Rien n'est chiffre : revele: false.
+discussion:
+  trace-geste:
+    quand: "Pour faire voir l'effet du geste sur la trace (arts plastiques, CM1 et 3e) : amplitude 1 = poignet à 5 = tout le corps (trace plus longue, plus ondulée), pression 1 = effleurer à 5 = appuyer fort (trace plus épaisse, plus foncée), hasard 0 = geste maîtrisé à 5 = geste libre (coulures, projections)."
+    valeurs:
+      amplitude: {min: 1, max: 5, pas: 1, defaut: 3}
+      pression: {min: 1, max: 5, pas: 1, defaut: 3}
+      hasard: {min: 0, max: 5, pas: 1, defaut: 1}
