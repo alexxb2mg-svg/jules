@@ -60,7 +60,9 @@ CLES_PERMISSIONS = frozenset({"reseau", "appel_ia", "ecriture_dossier_eleve", "n
 # Figures proposees dans la discussion (cle de premier niveau `discussion:`, voir docs/EXTENSIONS.md).
 # `revele` (facultatif, booleen, defaut false) : la figure montre la reponse (solutions placees, longueur
 # ecrite) ; jules/modules/figures.py ne la propose alors que dans les modes `modes_revele`.
-CLES_DISCUSSION = frozenset({"quand", "valeurs", "revele"})
+# `valeurs_revele` (facultatif, liste de noms de `valeurs`) : valeurs qui montrent la reponse hors de leur defaut
+# (triangle-rectangle `reponse`) ; hors `modes_revele` elles sont forcees a leur defaut, et jamais en curseur.
+CLES_DISCUSSION = frozenset({"quand", "valeurs", "revele", "valeurs_revele"})
 CLES_BORNES = ("min", "max", "pas", "defaut")
 LIMITE_QUAND = 300  # caracteres : une phrase pour le modele, pas un cours
 
@@ -160,7 +162,9 @@ def _lire_discussion(brut: Any, identifiant: str, figures: list[str]) -> dict[st
         if gabarit not in figures:
             raise ErreurExtension(f"{ou} : ce gabarit doit figurer dans fournit.figures")
         if not isinstance(declaration, dict) or set(declaration) - CLES_DISCUSSION:
-            raise ErreurExtension(f"{ou} : un objet {{quand, valeurs}} est attendu (revele facultatif)")
+            raise ErreurExtension(
+                f"{ou} : un objet {{quand, valeurs}} est attendu (revele, valeurs_revele facultatifs)"
+            )
         quand = str(declaration.get("quand") or "").strip()
         if not quand or len(quand) > LIMITE_QUAND:
             raise ErreurExtension(f"{ou} : 'quand' doit etre une phrase de 1 a {LIMITE_QUAND} caracteres")
@@ -184,7 +188,19 @@ def _lire_discussion(brut: Any, identifiant: str, figures: list[str]) -> dict[st
         revele = declaration.get("revele", False)
         if not isinstance(revele, bool):
             raise ErreurExtension(f"{ou} : 'revele' doit etre true ou false")
-        resultat[gabarit] = {"quand": quand, "valeurs": bornes_lues, "revele": revele}
+        valeurs_revele = declaration.get("valeurs_revele", [])
+        if (
+            not isinstance(valeurs_revele, list)
+            or not all(isinstance(v, str) and v in bornes_lues for v in valeurs_revele)
+            or len(set(valeurs_revele)) != len(valeurs_revele)
+        ):
+            raise ErreurExtension(f"{ou} : 'valeurs_revele' doit lister, sans doublon, des noms de 'valeurs'")
+        resultat[gabarit] = {
+            "quand": quand,
+            "valeurs": bornes_lues,
+            "revele": revele,
+            "valeurs_revele": list(valeurs_revele),
+        }
     return resultat
 
 

@@ -94,7 +94,13 @@ def normaliser(source: str, autorises: dict[str, dict[str, Any]]) -> tuple[str |
     if inconnues:
         return None, gabarit, f"valeur inconnue ({', '.join(sorted(map(str, inconnues)))[:60]})"
     resultat: dict[str, int | float] = {}
+    forcees = declaration.get("forcees") or ()
     for nom, bornes in declaration["valeurs"].items():
+        if nom in forcees:
+            # valeur qui montrerait la reponse (valeurs_revele) hors modes_revele : toujours son defaut, quoi
+            # qu'ait ecrit le modele ; le bloc reste (figure « ? »).
+            resultat[nom] = _valeur(bornes["defaut"])
+            continue
         v = valeurs.get(nom, bornes["defaut"])
         if isinstance(v, bool) or not isinstance(v, int | float) or not math.isfinite(v):
             return None, gabarit, f"{nom} : nombre attendu"
@@ -139,9 +145,18 @@ def _revele(normalise: str, bloc: Any) -> bool:
 
 
 def _exemple(autorises: dict[str, Any]) -> dict[str, Any]:
-    """Exemple montre au modele : le premier gabarit avec ses valeurs par defaut."""
+    """Exemple montre au modele : le premier gabarit avec ses valeurs par defaut (sans les valeurs forcees)."""
     gabarit, declaration = next(iter(autorises.items()))
-    return {"gabarit": gabarit, "valeurs": {nom: b["defaut"] for nom, b in declaration["valeurs"].items()}}
+    return {
+        "gabarit": gabarit,
+        "valeurs": {nom: b["defaut"] for nom, b in _proposees(declaration).items()},
+    }
+
+
+def _proposees(declaration: dict[str, Any]) -> dict[str, Any]:
+    """Valeurs donnees au modele : toutes, sauf celles forcees a leur defaut dans ce mode (valeurs_revele)."""
+    forcees = declaration.get("forcees") or ()
+    return {nom: b for nom, b in declaration["valeurs"].items() if nom not in forcees}
 
 
 def texte_sans_figures(texte: str) -> str:
@@ -176,25 +191,37 @@ class Brique(Module):
 
     def autorises(self, conv: Conversation) -> dict[str, dict[str, Any]]:
         """Gabarits que Jules peut montrer dans cette conversation : aucun hors des modes autorises, et
-        ceux qui revelent la reponse seulement dans les modes `modes_revele` (proposes ET acceptes)."""
+        ceux qui revelent la reponse seulement dans les modes `modes_revele` (proposes ET acceptes). Hors de
+        ces modes, les `valeurs_revele` d'un gabarit sont marquees `forcees` : normaliser() les ramene a leur
+        defaut et la contribution ne les donne pas au modele (la regle tient par le code, pas par `quand`)."""
         if conv.mode not in self.modes:
             return {}
         revele_permis = conv.mode in self.modes_revele
-        return {
-            gabarit: declaration
-            for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
-            if revele_permis or not declaration.get("revele")
-        }
+        resultat: dict[str, dict[str, Any]] = {}
+        for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items():
+            if declaration.get("revele") and not revele_permis:
+                continue
+            forcees = () if revele_permis else tuple(declaration.get("valeurs_revele") or ())
+            resultat[gabarit] = {**declaration, "forcees": forcees} if forcees else declaration
+        return resultat
 
     def infos_interface(self) -> dict[str, Any]:
         """Bornes des curseurs sous une figure de la bulle (lot 3) : {gabarit -> {nom -> {min, max, pas,
         defaut}}}, pour tous les gabarits declares. Le serveur a deja choisi quelles figures un message
-        peut porter (filtrer_reponse) ; ici l'eleve fait seulement bouger, dans les bornes, celle qu'il a."""
+        peut porter (filtrer_reponse) ; ici l'eleve fait seulement bouger, dans les bornes, celle qu'il a.
+        Une `valeurs_revele` est figee (min = max = defaut) : jamais de curseur, dans aucun mode ; la bulle
+        garde la valeur ecrite (et deja verifiee) dans le bloc."""
+
+        def bornes(nom: str, b: dict[str, float], figees: list[str]) -> dict[str, float]:
+            if nom in figees:
+                return {"min": b["defaut"], "max": b["defaut"], "pas": b["pas"], "defaut": b["defaut"]}
+            return {cle: b[cle] for cle in ("min", "max", "pas", "defaut")}
+
         return {
             "figures": {
                 gabarit: {
-                    nom: {cle: bornes[cle] for cle in ("min", "max", "pas", "defaut")}
-                    for nom, bornes in declaration["valeurs"].items()
+                    nom: bornes(nom, b, declaration.get("valeurs_revele") or [])
+                    for nom, b in declaration["valeurs"].items()
                 }
                 for gabarit, declaration in figures_pour_discussion(self.tuteur.extensions).items()
             }
@@ -297,7 +324,7 @@ class Brique(Module):
             valeurs = " ; ".join(
                 f"{nom} de {_valeur(b['min'])} à {_valeur(b['max'])} par pas de {_valeur(b['pas'])} "
                 f"(défaut {_valeur(b['defaut'])})"
-                for nom, b in declaration["valeurs"].items()
+                for nom, b in _proposees(declaration).items()
             )
             lignes.append(f"- {gabarit} : {declaration['quand']} Valeurs : {valeurs}.")
         lignes.append(
