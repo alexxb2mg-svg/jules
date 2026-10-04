@@ -1,0 +1,15 @@
+id: dizaines-unites
+titre: "Figure : un nombre en barres de dix et en cubes (dire les nombres en anglais)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [dizaines-unites]
+permissions: {}
+# revele false : la figure ecrit le nombre en chiffres (c'est la donnee) mais jamais en lettres ; l'eleve le dit
+# en anglais lui-meme.
+discussion:
+  dizaines-unites:
+    quand: "Pour faire voir un nombre de 0 à 99 en barres de dix (bleues) et en cubes seuls (orange), par exemple pour ne pas confondre thirteen (1 barre, 3 cubes) et thirty (3 barres) ; la figure n'écrit pas le nombre en lettres."
+    valeurs:
+      n: {min: 0, max: 99, pas: 1, defaut: 23}

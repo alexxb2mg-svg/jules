@@ -1,0 +1,19 @@
+id: rythme-intonation
+titre: "Figure : rythme d'un mot anglais (syllabe forte) et intonation (la voix monte ou descend)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [rythme-intonation]
+permissions: {}
+# revele false : la figure dessine ses propres mots exemples (cat, hotel, teacher, kangaroo, banana, elephant,
+# misunderstand, information, America, caterpillar), jamais le mot d'un exercice ; la ponctuation affichee (. ? !)
+# suit les curseurs choisis, elle ne dit rien d'une phrase entendue en exercice.
+discussion:
+  rythme-intonation:
+    quand: "Pour faire voir la musique de l'anglais : un rond par syllabe, gros rond orange = syllabe forte (n = syllabes, r = place de la forte depuis la fin, 1 = dernière) ; la voix monte (fin = 1, question fermée) ou descend (fin = -1) ; force = 2 : exclamation (« ! », « ?! » si elle monte)."
+    valeurs:
+      n: {min: 1, max: 4, pas: 1, defaut: 3}
+      r: {min: 1, max: 4, pas: 1, defaut: 2}
+      fin: {min: -1, max: 1, pas: 2, defaut: 1}
+      force: {min: 0, max: 2, pas: 1, defaut: 0}
