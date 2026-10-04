@@ -72,12 +72,24 @@ window.GABARITS["rectangle-multiplication"] = {
       el("line", { x1: f(x2 - dx), y1: f(y2 - dy), x2: f(x2 + dx), y2: f(y2 + dy), stroke: ENCRE, "stroke-width": 2 });
       el("text", { x: f(tx), y: f(ty), "font-size": 14, fill: ENCRE, "text-anchor": ancre, "font-family": "sans-serif" }, texte);
     };
+    // Deux cotes voisines trop proches (petits carreaux, a = b = 1 par exemple) : on ecarte leurs textes
+    // symetriquement autour de leur milieu pour qu'ils ne se touchent pas (ecart mini en px entre centres).
+    const ecarter = (p1, p2, mini) => {
+      if (p2 - p1 >= mini) return [p1, p2];
+      const m = (p1 + p2) / 2;
+      return [m - mini / 2, m + mini / 2];
+    };
     const yh = Y0 - 10;
-    cote(X0 + 2, yh, X0 + c * u - 2, yh, String(c), X0 + (c * u) / 2, yh - 7, "middle");
-    if (d > 0) cote(X0 + c * u + 2, yh, X0 + colonnes * u - 2, yh, String(d), X0 + c * u + (d * u) / 2, yh - 7, "middle");
+    // Largeur estimee d'un nombre en police 14 : 8 px par chiffre ; ecart = demi-largeurs + 6 px.
+    const larg = (n) => String(n).length * 8;
+    const [xc, xd] = ecarter(X0 + (c * u) / 2, X0 + c * u + (d * u) / 2, (larg(c) + larg(d)) / 2 + 6);
+    cote(X0 + 2, yh, X0 + c * u - 2, yh, String(c), d > 0 ? xc : X0 + (c * u) / 2, yh - 7, "middle");
+    if (d > 0) cote(X0 + c * u + 2, yh, X0 + colonnes * u - 2, yh, String(d), xd, yh - 7, "middle");
     const xg = X0 - 10;
-    cote(xg, Y0 + 2, xg, Y0 + a * u - 2, String(a), xg - 6, Y0 + (a * u) / 2 + 5, "end");
-    if (b > 0) cote(xg, Y0 + a * u + 2, xg, Y0 + lignes * u - 2, String(b), xg - 6, Y0 + a * u + (b * u) / 2 + 5, "end");
+    // Hauteur d'une ligne de texte en police 14 : 16 px entre centres.
+    const [ya, yb] = ecarter(Y0 + (a * u) / 2, Y0 + a * u + (b * u) / 2, 16);
+    cote(xg, Y0 + 2, xg, Y0 + a * u - 2, String(a), xg - 6, (b > 0 ? ya : Y0 + (a * u) / 2) + 5, "end");
+    if (b > 0) cote(xg, Y0 + a * u + 2, xg, Y0 + lignes * u - 2, String(b), xg - 6, yb + 5, "end");
     return { a, b, c, d, u };
   },
 };
