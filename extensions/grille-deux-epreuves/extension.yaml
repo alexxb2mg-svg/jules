@@ -1,0 +1,20 @@
+id: grille-deux-epreuves
+titre: "Figure : tableau à double entrée de deux dés (somme visée)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [grille-deux-epreuves]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs du second bloc graphe de la fiche 3e « probabilites a deux epreuves ».
+# revele true : le tableau ecrit la somme de chaque couple et colorie les cases favorables ; il fait donc le
+# denombrement demande dans les exercices (il reste a compter et a diviser, mais la reponse se lit).
+discussion:
+  grille-deux-epreuves:
+    quand: "Pour faire voir, en 3e, le tableau à double entrée de deux dés (p faces pour le 1er, q faces pour le 2e) : chaque case est un couple équiprobable avec sa somme écrite, et les cases dont la somme vaut s sont coloriées (compter les cases favorables, puis diviser par p × q)."
+    revele: true
+    valeurs:
+      p: {min: 2, max: 6, pas: 1, defaut: 6}
+      q: {min: 2, max: 6, pas: 1, defaut: 6}
+      s: {min: 2, max: 12, pas: 1, defaut: 7}

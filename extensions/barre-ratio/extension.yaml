@@ -1,0 +1,19 @@
+id: barre-ratio
+titre: "Figure : barre partagée selon un ratio"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [barre-ratio]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e « notion de ratio ».
+# revele false : la figure ecrit seulement les nombres du ratio (donnees) et montre les parts egales ; elle
+# n'ecrit ni le nombre total de parts, ni la valeur d'une part, ni les montants.
+discussion:
+  barre-ratio:
+    quand: "Pour faire voir, en 3e, un partage selon le ratio a : b (c = 0) ou a : b : c : la quantité est une barre découpée en a + b (+ c) parts égales, a bleues, b vertes, c orange. Utile contre l'erreur « 2 : 3 veut dire 2/3 »."
+    valeurs:
+      a: {min: 1, max: 9, pas: 1, defaut: 3}
+      b: {min: 1, max: 9, pas: 1, defaut: 4}
+      c: {min: 0, max: 9, pas: 1, defaut: 0}
