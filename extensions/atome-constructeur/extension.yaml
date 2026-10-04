@@ -1,0 +1,22 @@
+id: atome-constructeur
+titre: "Figure : construire un atome (protons, neutrons, électrons) et former un ion"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [atome-constructeur]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « constitution de l'atome ». electrons = electrons gagnes (positif) ou perdus
+# (negatif) par rapport a l'atome neutre.
+# revele true : la figure ecrit le nom et le symbole de l'element fixe par le nombre de protons (1 a 12), qui est la
+# reponse d'un exercice « quel element a 8 protons ? » ; c'est l'idee meme de la figure (seuls les protons changent
+# l'element), une version sans le nom ne la montrerait plus. Le nombre d'electrons et la charge ne sont pas ecrits.
+discussion:
+  atome-constructeur:
+    quand: "Pour faire voir la constitution d'un atome : protons (1 à 12) fixe l'élément, dont le nom est écrit ; neutrons (0 à 14) ne fait que grossir le noyau ; electrons = électrons gagnés (+) ou perdus (−) par rapport à l'atome neutre : perdus = ion positif, gagnés = ion négatif."
+    revele: true
+    valeurs:
+      protons: {min: 1, max: 12, pas: 1, defaut: 6}
+      neutrons: {min: 0, max: 14, pas: 1, defaut: 6}
+      electrons: {min: -2, max: 2, pas: 1, defaut: 0}

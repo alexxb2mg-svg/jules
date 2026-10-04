@@ -1,0 +1,18 @@
+id: flotte-coule
+titre: "Figure : un bloc qui flotte ou coule selon sa masse volumique"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [flotte-coule]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes
+# que les curseurs de la fiche 3e « masse volumique ». La masse m = masse_volumique x volume n'est jamais ecrite
+# (jauge sans nombre) : revele false.
+discussion:
+  flotte-coule:
+    quand: "Pour faire voir que flotter ou couler dépend de la masse volumique et pas de la taille : masse_volumique = ρ du bloc en g/cm³ (eau : 1), volume = volume du bloc en cm³ ; le bloc flotte si ρ < 1, reste entre deux eaux si ρ = 1, coule si ρ > 1 ; la jauge montre sa masse m = ρ × V sans l'écrire."
+    revele: false
+    valeurs:
+      masse_volumique: {min: 0.2, max: 8, pas: 0.1, defaut: 0.9}
+      volume: {min: 10, max: 100, pas: 10, defaut: 30}

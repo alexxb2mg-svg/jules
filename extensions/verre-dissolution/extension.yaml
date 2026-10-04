@@ -1,0 +1,19 @@
+id: verre-dissolution
+titre: "Figure : un verre d'eau où l'on dissout du sel jusqu'à saturation"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [verre-dissolution]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; absorbe la
+# proposition « dissolution-saturation » de l'audit CM1 (SPEC vague 2, § 2.2) : la fiche CM1 fige volume a 100 mL
+# et avance sel de 6 g en 6 g (une cuillere rase). Solubilite retenue : 36 g pour 100 mL d'eau vers 20 °C.
+# La masse maximale dissoute n'est pas ecrite (le depot apparait en grains) : revele false.
+discussion:
+  verre-dissolution:
+    quand: "Pour faire voir la saturation : sel = masse de sel versée (g), volume = volume d'eau (mL) ; tant que l'eau n'est pas saturée (environ 36 g de sel pour 100 mL vers 20 °C), le sel dissous ne se voit plus ; au-delà, le sel en trop reste au fond en grains ; plus d'eau dissout plus de sel."
+    revele: false
+    valeurs:
+      sel: {min: 0, max: 80, pas: 2, defaut: 20}
+      volume: {min: 50, max: 200, pas: 50, defaut: 100}

@@ -204,6 +204,10 @@ extensions:
   - construction-pas-a-pas
   - grille-deplacement
   - suite-motifs
+  - flotte-coule              # vague 2, lot 10 (physique-chimie : matiere)
+  - verre-dissolution
+  - echelle-ph
+  - atome-constructeur
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
