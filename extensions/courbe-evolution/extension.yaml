@@ -1,0 +1,21 @@
+id: courbe-evolution
+titre: "Figure : courbes qui se dessinent avec l'année (séries historiques)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [courbe-evolution]
+permissions: {}
+# Le jeu de données est choisi par « jeu » (figé par la fiche), l'élève fait avancer « annee » : la courbe se
+# dessine jusqu'à l'année choisie. Jeux : 1 Allemagne 1928-1933 (chômeurs en janvier, vote nazi), 2 États membres
+# de l'ONU 1945-1975, 3 chômage en France 1950-1990, 4 part des femmes parmi les actifs 1950-1990, 5 part des 65 ans
+# ou plus 1950-1990, 6 emplois par secteur 1950-2020. Données et sources en tête de gabarit.js (EX-205).
+# revele: la légende écrit la dernière valeur connue (« 99 États », « 9,1 % ») : réponse possible d'un exercice
+# « lis le graphique » ; aucune version sans nombre n'a été retenue (sans la valeur, la courbe ne se lit pas).
+discussion:
+  courbe-evolution:
+    quand: "Pour voir une évolution se dessiner année après année : jeu 1 = Allemagne 1928-1933 (chômeurs, vote nazi), 2 = États à l'ONU 1945-1975, 3 = chômage en France 1950-1990, 4 = femmes parmi les actifs, 5 = 65 ans ou plus, 6 = emplois par secteur 1950-2020 ; annee = fin du tracé."
+    revele: true
+    valeurs:
+      jeu: {min: 1, max: 6, pas: 1, defaut: 2}
+      annee: {min: 1928, max: 2020, pas: 1, defaut: 1960}

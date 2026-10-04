@@ -1,0 +1,21 @@
+id: aire-attraction
+titre: "Figure : aire d'attraction d'une ville, du centre à la couronne"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [aire-attraction]
+permissions: {}
+# Modèle vu du dessus d'une grande ville : ville-centre, banlieue (le pôle), couronne périurbaine, puis hors de
+# l'aire. distance : maison à 0-50 km du centre, le trajet domicile-travail s'allonge ; annee : la couronne s'étale
+# de 1970 à 2020. Définitions Insee 2020 (pôle + couronne où au moins 15 % des actifs travaillent dans le pôle) ;
+# les rayons sont un modèle indicatif, pas une ville réelle (voir gabarit.js, EX-205).
+# revele: la figure écrit le nom de la zone de la maison et la distance du trajet : réponse d'un exercice « dans
+# quelle zone habite-t-il ? ».
+discussion:
+  aire-attraction:
+    quand: "Pour ranger ville-centre, banlieue, couronne périurbaine et espace hors de l'aire : une maison à distance km du centre d'une grande ville (modèle), le trajet domicile-travail s'allonge ; annee fait s'étaler la couronne de 1970 à 2020 (périurbanisation)."
+    revele: true
+    valeurs:
+      distance: {min: 0, max: 50, pas: 1, defaut: 2}
+      annee: {min: 1970, max: 2020, pas: 10, defaut: 1970}

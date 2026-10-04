@@ -1,0 +1,22 @@
+id: carte-tuiles-europe
+titre: "Figure : l'Europe en carrés, couches UE, euro, Schengen, Conseil de l'Europe"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [carte-tuiles-europe]
+permissions: {}
+# Un carré par pays, à peu près à sa place ; la France est encadrée en rouge. couche : 1 = CECA / CEE / Union
+# européenne, 2 = zone euro, 3 = espace Schengen, 4 = Conseil de l'Europe ; annee : de 1949 à 2026. Les pays qui
+# entrent l'année choisie ont un liseré blanc, un pays sorti (Royaume-Uni de l'UE, Russie du Conseil de l'Europe)
+# un contour pointillé. Dates d'adhésion et sources en tête de gabarit.js (EX-205).
+# revele: le titre écrit le nombre de pays (« Union européenne en 2026 : 27 pays ») et les sigles des pays : réponse
+# d'un exercice « combien de pays » ou « quels pays » ; garder le nombre aide l'élève dys qui ne peut pas compter
+# 27 carrés de tête, d'où revele: true plutôt qu'une version sans nombre.
+discussion:
+  carte-tuiles-europe:
+    quand: "Pour montrer quels pays d'Europe appartiennent à un ensemble à une année donnée : couche 1 = CECA puis CEE puis Union européenne, 2 = zone euro, 3 = espace Schengen, 4 = Conseil de l'Europe ; annee de 1949 à 2026. Les nouveaux entrants sont marqués, la France est encadrée."
+    revele: true
+    valeurs:
+      annee: {min: 1949, max: 2026, pas: 1, defaut: 2026}
+      couche: {min: 1, max: 4, pas: 1, defaut: 1}

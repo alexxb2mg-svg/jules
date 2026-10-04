@@ -164,6 +164,11 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - carte-tuiles-europe       # 3e histoire, geographie, EMC : UE, euro, Schengen, Conseil de l'Europe
+  - aire-attraction           # 3e geographie : pole, couronne, periurbanisation
+  - courbe-evolution          # 3e histoire-geographie : series historiques qui se dessinent
+  - journee-repartition       # CM1 geographie : acces a l'eau, journee en 24 cases
+  - itineraire-carte          # CM1 histoire : Magellan, commerce triangulaire
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
