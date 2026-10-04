@@ -1,0 +1,20 @@
+id: poutre-flexion
+titre: "Figure : flexion d'une poutre sur deux appuis (charge, épaisseur, matériau)"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [poutre-flexion]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que
+# les curseurs de la fiche 3e technologie « validation du comportement mecanique ». Modele (fleche
+# F L^3 / 48 E I, etagere de 1 m, limite 5 mm) et sources en tete de gabarit.js.
+# revele: false : aucune fleche n'est ecrite ; le verdict « validee » compare a la limite propre a la figure,
+# pas a une valeur d'exercice.
+discussion:
+  poutre-flexion:
+    quand: "Pour voir la flexion d'une étagère de 1 m sur deux appuis, charge au milieu : charge en N, epaisseur en mm, materiau 1 bois, 2 aluminium, 3 acier. Doubler l'épaisseur divise la flèche par 8 ; rouge au-delà de la flèche admise (5 mm). Courbure exagérée."
+    valeurs:
+      charge: {min: 0, max: 1000, pas: 50, defaut: 200}
+      epaisseur: {min: 5, max: 40, pas: 5, defaut: 20}
+      materiau: {min: 1, max: 3, pas: 1, defaut: 1}
