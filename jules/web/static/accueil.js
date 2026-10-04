@@ -349,6 +349,8 @@ const typo = (texte) => String(texte || "").replace(/ ([?!:;»])/g, "\u202F$1").
       const champsValeur = {};
       for (const c of curseurs) {
         valeurs[c.nom] = Number(c.depart ?? c.min ?? 0);
+        // min = max : parametre fige par la fiche, transmis au gabarit mais pas affiche (SCHEMA-FICHE-VISUELLE.md).
+        if (c.min === c.max) continue;
         const zone = creer("div", "curseur-bloc");
         const label = document.createElement("label");
         const spanValeur = creer("span");
