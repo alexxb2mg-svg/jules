@@ -1,6 +1,6 @@
 id: chaine-accords
 titre: "Figure : chaîne d'accords"
-version: "1.0.0"
+version: "1.1.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
@@ -10,14 +10,19 @@ permissions: {}
 #   adjectifs + place (groupe nominal), exemple + genre + nombre (chaine d'accords),
 #   verbe + voisin + genre + nombre (sujet-verbe), genre + nombre seuls (mots variables, invariables).
 # genre : 0 masculin, 1 feminin ; nombre : 0 singulier, 1 pluriel.
-# Dans la discussion, seule la chaine d'accords du groupe nominal est proposee.
+# Dans la discussion : la chaine d'accords du groupe nominal (exemple 1 a 3, noms 1), deux noms coordonnes (noms 2)
+# et le participe passe avec avoir (exemple 4, place 0 COD apres / 1 COD avant) ; adjectifs, voisin, verbe restent
+# lus hors discussion (presence = autre dessin). place est declaree (vague 2, EX-213) : la lecture adjectifs + place
+# est choisie par la presence d'adjectifs, la valeur par defaut de place ne change donc rien aux autres dessins.
 # revele: la figure ecrit les formes accordees de trois groupes fixes (le petit chien noir, le beau cheval blanc,
 # le gros chat gris) ; un exercice peut porter sur les memes mots : proposee seulement en mode reexplique.
 discussion:
   chaine-accords:
     revele: true
-    quand: "Chaîne d'accords d'un groupe nominal : le nom noyau (vert) donne genre et nombre au déterminant et aux adjectifs, marques en orange (genre 1 = féminin, nombre 1 = pluriel) ; exemple 1 = le petit chien noir, 2 = le beau cheval blanc (chevaux, jument), 3 = le gros chat gris (déjà en s)."
+    quand: "Accords en flèches (genre 1 féminin, nombre 1 pluriel). exemple 1 à 3 : un groupe nominal (le petit chien noir, le beau cheval blanc, le gros chat gris) ; noms 2 : deux noms, un adjectif commun ; exemple 4 : participe passé avec avoir, place 0 COD après (pas d'accord), 1 COD avant (accord)."
     valeurs:
-      exemple: {min: 1, max: 3, pas: 1, defaut: 1}
+      exemple: {min: 1, max: 4, pas: 1, defaut: 1}
       genre: {min: 0, max: 1, pas: 1, defaut: 0}
       nombre: {min: 0, max: 1, pas: 1, defaut: 1}
+      noms: {min: 1, max: 2, pas: 1, defaut: 1}
+      place: {min: 0, max: 1, pas: 1, defaut: 1}

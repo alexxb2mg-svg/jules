@@ -1,0 +1,19 @@
+id: schema-narratif
+titre: "Figure : les cinq étapes d'un récit sous une courbe de tension"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [schema-narratif]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que les
+# curseurs des fiches CM1 « produire des ecrits varies » (francais) et « identifier la trame narrative » (anglais).
+# Absorbe la proposition d'audit « frise-recit-etapes » (SPEC vague 2, § 2.2) ; « frise » reste reservee aux dates.
+# revele false : la figure nomme les etapes du schema narratif, pas celles d'un texte d'exercice.
+discussion:
+  schema-narratif:
+    quand: "Schéma narratif d'un récit : moment 1 à 5 place le repère sur la courbe de tension (situation initiale, élément perturbateur, péripéties, résolution, situation finale) ; peripeties = nombre de pics au milieu ; anglais 1 écrit le mot anglais qui annonce l'étape (Once upon a time, One day…)."
+    valeurs:
+      moment: {min: 1, max: 5, pas: 1, defaut: 1}
+      peripeties: {min: 1, max: 3, pas: 1, defaut: 2}
+      anglais: {min: 0, max: 1, pas: 1, defaut: 0}

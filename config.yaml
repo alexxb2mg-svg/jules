@@ -160,6 +160,10 @@ extensions:
   - distance-temps-transports
   - frise-temps-verbaux
   - chaine-accords
+  - barre-objectif            # vague 2, lot 04 : francais CM1, fluidite de lecture (mots lus, erreurs, objectif)
+  - schema-narratif           # etapes d'un recit, situation initiale -> final (francais, anglais CM1)
+  - phrase-en-blocs           # grammaire CM1 : types et formes, groupes de la phrase, nature et fonction
+  - echelle-intensite         # mots ordonnes par intensite (francais 3e et CM1, anglais CM1)
   - position-objet
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
