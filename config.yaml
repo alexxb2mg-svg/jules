@@ -164,6 +164,10 @@ extensions:
   - forme-musicale            # education musicale : forme en blocs, pulsations ; arts plastiques : couleurs
   - frise-pulsations
   - cercle-couleurs
+  - deplacement-plaques       # vague 2, lot 12 : SVT 3e geodynamique
+  - eclairement-latitude      # zones climatiques (SVT 3e), saisons des deux hemispheres (anglais 3e)
+  - matrice-risque            # SVT 3e : alea, vulnerabilite, risque
+  - courbe-releves            # CM1 sciences : mesures meteorologiques
   - calculatrice              # outils (fournit.outils), servis sous /api/eleve/outils/<id>
   - frise-chronologique
   - lexique
