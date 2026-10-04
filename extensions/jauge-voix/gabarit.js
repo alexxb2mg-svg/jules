@@ -24,8 +24,7 @@ window.GABARITS = window.GABARITS || {};
 window.GABARITS["jauge-voix"] = {
   dessiner(svg, valeurs) {
     const NS = "http://www.w3.org/2000/svg";
-    // Police explicite (comme chaine-accords) : la largeur des mots est mesuree tout de suite avec la police
-    // reellement affichee ; sans elle, les traits de pause se decalent quand la police de la page arrive apres.
+    // Police explicite (comme chaine-accords) : rendu identique dans la fiche et dans une page isolee.
     const POLICE = "system-ui, Arial, sans-serif";
     const ENCRE = "#14243B", BLEU = "#1F4E8C", GRIS = "#6B7686", VERT = "#2E7D32", ORANGE = "#E07B00";
     const borne = (v, min, max, d) => {
@@ -100,17 +99,16 @@ window.GABARITS["jauge-voix"] = {
 
     // Phrase en blocs-mots : les pauses s'elargissent a la virgule (|) et au point (||).
     const MOTS = [["Le", 0], ["loup", 0], ["arrive,", 1], ["il", 0], ["a", 0], ["faim.", 2], ["Vite !", 0]];
-    const textes = MOTS.map(([mot]) => el("text", { x: 0, y: 298, "font-size": 15, fill: ENCRE }, mot));
-    const largeurs = textes.map((t, i) => {
-      let w = 0;
-      try { w = t.getComputedTextLength(); } catch (e) { w = 0; }
-      return w > 0 ? w : MOTS[i][0].length * 8; // estimation si le SVG n'est pas encore affiche
-    });
+    // Chaque mot est centre dans une case de largeur fixe (7,5 par lettre a 15 px, largeur moyenne de system-ui) : aucune mesure du texte.
+    // getComputedTextLength renvoie 0 quand le SVG est dessine avant d'etre affiche (cas de la fiche reelle) et
+    // decalait les traits de pause ; avec des cases centrees, l'erreur d'estimation se repartit des deux cotes
+    // du mot et les traits restent au milieu de l'espace.
+    const largeurs = MOTS.map(([mot]) => mot.length * 7.5);
     const ecart = (signe) => 7 + (signe === 1 && pauses >= 2 ? 16 : 0) + (signe === 2 && pauses >= 1 ? 26 : 0);
     const total = largeurs.reduce((s, w) => s + w, 0) + MOTS.slice(0, -1).reduce((s, [, signe]) => s + ecart(signe), 0);
     let x = Math.max(4, (340 - total) / 2);
-    MOTS.forEach(([, signe], i) => {
-      textes[i].setAttribute("x", x.toFixed(1));
+    MOTS.forEach(([mot, signe], i) => {
+      el("text", { x: (x + largeurs[i] / 2).toFixed(1), y: 298, "font-size": 15, "text-anchor": "middle", fill: ENCRE }, mot);
       x += largeurs[i];
       if (i < MOTS.length - 1) {
         const e = ecart(signe);
