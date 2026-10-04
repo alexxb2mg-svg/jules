@@ -156,6 +156,9 @@ extensions:
   - balance-plateaux          # CM1 sciences : masse et volume
   - effort-frequences         # 3e SVT : nutrition des cellules, effort musculaire
   - capteur-seuil             # 3e technologie : chaîne d'information, algorithme
+  - pistes-superposees        # vague 2, lot 03 : education musicale (successif, simultane, canon)
+  - pavage-motif              # histoire des arts : frise, pavement (translation, symetrie)
+  - arbre-multiplication      # EMC (partages d'un message), SVT (divisions de cellules)
   - frise                     # frise chronologique a curseur date (reperes portes par la fiche)
   - distance-temps-transports
   - frise-temps-verbaux
