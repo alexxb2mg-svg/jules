@@ -1,0 +1,22 @@
+id: echelle-intensite
+titre: "Figure : des mots rangés du plus faible au plus fort"
+version: "1.0.0"
+licence: MIT
+auteurs: ["projet-jules"]
+fournit:
+  figures: [echelle-intensite]
+permissions: {}
+# Figure que Jules peut montrer dans la discussion (bloc ```figure, voir docs/EXTENSIONS.md) ; memes bornes que les
+# curseurs des fiches 3e (lexique, sens des mots, modalisation) et CM1 (relations entre les mots, avis en anglais).
+# Absorbe la proposition d'audit « echelle-nuances » (SPEC vague 2, § 2.2). serie : 1 temperature, 2 taille
+# (contraires aux deux bouts), 3 peur, 4 colere, 5 joie (gradations), 6 doute / certitude, 7 avis en anglais.
+# revele: la figure ECRIT les mots ranges par intensite : un exercice « classe ces mots du plus faible au plus fort »
+# sur la meme serie aurait sa reponse ; aucune version sans les mots n'a de sens (on ne peut pas « compter » une
+# nuance) : proposee seulement en mode reexplique.
+discussion:
+  echelle-intensite:
+    revele: true
+    quand: "Pour faire voir que des mots proches n'ont pas la même force : serie choisit les mots (1 froid/chaud, 2 petit/grand avec les contraires aux bouts ; 3 peur, 4 colère, 5 joie ; 6 doute/certitude ; 7 avis en anglais), degre (0 à 4) monte la jauge jusqu'au mot montré."
+    valeurs:
+      serie: {min: 1, max: 7, pas: 1, defaut: 1}
+      degre: {min: 0, max: 4, pas: 1, defaut: 1}

@@ -37,8 +37,9 @@ LUES_HORS_DISCUSSION: dict[str, set[str]] = {
     # discussion n'a que la lecture par defaut (moment, fini) : declarer ces curseurs (donc avec un defaut,
     # toujours presents) changerait de dessin.
     "frise-temps-verbaux": {"personne", "habitude", "indirect", "longueur", "lien"},
-    # meme principe : adjectifs/place (place de l'adjectif), voisin/verbe (accord sujet-verbe, attribut).
-    "chaine-accords": {"adjectifs", "place", "voisin", "verbe"},
+    # meme principe : adjectifs (place de l'adjectif, avec place), voisin/verbe (accord sujet-verbe, attribut).
+    # place est declaree depuis la vague 2 (participe passe avec avoir, EX-213) : elle sort de la liste.
+    "chaine-accords": {"adjectifs", "voisin", "verbe"},
 }
 
 
