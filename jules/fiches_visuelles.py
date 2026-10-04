@@ -360,7 +360,8 @@ def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
             f"{ou} : trop de curseurs au total ({len(curseurs)}, max {LIMITE_CURSEURS_TOTAL} figes compris)"
         )
     vus: set[str] = set()
-    resultat = []
+    resultat: list[dict[str, Any]] = []
+    mobiles = 0
     for i, c in enumerate(curseurs):
         sous_ou = f"{ou}, curseur {i + 1}"
         if not isinstance(c, dict):
@@ -379,7 +380,8 @@ def _verifier_curseurs(curseurs: Any, ou: str) -> list[dict[str, Any]]:
         if erreur := erreur_bornes(mini, maxi, pas, depart, "depart"):
             raise ErreurFicheVisuelle(f"{sous_ou} : {erreur}")
         resultat.append({"id": identifiant, "nom": nom, "min": mini, "max": maxi, "pas": pas, "depart": depart})
-    mobiles = sum(1 for c in resultat if c["min"] < c["max"])
+        if mini < maxi:
+            mobiles += 1
     if mobiles > LIMITE_CURSEURS:
         raise ErreurFicheVisuelle(
             f"{ou} : trop de curseurs mobiles ({mobiles}, max {LIMITE_CURSEURS} ; un curseur min = max est fige "

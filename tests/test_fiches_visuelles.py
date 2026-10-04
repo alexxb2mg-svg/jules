@@ -401,7 +401,9 @@ def _graphe_a_curseurs(mobiles: int, figes: int) -> dict:
     curseurs = [
         {"id": f"curseur-m{i}", "nom": f"m{i}", "min": 0, "max": 10, "pas": 1, "depart": 0} for i in range(mobiles)
     ]
-    curseurs += [{"id": f"curseur-f{i}", "nom": f"f{i}", "min": 5, "max": 5, "pas": 1, "depart": 5} for i in range(figes)]
+    curseurs += [
+        {"id": f"curseur-f{i}", "nom": f"f{i}", "min": 5, "max": 5, "pas": 1, "depart": 5} for i in range(figes)
+    ]
     graphe["curseurs"] = curseurs
     graphe["lectures"] = []
     return brut
