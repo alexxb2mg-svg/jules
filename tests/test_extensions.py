@@ -203,8 +203,14 @@ def test_discussion_valide_exposee(tmp_path):
     _avec_discussion(tmp_path, DISCUSSION_VALIDE)
     bornes = {"min": -3.0, "max": 3.0, "pas": 0.5, "defaut": 1.0}
     assert figures_pour_discussion(charger_extensions(tmp_path, ["pack"])) == {
-        "ma-figure": {"quand": "Pour voir.", "valeurs": {"a": bornes}, "revele": False}
+        "ma-figure": {"quand": "Pour voir.", "valeurs": {"a": bornes}, "revele": False, "valeurs_revele": []}
     }
+
+
+def test_discussion_valeurs_revele_lues(tmp_path):
+    """`valeurs_revele` : liste de noms de `valeurs`, lue telle quelle ; absente, liste vide (test precedent)."""
+    _avec_discussion(tmp_path, DISCUSSION_VALIDE.replace("    valeurs:", "    valeurs_revele: [a]\n    valeurs:"))
+    assert figures_pour_discussion(charger_extensions(tmp_path, ["pack"]))["ma-figure"]["valeurs_revele"] == ["a"]
 
 
 def test_discussion_revele_lu(tmp_path):
@@ -228,6 +234,9 @@ def test_discussion_revele_lu(tmp_path):
         ("  ma-figure: {quand: x, valeurs: {}}\n", "au moins une valeur"),
         ("  ma-figure: {quand: x, valeurs: {a: {min: 0, max: 1, pas: 1, defaut: 0}}, svg: x}\n", "{quand, valeurs}"),
         (DISCUSSION_VALIDE.replace("    valeurs:", "    revele: oui-non\n    valeurs:"), "'revele'"),
+        (DISCUSSION_VALIDE.replace("    valeurs:", "    valeurs_revele: [b]\n    valeurs:"), "'valeurs_revele'"),
+        (DISCUSSION_VALIDE.replace("    valeurs:", "    valeurs_revele: a\n    valeurs:"), "'valeurs_revele'"),
+        (DISCUSSION_VALIDE.replace("    valeurs:", "    valeurs_revele: [a, a]\n    valeurs:"), "'valeurs_revele'"),
     ],
 )
 def test_discussion_invalide_refusee(tmp_path, declaration, message):
@@ -243,7 +252,7 @@ DECLARATIONS_DU_DEPOT = declarations_du_depot()
 # Reperes fixes, decides a la main, que la decouverte ne doit pas faire oublier (garde-fou de non-regression).
 REVELE_FIXE = {
     "equation-solutions": True,
-    "triangle-rectangle": True,
+    "triangle-rectangle": False,  # 2.1 : carre de l'hypotenuse « ? » tant que reponse = 0
     "onde-sonore": True,
     "jauge-decibels": True,
     "urne-tirage": False,

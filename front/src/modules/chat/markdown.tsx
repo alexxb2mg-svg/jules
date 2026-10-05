@@ -43,7 +43,11 @@ export function FigureBulle({ source }: { source: string }) {
       type: "graphe", id: "figure-bulle", adresse: "figure-bulle", gabarit: gabarit.gabarit, lectures: [],
       curseurs: Object.entries(declarees).map(([nom, b]) => {
         const v = Number(gabarit.valeurs[nom])
-        return { id: nom, nom, min: b.min, max: b.max, pas: b.pas, depart: borner(Number.isFinite(v) ? v : b.defaut, b.min, b.max) }
+        // Borne figée (min = max, `valeurs_revele` du serveur : triangle-rectangle `reponse`) : pas de curseur, et la
+        // valeur écrite par Jules (déjà vérifiée et forcée selon le mode par jules/modules/figures.py) est gardée telle
+        // quelle ; la ramener dans [min, max] effacerait `reponse: 1` en réexplication.
+        const depart = b.min === b.max ? (Number.isFinite(v) ? v : b.defaut) : borner(Number.isFinite(v) ? v : b.defaut, b.min, b.max)
+        return { id: nom, nom, min: b.min, max: b.max, pas: b.pas, depart }
       }),
     }
   }, [gabarit, declarees])

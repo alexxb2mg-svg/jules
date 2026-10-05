@@ -1,6 +1,6 @@
 id: triangle-rectangle
 titre: "Figure : triangle rectangle et carrés sur les côtés (Pythagore)"
-version: "2.0.0"
+version: "2.1.0"
 licence: MIT
 auteurs: ["projet-jules"]
 fournit:
@@ -10,13 +10,18 @@ permissions: {}
 # que les curseurs des fiches 3e « parallelisme, triangles, Pythagore » et « Thales, trigonometrie ».
 # 2.0.0 : carres construits sur les trois cotes, aire ecrite dans chacun (AC², BC², AC² + BC²), echelle adaptee
 # a la figure. La longueur AB n'est pas ecrite.
-# revele: les aires des trois carres sont ecrites, dont AC² + BC² (36, 64 et 100 pour AC = 6, BC = 8) : pour
-# « calcule AB », il ne reste que la racine carree a prendre, le coeur de l'exercice est fait par la figure.
-# Proposee seulement en mode reexplique (jamais en aide-devoirs ni en cours).
+# 2.1.0 : valeur `reponse` (0 ou 1, defaut 0). A 0, le carre orange porte « ? » : aucune valeur de AB ni de AB²
+# n'est ecrite, seules les aires AC² et BC² le sont ; la figure ne fait pas l'exercice « calcule AB ».
+# revele: false grace a cette variante (aide aux devoirs et cours, les modes qu'utilise l'eleve). A 1, l'aire
+# AC² + BC² est ecrite dans l'orange (36, 64 et 100 pour AC = 6, BC = 8) : il ne reste que la racine carree a
+# prendre. `valeurs_revele: [reponse]` : la regle tient par le code (jules/modules/figures.py) ; hors du mode
+# reexplique, reponse est forcee a 0 et n'est pas proposee au modele ; jamais de curseur reponse dans la bulle.
 discussion:
   triangle-rectangle:
-    quand: "Pour faire voir un triangle ABC rectangle en C et le théorème de Pythagore : ac = AC et bc = BC sont les côtés de l'angle droit ; un carré est dessiné sur chaque côté avec son aire écrite, et l'aire du carré de l'hypoténuse [AB] est la somme des deux autres (la longueur AB n'est pas écrite)."
-    revele: true
+    quand: "Triangle ABC rectangle en C et théorème de Pythagore : ac = AC, bc = BC, un carré sur chaque côté ; le carré de l'hypoténuse porte « ? ». Quand la valeur reponse est proposée, reponse = 1 y écrit son aire AC² + BC², pour réexpliquer."
+    revele: false
+    valeurs_revele: [reponse]
     valeurs:
       ac: {min: 1, max: 12, pas: 1, defaut: 6}
       bc: {min: 1, max: 12, pas: 1, defaut: 8}
+      reponse: {min: 0, max: 1, pas: 1, defaut: 0}

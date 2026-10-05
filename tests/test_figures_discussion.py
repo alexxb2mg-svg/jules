@@ -146,10 +146,11 @@ def test_aucun_module_ne_filtre_la_reponse_apres_figures(tuteur):
 # fichier. Le repere fixe ci-dessous garde les decisions deja prises a la main.
 GABARITS_DECLARES = sorted(declarations_du_depot())
 REVELENT = {g for g, (revele, _) in declarations_du_depot().items() if revele}
-# triangle-rectangle ecrit les aires des carres (AC² + BC²), onde-sonore le domaine du son (ultrason...), jauge-decibels
-# « juste a la limite » : ils revelent. urne-tirage n'ecrit plus de verdict en mots : il ne revele pas.
-REVELENT_FIXES = {"equation-solutions", "triangle-rectangle", "onde-sonore", "jauge-decibels"}
-NON_REVELENT_FIXES = {"droite-affine", "triangle-thales", "urne-tirage"}
+# onde-sonore ecrit le domaine du son (ultrason...), jauge-decibels « juste a la limite » : ils revelent. urne-tirage
+# n'ecrit plus de verdict en mots, triangle-rectangle (2.1) met « ? » dans le carre de l'hypotenuse tant que
+# reponse = 0 : ils ne revelent pas.
+REVELENT_FIXES = {"equation-solutions", "onde-sonore", "jauge-decibels"}
+NON_REVELENT_FIXES = {"droite-affine", "triangle-thales", "urne-tirage", "triangle-rectangle"}
 
 
 def test_registre_decouvert_et_reperes_fixes(tuteur):
@@ -220,6 +221,56 @@ def test_modes_revele_reglable(tuteur):
     figures.reglages["modes_revele"] = ["aide-devoirs"]
     assert "equation-solutions" in figures.autorises(tuteur.stockage.creer_conversation("aide-devoirs"))
     assert "equation-solutions" not in figures.autorises(tuteur.stockage.creer_conversation("reexplique"))
+
+
+# --- valeurs_revele : triangle-rectangle `reponse` (carte t_167db9a6, option A de SPEC) -----------------
+
+TRIANGLE_REPONSE_1 = '{"gabarit": "triangle-rectangle", "valeurs": {"ac": 3, "bc": 4, "reponse": 1}}'
+
+
+@pytest.mark.parametrize(("mode", "attendu"), [("aide-devoirs", 0), ("cours", 0), ("reexplique", 1)])
+def test_valeur_revele_forcee_au_defaut_hors_reexplique(tuteur, mode, attendu):
+    """`reponse: 1` ecrit par le modele ressort a 0 en aide-devoirs et en cours (bloc garde, figure « ? »), reste a
+    1 en reexplique. Aucun evenement figure_ecartee : la figure est montree."""
+    sortie, ecartees = _filtrer(tuteur, _bloc(TRIANGLE_REPONSE_1), mode)
+    normalise = json.dumps(
+        {"gabarit": "triangle-rectangle", "valeurs": {"ac": 3, "bc": 4, "reponse": attendu}},
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+    assert f"```figure\n{normalise}\n```" in sortie, sortie
+    assert ecartees == []
+
+
+@pytest.mark.parametrize("ecrit", ["5", "true", '"oui"', "0.5"])
+def test_valeur_revele_forcee_quoi_qu_ecrive_le_modele(tuteur, ecrit):
+    """Hors reexplique, la valeur forcee n'est meme pas lue : le bloc passe avec reponse = 0."""
+    bloc = f'{{"gabarit": "triangle-rectangle", "valeurs": {{"reponse": {ecrit}}}}}'
+    sortie, ecartees = _filtrer(tuteur, _bloc(bloc), "aide-devoirs")
+    assert '"reponse":0' in sortie and ecartees == []
+
+
+def test_valeur_revele_absente_de_la_contribution_hors_reexplique(tuteur):
+    figures = tuteur.module("figures")
+    for mode, propose in (("aide-devoirs", False), ("cours", False), ("reexplique", True)):
+        texte = figures.contribution(tuteur.stockage.creer_conversation(mode))
+        ligne = next(ligne for ligne in texte.splitlines() if ligne.startswith("- triangle-rectangle :"))
+        assert "ac de 1 à 12" in ligne and "bc de 1 à 12" in ligne, mode
+        assert ("reponse de 0 à 1" in ligne) is propose, mode
+
+
+def test_infos_interface_fige_les_valeurs_revele(tuteur):
+    """/api/infos : `reponse` figee (min = max = defaut) -> jamais de curseur dans la bulle, quel que soit le mode."""
+    triangle = tuteur.infos_interface()["figures"]["triangle-rectangle"]
+    assert triangle["reponse"] == {"min": 0, "max": 0, "pas": 1, "defaut": 0}
+    assert triangle["ac"] == {"min": 1, "max": 12, "pas": 1, "defaut": 6}
+    # les autres gabarits ne sont pas touches
+    assert all(
+        b["min"] < b["max"]
+        for g, valeurs in tuteur.infos_interface()["figures"].items()
+        if not figures_pour_discussion(tuteur.extensions)[g]["valeurs_revele"]
+        for b in valeurs.values()
+    )
 
 
 @pytest.mark.parametrize("mode", ["aide-devoirs", "reexplique"])
@@ -401,6 +452,41 @@ def test_curseurs_sous_la_figure_de_la_bulle_a_390px(serveur, tmp_path_factory, 
         assert float(apres["y2"]) == 170 - (a * 6 + 1) * 30
         time.sleep(0.4)
         _capture(page, dossier / f"lot3-{theme}-apres.png")
+
+
+# Triangle-rectangle dans la bulle : `reponse` figee par /api/infos -> aucun curseur reponse ; textes du SVG.
+TRIANGLE = """(() => { const g = document.querySelector('[data-figure-bulle]'); if (!g) return null;
+  const s = g.querySelector('svg'); if (!s || !s.querySelectorAll('text').length) return null;
+  return {textes: [...s.querySelectorAll('text')].map((t) => t.textContent.trim()),
+  curseurs: [...g.querySelectorAll('input[type=range]')].map((i) => i.getAttribute('aria-valuetext')),
+  dedans: g.getBoundingClientRect().right <= g.closest('.bulle-jules').getBoundingClientRect().right + 0.5}; })()"""
+
+
+@pytest.mark.parametrize(
+    ("mode", "attendu_orange"), [("aide-devoirs", "?"), ("reexplique", "25")], ids=["aide-devoirs", "reexplique"]
+)
+def test_triangle_rectangle_dans_la_bulle_sans_curseur_reponse(serveur, tmp_path_factory, mode, attendu_orange):
+    """Le modele ecrit `reponse: 1` : en aide-devoirs le serveur le ramene a 0 (carre orange « ? », aucun AB ni AB²),
+    en reexplique il reste a 1 (25 ecrit) ; dans les deux cas, seuls les curseurs ac et bc sont affiches."""
+    url, tuteur = serveur
+    tuteur.llm.regle = lambda s, t, m: _bloc(
+        '{"gabarit": "triangle-rectangle", "valeurs": {"ac": 3, "bc": 4, "reponse": 1}}'
+    )
+    conv = tuteur.stockage.creer_conversation(mode)
+    tuteur.stockage.renommer(conv.id, "Pythagore test")
+    tuteur.echanger(conv.id, "Montre-moi Pythagore avec une figure")
+    with navigateur_cdp(navigateur(), tmp_path_factory.mktemp("chromium-triangle"), (390, 844)) as page:
+        _ouvrir_conversation(page, url, "Pythagore test", False, nb_bulles=1)
+        etat = page.attendre(TRIANGLE, delai=10)
+        assert etat["curseurs"] == ["ac = 3", "bc = 4"], etat
+        assert etat["dedans"]
+        assert "9" in etat["textes"] and "16" in etat["textes"]
+        assert attendu_orange in etat["textes"], etat
+        if attendu_orange == "?":
+            assert not {"5", "25"} & set(etat["textes"]), etat  # ni AB = 5 ni AB² = 25
+        page.evaluer("document.querySelector('[data-figure-bulle]').scrollIntoView({block: 'center'})")
+        time.sleep(0.4)
+        _capture(page, tmp_path_factory.mktemp("captures-triangle") / f"triangle-{mode}.png")
 
 
 @pytest.fixture
